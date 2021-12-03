@@ -35,6 +35,9 @@ class MRKmeansStep(MRJob):
 
         The result should be always a value in the range [0,1]
         """
+
+
+
         return 1
 
     def configure_args(self):
@@ -75,12 +78,16 @@ class MRKmeansStep(MRJob):
         doc, words = line.split(':')
         lwords = words.split()
 
-        #
-        # Compute map here
-        #
-
+        minimum_distance = -1 
+        assigned_prototype= ""
+        for prot in self.prototypes:
+            distance = self.jaccard(self.prototypes[prot], lwords)
+            if (distance < minimum_distance or minimum_distance==-1):
+                assigned_prototype = prot
+                minimum_distance= distance
+            
         # Return pair key, value
-        yield None, None
+        yield assigned_prototype, (doc, lwords)
 
     def aggregate_prototype(self, key, values):
         """
@@ -99,6 +106,18 @@ class MRKmeansStep(MRJob):
         :param values:
         :return:
         """
+
+        new_prototype={}
+        new_prototype_documents=[]
+        n_documents=0
+        for document in values:
+            n_documents += 1
+            new_prototype_documents.append(document[0])
+            for word in document[1]:
+                if word in new_prototype:
+                    new_prototype[word] += 1
+                else:
+                    new_prototype[word] = 1
 
         yield None, None
 
