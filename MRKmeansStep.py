@@ -49,9 +49,16 @@ class MRKmeansStep(MRJob):
         Words must be alphabeticaly ordered
         The result should be always a value in the range [0,1]
         """
+<<<<<<< HEAD
         prot_doc = unpack_prot(prot,len(doc))
         jaccard_similarity = len(intersection(prot_doc,doc))/len(prot+doc)
         return jaccard_similarity
+=======
+
+
+
+        return 1
+>>>>>>> 1fb67181b265cfdac5445b6e6a6d8c971cd9bae9
 
     def configure_args(self):
         """
@@ -90,6 +97,7 @@ class MRKmeansStep(MRJob):
         # Each line is a string docid:wor1 word2 ... wordn
         doc, words = line.split(':')
         lwords = words.split()
+<<<<<<< HEAD
         
         for w in lwords:
             yield doc,lwords
@@ -98,8 +106,19 @@ class MRKmeansStep(MRJob):
         # Compute map here
         #
 
+=======
+
+        minimum_distance = -1 
+        assigned_prototype= ""
+        for prot in self.prototypes:
+            distance = self.jaccard(self.prototypes[prot], lwords)
+            if (distance < minimum_distance or minimum_distance==-1):
+                assigned_prototype = prot
+                minimum_distance= distance
+            
+>>>>>>> 1fb67181b265cfdac5445b6e6a6d8c971cd9bae9
         # Return pair key, value
-        yield None, None
+        yield assigned_prototype, (doc, lwords)
 
     def aggregate_prototype(self, key, values):
         """
@@ -118,6 +137,18 @@ class MRKmeansStep(MRJob):
         :param values:
         :return:
         """
+
+        new_prototype={}
+        new_prototype_documents=[]
+        n_documents=0
+        for document in values:
+            n_documents += 1
+            new_prototype_documents.append(document[0])
+            for word in document[1]:
+                if word in new_prototype:
+                    new_prototype[word] += 1
+                else:
+                    new_prototype[word] = 1
 
         yield None, None
 
