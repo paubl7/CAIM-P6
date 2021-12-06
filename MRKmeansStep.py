@@ -19,23 +19,39 @@ MRKmeansDef
 
 from mrjob.job import MRJob
 from mrjob.step import MRStep
+import numpy as np
+from np.ndarray import flatten
 
 __author__ = 'bejar'
 
+def unpack_prot(prot,total_count):
+    words = []
+    for word,prob in prot:
+        w_occurences = prob*total_count
+        words.append(np.repeat(word,w_occurences))
+    unpacked = list(flatten(np.array(words)))
+    return unpacked
 
+def intersection(lst1, lst2):
+    temp = set(lst2)
+    lst3 = [value for value in lst1 if value in temp]
+    return lst3
+    
 class MRKmeansStep(MRJob):
     prototypes = {}
 
-    def jaccard(self, prot, doc):
+
+    def jaccard(prot, doc):
         """
         Compute here the Jaccard similarity between  a prototype and a document
         prot should be a list of pairs (word, probability)
         doc should be a list of words
         Words must be alphabeticaly ordered
-
         The result should be always a value in the range [0,1]
         """
-        return 1
+        prot_doc = unpack_prot(prot,len(doc))
+        jaccard_similarity = len(intersection(prot_doc,doc))/len(prot+doc)
+        return jaccard_similarity
 
     def configure_args(self):
         """
@@ -74,7 +90,10 @@ class MRKmeansStep(MRJob):
         # Each line is a string docid:wor1 word2 ... wordn
         doc, words = line.split(':')
         lwords = words.split()
-
+        
+        for w in lwords:
+            yield doc,lwords
+        
         #
         # Compute map here
         #
