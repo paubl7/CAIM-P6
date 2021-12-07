@@ -111,16 +111,22 @@ class MRKmeansStep(MRJob):
         new_prototype_documents=[]
         n_documents=0
         for document in values:
-            n_documents += 1
             new_prototype_documents.append(document[0])
             for word in document[1]:
                 if word in new_prototype:
                     new_prototype[word] += 1
                 else:
                     new_prototype[word] = 1
+            
+            n_documents += 1
 
-        yield None, None
-
+        returnPrototype = []
+        for word in new_prototype:
+            returnPrototype.append((word,new_prototype[word]/float(n_documents)))
+    
+        yield key, (sorted(new_prototype_documents),sorted(returnPrototype, key=lambda x: x[0]))
+    
+    
     def steps(self):
         return [MRStep(mapper_init=self.load_data, mapper=self.assign_prototype,
                        reducer=self.aggregate_prototype)
