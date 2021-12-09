@@ -1,0 +1,19 @@
+Given a user-specified minimum degree threshold $\gamma$, a $\gamma$-quasi-clique is a subgraph
+$g=(V_g,E_g)$ where each vertex $v\in V_g$ connects to at least $\gamma$ fraction of the other vertices
+(i.e., $\lceil \gamma\cdot(|V_g|-1)\rceil$ vertices) in $g$. Quasi-clique is one of the most
+natural definitions for dense structures useful in finding communities in social networks and
+discovering significant biomolecule structures and pathways. However, mining maximal quasi-cliques
+is notoriously expensive. In this paper, we design parallel algorithms for mining maximal quasi-cliques
+on G-thinker, a recent distributed framework targeting divide-and-conquer graph mining algorithms
+that decomposes the mining into compute-intensive tasks to fully utilize CPU cores. However, we
+found that directly using G-thinker results in the straggler problem due to (i) the drastic load
+imbalance among different tasks and (ii) the difficulty of predicting the task running time and
+the time growth with task-subgraph size. We address these challenges by redesigning G-thinker's
+execution engine to prioritize long-running tasks for mining, and by utilizing a novel timeout
+strategy to effectively decompose the mining workloads of long-running tasks to improve load balancing.
+While this system redesign applies to many other expensive dense subgraph mining problems, this
+paper verifies the idea by adapting the state-of-the-art quasi-clique algorithm, Quick, to our
+redesigned G-thinker. We improve Quick by integrating new pruning rules, and fixing some missed
+boundary cases that could lead to missed results. Extensive experiments verify that our new solution
+scales well with the number of CPU cores, achieving 201$\times$ runtime speedup when mining a graph
+with 3.77M vertices and 16.5M edges in a 16-node cluster. 

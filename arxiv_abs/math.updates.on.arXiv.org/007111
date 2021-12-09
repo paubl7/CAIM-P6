@@ -1,0 +1,18 @@
+Consider a two-class classification problem where we observe samples $(X_i, Y_i)$ for i = 1, ...,
+n, $X_i \in \mathcal{R}^p$ and $Y_i \in \{0, 1\}$. Given $Y_i = k$, $X_i$ is assumed to follow a multivariate
+normal distribution with mean $\mu_k \in \mathcal{R}^k$ and covariance matrix $\Sigma_k$, $k=0,1$.
+Supposing a new sample $X$ from the same mixture is observed, our goal is to estimate its class label
+$Y$. The difficulty lies in the rarity and weakness of the differences in the mean vector and in the
+covariance matrices. By incorporating the quadratic terms $\Omega_k=\Sigma^{-1}_k$ from the
+two classes, we formulate the likelihood-based classification as a Quadratic Discriminant Analysis
+(QDA) problem. Hence, we propose the QDA classification method with the feature-selection step.
+Compared with recent work on the linear case (LDA) with $\Omega_k$ assumed to be the same, the current
+setting is much more general. The numerical results from real datasets support our theories and
+demonstrate the necessity and superiority of using QDA over LDA for classification under the rare
+and weak model. We set up a rare and weak model for both the mean vector and the precision matrix. With
+the model parameters, we clearly depict the boundary separating the region of successful classification
+from the region of unsuccessful classification of the newly proposed QDA with a feature-selection
+method, for the two cases that $\mu_k$ is either known or unknown. We also explore the region of successful
+classification of the QDA approach when both $\mu_k$ and $\Omega_k$ are unknown. The results again
+suggest that the quadratic term has a major influence over the LDA for the classification decision
+and classification accuracy. 

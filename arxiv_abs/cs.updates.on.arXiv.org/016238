@@ -1,0 +1,19 @@
+Satisfiability of boolean formulae (SAT) has been a topic of research in logic and computer science
+for a long time. In this paper we are interested in understanding the structure of satisfiable and
+unsatisfiable sentences. In previous work we initiated a new approach to SAT by formulating a mapping
+from propositional logic sentences to graphs, allowing us to find structural obstructions to 2SAT
+(clauses with exactly 2 literals) in terms of graphs. Here we generalize these ideas to multi-hypergraphs
+in which the edges can have more than 2 vertices and can have multiplicity. This is needed for understanding
+the structure of SAT for sentences made of clauses with 3 or more literals (3SAT), which is a building
+block of NP-completeness theory. We introduce a decision problem that we call GraphSAT, as a first
+step towards a structural view of SAT. Each propositional logic sentence can be mapped to a multi-hypergraph
+by associating each variable with a vertex (ignoring the negations) and each clause with a hyperedge.
+Such a graph then becomes a representative of a collection of possible sentences and we can then formulate
+the notion of satisfiability of such a graph. With this coarse representation of classes of sentences
+one can then investigate structural obstructions to SAT. To make the problem tractable, we prove
+a local graph rewriting theorem which allows us to simplify the neighborhood of a vertex without
+knowing the rest of the graph. We use this to deduce several reduction rules, allowing us to modify
+a graph without changing its satisfiability status which can then be used in a program to simplify
+graphs. We study a subclass of 3SAT by examining sentences living on triangulations of surfaces
+and show that for any compact surface there exists a triangulation that can support unsatisfiable
+sentences, giving specific examples of such triangulations for various surfaces. 

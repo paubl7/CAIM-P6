@@ -1,0 +1,20 @@
+Phase retrieval (PR) is an important component in modern computational imaging systems. Many algorithms
+have been developed over the past half century. Recent advances in deep learning have opened up a
+new possibility for robust and fast PR. An emerging technique, called deep unfolding, provides
+a systematic connection between conventional model-based iterative algorithms and modern data-based
+deep learning. Unfolded algorithms, powered by data learning, have shown remarkable performance
+and convergence speed improvement over the original algorithms. Despite their potential, most
+existing unfolded algorithms are strictly confined to a fixed number of iterations when employing
+layer-dependent parameters. In this study, we develop a novel framework for deep unfolding to overcome
+the existing limitations. Even if our framework can be widely applied to general inverse problems,
+we take PR as an example in the paper. Our development is based on an unfolded generalized expectation
+consistent signal recovery (GEC-SR) algorithm, wherein damping factors are left for data-driven
+learning. In particular, we introduce a hypernetwork to generate the damping factors for GEC-SR.
+Instead of directly learning a set of optimal damping factors, the hypernetwork learns how to generate
+the optimal damping factors according to the clinical settings, thus ensuring its adaptivity to
+different scenarios. To make the hypernetwork work adapt to varying layer numbers, we use a recurrent
+architecture to develop a dynamic hypernetwork, which generates a damping factor that can vary
+online across layers. We also exploit a self-attention mechanism to enhance the robustness of the
+hypernetwork. Extensive experiments show that the proposed algorithm outperforms existing ones
+in convergence speed and accuracy, and still works well under very harsh settings, that many classical
+PR algorithms unstable or even fail. 

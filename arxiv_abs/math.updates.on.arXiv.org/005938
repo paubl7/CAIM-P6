@@ -1,0 +1,18 @@
+There are several factorizations of multi-dimensional tensors into lower-dimensional components,
+known as `tensor networks'. We consider the popular `tensor-train' (TT) format and ask, how efficiently
+can we compute a low-rank approximation from a full tensor on current multi-core CPUs. Compared
+to sparse and dense linear algebra, there are much fewer and less extensive well-optimized kernel
+libraries for multi-linear algebra. Linear algebra libraries like BLAS and LAPACK may provide
+the required operations in principle, but often at the cost of additional data movements for rearranging
+memory layouts. Furthermore, these libraries are typically optimized for the compute-bound case
+(e.g.\ square matrix operations) whereas low-rank tensor decompositions lead to memory bandwidth
+limited operations. We propose a `tensor-train singular value decomposition' (TT-SVD) algorithm
+based on two building blocks: a `Q-less tall-skinny QR' factorization, and a fused tall-skinny
+matrix-matrix multiplication and reshape operation. We analyze the performance of the resulting
+TT-SVD algorithm using the Roofline performance model. In addition, we present performance results
+for different algorithmic variants for shared-memory as well as distributed-memory architectures.
+Our experiments show that commonly used TT-SVD implementations suffer severe performance penalties.
+We conclude that a dedicated library for tensor factorization kernels would benefit the community:
+Computing a low-rank approximation can be as cheap as reading the data twice from main memory. As
+a consequence, an implementation that achieves realistic performance will move the limit at which
+one has to resort to randomized methods that only process part of the data. 

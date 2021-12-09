@@ -1,0 +1,20 @@
+We present an alternative to model predictive control (MPC) for unknown nonlinear systems in low-resource
+embedded device settings. The structure of the presented data-driven control policy learning
+method, Differentiable Predictive Control (DPC), echos the structure of classical MPC, by i) using
+a prediction model capturing controlled system dynamics, ii) receding horizon optimal control
+action predictions, and iii) enforcing inequality constraints via penalty methods. However,
+contrary to MPC, the presented control architecture does not require the system dynamics model
+to synthesize the control policy. Instead, a dynamics model is learned end-to-end from time-series
+measurements of the system dynamics in the off-policy setup. The control policy is then optimized
+via gradient descent by differentiating the closed-loop system dynamics model. The proposed architecture
+allows to train the control policy to track the distribution of reference signals and handle time-varying
+inequality constraints. We experimentally demonstrate that it is possible to train generalizing
+constrained optimal control policies purely based on the observations of the dynamics of the unknown
+nonlinear system. The proposed control method is applied to a laboratory device in embedded implementation
+using a Raspberry Pi micro-controller. We demonstrate superior reference tracking control performance
+compared to classical explicit MPC and a baseline PI controller, and pivotal efficiency gains in
+online computational demands, memory requirements, policy complexity, and construction. Beyond
+improved control performance, the DPC method scales linearly compared to exponential scalability
+of the explicit MPC solved via multiparametric programming, hence, opening doors for applications
+in nonlinear systems with a large number of variables and fast sampling rates which are beyond the
+reach of classical explicit MPC. 

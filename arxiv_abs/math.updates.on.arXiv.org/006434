@@ -1,0 +1,20 @@
+Aerodynamic optimization is ubiquitous in the design of most engineering systems interacting
+with fluids. A common approach is to optimize a performance function defined by a choice of an aerodynamic
+model, e.g., turbulence RANS model, and at nominal operating conditions. Practical experience
+indicates that such a deterministic approach may result in considerably sub-optimal designs when
+the adopted aerodynamic model does not lead to accurate flow predictions or when the actual operating
+conditions differ from those considered in the design. One approach to address this shortcoming
+is to consider an average or robust design, wherein the statistical moments of the performance function,
+given the uncertainty in the operating conditions and the aerodynamic model, is optimized. However,
+when the number of uncertain inputs is large or the performance function exhibits significant variability,
+an accurate evaluation of these moments may require a large number of forward and/or adjoint solves,
+at each iteration of a gradient-based scheme. This, in turn, renders the design computationally
+expensive, if not infeasible. To tackle this difficulty, we consider a variant of the stochastic
+gradient descent method where, in each optimization iteration, a stochastic approximation of
+the objective, constraints, and their gradients are generated. This is done via a small number of
+forward/adjoint solves corresponding to random selections of the uncertain parameters and aerodynamic
+model. The methodology is applied to the robust optimization of the standard NACA-0012 subject
+to parametric and turbulence model uncertainty. With a cost that is a small factor larger than that
+of the deterministic approach, the stochastic gradient approach significantly improves the performance
+(mean and variance) of the aerodynamic design for a wide range of operating conditions and turbulence
+models. 

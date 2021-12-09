@@ -1,0 +1,20 @@
+The control of modern buildings is, on one hand, a complex multi-variable control problem due to
+the integration of renewable energy generation devices, storage devices, and connection of electrical
+vehicles (EVs), and, on the other hand, a complex multi-criteria problem due to requirements for
+overall energy minimization and comfort satisfaction. Both conventional rule-based (RB) and
+advanced model-based controllers, such as model predictive control (MPC), cannot fulfil the current
+building automation industry requirements of achieving system-wide optimal performance of a
+modern building at low commissioning and maintenance costs. In this work, we present a fully black-box,
+data-driven method to obtain a control policy for a multi-input-multi-output (MIMO) problem in
+buildings -- the joint control of a room temperature and a bidirectional EV charging -- with the aim
+to maximize occupants comfort and energy savings while leaving enough energy in the EV battery for
+the next trip. We modelled the room temperature and EV charging using recurrent neural networks
+and a piece-wise linear function, respectively, and used these models as a simulation environment
+for the Deep Deterministic Policy Gradient (DDPG) reinforcement learning algorithm to find an
+optimal control policy. In the simulation, the DDPG control agent achieved on average 17% energy
+savings and 19% better comfort during the heating season compared to a standard RB controller. Similarly,
+for the joint room heating and bidirectional EV charging control, the DDPG MIMO controller achieved
+on average 12% better comfort satisfaction, 11% energy savings, and 42% energy costs savings compared
+to two standard RB controllers. We also validated the method on the DFAB HOUSE at Empa, Duebendorf,
+in Switzerland where we obtained 27% energy savings at better comfort over three weeks during the
+heating season. 

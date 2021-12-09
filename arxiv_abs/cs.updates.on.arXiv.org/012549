@@ -1,0 +1,20 @@
+Side channel attacks steal secret keys by cleverly leveraging information leakages and can, therefore,
+break encryption. Thus, detection and mitigation of side channel attacks is a very important problem,
+but the solutions proposed in the literature have limitations in that they do not work in a real-world
+multi-tenancy setting on servers, have high false positives, or have high overheads. In this work,
+we demonstrate a compiler guided scheduler, Biscuit, that detects cache-based side channel attacks
+for processes scheduled on multi-tenancy server farms. A key element of this solution involves
+the use of a cache-miss model which is inserted by the compiler at the entrances of loop nests to predict
+the cache misses of the corresponding loop. Such inserted library calls, or beacons, convey the
+cache miss information to the scheduler at run time, which uses it to co-schedule processes such
+that their combined cache footprint does not exceed the maximum capacity of the last level cache.
+The scheduled processes are then monitored for actual vs predicted cache misses, and when an anomaly
+is detected, the scheduler performs a search to isolate the attacker. We show that Biscuit is able
+to detect and mitigate Prime+Probe, Flush+Reload, and Flush+Flush attacks on OpenSSL cryptography
+algorithms with an F-score of 1, and also to detect and mitigate degradation of service on a vision
+application suite with an F-score of 0.9375. Under a no-attack scenario, the scheme poses low overheads
+(up to a maximum of 6 percent). In the case of an attack, the scheme ends up with less than 11 percent
+overhead and is able to reduce the degradation of service in some cases by 40 percent. With these many
+desirable features such as an ability to deal with multi-tenancy, its ability to detect attacks
+early, its ability to mitigate those attacks, and low runtime overheads, Biscuit is a practical
+solution. 

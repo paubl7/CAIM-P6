@@ -1,0 +1,18 @@
+We consider the problem of optimizing a coverage function under a $\ell$-matchoid of rank $k$. We
+design fixed-parameter algorithms as well as streaming algorithms to compute an exact solution.
+Unlike previous work that presumes linear representativity of matroids, we consider the general
+oracle model. For the special case where the coverage function is linear, we give a deterministic
+fixed-parameter algorithm parameterized by $\ell$ and $k$. This result, combined with the lower
+bounds of Lovasz~\cite{Lovasz1981}, and Jensen and Korte~\cite{Jensen82}, demonstrates a separation
+between the $\ell$-matchoid and the matroid $\ell$-parity problems in the setting of fixed-parameter
+tractability. For a general coverage function, we give both deterministic and randomized fixed-parameter
+algorithms, parameterized by $\ell$ and $z$, where $z$ is the number of points covered in an optimal
+solution. The resulting algorithms can be directly translated into streaming algorithms. For
+unweighted coverage functions, we show that we can find an exact solution even when the function
+is given in the form of a value oracle (and so we do not have access to an explicit representation of
+the set system). Our result can be implemented in the streaming setting and stores a number of elements
+depending only on $\ell$ and $z$, but completely indpendent of the total size $n$ of the ground set.
+This shows that it is possible to circumvent the recent space lower bound of Feldman et al~\cite{feldman2020},
+by parameterizing the solution value. This result, combined with existing lower bounds, also provides
+a new separation between the space and time complexity of maximizing an arbitrary submodular function
+and a coverage function in the value oracle model. 

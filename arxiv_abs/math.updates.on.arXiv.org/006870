@@ -1,0 +1,20 @@
+In this work, we study linear error-correcting codes against adversarial insertion-deletion
+(insdel) errors. We focus on two different settings: Linear codes over small fields: We construct
+linear codes over $\mathbb{F}_q$, for $q=\text{poly}(1/\varepsilon)$, that can efficiently
+decode from a $\delta$ fraction of insdel errors and have rate $(1-4\delta)/8-\varepsilon$. We
+also show that by allowing codes over $\mathbb{F}_{q^2}$ that are linear over $\mathbb{F}_q$,
+we can improve the rate to $(1-\delta)/4-\varepsilon$ while not sacrificing efficiency. Using
+this latter result, we construct fully linear codes over $\mathbb{F}_2$ that can efficiently correct
+up to $\delta < 1/54$ fraction of deletions and have rate $R = (1 - 54 \delta)/1216$. Cheng, Guruswami,
+Haeupler, and Li [CGHL21] constructed codes with (extremely small) rates bounded away from zero
+that can correct up to a $\delta < 1/400$ fraction of insdel errors. They also posed the problem of
+constructing linear codes that get close to the half-Singleton bound (proved in [CGHL21]) over
+small fields. Thus, our results significantly improve their construction and get much closer to
+the bound. Reed-Solomon codes: We prove that over fields of size $n^{O(k)}$ there are $[n,k]$ Reed-Solomon
+codes that can decode from $n-2k+1$ insdel errors and hence attain the half-Singleton bound. We
+also give a deterministic construction of such codes over much larger fields (of size $n^{k^{O(k)}}$).
+Nevertheless, for $k=O(\log n /\log\log n)$ our construction runs in polynomial time. For the special
+case $k=2$, which received a lot of attention in the literature, we construct an $[n,2]$ Reed-Solomon
+code over a field of size $O(n^4)$ that can decode from $n-3$ insdel errors. Earlier construction
+required an exponential field size. Lastly, we prove that any such construction requires a field
+of size $\Omega(n^3)$. 

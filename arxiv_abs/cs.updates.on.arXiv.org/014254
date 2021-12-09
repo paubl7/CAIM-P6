@@ -1,0 +1,18 @@
+Individual tooth segmentation and identification from cone-beam computed tomography images
+are preoperative prerequisites for orthodontic treatments. Instance segmentation methods using
+convolutional neural networks have demonstrated ground-breaking results on individual tooth
+segmentation tasks, and are used in various medical imaging applications. While point-based detection
+networks achieve superior results on dental images, it is still a challenging task to distinguish
+adjacent teeth because of their similar topologies and proximate nature. In this study, we propose
+a point-based tooth localization network that effectively disentangles each individual tooth
+based on a Gaussian disentanglement objective function. The proposed network first performs heatmap
+regression accompanied by box regression for all the anatomical teeth. A novel Gaussian disentanglement
+penalty is employed by minimizing the sum of the pixel-wise multiplication of the heatmaps for all
+adjacent teeth pairs. Subsequently, individual tooth segmentation is performed by converting
+a pixel-wise labeling task to a distance map regression task to minimize false positives in adjacent
+regions of the teeth. Experimental results demonstrate that the proposed algorithm outperforms
+state-of-the-art approaches by increasing the average precision of detection by 9.1%, which results
+in a high performance in terms of individual tooth segmentation. The primary significance of the
+proposed method is two-fold: 1) the introduction of a point-based tooth detection framework that
+does not require additional classification and 2) the design of a novel loss function that effectively
+separates Gaussian distributions based on heatmap responses in the point-based detection framework.

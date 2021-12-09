@@ -1,0 +1,19 @@
+We study the general problem of computing frequency-based functions, i.e., the sum of any given
+function of data stream frequencies. Special cases include fundamental data stream problems such
+as computing the number of distinct elements ($F_0$), frequency moments ($F_k$), and heavy-hitters.
+It can also be applied to calculate the maximum frequency of an element ($F_{\infty}$). Given that
+exact computation of most of these special cases provably do not admit any sublinear space algorithm,
+a natural approach is to consider them in an enhanced data streaming model, where we have a computationally
+unbounded but untrusted prover sending proofs or help messages to ease the computation. Think of
+a memory-restricted client delegating the computation to a stronger cloud service whom it doesn't
+want to trust blindly. Using its limited memory, it wants to verify the proof that the cloud sends.
+Chakrabarti et al.~(ICALP '09) introduced this setting as the "annotated data streaming model"
+and showed that multiple problems including exact computation of frequency-based functions---that
+have no sublinear algorithms in basic streaming---do have annotated streaming algorithms, also
+called "schemes", with both space and proof-length sublinear in the input size. We give a general
+scheme for computing any frequency-based function with both space usage and proof-size of $O(n^{2/3}\log
+n)$ bits, where $n$ is the size of the universe. This improves upon the best known bound of $O(n^{2/3}\log^{4/3}
+n)$ given by the seminal paper of Chakrabarti et al.~and as a result, also improves upon the best known
+bounds for the important special cases of computing $F_0$ and $F_{\infty}$. We emphasize that while
+being quantitatively better, our scheme is also qualitatively better in the sense that it is simpler
+than the previously best scheme that uses intricate data structures and elaborate subroutines.

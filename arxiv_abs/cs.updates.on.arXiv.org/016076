@@ -1,0 +1,20 @@
+Given a natural language expression and an image/video, the goal of referring segmentation is to
+produce the pixel-level masks of the entities described by the subject of the expression. Previous
+approaches tackle this problem by implicit feature interaction and fusion between visual and linguistic
+modalities in a one-stage manner. However, human tends to solve the referring problem in a progressive
+manner based on informative words in the expression, i.e., first roughly locating candidate entities
+and then distinguishing the target one. In this paper, we propose a Cross-Modal Progressive Comprehension
+(CMPC) scheme to effectively mimic human behaviors and implement it as a CMPC-I (Image) module and
+a CMPC-V (Video) module to improve referring image and video segmentation models. For image data,
+our CMPC-I module first employs entity and attribute words to perceive all the related entities
+that might be considered by the expression. Then, the relational words are adopted to highlight
+the target entity as well as suppress other irrelevant ones by spatial graph reasoning. For video
+data, our CMPC-V module further exploits action words based on CMPC-I to highlight the correct entity
+matched with the action cues by temporal graph reasoning. In addition to the CMPC, we also introduce
+a simple yet effective Text-Guided Feature Exchange (TGFE) module to integrate the reasoned multimodal
+features corresponding to different levels in the visual backbone under the guidance of textual
+information. In this way, multi-level features can communicate with each other and be mutually
+refined based on the textual context. Combining CMPC-I or CMPC-V with TGFE can form our image or video
+version referring segmentation frameworks and our frameworks achieve new state-of-the-art performances
+on four referring image segmentation benchmarks and three referring video segmentation benchmarks
+respectively. 

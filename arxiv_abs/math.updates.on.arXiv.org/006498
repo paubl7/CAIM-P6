@@ -1,0 +1,20 @@
+We propose a modern method to estimate population size based on capture-recapture designs of K samples.
+The observed data is formulated as a sample of n i.i.d. K-dimensional vectors of binary indicators,
+where the k-th component of each vector indicates the subject being caught by the k-th sample, such
+that only subjects with nonzero capture vectors are observed. The target quantity is the unconditional
+probability of the vector being nonzero across both observed and unobserved subjects. We cover
+models assuming a single constraint (identification assumption) on the K-dimensional distribution
+such that the target quantity is identified and the statistical model is unrestricted. We present
+solutions for linear and non-linear constraints commonly assumed to identify capture-recapture
+models, including no K-way interaction in linear and log-linear models, independence or conditional
+independence. We demonstrate that the choice of constraint has a dramatic impact on the value of
+the estimand, showing that it is crucial that the constraint is known to hold by design. For the commonly
+assumed constraint of no K-way interaction in a log-linear model, the statistical target parameter
+is only defined when each of the $2^K - 1$ observable capture patterns is present, and therefore suffers
+from the curse of dimensionality. We propose a targeted MLE based on undersmoothed lasso model to
+smooth across the cells while targeting the fit towards the single valued target parameter of interest.
+For each identification assumption, we provide simulated inference and confidence intervals
+to assess the performance on the estimator under correct and incorrect identifying assumptions.
+We apply the proposed method, alongside existing estimators, to estimate prevalence of a parasitic
+infection using multi-source surveillance data from a region in southwestern China, under the
+four identification assumptions. 

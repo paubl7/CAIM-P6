@@ -1,0 +1,19 @@
+Federated learning (FL) and split learning (SL) are state-of-the-art distributed machine learning
+techniques to enable machine learning training without accessing raw data on clients or end devices.
+However, their \emph{comparative training performance} under real-world resource-restricted
+Internet of Things (IoT) device settings, e.g., Raspberry Pi, remains barely studied, which, to
+our knowledge, have not yet been evaluated and compared, rendering inconvenient reference for
+practitioners. This work firstly provides empirical comparisons of FL and SL in real-world IoT
+settings regarding (i) learning performance with heterogeneous data distributions and (ii) on-device
+execution overhead. Our analyses in this work demonstrate that the learning performance of SL is
+better than FL under an imbalanced data distribution but worse than FL under an extreme non-IID data
+distribution. Recently, FL and SL are combined to form splitfed learning (SFL) to leverage each
+of their benefits (e.g., parallel training of FL and lightweight on-device computation requirement
+of SL). This work then considers FL, SL, and SFL, and mount them on Raspberry Pi devices to evaluate
+their performance, including training time, communication overhead, power consumption, and
+memory usage. Besides evaluations, we apply two optimizations. Firstly, we generalize SFL by carefully
+examining the possibility of a hybrid type of model training at the server-side. The generalized
+SFL merges sequential (dependent) and parallel (independent) processes of model training and
+is thus beneficial for a system with large-scaled IoT devices, specifically at the server-side
+operations. Secondly, we propose pragmatic techniques to substantially reduce the communication
+overhead by up to four times for the SL and (generalized) SFL. 

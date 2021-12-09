@@ -1,0 +1,19 @@
+Brain-Computer Interface (BCI) is a system empowering humans to communicate with or control the
+outside world with exclusively brain intentions. Electroencephalography (EEG) based BCIs are
+promising solutions due to their convenient and portable instruments. Motor imagery EEG (MI-EEG)
+is a kind of most widely focused EEG signals, which reveals a subjects movement intentions without
+actual actions. Despite the extensive research of MI-EEG in recent years, it is still challenging
+to interpret EEG signals effectively due to the massive noises in EEG signals (e.g., low signal noise
+ratio and incomplete EEG signals), and difficulties in capturing the inconspicuous relationships
+between EEG signals and certain brain activities. Most existing works either only consider EEG
+as chain-like sequences neglecting complex dependencies between adjacent signals or performing
+simple temporal averaging over EEG sequences. In this paper, we introduce both cascade and parallel
+convolutional recurrent neural network models for precisely identifying human intended movements
+by effectively learning compositional spatio-temporal representations of raw EEG streams. The
+proposed models grasp the spatial correlations between physically neighboring EEG signals by
+converting the chain like EEG sequences into a 2D mesh like hierarchy. An LSTM based recurrent network
+is able to extract the subtle temporal dependencies of EEG data streams. Extensive experiments
+on a large-scale MI-EEG dataset (108 subjects, 3,145,160 EEG records) have demonstrated that both
+models achieve high accuracy near 98.3% and outperform a set of baseline methods and most recent
+deep learning based EEG recognition models, yielding a significant accuracy increase of 18% in
+the cross-subject validation scenario. 

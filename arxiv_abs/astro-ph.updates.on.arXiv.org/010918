@@ -1,0 +1,18 @@
+Aims. We present a new radiation hydrodynamics code, called "ARK-RT" which uses a two-moment model
+with the M1 closure relation for radiative transfer. This code aims at being ready for high-performance
+computing, on exascale architectures. Methods. The two-moment model is solved using a finite volume
+scheme. The scheme is asymptotic preserving to capture accurately both optically thick and thin
+regimes. We also propose a well-balanced discretization of the radiative flux source term able
+to capture constant flux steady states with discontinuities in opacity. We use the library Trilinos
+for linear algebra and the package Kokkos allows us to reach high-performance computing and portability
+across different architectures, such as multi-core, many-core, and GP-GPU. Results. ARK-RT is
+able to reproduce standard tests in both free-streaming and diffusive limits, including purely
+radiative tests and radiation hydrodynamics ones. Using a time-implicit solver is profitable
+as soon as the time step given by the hydrodynamics is 50-100 times larger than the explicit time step
+for radiative transfer, depending on the preconditioner and the architecture. Albeit more work
+is needed to ensure stability in all circumstances. Using ARK-RT, we study the propagation of an
+ionization front in convective dense cores. We show that the ionization front is strongly stable
+against perturbations even with destabilizing convective motions. As a result, the presence of
+instabilities should be interpreted with caution. Overall, ARK-RT is well-suited to study many
+astrophysical problems involving convection and radiative transfer such as the dynamics of H ii
+regions in massive pre-stellar dense cores and future applications could include planetary atmospheres.

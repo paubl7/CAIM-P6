@@ -1,0 +1,19 @@
+Automated production systems (aPS) are highly customized systems that consist of hardware and
+software. Such aPS are controlled by a programmable logic controller (PLC), often in accordance
+with the IEC 61131-3 standard that divides system implementation into so-called program organization
+units (POUs) as the smallest software unit and is comprised of multiple textual and graphical programming
+languages that can be arbitrarily nested. A common practice during the development of such systems
+is reusing implementation artifacts by copying, pasting, and then modifying code. This approach
+is referred to as code cloning. It is used on a fine-granular level where a POU is cloned within a system
+variant. It is also applied on the coarse-granular system level, where the entire system is cloned
+and adapted to create a system variant, for example for another customer. This ad hoc practice for
+the development of variants is commonly referred to as clone-and-own. It allows the fast development
+of variants to meet varying customer requirements or altered regulatory guidelines. However,
+clone-and-own is a non-sustainable approach and does not scale with an increasing number of variants.
+It has a detrimental effect on the overall quality of a software system, such as the propagation of
+bugs to other variants, which harms maintenance. In order to support the effective development
+and maintenance of such systems, a detailed code clone analysis is required. On the one hand, an analysis
+of code clones within a variant (i.e., clone detection in the classical sense) supports experts
+in refactoring respective code into library components. On the other hand, an analysis of commonalities
+and differences between cloned variants (i.e., variability analysis) supports the maintenance
+and further reuse and facilitates the migration of variants into a software product line (SPL).

@@ -1,0 +1,18 @@
+Caching high-frequency reuse contents at the edge servers in the mobile edge computing (MEC) network
+omits the part of backhaul transmission and further releases the pressure of data traffic. However,
+how to efficiently decide the caching contents for edge servers is still an open problem, which refers
+to the cache capacity of edge servers, the popularity of each content, and the wireless channel quality
+during transmission. In this paper, we discuss the influence of unknown user density and popularity
+of content on the cache placement solution at the edge server. Specifically, towards the implementation
+of the cache placement solution in the practical network, there are two problems needing to be solved.
+First, the estimation of unknown users' preference needs a huge amount of records of users' previous
+requests. Second, the overlapping serving regions among edge servers cause the wrong estimation
+of users' preference, which hinders the individual decision of caching placement. To address the
+first issue, we propose a learning-based solution to adaptively optimize the cache placement policy.
+We develop the extended multi-armed bandit (Extended MAB), which combines the generalized global
+bandit (GGB) and Standard Multi-armed bandit (MAB). For the second problem, a multi-agent Extended
+MAB-based solution is presented to avoid the mis-estimation of parameters and achieve the decentralized
+cache placement policy. The proposed solution determines the primary time slot and secondary time
+slot for each edge server. The proposed strategies are proven to achieve the bounded regret according
+to the mathematical analysis. Extensive simulations verify the optimality of the proposed strategies
+when comparing with baselines. 

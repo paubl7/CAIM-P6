@@ -1,0 +1,19 @@
+Biomedical word embeddings are usually pre-trained on free text corpora with neural methods that
+capture local and global distributional properties. They are leveraged in downstream tasks using
+various neural architectures that are designed to optimize task-specific objectives that might
+further tune such embeddings. Since 2018, however, there is a marked shift from these static embeddings
+to contextual embeddings motivated by language models (e.g., ELMo, transformers such as BERT,
+and ULMFiT). These dynamic embeddings have the added benefit of being able to distinguish homonyms
+and acronyms given their context. However, static embeddings are still relevant in low resource
+settings (e.g., smart devices, IoT elements) and to study lexical semantics from a computational
+linguistics perspective. In this paper, we jointly learn word and concept embeddings by first using
+the skip-gram method and further fine-tuning them with correlational information manifesting
+in co-occurring Medical Subject Heading (MeSH) concepts in biomedical citations. This fine-tuning
+is accomplished with the BERT transformer architecture in the two-sentence input mode with a classification
+objective that captures MeSH pair co-occurrence. In essence, we repurpose a transformer architecture
+(typically used to generate dynamic embeddings) to improve static embeddings using concept correlations.
+We conduct evaluations of these tuned static embeddings using multiple datasets for word relatedness
+developed by previous efforts. Without selectively culling concepts and terms (as was pursued
+by previous efforts), we believe we offer the most exhaustive evaluation of static embeddings to
+date with clear performance improvements across the board. We provide our code and embeddings for
+public use for downstream applications and research endeavors: https://github.com/bionlproc/BERT-CRel-Embeddings

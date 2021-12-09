@@ -1,0 +1,18 @@
+To obtain extensive annotated data for under-resourced languages is challenging, so in this research,
+we have investigated whether it is beneficial to train models using multi-task learning. Sentiment
+analysis and offensive language identification share similar discourse properties. The selection
+of these tasks is motivated by the lack of large labelled data for user-generated code-mixed datasets.
+This paper works on code-mixed YouTube comments for Tamil, Malayalam, and Kannada languages. Our
+framework is applicable to other sequence classification problems irrespective of the size of
+the datasets. Experiments show that our multi-task learning model can achieve high results compared
+with single-task learning while reducing the time and space constraints required to train the models
+on individual tasks. Analysis of fine-tuned models indicates the preference of multi-task learning
+over single-task learning resulting in a higher weighted F1-score on all three languages. We apply
+two multi-task learning approaches to three Dravidian languages: Kannada, Malayalam, and Tamil.
+Maximum scores on Kannada and Malayalam were achieved by mBERT subjected to cross-entropy loss
+and with an approach of hard parameter sharing. Best scores on Tamil was achieved by DistilBERT subjected
+to cross-entropy loss with soft parameter sharing as the architecture type. For the tasks of sentiment
+analysis and offensive language identification, the best-performing model scored a weighted
+F1-score of (66.8\% and 90.5\%), (59\% and 70\%), and (62.1\% and 75.3\%) for Kannada, Malayalam,
+and Tamil on sentiment analysis and offensive language identification, respectively. The data
+and approaches discussed in this paper are published in Github\footnote{\href{https://github.com/SiddhanthHegde/Dravidian-MTL-Benchmarking}{Dravidian-MTL-Benchmarking}}.

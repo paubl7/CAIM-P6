@@ -1,0 +1,20 @@
+In this paper we present a theory for the refinement of shared-memory concurrent algorithms from
+specifications. Our approach avoids restrictive atomicity contraints. It provides a range of
+constructs for specifying concurrent programs and laws for refining these to code. We augment pre
+and post condition specifications with Jones' rely and guarantee conditions, which we encode as
+commands within a wide-spectrum language. Program components are specified using either partial
+and total correctness versions of end-to-end specifications. Operations on shared data structures
+and atomic machine operations (e.g. compare-and-swap) are specified using an atomic specification
+command. All the above constructs are defined in terms of a simple core language, based on four primitive
+commands and a handful of operators, and for which we have developed an extensive algebraic theory
+in Isabelle/HOL. For shared memory programs, expression evaluation is subject to fine-grained
+interference and we have avoided atomicity restrictions other than for read and write of primitive
+types (words). Expression evaluation and assignment commands are also defined in terms of our core
+language primitives, allowing laws for reasoning about them to be proven in the theory. Control
+structures such as conditionals, recursion and loops are all defined in terms of the core language.
+In developing the laws for refining to such structures from specifications we have taken care to
+develop laws that are as general as possible; our laws are typically more general than those found
+in the literature. In developing our concurrent refinement theory we have taken care to focus on
+the algebraic properties of our commands and operators, which has allowed us to reuse algebraic
+theories, including well-known theories, such as lattices and boolean algebra, as well as programming-specific
+algebras, such as our synchronous algebra. 

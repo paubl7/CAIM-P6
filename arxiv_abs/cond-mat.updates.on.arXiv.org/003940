@@ -1,0 +1,19 @@
+The inference performance of the pseudolikelihood method is discussed in the framework of the inverse
+Ising problem when the $\ell_2$-regularized (ridge) linear regression is adopted. This setup
+is introduced for theoretically investigating the situation where the data generation model is
+different from the inference one, namely the model mismatch situation. In the teacher-student
+scenario under the assumption that the teacher couplings are sparse, the analysis is conducted
+using the replica and cavity methods, with a special focus on whether the presence/absence of teacher
+couplings is correctly inferred or not. The result indicates that despite the model mismatch, one
+can perfectly identify the network structure using naive linear regression without regularization
+when the number of spins $N$ is smaller than the dataset size $M$, in the thermodynamic limit $N\to
+\infty$. Further, to access the underdetermined region $M < N$, we examine the effect of the $\ell_2$
+regularization, and find that biases appear in all the coupling estimates, preventing the perfect
+identification of the network structure. We, however, find that the biases are shown to decay exponentially
+fast as the distance from the center spin chosen in the pseudolikelihood method grows. Based on this
+finding, we propose a two-stage estimator: In the first stage, the ridge regression is used and the
+estimates are pruned by a relatively small threshold; in the second stage the naive linear regression
+is conducted only on the remaining couplings, and the resultant estimates are again pruned by another
+relatively large threshold. This estimator with the appropriate regularization coefficient
+and thresholds is shown to achieve the perfect identification of the network structure even in $0<M/N<1$.
+Results of extensive numerical experiments support these findings. 

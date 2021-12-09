@@ -1,0 +1,19 @@
+The affine rank minimization (ARM) problem is well known for both its applications and the fact that
+it is NP-hard. One of the most successful approaches, yet arguably underrepresented, is iteratively
+reweighted least squares (IRLS), more specifically $\mathrm{IRLS}$-$0$. Despite comprehensive
+empirical evidence that it overall outperforms nuclear norm minimization and related methods,
+it is still not understood to a satisfying degree. In particular, the significance of a slow decrease
+of the therein appearing regularization parameter denoted $\gamma$ poses interesting questions.
+While commonly equated to matrix recovery, we here consider the ARM independently. We investigate
+the particular structure and global convergence property behind the asymptotic minimization
+of the log-det objective function on which $\mathrm{IRLS}$-$0$ is based. We expand on local convergence
+theorems, now with an emphasis on the decline of $\gamma$, and provide representative examples
+as well as counterexamples such as a diverging $\mathrm{IRLS}$-$0$ sequence that clarify theoretical
+limits. We present a data sparse, alternating realization $\mathrm{AIRLS}$-$p$ (related to prior
+work under the name $\mathrm{SALSA}$) that, along with the rest of this work, serves as basis and
+introduction to the more general tensor setting. In conclusion, numerical sensitivity experiments
+are carried out that reconfirm the success of $\mathrm{IRLS}$-$0$ and demonstrate that in surprisingly
+many cases, a slower decay of $\gamma$ will yet lead to a solution of the ARM problem, up to the point
+that the exact theoretical phase transition for generic recoverability can be observed. Likewise,
+this suggests that non-convexity is less substantial and problematic for the log-det approach
+than it might initially appear. 

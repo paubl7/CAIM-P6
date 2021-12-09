@@ -1,0 +1,20 @@
+Recent enhancements in neuroscience, like the development of new and powerful recording techniques
+of the brain activity combined with the increasing anatomical knowledge provided by atlases and
+the growing understanding of neuromodulation principles, allow studying the brain at a whole new
+level, paving the way to the creation of extremely detailed effective network models directly from
+observed data. Leveraging the advantages of this integrated approach, we propose a method to infer
+models capable of reproducing the complex spatio-temporal dynamics of the slow waves observed
+in the experimental recordings of the cortical hemisphere of a mouse under anesthesia. To reliably
+claim the good match between data and simulations, we implemented a versatile ensemble of analysis
+tools, applicable to both experimental and simulated data and capable to identify and quantify
+the spatio-temporal propagation of waves across the cortex. In order to reproduce the observed
+slow wave dynamics, we introduced an inference procedure composed of two steps: the inner and the
+outer loop. In the inner loop, the parameters of a mean-field model are optimized by likelihood maximization,
+exploiting the anatomical knowledge to define connectivity priors. The outer loop explores "external"
+parameters, seeking for an optimal match between the simulation outcome and the data, relying on
+observables (speed, directions, and frequency of the waves) apt for the characterization of cortical
+slow waves; the outer loop includes a periodic neuro-modulation for better reproduction of the
+experimental recordings. We show that our model is capable to reproduce most of the features of the
+non-stationary and non-linear dynamics displayed by the biological network. Also, the proposed
+method allows to infer which are the relevant modifications of parameters when the brain state changes,
+e.g. according to anesthesia levels. 

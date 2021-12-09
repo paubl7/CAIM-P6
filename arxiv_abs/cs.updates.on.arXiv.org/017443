@@ -1,0 +1,19 @@
+Neural network test cases are meant to exercise different reasoning paths in an architecture and
+used to validate the prediction outcomes. In this paper, we introduce "computational profiles"
+as vectors of neuron activation levels. We investigate the distribution of computational profile
+likelihood of metamorphic test cases with respect to the likelihood distributions of training,
+test and error control cases. We estimate the non-parametric probability densities of neuron activation
+levels for each distinct output class. Probabilities are inferred using training cases only, without
+any additional knowledge about metamorphic test cases. Experiments are performed by training
+a network on the MNIST Fashion library of images and comparing prediction likelihoods with those
+obtained from error control-data and from metamorphic test cases. Experimental results show that
+the distributions of computational profile likelihood for training and test cases are somehow
+similar, while the distribution of the random-noise control-data is always remarkably lower than
+the observed one for the training and testing sets. In contrast, metamorphic test cases show a prediction
+likelihood that lies in an extended range with respect to training, tests, and random noise. Moreover,
+the presented approach allows the independent assessment of different training classes and experiments
+to show that some of the classes are more sensitive to misclassifying metamorphic test cases than
+other classes. In conclusion, metamorphic test cases represent very aggressive tests for neural
+network architectures. Furthermore, since metamorphic test cases force a network to misclassify
+those inputs whose likelihood is similar to that of training cases, they could also be considered
+as adversarial attacks that evade defenses based on computational profile likelihood evaluation.

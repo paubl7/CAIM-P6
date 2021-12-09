@@ -1,0 +1,18 @@
+This paper considers the balanced hypergraph partitioning problem, which asks for partitioning
+the vertices into $k$ disjoint blocks of bounded size while minimizing an objective function over
+the hyperedges. Here, we consider the most commonly used connectivity metric. We describe our open
+source hypergraph partitioner KaHyPar which is based on the successful multi-level approach --
+driving it to the extreme of one level for (almost) every vertex. Using carefully designed data structures
+and dynamic update techniques, this approach offers a very good time-quality tradeoff. We present
+two preprocessing techniques -- pin sparsification using locality sensitive hashing and community
+detection based on the Louvain algorithm. The community structure is used to guide the coarsening
+process that incrementally contracts vertices. Portfolio-based partitioning of the contracted
+hypergraph already achieves good initial solutions. While reversing the contractions, a combination
+of highly-localized direct $k$-way local search and flow-based techniques that take a more global
+view, refine the partition to achieve high quality. Optionally, a memetic algorithm evolves a pool
+of solution candidates to obtain even higher quality. We evaluate KaHyPar on a large set of instances
+from a wide range of application domains. With respect to quality, KaHyPar outperforms all previously
+considered systems that can handle large hypergraphs such as hMETIS, PaToH, Mondriaan, or Zoltan.
+KaHyPar is also faster than most of these systems except for PaToH which represents a different speed-quality
+tradeoff. The results even extend to the special case of graph partitioning, where specialized
+systems such as KaHIP should have an advantage. 

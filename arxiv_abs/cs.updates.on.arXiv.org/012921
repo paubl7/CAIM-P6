@@ -1,0 +1,19 @@
+Optimal decision-making in social settings is often based on forecasts from time series (TS) data.
+Recently, several approaches using deep neural networks (DNNs) such as recurrent neural networks
+(RNNs) have been introduced for TS forecasting and have shown promising results. However, the applicability
+of these approaches is being questioned for TS settings where there is a lack of quality training
+data and where the TS to forecast exhibit complex behaviors. Examples of such settings include financial
+TS forecasting, where producing accurate and consistent long-term forecasts is notoriously difficult.
+In this work, we investigate whether DNN-based models can be used to forecast these TS conjointly
+by learning a joint representation of the series instead of computing the forecast from the raw time-series
+representations. To this end, we make use of the dynamic factor graph (DFG) to build a multivariate
+autoregressive model. We investigate a common limitation of RNNs that rely on the DFG framework
+and propose a novel variable-length attention-based mechanism (ACTM) to address it. With ACTM,
+it is possible to vary the autoregressive order of a TS model over time and model a larger set of probability
+distributions than with previous approaches. Using this mechanism, we propose a self-supervised
+DNN architecture for multivariate TS forecasting that learns and takes advantage of the relationships
+between them. We test our model on two datasets covering 19 years of investment fund activities.
+Our experimental results show that the proposed approach significantly outperforms typical DNN-based
+and statistical models at forecasting the 21-day price trajectory. We point out how improving forecasting
+accuracy and knowing which forecaster to use can improve the excess return of autonomous trading
+strategies. 

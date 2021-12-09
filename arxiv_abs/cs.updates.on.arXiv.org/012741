@@ -1,0 +1,19 @@
+Federated Learning (FL) and Split Learning (SL) are privacy-preserving Machine-Learning (ML)
+techniques that enable training ML models over data distributed among clients without requiring
+direct access to their raw data. Existing FL and SL approaches work on horizontally or vertically
+partitioned data and cannot handle sequentially partitioned data where segments of multiple-segment
+sequential data are distributed across clients. In this paper, we propose a novel federated split
+learning framework, FedSL, to train models on distributed sequential data. The most common ML models
+to train on sequential data are Recurrent Neural Networks (RNNs). Since the proposed framework
+is privacy preserving, segments of multiple-segment sequential data cannot be shared between
+clients or between clients and server. To circumvent this limitation, we propose a novel SL approach
+tailored for RNNs. A RNN is split into sub-networks, and each sub-network is trained on one client
+containing single segments of multiple-segment training sequences. During local training, the
+sub-networks on different clients communicate with each other to capture latent dependencies
+between consecutive segments of multiple-segment sequential data on different clients, but without
+sharing raw data or complete model parameters. After training local sub-networks with local sequential
+data segments, all clients send their sub-networks to a federated server where sub-networks are
+aggregated to generate a global model. The experimental results on simulated and real-world datasets
+demonstrate that the proposed method successfully train models on distributed sequential data,
+while preserving privacy, and outperforms previous FL and centralized learning approaches in
+terms of achieving higher accuracy in fewer communication rounds. 

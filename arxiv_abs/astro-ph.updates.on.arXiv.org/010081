@@ -1,0 +1,20 @@
+Cosmological simulations of reionization often treat radiative transfer by solving for the monopole
+and dipoles of the intensity field and by making ansatz for the quadrupole moments to close the system
+of equations. We investigate the accuracy of the most common closure methods, i.e. Eddington tensor
+choices. We argue that these algorithms are most likely to err at the end of and after reionization
+and study test problems mimicking these situations: large-scale post-reionization ionizing
+background fluctuations and radiative transfer in a predominantly ionized medium with discrete
+absorbers. We show that OTVET and M1 over-ionize Lyman-limit systems when fixing the background
+photoionization rate, leading to 30-40% higher emissivity to balance the increased recombination.
+This over-ionization results in a simulation run with these algorithms having a factor of ~2 lower
+average metagalactic photoionization rate relative to truth given an ionizing emissivity. Furthermore,
+these algorithms are unlikely to reproduce ionizing background fluctuations on scales below the
+photon mean path: OTVET tends to overpredict the fluctuations there when the simulation box is smaller
+than twice the mean free path and underpredict otherwise, while M1 drastically underpredicts these
+fluctuations. As a result, these numerical methods are likely not sufficiently accurate to interpret
+the Ly$\alpha$ forest opacity fluctuations observed after reionzation. We show that a high number
+of angular directions need to be followed to capture the post-reionization ionizing background
+fluctuations accurately with ray-tracing codes. Lastly, we argue that the strong dependence of
+the post-reionization ionizing background on the value of the reduced speed of light found in many
+simulations signals that the ionizing photon mean free path is several times larger in such simulations
+than the observationally measured value. 

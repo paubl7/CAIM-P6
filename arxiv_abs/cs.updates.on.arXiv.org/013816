@@ -1,0 +1,19 @@
+Traditional orthogonal range problems allow queries over a static set of points, each with some
+value. Dynamic variants allow points to be added or removed, one at a time. To support more powerful
+updates, we introduce the Grid Range class of data structure problems over integer arrays in one
+or more dimensions. These problems allow range updates (such as filling all cells in a range with
+a constant) and queries (such as finding the sum or maximum of values in a range). In this work, we consider
+these operations along with updates that replace each cell in a range with the minimum, maximum,
+or sum of its existing value, and a constant. In one dimension, it is known that segment trees can be
+leveraged to facilitate any $n$ of these operations in $\tilde{O}(n)$ time overall. Other than
+a few specific cases, until now, higher dimensional variants have been largely unexplored. We show
+that no truly subquadratic time algorithm can support certain pairs of these updates simultaneously
+without falsifying several popular conjectures. On the positive side, we show that truly subquadratic
+algorithms can be obtained for variants induced by other subsets. We provide two approaches to designing
+such algorithms that can be generalised to online and higher dimensional settings. First, we give
+almost-tight $\tilde{O}(n^{3/2})$ time algorithms for single-update variants where the update
+operation distributes over the query operation. Second, for other variants, we provide a general
+framework for reducing to instances with a special geometry. Using this, we show that $O(m^{3/2-\epsilon})$
+time algorithms for counting paths and walks of length 2 and 3 between vertex pairs in sparse graphs
+imply truly subquadratic data structures for certain variants; to this end, we give an $\tilde{O}(m^{(4\omega-1)/(2\omega+1)})
+= O(m^{1.478})$ time algorithm for counting simple 3-paths between vertex pairs. 

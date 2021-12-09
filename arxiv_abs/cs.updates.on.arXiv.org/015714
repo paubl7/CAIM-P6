@@ -1,0 +1,19 @@
+Inter-observer variation is a significant problem in clinical target volume(CTV) segmentation
+in postoperative settings, where there is no gross tumor present. In this scenario, the CTV is not
+an anatomically established structure, but one determined by the physician based on the clinical
+guideline used, the preferred tradeoff between tumor control and toxicity, their experience and
+training background, and other factors. This results in high inter-observer variability between
+physicians. This variability has been considered an issue, but the absence of multiple physician
+CTV contours for each patient and the significant amount of time required for dose planning have
+made it impractical to study its dosimetric consequences. In this study, we analyze the impact that
+variations in physician style have on dose to organs-at-risk(OAR) by simulating the clinical workflow
+via deep learning. For a given patient previously treated by one physician, we use deep learning-based
+tools to simulate how other physicians would contour the CTV and how the corresponding dose distributions
+would look for this patient. To simulate multiple physician styles, we use a previously developed
+in-house CTV segmentation model that can produce physician style-aware segmentations. The corresponding
+dose distribution is predicted using another in-house deep learning tool, which, can predict dose
+within 3% of the prescription dose, on average, on the test data. For every test patient, four different
+physician style CTVs are considered, and four different dose distributions are analyzed. OAR dose
+metrics are compared, showing that even though physician style variations result in organs getting
+different doses, all the important dose metrics except Maximum Dose point are within the clinically
+acceptable limit. 

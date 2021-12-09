@@ -1,0 +1,20 @@
+Sharding is the prevalent approach to breaking the trilemma of simultaneously achieving decentralization,
+security, and scalability in traditional blockchain systems, which are implemented as replicated
+state machines relying on atomic broadcast for consensus on an immutable chain of valid transactions.
+Sharding is to be understood broadly as techniques for dynamically partitioning nodes in a blockchain
+system into subsets (shards) that perform storage, communication, and computation tasks without
+fine-grained synchronization with each other. Despite much recent research on sharding blockchains,
+much remains to be explored in the design space of these systems. Towards that aim, we conduct a systematic
+analysis of existing sharding blockchain systems and derive a conceptual decomposition of their
+architecture into functional components and the underlying assumptions about system models and
+attackers they are built on. The functional components identified are node selection, epoch randomness,
+node assignment, intra-shard consensus, cross-shard transaction processing, shard reconfiguration,
+and motivation mechanism. We describe interfaces, functionality, and properties of each component
+and show how they compose into a sharding blockchain system. For each component, we systematically
+review existing approaches, identify potential and open problems, and propose future research
+directions. We focus on potential security attacks and performance problems, including system
+throughput and latency concerns such as confirmation delays. We believe our modular architectural
+decomposition and in-depth analysis of each component, based on a comprehensive literature study,
+provides a systematic basis for conceptualizing state-of-the-art sharding blockchain systems,
+proving or improving security and performance properties of components, and developing new sharding
+blockchain system designs. 

@@ -1,0 +1,18 @@
+Anomaly detection has attracted considerable search attention. However, existing anomaly detection
+databases encounter two major problems. Firstly, they are limited in scale. Secondly, training
+sets contain only video-level labels indicating the existence of an abnormal event during the full
+video while lacking annotations of precise time durations. To tackle these problems, we contribute
+a new Large-scale Anomaly Detection (LAD) database as the benchmark for anomaly detection in video
+sequences, which is featured in two aspects. 1) It contains 2000 video sequences including normal
+and abnormal video clips with 14 anomaly categories including crash, fire, violence, etc. with
+large scene varieties, making it the largest anomaly analysis database to date. 2) It provides the
+annotation data, including video-level labels (abnormal/normal video, anomaly type) and frame-level
+labels (abnormal/normal video frame) to facilitate anomaly detection. Leveraging the above benefits
+from the LAD database, we further formulate anomaly detection as a fully-supervised learning problem
+and propose a multi-task deep neural network to solve it. We first obtain the local spatiotemporal
+contextual feature by using an Inflated 3D convolutional (I3D) network. Then we construct a recurrent
+convolutional neural network fed the local spatiotemporal contextual feature to extract the spatiotemporal
+contextual feature. With the global spatiotemporal contextual feature, the anomaly type and score
+can be computed simultaneously by a multi-task neural network. Experimental results show that
+the proposed method outperforms the state-of-the-art anomaly detection methods on our database
+and other public databases of anomaly detection. Codes are available at https://github.com/wanboyang/anomaly_detection_LAD2000.

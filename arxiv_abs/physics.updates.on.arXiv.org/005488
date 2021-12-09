@@ -1,0 +1,19 @@
+Compliance of member States to the Treaty on the Non-Proliferation of Nuclear Weapons is monitored
+through nuclear safeguards. The Passive Gamma Emission Tomography system is a novel instrument
+developed by the International Atomic Energy Agency (IAEA) for the verification of spent nuclear
+fuel stored in water pools. Advanced image reconstruction techniques are crucial for obtaining
+high-quality cross-sectional images of the spent-fuel bundle to allow inspectors of the IAEA to
+monitor nuclear material and promptly identify its diversion. In this work, we have developed a
+software suite to accurately reconstruct the spent-fuel cross sectional image, automatically
+identify present fuel rods, and estimate their activity. Unique image reconstruction challenges
+are posed by the measurement of spent fuel, due to its high activity and the self-attenuation. We
+implemented a linear forward model to model the detector responses to the fuel rods inside the PGET.
+The image reconstruction is performed by solving a regularized linear inverse problem using the
+fast-iterative shrinkage-thresholding algorithm. We have also implemented the traditional
+filtered back projection method for comparison and applied both methods to reconstruct images
+of simulated mockup fuel assemblies. Higher image resolution and fewer reconstruction artifacts
+were obtained with the inverse-problem approach, with the mean-square-error reduced by 50%, and
+the structural-similarity improved by 200%. We then used a convolutional neural network to automatically
+identify the bundle type and extract the pin locations from the images; the estimated activity levels
+finally being compared with the ground truth. The proposed computational methods accurately estimated
+the activity levels of the present pins, with an associated uncertainty of approximately 5%. 

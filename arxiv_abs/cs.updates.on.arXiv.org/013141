@@ -1,0 +1,18 @@
+We study generalization under label shift in domain adaptation where the learner has access to labeled
+samples from the source domain but unlabeled samples from the target domain. Prior works deploy
+label classifiers and introduce various methods to estimate the importance weights from source
+to target domains. They use these estimates in importance weighted empirical risk minimization
+to learn classifiers. In this work, we theoretically compare the prior approaches, relax their
+strong assumptions, and generalize them from requiring label classifiers to general functions.
+This latter generalization improves the conditioning on the inverse operator of the induced inverse
+problems by allowing for broader exploitation of the spectrum of the forward operator. The prior
+works in the study of label shifts are limited to categorical label spaces. In this work, we propose
+a series of methods to estimate the importance weight functions for arbitrary normed label spaces.
+We introduce a new operator learning approach between Hilbert spaces defined on labels (rather
+than covariates) and show that it induces a perturbed inverse problem of compact operators. We propose
+a novel approach to solve the inverse problem in the presence of perturbation. This analysis has
+its own independent interest since such problems commonly arise in partial differential equations
+and reinforcement learning. For both categorical and general normed spaces, we provide concentration
+bounds for the proposed estimators. Using the existing generalization analysis based on Rademacher
+complexity, R\'enyi divergence, and MDFR lemma in Azizzadenesheli et al. [2019], we show the generalization
+property of the importance weighted empirical risk minimization on the unseen target domain. 

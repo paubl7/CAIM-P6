@@ -1,0 +1,20 @@
+Viscosity ($\eta$) is one of the most important properties of disordered matter. The temperature-dependence
+of viscosity is used to adjust process variables for glass-making, from melting to annealing. The
+aim of this work was to develop a physics-informed machine learning model capable of predicting
+$\eta(T)$ of oxide liquids. Instead of predicting the viscosity itself, the NN predicts the parameters
+of the MYEGA viscosity equation: the liquid's fragility index, the glass transition temperature,
+and the asymptotic viscosity. With these parameters, $\eta$ can be computed at any temperature
+of interest, with the advantage of good extrapolation capabilities inherent to the MYEGA equation.
+The dataset was collected from the SciGlass database; only oxide liquids with enough data points
+in the high and low viscosity regions were selected, resulting in a final dataset with 17,584 data
+points containing 847 different liquids. About 600 features were engineered from the liquids'
+chemical composition and 35 of these features were selected using a feature selection protocol.
+The hyperparameter (HP) tuning of the NN was performed in a set of experiments using both random search
+and Bayesian strategies, where a total of 700 HP sets were tested. The most successful HP sets were
+further tested using 10-fold cross-validation, and the one with the lowest average validation
+loss was selected as the best set. The final trained NN was tested with a test dataset of 85 liquids
+with different compositions than those used for training and validating the NN. The $R^2$ for the
+test dataset's prediction was 0.97. This work introduces three advantages: the model can predict
+viscosity as well as the liquids' glass transition temperature and fragility index; the model is
+designed and trained with a focus on extrapolation; finally, the model is available as free and open-source
+software licensed under the GPL3. 

@@ -1,0 +1,19 @@
+We formulate a data-driven, physics-constrained closure method for coarse-scale numerical simulations
+of turbulent fluid flows. Our approach involves a closure scheme that is non-local both in space
+and time, i.e. the closure terms are parametrized in terms of the spatial neighborhood of the resolved
+quantities but also their history. The data-driven scheme is complemented with a physical constrain
+expressing the energy conservation property of the nonlinear advection terms. We show that the
+adoption of this physical constrain not only increases the accuracy of the closure scheme but also
+improves the stability properties of the formulated coarse-scale model. We demonstrate the presented
+scheme in fluid flows consisting of an incompressible two-dimensional turbulent jet. Specifically,
+we first develop one-dimensional coarse-scale models describing the spatial profile of the jet.
+We then proceed to the computation of turbulent closures appropriate for two-dimensional coarse-scale
+models. Training data are obtained through high-fidelity direct numerical simulations (DNS).
+We also showcase how the developed scheme captures the coarse-scale features of the concentration
+fields associated with inertial tracers, such as bubbles and particles, carried by the flow but
+not following the flow. We thoroughly examine the generalizability properties of the trained closure
+models for different Reynolds numbers, as well as, radically different jet profiles from the ones
+used in the training phase. We also examine the robustness of the derived closures with respect to
+the grid size. Overall the adoption of the constraint results in an average improvement of 26% for
+one-dimensional closures and 29% for two-dimensional closures, being notably larger for flows
+that were not used for training. 

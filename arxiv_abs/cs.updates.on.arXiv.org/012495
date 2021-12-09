@@ -1,0 +1,19 @@
+Social recommender systems are expected to improve recommendation quality by incorporating social
+information when there is little user-item interaction data. However, recent reports from industry
+show that social recommender systems consistently fail in practice. According to the negative
+findings, the failure is attributed to: (1) A majority of users only have a very limited number of
+neighbors in social networks and can hardly benefit from social relations; (2) Social relations
+are noisy but they are indiscriminately used; (3) Social relations are assumed to be universally
+applicable to multiple scenarios while they are actually multi-faceted and show heterogeneous
+strengths in different scenarios. Most existing social recommendation models only consider the
+homophily in social networks and neglect these drawbacks. In this paper we propose a deep adversarial
+framework based on graph convolutional networks (GCN) to address these problems. Concretely,
+for (1) and (2), a GCN-based autoencoder is developed to augment the relation data by encoding high-order
+and complex connectivity patterns, and meanwhile is optimized subject to the constraint of reconstructing
+the social profile to guarantee the validity of the identified neighborhood. After obtaining enough
+purified social relations for each user, a GCN-based attentive social recommendation module is
+designed to address (3) by capturing the heterogeneous strengths of social relations. Finally,
+we adopt adversarial training to unify all the components by playing a Minimax game and ensure a coordinated
+effort to enhance recommendation performance. Extensive experiments on multiple open datasets
+demonstrate the superiority of our framework and the ablation study confirms the importance and
+effectiveness of each component. 

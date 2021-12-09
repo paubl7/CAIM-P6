@@ -1,0 +1,19 @@
+Numerous recent studies have demonstrated how Deep Neural Network (DNN) classifiers can be fooled
+by adversarial examples, in which an attacker adds perturbations to an original sample, causing
+the classifier to misclassify the sample. Adversarial attacks that render DNNs vulnerable in real
+life represent a serious threat in autonomous vehicles, malware filters, or biometric authentication
+systems. In this paper, we apply Fast Gradient Sign Method to introduce perturbations to a facial
+image dataset and then test the output on a different classifier that we trained ourselves, to analyze
+transferability of this method. Next, we craft a variety of different black-box attack algorithms
+on a facial image dataset assuming minimal adversarial knowledge, to further assess the robustness
+of DNNs in facial recognition. While experimenting with different image distortion techniques,
+we focus on modifying single optimal pixels by a large amount, or modifying all pixels by a smaller
+amount, or combining these two attack approaches. While our single-pixel attacks achieved about
+a 15% average decrease in classifier confidence level for the actual class, the all-pixel attacks
+were more successful and achieved up to an 84% average decrease in confidence, along with an 81.6%
+misclassification rate, in the case of the attack that we tested with the highest levels of perturbation.
+Even with these high levels of perturbation, the face images remained identifiable to a human. Understanding
+how these noised and perturbed images baffle the classification algorithms can yield valuable
+advances in the training of DNNs against defense-aware adversarial attacks, as well as adaptive
+noise reduction techniques. We hope our research may help to advance the study of adversarial attacks
+on DNNs and defensive mechanisms to counteract them, particularly in the facial recognition domain.

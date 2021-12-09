@@ -1,0 +1,18 @@
+Deep learning approaches may help radiologists in the early diagnosis and timely treatment of cerebrovascular
+diseases. Accurate cerebral vessel segmentation of Time-of-Flight Magnetic Resonance Angiographs
+(TOF-MRAs) is an essential step in this process. This study investigates deep learning approaches
+for automatic, fast and accurate cerebrovascular segmentation for TOF-MRAs. The performance
+of several data augmentation and selection methods for training a 2D and 3D U-Net for vessel segmentation
+was investigated in five experiments: a) without augmentation, b) Gaussian blur, c) rotation and
+flipping, d) Gaussian blur, rotation and flipping and e) different input patch sizes. All experiments
+were performed by patch-training both a 2D and 3D U-Net and predicted on a test set of MRAs. Ground
+truth was manually defined using an interactive threshold and region growing method. The performance
+was evaluated using the Dice Similarity Coefficient (DSC), Modified Hausdorff Distance and Volumetric
+Similarity, between the predicted images and the interactively defined ground truth. The segmentation
+performance of all trained networks on the test set was found to be good, with DSC scores ranging from
+0.72 to 0.83. Both the 2D and 3D U-Net had the best segmentation performance with Gaussian blur, rotation
+and flipping compared to other experiments without augmentation or only one of those augmentation
+techniques. Additionally, training on larger patches or slices gave optimal segmentation results.
+In conclusion, vessel segmentation can be optimally performed on TOF-MRAs using a trained 3D U-Net
+on larger patches, where data augmentation including Gaussian blur, rotation and flipping was
+performed on the training data. 

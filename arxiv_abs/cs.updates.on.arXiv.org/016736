@@ -1,0 +1,18 @@
+Massive access is a critical design challenge of Internet of Things (IoT) networks. In this paper,
+we consider the grant-free uplink transmission of an IoT network with a multiple-antenna base station
+(BS) and a large number of single-antenna IoT devices. Taking into account the sporadic nature of
+IoT devices, we formulate the joint activity detection and channel estimation (JADCE) problem
+as a group-sparse matrix estimation problem. This problem can be solved by applying the existing
+compressed sensing techniques, which however either suffer from high computational complexities
+or lack of algorithm robustness. To this end, we propose a novel algorithm unrolling framework based
+on the deep neural network to simultaneously achieve low computational complexity and high robustness
+for solving the JADCE problem. Specifically, we map the original iterative shrinkage thresholding
+algorithm (ISTA) into an unrolled recurrent neural network (RNN), thereby improving the convergence
+rate and computational efficiency through end-to-end training. Moreover, the proposed algorithm
+unrolling approach inherits the structure and domain knowledge of the ISTA, thereby maintaining
+the algorithm robustness, which can handle non-Gaussian preamble sequence matrix in massive access.
+With rigorous theoretical analysis, we further simplify the unrolled network structure by reducing
+the redundant training parameters. Furthermore, we prove that the simplified unrolled deep neural
+network structures enjoy a linear convergence rate. Extensive simulations based on various preamble
+signatures show that the proposed unrolled networks outperform the existing methods in terms of
+the convergence rate, robustness and estimation accuracy. 

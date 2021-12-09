@@ -1,0 +1,19 @@
+Black-box Artificial Intelligence (AI) methods, e.g. deep neural networks, have been widely utilized
+to build predictive models that can extract complex relationships in a dataset and make predictions
+for new unseen data records. However, it is difficult to trust decisions made by such methods since
+their inner working and decision logic is hidden from the user. Explainable Artificial Intelligence
+(XAI) refers to systems that try to explain how a black-box AI model produces its outcomes. Post-hoc
+XAI methods approximate the behavior of a black-box by extracting relationships between feature
+values and the predictions. Perturbation-based and decision set methods are among commonly used
+post-hoc XAI systems. The former explanators rely on random perturbations of data records to build
+local or global linear models that explain individual predictions or the whole model. The latter
+explanators use those feature values that appear more frequently to construct a set of decision
+rules that produces the same outcomes as the target black-box. However, these two classes of XAI
+methods have some limitations. Random perturbations do not take into account the distribution
+of feature values in different subspaces, leading to misleading approximations. Decision sets
+only pay attention to frequent feature values and miss many important correlations between features
+and class labels that appear less frequently but accurately represent decision boundaries of the
+model. In this paper, we address the above challenges by proposing an explanation method named Confident
+Itemsets Explanation (CIE). We introduce confident itemsets, a set of feature values that are highly
+correlated to a specific class label. CIE utilizes confident itemsets to discretize the whole decision
+space of a model to smaller subspaces. 

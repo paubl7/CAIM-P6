@@ -1,0 +1,20 @@
+Detecting semantically similar functions -- a crucial analysis capability with broad real-world
+security usages including vulnerability detection, malware lineage, and forensics -- requires
+understanding function behaviors and intentions. This task is challenging as semantically similar
+functions can be implemented differently, run on different architectures, and compiled with diverse
+compiler optimizations or obfuscations. Most existing approaches match functions based on syntactic
+features without understanding the functions' execution semantics. We present Trex, a transfer-learning-based
+framework, to automate learning execution semantics explicitly from functions' micro-traces
+and transfer the learned knowledge to match semantically similar functions. Our key insight is
+that these traces can be used to teach an ML model the execution semantics of different sequences
+of instructions. We thus train the model to learn execution semantics from the functions' micro-traces,
+without any manual labeling effort. We then develop a novel neural architecture to learn execution
+semantics from micro-traces, and we finetune the pretrained model to match semantically similar
+functions. We evaluate Trex on 1,472,066 function binaries from 13 popular software projects.
+These functions are from different architectures and compiled with various optimizations and
+obfuscations. Trex outperforms the state-of-the-art systems by 7.8%, 7.2%, and 14.3% in cross-architecture,
+optimization, and obfuscation function matching, respectively. Ablation studies show that the
+pretraining significantly boosts the function matching performance, underscoring the importance
+of learning execution semantics. Moreover, our extensive case studies demonstrate the practical
+use-cases of Trex -- on 180 real-world firmware images, Trex uncovers 16 vulnerabilities that have
+not been disclosed by any previous studies. 

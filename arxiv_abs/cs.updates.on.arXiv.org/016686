@@ -1,0 +1,19 @@
+Recent works demonstrated the promise of using resistive random access memory (ReRAM) as an emerging
+technology to perform inherently parallel analog domain in-situ matrix-vector multiplication
+-- the intensive and key computation in DNNs. With weights stored in the ReRAM crossbar cells as conductance,
+when the input vector is applied to word lines, the matrix-vector multiplication results can be
+generated as the current in bit lines. A key problem is that the weight can be either positive or negative,
+but the in-situ computation assumes all cells on each crossbar column with the same sign. The current
+architectures either use two ReRAM crossbars for positive and negative weights, or add an offset
+to weights so that all values become positive. Neither solution is ideal: they either double the
+cost of crossbars, or incur extra offset circuity. To better solve this problem, this paper proposes
+FORMS, a fine-grained ReRAM-based DNN accelerator with polarized weights. Instead of trying to
+represent the positive/negative weights, our key design principle is to enforce exactly what is
+assumed in the in-situ computation -- ensuring that all weights in the same column of a crossbar have
+the same sign. It naturally avoids the cost of an additional crossbar. Such weights can be nicely
+generated using alternating direction method of multipliers (ADMM) regularized optimization,
+which can exactly enforce certain patterns in DNN weights. To achieve high accuracy, we propose
+to use fine-grained sub-array columns, which provide a unique opportunity for input zero-skipping,
+significantly avoiding unnecessary computations. It also makes the hardware much easier to implement.
+Putting all together, with the same optimized models, FORMS achieves significant throughput improvement
+and speed up in frame per second over ISAAC with similar area cost. 

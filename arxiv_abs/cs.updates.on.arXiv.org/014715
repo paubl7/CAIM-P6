@@ -1,0 +1,19 @@
+Hardware/Software (HW/SW) co-designed processors provide a promising solution to the power and
+complexity problems of the modern microprocessors by keeping their hardware simple. Moreover,
+they employ several runtime optimizations to improve the performance. One of the most potent optimizations,
+vectorization, has been utilized by modern microprocessors, to exploit the data level parallelism
+through SIMD accelerators. Due to their hardware simplicity, these accelerators have evolved
+in terms of width from 64-bit vectors in Intel MMX to 512-bit wide vector units in Intel Xeon Phi and
+AVX-512. Although SIMD accelerators are simple in terms of hardware design, code generation for
+them has always been a challenge. Moreover, increasing vector lengths with each new generation
+add to this complexity. This paper explores the scalability of SIMD accelerators from the code generation
+point of view. We discover that the SIMD accelerators remain underutilized at higher vector lengths
+mainly due to: a) reduced dynamic instruction stream coverage for vectorization and b) increase
+in permutations. Both of these factors can be attributed to the rigidness of the SIMD architecture.
+We propose a novel SIMD architecture that possesses the flexibility needed to support higher vector
+lengths. Furthermore, we propose Variable Length Vectorization and Selective Writing in a HW/SW
+co-designed environment to transparently target the flexibility of the proposed architecture.
+We evaluate our proposals using a set of SPECFP2006 and Physicsbench applications. Our experimental
+results show an average dynamic instruction reduction of 31% and 40% and an average speed up of 13%
+and 10% for SPECFP2006 and Physicsbench respectively, for 512-bit vector length, over the scalar
+baseline code. 

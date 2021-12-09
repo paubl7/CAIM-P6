@@ -1,0 +1,19 @@
+Sparse codes in neuroscience have been suggested to offer certain computational advantages over
+other neural representations of sensory data. To explore this viewpoint, a sparse code is used to
+represent natural images in an optimal control task solved with neuro-dynamic programming, and
+its computational properties are investigated. The central finding is that when feature inputs
+to a linear network are correlated, an over-complete sparse code increases the memory capacity
+of the network in an efficient manner beyond that possible for any complete code with the same-sized
+input, and also increases the speed of learning the network weights. A complete sparse code is found
+to maximise the memory capacity of a linear network by decorrelating its feature inputs to transform
+the design matrix of the least-squares problem to one of full rank. It also conditions the Hessian
+matrix of the least-squares problem, thereby increasing the rate of convergence to the optimal
+network weights. Other types of decorrelating codes would also achieve this. However, an over-complete
+sparse code is found to be approximately decorrelated, extracting a larger number of approximately
+decorrelated features from the same-sized input, allowing it to efficiently increase memory capacity
+beyond that possible for any complete code: a 2.25 times over-complete sparse code is shown to at
+least double memory capacity compared with a complete sparse code using the same input. This is used
+in sequential learning to store a potentially large number of optimal control tasks in the network,
+while catastrophic forgetting is avoided using a partitioned representation, yielding a cost-to-go
+function approximator that generalizes over the states in each partition. Sparse code advantages
+over dense codes and local codes are also discussed. 

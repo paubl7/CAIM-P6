@@ -1,0 +1,19 @@
+Turbulent flow control has numerous applications and building reduced-order models (ROMs) of
+the flow and the associated feedback control laws is extremely challenging. Despite the complexity
+of building data-driven ROMs for turbulence, the superior representational capacity of deep neural
+networks has demonstrated considerable success in learning ROMs. Nevertheless, these strategies
+are typically devoid of physical foundations and often lack interpretability. Conversely, the
+Proper Orthogonal Decomposition (POD) based Galerkin projection (GP) approach for ROM has been
+popular in many problems owing to its theoretically consistent and explainable physical foundations.
+However, a key limitation is that the ordinary differential equations (ODEs) arising from GP ROMs
+are highly susceptible to instabilities due to truncation of POD modes and lead to deterioration
+in temporal predictions. In this work, we propose a \textit{differentiable programming} approach
+that blends the strengths of both these strategies, by embedding neural networks explicitly into
+the GP ODE structure, termed Neural Galerkin projection. We demonstrate this approach on the isentropic
+Navier-Stokes equations for compressible flow over a cavity at a moderate Mach number. When provided
+the structure of the projected equations, we show that the Neural Galerkin approach implicitly
+learns stable ODE coefficients from POD coefficients and demonstrates significantly longer and
+accurate time horizon predictions, when compared to the classical POD-GP assisted by calibration.
+We observe that the key benefits of this differentiable programming-based approach include increased
+flexibility in physics-based learning, very low computational costs, and a significant increase
+in interpretability, when compared to purely data-driven neural networks. 

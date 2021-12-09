@@ -1,0 +1,20 @@
+For the General Factor problem we are given an undirected graph $G$ and for each vertex $v\in V(G)$
+a finite set $B_v$ of non-negative integers. The task is to decide if there is a subset $S\subseteq
+E(G)$ such that $deg_S(v)\in B_v$ for all vertices $v$ of $G$. The maxgap of a finite integer set $B$
+is the largest $d\ge 0$ such that there is an $a\ge 0$ with $[a,a+d+1]\cap B=\{a,a+d+1\}$. Cornu\'ejols
+(1988) showed that if the maxgap of all sets $B_v$ is at most 1, then the decision version of General
+Factor is poly-time solvable. Dudycz and Paluch (2018) extended this result for the minimization
+and maximization versions. Using convolution techniques from van Rooij (2020), we improve upon
+the previous algorithm by Arulselvan et al. (2018) and present an algorithm counting the number
+of solutions of a certain size in time $O^*((M+1)^k)$, given a tree decomposition of width $k$, where
+$M=\max_v \max B_v$. We prove that this algorithm is essentially optimal for all cases that are not
+polynomial time solvable for the decision, minimization or maximization versions. We prove that
+such improvements are not possible even for $B$-Factor, which is General Factor on graphs where
+all sets $B_v$ agree with the fixed set $B$. We show that for every fixed $B$ where the problem is NP-hard,
+our new algorithm cannot be significantly improved: assuming the Strong Exponential Time Hypothesis
+(SETH), no algorithm can solve $B$-Factor in time $O^*((\max B+1-\epsilon)^k)$ for any $\epsilon>0$.
+We extend this bound to the counting version of $B$-Factor for arbitrary, non-trivial sets $B$,
+assuming #SETH. We also investigate the parameterization of the problem by cutwidth. Unlike for
+treewidth, a larger set $B$ does not make the problem harder: Given a linear layout of width $k$ we
+give a $O^*(2^k)$ algorithm for any $B$ and provide a matching lower bound that this is optimal for
+the NP-hard cases. 

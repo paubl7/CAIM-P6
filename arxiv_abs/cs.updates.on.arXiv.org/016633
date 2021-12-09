@@ -1,0 +1,20 @@
+For asynchronous binary agreement (ABA) with optimal resilience, prior private-setup free protocols
+(Cachin et al., CCS' 2002; Kokoris-Kogias et al., CCS' 2020) incur $O({\lambda}n^4)$ bits and $O(n^3)$
+messages; for asynchronous multi-valued agreement with external validity (VBA), Abraham et al.
+[2] very recently gave the first elegant construction with $O(n^3)$ messages, relying on public
+key infrastructure (PKI), but still costs $O({\lambda} n^3 \log n)$ bits. We for the first time close
+the remaining efficiency gap, i.e., reducing their communication to $O({\lambda} n^3)$ bits on
+average. At the core of our design, we give a systematic treatment of reasonably fair common randomness:
+- We construct a reasonably fair common coin (Canetti and Rabin, STOC' 1993) in the asynchronous
+setting with PKI instead of private setup, using only $O({\lambda} n^3)$ bit and constant asynchronous
+rounds. The common coin protocol ensures that with at least 1/3 probability, all honest parties
+can output a common bit that is as if uniformly sampled, rendering a more efficient private-setup
+free ABA with expected $O({\lambda} n^3)$ bit communication and constant running time. - More interestingly,
+we lift our reasonably fair common coin protocol to attain perfect agreement without incurring
+any extra factor in the asymptotic complexities, resulting in an efficient reasonably fair leader
+election primitive pluggable in all existing VBA protocols, thus reducing the communication of
+private-setup free VBA to expected $O({\lambda} n^3)$ bits while preserving expected constant
+running time. - Along the way, we improve an important building block, asynchronous verifiable
+secret sharing by presenting a private-setup free implementation costing only $O({\lambda} n^2)$
+bits in the PKI setting. By contrast, prior art having the same complexity (Backes et al., CT-RSA'
+2013) has to rely on a private setup. 

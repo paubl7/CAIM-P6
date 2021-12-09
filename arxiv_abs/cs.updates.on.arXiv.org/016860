@@ -1,0 +1,19 @@
+Current vision and language tasks usually take complete visual data (e.g., raw images or videos)
+as input, however, practical scenarios may often consist the situations where part of the visual
+information becomes inaccessible due to various reasons e.g., restricted view with fixed camera
+or intentional vision block for security concerns. As a step towards the more practical application
+scenarios, we introduce a novel task that aims to describe a video using the natural language dialog
+between two agents as a supplementary information source given incomplete visual data. Different
+from most existing vision-language tasks where AI systems have full access to images or video clips,
+which may reveal sensitive information such as recognizable human faces or voices, we intentionally
+limit the visual input for AI systems and seek a more secure and transparent information medium,
+i.e., the natural language dialog, to supplement the missing visual information. Specifically,
+one of the intelligent agents - Q-BOT - is given two semantic segmented frames from the beginning
+and the end of the video, as well as a finite number of opportunities to ask relevant natural language
+questions before describing the unseen video. A-BOT, the other agent who has access to the entire
+video, assists Q-BOT to accomplish the goal by answering the asked questions. We introduce two different
+experimental settings with either a generative (i.e., agents generate questions and answers freely)
+or a discriminative (i.e., agents select the questions and answers from candidates) internal dialog
+generation process. With the proposed unified QA-Cooperative networks, we experimentally demonstrate
+the knowledge transfer process between the two dialog agents and the effectiveness of using the
+natural language dialog as a supplement for incomplete implicit visions. 

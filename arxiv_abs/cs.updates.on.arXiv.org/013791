@@ -1,0 +1,20 @@
+This paper studies the problem of multi-agent computation under the differential privacy requirement
+of the agents' local datasets against eavesdroppers having node-to-node communications. We first
+propose for the network equipped with public-private networks. The private network is sparse and
+not even necessarily connected, over which communications are encrypted and secure along with
+the intermediate node states; the public network is connected and may be dense, over which communications
+are allowed to be public. In this setting, we propose a multi-gossip PPSC mechanism over the private
+network, where at each step, randomly selected node pairs update their states in such a way that they
+are shuffled with random noise while maintaining summation consistency. We show that this mechanism
+can achieve any desired differential privacy level with any prescribed probability. Next, we embed
+this mechanism in distributed computing processes, and propose privacy-guarantee protocols
+for three basic computation tasks, where an adaptive mechanism adjusts the amount of noise injected
+in PPSC steps for privacy protection, and the number of regular computation steps for accuracy guarantee.
+For average consensus, we develop a PPSC-Gossip averaging consensus algorithm by utilizing the
+multi-gossip PPSC mechanism for privacy encryption before an averaging consensus algorithm over
+the public network for local computations. For network linear equations and distributed convex
+optimization, we develop two respective distributed computing protocols by following the PPSC-Gossip
+averaging consensus algorithm with an additional projection or gradient descent step within each
+step of computation. Given any privacy and accuracy requirements, it is shown that all three proposed
+protocols can compute their corresponding problems with the desired computation accuracy, while
+achieving the desired differential privacy. 

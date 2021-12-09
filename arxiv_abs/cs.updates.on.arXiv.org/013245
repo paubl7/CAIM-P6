@@ -1,0 +1,20 @@
+Software vulnerabilities in applications undermine the security of applications. By blocking
+unused functionality, the impact of potential exploits can be reduced. While seccomp provides
+a solution for filtering syscalls, it requires manual implementation of filter rules for each individual
+application. Recent work has investigated automated approaches for detecting and installing
+the necessary filter rules. However, as we show, these approaches make assumptions that are not
+necessary or require overly time-consuming analysis. In this paper, we propose Chestnut, an automated
+approach for generating strict syscall filters for Linux userspace applications with lower requirements
+and limitations. Chestnut comprises two phases, with the first phase consisting of two static components,
+i.e., a compiler and a binary analyzer, that extract the used syscalls during compilation or in an
+analysis of the binary. The compiler-based approach of Chestnut is up to factor 73 faster than previous
+approaches without affecting the accuracy adversely. On the binary analysis level, we demonstrate
+that the requirement of position-independent binaries of related work is not needed, enlarging
+the set of applications for which Chestnut is usable. In an optional second phase, Chestnut provides
+a dynamic refinement tool that allows restricting the set of allowed syscalls further. We demonstrate
+that Chestnut on average blocks 302 syscalls (86.5%) via the compiler and 288 (82.5%) using the binary-level
+analysis on a set of 18 widely used applications. We found that Chestnut blocks the dangerous exec
+syscall in 50% and 77.7% of the tested applications using the compiler- and binary-based approach,
+respectively. For the tested applications, Chestnut prevents exploitation of more than 62% of
+the 175 CVEs that target the kernel via syscalls. Finally, we perform a 6 month long-term study of
+a sandboxed Nginx server. 

@@ -1,0 +1,19 @@
+Data movement between the CPU and main memory is a first-order obstacle against improving performance,
+scalability, and energy efficiency in modern systems. Computer systems employ a range of techniques
+to reduce overheads tied to data movement, spanning from traditional mechanisms (e.g., deep multi-level
+cache hierarchies, aggressive hardware prefetchers) to emerging techniques such as Near-Data
+Processing (NDP), where some computation is moved close to memory. Our goal is to methodically identify
+potential sources of data movement over a broad set of applications and to comprehensively compare
+traditional compute-centric data movement mitigation techniques to more memory-centric techniques,
+thereby developing a rigorous understanding of the best techniques to mitigate each source of data
+movement. With this goal in mind, we perform the first large-scale characterization of a wide variety
+of applications, across a wide range of application domains, to identify fundamental program properties
+that lead to data movement to/from main memory. We develop the first systematic methodology to classify
+applications based on the sources contributing to data movement bottlenecks. From our large-scale
+characterization of 77K functions across 345 applications, we select 144 functions to form the
+first open-source benchmark suite (DAMOV) for main memory data movement studies. We select a diverse
+range of functions that (1) represent different types of data movement bottlenecks, and (2) come
+from a wide range of application domains. Using NDP as a case study, we identify new insights about
+the different data movement bottlenecks and use these insights to determine the most suitable data
+movement mitigation mechanism for a particular application. We open-source DAMOV and the complete
+source code for our new characterization methodology at https://github.com/CMU-SAFARI/DAMOV.

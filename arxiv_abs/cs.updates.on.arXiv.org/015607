@@ -1,0 +1,18 @@
+The capability of generalization to unseen domains is crucial for deep learning models when considering
+real-world scenarios. However, current available medical image datasets, such as those for COVID-19
+CT images, have large variations of infections and domain shift problems. To address this issue,
+we propose a prior knowledge driven domain adaptation and a dual-domain enhanced self-correction
+learning scheme. Based on the novel learning schemes, a domain adaptation based self-correction
+model (DASC-Net) is proposed for COVID-19 infection segmentation on CT images. DASC-Net consists
+of a novel attention and feature domain enhanced domain adaptation model (AFD-DA) to solve the domain
+shifts and a self-correction learning process to refine segmentation results. The innovations
+in AFD-DA include an image-level activation feature extractor with attention to lung abnormalities
+and a multi-level discrimination module for hierarchical feature domain alignment. The proposed
+self-correction learning process adaptively aggregates the learned model and corresponding
+pseudo labels for the propagation of aligned source and target domain information to alleviate
+the overfitting to noises caused by pseudo labels. Extensive experiments over three publicly available
+COVID-19 CT datasets demonstrate that DASC-Net consistently outperforms state-of-the-art segmentation,
+domain shift, and coronavirus infection segmentation methods. Ablation analysis further shows
+the effectiveness of the major components in our model. The DASC-Net enriches the theory of domain
+adaptation and self-correction learning in medical imaging and can be generalized to multi-site
+COVID-19 infection segmentation on CT images for clinical deployment. 

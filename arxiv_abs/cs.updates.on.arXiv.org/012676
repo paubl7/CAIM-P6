@@ -1,0 +1,20 @@
+Image restoration encompasses fundamental image processing tasks that have been addressed with
+different algorithms and deep learning methods. Classical restoration algorithms leverage a
+variety of priors, either implicitly or explicitly. Their priors are hand-designed and their corresponding
+weights are heuristically assigned. Thus, deep learning methods often produce superior restoration
+quality. Deep networks are, however, capable of strong and hardly-predictable hallucinations.
+Networks jointly and implicitly learn to be faithful to the observed data while learning an image
+prior, and the separation of original and hallucinated data downstream is then not possible. This
+limits their wide-spread adoption in restoration applications. Furthermore, it is often the hallucinated
+part that is victim to degradation-model overfitting. We present an approach with decoupled network-prior
+hallucination and data fidelity. We refer to our framework as the Bayesian Integration of a Generative
+Prior (BIGPrior). Our BIGPrior method is rooted in a Bayesian restoration framework, and tightly
+connected to classical restoration methods. In fact, our approach can be viewed as a generalization
+of a large family of classical restoration algorithms. We leverage a recent network inversion method
+to extract image prior information from a generative network. We show on image colorization, inpainting,
+and denoising that our framework consistently improves the prior results through good integration
+of data fidelity. Our method, though partly reliant on the quality of the generative network inversion,
+is competitive with state-of-the-art supervised and task-specific restoration methods. It also
+provides an additional metric that sets forth the degree of prior reliance per pixel. Indeed, the
+per pixel contributions of the decoupled data fidelity and prior terms are readily available in
+our proposed framework. 

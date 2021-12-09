@@ -1,0 +1,20 @@
+Propagation characteristics of a wave are defined by the dispersion relationship, from which the
+governing partial differential equation (PDE) can be recovered. PDEs are commonly solved numerically
+using the finite-difference (FD) method, with stencils constructed from truncated Taylor series
+expansions which, whilst typically providing good approximation of the PDE in the space-time domain,
+often differ considerably from the original partial differential in the wavenumber-frequency
+domain where the dispersion relationship is defined. Consequentially, stable, high-order FD
+schemes may not necessarily result in realistic wave behavior, commonly exhibiting numerical
+dispersion: lagging high-frequency components as a product of discretization. A method for optimizing
+FD stencil weightings via constrained minimization to better approximate the partial derivative
+in the wavenumber domain is proposed, allowing for accurate propagation with coarser grids than
+would be otherwise possible. This was applied to second derivatives on a standard grid and first
+derivatives on a staggered grid. To evaluate the efficacy of the method, a pair of numerical simulations
+were devised to compare spatially-optimized stencils with conventional formulations of equivalent
+extent. A spatially-optimized formulation of the 1D acoustic wave equation with Dirichlet boundary
+conditions is presented, evaluating performance at a range of grid spacings, examining the interval
+between the theoretical maximum grid spacings for the conventional and optimized schemes in finer
+detail. The optimized scheme was found to offer superior performance for undersampled wavefields
+and heavily oversampled wavefields. Staggered-grid first derivative stencils were then applied
+to the P-SV elastic wave formulation, simulating seismic wave propagation for a two-layer, water-over-rock
+model. 

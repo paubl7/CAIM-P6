@@ -1,0 +1,18 @@
+We study the Langevin dynamics of a physical system with manifold structure $\mathcal{M}\subset\mathbb{R}^p$
+based on collected sample points $\{\mathsf{x}_i\}_{i=1}^n \subset \mathcal{M}$ that probe
+the unknown manifold $\mathcal{M}$. Through the diffusion map, we first learn the reaction coordinates
+$\{\mathsf{y}_i\}_{i=1}^n\subset \mathcal{N}$ corresponding to $\{\mathsf{x}_i\}_{i=1}^n$,
+where $\mathcal{N}$ is a manifold diffeomorphic to $\mathcal{M}$ and isometrically embedded
+in $\mathbb{R}^\ell$ with $\ell \ll p$. The induced Langevin dynamics on $\mathcal{N}$ in terms
+of the reaction coordinates captures the slow time scale dynamics such as conformational changes
+in biochemical reactions. To construct an efficient and stable approximation for the Langevin
+dynamics on $\mathcal{N}$, we leverage the corresponding Fokker-Planck equation on the manifold
+$\mathcal{N}$ in terms of the reaction coordinates $\mathsf{y}$. We propose an implementable,
+unconditionally stable, data-driven finite volume scheme for this Fokker-Planck equation, which
+automatically incorporates the manifold structure of $\mathcal{N}$. Furthermore, we provide
+a weighted $L^2$ convergence analysis of the finite volume scheme to the Fokker-Planck equation
+on $\mathcal{N}$. The proposed finite volume scheme leads to a Markov chain on $\{\mathsf{y}_i\}_{i=1}^n$
+with an approximated transition probability and jump rate between the nearest neighbor points.
+After an unconditionally stable explicit time discretization, the data-driven finite volume
+scheme gives an approximated Markov process for the Langevin dynamics on $\mathcal{N}$ and the
+approximated Markov process enjoys detailed balance, ergodicity, and other good properties.

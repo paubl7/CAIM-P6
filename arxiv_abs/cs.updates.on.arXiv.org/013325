@@ -1,0 +1,19 @@
+Synthetic medical image generation has a huge potential for improving healthcare through many
+applications, from data augmentation for training machine learning systems to preserving patient
+privacy. Conditional Adversarial Generative Networks (cGANs) use a conditioning factor to generate
+images and have shown great success in recent years. Intuitively, the information in an image can
+be divided into two parts: 1) content which is presented through the conditioning vector and 2) style
+which is the undiscovered information missing from the conditioning vector. Current practices
+in using cGANs for medical image generation, only use a single variable for image generation (i.e.,
+content) and therefore, do not provide much flexibility nor control over the generated image. In
+this work we propose a methodology to learn from the image itself, disentangled representations
+of style and content, and use this information to impose control over the generation process. In
+this framework, style is learned in a fully unsupervised manner, while content is learned through
+both supervised learning (using the conditioning vector) and unsupervised learning (with the
+inference mechanism). We undergo two novel regularization steps to ensure content-style disentanglement.
+First, we minimize the shared information between content and style by introducing a novel application
+of the gradient reverse layer (GRL); second, we introduce a self-supervised regularization method
+to further separate information in the content and style variables. We show that in general, two
+latent variable models achieve better performance and give more control over the generated image.
+We also show that our proposed model (DRAI) achieves the best disentanglement score and has the best
+overall performance. 

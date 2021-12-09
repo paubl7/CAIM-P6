@@ -1,0 +1,19 @@
+Given $n$ samples from a population of individuals belonging to different species, what is the number
+$U$ of hitherto unseen species that would be observed if $\lambda n$ new samples were collected?
+This is an important problem in many scientific endeavors, and it has been the subject of recent breakthrough
+studies leading to minimax near-optimal estimation of $U$ and consistency all the way up to $\lambda\asymp\log
+n$. These studies do not rely on assumptions on the underlying unknown distribution $p$ of the population,
+and therefore, while providing a theory in its greatest generality, worst case distributions may
+severely hamper the estimation of $U$ in concrete applications. Motivated by the ubiquitous power-law
+type distributions, which nowadays occur in many natural and social phenomena, in this paper we
+consider the problem of estimating $U$ under the assumption that $p$ has regularly varying tails
+of index $\alpha\in(0,1)$. First, we introduce an estimator of $U$ that is simple, linear in the
+sampling information, computationally efficient and scalable to massive datasets. Then, uniformly
+over the class of regularly varying tail distributions, we show that our estimator has the following
+provable guarantees: i) it is minimax near-optimal, up to a power of $\log n$ factor; ii) it is consistent
+all of the way up to $\log \lambda\asymp n^{\alpha/2}/\sqrt{\log n}$, and this range is the best
+possible. This work presents the first study on the estimation of the unseen under regularly varying
+tail distributions. Our results rely on a novel approach, of independent interest, which is based
+on Bayesian arguments under Poisson-Kingman priors for the unknown regularly varying tail $p$.
+A numerical illustration is presented for several synthetic and real data, showing that our method
+outperforms existing ones. 

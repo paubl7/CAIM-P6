@@ -1,0 +1,19 @@
+A growing branch of computer vision is object detection. Object detection is used in many applications
+such as industrial process, medical imaging analysis, and autonomous vehicles. The ability to
+detect objects in videos is crucial. Object detection systems are trained on large image datasets.
+For applications such as autonomous vehicles, it is crucial that the object detection system can
+identify objects through multiple frames in video. There are many problems with applying these
+systems to video. Shadows or changes in brightness that can cause the system to incorrectly identify
+objects frame to frame and cause an unintended system response. There are many neural networks that
+have been used for object detection and if there was a way of connecting objects between frames then
+these problems could be eliminated. For these neural networks to get better at identifying objects
+in video, they need to be re-trained. A dataset must be created with images that represent consecutive
+video frames and have matching ground-truth layers. A method is proposed that can generate these
+datasets. The ground-truth layer contains only moving objects. To generate this layer, FlowNet2-Pytorch
+was used to create the flow mask using the novel Magnitude Method. As well, a segmentation mask will
+be generated using networks such as Mask R-CNN or Refinenet. These segmentation masks will contain
+all objects detected in a frame. By comparing this segmentation mask to the flow mask ground-truth
+layer, a loss function is generated. This loss function can be used to train a neural network to be
+better at making consistent predictions on video. The system was tested on multiple video samples
+and a loss was generated for each frame, proving the Magnitude Method's ability to be used to train
+object detection neural networks in future work. 

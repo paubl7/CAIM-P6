@@ -1,0 +1,19 @@
+This paper proposes a plane wave activation based neural network (PWNN) for solving Helmholtz equation,
+the basic partial differential equation to represent wave propagation, e.g. acoustic wave, electromagnetic
+wave, and seismic wave. Unlike using traditional activation based neural network (TANN) or $sin$
+activation based neural network (SIREN) for solving general partial differential equations,
+we instead introduce a complex activation function $e^{\mathbf{i}{x}}$, the plane wave which
+is the basic component of the solution of Helmholtz equation. By a simple derivation, we further
+find that PWNN is actually a generalization of the plane wave partition of unity method (PWPUM) by
+additionally imposing a learned basis with both amplitude and direction to better characterize
+the potential solution. We firstly investigate our performance on a problem with the solution is
+an integral of the plane waves with all known directions. The experiments demonstrate that: PWNN
+works much better than TANN and SIREN on varying architectures or the number of training samples,
+that means the plane wave activation indeed helps to enhance the representation ability of neural
+network toward the solution of Helmholtz equation; PWNN has competitive performance than PWPUM,
+e.g. the same convergence order but less relative error. Furthermore, we focus a more practical
+problem, the solution of which only integrate the plane waves with some unknown directions. We find
+that PWNN works much better than PWPUM at this case. Unlike using the plane wave basis with fixed directions
+in PWPUM, PWNN can learn a group of optimized plane wave basis which can better predict the unknown
+directions of the solution. The proposed approach may provide some new insights in the aspect of
+applying deep learning in Helmholtz equation. 

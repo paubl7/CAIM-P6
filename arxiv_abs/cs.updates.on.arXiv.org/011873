@@ -1,0 +1,19 @@
+Nowadays, deep learning methods, especially the Graph Convolutional Network (GCN), have shown
+impressive performance in hyperspectral image (HSI) classification. However, the current GCN-based
+methods treat graph construction and image classification as two separate tasks, which often results
+in suboptimal performance. Another defect of these methods is that they mainly focus on modeling
+the local pairwise importance between graph nodes while lack the capability to capture the global
+contextual information of HSI. In this paper, we propose a Multi-level GCN with Automatic Graph
+Learning method (MGCN-AGL) for HSI classification, which can automatically learn the graph information
+at both local and global levels. By employing attention mechanism to characterize the importance
+among spatially neighboring regions, the most relevant information can be adaptively incorporated
+to make decisions, which helps encode the spatial context to form the graph information at local
+level. Moreover, we utilize multiple pathways for local-level graph convolution, in order to leverage
+the merits from the diverse spatial context of HSI and to enhance the expressive power of the generated
+representations. To reconstruct the global contextual relations, our MGCN-AGL encodes the long
+range dependencies among image regions based on the expressive representations that have been
+produced at local level. Then inference can be performed along the reconstructed graph edges connecting
+faraway regions. Finally, the multi-level information is adaptively fused to generate the network
+output. In this means, the graph learning and image classification can be integrated into a unified
+framework and benefit each other. Extensive experiments have been conducted on three real-world
+hyperspectral datasets, which are shown to outperform the state-of-the-art methods. 

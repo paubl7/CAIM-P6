@@ -1,0 +1,20 @@
+Deep neural networks (DNNs) achieve substantial advancement to the state-of-the-art in many computer
+vision tasks. However, accuracy of DNNs may drop drastically when test data come from a different
+distribution than training data. Detecting out-of-distribution (OOD) samples before performing
+downstream analysis on the predictions of a DNN thus arises as a crucial problem for critical applications,
+such as medical diagnosis and autonomous driving. The majority of the existing methods focus on
+OOD detection in the classification problem. In this paper, we propose an unsupervised OOD detection
+method using kernel density estimation (KDE), which is a non-parametric method for estimating
+probability density functions (pdfs). Specifically, we estimate the pdfs of features for each
+channel of the network, by performing KDE on the in-distribution (InD) dataset. At test time, the
+pdfs are evaluated on the test data to obtain a confidence score for each channel, which is expected
+to be higher for InD and lower for OOD samples. These scores are combined into a final score using logistic
+regression. Crucially, the proposed method does not require class labels nor information on the
+output of a network. Thus, it can be used for networks both for classification and non-classification
+problems. Furthermore, the use of KDE eliminates the need for making a parametric assumption (e.g.
+Gaussian) about feature densities. We performed experiments on 2 different classification networks
+trained on CIFAR-10 and CIFAR-100, and 2 different non-classification networks (segmentation
+and detection) trained on COCO dataset. The proposed method achieved detection accuracy on-par
+with the state-of-the-art for classification networks and substantially outperformed the compared
+alternatives for segmentation and detection networks in all the tests, thus exhibiting a larger
+scope of applications than existing methods. 

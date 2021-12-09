@@ -1,0 +1,18 @@
+Modern ARM-based servers such as ThunderX and ThunderX2 offer a tremendous amount of parallelism
+by providing dozens or even hundreds of processors. However, exploiting these computing resources
+for reuse-heavy, data dependent workloads is a big challenge because of shared cache resources.
+In particular, schedulers have to conservatively co-locate processes to avoid cache conflicts
+since miss penalties are detrimental and conservative co-location decisions lead to lower resource
+utilization. To address these challenges, in this paper we explore the utility of predictive analysis
+of applications' execution to dynamically forecast resource-heavy workload regions, and to improve
+the efficiency of resource management through the use of new proactive methods. Our approach relies
+on the compiler to insert "beacons" in the application at strategic program points to periodically
+produce and/or update the attributes of anticipated resource-intense program region(s). The
+compiler classifies loops in programs based on predictability of their execution time and inserts
+different types of beacons at their entry/exit points. The precision of the information carried
+by beacons varies as per the analyzability of the loops, and the scheduler uses performance counters
+to fine tune co-location decisions. The information produced by beacons in multiple processes
+is aggregated and analyzed by the proactive scheduler to respond to the anticipated workload requirements.
+For throughput environments, we develop a framework that demonstrates high-quality predictions
+and improvements in throughput over CFS by 1.4x on an average and up to 4.7x on ThunderX and 1.9x on
+an average and up to 5.2x on ThunderX2 servers on consolidated workloads across 45 benchmarks. 

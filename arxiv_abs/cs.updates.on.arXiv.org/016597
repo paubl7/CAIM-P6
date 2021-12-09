@@ -1,0 +1,20 @@
+Automatic medical image segmentation has made great progress benefit from the development of deep
+learning. However, most existing methods are based on convolutional neural networks (CNNs), which
+fail to build long-range dependencies and global context connections due to the limitation of receptive
+field in convolution operation. Inspired by the success of Transformer in modeling the long-range
+contextual information, some researchers have expended considerable efforts in designing the
+robust variants of Transformer-based U-Net. Moreover, the patch division used in vision transformers
+usually ignores the pixel-level intrinsic structural features inside each patch. To alleviate
+these problems, we propose a novel deep medical image segmentation framework called Dual Swin Transformer
+U-Net (DS-TransUNet), which might be the first attempt to concurrently incorporate the advantages
+of hierarchical Swin Transformer into both encoder and decoder of the standard U-shaped architecture
+to enhance the semantic segmentation quality of varying medical images. Unlike many prior Transformer-based
+solutions, the proposed DS-TransUNet first adopts dual-scale encoder subnetworks based on Swin
+Transformer to extract the coarse and fine-grained feature representations of different semantic
+scales. As the core component for our DS-TransUNet, a well-designed Transformer Interactive Fusion
+(TIF) module is proposed to effectively establish global dependencies between features of different
+scales through the self-attention mechanism. Furthermore, we also introduce the Swin Transformer
+block into decoder to further explore the long-range contextual information during the up-sampling
+process. Extensive experiments across four typical tasks for medical image segmentation demonstrate
+the effectiveness of DS-TransUNet, and show that our approach significantly outperforms the state-of-the-art
+methods. 

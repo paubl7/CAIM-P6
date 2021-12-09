@@ -1,0 +1,20 @@
+Purpose: To develop an automated machine-learning-based method for the discovery of rapid and
+quantitative chemical exchange saturation transfer (CEST) MR fingerprinting acquisition and
+reconstruction protocols. Methods: An MR physics governed AI system was trained to generate optimized
+acquisition schedules and the corresponding quantitative reconstruction neural-network. The
+system (termed AutoCEST) is composed of a CEST saturation block, a spin dynamics module, and a deep
+reconstruction network, all differentiable and jointly connected. The method was validated using
+a variety of chemical exchange phantoms and an in-vivo mouse brain at 9.4T. Results: The acquisition
+times for AutoCEST optimized schedules ranged from 35-71s, with a quantitative image reconstruction
+time of only 29 ms. The resulting exchangeable proton concentration maps for the phantoms were in
+good agreement with the known solute concentrations for AutoCEST sequences (mean absolute error
+= 2.42 mM; Pearson's r=0.992 , p$<$0.0001), but not for an unoptimized sequence (mean absolute error
+= 65.19 mM; Pearson's r=-0.161, p=0.522). Similarly, improved exchange rate agreement was observed
+between AutoCEST and quantification of exchange using saturation power (QUESP) methods (mean
+absolute error: 35.8 Hz, Pearson's r=0.971, p$<$0.0001) compared to an unoptimized schedule and
+QUESP (mean absolute error = 58.2 Hz; Pearson's r=0.959, p$<$0.0001). The AutoCEST in-vivo mouse
+brain semi-solid proton volume-fractions were lower in the cortex (12.21$\pm$1.37%) compared
+to the white-matter (19.73 $\pm$ 3.30%), as expected, and the amide proton volume-fraction and
+exchange rates agreed with previous reports. Conclusion: AutoCEST can automatically generate
+optimized CEST/MT acquisition protocols that can be rapidly reconstructed into quantitative
+exchange parameter maps. 

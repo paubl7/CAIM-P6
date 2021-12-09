@@ -1,0 +1,18 @@
+A unified treatment for fast and spectrally accurate evaluation of electrostatic potentials subject
+to periodic boundary conditions in any or none of the three spatial dimensions is presented. Ewald
+decomposition is used to split the problem into a real-space and a Fourier-space part, and the FFT-based
+Spectral Ewald (SE) method is used to accelerate the computation of the latter. A key component in
+the unified treatment is an FFT-based solution technique for the free-space Poisson problem in
+three, two or one dimensions, depending on the number of non-periodic directions. The computational
+cost is furthermore reduced by employing an adaptive FFT for the doubly and singly periodic cases,
+allowing for different local upsampling factors. The SE method will always be most efficient for
+the triply periodic case as the cost of computing FFTs will then be the smallest, whereas the computational
+cost of the rest of the algorithm is essentially independent of periodicity. We show that the cost
+of removing periodic boundary conditions from one or two directions out of three will only moderately
+increase the total runtime. Our comparisons also show that the computational cost of the SE method
+in the free-space case is around four times that of the triply periodic case. The Gaussian window
+function previously used in the SE method, is here compared to a piecewise polynomial approximation
+of the Kaiser-Bessel window function. With a carefully tuned shape parameter that is selected based
+on an error estimate for this new window function, runtimes for the SE method can be further reduced.
+Furthermore, we consider different methods for computing the force, and compare the runtime of
+the SE method with that of the Fast Multipole Method. 

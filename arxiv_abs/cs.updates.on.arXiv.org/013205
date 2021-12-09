@@ -1,0 +1,20 @@
+The problem of private data disclosure is studied from an information theoretic perspective. Considering
+a pair of dependent random variables $(X,Y)$, where $X,Y$ denote the private and useful data, respectively,
+the following problem is addressed: What is the maximum information that can be revealed about $Y$
+(measured by mutual information $I(Y;U)$, in which $U$ is the revealed data), while disclosing
+no information about $X$ (captured by the condition of statistical independence, i.e., $X\independent
+U$, and henceforth called \textit{perfect privacy})? We analyze the supremization of $I(Y;U)$
+under perfect privacy for two scenarios: \textit{output perturbation} and \textit{full data
+observation}, which correspond to the cases where the revealed data is the output of a kernel (called
+\textit{privacy-preserving mapping}) applied to $Y$ and $(X,Y)$, respectively. In the case of
+finite alphabets, the linear algebraic analysis involved in the solution provides some interesting
+results, such as upper/lower bounds on the size of the released alphabet and the maximum utility.
+In this setting, we propose a privacy-preserving algorithm which is far less complex than the optimal
+solution, and yet provides acceptable performance. When the private data is binary, it is proved
+that the proposed algorithm achieves the optimal solution, which has a closed form expression in
+the full data observation model. Afterwards, it is shown that for jointly Gaussian $(X,Y)$, perfect
+privacy is not possible in the output perturbation model in contrast to the full data observation
+model. Finally, an asymptotic analysis is provided in the context of output perturbation model,
+to obtain the rate of released information when a sufficiently small leakage is allowed. It is shown
+that this rate is always finite when perfect privacy is not feasible; otherwise, under mild conditions,
+this becomes unbounded. 

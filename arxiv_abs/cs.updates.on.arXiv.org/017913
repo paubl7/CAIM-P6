@@ -1,0 +1,19 @@
+The national highway traffic safety administration (NHTSA) identified cybersecurity of the automobile
+systems are more critical than the security of other information systems. Researchers already
+demonstrated remote attacks on critical vehicular electronic control units (ECUs) using controller
+area network (CAN). Besides, existing intrusion detection systems (IDSs) often propose to tackle
+a specific type of attack, which may leave a system vulnerable to numerous other types of attacks.
+A generalizable IDS that can identify a wide range of attacks within the shortest possible time has
+more practical value than attack-specific IDSs, which is not a trivial task to accomplish. In this
+paper we propose a novel {\textbf g}raph-based {\textbf G}aussian {\textbf n}aive {\textbf B}ayes
+(GGNB) intrusion detection algorithm by leveraging graph properties and PageRank-related features.
+The GGNB on the real rawCAN data set~\cite{Lee:2017} yields 99.61\%, 99.83\%, 96.79\%, and 96.20\%
+detection accuracy for denial of service (DoS), fuzzy, spoofing, replay, mixed attacks, respectively.
+Also, using OpelAstra data set~\cite{Guillaume:2019}, the proposed methodology has 100\%, 99.85\%,
+99.92\%, 100\%, 99.92\%, 97.75\% and 99.57\% detection accuracy considering DoS, diagnostic,
+fuzzing CAN ID, fuzzing payload, replay, suspension, and mixed attacks, respectively. The GGNB-based
+methodology requires about $239\times$ and $135\times$ lower training and tests times, respectively,
+compared to the SVM classifier used in the same application. Using Xilinx Zybo Z7 field-programmable
+gate array (FPGA) board, the proposed GGNB requires $5.7 \times$, $5.9 \times$, $5.1 \times$, and
+$3.6 \times$ fewer slices, LUTs, flip-flops, and DSP units, respectively, than conventional NN
+architecture. 

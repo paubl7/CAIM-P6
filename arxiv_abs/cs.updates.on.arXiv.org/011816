@@ -1,0 +1,19 @@
+Property testing algorithms are highly efficient algorithms, that come with probabilistic accuracy
+guarantees. For a property P, the goal is to distinguish inputs that have P from those that are far
+from having P with high probability correctly, by querying only a small number of local parts of the
+input. In property testing on graphs, the distance is measured by the number of edge modifications
+(additions or deletions), that are necessary to transform a graph into one with property P. Much
+research has focussed on the query complexity of such algorithms, i. e. the number of queries the
+algorithm makes to the input, but in view of applications, the running time of the algorithm is equally
+relevant. In (Adler, Harwath STACS 2018), a natural extension of the bounded degree graph model
+of property testing to relational databases of bounded degree was introduced, and it was shown that
+on databases of bounded degree and bounded tree-width, every property that is expressible in monadic
+second-order logic with counting (CMSO) is testable with constant query complexity and sublinear
+running time. It remains open whether this can be improved to constant running time. In this paper
+we introduce a new model, which is based on the bounded degree model, but the distance measure allows
+both edge (tuple) modifications and vertex (element) modifications. Our main theorem shows that
+on databases of bounded degree and bounded tree-width, every property that is expressible in CMSO
+is testable with constant query complexity and constant running time in the new model. We also show
+that every property that is testable in the classical model is testable in our model with the same
+query complexity and running time, but the converse is not true. We argue that our model is natural
+and our meta-theorem showing constant-time CMSO testability supports this. 

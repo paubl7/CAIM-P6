@@ -1,0 +1,18 @@
+In this paper we introduce a mixture cure model with a linear hazard rate regression model for the
+event times. Cure models are statistical models for event times that take into account that a fraction
+of the population might never experience the event of interest, this fraction is said to be {`}cured{'}.
+The population survival function in a mixture cure model takes the form $S(t) = 1 - \pi + \pi\exp(-\int_0^t\alpha(s)\,d
+s)$, where $\pi$ is the probability of being susceptible to the event under study, and $\alpha(s)$
+is the hazard rate of the susceptible fraction. We let both $\pi$ and $\alpha(s)$ depend on possibly
+different covariate vectors $X$ and $Z$. The probability $\pi$ is taken to be the logistic function
+$\pi(X^{\prime}\gamma) = 1/\{1+\exp(-X^{\prime}\gamma)\}$, while we model $\alpha(s)$ by
+Aalen's linear hazard rate regression model. This model postulates that a susceptible individual
+has hazard rate function $\alpha(t;Z) = \beta_0(t) + \beta_1(t)Z_1 + \cdots + Z_{q-1}\beta_{q-1}(t)$
+in terms of her covariate values $Z_1,\ldots,Z_{q-1}$. The large-sample properties of our estimators
+are studied by way of parametric models that tend to a semiparametric model as a parameter $K \to \infty$.
+For each model in the sequence of parametric models, we assume that the data generating mechanism
+is parametric, thus simplifying the derivation of the estimators, as well as the proofs of consistency
+and limiting normality. Finally, we use contiguity techniques to switch back to assuming that the
+data stem from the semiparametric model. This technique for deriving and studying estimators in
+non- and semiparametric settings has previously been studied and employed in the high-frequency
+data literature, but seems to be novel in survival analysis. 

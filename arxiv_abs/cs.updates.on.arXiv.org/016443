@@ -1,0 +1,19 @@
+Privacy-preserving machine learning (PPML) aims at enabling machine learning (ML) algorithms
+to be used on sensitive data. We contribute to this line of research by proposing a framework that
+allows efficient and secure evaluation of full-fledged state-of-the-art ML algorithms via secure
+multi-party computation (MPC). This is in contrast to most prior works, which substitute ML algorithms
+with approximated "MPC-friendly" variants. A drawback of the latter approach is that fine-tuning
+of the combined ML and MPC algorithms is required, which might lead to less efficient algorithms
+or inferior quality ML. This is an issue for secure deep neural networks (DNN) training in particular,
+as this involves arithmetic algorithms thought to be "MPC-unfriendly", namely, integer division,
+exponentiation, inversion, and square root. In this work, we propose secure and efficient protocols
+for the above seemingly MPC-unfriendly computations. Our protocols are three-party protocols
+in the honest-majority setting, and we propose both passively secure and actively secure with abort
+variants. A notable feature of our protocols is that they simultaneously provide high accuracy
+and efficiency. This framework enables us to efficiently and securely compute modern ML algorithms
+such as Adam and the softmax function "as is", without resorting to approximations. As a result,
+we obtain secure DNN training that outperforms state-of-the-art three-party systems; our full
+training is up to 6.7 times faster than just the online phase of the recently proposed FALCON@PETS'21
+on a standard benchmark network. We further perform measurements on real-world DNNs, AlexNet and
+VGG16. The performance of our framework is up to a factor of about 12-14 faster for AlexNet and 46-48
+faster for VGG16 to achieve an accuracy of 70% and 75%, respectively, when compared to FALCON. 

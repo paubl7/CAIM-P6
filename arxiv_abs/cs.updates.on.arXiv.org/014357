@@ -1,0 +1,20 @@
+Motivated by mail delivery scheduling problems arising in Royal Mail, we study a generalization
+of the fundamental makespan scheduling P||Cmax problem which we call the bounded job start scheduling
+problem. Given a set of jobs, each specified by an integer processing time p_j, that have to be executed
+non-preemptively by a set of m parallel identical machines, the objective is to compute a minimum
+makespan schedule subject to an upper bound g<=m on the number of jobs that may simultaneously begin
+per unit of time. With perfect input knowledge, we show that Longest Processing Time First (LPT)
+algorithm is tightly 2-approximate. After proving that the problem is strongly NP-hard even when
+g=1, we elaborate on improving the 2-approximation ratio for this case. We distinguish the classes
+of long and short instances satisfying p_j>=m and p_j<m, respectively, for each job j. We show that
+LPT is 5/3-approximate for the former and optimal for the latter. Then, we explore scheduling long
+jobs in parallel with short jobs to obtain tightly satisfied packing and bounded job start constraints.
+For a broad family of instances excluding degenerate instances with many very long jobs, we derive
+a 1.985-approximation ratio. For general instances, we require machine augmentation to obtain
+better than 2-approximate schedules. Under uncertain job processing times, we exploit machine
+augmentation and lexicographic optimization to propose a two-stage robust optimization approach
+for bounded job start scheduling under uncertainty aiming in a low number of used machines. Given
+a collection of schedules of makespan <= D, this approach allows distinguishing which are the more
+robust. We substantiate both the heuristics and our recovery approach numerically using Royal
+Mail data. We show that, for the Royal Mail application, machine augmentation, i.e. short-term
+van rental, is especially relevant. 

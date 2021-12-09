@@ -1,0 +1,19 @@
+Image restoration remains a challenging task in image processing. Numerous methods tackle this
+problem, often solved by minimizing a non-smooth penalized co-log-likelihood function. Although
+the solution is easily interpretable with theoretic guarantees, its estimation relies on an optimization
+process that can take time. Considering the research effort in deep learning for image classification
+and segmentation, this class of methods offers a serious alternative to perform image restoration
+but stays challenging to solve inverse problems. In this work, we design a deep network, named DeepPDNet,
+built from primal-dual proximal iterations associated with the minimization of a standard penalized
+likelihood with an analysis prior, allowing us to take advantage of both worlds. We reformulate
+a specific instance of the Condat-Vu primal-dual hybrid gradient (PDHG) algorithm as a deep network
+with fixed layers. The learned parameters are both the PDHG algorithm step-sizes and the analysis
+linear operator involved in the penalization (including the regularization parameter). These
+parameters are allowed to vary from a layer to another one. Two different learning strategies: "Full
+learning" and "Partial learning" are proposed, the first one is the most efficient numerically
+while the second one relies on standard constraints ensuring convergence in the standard PDHG iterations.
+Moreover, global and local sparse analysis prior are studied to seek a better feature representation.
+We apply the proposed methods to image restoration on the MNIST and BSD68 datasets and to single image
+super-resolution on the BSD100 and SET14 datasets. Extensive results show that the proposed DeepPDNet
+demonstrates excellent performance on the MNIST and the more complex BSD68, BSD100, and SET14 datasets
+for image restoration and single image super-resolution task. 

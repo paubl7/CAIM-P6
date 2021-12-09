@@ -1,0 +1,20 @@
+Rapid transitions are important for quick response of consensus-based, multi-agent networks
+to external stimuli. While high-gain can increase response speed, potential instability tends
+to limit the maximum possible gain, and therefore, limits the maximum convergence rate to consensus
+during transitions. Since the update law for multi-agent networks with symmetric graphs can be
+considered as the gradient of its Laplacian-potential function, Nesterov-type accelerated-gradient
+approaches from optimization theory, can further improve the convergence rate of such networks.
+An advantage of the accelerated-gradient approach is that it can be implemented using accelerated
+delayed-self-reinforcement (A-DSR), which does not require new information from the network
+nor modifications in the network connectivity. However, the accelerated-gradient approach is
+not directly applicable to general directed graphs since the update law is not the gradient of the
+Laplacian-potential function. The main contribution of this work is to extend the accelerated-gradient
+approach to general directed graph networks, without requiring the graph to be strongly connected.
+Additionally, while both the momentum term and outdated-feedback term in the accelerated-gradient
+approach are important in general, it is shown that the momentum term alone is sufficient to achieve
+balanced robustness and rapid transitions without oscillations in the dominant mode, for networks
+whose graph Laplacians have real spectrum. Simulation results are presented to illustrate the
+performance improvement with the proposed Robust A-DSR of 40% in structural robustness and 50%
+in convergence rate to consensus, when compared to the case without the A-DSR. Moreover, experimental
+results are presented that show a similar 37% faster convergence with the Robust A-DSR when compared
+to the case without the A-DSR. 

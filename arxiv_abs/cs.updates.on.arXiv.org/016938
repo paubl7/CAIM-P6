@@ -1,0 +1,19 @@
+Software reuse is a fundamental aspect of modern software development. Reuse of OSS Software Components
+is facilitated by package managers, the widespread use of which created repositories of highly
+interdependent reusable packages. The standard way to study package dependency networks is to
+infer relationships between software packages through manifests in the packages' repositories.
+Such networks can help answer important questions like "How many packages have dependencies to
+packages with known security issues?" or "What are the most used packages?". However, an important
+overlooked aspect of current studies is that manifest-inferred relationships do not necessarily
+describe how or whether these dependencies are actually used in the code. To better model dependencies
+between packages, we developed Pr\"azi, an approach combining manifests and call graphs of packages.
+Pr\"azi constructs a dependency network at the more fine-grained function-level, instead of at
+the manifest-level. For this paper, we discuss a prototypical Pr\"azi implementation for the popular
+system programming language Rust. Using Pr\"azi, we perform an evolution study characterizing
+Rust's package repository, Cratesio, at the function-level. Our results identify new key characteristics
+of Cratesio: i) packages call 40% of their resolved transitive dependencies, ii) package maintainers
+introduce on average 7 new calls to their dependencies every six months, and iii) packages have two
+to three times more indirect callers than direct callers. In a manual evaluation of 34 cases, we find
+Pr\"azi to be more precise than metadata-based networks, particularly for analyses involving
+transitive dependencies. These results showcase that current analyses of manifest-level dependency
+networks are not sufficient to understand how packages use each other. 

@@ -1,0 +1,19 @@
+Simulation of unsteady creeping flows in complex geometries has traditionally required the use
+of a time-stepping procedure, which is typically costly and unscalable. To reduce the cost and allow
+for computations at much larger scales, we propose an alternative approach that is formulated based
+on the unsteady Stokes equation expressed in the time-spectral domain. This transformation results
+in a boundary value problem with an imaginary source term proportional to the computed mode that
+is discretized and solved in a complex-valued finite element solver using Bubnov-Galerkin formulation.
+This transformed spatio-spectral formulation presents several advantages over the traditional
+spatio-temporal techniques. Firstly, for cases with boundary conditions varying smoothly in
+time, it provides a significant saving in computational cost as it can resolve time-variation of
+the solution using a few modes rather than thousands of time steps. Secondly, in contrast to the traditional
+time integration scheme with a finite order of accuracy, this method exhibits a super convergence
+behavior versus the number of computed modes. Thirdly, in contrast to the stabilized finite element
+methods for fluid, no stabilization term is employed in our formulation, producing a solution that
+is consistent and more accurate. Fourthly, the proposed approach is embarrassingly parallelizable
+owing to the independence of the solution modes, thus enabling scalable calculations at a much larger
+number of processors. The comparison of the proposed technique against a standard stabilized finite
+element solver is performed using two- and three-dimensional canonical and complex geometries.
+The results show that the proposed method can produce more accurate results at 1% to 11% of the cost
+of the standard technique for the studied cases. 

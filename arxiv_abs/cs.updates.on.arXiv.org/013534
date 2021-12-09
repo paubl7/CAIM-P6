@@ -1,0 +1,19 @@
+To build commercial robots, skid-steering mechanical design is of increased popularity due to
+its manufacturing simplicity and unique mechanism. However, these also cause significant challenges
+on software and algorithm design, especially for pose estimation (i.e., determining the robot's
+rotation and position), which is the prerequisite of autonomous navigation. While the general
+localization algorithms have been extensively studied in research communities, there are still
+fundamental problems that need to be resolved for localizing skid-steering robots that change
+their orientation with a skid. To tackle this problem, we propose a probabilistic sliding-window
+estimator dedicated to skid-steering robots, using measurements from a monocular camera, the
+wheel encoders, and optionally an inertial measurement unit (IMU). Specifically, we explicitly
+model the kinematics of skid-steering robots by both track instantaneous centers of rotation (ICRs)
+and correction factors, which are capable of compensating for the complexity of track-to-terrain
+interaction, the imperfectness of mechanical design, terrain conditions and smoothness, and
+so on. To prevent performance reduction in robots' lifelong missions, the time- and location- varying
+kinematic parameters are estimated online along with pose estimation states in a tightly-coupled
+manner. More importantly, we conduct in-depth observability analysis for different sensors and
+design configurations in this paper, which provides us with theoretical tools in making the correct
+choice when building real commercial robots. In our experiments, we validate the proposed method
+by both simulation tests and real-world experiments, which demonstrate that our method outperforms
+competing methods by wide margins. 

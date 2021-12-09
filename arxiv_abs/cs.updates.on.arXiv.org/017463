@@ -1,0 +1,19 @@
+Supernumerary Robotics Device (SRD) is an ideal solution to provide robotic assistance in overhead
+manual manipulation. Since two arms are occupied for the overhead task, it is desired to have additional
+arms to assist us in achieving other subtasks such as supporting the far end of a long plate and pushing
+it upward to fit in the ceiling. In this study, a method that maps human muscle force to SRD for overhead
+task assistance is proposed. Our methodology is to utilize redundant DoFs such as the idle muscles
+in the leg to control the supporting force of the SRD. A sEMG device is worn on the operator's shank
+where muscle signals are measured, parsed, and transmitted to SRD for control. In the control aspect,
+we adopted stiffness control in the task space based on torque control at the joint level. We are motivated
+by the fact that humans can achieve daily manipulation merely through simple inherent compliance
+property in joint driven by muscles. We explore to estimate the force of some particular muscles
+in humans and control the SRD to imitate the behaviors of muscle and output supporting forces to accomplish
+the subtasks such as overhead supporting. The sEMG signals detected from human muscles are extracted,
+filtered, rectified, and parsed to estimate the muscle force. We use this force information as the
+intent of the operator for proper overhead supporting force. As one of the well-known compliance
+control methods, stiffness control is easy to achieve using a few of straightforward parameters
+such as stiffness and equilibrium point. Through tuning the stiffness and equilibrium point, the
+supporting force of SRD in task space can be easily controlled. The muscle force estimated by sEMG
+is mapped to the desired force in the task space of the SRD. The desired force is transferred into stiffness
+or equilibrium point to output the corresponding supporting force. 

@@ -1,0 +1,18 @@
+There has been remarkable progress in identifying the perplexity of genomic landscape of cancer
+over the past two decades, providing us a brand new way to understand cancer and anti-cancer drugs.
+However, it is extremely expensive and time-consuming to develop anti-cancer drugs, and the diversity
+of cancer genomic features and drug molecular features renders it considerably difficult to customize
+therapy strategy for patients. In order to facilitate the discovery of new anti-cancer drugs and
+the selection of drugs to provide personalized treatment strategy, we seek to predict the response
+of different anti-cancer drugs with deep learning models. We test our model on breast cancer cell
+lines at first, and then generalize our method on pan-cancer dataset. We incorporate 2 kinds of essential
+information for anti-cancer drug response prediction into our model, namely gene expression data
+of cancer cell lines and drug molecular data. In order to extract representative features from these
+unlabeled data, we propose variational autoencoder (VAE) which has been proved to be very powerful
+in unsupervised learning. Our model encode gene expression data and drug molecular data with geneVAE
+model and rectified Junction Tree variational autoencoder\cite{jin2018junction} (JTVAE) model
+respectively, and process the encoded features with a Multi-layer Perceptron (MLP) model to produce
+a final prediction. We reach an average coefficient of determination ($R^{2} = 0.83$) in predicting
+drug response on breast cancer cell lines and an average $R^{2} > 0.84$ on pan-cancer cell lines.
+We further explore the latent representations encoded by geneVAE and JTVAE model, and the results
+show these models are robust and can preserve critical features of original data. 

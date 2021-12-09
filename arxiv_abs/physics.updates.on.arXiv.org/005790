@@ -1,0 +1,18 @@
+Automatic segmentation of medical images with DL algorithms has proven to be highly successful.
+With most of these algorithms, inter-observer variation is an acknowledged problem, leading to
+sub-optimal results. This problem is even more significant in post-operative clinical target
+volume (post-op CTV) segmentation due to the absence of macroscopic visual tumor in the image. This
+study, using post-op CTV segmentation as the test bed, tries to determine if physician styles are
+consistent and learnable, if there is an impact of physician styles on treatment outcome and toxicity;
+and how to explicitly deal with physician styles in DL algorithms to facilitate its clinical acceptance.
+A classifier is trained to identify which physician has contoured the CTV from just the contour and
+corresponding CT scan, to determine if physician styles are consistent and learnable. Next, we
+evaluate if adapting automatic segmentation to physician styles would be clinically feasible
+based on a lack of difference between outcomes. For modeling different physician styles of CTV segmentation,
+a concept called physician style-aware (PSA) segmentation is proposed which is an encoder-multidecoder
+network trained with perceptual loss. With the proposed physician style-aware network (PSA-Net),
+Dice similarity coefficient (DSC) accuracy increases on an average of 3.4% for all physicians from
+a general model that is not style adapted. We show that stylistic contouring variations also exist
+between institutions that follow the same segmentation guidelines and show the effectiveness
+of the proposed method in adapting to new institutional styles. We observed an accuracy improvement
+of 5% in terms of DSC when adapting to the style of a separate institution. 

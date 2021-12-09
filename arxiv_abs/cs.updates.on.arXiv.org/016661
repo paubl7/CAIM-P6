@@ -1,0 +1,19 @@
+The abundance and ease of utilizing sound, along with the fact that auditory clues reveal so much
+about what happens in the scene, make the audio-visual space a perfectly intuitive choice for self-supervised
+representation learning. However, the current literature suggests that training on \textit{uncurated}
+data yields considerably poorer representations compared to the \textit{curated} alternatives
+collected in supervised manner, and the gap only narrows when the volume of data significantly increases.
+Furthermore, the quality of learned representations is known to be heavily influenced by the size
+and taxonomy of the curated datasets used for self-supervised training. This begs the question
+of whether we are celebrating too early on catching up with supervised learning when our self-supervised
+efforts still rely almost exclusively on curated data. In this paper, we study the efficacy of learning
+from Movies and TV Shows as forms of uncurated data for audio-visual self-supervised learning.
+We demonstrate that a simple model based on contrastive learning, trained on a collection of movies
+and TV shows, not only dramatically outperforms more complex methods which are trained on orders
+of magnitude larger uncurated datasets, but also performs very competitively with the state-of-the-art
+that learns from large-scale curated data. We identify that audiovisual patterns like the appearance
+of the main character or prominent scenes and mise-en-sc\`ene which frequently occur through the
+whole duration of a movie, lead to an overabundance of easy negative instances in the contrastive
+learning formulation. Capitalizing on such observation, we propose a hierarchical sampling policy,
+which despite its simplicity, effectively improves the performance, particularly when learning
+from TV shows which naturally face less semantic diversity. 

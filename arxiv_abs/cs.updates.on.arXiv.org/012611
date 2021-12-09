@@ -1,0 +1,19 @@
+String analysis is the problem of reasoning about how strings are manipulated by a program. It has
+numerous applications including automatic detection of cross-site scripting (XSS). A popular
+string analysis technique includes symbolic executions, which at their core use string (constraint)
+solvers. Such solvers typically reason about constraints expressed in theories over strings with
+the concatenation operator as an atomic constraint. In recent years, researchers started to recognise
+the importance of incorporating the replace-all operator and finite transductions in the theories
+of strings with concatenation. Such string operations are typically crucial for reasoning about
+XSS vulnerabilities in web applications, especially for modelling sanitisation functions and
+implicit browser transductions (e.g. innerHTML). In this paper, we provide the first string solver
+that can reason about constraints involving both concatenation and finite transductions. Moreover,
+it has a completeness and termination guarantee for several important fragments (e.g. straight-line
+fragment). The main challenge addressed in the paper is the prohibitive worst-case complexity
+of the theory. To this end, we propose a method that exploits succinct alternating finite automata
+as concise symbolic representations of string constraints. Alternation offers not only exponential
+savings in space when representing Boolean combinations of transducers, but also a possibility
+of succinct representation of otherwise costly combinations of transducers and concatenation.
+Reasoning about the emptiness of the AFA language requires a state-space exploration in an exponential-sized
+graph, for which we use model checking algorithms (e.g. IC3). We have implemented our algorithm
+and demonstrated its efficacy on benchmarks that are derived from XSS and other examples in the literature.

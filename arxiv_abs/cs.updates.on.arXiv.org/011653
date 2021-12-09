@@ -1,0 +1,19 @@
+Automatic segmentation of multi-sequence (multi-modal) cardiac MR (CMR) images plays a significant
+role in diagnosis and management for a variety of cardiac diseases. However, the performance of
+relevant algorithms is significantly affected by the proper fusion of the multi-modal information.
+Furthermore, particular diseases, such as myocardial infarction, display irregular shapes on
+images and occupy small regions at random locations. These facts make pathology segmentation of
+multi-modal CMR images a challenging task. In this paper, we present the Max-Fusion U-Net that achieves
+improved pathology segmentation performance given aligned multi-modal images of LGE, T2-weighted,
+and bSSFP modalities. Specifically, modality-specific features are extracted by dedicated encoders.
+Then they are fused with the pixel-wise maximum operator. Together with the corresponding encoding
+features, these representations are propagated to decoding layers with U-Net skip-connections.
+Furthermore, a spatial-attention module is applied in the last decoding layer to encourage the
+network to focus on those small semantically meaningful pathological regions that trigger relatively
+high responses by the network neurons. We also use a simple image patch extraction strategy to dynamically
+resample training examples with varying spacial and batch sizes. With limited GPU memory, this
+strategy reduces the imbalance of classes and forces the model to focus on regions around the interested
+pathology. It further improves segmentation accuracy and reduces the mis-classification of pathology.
+We evaluate our methods using the Myocardial pathology segmentation (MyoPS) combining the multi-sequence
+CMR dataset which involves three modalities. Extensive experiments demonstrate the effectiveness
+of the proposed model which outperforms the related baselines. 

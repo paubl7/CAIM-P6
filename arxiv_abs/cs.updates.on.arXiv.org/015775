@@ -1,0 +1,19 @@
+Drivers on the Lyft rideshare platform do not always know where the areas of supply shortage are in
+real time. This lack of information hurts both riders trying to find a ride and drivers trying to determine
+how to maximize their earnings opportunity. Lyft's Personal Power Zone (PPZ) product helps the
+company to maintain high levels of service on the platform by influencing the spatial distribution
+of drivers in real time via monetary incentives that encourage them to reposition their vehicles.
+The underlying system that powers the product has two main components: (1) a novel 'escrow mechanism'
+that tracks available incentive budgets tied to locations within a city in real time, and (2) an algorithm
+that solves the stochastic driver positioning problem to maximize short-run revenue from riders'
+fares. The optimization problem is a multiagent dynamic program that is too complicated to solve
+optimally for our large-scale application. Our approach is to decompose it into two subproblems.
+The first determines the set of drivers to incentivize and where to incentivize them to position
+themselves. The second determines how to fund each incentive using the escrow budget. By formulating
+it as two convex programs, we are able to use commercial solvers that find the optimal solution in
+a matter of seconds. Rolled out to all 320 cities in which Lyft's operates in a little over a year, the
+system now generates millions of bonuses that incentivize hundreds of thousands of active drivers
+to optimally position themselves in anticipation of ride requests every week. Together, the PPZ
+product and its underlying algorithms represent a paradigm shift in how Lyft drivers drive and generate
+earnings on the platform. Its direct business impact has been a 0.5% increase in incremental bookings,
+amounting to tens of millions of dollars per year. 

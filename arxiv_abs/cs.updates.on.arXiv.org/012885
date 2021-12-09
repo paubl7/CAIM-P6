@@ -1,0 +1,19 @@
+Given a graph $G = (V,E)$, an $(\alpha, \beta)$-ruling set is a subset $S \subseteq V$ such that the
+distance between any two vertices in $S$ is at least $\alpha$, and the distance between any vertex
+in $V$ and the closest vertex in $S$ is at most $\beta$. We present lower bounds for distributedly
+computing ruling sets. More precisely, for the problem of computing a $(2, \beta)$-ruling set in
+the LOCAL model, we show the following, where $n$ denotes the number of vertices, $\Delta$ the maximum
+degree, and $c$ is some universal constant independent of $n$ and $\Delta$. $\bullet$ Any deterministic
+algorithm requires $\Omega\left(\min \left\{ \frac{\log \Delta}{\beta \log \log \Delta} , \log_\Delta
+n \right\} \right)$ rounds, for all $\beta \le c \cdot \min\left\{ \sqrt{\frac{\log \Delta}{\log
+\log \Delta}} , \log_\Delta n \right\}$. By optimizing $\Delta$, this implies a deterministic
+lower bound of $\Omega\left(\sqrt{\frac{\log n}{\beta \log \log n}}\right)$ for all $\beta \le
+c \sqrt[3]{\frac{\log n}{\log \log n}}$. $\bullet$ Any randomized algorithm requires $\Omega\left(\min
+\left\{ \frac{\log \Delta}{\beta \log \log \Delta} , \log_\Delta \log n \right\} \right)$ rounds,
+for all $\beta \le c \cdot \min\left\{ \sqrt{\frac{\log \Delta}{\log \log \Delta}} , \log_\Delta
+\log n \right\}$. By optimizing $\Delta$, this implies a randomized lower bound of $\Omega\left(\sqrt{\frac{\log
+\log n}{\beta \log \log \log n}}\right)$ for all $\beta \le c \sqrt[3]{\frac{\log \log n}{\log
+\log \log n}}$. For $\beta > 1$, this improves on the previously best lower bound of $\Omega(\log^*
+n)$ rounds that follows from the 30-year-old bounds of Linial [FOCS'87] and Naor [J.Disc.Math.'91].
+For $\beta = 1$, i.e., for the problem of computing a maximal independent set, our results improve
+on the previously best lower bound of $\Omega(\log^* n)$ on trees, as our bounds already hold on trees.

@@ -1,0 +1,19 @@
+Several decades ago the Proximal Point Algorithm (PPA) started to gain much attraction for both
+abstract operator theory and the numerical optimization communities. Even in modern applications,
+researchers still use proximal minimization theory to design scalable algorithms that overcome
+nonsmoothness in high dimensional models. Several remarkable references as \cite{Fer:91,Ber:82constrained,Ber:89parallel,Tom:11}
+analyzed the tight local relations between the convergence rate of PPA and the regularity of the
+objective function. However, without taking into account the concrete computational effort paid
+for computing each PPA iteration, any iteration complexity remains abstract and purely informative.
+In this manuscript we aim to evaluate the computational complexity of practical PPA in terms of (proximal)
+gradient/subgradient iterations, which might allow a fair positioning of the famous PPA numerical
+performance in the class of first order methods. First, we derive nonasymptotic iteration complexity
+estimates of exact and inexact PPA to minimize convex functions under $\gamma-$Holderian growth:
+$\BigO{\log(1/\epsilon)}$ (for $\gamma \in [1,2]$) and $\BigO{1/\epsilon^{\gamma - 2}}$ (for
+$\gamma > 2$). In particular, we recover well-known results on exact PPA: finite convergence for
+sharp minima and linear convergence for quadratic growth, even under presence of inexactness.
+Second, assuming that an usual (proximal) gradient/subgradient method subroutine is employed
+to compute inexact PPA iteration, we show novel computational complexity bounds on a restarted
+variant of the inexact PPA, available when no information on the growth of the objective function
+is known. In the numerical experiments we confirm the practical performance and implementability
+of our schemes. 

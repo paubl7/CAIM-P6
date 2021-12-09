@@ -1,0 +1,18 @@
+Discovering vulnerabilities in applications of real-world complexity is a daunting task: a vulnerability
+may affect a single line of code, and yet it compromises the security of the entire application. Even
+worse, vulnerabilities may manifest only in exceptional circumstances that do not occur in the
+normal operation of the application. It is widely recognized that state-of-the-art penetration
+testing tools play a crucial role, and are routinely used, to dig up vulnerabilities. Yet penetration
+testing is still primarily a human-driven activity, and its effectiveness still depends on the
+skills and ingenuity of the security analyst driving the tool. In this paper, we propose a technique
+for the automatic discovery of vulnerabilities in event-based systems, such as web and mobile applications.
+Our approach is based on a collaborative, co-evolutionary and contract-driven search strategy
+that iteratively (i) executes a pool of test cases, (ii) identifies the most promising ones, and
+(iii) generates new test cases from them. The approach makes a synergistic combination of evolutionary
+algorithms where several "species" contribute to solving the problem: one species, the test species,
+evolves to find the target test case, i.e., the set of instruction whose execution lead to the vulnerable
+statement, whereas the other species, called contract species, evolve to select the parameters
+for the procedure calls needed to trigger the vulnerability. To assess the effectiveness of our
+approach, we implemented a working prototype and ran it against both a case study and a benchmark
+web application. The experimental results confirm that our tool automatically discovers and executes
+a number of injection flaw attacks that are out of reach for state-of-the-art web scanners. 

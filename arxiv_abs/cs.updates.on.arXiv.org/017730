@@ -1,0 +1,20 @@
+This paper proposes an authentication-simplified and deceptive scheme (SEIGuard) to protect
+server-side social engineering information (SEI) and other information against brute-force
+attacks. In SEIGuard, the password check in authentication is omitted and this design is further
+combined with the SEI encryption design using honey encryption. The login password merely serves
+as a temporary key to encrypt SEI and there is no password plaintext or ciphertext stored in the database.
+During the login, the server doesn't check the login passwords, correct passwords decrypt ciphertexts
+to be correct plaintexts; incorrect passwords decrypt ciphertexts to be phony but plausible-looking
+plaintexts (sampled from the same distribution). And these two situations share the same undifferentiated
+backend procedures. This scheme eliminates the anchor that both online and offline brute-force
+attacks depending on. Furthermore, this paper presents four SEIGuard scheme designs and algorithms
+for 4 typical social engineering information objects (mobile phone number, identification number,
+email address, personal name), which represent 4 different types of message space, i.e. 1) limited
+and uniformly distributed, 2) limited, complex and uniformly distributed, 3) unlimited and uniformly
+distributed, 4) unlimited and non-uniformly distributed message space. Specially, we propose
+multiple small mapping files strategies, binary search algorithms, two-part HE (DTE) design and
+incremental mapping files solutions for the applications of SEIGuard scheme. Finally, this paper
+develops the SEIGuard system based on the proposed schemes, designs and algorithms. Experiment
+result shows that the SEIGuard scheme can effectively protect server-side SEI against brute-force
+attacks, and SEIGuard also has an impressive real-time response performance that is better than
+conventional PBE server scheme and HE encryption/decryption. 

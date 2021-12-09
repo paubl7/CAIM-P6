@@ -1,0 +1,20 @@
+Existing anomaly detection paradigms overwhelmingly focus on training detection models using
+exclusively normal data or unlabeled data (mostly normal samples). One notorious issue with these
+approaches is that they are weak in discriminating anomalies from normal samples due to the lack
+of the knowledge about the anomalies. Here, we study the problem of few-shot anomaly detection,
+in which we aim at using a few labeled anomaly examples to train sample-efficient discriminative
+detection models. To address this problem, we introduce a novel weakly-supervised anomaly detection
+framework to train detection models without assuming the examples illustrating all possible classes
+of anomaly. Specifically, the proposed approach learns discriminative normality (regularity)
+by leveraging the labeled anomalies and a prior probability to enforce expressive representations
+of normality and unbounded deviated representations of abnormality. This is achieved by an end-to-end
+optimization of anomaly scores with a neural deviation learning, in which the anomaly scores of
+normal samples are imposed to approximate scalar scores drawn from the prior while that of anomaly
+examples is enforced to have statistically significant deviations from these sampled scores in
+the upper tail. Furthermore, our model is optimized to learn fine-grained normality and abnormality
+by top-K multiple-instance-learning-based feature subspace deviation learning, allowing more
+generalized representations. Comprehensive experiments on nine real-world image anomaly detection
+benchmarks show that our model is substantially more sample-efficient and robust, and performs
+significantly better than state-of-the-art competing methods in both closed-set and open-set
+settings. Our model can also offer explanation capability as a result of its prior-driven anomaly
+score learning. Code and datasets are available at: https://git.io/DevNet. 

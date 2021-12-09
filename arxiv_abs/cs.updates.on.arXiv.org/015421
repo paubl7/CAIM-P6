@@ -1,0 +1,19 @@
+The purpose of the study presented herein is to develop a machine learning algorithm based on natural
+language processing that automatically detects whether a patient has a cardiac failure or a healthy
+condition by using physician notes in Research Data Warehouse at CHU Sainte Justine Hospital. First,
+a word representation learning technique was employed by using bag-of-word (BoW), term frequency
+inverse document frequency (TFIDF), and neural word embeddings (word2vec). Each representation
+technique aims to retain the words semantic and syntactic analysis in critical care data. It helps
+to enrich the mutual information for the word representation and leads to an advantage for further
+appropriate analysis steps. Second, a machine learning classifier was used to detect the patients
+condition for either cardiac failure or stable patient through the created word representation
+vector space from the previous step. This machine learning approach is based on a supervised binary
+classification algorithm, including logistic regression (LR), Gaussian Naive-Bayes (GaussianNB),
+and multilayer perceptron neural network (MLPNN). Technically, it mainly optimizes the empirical
+loss during training the classifiers. As a result, an automatic learning algorithm would be accomplished
+to draw a high classification performance, including accuracy (acc), precision (pre), recall
+(rec), and F1 score (f1). The results show that the combination of TFIDF and MLPNN always outperformed
+other combinations with all overall performance. In the case without any feature selection, the
+proposed framework yielded an overall classification performance with acc, pre, rec, and f1 of
+84% and 82%, 85%, and 83%, respectively. Significantly, if the feature selection was well applied,
+the overall performance would finally improve up to 4% for each evaluation. 

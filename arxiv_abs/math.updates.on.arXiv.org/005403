@@ -1,0 +1,18 @@
+We here introduce Multi-Iteration Stochastic Optimizers, a novel class of first-order stochastic
+optimizers where the coefficient of variation of the mean gradient approximation, its relative
+statistical error, is estimated and controlled using successive control variates along the path
+of iterations. By exploiting the correlation between iterates, control variates may reduce the
+estimator's variance so that an accurate estimation of the mean gradient becomes computationally
+affordable. We name the estimator of the mean gradient Multi-Iteration stochastiC Estimator-MICE.
+In principle, MICE can be flexibly coupled with any first-order stochastic optimizer given its
+non-intrusive nature. Optimally, our generic algorithm decides whether to drop a particular iteration
+out of the control variates hierarchy, restart it, or clip it somewhere in the hierarchy, discarding
+previous iterations. We present a simplified study of the convergence and complexity of Multi-Iteration
+Stochastic Optimizers for strongly-convex and L-smooth functions. Motivated by this analysis,
+we provide a generic step-size choice for Stochastic Gradient Descent (SGD) with MICE, which, combined
+with the above characteristics, yields an efficient and robust stochastic optimizer. To assess
+the efficiency of MICE, we present several examples in which we use SGD-MICE and Adam-MICE. We include
+one example based on a stochastic adaptation of the Rosenbrock function and logistic regression
+training for various datasets. When compared to SGD, SAG, SAGA, SRVG, and SARAH methods, the Multi-Iteration
+Stochastic Optimizers reduced, without the need to tune parameters for each example, the gradient
+sampling cost in all cases tested, also lowering the total runtime in some cases. 

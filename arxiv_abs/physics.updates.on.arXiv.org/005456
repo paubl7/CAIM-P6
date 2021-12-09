@@ -1,0 +1,19 @@
+Uncertainty quantification for Particle Image Velocimetry (PIV) is critical for comparing flow
+fields with Computational Fluid Dynamics (CFD) results, and model design and validation. However,
+PIV features a complex measurement chain with coupled, non-linear error sources, and quantifying
+the uncertainty is challenging. Multiple assessments show that none of the current methods can
+reliably measure the actual uncertainty across a wide range of experiments. Because the current
+methods differ in assumptions regarding the measurement process and calculation procedures,
+it is not clear which method is best to use for an experiment. To address this issue, we propose a method
+to estimate an uncertainty method's sensitivity and reliability, termed the Meta-Uncertainty.
+The novel approach is automated, local, and instantaneous, and based on perturbation of the recorded
+particle images. We developed an image perturbation scheme based on adding random unmatched particles
+to the interrogation window pair considering the signal-to-noise (SNR) of the correlation plane.
+Each uncertainty scheme's response to several trials of random particle addition is used to estimate
+a reliability metric, defined as the rate of change of the inter-quartile range (IQR) of the uncertainties
+with increasing levels of particle addition. We also propose applying the meta-uncertainty as
+a weighting metric to combine uncertainty estimates from individual schemes, based on ideas from
+the consensus forecasting literature. We use PIV measurements across a range of canonical flows
+to assess the performance of the uncertainty schemes.The results show that the combined uncertainty
+method outperforms the individual methods, and establish the meta-uncertainty as a useful reliability
+assessment tool for PIV uncertainty quantification. 

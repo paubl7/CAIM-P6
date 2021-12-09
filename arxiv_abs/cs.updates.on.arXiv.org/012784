@@ -1,0 +1,20 @@
+We study partitioning to parallelize multiplication of one or more dense vectors by a sparse matrix
+(SpMV or SpMM). We consider contiguous partitions, where the rows (or columns) of a sparse matrix
+with $N$ nonzeros are split into $K$ parts without reordering. We propose exact and approximate
+algorithms to produce contiguous partitions minimizing the maximum runtime of any processor under
+a diverse family of cost models that combine work and hypergraph communication terms in symmetric
+or asymmetric settings. This differs from traditional partitioning models which minimize total
+communication, or from traditional load balancing models which only balance work. One can view
+our algorithms as optimally rounding one-dimensional embeddings of direct $K$-way noncontiguous
+partitioning problems. Our algorithms use linear space. Our exact algorithm runs in linear time
+when $K^2$ is $O(N^C)$ for $C < 1$. Our $(1 + \epsilon)$-approximate algorithm runs in linear time
+when $K\log(c_{high}/(c_{low}\epsilon))$ is $O(N^C)$ for $C < 1$, where $c_{high}$ and $c_{low}$
+are upper and lower bounds on the optimal cost. We also propose a simpler version of our $(1 + \epsilon)$-approximate
+algorithm which runs in a factor of $\log(c_{high}/(c_{low}\epsilon))$ from linear time, but
+is faster in practice. We empirically demonstrate that all of our algorithms efficiently produce
+high-quality contiguous partitions. We combine concepts from high-performance computing and
+computational geometry. We extend existing load balancing algorithms to optimize arbitrary nonuniform
+monotonic increasing or decreasing cost functions. We reduce evaluation of our communication
+model to planar dominance counting. We specialize Chazelle's dominance counting algorithm to
+points in the bounded integer plane and generalize it to trade reduced construction time for increased
+query time, resulting in an overall linear runtime. 

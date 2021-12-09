@@ -1,0 +1,20 @@
+Electronic Medical Records contain clinical narrative text that is of great potential value to
+medical researchers. However, this information is mixed with Personally Identifiable Information
+that presents risks to patient and clinician confidentiality. This paper presents an end-to-end
+de-identification framework to automatically remove PII from hospital discharge summaries.
+Our corpus included 600 hospital discharge summaries which were extracted from the EMRs of two principal
+referral hospitals in Sydney, Australia. Our end-to-end de-identification framework consists
+of three components: 1) Annotation: labelling of PII in the hospital discharge summaries using
+five pre-defined categories: person, address, date of birth, individual identification number,
+phone/fax number; 2) Modelling: training six named entity recognition deep learning base-models
+on balanced and imbalanced datasets; and evaluating ensembles that combine all six base-models,
+the three base-models with the best F1 scores and the three base-models with the best recall scores
+respectively, using token-level majority voting and stacking methods; and 3) De-identification:
+removing PII from the hospital discharge summaries. Our results showed that the ensemble model
+combined using the stacking Support Vector Machine method on the three base-models with the best
+F1 scores achieved excellent results with a F1 score of 99.16% on the test set of our corpus. We also
+evaluated the robustness of our modelling component on the 2014 i2b2 de-identification dataset.
+Our ensemble model, which uses the token-level majority voting method on all six base-models, achieved
+the highest F1 score of 96.24% at strict entity matching and the highest F1 score of 98.64% at binary
+token-level matching compared to two state-of-the-art methods. The end-to-end framework provides
+a robust solution to de-identifying clinical narrative corpuses safely. 

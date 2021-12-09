@@ -1,0 +1,18 @@
+Background and Objective: Non-invasively predicting the risk of cancer metastasis before surgery
+plays an essential role in determining optimal treatment methods for cancer patients (including
+who can benefit from neoadjuvant chemotherapy). Although developing radiomics based machine
+learning (ML) models has attracted broad research interest for this purpose, it often faces a challenge
+of how to build a highly performed and robust ML model using small and imbalanced image datasets.
+Methods: In this study, we explore a new approach to build an optimal ML model. A retrospective dataset
+involving abdominal computed tomography (CT) images acquired from 159 patients diagnosed with
+gastric cancer is assembled. Among them, 121 cases have peritoneal metastasis (PM), while 38 cases
+do not have PM. A computer-aided detection (CAD) scheme is first applied to segment primary gastric
+tumor volumes and initially computes 315 image features. Then, two Gradient Boosting Machine (GBM)
+models embedded with two different feature dimensionality reduction methods, namely, the principal
+component analysis (PCA) and a random projection algorithm (RPA) and a synthetic minority oversampling
+technique, are built to predict the risk of the patients having PM. All GBM models are trained and
+tested using a leave-one-case-out cross-validation method. Results: Results show that the GBM
+embedded with RPA yielded a significantly higher prediction accuracy (71.2%) than using PCA (65.2%)
+(p<0.05). Conclusions: The study demonstrated that CT images of the primary gastric tumors contain
+discriminatory information to predict the risk of PM, and RPA is a promising method to generate optimal
+feature vector, improving the performance of ML models of medical images. 

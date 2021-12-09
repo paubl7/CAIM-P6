@@ -1,0 +1,19 @@
+We introduce the I-prior methodology as a unifying framework for estimating a variety of regression
+models, including varying coefficient, multilevel, longitudinal models, and models with functional
+covariates and responses. It can also be used for multi-class classification, with low or high dimensional
+covariates. The I-prior is generally defined as a maximum entropy prior. For a regression function,
+the I-prior is Gaussian with covariance kernel proportional to the Fisher information on the regression
+function, which is estimated by its posterior distribution under the I-prior. The I-prior has the
+intuitively appealing property that the more information is available on a linear functional of
+the regression function, the larger the prior variance, and the smaller the influence of the prior
+mean on the posterior distribution. Advantages compared to competing methods, such as Gaussian
+process regression or Tikhonov regularization, are ease of estimation and model comparison. In
+particular, we develop an EM algorithm with a simple E and M step for estimating hyperparameters,
+facilitating estimation for complex models. We also propose a novel parsimonious model formulation,
+requiring a single scale parameter for each (possibly multidimensional) covariate and no further
+parameters for interaction effects. This simplifies estimation because fewer hyperparameters
+need to be estimated, and also simplifies model comparison of models with the same covariates but
+different interaction effects; in this case, the model with the highest estimated likelihood can
+be selected. Using a number of widely analyzed real data sets we show that predictive performance
+of our methodology is competitive. An R-package implementing the methodology is available (Jamil,
+2019). 

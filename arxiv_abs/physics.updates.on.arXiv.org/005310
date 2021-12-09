@@ -1,0 +1,19 @@
+Conventional spectrometers are limited by trade-offs set by size, cost, signal-to-noise ratio
+(SNR), and spectral resolution. Here, we demonstrate a deep learning-based spectral reconstruction
+framework, using a compact and low-cost on-chip sensing scheme that is not constrained by the design
+trade-offs inherent to grating-based spectroscopy. The system employs a plasmonic spectral encoder
+chip containing 252 different tiles of nanohole arrays fabricated using a scalable and low-cost
+imprint lithography method, where each tile has a unique geometry and, thus, a unique optical transmission
+spectrum. The illumination spectrum of interest directly impinges upon the plasmonic encoder,
+and a CMOS image sensor captures the transmitted light, without any lenses, gratings, or other optical
+components in between, making the entire hardware highly compact, light-weight and field-portable.
+A trained neural network then reconstructs the unknown spectrum using the transmitted intensity
+information from the spectral encoder in a feed-forward and non-iterative manner. Benefiting
+from the parallelization of neural networks, the average inference time per spectrum is ~28 microseconds,
+which is orders of magnitude faster compared to other computational spectroscopy approaches.
+When blindly tested on unseen new spectra (N = 14,648) with varying complexity, our deep-learning
+based system identified 96.86% of the spectral peaks with an average peak localization error, bandwidth
+error, and height error of 0.19 nm, 0.18 nm, and 7.60%, respectively. This system is also highly tolerant
+to fabrication defects that may arise during the imprint lithography process, which further makes
+it ideal for applications that demand cost-effective, field-portable and sensitive high-resolution
+spectroscopy tools. 

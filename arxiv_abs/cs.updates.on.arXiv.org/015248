@@ -1,0 +1,19 @@
+Identifying "superspreaders" of disease is a pressing concern for society during pandemics such
+as COVID-19. Superspreaders represent a group of people who have much more social contacts than
+others. The widespread deployment of WLAN infrastructure enables non-invasive contact tracing
+via people's ubiquitous mobile devices. This technology offers promise for detecting superspreaders.
+In this paper, we propose a general framework for WLAN-log-based superspreader detection. In our
+framework, we first use WLAN logs to construct contact graphs by jointly considering human symmetric
+and asymmetric interactions. Next, we adopt three vertex centrality measurements over the contact
+graphs to generate three groups of superspreader candidates. Finally, we leverage SEIR simulation
+to determine groups of superspreaders among these candidates, who are the most critical individuals
+for the spread of disease based on the simulation results. We have implemented our framework and
+evaluate it over a WLAN dataset with 41 million log entries from a large-scale university. Our evaluation
+shows superspreaders exist on university campuses. They change over the first few weeks of a semester,
+but stabilize throughout the rest of the term. The data also demonstrate that both symmetric and
+asymmetric contact tracing can discover superspreaders, but the latter performs better with daily
+contact graphs. Further, the evaluation shows no consistent differences among three vertex centrality
+measures for long-term (i.e., weekly) contact graphs, which necessitates the inclusion of SEIR
+simulation in our framework. We believe our proposed framework and these results may provide timely
+guidance for public health administrators regarding effective testing, intervention, and vaccination
+policies. 

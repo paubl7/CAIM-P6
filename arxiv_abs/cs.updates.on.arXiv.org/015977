@@ -1,0 +1,19 @@
+The static instrumentation of machine code, also known as binary rewriting, is a power technique,
+but suffers from high runtime overhead compared to compiler-level instrumentation. Recent research
+has shown that tools can achieve near-to-zero overhead when rewriting binaries (excluding the
+overhead from the application specific instrumentation). However, the users of binary rewriting
+tools often have difficulties in understanding why their instrumentation is slow and how to optimize
+their instrumentation. We are inspired by a traditional program optimization workflow, where
+one can profile the program execution to identify performance hot spots, modify the source code
+or apply suitable compiler optimizations, and even apply profile-guided optimization. We present
+profile-guided, Multi-Version Binary Rewriting to enable this optimization workflow for static
+binary instrumentation. Our new techniques include three components. First, we augment existing
+binary rewriting to support call path profiling; one can interactively view instrumentation costs
+and understand the calling contexts where the costs incur. Second, we present Versioned Structure
+Binary Editing, which is a general binary transformation technique. Third, we use call path profiles
+to guide the application of binary transformation. We apply our new techniques to shadow stack and
+basic block code coverage. Our instrumentation optimization workflow helps us identify several
+opportunities with regard to code transformation and instrumentation data layout. Our evaluation
+on SPEC CPU 2017 shows that the geometric overhead of shadow stack and block coverage is reduced from
+7.6% and 161.3% to 1.4% and 4.0%, respectively. We also achieve promising results on Apache HTTP
+Server, where the shadow stack overhead is reduced from about 20% to 3.5%. 

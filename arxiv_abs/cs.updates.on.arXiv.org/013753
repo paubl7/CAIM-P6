@@ -1,0 +1,19 @@
+The low-rank stochastic semidefinite optimization has attracted rising attention due to its wide
+range of applications. The nonconvex reformulation based on the low-rank factorization, significantly
+improves the computational efficiency but brings some new challenge to the analysis. The stochastic
+variance reduced gradient (SVRG) method has been regarded as one of the most effective methods.
+SVRG in general consists of two loops, where a reference full gradient is first evaluated in the outer
+loop and then used to yield a variance reduced estimate of the current gradient in the inner loop.
+Two options have been suggested to yield the output of the inner loop, where Option I sets the output
+as its last iterate, and Option II yields the output via random sampling from all the iterates in the
+inner loop. However, there is a significant gap between the theory and practice of SVRG when adapted
+to the stochastic semidefinite programming (SDP). SVRG practically works better with Option I,
+while most of existing theoretical results focus on Option II. In this paper, we fill this gap via
+exploiting a new semi-stochastic variant of the original SVRG with Option I adapted to the semidefinite
+optimization. Equipped with this, we establish the global linear submanifold convergence (i.e.,
+converging exponentially fast to a submanifold of a global minimum under the orthogonal group action)
+of the proposed SVRG method, given a provable initialization scheme and under certain smoothness
+and restricted strongly convex assumptions. Our analysis includes the effects of the mini-batch
+size and update frequency in the inner loop as well as two practical step size strategies, the fixed
+and stabilized Barzilai-Borwein step sizes. Some numerical results in matrix sensing demonstrate
+the efficiency of proposed SVRG method outperforming Option II counterpart as well as others. 

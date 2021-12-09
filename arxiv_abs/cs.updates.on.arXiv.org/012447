@@ -1,0 +1,19 @@
+Point signature, a representation describing the structural neighborhood of a point in 3D shapes,
+can be applied to establish correspondences between points in 3D shapes. Conventional methods
+apply a weight-sharing network, e.g., any kind of graph neural networks, across all neighborhoods
+to directly generate point signatures and gain the generalization ability by extensive training
+over a large amount of training samples from scratch. However, these methods lack the flexibility
+in rapidly adapting to unseen neighborhood structures and thus generalizes poorly on new point
+sets. In this paper, we propose a novel meta-learning based 3D point signature model, named 3Dmetapointsignature
+(MEPS) network, that is capable of learning robust point signatures in 3D shapes. By regarding each
+point signature learning process as a task, our method obtains an optimized model over the best performance
+on the distribution of all tasks, generating reliable signatures for new tasks, i.e., signatures
+of unseen point neighborhoods. Specifically, the MEPS consists of two modules: a base signature
+learner and a meta signature learner. During training, the base-learner is trained to perform specific
+signature learning tasks. In the meantime, the meta-learner is trained to update the base-learner
+with optimal parameters. During testing, the meta-learner that is learned with the distribution
+of all tasks can adaptively change parameters of the base-learner, accommodating to unseen local
+neighborhoods. We evaluate the MEPS model on two datasets, e.g., FAUST and TOSCA, for dense 3Dshape
+correspondence. Experimental results demonstrate that our method not only gains significant
+improvements over the baseline model and achieves state-of-the-art results, but also is capable
+of handling unseen 3D shapes. 

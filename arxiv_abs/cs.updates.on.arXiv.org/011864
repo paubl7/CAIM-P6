@@ -1,0 +1,18 @@
+Software vulnerabilities have a large negative impact on the software systems that we depend on
+daily. Reports on software vulnerabilities always paint a grim picture, with some reports showing
+that 83% of organizations depend on vulnerable software. However, our experience leads us to believe
+that, in the grand scheme of things, these software vulnerabilities may have less impact than what
+is reported. Therefore, we perform a study to better understand the threat of npm vulnerable packages
+used in Node.js applications. We define three threat levels for vulnerabilities in packages, based
+on their lifecycle, where a package vulnerability is assigned a low threat level if it was hidden
+or still unknown at the time it was used in the dependent application (t), medium threat level if the
+vulnerability was reported but not yet published at t, and high if it was publicly announced at t.
+Then, we perform an empirical study involving 6,673 real-world, active, and mature open source
+Node.js applications. Our findings show that although 67.93% of the examined applications depend
+on at least one vulnerable package, 94.91% of the vulnerable packages in those affected applications
+are classified as having low threat. Moreover, we find that in the case of vulnerable packages classified
+as having high threat, it is the application's lack of updating that makes them vulnerable, i.e.,
+it is not the existence of the vulnerability that is the real problem. Furthermore, we verify our
+findings at different stages of the application's lifetime and find that our findings still hold.
+Our study argues that when it comes to software vulnerabilities, things may not be as bad as they seem
+and that considering vulnerability threat is key. 

@@ -1,0 +1,19 @@
+In recent years, several online platforms have seen a rapid increase in the number of review systems
+that request users to provide aspect-level feedback. Multi-Aspect Rating Prediction (MARP),
+where the goal is to predict the ratings from a review at an individual aspect level, has become a challenging
+and an imminent problem. To tackle this challenge, we propose a deliberate self-attention deep
+neural network model, named as FEDAR, for the MARP problem, which can achieve competitive performance
+while also being able to interpret the predictions made. As opposed to the previous studies, which
+make use of hand-crafted keywords to determine aspects in sentiment predictions, our model does
+not suffer from human bias issues since aspect keywords are automatically detected through a self-attention
+mechanism. FEDAR is equipped with a highway word embedding layer to transfer knowledge from pre-trained
+word embeddings, an RNN encoder layer with output features enriched by pooling and factorization
+techniques, and a deliberate self-attention layer. In addition, we also propose an Attention-driven
+Keywords Ranking (AKR) method, which can automatically extract aspect-level sentiment-related
+keywords from the review corpus based on the attention weights. Since crowdsourcing annotation
+can be an alternate way to recover missing ratings of reviews, we propose a LEcture-AuDience (LEAD)
+strategy to estimate model uncertainty in the context of multi-task learning, so that valuable
+human resources can focus on the most uncertain predictions. Our extensive set of experiments on
+different DMSC datasets demonstrate the superiority of the proposed FEDAR and LEAD models. Visualization
+of aspect-level sentiment keywords demonstrate the interpretability of our model and effectiveness
+of our AKR method. 

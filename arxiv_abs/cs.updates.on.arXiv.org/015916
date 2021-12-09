@@ -1,0 +1,18 @@
+Structural health monitoring (SHM) systems use the non-destructive testing principle for damage
+identification. As part of SHM, the propagation of ultrasonic guided waves (UGWs) is tracked and
+analyzed for the changes in the associated wave pattern. These changes help identify the location
+of a structural damage, if any. We advance existing research by accounting for uncertainty in the
+material and geometric properties of a structure. The physics model used in this study comprises
+of a monolithically coupled system of acoustic and elastic wave equations, known as the wave propagation
+in fluid-solid and their interface (WpFSI) problem. As the UGWs propagate in the solid, fluid, and
+their interface, the wave signal displacement measurements are contrasted against the benchmark
+pattern. For the numerical solution, we develop an efficient algorithm that successfully addresses
+the inherent complexity of solving the multiphysics problem under uncertainty. We present a procedure
+that uses Gaussian process regression and convolutional neural network for predicting the UGW
+propagation in a solid-fluid and their interface under uncertainty. First, a set of training images
+for different realizations of the uncertain parameters of the inclusion inside the structure is
+generated using a monolithically-coupled system of acoustic and elastic wave equations. Next,
+Gaussian processes trained with these images are used for predicting the propagated wave with convolutional
+neural networks for further enhancement to produce high-quality images of the wave patterns for
+new realizations of the uncertainty. The results indicate that the proposed approach provides
+an accurate prediction for the WpFSI problem in the presence of uncertainty. 

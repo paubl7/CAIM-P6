@@ -1,0 +1,20 @@
+The Ising model is a celebrated example of a Markov random field, introduced in statistical physics
+to model ferromagnetism. This is a discrete exponential family with binary outcomes, where the
+sufficient statistic involves a quadratic term designed to capture correlations arising from
+pairwise interactions. However, in many situations the dependencies in a network arise not just
+from pairs, but from peer-group effects. A convenient mathematical framework for capturing higher-order
+dependencies, is the $p$-tensor Ising model, where the sufficient statistic consists of a multilinear
+polynomial of degree $p$. This thesis develops a framework for statistical inference of the natural
+parameters in $p$-tensor Ising models. We begin with the Curie-Weiss Ising model, where we unearth
+various non-standard phenomena in the asymptotics of the maximum-likelihood (ML) estimates of
+the parameters, such as the presence of a critical curve in the interior of the parameter space on
+which these estimates have a limiting mixture distribution, and a surprising superefficiency
+phenomenon at the boundary point(s) of this curve. ML estimation fails in more general $p$-tensor
+Ising models due to the presence of a computationally intractable normalizing constant. To overcome
+this issue, we use the popular maximum pseudo-likelihood (MPL) method, which avoids computing
+the inexplicit normalizing constant based on conditional distributions. We derive general conditions
+under which the MPL estimate is $\sqrt{N}$-consistent, where $N$ is the size of the underlying network.
+Finally, we consider a more general Ising model, which incorporates high-dimensional covariates
+at the nodes of the network, that can also be viewed as a logistic regression model with dependent
+observations. In this model, we show that the parameters can be estimated consistently under sparsity
+assumptions on the true covariate vector. 

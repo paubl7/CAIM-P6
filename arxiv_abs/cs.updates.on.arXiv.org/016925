@@ -1,0 +1,20 @@
+ML-enabled software systems have been incorporated in many public demonstrations for automated
+driving (AD) systems. Such solutions have also been considered as a crucial approach to aim at SAE
+Level 5 systems, where the passengers in such vehicles do not have to interact with the system at all
+anymore. Already in 2016, Nvidia demonstrated a complete end-to-end approach for training the
+complete software stack covering perception, planning and decision making, and the actual vehicle
+control. While such approaches show the great potential of such ML-enabled systems, there have
+also been demonstrations where already changes to single pixels in a video frame can potentially
+lead to completely different decisions with dangerous consequences. In this paper, a structured
+analysis has been conducted to explore video degradation effects on the performance of an ML-enabled
+pedestrian detector. Firstly, a baseline of applying YOLO to 1,026 frames with pedestrian annotations
+in the KITTI Vision Benchmark Suite has been established. Next, video degradation candidates for
+each of these frames were generated using the leading video codecs libx264, libx265, Nvidia HEVC,
+and AV1: 52 frames for the various compression presets for color and gray-scale frames resulting
+in 104 degradation candidates per original KITTI frame and 426,816 images in total. YOLO was applied
+to each image to compute the intersection-over-union (IoU) metric to compare the performance with
+the original baseline. While aggressively lossy compression settings result in significant performance
+drops as expected, it was also observed that some configurations actually result in slightly better
+IoU results compared to the baseline. The findings show that carefully chosen lossy video configurations
+preserve a decent performance of particular ML-enabled systems while allowing for substantial
+savings when storing or transmitting data. 

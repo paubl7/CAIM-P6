@@ -1,0 +1,19 @@
+Training deep neural networks on large datasets containing high-dimensional data requires a large
+amount of computation. A solution to this problem is data-parallel distributed training, where
+a model is replicated into several computational nodes that have access to different chunks of the
+data. This approach, however, entails high communication rates and latency because of the computed
+gradients that need to be shared among nodes at every iteration. The problem becomes more pronounced
+in the case that there is wireless communication between the nodes (i.e. due to the limited network
+bandwidth). To address this problem, various compression methods have been proposed including
+sparsification, quantization, and entropy encoding of the gradients. Existing methods leverage
+the intra-node information redundancy, that is, they compress gradients at each node independently.
+In contrast, we advocate that the gradients across the nodes are correlated and propose methods
+to leverage this inter-node redundancy to improve compression efficiency. Depending on the node
+communication protocol (parameter server or ring-allreduce), we propose two instances of the
+LGC approach that we coin Learned Gradient Compression (LGC). Our methods exploit an autoencoder
+(i.e. trained during the first stages of the distributed training) to capture the common information
+that exists in the gradients of the distributed nodes. We have tested our LGC methods on the image
+classification and semantic segmentation tasks using different convolutional neural networks
+(ResNet50, ResNet101, PSPNet) and multiple datasets (ImageNet, Cifar10, CamVid). The ResNet101
+model trained for image classification on Cifar10 achieved an accuracy of 93.57%, which is lower
+than the baseline distributed training with uncompressed gradients only by 0.18%. 

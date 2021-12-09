@@ -1,0 +1,19 @@
+The 3D matter power spectrum, $P_{\delta}(k,z)$ is a fundamental quantity in the analysis of cosmological
+data such as large-scale structure, 21cm observations, and weak lensing. Existing computer models
+(Boltzmann codes) such as CLASS can provide it at the expense of immoderate computational cost.
+In this paper, we propose a fast Bayesian method to generate the 3D matter power spectrum, for a given
+set of wavenumbers, $k$ and redshifts, $z$. Our code allows one to calculate the following quantities:
+the linear matter power spectrum at a given redshift (the default is set to 0); the non-linear 3D matter
+power spectrum with/without baryon feedback; the weak lensing power spectrum. The gradient of
+the 3D matter power spectrum with respect to the input cosmological parameters is also returned
+and this is useful for Hamiltonian Monte Carlo samplers. The derivatives are also useful for Fisher
+matrix calculations. In our application, the emulator is accurate when evaluated at a set of cosmological
+parameters, drawn from the prior, with the fractional uncertainty, $\Delta P_{\delta}/P_{\delta}$
+centered on 0. It is also $\sim 300$ times faster compared to CLASS, hence making the emulator amenable
+to sampling cosmological and nuisance parameters in a Monte Carlo routine. In addition, once the
+3D matter power spectrum is calculated, it can be used with a specific redshift distribution, $n(z)$
+to calculate the weak lensing and intrinsic alignment power spectra, which can then be used to derive
+constraints on cosmological parameters in a weak lensing data analysis problem. The software ($\texttt{emuPK}$)
+can be trained with any set of points and is distributed on Github, and comes with with a pre-trained
+set of Gaussian Process (GP) models, based on 1000 Latin Hypercube (LH) samples, which follow roughly
+the current priors for current weak lensing analyses. 

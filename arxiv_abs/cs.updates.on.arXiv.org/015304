@@ -1,0 +1,20 @@
+In this paper, we investigate projection-based intrusive and data-driven non-intrusive model
+order reduction (MOR) methods in the numerical simulation of the rotating thermal shallow water
+equation (RTSWE) in parametric and non-parametric form. The RTSWE is a non-canonical Hamiltonian
+partial differential equation (PDE) with the associated conserved quantities, i.e., Hamiltonian
+(energy), mass, buoyancy, and the total vorticity. Discretization of the RTSWE in space with centered
+finite differences leads to Hamiltonian system of ordinary differential equations (ODEs) with
+linear and quadratic terms. The intrusive reduced-order model (ROM) is constructed with the proper
+orthogonal decomposition (POD) with the Galerkin projection (POD-G). We apply the operator inference
+(OpInf) with re-projection for non-intrusive reduced-order modeling.The OpInf non-intrusively
+learns a reduced model from state snapshot and time derivative which approximate the evolution
+of the RTSWE within a low-dimensional subspace. The OpInf data sampling scheme to obtain re-projected
+trajectories of the RTSWE corresponding to Markovian dynamics in low-dimensional subspaces,
+recovers of reduced models with high accuracy. In the parametric case, for both methods, we make
+use of the parameter dependency at the level of the PDE without interpolating between the reduced
+operators. The least-squares problem of the OpInf is regularized with the minimum norm solution.
+Both reduced models are able to accurately re-predict the training data and capture much of the overall
+system behavior in the prediction period. Due to re-projection, the OpInf is more costly than the
+POG-G, nevertheless, speed-up factors of order two are achieved for both ROMs. Numerical results
+demonstrate that the conserved quantities of the RTSWE are preserved for both ROMs over time and
+the long-term stability of the reduced solutions is achieved. 

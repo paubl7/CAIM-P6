@@ -1,0 +1,18 @@
+The performance of spectral clustering heavily relies on the quality of affinity matrix. A variety
+of affinity-matrix-construction methods have been proposed but they have hyper-parameters to
+determine beforehand, which requires strong experience and lead to difficulty in real applications
+especially when the inter-cluster similarity is high or/and the dataset is large. On the other hand,
+we often have to determine to use a linear model or a nonlinear model, which still depends on experience.
+To solve these two problems, in this paper, we present an eigen-gap guided search method for subspace
+clustering. The main idea is to find the most reliable affinity matrix among a set of candidates constructed
+by linear and kernel regressions, where the reliability is quantified by the \textit{relative-eigen-gap}
+of graph Laplacian defined in this paper. We show, theoretically and numerically, that the Laplacian
+matrix with a larger relative-eigen-gap often yields a higher clustering accuracy and stability.
+Our method is able to automatically search the best model and hyper-parameters in a pre-defined
+space. The search space is very easy to determine and can be arbitrarily large, though a relatively
+compact search space can reduce the highly unnecessary computation. Our method has high flexibility
+and convenience in real applications, and also has low computational cost because the affinity
+matrix is not computed by iterative optimization. We extend the method to large-scale datasets
+such as MNIST, on which the time cost is less than 90s and the clustering accuracy is state-of-the-art.
+Extensive experiments of natural image clustering show that our method is more stable, accurate,
+and efficient than baseline methods. 

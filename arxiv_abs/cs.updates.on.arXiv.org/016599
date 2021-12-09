@@ -1,0 +1,19 @@
+Convolutional Neural Networks (CNN) have shown impressive performance in computer vision, natural
+language processing, and many other applications, but they exhibit high computations and substantial
+memory requirements. To address these limitations, especially in resource-constrained devices,
+the use of cloud computing for CNNs is becoming more popular. This comes with privacy and latency
+concerns that have motivated the designers to develop embedded hardware accelerators for CNNs.
+However, designing a specialized accelerator increases the time-to-market and cost of production.
+Therefore, to reduce the time-to-market and access to state-of-the-art techniques, CNN hardware
+mapping and deployment on embedded accelerators are often outsourced to untrusted third parties,
+which is going to be more prevalent in futuristic artificial intelligence of things (AIoT) systems.
+These AIoT systems anticipate horizontal collaboration among different resource-constrained
+AIoT node devices, where CNN layers are partitioned and these devices collaboratively compute
+complex CNN tasks Therefore, there is a dire need to explore this attack surface for designing secure
+embedded hardware accelerators for CNNs. Towards this goal, in this paper, we exploited this attack
+surface to propose an HT-based attack called FeSHI. This attack exploits the statistical distribution
+i.e., Gaussian distribution, of the layer-by-layer feature maps of the CNN to design two triggers
+for stealthy HT with a very low probability of triggering. To illustrate the effectiveness of the
+proposed attack, we deployed the LeNet and LeNet-3D on PYNQ to classify the MNIST and CIFAR-10 datasets,
+respectively, and tested FeSHI. The experimental results show that FeSHI utilizes up to 2% extra
+LUTs, and the overall resource overhead is less than 1% compared to the original designs 

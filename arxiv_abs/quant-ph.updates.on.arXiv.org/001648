@@ -1,0 +1,20 @@
+Should quantum computers become available, they will reduce the effective key length of basic secret-key
+primitives, such as blockciphers. To address this we will either need to use blockciphers which
+inherently have longer keys or use key-length extension techniques which employ a blockcipher
+to construct a more secure blockcipher that uses longer keys. We consider the latter approach by
+analyzing the security of the FX and double encryption constructions. Classically, FX is known
+to be secure, while double encryption is no more secure than single encryption due to a meet-in-the-middle
+attack. We provide positive results, with concrete and tight bounds, for both of these constructions
+against quantum attackers in ideal models. For FX, we consider security in the "Q1 model," a natural
+model in which the attacker has quantum access to the ideal primitive, but only classic access to
+FX. We provide two partial results in this model. The first establishes the security of FX against
+non-adaptive attackers. The second establishes fully adaptive security when considering a variant
+of FX using a random oracle in place of an ideal cipher. This result relies on the techniques of Zhandry
+(CRYPTO '19) for lazily sampling a quantum random oracle and are thus hard to extend to the true FX
+construction because it is unknown if a quantum random permutation can be lazily sampled. To the
+best of our knowledge, this result also is the first to introduce techniques to handle Q1 security
+in ideal models without analyzing the classical and quantum oracles separately, which may be of
+broader interest. For double encryption we apply a technique of Tessaro and Thiruvengadam (TCC
+'18) to establish that security reduces to the difficulty of solving the list disjointness problem,
+which we are able to reduce through a chain of results to the known quantum difficulty of the element
+distinctness problem. 

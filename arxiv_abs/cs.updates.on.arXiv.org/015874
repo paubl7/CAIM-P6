@@ -1,0 +1,19 @@
+In this paper, we introduce a framework for segmenting instances of a common object class by multiple
+active contour evolution over semantic segmentation maps of images obtained through fully convolutional
+networks. The contour evolution is cast as an energy minimization problem, where the aggregate
+energy functional incorporates a data fit term, an explicit shape model, and accounts for object
+overlap. Efficient solution neighborhood operators are proposed, enabling optimization through
+metaheuristics such as simulated annealing. We instantiate the proposed framework in the context
+of segmenting individual fallen stems from high-resolution aerial multispectral imagery. We
+validated our approach on 3 real-world scenes of varying complexity. The test plots were situated
+in regions of the Bavarian Forest National Park, Germany, which sustained a heavy bark beetle infestation.
+Evaluations were performed on both the polygon and line segment level, showing that the multi-contour
+segmentation can achieve up to 0.93 precision and 0.82 recall. An improvement of up to 7 percentage
+points (pp) in recall and 6 in precision compared to an iterative sample consensus line segment detection
+was achieved. Despite the simplicity of the applied shape parametrization, an explicit shape model
+incorporated into the energy function improved the results by up to 4 pp of recall. Finally, we show
+the importance of using a deep learning based semantic segmentation method as the basis for individual
+stem detection. Our method is a step towards increased accessibility of automatic fallen tree mapping,
+due to higher cost efficiency of aerial imagery acquisition compared to laser scanning. The precise
+fallen tree maps could be further used as a basis for plant and animal habitat modeling, studies on
+carbon sequestration as well as soil quality in forest ecosystems. 

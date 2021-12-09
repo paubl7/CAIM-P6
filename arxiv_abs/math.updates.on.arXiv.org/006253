@@ -1,0 +1,19 @@
+In this paper we consider minimization of a difference-of-convex (DC) function with and without
+linear constraints. We first study a smooth approximation of a generic DC function, termed difference-of-Moreau-envelopes
+(DME) smoothing, where both components of the DC function are replaced by their respective Moreau
+envelopes. The resulting smooth approximation is shown to be Lipschitz differentiable, capture
+stationary points, local, and global minima of the original DC function, and enjoy some growth conditions,
+such as level-boundedness and coercivity, for broad classes of DC functions. We then develop four
+algorithms for solving DC programs with and without linear constraints based on the DME smoothing.
+In particular, for a smoothed DC program without linear constraints, we show that the classic gradient
+descent method as well as an inexact variant can obtain a stationary solution in the limit with a convergence
+rate of $\mathcal{O}(K^{-1/2})$, where $K$ is the number of proximal evaluations of both components.
+Furthermore, when the DC program is explicitly constrained in an affine subspace, we combine the
+smoothing technique with the augmented Lagrangian function and derive two variants of the augmented
+Lagrangian method (ALM), named LCDC-ALM and composite LCDC-ALM, focusing on different structures
+of the DC objective function. We show that both algorithms find an $\epsilon$-approximate stationary
+solution of the original DC program in $\mathcal{O}(\epsilon^{-2})$ iterations. Comparing to
+existing methods designed for linearly constrained weakly convex minimization, the proposed
+ALM-based algorithms can be applied to a broader class of problems, where the objective contains
+a nonsmooth concave component. Finally, numerical experiments are presented to demonstrate the
+performance of the proposed algorithms. 

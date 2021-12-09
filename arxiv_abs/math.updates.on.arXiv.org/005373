@@ -1,0 +1,19 @@
+Given an undirected graph $G=(V,E,l)$ with a nonnegative edge length function $l$, and two integers
+$p$, $\lambda$, $0<p<|V|$, $0\le\lambda\le 1$, let $V^{\prime}$ be a subset of $V$ with $|V^{\prime}|=p$.
+For each vertex $v \in V$, we let $d(v,V^{\prime})$ denote the shortest distance from $v$ to $V^{\prime}$.
+An {\it eccentricity} $\pounds_C(V^{\prime})$ of $V^{\prime}$ denotes the maximum distance
+of $d(v,V^{\prime})$ for all $v \in V$. A {median-distance} $\pounds_M(V^{\prime})$ of $V^{\prime}$
+denotes the total distance of $d(v,V^{\prime})$ for all $v \in V$. The $p$-centdian problem is to
+find a vertex set $V^{\prime}$ of $V$ with $|V^{\prime}|=p$, such that $\lambda \pounds_C(V^{\prime})+(1-\lambda)
+\pounds_M(V^{\prime})$ is minimized. The vertex set $V^{\prime}$ is called as the {\it centdian
+set} and $\lambda \pounds_C(V^{\prime})+(1-\lambda) \pounds_M(V^{\prime})$ is called as the
+{centdian-distance}. If we converse the two criteria, that is given the bound $U$ of the {centdian-distance}
+and the objective function is to minimize the cardinality of the {centdian set}, this problem is
+called as the converse centdian problem. In this paper, we prove the $p$-centdian problem is NP-Complete
+even when the {centdian-distance} is $\pounds_C(V^{\prime})+\pounds_M(V^{\prime})$. Then
+we design the first non-trivial brute force exact algorithms for the $p$-centdian problem and the
+converse centdian problem, respectively. Finally, we design a $(1+\epsilon)$-approximation
+(respectively, $(1+1/\epsilon)(ln|V|+1)$-approximation) algorithm for the $p$-centdian
+problem (respectively, converse centdian problem) satisfying the cardinality of {centdian set}
+is less than or equal to $(1+1/\epsilon)(ln|V|+1)p$ (respectively, $(1+\epsilon)U$), in which
+$\epsilon>0$. 

@@ -1,0 +1,19 @@
+In this paper, we consider jointly optimizing cell load balance and network throughput via a reinforcement
+learning (RL) approach, where inter-cell handover (i.e., user association assignment) and massive
+MIMO antenna tilting are configured as the RL policy to learn. Our rationale behind using RL is to
+circumvent the challenges of analytically modeling user mobility and network dynamics. To accomplish
+this joint optimization, we integrate vector rewards into the RL value network and conduct RL action
+via a separate policy network. We name this method as Pareto deterministic policy gradients (PDPG).
+It is an actor-critic, model-free and deterministic policy algorithm which can handle the coupling
+objectives with the following two merits: 1) It solves the optimization via leveraging the degree
+of freedom of vector reward as opposed to choosing handcrafted scalar-reward; 2) Cross-validation
+over multiple policies can be significantly reduced. Accordingly, the RL enabled network behaves
+in a self-organized way: It learns out the underlying user mobility through measurement history
+to proactively operate handover and antenna tilt without environment assumptions. Our numerical
+evaluation demonstrates that the introduced RL method outperforms scalar-reward based approaches.
+Meanwhile, to be self-contained, an ideal static optimization based brute-force search solver
+is included as a benchmark. The comparison shows that the RL approach performs as well as this ideal
+strategy, though the former one is constrained with limited environment observations and lower
+action frequency, whereas the latter ones have full access to the user mobility. The convergence
+of our introduced approach is also tested under different user mobility environment based on our
+measurement data from a real scenario. 

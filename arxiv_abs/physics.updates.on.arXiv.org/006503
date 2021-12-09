@@ -1,0 +1,18 @@
+Pulmonary respiratory motion artifacts are common in four-dimensional computed tomography (4DCT)
+of lungs and are caused by missing, duplicated, and misaligned image data. This paper presents a
+geodesic density regression (GDR) algorithm to correct motion artifacts in 4DCT by correcting
+artifacts in one breathing phase with artifact-free data from corresponding regions of other breathing
+phases. The GDR algorithm estimates an artifact-free lung template image and a smooth, dense, 4D
+(space plus time) vector field that deforms the template image to each breathing phase to produce
+an artifact-free 4DCT scan. Correspondences are estimated by accounting for the local tissue density
+change associated with air entering and leaving the lungs, and using binary artifact masks to exclude
+regions with artifacts from image regression. The artifact-free lung template image is generated
+by mapping the artifact-free regions of each phase volume to a common reference coordinate system
+using the estimated correspondences and then averaging. This procedure generates a fixed view
+of the lung with an improved signal-to-noise ratio. The GDR algorithm was evaluated and compared
+to a state-of-the-art geodesic intensity regression (GIR) algorithm using simulated CT time-series
+and 4DCT scans with clinically observed motion artifacts. The simulation shows that the GDR algorithm
+has achieved significantly more accurate Jacobian images and sharper template images, and is less
+sensitive to data dropout than the GIR algorithm. We also demonstrate that the GDR algorithm is more
+effective than the GIR algorithm for removing clinically observed motion artifacts in treatment
+planning 4DCT scans. Our code is freely available at https://github.com/Wei-Shao-Reg/GDR. 

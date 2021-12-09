@@ -1,0 +1,19 @@
+Manually authoring 3D shapes is difficult and time consuming; generative models of 3D shapes offer
+compelling alternatives. Procedural representations are one such possibility: they offer high-quality
+and editable results but are difficult to author and often produce outputs with limited diversity.
+On the other extreme are deep generative models: given enough data, they can learn to generate any
+class of shape but their outputs have artifacts and the representation is not editable. In this paper,
+we take a step towards achieving the best of both worlds for novel 3D shape synthesis. We propose ShapeAssembly,
+a domain-specific "assembly-language" for 3D shape structures. ShapeAssembly programs construct
+shapes by declaring cuboid part proxies and attaching them to one another, in a hierarchical and
+symmetrical fashion. Its functions are parameterized with free variables, so that one program
+structure is able to capture a family of related shapes. We show how to extract ShapeAssembly programs
+from existing shape structures in the PartNet dataset. Then we train a deep generative model, a hierarchical
+sequence VAE, that learns to write novel ShapeAssembly programs. The program captures the subset
+of variability that is interpretable and editable. The deep model captures correlations across
+shape collections that are hard to express procedurally. We evaluate our approach by comparing
+shapes output by our generated programs to those from other recent shape structure synthesis models.
+We find that our generated shapes are more plausible and physically-valid than those of other methods.
+Additionally, we assess the latent spaces of these models, and find that ours is better structured
+and produces smoother interpolations. As an application, we use our generative model and differentiable
+program interpreter to infer and fit shape programs to unstructured geometry, such as point clouds.

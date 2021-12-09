@@ -1,0 +1,19 @@
+Pedestrian trajectory prediction in dynamic scenes remains a challenging and critical problem
+in numerous applications, such as self-driving cars and socially aware robots. Challenges concentrate
+on capturing pedestrians' motion patterns and social interactions, as well as handling the future
+uncertainties. Recent studies focus on modeling pedestrians' motion patterns with recurrent
+neural networks, capturing social interactions with pooling-based or graph-based methods, and
+handling future uncertainties by using random Gaussian noise as the latent variable. However,
+they do not integrate specific obstacle avoidance experience (OAE) that may improve prediction
+performance. For example, pedestrians' future trajectories are always influenced by others in
+front. Here we propose GTPPO (Graph-based Trajectory Predictor with Pseudo Oracle), an encoder-decoder-based
+method conditioned on pedestrians' future behaviors. Pedestrians' motion patterns are encoded
+with a long short-term memory unit, which introduces the temporal attention to highlight specific
+time steps. Their interactions are captured by a graph-based attention mechanism, which draws
+OAE into the data-driven learning process of graph attention. Future uncertainties are handled
+by generating multi-modal outputs with an informative latent variable. Such a variable is generated
+by a novel pseudo oracle predictor, which minimizes the knowledge gap between historical and ground-truth
+trajectories. Finally, the GTPPO is evaluated on ETH, UCY and Stanford Drone datasets, and the results
+demonstrate state-of-the-art performance. Besides, the qualitative evaluations show successful
+cases of handling sudden motion changes in the future. Such findings indicate that GTPPO can peek
+into the future. 

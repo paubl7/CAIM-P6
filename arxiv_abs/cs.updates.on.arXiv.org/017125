@@ -1,0 +1,19 @@
+Length Rate Quotient (LRQ) is the first algorithm of interleaved shaping -- a novel concept proposed
+to provide per-flow shaping for a flow aggregate without per-flow queuing. This concept has been
+adopted by Time-Sensitive Networking (TSN) and Deterministic Networking (DetNet). An appealing
+property of interleaved shaping is that, when an interleaved shaper is appended to a FIFO system,
+it does not increase the worst-case delay of the system. Based on this "shaping-for-free" property,
+an approach has been introduced to deliver bounded end-to-end latency. Specifically, at each output
+link of a node, class-based aggregate scheduling is used together with one interleaved shaper per-input
+link and per-class, and the interleaved shaper re-shapes every flow to its initial traffic constraint.
+In this paper, we investigate other properties of interleaved LRQ shapers, particularly as stand-alone
+elements. In addition, under per-flow setting, we also investigate per-flow LRQ based flow aggregation
+and derive its properties. The analysis focuses directly on the timing of operations, such as shaping
+and scheduling, in the network. This timing based method can be found in the Guaranteed Rate (GR)
+server model and more generally the max-plus branch of network calculus. With the derived properties,
+we not only show that an improved end-to-end latency bound can be obtained for the current approach,
+but also demonstrate with two examples that new approaches may be devised. End-to-end delay bounds
+for the three approaches are derived and compared. As a highlight, the two new approaches do not require
+different node architectures in allocating (shaping / scheduling) queues, which implies that
+they can be readily adapted for use in TSN and DetNet. This together with the derived properties of
+LRQ shed new insights on providing the TSN / DetNet qualities of service. 

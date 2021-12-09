@@ -1,0 +1,20 @@
+The exascale race is at an end with the announcement of the Aurora and Frontier machines. This next
+generation of supercomputers utilize diverse hardware architectures to achieve their compute
+performance, providing an added onus on the performance portability of applications. An expanding
+fragmentation of programming models would provide a compounding optimization challenge were
+it not for the evolution of performance-portable frameworks, providing unified models for mapping
+abstract hierarchies of parallelism to diverse architectures. A solution to this challenge is
+the evolution of performance-portable frameworks, providing unified models for mapping abstract
+hierarchies of parallelism to diverse architectures. Kokkos is one such performance portable
+programming model for C++ applications, providing back-end implementations for each major HPC
+platform. Even with a performance portable framework, restructuring algorithms to expose higher
+degrees of parallelism is non-trivial. The Spectral Neighbor Analysis Potential (SNAP) is a machine-learned
+inter-atomic potential utilized in cutting-edge molecular dynamics simulations. Previous implementations
+of the SNAP calculation showed a downward trend in their performance relative to peak on newer-generation
+CPUs and low performance on GPUs. In this paper we describe the restructuring and optimization of
+SNAP as implemented in the Kokkos CUDA backend of the LAMMPS molecular dynamics package, benchmarked
+on NVIDIA GPUs. We identify novel patterns of hierarchical parallelism, facilitating a minimization
+of memory access overheads and pushing the implementation into a compute-saturated regime. Our
+implementation via Kokkos enables recompile-and-run efficiency on upcoming architectures.
+We find a $\sim$22x time-to-solution improvement relative to an existing implementation as measured
+on an NVIDIA Tesla V100-16GB for an important benchmark. 

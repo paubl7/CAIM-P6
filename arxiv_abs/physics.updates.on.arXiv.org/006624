@@ -1,0 +1,19 @@
+We present OrbNet Denali, a machine learning model for electronic structure that is designed as
+a drop-in replacement for ground-state density functional theory (DFT) energy calculations.
+The model is a message-passing neural network that uses symmetry-adapted atomic orbital features
+from a low-cost quantum calculation to predict the energy of a molecule. OrbNet Denali is trained
+on a vast dataset of 2.3 million DFT calculations on molecules and geometries. This dataset covers
+the most common elements in bio- and organic chemistry (H, Li, B, C, N, O, F, Na, Mg, Si, P, S, Cl, K, Ca,
+Br, I) as well as charged molecules. OrbNet Denali is demonstrated on several well-established
+benchmark datasets, and we find that it provides accuracy that is on par with modern DFT methods while
+offering a speedup of up to three orders of magnitude. For the GMTKN55 benchmark set, OrbNet Denali
+achieves WTMAD-1 and WTMAD-2 scores of 7.19 and 9.84, on par with modern DFT functionals. For several
+GMTKN55 subsets, which contain chemical problems that are not present in the training set, OrbNet
+Denali produces a mean absolute error comparable to those of DFT methods. For the Hutchison conformers
+benchmark set, OrbNet Denali has a median correlation coefficient of R^2=0.90 compared to the reference
+DLPNO-CCSD(T) calculation, and R^2=0.97 compared to the method used to generate the training data
+(wB97X-D3/def2-TZVP), exceeding the performance of any other method with a similar cost. Similarly,
+the model reaches chemical accuracy for non-covalent interactions in the S66x10 dataset. For torsional
+profiles, OrbNet Denali reproduces the torsion profiles of wB97X-D3/def2-TZVP with an average
+MAE of 0.12 kcal/mol for the potential energy surfaces of the diverse fragments in the TorsionNet500
+dataset. 

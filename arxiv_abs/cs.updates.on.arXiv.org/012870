@@ -1,0 +1,20 @@
+Graph Crossing Number is a fundamental problem with various applications. In this problem, the
+goal is to draw an input graph $G$ in the plane so as to minimize the number of crossings between the
+images of its edges. Despite extensive work, non-trivial approximation algorithms are only known
+for bounded-degree graphs. Even for this special case, the best current algorithm achieves a $\tilde
+O(\sqrt n)$-approximation, while the best current negative result is APX-hardness. All current
+approximation algorithms for the problem build on the same paradigm: compute a set $E'$ of edges
+(called a \emph{planarizing set}) such that $G\setminus E'$ is planar; compute a planar drawing
+of $G\setminus E'$; then add the drawings of the edges of $E'$ to the resulting drawing. Unfortunately,
+there are examples of graphs, in which any implementation of this method must incur $\Omega (\text{OPT}^2)$
+crossings, where $\text{OPT}$ is the value of the optimal solution. This barrier seems to doom the
+only known approach to designing approximation algorithms for the problem, and to prevent it from
+yielding a better than $O(\sqrt n)$-approximation. In this paper we propose a new paradigm that
+allows us to overcome this barrier. We show an algorithm that, given a bounded-degree graph $G$ and
+a planarizing set $E'$ of its edges, computes another set $E''$ with $E'\subseteq E''$, such that
+$|E''|$ is relatively small, and there exists a near-optimal drawing of $G$ in which only edges of
+$E''$ participate in crossings. This allows us to reduce the Crossing Number problem to \emph{Crossing
+Number with Rotation System} -- a variant in which the ordering of the edges incident to every vertex
+is fixed as part of input. We show a randomized algorithm for this new problem, that allows us to obtain
+an $O(n^{1/2-\epsilon})$-approximation for Crossing Number on bounded-degree graphs, for some
+constant $\epsilon>0$. 

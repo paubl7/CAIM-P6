@@ -1,0 +1,19 @@
+This paper presents a one-sided immersed boundary (IB) method using kernel functions constructed
+via a moving least squares (MLS) method. The resulting kernels effectively couple structural degrees
+of freedom to fluid variables on only one side of the fluid-structure interface. This reduces spurious
+feedback forcing and internal flows that are typically observed in IB models that use isotropic
+kernel functions to couple the structure to fluid degrees of freedom on both sides of the interface.
+The method developed here extends the original MLS methodology introduced by Vanella and Balaras
+(J Comput Phys, 2009). Prior IB/MLS methods have used isotropic kernel functions that coupled fluid
+variables on both sides of the boundary to the interfacial degrees of freedom. The original IB/MLS
+approach converts the cubic spline weights typically employed in MLS reconstruction into an IB
+kernel function that satisfies particular discrete moment conditions. This paper shows that the
+same approach can be used to construct one-sided kernel functions (kernel functions are referred
+to as generating functions in the MLS literature). We also examine the performance of the new approach
+for a family of kernel functions introduced by Peskin. It is demonstrated that the one-sided MLS
+construction tends to generate non-monotone interpolation kernels with large over- and undershoots.
+We present two simple weight shifting strategies to construct generating functions that are positive
+and monotone, which enhances the stability of the resulting IB methodology. Benchmark cases are
+used to test the order of accuracy and verify the one-sided IB/MLS simulations in both two and three
+spatial dimensions. This new IB/MLS method is also used to simulate flow over the Ahmed car model,
+which highlights the applicability of this methodology for modeling complex engineering flows.

@@ -1,0 +1,20 @@
+A central object in optimal stopping theory is the single-choice prophet inequality for independent,
+identically distributed random variables: Given a sequence of random variables $X_1,\dots,X_n$
+drawn independently from a distribution $F$, the goal is to choose a stopping time $\tau$ so as to
+maximize $\alpha$ such that for all distributions $F$ we have $\mathbb{E}[X_\tau] \geq \alpha
+\cdot \mathbb{E}[\max_tX_t]$. What makes this problem challenging is that the decision whether
+$\tau=t$ may only depend on the values of the random variables $X_1,\dots,X_t$ and on the distribution
+$F$. For quite some time the best known bound for the problem was $\alpha\geq1-1/e\approx0.632$
+[Hill and Kertz, 1982]. Only recently this bound was improved by Abolhassani et al. [2017], and a
+tight bound of $\alpha\approx0.745$ was obtained by Correa et al. [2017]. The case where $F$ is unknown,
+such that the decision whether $\tau=t$ may depend only on the values of the first $t$ random variables
+but not on $F$, is equally well motivated (e.g., [Azar et al., 2014]) but has received much less attention.
+A straightforward guarantee for this case of $\alpha\geq1/e\approx0.368$ can be derived from
+the solution to the secretary problem. Our main result is that this bound is tight. Motivated by this
+impossibility result we investigate the case where the stopping time may additionally depend on
+a limited number of samples from~$F$. An extension of our main result shows that even with $o(n)$
+samples $\alpha\leq 1/e$, so that the interesting case is the one with $\Omega(n)$ samples. Here
+we show that $n$ samples allow for a significant improvement over the secretary problem, while $O(n^2)$
+samples are equivalent to knowledge of the distribution: specifically, with $n$ samples $\alpha\geq1-1/e\approx0.632$
+and $\alpha\leq\ln(2)\approx0.693$, and with $O(n^2)$ samples $\alpha\geq0.745-\epsilon$
+for any $\epsilon>0$. 

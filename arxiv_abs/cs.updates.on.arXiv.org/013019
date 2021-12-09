@@ -1,0 +1,18 @@
+The Markov-Chain Monte-Carlo (MCMC) method has been used widely in the literature for various applications,
+in particular estimating the expectation $\mathbb{E}_{\pi}[f]$ of a function $f:\Omega\to [a,b]$
+over a distribution $\pi$ on $\Omega$ (a.k.a. mean-estimation), to within $\varepsilon$ additive
+error (w.h.p.). Letting $R \doteq b-a$, standard variance-agnostic MCMC mean-estimators run
+the chain for $\tilde{\cal O}(\frac{TR^{2}}{\varepsilon^{2}})$ steps, when given as input an
+(often loose) upper-bound $T$ on the relaxation time $\tau_{\rm rel}$. When an upper-bound $V$
+on the stationary variance $v_{\pi} \doteq \mathbb{V}_{\pi}[f]$ is known, $\tilde{\cal O}\bigl(\frac{TR}{\varepsilon}+\frac{TV}{\varepsilon^{2}}\bigr)$
+steps suffice. We introduce the DYNAmic {Mcmc} Inter-Trace variance Estimation (DynaMITE) algorithm
+for mean-estimation. We define the inter-trace variance $v_{T}$ for any trace length $T$, and show
+that w.h.p., DynaMITE estimates the mean within $\varepsilon$ additive error within $\tilde{\cal
+O}\bigl(\frac{TR}{\varepsilon} + \frac{\tau_{\rm rel} v_{\tau\rm rel}}{\varepsilon^{2}}\bigr)$
+steps, without {a priori} bounds on $v_{\pi}$, the variance of $f$, or the trace variance $v_{T}$.
+When $\epsilon$ is small, the dominating term is $\tau_{\rm rel} v_{\tau\rm rel}$, thus the complexity
+of DynaMITE principally depends on the {\it a priori unknown} $\tau_{\rm rel}$ and $v_{\tau\rm
+rel}$. We believe in many situations $v_{T}=o(v_{\pi})$, and we identify two cases to demonstrate
+it. Furthermore, it always holds that $v_{\tau\rm rel} \leq 2v_{\pi}$, thus the worst-case complexity
+of DynaMITE is $\tilde{\cal O}(\frac{TR}{\varepsilon} +\frac{\tau_{\rm rel} v_{\pi}}{\varepsilon^{2}})$,
+improving the dependence of classical methods on the loose bounds $T$ and $V$. 

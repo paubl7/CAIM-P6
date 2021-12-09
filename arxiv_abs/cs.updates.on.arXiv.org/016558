@@ -1,0 +1,18 @@
+Problems of satisfiability and resiliency in workflows have been widely studied in the last decade.
+Recent work has shown that many such problems may be viewed as special cases of the authorization
+policy existence problem (APEP), which returns an authorization policy if one exists and 'No' otherwise.
+A solution may not exist because of the restrictions imposed by the base authorization relation
+and constraints that form part of the input to APEP. However, in many practical settings it would
+be more useful to obtain a 'least bad' policy than just a 'No', where 'least bad' is characterized
+by some numerical value associated with the policy indicating the extent to which the policy violates
+the base authorization relation and constraints. Accordingly, we introduce the Valued APEP, which
+returns an authorization policy of minimum weight, where the (non-negative) weight is determined
+by the constraints violated by the returned solution (and is 0 if all constraints are satisfied).
+We then establish a number of results concerning the parameterized complexity of Valued APEP. We
+prove that the problem is fixed-parameter tractable if the set of constraints satisfies two restrictions,
+but is intractable if only one of these restrictions holds. (Most constraints known to be of practical
+use satisfy these restrictions.) We introduce the notion of a user profile for a weighted constraint,
+which enables us to prove a powerful result, a corollary of which improves on known complexity results
+for APEP. Finally, we consider Valued APEP when restricted to particular sub-classes of constraints
+and show that instances of such problems can be reduced to the Valued WSP, enabling us to exploit known
+algorithms to solve these particular instances. 

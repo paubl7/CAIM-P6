@@ -1,0 +1,18 @@
+With the goal of identifying pixel-wise salient object regions from each input image, salient object
+detection (SOD) has been receiving great attention in recent years. One kind of mainstream SOD methods
+is formed by a bottom-up feature encoding procedure and a top-down information decoding procedure.
+While numerous approaches have explored the bottom-up feature extraction for this task, the design
+on top-down flows still remains under-studied. To this end, this paper revisits the role of top-down
+modeling in salient object detection and designs a novel densely nested top-down flows (DNTDF)-based
+framework. In every stage of DNTDF, features from higher levels are read in via the progressive compression
+shortcut paths (PCSP). The notable characteristics of our proposed method are as follows. 1) The
+propagation of high-level features which usually have relatively strong semantic information
+is enhanced in the decoding procedure; 2) With the help of PCSP, the gradient vanishing issues caused
+by non-linear operations in top-down information flows can be alleviated; 3) Thanks to the full
+exploration of high-level features, the decoding process of our method is relatively memory efficient
+compared against those of existing methods. Integrating DNTDF with EfficientNet, we construct
+a highly light-weighted SOD model, with very low computational complexity. To demonstrate the
+effectiveness of the proposed model, comprehensive experiments are conducted on six widely-used
+benchmark datasets. The comparisons to the most state-of-the-art methods as well as the carefully-designed
+baseline models verify our insights on the top-down flow modeling for SOD. The code of this paper
+is available at https://github.com/new-stone-object/DNTD. 

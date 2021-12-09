@@ -1,0 +1,19 @@
+As a well-established approach, factorization machine (FM) is capable of automatically learning
+high-order interactions among features to make predictions without the need for manual feature
+engineering. With the prominent development of deep neural networks (DNNs), there is a recent and
+ongoing trend of enhancing the expressiveness of FM-based models with DNNs. However, though better
+results are obtained with DNN-based FM variants, such performance gain is paid off by an enormous
+amount (usually millions) of excessive model parameters on top of the plain FM. Consequently, the
+heavy parameterization impedes the real-life practicality of those deep models, especially efficient
+deployment on resource-constrained IoT and edge devices. In this paper, we move beyond the traditional
+real space where most deep FM-based models are defined, and seek solutions from quaternion representations
+within the hypercomplex space. Specifically, we propose the quaternion factorization machine
+(QFM) and quaternion neural factorization machine (QNFM), which are two novel lightweight and
+memory-efficient quaternion-valued models for sparse predictive analytics. By introducing
+a brand new take on FM-based models with the notion of quaternion algebra, our models not only enable
+expressive inter-component feature interactions, but also significantly reduce the parameter
+size due to lower degrees of freedom in the hypercomplex Hamilton product compared with real-valued
+matrix multiplication. Extensive experimental results on three large-scale datasets demonstrate
+that QFM achieves 4.36% performance improvement over the plain FM without introducing any extra
+parameters, while QNFM outperforms all baselines with up to two magnitudes' parameter size reduction
+in comparison to state-of-the-art peer methods. 

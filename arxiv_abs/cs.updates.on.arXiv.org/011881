@@ -1,0 +1,18 @@
+In this paper, two nonlinear methods for stabilizing the orientation of a Four-Wheel Independent
+Drive and Steering (4WIDS) robot while in the air are analyzed, implemented in simulation, and compared.
+AGRO (the Agile Ground Robot) is a 4WIDS inspection robot that can be deployed into unsafe environments
+by being thrown, and can use the reaction torque from its four wheels to command its orientation while
+in the air. Prior work has demonstrated on a hardware prototype that simple PD control with hand-tuned
+gains is sufficient, but hardly optimal, to stabilize the orientation in under 500ms. The goal of
+this work is to decrease the stabilization time and reject disturbances using nonlinear control
+methods. A model-based Feedback Linearization (FL) was added to compensate for the nonlinear Coriolis
+terms. However, with external disturbances, model uncertainty and sensor noise, the FL controller
+does not guarantee stability. As an alternative, a second controller was developed using backstepping
+methods with an adaptive compensator for external disturbances, model uncertainty, and sensor
+offset. The controller was designed using Lyapunov analysis. A simulation was written using the
+full nonlinear dynamics of AGRO in an isotropic steering configuration in which control authority
+over its pitch and roll are equalized. The PD+FL control method was compared to the backstepping
+control method using the same initial conditions in simulation. Both the backstepping controller
+and the PD+FL controller stabilized the system within 250 milliseconds. The adaptive backstepping
+controller was also able to achieve this performance with the adaptation law enabled and compensating
+for offset noisy sinusoidal disturbances. 

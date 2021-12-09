@@ -1,0 +1,19 @@
+We consider integer programs whose constraint matrix has a special block structure: $\min\{f(x):H_{com}x=b,
+l\le x\le u,x\in\mathbb{Z}^{t_B+nt_A}\}$, where the objective function $f$ is separable convex
+and the constraint matrix $H_ {com}$ is composed of small submatrices $A_i,B,C,D_i$ such that the
+first row is $(C,D_1,D_2,\ldots,D_n)$, the first column is $(C,B,B,\ldots,B)^{\top}$, the main
+diagonal is $(C,A_1,A_2,\ldots,A_n)$, and the rest entries are 0. Furthermore, $\text{rank}(B)$=1.
+We study fixed parameter tractable (FPT) algorithms by taking as parameters the number of rows and
+columns of small submatrices, together with the largest absolute value over their entries. We call
+the IP (almost) combinatorial 4-block n-fold IP. It generalizes n-fold IP and is a special case of
+4-block n-fold IP. The existence of FPT algorithms for 4-block n-fold IP is a major open problem and
+Chen et al. [ESA 2020] showed that the $\ell_\infty$-norm of Graver basis elements of 4-block n-fold
+IP is $\Omega(n)$. This motivates us to study special cases of 4-block n-fold IP to find structural
+insights. We show the $\ell_{\infty}$-norm of Graver basis elements of combinatorial 4-block
+n-fold IP is $\Omega(n)$. There is some FPT-value $\lambda$ such that for any nonzero element $g\in\{x:
+H_{com} x= 0\}$, $\lambda g$ can always be decomposed into Graver basis elements in the same orthant
+whose $\ell_{\infty}$-norm is FPT-bounded (while g might not admit such a decomposition). Then
+we can bound the $\ell_{\infty}$-norm of Graver basis elements by $O_{FPT}(n)$ and develop $O_{FPT}(n^{3+o(1)})$-time
+algorithms ($O_{FPT}$ hides a multiplicative FPT-term). Combinatorial 4-block n-fold IP can
+be used to model some classical problems, including scheduling with rejection and bicriteria scheduling,
+which implies that our FPT algorithm establishes a general framework to settle those problems.

@@ -1,0 +1,20 @@
+Oxygen consumption (VO$_2$) provides established clinical and physiological indicators of cardiorespiratory
+function and exercise capacity. However, VO$_2$ monitoring is largely limited to specialized
+laboratory settings, making its widespread monitoring elusive. Here, we investigate temporal
+prediction of VO$_2$ from wearable sensors during cycle ergometer exercise using a temporal convolutional
+network (TCN). Cardiorespiratory signals were acquired from a smart shirt with integrated textile
+sensors alongside ground-truth VO$_2$ from a metabolic system on twenty-two young healthy adults.
+Participants performed one ramp-incremental and three pseudorandom binary sequence exercise
+protocols to assess a range of VO$_2$ dynamics. A TCN model was developed using causal convolutions
+across an effective history length to model the time-dependent nature of VO$_2$. Optimal history
+length was determined through minimum validation loss across hyperparameter values. The best
+performing model encoded 218 s history length (TCN-VO$_2$ A), with 187 s, 97 s, and 76 s yielding less
+than 3% deviation from the optimal validation loss. TCN-VO$_2$ A showed strong prediction accuracy
+(mean, 95% CI) across all exercise intensities (-22 ml.min$^{-1}$, [-262, 218]), spanning transitions
+from low-moderate (-23 ml.min$^{-1}$, [-250, 204]), low-heavy (14 ml.min$^{-1}$, [-252, 280]),
+ventilatory threshold-heavy (-49 ml.min$^{-1}$, [-274, 176]), and maximal (-32 ml.min$^{-1}$,
+[-261, 197]) exercise. Second-by-second classification of physical activity across 16090 s of
+predicted VO$_2$ was able to discern between vigorous, moderate, and light activity with high accuracy
+(94.1%). This system enables quantitative aerobic activity monitoring in non-laboratory settings
+across a range of exercise intensities using wearable sensors for monitoring exercise prescription
+adherence and personal fitness. 

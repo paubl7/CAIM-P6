@@ -1,0 +1,19 @@
+Federated learning (FL) is a framework for distributed learning of centralized models. In FL, a
+set of edge devices train a model using their local data, while repeatedly exchanging their trained
+updates with a central server. This procedure allows tuning a centralized model in a distributed
+fashion without having the users share their possibly private data. In this paper, we focus on over-the-air
+(OTA) FL, which has been suggested recently to reduce the communication overhead of FL due to the
+repeated transmissions of the model updates by a large number of users over the wireless channel.
+In OTA FL, all users simultaneously transmit their updates as analog signals over a multiple access
+channel, and the server receives a superposition of the analog transmitted signals. However, this
+approach results in the channel noise directly affecting the optimization procedure, which may
+degrade the accuracy of the trained model. We develop a Convergent OTA FL (COTAF) algorithm which
+enhances the common local stochastic gradient descent (SGD) FL algorithm, introducing precoding
+at the users and scaling at the server, which gradually mitigates the effect of the noise. We analyze
+the convergence of COTAF to the loss minimizing model and quantify the effect of a statistically
+heterogeneous setup, i.e. when the training data of each user obeys a different distribution. Our
+analysis reveals the ability of COTAF to achieve a convergence rate similar to that achievable over
+error-free channels. Our simulations demonstrate the improved convergence of COTAF over vanilla
+OTA local SGD for training using non-synthetic datasets. Furthermore, we numerically show that
+the precoding induced by COTAF notably improves the convergence rate and the accuracy of models
+trained via OTA FL. 

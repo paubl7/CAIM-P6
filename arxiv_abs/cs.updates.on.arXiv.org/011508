@@ -1,0 +1,18 @@
+We present W-Net, a novel Convolution Neural Network (CNN) framework that employs raw ultrasound
+waveforms from each A-scan, typically referred to as ultrasound Radio Frequency (RF) data, in addition
+to the gray ultrasound image to semantically segment and label tissues. Unlike prior work, we seek
+to label every pixel in the image, without the use of a background class. To the best of our knowledge,
+this is also the first deep-learning or CNN approach for segmentation that analyses ultrasound
+raw RF data along with the gray image. International patent(s) pending [PCT/US20/37519]. We chose
+subcutaneous tissue (SubQ) segmentation as our initial clinical goal since it has diverse intermixed
+tissues, is challenging to segment, and is an underrepresented research area. SubQ potential applications
+include plastic surgery, adipose stem-cell harvesting, lymphatic monitoring, and possibly detection/treatment
+of certain types of tumors. A custom dataset consisting of hand-labeled images by an expert clinician
+and trainees are used for the experimentation, currently labeled into the following categories:
+skin, fat, fat fascia/stroma, muscle and muscle fascia. We compared our results with U-Net and Attention
+U-Net. Our novel \emph{W-Net}'s RF-Waveform input and architecture increased mIoU accuracy (averaged
+across all tissue classes) by 4.5\% and 4.9\% compared to regular U-Net and Attention U-Net, respectively.
+We present analysis as to why the Muscle fascia and Fat fascia/stroma are the most difficult tissues
+to label. Muscle fascia in particular, the most difficult anatomic class to recognize for both humans
+and AI algorithms, saw mIoU improvements of 13\% and 16\% from our W-Net vs U-Net and Attention U-Net
+respectively. 

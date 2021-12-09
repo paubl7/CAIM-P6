@@ -1,0 +1,18 @@
+The current paper studies the problem of minimizing a loss $f(\boldsymbol{x})$ subject to constraints
+of the form $\boldsymbol{D}\boldsymbol{x} \in S$, where $S$ is a closed set, convex or not, and $\boldsymbol{D}$
+is a fusion matrix. Fusion constraints can capture smoothness, sparsity, or more general constraint
+patterns. To tackle this generic class of problems, we combine the Beltrami-Courant penalty method
+of optimization with the proximal distance principle. The latter is driven by minimization of penalized
+objectives $f(\boldsymbol{x})+\frac{\rho}{2}\text{dist}(\boldsymbol{D}\boldsymbol{x},S)^2$
+involving large tuning constants $\rho$ and the squared Euclidean distance of $\boldsymbol{D}\boldsymbol{x}$
+from $S$. The next iterate $\boldsymbol{x}_{n+1}$ of the corresponding proximal distance algorithm
+is constructed from the current iterate $\boldsymbol{x}_n$ by minimizing the majorizing surrogate
+function $f(\boldsymbol{x})+\frac{\rho}{2}\|\boldsymbol{D}\boldsymbol{x}-\mathcal{P}_S(\boldsymbol{D}\boldsymbol{x}_n)\|^2$.
+For fixed $\rho$ and convex $f(\boldsymbol{x})$ and $S$, we prove convergence, provide convergence
+rates, and demonstrate linear convergence under stronger assumptions. We also construct a steepest
+descent (SD) variant to avoid costly linear system solves. To benchmark our algorithms, we adapt
+the alternating direction method of multipliers (ADMM) and compare on extensive numerical tests
+including problems in metric projection, convex regression, convex clustering, total variation
+image denoising, and projection of a matrix to one that has a good condition number. Our experiments
+demonstrate the superior speed and acceptable accuracy of the steepest variant on high-dimensional
+problems. Julia code to replicate all of our experiments can be found at https://github.com/alanderos91/ProximalDistanceAlgorithms.jl.

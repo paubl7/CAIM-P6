@@ -1,0 +1,18 @@
+Consider an input consisting of a set of $n$ disjoint triangular obstacles in $\mathbb{R}^3$ and
+a target point $t$ in the free space, all enclosed by a large sphere $S$ of radius $R$ centered at $t$.
+An articulated probe is modeled as two line segments $ab$ and $bc$ connected at point $b$. The length
+of $ab$ can be equal to or greater than $R$, while $bc$ is of a given length $r \leq R$. The probe is initially
+located outside $S$, assuming an unarticulated configuration, in which $ab$ and $bc$ are collinear
+and $b \in ac$. The goal is to find a feasible (obstacle-avoiding) probe trajectory to reach $t$,
+with the condition that the probe is constrained by the following sequence of moves -- a straight-line
+insertion of the unarticulated probe into $S$, possibly followed by a rotation of $bc$ at $b$ for
+at most $\pi/2$ radians, so that $c$ coincides with $t$. We prove that if there exists a feasible probe
+trajectory, then a set of extremal feasible trajectories must be present. Through careful case
+analysis, we show that these extremal trajectories can be represented by $O(n^4)$ combinatorial
+events. We present a solution approach that enumerates and verifies these combinatorial events
+for feasibility in overall $O(n^{4+\epsilon})$ time using $O(n^{4+\epsilon})$ space, for any
+constant $\epsilon > 0$. The enumeration algorithm is highly parallel, considering that each combinatorial
+event can be generated and verified for feasibility independently of the others. In the process
+of deriving our solution, we design the first data structure for addressing a special instance of
+circular sector emptiness queries among polyhedral obstacles in three dimensional space, and
+provide a simplified data structure for the corresponding emptiness query problem in two dimensions.

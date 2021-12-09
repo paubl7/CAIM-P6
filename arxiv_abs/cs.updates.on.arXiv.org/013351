@@ -1,0 +1,20 @@
+Gait, as one of unique biometric features, has the advantage of being recognized from a long distance
+away, can be widely used in public security. Considering 3D pose estimation is more challenging
+than 2D pose estimation in practice , we research on using 2D joints to recognize gait in this paper,
+and a new model-based gait recognition method JointsGait is put forward to extract gait information
+from 2D human body joints. Appearance-based gait recognition algorithms are prevalent before.
+However, appearance features suffer from external factors which can cause drastic appearance
+variations, e.g. clothing. Unlike previous approaches, JointsGait firstly extracted spatio-temporal
+features from 2D joints using gait graph convolutional networks, which are less interfered by external
+factors. Secondly, Joints Relationship Pyramid Mapping (JRPM) are proposed to map spatio-temporal
+gait features into a discriminative feature space with biological advantages according to the
+relationship of human joints when people are walking at various scales. Finally, we design a fusion
+loss strategy to help the joints features to be insensitive to cross-view. Our method is evaluated
+on two large datasets, Kinect Gait Biometry Dataset and CASIA-B. On Kinect Gait Biometry Dataset
+database, JointsGait only uses corresponding 2D coordinates of joints, but achieves satisfactory
+recognition accuracy compared with those model-based algorithms using 3D joints. On CASIA-B database,
+the proposed method greatly outperforms advanced model-based methods in all walking conditions,
+even performs superior to state-of-art appearance-based methods when clothing seriously affect
+people's appearance. The experimental results demonstrate that JointsGait achieves the state-of-art
+performance despite the low dimensional feature (2D body joints) and is less affected by the view
+variations and clothing variation. 

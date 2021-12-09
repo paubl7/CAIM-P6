@@ -1,0 +1,20 @@
+Convolutional Neural Networks (CNNs) such as ResNet-50, DenseNet-40 and ResNeXt-56 are severely
+over-parameterized, necessitating a consequent increase in the computational resources required
+for model training which scales exponentially for increments in model depth. In this paper, we propose
+an Entropy-Based Convolutional Layer Estimation (EBCLE) heuristic which is robust and simple,
+yet effective in resolving the problem of over-parameterization with regards to network depth
+of CNN model. The EBCLE heuristic employs a priori knowledge of the entropic data distribution of
+input datasets to determine an upper bound for convolutional network depth, beyond which identity
+transformations are prevalent offering insignificant contributions for enhancing model performance.
+Restricting depth redundancies by forcing feature compression and abstraction restricts over-parameterization
+while decreasing training time by 24.99% - 78.59% without degradation in model performance. We
+present empirical evidence to emphasize the relative effectiveness of broader, yet shallower
+models trained using the EBCLE heuristic, which maintains or outperforms baseline classification
+accuracies of narrower yet deeper models. The EBCLE heuristic is architecturally agnostic and
+EBCLE based CNN models restrict depth redundancies resulting in enhanced utilization of the available
+computational resources. The proposed EBCLE heuristic is a compelling technique for researchers
+to analytically justify their HyperParameter (HP) choices for CNNs. Empirical validation of the
+EBCLE heuristic in training CNN models was established on five benchmarking datasets (ImageNet32,
+CIFAR-10/100, STL-10, MNIST) and four network architectures (DenseNet, ResNet, ResNeXt and EfficientNet
+B0-B2) with appropriate statistical tests employed to infer any conclusive claims presented in
+this paper. 

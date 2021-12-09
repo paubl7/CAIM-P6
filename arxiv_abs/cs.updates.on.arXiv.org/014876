@@ -1,0 +1,18 @@
+Thanks to its capability of classifying complex phenomena without explicit modeling, deep learning
+(DL) has been demonstrated to be a key enabler of Wireless Signal Classification (WSC). Although
+DL can achieve a very high accuracy under certain conditions, recent research has unveiled that
+the wireless channel can disrupt the features learned by the DL model during training, thus drastically
+reducing the classification performance in real-world live settings. Since retraining classifiers
+is cumbersome after deployment, existing work has leveraged the usage of carefully-tailored Finite
+Impulse Response (FIR) filters that, when applied at the transmitter's side, can restore the features
+that are lost because of the the channel actions, i.e., waveform synthesis. However, these approaches
+compute FIRs using offline optimization strategies, which limits their efficacy in highly-dynamic
+channel settings. In this paper, we improve the state of the art by proposing Chares, a Deep Reinforcement
+Learning (DRL)-based framework for channel-resilient adaptive waveform synthesis. Chares adapts
+to new and unseen channel conditions by optimally computing through DRL the FIRs in real-time. Chares
+is a DRL agent whose architecture is-based upon the Twin Delayed Deep Deterministic Policy Gradients
+(TD3), which requires minimal feedback from the receiver and explores a continuous action space.
+Chares has been extensively evaluated on two well-known datasets. We have also evaluated the real-time
+latency of Chares with an implementation on field-programmable gate array (FPGA). Results show
+that Chares increases the accuracy up to 4.1x when no waveform synthesis is performed, by 1.9x with
+respect to existing work, and can compute new actions within 41us. 

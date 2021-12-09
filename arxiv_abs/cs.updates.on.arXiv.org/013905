@@ -1,0 +1,18 @@
+The gold standard to assess respiration during sleep is polysomnography; a technique that is burdensome,
+expensive (both in analysis time and measurement costs), and difficult to repeat. Automation of
+respiratory analysis can improve test efficiency and enable accessible implementation opportunities
+worldwide. Using 9,656 polysomnography recordings from the Massachusetts General Hospital (MGH),
+we trained a neural network (WaveNet) based on a single respiratory effort belt to detect obstructive
+apnea, central apnea, hypopnea and respiratory-effort related arousals. Performance evaluation
+included event-based and recording-based metrics - using an apnea-hypopnea index analysis. The
+model was further evaluated on a public dataset, the Sleep-Heart-Health-Study-1, containing
+8,455 polysomnographic recordings. For binary apnea event detection in the MGH dataset, the neural
+network obtained an accuracy of 95%, an apnea-hypopnea index $r^2$ of 0.89 and area under the curve
+for the receiver operating characteristics curve and precision-recall curve of 0.93 and 0.74,
+respectively. For the multiclass task, we obtained varying performances: 81% of all labeled central
+apneas were correctly classified, whereas this metric was 46% for obstructive apneas, 29% for respiratory
+effort related arousals and 16% for hypopneas. The majority of false predictions were misclassifications
+as another type of respiratory event. Our fully automated method can detect respiratory events
+and assess the apnea-hypopnea index with sufficient accuracy for clinical utilization. Differentiation
+of event types is more difficult and may reflect in part the complexity of human respiratory output
+and some degree of arbitrariness in the clinical thresholds and criteria used during manual annotation.

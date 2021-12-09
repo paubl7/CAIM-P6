@@ -1,0 +1,19 @@
+Customized hardware accelerators have been developed to provide improved performance and efficiency
+for DNN inference and training. However, the existing hardware accelerators may not always be suitable
+for handling various DNN models as their architecture paradigms and configuration tradeoffs are
+highly application-specific. It is important to benchmark the accelerator candidates in the earliest
+stage to gather comprehensive performance metrics and locate the potential bottlenecks. Further
+demands also emerge after benchmarking, which require adequate solutions to address the bottlenecks
+and improve the current designs for targeted workloads. To achieve these goals, in this paper, we
+leverage an automation tool called DNNExplorer for benchmarking customized DNN hardware accelerators
+and exploring novel accelerator designs with improved performance and efficiency. Key features
+include (1) direct support to popular machine learning frameworks for DNN workload analysis and
+accurate analytical models for fast accelerator benchmarking; (2) a novel accelerator design
+paradigm with high-dimensional design space support and fine-grained adjustability to overcome
+the existing design drawbacks; and (3) a design space exploration (DSE) engine to generate optimized
+accelerators by considering targeted AI workloads and available hardware resources. Results
+show that accelerators adopting the proposed novel paradigm can deliver up to 4.2X higher throughput
+(GOP/s) than the state-of-the-art pipeline design in DNNBuilder and up to 2.0X improved efficiency
+than the recently published generic design in HybridDNN given the same DNN model and resource budgets.
+With DNNExplorer's benchmarking and exploration features, we can be ahead at building and optimizing
+customized AI accelerators and enable more efficient AI applications. 

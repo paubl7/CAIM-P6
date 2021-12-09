@@ -1,0 +1,19 @@
+Deep neural networks (DNNs) have become the driving force behind recent artificial intelligence
+(AI) research. An important problem with implementing a neural network is the design of its architecture.
+Typically, such an architecture is obtained manually by exploring its hyperparameter space and
+kept fixed during training. This approach is time-consuming and inefficient. Another issue is
+that modern neural networks often contain millions of parameters, whereas many applications and
+devices require small inference models. However, efforts to migrate DNNs to such devices typically
+entail a significant loss of classification accuracy. To address these challenges, we propose
+a two-step neural network synthesis methodology, called DR+SCANN, that combines two complementary
+approaches to design compact and accurate DNNs. At the core of our framework is the SCANN methodology
+that uses three basic architecture-changing operations, namely connection growth, neuron growth,
+and connection pruning, to synthesize feed-forward architectures with arbitrary structure.
+SCANN encapsulates three synthesis methodologies that apply a repeated grow-and-prune paradigm
+to three architectural starting points. DR+SCANN combines the SCANN methodology with dataset
+dimensionality reduction to alleviate the curse of dimensionality. We demonstrate the efficacy
+of SCANN and DR+SCANN on various image and non-image datasets. We evaluate SCANN on MNIST and ImageNet
+benchmarks. In addition, we also evaluate the efficacy of using dimensionality reduction alongside
+SCANN (DR+SCANN) on nine small to medium-size datasets. We also show that our synthesis methodology
+yields neural networks that are much better at navigating the accuracy vs. energy efficiency space.
+This would enable neural network-based inference even on Internet-of-Things sensors. 

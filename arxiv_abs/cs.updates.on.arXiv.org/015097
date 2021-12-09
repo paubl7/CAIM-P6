@@ -1,0 +1,18 @@
+Code comments can help in program comprehension and are considered as important artifacts to help
+developers in software maintenance. However, the comments are mostly missing or are outdated,
+specially in complex software projects. As a result, several automatic comment generation models
+are developed as a solution. The recent models explore the integration of external knowledge resources
+such as Unified Modeling Language class diagrams to improve the generated comments. In this paper,
+we propose API2Com, a model that leverages the Application Programming Interface Documentations
+(API Docs) as a knowledge resource for comment generation. The API Docs include the description
+of the methods in more details and therefore, can provide better context in the generated comments.
+The API Docs are used along with the code snippets and Abstract Syntax Trees in our model. We apply
+the model on a large Java dataset of over 130,000 methods and evaluate it using both Transformer and
+RNN-base architectures. Interestingly, when API Docs are used, the performance increase is negligible.
+We therefore run different experiments to reason about the results. For methods that only contain
+one API, adding API Docs improves the results by 4% BLEU score on average (BLEU score is an automatic
+evaluation metric used in machine translation). However, as the number of APIs that are used in a
+method increases, the performance of the model in generating comments decreases due to long documentations
+used in the input. Our results confirm that the API Docs can be useful in generating better comments,
+but, new techniques are required to identify the most informative ones in a method rather than using
+all documentations simultaneously. 

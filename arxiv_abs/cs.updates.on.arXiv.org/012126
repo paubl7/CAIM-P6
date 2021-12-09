@@ -1,0 +1,19 @@
+Recently, progress has been made in the supervised training of Convolutional Object Detectors
+(e.g. Faster R-CNN) for threat recognition in carry-on luggage using X-ray images. This is part
+of the Transportation Security Administration's (TSA's) mission to protect air travelers in the
+United States. While more training data with threats may reliably improve performance for this
+class of deep algorithm, it is expensive to stage in realistic contexts. By contrast, data from the
+real world can be collected quickly with minimal cost. In this paper, we present a semi-supervised
+approach for threat recognition which we call Background Adaptive Faster R-CNN. This approach
+is a training method for two-stage object detectors which uses Domain Adaptation methods from the
+field of deep learning. The data sources described earlier make two "domains": a hand-collected
+data domain of images with threats, and a real-world domain of images assumed without threats. Two
+domain discriminators, one for discriminating object proposals and one for image features, are
+adversarially trained to prevent encoding domain-specific information. Without this penalty
+a Convolutional Neural Network (CNN) can learn to identify domains based on superficial characteristics,
+and minimize a supervised loss function without improving its ability to recognize objects. For
+the hand-collected data, only object proposals and image features from backgrounds are used. The
+losses for these domain-adaptive discriminators are added to the Faster R-CNN losses of images
+from both domains. This can reduce threat detection false alarm rates by matching the statistics
+of extracted features from hand-collected backgrounds to real world data. Performance improvements
+are demonstrated on two independently-collected datasets of labeled threats. 

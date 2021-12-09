@@ -1,0 +1,19 @@
+Choreographic Programming is a correct-by-construction paradigm where a compilation procedure
+synthesises deadlock-free, concurrent, and distributed communicating processes from global,
+declarative descriptions of communications, called choreographies. Previous work used choreographies
+for the synthesis of programs. Alas, there is no formalisation that provides a chain of correctness
+from choreographies to their implementations. This problem originates from the gap between existing
+theoretical models, which abstract communications using channel names (\`a la CCS/{\pi}-calculus),
+and their implementations, which use low-level mechanisms for message routing. As a solution,
+we propose the theoretical framework of Applied Choreographies. In the framework, developers
+write choreographies in a language that follows the standard syntax and name-based communication
+semantics of previous works. Then, they use a compilation procedure to transform a choreography
+into a low-level, implementation-adherent calculus of Service-Oriented Computing (SOC). To
+manage the complexity of the compilation, we divide its formalisation and proof in three stages,
+respectively dealing with: a) the translation of name-based communications into their SOC equivalents
+(namely, using correlation mechanisms based on message data); b) the projection of a choreography
+into a composition of partial, single-participant choreographies (towards their translation
+into SOC processes); c) the translation of partial choreographies and the distribution of choreography-level
+state into SOC processes. We provide results of behavioural correspondence for each stage. Thus,
+given a choreography specification, we guarantee to synthesise its faithful and deadlock-free
+service-oriented implementation. 

@@ -1,0 +1,19 @@
+Modeling patient disease progression using Electronic Health Records (EHRs) is critical to assist
+clinical decision making. While most of prior work has mainly focused on developing effective disease
+progression models using EHRs collected from an individual medical system, relatively little
+work has investigated building robust yet generalizable diagnosis models across different systems.
+In this work, we propose a general domain adaptation (DA) framework that tackles two categories
+of discrepancies in EHRs collected from different medical systems: one is caused by heterogeneous
+patient populations (covariate shift) and the other is caused by variations in data collection
+procedures (systematic bias). Prior research in DA has mainly focused on addressing covariate
+shift but not systematic bias. In this work, we propose an adversarial domain separation framework
+that addresses both categories of discrepancies by maintaining one globally-shared invariant
+latent representation across all systems} through an adversarial learning process, while also
+allocating a domain-specific model for each system to extract local latent representations that
+cannot and should not be unified across systems. Moreover, our proposed framework is based on variational
+recurrent neural network (VRNN) because of its ability to capture complex temporal dependencies
+and handling missing values in time-series data. We evaluate our framework for early diagnosis
+of an extremely challenging condition, septic shock, using two real-world EHRs from distinct medical
+systems in the U.S. The results show that by separating globally-shared from domain-specific representations,
+our framework significantly improves septic shock early prediction performance in both EHRs and
+outperforms the current state-of-the-art DA models. 

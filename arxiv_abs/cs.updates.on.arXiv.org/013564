@@ -1,0 +1,18 @@
+Speaker verification aims to verify whether an input speech corresponds to the claimed speaker,
+and conventionally, this kind of system is deployed based on single-stream scenario, wherein the
+feature extractor operates in full frequency range. In this paper, we hypothesize that machine
+can learn enough knowledge to do classification task when listening to partial frequency range
+instead of full frequency range, which is so called frequency selection technique, and further
+propose a novel framework of multi-stream Convolutional Neural Network (CNN) with this technique
+for speaker verification tasks. The proposed framework accommodates diverse temporal embeddings
+generated from multiple streams to enhance the robustness of acoustic modeling. For the diversity
+of temporal embeddings, we consider feature augmentation with frequency selection, which is to
+manually segment the full-band of frequency into several sub-bands, and the feature extractor
+of each stream can select which sub-bands to use as target frequency domain. Different from conventional
+single-stream solution wherein each utterance would only be processed for one time, in this framework,
+there are multiple streams processing it in parallel. The input utterance for each stream is pre-processed
+by a frequency selector within specified frequency range, and post-processed by mean normalization.
+The normalized temporal embeddings of each stream will flow into a pooling layer to generate fused
+embeddings. We conduct extensive experiments on VoxCeleb dataset, and the experimental results
+demonstrate that multi-stream CNN significantly outperforms single-stream baseline with 20.53
+% of relative improvement in minimum Decision Cost Function (minDCF). 

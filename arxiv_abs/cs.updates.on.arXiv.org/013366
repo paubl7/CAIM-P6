@@ -1,0 +1,19 @@
+We examine the fundamental problem of constructing depth-optimum circuits for binary addition.
+More precisely, as in literature, we consider the following problem: Given auxiliary inputs $t_0,
+\dotsc, t_{m-1}$, so-called generate and propagate signals, construct a depth-optimum circuit
+over the basis {AND2, OR2} computing all $n$ carry bits of an $n$-bit adder, where $m=2n-1$. In fact,
+carry bits are AND-OR paths, i.e., Boolean functions of the form $t_0 \lor ( t_1 \land (t_2 \lor ( \dots
+t_{m-1}) \dots ))$. Classical approaches construct so-called prefix circuits which do not achieve
+a competitive depth. For instance, the popular construction by Kogge and Stone is only a $2$-approximation.
+A lower bound on the depth of any prefix circuit is $1.44 \log_2 m$ + const, while recent non-prefix
+circuits have a depth of $\log_2 m$ + $\log_2 \log_2 m$ + const. However, it is unknown whether any
+of these polynomial-time approaches achieves the optimum depth for all $m$. We present a new exponential-time
+algorithm solving the problem optimally. The previously best exact algorithm with a running time
+of $\mathcal O(2.45^m)$ is viable only for $m \leq 29$. Our algorithm is significantly faster: We
+achieve a running time of $\mathcal O(2.02^m)$ and apply sophisticated pruning strategies to improve
+practical running times dramatically. This allows us to compute optimum circuits for all $m \leq
+64$. Combining these computational results with new theoretical insights, we derive the optimum
+depths of $2^k$-bit adder circuits for all $k \leq 13$, previously known only for $k \leq 4$. In fact,
+we solve a more general problem occurring in VLSI design: $delay$ optimization of a $generalization$
+of AND-OR paths where AND and OR do not necessarily alternate. Our algorithm arises from our new structure
+theorem which characterizes delay-optimum generalized AND-OR path circuits. 

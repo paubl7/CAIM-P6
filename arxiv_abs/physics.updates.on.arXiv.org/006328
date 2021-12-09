@@ -1,0 +1,19 @@
+MRI-guided radiation treatment planning is widely applied because of its superior soft-tissue
+contrast and no ionization radiation compared to CT-based planning. In this regard, synthetic
+CT (sCT) images should be generated from the patients MRI scans if radiation treatment planning
+is sought. Among the different available methods for this purpose, the deep learning algorithms
+have and do outperform their conventional counterparts. In this study, we investigated the performance
+of some most popular deep learning architectures including eCNN, U-Net, GAN, V-Net, and Res-Net
+for the task of sCT generation. As a baseline, an atlas-based method is implemented to which the results
+of the deep learning-based model are compared. A dataset consisting of 20 co-registered MR-CT pairs
+of the male pelvis is applied to assess the different sCT production methods' performance. The mean
+error (ME), mean absolute error (MAE), Pearson correlation coefficient (PCC), structural similarity
+index (SSIM), and peak signal-to-noise ratio (PSNR) metrics were computed between the estimated
+sCT and the ground truth (reference) CT images. The visual inspection revealed that the sCTs produced
+by eCNN, V-Net, and ResNet, unlike the other methods, were less noisy and greatly resemble the ground
+truth CT image. In the whole pelvis region, the eCNN yielded the lowest MAE (26.03-8.85 HU) and ME
+(0.82-7.06 HU), and the highest PCC metrics were yielded by the eCNN (0.93-0.05) and ResNet (0.91-0.02)
+methods. The ResNet model had the highest PSNR of 29.38-1.75 among all models. In terms of the Dice
+similarity coefficient, the eCNN method revealed superior performance in major tissue identification
+(air, bone, and soft tissue). All in all, the eCNN and ResNet deep learning methods revealed acceptable
+performance with clinically tolerable quantification errors. 

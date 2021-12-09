@@ -1,0 +1,19 @@
+Widely used European land cover maps such as CORINE are produced at medium spatial resolutions (100
+m) and rely on diverse data with complex workflows requiring significant institutional capacity.
+We present a high resolution (10 m) land cover map (ELC10) of Europe based on a satellite-driven machine
+learning workflow that is annually updatable. A Random Forest classification model was trained
+on 70K ground-truth points from the LUCAS (Land Use/Cover Area frame Survey) dataset. Within the
+Google Earth Engine cloud computing environment, the ELC10 map can be generated from approx. 700
+TB of Sentinel imagery within approx. 4 days from a single research user account. The map achieved
+an overall accuracy of 90% across 8 land cover classes and could account for statistical unit land
+cover proportions within 3.9% (R2 = 0.83) of the actual value. These accuracies are higher than that
+of CORINE (100 m) and other 10-m land cover maps including S2GLC and FROM-GLC10. We found that atmospheric
+correction of Sentinel-2 and speckle filtering of Sentinel-1 imagery had minimal effect on enhancing
+classification accuracy (< 1%). However, combining optical and radar imagery increased accuracy
+by 3% compared to Sentinel-2 alone and by 10% compared to Sentinel-1 alone. The conversion of LUCAS
+points into homogenous polygons under the Copernicus module increased accuracy by <1%, revealing
+that Random Forests are robust against contaminated training data. Furthermore, the model requires
+very little training data to achieve moderate accuracies - the difference between 5K and 50K LUCAS
+points is only 3% (86 vs 89%). At 10-m resolution, the ELC10 map can distinguish detailed landscape
+features like hedgerows and gardens, and therefore holds potential for aerial statistics at the
+city borough level and monitoring property-level environmental interventions (e.g. tree planting).

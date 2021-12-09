@@ -1,0 +1,18 @@
+Deep neural networks with batch normalization (BN-DNNs) are invariant to weight rescaling due
+to their normalization operations. However, using weight decay (WD) benefits these weight-scale-invariant
+networks, which is often attributed to an increase of the effective learning rate when the weight
+norms are decreased. In this paper, we demonstrate the insufficiency of the previous explanation
+and investigate the implicit biases of stochastic gradient descent (SGD) on BN-DNNs to provide
+a theoretical explanation for the efficacy of weight decay. We identity two implicit biases of SGD
+on BN-DNNs: 1) the weight norms in SGD training remain constant in the continuous-time domain and
+keep increasing in the discrete-time domain; 2) SGD optimizes weight vectors in fully-connected
+networks or convolution kernels in convolution neural networks by updating components lying in
+the input feature span, while leaving those components orthogonal to the input feature span unchanged.
+Thus, SGD without WD accumulates weight noise orthogonal to the input feature span, and cannot eliminate
+such noise. Our empirical studies corroborate the hypothesis that weight decay suppresses weight
+noise that is left untouched by SGD. Furthermore, we propose to use weight rescaling (WRS) instead
+of weight decay to achieve the same regularization effect, while avoiding performance degradation
+of WD on some momentum-based optimizers. Our empirical results on image recognition show that regardless
+of optimization methods and network architectures, training BN-DNNs using WRS achieves similar
+or better performance compared with using WD. We also show that training with WRS generalizes better
+compared to WD, on other computer vision tasks. 

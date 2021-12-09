@@ -1,0 +1,20 @@
+Most information storage devices write data by modifying the local state of matter, in the hope that
+sub-atomic local interactions stabilize the state for sufficiently long time, thereby allowing
+later recovery. Motivated to explore how temporal evolution of physical states in magnetic storage
+media affects their capacity, this work initiates the study of information retention in locally-interacting
+particle systems. The system dynamics follow the stochastic Ising model (SIM) over a 2-dimensional
+$\sqrt{n}\times\sqrt{n}$ grid. The initial spin configuration $X_0$ serves as the user-controlled
+input. The output configuration $X_t$ is produced by running $t$ steps of Glauber dynamics. Our
+main goal is to evaluate the information capacity $I_n(t):=\max_{p_{X_0}}I(X_0;X_t)$ when time
+$t$ scales with the system's size $n$. While the positive (but low) temperature regime is our main
+interest, we start by exploring the simpler zero-temperature dynamics. We first show that at zero
+temperature, order of $\sqrt{n}$ bits can be stored in the system indefinitely by coding over stable,
+striped configurations. While $\sqrt{n}$ is order optimal for infinite time, backing off to $t<\infty$,
+higher orders of $I_n(t)$ are achievable. First, linear coding arguments imply that $I_n(t) = \Theta(n)$
+for $t=O(n)$. To go beyond the linear scale, we develop a droplet-based achievability scheme that
+reliably stores $\Omega\left(n/\log n\right)$ for $t=O(n\log n)$ time ($\log n$ can be replaced
+with any $o(n)$ function). Moving to the positive but low temperature regime, two main results are
+provided. First, we show that an initial configuration drawn from the Gibbs measure cannot retain
+more than a single bit for $t\geq \exp(C\beta n^{1/4+\epsilon})$ time. On the other hand, when scaling
+time with the inverse temperature $\beta$, the stripe-based coding scheme is shown to retain its
+bits for $e^{c\beta}$. 

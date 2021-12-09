@@ -1,0 +1,20 @@
+Automatic lung lesions segmentation of chest CT scans is considered a pivotal stage towards accurate
+diagnosis and severity measurement of COVID-19. Traditional U-shaped encoder-decoder architecture
+and its variants suffer from diminutions of contextual information in pooling/upsampling operations
+with increased semantic gaps among encoded and decoded feature maps as well as instigate vanishing
+gradient problems for its sequential gradient propagation that result in sub-optimal performance.
+Moreover, operating with 3D CT-volume poses further limitations due to the exponential increase
+of computational complexity making the optimization difficult. In this paper, an automated COVID-19
+lesion segmentation scheme is proposed utilizing a highly efficient neural network architecture,
+namely CovSegNet, to overcome these limitations. Additionally, a two-phase training scheme is
+introduced where a deeper 2D-network is employed for generating ROI-enhanced CT-volume followed
+by a shallower 3D-network for further enhancement with more contextual information without increasing
+computational burden. Along with the traditional vertical expansion of Unet, we have introduced
+horizontal expansion with multi-stage encoder-decoder modules for achieving optimum performance.
+Additionally, multi-scale feature maps are integrated into the scale transition process to overcome
+the loss of contextual information. Moreover, a multi-scale fusion module is introduced with a
+pyramid fusion scheme to reduce the semantic gaps between subsequent encoder/decoder modules
+while facilitating the parallel optimization for efficient gradient propagation. Outstanding
+performances have been achieved in three publicly available datasets that largely outperform
+other state-of-the-art approaches. The proposed scheme can be easily extended for achieving optimum
+segmentation performances in a wide variety of applications. 

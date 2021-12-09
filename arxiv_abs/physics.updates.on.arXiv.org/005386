@@ -1,0 +1,18 @@
+In this paper, we compute the band structure of one- and two-dimensional phononic composites using
+the extended finite element method (X-FEM) on structured higher-order (spectral) finite element
+meshes. On using partition-of-unity enrichment in finite element analysis, the X-FEM permits
+use of structured finite element meshes that do not conform to the geometry of holes and inclusions.
+This eliminates the need for remeshing in phononic shape optimization and topology optimization
+studies. In two dimensions, we adopt rational B{\'e}zier representation of curved (circular)
+geometries, and construct suitable material enrichment functions to model two-phase composites.
+A Bloch-formulation of the elastodynamic phononic eigenproblem is adopted. Efficient computation
+of weak form integrals with polynomial integrands is realized via the homogeneous numerical integration
+scheme -- a method that uses Euler's homogeneous function theorem and Stokes's theorem to reduce
+integration to the boundary of the domain. Ghost penalty stabilization is used on finite elements
+that are cut by a hole. Band structure calculations on perforated (circular holes, elliptical holes,
+and holes defined as a level set) materials as well as on two-phase phononic crystals are presented
+that affirm the sound accuracy and optimal convergence of the method on structured, higher-order
+spectral finite element meshes. Several numerical examples demonstrate the advantages of $p$-refinement
+made possible by the spectral extended finite element method. In these examples, fourth-order
+spectral extended finite elements deliver $\mathcal{O}(10^{-8})$ accuracy in frequency calculations
+with more than thirty-fold fewer degrees-of-freedom when compared to quadratic finite elements.

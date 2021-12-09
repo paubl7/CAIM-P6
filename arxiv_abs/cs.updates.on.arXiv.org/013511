@@ -1,0 +1,20 @@
+Deep neural networks (DNNs) are being increasingly used to make predictions from functional magnetic
+resonance imaging (fMRI) data. However, they are widely seen as uninterpretable "black boxes",
+as it can be difficult to discover what input information is used by the DNN in the process, something
+important in both cognitive neuroscience and clinical applications. A saliency map is a common
+approach for producing interpretable visualizations of the relative importance of input features
+for a prediction. However, methods for creating maps often fail due to DNNs being sensitive to input
+noise, or by focusing too much on the input and too little on the model. It is also challenging to evaluate
+how well saliency maps correspond to the truly relevant input information, as ground truth is not
+always available. In this paper, we review a variety of methods for producing gradient-based saliency
+maps, and present a new adversarial training method we developed to make DNNs robust to input noise,
+with the goal of improving interpretability. We introduce two quantitative evaluation procedures
+for saliency map methods in fMRI, applicable whenever a DNN or linear model is being trained to decode
+some information from imaging data. We evaluate the procedures using a synthetic dataset where
+the complex activation structure is known, and on saliency maps produced for DNN and linear models
+for task decoding in the Human Connectome Project (HCP) dataset. Our key finding is that saliency
+maps produced with different methods vary widely in interpretability, in both in synthetic and
+HCP fMRI data. Strikingly, even when DNN and linear models decode at comparable levels of performance,
+DNN saliency maps score higher on interpretability than linear model saliency maps (derived via
+weights or gradient). Finally, saliency maps produced with our adversarial training method outperform
+those from other methods. 

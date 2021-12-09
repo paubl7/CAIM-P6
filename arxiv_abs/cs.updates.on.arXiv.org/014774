@@ -1,0 +1,20 @@
+In recent years, the security concerns about the vulnerability of Deep Convolutional Neural Networks
+(DCNN) to Adversarial Attacks (AA) in the form of small modifications to the input image almost invisible
+to human vision make their predictions untrustworthy. Therefore, it is necessary to provide robustness
+to adversarial examples in addition to an accurate score when developing a new classifier. In this
+work, we perform a comparative study of the effects of AA on the complex problem of art media categorization,
+which involves a sophisticated analysis of features to classify a fine collection of artworks.
+We tested a prevailing bag of visual words approach from computer vision, four state-of-the-art
+DCNN models (AlexNet, VGG, ResNet, ResNet101), and the Brain Programming (BP) algorithm. In this
+study, we analyze the algorithms' performance using accuracy. Besides, we use the accuracy ratio
+between adversarial examples and clean images to measure robustness. Moreover, we propose a statistical
+analysis of each classifier's predictions' confidence to corroborate the results. We confirm
+that BP predictions' change was below 2\% using adversarial examples computed with the fast gradient
+sign method. Also, considering the multiple pixel attack, BP obtained four out of seven classes
+without changes and the rest with a maximum error of 4\% in the predictions. Finally, BP also gets
+four categories using adversarial patches without changes and for the remaining three classes
+with a variation of 1\%. Additionally, the statistical analysis showed that the predictions' confidence
+of BP were not significantly different for each pair of clean and perturbed images in every experiment.
+These results prove BP's robustness against adversarial examples compared to DCNN and handcrafted
+features methods, whose performance on the art media classification was compromised with the proposed
+perturbations. 

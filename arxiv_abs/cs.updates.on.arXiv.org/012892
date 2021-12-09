@@ -1,0 +1,19 @@
+RGBT tracking has attracted increasing attention since RGB and thermal infrared data have strong
+complementary advantages, which could make trackers all-day and all-weather work. However, how
+to effectively represent RGBT data for visual tracking remains unstudied well. Existing works
+usually focus on extracting modality-shared or modality-specific information, but the potentials
+of these two cues are not well explored and exploited in RGBT tracking. In this paper, we propose a
+novel multi-adapter network to jointly perform modality-shared, modality-specific and instance-aware
+target representation learning for RGBT tracking. To this end, we design three kinds of adapters
+within an end-to-end deep learning framework. In specific, we use the modified VGG-M as the generality
+adapter to extract the modality-shared target representations.To extract the modality-specific
+features while reducing the computational complexity, we design a modality adapter, which adds
+a small block to the generality adapter in each layer and each modality in a parallel manner. Such
+a design could learn multilevel modality-specific representations with a modest number of parameters
+as the vast majority of parameters are shared with the generality adapter. We also design instance
+adapter to capture the appearance properties and temporal variations of a certain target. Moreover,
+to enhance the shared and specific features, we employ the loss of multiple kernel maximum mean discrepancy
+to measure the distribution divergence of different modal features and integrate it into each layer
+for more robust representation learning. Extensive experiments on two RGBT tracking benchmark
+datasets demonstrate the outstanding performance of the proposed tracker against the state-of-the-art
+methods. 

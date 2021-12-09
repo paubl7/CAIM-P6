@@ -1,0 +1,18 @@
+We consider a system of several collocated nodes sharing a time slotted wireless channel, and seek
+a MAC that (i) provides low mean delay, (ii) has distributed control (i.e., there is no central scheduler),
+and (iii) does not require explicit exchange of state information or control signals. The design
+of such MAC protocols must keep in mind the need for contention access at light traffic, and scheduled
+access in heavy traffic, leading to the long-standing interest in hybrid, adaptive MACs. We first
+propose EZMAC, a simple extension of an existing decentralized, hybrid MAC called ZMAC. Next, motivated
+by our results on delay and throughput optimality in partially observed, constrained queuing networks,
+we develop another decentralized MAC protocol that we term QZMAC. A method to improve the short-term
+fairness of QZMAC is proposed and analysed, and the resulting modified algorithm is shown to possess
+better fairness properties than QZMAC. The theory developed to reduce delay is also shown to work
+%with different traffic types (batch arrivals, for example) and even in the presence of transmission
+errors and fast fading. Extensions to handle time critical traffic (alarms, for example) and hidden
+nodes are also discussed. Practical implementation issues, such as handling Clear Channel Assessment
+(CCA) errors, are outlined. We implement and demonstrate the performance of QZMAC on a test bed consisting
+of CC2420 based Crossbow telosB motes, running the 6TiSCH communication stack on the Contiki operating
+system over the 2.4GHz ISM band. Finally, using simulations, we show that both protocols achieve
+mean delays much lower than those achieved by ZMAC, and QZMAC provides mean delays very close to the
+minimum achievable in this setting, i.e., that of the centralized complete knowledge scheduler.

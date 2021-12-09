@@ -1,0 +1,18 @@
+This work focuses on reducing the physical cost of implementing quantum algorithms when using the
+state-of-the-art fault-tolerant quantum error correcting codes, in particular, those for which
+implementing the T gate consumes vastly more resources than the other gates in the gate set. More
+specifically, we consider the group of unitaries that can be exactly implemented by a quantum circuit
+consisting of the Clifford+T gate set, a universal gate set. Our primary interest is to compute a
+circuit for a given $n$-qubit unitary $U$, using the minimum possible number of T gates (called the
+T-count of $U$). We consider the problem COUNT-T, the optimization version of which aims to find
+the T-count of $U$. In its decision version the goal is to decide if the T-count is at most some positive
+integer $m$. Given an oracle for COUNT-T, we can compute a T-optimal circuit in time polynomial in
+the T-count and dimension of $U$. We give a provable classical algorithm that solves COUNT-T (decision)
+in time $O\left(N^{2(c-1)\lceil\frac{m}{c}\rceil}\poly(m,N)\right)$ and space $O\left(N^{2\lceil\frac{m}{c}\rceil}\poly(m,N)\right)$,
+where $N=2^n$ and $c\geq 2$. We also introduce an asymptotically faster multiplication method
+that shaves a factor of $N^{0.7457}$ off of the overall complexity. Lastly, beyond our improvements
+to the rigorous algorithm, we give a heuristic algorithm that solves COUNT-T (optimization) with
+both space and time $\poly(m,N)$. While our heuristic method still scales exponentially with the
+number of qubits (though with a lower exponent) , there is a large improvement by going from exponential
+to polynomial scaling with $m$. We implemented our heuristic algorithm with up to 4 qubit unitaries
+and obtained a significant improvement in time as well as T-count. 

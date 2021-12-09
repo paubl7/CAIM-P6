@@ -1,0 +1,20 @@
+Purpose: To achieve free-breathing quantitative fat and $R_2^{\star}$ mapping of the liver using
+a generalized model-based iterative reconstruction, dubbed as MERLOT. Methods: For acquisition,
+we use a multi-echo radial FLASH sequence that acquires multiple echoes with different complementary
+radial spoke encodings. We investigate real-time single-slice and volumetric multi-echo radial
+FLASH acquisition. For the latter, the sampling scheme is extended to a volumetric stack-of-stars
+acquisition. Model-based reconstruction based on generalized nonlinear inversion is used to
+jointly estimate water, fat, $R_2^{\star}$, $B_0$ field inhomogeneity, and coil sensitivity
+maps from the multi-coil multi-echo radial spokes. Spatial smoothness regularization is applied
+onto the B 0 field and coil sensitivity maps, whereas joint sparsity regularization is employed
+for the other parameter maps. The method integrates calibration-less parallel imaging and compressed
+sensing and was implemented in BART. For the volumetric acquisition, the respiratory motion is
+resolved with self-gating using SSA-FARY. The quantitative accuracy of the proposed method was
+validated via numerical simulation, the NIST phantom, a water/fat phantom, and in in-vivo liver
+studies. Results: For real-time acquisition, the proposed model-based reconstruction allowed
+acquisition of dynamic liver fat fraction and $R_2^{\star}$ maps at a temporal resolution of 0.3
+s per frame. For the volumetric acquisition, whole liver coverage could be achieved in under 2 minutes
+using the self-gated motion-resolved reconstruction. Conclusion: The proposed multi-echo radial
+sampling sequence achieves fast k -space coverage and is robust to motion. The proposed model-based
+reconstruction yields spatially and temporally resolved liver fat fraction, $R_2^{\star}$ and
+$B_0$ field maps at high undersampling factor and with volume coverage. 

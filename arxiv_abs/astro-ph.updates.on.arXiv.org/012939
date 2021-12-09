@@ -1,0 +1,18 @@
+We leverage state-of-the-art machine learning methods and a decade's worth of archival data from
+the Canada-France-Hawaii Telescope (CFHT) to predict observatory image quality (IQ) from environmental
+conditions and observatory operating parameters. Specifically, we develop accurate and interpretable
+models of the complex dependence between data features and observed IQ for CFHT's wide field camera,
+MegaCam. Our contributions are several-fold. First, we collect, collate and reprocess several
+disparate data sets gathered by CFHT scientists. Second, we predict probability distribution
+functions (PDFs) of IQ, and achieve a mean absolute error of $\sim0.07''$ for the predicted medians.
+Third, we explore data-driven actuation of the 12 dome ``vents'', installed in 2013-14 to accelerate
+the flushing of hot air from the dome. We leverage epistemic and aleatoric uncertainties in conjunction
+with probabilistic generative modeling to identify candidate vent adjustments that are in-distribution
+(ID) and, for the optimal configuration for each ID sample, we predict the reduction in required
+observing time to achieve a fixed SNR. On average, the reduction is $\sim15\%$. Finally, we rank
+sensor data features by Shapley values to identify the most predictive variables for each observation.
+Our long-term goal is to construct reliable and real-time models that can forecast optimal observatory
+operating parameters for optimization of IQ. Such forecasts can then be fed into scheduling protocols
+and predictive maintenance routines. We anticipate that such approaches will become standard
+in automating observatory operations and maintenance by the time CFHT's successor, the Maunakea
+Spectroscopic Explorer (MSE), is installed in the next decade. 

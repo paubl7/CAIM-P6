@@ -1,0 +1,20 @@
+The existing particle image velocimetry (PIV) do not consider the curvature effect of the non-straight
+particle trajectory, because it seems to be impossible to obtain the curvature information from
+a pair of particle images. As a result, the computed vector underestimates the real velocity due
+to the straight-line approximation, that further causes a systematic error for the PIV instrument.
+In this work, the particle curved trajectory between two recordings is firstly explained with the
+streamline segment of a steady flow (diffeomorphic transformation) instead of a single vector,
+and this idea is termed as diffeomorphic PIV. Specifically, a deformation field is introduced to
+describe the particle displacement, i.e., we try to find the optimal velocity field, of which the
+corresponding deformation vector field agrees with the particle displacement. Because the variation
+of the deformation function can be approximated with the variation of the velocity function, the
+diffeomorphic PIV can be implemented as iterative PIV. That says, the diffeomorphic PIV warps the
+images with deformation vector field instead of the velocity, and keeps the rest as same as iterative
+PIVs. Two diffeomorphic deformation schemes -- forward diffeomorphic deformation interrogation
+(FDDI) and central diffeomorphic deformation interrogation (CDDI) -- are proposed. Tested on
+synthetic images, the FDDI achieves significant accuracy improvement across different one-pass
+displacement estimators (cross-correlation, optical flow, deep learning flow). Besides, the
+results on three real PIV image pairs demonstrate the non-negligible curvature effect for CDI-based
+PIV, and our FDDI provides larger velocity estimation (more accurate) in the fast curvy streamline
+areas. The accuracy improvement of the combination of FDDI and accurate dense estimator means that
+our diffeomorphic PIV paves a new way for complex flow measurement. 

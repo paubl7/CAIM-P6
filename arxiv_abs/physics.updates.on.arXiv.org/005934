@@ -1,0 +1,19 @@
+This paper illustrates an application of machine learning (ML) within a complex system that performs
+grade estimation. In surface mining, assay measurements taken from production drilling often
+provide rich information that allows initially inaccurate surfaces created using sparse exploration
+data to be revised and subsequently improved. Recently, a Bayesian warping technique has been proposed
+to reshape modeled surfaces based on geochemical and spatial constraints imposed by newly acquired
+blasthole data. This paper focuses on incorporating machine learning in this warping framework
+to make the likelihood computation generalizable. The technique works by adjusting the position
+of vertices on the surface to maximize the integrity of modeled geological boundaries with respect
+to sparse geochemical observations. Its foundation is laid by a Bayesian derivation in which the
+geological domain likelihood given the chemistry, p(g|c), plays a similar role to p(y(c)|g). This
+observation allows a manually calibrated process centered around the latter to be automated since
+ML techniques may be used to estimate the former in a data-driven way. Machine learning performance
+is evaluated for gradient boosting, neural network, random forest and other classifiers in a binary
+and multi-class context using precision and recall rates. Once ML likelihood estimators are integrated
+in the surface warping framework, surface shaping performance is evaluated using unseen data by
+examining the categorical distribution of test samples located above and below the warped surface.
+Large-scale validation experiments are performed to assess the overall efficacy of ML assisted
+surface warping as a fully integrated component within an ore grade estimation system where the
+posterior mean is obtained via Gaussian Process inference with a Matern 3/2 kernel. 

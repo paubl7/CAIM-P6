@@ -1,0 +1,18 @@
+Next-basket recommendation considers the problem of recommending a set of items into the next basket
+that users will purchase as a whole. In this paper, we develop a novel mixed model with preferences,
+popularities and transitions (M2) for next-basket recommendation. This method explicitly models
+three important factors in next-basket generation process: 1) users' general preferences, 2)
+items' global popularities and 3) transition patterns among items. We also propose a simple encoder-decoder
+based framework (ed-Trans) to better model the transition patterns among items. We compared M2
+with 5 state-of-the-art next-basket recommendation methods on 4 public benchmark datasets. Our
+experimental results demonstrate that M2 significantly outperforms the state-of-the-art methods
+on all the datasets, with an improvement as much as 19.0% at recall@5. We also compared M2 with these
+baseline methods in recommending the second next and third next baskets. Our experimental results
+demonstrate that M2 could consistently outperform the baseline methods in all these tasks, with
+an improvement as much as 14.4% at recall@5. In addition, we conducted a comprehensive ablation
+study to verify the effects of the different factors. The results show that learning all the factors
+together could significantly improve the recommendation performance compared to learning each
+of them alone. The results also show that ed-Trans in learning item transitions among baskets could
+outperform recurrent neural network-based methods on the benchmark datasets, with an improvement
+as much as 20.4% at recall@5. We also have a thorough discussion on various experimental protocols
+and evaluation metrics for next-basket recommendation evaluation. 

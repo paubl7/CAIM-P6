@@ -1,0 +1,20 @@
+The vertex-centric programming model, designed to improve the programmability in graph processing
+application writing, has attracted great attention over the years. However, shared memory frameworks
+that implement the vertex-centric interface all expose a common tradeoff: programmability against
+memory efficiency and performance. Our approach, iPregel, preserves vertex-centric programmability,
+while implementing optimisations for performance, and designing these so they are transparent
+to a user's application code, hence not impacting programmability. In this paper, we evaluate iPregel
+against FemtoGraph, whose characteristics are identical, an asynchronous counterpart GraphChi
+and the vertex-subset-centric framework Ligra. Our experiments include three of the most popular
+vertex-centric benchmark applications over 4 real-world publicly accessible graphs, which cover
+orders of magnitude between a million to a billion edges, measuring execution time and peak memory
+usage. Finally, we evaluate the programmability of each framework by comparing against Google's
+original Pregel framework. Experiments demonstrate that iPregel, like FemtoGraph, does not sacrifice
+vertex-centric programmability for additional performance and memory efficiency optimisations,
+which contrasts against GraphChi and Ligra. Sacrificing vertex-centric programmability allowed
+the latter to benefit from substantial performance and memory efficiency gains. We demonstrate
+that iPregel is up to 2300 times faster than FemtoGraph, as well as generating a memory footprint
+up to 100 times smaller. Ligra and GraphChi are up to 17000 and 700 times faster than FemtoGraph but,
+when comparing against iPregel, this maximum speed-up drops to 10. Furthermore, with PageRank,
+iPregel is the fastest overall. For memory efficiency, iPregel provides the same memory efficiency
+as Ligra and 3 to 6 times lighter than GraphChi on average. 

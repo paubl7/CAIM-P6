@@ -1,0 +1,19 @@
+Continual learning aims to provide intelligent agents capable of learning multiple tasks sequentially
+with neural networks. One of its main challenging, catastrophic forgetting, is caused by the neural
+networks non-optimal ability to learn in non-stationary distributions. In most settings of the
+current approaches, the agent starts from randomly initialized parameters and is optimized to
+master the current task regardless of the usefulness of the learned representation for future tasks.
+Moreover, each of the future tasks uses all the previously learned knowledge although parts of this
+knowledge might not be helpful for its learning. These cause interference among tasks, especially
+when the data of previous tasks is not accessible. In this paper, we propose a new method, named Self-Attention
+Meta-Learner (SAM), which learns a prior knowledge for continual learning that permits learning
+a sequence of tasks, while avoiding catastrophic forgetting. SAM incorporates an attention mechanism
+that learns to select the particular relevant representation for each future task. Each task builds
+a specific representation branch on top of the selected knowledge, avoiding the interference between
+tasks. We evaluate the proposed method on the Split CIFAR-10/100 and Split MNIST benchmarks in the
+task agnostic inference. We empirically show that we can achieve a better performance than several
+state-of-the-art methods for continual learning by building on the top of selected representation
+learned by SAM. We also show the role of the meta-attention mechanism in boosting informative features
+corresponding to the input data and identifying the correct target in the task agnostic inference.
+Finally, we demonstrate that popular existing continual learning methods gain a performance boost
+when they adopt SAM as a starting point. 

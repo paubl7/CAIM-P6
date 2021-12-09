@@ -1,0 +1,20 @@
+Most existing algorithms for automatic 3D morphometry of human brain MRI scans are designed for
+data with near-isotropic voxels at approximately 1 mm resolution, and frequently have contrast
+constraints as well - typically requiring T1 scans (e.g., MP-RAGE). This limitation prevents the
+analysis of millions of MRI scans acquired with large inter-slice spacing ("thick slice") in clinical
+settings every year. The inability to quantitatively analyze these scans hinders the adoption
+of quantitative neuroimaging in healthcare, and precludes research studies that could attain
+huge sample sizes and hence greatly improve our understanding of the human brain. Recent advances
+in CNNs are producing outstanding results in super-resolution and contrast synthesis of MRI. However,
+these approaches are very sensitive to the contrast, resolution and orientation of the input images,
+and thus do not generalize to diverse clinical acquisition protocols - even within sites. Here we
+present SynthSR, a method to train a CNN that receives one or more thick-slice scans with different
+contrast, resolution and orientation, and produces an isotropic scan of canonical contrast (typically
+a 1 mm MP-RAGE). The presented method does not require any preprocessing, e.g., skull stripping
+or bias field correction. Crucially, SynthSR trains on synthetic input images generated from 3D
+segmentations, and can thus be used to train CNNs for any combination of contrasts, resolutions
+and orientations without high-resolution training data. We test the images generated with SynthSR
+in an array of common downstream analyses, and show that they can be reliably used for subcortical
+segmentation and volumetry, image registration (e.g., for tensor-based morphometry), and, if
+some image quality requirements are met, even cortical thickness morphometry. The source code
+is publicly available at github.com/BBillot/SynthSR. 

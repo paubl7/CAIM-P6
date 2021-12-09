@@ -1,0 +1,19 @@
+Consider the problem where $n$ jobs, each with a release time, a deadline and a required processing
+time are to be feasibly scheduled in a single- or multi-processor setting so as to minimize the total
+energy consumption of the schedule. A processor has two available states: a \emph{sleep state}
+where no energy is consumed but also no processing can take place, and an \emph{active state} which
+consumes energy at a rate of one, and in which jobs can be processed. Transitioning from the active
+to the sleep does not incur any further energy cost, but transitioning from the sleep to the active
+state requires $q$ energy units. Jobs may be preempted and (in the multi-processor case) migrated.
+The single-processor case of the problem is known to be solvable in polynomial time via an involved
+dynamic program, whereas the only known approximation algorithm for the multi-processor case
+attains an approximation factor of $3$ and is based on rounding the solution to a linear programming
+relaxation of the problem. In this work, we present efficient and combinatorial approximation
+algorithms for both the single- and the multi-processor setting. Before, only an algorithm based
+on linear programming was known for the multi-processor case. Our algorithms build upon the concept
+of a \emph{skeleton}, a basic (and not necessarily feasible) schedule that captures the fact that
+some processor(s) must be active at some time point during an interval. Finally, we further demonstrate
+the power of skeletons by providing an $2$-approximation algorithm for the multiprocessor case,
+thus improving upon the recent breakthrough $3$-approximation result. Our algorithm is based
+on a novel rounding scheme of a linear-programming relaxation of the problem which incorporates
+skeletons. 

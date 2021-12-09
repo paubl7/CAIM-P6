@@ -1,0 +1,18 @@
+Recently, heatmap regression models have become popular due to their superior performance in locating
+facial landmarks. However, three major problems still exist among these models: (1) they are computationally
+expensive; (2) they tend to lack robustness; (3) domain gaps are commonly present. To address these
+problems, we propose Pixel-In-Pixel Net (PIPNet) for facial landmark detection. The proposed
+model is equipped with a novel detection head based on heatmap regression, which conducts score
+and offset predictions simultaneously on low-resolution feature maps. By doing so, repeated upsampling
+layers are no longer necessary, enabling the inference time to be largely reduced without sacrificing
+model accuracy. Besides, a simple but effective neighbor regression module is proposed to enforce
+local constraints by fusing predictions from neighboring landmarks, which enhances the robustness
+of the new detection head. To further improve the cross-domain generalization capability of PIPNet,
+we propose self-training with curriculum as a training strategy. Self-training with curriculum
+is able to mine more reliable pseudo-labels from unlabeled data across domains by starting with
+an easier task, then gradually increasing the difficulty to provide more precise labels. Extensive
+experiments demonstrate the superiority of PIPNet, which obtains new state-of-the-art results
+on two out of four popular benchmarks under the supervised setting. The results on two cross-domain
+test sets are also consistently improved compared to the baseline. Notably, our lightweight version
+of PIPNet runs at 35.7 FPS and 200 FPS on CPU and GPU respectively, while still maintaining a competitive
+accuracy with state-of-the-art methods. The code is available at https://github.com/jhb86253817/PIPNet.

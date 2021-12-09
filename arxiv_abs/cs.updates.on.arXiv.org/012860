@@ -1,0 +1,19 @@
+In the traditional deep compression framework, iteratively performing network pruning and quantization
+can reduce the model size and computation cost to meet the deployment requirements. However, such
+a step-wise application of pruning and quantization may lead to suboptimal solutions and unnecessary
+time consumption. In this paper, we tackle this issue by integrating network pruning and quantization
+as a unified joint compression problem and then use AutoML to automatically solve it. We find the
+pruning process can be regarded as the channel-wise quantization with 0 bit. Thus, the separate
+two-step pruning and quantization can be simplified as the one-step quantization with mixed precision.
+This unification not only simplifies the compression pipeline but also avoids the compression
+divergence. To implement this idea, we propose the automated model compression by jointly applied
+pruning and quantization (AJPQ). AJPQ is designed with a hierarchical architecture: the layer
+controller controls the layer sparsity, and the channel controller decides the bit-width for each
+kernel. Following the same importance criterion, the layer controller and the channel controller
+collaboratively decide the compression strategy. With the help of reinforcement learning, our
+one-step compression is automatically achieved. Compared with the state-of-the-art automated
+compression methods, our method obtains a better accuracy while reducing the storage considerably.
+For fixed precision quantization, AJPQ can reduce more than five times model size and two times computation
+with a slight performance increase for Skynet in remote sensing object detection. When mixed-precision
+is allowed, AJPQ can reduce five times model size with only 1.06% top-5 accuracy decline for MobileNet
+in the classification task. 

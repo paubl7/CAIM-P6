@@ -1,0 +1,19 @@
+We present a novel variant of Domain Adversarial Networks with impactful improvements to the loss
+functions, training paradigm, and hyperparameter optimization. New loss functions are defined
+for both forks of the DANN network, the label predictor and domain classifier, in order to facilitate
+more rapid gradient descent, provide more seamless integration into modern neural networking
+frameworks, and allow previously unavailable inferences into network behavior. Using these loss
+functions, it is possible to extend the concept of 'domain' to include arbitrary user defined labels
+applicable to subsets of the training data, the test data, or both. As such, the network can be operated
+in either 'On the Fly' mode where features provided by the feature extractor indicative of differences
+between 'domain' labels in the training data are removed or in 'Test Collection Informed' mode where
+features indicative of difference between 'domain' labels in the combined training and test data
+are removed (without needing to know or provide test activity labels to the network). This work also
+draws heavily from previous works on Robust Training which draws training examples from a L_inf
+ball around the training data in order to remove fragile features induced by random fluctuations
+in the data. On these networks we explore the process of hyperparameter optimization for both the
+domain adversarial and robust hyperparameters. Finally, this network is applied to the construction
+of a binary classifier used to identify the presence of EM signal emitted by a turbopump. For this
+example, the effect of the robust and domain adversarial training is to remove features indicative
+of the difference in background between instances of operation of the device - providing highly
+discriminative features on which to construct the classifier. 

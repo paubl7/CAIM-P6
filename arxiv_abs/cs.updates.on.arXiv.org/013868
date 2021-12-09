@@ -1,0 +1,19 @@
+Active fire detection in satellite imagery is of critical importance to the management of environmental
+conservation policies, supporting decision-making and law enforcement. This is a well established
+field, with many techniques being proposed over the years, usually based on pixel or region-level
+comparisons involving sensor-specific thresholds and neighborhood statistics. In this paper,
+we address the problem of active fire detection using deep learning techniques. In recent years,
+deep learning techniques have been enjoying an enormous success in many fields, but their use for
+active fire detection is relatively new, with open questions and demand for datasets and architectures
+for evaluation. This paper addresses these issues by introducing a new large-scale dataset for
+active fire detection, with over 150,000 image patches (more than 200 GB of data) extracted from
+Landsat-8 images captured around the world in August and September 2020, containing wildfires
+in several locations. The dataset was split in two parts, and contains 10-band spectral images with
+associated outputs, produced by three well known handcrafted algorithms for active fire detection
+in the first part, and manually annotated masks in the second part. We also present a study on how different
+convolutional neural network architectures can be used to approximate these handcrafted algorithms,
+and how models trained on automatically segmented patches can be combined to achieve better performance
+than the original algorithms - with the best combination having 87.2% precision and 92.4% recall
+on our manually annotated dataset. The proposed dataset, source codes and trained models are available
+on Github (https://github.com/pereira-gha/activefire), creating opportunities for further
+advances in the field 

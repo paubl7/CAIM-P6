@@ -1,0 +1,20 @@
+Deep learning models heavily rely on large scale annotated datasets for training. Unfortunately,
+datasets cannot capture the infinite variability of the real world, thus neural networks are inherently
+limited by the restricted visual and semantic information contained in their training set. In this
+thesis, we argue that it is crucial to design deep architectures that can operate in previously unseen
+visual domains and recognize novel semantic concepts. In the first part of the thesis, we describe
+different solutions to enable deep models to generalize to new visual domains, by transferring
+knowledge from a labeled source domain(s) to a domain (target) where no labeled data are available.
+We will show how variants of batch-normalization (BN) can be applied to different scenarios, from
+domain adaptation when source and target are mixtures of multiple latent domains, to domain generalization,
+continuous domain adaptation, and predictive domain adaptation, where information about the
+target domain is available only in the form of metadata. In the second part of the thesis, we show how
+to extend the knowledge of a pretrained deep model to new semantic concepts, without access to the
+original training set. We address the scenarios of sequential multi-task learning, using transformed
+task-specific binary masks, open-world recognition, with end-to-end training and enforced clustering,
+and incremental class learning in semantic segmentation, where we highlight and address the problem
+of the semantic shift of the background class. In the final part, we tackle a more challenging problem:
+given images of multiple domains and semantic categories (with their attributes), how to build
+a model that recognizes images of unseen concepts in unseen domains? We also propose an approach
+based on domain and semantic mixing of inputs and features, which is a first, promising step towards
+solving this problem. 

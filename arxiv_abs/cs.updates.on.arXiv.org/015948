@@ -1,0 +1,20 @@
+Neurodegenerative parkinsonism can be assessed by dopamine transporter single photon emission
+computed tomography (DaT-SPECT). Although generating images is time consuming, these images
+can show interobserver variability and they have been visually interpreted by nuclear medicine
+physicians to date. Accordingly, this study aims to provide an automatic and robust method based
+on Diffusion Maps and machine learning classifiers to classify the SPECT images into two types,
+namely Normal and Abnormal DaT-SPECT image groups. In the proposed method, the 3D images of N patients
+are mapped to an N by N pairwise distance matrix and are visualized in Diffusion Maps coordinates.
+The images of the training set are embedded into a low-dimensional space by using diffusion maps.
+Moreover, we use Nystr\"om's out-of-sample extension, which embeds new sample points as the testing
+set in the reduced space. Testing samples in the embedded space are then classified into two types
+through the ensemble classifier with Linear Discriminant Analysis (LDA) and voting procedure
+through twenty-five-fold cross-validation results. The feasibility of the method is demonstrated
+via Parkinsonism Progression Markers Initiative (PPMI) dataset of 1097 subjects and a clinical
+cohort from Kaohsiung Chang Gung Memorial Hospital (KCGMH-TW) of 630 patients. We compare performances
+using Diffusion Maps with those of three alternative manifold methods for dimension reduction,
+namely Locally Linear Embedding (LLE), Isomorphic Mapping Algorithm (Isomap), and Kernel Principal
+Component Analysis (Kernel PCA). We also compare results using 2D and 3D CNN methods. The diffusion
+maps method has an average accuracy of 98% for the PPMI and 90% for the KCGMH-TW dataset with twenty-five
+fold cross-validation results. It outperforms the other three methods concerning the overall
+accuracy and the robustness in the training and testing samples. 

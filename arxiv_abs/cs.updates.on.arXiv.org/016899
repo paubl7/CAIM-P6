@@ -1,0 +1,19 @@
+Autonomous navigation in uninstrumented and unprepared environments is a fundamental demand
+for next generation indoor and outdoor location-based services. To bring about such ambition,
+a suite of collaborative sensing modalities is required in order to sustain performance irrespective
+of challenging dynamic conditions. Of the many modalities on offer, inertial tracking plays a key
+role under momentary unfavourable operational conditions owing to its independence of the surrounding
+environment. However, inertial tracking has traditionally (i) suffered from excessive error
+growth and (ii) required extensive and cumbersome tuning. Both of these issues have limited the
+appeal and utility of inertial tracking. In this paper, we present DIT: a novel Deep learning Inertial
+Tracking system that overcomes prior limitations; namely, by (i) significantly reducing tracking
+drift and (ii) seamlessly constructing robust and generalisable learned models. DIT describes
+two core contributions: (i) DIT employs a robotic platform augmented with a mechanical slider subsystem
+that automatically samples inertial signal variabilities arising from different sensor mounting
+geometries. We use the platform to curate in-house a 7.2 million sample dataset covering an aggregate
+distance of 21 kilometres split into 11 indexed sensor mounting geometries. (ii) DIT uses deep learning,
+optimal transport, and domain adaptation (DA) to create a model which is robust to variabilities
+in sensor mounting geometry. The overall system synthesises high-performance and generalisable
+inertial navigation models in an end-to-end, robotic-learning fashion. In our evaluation, DIT
+outperforms an industrial-grade sensor fusion baseline by 10x (90th percentile) and a state-of-the-art
+adversarial DA technique by > 2.5x in performance (90th percentile) and >10x in training time. 

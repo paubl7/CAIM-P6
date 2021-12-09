@@ -1,0 +1,20 @@
+Proof assistants are getting more widespread use in research and industry to provide certified
+and independently checkable guarantees about theories, designs, systems and implementations.
+However, proof assistant implementations themselves are seldom verified, although they take
+a major share of the trusted code base in any such certification effort. In this area, proof assistants
+based on Higher-Order Logic enjoy stronger guarantees, as self-certified implementations have
+been available for some years. One cause of this difference is the inherent complexity of dependent
+type theories together with their extensions with inductive types, universe polymorphism and
+complex sort systems, and the gap between theory on paper and practical implementations in efficient
+programming languages. MetaCoq is a collaborative project that aims to tackle these difficulties
+to provide the first fully-certified realistic implementation of a type checker for the full calculus
+underlying the Coq proof assistant. To achieve this, we refined the sometimes blurry, if not incorrect,
+specification and implementation of the system. We show how theoretical tools from this community
+such as bidirectional type-checking, Tait-Martin-L\"of/Takahashi's confluence proof technique
+and monadic and dependently-typed programming can help construct the following artefacts: a specification
+of Coq's syntax and type theory, the Polymorphic Cumulative Calculus of (Co)-Inductive Constructions
+(PCUIC); a monad for the manipulation of raw syntax and interaction with the Coq system; a verification
+of PCUIC's metatheory, whose main results are the confluence of reduction, type preservation and
+principality of typing; a realistic, correct and complete type-checker for PCUIC; a sound type
+and proof erasure procedure from PCUIC to untyped lambda-calculus, i.e., the core of the extraction
+mechanism of Coq. 

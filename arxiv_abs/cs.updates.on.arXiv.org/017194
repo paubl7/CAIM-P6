@@ -1,0 +1,19 @@
+To verify safety and robustness of neural networks, researchers have successfully applied abstract
+interpretation, primarily using the interval abstract domain. In this paper, we study the theoretical
+power and limits of the interval domain for neural-network verification. First, we introduce the
+interval universal approximation (IUA) theorem. IUA shows that neural networks not only can approximate
+any continuous function $f$ (universal approximation) as we have known for decades, but we can find
+a neural network, using any well-behaved activation function, whose interval bounds are an arbitrarily
+close approximation of the set semantics of $f$ (the result of applying $f$ to a set of inputs). We
+call this notion of approximation interval approximation. Our theorem generalizes the recent
+result of Baader et al. (2020) from ReLUs to a rich class of activation functions that we call squashable
+functions. Additionally, the IUA theorem implies that we can always construct provably robust
+neural networks under $\ell_\infty$-norm using almost any practical activation function. Second,
+we study the computational complexity of constructing neural networks that are amenable to precise
+interval analysis. This is a crucial question, as our constructive proof of IUA is exponential in
+the size of the approximation domain. We boil this question down to the problem of approximating
+the range of a neural network with squashable activation functions. We show that the range approximation
+problem (RA) is a $\Delta_2$-intermediate problem, which is strictly harder than $\mathsf{NP}$-complete
+problems, assuming $\mathsf{coNP}\not\subset \mathsf{NP}$. As a result, IUA is an inherently
+hard problem: No matter what abstract domain or computational tools we consider to achieve interval
+approximation, there is no efficient construction of such a universal approximator. 

@@ -1,0 +1,18 @@
+Mutation and recombination operators play a key role in determining the speed and quality of Genetic
+and Evolutionary Algorithms (GEAs). Prior work has analyzed the effects of these operators on genotypic
+variation, often using locality metrics that measure the sensitivity and stability of genotype-phenotype
+representations to these operators. In this paper, we focus on an important subset of representations,
+namely nonredundant bitstring-to-integer representations, and analyze them through the lens
+of Rothlauf's widely used locality metrics. We first define locality metrics equivalent to Rothlauf's
+that are tailored to our domain: the \textit{point locality} for single-bit mutation and \textit{general
+locality} for recombination. With these definitions, we derive tight bounds and a closed form expected
+value for point locality. For general locality we show that it is asymptotically equivalent across
+all representations and operators. We also recreate three established GEA experiments to understand
+the predictive power of point locality on GEA performance, focusing on two popular and often juxtaposed
+representations: standard binary and binary reflected Gray. We show that standard binary has provably
+no worse locality than any Gray encoding, including binary reflected Gray. We discuss this result
+in the context of previous studies that found binary reflected Gray to outperform standard binary,
+and we argue that locality cannot be the explanation for strong performance. Finally, we provide
+empirical evidence that weak point locality representations can be beneficial to performance
+in the exploration phase of the GEA, while strong point locality representations are more beneficial
+in the exploitation phase. 

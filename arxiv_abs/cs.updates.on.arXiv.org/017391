@@ -1,0 +1,18 @@
+Background: Glioma is the most common brain malignant tumor, with a high morbidity rate and a mortality
+rate of more than three percent, which seriously endangers human health. The main method of acquiring
+brain tumors in the clinic is MRI. Segmentation of brain tumor regions from multi-modal MRI scan
+images is helpful for treatment inspection, post-diagnosis monitoring, and effect evaluation
+of patients. However, the common operation in clinical brain tumor segmentation is still manual
+segmentation, lead to its time-consuming and large performance difference between different
+operators, a consistent and accurate automatic segmentation method is urgently needed. Methods:
+To meet the above challenges, we propose an automatic brain tumor MRI data segmentation framework
+which is called AGSE-VNet. In our study, the Squeeze and Excite (SE) module is added to each encoder,
+the Attention Guide Filter (AG) module is added to each decoder, using the channel relationship
+to automatically enhance the useful information in the channel to suppress the useless information,
+and use the attention mechanism to guide the edge information and remove the influence of irrelevant
+information such as noise. Results: We used the BraTS2020 challenge online verification tool to
+evaluate our approach. The focus of verification is that the Dice scores of the whole tumor (WT),
+tumor core (TC) and enhanced tumor (ET) are 0.68, 0.85 and 0.70, respectively. Conclusion: Although
+MRI images have different intensities, AGSE-VNet is not affected by the size of the tumor, and can
+more accurately extract the features of the three regions, it has achieved impressive results and
+made outstanding contributions to the clinical diagnosis and treatment of brain tumor patients.

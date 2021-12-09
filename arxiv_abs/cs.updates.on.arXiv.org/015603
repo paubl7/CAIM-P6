@@ -1,0 +1,20 @@
+We present BIEBER (Byte-IdEntical Binary parsER), the first system to model and regenerate a full
+working parser from instrumented program executions. To achieve this, BIEBER exploits the regularity
+(e.g., header fields and array-like data structures) that is commonly found in file formats. Key
+generalization steps derive strided loops that parse input file data and rewrite concrete loop
+bounds with expressions over input file header bytes. These steps enable BIEBER to generalize parses
+of specific input files to obtain parsers that operate over input files of arbitrary size. BIEBER
+also incrementally and efficiently infers a decision tree that reads file header bytes to route
+input files of different types to inferred parsers of the appropriate type. The inferred parsers
+and decision tree are expressed in an IR; separate backends (C and Perl in our prototype) can translate
+the IR into the same language as the original program (for a safer drop-in replacement), or automatically
+port to a different language. An empirical evaluation shows that BIEBER can successfully regenerate
+parsers for six file formats (waveform audio [1654 files], MT76x0 .BIN firmware containers [5 files],
+OS/2 1.x bitmap images [9 files], Windows 3.x bitmaps [9971 files], Windows 95/NT4 bitmaps [133
+files], and Windows 98/2000 bitmaps [859 files]), correctly parsing 100% (>= 99.98% when using
+standard held-out cross-validation) of the corresponding corpora. The regenerated parsers contain
+automatically inserted safety checks that eliminate common classes of errors such as memory errors.
+We find that BIEBER can help reverse-engineer file formats, because it automatically identifies
+predicates for the decision tree that relate to key semantics of the file format. We also discuss
+how BIEBER helped us detect and fix two new bugs in stb_image as well as independently rediscover
+and fix a known bug. 

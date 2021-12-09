@@ -1,0 +1,18 @@
+Dimensionality reduction (DR) algorithms, which reduce the dimensionality of a given data set
+while preserving the information of the original data set as well as possible, play an important
+role in machine learning and data mining. Duan \emph{et al}. proposed a quantum version of the A-optimal
+projection algorithm (AOP) for dimensionality reduction [Phys. Rev. A 99, 032311 (2019)] and claimed
+that the algorithm has exponential speedups on the dimensionality of the original feature space
+$n$ and the dimensionality of the reduced feature space $k$ over the classical algorithm. In this
+paper, we correct the time complexity of Duan \emph{et al}.'s algorithm to $O(\frac{\kappa^{4s}\sqrt{k^s}}
+{\epsilon^{s}}\mathrm{polylog}^s (\frac{mn}{\epsilon}))$, where $\kappa$ is the condition
+number of a matrix that related to the original data set, $s$ is the number of iterations, $m$ is the
+number of data points and $\epsilon$ is the desired precision of the output state. Since the time
+complexity has an exponential dependence on $s$, the quantum algorithm can only be beneficial for
+high dimensional problems with a small number of iterations $s$. To get a further speedup, we propose
+an improved quantum AOP algorithm with time complexity $O(\frac{s \kappa^6 \sqrt{k}}{\epsilon}\mathrm{polylog}(\frac{nm}{\epsilon})
++ \frac{s^2 \kappa^4}{\epsilon}\mathrm{polylog}(\frac{\kappa k}{\epsilon}))$ and space
+complexity $O(\log_2(nk/\epsilon)+s)$. With space complexity slightly worse, our algorithm
+achieves at least a polynomial speedup compared to Duan \emph{et al}.'s algorithm. Also, our algorithm
+shows exponential speedups in $n$ and $m$ compared with the classical algorithm when both $\kappa$,
+$k$ and $1/\epsilon$ are $O(\mathrm{polylog}(nm))$. 

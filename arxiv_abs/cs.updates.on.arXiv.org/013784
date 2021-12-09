@@ -1,0 +1,19 @@
+In this paper, we propose a novel deep learning method based on a Convolutional Neural Network (CNN)
+that simultaneously detects and geolocates plantation-rows while counting its plants considering
+highly-dense plantation configurations. The experimental setup was evaluated in a cornfield
+with different growth stages and in a Citrus orchard. Both datasets characterize different plant
+density scenarios, locations, types of crops, sensors, and dates. A two-branch architecture was
+implemented in our CNN method, where the information obtained within the plantation-row is updated
+into the plant detection branch and retro-feed to the row branch; which are then refined by a Multi-Stage
+Refinement method. In the corn plantation datasets (with both growth phases, young and mature),
+our approach returned a mean absolute error (MAE) of 6.224 plants per image patch, a mean relative
+error (MRE) of 0.1038, precision and recall values of 0.856, and 0.905, respectively, and an F-measure
+equal to 0.876. These results were superior to the results from other deep networks (HRNet, Faster
+R-CNN, and RetinaNet) evaluated with the same task and dataset. For the plantation-row detection,
+our approach returned precision, recall, and F-measure scores of 0.913, 0.941, and 0.925, respectively.
+To test the robustness of our model with a different type of agriculture, we performed the same task
+in the citrus orchard dataset. It returned an MAE equal to 1.409 citrus-trees per patch, MRE of 0.0615,
+precision of 0.922, recall of 0.911, and F-measure of 0.965. For citrus plantation-row detection,
+our approach resulted in precision, recall, and F-measure scores equal to 0.965, 0.970, and 0.964,
+respectively. The proposed method achieved state-of-the-art performance for counting and geolocating
+plants and plant-rows in UAV images from different types of crops. 

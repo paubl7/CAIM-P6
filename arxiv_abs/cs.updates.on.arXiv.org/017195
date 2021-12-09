@@ -1,0 +1,19 @@
+We present SimultaneousGreedys, a deterministic algorithm for constrained submodular maximization.
+At a high level, the algorithm maintains $\ell$ solutions and greedily updates them in a simultaneous
+fashion. SimultaneousGreedys achieves the tightest known approximation guarantees for both
+$k$-extendible systems and the more general $k$-systems, which are $(k+1)^2/k = k + \mathcal{O}(1)$
+and $(1 + \sqrt{k+2})^2 = k + \mathcal{O}(\sqrt{k})$, respectively. This is in contrast to previous
+algorithms, which are designed to provide tight approximation guarantees in one setting, but not
+both. We also improve the analysis of RepeatedGreedy, showing that it achieves an approximation
+ratio of $k + \mathcal{O}(\sqrt{k})$ for $k$-systems when allowed to run for $\mathcal{O}(\sqrt{k})$
+iterations, an improvement in both the runtime and approximation over previous analyses. We demonstrate
+that both algorithms may be modified to run in nearly linear time with an arbitrarily small loss in
+the approximation. Both SimultaneousGreedys and RepeatedGreedy are flexible enough to incorporate
+the intersection of $m$ additional knapsack constraints, while retaining similar approximation
+guarantees: both algorithms yield an approximation guarantee of roughly $k + 2m + \mathcal{O}(\sqrt{k+m})$
+for $k$-systems and SimultaneousGreedys enjoys an improved approximation guarantee of $k+2m
++ \mathcal{O}(\sqrt{m})$ for $k$-extendible systems. To complement our algorithmic contributions,
+we provide a hardness result which states that no algorithm making polynomially many oracle queries
+can achieve an approximation better than $k + 1/2 + \varepsilon$. We also present SubmodularGreedy.jl,
+a Julia package which implements these algorithms and may be downloaded at https://github.com/crharshaw/SubmodularGreedy.jl
+. Finally, we test the effectiveness of these algorithms on real datasets. 

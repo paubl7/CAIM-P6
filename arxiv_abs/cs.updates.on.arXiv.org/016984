@@ -1,0 +1,20 @@
+We introduce Neural Marching Cubes (NMC), a data-driven approach for extracting a triangle mesh
+from a discretized implicit field. Classical MC is defined by coarse tessellation templates isolated
+to individual cubes. While more refined tessellations have been proposed, they all make heuristic
+assumptions, such as trilinearity, when determining the vertex positions and local mesh topologies
+in each cube. In principle, none of these approaches can reconstruct geometric features that reveal
+coherence or dependencies between nearby cubes (e.g., a sharp edge), as such information is unaccounted
+for, resulting in poor estimates of the true underlying implicit field. To tackle these challenges,
+we re-cast MC from a deep learning perspective, by designing tessellation templates more apt at
+preserving geometric features, and learning the vertex positions and mesh topologies from training
+meshes, to account for contextual information from nearby cubes. We develop a compact per-cube
+parameterization to represent the output triangle mesh, while being compatible with neural processing,
+so that a simple 3D convolutional network can be employed for the training. We show that all topological
+cases in each cube that are applicable to our design can be easily derived using our representation,
+and the resulting tessellations can also be obtained naturally and efficiently by following a few
+design guidelines. In addition, our network learns local features with limited receptive fields,
+hence it generalizes well to new shapes and new datasets. We evaluate our neural MC approach by quantitative
+and qualitative comparisons to all well-known MC variants. In particular, we demonstrate the ability
+of our network to recover sharp features such as edges and corners, a long-standing issue of MC and
+its variants. Our network also reconstructs local mesh topologies more accurately than previous
+approaches. 

@@ -1,0 +1,20 @@
+Fast diagnosis and treatment of pneumothorax, a collapsed or dropped lung, is crucial to avoid fatalities.
+Pneumothorax is typically detected on a chest X-ray image through visual inspection by experienced
+radiologists. However, the detection rate is quite low. Therefore, there is a strong need for automated
+detection systems to assist radiologists. Despite the high accuracy levels generally reported
+for deep learning classifiers in many applications, they may not be useful in clinical practice
+due to the lack of large number of high-quality labelled images as well as a lack of interpretation
+possibility. Alternatively, searching in the archive of past cases to find matching images may
+serve as a 'virtual second opinion' through accessing the metadata of matched evidently diagnosed
+cases. To use image search as a triaging/diagnosis tool, all chest X-ray images must first be tagged
+with identifiers, i.e., deep features. Then, given a query chest X-ray image, the majority vote
+among the top k retrieved images can provide a more explainable output. While image search can be
+clinically more viable, its detection performance needs to be investigated at a scale closer to
+real-world practice. We combined 3 public datasets to assemble a repository with more than 550,000
+chest X-ray images. We developed the Autoencoding Thorax Net (short AutoThorax-Net) for image
+search in chest radiographs compressing three inputs: the left chest side, the flipped right side,
+and the entire chest image. Experimental results show that image search based on AutoThorax-Net
+features can achieve high identification rates providing a path towards real-world deployment.
+We achieved 92% AUC accuracy for a semi-automated search in 194,608 images (pneumothorax and normal)
+and 82% AUC accuracy for fully automated search in 551,383 images (normal, pneumothorax and many
+other chest diseases). 

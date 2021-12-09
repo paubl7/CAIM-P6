@@ -1,0 +1,18 @@
+The adversarial patch attack against image classification models aims to inject adversarially
+crafted pixels within a localized restricted image region (i.e., a patch) for inducing model misclassification.
+This attack can be realized in the physical world by printing and attaching the patch to the victim
+object and thus imposes a real-world threat to computer vision systems. To counter this threat,
+we propose PatchCleanser as a certifiably robust defense against adversarial patches that is compatible
+with any image classifier. In PatchCleanser, we perform two rounds of pixel masking on the input
+image to neutralize the effect of the adversarial patch. In the first round of masking, we apply a
+set of carefully generated masks to the input image and evaluate the model prediction on every masked
+image. If model predictions on all one-masked images reach a unanimous agreement, we output the
+agreed prediction label. Otherwise, we perform a second round of masking to settle the disagreement,
+in which we evaluate model predictions on two-masked images to robustly recover the correct prediction
+label. Notably, we can prove that our defense will always make correct predictions on certain images
+against any adaptive white-box attacker within our threat model, achieving certified robustness.
+We extensively evaluate our defense on the ImageNet, ImageNette, CIFAR-10, CIFAR-100, SVHN, and
+Flowers-102 datasets and demonstrate that our defense achieves similar clean accuracy as state-of-the-art
+classification models and also significantly improves certified robustness from prior works.
+Notably, our defense can achieve 83.8% top-1 clean accuracy and 60.4% top-1 certified robust accuracy
+against a 2%-pixel square patch anywhere on the 1000-class ImageNet dataset. 

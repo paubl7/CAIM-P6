@@ -1,0 +1,20 @@
+A random dot product graph (RDPG) is a generative model for networks in which vertices correspond
+to positions in a latent Euclidean space and edge probabilities are determined by the dot products
+of the latent positions. We consider RDPGs for which the latent positions are randomly sampled from
+an unknown $1$-dimensional submanifold of the latent space. In principle, restricted inference,
+i.e., procedures that exploit the structure of the submanifold, should be more effective than unrestricted
+inference; however, it is not clear how to conduct restricted inference when the submanifold is
+unknown. We submit that techniques for manifold learning can be used to learn the unknown submanifold
+well enough to realize benefit from restricted inference. To illustrate, we test $1$- and $2$-sample
+hypotheses about the Fr\'{e}chet means of small communities of vertices, using the complete set
+of vertices to infer latent structure. We propose test statistics that deploy the Isomap procedure
+for manifold learning, using shortest path distances on neighborhood graphs constructed from
+estimated latent positions to estimate arc lengths on the unknown $1$-dimensional submanifold.
+Unlike conventional applications of Isomap, the estimated latent positions do not lie on the submanifold
+of interest. We extend existing convergence results for Isomap to this setting and use them to demonstrate
+that, as the number of auxiliary vertices increases, the power of our test converges to the power
+of the corresponding test when the submanifold is known. Finally, we apply our methods to an inference
+problem that arises in studying the connectome of the Drosophila larval mushroom body. The univariate
+learnt manifold test rejects ($p<0.05$), while the multivariate ambient space test does not ($p\gg0.05$),
+illustrating the value of identifying and exploiting low-dimensional structure for subsequent
+inference. 

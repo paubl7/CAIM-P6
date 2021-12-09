@@ -1,0 +1,20 @@
+Mobile devices enable users to retrieve information at any time and any place. Considering the occasional
+requirements and fragmentation usage pattern of mobile users, temporal recommendation techniques
+are proposed to improve the efficiency of information retrieval on mobile devices by means of accurately
+recommending items via learning temporal interests with short-term user interaction behaviors.
+However, the enforcement of privacy-preserving laws and regulations, such as GDPR, may overshadow
+the successful practice of temporal recommendation. The reason is that state-of-the-art recommendation
+systems require to gather and process the user data in centralized servers but the interaction behaviors
+data used for temporal recommendation are usually non-transactional data that are not allowed
+to gather without the explicit permission of users according to GDPR. As a result, if users do not
+permit services to gather their interaction behaviors data, the temporal recommendation fails
+to work. To realize the temporal recommendation in the post-GDPR era, this paper proposes $C^3DRec$,
+a cloud-client cooperative deep learning framework of mining interaction behaviors for recommendation
+while preserving user privacy. $C^3DRec$ constructs a global recommendation model on centralized
+servers using data collected before GDPR and fine-tunes the model directly on individual local
+devices using data collected after GDPR. We design two modes to accomplish the recommendation,
+i.e. pull mode where candidate items are pulled down onto the devices and fed into the local model
+to get recommended items, and push mode where the output of the local model is pushed onto the server
+and combined with candidate items to get recommended ones. Evaluation results show that $C^3DRec$
+achieves comparable recommendation accuracy to the centralized approaches, with minimal privacy
+concern. 

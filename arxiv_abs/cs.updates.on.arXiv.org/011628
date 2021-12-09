@@ -1,0 +1,18 @@
+The segmentation of the retinal vasculature from eye fundus images represents one of the most fundamental
+tasks in retinal image analysis. Over recent years, increasingly complex approaches based on sophisticated
+Convolutional Neural Network architectures have been slowly pushing performance on well-established
+benchmark datasets. In this paper, we take a step back and analyze the real need of such complexity.
+Specifically, we demonstrate that a minimalistic version of a standard U-Net with several orders
+of magnitude less parameters, carefully trained and rigorously evaluated, closely approximates
+the performance of current best techniques. In addition, we propose a simple extension, dubbed
+W-Net, which reaches outstanding performance on several popular datasets, still using orders
+of magnitude less learnable weights than any previously published approach. Furthermore, we provide
+the most comprehensive cross-dataset performance analysis to date, involving up to 10 different
+databases. Our analysis demonstrates that the retinal vessel segmentation problem is far from
+solved when considering test images that differ substantially from the training data, and that
+this task represents an ideal scenario for the exploration of domain adaptation techniques. In
+this context, we experiment with a simple self-labeling strategy that allows us to moderately enhance
+cross-dataset performance, indicating that there is still much room for improvement in this area.
+Finally, we also test our approach on the Artery/Vein segmentation problem, where we again achieve
+results well-aligned with the state-of-the-art, at a fraction of the model complexity in recent
+literature. All the code to reproduce the results in this paper is released. 

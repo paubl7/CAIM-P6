@@ -1,0 +1,18 @@
+Emulating atomic read/write shared objects in a message-passing system is a fundamental problem
+in distributed computing. Considering that network communication is the most expensive resource,
+efficiency is measured first of all in terms of the communication needed to implement read and write
+operations. It is well known that 2 communication round-trip phases involving in total 4 message
+exchanges are sufficient to implemented atomic operations. It is also known that under certain
+constraints on the number of readers with respect to the numbers of replica servers and failures
+it is possible to implement single-writer atomic objects such that each operation involves one
+round-trip phase. We present algorithms that allow operations to complete in 3 communication exchanges
+without imposing any constraints on the number of readers and writers. Specifically, we present
+an atomic memory implementation for the SWMR setting, where reads complete in 3 communication exchanges
+and writes complete in 2 exchanges. We pose the question of whether it is possible to implement MWMR
+memory where operations complete in at most 3 communication exchanges. We answer this question
+in the negative by showing that an atomic memory implementation is impossible if both read and write
+operations take 3 communication exchanges, even when assuming two writers, two readers, and a single
+replica server failure. Motivated by this impossibility result, we provide a MWMR atomic memory
+implementation where reads involve 3 and writes 4 communication exchanges. In light of our impossibility
+result these algorithms are optimal in terms of the number of communication exchanges. We rigorously
+reason about the correctness of the algorithms. 

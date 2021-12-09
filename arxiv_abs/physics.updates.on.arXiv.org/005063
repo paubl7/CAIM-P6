@@ -1,0 +1,19 @@
+In this study, we employ physics-informed neural networks (PINNs) to solve forward and inverse
+problems via the Boltzmann-BGK formulation (PINN-BGK), enabling PINNs to model flows in both the
+continuum and rarefied regimes. In particular, the PINN-BGK is composed of three sub-networks,
+i.e., the first for approximating the equilibrium distribution function, the second for approximating
+the non-equilibrium distribution function, and the third one for encoding the Boltzmann-BGK equation
+as well as the corresponding boundary/initial conditions. By minimizing the residuals of the governing
+equations and the mismatch between the predicted and provided boundary/initial conditions, we
+can approximate the Boltzmann-BGK equation for both continuous and rarefied flows. For forward
+problems, the PINN-BGK is utilized to solve various benchmark flows given boundary/initial conditions,
+e.g., Kovasznay flow, Taylor-Green flow, cavity flow, and micro Couette flow for Knudsen number
+up to 5. For inverse problems, we focus on rarefied flows in which accurate boundary conditions are
+difficult to obtain. We employ the PINN-BGK to infer the flow field in the entire computational domain
+given a limited number of interior scattered measurements on the velocity with unknown boundary
+conditions. Results for the two-dimensional micro Couette and micro cavity flows with Knudsen
+numbers ranging from 0.1 to 10 indicate that the PINN-BGK can infer the velocity field in the entire
+domain with good accuracy. Finally, we also present some results on using transfer learning to accelerate
+the training process. Specifically, we can obtain a three-fold speedup compared to the standard
+training process (e.g., Adam plus L-BFGS-B) for the two-dimensional flow problems considered
+in our work. 

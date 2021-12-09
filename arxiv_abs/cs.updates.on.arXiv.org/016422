@@ -1,0 +1,20 @@
+Cyber-physical systems, such as self-driving cars or autonomous aircraft, must defend against
+attacks that target sensor hardware. Analyzing system design can help engineers understand how
+a compromised sensor could impact the system's behavior; however, designing security analyses
+for cyber-physical systems is difficult due to their combination of discrete dynamics, continuous
+dynamics, and nondeterminism. This paper contributes a framework for modeling and analyzing sensor
+attacks on cyber-physical systems, using the formalism of hybrid programs. We formalize and analyze
+two relational properties of a system's robustness. These relational properties respectively
+express (1) whether a system's safety property can be influenced by sensor attacks, and (2) whether
+a system's high-integrity state can be affected by sensor attacks. We characterize these relational
+properties by defining an equivalence relation between a system under attack and the original unattacked
+system. That is, the system satisfies the robustness properties if executions of the attacked system
+are appropriately related to executions of the unattacked system. We present two techniques for
+reasoning about the equivalence relation and thus proving the relational properties for a system.
+One proof technique decomposes large proof obligations to smaller proof obligations. The other
+proof technique adapts the self-composition technique from the literature on secure information-flow,
+allowing us to reduce reasoning about the equivalence of two systems to reasoning about properties
+of a single system. This technique allows us to reuse existing tools for reasoning about properties
+of hybrid programs, but is challenging due to the combination of discrete dynamics, continuous
+dynamics, and nondeterminism. To evaluate, we present three case studies motivated by real design
+flaws in existing cyber-physical systems. 

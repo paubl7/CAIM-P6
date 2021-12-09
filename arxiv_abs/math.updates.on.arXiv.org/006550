@@ -1,0 +1,18 @@
+In this work, we propose three pilot assignment schemes to reduce the effect of pilot contamination
+in cell-free massive multiple-input-multiple-output (MIMO) systems. Our first algorithm, which
+is based on the idea of random sequential adsorption (RSA) process from the statistical physics
+literature, can be implemented in a distributed and scalable manner while ensuring a minimum distance
+among the co-pilot users. Further, leveraging the rich literature of the RSA process, we present
+an approximate analytical approach to accurately determine the density of the co-pilot users as
+well as the pilot assignment probability for the typical user in this network. We also develop two
+optimization-based centralized pilot allocation schemes with the primary goal of benchmarking
+the RSA-based scheme. The first centralized scheme is based only on the user locations (just like
+the RSA-based scheme) and partitions the users into sets of co-pilot users such that the minimum
+distance between two users in a partition is maximized. The second centralized scheme takes both
+user and remote radio head (RRH) locations into account and provides a near-optimal solution in
+terms of sum-user spectral efficiency (SE). The general idea is to first cluster the users with similar
+propagation conditions with respect to the RRHs using spectral graph theory and then ensure that
+the users in each cluster are assigned different pilots using the branch and price (BnP) algorithm.
+Our simulation results demonstrate that despite admitting distributed implementation, the RSA-based
+scheme has a competitive performance with respect to the first centralized scheme in all regimes
+as well as to the near-optimal second scheme when the density of RRHs is high. 

@@ -1,0 +1,18 @@
+A promising use of quantum computers is to prepare quantum states that model complex domains, such
+as correlated electron wavefunctions or the underlying distribution of a complex dataset. Such
+states need to be verified in view of algorithmic approximations and device imperfections. As quantum
+computers grow in size, however, verifying the states they produce becomes increasingly problematic.
+Relatively efficient methods have been devised for verifying sparse quantum states, but dense
+quantum states have remained costly to verify. Here I present a novel method for estimating the fidelity
+$F(\mu,\tau)$ between a preparable quantum state $\mu$ and a classically specified target state
+$\tau$, using simple quantum circuits and on-the-fly classical calculation (or lookup) of selected
+amplitudes of $\tau$. Notably, in the targeted regime the method demonstrates an exponential quantum
+advantage in sample efficiency over any classical method. The simplest version of the method is
+efficient for anticoncentrated quantum states (including many states that are hard to simulate
+classically), with a sample cost of approximately $4\epsilon^{-2}(1-F)dp_{\text{coll}}$ where
+$\epsilon$ is the desired precision of the estimate, $d$ is the dimension of the Hilbert space in
+which $\mu$ and $\tau$ reside, and $p_{\text{coll}}$ is the collision probability of the target
+distribution. I also present a more sophisticated version of the method, which uses any efficiently
+preparable and well-characterized quantum state as an importance sampler to further reduce the
+number of copies of $\mu$ needed. Though some challenges remain, this work takes a significant step
+toward scalable verification of complex states produced by quantum processors. 

@@ -1,0 +1,19 @@
+In this paper, we are interested in unsupervised (unknown noise) audio-visual speech enhancement
+based on variational autoencoders (VAEs), where the probability distribution of clean speech
+spectra is simulated using an encoder-decoder architecture. The trained generative model (decoder)
+is then combined with a noise model at test time to estimate the clean speech. In the speech enhancement
+phase (test time), the initialization of the latent variables, which describe the generative process
+of clean speech via decoder, is crucial, as the overall inference problem is non-convex. This is
+usually done by using the output of the trained encoder where the noisy audio and clean visual data
+are given as input. Current audio-visual VAE models do not provide an effective initialization
+because the two modalities are tightly coupled (concatenated) in the associated architectures.
+To overcome this issue, inspired by mixture models, we introduce the mixture of inference networks
+variational autoencoder (MIN-VAE). Two encoder networks input, respectively, audio and visual
+data, and the posterior of the latent variables is modeled as a mixture of two Gaussian distributions
+output from each encoder network. The mixture variable is also latent, and therefore the inference
+of learning the optimal balance between the audio and visual inference networks is unsupervised
+as well. By training a shared decoder, the overall network learns to adaptively fuse the two modalities.
+Moreover, at test time, the visual encoder, which takes (clean) visual data, is used for initialization.
+A variational inference approach is derived to train the proposed generative model. Thanks to the
+novel inference procedure and the robust initialization, the proposed MIN-VAE exhibits superior
+performance on speech enhancement than using the standard audio-only as well as audio-visual counterparts.

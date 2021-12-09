@@ -1,0 +1,19 @@
+Recommending medications for patients using electronic health records (EHRs) is a crucial data
+mining task for an intelligent healthcare system. It can assist doctors in making clinical decisions
+more efficiently. However, the inherent complexity of the EHR data renders it as a challenging task:
+(1) Multilevel structures: the EHR data typically contains multilevel structures which are closely
+related with the decision-making pathways, e.g., laboratory results lead to disease diagnoses,
+and then contribute to the prescribed medications; (2) Multiple sequences interactions: multiple
+sequences in EHR data are usually closely correlated with each other; (3) Abundant noise: lots of
+task-unrelated features or noise information within EHR data generally result in suboptimal performance.
+To tackle the above challenges, we propose a multilevel selective and interactive network (MeSIN)
+for medication recommendation. Specifically, MeSIN is designed with three components. First,
+an attentional selective module (ASM) is applied to assign flexible attention scores to different
+medical codes embeddings by their relevance to the recommended medications in every admission.
+Second, we incorporate a novel interactive long-short term memory network (InLSTM) to reinforce
+the interactions of multilevel medical sequences in EHR data with the help of the calibrated memory-augmented
+cell and an enhanced input gate. Finally, we employ a global selective fusion module (GSFM) to infuse
+the multi-sourced information embeddings into final patient representations for medications
+recommendation. To validate our method, extensive experiments have been conducted on a real-world
+clinical dataset. The results demonstrate a consistent superiority of our framework over several
+baselines and testify the effectiveness of our proposed approach. 

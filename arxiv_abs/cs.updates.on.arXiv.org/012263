@@ -1,0 +1,18 @@
+Unsupervised learning can discover various unseen abnormalities, relying on large-scale unannotated
+medical images of healthy subjects. Towards this, unsupervised methods reconstruct a 2D/3D single
+medical image to detect outliers either in the learned feature space or from high reconstruction
+loss. However, without considering continuity between multiple adjacent slices, they cannot
+directly discriminate diseases composed of the accumulation of subtle anatomical anomalies,
+such as Alzheimer's Disease (AD). Moreover, no study has shown how unsupervised anomaly detection
+is associated with either disease stages, various (i.e., more than two types of) diseases, or multi-sequence
+Magnetic Resonance Imaging (MRI) scans. Therefore, we propose unsupervised Medical Anomaly Detection
+Generative Adversarial Network (MADGAN), a novel two-step method using GAN-based multiple adjacent
+brain MRI slice reconstruction to detect brain anomalies at different stages on multi-sequence
+structural MRI: (Reconstruction) Wasserstein loss with Gradient Penalty + 100 L1 loss-trained
+on 3 healthy brain axial MRI slices to reconstruct the next 3 ones-reconstructs unseen healthy/abnormal
+scans; (Diagnosis) Average L2 loss per scan discriminates them, comparing the ground truth/reconstructed
+slices. For training, we use two different datasets composed of 1,133 healthy T1-weighted (T1)
+and 135 healthy contrast-enhanced T1 (T1c) brain MRI scans for detecting AD and brain metastases/various
+diseases, respectively. Our Self-Attention MADGAN can detect AD on T1 scans at a very early stage,
+Mild Cognitive Impairment (MCI), with Area Under the Curve (AUC) 0.727, and AD at a late stage with
+AUC 0.894, while detecting brain metastases on T1c scans with AUC 0.921. 

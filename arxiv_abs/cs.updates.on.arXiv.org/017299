@@ -1,0 +1,18 @@
+In the context of electroencephalogram (EEG)-based driver drowsiness recognition, it is still
+a challenging task to design a calibration-free system, since there exists a significant variability
+of EEG signals among different subjects and recording sessions. As deep learning has received much
+research attention in recent years, many efforts have been made to use deep learning methods for
+EEG signal recognition. However, existing works mostly treat deep learning models as blackbox
+classifiers, while what have been learned by the models and to which extent they are affected by the
+noise from EEG data are still underexplored. In this paper, we develop a novel convolutional neural
+network that can explain its decision by highlighting the local areas of the input sample that contain
+important information for the classification. The network has a compact structure for ease of interpretation
+and takes advantage of separable convolutions to process the EEG signals in a spatial-temporal
+sequence. Results show that the model achieves an average accuracy of 78.35% on 11 subjects for leave-one-out
+cross-subject drowsiness recognition, which is higher than the conventional baseline methods
+of 53.4%-72.68% and state-of-art deep learning methods of 63.90%-65.61%. Visualization results
+show that the model has learned to recognize biologically explainable features from EEG signals,
+e.g., Alpha spindles, as strong indicators of drowsiness across different subjects. In addition,
+we also explore reasons behind some wrongly classified samples and how the model is affected by artifacts
+and noise in the data. Our work illustrates a promising direction on using interpretable deep learning
+models to discover meaning patterns related to different mental states from complex EEG signals.

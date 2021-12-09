@@ -1,0 +1,20 @@
+In this work, we propose a network which can utilize computational cheap low-fidelity data together
+with limited high-fidelity data to train surrogate models, where the multi-fidelity data are generated
+from multiple underlying models. The network takes a context set as input (physical observation
+points, low fidelity solution at observed points) and output (high fidelity solution at observed
+points) pairs. It uses the neural process to learn a distribution over functions conditioned on
+context sets and provide the mean and standard deviation at target sets. Moreover, the proposed
+framework also takes into account the available physical laws that govern the data and imposes them
+as constraints in the loss function. The multi-fidelity physical constraint network (MFPC-Net)
+(1) takes datasets obtained from multiple models at the same time in the training, (2) takes advantage
+of available physical information, (3) learns a stochastic process which can encode prior beliefs
+about the correlation between two fidelity with a few observations, and (4) produces predictions
+with uncertainty. The ability of representing a class of functions is ensured by the property of
+neural process and is achieved by the global latent variables in the neural network. Physical constraints
+are added to the loss using Lagrange multipliers. An algorithm to optimize the loss function is proposed
+to effectively train the parameters in the network on an ad hoc basis. Once trained, one can obtain
+fast evaluations at the entire domain of interest given a few observation points from a new low-and
+high-fidelity model pair. Particularly, one can further identify the unknown parameters such
+as permeability fields in elliptic PDEs with a simple modification of the network. Several numerical
+examples for both forward and inverse problems are presented to demonstrate the performance of
+the proposed method. 

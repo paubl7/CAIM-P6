@@ -1,0 +1,18 @@
+At relatively high frequencies, highly sensitive grating sidelobes occur in the primary beam patterns
+of low frequency aperture arrays (LFAA) such as the Murchison Widefield Array (MWA). This occurs
+when the observing wavelength becomes comparable to the dipole separation for LFAA tiles, which
+for the MWA occurs at approximately 300 MHz. The presence of these grating sidelobes has made calibration
+and image processing for 300 MHz MWA observations difficult. This work presents a new calibration
+and imaging strategy which employs existing techniques to process two example 300 MHz MWA observations.
+Observations are initially calibrated using a new 300 MHz sky-model which has been interpolated
+from low frequency and high frequency all-sky surveys. Using this 300 MHz model in conjunction with
+the accurate MWA tile primary beam model, we perform sky-model calibration for the two example observations.
+After initial calibration a self-calibration loop is performed by all-sky imaging each observation
+with WSCLEAN. Using the output all-sky image we mask the main lobe of the image. Using this masked
+image we perform a sky-subtraction by estimating the masked image visibilities using WSCLEAN.
+We then image the main lobe of the observations with WSCLEAN. This results in high dynamic range images
+of the two example observation main lobes. These images have a resolution of 2.4 arcminutes, with
+a maximum sensitivity of 31 mJy/beam. The calibration and imaging strategy demonstrated in this
+work, opens the door to performing science at 300 MHz with the MWA, which was previously an inaccessible
+domain. With this paper we release the code described below and the cross-matched catalogue along
+with the code to produce a sky-model in the range 70-1400 MHz. 

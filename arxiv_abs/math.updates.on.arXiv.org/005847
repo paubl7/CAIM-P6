@@ -1,0 +1,20 @@
+Borehole resistivity measurements recorded with logging-while-drilling (LWD) instruments
+are widely used for characterizing the earth's subsurface properties. They facilitate the extraction
+of natural resources such as oil and gas. LWD instruments require real-time inversions of electromagnetic
+measurements to estimate the electrical properties of the earth's subsurface near the well and
+possibly correct the well trajectory. Deep Neural Network (DNN)-based methods are suitable for
+the rapid inversion of borehole resistivity measurements as they approximate the forward and inverse
+problem offline during the training phase and they only require a fraction of a second for the evaluation
+(aka prediction). However, the inverse problem generally admits multiple solutions. DNNs with
+traditional loss functions based on data misfit are ill-equipped for solving an inverse problem.
+This can be partially overcome by adding regularization terms to a loss function specifically designed
+for encoder-decoder architectures. But adding regularization seriously limits the number of
+possible solutions to a set of a priori desirable physical solutions. To avoid this, we use a two-step
+loss function without any regularization. In addition, to guarantee an inverse solution, we need
+a carefully selected measurement acquisition system with a sufficient number of measurements.
+In this work, we propose a DNN-based iterative algorithm for designing such a measurement acquisition
+system. We illustrate our DNN-based iterative algorithm via several synthetic examples. Numerical
+results show that the obtained measurement acquisition system is sufficient to identify and characterize
+both resistive and conductive layers above and below the logging instrument. Numerical results
+are promising, although further improvements are required to make our method amenable for industrial
+purposes. 

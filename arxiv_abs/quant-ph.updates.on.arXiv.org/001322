@@ -1,0 +1,18 @@
+We propose quantum subroutines for the simplex method that avoid classical computation of the basis
+inverse. For an $m \times n$ constraint matrix with at most $d_c$ nonzero elements per column, at
+most $d$ nonzero elements per column or row of the basis, basis condition number $\kappa$, and optimality
+tolerance $\epsilon$, we show that pricing can be performed in $\tilde{O}(\frac{1}{\epsilon}\sqrt{n}(\kappa
+d_c n + \kappa^2 d^2 m))$ time, where the $\tilde{O}$ notation hides polylogarithmic factors. If
+the ratio $n/m$ is larger than a certain threshold, the running time of the quantum subroutine can
+be reduced to $\tilde{O}(\frac{1}{\epsilon}\kappa^{1.5} d \sqrt{d_c} n \sqrt{m})$. The steepest
+edge pivoting rule also admits a quantum implementation, increasing the running time by a factor
+$\kappa^2$. Classically, pricing requires $O(d_c^{0.7} m^{1.9} + m^{2 + o(1)} + d_c n)$ time in
+the worst case using the fastest known algorithm for sparse matrix multiplication, and $O(d_c^{0.7}
+m^{1.9} + m^{2 + o(1)} + m^2n)$ with steepest edge. Furthermore, we show that the ratio test can be
+performed in $\tilde{O}(\frac{t}{\delta} \kappa^2 d^2 m^{1.5})$ time, where $t, \delta$ determine
+a feasibility tolerance; classically, this requires $O(m^2)$ time in the worst case. For well-conditioned
+sparse problems the quantum subroutines scale better in $m$ and $n$, and may therefore have a worst-case
+asymptotic advantage. An important feature of our paper is that this asymptotic speedup does not
+depend on the data being available in some "quantum form": the input of our quantum subroutines is
+the natural classical description of the problem, and the output is the index of the variables that
+should leave or enter the basis. 

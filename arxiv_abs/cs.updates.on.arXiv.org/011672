@@ -1,0 +1,20 @@
+Today, offline attacks are one of the most severe threats to password security. These attacks have
+claimed millions of passwords from prominent websites including Yahoo, LinkedIn, Twitter, Sony,
+Adobe and many more. Therefore, as a preventive measure, it is necessary to gauge the offline guessing
+resistance of a password database and to help users choose secure passwords. The rule-based mechanisms
+that rely on minimum password length and different character classes are too naive to capture the
+intricate human behavior whereas those based on probabilistic models require the knowledge of
+an entire password distribution which is not always easy to learn. In this paper, we propose a space
+partition attack model which uses information from previous leaks, surveys, attacks and other
+sources to divide the password search space into non-overlapping partitions and learn partition
+densities. We prove that the expected success of a partition attacker is maximum if the resulting
+partitions are explored in decreasing order of density. We show that the proposed attack model is
+more general and various popular attack techniques including probabilistic-based, dictionary-based,
+grammar-based and brute-force are just different instances of a partition attacker. Later, we
+introduce bin attacker, another instance of a partition attacker, and measure the guessing resistance
+of real-world password databases. We demonstrate that the utilized search space is very small and
+as a result even a weak attacker can cause sufficient damage to the system. We prove that partition
+attacks can be countered only if partition densities are uniform. We use this result and propose
+a system that thwarts partition attacker by distributing users across different partitions. Finally,
+we demonstrate how some of the well-known password schemes can be adapted to help users in choosing
+passwords from the system assigned partitions. 

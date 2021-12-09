@@ -1,0 +1,20 @@
+We first introduce a novel profile-based alignment algorithm, the multiple continuous Signal
+Alignment algorithm with Gaussian Process Regression profiles (SA-GPR). SA-GPR addresses the
+limitations of currently available signal alignment methods by adopting a hybrid of the particle
+smoothing and Markov-chain Monte Carlo (MCMC) algorithms to align signals, and by applying the
+Gaussian process regression to construct profiles to be aligned continuously. SA-GPR shares all
+the strengths of the existing alignment algorithms that depend on profiles but is more exact in the
+sense that profiles do not need to be discretized as sequential bins. The uncertainty of performance
+over the resolution of such bins is thereby eliminated. This methodology produces alignments that
+are consistent, that regularize extreme cases, and that properly reflect the inherent uncertainty.
+Then we extend SA-GPR to a specific problem in the field of paleoceanography with a method called
+Bayesian Inference Gaussian Process Multiproxy Alignment of Continuous Signals (BIGMACS). The
+goal of BIGMACS is to infer continuous ages for ocean sediment cores using two classes of age proxies:
+proxies that explicitly return calendar ages (e.g., radiocarbon) and those used to synchronize
+ages in multiple marine records (e.g., an oxygen isotope based marine proxy known as benthic ${\delta}^{18}{\rm
+O}$). BIGMACS integrates these two proxies by iteratively performing two steps: profile construction
+from benthic ${\delta}^{18}{\rm O}$ age models and alignment of each core to the profile also reflecting
+radiocarbon dates. We use BIGMACS to construct a new Deep Northeastern Atlantic stack (i.e., a profile
+from a particular benthic ${\delta}^{18}{\rm O}$ records) of five ocean sediment cores. We conclude
+by constructing multiproxy age models for two additional cores from the same region by aligning
+them to the stack. 

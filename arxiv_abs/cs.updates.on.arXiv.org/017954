@@ -1,0 +1,19 @@
+Tile low rank representations of dense matrices partition them into blocks of roughly uniform size,
+where each off-diagonal tile is compressed and stored as its own low rank factorization. They offer
+an attractive representation for many data-sparse dense operators that appear in practical applications,
+where substantial compression and a much smaller memory footprint can be achieved. TLR matrices
+are a compromise between the simplicity of a regular perfectly-strided data structure and the optimal
+complexity of the unbalanced trees of hierarchically low rank matrices, and provide a convenient
+performance-tuning parameter through their tile size that can be proportioned to take into account
+the cache size where the tiles reside in the memory hierarchy. There are currently no high-performance
+algorithms that can generate Cholesky and $LDL^T$ factorizations, particularly on GPUs. The difficulties
+in achieving high performance when factoring TLR matrices come from the expensive compression
+operations that must be performed during the factorization process and the adaptive rank distribution
+of the tiles that causes an irregular work pattern for the processing cores. In this work, we develop
+a dynamic batching operation and combine it with batched adaptive randomized approximations to
+achieve high performance both on GPUs and CPUs. Our implementation attains over 1.2 TFLOP/s in double
+precision on the V100 GPU, and is limited by the performance of batched GEMM operations. The Cholesky
+factorization of covariance matrix of size $N = 131K$ arising in spatial statistics can be factored
+to an accuracy $\epsilon=10^{-2}$ in just a few seconds. We believe the proposed GEMM-centric algorithm
+allows it to be readily ported to newer hardware such as the tensor cores that are optimized for small
+GEMM operations. 

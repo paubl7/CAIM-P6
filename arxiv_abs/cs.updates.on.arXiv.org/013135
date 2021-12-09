@@ -1,0 +1,20 @@
+Deep neural networks (DNNs) show promise in image-based medical diagnosis, but cannot be fully
+trusted since their performance can be severely degraded by dataset shifts to which human perception
+remains invariant. If we can better understand the differences between human and machine perception,
+we can potentially characterize and mitigate this effect. We therefore propose a framework for
+comparing human and machine perception in medical diagnosis. The two are compared with respect
+to their sensitivity to the removal of clinically meaningful information, and to the regions of
+an image deemed most suspicious. Drawing inspiration from the natural image domain, we frame both
+comparisons in terms of perturbation robustness. The novelty of our framework is that separate
+analyses are performed for subgroups with clinically meaningful differences. We argue that this
+is necessary in order to avert Simpson's paradox and draw correct conclusions. We demonstrate our
+framework with a case study in breast cancer screening, and reveal significant differences between
+radiologists and DNNs. We compare the two with respect to their robustness to Gaussian low-pass
+filtering, performing a subgroup analysis on microcalcifications and soft tissue lesions. For
+microcalcifications, DNNs use a separate set of high frequency components than radiologists,
+some of which lie outside the image regions considered most suspicious by radiologists. These features
+run the risk of being spurious, but if not, could represent potential new biomarkers. For soft tissue
+lesions, the divergence between radiologists and DNNs is even starker, with DNNs relying heavily
+on spurious high frequency components ignored by radiologists. Importantly, this deviation in
+soft tissue lesions was only observable through subgroup analysis, which highlights the importance
+of incorporating medical domain knowledge into our comparison framework. 

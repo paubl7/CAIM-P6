@@ -1,0 +1,20 @@
+Modern modeling languages for general physical systems, such as Modelica, Amesim, or Simscape,
+rely on Differential Algebraic Equations (DAEs), i.e., constraints of the form f(\dot{x},x,u)=0.
+This drastically facilitates modeling from first principles of the physics, as well as model reuse.
+In recent works [RR9334], we presented the mathematical theory needed to establish the development
+of compilers and tools for DAE-based physical modeling languages on solid mathematical grounds.At
+the core of this analysis sits the so-called structural analysis, whose purpose, at compile time,
+is to either identify under- and over-specified subsystems (if any), or to rewrite the model in a
+form amenable of existing DAE solvers, including the handling of mode change events. The notion
+of "structure" collects, for each mode and mode change event, the variables and equations involved,
+as well as the latent equations (additional equations redundant with the system), needed to prepare
+the code submitted to the solver. The notion of DAE index (the minimal number of times any equation
+has to be possibly differentiated) is part of this structural analysis. This report complements
+[RR9334] by collecting all the needed background on structural analysis. The body of knowledge
+on structural analysis is large and scattered, which also motivated us to collect it in a single report.We
+first explain the primary meaning of structural analysis of systems of equations, namely the study
+of their regularity or singularity in some generic sense. We then briefly review the body of graph
+theory used in this context. We develop some extensions, for which we are not aware of any reference,
+namely the structural analysis of systems of equations with existential quantifiers. For the structural
+analysis of DAE systems, we focus on John Pryce's Sigma-method, that we both summarize and extend
+to non-square systems. The uses of these tools and methods in [RR9334] are highlighted in this report.

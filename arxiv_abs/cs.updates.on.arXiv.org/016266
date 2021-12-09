@@ -1,0 +1,18 @@
+Zero-shot action recognition can recognize samples of unseen classes that are unavailable in training
+by exploring common latent semantic representation in samples. However, most methods neglected
+the connotative relation and extensional relation between the action classes, which leads to the
+poor generalization ability of the zero-shot learning. Furthermore, the learned classifier incline
+to predict the samples of seen class, which leads to poor classification performance. To solve the
+above problems, we propose a two-stage deep neural network for zero-shot action recognition, which
+consists of a feature generation sub-network serving as the sampling stage and a graph attention
+sub-network serving as the classification stage. In the sampling stage, we utilize a generative
+adversarial networks (GAN) trained by action features and word vectors of seen classes to synthesize
+the action features of unseen classes, which can balance the training sample data of seen classes
+and unseen classes. In the classification stage, we construct a knowledge graph (KG) based on the
+relationship between word vectors of action classes and related objects, and propose a graph convolution
+network (GCN) based on attention mechanism, which dynamically updates the relationship between
+action classes and objects, and enhances the generalization ability of zero-shot learning. In
+both stages, we all use word vectors as bridges for feature generation and classifier generalization
+from seen classes to unseen classes. We compare our method with state-of-the-art methods on UCF101
+and HMDB51 datasets. Experimental results show that our proposed method improves the classification
+performance of the trained classifier and achieves higher accuracy. 

@@ -1,0 +1,20 @@
+We present a catalog of quasars and corresponding redshifts in the Kilo-Degree Survey (KiDS) Data
+Release 4. We trained machine learning (ML) models, using optical ugri and near-infrared ZYJHK_s
+bands, on objects known from Sloan Digital Sky Survey (SDSS) spectroscopy. We define inference
+subsets from the 45 million objects of the KiDS photometric data limited to 9-band detections. We
+show that projections of the high-dimensional feature space can be successfully used to investigate
+the estimations. The model creation employs two test subsets: randomly selected and the faintest
+objects, which allows to fit the bias versus variance trade-off. We tested three ML models: random
+forest (RF), XGBoost (XGB), and artificial neural network (ANN). We find that XGB is the most robust
+model for classification, while ANN performs the best for combined classification and redshift.
+The inference results are tested using number counts, Gaia parallaxes, and other quasar catalogs.
+Based on these tests, we derived the minimum classification probability which provides the best
+purity versus completeness trade-off: p(QSO_cand) > 0.9 for r < 22 and p(QSO_cand) > 0.98 for 22 <
+r < 23.5. We find 158,000 quasar candidates in the safe inference subset (r < 22) and an additional
+185,000 candidates in the reliable extrapolation regime (22 < r < 23.5). Test-data purity equals
+97% and completeness is 94%; the latter drops by 3% in the extrapolation to data fainter by one magnitude
+than the training set. The photometric redshifts were modeled with Gaussian uncertainties. The
+redshift error (mean and scatter) equals 0.01 +/- 0.1 in the safe subset and -0.0004 +/- 0.2 in the
+extrapolation, in a redshift range of 0.14 < z < 3.63. Our success of the extrapolation challenges
+the way that models are optimized and applied at the faint data end. The catalog is ready for cosmology
+and active galactic nucleus (AGN) studies. 

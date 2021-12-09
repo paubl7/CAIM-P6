@@ -1,0 +1,19 @@
+Most of existing outlier detection methods assume that the outlier factors (i.e., outlierness
+scoring measures) of data entities (e.g., feature values and data objects) are Independent and
+Identically Distributed (IID). This assumption does not hold in real-world applications where
+the outlierness of different entities is dependent on each other and/or taken from different probability
+distributions (non-IID). This may lead to the failure of detecting important outliers that are
+too subtle to be identified without considering the non-IID nature. The issue is even intensified
+in more challenging contexts, e.g., high-dimensional data with many noisy features. This work
+introduces a novel outlier detection framework and its two instances to identify outliers in categorical
+data by capturing non-IID outlier factors. Our approach first defines and incorporates distribution-sensitive
+outlier factors and their interdependence into a value-value graph-based representation. It
+then models an outlierness propagation process in the value graph to learn the outlierness of feature
+values. The learned value outlierness allows for either direct outlier detection or outlying feature
+selection. The graph representation and mining approach is employed here to well capture the rich
+non-IID characteristics. Our empirical results on 15 real-world data sets with different levels
+of data complexities show that (i) the proposed outlier detection methods significantly outperform
+five state-of-the-art methods at the 95%/99% confidence level, achieving 10%-28% AUC improvement
+on the 10 most complex data sets; and (ii) the proposed feature selection methods significantly
+outperform three competing methods in enabling subsequent outlier detection of two different
+existing detectors. 

@@ -1,0 +1,19 @@
+In this paper, we study the task of multimodal sequence analysis which aims to draw inferences from
+visual, language and acoustic sequences. A majority of existing works generally focus on aligned
+fusion, mostly at word level, of the three modalities to accomplish this task, which is impractical
+in real-world scenarios. To overcome this issue, we seek to address the task of multimodal sequence
+analysis on unaligned modality sequences which is still relatively underexplored and also more
+challenging. Recurrent neural network (RNN) and its variants are widely used in multimodal sequence
+analysis, but they are susceptible to the issues of gradient vanishing/explosion and high time
+complexity due to its recurrent nature. Therefore, we propose a novel model, termed Multimodal
+Graph, to investigate the effectiveness of graph neural networks (GNN) on modeling multimodal
+sequential data. The graph-based structure enables parallel computation in time dimension and
+can learn longer temporal dependency in long unaligned sequences. Specifically, our Multimodal
+Graph is hierarchically structured to cater to two stages, i.e., intra- and inter-modal dynamics
+learning. For the first stage, a graph convolutional network is employed for each modality to learn
+intra-modal dynamics. In the second stage, given that the multimodal sequences are unaligned,
+the commonly considered word-level fusion does not pertain. To this end, we devise a graph pooling
+fusion network to automatically learn the associations between various nodes from different modalities.
+Additionally, we define multiple ways to construct the adjacency matrix for sequential data. Experimental
+results suggest that our graph-based model reaches state-of-the-art performance on two benchmark
+datasets. 

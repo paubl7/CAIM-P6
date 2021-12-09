@@ -1,0 +1,19 @@
+The Square Kilometre Array (SKA) is an international initiative for developing the world's largest
+radio telescope with a total collecting area of over a million square meters. The scale of the operation,
+combined with the remote location of the telescope, requires the use of energy-efficient computational
+algorithms. This, along with the extreme data rates that will be produced by the SKA and the requirement
+for a real-time observing capability, necessitates in-situ data processing in an edge style computing
+solution. More generally, energy efficiency in the modern computing landscape is becoming of paramount
+concern. Whether it be the power budget that can limit some of the world's largest supercomputers,
+or the limited power available to the smallest Internet-of-Things devices. In this paper, we study
+the impact of hardware frequency scaling on the energy consumption and execution time of the Fast
+Fourier Transform (FFT) on NVIDIA GPUs using the cuFFT library. The FFT is used in many areas of science
+and it is one of the key algorithms used in radio astronomy data processing pipelines. Through the
+use of frequency scaling, we show that we can lower the power consumption of the NVIDIA V100 GPU when
+computing the FFT by up to 60% compared to the boost clock frequency, with less than a 10% increase
+in the execution time. Furthermore, using one common core clock frequency for all tested FFT lengths,
+we show on average a 50% reduction in power consumption compared to the boost core clock frequency
+with an increase in the execution time still below 10%. We demonstrate how these results can be used
+to lower the power consumption of existing data processing pipelines. These savings, when considered
+over years of operation, can yield significant financial savings, but can also lead to a significant
+reduction of greenhouse gas emissions. 

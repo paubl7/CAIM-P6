@@ -1,0 +1,19 @@
+Cloud computing is a convenient model for processing data remotely. However, users must trust their
+cloud provider with the confidentiality and integrity of the stored and processed data. To increase
+the protection of virtual machines, AMD introduced SEV, a hardware feature which aims to protect
+code and data in a virtual machine. This allows to store and process sensitive data in cloud environments
+without the need to trust the cloud provider or the underlying software. However, the virtual machine
+still depends on the hypervisor for performing certain activities, such as the emulation of special
+CPU instructions, or the emulation of devices. Yet, most code that runs in virtual machines was not
+written with an attacker model which considers the hypervisor as malicious. In this work, we introduce
+a new class of attacks in which a malicious hypervisor manipulates external interfaces of an SEV
+or SEV-ES virtual machine to make it act against its own interests. We start by showing how we can make
+use of virtual devices to extract encryption keys and secret data of a virtual machine. We then show
+how we can reduce the entropy of probabilistic kernel defenses in the virtual machine by carefully
+manipulating the results of the CPUID and RDTSC instructions. We continue by showing an approach
+for secret data exfiltration and code injection based on the forgery of MMIO regions over the VM's
+address space. Finally, we show another attack which forces decryption of the VM's stack and uses
+Return Oriented Programming to execute arbitrary code inside the VM. While our approach is also
+applicable to traditional virtualization environments, its severity significantly increases
+with the attacker model of SEV-ES, which aims to protect a virtual machine from a benign but vulnerable
+hypervisor. 

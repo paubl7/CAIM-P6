@@ -1,0 +1,20 @@
+Price movement forecasting aims at predicting the future trends of financial assets based on the
+current market conditions and other relevant information. Recently, machine learning(ML) methods
+have become increasingly popular and achieved promising results for price movement forecasting
+in both academia and industry. Most existing ML solutions formulate the forecasting problem as
+a classification(to predict the direction) or a regression(to predict the return) problem in the
+entire set of training data. However, due to the extremely low signal-to-noise ratio and stochastic
+nature of financial data, good trading opportunities are extremely scarce. As a result, without
+careful selection of potentially profitable samples, such ML methods are prone to capture the patterns
+of noises instead of real signals. To address the above issues, we propose a novel framework-LARA(Locality-Aware
+Attention and Adaptive Refined Labeling), which contains the following three components: 1)Locality-aware
+attention automatically extracts the potentially profitable samples by attending to their label
+information in order to construct a more accurate classifier on these selected samples. 2)Adaptive
+refined labeling further iteratively refines the labels, alleviating the noise of samples. 3)Equipped
+with metric learning techniques, Locality-aware attention enjoys task-specific distance metrics
+and distributes attention on potentially profitable samples in a more effective way. To validate
+our method, we conduct comprehensive experiments on three real-world financial markets: ETFs,
+the China's A-share stock market, and the cryptocurrency market. LARA achieves superior performance
+compared with the time-series analysis methods and a set of machine learning based competitors
+on the Qlib platform. Extensive ablation studies and experiments demonstrate that LARA indeed
+captures more reliable trading opportunities. 

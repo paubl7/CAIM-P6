@@ -1,0 +1,18 @@
+Machine learning classification models are vulnerable to adversarial examples -- effective input-specific
+perturbations that can manipulate the model's output. Universal Adversarial Perturbations (UAPs),
+which identify noisy patterns that generalize across the input space, allow the attacker to greatly
+scale up the generation of these adversarial examples. Although UAPs have been explored in application
+domains beyond computer vision, little is known about their properties and implications in the
+specific context of realizable attacks, such as malware, where attackers must reason about satisfying
+challenging problem-space constraints. In this paper, we explore the challenges and strengths
+of UAPs in the context of malware classification. We generate sequences of problem-space transformations
+that induce UAPs in the corresponding feature-space embedding and evaluate their effectiveness
+across threat models that consider a varying degree of realistic attacker knowledge. Additionally,
+we propose adversarial training-based mitigations using knowledge derived from the problem-space
+transformations, and compare against alternative feature-space defenses. Our experiments limit
+the effectiveness of a white box Android evasion attack to ~20 % at the cost of 3 % TPR at 1 % FPR. We additionally
+show how our method can be adapted to more restrictive application domains such as Windows malware.
+We observe that while adversarial training in the feature space must deal with large and often unconstrained
+regions, UAPs in the problem space identify specific vulnerabilities that allow us to harden a classifier
+more effectively, shifting the challenges and associated cost of identifying new universal adversarial
+transformations back to the attacker. 

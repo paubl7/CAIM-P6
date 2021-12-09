@@ -1,0 +1,19 @@
+A homomorphism from a graph $G$ to a graph $H$ is an edge-preserving mapping from $V(G)$ to $V(H)$.
+For a fixed graph $H$, in the list homomorphism problem, denoted by LHom($H$), we are given a graph
+$G$, whose every vertex $v$ is equipped with a list $L(v) \subseteq V(H)$. We ask if there exists a
+homomorphism $f$ from $G$ to $H$, in which $f(v) \in L(v)$ for every $v \in V(G)$. Feder, Hell, and
+Huang [JGT~2003] proved that LHom($H$) is polynomial time-solvable if $H$ is a bi-arc-graph, and
+NP-complete otherwise. We are interested in the complexity of the LHom($H$) problem in graphs excluding
+a copy of some fixed graph $F$ as an induced subgraph. It is known that if $F$ is connected and is not
+a path nor a subdivided claw, then for every non-bi-arc graph the LHom($H$) problem is NP-complete
+and cannot be solved in subexponential time, unless the ETH fails. We consider the remaining cases
+for connected graphs $F$. If $F$ is a path, we exhibit a full dichotomy. We define a class called predacious
+graphs and show that if $H$ is not predacious, then for every fixed $t$ the LHom($H$) problem can be
+solved in quasi-polynomial time in $P_t$-free graphs. On the other hand, if $H$ is predacious, then
+there exists $t$, such that LHom($H$) cannot be solved in subexponential time in $P_t$-free graphs.
+If $F$ is a subdivided claw, we show a full dichotomy in two important cases: for $H$ being irreflexive
+(i.e., with no loops), and for $H$ being reflexive (i.e., where every vertex has a loop). Unless the
+ETH fails, for irreflexive $H$ the LHom($H$) problem can be solved in subexponential time in graphs
+excluding a fixed subdivided claw if and only if $H$ is non-predacious and triangle-free. If $H$
+is reflexive, then LHom($H$) cannot be solved in subexponential time whenever $H$ is not a bi-arc
+graph. 

@@ -1,0 +1,19 @@
+Accurate characterisation of visual attributes such as spiculation, lobulation, and calcification
+of lung nodules is critical in cancer management. The characterisation of these attributes is often
+subjective, which may lead to high inter- and intra-observer variability. Furthermore, lung nodules
+are often heterogeneous in the cross-sectional image slices of a 3D volume. Current state-of-the-art
+methods that score multiple attributes rely on deep learning-based multi-task learning (MTL)
+schemes. These methods, however, extract shared visual features across attributes and then examine
+each attribute without explicitly leveraging their inherent intercorrelations. Furthermore,
+current methods either treat each slice with equal importance without considering their relevance
+or heterogeneity, which limits performance. In this study, we address these challenges with a new
+convolutional neural network (CNN)-based MTL model that incorporates multiple attention-based
+learning modules to simultaneously score 9 visual attributes of lung nodules in computed tomography
+(CT) image volumes. Our model processes entire nodule volumes of arbitrary depth and uses a slice
+attention module to filter out irrelevant slices. We also introduce cross-attribute and attribute
+specialisation attention modules that learn an optimal amalgamation of meaningful representations
+to leverage relationships between attributes. We demonstrate that our model outperforms previous
+state-of-the-art methods at scoring attributes using the well-known public LIDC-IDRI dataset
+of pulmonary nodules from over 1,000 patients. Our model also performs competitively when repurposed
+for benign-malignant classification. Our attention modules also provide easy-to-interpret
+weights that offer insights into the predictions of the model. 

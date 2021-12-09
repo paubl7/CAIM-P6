@@ -1,0 +1,20 @@
+The simulation of fracture using continuum ductile damage models attains a pathological discretization
+dependence caused by strain localization, after loss of ellipticity of the problem, in regions
+whose size is connected to the spatial discretization. Implicit gradient techniques suppress
+this problem introducing some inelastic non-local fields and solving an enriched formulation
+where the classical balance of linear momentum is fully coupled with a Helmholtz-type equation
+for each of the non-local variable. Such Helmholtz-type equations determine the distribution
+of the non-local fields in bands whose width is controlled by a characteristic length, independently
+on the spatial discretization. The numerical resolution of this coupled problem using the Finite
+Element method is computationally very expensive and its use to simulate the damage process in 3D
+multi-phase microstructures becomes prohibitive. In this work, we propose a novel FFT-based iterative
+algorithm for simulating gradient ductile damage in computational homogenization problems.
+In particular, the Helmholtz-type equation of the implicit gradient approach is properly generalized
+to model the regularization of damage in multi-phase media, where multiple damage variables and
+different characteristic lengths may come into play. In the proposed iterative algorithm, two
+distinct problems are solved in a staggered fashion: (i) a conventional mechanical problem via
+a FFT-Galerkin solver with mixed macroscopic loading control and (ii) the generalized Helmholtz-type
+equation using a Krylov-based algorithm combined with an efficient pre-conditioner. The numerical
+implementation is firstly validated. Finally, the robustness and efficiency of the algorithm
+is demonstrated in the simulation of failure of complex 3D particle reinforced composites characterized
+by millions of degrees of freedom. 

@@ -1,0 +1,19 @@
+This paper studies an edge intelligence-based IoT network in which a set of edge servers learn a shared
+model using federated learning (FL) based on the datasets uploaded from a multi-technology-supported
+IoT network. The data uploading performance of IoT network and the computational capacity of edge
+servers are entangled with each other in influencing the FL model training process. We propose a
+novel framework, called federated edge intelligence (FEI), that allows edge servers to evaluate
+the required number of data samples according to the energy cost of the IoT network as well as their
+local data processing capacity and only request the amount of data that is sufficient for training
+a satisfactory model. We evaluate the energy cost for data uploading when two widely-used IoT solutions:
+licensed band IoT (e.g., 5G NB-IoT) and unlicensed band IoT (e.g., Wi-Fi, ZigBee, and 5G NR-U) are
+available to each IoT device. We prove that the cost minimization problem of the entire IoT network
+is separable and can be divided into a set of subproblems, each of which can be solved by an individual
+edge server. We also introduce a mapping function to quantify the computational load of edge servers
+under different combinations of three key parameters: size of the dataset, local batch size, and
+number of local training passes. Finally, we adopt an Alternative Direction Method of Multipliers
+(ADMM)-based approach to jointly optimize energy cost of the IoT network and average computing
+resource utilization of edge servers. We prove that our proposed algorithm does not cause any data
+leakage nor disclose any topological information of the IoT network. Simulation results show that
+our proposed framework significantly improves the resource efficiency of the IoT network and edge
+servers with only a limited sacrifice on the model convergence performance. 

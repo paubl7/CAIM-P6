@@ -1,0 +1,20 @@
+Unsupervised domain adaptation (UDA) is to learn classification models that make predictions
+for unlabeled data on a target domain, given labeled data on a source domain whose distribution diverges
+from the target one. Mainstream UDA methods strive to learn domain-aligned features such that classifiers
+trained on the source features can be readily applied to the target ones. Although impressive results
+have been achieved, these methods have a potential risk of damaging the intrinsic data structures
+of target discrimination, raising an issue of generalization particularly for UDA tasks in an inductive
+setting. To address this issue, we are motivated by a UDA assumption of structural similarity across
+domains, and propose to directly uncover the intrinsic target discrimination via constrained
+clustering, where we constrain the clustering solutions using structural source regularization
+that hinges on the very same assumption. Technically, we propose a hybrid model of Structurally
+Regularized Deep Clustering, which integrates the regularized discriminative clustering of
+target data with a generative one, and we thus term our method as H-SRDC. Our hybrid model is based
+on a deep clustering framework that minimizes the Kullback-Leibler divergence between the distribution
+of network prediction and an auxiliary one, where we impose structural regularization by learning
+domain-shared classifier and cluster centroids. By enriching the structural similarity assumption,
+we are able to extend H-SRDC for a pixel-level UDA task of semantic segmentation. We conduct extensive
+experiments on seven UDA benchmarks of image classification and semantic segmentation. With no
+explicit feature alignment, our proposed H-SRDC outperforms all the existing methods under both
+the inductive and transductive settings. We make our implementation codes publicly available
+at https://github.com/huitangtang/H-SRDC. 

@@ -1,0 +1,18 @@
+Purpose: To use and test a labelling algorithm that operates on two-dimensional (2D) reformations,
+rather than three-dimensional (3D) data to locate and identify vertebrae. Methods: We improved
+the Btrfly Net (described by Sekuboyina et al) that works on sagittal and coronal maximum intensity
+projections (MIP) and augmented it with two additional components: spine-localization and adversarial
+a priori-learning. Furthermore, we explored two variants of adversarial training schemes that
+incorporated the anatomical a priori knowledge into the Btrfly Net. We investigated the superiority
+of the proposed approach for labelling vertebrae on three datasets: a public benchmarking dataset
+of 302 CT scans and two in-house datasets with a total of 238 CT scans. We employed Wilcoxon signed-rank
+test to compute the statistical significance of the improvement in performance observed due to
+various architectural components in our approach. Results: On the public dataset, our approach
+using the described Btrfly(pe-eb) network performed on par with current state-of-the-art methods
+achieving a statistically significant (p < .001) vertebrae identification rate of 88.5+/-0.2
+% and localization distances of less than 7-mm. On the in-house datasets that had a higher inter-scan
+data variability, we obtained an identification rate of 85.1+/-1.2%. Conclusion: An identification
+performance comparable to existing 3D approaches was achieved when labelling vertebrae on 2D MIPs.
+The performance was further improved using the proposed adversarial training regime that effectively
+enforced local spine a priori knowledge during training. Lastly, spine-localization increased
+the generalizability of our approach by homogenizing the content in the MIPs. 

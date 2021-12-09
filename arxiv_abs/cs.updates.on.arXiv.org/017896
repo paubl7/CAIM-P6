@@ -1,0 +1,20 @@
+Many applications from geosciences require simulations of seismic waves in porous media. Biot's
+theory of poroelasticity describes the coupling between solid and fluid phases and introduces
+a stiff source term, thereby increasing computational cost and motivating efficient methods utilising
+High-Performance Computing. We present a novel realisation of the discontinuous Galerkin scheme
+with Arbitrary DERivative time stepping (ADER-DG) that copes with stiff source terms. To integrate
+this source term with a reasonable time step size, we use an element-local space-time predictor,
+which needs to solve medium-sized linear systems - with 1000 to 10000 unknowns - in each element update
+(i.e., billions of times). We present a novel block-wise back-substitution algorithm for solving
+these systems efficiently. In comparison to LU decomposition, we reduce the number of floating-point
+operations by a factor of up to 25. The block-wise back-substitution is mapped to a sequence of small
+matrix-matrix multiplications, for which code generators are available to generate highly optimised
+code. We verify the new solver thoroughly in problems of increasing complexity. We demonstrate
+high-order convergence for 3D problems. We verify the correct treatment of point sources, material
+interfaces and traction-free boundary conditions. In addition, we compare against a finite difference
+code for a newly defined layer over half-space problem. We find that extremely high accuracy is required
+to resolve the slow P-wave at a free surface, while solid particle velocities are not affected by
+coarser resolutions. By using a clustered local time stepping scheme, we reduce time to solution
+by a factor of 6 to 10 compared to global time stepping. We conclude our study with a scaling and performance
+analysis, demonstrating our implementation's efficiency and its potential for extreme-scale
+simulations. 

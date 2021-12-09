@@ -1,0 +1,20 @@
+Domain adversarial training has become a prevailing and effective paradigm for unsupervised domain
+adaptation (UDA). To successfully align the multi-modal data structures across domains, the following
+works exploit discriminative information in the adversarial training process, e.g., using multiple
+class-wise discriminators and introducing conditional information in input or output of the domain
+discriminator. However, these methods either require non-trivial model designs or are inefficient
+for UDA tasks. In this work, we attempt to address this dilemma by devising simple and compact conditional
+domain adversarial training methods. We first show that the previous failure of the concatenation
+conditioning strategy mainly accounts for the weak support of the conditioning. Thus we propose
+an effective concatenation conditioning strategy by introducing a norm control factor to strengthen
+the conditioning and term the derived method as \underline{S}emantic \underline{D}omain \underline{A}dversarial
+\underline{N}etworks~(SDAN). However, directly applying predictions for conditional domain
+alignment, SDAN still suffers from inaccurate target predictions. We further propose a novel structure-aware
+conditioning strategy to enhance SDAN by conditioning the cross-domain feature alignment in the
+structure-aware semantic space rather than in the prediction space. We term the enhanced method
+as \underline{S}tructure-aware \underline{S}emantic \underline{D}omain \underline{A}dversarial
+\underline{N}etworks~(SSDAN). Experiments on both object recognition and semantic segmentation
+show that SDAN effectively aligns the multi-modal structures across domains and even outperforms
+state-of-the-art domain adversarial training methods. With structure-aware semantic conditioning,
+SSDAN further improves the adaptation performance over SDAN on multiple object recognition benchmarks
+for UDA. 

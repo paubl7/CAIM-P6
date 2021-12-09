@@ -1,0 +1,19 @@
+Kalman filter is presumably one of the most important and extensively used filtering techniques
+in modern control systems. Yet, nearly all current variants of Kalman filters are formulated in
+the Euclidean space $\mathbb{R}^n$, while many real-world systems (e.g., robotic systems) are
+really evolving on manifolds. In this paper, we propose a method to develop Kalman filters for such
+on-manifold systems. Utilizing $\boxplus$, $\boxminus$ operations and further defining an oplus
+operation on the respective manifold, we propose a canonical representation of the on-manifold
+system. Such a canonical form enables us to separate the manifold constraints from the system behaviors
+in each step of the Kalman filter, ultimately leading to a generic and symbolic Kalman filter framework
+that are naturally evolving on the manifold. Furthermore, the on-manifold Kalman filter is implemented
+as a toolkit in $C$++ packages which enables users to implement an on-manifold Kalman filter just
+like the normal one in $\mathbb{R}^n$: the user needs only to provide the system-specific descriptions,
+and then call the respective filter steps (e.g., predict, update) without dealing with any of the
+manifold constraints. The existing implementation supports full iterated Kalman filtering for
+systems on any manifold composed of $\mathbb{R}^n$, $SO(3)$ and $\mathbb{S}^2$, and is extendable
+to other types of manifold when necessary. The proposed symbolic Kalman filter and the developed
+toolkit are verified by implementing a tightly-coupled lidar-inertial navigation system. Results
+show that the developed toolkit leads to superior filtering performances and computation efficiency
+comparable to hand-engineered counterparts. Finally, the toolkit is opened sourced at https://github.com/hku-mars/IKFoM
+to assist practitioners to quickly deploy an on-manifold Kalman filter. 

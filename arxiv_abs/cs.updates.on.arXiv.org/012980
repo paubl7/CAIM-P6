@@ -1,0 +1,18 @@
+We study the sample complexity of estimating the covariance matrix $\mathbf{\Sigma} \in \mathbb{R}^{d\times
+d}$ of a distribution $\mathcal D$ over $\mathbb{R}^d$ given independent samples, under the assumption
+that $\mathbf{\Sigma}$ is graph-structured. In particular, we focus on shortest path covariance
+matrices, where the covariance between any two measurements is determined by the shortest path
+distance in an underlying graph with $d$ nodes. Such matrices generalize Toeplitz and circulant
+covariance matrices and are widely applied in signal processing applications, where the covariance
+between two measurements depends on the (shortest path) distance between them in time or space.
+We focus on minimizing both the vector sample complexity: the number of samples drawn from $\mathcal{D}$
+and the entry sample complexity: the number of entries read in each sample. The entry sample complexity
+corresponds to measurement equipment costs in signal processing applications. We give a very simple
+algorithm for estimating $\mathbf{\Sigma}$ up to spectral norm error $\epsilon \left\|\mathbf{\Sigma}\right\|_2$
+using just $O(\sqrt{D})$ entry sample complexity and $\tilde O(r^2/\epsilon^2)$ vector sample
+complexity, where $D$ is the diameter of the underlying graph and $r \le d$ is the rank of $\mathbf{\Sigma}$.
+Our method is based on extending the widely applied idea of sparse rulers for Toeplitz covariance
+estimation to the graph setting. In the special case when $\mathbf{\Sigma}$ is a low-rank Toeplitz
+matrix, our result matches the state-of-the-art, with a far simpler proof. We also give an information
+theoretic lower bound matching our upper bound up to a factor $D$ and discuss some directions towards
+closing this gap. 

@@ -1,0 +1,18 @@
+Marginal maximum likelihood (MML) estimation is the preferred approach to fitting item response
+theory models in psychometrics due to the MML estimator's consistency, normality, and efficiency
+as the sample size tends to infinity. However, state-of-the-art MML estimation procedures such
+as the Metropolis-Hastings Robbins-Monro (MH-RM) algorithm as well as approximate MML estimation
+procedures such as variational inference (VI) are computationally time-consuming when the sample
+size and the number of latent factors are very large. In this work, we investigate a deep learning-based
+VI algorithm for exploratory item factor analysis (IFA) that is computationally fast even in large
+data sets with many latent factors. The proposed approach applies a deep artificial neural network
+model called an importance-weighted autoencoder (IWAE) for exploratory IFA. The IWAE approximates
+the MML estimator using an importance sampling technique wherein increasing the number of importance-weighted
+(IW) samples drawn during fitting improves the approximation, typically at the cost of decreased
+computational efficiency. We provide a real data application that recovers results aligning with
+psychological theory across random starts. Via simulation studies, we show that the IWAE yields
+more accurate estimates as either the sample size or the number of IW samples increases (although
+factor correlation and intercepts estimates exhibit some bias) and obtains similar results to
+MH-RM in less time. Our simulations also suggest that the proposed approach performs similarly
+to and is potentially faster than constrained joint maximum likelihood estimation, a fast procedure
+that is consistent when the sample size and the number of items simultaneously tend to infinity.

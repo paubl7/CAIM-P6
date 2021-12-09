@@ -1,0 +1,18 @@
+For a map (function) $F(x):\ftwo^n\rightarrow\ftwo^n$ and a given $y$ in the image of $F$ the problem
+of \emph{local inversion} of $F$ is to find all inverse images $x$ in $\ftwo^n$ such that $y=F(x)$.
+In Cryptology, such a problem arises in Cryptanalysis of One way Functions (OWFs). The well known
+TMTO attack in Cryptanalysis is a probabilistic algorithm for computing one solution of local inversion
+using $O(\sqrt N)$ order computation in offline as well as online for $N=2^n$. This paper proposes
+a complete algorithm for solving the local inversion problem which uses linear complexity for a
+unique solution in a periodic orbit. The algorithm is shown to require an offline computation to
+solve a hard problem (possibly requiring exponential computation) and an online computation dependent
+on $y$ that of repeated forward evaluation $F(x)$ on points $x$ in $\ff_{2^n}$ which is polynomial
+time at each evaluation. However the forward evaluation is repeated at most as many number of times
+as the Linear Complexity of the sequence $\{y,F(y),\ldots\}$ to get one possible solution when
+this sequence is periodic. All other solutions are obtained in chains $\{e,F(e),\ldots\}$ for
+all points $e$ in the Garden of Eden (GOE) of the map $F$. Hence a solution $x$ exists iff either the
+former sequence is periodic or a solution occurs in a chain starting from a point in GOE. The online
+computation then turns out to be polynomial time $O(L^k)$ in the linear complexity $L$ of the sequence
+to compute one possible solution in a periodic orbit or $O(l)$ the chain length for a fixed $n$. Hence
+this is a complete algorithm for solving the problem of finding all rational solutions $x$ of the
+equation $F(x)=y$ for a given $y$ and a map $F$ in $\ff_{2^n}$. 

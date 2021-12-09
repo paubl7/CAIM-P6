@@ -1,0 +1,18 @@
+Treewidth is a parameter that emerged from the study of minor closed classes of graphs (i.e. classes
+closed under vertex and edge deletion, and edge contraction). It in some sense describes the global
+structure of a graph. Roughly, a graph has treewidth $k$ if it can be decomposed by a sequence of noncrossing
+cutsets of size at most $k$ into pieces of size at most $k+1$. The study of hereditary graph classes
+(i.e. those closed under vertex deletion only) reveals a different picture, where cutsets that
+are not necessarily bounded in size (such as star cutsets, 2-joins and their generalization) are
+required to decompose the graph into simpler pieces that are structured but not necessarily bounded
+in size. A number of such decomposition theorems are known for complex hereditary graph classes,
+including even-hole-free graphs, perfect graphs and others. These theorems do not describe the
+global structure in the sense that a tree decomposition does, since the cutsets guaranteed by them
+are far from being noncrossing. They are also of limited use in algorithmic applications. We show
+that in the case of even-hole-free graphs of bounded degree the cutsets described in the previous
+paragraph can be partitioned into a bounded number of well-behaved collections. This allows us
+to prove that even-hole-free graphs with bounded degree have bounded treewidth, resolving a conjecture
+of Aboulker, Adler, Kim, Sintiari and Trotignon [arXiv:2008.05504]. As a consequence, it follows
+that many algorithmic problems can be solved in polynomial time for this class, and that even-hole-freeness
+is testable in the bounded degree graph model of property testing. In fact we prove our results for
+a larger class of graphs, namely the class of $C_4$-free odd-signable graphs with bounded degree.

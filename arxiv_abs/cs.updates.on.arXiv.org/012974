@@ -1,0 +1,19 @@
+Deep neural networks (DNNs) are being widely applied for various real-world applications across
+domains due to their high performance (e.g., high accuracy on image classification). Nevertheless,
+a well-trained DNN after deployment could oftentimes raise errors during practical use in the operational
+environment due to the mismatching between distributions of the training dataset and the potential
+unknown noise factors in the operational environment, e.g., weather, blur, noise etc. Hence, it
+poses a rather important problem for the DNNs' real-world applications: how to repair the deployed
+DNNs for correcting the failure samples (i.e., incorrect prediction) under the deployed operational
+environment while not harming their capability of handling normal or clean data. The number of failure
+samples we can collect in practice, caused by the noise factors in the operational environment,
+is often limited. Therefore, It is rather challenging how to repair more similar failures based
+on the limited failure samples we can collect. In this paper, we propose a style-guided data augmentation
+for repairing DNN in the operational environment. We propose a style transfer method to learn and
+introduce the unknown failure patterns within the failure data into the training data via data augmentation.
+Moreover, we further propose the clustering-based failure data generation for much more effective
+style-guided data augmentation. We conduct a large-scale evaluation with fifteen degradation
+factors that may happen in the real world and compare with four state-of-the-art data augmentation
+methods and two DNN repairing methods, demonstrating that our method can significantly enhance
+the deployed DNNs on the corrupted data in the operational environment, and with even better accuracy
+on clean datasets. 

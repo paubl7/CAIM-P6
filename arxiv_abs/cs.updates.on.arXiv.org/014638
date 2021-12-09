@@ -1,0 +1,20 @@
+Mutation analysis assesses a test suite's adequacy by measuring its ability to detect small artificial
+faults, systematically seeded into the tested program. Mutation analysis is considered one of
+the strongest test-adequacy criteria. Mutation testing builds on top of mutation analysis and
+is a testing technique that uses mutants as test goals to create or improve a test suite. Mutation
+testing has long been considered intractable because the sheer number of mutants that can be created
+represents an insurmountable problem -- both in terms of human and computational effort. This has
+hindered the adoption of mutation testing as an industry standard. For example, Google has a codebase
+of two billion lines of code and more than 500,000,000 tests are executed on a daily basis. The traditional
+approach to mutation testing does not scale to such an environment. To address these challenges,
+this paper presents a scalable approach to mutation testing based on the following main ideas: (1)
+Mutation testing is done incrementally, mutating only changed code during code review, rather
+than the entire code base; (2) Mutants are filtered, removing mutants that are likely to be irrelevant
+to developers, and limiting the number of mutants per line and per code review process; (3) Mutants
+are selected based on the historical performance of mutation operators, further eliminating irrelevant
+mutants and improving mutant quality. Evaluation in a code-review-based setting with more than
+24,000 developers on more than 1,000 projects shows that the proposed approach produces orders
+of magnitude fewer mutants and that context-based mutant filtering and selection improve mutant
+quality and actionability. Overall, the proposed approach represents a mutation testing framework
+that seamlessly integrates into the software development workflow and is applicable up to large-scale
+industrial settings. 

@@ -1,0 +1,19 @@
+COVID-19 spread across the globe at an immense rate has left healthcare systems incapacitated to
+diagnose and test patients at the needed rate. Studies have shown promising results for detection
+of COVID-19 from viral bacterial pneumonia in chest X-rays. Automation of COVID-19 testing using
+medical images can speed up the testing process of patients where health care systems lack sufficient
+numbers of the reverse-transcription polymerase chain reaction (RT-PCR) tests. Supervised deep
+learning models such as convolutional neural networks (CNN) need enough labeled data for all classes
+to correctly learn the task of detection. Gathering labeled data is a cumbersome task and requires
+time and resources which could further strain health care systems and radiologists at the early
+stages of a pandemic such as COVID-19. In this study, we propose a randomized generative adversarial
+network (RANDGAN) that detects images of an unknown class (COVID-19) from known and labelled classes
+(Normal and Viral Pneumonia) without the need for labels and training data from the unknown class
+of images (COVID-19). We used the largest publicly available COVID-19 chest X-ray dataset, COVIDx,
+which is comprised of Normal, Pneumonia, and COVID-19 images from multiple public databases. In
+this work, we use transfer learning to segment the lungs in the COVIDx dataset. Next, we show why segmentation
+of the region of interest (lungs) is vital to correctly learn the task of classification, specifically
+in datasets that contain images from different resources as it is the case for the COVIDx dataset.
+Finally, we show improved results in detection of COVID-19 cases using our generative model (RANDGAN)
+compared to conventional generative adversarial networks (GANs) for anomaly detection in medical
+images, improving the area under the ROC curve from 0.71 to 0.77. 

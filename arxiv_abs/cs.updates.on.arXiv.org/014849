@@ -1,0 +1,19 @@
+Chordal graphs are characterized as the intersection graphs of subtrees in a tree and such a representation
+is known as the tree model. Restricting the characterization results in well-known subclasses
+of chordal graphs such as interval graphs or split graphs. A typical example that behaves computationally
+different in subclasses of chordal graph is the \textsc{Subset Feedback Vertex Set} (SFVS) problem:
+given a graph $G=(V,E)$ and a set $S\subseteq V$, SFVS asks for a minimum set of vertices that intersects
+all cycles containing a vertex of $S$. SFVS is known to be polynomial-time solvable on interval graphs,
+whereas SFVS remains \NP-complete on split graphs and, consequently, on chordal graphs. Towards
+a better understanding of the complexity of SFVS on subclasses of chordal graphs, we exploit structural
+properties of a tree model in order to cope with the hardness of SFVS. Here we consider variants of
+the \emph{leafage} that measures the minimum number of leaves in a tree model. We show that SFVS can
+be solved in polynomial time for every chordal graph with bounded leafage. In particular, given
+a chordal graph on $n$ vertices with leafage $\ell$, we provide an algorithm for SFVS with running
+time $n^{O(\ell)}$. Pushing further our positive result, it is natural to consider a slight generalization
+of leafage, the \emph{vertex leafage}, which measures the smallest number among the maximum number
+of leaves of all subtrees in a tree model. However, we show that it is unlikely to obtain a similar result,
+as we prove that SFVS remains \NP-complete on undirected path graphs, i.e., graphs having vertex
+leafage at most two. Moreover, we strengthen previously-known polynomial-time algorithm for
+SFVS on directed path graphs that form a proper subclass of undirected path graphs and graphs of mim-width
+one. 

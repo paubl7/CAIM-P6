@@ -1,0 +1,19 @@
+This article is devoted to the construction of a new class of semi-Lagrangian (SL) schemes with implicit-explicit
+(IMEX) Runge-Kutta (RK) time stepping for PDEs involving multiple space-time scales. The semi-Lagrangian
+(SL) approach fully couples the space and time discretization, thus making the use of RK strategies
+particularly difficult to be combined with. First, a simple scalar advection-diffusion equation
+is considered as a prototype PDE for the development of a high order formulation of the semi-Lagrangian
+IMEX algorithms. The advection part of the PDE is discretized explicitly at the aid of a SL technique,
+while an implicit discretization is employed for the diffusion terms. Second, the SL-IMEX approach
+is extended to deal with hyperbolic systems with multiple scales, including balance laws, that
+involve shock waves and other discontinuities. A novel SL technique is proposed, which is based
+on the integration of the governing equations over the space-time control volume which arises from
+the motion of each grid point. High order of accuracy is ensured by the usage of IMEX RK schemes combined
+with a Cauchy-Kowalevskaya procedure that provides a predictor solution within each space-time
+element. The one-dimensional shallow water equations (SWE) are chosen to validate the new conservative
+SL-IMEX schemes, where convection and pressure fluxes are treated explicitly and implicitly,
+respectively. The asymptotic-preserving (AP) property of the novel schemes is also studied considering
+a relaxation PDE system for the SWE. A large suite of convergence studies for both the non-conservative
+and the conservative version of the novel class of methods demonstrates that the formal order of
+accuracy is achieved and numerical evidences about the conservation property are shown. The AP
+property for the corresponding relaxation system is also investigated. 

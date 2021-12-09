@@ -1,0 +1,19 @@
+Colorectal cancer is one of the most common and lethal cancers and colorectal cancer liver metastases
+(CRLM) is the major cause of death in patients with colorectal cancer. Multifocality occurs frequently
+in CRLM, but is relatively unexplored in CRLM outcome prediction. Most existing clinical and imaging
+biomarkers do not take the imaging features of all multifocal lesions into account. In this paper,
+we present an end-to-end autoencoder-based multiple instance neural network (AMINN) for the prediction
+of survival outcomes in multifocal CRLM patients using radiomic features extracted from contrast-enhanced
+MRIs. Specifically, we jointly train an autoencoder to reconstruct input features and a multiple
+instance network to make predictions by aggregating information from all tumour lesions of a patient.
+In addition, we incorporate a two-step normalization technique to improve the training of deep
+neural networks, built on the observation that the distributions of radiomic features are almost
+always severely skewed. Experimental results empirically validated our hypothesis that incorporating
+imaging features of all lesions improves outcome prediction for multifocal cancer. The proposed
+ADMINN framework achieved an area under the ROC curve (AUC) of 0.70, which is 19.5% higher than baseline
+methods. We built a risk score based on the outputs of our network and compared it to other clinical
+and imaging biomarkers. Our risk score is the only one that achieved statistical significance in
+univariate and multivariate cox proportional hazard modeling in our cohort of multifocal CRLM
+patients. The effectiveness of incorporating all lesions and applying two-step normalization
+is demonstrated by a series of ablation studies. Our code will be released after the peer-review
+process. 

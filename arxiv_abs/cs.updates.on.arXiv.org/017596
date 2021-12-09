@@ -1,0 +1,18 @@
+Flying robots such as the quadrotor could provide an efficient approach for medical treatment or
+sensor placing of wild animals. In these applications, continuously targeting the moving animal
+is a crucial requirement. Due to the underactuated characteristics of the quadrotor and the coupled
+kinematics with the animal, nonlinear optimal tracking approaches, other than smooth feedback
+control, are required. However, with severe nonlinearities, it would be time-consuming to evaluate
+control inputs, and real-time tracking may not be achieved with generic optimizers onboard. To
+tackle this problem, a novel efficient egocentric regulation approach with high computational
+efficiency is proposed in this paper. Specifically, it directly formulates the optimal tracking
+problem in an egocentric manner regarding the quadrotor's body coordinates. Meanwhile, the nonlinearities
+of the system are peeled off through a mapping of the feedback states as well as control inputs, between
+the inertial and body coordinates. In this way, the proposed efficient egocentric regulator only
+requires solving a quadratic performance objective with linear constraints and then generate
+control inputs analytically. Comparative simulations and mimic biological experiment are carried
+out to verify the effectiveness and computational efficiency. Results demonstrate that the proposed
+control approach presents the highest and stablest computational efficiency than generic optimizers
+on different platforms. Particularly, on a commonly utilized onboard computer, our method can
+compute the control action in approximately 0.3 ms, which is on the order of 350 times faster than
+that of generic nonlinear optimizers, establishing a control frequency around 3000 Hz. 

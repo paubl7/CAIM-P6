@@ -1,0 +1,18 @@
+pyGDM is a python toolkit for electro-dynamical simulations of individual nano-structures, based
+on the Green Dyadic Method (GDM). pyGDM uses the concept of a generalized propagator, which allows
+to solve cost-efficiently monochromatic problems with a large number of varying illumination
+conditions such as incident angle scans or focused beam raster-scan simulations. We provide an
+overview of new features added since the initial publication [Wiecha, Computer Physics Communications
+233, pp.167-192 (2018)]. The updated version of pyGDM is implemented in pure python, removing the
+former dependency on fortran-based binaries. In the course of this re-write, the toolkit's internal
+architecture has been completely redesigned to offer a much wider range of possibilities to the
+user such as the choice of the dyadic Green's functions describing the environment. A new class of
+dyads allows to perform 2D simulations of infinitely long nanostructures. While the Green's dyads
+in pyGDM are based on a quasistatic description for interfaces, we also provide as new external python
+package pyGDM2_retard a module with retarded Green's tensors for an environment with two interfaces.
+We have furthermore added functionalities for simulations using fast-electron excitation, namely
+electron energy loss spectroscopy and cathodoluminescence. Along with several further new tools
+and improvements, the update includes also the possibility to calculate the magnetic field and
+the magnetic LDOS inside nanostructures, field-gradients in- and outside a nanoparticle, optical
+forces or the chirality of nearfields. All new functionalities remain compatible with the evolutionary
+optimization module of pyGDM for nano-photonics inverse design. 

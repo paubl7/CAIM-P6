@@ -1,0 +1,18 @@
+This paper introduces the first open-source FPGA-based infrastructure, MetaSys, with a prototype
+in a RISC-V core, to enable the rapid implementation and evaluation of a wide range of cross-layer
+techniques in real hardware. Hardware-software cooperative techniques are powerful approaches
+to improve the performance, quality of service, and security of general-purpose processors. They
+are however typically challenging to rapidly implement and evaluate in real hardware as they require
+full-stack changes to the hardware, OS, system software, and instruction-set architecture (ISA).
+MetaSys implements a rich hardware-software interface and lightweight metadata support that
+can be used as a common basis to rapidly implement and evaluate new cross-layer techniques. We demonstrate
+MetaSys's versatility and ease-of-use by implementing and evaluating three cross-layer techniques
+for: (i) prefetching for graph analytics; (ii) bounds checking in memory unsafe languages, and
+(iii) return address protection in stack frames; each technique only requiring ~100 lines of Chisel
+code over MetaSys. Using MetaSys, we perform the first detailed experimental study to quantify
+the performance overheads of using a single metadata management system to enable multiple cross-layer
+optimizations in CPUs. We identify the key sources of bottlenecks and system inefficiency of a general
+metadata management system. We design MetaSys to minimize these inefficiencies and provide increased
+versatility compared to previously-proposed metadata systems. Using three use cases and a detailed
+characterization, we demonstrate that a common metadata management system can be used to efficiently
+support diverse cross-layer techniques in CPUs. 

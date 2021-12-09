@@ -1,0 +1,19 @@
+Many open problems in machine learning are intrinsically related to causality, however, the use
+of causal analysis in machine learning is still in its early stage. Within a general reinforcement
+learning setting, we consider the problem of building a general reinforcement learning agent which
+uses experience to construct a causal graph of the environment, and use this graph to inform its policy.
+Our approach has three characteristics: First, we learn a simple, coarse-grained causal graph,
+in which the variables reflect states at many time instances, and the interventions happen at the
+level of policies, rather than individual actions. Secondly, we use mediation analysis to obtain
+an optimization target. By minimizing this target, we define the causal variables. Thirdly, our
+approach relies on estimating conditional expectations rather the familiar expected return from
+reinforcement learning, and we therefore apply a generalization of Bellman's equations. We show
+the method can learn a plausible causal graph in a grid-world environment, and the agent obtains
+an improvement in performance when using the causally informed policy. To our knowledge, this is
+the first attempt to apply causal analysis in a reinforcement learning setting without strict restrictions
+on the number of states. We have observed that mediation analysis provides a promising avenue for
+transforming the problem of causal acquisition into one of cost-function minimization, but importantly
+one which involves estimating conditional expectations. This is a new challenge, and we think that
+causal reinforcement learning will involve development methods suited for online estimation
+of such conditional expectations. Finally, a benefit of our approach is the use of very simple causal
+models, which are arguably a more natural model of human causal understanding. 

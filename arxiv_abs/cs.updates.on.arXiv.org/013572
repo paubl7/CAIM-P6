@@ -1,0 +1,19 @@
+Expert finding, a popular service provided by many online websites such as Expertise Finder, LinkedIn,
+and AMiner, benefits seeking consultants, collaborators, and candidate qualifications. However,
+its quality is suffered from a single source of support information for experts. This paper employs
+AMiner, a free online academic search and mining system, having collected more than over 100 million
+researcher profiles together with 200 million papers from multiple publication databases, as
+the basis for investigating the problem of expert linking, which aims at linking any external information
+of persons to experts in AMiner. A critical challenge is how to perform zero shot expert linking without
+any labeled linkages from the external information to AMiner experts, as it is infeasible to acquire
+sufficient labels for arbitrary external sources. Inspired by the success of self supervised learning
+in computer vision and natural language processing, we propose to train a self supervised expert
+linking model, which is first pretrained by contrastive learning on AMiner data to capture the common
+representation and matching patterns of experts across AMiner and external sources, and is then
+fine-tuned by adversarial learning on AMiner and the unlabeled external sources to improve the
+model transferability. Experimental results demonstrate that COAD significantly outperforms
+various baselines without contrastive learning of experts on two widely studied downstream tasks:
+author identification (improving up to 32.1% in HitRatio@1) and paper clustering (improving up
+to 14.8% in Pairwise-F1). Expert linking on two genres of external sources also indicates the superiority
+of the proposed adversarial fine-tuning method compared with other domain adaptation ways (improving
+up to 2.3% in HitRatio@1). 

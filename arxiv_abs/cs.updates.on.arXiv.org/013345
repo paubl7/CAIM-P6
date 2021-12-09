@@ -1,0 +1,20 @@
+The development of mobile services has impacted a variety of computation-intensive and time-sensitive
+applications, such as recommendation systems and daily payment methods. However, computing task
+competition involving limited resources increases the task processing latency and energy consumption
+of mobile devices, as well as time constraints. Mobile edge computing (MEC) has been widely used
+to address these problems. However, there are limitations to existing methods used during computation
+offloading. On the one hand, they focus on independent tasks rather than dependent tasks. The challenges
+of task dependency in the real world, especially task segmentation and integration, remain to be
+addressed. On the other hand, the multiuser scenarios related to resource allocation and the mutex
+access problem must be considered. In this paper, we propose a novel offloading approach, Com-DDPG,
+for MEC using multiagent reinforcement learning to enhance the offloading performance. First,
+we discuss the task dependency model, task priority model, energy consumption model, and average
+latency from the perspective of server clusters and multidependence on mobile tasks. Our method
+based on these models is introduced to formalize communication behavior among multiple agents;
+then, reinforcement learning is executed as an offloading strategy to obtain the results. Because
+of the incomplete state information, long short-term memory (LSTM) is employed as a decision-making
+tool to assess the internal state. Moreover, to optimize and support effective action, we consider
+using a bidirectional recurrent neural network (BRNN) to learn and enhance features obtained from
+agents' communication. Finally, we simulate experiments on the Alibaba cluster dataset. The results
+show that our method is better than other baselines in terms of energy consumption, load status and
+latency. 

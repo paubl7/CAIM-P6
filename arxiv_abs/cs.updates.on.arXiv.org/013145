@@ -1,0 +1,19 @@
+Monocular 3D object detection is an active research topic due to its challenging nature and broad
+applying prospects. In this work, a single-stage keypoint-based network, named as FADNet, is presented
+to address the task of monocular 3D object detection with autonomous driving as the target application.
+In contrast to previous keypoint-based methods which adopt identical layouts for output branches,
+we propose to divide the output modalities into different groups according to the estimating difficulty,
+whereby different groups are treated differently. To this end, a convolutional gated recurrent
+unit (convGRU) is embedded into our network to enable sequential feature association across the
+convolutional features in different groups. The purpose of sequential feature association is
+to improve the accuracy of harder estimations under the guidance of easier ones. It is also observed
+that such design contributes to the geometric consistency between 2D and 3D estimations. Another
+contribution of this work is the strategy of depth hint augmentation. To provide characterized
+depth patterns as hints for depth estimation, a dedicated depth hint module is designed to generate
+row-wise features named as depth hints, which are explicitly supervised in a bin-wise manner. In
+the training stage, the regression outputs are uniformly encoded to enable loss disentanglement.
+The 2D loss term is further adapted to be depth-aware for improving the detection accuracy of small
+objects. The contributions of this work are validated by conducting experiments and ablation study
+on the KITTI3D benchmark. Without utilizing depth priors, post optimization, or other refinement
+modules, our network achieves the performance on par with state-of-the-art methods while maintaining
+a decent running speed. The code is available at https://github.com/gtzly/FADNet. 

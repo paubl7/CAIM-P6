@@ -1,0 +1,19 @@
+The Karhunen-Lo\`eve series expansion (KLE) decomposes a stochastic process into an infinite
+series of pairwise uncorrelated random variables and pairwise $L^2$-orthogonal functions. For
+any given truncation order of the infinite series the basis is optimal in the sense that the total
+mean squared error is minimized. The orthogonal basis functions are determined as the solution
+of an eigenvalue problem corresponding to the homogeneous Fredholm integral equation of the second
+kind, which is computationally challenging for several reasons. Firstly, a Galerkin discretization
+requires numerical integration over a $2d$ dimensional domain, where $d$, in this work, denotes
+the spatial dimension. Secondly, the main system matrix of the discretized weak-form is dense.
+Consequently, the computational complexity of classical finite element formation and assembly
+procedures as well as the memory requirements of direct solution techniques become quickly computationally
+intractable with increasing polynomial degree, number of elements and degrees of freedom. The
+objective of this work is to significantly reduce several of the computational bottlenecks associated
+with numerical solution of the KLE. We present a matrix-free solution strategy, which is embarrassingly
+parallel and scales favorably with problem size and polynomial degree. Our approach is based on
+(1) an interpolation based quadrature that minimizes the required number of quadrature points;
+(2) an inexpensive reformulation of the generalized eigenvalue problem into a standard eigenvalue
+problem; and (3) a matrix-free and parallel matrix-vector product for iterative eigenvalue solvers.
+Two higher-order three-dimensional benchmarks illustrate exceptional computational performance
+combined with high accuracy and robustness. 

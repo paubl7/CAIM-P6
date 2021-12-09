@@ -1,0 +1,19 @@
+The fine-grained localization of clinicians in the operating room (OR) is a key component to design
+the new generation of OR support systems. Computer vision models for person pixel-based segmentation
+and body-keypoints detection are needed to better understand the clinical activities and the spatial
+layout of the OR. This is challenging, not only because OR images are very different from traditional
+vision datasets, but also because data and annotations are hard to collect and generate in the OR
+due to privacy concerns. To address these concerns, we first study how joint person pose estimation
+and instance segmentation can be performed on low resolutions images from 1x to 12x. Second, to address
+the domain shift and the lack of annotations, we propose a novel unsupervised domain adaptation
+method, called \emph{AdaptOR}, to adapt a model from an \emph{in-the-wild} labeled source domain
+to a statistically different unlabeled target domain. We propose to exploit explicit geometric
+constraints on the different augmentations of the unlabeled target domain image to generate accurate
+pseudo labels, and using these pseudo labels to train the model on high- and low-resolution OR images
+in a \emph{self-training} framework. Furthermore, we propose \emph{disentangled feature normalization}
+to handle the statistically different source and target domain data. Extensive experimental results
+with detailed ablation studies on the two OR datasets \emph{MVOR+} and \emph{TUM-OR-test} show
+the effectiveness of our approach against strongly constructed baselines, especially on the low-resolution
+privacy-preserving OR images. Finally, we show the generality of our method as a semi-supervised
+learning (SSL) method on the large-scale \emph{COCO} dataset, where we achieve comparable results
+with as few as \textbf{1\%} of labeled supervision against a model trained with 100\% labeled supervision.

@@ -1,0 +1,19 @@
+Mean field models are a popular tool used to analyse load balancing policies. In some cases the waiting
+time distribution of the mean field limit has an explicit form. In other cases it can be computed as
+the solution of a set of differential equations. Here we study the limit of the mean waiting time $E[W_\lambda]$
+as the arrival rate $\lambda$ approaches $1$ for a number of load balancing policies when job sizes
+are exponential with mean $1$ (i.e. the system gets close to instability). As $E[W_\lambda]$ diverges
+to infinity, we scale with $-\log(1-\lambda)$ and present a method to compute the limit $\lim_{\lambda\rightarrow
+1^-}-E[W_\lambda]/\log(1-\lambda)$. This limit has a surprisingly simple form for the load balancing
+algorithms considered. We present a general result that holds for any policy for which the associated
+differential equation satisfies a list of assumptions. For the LL(d) policy which assigns an incoming
+job to a server with the least work left among d randomly selected servers these assumptions are trivially
+verified. For this policy we prove the limit is given by $\frac{1}{d-1}$. We further show that the
+LL(d,K) policy, which assigns batches of $K$ jobs to the $K$ least loaded servers among d randomly
+selected servers, satisfies the assumptions and the limit is equal to $\frac{K}{d-K}$. For a policy
+which applies LL($d_i$) with probability $p_i$, we show that the limit is given by $\frac{1}{\sum_ip_id_i-1}$.
+We further indicate that our main result can also be used for load balancers with redundancy or memory.
+In addition, we propose an alternate scaling $-\log(p_\lambda)$ instead of $-\log(1-\lambda)$,
+for which the limit $\lim_{\lambda\rightarrow 0^+}-E[W_\lambda]/\log(p_\lambda)$ is well
+defined and non-zero (contrary to $\lim_{\lambda\rightarrow 0^+}-E[W_\lambda]/\log(1-\lambda)$),
+while $\lim_{\lambda\rightarrow 1^-}\log(1-\lambda) / \log(p_\lambda)=1$. 

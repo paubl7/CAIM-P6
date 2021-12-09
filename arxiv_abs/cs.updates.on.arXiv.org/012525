@@ -1,0 +1,18 @@
+Deep Neural Networks (DNNs) are often examined at the level of their response to input, such as analyzing
+the mutual information between nodes and data sets. Yet DNNs can also be examined at the level of causation,
+exploring "what does what" within the layers of the network itself. Historically, analyzing the
+causal structure of DNNs has received less attention than understanding their responses to input.
+Yet definitionally, generalizability must be a function of a DNN's causal structure since it reflects
+how the DNN responds to unseen or even not-yet-defined future inputs. Here, we introduce a suite
+of metrics based on information theory to quantify and track changes in the causal structure of DNNs
+during training. Specifically, we introduce the effective information (EI) of a feedforward DNN,
+which is the mutual information between layer input and output following a maximum-entropy perturbation.
+The EI can be used to assess the degree of causal influence nodes and edges have over their downstream
+targets in each layer. We show that the EI can be further decomposed in order to examine the sensitivity
+of a layer (measured by how well edges transmit perturbations) and the degeneracy of a layer (measured
+by how edge overlap interferes with transmission), along with estimates of the amount of integrated
+information of a layer. Together, these properties define where each layer lies in the "causal plane"
+which can be used to visualize how layer connectivity becomes more sensitive or degenerate over
+time, and how integration changes during training, revealing how the layer-by-layer causal structure
+differentiates. These results may help in understanding the generalization capabilities of DNNs
+and provide foundational tools for making DNNs both more generalizable and more explainable. 

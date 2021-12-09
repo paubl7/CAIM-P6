@@ -1,0 +1,20 @@
+Infant motility assessment using intelligent wearables is a promising new approach for assessment
+of infant neurophysiological development, and where efficient signal analysis plays a central
+role. This study investigates the use of different end-to-end neural network architectures for
+processing infant motility data from wearable sensors. We focus on the performance and computational
+burden of alternative sensor encoder and time-series modelling modules and their combinations.
+In addition, we explore the benefits of data augmentation methods in ideal and non-ideal recording
+conditions. The experiments are conducted using a data-set of multi-sensor movement recordings
+from 7-month-old infants, as captured by a recently proposed smart jumpsuit for infant motility
+assessment. Our results indicate that the choice of the encoder module has a major impact on classifier
+performance. For sensor encoders, the best performance was obtained with parallel 2-dimensional
+convolutions for intra-sensor channel fusion with shared weights for all sensors. The results
+also indicate that a relatively compact feature representation is obtainable for within-sensor
+feature extraction without a drastic loss to classifier performance. Comparison of time-series
+models revealed that feed-forward dilated convolutions with residual and skip connections outperformed
+all RNN-based models in performance, training time, and training stability. The experiments also
+indicate that data augmentation improves model robustness in simulated packet loss or sensor dropout
+scenarios. In particular, signal- and sensor-dropout-based augmentation strategies provided
+considerable boosts to performance without negatively affecting the baseline performance. Overall
+the results provide tangible suggestions on how to optimize end-to-end neural network training
+for multi-channel movement sensor data. 

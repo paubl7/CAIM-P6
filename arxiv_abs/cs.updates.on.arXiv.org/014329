@@ -1,0 +1,19 @@
+Deep learning-based networks are among the most prominent methods to learn linear patterns and
+extract this type of information from diverse imagery conditions. Here, we propose a deep learning
+approach based on graphs to detect plantation lines in UAV-based RGB imagery presenting a challenging
+scenario containing spaced plants. The first module of our method extracts a feature map throughout
+the backbone, which consists of the initial layers of the VGG16. This feature map is used as an input
+to the Knowledge Estimation Module (KEM), organized in three concatenated branches for detecting
+1) the plant positions, 2) the plantation lines, and 3) for the displacement vectors between the
+plants. A graph modeling is applied considering each plant position on the image as vertices, and
+edges are formed between two vertices (i.e. plants). Finally, the edge is classified as pertaining
+to a certain plantation line based on three probabilities (higher than 0.5): i) in visual features
+obtained from the backbone; ii) a chance that the edge pixels belong to a line, from the KEM step; and
+iii) an alignment of the displacement vectors with the edge, also from KEM. Experiments were conducted
+in corn plantations with different growth stages and patterns with aerial RGB imagery. A total of
+564 patches with 256 x 256 pixels were used and randomly divided into training, validation, and testing
+sets in a proportion of 60\%, 20\%, and 20\%, respectively. The proposed method was compared against
+state-of-the-art deep learning methods, and achieved superior performance with a significant
+margin, returning precision, recall, and F1-score of 98.7\%, 91.9\%, and 95.1\%, respectively.
+This approach is useful in extracting lines with spaced plantation patterns and could be implemented
+in scenarios where plantation gaps occur, generating lines with few-to-none interruptions. 

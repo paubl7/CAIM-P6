@@ -1,0 +1,18 @@
+The popularity of e-commerce platforms continues to grow. Being able to understand, and predict
+customer behavior is essential for customizing the user experience through personalized result
+presentations, recommendations, and special offers. Previous work has considered a broad range
+of prediction models as well as features inferred from clickstream data to record session characteristics,
+and features inferred from user data to record customer characteristics. So far, most previous
+work in the area of purchase prediction has focused on known customers, largely ignoring anonymous
+sessions, i.e., sessions initiated by a non-logged-in or unrecognized customer. However, in the
+de-identified data from a large European e-commerce platform available to us, more than 50% of the
+sessions start as anonymous sessions. In this paper, we focus on purchase prediction for both anonymous
+and identified sessions on an e-commerce platform. We start with a descriptive analysis of purchase
+vs. non-purchase sessions. This analysis informs the definition of a feature-based model for purchase
+prediction for anonymous sessions and identified sessions; our models consider a range of session-based
+features for anonymous sessions, such as the channel type, the number of visited pages, and the device
+type. For identified user sessions, our analysis points to customer history data as a valuable discriminator
+between purchase and non-purchase sessions. Based on our analysis, we build two types of predictors:
+(1) a predictor for anonymous that beats a production-ready predictor by over 17.54% F1; and (2)
+a predictor for identified customers that uses session data as well as customer history and achieves
+an F1 of 96.20%. Finally, we discuss the broader practical implications of our findings. 

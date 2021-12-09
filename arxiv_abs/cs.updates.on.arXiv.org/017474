@@ -1,0 +1,19 @@
+Spanners for metric spaces have been extensively studied, both in general metrics and in restricted
+classes, perhaps most notably in low-dimensional Euclidean spaces -- due to their numerous applications.
+Euclidean spanners can be viewed as means of compressing the $\binom{n}{2}$ pairwise distances
+of a $d$-dimensional Euclidean space into $O(n) = O_{\epsilon,d}(n)$ spanner edges, so that the
+spanner distances preserve the original distances to within a factor of $1+\epsilon$, for any $\epsilon
+> 0$. Moreover, one can compute such spanners in optimal $O(n \log n)$ time. Once the spanner has been
+computed, it serves as a "proxy" overlay network, on which the computation can proceed, which gives
+rise to huge savings in space and other important quality measures. On the negative side, by working
+on the spanner rather than the original metric, one loses the key property of being able to efficiently
+"navigate" between pairs of points. While in the original metric, one can go from any point to any
+other via a direct edge, it is unclear how to efficiently navigate in the spanner: How can we translate
+the existence of a "good" path into an efficient algorithm finding it? Moreover, usually by "good"
+path we mean a path whose weight approximates the original distance between its endpoints -- but
+a priori the number of edges (or "hops") in the path could be huge. To control the hop-length of paths,
+one can try to upper bound the spanner's hop-diameter, but naturally bounded hop-diameter spanners
+are more complex than spanners with unbounded hop-diameter, which might render the algorithmic
+task of efficiently finding good paths more challenging. The original metric enables us to navigate
+optimally -- a single hop (for any two points) with the exact distance, but the price is high -- $\Theta(n^2)$
+edges. [...] 

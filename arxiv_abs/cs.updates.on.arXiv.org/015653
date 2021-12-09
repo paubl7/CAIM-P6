@@ -1,0 +1,20 @@
+The adaptive traffic signal control (ATSC) problem can be modeled as a multiagent cooperative game
+among urban intersections, where intersections cooperate to optimize their common goal. Recently,
+reinforcement learning (RL) has achieved marked successes in managing sequential decision making
+problems, which motivates us to apply RL in the ASTC problem. Here we use independent reinforcement
+learning (IRL) to solve a complex traffic cooperative control problem in this study. One of the largest
+challenges of this problem is that the observation information of intersection is typically partially
+observable, which limits the learning performance of IRL algorithms. To this, we model the traffic
+control problem as a partially observable weak cooperative traffic model (PO-WCTM) to optimize
+the overall traffic situation of a group of intersections. Different from a traditional IRL task
+that averages the returns of all agents in fully cooperative games, the learning goal of each intersection
+in PO-WCTM is to reduce the cooperative difficulty of learning, which is also consistent with the
+traffic environment hypothesis. We also propose an IRL algorithm called Cooperative Important
+Lenient Double DQN (CIL-DDQN), which extends Double DQN (DDQN) algorithm using two mechanisms:
+the forgetful experience mechanism and the lenient weight training mechanism. The former mechanism
+decreases the importance of experiences stored in the experience reply buffer, which deals with
+the problem of experience failure caused by the strategy change of other agents. The latter mechanism
+increases the weight experiences with high estimation and `leniently' trains the DDQN neural network,
+which improves the probability of the selection of cooperative joint strategies. Experimental
+results show that CIL-DDQN outperforms other methods in almost all performance indicators of the
+traffic control problem. 

@@ -1,0 +1,19 @@
+Android is currently the most extensively used smartphone platform in the world. Due to its popularity
+and open source nature, Android malware has been rapidly growing in recent years, and bringing great
+risks to users' privacy. The malware applications in a malware family may have common features and
+similar behaviors, which are beneficial for malware detection and inspection. Thus, classifying
+Android malware into their corresponding families is an important task in malware analysis. At
+present, the main problem of existing research works on Android malware family classification
+lies in that the extracted features are inadequate to represent the common behavior characteristics
+of the malware in malicious families, and leveraging a single classifier or a static ensemble classifier
+is restricted to further improve the accuracy of classification. In this paper, we propose DroidMFC,
+a novel Android malware family classification scheme based on static analysis technology. In DroidMFC,
+the explicit features including permissions, hardware components, app components, intent filters
+are extracted from the apk files of a malware application. Besides, a hidden feature generated from
+the extracted APIs is used to represents the API call relationship in the application. Then, we design
+an adaptive weighted ensemble classifier, which considers the adaptability of the sample to each
+base classifier, to carry out accurate malware family classification. We conducted experiments
+on the Drebin dataset which contains 5560 Android malicious applications. The superiority of DroidMFC
+is demonstrated through comparing it with 5 traditional machine learning models and 4 state-of-the-art
+reference schemes. DroidMFC can correctly classify 98.92% of malware samples into their families
+and achieve 99.12% F1-Score. 

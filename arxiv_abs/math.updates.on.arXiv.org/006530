@@ -1,0 +1,19 @@
+We study a class of optimization problems including matrix scaling, matrix balancing, multidimensional
+array scaling, operator scaling, and tensor scaling that arise frequently in theory and in practice.
+Some of these problems, such as matrix and array scaling, are convex in the Euclidean sense, but others
+such as operator scaling and tensor scaling are geodesically convex on a different Riemannian manifold.
+Trust region methods, which include box-constrained Newton's method, are known to produce high
+precision solutions very quickly for matrix scaling and matrix balancing (Cohen et. al., FOCS 2017,
+Allen-Zhu et. al. FOCS 2017), and result in polynomial time algorithms for some geodesically convex
+problems like operator scaling (Garg et. al. STOC 2018, B\"urgisser et. al. FOCS 2019). One is led
+to ask whether these guarantees also hold for multidimensional array scaling and tensor scaling.
+We show that this is not the case by exhibiting instances with exponential diameter bound: we construct
+polynomial-size instances of 3-dimensional array scaling and 3-tensor scaling whose approximate
+solutions all have doubly exponential condition number. Moreover, we study convex-geometric
+notions of complexity known as margin and gap, which are used to bound the running times of all existing
+optimization algorithms for such problems. We show that margin and gap are exponentially small
+for several problems including array scaling, tensor scaling and polynomial scaling. Our results
+suggest that it is impossible to prove polynomial running time bounds for tensor scaling based on
+diameter bounds alone. Therefore, our work motivates the search for analogues of more sophisticated
+algorithms, such as interior point methods, for geodesically convex optimization that do not rely
+on polynomial diameter bounds. 

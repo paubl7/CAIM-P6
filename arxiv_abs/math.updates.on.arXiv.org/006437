@@ -1,0 +1,18 @@
+Many modern applications involve the acquisition of noisy modulo samples of a function $f$, with
+the goal being to recover estimates of the original samples of $f$. For a Lipschitz function $f:[0,1]^d
+\to \mathbb{R}$, suppose we are given the samples $y_i = (f(x_i) + \eta_i)\bmod 1; \quad i=1,\dots,n$
+where $\eta_i$ denotes noise. Assuming $\eta_i$ are zero-mean i.i.d Gaussian's, and $x_i$'s form
+a uniform grid, we derive a two-stage algorithm that recovers estimates of the samples $f(x_i)$
+with a uniform error rate $O((\frac{\log n}{n})^{\frac{1}{d+2}})$ holding with high probability.
+The first stage involves embedding the points on the unit complex circle, and obtaining denoised
+estimates of $f(x_i)\bmod 1$ via a $k$NN (nearest neighbor) estimator. The second stage involves
+a sequential unwrapping procedure which unwraps the denoised mod $1$ estimates from the first stage.
+The estimates of the samples $f(x_i)$ can be subsequently utilized to construct an estimate of the
+function $f$, with the aforementioned uniform error rate. Recently, Cucuringu and Tyagi proposed
+an alternative way of denoising modulo $1$ data which works with their representation on the unit
+complex circle. They formulated a smoothness regularized least squares problem on the product
+manifold of unit circles, where the smoothness is measured with respect to the Laplacian of a proximity
+graph $G$ involving the $x_i$'s. This is a nonconvex quadratically constrained quadratic program
+(QCQP) hence they proposed solving its semidefinite program (SDP) based relaxation. We derive
+sufficient conditions under which the SDP is a tight relaxation of the QCQP. Hence under these conditions,
+the global solution of QCQP can be obtained in polynomial time. 

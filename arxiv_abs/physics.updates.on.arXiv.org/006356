@@ -1,0 +1,20 @@
+Ensemble analysis has become an important tool for quantifying gerrymandering; the main idea is
+to generate a large, random sample of districting plans (an "ensemble") to which any proposed plan
+may be compared. If a proposed plan is an extreme outlier compared to the ensemble with regard to various
+redistricting criteria, this may indicate that the plan was deliberately engineered to produce
+a specific outcome. Many methods have been used to construct ensembles, and a fundamental question
+that arises is: Given a method for constructing plans, can we identify a probability distribution
+on the space of plans that describes the probability of constructing any particular plan by that
+method? Recently, MCMC methods have become a predominant tool for constructing ensembles. Here
+we focus on the MCMC method known as "ReCom," which was introduced in 2018 by the MGGG Redistricting
+Lab. ReCom tends to produce plans with more compact districts than some other methods, and we sought
+to better understand this phenomenon. We adopted a discrete analog of district perimeter called
+"cut edges" as a quantitative measure for district compactness; this measure was proposed by Duchin
+and Tenner, and it avoids some of the difficulties associated with compactness measures based on
+geographic perimeter, such as the Polsby-Popper score. To model the basic ReCom step, we constructed
+ensembles of 2-district plans for two grid graphs and for the precinct graph of Boulder County, CO.
+We found that the probability of sampling any particular plan -- which is roughly proportional to
+the product of the numbers of spanning trees for each of the two districts -- is also approximately
+proportional to an exponentially decaying function of the number of cut edges in the plan. This is
+an important step towards understanding compactness properties for districting plans produced
+by the ReCom method. 

@@ -1,0 +1,19 @@
+Recent advances in supervised learning and reinforcement learning have provided new opportunities
+to apply related methodologies to automated driving. However, there are still challenges to achieve
+automated driving maneuvers in dynamically changing environments. Supervised learning algorithms
+such as imitation learning can generalize to new environments by training on a large amount of labeled
+data, however, it can be often impractical or cost-prohibitive to obtain sufficient data for each
+new environment. Although reinforcement learning methods can mitigate this data-dependency
+issue by training the agent in a trial-and-error way, they still need to re-train policies from scratch
+when adapting to new environments. In this paper, we thus propose a meta reinforcement learning
+(MRL) method to improve the agent's generalization capabilities to make automated lane-changing
+maneuvers at different traffic environments, which are formulated as different traffic congestion
+levels. Specifically, we train the model at light to moderate traffic densities and test it at a new
+heavy traffic density condition. We use both collision rate and success rate to quantify the safety
+and effectiveness of the proposed model. A benchmark model is developed based on a pretraining method,
+which uses the same network structure and training tasks as our proposed model for fair comparison.
+The simulation results shows that the proposed method achieves an overall success rate up to 20%
+higher than the benchmark model when it is generalized to the new environment of heavy traffic density.
+The collision rate is also reduced by up to 18% than the benchmark model. Finally, the proposed model
+shows more stable and efficient generalization capabilities adapting to the new environment,
+and it can achieve 100% successful rate and 0% collision rate with only a few steps of gradient updates.

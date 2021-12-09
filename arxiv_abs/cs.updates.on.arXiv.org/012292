@@ -1,0 +1,18 @@
+Transfer Learning has shown great potential to enhance the single-agent Reinforcement Learning
+(RL) efficiency, by sharing learned policies of previous tasks. Similarly, in multiagent settings,
+the learning performance can also be promoted if agents can share knowledge between each other.
+However, it remains an open question of how an agent should learn from other agents' knowledge. In
+this paper, we propose a novel multiagent option-based policy transfer (MAOPT) framework to improve
+multiagent learning efficiency. Our framework learns what advice to give to each agent and when
+to terminate it by modeling multiagent policy transfer as the option learning problem. MAOPT provides
+different kinds of variants which can be classified into two types in terms of the experience used
+during training. One type is the MAOPT with the Global Option Advisor which has the access to the global
+information of the environment. However, in many realistic scenarios, we can only obtain each agent's
+local information due to the partial observation. The other type contains MAOPT with the Local Option
+Advisor and MAOPT with the Successor Representation Option (SRO) which are suitable for this setting
+and collect each agent's local experience for the update. In many cases, each agent's experience
+is inconsistent with each other which causes the option-value estimation to oscillate and to become
+inaccurate. SRO is used to handle the experience inconsistency by decoupling the dynamics of the
+environment from the rewards to learn the option-value function under each agent's preference.
+MAOPT can be easily combined with existing deep RL approaches. Experimental results show it significantly
+boosts the performance of existing deep RL methods in both discrete and continuous state spaces.

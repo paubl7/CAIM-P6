@@ -1,0 +1,20 @@
+Smart contract is one of the core features of Ethereum and has inspired many blockchain descendants.
+Since its advent, the verification paradigm of smart contract has been improving toward high scalability.
+It shifts from the expensive on-chain verification to the orchestration of off-chain VM (virtual
+machine) execution and on-chain arbitration with the pinpoint protocol. The representative projects
+are TrueBit, Arbitrum, YODA, ACE, and Optimism. Inspired by visionaries in academia and industry,
+we consider the DNN computation to be promising but on the next level of complexity for the verification
+paradigm of smart contract. Unfortunately, even for the state-of-the-art verification paradigm,
+off-chain VM execution of DNN computation has an orders-of-magnitude slowdown compared to the
+native off-chain execution. To enable the native off-chain execution of verifiable DNN computation,
+we present Agatha system, which solves the significant challenges of misalignment and inconsistency:
+(1) Native DNN computation has a graph-based computation paradigm misaligned with previous VM-based
+execution and arbitration; (2) Native DNN computation may be inconsistent cross platforms which
+invalidates the verification paradigm. In response, we propose the graph-based pinpoint protocol
+(GPP) which enables the pinpoint protocol on computational graphs, and bridges the native off-chain
+execution and the contract arbitration. We also develop a technique named Cross-evaluator Consistent
+Execution (XCE), which guarantees cross-platform consistency and forms the correctness foundation
+of GPP. We showcase Agatha for the DNN computation of popular models (MobileNet, ResNet50 and VGG16)
+on Ethereum. Agatha achieves a negligible on-chain overhead, and an off-chain execution overhead
+of 3.0%, which represents an off-chain latency reduction of at least 602x compared to the state-of-the-art
+verification paradigm. 

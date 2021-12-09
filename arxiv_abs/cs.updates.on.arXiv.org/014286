@@ -1,0 +1,18 @@
+This paper presents the definition and implementation of a quantum computer architecture to enable
+creating a new computational device - a quantum computer as an accelerator In this paper, we present
+explicitly the idea of a quantum accelerator which contains the full stack of the layers of an accelerator.
+Such a stack starts at the highest level describing the target application of the accelerator. Important
+to realise is that qubits are defined as perfect qubits, implying they do not decohere and perform
+good quantum gate operations. The next layer abstracts the quantum logic outlining the algorithm
+that is to be executed on the quantum accelerator. In our case, the logic is expressed in the universal
+quantum-classical hybrid computation language developed in the group, called OpenQL. We also
+have to start thinking about how to verify, validate and test the quantum software such that the compiler
+generates a correct version of the quantum circuit. The OpenQL compiler translates the program
+to a common assembly language, called cQASM. We need to develop a quantum operating system that manages
+all the hardware of the micro-architecture. The layer below the micro-architecture is responsible
+of the mapping and routing of the qubits on the topology such that the nearest-neighbour-constraint
+can be be respected. At any moment in the future when we are capable of generating multiple good qubits,
+the compiler can convert the cQASM to generate the eQASM, which is executable on a particular experimental
+device incorporating the platform-specific parameters. This way, we are able to distinguish clearly
+the experimental research towards better qubits, and the industrial and societal applications
+that need to be developed and executed on a quantum device. 

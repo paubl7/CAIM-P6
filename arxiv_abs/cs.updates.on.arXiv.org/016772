@@ -1,0 +1,20 @@
+In this work, we consider the problem of learning a feed-forward neural network (NN) controller
+to safely steer an arbitrarily shaped planar robot in a compact and obstacle-occluded workspace.
+Unlike existing methods that depend strongly on the density of data points close to the boundary
+of the safe state space to train NN controllers with closed-loop safety guarantees, we propose an
+approach that lifts such assumptions on the data that are hard to satisfy in practice and instead
+allows for graceful safety violations, i.e., of a bounded magnitude that can be spatially controlled.
+To do so, we employ reachability analysis methods to encapsulate safety constraints in the training
+process. Specifically, to obtain a computationally efficient over-approximation of the forward
+reachable set of the closed-loop system, we partition the robot's state space into cells and adaptively
+subdivide the cells that contain states which may escape the safe set under the trained control law.
+To do so, we first design appropriate under- and over-approximations of the robot's footprint to
+adaptively subdivide the configuration space into cells. Then, using the overlap between each
+cell's forward reachable set and the set of infeasible robot configurations as a measure for safety
+violations, we introduce penalty terms into the loss function that penalize this overlap in the
+training process. As a result, our method can learn a safe vector field for the closed-loop system
+and, at the same time, provide numerical worst-case bounds on safety violation over the whole configuration
+space, defined by the overlap between the over-approximation of the forward reachable set of the
+closed-loop system and the set of unsafe states. Moreover, it can control the tradeoff between computational
+complexity and tightness of these bounds. Finally, we provide a simulation study that verifies
+the efficacy of the proposed scheme. 

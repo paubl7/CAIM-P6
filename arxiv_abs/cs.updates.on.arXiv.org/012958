@@ -1,0 +1,18 @@
+Federated learning enables mutually distrusting participants to collaboratively learn a distributed
+machine learning model without revealing anything but the model's output. Generic federated learning
+has been studied extensively, and several learning protocols, as well as open-source frameworks,
+have been developed. Yet, their over pursuit of computing efficiency and fast implementation might
+diminish the security and privacy guarantees of participant's training data, about which little
+is known thus far. In this paper, we consider an honest-but-curious adversary who participants
+in training a distributed ML model, does not deviate from the defined learning protocol, but attempts
+to infer private training data from the legitimately received information. In this setting, we
+design and implement two practical attacks, reverse sum attack and reverse multiplication attack,
+neither of which will affect the accuracy of the learned model. By empirically studying the privacy
+leakage of two learning protocols, we show that our attacks are (1) effective - the adversary successfully
+steal the private training data, even when the intermediate outputs are encrypted to protect data
+privacy; (2) evasive - the adversary's malicious behavior does not deviate from the protocol specification
+and deteriorate any accuracy of the target model; and (3) easy - the adversary needs little prior
+knowledge about the data distribution of the target participant. We also experimentally show that
+the leaked information is as effective as the raw training data through training an alternative
+classifier on the leaked information. We further discuss potential countermeasures and their
+challenges, which we hope may lead to several promising research directions. 

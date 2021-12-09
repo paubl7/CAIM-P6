@@ -1,0 +1,19 @@
+In this work we explore the possibility of applying machine learning methods designed for one-dimensional
+problems to the task of galaxy image classification. The algorithms used for image classification
+typically rely on multiple costly steps, such as the Point Spread Function (PSF) deconvolution
+and the training and application of complex Convolutional Neural Networks (CNN) of thousands or
+even millions of parameters. In our approach, we extract features from the galaxy images by analysing
+the elliptical isophotes in their light distribution and collect the information in a sequence.
+The sequences obtained with this method present definite features allowing a direct distinction
+between galaxy types, as opposed to smooth S\'ersic profiles. Then, we train and classify the sequences
+with machine learning algorithms, designed through the platform Modulos AutoML, and study how
+they optimize the classification task. As a demonstration of this method, we use the second public
+release of the Dark Energy Survey (DES DR2). We show that by applying it to this sample we are able to
+successfully distinguish between early-type and late-type galaxies, for images with signal-to-noise
+ratio greater then 300. This yields an accuracy of $86\%$ for the early-type galaxies and $93\%$
+for the late-type galaxies, which is on par with most contemporary automated image classification
+approaches. Our novel method allows for galaxy images to be accurately classified and is faster
+than other approaches. Data dimensionality reduction also implies a significant lowering in computational
+cost. In the perspective of future data sets obtained with e.g. Euclid and the Vera Rubin Observatory
+(VRO), this work represents a path towards using a well-tested and widely used platform from industry
+in efficiently tackling galaxy classification problems at the peta-byte scale. 

@@ -1,0 +1,19 @@
+Selecting input variables or design points for statistical models has been of great interest in
+adaptive design and active learning. Motivated by two scientific examples, this paper presents
+a strategy of selecting the design points for a regression model when the underlying regression
+function is discontinuous. The first example we undertook was for the purpose of accelerating imaging
+speed in a high resolution material imaging; the second was use of sequential design for the purpose
+of mapping a chemical phase diagram. In both examples, the underlying regression functions have
+discontinuities, so many of the existing design optimization approaches cannot be applied because
+they mostly assume a continuous regression function. Although some existing adaptive design strategies
+developed from treed regression models can handle the discontinuities, the Bayesian approaches
+come with computationally expensive Markov Chain Monte Carlo techniques for posterior inferences
+and subsequent design point selections, which is not appropriate for the first motivating example
+that requires computation at least faster than the original imaging speed. In addition, the treed
+models are based on the domain partitioning that are inefficient when the discontinuities occurs
+over complex sub-domain boundaries. We propose a simple and effective adaptive design strategy
+for a regression analysis with discontinuities: some statistical properties with a fixed design
+will be presented first, and then these properties will be used to propose a new criterion of selecting
+the design points for the regression analysis. Sequential design with the new criterion will be
+presented with comprehensive simulated examples, and its application to the two motivating examples
+will be presented. 

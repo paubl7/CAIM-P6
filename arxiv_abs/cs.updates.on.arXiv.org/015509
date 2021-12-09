@@ -1,0 +1,20 @@
+Recent years have witnessed a substantial increase in the deep learning (DL)architectures proposed
+for visual recognition tasks like person re-identification,where individuals must be recognized
+over multiple distributed cameras. Althoughthese architectures have greatly improved the state-of-the-art
+accuracy, thecomputational complexity of the CNNs commonly used for feature extractionremains
+an issue, hindering their deployment on platforms with limited resources,or in applications with
+real-time constraints. There is an obvious advantage toaccelerating and compressing DL models
+without significantly decreasing theiraccuracy. However, the source (pruning) domain differs
+from operational (target)domains, and the domain shift between image data captured with differentnon-overlapping
+camera viewpoints leads to lower recognition accuracy. In thispaper, we investigate the prunability
+of these architectures under different designscenarios. This paper first revisits pruning techniques
+that are suitable forreducing the computational complexity of deep CNN networks applied to personre-identification.
+Then, these techniques are analysed according to their pruningcriteria and strategy, and according
+to different scenarios for exploiting pruningmethods to fine-tuning networks to target domains.
+Experimental resultsobtained using DL models with ResNet feature extractors, and multiplebenchmarks
+re-identification datasets, indicate that pruning can considerablyreduce network complexity
+while maintaining a high level of accuracy. Inscenarios where pruning is performed with large pre-training
+or fine-tuningdatasets, the number of FLOPS required by ResNet architectures is reduced byhalf,
+while maintaining a comparable rank-1 accuracy (within 1% of the originalmodel). Pruning while
+training a larger CNNs can also provide a significantlybetter performance than fine-tuning smaller
+ones. 

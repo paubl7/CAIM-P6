@@ -1,0 +1,19 @@
+Gradient-related first-order methods have become the workhorse of large-scale numerical optimization
+problems. Many of these problems involve nonconvex objective functions with multiple saddle points,
+which necessitates an understanding of the behavior of discrete trajectories of first-order methods
+within the geometrical landscape of these functions. This paper concerns convergence of first-order
+discrete methods to a local minimum of nonconvex optimization problems that comprise strict saddle
+points within the geometrical landscape. To this end, it focuses on analysis of discrete gradient
+trajectories around saddle neighborhoods, derives sufficient conditions under which these trajectories
+can escape strict-saddle neighborhoods in linear time, explores the contractive and expansive
+dynamics of these trajectories in neighborhoods of strict-saddle points that are characterized
+by gradients of moderate magnitude, characterizes the non-curving nature of these trajectories,
+and highlights the inability of these trajectories to re-enter the neighborhoods around strict-saddle
+points after exiting them. Based on these insights and analyses, the paper then proposes a simple
+variant of the vanilla gradient descent algorithm, termed Curvature Conditioned Regularized
+Gradient Descent (CCRGD) algorithm, which utilizes a check for an initial boundary condition to
+ensure its trajectories can escape strict-saddle neighborhoods in linear time. Convergence analysis
+of the CCRGD algorithm, which includes its rate of convergence to a local minimum within a geometrical
+landscape that has a maximum number of strict-saddle points, is also presented in the paper. Numerical
+experiments are then provided on a test function as well as a low-rank matrix factorization problem
+to evaluate the efficacy of the proposed algorithm. 

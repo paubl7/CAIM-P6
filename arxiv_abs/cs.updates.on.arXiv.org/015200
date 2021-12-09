@@ -1,0 +1,19 @@
+Super-resolution (SR) methods have seen significant advances thanks to the development of convolutional
+neural networks (CNNs). CNNs have been successfully employed to improve the quality of endomicroscopy
+imaging. Yet, the inherent limitation of research on SR in endomicroscopy remains the lack of ground
+truth high-resolution (HR) images, commonly used for both supervised training and reference-based
+image quality assessment (IQA). Therefore, alternative methods, such as unsupervised SR are being
+explored. To address the need for non-reference image quality improvement, we designed a novel
+zero-shot super-resolution (ZSSR) approach that relies only on the endomicroscopy data to be processed
+in a self-supervised manner without the need for ground-truth HR images. We tailored the proposed
+pipeline to the idiosyncrasies of endomicroscopy by introducing both: a physically-motivated
+Voronoi downscaling kernel accounting for the endomicroscope's irregular fibre-based sampling
+pattern, and realistic noise patterns. We also took advantage of video sequences to exploit a sequence
+of images for self-supervised zero-shot image quality improvement. We run ablation studies to
+assess our contribution in regards to the downscaling kernel and noise simulation. We validate
+our methodology on both synthetic and original data. Synthetic experiments were assessed with
+reference-based IQA, while our results for original images were evaluated in a user study conducted
+with both expert and non-expert observers. The results demonstrated superior performance in image
+quality of ZSSR reconstructions in comparison to the baseline method. The ZSSR is also competitive
+when compared to supervised single-image SR, especially being the preferred reconstruction technique
+by experts. 

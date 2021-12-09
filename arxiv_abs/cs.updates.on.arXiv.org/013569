@@ -1,0 +1,20 @@
+Aggregators have emerged as crucial tools for the coordination of distributed, controllable loads.
+To be used effectively, an aggregator must be able to communicate the available flexibility of the
+loads they control, as known as the aggregate flexibility to a system operator. However, most of
+existing aggregate flexibility measures often are slow-timescale estimations and much less attention
+has been paid to real-time coordination between an aggregator and a system operator to allow the
+system operator to send control signals to the aggregator that lead to optimization of system-level
+objectives, such as online cost minimization, and do not violate private constraints of the loads,
+such as satisfying specific load demands. In this paper, we present a design of real-time aggregate
+flexibility feedback based on maximization of entropy, termed the maximum entropy feedback (MEF).
+The design provides a concise and informative signal that can be used by the system operator to perform
+online cost minimization, while provably satisfying the constraints of the loads. In addition
+to deriving analytic properties of the MEF, we show that it can be generated efficiently using reinforcement
+learning and used as a penalty term in model predictive control (MPC), which gives a novel algorithm
+-- the penalized predictive control (PPC). The benefits of the PPC are (1). Efficient Communication.
+An operator running PPC does not need to know the exact states and constraints of the loads on the aggregator's
+side, but only the MEF sent by the aggregator. (2). Fast Computation. The PPC is an unconstrained
+online optimization and it often has much less number of variables than the optimization formulation
+of an MPC. (3). Lower Costs. We illustrate the efficacy of the PPC using a dataset from an adaptive
+electric vehicle charging network and show that PPC outperforms classical MPC by achieving lower
+costs. 

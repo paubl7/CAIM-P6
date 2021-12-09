@@ -1,0 +1,19 @@
+In the present work, single- and segregated-network PINN architectures are applied to predict
+momentum, species and temperature distributions of a dry air humidification problem in a simple
+2D rectangular domain. The created PINN models account for variable fluid properties, species-
+and heat-diffusion and convection. Both the mentioned PINN architectures were trained using different
+hyperparameter settings, such as network width and depth to find the best-performing configuration.
+It is shown that the segregated-network PINN approach results in on-average 62% lower losses when
+compared to the single-network PINN architecture for the given problem. Furthermore, the single-network
+variant struggled to ensure species mass conservation in different areas of the computational
+domain, whereas, the segregated approach successfully maintained species conservation. The
+PINN predicted velocity, temperature and species profiles for a given set of boundary conditions
+were compared to results generated using OpenFOAM software. Both the single- and segregated-network
+PINN models produced accurate results for temperature and velocity profiles, with average percentage
+difference relative to the CFD results of approximately 7.5% for velocity and 8% for temperature.
+The mean error percentages for the species mass fractions are 9\% for the single-network model and
+1.5% for the segregated-network approach. To showcase the applicability of PINNs for surrogate
+modelling of multi-species problems, a parameterised version of the segregated-network PINN
+is trained which could produce results for different water vapour inlet velocities. The normalised
+mean absolute percentage errors, relative to the OpenFOAM results, across three predicted cases
+for velocity and temperature are approximately 7.5% and 2.4% for water vapour mass fraction. 

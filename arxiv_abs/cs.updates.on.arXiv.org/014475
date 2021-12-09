@@ -1,0 +1,20 @@
+We introduce and analyze a simpler and practical variant of multivariate singular spectrum analysis
+(mSSA), a known time series method to impute and forecast multivariate time series. Towards this,
+we introduce a spatio-temporal factor model to analyze mSSA. We establish that given $N$ time series
+and $T$ observations per time series, the in-sample prediction error for both imputation and forecasting
+under mSSA scales as $1/\sqrt{\min(N, T) T}$. This is an improvement over: (i) the $1/\sqrt{T}$
+error scaling one gets for SSA, which is the restriction of mSSA to a univariate time series; (ii)
+the ${1}/{\min(N, T)}$ error scaling one gets for Temporal Regularized Matrix Factorized (TRMF),
+a matrix factorization based method for time series prediction. That is, mSSA exploits both the
+`temporal' and `spatial' structure in a multivariate time series. Our experimental results using
+various benchmark datasets confirm the characteristics of the spatio-temporal factor model as
+well as our theoretical findings -- the variant of mSSA we introduce empirically performs as well
+or better compared to popular neural network based time series methods, LSTM and DeepAR. We discuss
+various extensions of mSSA we introduce: (i) a variant of mSSA to estimate the time-varying variance
+of a time series; (ii) a tensor variant of mSSA we call tSSA to further exploit the `temporal' and `spatial'
+structure in a multivariate time series. The spatio-temporal model considered in our work includes
+the usual components used to model dynamics in time series analysis such as trends (low order polynomials),
+seasonality (finite sum of harmonics) and linear time-invariant systems. An important representation
+result of this work, which might be of interest more broadly, is the `calculus' for such models that
+we introduce: specifically, instances of the spatio-temporal factor model are closed under addition
+and multiplication. 

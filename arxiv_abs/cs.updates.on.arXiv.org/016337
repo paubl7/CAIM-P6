@@ -1,0 +1,19 @@
+Gradient descent-based optimization methods underpin the parameter training of neural networks,
+and hence comprise a significant component in the impressive test results found in a number of applications.
+Introducing stochasticity is key to their success in practical problems, and there is some understanding
+of the role of stochastic gradient descent in this context. Momentum modifications of gradient
+descent such as Polyak's Heavy Ball method (HB) and Nesterov's method of accelerated gradients
+(NAG), are also widely adopted. In this work our focus is on understanding the role of momentum in
+the training of neural networks, concentrating on the common situation in which the momentum contribution
+is fixed at each step of the algorithm. To expose the ideas simply we work in the deterministic setting.
+Our approach is to derive continuous time approximations of the discrete algorithms; these continuous
+time approximations provide insights into the mechanisms at play within the discrete algorithms.
+We prove three such approximations. Firstly we show that standard implementations of fixed momentum
+methods approximate a time-rescaled gradient descent flow, asymptotically as the learning rate
+shrinks to zero; this result does not distinguish momentum methods from pure gradient descent,
+in the limit of vanishing learning rate. We then proceed to prove two results aimed at understanding
+the observed practical advantages of fixed momentum methods over gradient descent. We achieve
+this by proving approximations to continuous time limits in which the small but fixed learning rate
+appears as a parameter. Furthermore in a third result we show that the momentum methods admit an exponentially
+attractive invariant manifold on which the dynamics reduces, approximately, to a gradient flow
+with respect to a modified loss function. 

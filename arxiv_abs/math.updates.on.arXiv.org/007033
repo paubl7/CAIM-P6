@@ -1,0 +1,19 @@
+Gradient descent (GD) type optimization methods are the standard instrument to train artificial
+neural networks (ANNs) with rectified linear unit (ReLU) activation. Despite the great success
+of GD type optimization methods in numerical simulations for the training of ANNs with ReLU activation,
+it remains - even in the simplest situation of the plain vanilla GD optimization method with random
+initializations and ANNs with one hidden layer - an open problem to prove (or disprove) the conjecture
+that the risk of the GD optimization method converges in the training of such ANNs to zero as the width
+of the ANNs, the number of independent random initializations, and the number of GD steps increase
+to infinity. In this article we prove this conjecture in the situation where the probability distribution
+of the input data is equivalent to the continuous uniform distribution on a compact interval, where
+the probability distributions for the random initializations of the ANN parameters are standard
+normal distributions, and where the target function under consideration is continuous and piecewise
+affine linear. Roughly speaking, the key ingredients in our mathematical convergence analysis
+are (i) to prove that suitable sets of global minima of the risk functions are \emph{twice continuously
+differentiable submanifolds of the ANN parameter spaces}, (ii) to prove that the Hessians of the
+risk functions on these sets of global minima satisfy an appropriate \emph{maximal rank condition},
+and, thereafter, (iii) to apply the machinery in [Fehrman, B., Gess, B., Jentzen, A., Convergence
+rates for the stochastic gradient descent method for non-convex objective functions. J. Mach.
+Learn. Res. 21(136): 1--48, 2020] to establish convergence of the GD optimization method with random
+initializations. 

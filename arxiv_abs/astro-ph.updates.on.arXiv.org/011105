@@ -1,0 +1,20 @@
+One of the main difficulties to analyze modern spectroscopic datasets is due to the large amount
+of data. For example, in atmospheric transmittance spectroscopy, the solar occultation channel
+(SO) of the NOMAD instrument onboard the ESA ExoMars2016 satellite called Trace Gas Orbiter (TGO)
+had produced $\sim$10 millions of spectra in 20000 acquisition sequences since the beginning of
+the mission in April 2018 until 15 January 2020. Other datasets are even larger with $\sim$billions
+of spectra for OMEGA onboard Mars Express or CRISM onboard Mars Reconnaissance Orbiter. Usually,
+new lines are discovered after a long iterative process of model fitting and manual residual analysis.
+Here we propose a new method based on unsupervised machine learning, to automatically detect new
+minor species. Although precise quantification is out of scope, this tool can also be used to quickly
+summarize the dataset, by giving few endmembers ("source") and their abundances. We approximate
+the dataset non-linearity by a linear mixture of abundance and source spectra (endmembers). We
+used unsupervised source separation in form of non-negative matrix factorization to estimate
+those quantities. Several methods are tested on synthetic and simulation data. Our approach is
+dedicated to detect minor species spectra rather than precisely quantifying them. On synthetic
+example, this approach is able to detect chemical compounds present in form of 100 hidden spectra
+out of $10^4$, at 1.5 times the noise level. Results on simulated spectra of NOMAD-SO targeting CH$_{4}$
+show that detection limits goes in the range of 100-500 ppt in favorable conditions. Results on real
+martian data from NOMAD-SO show that CO$_{2}$ and H$_{2}$O are present, as expected, but CH$_{4}$
+is absent. Nevertheless, we confirm a set of new unexpected lines in the database, attributed by
+ACS instrument Team to the CO$_{2}$ magnetic dipole. 

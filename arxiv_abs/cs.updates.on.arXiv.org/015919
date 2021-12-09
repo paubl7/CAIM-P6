@@ -1,0 +1,19 @@
+A classic result due to Schaefer (1978) classifies all constraint satisfaction problems (CSPs)
+over the Boolean domain as being either in $\mathsf{P}$ or $\mathsf{NP}$-hard. This paper considers
+a promise-problem variant of CSPs called PCSPs. A PCSP over a finite set of pairs of constraints $\Gamma$
+consists of a pair $(\Psi_P, \Psi_Q)$ of CSPs with the same set of variables such that for every $(P,
+Q) \in \Gamma$, $P(x_{i_1}, ..., x_{i_k})$ is a clause of $\Psi_P$ if and only if $Q(x_{i_1}, ...,
+x_{i_k})$ is a clause of $\Psi_Q$. The promise problem $\operatorname{PCSP}(\Gamma)$ is to distinguish,
+given $(\Psi_P, \Psi_Q)$, between the cases $\Psi_P$ is satisfiable and $\Psi_Q$ is unsatisfiable.
+Many natural problems including approximate graph and hypergraph coloring can be placed in this
+framework. This paper is motivated by the pursuit of understanding the computational complexity
+of Boolean promise CSPs. As our main result, we show that $\operatorname{PCSP}(\Gamma)$ exhibits
+a dichotomy (it is either polynomial time solvable or $\mathsf{NP}$-hard) when the relations in
+$\Gamma$ are symmetric and allow for negations of variables. We achieve our dichotomy theorem by
+extending the weak polymorphism framework of Austrin, Guruswami, and H\aa stad [FOCS '14] which
+itself is a generalization of the algebraic approach to study CSPs. In both the algorithm and hardness
+portions of our proof, we incorporate new ideas and techniques not utilized in the CSP case. Furthermore,
+we show that the computational complexity of any promise CSP (over arbitrary finite domains) is
+captured entirely by its weak polymorphisms, a feature known as Galois correspondence, as well
+as give necessary and sufficient conditions for the structure of this set of weak polymorphisms.
+Such insights call us to question the existence of a general dichotomy for Boolean PCSPs. 

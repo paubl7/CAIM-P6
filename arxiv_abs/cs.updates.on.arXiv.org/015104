@@ -1,0 +1,18 @@
+We experimentally evaluate the practical state-of-the-art in graph bipartization (Odd Cycle
+Transversal), motivated by recent advances in near-term quantum computing hardware and the related
+embedding problems. We assemble a preprocessing suite of fast input reduction routines from the
+Odd Cycle Transversal (OCT) and Vertex Cover (VC) literature, and compare algorithm implementations
+using Quadratic Unconstrained Binary Optimization problems from the quantum literature. We also
+generate a corpus of frustrated cluster loop graphs, which have previously been used to benchmark
+quantum annealing hardware. The diversity of these graphs leads to harder OCT instances than in
+existing benchmarks. In addition to combinatorial branching algorithms for solving OCT directly,
+we study various reformulations into other NP-hard problems such as VC and Integer Linear Programming
+(ILP), enabling the use of solvers such as CPLEX. We find that for heuristic solutions with time constraints
+under a second, iterative compression routines jump-started with a heuristic solution perform
+best, after which point using a highly tuned solver like CPLEX is worthwhile. Results on exact solvers
+are split between using ILP formulations on CPLEX and solving VC formulations with a branch-and-reduce
+solver. We extend our results with a large corpus of synthetic graphs, establishing robustness
+and potential to generalize to other domain data. In total, over 8000 graph instances are evaluated,
+compared to the previous canonical corpus of 100 graphs. Finally, we provide all code and data in
+an open source suite, including a Python API for accessing reduction routines and branching algorithms,
+along with scripts for fully replicating our results. 

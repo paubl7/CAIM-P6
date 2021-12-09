@@ -1,0 +1,19 @@
+Recent facial image synthesis methods have been mainly based on conditional generative models.
+Sketch-based conditions can effectively describe the geometry of faces, including the contours
+of facial components, hair structures, as well as salient edges (e.g., wrinkles) on face surfaces
+but lack effective control of appearance, which is influenced by color, material, lighting condition,
+etc. To have more control of generated results, one possible approach is to apply existing disentangling
+works to disentangle face images into geometry and appearance representations. However, existing
+disentangling methods are not optimized for human face editing, and cannot achieve fine control
+of facial details such as wrinkles. To address this issue, we propose DeepFaceEditing, a structured
+disentanglement framework specifically designed for face images to support face generation and
+editing with disentangled control of geometry and appearance. We adopt a local-to-global approach
+to incorporate the face domain knowledge: local component images are decomposed into geometry
+and appearance representations, which are fused consistently using a global fusion module to improve
+generation quality. We exploit sketches to assist in extracting a better geometry representation,
+which also supports intuitive geometry editing via sketching. The resulting method can either
+extract the geometry and appearance representations from face images, or directly extract the
+geometry representation from face sketches. Such representations allow users to easily edit and
+synthesize face images, with decoupled control of their geometry and appearance. Both qualitative
+and quantitative evaluations show the superior detail and appearance control abilities of our
+method compared to state-of-the-art methods. 

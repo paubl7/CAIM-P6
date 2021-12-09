@@ -1,0 +1,19 @@
+The expanding adoption of digital pathology has enabled the curation of large repositories of histology
+whole slide images (WSIs), which contain a wealth of information. Similar pathology image search
+offers the opportunity to comb through large historical repositories of gigapixel WSIs to identify
+cases with similar morphological features and can be particularly useful for diagnosing rare diseases,
+identifying similar cases for predicting prognosis, treatment outcomes, and potential clinical
+trial success. A critical challenge in developing a WSI search and retrieval system is scalability,
+which is uniquely challenging given the need to search a growing number of slides that each can consist
+of billions of pixels and are several gigabytes in size. Such systems are typically slow and retrieval
+speed often scales with the size of the repository they search through, making their clinical adoption
+tedious and are not feasible for repositories that are constantly growing. Here we present Fast
+Image Search for Histopathology (FISH), a histology image search pipeline that is infinitely scalable
+and achieves constant search speed that is independent of the image database size while being interpretable
+and without requiring detailed annotations. FISH uses self-supervised deep learning to encode
+meaningful representations from WSIs and a Van Emde Boas tree for fast search, followed by an uncertainty-based
+ranking algorithm to retrieve similar WSIs. We evaluated FISH on multiple tasks and datasets with
+over 22,000 patient cases spanning 56 disease subtypes. We additionally demonstrate that FISH
+can be used to assist with the diagnosis of rare cancer types where sufficient cases may not be available
+to train traditional supervised deep models. FISH is available as an easy-to-use, open-source
+software package (https://github.com/mahmoodlab/FISH). 

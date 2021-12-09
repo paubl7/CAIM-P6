@@ -1,0 +1,19 @@
+Anomaly detection is necessary for proper and safe operation of large-scale systems consisting
+of multiple devices, networks, and/or plants. Those systems are often characterized by a pair of
+multivariate datasets. To detect anomaly in such a system and localize element(s) associated with
+anomaly, one would need to estimate scores that quantify anomalousness of the entire system as well
+as its elements. However, it is not trivial to estimate such scores by considering changes of relationships
+between the elements, which strongly correlate with each other. Moreover, it is necessary to estimate
+the scores for the entire system and its elements from a single framework, in order to identify relationships
+among the scores for localizing elements associated with anomaly. Here, we developed a new method
+to quantify anomalousness of an entire system and its elements simultaneously. The purpose of this
+paper is threefold. The first one is to propose a new anomaly detection method: Double Kernelized
+Scoring (DKS). DKS is a unified framework for entire-system anomaly scoring and element-wise anomaly
+scoring. Therefore, DKS allows for conducting simultaneously 1) anomaly detection for the entire
+system and 2) localization for identifying faulty elements responsible for the system anomaly.
+The second purpose is to propose a new kernel function: Matrix Kernel. The Matrix Kernel is defined
+between general matrices, which might have different dimensions, allowing for conducting anomaly
+detection on systems where the number of elements change over time. The third purpose is to demonstrate
+the effectiveness of the proposed method experimentally. We evaluated the proposed method with
+synthetic and real time series data. The results demonstrate that DKS is able to detect anomaly and
+localize the elements associated with it successfully. 

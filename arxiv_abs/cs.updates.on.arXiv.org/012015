@@ -1,0 +1,20 @@
+As one of the triumphs and milestones of robust statistics, Huber regression plays an important
+role in robust inference and estimation. It has also been finding a great variety of applications
+in machine learning. In a parametric setup, it has been extensively studied. However, in the statistical
+learning context where a function is typically learned in a nonparametric way, there is still a lack
+of theoretical understanding of how Huber regression estimators learn the conditional mean function
+and why it works in the absence of light-tailed noise assumptions. To address these fundamental
+questions, we conduct an assessment of Huber regression from a statistical learning viewpoint.
+First, we show that the usual risk consistency property of Huber regression estimators, which is
+usually pursued in machine learning, cannot guarantee their learnability in mean regression.
+Second, we argue that Huber regression should be implemented in an adaptive way to perform mean regression,
+implying that one needs to tune the scale parameter in accordance with the sample size and the moment
+condition of the noise. Third, with an adaptive choice of the scale parameter, we demonstrate that
+Huber regression estimators can be asymptotic mean regression calibrated under $(1+\epsilon)$-moment
+conditions ($\epsilon>0$). Last but not least, under the same moment conditions, we establish
+almost sure convergence rates for Huber regression estimators. Note that the $(1+\epsilon)$-moment
+conditions accommodate the special case where the response variable possesses infinite variance
+and so the established convergence rates justify the robustness feature of Huber regression estimators.
+In the above senses, the present study provides a systematic statistical learning assessment of
+Huber regression estimators and justifies their merits in terms of robustness from a theoretical
+viewpoint. 

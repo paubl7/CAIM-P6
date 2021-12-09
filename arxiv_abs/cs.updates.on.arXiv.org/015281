@@ -1,0 +1,19 @@
+Considering the success of generative adversarial networks (GANs) for image-to-image translation,
+researchers have attempted to translate remote sensing images (RSIs) to maps (rs2map) through
+GAN for cartography. However, these studies involved limited scales, which hinders multi-scale
+map creation. By extending their method, multi-scale RSIs can be trivially translated to multi-scale
+maps (multi-scale rs2map translation) through scale-wise rs2map models trained for certain scales
+(parallel strategy). However, this strategy has two theoretical limitations. First, inconsistency
+between various spatial resolutions of multi-scale RSIs and object generalization on multi-scale
+maps (RS-m inconsistency) increasingly complicate the extraction of geographical information
+from RSIs for rs2map models with decreasing scale. Second, as rs2map translation is cross-domain,
+generators incur high computation costs to transform the RSI pixel distribution to that on maps.
+Thus, we designed a series strategy of generators for multi-scale rs2map translation to address
+these limitations. In this strategy, high-resolution RSIs are inputted to an rs2map model to output
+large-scale maps, which are translated to multi-scale maps through series multi-scale map translation
+models. The series strategy avoids RS-m inconsistency as inputs are high-resolution large-scale
+RSIs, and reduces the distribution gap in multi-scale map generation through similar pixel distributions
+among multi-scale maps. Our experimental results showed better quality multi-scale map generation
+with the series strategy, as shown by average increases of 11.69%, 53.78%, 55.42%, and 72.34% in
+the structural similarity index, edge structural similarity index, intersection over union (road),
+and intersection over union (water) for data from Mexico City and Tokyo at zoom level 17-13. 

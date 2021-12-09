@@ -1,0 +1,19 @@
+State-of-the-art Model Predictive Control (MPC) applications for building heating adopt either
+a deterministic controller together with a nonlinear model or a linearized model with a stochastic
+MPC controller. However, deterministic MPC only considers one single realization of the disturbances
+and its performance strongly depends on the quality of the forecast of the disturbances, which can
+lead to low performance. In fact, inadequate building energy management can lead to high energy
+costs and CO$_2$ emissions. On the other hand, a linearized model can fail to capture some dynamics
+and behavior of the building under control. In this article, we combine a stochastic scenario-based
+MPC (SBMPC) controller together with a nonlinear Modelica model that is able to provide a richer
+building description and to capture the dynamics of the building more accurately than linear models.
+The adopted SBMPC controller considers multiple realizations of the external disturbances obtained
+through a statistically accurate model, so as to consider different possible disturbance evolutions
+and to robustify the control action. To this purpose, we present a scenario generation method for
+building temperature control that can be applied to several exogenous perturbations, e.g.\ solar
+irradiance, outside temperature, and that satisfies several important stastistical properties,
+in contrast with simpler and less accurate methods adopted in the literature. We show the benefits
+of our proposed approach through several simulations in which we compare our method against the
+standard ones from the literature, for several combinations of a trade-off parameter between comfort
+and energy cost. We show how our SBMPC controller approach outperforms the standard controllers
+available in the literature. 

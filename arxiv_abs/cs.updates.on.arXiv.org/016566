@@ -1,0 +1,19 @@
+Data representation plays a critical role in the performance of novelty detection (or ``anomaly
+detection'') methods in machine learning. The data representation of network traffic often determines
+the effectiveness of these models as much as the model itself. The wide range of novel events that
+network operators need to detect (e.g., attacks, malware, new applications, changes in traffic
+demands) introduces the possibility for a broad range of possible models and data representations.
+In each scenario, practitioners must spend significant effort extracting and engineering features
+that are most predictive for that situation or application. While anomaly detection is well-studied
+in computer networking, much existing work develops specific models that presume a particular
+representation -- often IPFIX/NetFlow. Yet, other representations may result in higher model
+accuracy, and the rise of programmable networks now makes it more practical to explore a broader
+range of representations. To facilitate such exploration, we develop a systematic framework,
+open-source toolkit, and public Python library that makes it both possible and easy to extract and
+generate features from network traffic and perform and end-to-end evaluation of these representations
+across most prevalent modern novelty detection models. We first develop and publicly release an
+open-source tool, an accompanying Python library (NetML), and end-to-end pipeline for novelty
+detection in network traffic. Second, we apply this tool to five different novelty detection problems
+in networking, across a range of scenarios from attack detection to novel device detection. Our
+findings general insights and guidelines concerning which features appear to be more appropriate
+for particular situations. 

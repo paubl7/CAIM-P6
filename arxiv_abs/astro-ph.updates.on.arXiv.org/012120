@@ -1,0 +1,19 @@
+In this study, a novel type of Fourier transform radio spectrometer (termed as all-digital radio
+spectrometer; ADRS) has been developed in which all functionalities comprising a radio spectrometer
+including a sampler and Fourier computing unit were implemented as a soft-core on a field-programmable
+gate array (FPGA). A delay-line-based ramp-compare analog-to-digital converter (ADC), one of
+completely digital ADC, was used, and two primary elements of the ADC, an analog-to-time converter
+(ATC) and a time-to-digital converter (TDC), were implemented on the FPGA. The sampling rate of
+the ADRS $f$ and the quantization bit rate $n$ are limited by the relation, $\tau = \frac{1}{2^{n}f}$,
+where $\tau$ is the latency of the delay element of the delay-line. Given that the typical latency
+of the delay element implemented on FPGAs is $\sim10$ ps, adoption of a low quantization bit rate,
+which satisfies the requirements for radio astronomy, facilitates the realization of a high sampling
+rate up to $\sim$100 GSa/s. In addition, as the proposed \ADRS does not require a discrete ADC and
+can be implemented on mass-produced evaluation boards, its fabrication cost is much lower than
+that of conventional spectrometers. The ADRS prototype was fabricated with values of $f$ = 600 MSa/s
+and $n$ = 6.6 using a PYNQ-Z1 evaluation board, with a $\tau$ of 16.7 ps. The performance of the prototype,
+including its linearity and stability, was measured, and a test observation was conducted using
+the Osaka Prefecture University 1.85-m mm-submm telescope; this confirmed the potential application
+of the prototype in authentic radio observations. With 10 times better cost performance ($\sim$800
+USD GHz$^{-1}$) than conventional radio spectrometers, the prototype facilitates cost-effective
+coverage of intermediate frequency (IF) bandwidths of $\sim100$ GHz in modern receiver systems.

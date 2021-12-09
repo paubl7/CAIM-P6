@@ -1,0 +1,18 @@
+We analyze the noise in macro-particle methods used in plasma physics and fluid dynamics, leading
+to approaches for minimizing the total error, focusing on electrostatic models in one dimension.
+We describe kernel density estimation for continuous values of the spatial variable, $x$, and compute
+the covariance matrix for uniform true density. The band width of the covariance matrix is related
+to the width of the kernel. We find the presence of constant negative terms in the elements of the covariance
+matrix both on and off-diagonal. These negative correlations are related to the fact that the total
+number of particles is fixed at each time step. The effect of these negative correlations on the electric
+field, computed by Gauss's law, is that the noise in the electric field is related to a process called
+the Ornstein-Uhlenbeck bridge. For non-constant density still with continuous $x$, we analyze
+the total error in the density estimation and discuss it in terms of bias-variance optimization
+(BVO). For some characteristic length $l$ and kernel width $h$, having too few particles within
+$h$ leads to too much variance; for $h$ large relative to $l$, there is too much smoothing of the density.
+The optimum between these two limits is found by BVO. We repeat the analysis for $x$ discretized on
+a grid, connecting particle shapes and estimation kernels. If the particle shape satisfies a sum
+rule, the charge deposited on the grid is conserved exactly. Particle shapes expressed as the convolution
+of a kernel with another kernel that satisfies the sum rule also obey the sum rule. This property holds
+for kernels of arbitrary width, including widths that are not integer multiples of the grid spacing.
+We show good agreement with numerical computations. 

@@ -1,0 +1,20 @@
+The verification that planned security mechanisms are actually implemented in the software code
+is a challenging endeavor. In the context of model-based development, the implemented security
+mechanisms must capture all intended security properties that were considered in the design models.
+Assuring this compliance manually is labor intensive and can be error-prone. This work introduces
+the first semi-automatic technique for secure data flow compliance checks between design models
+and code. We develop heuristic-based automated mappings between a design-level model (SecDFD,
+provided by humans) and a code-level representation (Program Model, automatically extracted
+from the implementation) in order to guide users in discovering compliance violations, and hence
+potential security flaws in the code. These mappings enable an automated, and project-specific
+static analysis of the implementation with respect to the desired security properties of the design
+model. We contribute with (i) a definition of corresponding elements between the design-level
+and the implementation-level models and a heuristic-based approach to search for correspondences,
+(ii) two types of security compliance checks using static code analysis, and (iii) an implementation
+of our approach as a publicly available Eclipse plugin, evaluated with three studies on open source
+Java projects. Our evaluation shows that the mappings are automatically suggested with up to 87.2%
+precision. Further, the two developed types of security compliance checks are relatively precise
+(average precision is 79.6% and 100%), but may still overlook some implemented information flows
+(average recall is 65.5% and 94.5%) due to the large gap between the design and implementation. Finally,
+our approach enables a project-specific analysis with up to 62% less false alarms raised by an existing
+data flow analyzer. 

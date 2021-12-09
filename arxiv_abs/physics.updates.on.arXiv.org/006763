@@ -1,0 +1,18 @@
+Molecular kinetic simulations are typically used to accurately describe the tenuous regions of
+the upper atmospheres on planetary bodies. These simulations track the motion of particles representing
+real atmospheric atoms and/or molecules subject to collisions, the object's gravity, and external
+influences. Because particles can end up in very large ballistic orbits, upper boundary conditions
+(UBC) are typically used to limit the domain size thereby reducing the time for the atmosphere to
+reach steady-state. In the absence of a clear altitude at which all molecules are removed, such as
+a Hill sphere, an often used condition is to choose an altitude at which collisions become infrequent
+so that particles on escape trajectories are removed. The remainder are then either specularly
+reflected back into the simulation domain or their ballistic trajectories are calculated analytically
+or explicitly tracked so they eventually re-enter the domain. Here we examine the effect of the choice
+of the UBC on the escape rate and the structure of the atmosphere near the nominal exobase in the convenient
+and frequently used 1D spherically symmetric approximation. Using Callisto as the example body,
+we show that the commonly used specular reflection UBC can lead to significant uncertainties when
+simulating a species with a lifetime comparable to or longer than a dynamical time scale, such as
+an overestimation of escape rates and an inflated exosphere. Therefore, although specular reflection
+is convenient, the molecular lifetimes and body's dynamical time scales need to be considered even
+when implementing the convenient 1D spherically symmetric simulations in order to accurately
+estimate the escape rate and the density and temperature structure in the transition regime. 

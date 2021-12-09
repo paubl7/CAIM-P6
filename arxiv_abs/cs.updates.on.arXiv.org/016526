@@ -1,0 +1,20 @@
+Over three decades ago, Karp, Vazirani and Vazirani (STOC'90) introduced the online bipartite
+matching problem. They observed that deterministic algorithms' competitive ratio for this problem
+is no greater than $1/2$, and proved that randomized algorithms can do better. A natural question
+thus arises: \emph{how random is random}? i.e., how much randomness is needed to outperform deterministic
+algorithms? The \textsc{ranking} algorithm of Karp et al.~requires $\tilde{O}(n)$ random bits,
+which, ignoring polylog terms, remained unimproved. On the other hand, Pena and Borodin (TCS'19)
+established a lower bound of $(1-o(1))\log\log n$ random bits for any $1/2+\Omega(1)$ competitive
+ratio. We close this doubly-exponential gap, proving that, surprisingly, the lower bound is tight.
+In fact, we prove a \emph{sharp threshold} of $(1\pm o(1))\log\log n$ random bits for the randomness
+necessary and sufficient to outperform deterministic algorithms for this problem, as well as its
+vertex-weighted generalization. This implies the same threshold for the advice complexity (nondeterminism)
+of these problems. Similar to recent breakthroughs in the online matching literature, for edge-weighted
+matching (Fahrbach et al.~FOCS'20) and adwords (Huang et al.~FOCS'20), our algorithms break the
+barrier of $1/2$ by randomizing matching choices over two neighbors. Unlike these works, our approach
+does not rely on the recently-introduced OCS machinery, nor the more established randomized primal-dual
+method. Instead, our work revisits a highly-successful online design technique, which was nonetheless
+under-utilized in the area of online matching, namely (lossless) online rounding of fractional
+algorithms. While this technique is known to be hopeless for online matching in general, we show
+that it is nonetheless applicable to carefully designed fractional algorithms with additional
+(non-convex) constraints. 

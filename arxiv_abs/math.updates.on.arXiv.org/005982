@@ -1,0 +1,19 @@
+Given an integer $n\geq 1$ and an irreducible character $\chi_{\lambda}$ of $S_{n}$ for some partition
+$\lambda$ of $n$, the immanant $\mathrm{imm}_{\lambda}:\mathbb{C}^{n\times n}\to\mathbb{C}$
+maps matrices $A\in\mathbb{C}^{n\times n}$ to $\mathrm{imm}_{\lambda}(A)=\sum_{\pi\in S_{n}}\chi_{\lambda}(\pi)\prod_{i=1}^{n}A_{i,\pi(i)}$.
+Important special cases include the determinant and permanent, which are the immanants associated
+with the sign and trivial character, respectively. It is known that immanants can be evaluated in
+polynomial time for characters that are close to the sign character: Given a partition $\lambda$
+of $n$ with $s$ parts, let $b(\lambda):=n-s$ count the boxes to the right of the first column in the
+Young diagram of $\lambda$. For a family of partitions $\Lambda$, let $b(\Lambda):=\max_{\lambda\in\Lambda}b(\lambda)$
+and write Imm$(\Lambda)$ for the problem of evaluating $\mathrm{imm}_{\lambda}(A)$ on input
+$A$ and $\lambda\in\Lambda$. If $b(\Lambda)<\infty$, then Imm$(\Lambda)$ is known to be polynomial-time
+computable. This subsumes the case of the determinant. On the other hand, if $b(\Lambda)=\infty$,
+then previously known hardness results suggest that Imm$(\Lambda)$ cannot be solved in polynomial
+time. However, these results only address certain restricted classes of families $\Lambda$. In
+this paper, we show that the parameterized complexity assumption FPT $\neq$ #W[1] rules out polynomial-time
+algorithms for Imm$(\Lambda)$ for any computationally reasonable family of partitions $\Lambda$
+with $b(\Lambda)=\infty$. We give an analogous result in algebraic complexity under the assumption
+VFPT $\neq$ VW[1]. Furthermore, if $b(\lambda)$ even grows polynomially in $\Lambda$, we show
+that Imm$(\Lambda)$ is hard for #P and VNP. This concludes a series of partial results on the complexity
+of immanants obtained over the last 35 years. 

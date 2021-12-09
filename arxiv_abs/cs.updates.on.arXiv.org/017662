@@ -1,0 +1,18 @@
+We revisit the minimum dominating set problem on graphs with arboricity bounded by $\alpha$. Bansal
+and Umboh [BU17] gave an $O(\alpha)$-approximation LP rounding algorithm, which also translates
+into a near-linear time algorithm using general-purpose approximation results for explicit mixed
+packing and covering or pure covering LPs [KY14, You14, AZO19, Qua10]. Moreover, [BU17] showed
+that it is NP-hard to achieve an asymptotic improvement for the approximation factor. On the other
+hand, the previous two non-LP-based algorithms, by Lenzen and Wattenhofer [LW10], and Jones et
+al. [JLR+13], achieve an approximation factor of $O(\alpha^2)$ in linear time. There is a similar
+situation in the distributed setting: While there is an $O(\log^2 n)$-round LP-based $O(\alpha)$-approximation
+algorithm implied in [KMW06], the best non-LP-based algorithm by Lenzen and Wattenhofer [LW10]
+is an implementation of their centralized algorithm, providing an $O(\alpha^2)$-approximation
+within $O(\log n)$ rounds. We address the questions of whether one can achieve an $O(\alpha)$-approximation
+algorithm that is not LP-based, either in the centralized setting or in the distributed setting.
+We resolve both questions in the affirmative, and en route achieve algorithms that are faster than
+the state-of-the-art LP-based algorithms. More specifically, our contribution is two-fold:
+1. In the centralized setting, we provide a surprisingly simple combinatorial algorithm that is
+asymptotically optimal in terms of both approximation factor and running time: an $O(\alpha)$-approximation
+in linear time. 2. Based on our centralized algorithm, we design a distributed combinatorial $O(\alpha)$-approximation
+algorithm in the CONGEST model that runs in $O(\alpha\log n )$ rounds with high probability. 

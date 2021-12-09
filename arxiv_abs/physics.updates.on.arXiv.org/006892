@@ -1,0 +1,19 @@
+Objective: To investigate cardiac activation maps estimated using electrocardiographic imaging
+and to find methods reducing line-of-block (LoB) artifacts, while preserving real LoBs. Methods:
+Body surface potentials were computed for 137 simulated ventricular excitations. Subsequently,
+the inverse problem was solved to obtain extracellular potentials (EP) and transmembrane voltages
+(TMV). From these, activation times (AT) were estimated using four methods and compared to the ground
+truth. This process was evaluated with two cardiac mesh resolutions. Factors contributing to LoB
+artifacts were identified by analyzing the impact of spatial and temporal smoothing on the morphology
+of source signals. Results: AT estimation using a spatiotemporal derivative performed better
+than using a temporal derivative. Compared to deflection-based AT estimation, correlation-based
+methods were less prone to LoB artifacts but performed worse in identifying real LoBs. Temporal
+smoothing could eliminate artifacts for TMVs but not for EPs, which could be linked to their temporal
+morphology. TMVs led to more accurate ATs on the septum than EPs. Mesh resolution had a negligible
+effect on inverse reconstructions, but small distances were important for cross-correlation-based
+estimation of AT delays. Conclusion: LoB artifacts are mainly caused by the inherent spatial smoothing
+effect of the inverse reconstruction. Among the configurations evaluated, only deflection-based
+AT estimation in combination with TMVs and strong temporal smoothing can prevent LoB artifacts,
+while preserving real LoBs. Significance: Regions of slow conduction are of considerable clinical
+interest and LoB artifacts observed in non-invasive ATs can lead to misinterpretations. We addressed
+this problem by identifying factors causing such artifacts and methods to reduce them. 

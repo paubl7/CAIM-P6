@@ -1,0 +1,19 @@
+We present HyperMorph, a learning-based strategy for deformable image registration that removes
+the need to tune important registration hyperparameters during training. Classical registration
+methods solve an optimization problem to find a set of spatial correspondences between two images,
+while learning-based methods leverage a training dataset to learn a function that generates these
+correspondences. The quality of the results for both types of techniques depends greatly on the
+choice of hyperparameters. Unfortunately, hyperparameter tuning is time-consuming and typically
+involves training many separate models with various hyperparameter values, potentially leading
+to suboptimal results. To address this inefficiency, we introduce amortized hyperparameter learning
+for image registration, a novel strategy to learn the effects of hyperparameters on deformation
+fields. The proposed framework learns a hypernetwork that takes in an input hyperparameter and
+modulates a registration network to produce the optimal deformation field for that hyperparameter
+value. In effect, this strategy trains a single, rich model that enables rapid, fine-grained discovery
+of hyperparameter values from a continuous interval at test-time. We demonstrate that this approach
+can be used to optimize multiple hyperparameters considerably faster than existing search strategies,
+leading to a reduced computational and human burden as well as increased flexibility. We also show
+several important benefits, including increased robustness to initialization and the ability
+to rapidly identify optimal hyperparameter values specific to a registration task, dataset, or
+even a single anatomical region, all without retraining the HyperMorph model. Our code is publicly
+available at this http URL 

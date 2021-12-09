@@ -1,0 +1,19 @@
+In the human brain, sequences of language input are processed within a distributed and hierarchical
+architecture, in which higher stages of processing encode contextual information over longer
+timescales. In contrast, in recurrent neural networks which perform natural language processing,
+we know little about how the multiple timescales of contextual information are functionally organized.
+Therefore, we applied tools developed in neuroscience to map the "processing timescales" of individual
+units within a word-level LSTM language model. This timescale-mapping method assigned long timescales
+to units previously found to track long-range syntactic dependencies. Additionally, the mapping
+revealed a small subset of the network (less than 15% of units) with long timescales and whose function
+had not previously been explored. We next probed the functional organization of the network by examining
+the relationship between the processing timescale of units and their network connectivity. We
+identified two classes of long-timescale units: "controller" units composed a densely interconnected
+subnetwork and strongly projected to the rest of the network, while "integrator" units showed the
+longest timescales in the network, and expressed projection profiles closer to the mean projection
+profile. Ablating integrator and controller units affected model performance at different positions
+within a sentence, suggesting distinctive functions of these two sets of units. Finally, we tested
+the generalization of these results to a character-level LSTM model and models with different architectures.
+In summary, we demonstrated a model-free technique for mapping the timescale organization in recurrent
+neural networks, and we applied this method to reveal the timescale and functional organization
+of neural language models. 

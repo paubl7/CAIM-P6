@@ -1,0 +1,20 @@
+Federated learning (FL) has emerged as a promising master/slave learning paradigm to alleviate
+systemic privacy risks and communication costs incurred by cloud-centric machine learning methods.
+However, it is very challenging to resist the single point of failure of the master aggregator and
+attacks from malicious participants while guaranteeing model convergence speed and accuracy.
+Recently, blockchain has been brought into FL systems transforming the paradigm to a decentralized
+manner thus further improve the system security and learning reliability. Unfortunately, the
+traditional consensus mechanism and architecture of blockchain systems can hardly handle the
+large-scale FL task due to the huge resource consumption, limited transaction throughput, and
+high communication complexity. To address these issues, this paper proposes a two-layer blockchaindriven
+FL framework, called as ChainsFL, which is composed of multiple subchain networks (subchain layer)
+and a direct acyclic graph (DAG)-based mainchain (mainchain layer). In ChainsFL, the subchain
+layer limits the scale of each shard for a small range of information exchange, and the mainchain
+layer allows each shard to share and validate the learning model in parallel and asynchronously
+to improve the efficiency of cross-shard validation. Furthermore, the FL procedure is customized
+to deeply integrate with blockchain technology, and the modified DAG consensus mechanism is proposed
+to mitigate the distortion caused by abnormal models. In order to provide a proof-ofconcept implementation
+and evaluation, multiple subchains base on Hyperledger Fabric are deployed as the subchain layer,
+and the self-developed DAG-based mainchain is deployed as the mainchain layer. The experimental
+results show that ChainsFL provides acceptable and sometimes better training efficiency and stronger
+robustness compared with the typical existing FL systems. 

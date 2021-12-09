@@ -1,0 +1,20 @@
+The classification of the optical spectra of active galactic nuclei (AGN) into different types
+is well founded on AGN physics, but it involves some degree of human oversight and cannot be reliably
+scaled to large data sets. Machine learning (ML) tackles such a classification problem in a fast
+and reproducible way, but is often perceived as a black box. However, ML interpretability and explainability
+are active research areas in computer science, increasingly providing us with tools to alleviate
+this issue. We applied ML interpretability tools to a classifier trained to predict AGN type from
+spectra, to demonstrate the use of such tools in this context. We trained a support-vector machine
+on 3346 high-quality, low redshift AGN spectra from SDSS DR15 with an existing reliable classification
+as type 1, type 2, or intermediate type. On a selection of test-set spectra, we computed the gradient
+of the predicted class probability and we built saliency maps. We also visualized the high-dimensional
+space of AGN spectra using t-distributed stochastic neighbor embedding (t-SNE), showing where
+the spectra for which we computed a saliency map are located. Regions that affect the predicted AGN
+type often coincide with physically relevant features, such as spectral lines. t-SNE visualization
+shows good separability of type 1 and type 2 spectra, while intermediate-type spectra either lie
+in-between as expected or appear mixed with type 2 spectra. Saliency maps show why a given AGN type
+was predicted by our classifier, resulting in a physical interpretation in terms of regions of the
+spectrum that affected its decision, making it no longer a black box. These regions coincide with
+those used by human experts such as relevant spectral lines, and are even used in a similar way, with
+the classifier e.g. effectively measuring the width of a line by weighing its center and its tails
+oppositely. 

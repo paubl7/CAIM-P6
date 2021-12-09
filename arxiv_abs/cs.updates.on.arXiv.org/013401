@@ -1,0 +1,18 @@
+Deep neural networks have shown promise in several domains, and the learned task-specific information
+is implicitly stored in the network parameters. It will be vital to utilize representations from
+these networks for downstream tasks such as continual learning. In this paper, we introduce the
+notion of {\em flashcards} that are visual representations to {\em capture} the encoded knowledge
+of a network, as a function of random image patterns. We demonstrate the effectiveness of flashcards
+in capturing representations and show that they are efficient replay methods for general and task
+agnostic continual learning setting. Thus, while adapting to a new task, a limited number of constructed
+flashcards, help to prevent catastrophic forgetting of the previously learned tasks. Most interestingly,
+such flashcards neither require external memory storage nor need to be accumulated over multiple
+tasks and only need to be constructed just before learning the subsequent new task, irrespective
+of the number of tasks trained before and are hence task agnostic. We first demonstrate the efficacy
+of flashcards in capturing knowledge representation from a trained network, and empirically validate
+the efficacy of flashcards on a variety of continual learning tasks: continual unsupervised reconstruction,
+continual denoising, and new-instance learning classification, using a number of heterogeneous
+benchmark datasets. These studies also indicate that continual learning algorithms with flashcards
+as the replay strategy perform better than other state-of-the-art replay methods, and exhibits
+on par performance with the best possible baseline using coreset sampling, with the least additional
+computational complexity and storage. 

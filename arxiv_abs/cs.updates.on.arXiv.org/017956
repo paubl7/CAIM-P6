@@ -1,0 +1,19 @@
+Adversarial robustness of deep learning models has gained much traction in the last few years. Various
+attacks and defenses are proposed to improve the adversarial robustness of modern-day deep learning
+architectures. While all these approaches help improve the robustness, one promising direction
+for improving adversarial robustness is unexplored, i.e., the complex topology of the neural network
+architecture. In this work, we address the following question: Can the complex topology of a neural
+network give adversarial robustness without any form of adversarial training?. We answer this
+empirically by experimenting with different hand-crafted and NAS-based architectures. Our findings
+show that, for small-scale attacks, NAS-based architectures are more robust for small-scale datasets
+and simple tasks than hand-crafted architectures. However, as the size of the dataset or the complexity
+of task increases, hand-crafted architectures are more robust than NAS-based architectures.
+Our work is the first large-scale study to understand adversarial robustness purely from an architectural
+perspective. Our study shows that random sampling in the search space of DARTS (a popular NAS method)
+with simple ensembling can improve the robustness to PGD attack by nearly~12\%. We show that NAS,
+which is popular for achieving SoTA accuracy, can provide adversarial accuracy as a free add-on
+without any form of adversarial training. Our results show that leveraging the search space of NAS
+methods with methods like ensembles can be an excellent way to achieve adversarial robustness without
+any form of adversarial training. We also introduce a metric that can be used to calculate the trade-off
+between clean accuracy and adversarial robustness. Code and pre-trained models will be made available
+at \url{https://github.com/tdchaitanya/nas-robustness} 

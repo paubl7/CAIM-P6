@@ -1,0 +1,20 @@
+We consider strongly-convex-strongly-concave saddle-point problems with general non-bilinear
+objective and different condition numbers with respect to the primal and the dual variables. First,
+we consider such problems with smooth composite terms, one of which having finite-sum structure.
+For this setting we propose a variance reduction algorithm with complexity estimates superior
+to the existing bounds in the literature. Second, we consider finite-sum saddle-point problems
+with composite terms and propose several algorithms depending on the properties of the composite
+terms. When the composite terms are smooth we obtain better complexity bounds than the ones in the
+literature, including the bounds of a recently proposed nearly-optimal algorithms which do not
+consider the composite structure of the problem. If the composite terms are prox-friendly, we propose
+a variance reduction algorithm that, on the one hand, is accelerated compared to existing variance
+reduction algorithms and, on the other hand, provides in the composite setting similar complexity
+bounds to the nearly-optimal algorithm which is designed for non-composite setting. Besides that,
+our algorithms allow to separate the complexity bounds, i.e. estimate, for each part of the objective
+separately, the number of oracle calls that is sufficient to achieve a given accuracy. This is important
+since different parts can have different arithmetic complexity of the oracle, and it is desired
+to call expensive oracles less often than cheap oracles. The key thing to all these results is our
+general framework for saddle-point problems, which may be of independent interest. This framework,
+in turn is based on our proposed Accelerated Meta-Algorithm for composite optimization with probabilistic
+inexact oracles and probabilistic inexactness in the proximal mapping, which may be of independent
+interest as well. 

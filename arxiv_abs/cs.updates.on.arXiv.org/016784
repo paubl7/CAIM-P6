@@ -1,0 +1,19 @@
+This paper integrates non-orthogonal multiple access (NOMA) and over-the-air federated learning
+(AirFL) into a unified framework using one simultaneous transmitting and reflecting reconfigurable
+intelligent surface (STAR-RIS). The STAR-RIS plays an important role in adjusting the decoding
+order of hybrid users for efficient interference mitigation and omni-directional coverage extension.
+To capture the impact of non-ideal wireless channels on AirFL, a closed-form expression for the
+optimality gap (a.k.a. convergence upper bound) between the actual loss and the optimal loss is
+derived. This analysis reveals that the learning performance is significantly affected by active
+and passive beamforming schemes as well as wireless noise. Furthermore, when the learning rate
+diminishes as the training proceeds, the optimality gap is explicitly characterized to converge
+with a linear rate. To accelerate convergence while satisfying QoS requirements, a mixed-integer
+non-linear programming (MINLP) problem is formulated by jointly designing the transmit power
+at users and the configuration mode of STAR-RIS. Next, a trust region-based successive convex approximation
+method and a penalty-based semidefinite relaxation approach are proposed to handle the decoupled
+non-convex subproblems iteratively. An alternating optimization algorithm is then developed
+to find a suboptimal solution for the original MINLP problem. Extensive simulation results show
+that i) the proposed framework can efficiently support NOMA and AirFL users via concurrent uplink
+communications, ii) our algorithms can achieve a faster convergence rate on IID and non-IID settings
+compared to existing baselines, and iii) both the spectrum efficiency and learning performance
+can be significantly improved with the aid of the well-tuned STAR-RIS. 

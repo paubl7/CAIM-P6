@@ -1,0 +1,19 @@
+Quantum mechanics/molecular mechanics (QM/MM) molecular dynamics (MD) simulations have been
+developed to simulate molecular systems, where an explicit description of changes in the electronic
+structure is necessary. However, QM/MM MD simulations are computationally expensive compared
+to fully classical simulations as all valence electrons are treated explicitly and a self-consistent
+field (SCF) procedure is required. Recently, approaches have been proposed to replace the QM description
+with machine learned (ML) models. However, condensed-phase systems pose a challenge for these
+approaches due to long-range interactions. Here, we establish a workflow, which incorporates
+the MM environment as an element type in a high-dimensional neural network potential (HDNNP). The
+fitted HDNNP describes the potential-energy surface of the QM particles with an electrostatic
+embedding scheme. Thus, the MM particles feel a force from the polarized QM particles. To achieve
+chemical accuracy, we find that even simple systems require models with a strong gradient regularization,
+a large number of data points, and a substantial number of parameters. To address this issue, we extend
+our approach to a delta-learning scheme, where the ML model learns the difference between a reference
+method (DFT) and a cheaper semi-empirical method (DFTB). We show that such a scheme reaches the accuracy
+of the DFT reference method, while requiring significantly less parameters. Furthermore, the
+delta-learning scheme is capable of correctly incorporating long-range interactions within
+a cutoff of 1.4 nm. It is validated by performing MD simulations of retinoic acid in water and the interaction
+between S-adenoslymethioniat with cytosine in water. The presented results indicate that delta-learning
+is a promising approach for (QM)ML/MM MD simulations of condensed-phase systems. 

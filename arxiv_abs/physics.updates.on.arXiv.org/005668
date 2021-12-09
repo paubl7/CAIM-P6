@@ -1,0 +1,20 @@
+The lattice Boltzmann method (LBM) has recently emerged as an efficient alternative to classical
+Navier-Stokes solvers. This is particularly true for hemodynamics in complex geometries. However,
+in its most basic formulation, {i.e.} with the so-called single relaxation time (SRT) collision
+operator, it has been observed to have a limited stability domain in the Courant/Fourier space,
+strongly constraining the minimum time-step and grid size. The development of improved collision
+models such as the multiple relaxation time (MRT) operator in central moments space has tremendously
+widened the stability domain, while allowing to overcome a number of other well-documented artifacts,
+therefore opening the door for simulations over a wider range of grid and time-step sizes. The present
+work focuses on implementing and validating a specific collision operator, the central Hermite
+moments multiple relaxation time model with the full expansion of the equilibrium distribution
+function, to simulate blood flows in intracranial aneurysms. The study further proceeds with a
+validation of the numerical model through different test-cases and against experimental measurements
+obtained via stereoscopic particle image velocimetry (PIV) and phase-contrast magnetic resonance
+imaging (PC-MRI). For a patient-specific aneurysm both PIV and PC-MRI agree fairly well with the
+simulation. Finally, low-resolution simulations were shown to be able to capture blood flow information
+with sufficient accuracy, as demonstrated through both qualitative and quantitative analysis
+of the flow field {while leading to strongly reduced computation times. For instance in the case
+of the patient-specific configuration, increasing the grid-size by a factor of two led to a reduction
+of computation time by a factor of 14 with very good similarity indices still ranging from 0.83 to
+0.88.} 

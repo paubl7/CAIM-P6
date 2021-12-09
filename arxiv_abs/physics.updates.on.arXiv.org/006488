@@ -1,0 +1,20 @@
+To simulate the propagation of ocean waves and their interaction with structures, coupling approaches
+between a potential flow model and a viscous model are investigated. The aim is to apply each model
+at the scale where it is most appropriate and to optimize the computational resources. This first
+model is a fully nonlinear potential flow (FNPF) model based on the Harmonic Polynomial Cell (HPC)
+method, highly accurate for representing long distance wave propagation and diffraction effects
+due to the presence of the structure. The second model is a viscous CFD code, solving the Reynolds-Averaged
+Navier-Stokes (RANS) equations within the OpenFOAM toolkit, more suited to represent viscous
+and turbulent effects in the body's vicinity. Two one-way coupling strategies are developed and
+compared. A domain decomposition (DD) strategy is first considered, introducing a refined mesh
+in the body vicinity on which the RANS equations are solved. The second coupling strategy considers
+a functional decomposition (FD) on the local grid. As the FNPF simulation provides fields of variables
+satisfying the irrotational Euler equations, complementary velocity and pressure components
+are introduced as the difference between the total flow variables and the potential ones. Those
+complementary variables are solutions of modified RANS equations. Extensive comparisons are
+presented for nonlinear waves interacting with a fixed horizontal submerged cylinder of rectangular
+cross-section. The loads exerted on the body computed from the four simulation methods (standalone
+FNPF, standalone CFD, DD and FD coupling schemes) are compared with experimental data. It is shown
+that both coupling approaches produce an accurate representation of the loads and associated hydrodynamic
+coefficients over a large range of incident wave steepness for a small fraction of the computational
+needed by the complete CFD simulation. 

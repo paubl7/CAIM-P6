@@ -1,0 +1,20 @@
+Cycle representatives of persistent homology classes can be used to provide descriptions of topological
+features in data. However, the non-uniqueness of these representatives creates ambiguity and
+can lead to many different interpretations of the same set of classes. One approach to solving this
+problem is to optimize the choice of representative against some measure that is meaningful in the
+context of the data. In this work, we provide a study of the effectiveness and computational cost
+of several $\ell_1$-minimization optimization procedures for constructing homological cycle
+bases for persistent homology with rational coefficients in dimension one, including uniform-weighted
+and length-weighted edge-loss algorithms as well as uniform-weighted and area-weighted triangle-loss
+algorithms. We conduct these optimizations via standard linear programming methods, applying
+general-purpose solvers to optimize over column bases of simplicial boundary matrices. Our key
+findings are: (i) optimization is effective in reducing the size of cycle representatives, (ii)
+the computational cost of optimizing a basis of cycle representatives exceeds the cost of computing
+such a basis in most data sets we consider, (iii) the choice of linear solvers matters a lot to the computation
+time of optimizing cycles, (iv) the computation time of solving an integer program is not significantly
+longer than the computation time of solving a linear program for most of the cycle representatives,
+using the Gurobi linear solver, (v) strikingly, whether requiring integer solutions or not, we
+almost always obtain a solution with the same cost and almost all solutions found have entries in
+{-1, 0, 1} and therefore, are also solutions to a restricted $\ell_0$ optimization problem, and
+(vi) we obtain qualitatively different results for generators in Erd\H{o}s-R\'enyi random clique
+complexes. 

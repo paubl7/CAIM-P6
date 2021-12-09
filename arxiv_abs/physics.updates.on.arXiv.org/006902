@@ -1,0 +1,20 @@
+This work presents a hybrid modeling approach to data-driven learning and representation of unknown
+physical processes and closure parameterizations. These hybrid models are suitable for situations
+where the mechanistic description of dynamics of some variables is unknown, but reasonably accurate
+observational data can be obtained for the evolution of the state of the system. In this work, we propose
+machine learning to account for missing physics and then data assimilation to correct the prediction.
+In particular, we devise an effective methodology based on a recurrent neural network to model the
+unknown dynamics. A long short-term memory (LSTM) based correction term is added to the predictive
+model in order to take into account hidden physics. Since LSTM introduces a black-box approach for
+the unknown part of the model, we investigate whether the proposed hybrid neural-physical model
+can be further corrected through a sequential data assimilation step. We apply this framework to
+the weakly nonlinear Lorenz model that displays quasiperiodic oscillations, the highly nonlinear
+Lorenz model, and two-scale Lorenz model. The hybrid neural-physics model yields accurate results
+for the weakly nonlinear Lorenz model with the predicted state close to the true Lorenz model trajectory.
+For the highly nonlinear Lorenz model and the two-scale Lorenz model, the hybrid neural-physics
+model deviates from the true state due to the accumulation of prediction error from one time step
+to the next time step. The ensemble Kalman filter approach takes into account the prediction error
+and updates the diverged prediction using available observations in order to provide a more accurate
+state estimate. The successful synergistic integration of neural network and data assimilation
+for low-dimensional system shows the potential benefits of the proposed hybrid-neural physics
+model for complex systems. 

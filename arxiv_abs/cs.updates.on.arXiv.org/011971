@@ -1,0 +1,18 @@
+Research in vertebral bone micro-structure generally requires costly procedures to obtain physical
+scans of real bone with a specific pathology under study, since no methods are available yet to generate
+realistic bone structures in-silico. Here we propose to apply recent advances in generative adversarial
+networks (GANs) to develop such a method. We adapted style-transfer techniques, which have been
+largely used in other contexts, in order to transfer style between image pairs while preserving
+its informational content. In a first step, we trained a volumetric generative model in a progressive
+manner using a Wasserstein objective and gradient penalty (PWGAN-GP) to create patches of realistic
+bone structure in-silico. The training set contained 7660 purely spongeous bone samples from twelve
+human vertebrae (T12 or L1) with isotropic resolution of 164um and scanned with a high resolution
+peripheral quantitative CT (Scanco XCT). After training, we generated new samples with tailored
+micro-structure properties by optimizing a vector z in the learned latent space. To solve this optimization
+problem, we formulated a differentiable goal function that leads to valid samples while compromising
+the appearance (content) with target 3D properties (style). Properties of the learned latent space
+effectively matched the data distribution. Furthermore, we were able to simulate the resulting
+bone structure after deterioration or treatment effects of osteoporosis therapies based only
+on expected changes of micro-structural parameters. Our method allows to generate a virtually
+infinite number of patches of realistic bone micro-structure, and thereby likely serves for the
+development of bone-biomarkers and to simulate bone therapies in advance. 

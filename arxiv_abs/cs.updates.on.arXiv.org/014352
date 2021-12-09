@@ -1,0 +1,20 @@
+Error-state Kalman filter is an elegant and effective filtering technique for robotic systems
+operating on manifolds. To avoid the tedious and repetitive derivations for implementing an error-state
+Kalman filter for a certain system, this paper proposes a generic symbolic representation for error-state
+Kalman filters on manifolds. Utilizing the $\boxplus\backslash\boxminus$ operations and further
+defining a $\oplus$ operation on the respective manifold, we propose a canonical representation
+of the robotic system, which enables us to separate the manifold structures from the system descriptions
+in each step of the Kalman filter, ultimately leading to a generic, symbolic and manifold-embedding
+Kalman filter framework. This proposed Kalman filter framework can be used by only casting the system
+model into the canonical form without going through the cumbersome hand-derivation of the on-manifold
+Kalman filter. This is particularly useful when the robotic system is of high dimension. Furthermore,
+the manifold-embedding Kalman filter is implemented as a toolkit in $C$++, with which an user needs
+only to define the system, and call the respective filter steps (e.g., propagation, update) according
+to the events (e.g., reception of input, reception of measurement). The existing implementation
+supports full iterated Kalman filtering for systems on manifold $\mathcal{S} = \mathbb{R}^m \times
+SO(3) \times \cdots \times SO(3) \times \mathbb{S}^2 \times \cdots \times \mathbb{S}^2 $ or any
+of its sub-manifolds, and is extendable to other types of manifold when necessary. The proposed
+symbolic Kalman filter and the developed toolkit are verified by implementing a tightly-coupled
+lidar-inertial navigation system. Results show superior filtering performances and computation
+efficiency comparable to hand-engineered counterparts. Finally, the toolkit is opened sourced
+at https://github.com/hku-mars/IKFoM. 

@@ -1,0 +1,19 @@
+Radiative transfer modelling is part of many astrophysical simulations and is used to make synthetic
+observations and to assist analysis of observations. We concentrate on the modelling of the radio
+lines emitted by the interstellar medium. In connection with high-resolution models, this can
+be significant computationally challenge. Our goal is a line radiative transfer (RT) program that
+makes good use of multi-core CPUs and GPUs. Parallelisation is essential to speed up computations
+and to enable the tackling of large modelling tasks with personal computers. The program LOC is based
+on ray-tracing and uses standard accelerated lambda iteration (ALI) methods for faster convergence.
+The program works on 1D and 3D grids. The 1D version makes use of symmetries to speed up the RT calculations.
+The 3D version works with octree grids and, to enable calculations with large models, is optimised
+for low memory usage. Tests show that LOC gives results that are in agreement with other RT codes to
+within ~2%. This is typical of code-to-code differences, which often are related to different interpretations
+of the model set-up. LOC run times compare favourably with those of Monte Carlo codes. In 1D tests,
+LOC runs were by up to a factor ~20 faster on a GPU than on a single CPU core. In spite of the complex path
+calculations, up to ~10 speed-up was observed also for 3D models using octree discretisation. GPUs
+enable calculations of models with hundreds of millions of cells, as encountered in the context
+of large-scale simulations of interstellar clouds. LOC shows good performance and accuracy and
+and is able to handle many RT modelling tasks on personal computers. Being written in Python, with
+the computing-intensive parts implemented as compiled OpenCL kernels, it can also a serve as a platform
+for further experimentation with alternative RT implementations. 

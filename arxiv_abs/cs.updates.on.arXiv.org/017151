@@ -1,0 +1,18 @@
+Modern top-performing object detectors depend heavily on backbone networks, whose advances bring
+consistent performance gains through exploring more effective network structures. In this paper,
+we propose a novel and flexible backbone framework, namely CBNetV2, to better train existing open-sourced
+pre-trained backbones under the pre-training fine-tuning protocol. In particular, CBNetV2 architecture
+groups multiple identical backbones, which are connected through composite connections. Specifically,
+it integrates the high- and low-level features of multiple backbone networks and gradually expands
+the receptive field to more efficiently perform object detection. We also propose a better training
+strategy with assistant supervision for CBNet-based detectors. CBNetV2 has strong generalization
+capabilities for different backbones and head designs of the detector architecture. Without additional
+pre-training, CBNetV2 can be adapted to various backbones, including manual-based and NAS-based,
+as well as CNN-based and Transformer-based ones. Experiments provide strong evidence showing
+that composite backbones are more efficient, effective, and resource-friendly than wider and
+deeper networks. CBNetV2 is compatible with the head designs of most mainstream detectors, including
+one-stage and two-stage detectors, as well as anchor-based and anchor-free-based ones, and significantly
+improve their performances by more than 3.0% AP over the baseline on COCO. Particularly, under the
+single-model and single-scale testing protocol, our Dual-Swin-L achieves 59.4% box AP and 51.6%
+mask AP on COCO test-dev, which is significantly better than the state-of-the-art result (i.e.,
+57.7% box AP and 50.2% mask AP). Code is available at https://github.com/VDIGPKU/CBNetV2. 

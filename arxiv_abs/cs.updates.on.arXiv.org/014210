@@ -1,0 +1,20 @@
+In AI research, synthesizing a plan of action has typically used descriptive models of the actions
+that abstractly specify what might happen as a result of an action, and are tailored for efficiently
+computing state transitions. However, executing the planned actions has needed operational models,
+in which rich computational control structures and closed-loop online decision-making are used
+to specify how to perform an action in a complex execution context, react to events and adapt to an
+unfolding situation. Deliberative actors, which integrate acting and planning, have typically
+needed to use both of these models together -- which causes problems when attempting to develop the
+different models, verify their consistency, and smoothly interleave acting and planning. As an
+alternative, we define and implement an integrated acting-and-planning system in which both planning
+and acting use the same operational models. These rely on hierarchical task-oriented refinement
+methods offering rich control structures. The acting component, called Reactive Acting Engine
+(RAE), is inspired by the well-known PRS system. At each decision step, RAE can get advice from a planner
+for a near-optimal choice with respect to a utility function. The anytime planner uses a UCT-like
+Monte Carlo Tree Search procedure, called UPOM, (UCT Procedure for Operational Models), whose
+rollouts are simulations of the actor's operational models. We also present learning strategies
+for use with RAE and UPOM that acquire, from online acting experiences and/or simulated planning
+results, a mapping from decision contexts to method instances as well as a heuristic function to
+guide UPOM. We demonstrate the asymptotic convergence of UPOM towards optimal methods in static
+domains, and show experimentally that UPOM and the learning strategies significantly improve
+the acting efficiency and robustness. 

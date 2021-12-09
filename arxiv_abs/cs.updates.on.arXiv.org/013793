@@ -1,0 +1,18 @@
+Political polarization in the US is on the rise. This polarization negatively affects the public
+sphere by contributing to the creation of ideological echo chambers. In this paper, we focus on addressing
+one of the factors that contributes to this polarity, polarized media. We introduce a framework
+for depolarizing news articles. Given an article on a certain topic with a particular ideological
+slant (eg., liberal or conservative), the framework first detects polar language in the article
+and then generates a new article with the polar language replaced with neutral expressions. To detect
+polar words, we train a multi-attribute-aware word embedding model that is aware of ideology and
+topics on 360k full-length media articles. Then, for text generation, we propose a new algorithm
+called Text Annealing Depolarization Algorithm (TADA). TADA retrieves neutral expressions from
+the word embedding model that not only decrease ideological polarity but also preserve the original
+argument of the text, while maintaining grammatical correctness. We evaluate our framework by
+comparing the depolarized output of our model in two modes, fully-automatic and semi-automatic,
+on 99 stories spanning 11 topics. Based on feedback from 161 human testers, our framework successfully
+depolarized 90.1% of paragraphs in semi-automatic mode and 78.3% of paragraphs in fully-automatic
+mode. Furthermore, 81.2% of the testers agree that the non-polar content information is well-preserved
+and 79% agree that depolarization does not harm semantic correctness when they compare the original
+text and the depolarized text. Our work shows that data-driven methods can help to locate political
+polarity and aid in the depolarization of articles. 

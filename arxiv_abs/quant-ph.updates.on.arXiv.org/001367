@@ -1,0 +1,18 @@
+Is a quantum algorithm capable of implementing an if-clause? Given a black-box subroutine, a $d$-dimensional
+unitary $U\in U(d)$, a quantum if-clause would correspond to applying it to an input qudit if and
+only if the value of a control qubit is $1$. It was previously shown by Thompson et al. and Ara\'ujo
+et al. that implementations using single access to the oracle $U$ are impossible. Our main result
+is a strong generalization of this impossibility result: we prove that there is no unitary oracle
+algorithm implementing $control_\phi(U)=\left|0\right>\!\!\left<0\right|\otimes I+e^{i\phi(U)}\left|1\right>\!\!\left<1\right|\otimes
+U$, for some $U$-dependent phase $\phi(U)$, even if allowed any finite number of calls to $U$ and
+$U^\dagger$, and even if required to only approximate the desired operator $control_\phi(U)$.
+Even further, there is no such \emph{postselection} oracle algorithm, i.e. a unitary oracle algorithm
+followed by a binary success/fail measurement, that reports success and implements $control_\phi(U)$
+with a nonzero probability for each $U\in U(d)$. Our proof relies on topological arguments which
+can be viewed as a modification of the Borsuk-Ulam theorem. Combining the topological arguments
+with the algorithm of Dong et al. in fact leads to an interesting dichotomy: implementing $control_\phi(U^m)$
+in our model is possible if and only if the integer $m$ is a multiple of the oracle's dimension $d$.
+Our impossibility no longer holds if the model is relaxed, either by dropping the worst-case requirement
+that the algorithm works for all $U\in U(d)$, or, remarkably, by allowing measurements more general
+than a binary postselection measurement. We observe that for both relaxations, inefficient algorithms
+exist, and it remains open whether efficient ones do. 

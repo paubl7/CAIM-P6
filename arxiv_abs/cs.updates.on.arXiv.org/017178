@@ -1,0 +1,19 @@
+The 100 MW cryogenic liquid oxygen/hydrogen multi-injector combustor BKD operated by the DLR Institute
+of Space Propulsion is a research platform that allows the study of thermoacoustic instabilities
+under realistic conditions, representative of small upper stage rocket engines. We use data from
+BKD experimental campaigns in which the static chamber pressure and fuel-oxidizer ratio are varied
+such that the first tangential mode of the combustor is excited under some conditions. We train an
+autoregressive Bayesian neural network model to forecast the amplitude of the dynamic pressure
+time series, inputting multiple sensor measurements (injector pressure/ temperature measurements,
+static chamber pressure, high-frequency dynamic pressure measurements, high-frequency OH*
+chemiluminescence measurements) and future flow rate control signals. The Bayesian nature of
+our algorithms allows us to work with a dataset whose size is restricted by the expense of each experimental
+run, without making overconfident extrapolations. We find that the networks are able to accurately
+forecast the evolution of the pressure amplitude and anticipate instability events on unseen experimental
+runs 500 milliseconds in advance. We compare the predictive accuracy of multiple models using different
+combinations of sensor inputs. We find that the high-frequency dynamic pressure signal is particularly
+informative. We also use the technique of integrated gradients to interpret the influence of different
+sensor inputs on the model prediction. The negative log-likelihood of data points in the test dataset
+indicates that predictive uncertainties are well-characterized by our Bayesian model and simulating
+a sensor failure event results as expected in a dramatic increase in the epistemic component of the
+uncertainty. 

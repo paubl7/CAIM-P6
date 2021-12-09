@@ -1,0 +1,19 @@
+The goal of No-Reference Image Quality Assessment (NR-IQA) is to estimate the perceptual image
+quality in accordance with subjective evaluations, it is a complex and unsolved problem due to the
+absence of the pristine reference image. In this paper, we propose a novel model to address the NR-IQA
+task by leveraging a hybrid approach that benefits from Convolutional Neural Networks (CNNs) and
+self-attention mechanism in Transformers to extract both local and non-local features from the
+input image. We capture local structure information of the image via CNNs, then to circumvent the
+locality bias among the extracted CNNs features and obtain a non-local representation of the image,
+we utilize Transformers on the extracted features where we model them as a sequential input to the
+Transformer model. Furthermore, to improve the monotonicity correlation between the subjective
+and objective scores, we utilize the relative distance information among the images within each
+batch and enforce the relative ranking among them. Last but not least, we observe that the performance
+of NR-IQA models degrades when we apply equivariant transformations (e.g. horizontal flipping)
+to the inputs. Therefore, we propose a method that leverages self-consistency as a source of self-supervision
+to improve the robustness of NRIQA models. Specifically, we enforce self-consistency between
+the outputs of our quality assessment model for each image and its transformation (horizontally
+flipped) to utilize the rich self-supervisory information and reduce the uncertainty of the model.
+To demonstrate the effectiveness of our work, we evaluate it on seven standard IQA datasets (both
+synthetic and authentic) and show that our model achieves state-of-the-art results on various
+datasets. 

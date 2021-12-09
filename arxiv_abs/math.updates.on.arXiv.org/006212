@@ -1,0 +1,19 @@
+The Griddy Gibbs sampling was proposed by Ritter and Tanner (1992) as a computationally efficient
+approximation of the well-known Gibbs sampling method. The algorithm is simple and effective and
+has been used successfully to address problems in various fields of applied science. However, the
+approximate nature of the algorithm has prevented it from being widely used: the Markov chains generated
+by the Griddy Gibbs sampling method are not reversible in general, so the existence and uniqueness
+of its invariant measure is not guaranteed. Even when such an invariant measure uniquely exists,
+there was no estimate of the distance between it and the probability distribution of interest, hence
+no means to ensure the validity of the algorithm as a means to sample from the true distribution. In
+this paper, we show, subject to some fairly natural conditions, that the Griddy Gibbs method has
+a unique, invariant measure. Moreover, we provide $L^p$ estimates on the distance between this
+invariant measure and the corresponding measure obtained from Gibbs sampling. These results provide
+a theoretical foundation for the use of the Griddy Gibbs sampling method. We also address a more general
+result about the sensitivity of invariant measures under small perturbations on the transition
+probability. That is, if we replace the transition probability $P$ of any Monte Carlo Markov chain
+by another transition probability $Q$ where $Q$ is close to $P$, we can still estimate the distance
+between the two invariant measures. The distinguishing feature between our approach and previous
+work on convergence of perturbed Markov chain is that by considering the invariant measures as fixed
+points of linear operators on function spaces, we don't need to impose any further conditions on
+the rate of convergence of the Markov chain. 

@@ -1,0 +1,19 @@
+In the age of big data and machine learning, at a time when the techniques and methods of software development
+are evolving rapidly, a problem has arisen: programmers can no longer detect all the security flaws
+and vulnerabilities in their code manually. To overcome this problem, developers can now rely on
+automatic techniques, like machine learning based prediction models, to detect such issues. An
+inherent property of such approaches is that they work with numeric vectors (i.e., feature vectors)
+as inputs. Therefore, one needs to transform the source code into such feature vectors, often referred
+to as code embedding. A popular approach for code embedding is to adapt natural language processing
+techniques, like text representation, to automatically derive the necessary features from the
+source code. However, the suitability and comparison of different text representation techniques
+for solving Software Engineering (SE) problems is rarely studied systematically. In this paper,
+we present a comparative study on three popular text representation methods, word2vec, fastText,
+and BERT applied to the SE task of detecting vulnerabilities in Python code. Using a data mining approach,
+we collected a large volume of Python source code in both vulnerable and fixed forms that we embedded
+with word2vec, fastText, and BERT to vectors and used a Long Short-Term Memory network to train on
+them. Using the same LSTM architecture, we could compare the efficiency of the different embeddings
+in deriving meaningful feature vectors. Our findings show that all the text representation methods
+are suitable for code representation in this particular task, but the BERT model is the most promising
+as it is the least time consuming and the LSTM model based on it achieved the best overall accuracy(93.8%)
+in predicting Python source code vulnerabilities. 

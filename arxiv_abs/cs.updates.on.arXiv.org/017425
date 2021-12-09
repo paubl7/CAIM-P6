@@ -1,0 +1,18 @@
+With the development of end-to-end control based on deep learning, it is important to study new system
+modeling techniques to realize dynamics modeling with high-dimensional inputs. In this paper,
+a novel Koopman-based deep convolutional network, called CKNet, is proposed to identify latent
+dynamics from raw pixels. CKNet learns an encoder and decoder to play the role of the Koopman eigenfunctions
+and modes, respectively. The Koopman eigenvalues can be approximated by eigenvalues of the learned
+state transition matrix. The deterministic convolutional Koopman network (DCKNet) and the variational
+convolutional Koopman network (VCKNet) are proposed to span some subspace for approximating the
+Koopman operator respectively. Because CKNet is trained under the constraints of the Koopman theory,
+the identified latent dynamics is in a linear form and has good interpretability. Besides, the state
+transition and control matrices are trained as trainable tensors so that the identified dynamics
+is also time-invariant. We also design an auxiliary weight term for reducing multi-step linearity
+and prediction losses. Experiments were conducted on two offline trained and four online trained
+nonlinear forced dynamical systems with continuous action spaces in Gym and Mujoco environment
+respectively, and the results show that identified dynamics are adequate for approximating the
+latent dynamics and generating clear images. Especially for offline trained cases, this work confirms
+CKNet from a novel perspective that we visualize the evolutionary processes of the latent states
+and the Koopman eigenfunctions with DCKNet and VCKNet separately to each task based on the same episode
+and results demonstrate that different approaches learn similar features in shapes. 

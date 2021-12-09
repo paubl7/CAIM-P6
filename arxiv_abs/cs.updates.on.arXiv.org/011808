@@ -1,0 +1,19 @@
+Locally decodable codes (LDCs) are error-correcting codes $C : \Sigma^k \to \Sigma^n$ that admit
+a local decoding algorithm that recovers each individual bit of the message by querying only a few
+bits from a noisy codeword. An important question in this line of research is to understand the optimal
+trade-off between the query complexity of LDCs and their block length. Despite importance of these
+objects, the best known constructions of constant query LDCs have super-polynomial length, and
+there is a significant gap between the best constructions and the known lower bounds in terms of the
+block length. For many applications it suffices to consider the weaker notion of relaxed LDCs (RLDCs),
+which allows the local decoding algorithm to abort if by querying a few bits it detects that the input
+is not a codeword. This relaxation turned out to allow decoding algorithms with constant query complexity
+for codes with almost linear length. Specifically, [BGH+06] constructed an $O(q)$-query RLDC
+that encodes a message of length $k$ using a codeword of block length $n = O(k^{1+1/\sqrt{q}})$.
+In this work we improve the parameters of [BGH+06] by constructing an $O(q)$-query RLDC that encodes
+a message of length $k$ using a codeword of block length $O(k^{1+1/{q}})$. This construction matches
+(up to a multiplicative constant factor) the lower bounds of [KT00, Woo07] for constant query LDCs,
+thus making progress toward understanding the gap between LDCs and RLDCs in the constant query regime.
+In fact, our construction extends to the stronger notion of relaxed locally correctable codes (RLCCs),
+introduced in [GRR18], where given a noisy codeword the correcting algorithm either recovers each
+individual bit of the codeword by only reading a small part of the input, or aborts if the input is detected
+to be corrupt. 

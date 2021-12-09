@@ -1,0 +1,18 @@
+Given $n$ samples from a population of individuals belonging to different species, what is the number
+$U$ of hitherto unseen species that would be observed if $\lambda n$ new samples were collected?
+This is an important problem in many scientific endeavors, and it has been the subject of recent works
+introducing non-parametric estimators of $U$ that are minimax near-optimal and consistent all
+the way up to $\lambda\asymp\log n$. These works do not rely on any assumption on the underlying unknown
+distribution $p$ of the population, and therefore, while providing a theory in its greatest generality,
+worst-case distributions may severely hamper the estimation of $U$ in concrete applications.
+In this paper, we consider the problem of strengthening the non-parametric framework for estimating
+$U$. Inspired by the estimation of rare probabilities in extreme value theory, and motivated by
+the ubiquitous power-law type distributions in many natural and social phenomena, we make use of
+a semi-parametric assumption regular variation of index $\alpha\in(0,1)$ for the tail behaviour
+of $p$. Under this assumption, we introduce an estimator of $U$ that is simple, linear in the sampling
+information, computationally efficient, and scalable to massive datasets. Then, uniformly over
+our class of regularly varying tail distributions, we show that the proposed estimator has provable
+guarantees: i) it is minimax near-optimal, up to a power of $\log n$ factor; ii) it is consistent all
+of the way up to $\log \lambda\asymp n^{\alpha/2}/\sqrt{\log n}$, and this range is the best possible.
+This work presents the first study on the estimation of the unseen under regularly varying tail distributions.
+A numerical illustration of our methodology is presented for synthetic data and real data. 

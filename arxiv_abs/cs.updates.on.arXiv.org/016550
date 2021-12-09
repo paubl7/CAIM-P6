@@ -1,0 +1,19 @@
+Deep neural networks (DNNs) are vulnerable to adversarial noise. A range of adversarial defense
+techniques have been proposed to mitigate the interference of adversarial noise, among which the
+input pre-processing methods are scalable and show great potential to safeguard DNNs. However,
+pre-processing methods may suffer from the robustness degradation effect, in which the defense
+reduces rather than improving the adversarial robustness of a target model in a white-box setting.
+A potential cause of this negative effect is that adversarial training examples are static and independent
+to the pre-processing model. To solve this problem, we investigate the influence of full adversarial
+examples which are crafted against the full model, and find they indeed have a positive impact on
+the robustness of defenses. Furthermore, we find that simply changing the adversarial training
+examples in pre-processing methods does not completely alleviate the robustness degradation
+effect. This is due to the adversarial risk of the pre-processed model being neglected, which is
+another cause of the robustness degradation effect. Motivated by above analyses, we propose a method
+called Joint Adversarial Training based Pre-processing (JATP) defense. Specifically, we formulate
+a feature similarity based adversarial risk for the pre-processing model by using full adversarial
+examples found in a feature space. Unlike standard adversarial training, we only update the pre-processing
+model, which prompts us to introduce a pixel-wise loss to improve its cross-model transferability.
+We then conduct a joint adversarial training on the pre-processing model to minimize this overall
+risk. Empirical results show that our method could effectively mitigate the robustness degradation
+effect across different target models in comparison to previous state-of-the-art approaches.

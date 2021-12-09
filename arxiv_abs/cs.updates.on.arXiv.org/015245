@@ -1,0 +1,20 @@
+Convolutional neural networks (CNNs) are a promising technique for automated glaucoma diagnosis
+from images of the fundus, and these images are routinely acquired as part of an ophthalmic exam.
+Nevertheless, CNNs typically require a large amount of well-labeled data for training, which may
+not be available in many biomedical image classification applications, especially when diseases
+are rare and where labeling by experts is costly. This paper makes two contributions to address this
+issue: (1) It extends the conventional twin neural network and introduces a training method for
+low-shot learning when labeled data are limited and imbalanced, and (2) it introduces a novel semi-supervised
+learning strategy that uses additional unlabeled training data to achieve greater accuracy. Our
+proposed multi-task twin neural network (MTTNN) can employ any backbone CNN, and we demonstrate
+with four backbone CNNs that its accuracy with limited training data approaches the accuracy of
+backbone CNNs trained with a dataset that is 50 times larger. We also introduce One-Vote Veto (OVV)
+self-training, a semi-supervised learning strategy that is designed specifically for MTTNNs.
+By taking both self-predictions and contrastive-predictions of the unlabeled training data into
+account, OVV self-training provides additional pseudo labels for fine tuning a pretrained MTTNN.
+Using a large (imbalanced) dataset with 66715 fundus photographs acquired over 15 years, extensive
+experimental results demonstrate the effectiveness of low-shot learning with MTTNN and semi-supervised
+learning with OVV self-training. Three additional, smaller clinical datasets of fundus images
+acquired under different conditions (cameras, instruments, locations, populations) are used
+to demonstrate the generalizability of the proposed methods. Source code and pretrained models
+will be publicly available upon publication. 

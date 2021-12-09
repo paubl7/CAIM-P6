@@ -1,0 +1,19 @@
+Person Re-Identification (re-ID) aims at retrieving images of the same person taken by different
+cameras. A challenge for re-ID is the performance preservation when a model is used on data of interest
+(target data) which belong to a different domain from the training data domain (source data). Unsupervised
+Domain Adaptation (UDA) is an interesting research direction for this challenge as it avoids a costly
+annotation of the target data. Pseudo-labeling methods achieve the best results in UDA-based re-ID.
+Surprisingly, labeled source data are discarded after this initialization step. However, we believe
+that pseudo-labeling could further leverage the labeled source data in order to improve the post-initialization
+training steps. In order to improve robustness against erroneous pseudo-labels, we advocate the
+exploitation of both labeled source data and pseudo-labeled target data during all training iterations.
+To support our guideline, we introduce a framework which relies on a two-branch architecture optimizing
+classification and triplet loss based metric learning in source and target domains, respectively,
+in order to allow \emph{adaptability to the target domain} while ensuring \emph{robustness to
+noisy pseudo-labels}. Indeed, shared low and mid-level parameters benefit from the source classification
+and triplet loss signal while high-level parameters of the target branch learn domain-specific
+features. Our method is simple enough to be easily combined with existing pseudo-labeling UDA approaches.
+We show experimentally that it is efficient and improves performance when the base method has no
+mechanism to deal with pseudo-label noise or for hard adaptation tasks. Our approach reaches state-of-the-art
+performance when evaluated on commonly used datasets, Market-1501 and DukeMTMC-reID, and outperforms
+the state of the art when targeting the bigger and more challenging dataset MSMT. 

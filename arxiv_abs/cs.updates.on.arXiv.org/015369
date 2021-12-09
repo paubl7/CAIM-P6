@@ -1,0 +1,20 @@
+A multiply-accumulate (MAC) operation is the main computation unit for DSP applications. DSP blocks
+are one of the efficient solutions to implement MACs in FPGA's. However, since the DSP blocks have
+wide multiplier and adder blocks, MAC operations using low bit-length parameters lead to an underutilization
+problem. Hence, an efficient approximation technique is introduced. The technique includes manipulation
+and approximation of the low bit-length fixed-point parameters based upon a Single DSP - Multiple
+Multiplication (SDMM) execution. The SDMM changes the traditional MAC implementation in the DSP
+block by separating multiplication and accumulation operations. While the accumulator hardware
+available in the DSP block is used for multiple parameter multiplication, parallel LUTs are employed
+for the accumulation part of the MAC operation. The accuracy of the developed optimization technique
+was evaluated for different CNN weight bit precisions using the Alexnet and VGG-16 networks and
+the Tiny ImageNet dataset. The optimization can be implemented without loss of accuracy in almost
+all cases, while it causes slight accuracy losses in a few cases. Through these optimizations, the
+SDMM is performed at the cost of a small hardware overhead. For example, a single DSP block executes
+3 8-bit fixed-point parameter multiplications. As a result of our optimizations, the parameters
+are represented in a different format on off-chip memory, providing up to 33% compression without
+any hardware cost. The compression rate can be further increased by up to 97% when used in conjunction
+with other compression methods for the VGG-16. Reaching this compression rate requires extra hardware
+cost. A prototype systolic array architecture was implemented employing our optimizations on
+a Xilinx Zynq FPGA. It reduced the number of DSP blocks by 66.6%, 75%, and 83.3% for 8, 6, and 4-bit input
+variables, respectively. 

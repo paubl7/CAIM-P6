@@ -1,0 +1,20 @@
+Analysing and understanding the transmission and evolution of the COVID-19 pandemic is mandatory
+to be able to design the best social and medical policies, foresee their outcomes and deal with all
+the subsequent socio-economic effects. We address this important problem from a computational
+and machine learning perspective. More specifically, we want to statistically estimate all the
+relevant parameters for the new coronavirus COVID-19, such as the reproduction number, fatality
+rate or length of infectiousness period, based on Romanian patients, as well as be able to predict
+future outcomes. This endeavor is important, since it is well known that these factors vary across
+the globe, and might be dependent on many causes, including social, medical, age and genetic factors.
+We use a recently published improved version of SEIR, which is the classic, established model for
+infectious diseases. We want to infer all the parameters of the model, which govern the evolution
+of the pandemic in Romania, based on the only reliable, true measurement, which is the number of deaths.
+Once the model parameters are estimated, we are able to predict all the other relevant measures,
+such as the number of exposed and infectious people. To this end, we propose a self-supervised approach
+to train a deep convolutional network to guess the correct set of Modified-SEIR model parameters,
+given the observed number of daily fatalities. Then, we refine the solution with a stochastic coordinate
+descent approach. We compare our deep learning optimization scheme with the classic grid search
+approach and show great improvement in both computational time and prediction accuracy. We find
+an optimistic result in the case fatality rate for Romania which may be around 0.3% and we also demonstrate
+that our model is able to correctly predict the number of daily fatalities for up to three weeks in
+the future. 

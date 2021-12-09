@@ -1,0 +1,18 @@
+We study several generalizations of the Online Bipartite Matching problem. We consider settings
+with stochastic rewards, patience constraints, and weights (both vertex- and edge-weighted variants).
+We introduce a stochastic variant of the patience-constrained problem, where the patience is chosen
+randomly according to some known distribution and is not known until the point at which patience
+has been exhausted. We also consider stochastic arrival settings (i.e., online vertex arrival
+is determined by a known random process), which are natural settings that are able to beat the hard
+worst-case bounds of more pessimistic adversarial arrivals. Our approach to online matching utilizes
+black-box algorithms for matching on star graphs under various models of patience. In support of
+this, we design algorithms which solve the star graph problem optimally for patience with a constant
+hazard rate and yield a 1/2-approximation for any patience distribution. This 1/2-approximation
+also improves existing guarantees for cascade-click models in the product ranking literature,
+in which a user must be shown a sequence of items with various click-through-rates and the user's
+patience could run out at any time. We then build a framework which uses these star graph algorithms
+as black boxes to solve the online matching problems under different arrival settings. We show improved
+(or first-known) competitive ratios for these problems. Finally, we present negative results
+that include formalizing the concept of a stochasticity gap for LP upper bounds on these problems,
+bounding the worst-case performance of some popular greedy approaches, and showing the impossibility
+of having an adversarial patience in the product ranking setting. 

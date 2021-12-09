@@ -1,0 +1,20 @@
+As online auto-grading systems appear, information obtained from those systems can potentially
+enable researchers to create predictive models to predict student behaviour and performances.
+In the University of Waterloo, the ECE 150 (Fundamentals of Programming) Instructional Team wants
+to get an insight into how to allocate the limited teaching resources better to achieve improved
+educational outcomes. Currently, the Instructional Team allocates tutoring time in a reactive
+basis. They help students "as-requested". This approach serves those students with the wherewithal
+to request help; however, many of the students who are struggling do not reach out for assistance.
+Therefore, we, as the Research Team, want to explore if we can determine students which need help
+by looking into the data from our auto-grading system, Marmoset. In this paper, we conducted experiments
+building decision-tree and linear-regression models with various features extracted from the
+Marmoset auto-grading system, including passing rate, testcase outcomes, number of submissions
+and submission time intervals (the time interval between the student's first reasonable submission
+and the deadline). For each feature, we interpreted the result at the confusion matrix level. Specifically
+for poor-performance students, we show that the linear-regression model using submission time
+intervals performs the best among all models in terms of Precision and F-Measure. We also show that
+for students who are misclassified into poor-performance students, they have the lowest actual
+grades in the linear-regression model among all models. In addition, we show that for the midterm,
+the submission time interval of the last assignment before the midterm predicts the midterm performance
+the most. However, for the final exam, the midterm performance contributes the most on the final
+exam performance. 

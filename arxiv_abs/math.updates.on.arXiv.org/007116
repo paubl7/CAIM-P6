@@ -1,0 +1,18 @@
+The full-waveform inversion (FWI) addresses the computation and characterization of subsurface
+model parameters by matching predicted data to observed seismograms in the frame of nonlinear optimization.
+We formulate FWI as a nonlinearly constrained optimization problem, for which a regularization
+term is minimized subject to the nonlinear data matching constraint. Unlike FWI which is based on
+the penalty function, the method of multipliers solves the resulting optimization problems by
+using the augmented Lagrangian function; and leads to a two-step recursive algorithm. The primal
+step requires solving an unconstrained minimization problem like the traditional FWI with a difference
+that the data are replaced by the Lagrange multipliers. The dual step involves an update of the Lagrange
+multipliers. The overall performance of the algorithm is improved considering that this multiplier
+method does not require an exact solution of these primal-dual subproblems. In fact, convergence
+is attained when only one step of a gradient-based method is taken on both subproblems. The proposed
+algorithm greatly improves the overall performance of FWI such as convergence from inaccurate
+starting models and robustness with respect to the determination of the step length. Furthermore,
+it can be performed by the existing FWI engines with minimal change. We only have to replace the observed
+data at each iteration with the multipliers, thus all the nice properties of the traditional FWI
+algorithms are kept. Numerical experiments confirm that the multipliers waveform inversion can
+converge to a solution of the inverse problem in the absence of low-frequency data from an inaccurate
+initial model even with a constant step size. 

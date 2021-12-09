@@ -1,0 +1,18 @@
+In many fundamental combinatorial optimization problems, a feasible solution induces some real
+cost vectors as an intermediate result, and the optimization objective is a certain function of
+the vectors. For example, in the problem of makespan minimization on unrelated parallel machines,
+a feasible job assignment induces a vector containing the sizes of assigned jobs for each machine,
+and the goal is to minimize the $L_\infty$ norm of $L_1$ norms of the vectors. Another example is fault-tolerant
+$k$-center, where each client is connected to multiple open facilities, thus having a vector of
+distances to these facilities, and the goal is to minimize the $L_\infty$ norm of $L_\infty$ norms
+of these vectors. In this paper, we study the maximum of norm problem. Given an arbitrary symmetric
+monotone norm $f$, the objective is defined as the maximum ($L_\infty$ norm) of $f$-norm values
+of the induced cost vectors. This versatile formulation captures a wide variety of problems, including
+makespan minimization, fault-tolerant $k$-center and many others. We give concrete results for
+load balancing on unrelated parallel machines and clustering problems, including constant-factor
+approximation algorithms when $f$ belongs with a certain rich family of norms, and $O(\log n)$-approximations
+when $f$ is general and satisfies some mild assumptions. We also consider the aforementioned problems
+in a generalized fairness setting. As a concrete example, the insight is to prevent a scheduling
+algorithm from assigning too many jobs consistently on any machine in a job-recurring scenario,
+and causing the machine's controller to fail. Our algorithm needs to stochastically output a feasible
+solution minimizing the objective function, and satisfy the given marginal fairness constraints.

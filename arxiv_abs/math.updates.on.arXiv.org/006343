@@ -1,0 +1,18 @@
+Bayesian optimization is a popular algorithm for sequential optimization of a latent objective
+function when sampling from the objective is costly. The search path of the algorithm is governed
+by the acquisition function, which defines the agent's search strategy. Conceptually, the acquisition
+function characterizes how the optimizer balances exploration and exploitation when searching
+for the optimum of the latent objective. In this paper, we explore the inverse problem of Bayesian
+optimization; we seek to estimate the agent's latent acquisition function based on observed search
+paths. We introduce a probabilistic solution framework for the inverse problem which provides
+a principled framework to quantify both the variability with which the agent performs the optimization
+task as well as the uncertainty around their estimated acquisition function. We illustrate our
+methods by analyzing human behavior from an experiment which was designed to force subjects to balance
+exploration and exploitation in search of an invisible target location. We find that while most
+subjects demonstrate clear trends in their search behavior, there is significant variation around
+these trends from round to round. A wide range of search strategies are exhibited across the subjects
+in our study, but upper confidence bound acquisition functions offer the best fit for the majority
+of subjects. Finally, some subjects do not map well to any of the acquisition functions we initially
+consider; these subjects tend to exhibit exploration preferences beyond that of standard acquisition
+functions to capture. Guided by the model discrepancies, we augment the candidate acquisition
+functions to yield a superior fit to the human behavior in this task. 

@@ -1,0 +1,18 @@
+In this paper we focus on the empirical variable-selection peformance of subsample-ordered least
+angle regression (Solar) -- a novel ultrahigh dimensional redesign of lasso -- on the empirical
+data with complicated dependence structures and, hence, severe multicollinearity and grouping
+effect issues. Previous researches show that Solar largely alleviates several known high-dimensional
+issues with least-angle regression and $\mathcal{L}_1$ shrinkage. Also, With the same computation
+load, solar yields substantiali mprovements over two lasso solvers (least-angle regression for
+lasso and coordinate-descent) in terms of the sparsity (37-64\% reduction in the average number
+of selected variables), stability and accuracy of variable selection. Simulations also demonstrate
+that solar enhances the robustness of variable selection to different settings of the irrepresentable
+condition and to variations in the dependence structures assumed in regression analysis. To confirm
+that the improvements are also available for empirical researches, we choose the prostate cancer
+data and the Sydney house price data and apply two lasso solvers, elastic net and Solar on them for
+comparison. The results shows that (i) lasso is affected by the grouping effect and randomly drop
+variables with high correlations, resulting unreliable and uninterpretable results; (ii) elastic
+net is more robust to grouping effect; however, it completely lose variable-selection sparsity
+when the dependence structure of the data is complicated; (iii) solar demonstrates its superior
+robustness to complicated dependence structures and grouping effect, returning variable-selection
+results with better stability and sparsity. The code can be found at https://github.com/isaac2math/solar_application

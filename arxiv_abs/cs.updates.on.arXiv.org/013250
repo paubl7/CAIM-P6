@@ -1,0 +1,20 @@
+With the continuous increase in the number of software-based attacks, there has been a growing effort
+towards isolating sensitive data and trusted software components from untrusted third-party
+components. A hardware-assisted intra-process isolation mechanism enables software developers
+to partition a process into isolated components and in turn secure sensitive data from untrusted
+components. However, most of the existing hardware-assisted intra-process isolation mechanisms
+in modern processors, such as ARM and IBM Power, rely on costly kernel operations for switching between
+trusted and untrusted domains. Recently, Intel introduced a new hardware feature for intra-process
+memory isolation, called Memory Protection Keys (MPK), which enables a user-space process to switch
+the domains in an efficient way. While the efficiency of Intel MPK enables developers to leverage
+it for common use cases such as Code-Pointer Integrity, the limited number of unique domains (16)
+prohibits its use in cases such as OpenSSL where a large number of domains are required. Moreover,
+Intel MPK suffers from the protection key use-after-free vulnerability. To address these shortcomings,
+in this paper, we propose an efficient intra-process isolation technique for the RISC-V open ISA,
+called SealPK, which supports up to 1024 unique domains. SealPK prevents the protection key use-after-free
+problem by leveraging a lazy de-allocation approach. To further strengthen SealPK, we devise three
+novel sealing features to protect the allocated domains, their associated pages, and their permissions
+from modifications or tampering by an attacker. To demonstrate the feasibility of our design, we
+implement SealPK on a RISC-V Rocket processor, provide the OS support for it, and prototype our design
+on an FPGA. We demonstrate the efficiency of SealPK by leveraging it to implement an isolated shadow
+stack on our FPGA prototype. 

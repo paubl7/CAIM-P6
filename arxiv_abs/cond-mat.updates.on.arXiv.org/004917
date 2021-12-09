@@ -1,0 +1,18 @@
+The study of alloys using computational methods has been a difficult task due to the usually unknown
+stoichiometry and local atomic ordering of the different structures experimentally. In order
+to combat this, first-principles methods have been coupled with statistical methods such as the
+Cluster Expansion formalism in order to construct the energy hull diagram, which helps to determine
+if an alloyed structure can exist in nature. Traditionally, density functional theory (DFT) has
+been used in such workflows. In this work we propose to use chemically accurate many-body variational
+Monte Carlo (VMC) and diffusion Monte Carlo (DMC) methods to construct the energy hull diagram of
+an alloy system, due to the fact that such methods have a weaker dependence on the starting wavefunction
+and density functional, scale similarly to DFT with the number of electrons, and have had demonstrated
+success for a variety of materials. To carry out these simulations in a high-throughput manner,
+we propose a method called Jastrow sharing, which involves recycling the optimized Jastrow parameters
+between alloys with different stoichiometries. We show that this eliminates the need for extra
+VMC Jastrow optimization calculations and results in a significant computational cost savings
+(on average 1/4 savings of total computational time). Since it is a novel post-transition metal
+chalcogenide alloy series that has been synthesized in its few-layer form, we used monolayer $GaS_xSe_{1-x}$
+as a case study for our workflow. By extensively testing our Jastrow sharing procedure for monolayer
+$GaS_xSe_{1-x}$ and quantifying the cost savings, we demonstrate how a pathway towards chemically
+accurate high-throughput simulations of alloys can be achieved using many-body VMC and DMC methods.

@@ -1,0 +1,20 @@
+This paper studies the PML method for wave scattering in a half space of homogeneous medium bounded
+by a two-dimensional, perfectly conducting, and locally defected periodic surface, and develops
+a high-accuracy boundary-integral-equation (BIE) solver. Along the vertical direction, we place
+a PML to truncate the unbounded domain onto a strip and prove that the PML solution converges linearly
+to the true solution in the physical subregion of the strip with the PML thickness. Laterally, we
+divide the unbounded strip into three regions: a region containing the defect and two semi-waveguide
+regions, separated by two vertical line segments. In both semi-waveguides, we prove the well-posedness
+of an associated scattering problem so as to well define a Neumann-to-Dirichlet (NtD) operator
+on the associated vertical segment. The two NtD operators, serving as exact lateral boundary conditions,
+reformulate the unbounded strip problem as a boundary value problem onto the defected region. Due
+to the periodicity of the semi-waveguides, both NtD operators turn out to be closely related to a
+Neumann-marching operator, governed by a nonlinear Riccati equation. It is proved that the Neumann-marching
+operators are contracting, so that the PML solution decays exponentially fast along both lateral
+directions. The consequences culminate in two opposite aspects. Negatively, the PML solution
+cannot exponentially converge to the true solution in the whole physical region of the strip. Positively,
+from a numerical perspective, the Riccati equations can now be efficiently solved by a recursive
+doubling procedure and a high-accuracy PML-based BIE method so that the boundary value problem
+on the defected region can be solved efficiently and accurately. Numerical experiments demonstrate
+that the PML solution converges exponentially fast to the true solution in any compact subdomain
+of the strip. 

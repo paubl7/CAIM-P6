@@ -1,0 +1,20 @@
+Python type inference is challenging in practice. Due to its dynamic properties and extensive dependencies
+on third-party libraries without type annotations, the performance of traditional static analysis
+techniques is limited. Although semantics in source code can help manifest intended usage for variables
+(thus help infer types), they are usually ignored by existing tools. In this paper, we propose PYInfer,
+an end-to-end learning-based type inference tool that automatically generates type annotations
+for Python variables. The key insight is that contextual code semantics is critical in inferring
+the type for a variable. For each use of a variable, we collect a few tokens within its contextual scope,
+and design a neural network to predict its type. One challenge is that it is difficult to collect a
+high-quality human-labeled training dataset for this purpose. To address this issue, we apply
+an existing static analyzer to generate the ground truth for variables in source code. Our main contribution
+is a novel approach to statically infer variable types effectively and efficiently. Formulating
+the type inference as a classification problem, we can handle user-defined types and predict type
+probabilities for each variable. Our model achieves 91.2% accuracy on classifying 11 basic types
+in Python and 81.2% accuracy on classifying 500 most common types. Our results substantially outperform
+the state-of-the-art type annotators. Moreover, PYInfer achieves 5.2X more code coverage and
+is 187X faster than a state-of-the-art learning-based tool. With similar time consumption, our
+model annotates 5X more variables than a state-of-the-art static analysis tool. Our model also
+outperforms a learning-based function-level annotator on annotating types for variables and
+function arguments. All our tools and datasets are publicly available to facilitate future research
+in this direction. 

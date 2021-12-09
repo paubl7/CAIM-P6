@@ -1,0 +1,18 @@
+In the \emph{trace reconstruction problem}, an unknown source string $x \in \{0,1\}^n$ is sent
+through a probabilistic \emph{deletion channel} which independently deletes each bit with probability
+$\delta$ and concatenates the surviving bits, yielding a \emph{trace} of $x$. The problem is to
+reconstruct $x$ given independent traces. This problem has received much attention in recent years
+both in the worst-case setting where $x$ may be an arbitrary string in $\{0,1\}^n$ \cite{DOS17,NazarovPeres17,HHP18,HL18,Chase19}
+and in the average-case setting where $x$ is drawn uniformly at random from $\{0,1\}^n$ \cite{PeresZhai17,HPP18,HL18,Chase19}.
+This paper studies trace reconstruction in the \emph{smoothed analysis} setting, in which a ``worst-case''
+string $x^{\worst}$ is chosen arbitrarily from $\{0,1\}^n$, and then a perturbed version $\bx$
+of $x^{\worst}$ is formed by independently replacing each coordinate by a uniform random bit with
+probability $\sigma$. The problem is to reconstruct $\bx$ given independent traces from it. Our
+main result is an algorithm which, for any constant perturbation rate $0<\sigma < 1$ and any constant
+deletion rate $0 < \delta < 1$, uses $\poly(n)$ running time and traces and succeeds with high probability
+in reconstructing the string $\bx$. This stands in contrast with the worst-case version of the problem,
+for which $\text{exp}(O(n^{1/3}))$ is the best known time and sample complexity \cite{DOS17,NazarovPeres17}.
+Our approach is based on reconstructing $\bx$ from the multiset of its short subwords and is quite
+different from previous algorithms for either the worst-case or average-case versions of the problem.
+The heart of our work is a new $\poly(n)$-time procedure for reconstructing the multiset of all $O(\log
+n)$-length subwords of any source string $x\in \{0,1\}^n$ given access to traces of $x$. 

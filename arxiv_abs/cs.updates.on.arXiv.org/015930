@@ -1,0 +1,18 @@
+With recent advancements in deep learning methods, automatically learning deep features from
+the original data is becoming an effective and widespread approach. However, the hand-crafted
+expert knowledge-based features are still insightful. These expert-curated features can increase
+the model's generalization and remind the model of some data characteristics, such as the time interval
+between two patterns. It is particularly advantageous in tasks with the clinically-relevant data,
+where the data are usually limited and complex. To keep both implicit deep features and expert-curated
+explicit features together, an effective fusion strategy is becoming indispensable. In this work,
+we focus on a specific clinical application, i.e., sleep apnea detection. In this context, we propose
+a contrastive learning-based cross attention framework for sleep apnea detection (named ConCAD).
+The cross attention mechanism can fuse the deep and expert features by automatically assigning
+attention weights based on their importance. Contrastive learning can learn better representations
+by keeping the instances of each class closer and pushing away instances from different classes
+in the embedding space concurrently. Furthermore, a new hybrid loss is designed to simultaneously
+conduct contrastive learning and classification by integrating a supervised contrastive loss
+with a cross-entropy loss. Our proposed framework can be easily integrated into standard deep learning
+models to utilize expert knowledge and contrastive learning to boost performance. As demonstrated
+on two public ECG dataset with sleep apnea annotation, ConCAD significantly improves the detection
+performance and outperforms state-of-art benchmark methods. 

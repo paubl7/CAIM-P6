@@ -1,0 +1,18 @@
+Bitcoin and its underlying blockchain protocol have recently received significant attention
+in the context of building distributed systems and foundations of the consensus problem. At the
+same time, the rapid development in quantum computing makes the threats to cryptography more and
+more concerning. In this work, we revisit the formal security of the core of the Bitcoin consensus
+protocol, called the Bitcoin backbone (Eurocrypt 2015), in the presence of quantum adversaries
+-- i.e. adversaries equipped with quantum computers. We show that the security of the Bitcoin backbone
+holds under a quantum analogue of the ``honest majority'' assumption that we develop. The critical
+ingredient of proving security of the blockchain is to analyzing the quantum query complexity of
+a Chain-of-Proofs-of-Work search problem. This problem in turn reduces to a problem we call multi-solution
+Bernoulli search, for which we establish its quantum query complexity. This can be viewed as an extension
+of a threshold direct product theorem to an average-case unstructured search problem. Our proof,
+adding to active recent efforts, simplifies and generalizes the powerful recording technique
+due to Zhandry (Crypto 2019). Our analysis indicates that the security of the Bitcoin backbone protocol
+is guaranteed provided that the number of adversarial quantum queries is bounded so that each quantum
+query is worth $O(p^{-1/2})$ classical ones, where $p$ is the probability of success of a single
+classical query to the protocol's underlying hash function. Perhaps surprisingly, the wait time
+for safe settlement of transactions in the case of quantum adversaries matches (up to a constant)
+the safe settlement time in the classical case and thus does not result in any further overhead. 

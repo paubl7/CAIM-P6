@@ -1,0 +1,20 @@
+Advances in climate science have rendered obsolete gridded observation data sets commonly used
+in macroecological analyses. Novel climate reanalysis products outperform legacy data products
+in accuracy, temporal resolution, and provision of uncertainty metrics. Consequently, there
+is an urgent need to develop a workflow through which to integrate these improved data into analyses.
+The ERA5 product family are the latest and most advanced global reanalysis products created by the
+ECMWF. These data products offer up to 83 essential climate variables at hourly intervals for the
+time-period of 1981 to today with preliminary back-extensions being available for 1950-1981.
+Spatial resolutions range from 30km (ERA5) to 11km (ERA5-Land) and can be statistically downscaled
+to study-requirements at finer spatial resolutions. Kriging is one such method to interpolate
+data to finer resolutions and has the advantages that one can leverage additional covariate information
+and obtain the uncertainty associated with the downscaling. The KrigR R Package enables users to
+(1) download ERA5(-Land) climate reanalysis data for a user-specified region, and time-period,
+(2) aggregate these climate products to desired temporal resolutions and metrics, (3) acquire
+topographical co-variates, and (4) statistically downscale spatial data to a user-specified
+resolution using co-variate data via kriging. This R package provides a workflow for implementation
+of state-of-the-art climate data into biological analyses while avoiding issues of storage limitations
+at high temporal and spatial resolutions by providing data according to user-needs rather than
+in global data sets. Consequently, KrigR provides a toolbox to obtain a wide range of tailored climate
+data at unprecedented combinations of high temporal and spatial resolutions thus enabling the
+use of world-leading climate data in the R-environment. 

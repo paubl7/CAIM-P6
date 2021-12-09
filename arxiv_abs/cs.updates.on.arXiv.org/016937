@@ -1,0 +1,18 @@
+The Orienteering Problem with Time Windows (OPTW) is a combinatorial optimization problem where
+the goal is to maximize the total score collected from different visited locations. The application
+of neural network models to combinatorial optimization has recently shown promising results in
+dealing with similar problems, like the Travelling Salesman Problem. A neural network allows learning
+solutions using reinforcement learning or supervised learning, depending on the available data.
+After the learning stage, it can be generalized and quickly fine-tuned to further improve performance
+and personalization. The advantages are evident since, for real-world applications, solution
+quality, personalization, and execution times are all important factors that should be taken into
+account. This study explores the use of Pointer Network models trained using reinforcement learning
+to solve the OPTW problem. We propose a modified architecture that leverages Pointer Networks to
+better address problems related with dynamic time-dependent constraints. Among its various applications,
+the OPTW can be used to model the Tourist Trip Design Problem (TTDP). We train the Pointer Network
+with the TTDP problem in mind, by sampling variables that can change across tourists visiting a particular
+instance-region: starting position, starting time, available time, and the scores given to each
+point of interest. Once a model-region is trained, it can infer a solution for a particular tourist
+using beam search. We based the assessment of our approach on several existing benchmark OPTW instances.
+We show that it generalizes across different tourists that visit each region and that it generally
+outperforms the most commonly used heuristic, while computing the solution in realistic times.

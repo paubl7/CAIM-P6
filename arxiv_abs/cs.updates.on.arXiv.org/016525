@@ -1,0 +1,19 @@
+A Merkle tree is a data structure for representing a key-value store as a tree. Each node of a Merkle
+tree is equipped with a hash value computed from those of their descendants. A Merkle tree is often
+used for representing a state of a blockchain system since it can be used for efficiently auditing
+the state in a trustless manner. Due to the safety-critical nature of blockchains, ensuring the
+correctness of their implementation is paramount. We show our formally verified implementation
+of the core part of Plebeia using F*. Plebeia is a library to manipulate an extension of Merkle trees
+(called Plebeia trees). It is being implemented as a part of the storage system of the Tezos blockchain
+system. To this end, we gradually ported Plebeia to F*; the OCaml code extracted from the modules
+ported to F* is linked with the unverified part of Plebeia. By this gradual porting process, we can
+obtain a working code from our partially verified implementation of Plebeia; we confirmed that
+the binary passes all the unit tests of Plebeia. More specifically, we verified the following properties
+on the implementation of Plebeia: (1) Each tree-manipulating function preserves the invariants
+on the data structure of a Plebeia tree and satisfies the functional requirements as a nested key-value
+store; (2) Each function for serializing/deserializing a Plebeia tree to/from the low-level storage
+is implemented correctly; and (3) The hash function for a Plebeia tree is relatively collision-resistant
+with respect to the cryptographic safety of the blake2b hash function. During porting Plebeia to
+F*, we found a bug in an old version of Plebeia, which was overlooked by the tests bundled with the original
+implementation. To the best of our knowledge, this is the first work that verifies a production-level
+implementation of a Merkle-tree library by F*. 

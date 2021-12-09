@@ -1,0 +1,19 @@
+This paper presents a generic motion model to capture mobile robots' dynamic behaviors (translation
+and rotation). The model is based on statistical models driven by white random processes and is formulated
+into a full state estimation algorithm based on the error-state extended Kalman filtering framework
+(ESEKF). Major benefits of this method are its versatility, being applicable to different robotic
+systems without accurately modeling the robots' specific dynamics, and ability to estimate the
+robot's (angular) acceleration, jerk, or higher-order dynamic states with low delay. Mathematical
+analysis with numerical simulations are presented to show the properties of the statistical model-based
+estimation framework and to reveal its connection to existing low-pass filters. Furthermore,
+a new paradigm is developed for robots observability analysis by developing Lie derivatives and
+associated partial differentiation directly on manifolds. It is shown that this new paradigm is
+much simpler and more natural than existing methods based on quaternion parameterizations. It
+is also scalable to high dimensional systems. A novel \textbf{\textit{thin}} set concept is introduced
+to characterize the unobservable subset of the system states, providing the theoretical foundation
+to observability analysis of robotic systems operating on manifolds and in high dimension. Finally,
+extensive experiments including full state estimation and extrinsic calibration (both POS-IMU
+and IMU-IMU) on a quadrotor UAV, a handheld platform and a ground vehicle are conducted. Comparisons
+with existing methods show that the proposed method can effectively estimate all extrinsic parameters,
+the robot's translation/angular acceleration and other state variables (e.g., position, velocity,
+attitude) of high accuracy and low delay. 

@@ -1,0 +1,18 @@
+As a 3D counterpart of object classification in images, object point cloud classification is fundamental
+to 3D scene understanding, and has drawn great research attention since the release of benchmarking
+datasets, such as the ModelNet and the ShapeNet. These benchmarks assume point clouds covering
+complete surfaces of object instances, for which plenty of high-performing methods have been developed.
+However, their settings deviate from those often met in practice, where, due to (self-)occlusion,
+a point cloud covering partial surface of an object is captured from an arbitrary view. We show in
+this paper that performance of existing point cloud classification methods drops drastically
+under the considered practical single-view, partial setting; the phenomenon is consistent with
+the observation that semantic category of a partial object surface is less ambiguous only when its
+distribution on the whole surface is clearly specified. To this end, we argue for a single-view,
+partial setting where supervised learning of object pose estimation should be accompanied with
+classification. Technically, we propose a baseline method of Pose-Accompanied Point cloud classification
+Network (PAPNet); built upon SE(3)-equivariant convolutions, the PAPNet learns intermediate
+pose transformations for equivariant features defined on vector fields, which makes the subsequent
+classification easier (ideally) in the category-level, canonical pose. We adapt existing ModelNet40
+and ScanNet datasets on point set classification to the introduced single-view, partial setting
+to verify our hypothesis. Thorough experiments confirm the necessity of object pose estimation;
+our PAPNet also outperforms existing methods greatly on the new benchmarks. 

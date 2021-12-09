@@ -1,0 +1,19 @@
+We give an algorithm for solving unique games (UG) instances whose constraints correspond to edges
+of graphs with a sum-of-squares (SoS) small-set-expansion certificate. As corollaries, we obtain
+the first polynomial-time algorithms for solving UG on the noisy hypercube and the short code graphs.
+The prior best algorithm for such instances was the eigenvalue enumeration algorithm of Arora,
+Barak, and Steurer (2010) which requires quasi-polynomial time for the noisy hypercube and nearly-exponential
+time for the short code graph. All of our results achieve an approximation of $1-\epsilon$ vs $\delta$
+for UG instances, where $\delta > 0$ depends on the expansion parameters of the graph but is independent
+of the alphabet size. Specifically, say that a regular graph $G=(V,E)$ is a $(\mu,\eta)$ small-set
+expander (SSE) if for every subset $S \subseteq V$ with $|S| \leq \mu |V|$, the edge-expansion of
+$S$ is at least $\eta$. We say that $G$ is a $d$-certified $(\mu,\eta)$-SSE if there is a degree-d
+SoS certificate for this fact (based on 2 to 4 hypercontractivity). We prove that there is a $|V|^{f(d,\mu,\eta)}$
+time algorithm $A$ (based on the SoS hierarchy) such that for every $\eta>0$ and $d$-certified $(\mu,
+\eta)$-SSE $G$, if $I$ is a $1-\eta^2/100$ satisfiable affine UG instance over $G$ then $A(I)$ is
+an assignment satisfying at least some positive fraction $\delta = \delta(\mu,\eta)$ of $I$'s
+constraints. As a corollary, we get a polynomial-time algorithm $A$ such that if $I$ is a $1-\epsilon$
+satisfiable instance over the $\alpha$-noisy hypercube or short code graph, then $A(I)$ outputs
+an assignment satisfying an $\exp(-O(\sqrt{\epsilon}/\alpha))$ fraction of the constraints.
+Our techniques can be extended even to graphs that are not SSE, and in particular we obtain a new efficient
+algorithm for solving UG instances over the Johnson graph. 

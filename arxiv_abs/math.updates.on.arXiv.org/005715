@@ -1,0 +1,19 @@
+We consider the problem of solving integer programs of the form $\min \{\,c^\intercal x\ \colon\
+Ax=b, x\geq 0\}$, where $A$ is a multistage stochastic matrix in the following sense: the primal
+treedepth of $A$ is bounded by a parameter $d$, which means that the columns of $A$ can be organized
+into a rooted forest of depth at most $d$ so that columns not bound by the ancestor/descendant relation
+in the forest do not have non-zero entries in the same row. We give an algorithm that solves this problem
+in fixed-parameter time $f(d,\|A\|_{\infty})\cdot n\log^{O(2^d)} n$, where $f$ is a computable
+function and $n$ is the number of rows of $A$. The algorithm works in the strong model, where the running
+time only measures unit arithmetic operations on the input numbers and does not depend on their bitlength.
+This is the first fpt algorithm for multistage stochastic integer programming to achieve almost
+linear running time in the strong sense. For the case of two-stage stochastic integer programs,
+our algorithm works in time $2^{(2\|A\|_\infty)^{O(r(r+s))}}\cdot n\log^{O(rs)} n$. The algorithm
+can be also parallelized: we give an implementation in the PRAM model that achieves running time
+$f(d,\|A\|_{\infty})\cdot \log^{O(2^d)} n$ using $n$ processors. The main conceptual ingredient
+in our algorithms is a new proximity result for multistage stochastic integer programs. We prove
+that if we consider an integer program $P$, say with a constraint matrix $A$, then for every optimum
+solution to the linear relaxation of $P$ there exists an optimum (integral) solution to $P$ that
+lies, in the $\ell_{\infty}$-norm, within distance bounded by a function of $\|A\|_{\infty}$
+and the primal treedepth of $A$. On the way to achieve this result, we prove a generalization and considerable
+improvement of a structural result of Klein for multistage stochastic integer programs. 

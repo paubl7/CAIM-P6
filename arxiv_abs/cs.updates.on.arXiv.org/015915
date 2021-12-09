@@ -1,0 +1,20 @@
+We designed, prototyped, and experimentally demonstrated, for the first time to our knowledge,
+an optoelectronic spiking neuron inspired by the Izhikevich model incorporating both excitatory
+and inhibitory optical spiking inputs and producing optical spiking outputs accordingly. The
+optoelectronic neurons consist of three transistors acting as electrical spiking circuits, a
+vertical-cavity surface-emitting laser (VCSEL) for optical spiking outputs, and two photodetectors
+for excitatory and inhibitory optical spiking inputs. Additional inclusion of capacitors and
+resistors complete the Izhikevich-inspired optoelectronic neurons, which receive excitatory
+and inhibitory optical spikes as inputs from other optoelectronic neurons. We developed a detailed
+optoelectronic neuron model in Verilog-A and simulated the circuit-level operation of various
+cases with excitatory input and inhibitory input signals. The experimental results closely resemble
+the simulated results and demonstrate how the excitatory inputs trigger the optical spiking outputs
+while the inhibitory inputs suppress the outputs. Utilizing the simulated neuron model, we conducted
+simulations using fully connected (FC) and convolutional neural networks (CNN). The simulation
+results using MNIST handwritten digits recognition show 90% accuracy on unsupervised learning
+and 97% accuracy on a supervised modified FC neural network. We further designed a nanoscale optoelectronic
+neuron utilizing quantum impedance conversion where a 200 aJ/spike input can trigger the output
+from on-chip nanolasers with 10 fJ/spike. The nanoscale neuron can support a fanout of ~80 or overcome
+19 dB excess optical loss while running at 10 GSpikes/second in the neural network, which corresponds
+to 100x throughput and 1000x energy-efficiency improvement compared to state-of-art electrical
+neuromorphic hardware such as Loihi and NeuroGrid. 

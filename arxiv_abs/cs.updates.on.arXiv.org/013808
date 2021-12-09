@@ -1,0 +1,20 @@
+Scientific computing is at the core of many High-Performance Computing applications, including
+computational flow dynamics. Because of the uttermost importance to simulate increasingly larger
+computational models, hardware acceleration is receiving increased attention due to its potential
+to maximize the performance of scientific computing. A Field-Programmable Gate Array is a reconfigurable
+hardware accelerator that is fully customizable in terms of computational resources and memory
+storage requirements of an application during its lifetime. Therefore, it is an ideal candidate
+to accelerate scientific computing applications because of the possibility to fully customize
+the memory hierarchy important in irregular applications such as iterative linear solvers found
+in scientific libraries. In this paper, we study the potential of using FPGA in HPC because of the
+rapid advances in reconfigurable hardware, such as the increase in on-chip memory size, increasing
+number of logic cells, and the integration of High-Bandwidth Memories on board. To perform this
+study, we first propose a novel ILU0 preconditioner tightly integrated with a BiCGStab solver kernel
+designed using a mixture of High-Level Synthesis and Register-Transfer Level hand-coded design.
+Second, we integrate the developed preconditioned iterative solver in Flow from the Open Porous
+Media (OPM) project, a state-of-the-art open-source reservoir simulator. Finally, we perform
+a thorough evaluation of the FPGA solver kernel in both standalone mode and integrated into the reservoir
+simulator that includes all the on-chip URAM and BRAM, on-board High-Bandwidth Memory, and off-chip
+CPU memory data transfers required in a complex simulator software such as OPM's Flow. We evaluate
+the performance on the Norne field, a real-world case reservoir model using a grid with more than
+10^5 cells and using 3 unknowns per cell. 

@@ -1,0 +1,20 @@
+Opportunistic computation offloading is an effective method to improve the computation performance
+of mobile-edge computing (MEC) networks under dynamic edge environment. In this paper, we consider
+a multi-user MEC network with time-varying wireless channels and stochastic user task data arrivals
+in sequential time frames. In particular, we aim to design an online computation offloading algorithm
+to maximize the network data processing capability subject to the long-term data queue stability
+and average power constraints. The online algorithm is practical in the sense that the decisions
+for each time frame are made without the assumption of knowing future channel conditions and data
+arrivals. We formulate the problem as a multi-stage stochastic mixed integer non-linear programming
+(MINLP) problem that jointly determines the binary offloading (each user computes the task either
+locally or at the edge server) and system resource allocation decisions in sequential time frames.
+To address the coupling in the decisions of different time frames, we propose a novel framework,
+named LyDROO, that combines the advantages of Lyapunov optimization and deep reinforcement learning
+(DRL). Specifically, LyDROO first applies Lyapunov optimization to decouple the multi-stage
+stochastic MINLP into deterministic per-frame MINLP subproblems. By doing so, it guarantees to
+satisfy all the long-term constraints by solving the per-frame subproblems that are much smaller
+in size. Then, LyDROO integrates model-based optimization and model-free DRL to solve the per-frame
+MINLP problems with low computational complexity. Simulation results show that under various
+network setups, the proposed LyDROO achieves optimal computation performance while stabilizing
+all queues in the system. Besides, it induces very low execution latency that is particularly suitable
+for real-time implementation in fast fading environments. 

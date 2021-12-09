@@ -1,0 +1,21 @@
+We demonstrated that the Transition Region Adaptive Conduction (TRAC) method permits fast and
+accurate numerical solutions of the field-aligned hydrodynamic equations, successfully removing
+the influence of numerical resolution on the coronal density response to impulsive heating. This
+is achieved by adjusting the parallel thermal conductivity, radiative loss and heating rates to
+broaden the transition region (TR), below a global cutoff temperature, so that the steep gradients
+are spatially resolved even when using coarse numerical grids. Implementing the original (one-dimensional)
+formulation of TRAC in multi-dimensional magnetohydrodynamic (MHD) models would require tracing
+a large number of magnetic field lines at every time step, in order to prescribe a global cutoff temperature
+to each field line. In this paper, we present a highly efficient formulation of the TRAC method for
+use in multi-dimensional MHD simulations, which does not rely on field line tracing. In the TR, adaptive
+local cutoff temperatures are used instead of global cutoff temperatures, to broaden any unresolved
+parts of the atmosphere. These local cutoff temperatures are calculated using only local grid cell
+quantities, enabling the MHD extension of TRAC to efficiently account for the magnetic field evolution,
+without tracing field lines. Consistent with analytical predictions, we show that this approach
+successful preserves the properties of the original TRAC method. In particular, the total radiative
+losses and heating remain conserved under the MHD formulation. Results from 2D MHD simulations
+of impulsive heating in unsheared and sheared arcades of coronal loops are also presented. These
+simulations benchmark the MHD TRAC method against a series of 1D models and demonstrate the versatility
+and robustness of the method in multi-dimensional magnetic fields. We show for the first time that
+pressure differences, generated during the evaporation phase of impulsive heating events, can
+produce current layers that are significantly narrower than the transverse energy deposition.

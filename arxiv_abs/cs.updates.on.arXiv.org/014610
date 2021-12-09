@@ -1,0 +1,19 @@
+Self-supervised contrastive learning between pairs of multiple views of the same image has been
+shown to successfully leverage unlabeled data to produce meaningful visual representations for
+both natural and medical images. However, there has been limited work on determining how to select
+pairs for medical images, where availability of patient metadata can be leveraged to improve representations.
+In this work, we develop a method to select positive pairs coming from views of possibly different
+images through the use of patient metadata. We compare strategies for selecting positive pairs
+for chest X-ray interpretation including requiring them to be from the same patient, imaging study
+or laterality. We evaluate downstream task performance by fine-tuning the linear layer on 1% of
+the labeled dataset for pleural effusion classification. Our best performing positive pair selection
+strategy, which involves using images from the same patient from the same study across all lateralities,
+achieves a performance increase of 3.4% and 14.4% in mean AUC from both a previous contrastive method
+and ImageNet pretrained baseline respectively. Our controlled experiments show that the keys
+to improving downstream performance on disease classification are (1) using patient metadata
+to appropriately create positive pairs from different images with the same underlying pathologies,
+and (2) maximizing the number of different images used in query pairing. In addition, we explore
+leveraging patient metadata to select hard negative pairs for contrastive learning, but do not
+find improvement over baselines that do not use metadata. Our method is broadly applicable to medical
+image interpretation and allows flexibility for incorporating medical insights in choosing pairs
+for contrastive learning. 

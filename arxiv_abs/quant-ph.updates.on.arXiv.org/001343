@@ -1,0 +1,20 @@
+Randomized encoding is a powerful cryptographic primitive with various applications such as secure
+multiparty computation, verifiable computation, parallel cryptography, and complexity lower-bounds.
+Intuitively, randomized encoding $\hat{f}$ of a function $f$ is another function such that $f(x)$
+can be recovered from $\hat{f}(x)$, and nothing except for $f(x)$ is leaked from $\hat{f}(x)$.
+Its quantum version, quantum randomized encoding, has been introduced recently [Brakerski and
+Yuen, arXiv:2006.01085]. Intuitively, quantum randomized encoding $\hat{F}$ of a quantum operation
+$F$ is another quantum operation such that, for any quantum state $\rho$, $F(\rho)$ can be recovered
+from $\hat{F}(\rho)$, and nothing except for $F(\rho)$ is leaked from $\hat{F}(\rho)$. In this
+paper, we show that if quantum randomized encoding of BB84 state generations is possible with an
+encoding operation $E$, then a two-round verification of quantum computing is possible with a classical
+verifier who can additionally do the operation $E$. One of the most important goals in the field of
+the verification of quantum computing is to construct a verification protocol with a verifier as
+classical as possible. This result therefore demonstrates a potential application of quantum
+randomized encoding to the verification of quantum computing: if we can find a good quantum randomized
+encoding (in terms of the encoding complexity), then we can construct a good verification protocol
+of quantum computing. We, however, also show that too good quantum randomized encoding is impossible:
+if quantum randomized encoding with a classical encoding operation is possible, then the no-cloning
+is violated. We finally consider a natural modification of blind quantum computing protocols in
+such a way that the server gets the output like quantum randomized encoding. We show that the modified
+protocol is not secure. 

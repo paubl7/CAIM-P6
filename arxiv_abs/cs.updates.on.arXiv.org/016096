@@ -1,0 +1,18 @@
+Graph Neural Networks have emerged as a useful tool to learn on the data by applying additional constraints
+based on the graph structure. These graphs are often created with assumed intrinsic relations between
+the entities. In recent years, there have been tremendous improvements in the architecture design,
+pushing the performance up in various prediction tasks. In general, these neural architectures
+combine layer depth and node feature aggregation steps. This makes it challenging to analyze the
+importance of features at various hops and the expressiveness of the neural network layers. As different
+graph datasets show varying levels of homophily and heterophily in features and class label distribution,
+it becomes essential to understand which features are important for the prediction tasks without
+any prior information. In this work, we decouple the node feature aggregation step and depth of graph
+neural network and introduce several key design strategies for graph neural networks. More specifically,
+we propose to use softmax as a regularizer and "Soft-Selector" of features aggregated from neighbors
+at different hop distances; and "Hop-Normalization" over GNN layers. Combining these techniques,
+we present a simple and shallow model, Feature Selection Graph Neural Network (FSGNN), and show
+empirically that the proposed model outperforms other state of the art GNN models and achieves up
+to 64% improvements in accuracy on node classification tasks. Moreover, analyzing the learned
+soft-selection parameters of the model provides a simple way to study the importance of features
+in the prediction tasks. Finally, we demonstrate with experiments that the model is scalable for
+large graphs with millions of nodes and billions of edges. 

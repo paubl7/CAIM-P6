@@ -1,0 +1,19 @@
+We describe quantum circuits with only $\widetilde{\cal O}(N)$ Toffoli complexity that block
+encode the spectra of quantum chemistry Hamiltonians in a basis of $N$ molecular orbitals. With
+${\cal O}(\lambda / \epsilon)$ repetitions of these circuits one can use phase estimation to sample
+in the molecular eigenbasis, where $\lambda$ is the 1-norm of Hamiltonian coefficients and $\epsilon$
+is the target precision. This is the lowest complexity that has been shown for quantum computations
+of chemistry within an arbitrary basis. Furthermore, up to logarithmic factors, this matches the
+scaling of the most efficient prior block encodings that can only work with orthogonal basis functions
+diagonalizing the Coloumb operator (e.g., the plane wave dual basis). Our key insight is to factorize
+the Hamiltonian using a method known as tensor hypercontraction (THC) and then to transform the
+Coulomb operator into a diagonal form with a non-orthogonal basis defined by THC factors. We then
+use qubitization to simulate the non-orthogonal THC Hamiltonian, in a fashion that avoids most
+complications of the non-orthogonal basis. We also reanalyze and reduce the cost of several of the
+best prior algorithms for these simulations in order to facilitate a clear comparison to the present
+work. In addition to having lower asymptotic scaling spacetime volume, compilation of our algorithm
+for challenging finite-sized molecules such as FeMoCo reveals that our method requires the least
+fault-tolerant resources of any known approach. By laying out and optimizing the surface code resources
+required of our approach we show that FeMoCo can be simulated using about four million physical qubits
+and under four days of runtime, assuming $1 \, \mu {\rm s}$ cycle times and physical gate error rates
+no worse than $0.1\%$. 

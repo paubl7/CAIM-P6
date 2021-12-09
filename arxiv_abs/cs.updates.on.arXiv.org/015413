@@ -1,0 +1,19 @@
+Self-supervised learning methods are gaining increasing traction in computer vision due to their
+recent success in reducing the gap with supervised learning. In natural language processing (NLP)
+self-supervised learning and transformers are already the methods of choice. The recent literature
+suggests that the transformers are becoming increasingly popular also in computer vision. So far,
+the vision transformers have been shown to work well when pretrained either using a large scale supervised
+data or with some kind of co-supervision, e.g. in terms of teacher network. These supervised pretrained
+vision transformers achieve very good results in downstream tasks with minimal changes. In this
+work we investigate the merits of self-supervised learning for pretraining image/vision transformers
+and then using them for downstream classification tasks. We propose Self-supervised vIsion Transformers
+(SiT) and discuss several self-supervised training mechanisms to obtain a pretext model. The architectural
+flexibility of SiT allows us to use it as an autoencoder and work with multiple self-supervised tasks
+seamlessly. We show that a pretrained SiT can be finetuned for a downstream classification task
+on small scale datasets, consisting of a few thousand images rather than several millions. The proposed
+approach is evaluated on standard datasets using common protocols. The results demonstrate the
+strength of the transformers and their suitability for self-supervised learning. We outperformed
+existing self-supervised learning methods by large margin. We also observed that SiT is good for
+few shot learning and also showed that it is learning useful representation by simply training a
+linear classifier on top of the learned features from SiT. Pretraining, finetuning, and evaluation
+codes will be available under: https://github.com/Sara-Ahmed/SiT. 

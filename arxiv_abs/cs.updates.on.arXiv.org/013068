@@ -1,0 +1,19 @@
+Let $P$ be a set (called points), $Q$ be a set (called queries) and a function $ f:P\times Q\to [0,\infty)$
+(called cost). For an error parameter $\epsilon>0$, a set $S\subseteq P$ with a \emph{weight function}
+$w:P \rightarrow [0,\infty)$ is an $\epsilon$-coreset if $\sum_{s\in S}w(s) f(s,q)$ approximates
+$\sum_{p\in P} f(p,q)$ up to a multiplicative factor of $1\pm\epsilon$ for every given query $q\in
+Q$. We construct coresets for the $k$-means clustering of $n$ input points, both in an arbitrary
+metric space and $d$-dimensional Euclidean space. For Euclidean space, we present the first coreset
+whose size is simultaneously independent of both $d$ and $n$. In particular, this is the first coreset
+of size $o(n)$ for a stream of $n$ sparse points in a $d \ge n$ dimensional space (e.g. adjacency matrices
+of graphs). We also provide the first generalizations of such coresets for handling outliers. For
+arbitrary metric spaces, we improve the dependence on $k$ to $k \log k$ and present a matching lower
+bound. For $M$-estimator clustering (special cases include the well-known $k$-median and $k$-means
+clustering), we introduce a new technique for converting an offline coreset construction to the
+streaming setting. Our method yields streaming coreset algorithms requiring the storage of $O(S
++ k \log n)$ points, where $S$ is the size of the offline coreset. In comparison, the previous state-of-the-art
+was the merge-and-reduce technique that required $O(S \log^{2a+1} n)$ points, where $a$ is the
+exponent in the offline construction's dependence on $\epsilon^{-1}$. For example, combining
+our offline and streaming results, we produce a streaming metric $k$-means coreset algorithm using
+$O(\epsilon^{-2} k \log k \log n)$ points of storage. The previous state-of-the-art required $O(\epsilon^{-4}
+k \log k \log^{6} n)$ points. 

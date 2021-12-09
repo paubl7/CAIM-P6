@@ -1,0 +1,18 @@
+We give a quantum logspace algorithm for powering contraction matrices, that is, matrices with
+spectral norm at most~1. The algorithm gets as an input an arbitrary $n\times n$ contraction matrix
+$A$, and a parameter $T \leq \mathrm{poly}(n)$ and outputs the entries of $A^T$, up to (arbitrary)
+polynomially small additive error. The algorithm applies only unitary operators, without intermediate
+measurements. We show various implications and applications of this result: First, we use this
+algorithm to show that the class of quantum logspace algorithms with only quantum memory and with
+intermediate measurements is equivalent to the class of quantum logspace algorithms with only
+quantum memory without intermediate measurements. This shows that the deferred-measurement
+principle, a fundamental principle of quantum computing, applies also for quantum logspace algorithms
+(without classical memory). More generally, we give a quantum algorithm with space $O(S + \log T)$
+that takes as an input the description of a quantum algorithm with quantum space $S$ and time $T$,
+with intermediate measurements (without classical memory), and simulates it unitarily with polynomially
+small error, without intermediate measurements. Since unitary transformations are reversible
+(while measurements are irreversible) an interesting aspect of this result is that it shows that
+any quantum logspace algorithm (without classical memory) can be simulated by a reversible quantum
+logspace algorithm. This proves a quantum analogue of the result of Lange, McKenzie and Tapp that
+deterministic logspace is equal to reversible logspace [LMT00]. Finally, we use our results to
+show non-trivial classical simulations of quantum logspace learning algorithms. 

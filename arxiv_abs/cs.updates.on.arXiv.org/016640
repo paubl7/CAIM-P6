@@ -1,0 +1,19 @@
+With the emergence of large-scale decentralized applications, a scalable and efficient Byzantine
+Fault Tolerant protocol of hundreds of replicas is ideal. Although the throughput of existing leader-based
+BFT protocols has reached a high level of 10^5 operations per second for a small scale of replicas,
+it drops significantly when the number of replicas increases, which leads to a lack of practicality.
+This paper focuses on the scalability of BFT protocols and identifies a major bottleneck to leader-based
+BFT protocols due to the excessive workload of the leader at large scales. A new metric of scaling
+factor is defined to capture whether a BFT protocol will get stuck when it scales out, which can be
+used to measure the performance of efficiency and scalability of BFT protocols. We propose Leopard,
+the first leader-based BFT protocol that scales to multiple hundreds of replicas, and more importantly,
+preserves high efficiency. It is secure with the optimal resilience bound (i.e., 1/3) in the partial
+synchronous network model. We remove the bottleneck by introducing a technique of achieving constant
+scaling factor, which takes full advantage of the idle resource and adaptively balances the workload
+of the leader among all replicas. We implement Leopard and evaluate its performance compared to
+HotStuff, the state-of-the-art BFT protocol. We run extensive experiments on the two systems back-to-back
+in the same environments with up to 600 replicas. The results show that Leopard achieves significant
+performance improvements both on throughput and scalability. In particular, the throughput of
+Leopard remains at a high level of 10^5 when the system scales out to 600 replicas. It achieves a 5 times
+throughput over HotStuff when the scale is 300 (which is already the largest scale we can see the progress
+of the latter in our experiments), and the gap becomes wider as the scale further increases. 

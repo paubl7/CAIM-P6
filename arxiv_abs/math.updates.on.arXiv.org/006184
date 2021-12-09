@@ -1,0 +1,18 @@
+For a fixed finite collection of graphs ${\cal F}$, the ${\cal F}$-M-DELETION problem asks, given
+an $n$-vertex input graph $G,$ for the minimum number of vertices that intersect all minor models
+in $G$ of the graphs in ${\cal F}$. by Courcelle Theorem, this problem can be solved in time $f_{{\cal
+F}}(tw)\cdot n^{O(1)},$ where $tw$ is the treewidth of $G$, for some function $f_{{\cal F}}$ depending
+on ${\cal F}$ In a recent series of articles, we have initiated the programme of optimizing asymptotically
+the function $f_{{\cal F}}$. Here we provide an algorithm showing that $f_{{\cal F}}(tw) = 2^{O(tw\cdot
+\log tw)}$ for every collection ${\cal F}$. Prior to this work, the best known function $f_{{\cal
+F}}$ was double-exponential in $tw$. In particular, our algorithm vastly extends the results of
+Jansen et al. [SODA 2014] for the particular case ${\cal F}=\{K_5,K_{3,3}\}$ and of Kociumaka and
+Pilipczuk [Algorithmica 2019] for graphs of bounded genus, and answers an open problem posed by
+Cygan et al. [Inf Comput 2017]. We combine several ingredients such as the machinery of boundaried
+graphs in dynamic programming via representatives, the Flat Wall Theorem, Bidimensionality,
+the irrelevant vertex technique, treewidth modulators, and protrusion replacement. Together
+with our previous results providing single-exponential algorithms for particular collections
+${\cal F}$ [Theor Comput Sci 2020] and general lower bounds [J Comput Syst Sci 2020], our algorithm
+yields the following complexity dichotomy when ${\cal F} = \{H\}$ contains a single connected graph
+$H,$ assuming the Exponential Time Hypothesis: $f_H(tw)=2^{\Theta(tw)}$ if $H$ is a contraction
+of the chair or the banner, and $f_H(tw)=2^{\Theta(tw\cdot \log tw)}$ otherwise. 

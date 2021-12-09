@@ -1,0 +1,19 @@
+Gas turbine combustion chambers contain numerous smallscale features that help to dampen acoustic
+waves and alter the acoustic mode shapes. This damping helps to alleviate problems such as thermoacoustic
+instabilities. During computational fluid dynamics simulations (CFD) of combustion chambers,
+these small-scale features are often neglected as the corresponding increase in the mesh cell count
+augments significantly the cost of simulation while the small physical size of these cells can present
+problems for the stability of the solver. In problems where acoustics are prevalent and critical
+to the validity of the simulation, the neglected small-scale features and the associated reduction
+in overall acoustic damping can cause problems with spurious, nonphysical noise and prevents accurate
+simulation of transients and limit cycle oscillations. Low-order dynamical systems (LODS) and
+artificial neural networks (ANNs) are proposed and tested in their ability to represent a simple
+two-dimensional acoustically forced simulation of an orifice at multiple frequencies. These
+models were built using compressible CFD, using OpenFOAM, of an orifice placed between two ducts.
+The acoustic impedance of the orifice has been computed using the multi-microphone method and compared
+to a commonly used analytical model. Following this, the flow field downstream of the orifice has
+been modelled using both a LODS and ANN model. Both methods have shown the ability to closely represent
+the simulated dynamical flows at much lower computational cost than the original CFD simulation.
+Such models may also assist in the accurate simulation of flame quenching due to cooling flows or
+the design of effusion cooled aerodynamic surfaces such as nozzle guide vanes (NGVs) and turbine
+blades. 

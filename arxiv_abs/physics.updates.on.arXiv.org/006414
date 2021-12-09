@@ -1,0 +1,20 @@
+Quantum simulations of chemistry in first quantization offer important advantages over approaches
+in second quantization including faster convergence to the continuum limit and the opportunity
+for practical simulations outside the Born-Oppenheimer approximation. However, as all prior
+work on quantum simulation in first quantization has been limited to asymptotic analysis, it has
+been impossible to compare the resources required for these approaches to those for more commonly
+studied algorithms in second quantization. Here, we analyze and optimize the resources required
+to implement two first quantized quantum algorithms for chemistry from Babbush et al that realize
+block encodings for the qubitization and interaction picture frameworks of Low et al. The two algorithms
+we study enable simulation with gate complexities $\tilde{\cal O}(\eta^{8/3}N^{1/3}t+\eta^{4/3}N^{2/3}t)$
+and $\tilde{\cal O}(\eta^{8/3} N^{1/3} t)$ where $\eta$ is the number of electrons, $N$ is the number
+of plane wave basis functions, and $t$ is the duration of time-evolution ($t$ is inverse to target
+precision when the goal is to estimate energies). In addition to providing the first explicit circuits
+and constant factors for any first quantized simulation and introducing improvements which reduce
+circuit complexity by about a thousandfold over naive implementations for modest sized systems,
+we also describe new algorithms that asymptotically achieve the same scaling in a real space representation.
+We assess the resources required to simulate various molecules and materials and conclude that
+the qubitized algorithm will often be more practical than the interaction picture algorithm. We
+demonstrate that our qubitized algorithm often requires much less surface code spacetime volume
+for simulating millions of plane waves than the best second quantized algorithms require for simulating
+hundreds of Gaussian orbitals. 

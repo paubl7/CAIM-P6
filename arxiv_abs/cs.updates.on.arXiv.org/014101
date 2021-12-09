@@ -1,0 +1,20 @@
+We propose FlowReg, a deep learning-based framework for unsupervised image registration for neuroimaging
+applications. The system is composed of two architectures that are trained sequentially: FlowReg-A
+which affinely corrects for gross differences between moving and fixed volumes in 3D followed by
+FlowReg-O which performs pixel-wise deformations on a slice-by-slice basis for fine tuning in
+2D. The affine network regresses the 3D affine matrix based on a correlation loss function that enforces
+global similarity. The deformable network operates on 2D image slices based on the optical flow
+network FlowNet-Simple but with three loss components. The photometric loss minimizes pixel intensity
+differences differences, the smoothness loss encourages similar magnitudes between neighbouring
+vectors, and a correlation loss that is used to maintain the intensity similarity between fixed
+and moving image slices. The proposed method is compared to four open source registration techniques
+ANTs, Demons, SE, and Voxelmorph. In total, 4643 FLAIR MR imaging volumes are used from dementia
+and vascular disease cohorts, acquired from over 60 international centres with varying acquisition
+parameters. A battery of quantitative novel registration validation metrics are proposed that
+focus on the structural integrity of tissues, spatial alignment, and intensity similarity. Experimental
+results show FlowReg (FlowReg-A+O) performs better than iterative-based registration algorithms
+for intensity and spatial alignment metrics with a Pixelwise Agreement of 0.65, correlation coefficient
+of 0.80, and Mutual Information of 0.29. Among the deep learning frameworks, FlowReg-A or FlowReg-A+O
+provided the highest performance over all but one of the metrics. Results show that FlowReg is able
+to obtain high intensity and spatial similarity while maintaining the shape and structure of anatomy
+and pathology. 

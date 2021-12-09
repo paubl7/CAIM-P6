@@ -1,0 +1,19 @@
+Postprocessing ensemble weather predictions to correct systematic errors has become a standard
+practice in research and operations. However, only few recent studies have focused on ensemble
+postprocessing of wind gust forecasts, despite its importance for severe weather warnings. Here,
+we provide a comprehensive review and systematic comparison of eight statistical and machine learning
+methods for probabilistic wind gust forecasting via ensemble postprocessing, that can be divided
+in three groups: State of the art postprocessing techniques from statistics (ensemble model output
+statistics (EMOS), member-by-member postprocessing, isotonic distributional regression),
+established machine learning methods (gradient-boosting extended EMOS, quantile regression
+forests) and neural network-based approaches (distributional regression network, Bernstein
+quantile network, histogram estimation network). The methods are systematically compared using
+six years of data from a high-resolution, convection-permitting ensemble prediction system that
+was run operationally at the German weather service, and hourly observations at 175 surface weather
+stations in Germany. While all postprocessing methods yield calibrated forecasts and are able
+to correct the systematic errors of the raw ensemble predictions, incorporating information from
+additional meteorological predictor variables beyond wind gusts leads to significant improvements
+in forecast skill. In particular, we propose a flexible framework of locally adaptive neural networks
+with different probabilistic forecast types as output, which not only significantly outperform
+all benchmark postprocessing methods but also learn physically consistent relations associated
+with the diurnal cycle, especially the evening transition of the planetary boundary layer. 

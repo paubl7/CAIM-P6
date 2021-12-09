@@ -1,0 +1,19 @@
+This paper considers the problem of Byzantine fault-tolerance in distributed multi-agent optimization.
+In this problem, each agent has a local cost function, and in the fault-free case, the goal is to design
+a distributed algorithm that allows all the agents to find a minimum point of all the agents' aggregate
+cost function. We consider a scenario where some agents might be Byzantine faulty that renders the
+original goal of computing a minimum point of all the agents' aggregate cost vacuous. A more reasonable
+objective for an algorithm in this scenario is to allow all the non-faulty agents to compute the minimum
+point of only the non-faulty agents' aggregate cost. Prior work shows that if there are up to $f$ (out
+of $n$) Byzantine agents then a minimum point of the non-faulty agents' aggregate cost can be computed
+exactly if and only if the non-faulty agents' costs satisfy a certain redundancy property called
+$2f$-redundancy. However, $2f$-redundancy is an ideal property that can be satisfied only in systems
+free from noise or uncertainties, which can make the goal of exact fault-tolerance unachievable
+in some applications. Thus, we introduce the notion of $(f,\epsilon)$-resilience, a generalization
+of exact fault-tolerance wherein the objective is to find an approximate minimum point of the non-faulty
+aggregate cost, with $\epsilon$ accuracy. This approximate fault-tolerance can be achieved under
+a weaker condition that is easier to satisfy in practice, compared to $2f$-redundancy. We obtain
+necessary and sufficient conditions for achieving $(f,\epsilon)$-resilience characterizing
+the correlation between relaxation in redundancy and approximation in resilience. In case when
+the agents' cost functions are differentiable, we obtain conditions for $(f,\epsilon)$-resilience
+of the distributed gradient-descent method when equipped with robust gradient aggregation. 

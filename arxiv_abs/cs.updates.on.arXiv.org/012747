@@ -1,0 +1,19 @@
+Given a graph property $\Phi$, we consider the problem $\mathtt{EdgeSub}(\Phi)$, where the input
+is a pair of a graph $G$ and a positive integer $k$, and the task is to decide whether $G$ contains a $k$-edge
+subgraph that satisfies $\Phi$. Specifically, we study the parameterized complexity of $\mathtt{EdgeSub}(\Phi)$
+and of its counting problem $\#\mathtt{EdgeSub}(\Phi)$ with respect to both approximate and exact
+counting. We obtain a complete picture for minor-closed properties $\Phi$: the decision problem
+$\mathtt{EdgeSub}(\Phi)$ always admits an FPT algorithm and the counting problem $\#\mathtt{EdgeSub}(\Phi)$
+always admits an FPTRAS. For exact counting, we present an exhaustive and explicit criterion on
+the property $\Phi$ which, if satisfied, yields fixed-parameter tractability and otherwise $\#\mathsf{W[1]}$-hardness.
+Additionally, most of our hardness results come with an almost tight conditional lower bound under
+the so-called Exponential Time Hypothesis, ruling out algorithms for $\#\mathtt{EdgeSub}(\Phi)$
+that run in time $f(k)\cdot|G|^{o(k/\log k)}$ for any computable function $f$. As a main technical
+result, we gain a complete understanding of the coefficients of toroidal grids and selected Cayley
+graph expanders in the homomorphism basis of $\#\mathtt{EdgeSub}(\Phi)$. This allows us to establish
+hardness of exact counting using the Complexity Monotonicity framework due to Curticapean, Dell
+and Marx (STOC'17). Our methods can also be applied to a parameterized variant of the Tutte Polynomial
+$T^k_G$ of a graph $G$, to which many known combinatorial interpretations of values of the (classical)
+Tutte Polynomial can be extended. As an example, $T^k_G(2,1)$ corresponds to the number of $k$-forests
+in the graph $G$. Our techniques allow us to completely understand the parametrized complexity
+of computing the evaluation of $T^k_G$ at every pair of rational coordinates $(x,y)$. 

@@ -1,0 +1,20 @@
+It is well known that the Johnson-Lindenstrauss dimensionality reduction method is optimal for
+worst case distortion. While in practice many other methods and heuristics are used, not much is
+known in terms of bounds on their performance. The question of whether the JL method is optimal for
+practical measures of distortion was recently raised in \cite{BFN19} (NeurIPS'19). They provided
+upper bounds on its quality for a wide range of practical measures and showed that indeed these are
+best possible in many cases. Yet, some of the most important cases, including the fundamental case
+of average distortion were left open. In particular, they show that the JL transform has $1+\epsilon$
+average distortion for embedding into $k$-dimensional Euclidean space, where $k=O(1/\eps^2)$,
+and for more general $q$-norms of distortion, $k = O(\max\{1/\eps^2,q/\eps\})$, whereas tight
+lower bounds were established only for large values of $q$ via reduction to the worst case. In this
+paper we prove that these bounds are best possible for any dimensionality reduction method, for
+any $1 \leq q \leq O(\frac{\log (2\eps^2 n)}{\eps})$ and $\epsilon \geq \frac{1}{\sqrt{n}}$,
+where $n$ is the size of the subset of Euclidean space. Our results imply that the JL method is optimal
+for various distortion measures commonly used in practice, such as {\it stress, energy} and {\it
+relative error}. We prove that if any of these measures is bounded by $\eps$ then $k=\Omega(1/\eps^2)$,
+for any $\epsilon \geq \frac{1}{\sqrt{n}}$, matching the upper bounds of \cite{BFN19} and extending
+their tightness results for the full range moment analysis. Our results may indicate that the JL
+dimensionality reduction method should be considered more often in practical applications, and
+the bounds we provide for its quality should be served as a measure for comparison when evaluating
+the performance of other methods and heuristics. 

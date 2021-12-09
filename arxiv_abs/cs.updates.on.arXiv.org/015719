@@ -1,0 +1,19 @@
+Traffic assignment is one of the key approaches used to model the congestion patterns that arise
+in transportation networks. Since static traffic assignment does not have a notion of time dynamics,
+it is not designed to represent the complex dynamics of transportation networks as usage changes
+throughout the day. Dynamic traffic assignment methods attempt to resolve these dynamics, but
+require significant computational resources if modeling urban-scale regions and often take days
+of compute time to complete. The focus of this work is two-fold: 1) to introduce a new traffic assignment
+approach: a quasi-dynamic traffic assignment (QDTA) model and 2) to describe how we parallelized
+the QDTA algorithms to leverage High-Performance Computing (HPC) capabilities and scale to large
+metropolitan areas while dramatically reducing compute time. We examine and compare the user-equilibrium
+model (UET) to a baseline static traffic assignment (STA) model. Results are presented for the San
+Francisco Bay Area which accounts for 19M trips/day and an urban road network of 1M links and is validated
+against multiple data sources. In order to select the gradient descent step size, we use a line search
+using Newton's method with parallelized cost function evaluations and compare it to the method
+of successive averages (MSA). Using the parallelized line search provides a 49 percent reduction
+in total execution time due to a reduction in the number of gradient descent iterations required
+for convergence. The full day simulation using results of 96 optimization steps over 15 minute intervals
+runs in \textasciitilde6 minutes utilizing 1,024 compute cores on the NERSC Cori computer, representing
+a speedup of over 34x versus serial execution. To our knowledge, this compute time is significantly
+lower than any other traffic assignment solutions for a problem of this scale. 

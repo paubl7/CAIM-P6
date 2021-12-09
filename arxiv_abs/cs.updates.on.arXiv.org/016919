@@ -1,0 +1,19 @@
+Longitudinal studies are vital to understanding dynamic changes of the planet, but labels (e.g.,
+buildings, facilities, roads) are often available only for a single point in time. We propose a general
+model, Temporal Cluster Matching (TCM), for detecting building changes in time series of remotely
+sensed imagery when footprint labels are observed only once. The intuition behind the model is that
+the relationship between spectral values inside and outside of building's footprint will change
+when a building is constructed (or demolished). For instance, in rural settings, the pre-construction
+area may look similar to the surrounding environment until the building is constructed. Similarly,
+in urban settings, the pre-construction areas will look different from the surrounding environment
+until construction. We further propose a heuristic method for selecting the parameters of our model
+which allows it to be applied in novel settings without requiring data labeling efforts (to fit the
+parameters). We apply our model over a dataset of poultry barns from 2016/2017 high-resolution
+aerial imagery in the Delmarva Peninsula and a dataset of solar farms from a 2020 mosaic of Sentinel
+2 imagery in India. Our results show that our model performs as well when fit using the proposed heuristic
+as it does when fit with labeled data, and further, that supervised versions of our model perform
+the best among all the baselines we test against. Finally, we show that our proposed approach can
+act as an effective data augmentation strategy -- it enables researchers to augment existing structure
+footprint labels along the time dimension and thus use imagery from multiple points in time to train
+deep learning models. We show that this improves the spatial generalization of such models when
+evaluated on the same change detection task. 

@@ -1,0 +1,18 @@
+The European Spallation Source (ESS) accelerator is composed of superconducting elliptical cavities.
+When the facility is running, the cavities are fed with electrical field from klystrons. Parameters
+of this field are monitored and controlled by the Low-Level Radio Frequency (LLRF) system. Its main
+goal is to keep the amplitude and phase at a given set-point. The LLRF system is also responsible for
+the reference clock distribution. During machine operation the cavities are periodically experiencing
+strain caused by the Lorentz force, appearing when the beam is passing through the accelerating
+structures. Even small changes of the physical dimensions of the cavity cause a shift of its resonance
+frequency. This phenomenon, called detuning, causes significant power losses. It is actively
+compensated by the LLRF control system, which can physically tune lengths of the accelerating cavities
+with stepper motors (slow, coarse grained control) and piezoelements (active compensation during
+operation state). The paper describes implementation and tests of the software supporting various
+aspects of the LLRF system and cavities management. The Piezo Driver management and monitoring
+tool is dedicated for piezo controller device. The LO Distribution application is responsible
+for configuration of the local oscillator. The Cavity Simulator tool was designed to provide access
+to properties of the hardware device, emulating behaviour of elliptical cavities. IPMI Manager
+software was implemented to monitor state of MicroTCA.4 crates, which are major part of the LLRF
+system architecture. All applications have been created using the Experimental Physics and Industrial
+Control System (EPICS) framework and built in ESS EPICS Environment (E3). 

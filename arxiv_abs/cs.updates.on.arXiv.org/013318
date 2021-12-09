@@ -1,0 +1,18 @@
+Spatially-adaptive normalization (SPADE) is remarkably successful recently in conditional
+semantic image synthesis, which modulates the normalized activation with spatially-varying
+transformations learned from semantic layouts, to prevent the semantic information from being
+washed away. Despite its impressive performance, a more thorough understanding of the advantages
+inside the box is still highly demanded to help reduce the significant computation and parameter
+overhead introduced by this novel structure. In this paper, from a return-on-investment point
+of view, we conduct an in-depth analysis of the effectiveness of this spatially-adaptive normalization
+and observe that its modulation parameters benefit more from semantic-awareness rather than spatial-adaptiveness,
+especially for high-resolution input masks. Inspired by this observation, we propose class-adaptive
+normalization (CLADE), a lightweight but equally-effective variant that is only adaptive to semantic
+class. In order to further improve spatial-adaptiveness, we introduce intra-class positional
+map encoding calculated from semantic layouts to modulate the normalization parameters of CLADE
+and propose a truly spatially-adaptive variant of CLADE, namely CLADE-ICPE. %Benefiting from
+this design, CLADE greatly reduces the computation cost while being able to preserve the semantic
+information in the generation. Through extensive experiments on multiple challenging datasets,
+we demonstrate that the proposed CLADE can be generalized to different SPADE-based methods while
+achieving comparable generation quality compared to SPADE, but it is much more efficient with fewer
+extra parameters and lower computational cost. The code is available at https://github.com/tzt101/CLADE.git

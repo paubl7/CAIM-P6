@@ -1,0 +1,19 @@
+In genetic programming, an evolutionary method for producing computer programs that solve specified
+computational problems, parent selection is ordinarily based on aggregate measures of performance
+across an entire training set. Lexicase selection, by contrast, selects on the basis of performance
+on random sequences of training cases; this has been shown to enhance problem-solving power in many
+circumstances. Lexicase selection can also be seen as better reflecting biological evolution,
+by modeling sequences of challenges that organisms face over their lifetimes. Recent work has demonstrated
+that the advantages of lexicase selection can be amplified by down-sampling, meaning that only
+a random subsample of the training cases is used each generation. This can be seen as modeling the
+fact that individual organisms encounter only subsets of the possible environments, and that environments
+change over time. Here we provide the most extensive benchmarking of down-sampled lexicase selection
+to date, showing that its benefits hold up to increased scrutiny. The reasons that down-sampling
+helps, however, are not yet fully understood. Hypotheses include that down-sampling allows for
+more generations to be processed with the same budget of program evaluations; that the variation
+of training data across generations acts as a changing environment, encouraging adaptation; or
+that it reduces overfitting, leading to more general solutions. We systematically evaluate these
+hypotheses, finding evidence against all three, and instead draw the conclusion that down-sampled
+lexicase selection's main benefit stems from the fact that it allows the evolutionary process to
+examine more individuals within the same computational budget, even though each individual is
+examined less completely. 

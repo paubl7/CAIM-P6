@@ -1,0 +1,19 @@
+Precise real time estimates of earthquake magnitude and location are essential for early warning
+and rapid response. While recently multiple deep learning approaches for fast assessment of earthquakes
+have been proposed, they usually rely on either seismic records from a single station or from a fixed
+set of seismic stations. Here we introduce a new model for real-time magnitude and location estimation
+using the attention based transformer networks. Our approach incorporates waveforms from a dynamically
+varying set of stations and outperforms deep learning baselines in both magnitude and location
+estimation performance. Furthermore, it outperforms a classical magnitude estimation algorithm
+considerably and shows promising performance in comparison to a classical localization algorithm.
+In this work, we furthermore conduct a comprehensive study of the requirements on training data,
+the training procedures and the typical failure modes using three diverse and large scale data sets.
+Our analysis gives several key insights. First, we can precisely pinpoint the effect of large training
+data; for example, a four times larger training set reduces the required time for real time assessment
+by a factor of four. Second, the basic model systematically underestimates large magnitude events.
+This issue can be mitigated by incorporating events from other regions into the training through
+transfer learning. Third, location estimation is highly precise in areas with sufficient training
+data, but is strongly degraded for events outside the training distribution. Our analysis suggests
+that these characteristics are not only present for our model, but for most deep learning models
+for fast assessment published so far. They result from the black box modeling and their mitigation
+will likely require imposing physics derived constraints on the neural network. 

@@ -1,0 +1,20 @@
+In the blind deconvolution problem, we observe the convolution of an unknown filter and unknown
+signal and attempt to reconstruct the filter and signal. The problem seems impossible in general,
+since there are seemingly many more unknowns than knowns . Nevertheless, this problem arises in
+many application fields; and empirically, some of these fields have had success using heuristic
+methods -- even economically very important ones, in wireless communications and oil exploration.
+Today's fashionable heuristic formulations pose non-convex optimization problems which are
+then attacked heuristically as well. The fact that blind deconvolution can be solved under some
+repeatable and naturally-occurring circumstances poses a theoretical puzzle. To bridge the gulf
+between reported successes and theory's limited understanding, we exhibit a convex optimization
+problem that -- assuming signal sparsity -- can convert a crude approximation to the true filter
+into a high-accuracy recovery of the true filter. Our proposed formulation is based on L1 minimization
+of inverse filter outputs. We give sharp guarantees on performance of the minimizer assuming sparsity
+of signal, showing that our proposal precisely recovers the true inverse filter, up to shift and
+rescaling. There is a sparsity/initial accuracy tradeoff: the less accurate the initial approximation,
+the greater we rely on sparsity to enable exact recovery. To our knowledge this is the first reported
+tradeoff of this kind. We consider it surprising that this tradeoff is independent of dimension.
+We also develop finite-$N$ guarantees, for highly accurate reconstruction under $N\geq O(k \log(k)
+)$ with high probability. We further show stable approximation when the true inverse filter is infinitely
+long and extend our guarantees to the case where the observations are contaminated by stochastic
+or adversarial noise. 

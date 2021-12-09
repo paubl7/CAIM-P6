@@ -1,0 +1,19 @@
+The emergence of multiple sensory devices on or near a human body is uncovering new dynamics of extreme
+edge computing. In this, a powerful and resource-rich edge device such as a smartphone or a Wi-Fi
+gateway is transformed into a personal edge, collaborating with multiple devices to offer remarkable
+sensory al eapplications, while harnessing the power of locality, availability, and proximity.
+Naturally, this transformation pushes us to rethink how to construct accurate, robust, and efficient
+sensory systems at personal edge. For instance, how do we build a reliable activity tracker with
+multiple on-body IMU-equipped devices? While the accuracy of sensing models is improving, their
+runtime performance still suffers, especially under this emerging multi-device, personal edge
+environments. Two prime caveats that impact their performance are device and data variabilities,
+contributed by several runtime factors, including device availability, data quality, and device
+placement. To this end, we present SensiX, a personal edge platform that stays between sensor data
+and sensing models, and ensures best-effort inference under any condition while coping with device
+and data variabilities without demanding model engineering. SensiX externalises model execution
+away from applications, and comprises of two essential functions, a translation operator for principled
+mapping of device-to-device data and a quality-aware selection operator to systematically choose
+the right execution path as a function of model accuracy. We report the design and implementation
+of SensiX and demonstrate its efficacy in developing motion and audio-based multi-device sensing
+systems. Our evaluation shows that SensiX offers a 7-13% increase in overall accuracy and up to 30%
+increase across different environment dynamics at the expense of 3mW power overhead. 

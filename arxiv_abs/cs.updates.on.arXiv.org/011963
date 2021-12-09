@@ -1,0 +1,19 @@
+Foreseeing the brain evolution as a complex highly inter-connected system, widely modeled as a
+graph, is crucial for mapping dynamic interactions between different anatomical regions of interest
+(ROIs) in health and disease. Interestingly, brain graph evolution models remain almost absent
+in the literature. Here we design an adversarial brain network normalizer for representing each
+brain network as a transformation of a fixed centered population-driven connectional template.
+Such graph normalization with respect to a fixed reference paves the way for reliably identifying
+the most similar training samples (i.e., brain graphs) to the testing sample at baseline timepoint.
+The testing evolution trajectory will be then spanned by the selected training graphs and their
+corresponding evolution trajectories. We base our prediction framework on geometric deep learning
+which naturally operates on graphs and nicely preserves their topological properties. Specifically,
+we propose the first graph-based Generative Adversarial Network (gGAN) that not only learns how
+to normalize brain graphs with respect to a fixed connectional brain template (CBT) (i.e., a brain
+template that selectively captures the most common features across a brain population) but also
+learns a high-order representation of the brain graphs also called embeddings. We use these embeddings
+to compute the similarity between training and testing subjects which allows us to pick the closest
+training subjects at baseline timepoint to predict the evolution of the testing brain graph over
+time. A series of benchmarks against several comparison methods showed that our proposed method
+achieved the lowest brain disease evolution prediction error using a single baseline timepoint.
+Our gGAN code is available at this http URL 

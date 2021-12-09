@@ -1,0 +1,20 @@
+We introduce the block elimination distance as a measure of how close a graph is to some particular
+graph class. Formally, given a graph class ${\cal G}$, the class ${\cal B}({\cal G})$ contains all
+graphs whose blocks belong to ${\cal G}$ and the class ${\cal A}({\cal G})$ contains all graphs where
+the removal of a vertex creates a graph in ${\cal G}$. Given a hereditary graph class ${\cal G}$, we
+recursively define ${\cal G}^{(k)}$ so that ${\cal G}^{(0)}={\cal B}({\cal G})$ and, if $k\geq
+1$, ${\cal G}^{(k)}={\cal B}({\cal A}({\cal G}^{(k-1)}))$. The block elimination distance of
+a graph $G$ to a graph class ${\cal G}$ is the minimum $k$ such that $G\in{\cal G}^{(k)}$ and can be
+seen as an analog of the elimination distance parameter, with the difference that connectivity
+is now replaced by biconnectivity. We show that, for every non-trivial hereditary class ${\cal
+G}$, the problem of deciding whether $G\in{\cal G}^{(k)}$ is NP-complete. We focus on the case where
+${\cal G}$ is minor-closed and we study the minor obstruction set of ${\cal G}^{(k)}$. We prove that
+the size of the obstructions of ${\cal G}^{(k)}$ is upper bounded by some explicit function of $k$
+and the maximum size of a minor obstruction of ${\cal G}$. This implies that the problem of deciding
+whether $G\in{\cal G}^{(k)}$ is constructively fixed parameter tractable, when parameterized
+by $k$. Our results are based on a structural characterization of the obstructions of ${\cal B}({\cal
+G})$, relatively to the obstructions of ${\cal G}$. We give two graph operations that generate members
+of ${\cal G}^{(k)}$ from members of ${\cal G}^{(k-1)}$ and we prove that this set of operations is
+complete for the class ${\cal O}$ of outerplanar graphs. This yields the identification of all members
+${\cal O}\cap{\cal G}^{(k)}$, for every $k\in\mathbb{N}$ and every non-trivial minor-closed
+graph class ${\cal G}$. 

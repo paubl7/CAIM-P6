@@ -1,0 +1,20 @@
+Self-supervised learning approaches leverage unlabeled samples to acquire generic knowledge
+about different concepts, hence allowing for annotation-efficient downstream task learning.
+In this paper, we propose a novel self-supervised method that leverages multiple imaging modalities.
+We introduce the multimodal puzzle task, which facilitates rich representation learning from
+multiple image modalities. The learned representations allow for subsequent fine-tuning on different
+downstream tasks. To achieve that, we learn a modality-agnostic feature embedding by confusing
+image modalities at the data-level. Together with the Sinkhorn operator, with which we formulate
+the puzzle solving optimization as permutation matrix inference instead of classification, they
+allow for efficient solving of multimodal puzzles with varying levels of complexity. In addition,
+we also propose to utilize cross-modal generation techniques for multimodal data augmentation
+used for training self-supervised tasks. In other words, we exploit synthetic images for self-supervised
+pretraining, instead of downstream tasks directly, in order to circumvent quality issues associated
+with synthetic images, while improving data-efficiency and representations quality. Our experimental
+results, which assess the gains in downstream performance and data-efficiency, show that solving
+our multimodal puzzles yields better semantic representations, compared to treating each modality
+independently. Our results also highlight the benefits of exploiting synthetic images for self-supervised
+pretraining. We showcase our approach on four downstream tasks: Brain tumor segmentation and survival
+days prediction using four MRI modalities, Prostate segmentation using two MRI modalities, and
+Liver segmentation using unregistered CT and MRI modalities. We outperform many previous solutions,
+and achieve results competitive to state-of-the-art. 

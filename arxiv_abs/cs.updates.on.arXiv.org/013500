@@ -1,0 +1,19 @@
+We study the problem of sorting under incomplete information, when queries are used to resolve uncertainties.
+Each of $n$ data items has an unknown value, which is known to lie in a given interval. We can pay a query
+cost to learn the actual value, and we may allow an error threshold in the sorting. The goal is to find
+a nearly-sorted permutation by performing a minimum-cost set of queries. We show that an offline
+optimum query set can be found in poly time, and that both oblivious and adaptive problems have simple
+competitive algorithms. The competitive ratio for the oblivious problem is $n$ for uniform query
+costs, and unbounded for arbitrary costs; for the adaptive problem, the ratio is 2. We present a unified
+adaptive strategy for uniform costs that yields the following improved results: (1) a 3/2-competitive
+randomized algorithm; (2) a 5/3-competitive deterministic algorithm if the dependency graph
+has no 2-components after some preprocessing, which has competitive ratio $3/2+\mathrm{O}(1/k)$
+if the components obtained have size at least $k$; and (3) an exact algorithm for laminar families
+of intervals. The first two results have matching lower bounds, and we have a lower bound of 7/5 for
+large components. We also give a randomized adaptive algorithm with competitive ratio $1+\frac{4}{3\sqrt{3}}\approx
+1.7698$ for arbitrary query costs, and we show that the 2-competitive deterministic adaptive algorithm
+can be generalized for queries returning intervals and for a more general vertex cover problem,
+by using the local ratio technique. Moreover, we prove that the advice complexity of the adaptive
+problem is $\lfloor n/2\rfloor$ if no error threshold is allowed, and $\lceil n/3\cdot\lg 3\rceil$
+for the general case. Finally, we present some graph-theoretical results on co-threshold tolerance
+graphs, and we discuss uncertainty variants of some classical interval problems. 

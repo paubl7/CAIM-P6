@@ -1,0 +1,19 @@
+The quality of images captured by smartphones is an important specification since smartphones
+are becoming ubiquitous as primary capturing devices. The traditional image signal processing
+(ISP) pipeline in a smartphone camera consists of several image processing steps performed sequentially
+to reconstruct a high quality sRGB image from the raw sensor data. These steps consist of demosaicing,
+denoising, white balancing, gamma correction, colour enhancement, etc. Since each of them are
+performed sequentially using hand-crafted algorithms, the residual error from each processing
+module accumulates in the final reconstructed signal. Thus, the traditional ISP pipeline has limited
+reconstruction quality in terms of generalizability across different lighting conditions and
+associated noise levels while capturing the image. Deep learning methods using convolutional
+neural networks (CNN) have become popular in solving many image-related tasks such as image denoising,
+contrast enhancement, super resolution, deblurring, etc. Furthermore, recent approaches for
+the RAW to sRGB conversion using deep learning methods have also been published, however, their
+immense complexity in terms of their memory requirement and number of Mult-Adds make them unsuitable
+for mobile camera ISP. In this paper we propose DelNet - a single end-to-end deep learning model -
+to learn the entire ISP pipeline within reasonable complexity for smartphone deployment. Del-Net
+is a multi-scale architecture that uses spatial and channel attention to capture global features
+like colour, as well as a series of lightweight modified residual attention blocks to help with denoising.
+For validation, we provide results to show the proposed Del-Net achieves compelling reconstruction
+quality. 

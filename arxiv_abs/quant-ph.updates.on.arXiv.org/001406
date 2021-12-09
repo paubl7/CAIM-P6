@@ -1,0 +1,18 @@
+We report on the energy-expectation-value landscapes produced by the single-layer ($p=1$) Quantum
+Approximate Optimization Algorithm (QAOA) when being used to solve Ising problems. The landscapes
+are obtained using an analytical formula that we derive. The formula allows us to predict the landscape
+for any given Ising problem instance and consequently predict the optimal QAOA parameters for heuristically
+solving that instance using the single-layer QAOA. We have validated our analytical formula by
+showing that it accurately reproduces the landscapes published in recent experimental reports.
+We then applied our methods to address the question: how well is the single-layer QAOA able to solve
+large benchmark problem instances? We used our analytical formula to calculate the optimal energy-expectation
+values for benchmark MAX-CUT problems containing up to $7\,000$ vertices and $41\,459$ edges.
+We also calculated the optimal energy expectations for general Ising problems with up to $100\,000$
+vertices and $150\,000$ edges. Our results provide an estimate for how well the single-layer QAOA
+may work when run on a quantum computer with thousands of qubits. In addition to providing performance
+estimates when optimal angles are used, we are able to use our analytical results to investigate
+the difficulties one may encounter when running the QAOA in practice for different classes of Ising
+instances. We find that depending on the parameters of the Ising Hamiltonian, the expectation-value
+landscapes can be rather complex, with sharp features that necessitate highly accurate rotation
+gates in order for the QAOA to be run optimally on quantum hardware. We also present analytical results
+that explain some of the qualitative landscape features that are observed numerically. 

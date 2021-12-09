@@ -1,0 +1,18 @@
+We study approximate-near-neighbor data structures for time series under the continuous Fr\'echet
+distance. For an attainable approximation factor $c>1$ and a query radius $r$, an approximate-near-neighbor
+data structure can be used to preprocess $n$ curves in $\mathbb{R}$ (aka time series), each of complexity
+$m$, to answer queries with a curve of complexity $k$ by either returning a curve that lies within
+Fr\'echet distance $cr$, or answering that there exists no curve in the input within distance $r$.
+In both cases, the answer is correct. Our first data structure achieves a $(5+\epsilon)$ approximation
+factor, uses space in $n\cdot \mathcal{O}\left({\epsilon^{-1}}\right)^{k} + \mathcal{O}(nm)$
+and has query time in $\mathcal{O}\left(k\right)$. Our second data structure achieves a $(2+\epsilon)$
+approximation factor, uses space in $n\cdot \mathcal{O}\left(\frac{m}{k\epsilon}\right)^{k}
++ \mathcal{O}(nm)$ and has query time in $\mathcal{O}\left(k\cdot 2^k\right)$. Our third positive
+result is a probabilistic data structure based on locality-sensitive hashing, which achieves
+space in $\mathcal{O}(n\log n+nm)$ and query time in $\mathcal{O}(k\log n)$, and which answers
+queries with an approximation factor in $\mathcal{O}(k)$. All of our data structures make use of
+the concept of signatures, which were originally introduced for the problem of clustering time
+series under the Fr\'echet distance. In addition, we show lower bounds for this problem. Consider
+any data structure which achieves an approximation factor less than $2$ and which supports curves
+of arclength up to $L$ and answers the query using only a constant number of probes. We show that under
+reasonable assumptions on the word size any such data structure needs space in $L^{\Omega(k)}$.

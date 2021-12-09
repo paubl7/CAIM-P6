@@ -1,0 +1,20 @@
+Face recognition technology related to recognizing identities is widely adopted in intelligence
+gathering, law enforcement, surveillance, and consumer applications. Recently, this technology
+has been ported to smartphones and body-worn cameras (BWC). Face recognition technology in body-worn
+cameras is used for surveillance, situational awareness, and keeping the officer safe. Only a handful
+of academic studies exist in face recognition using the body-worn camera. A recent study has assembled
+BWCFace facial image dataset acquired using a body-worn camera and evaluated the ResNet-50 model
+for face identification. However, for real-time inference in resource constraint body-worn cameras
+and privacy concerns involving facial images, on-device face recognition is required. To this
+end, this study evaluates lightweight MobileNet-V2, EfficientNet-B0, LightCNN-9 and LightCNN-29
+models for face identification using body-worn camera. Experiments are performed on a publicly
+available BWCface dataset. The real-time inference is evaluated on three mobile devices. The comparative
+analysis is done with heavy-weight VGG-16 and ResNet-50 models along with six hand-crafted features
+to evaluate the trade-off between the performance and model size. Experimental results suggest
+the difference in maximum rank-1 accuracy of lightweight LightCNN-29 over best-performing ResNet-50
+is \textbf{1.85\%} and the reduction in model parameters is \textbf{23.49M}. Most of the deep models
+obtained similar performances at rank-5 and rank-10. The inference time of LightCNNs is 2.1x faster
+than other models on mobile devices. The least performance difference of \textbf{14\%} is noted
+between LightCNN-29 and Local Phase Quantization (LPQ) descriptor at rank-1. In most of the experimental
+settings, lightweight LightCNN models offered the best trade-off between accuracy and the model
+size in comparison to most of the models. 

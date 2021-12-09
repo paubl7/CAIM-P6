@@ -1,0 +1,19 @@
+Relativistic runaway electrons are a major concern in tokamaks. The European framework for Integrated
+Modelling (EU-IM), facilitates the integration of different plasma simulation tools by providing
+a standard data structure for communication that enables relatively easy integration of different
+physics codes. A three-level modelling approach was adopted for runaway electron simulations
+within the EU-IM. Recently, a number of runaway electron modelling modules have been integrated
+into this framework. The first level of modelling (Runaway Indicator) is limited to the indication
+if runaway electron generation is possible or likely. The second level (Runaway Fluid) adopts an
+approach similar to e.g. the GO code, using analytical formulas to estimate changes in the runaway
+electron current density. The third level is based on the solution of the electron kinetics. One
+such code is LUKE that can handle the toroidicity-induced effects by solving the bounce-averaged
+Fokker-Planck equation. Another approach is used in NORSE, which features a fully nonlinear collision
+operator that makes it capable of simulating major changes in the electron distribution, for example
+slide-away. Both codes handle the effect of radiation on the runaway distribution. These runaway-electron
+modelling codes are in different stages of integration into the EU-IM infrastructure, and into
+the European Transport Simulator (ETS), which is a fully capable modular 1.5D core transport simulator.
+ETS with Runaway Fluid was benchmarked to the GO code implementing similar physics. Coherent integration
+of kinetic solvers requires more effort on the coupling, especially regarding the definition of
+the boundary between runaway and thermal populations, and on consistent calculation of resistivity.
+Some of these issues are discussed. 

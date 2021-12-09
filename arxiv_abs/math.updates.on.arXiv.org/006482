@@ -1,0 +1,19 @@
+Optimization is at the heart of machine learning, statistics and many applied scientific disciplines.
+It also has a long history in physics, ranging from the minimal action principle to finding ground
+states of disordered systems such as spin glasses. Proximal algorithms form a class of methods that
+are broadly applicable and are particularly well-suited to nonsmooth, constrained, large-scale,
+and distributed optimization problems. There are essentially five proximal algorithms currently
+known: Forward-backward splitting, Tseng splitting, Douglas-Rachford, alternating direction
+method of multipliers, and the more recent Davis-Yin. These methods sit on a higher level of abstraction
+compared to gradient-based ones, with deep roots in nonlinear functional analysis. We show that
+all of these methods are actually different discretizations of a single differential equation,
+namely, the simple gradient flow which dates back to Cauchy (1847). An important aspect behind many
+of the success stories in machine learning relies on "accelerating" the convergence of first-order
+methods. We show that similar discretization schemes applied to Newton's equation with an additional
+dissipative force, which we refer to as accelerated gradient flow, allow us to obtain accelerated
+variants of all these proximal algorithms -- the majority of which are new although some recover
+known cases in the literature. Furthermore, we extend these methods to stochastic settings, allowing
+us to make connections with Langevin and Fokker-Planck equations. Similar ideas apply to gradient
+descent, heavy ball, and Nesterov's method which are simpler. Our results therefore provide a unified
+framework from which several important optimization methods are nothing but simulations of classical
+dissipative systems. 

@@ -1,0 +1,19 @@
+Wearable devices such as smartwatches are becoming increasingly popular tools for objectively
+monitoring physical activity in free-living conditions. To date, research has primarily focused
+on the purely supervised task of human activity recognition, demonstrating limited success in
+inferring high-level health outcomes from low-level signals. Here, we present a novel self-supervised
+representation learning method using activity and heart rate (HR) signals without semantic labels.
+With a deep neural network, we set HR responses as the supervisory signal for the activity data, leveraging
+their underlying physiological relationship. In addition, we propose a custom quantile loss function
+that accounts for the long-tailed HR distribution present in the general population. We evaluate
+our model in the largest free-living combined-sensing dataset (comprising >280k hours of wrist
+accelerometer & wearable ECG data). Our contributions are two-fold: i) the pre-training task creates
+a model that can accurately forecast HR based only on cheap activity sensors, and ii) we leverage
+the information captured through this task by proposing a simple method to aggregate the learnt
+latent representations (embeddings) from the window-level to user-level. Notably, we show that
+the embeddings can generalize in various downstream tasks through transfer learning with linear
+classifiers, capturing physiologically meaningful, personalized information. For instance,
+they can be used to predict variables associated with individuals' health, fitness and demographic
+characteristics, outperforming unsupervised autoencoders and common bio-markers. Overall,
+we propose the first multimodal self-supervised method for behavioral and physiological data
+with implications for large-scale health and lifestyle monitoring. 

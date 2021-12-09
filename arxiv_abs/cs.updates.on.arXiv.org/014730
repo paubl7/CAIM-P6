@@ -1,0 +1,19 @@
+Tensor (multidimensional array) classification problem has become very popular in modern applications
+such as image recognition and high dimensional spatio-temporal data analysis. Support Tensor
+Machine (STM) classifier, which is extended from the support vector machine, takes CANDECOMP /
+Parafac (CP) form of tensor data as input and predicts the data labels. The distribution-free and
+statistically consistent properties of STM highlight its potential in successfully handling
+wide varieties of data applications. Training a STM can be computationally expensive with high-dimensional
+tensors. However, reducing the size of tensor with a random projection technique can reduce the
+computational time and cost, making it feasible to handle large size tensors on regular machines.
+We name an STM estimated with randomly projected tensor as Random Projection-based Support Tensor
+Machine (RPSTM). In this work, we propose a Tensor Ensemble Classifier (TEC), which aggregates
+multiple RPSTMs for big tensor classification. TEC utilizes the ensemble idea to minimize the excessive
+classification risk brought by random projection, providing statistically consistent predictions
+while taking the computational advantage of RPSTM. Since each RPSTM can be estimated independently,
+TEC can further take advantage of parallel computing techniques and be more computationally efficient.
+The theoretical and numerical results demonstrate the decent performance of TEC model in high-dimensional
+tensor classification problems. The model prediction is statistically consistent as its risk
+is shown to converge to the optimal Bayes risk. Besides, we highlight the trade-off between the computational
+cost and the prediction risk for TEC model. The method is validated by extensive simulation and a
+real data example. We prepare a python package for applying TEC, which is available at our GitHub.

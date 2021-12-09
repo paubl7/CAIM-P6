@@ -1,0 +1,20 @@
+In multiclass deep network classifiers, the burden of classifying samples of different classes
+is put on a single classifier. As the result the optimum classification accuracy is not obtained.
+Also training times are large due to running the CNN training on single CPU/GPU. However it is known
+that using ensembles of classifiers increases the performance. Also, the training times can be
+reduced by running each member of the ensemble on a separate processor. Ensemble learning has been
+used in the past for traditional methods to a varying extent and is a hot topic. With the advent of deep
+learning, ensemble learning has been applied to the former as well. However, an area which is unexplored
+and has potential is One-Versus-All (OVA) deep ensemble learning. In this paper we explore it and
+show that by using OVA ensembles of deep networks, improvements in performance of deep networks
+can be obtained. As shown in this paper, the classification capability of deep networks can be further
+increased by using an ensemble of binary classification (OVA) deep networks. We implement a novel
+technique for the case of digit image recognition and test and evaluate it on the same. In the proposed
+approach, a single OVA deep network classifier is dedicated to each category. Subsequently, OVA
+deep network ensembles have been investigated. Every network in an ensemble has been trained by
+an OVA training technique using the Stochastic Gradient Descent with Momentum Algorithm (SGDMA).
+For classification of a test sample, the sample is presented to each network in the ensemble. After
+prediction score voting, the network with the largest score is assumed to have classified the sample.
+The experimentation has been done on the MNIST digit dataset, the USPS+ digit dataset, and MATLAB
+digit image dataset. Our proposed technique outperforms the baseline on digit image recognition
+for all datasets. 

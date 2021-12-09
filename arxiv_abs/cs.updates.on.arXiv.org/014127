@@ -1,0 +1,18 @@
+An attacker who breaks into an authentication server and steals all of the cryptographic password
+hashes is able to mount an offline-brute force attack against each user's password. Offline brute-force
+attacks against passwords are increasingly commonplace and the danger is amplified by the well
+documented human tendency to select low-entropy password and/or reuse these passwords across
+multiple accounts. Moderately hard password hashing functions are often deployed to help protect
+passwords against offline attacks by increasing the attacker's guessing cost. However, there
+is a limit to how "hard" one can make the password hash function as authentication servers are resource
+constrained and must avoid introducing substantial authentication delay. Observing that there
+is a wide gap in the strength of passwords selected by different users we introduce DAHash (Distribution
+Aware Password Hashing) a novel mechanism which reduces the number of passwords that an attacker
+will crack. Our key insight ishat a resource-constrained authentication server can dynamically
+tune the hardness parameters of a password hash function based on the (estimated) strength of the
+user's password. We introduce a Stackelberg game to model the interaction between a defender (authentication
+server) and an offline attacker. Our model allows the defender to optimize the parameters of DAHash
+e.g., specify how much effort is spent to hash weak/moderate/high strength passwords. We use several
+large scale password frequency datasets to empirically evaluate the effectiveness of our differentiated
+cost password hashing mechanism. We find that the defender who uses our mechanism can reduce the
+fraction of passwords that would be cracked by a rational offline attacker by around 15%. 

@@ -1,0 +1,18 @@
+The non-linear binary Kerdock codes are known to be Gray images of certain extended cyclic codes
+of length $N = 2^m$ over $\mathbb{Z}_4$. We show that exponentiating these $\mathbb{Z}_4$-valued
+codewords by $\imath \triangleq \sqrt{-1}$ produces stabilizer states, that are quantum states
+obtained using only Clifford unitaries. These states are also the common eigenvectors of commuting
+Hermitian matrices forming maximal commutative subgroups (MCS) of the Pauli group. We use this
+quantum description to simplify the derivation of the classical weight distribution of Kerdock
+codes. Next, we organize the stabilizer states to form $N+1$ mutually unbiased bases and prove that
+automorphisms of the Kerdock code permute their corresponding MCS, thereby forming a subgroup
+of the Clifford group. When represented as symplectic matrices, this subgroup is isomorphic to
+the projective special linear group PSL($2,N$). We show that this automorphism group acts transitively
+on the Pauli matrices, which implies that the ensemble is Pauli mixing and hence forms a unitary $2$-design.
+The Kerdock design described here was originally discovered by Cleve et al. (arXiv:1501.04592),
+but the connection to classical codes is new which simplifies its description and translation to
+circuits significantly. Sampling from the design is straightforward, the translation to circuits
+uses only Clifford gates, and the process does not require ancillary qubits. Finally, we also develop
+algorithms for optimizing the synthesis of unitary $2$-designs on encoded qubits, i.e., to construct
+logical unitary $2$-designs. Software implementations are available at https://github.com/nrenga/symplectic-arxiv18a,
+which we use to provide empirical gate complexities for up to $16$ qubits. 

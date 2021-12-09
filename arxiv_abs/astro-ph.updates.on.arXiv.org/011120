@@ -1,0 +1,18 @@
+Magnetohydrodynamical (MHD) dynamos emerge in many different astrophysical situations where
+turbulence is present, but the interaction between large-scale (LSD) and small-scale dynamos
+(SSD) is not fully understood. We performed a systematic study of turbulent dynamos driven by isotropic
+forcing in isothermal MHD with magnetic Prandtl number of unity, focusing on the exponential growth
+stage. Both helical and non-helical forcing was employed to separate the effects of LSD and SSD in
+a periodic domain. Reynolds numbers (Rm) up to $\approx 250$ were examined and multiple resolutions
+used for convergence checks. We ran our simulations with the Astaroth code, designed to accelerate
+3D stencil computations on graphics processing units (GPUs) and to employ multiple GPUs with peer-to-peer
+communication. We observed a speedup of $\approx 35$ in single-node performance compared to the
+widely used multi-CPU MHD solver Pencil Code. We estimated the growth rates both from the averaged
+magnetic fields and their power spectra. At low Rm, LSD growth dominates, but at high Rm SSD appears
+to dominate in both helically and non-helically forced cases. Pure SSD growth rates follow a logarithmic
+scaling as a function of Rm. Probability density functions of the magnetic field from the growth
+stage exhibit SSD behaviour in helically forced cases even at intermediate Rm. We estimated mean-field
+turbulence transport coefficients using closures like the second-order correlation approximation
+(SOCA). They yield growth rates similar to the directly measured ones and provide evidence of $\alpha$
+quenching. Our results are consistent with the SSD inhibiting the growth of the LSD at moderate Rm,
+while the dynamo growth is enhanced at higher Rm. 

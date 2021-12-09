@@ -1,0 +1,18 @@
+Optimization is finding the best solution, which mathematically amounts to locating the global
+minimum of some cost function. To prevent confinement to a non-global minimum, a suitable technique
+should incorporate a mechanism to overcome barriers between local minima. For example, simulated
+annealing emulates pushing an imaginary particle over a barrier by random noise, whereas quantum
+computers utilise tunnelling through the barriers. All existing methods have limitations, and
+none guarantees optimal solution. Here, we conceive and explore an idea of an optimizer exploiting
+delay-induced bifurcations. Although bifurcation scenarii in nonlinear delay differential
+equations can be very complex and are notoriously difficult to predict, we utilise the fact that
+they become considerably more predictable in special systems, where the right-hand side depends
+only on the delayed variable and represents a gradient of some landscape function. By tuning the
+delay introduced into the gradient descent setting, thanks to global bifurcations destroying
+local attractors, one could force the system to overcome all barriers and to spontaneously wander
+around all minima. This would be similar to noise-induced behavior in simulated annealing, but
+achieved deterministically. Ideally, starting from arbitrary initial conditions at zero delay,
+one would slowly increase and then decrease the delay, while the system would automatically converge
+to the global minimum of the cost function. We explore the possibility of this scenario and formulate
+some of its necessary conditions. Limitations of this technique seem comparable with those of other
+approaches available, but advantages are extreme technical simplicity and complete determinism.

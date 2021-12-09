@@ -1,0 +1,19 @@
+In this paper, we study a privacy filter design problem for a sequence of sensor measurements whose
+joint probability density function (p.d.f.) depends on a private parameter. To ensure parameter
+privacy, we propose a filter design framework which consists of two components: a randomizer and
+a nonlinear transformation. The randomizer takes the private parameter as input and randomly generates
+a pseudo parameter. The nonlinear mapping transforms the measurements such that the joint p.d.f.
+of the filter's output depends on the pseudo parameter rather than the private parameter. It also
+ensures that the joint p.d.f. of the filter's output belongs to the same family of distributions
+as that of the measurements. The nonlinear transformation has a feedforward-feedback structure
+that allows real-time and causal generation of the disguised measurements with low complexity
+using a recursive structure. The design of the randomizer is formulated as an optimization problem
+subject to a privacy constraint, in terms of mutual information, and it is shown that the optimal
+randomizer is the solution of a convex optimization problem. Using information-theoretic inequalities,
+we show that the performance of any estimator of the private parameter, based on the output of the
+privacy filter, is limited by the privacy constraint. The structure of the nonlinear transformation
+is studied in the special cases of independent and identically distributed, Markovian, and Gauss-Markov
+measurements. Our results show that the privacy filter in the Gauss-Markov case can be implemented
+as two one-step ahead Kalman predictors and a set of minimum mean square error predictors. The Kalman
+predictors significantly reduce the complexity of computing the disguised measurements. A numerical
+example on occupancy privacy in a building automation system illustrates the approach. 

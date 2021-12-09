@@ -1,0 +1,18 @@
+Previous robustness approaches for deep learning models such as data augmentation techniques
+via data transformation or adversarial training cannot capture real-world variations that preserve
+the semantics of the input, such as a change in lighting conditions. To bridge this gap, we present
+NaTra, an adversarial training scheme that is designed to improve the robustness of image classification
+algorithms. We target attributes of the input images that are independent of the class identification,
+and manipulate those attributes to mimic real-world natural transformations (NaTra) of the inputs,
+which are then used to augment the training dataset of the image classifier. Specifically, we apply
+\textit{Batch Inverse Encoding and Shifting} to map a batch of given images to corresponding disentangled
+latent codes of well-trained generative models. \textit{Latent Codes Expansion} is used to boost
+image reconstruction quality through the incorporation of extended feature maps. \textit{Unsupervised
+Attribute Directing and Manipulation} enables identification of the latent directions that correspond
+to specific attribute changes, and then produce interpretable manipulations of those attributes,
+thereby generating natural transformations to the input data. We demonstrate the efficacy of our
+scheme by utilizing the disentangled latent representations derived from well-trained GANs to
+mimic transformations of an image that are similar to real-world natural variations (such as lighting
+conditions or hairstyle), and train models to be invariant to these natural transformations. Extensive
+experiments show that our method improves generalization of classification models and increases
+its robustness to various real-world distortions 

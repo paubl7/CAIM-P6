@@ -1,0 +1,18 @@
+In a compiler, an essential component is the register allocator. Two main algorithms have dominated
+implementations, graph coloring and linear scan, differing in how live values are modeled. Graph
+coloring uses an edge in an `interference graph' to show that two values cannot reside in the same
+register. Linear scan numbers all values, creates intervals between definition and uses, and then
+intervals that do not overlap may be allocated to the same register. For both algorithms the liveness
+models are computed at considerable runtime and memory cost. Furthermore, these algorithms do
+little to improve code quality, where the target architecture and register coalescing are important
+concerns. We describe a new register allocation algorithm with lightweight implementation characteristics.
+The algorithm introduces a `future-active' set for values that will reside in a register later in
+the allocation. Registers are allocated and freed in the manner of linear scan, although other ordering
+heuristics could improve code quality or lower runtime cost. An advantageous property of the approach
+is an ability to make these trade-offs. A key result is the `future-active' set can remove any liveness
+model for over 90% of instructions and 80% of methods. The major contribution is the allocation algorithm
+that, for example, solves an inability of the similarly motivated Treescan register allocator
+to look ahead of the instruction being allocated - allowing an unconstrained allocation order,
+and an ability to better handle fixed registers and loop carried values. The approach also is not
+reliant on properties of SSA form, similar to the original linear scan work. An analysis is presented
+in a production compiler for Java code compiled through SSA form to Android dex files. 

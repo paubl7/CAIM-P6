@@ -1,0 +1,19 @@
+We present a new methodology for simulating self-gravitating general-relativistic fluids. In
+our approach the fluid is modelled by means of Lagrangian particles in the framework of a general-relativistic
+(GR) Smooth Particle Hydrodynamics (SPH) formulation, while the spacetime is evolved on a mesh
+according to the BSSN formulation that is also frequently used in Eulerian GR-hydrodynamics. To
+the best of our knowledge this is the first Lagrangian fully general relativistic hydrodynamics
+code (all previous SPH approaches used approximations to GR-gravity). A core ingredient of our
+particle-mesh approach is the coupling between the gas (represented by particles) and the spacetime
+(represented by a mesh) for which we have developed a set of sophisticated interpolation tools that
+are inspired by other particle-mesh approaches, in particular by vortex-particle methods. One
+advantage of splitting the methodology between matter and spacetime is that it gives us more freedom
+in choosing the resolution, so that -- if the spacetime is smooth enough -- we obtain good results
+already with a moderate number of grid cells and can focus the computational effort on the simulation
+of the matter. Further advantages of our approach are the ease with which ejecta can be tracked and
+the fact that the neutron star surface remains well-behaved and does not need any particular treatment.
+In the hydrodynamics part of the code we use a number of techniques that are new to SPH, such as reconstruction,
+slope limiting and steering dissipation by monitoring entropy conservation. We describe here
+in detail the employed numerical methods and demonstrate the code performance in a number of benchmark
+problems ranging from shock tube tests, over Cowling approximations to the fully dynamical evolution
+of neutron stars in self-consistently evolved spacetimes. 

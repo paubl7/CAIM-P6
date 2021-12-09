@@ -1,0 +1,18 @@
+For mitigating Byzantine behaviors in federated learning (FL), most state-of-the-art approaches,
+such as Bulyan, tend to leverage the similarity of updates from the benign clients. However, in many
+practical FL scenarios, data is non-IID across clients, thus the updates received from even the
+benign clients are quite dissimilar. Hence, using similarity based methods result in wasted opportunities
+to train a model from interesting non-IID data, and also slower model convergence. We propose DiverseFL
+to overcome this challenge in heterogeneous data distribution settings. Rather than comparing
+each client's update with other client updates to detect Byzantine clients, DiverseFL compares
+each client's update with a guiding update of that client. Any client whose update diverges from
+its associated guiding update is then tagged as a Byzantine node. The FL server in DiverseFL computes
+the guiding update in every round for each client over a small sample of the client's local data that
+is received only once before start of the training. However, sharing even a small sample of client's
+data with the FL server can compromise client's data privacy needs. To tackle this challenge, DiverseFL
+creates a Trusted Execution Environment (TEE)-based enclave to receive each client's sample and
+to compute its guiding updates. TEE provides a hardware assisted verification and attestation
+to each client that its data is not leaked outside of TEE. Through experiments involving neural networks,
+benchmark datasets and popular Byzantine attacks, we demonstrate that DiverseFL not only performs
+Byzantine mitigation quite effectively, it also almost matches the performance of OracleSGD,
+where the server only aggregates the updates from the benign clients. 

@@ -1,0 +1,18 @@
+The design of permissioned blockchains places an access control requirement for members to read,
+access, and write information over the blockchains. In this paper, we study a hierarchical scenario
+to include three types of participants: providers, collectors, and governors. To be specific,
+providers forward transactions, collected from terminals, to collectors; collectors upload
+received transactions to governors after verifying and labeling them; and governors validate
+a part of received labeled transactions, pack valid ones into a block, and append a new block on the
+ledger. Collectors in the hierarchical model play a crucial role in the design: they have connections
+with both providers and governors, and are responsible for collecting, verifying, and uploading
+transactions. However, collectors are rational and some of them may behave maliciously (not necessarily
+for their own benefits). In this paper, we introduce a reputation protocol as a measure of the reliability
+of collectors in the permissioned blockchain environment. Its objective is to encourage collectors
+to behave truthfully and, in addition, to reduce the verification cost. The verification cost on
+provider $p$ is defined as the total number of invalid transactions provided by $p$ and checked by
+governors. Through theoretical analysis, our protocol with the reputation mechanism has a significant
+improvement in efficiency. Specifically, the verification loss that governors suffer is proved
+to be asymptotically $O(\sqrt{T_{total}})$ ($T_{total}$, representing the number of transactions
+verified by governors and provided by $p$), as long as there exists at least one collector who behaves
+well. At last, two typical cases where our model can be well applied are also demonstrated. 

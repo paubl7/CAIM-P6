@@ -1,0 +1,19 @@
+Seminal works on light spanners over the years provide spanners with optimal or near-optimal lightness
+in various graph classes, such as in general graphs, Euclidean spanners, and minor-free graphs.
+Two shortcomings of all previous work on light spanners are: (1) The techniques are ad hoc per graph
+class, and thus can't be applied broadly (e.g., some require large stretch and are thus suitable
+to general graphs, while others are naturally suitable to stretch $1 + \epsilon$). (2) The runtimes
+of these constructions are almost always sub-optimal, and usually far from optimal. This work aims
+at initiating a unified theory of light spanners by presenting a single framework that can be used
+to construct light spanners in a variety of graph classes. This theory is developed in two papers.
+The current paper is the first of the two -- it lays the foundations of the theory of light spanners
+and then applies it to design fast constructions with optimal lightness for several graph classes.
+Our new constructions are significantly faster than the state-of-the-art for every examined graph
+class; moreover, our runtimes are near-linear and usually optimal. Specifically, this paper includes
+the following results: (i) An $O(m \alpha(m,n))$ -time construction of $(2k-1)(1+\epsilon)$-spanner
+with lightness $O(n^{1/k})$ for general graphs; (ii) An $O(n\log n)$-time construction of Euclidean
+$(1+\epsilon)$-spanners with lightness and degree both bounded by constants in the basic algebraic
+computation tree (ACT) model. This construction resolves a major problem in the area of geometric
+spanners, which was open for three decades; (ii) An $O(n\log n)$-time construction of $(1+\epsilon)$-spanners
+with constant lightness and degree, in the ACT model for unit disk graphs; (iv) a linear-time algorithm
+for constructing $(1+\epsilon)$-spanners with constant lightness for minor-free graphs. 

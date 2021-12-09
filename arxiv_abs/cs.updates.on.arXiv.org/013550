@@ -1,0 +1,19 @@
+We study {\em online} active learning of homogeneous $s$-sparse halfspaces in $\mathbb{R}^d$
+with adversarial noise \cite{kearns1992toward}, where the overall probability of a noisy label
+is constrained to be at most $\nu$ and the marginal distribution over unlabeled data is unchanged.
+Our main contribution is a state-of-the-art online active learning algorithm that achieves near-optimal
+attribute efficiency, label and sample complexity under mild distributional assumptions. In
+particular, under the conditions that the marginal distribution is isotropic log-concave and
+$\nu = \Omega(\epsilon)$, where $\epsilon \in (0, 1)$ is the target error rate, we show that our algorithm
+PAC learns the underlying halfspace in polynomial time with near-optimal label complexity bound
+of $\tilde{O}\big(s \cdot polylog(d, \frac{1}{\epsilon})\big)$ and sample complexity bound
+of $\tilde{O}\big(\frac{s}{\epsilon} \cdot polylog(d)\big)$. Prior to this work, existing
+online algorithms designed for tolerating the adversarial noise are either subject to label complexity
+polynomial in $d$ or $\frac{1}{\epsilon}$, or work under the restrictive uniform marginal distribution.
+As an immediate corollary of our main result, we show that under the more challenging agnostic model
+\cite{kearns1992toward} where no assumption is made on the noise rate, our active learner achieves
+an error rate of $O(OPT) + \epsilon$ with the same running time and label and sample complexity, where
+$OPT$ is the best possible error rate achievable by any homogeneous $s$-sparse halfspace. Our algorithm
+builds upon the celebrated Perceptron while leveraging novel localized sampling and semi-random
+gradient update to tolerate the adversarial noise. We believe that our algorithmic design and analysis
+are of independent interest, and may shed light on learning halfspaces with broader noise models.

@@ -1,0 +1,20 @@
+Cancer diagnosis, prognosis, and therapy response predictions from tissue specimens highly depend
+on the phenotype and topological distribution of constituting histological entities. Thus, adequate
+tissue representations for encoding histological entities is imperative for computer aided cancer
+patient care. To this end, several approaches have leveraged cell-graphs that encode cell morphology
+and organization to denote the tissue information. These allow for utilizing machine learning
+to map tissue representations to tissue functionality to help quantify their relationship. Though
+cellular information is crucial, it is incomplete alone to comprehensively characterize complex
+tissue structure. We herein treat the tissue as a hierarchical composition of multiple types of
+histological entities from fine to coarse level, capturing multivariate tissue information at
+multiple levels. We propose a novel multi-level hierarchical entity-graph representation of
+tissue specimens to model hierarchical compositions that encode histological entities as well
+as their intra- and inter-entity level interactions. Subsequently, a graph neural network is proposed
+to operate on the hierarchical entity-graph representation to map the tissue structure to tissue
+functionality. Specifically, for input histology images we utilize well-defined cells and tissue
+regions to build HierArchical Cell-to-Tissue (HACT) graph representations, and devise HACT-Net,
+a graph neural network, to classify such HACT representations. As part of this work, we introduce
+the BReAst Carcinoma Subtyping (BRACS) dataset, a large cohort of H&E stained breast tumor images,
+to evaluate our proposed methodology against pathologists and state-of-the-art approaches.
+Through comparative assessment and ablation studies, our method is demonstrated to yield superior
+classification results compared to alternative methods as well as pathologists. 

@@ -1,0 +1,19 @@
+In neuroimaging, MRI tissue properties characterize underlying neurobiology, provide quantitative
+biomarkers for neurological disease detection and analysis, and can be used to synthesize arbitrary
+MRI contrasts. Estimating tissue properties from a single scan session using a protocol available
+on all clinical scanners promises to reduce scan time and cost, enable quantitative analysis in
+routine clinical scans and provide scan-independent biomarkers of disease. However, existing
+tissue properties estimation methods - most often $\mathbf{T_1}$ relaxation, $\mathbf{T_2^*}$
+relaxation, and proton density ($\mathbf{PD}$) - require data from multiple scan sessions and
+cannot estimate all properties from a single clinically available MRI protocol such as the multiecho
+MRI scan. In addition, the widespread use of non-standard acquisition parameters across clinical
+imaging sites require estimation methods that can generalize across varying scanner parameters.
+However, existing learning methods are acquisition protocol specific and cannot estimate from
+heterogenous clinical data from different imaging sites. In this work we propose an unsupervised
+deep-learning strategy that employs MRI physics to estimate all three tissue properties from a
+single multiecho MRI scan session, and generalizes across varying acquisition parameters. The
+proposed strategy optimizes accurate synthesis of new MRI contrasts from estimated latent tissue
+properties, enabling unsupervised training, we also employ random acquisition parameters during
+training to achieve acquisition generalization. We provide the first demonstration of estimating
+all tissue properties from a single multiecho scan session. We demonstrate improved accuracy and
+generalizability for tissue property estimation and MRI synthesis. 

@@ -1,0 +1,19 @@
+If two or more identical HTTPS clients, located at different geographic locations (regions), make
+an HTTPS request to the same domain (e.g. example.com), on the same day, will they receive the same
+HTTPS security guarantees in response? Our results give evidence that this is not always the case.
+We conduct scans for the top 250,000 most visited domains on the Internet, from clients located at
+five different regions: Australia, Brazil, India, the UK, and the US. Our scans gather data from
+both application (URLs and HTTP headers) and transport (servers' selected TLS version, ciphersuite,
+and certificate) layers. Overall, we find that HTTPS inconsistencies at the application layer
+are higher than those at the transport layer. We also find that HTTPS security inconsistencies are
+strongly related to URLs and IPs diversity among regions, and to a lesser extent to the presence of
+redirections. Further manual inspection shows that there are several reasons behind URLs diversity
+among regions such as downgrading to the plain-HTTP protocol, using different subdomains, different
+TLDs, or different home page documents. Furthermore, we find that downgrading to plain-HTTP is
+related to websites' regional blocking. We also provide attack scenarios that show how an attacker
+can benefit from HTTPS security inconsistencies, and introduce a new attack scenario which we call
+the "region confusion" attack. Finally, based on our analysis and observations, we provide discussion,
+which include some recommendations such as the need for testing tools for domain administrators
+and users that help to mitigate and detect regional domains' inconsistencies, standardising regional
+domains format with the same-origin policy (of domains) in mind, standardising secure URL redirections,
+and avoid redirections whenever possible. 

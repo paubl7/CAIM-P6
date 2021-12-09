@@ -1,0 +1,19 @@
+Training a deep neural network (DNN) via federated learning allows participants to share model
+updates (gradients), instead of the data itself. However, recent studies show that unintended
+latent information (e.g. gender or race) carried by the gradients can be discovered by attackers,
+compromising the promised privacy guarantee of federated learning. Existing privacy-preserving
+techniques (e.g. differential privacy) either have limited defensive capacity against the potential
+attacks, or suffer from considerable model utility loss. Moreover, characterizing the latent
+information carried by the gradients and the consequent privacy leakage has been a major theoretical
+and practical challenge. In this paper, we propose two new metrics to address these challenges:
+the empirical $\mathcal{V}$-information, a theoretically grounded notion of information which
+measures the amount of gradient information that is usable for an attacker, and the sensitivity
+analysis that utilizes the Jacobian matrix to measure the amount of changes in the gradients with
+respect to latent information which further quantifies private risk. We show that these metrics
+can localize the private information in each layer of a DNN and quantify the leakage depending on
+how sensitive the gradients are with respect to the latent information. As a practical application,
+we design LatenTZ: a federated learning framework that lets the most sensitive layers to run in the
+clients' Trusted Execution Environments (TEE). The implementation evaluation of LatenTZ shows
+that TEE-based approaches are promising for defending against powerful property inference attacks
+without a significant overhead in the clients' computing resources nor trading off the model's
+utility. 

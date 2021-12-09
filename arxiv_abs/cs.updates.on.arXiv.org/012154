@@ -1,0 +1,20 @@
+We study the problem of balancing effectiveness and efficiency in automated feature selection.
+After exploring many feature selection methods, we observe a computational dilemma: 1) traditional
+feature selection is mostly efficient, but difficult to identify the best subset; 2) the emerging
+reinforced feature selection automatically navigates to the best subset, but is usually inefficient.
+Can we bridge the gap between effectiveness and efficiency under automation? Motivated by this
+dilemma, we aim to develop a novel feature space navigation method. In our preliminary work, we leveraged
+interactive reinforcement learning to accelerate feature selection by external trainer-agent
+interaction. In this journal version, we propose a novel interactive and closed-loop architecture
+to simultaneously model interactive reinforcement learning (IRL) and decision tree feedback
+(DTF). Specifically, IRL is to create an interactive feature selection loop and DTF is to feed structured
+feature knowledge back to the loop. First, the tree-structured feature hierarchy from decision
+tree is leveraged to improve state representation. In particular, we represent the selected feature
+subset as an undirected graph of feature-feature correlations and a directed tree of decision features.
+We propose a new embedding method capable of empowering graph convolutional network to jointly
+learn state representation from both the graph and the tree. Second, the tree-structured feature
+hierarchy is exploited to develop a new reward scheme. In particular, we personalize reward assignment
+of agents based on decision tree feature importance. In addition, observing agents' actions can
+be feedback, we devise another reward scheme, to weigh and assign reward based on the feature selected
+frequency ratio in historical action records. Finally, we present extensive experiments on real-world
+datasets to show the improved performance. 

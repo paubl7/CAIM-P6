@@ -1,0 +1,19 @@
+Adversarial robustness of deep neural networks has been actively investigated. However, most
+existing defense approaches are limited to a specific type of adversarial perturbations. Specifically,
+they often fail to offer resistance to multiple attack types simultaneously, i.e., they lack multi-perturbation
+robustness. Furthermore, compared to image recognition problems, the adversarial robustness
+of video recognition models is relatively unexplored. While several studies have proposed how
+to generate adversarial videos, only a handful of approaches about the defense strategies have
+been published in the literature. In this paper, we propose one of the first defense strategies against
+multiple types of adversarial videos for video recognition. The proposed method, referred to as
+MultiBN, performs adversarial training on multiple adversarial video types using multiple independent
+batch normalization (BN) layers with a learning-based BN selection module. With a multiple BN structure,
+each BN brach is responsible for learning the distribution of a single perturbation type and thus
+provides more precise distribution estimations. This mechanism benefits dealing with multiple
+perturbation types. The BN selection module detects the attack type of an input video and sends it
+to the corresponding BN branch, making MultiBN fully automatic and allow end-to-end training.
+Compared to present adversarial training approaches, the proposed MultiBN exhibits stronger
+multi-perturbation robustness against different and even unforeseen adversarial video types,
+ranging from Lp-bounded attacks and physically realizable attacks. This holds true on different
+datasets and target models. Moreover, we conduct an extensive analysis to study the properties
+of the multiple BN structure. 

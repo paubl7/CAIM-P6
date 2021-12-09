@@ -1,0 +1,20 @@
+Modern client processors typically use one of three commonly-used power delivery network (PDN):
+1) motherboard voltage regulators (MBVR), 2) integrated voltage regulators (IVR), and 3) low dropout
+voltage regulators (LDO). We observe that the energy-efficiency of each of these PDNs varies with
+the processor power (e.g., thermal design power (TDP) and dynamic power-state) and workload characteristics.
+This leads to energy inefficiency and performance loss, as modern client processors operate across
+a wide spectrum of power consumption and execute a wide variety of workloads. We propose FlexWatts,
+a hybrid adaptive PDN for modern client processors whose goal is to provide high energy-efficiency
+across the processor's wide range of power consumption and workloads by dynamically allocating
+PDNs to processor domains. FlexWatts is based on three key ideas. First, it combines IVRs and LDOs
+in a novel way to share multiple on-chip and off-chip resources. This hybrid PDN is allocated for
+processor domains with a wide power consumption range and it dynamically switches between two modes:
+IVR-Mode and LDO-Mode, depending on the power consumption. Second, for all other processor domains,
+FlexWatts statically allocates off-chip VRs. Third, FlexWatts introduces a prediction algorithm
+that switches the hybrid PDN to the mode that is the most beneficial. To evaluate the tradeoffs of
+PDNs, we develop and open-source PDNspot, the first validated architectural PDN model that enables
+quantitative analysis of PDN metrics. Using PDNspot, we evaluate FlexWatts on a wide variety of
+SPEC CPU2006, 3DMark06, and battery life workloads against IVR, the state-of-the-art PDN in modern
+client processors. For a 4W TDP processor, FlexWatts improves the average performance of the SPEC
+CPU2006 and 3DMark06 workloads by 22% and 25%, respectively. FlexWatts has comparable cost and
+area overhead to IVR. 

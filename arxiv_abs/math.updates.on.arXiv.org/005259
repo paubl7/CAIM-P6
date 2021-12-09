@@ -1,0 +1,18 @@
+We consider the quasilinear 1D inverse heat convection problem (IHCP) of determining the enthalpy-dependent
+heat fluxes from noisy internal enthalpy measurements. This problem arises in the Accelerated
+Cooling (ACC) process of producing thermomechanically controlled processed (TMCP) heavy plates
+made of steel. In order to adjust the complex microstructure of the underlying material, the Leidenfrost
+behavior of the hot surfaces with respect to the application of the cooling fluid has to be studied.
+Since the heat fluxes depend on the enthalpy and hence on the solution of the underlying initial boundary
+value problem (IBVP), the parameter-to-solution operator, and thus the forward operator of the
+inverse problem, can only be defined implicitly. To guarantee well-defined operators, we study
+two approaches for showing existence and uniqueness of solutions of the IBVP. One approach deals
+with the theory of pseudomonotone operators and so-called strong solutions in Sobolev-Bochner
+spaces. The other theory uses classical solutions in H\"older spaces. Whereas the first approach
+yields a solution under milder assumptions, it fails to show the uniqueness result in contrast to
+the second approach. Furthermore, we propose a convenient parametrization approach for the nonlinear
+heat fluxes in order to decouple the parameter-to-solution relation and use an iterative solver
+based on a Projected Quasi-Newton (PQN) method together with box-constraints to solve the inverse
+problem. For numerical experiments, we derive the necessary gradient information of the objective
+functional and use the discrepancy principle as a stopping rule. Numerical tests show that the PQN
+method outperforms the Landweber method with respect to computing time and approximation accuracy.

@@ -1,0 +1,18 @@
+Deep learning (DL) has demonstrated its powerful capabilities in the field of image inpainting,
+which could produce visually plausible results. Meanwhile, the malicious use of advanced image
+inpainting tools (e.g. removing key objects to report fake news) has led to increasing threats to
+the reliability of image data. To fight against the inpainting forgeries, in this work, we propose
+a novel end-to-end Generalizable Image Inpainting Detection Network (GIID-Net), to detect the
+inpainted regions at pixel accuracy. The proposed GIID-Net consists of three sub-blocks: the enhancement
+block, the extraction block and the decision block. Specifically, the enhancement block aims to
+enhance the inpainting traces by using hierarchically combined special layers. The extraction
+block, automatically designed by Neural Architecture Search (NAS) algorithm, is targeted to extract
+features for the actual inpainting detection tasks. In order to further optimize the extracted
+latent features, we integrate global and local attention modules in the decision block, where the
+global attention reduces the intra-class differences by measuring the similarity of global features,
+while the local attention strengthens the consistency of local features. Furthermore, we thoroughly
+study the generalizability of our GIID-Net, and find that different training data could result
+in vastly different generalization capability. Extensive experimental results are presented
+to validate the superiority of the proposed GIID-Net, compared with the state-of-the-art competitors.
+Our results would suggest that common artifacts are shared across diverse image inpainting methods.
+Finally, we build a public inpainting dataset of 10K image pairs for the future research in this area.

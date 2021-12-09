@@ -1,0 +1,20 @@
+Estimating a representative and discriminative brain network atlas (BNA) is a nascent research
+field in mapping a population of brain networks in health and disease. Although limited, existing
+BNA estimation methods have several limitations. First, they primarily rely on a similarity network
+diffusion and fusion technique, which only considers node degree as a topological measure in the
+cross-network diffusion process, thereby overlooking rich topological measures of the brain
+network (e.g., centrality). Second, both diffusion and fusion techniques are implemented in fully
+unsupervised manner, which might decrease the discriminative power of the estimated BNAs. To fill
+these gaps, we propose a supervised multi-topology network cross-diffusion (SM-netFusion) framework
+for estimating a BNA satisfying : (i) well-representativeness (captures shared traits across
+subjects), (ii) well-centeredness (optimally close to all subjects), and (iii) high discriminativeness
+(can easily and efficiently identify discriminative brain connections that distinguish between
+two populations). For a specific class, given the cluster labels of the training data, we learn a
+weighted combination of the topological diffusion kernels derived from degree, closeness and
+eigenvector centrality measures in a supervised manner. Specifically, we learn the cross-diffusion
+process by normalizing the training brain networks using the learned diffusion kernels. Our SM-netFusion
+produces the most centered and representative template in comparison with its variants and state-of-the-art
+methods and further boosted the classification of autistic subjects by 5-15%. SM-netFusion presents
+the first work for supervised network cross-diffusion based on graph topological measures, which
+can be further leveraged to design an efficient graph feature selection method for training predictive
+learners in network neuroscience. 

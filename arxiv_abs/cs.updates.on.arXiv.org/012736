@@ -1,0 +1,20 @@
+We consider fundamental algorithmic number theoretic problems and their relation to a class of
+block structured Integer Linear Programs (ILPs) called $2$-stage stochastic. A $2$-stage stochastic
+ILP is an integer program of the form $\min \{c^T x \mid \mathcal{A} x = b, \ell \leq x \leq u, x \in \mathbb{Z}^{r
++ ns} \}$ where the constraint matrix $\mathcal{A} \in \mathbb{Z}^{nt \times r +ns}$ consists of
+$n$ matrices $A_i \in \mathbb{Z}^{t \times r}$ on the vertical line and $n$ matrices $B_i \in \mathbb{Z}^{t
+\times s}$ on the diagonal line aside. First, we show a stronger hardness result for a number theoretic
+problem called Quadratic Congruences where the objective is to compute a number $z \leq \gamma$
+satisfying $z^2 \equiv \alpha \bmod \beta$ for given $\alpha, \beta, \gamma \in \mathbb{Z}$. This
+problem was proven to be NP-hard already in 1978 by Manders and Adleman. However, this hardness only
+applies for instances where the prime factorization of $\beta$ admits large multiplicities of
+each prime number. We circumvent this necessity proving that the problem remains NP-hard, even
+if each prime number only occurs constantly often. Then, using this new hardness result for the Quadratic
+Congruences problem, we prove a lower bound of $2^{2^{\delta(s+t)}} |I|^{O(1)}$ for some $\delta
+> 0$ for the running time of any algorithm solving $2$-stage stochastic ILPs assuming the Exponential
+Time Hypothesis (ETH). Here, $|I|$ is the encoding length of the instance. This result even holds
+if $r$, $||b||_{\infty}$, $||c||_{\infty}, ||\ell||_{\infty}$ and the largest absolute value
+$\Delta$ in the constraint matrix $\mathcal{A}$ are constant. This shows that the state-of-the-art
+algorithms are nearly tight. Further, it proves the suspicion that these ILPs are indeed harder
+to solve than the closely related $n$-fold ILPs where the contraint matrix is the transpose of $\mathcal
+A$. 

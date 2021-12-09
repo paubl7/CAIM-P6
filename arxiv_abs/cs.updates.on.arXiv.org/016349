@@ -1,0 +1,20 @@
+Virtualized Radio Access Network (vRAN) brings agility to Next-Generation RAN through functional
+split. It allows decomposing the base station (BS) functions into virtualized components and hosts
+it either at the distributed-unit (DU) or central-unit (CU). However, deciding which functions
+to deploy at DU or CU to minimize the total network cost is challenging. In this paper, a constrained
+deep reinforcement based functional split optimization (CDRS) is proposed to optimize the locations
+of functions in vRAN. Our formulation results in a combinatorial and NP-hard problem for which finding
+the exact solution is computationally expensive. Hence, in our proposed approach, a policy gradient
+method with Lagrangian relaxation is applied that uses a penalty signal to lead the policy toward
+constraint satisfaction. It utilizes a neural network architecture formed by an encoder-decoder
+sequence-to-sequence model based on stacked Long Short-term Memory (LSTM) networks to approximate
+the policy. Greedy decoding and temperature sampling methods are also leveraged for a search strategy
+to infer the best solution among candidates from multiple trained models that help to avoid a severe
+suboptimality. Simulations are performed to evaluate the performance of the proposed solution
+in both synthetic and real network datasets. Our findings reveal that CDRS successfully learns
+the optimal decision, solves the problem with the accuracy of 0.05\% optimality gap and becomes
+the most cost-effective compared to the available RAN setups. Moreover, altering the routing cost
+and traffic load does not significantly degrade the optimality. The results also show that all of
+our CDRS settings have faster computational time than the optimal baseline solver. Our proposed
+method fills the gap of optimizing the functional split offering a near-optimal solution, faster
+computational time and minimal hand-engineering. 

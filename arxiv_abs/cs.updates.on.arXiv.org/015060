@@ -1,0 +1,20 @@
+We consider the problem of computing shortest paths in weighted unit-disk graphs in constant dimension
+$d$. Although the single-source and all-pairs variants of this problem are well-studied in the
+plane case, no non-trivial exact distance oracles for unit-disk graphs have been known to date,
+even for $d=2$. The classical result of Sedgewick and Vitter [Algorithmica '86] shows that for weighted
+unit-disk graphs in the plane the $A^*$ search has average-case performance superior to that of
+a standard shortest path algorithm, e.g., Dijkstra's algorithm. Specifically, if the $n$ corresponding
+points of a weighted unit-disk graph $G$ are picked from a unit square uniformly at random, and the
+connectivity radius is $r\in (0,1)$, $A^*$ finds a shortest path in $G$ in $O(n)$ expected time when
+$r=\Omega(\sqrt{\log n/n})$, even though $G$ has $\Theta((nr)^2)$ edges in expectation. In other
+words, the work done by the algorithm is in expectation proportional to the number of vertices and
+not the number of edges. In this paper, we break this natural barrier and show even stronger sublinear
+time results. We propose a new heuristic approach to computing point-to-point exact shortest paths
+in unit-disk graphs. We analyze the average-case behavior of our heuristic using the same random
+graph model as used by Sedgewick and Vitter and prove it superior to $A^*$. Specifically, we show
+that, if we are able to report the set of all $k$ points of $G$ from an arbitrary rectangular region
+of the plane in $O(k + t(n))$ time, then a shortest path between arbitrary two points of such a random
+graph on the plane can be found in $O(1/r^2 + t(n))$ expected time. In particular, the state-of-the-art
+range reporting data structures imply a sublinear expected bound for all $r=\Omega(\sqrt{\log
+n/n})$ and $O(\sqrt{n})$ expected bound for $r=\Omega(n^{-1/4})$ after only near-linear preprocessing
+of the point set. 

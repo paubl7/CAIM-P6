@@ -1,0 +1,20 @@
+Pneumothorax, a life threatening disease, needs to be diagnosed immediately and efficiently.
+The prognosis in this case is not only time consuming but also prone to human errors. So an automatic
+way of accurate diagnosis using chest X-rays is the utmost requirement. To-date, most of the available
+medical images datasets have class-imbalance issue. The main theme of this study is to solve this
+problem along with proposing an automated way of detecting pneumothorax. We first compare the existing
+approaches to tackle the class-imbalance issue and find that data-level-ensemble (i.e. ensemble
+of subsets of dataset) outperforms other approaches. Thus, we propose a novel framework named as
+VDV model, which is a complex model-level-ensemble of data-level-ensembles and uses three convolutional
+neural networks (CNN) including VGG16, VGG-19 and DenseNet-121 as fixed feature extractors. In
+each data-level-ensemble features extracted from one of the pre-defined CNN are fed to support
+vector machine (SVM) classifier, and output from each data-level-ensemble is calculated using
+voting method. Once outputs from the three data-level-ensembles with three different CNN architectures
+are obtained, then, again, voting method is used to calculate the final prediction. Our proposed
+framework is tested on SIIM ACR Pneumothorax dataset and Random Sample of NIH Chest X-ray dataset
+(RS-NIH). For the first dataset, 85.17% Recall with 86.0% Area under the Receiver Operating Characteristic
+curve (AUC) is attained. For the second dataset, 90.9% Recall with 95.0% AUC is achieved with random
+split of data while 85.45% recall with 77.06% AUC is obtained with patient-wise split of data. For
+RS-NIH, the obtained results are higher as compared to previous results from literature However,
+for first dataset, direct comparison cannot be made, since this dataset has not been used earlier
+for Pneumothorax classification. 

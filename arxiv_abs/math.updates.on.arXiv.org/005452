@@ -1,0 +1,19 @@
+The Gilbert-Varshamov bound (non-constructively) establishes the existence of binary codes
+of distance $1/2 -\epsilon$ and rate $\Omega(\epsilon^2)$ (where an upper bound of $O(\epsilon^2\log(1/\epsilon))$
+is known). Ta-Shma [STOC 2017] gave an explicit construction of $\epsilon$-balanced binary codes,
+where any two distinct codewords are at a distance between $1/2 -\epsilon/2$ and $1/2+\epsilon/2$,
+achieving a near optimal rate of $\Omega(\epsilon^{2+\beta})$, where $\beta \to 0$ as $\epsilon
+\to 0$. We develop unique and list decoding algorithms for (essentially) the family of codes constructed
+by Ta-Shma. We prove the following results for $\epsilon$-balanced codes with block length $N$
+and rate $\Omega(\epsilon^{2+\beta})$ in this family: - For all $\epsilon, \beta > 0$ there are
+explicit codes which can be uniquely decoded up to an error of half the minimum distance in time $N^{O_{\epsilon,
+\beta}(1)}$. - For any fixed constant $\beta$ independent of $\epsilon$, there is an explicit construction
+of codes which can be uniquely decoded up to an error of half the minimum distance in time $(\log(1/\epsilon))^{O(1)}
+\cdot N^{O_\beta(1)}$. - For any $\epsilon > 0$, there are explicit $\epsilon$-balanced codes
+with rate $\Omega(\epsilon^{2+\beta})$ which can be list decoded up to error $1/2 - \epsilon'$
+in time $N^{O_{\epsilon,\epsilon',\beta}(1)}$, where $\epsilon', \beta \to 0$ as $\epsilon
+\to 0$. The starting point of our algorithms is the list decoding framework from Alev et al. [SODA
+2020], which uses the Sum-of-Squares SDP hierarchy. The rates obtained there were quasipolynomial
+in $\epsilon$. Here, we show how to overcome the far from optimal rates of this framework obtaining
+unique decoding algorithms for explicit binary codes of near optimal rate. These codes are based
+on simple modifications of Ta-Shma's construction. 

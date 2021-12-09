@@ -1,0 +1,20 @@
+Stochastic gradient descent (SGD) is an essential element in Machine Learning (ML) algorithms.
+Asynchronous parallel shared-memory SGD (AsyncSGD), including synchronization-free algorithms,
+e.g. HOGWILD!, have received interest in certain contexts, due to reduced overhead compared to
+synchronous parallelization. Despite that they induce staleness and inconsistency, they have
+shown speedup for problems satisfying smooth, strongly convex targets, and gradient sparsity.
+Recent works take important steps towards understanding the potential of parallel SGD for problems
+not conforming to these strong assumptions, in particular for deep learning (DL). There is however
+a gap in current literature in understanding when AsyncSGD algorithms are useful in practice, and
+in particular how mechanisms for synchronization and consistency play a role. We focus on the impact
+of consistency-preserving non-blocking synchronization in SGD convergence, and in sensitivity
+to hyper-parameter tuning. We propose Leashed-SGD, an extensible algorithmic framework of consistency-preserving
+implementations of AsyncSGD, employing lock-free synchronization, effectively balancing throughput
+and latency. We argue analytically about the dynamics of the algorithms, memory consumption, the
+threads' progress over time, and the expected contention. We provide a comprehensive empirical
+evaluation, validating the analytical claims, benchmarking the proposed Leashed-SGD framework,
+and comparing to baselines for training multilayer perceptrons (MLP) and convolutional neural
+networks (CNN). We observe the crucial impact of contention, staleness and consistency and show
+how Leashed-SGD provides significant improvements in stability as well as wall-clock time to convergence
+(from 20-80% up to 4x improvements) compared to the standard lock-based AsyncSGD algorithm and
+HOGWILD!, while reducing the overall memory footprint. 

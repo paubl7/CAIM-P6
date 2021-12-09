@@ -1,0 +1,19 @@
+Quantum noise is the key challenge in Noisy Intermediate-Scale Quantum (NISQ) computers. Limited
+research efforts have explored a higher level of optimization by making the quantum circuit resilient
+to noise. We propose and experimentally implement QuantumNAS, the first comprehensive framework
+for noise-adaptive co-search of variational circuit and qubit mapping. Variational quantum circuits
+are a promising approach for constructing quantum neural networks for machine learning and variational
+ansatzes for quantum simulation. However, finding the best variational circuit and its optimal
+parameters is challenging in a high-dimensional Hilbert space. We propose to decouple the parameter
+training and circuit search by introducing a novel gate-sharing SuperCircuit. The SuperCircuit
+is trained by sampling and updating the SubCircuits in it and provides an accurate estimation of
+SubCircuit performance trained from scratch. Then we perform an evolutionary co-search of SubCircuit
+and its qubit mapping. The SubCircuit performance is estimated with parameters inherited from
+SuperCircuit and simulated with real device noise models. Finally, we perform iterative gate pruning
+and finetuning to further remove the redundant gates in a fine-grained manner. Extensively evaluated
+with 12 QML and VQE benchmarks on 10 quantum computers, QuantumNAS significantly outperforms noise-unaware
+search, human and random baselines. For QML tasks, QuantumNAS is the first to demonstrate over 95%
+2-class, 85% 4-class, and 32% 10-class classification accuracy on real quantum computers. It also
+achieves the lowest eigenvalue for VQE tasks on H2, H2O, LiH, CH4, BeH2 compared with UCCSD baselines.
+We also open-source QuantumEngine (https://github.com/mit-han-lab/pytorch-quantum) for
+fast training of parameterized quantum circuits to facilitate future research. 

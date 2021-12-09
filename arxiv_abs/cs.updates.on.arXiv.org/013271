@@ -1,0 +1,18 @@
+Preterm neonates are highly likely to suffer from ventriculomegaly, a dilation of the Cerebral
+Ventricular System (CVS). This condition can develop into life-threatening hydrocephalus and
+is correlated with future neuro-developmental impairments. Consequently, it must be detected
+and monitored by physicians. In clinical routing, manual 2D measurements are performed on 2D ultrasound
+(US) images to estimate the CVS volume but this practice is imprecise due to the unavailability of
+3D information. A way to tackle this problem would be to develop automatic CVS segmentation algorithms
+for 3D US data. In this paper, we investigate the potential of 2D and 3D Convolutional Neural Networks
+(CNN) to solve this complex task and propose to use Compositional Pattern Producing Network (CPPN)
+to enable the CNNs to learn CVS location. Our database was composed of 25 3D US volumes collected on
+21 preterm nenonates at the age of $35.8 \pm 1.6$ gestational weeks. We found that the CPPN enables
+to encode CVS location, which increases the accuracy of the CNNs when they have few layers. Accuracy
+of the 2D and 3D CNNs reached intraobserver variability (IOV) in the case of dilated ventricles with
+Dice of $0.893 \pm 0.008$ and $0.886 \pm 0.004$ respectively (IOV = $0.898 \pm 0.008$) and with volume
+errors of $0.45 \pm 0.42$ cm$^3$ and $0.36 \pm 0.24$ cm$^3$ respectively (IOV = $0.41 \pm 0.05$ cm$^3$).
+3D CNNs were more accurate than 2D CNNs in the case of normal ventricles with Dice of $0.797 \pm 0.041$
+against $0.776 \pm 0.038$ (IOV = $0.816 \pm 0.009$) and volume errors of $0.35 \pm 0.29$ cm$^3$ against
+$0.35 \pm 0.24$ cm$^3$ (IOV = $0.2 \pm 0.11$ cm$^3$). The best segmentation time of volumes of size
+$320 \times 320 \times 320$ was obtained by a 2D CNN in $3.5 \pm 0.2$ s. 

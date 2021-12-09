@@ -1,0 +1,19 @@
+IFOSMONDI iterative algorithm for implicit co-simulation of coupled physical systems (introduced
+by the authors in july 2019 during the Simultech conference, p.176-186) enables us to solve the nonlinear
+coupling function while keeping the smoothness of interfaces without introducing a delay. Moreover,
+it automatically adapts the size of the steps between data exchanges among the systems according
+to the difficulty of the solving of the coupling constraint. The latter was solved by a fixed-point
+algorithm in the original implementation whereas this paper introduces the JFM version (standing
+for Jacobian-Free Methods). Most implementations of Newton-like methods require a jacobian matrix
+which can be difficult to compute in the co-simulation context, except in the case where the interfaces
+are represented by a Zero-Order-Hold (ZOH). As far as IFOSMONDI coupling algorithm uses Hermite
+interpolation for smoothness enhancement (up to Third-Order-Hold), we propose hereafter a new
+formulation of the non-linear coupling function including both the values and the time-derivatives
+of the coupling variables. This formulation is well designed for solving the coupling through jacobian-free
+Newton type methods. Consequently, successive function evaluations consist in multiple simulations
+of the systems on a co-simulation time step using rollback. The orchestrator-workers structure
+of the algorithm enables us to combine the PETSc framework on the orchestrator side for the non-linear
+Newton-type solvers with the parallel integrations of the systems on the workers side thanks to
+MPI processes. Different nonlinear methods will be compared to one another and to the original fixed-point
+implementation on a newly proposed 2-systems academic test-case (mass-spring-damper type) with
+direct feedthrough on both sides. 

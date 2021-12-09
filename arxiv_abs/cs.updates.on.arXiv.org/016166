@@ -1,0 +1,18 @@
+In a (parameterized) graph edge modification problem, we are given a graph $G$, an integer $k$ and
+a (usually well-structured) class of graphs $\mathcal{G}$, and ask whether it is possible to transform
+$G$ into a graph $G' \in \mathcal{G}$ by adding and/or removing at most $k$ edges. Parameterized
+graph edge modification problems received considerable attention in the last decades. In this
+paper we focus on finding small kernels for edge modification problems. One of the most studied problems
+is the \textsc{Cluster Editing} problem, in which the goal is to partition the vertex set into a disjoint
+union of cliques. Even if a $2k$ kernel exists for \textsc{Cluster Editing}, this kernel does not
+reduce the size of the instance in most cases. Therefore, we explore the question of whether linear
+kernels are a theoretical limit in edge modification problems, in particular when the target graphs
+are very structured (such as a partition into cliques for instance). We prove, as far as we know, the
+first sublinear kernel for an edge modification problem. Namely, we show that \textsc{Clique +
+Independent Set Deletion}, which is a restriction of \textsc{Cluster Deletion}, admits a kernel
+of size $O(k/\log k)$. We also obtain small kernels for several other edge modification problems.
+We prove that \textsc{Split Addition} (and the equivalent \textsc{Split Deletion}) admits a linear
+kernel, improving the existing quadratic kernel of Ghosh et al. \cite{ghosh2015faster}. We also
+prove that \textsc{Trivially Perfect Addition} admits a quadratic kernel (improving the cubic
+kernel of Guo \cite{guo2007problem}), and finally prove that its triangle-free version (\textsc{Starforest
+Deletion}) admits a linear kernel, which is optimal under ETH. 

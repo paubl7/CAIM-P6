@@ -1,0 +1,18 @@
+We investigate how hardware specifications can impact the final run time and the required number
+of physical qubits to achieve a quantum advantage in the fault tolerant regime. Within a particular
+time frame, both the code cycle time and the number of achievable physical qubits may vary by orders
+of magnitude between different quantum hardware designs. We start with logical resource requirements
+corresponding to a quantum advantage for a particular chemistry application, simulating the FeMoco
+molecule, and explore to what extent slower code cycle times can be mitigated by using additional
+qubits. We show that in certain situations architectures with considerably slower code cycle times
+will still be able to reach desirable run times, provided enough physical qubits are available.
+We utilize various space and time optimization strategies that have been previously considered
+within the field of error-correcting surface codes. In particular, we compare two distinct methods
+of parallelization, Game of Surface Code's Units, and AutoCCZ factories, both of which enable one
+to incrementally speed up the computation until the time optimal limit is reached. We investigate
+the impact of the average number of T gates per layer and identify the optimal value for particular
+scenarios. Finally we calculate the number of physical qubits which would be required to break the
+256 bit elliptic curve encryption of keys in the Bitcoin network, within the small available time
+frame in which it would actually pose a threat to do so. It would require approximately 35 million
+physical qubits to break the encryption within one hour using the surface code and a code cycle time
+of 1 $ \mu s$, a reaction time of 10 $ \mu s$, and physical gate error of $10^{-3}$. 

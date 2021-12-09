@@ -1,0 +1,19 @@
+We present a comprehensive inter-comparison of linear regression (LR), stochastic, and deep-learning
+approaches for reduced-order statistical emulation of ocean circulation. The reference dataset
+is provided by an idealized, eddy-resolving, double-gyre ocean circulation model. Our goal is
+to conduct a systematic and comprehensive assessment and comparison of skill, cost, and complexity
+of statistical models from the three methodological classes. The model based on LR is considered
+as a baseline. Additionally, we investigate its additive white noise augmentation and a multi-level
+stochastic approach, deep-learning methods, hybrid frameworks (LR plus deep-learning), and
+simple stochastic extensions of deep-learning and hybrid methods. The assessment metrics considered
+are: root mean squared error, anomaly cross-correlation, climatology, variance, frequency map,
+forecast horizon, and computational cost. We found that the multi-level linear stochastic approach
+performs the best for both short- and long-timescale forecasts. The deep-learning hybrid models
+augmented by additive state-dependent white noise came second, while their deterministic counterparts
+failed to reproduce the characteristic frequencies in climate-range forecasts. Pure deep learning
+implementations performed worse than LR and its noise augmentations. Skills of LR and its white
+noise extension were similar on short timescales, but the latter performed better on long timescales,
+while LR-only outputs decay to zero for long simulations. Overall, our analysis promotes multi-level
+LR stochastic models with memory effects, and hybrid models with linear dynamical core augmented
+by additive stochastic terms learned via deep learning, as a more practical, accurate, and cost-effective
+option for ocean emulation than pure deep-learning solutions. 

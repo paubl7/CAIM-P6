@@ -1,0 +1,19 @@
+As a common weather, rain streaks adversely degrade the image quality. Hence, removing rains from
+an image has become an important issue in the field. To handle such an ill-posed single image deraining
+task, in this paper, we specifically build a novel deep architecture, called rain convolutional
+dictionary network (RCDNet), which embeds the intrinsic priors of rain streaks and has clear interpretability.
+In specific, we first establish a RCD model for representing rain streaks and utilize the proximal
+gradient descent technique to design an iterative algorithm only containing simple operators
+for solving the model. By unfolding it, we then build the RCDNet in which every network module has
+clear physical meanings and corresponds to each operation involved in the algorithm. This good
+interpretability greatly facilitates an easy visualization and analysis on what happens inside
+the network and why it works well in inference process. Moreover, taking into account the domain
+gap issue in real scenarios, we further design a novel dynamic RCDNet, where the rain kernels can
+be dynamically inferred corresponding to input rainy images and then help shrink the space for rain
+layer estimation with few rain maps so as to ensure a fine generalization performance in the inconsistent
+scenarios of rain types between training and testing data. By end-to-end training such an interpretable
+network, all involved rain kernels and proximal operators can be automatically extracted, faithfully
+characterizing the features of both rain and clean background layers, and thus naturally lead to
+better deraining performance. Comprehensive experiments substantiate the superiority of our
+method, especially on its well generality to diverse testing scenarios and good interpretability
+for all its modules. Code is available in \emph{\url{https://github.com/hongwang01/DRCDNet}}.

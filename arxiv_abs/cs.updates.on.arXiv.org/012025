@@ -1,0 +1,18 @@
+In this paper we introduce a provably stable architecture for Neural Ordinary Differential Equations
+(ODEs) which achieves non-trivial adversarial robustness under white-box adversarial attacks
+even when the network is trained naturally. For most existing defense methods withstanding strong
+white-box attacks, to improve robustness of neural networks, they need to be trained adversarially,
+hence have to strike a trade-off between natural accuracy and adversarial robustness. Inspired
+by dynamical system theory, we design a stabilized neural ODE network named SONet whose ODE blocks
+are skew-symmetric and proved to be input-output stable. With natural training, SONet can achieve
+comparable robustness with the state-of-the-art adversarial defense methods, without sacrificing
+natural accuracy. Even replacing only the first layer of a ResNet by such a ODE block can exhibit further
+improvement in robustness, e.g., under PGD-20 ($\ell_\infty=0.031$) attack on CIFAR-10 dataset,
+it achieves 91.57\% and natural accuracy and 62.35\% robust accuracy, while a counterpart architecture
+of ResNet trained with TRADES achieves natural and robust accuracy 76.29\% and 45.24\%, respectively.
+To understand possible reasons behind this surprisingly good result, we further explore the possible
+mechanism underlying such an adversarial robustness. We show that the adaptive stepsize numerical
+ODE solver, DOPRI5, has a gradient masking effect that fails the PGD attacks which are sensitive
+to gradient information of training loss; on the other hand, it cannot fool the CW attack of robust
+gradients and the SPSA attack that is gradient-free. This provides a new explanation that the adversarial
+robustness of ODE-based networks mainly comes from the obfuscated gradients in numerical ODE solvers.

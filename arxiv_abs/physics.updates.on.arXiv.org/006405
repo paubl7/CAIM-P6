@@ -1,0 +1,18 @@
+We present a fully Eulerian hybrid immersed-boundary/phase-field model to simulate wetting and
+contact line motion over any arbitrary geometry. The solid wall is described with a volume-penalisation
+ghost-cell immersed boundary whereas the interface between the two fluids by a diffuse-interface
+method. The contact line motion on the complex wall is prescribed via slip velocity in the momentum
+equation and static/dynamic contact angle condition for the order parameter of the Cahn-Hilliard
+model. This combination requires accurate computations of the normal and tangential gradients
+of the scalar order parameter and of the components of the velocity. However, the present algorithm
+requires the computation of averaging weights and other geometrical variables as a preprocessing
+step. Several validation tests are reported in the manuscript, together with 2D simulations of
+a droplet spreading over a sinusoidal wall with different contact angles and slip length and a spherical
+droplet spreading over a sphere, showing that the proposed algorithm is capable to deal with the
+three-phase contact line motion over any complex wall. The Eulerian feature of the algorithm facilitates
+the implementation and provides a straight-forward and potentially highly scalable parallelisation.
+The employed parallelisation of the underlying Navier-Stokes solver can be efficiently used for
+the multiphase part as well. The procedure proposed here can be directly employed to impose any types
+of boundary conditions (Neumann, Dirichlet and mixed) for any field variable evolving over a complex
+geometry, modelled with an immersed-boundary approach (for instance, modelling deformable biological
+membranes, red blood cells, solidification, evaporation and boiling, to name a few) 

@@ -1,0 +1,18 @@
+The problem of precision matrix estimation in a multivariate Gaussian model is fundamental to network
+estimation. Although there exist both Bayesian and frequentist approaches to this, it is difficult
+to obtain good Bayesian and frequentist properties under the same prior-penalty dual, complicating
+justification. It is well known, for example, that the Bayesian version of the popular lasso estimator
+has poor posterior concentration properties. To bridge this gap for the precision matrix estimation
+problem, our contribution is a novel prior-penalty dual that closely approximates the popular
+graphical horseshoe prior and penalty, and performs well in both Bayesian and frequentist senses.
+A chief difficulty with the horseshoe prior is a lack of closed form expression of the density function,
+which we overcome in this article, allowing us to directly study the penalty function. In terms of
+theory, we establish posterior convergence rate of the precision matrix that matches the oracle
+rate, in addition to the frequentist consistency of the maximum a posteriori estimator. In addition,
+our results also provide theoretical justifications for previously developed approaches that
+have been unexplored so far, e.g. for the graphical horseshoe prior. Computationally efficient
+Expectation Conditional Maximization and Markov chain Monte Carlo algorithms are developed respectively
+for the penalized likelihood and fully Bayesian estimation problems, using the same latent variable
+framework. In numerical experiments, the horseshoe-based approaches echo their superior theoretical
+properties by comprehensively outperforming the competing methods. A protein-protein interaction
+network estimation in B-cell lymphoma is considered to validate the proposed methodology. 

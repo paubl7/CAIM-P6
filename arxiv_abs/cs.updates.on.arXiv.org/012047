@@ -1,0 +1,19 @@
+In Central Differential Privacy (CDP), there is a trusted analyst who collects the data from users
+and publishes the datasets/statistics after the procedure of random perturbation. However, in
+this paradigm, the submitted users' raw data is completely revealed to the analyst. In Local Differential
+Privacy (LDP), each user locally perturbs the data before submitting it to the data collector. Users
+no longer need to fully trust the analyst. Nevertheless, the LDP paradigm suffers from a strong constraint
+on the utility of statistical functions. To tackle the conflicts, recent works propose the shuffle
+model to enhance the utility of LDP mechanism. A new participant, i.e., shuffler, is introduced
+between users and the analyst to produce the privacy amplification. In this paper, we propose DUMP
+(\underline{DUM}my-\underline{P}oint-based), a framework for privacy-preserving histogram
+estimation in shuffle model. DUMP can summarize all existing histogram estimation protocols in
+shuffle model. We introduce $dummy\ blanket$ intuition to analyze the advantage of dummy points
+in improving utility. Then we design two protocols: pureDUMP and mixDUMP under DUMP framework,
+which achieve better trade-offs between privacy, accuracy, and communication than existing protocols.
+We also prove that dummy points have privacy amplification locally, which can achieve enhanced
+privacy protection on the shuffler. Besides, existing related studies lacks experimental evaluation
+that results are still in the theoretical stage. We conduct a comprehensive experimental evaluation
+to evaluate our proposed protocols and existing other protocols. Experimental results on both
+synthetic and real-world datasets show that our proposed protocols achieve better utility for
+both accuracy and communication under the same privacy guarantee than existing protocols. 

@@ -1,0 +1,19 @@
+In the past decades, great progress has been made in the field of optical and particle-based measurement
+techniques for experimental analysis of fluid flows. Particle Image Velocimetry (PIV) technique
+is widely used to identify flow parameters from time-consecutive snapshots of particles injected
+into the fluid. The computation is performed as post-processing of the experimental data via proximity
+measure between particles in frames of reference. However, the post-processing step becomes problematic
+as the motility and density of the particles increases, since the data emerges in extreme rates and
+volumes. Moreover, existing algorithms for PIV either provide sparse estimations of the flow or
+require large computational time frame preventing from on-line use. The goal of this manuscript
+is therefore to develop an accurate on-line algorithm for estimation of the fine-grained velocity
+field from PIV data. As the data constitutes a pair of images, we employ computer vision methods to
+solve the problem. In this work, we introduce a convolutional neural network adapted to the problem,
+namely Volumetric Correspondence Network (VCN) which was recently proposed for the end-to-end
+optical flow estimation in computer vision. The network is thoroughly trained and tested on a dataset
+containing both synthetic and real flow data. Experimental results are analyzed and compared to
+that of conventional methods as well as other recently introduced methods based on neural networks.
+Our analysis indicates that the proposed approach provides improved efficiency also keeping accuracy
+on par with other state-of-the-art methods in the field. We also verify through a-posteriori tests
+that our newly constructed VCN schemes are reproducing well physically relevant statistics of
+velocity and velocity gradients. 

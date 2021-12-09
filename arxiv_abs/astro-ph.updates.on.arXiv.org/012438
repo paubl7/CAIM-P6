@@ -1,0 +1,19 @@
+Weak gravitational lensing mass maps play a crucial role in understanding the evolution of structures
+in the universe and our ability to constrain cosmological models. The prediction of these mass maps
+is based on expensive N-body simulations, which can create a computational bottleneck for cosmological
+analyses. Modern deep generative models, such as Generative Adversarial Networks (GAN), have
+demonstrated their potential to achieve this goal. Most existing GAN approaches produce simulations
+for a fixed value of the cosmological parameters, which limits their practical applicability.
+We propose a novel conditional GAN model that is able to generate mass maps for any pair of matter density
+$\Omega_m$ and matter clustering strength $\sigma_8$, parameters which have the largest impact
+on the evolution of structures in the universe. Our results show that our conditional GAN can interpolate
+efficiently within the space of simulated cosmologies, and generate maps anywhere inside this
+space with good visual quality high statistical accuracy. We perform an extensive quantitative
+comparison of the N-body and GAN -generated maps using a range of metrics: the pixel histograms,
+peak counts, power spectra, bispectra, Minkowski functionals, correlation matrices of the power
+spectra, the Multi-Scale Structural Similarity Index (MS-SSIM) and our equivalent of the Fr\'echet
+Inception Distance (FID). We find a very good agreement on these metrics, with typical differences
+are <5% at the centre of the simulation grid, and slightly worse for cosmologies at the grid edges.
+The agreement for the bispectrum is slightly worse, on the <20% level. This contribution is a step
+towards building emulators of mass maps directly, capturing both the cosmological signal and its
+variability. We make the code and the data publicly available: https://renkulab.io/gitlab/nathanael.perraudin/darkmattergan

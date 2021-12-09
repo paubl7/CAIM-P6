@@ -1,0 +1,20 @@
+Proving only over source code that programs do not leak sensitive data leaves a gap between reasoning
+and reality that can only be filled by accounting for the behaviour of the compiler. Furthermore,
+software does not always have the luxury of limiting itself to single-threaded computation with
+resources statically dedicated to each user to ensure the confidentiality of their data. This results
+in mixed-sensitivity concurrent programs, which might reuse memory shared between their threads
+to hold data of different sensitivity levels at different times; for such programs, a compiler must
+preserve the value-dependent coordination of such mixed-sensitivity reuse despite the impact
+of concurrency. Here we demonstrate, using Isabelle/HOL, that it is feasible to verify that a compiler
+preserves noninterference, the strictest kind of confidentiality property, for mixed-sensitivity
+concurrent programs. First, we present notions of refinement that preserve a concurrent value-dependent
+notion of noninterference that we have designed to support such programs. As proving noninterference-preserving
+refinement can be considerably more complex than the standard refinements typically used to verify
+semantics -- preserving compilation, our notions include a decomposition principle that separates
+the semantics -- from the security-preservation concerns. Second, we demonstrate that these refinement
+notions are applicable to verified secure compilation, by exercising them on a single-pass compiler
+for mixed-sensitivity concurrent programs that synchronise using mutex locks, from a generic
+imperative language to a generic RISC-style assembly language. Finally, we execute our compiler
+on a nontrivial mixed-sensitivity concurrent program modelling a real-world use case, thus preserving
+its source-level noninterference properties down to an assembly-level model automatically.
+(See paper for complete abstract.) 

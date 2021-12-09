@@ -1,0 +1,19 @@
+We study fundamental point-line covering problems in computational geometry, in which the input
+is a set $S$ of points in the plane. The first is the {\sc Rich Lines} problem, which asks for the set
+of all lines that each covers at least $\lambda$ points from $S$, for a given integer parameter $\lambda
+\geq 2$; this problem subsumes the {\sc 3-Points-on-Line} problem and the {\sc Exact Fitting} problem,
+which -- the latter -- asks for a line containing the maximum number of points. The second is the \NP-hard
+problem {\sc Line Cover}, which asks for a set of $k$ lines that cover the points of $S$, for a given
+parameter $k \in \mathbb{N}$. Both problems have been extensively studied. In particular, the
+{\sc Rich Lines} problem is a fundamental problem whose solution serves as a building block for several
+algorithms in computational geometry. For {\sc Rich Lines} and {\sc Exact Fitting}, we present
+a randomized Monte Carlo algorithm that achieves a lower running time than that of Guibas et al.'s
+algorithm [{\it Computational Geometry} 1996], for a wide range of the parameter $\lambda$. We
+derive lower-bound results showing that, for $\lambda =\Omega(\sqrt{n \log n})$, the upper bound
+on the running time of this randomized algorithm matches the lower bound that we derive on the time
+complexity of {\sc Rich Lines} in the algebraic computation trees model. For {\sc Line Cover}, we
+present two kernelization algorithms: a randomized Monte Carlo algorithm and a deterministic
+algorithm. Both algorithms improve the running time of existing kernelization algorithms for
+{\sc Line Cover}. We derive lower-bound results showing that the running time of the randomized
+algorithm we present comes close to the lower bound we derive on the time complexity of kernelization
+algorithms for {\sc Line Cover} in the algebraic computation trees model. 

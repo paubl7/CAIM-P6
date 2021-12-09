@@ -1,0 +1,19 @@
+During the normal operation of a Cloud solution, no one pays attention to the logs except the system
+reliability engineers, who may periodically check them to ensure that the Cloud platform's performance
+conforms to the Service Level Agreements (SLA). However, the moment a component fails, or a customer
+complains about a breach of SLA, the importance of logs increases significantly. All departments,
+including management, customer support, and even the actual customer, may turn to logs to determine
+the cause and timeline of the issue and to find the party responsible for the issue. The party at fault
+may be motivated to tamper with the logs to hide their role. Given the number and volume of logs generated
+by the Cloud platforms, many tampering opportunities exist. We argue that the critical nature of
+logs calls for immutability and verification mechanism without the presence of a single trusted
+party. This paper proposes such a mechanism by describing a blockchain-based log system, called
+Logchain, which can be integrated with existing private and public blockchain solutions. Logchain
+uses the immutability feature of blockchain to provide a tamper-resistance storage platform for
+log storage. Additionally, we propose a hierarchical structure to combine the hash-binding of
+two blockchains to address blockchains' scalability issues. To validate the mechanism, we integrate
+Logchain into two different types of blockchains. We choose Ethereum as a public, permission-less
+blockchain and IBM Blockchain as a private, permission-based one. We show that the solution is scalable
+on both the private and public blockchains. Additionally, we perform the analysis of the cost of
+ownership for private and public blockchains implementations to help a reader selecting an implementation
+that would be applicable to their needs. 

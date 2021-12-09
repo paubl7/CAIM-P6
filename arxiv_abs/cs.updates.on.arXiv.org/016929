@@ -1,0 +1,19 @@
+Images obtained in real-world low-light conditions are not only low in brightness, but they also
+suffer from many other types of degradation, such as color bias, unknown noise, detail loss and halo
+artifacts. In this paper, we propose a very fast deep learning framework called Bringing the Lightness
+(denoted as BLNet) that consists of two U-Nets with a series of well-designed loss functions to tackle
+all of the above degradations. Based on Retinex Theory, the decomposition net in our model can decompose
+low-light images into reflectance and illumination and remove noise in the reflectance during
+the decomposition phase. We propose a Noise and Color Bias Control module (NCBC Module) that contains
+a convolutional neural network and two loss functions (noise loss and color loss). This module is
+only used to calculate the loss functions during the training phase, so our method is very fast during
+the test phase. This module can smooth the reflectance to achieve the purpose of noise removal while
+preserving details and edge information and controlling color bias. We propose a network that can
+be trained to learn the mapping between low-light and normal-light illumination and enhance the
+brightness of images taken in low-light illumination. We train and evaluate the performance of
+our proposed model over the real-world Low-Light (LOL) dataset), and we also test our model over
+several other frequently used datasets (LIME, DICM and MEF datasets). We conduct extensive experiments
+to demonstrate that our approach achieves a promising effect with good rubustness and generalization
+and outperforms many other state-of-the-art methods qualitatively and quantitatively. Our method
+achieves high speed because we use loss functions instead of introducing additional denoisers
+for noise removal and color correction. The code and model are available at https://github.com/weixinxu666/BLNet.

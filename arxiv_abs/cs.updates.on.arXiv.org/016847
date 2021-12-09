@@ -1,0 +1,18 @@
+The detection of nuclei and cells in histology images is of great value in both clinical practice
+and pathological studies. However, multiple reasons such as morphological variations of nuclei
+or cells make it a challenging task where conventional object detection methods cannot obtain satisfactory
+performance in many cases. A detection task consists of two sub-tasks, classification and localization.
+Under the condition of dense object detection, classification is a key to boost the detection performance.
+Considering this, we propose similarity based region proposal networks (SRPN) for nuclei and cells
+detection in histology images. In particular, a customized convolution layer termed as embedding
+layer is designed for network building. The embedding layer is added into the region proposal networks,
+enabling the networks to learn discriminative features based on similarity learning. Features
+obtained by similarity learning can significantly boost the classification performance compared
+to conventional methods. SRPN can be easily integrated into standard convolutional neural networks
+architectures such as the Faster R-CNN and RetinaNet. We test the proposed approach on tasks of multi-organ
+nuclei detection and signet ring cells detection in histological images. Experimental results
+show that networks applying similarity learning achieved superior performance on both tasks when
+compared to their counterparts. In particular, the proposed SRPN achieve state-of-the-art performance
+on the MoNuSeg benchmark for nuclei segmentation and detection while compared to previous methods,
+and on the signet ring cell detection benchmark when compared with baselines. The sourcecode is
+publicly available at: https://github.com/sigma10010/nuclei_cells_det. 

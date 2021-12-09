@@ -1,0 +1,20 @@
+Current limitations in boosted tree modelling prevent the effective scaling to datasets with a
+large feature number, particularly when investigating the magnitude and directionality of various
+features on classification. We present a novel methodology, Hollow-tree Super (HOTS), to resolve
+and visualize feature importance in boosted tree models involving a large number of features. Further,
+HOTS allows for investigation of the directionality and magnitude various features have on classification.
+Using the Iris dataset, we first compare HOTS to Gini Importance, Partial Dependence Plots, and
+Permutation Importance, and demonstrate how HOTS resolves the weaknesses present in these methods.
+We then show how HOTS can be utilized in high dimensional neuroscientific data, by taking 60 Schizophrenic
+subjects and applying the method to determine which brain regions were most important for classification
+of schizophrenia as determined by the PANSS. HOTS effectively replicated and supported the findings
+of Gini importance, Partial Dependence Plots and Permutation importance within the Iris dataset.
+When applied to the schizophrenic brain dataset, HOTS was able to resolve the top 10 most important
+features for classification, as well as their directionality for classification and magnitude
+compared to other features. Cross-validation supported that these same 10 features were consistently
+used in the decision-making process across multiple trees, and these features were localised primarily
+to the occipital and parietal cortices, commonly disturbed brain regions in those with Schizophrenia.
+It is imperative that a methodology is developed that is able to handle the demands of working with
+large datasets that contain a large number of features. HOTS represents a unique way to investigate
+both the directionality and magnitude of feature importance when working at scale with boosted-tree
+modelling. 

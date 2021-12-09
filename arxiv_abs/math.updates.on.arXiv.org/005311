@@ -1,0 +1,18 @@
+The extended Lagrangian molecular dynamics (XLMD) method provides a useful framework for reducing
+the computational cost of a class of molecular dynamics simulations with constrained latent variables.
+The XLMD method relaxes the constraints by introducing a fictitious mass $\varepsilon$ for the
+latent variables, solving a set of singularly perturbed ordinary differential equations. While
+favorable numerical performance of XLMD has been demonstrated in several different contexts in
+the past decade, mathematical analysis of the method remains scarce. We propose the first error
+analysis of the XLMD method in the context of a classical polarizable force field model. While the
+dynamics with respect to the atomic degrees of freedom are general and nonlinear, the key mathematical
+simplification of the polarizable force field model is that the constraints on the latent variables
+are given by a linear system of equations. We prove that when the initial value of the latent variables
+is compatible in a sense that we define, XLMD converges as the fictitious mass $\varepsilon$ is made
+small with $\mathcal{O}(\varepsilon)$ error for the atomic degrees of freedom and with $\mathcal{O}(\sqrt{\varepsilon})$
+error for the latent variables, when the dimension of the latent variable $d'$ is 1. Furthermore,
+when the initial value of the latent variables is improved to be optimally compatible in a certain
+sense, we prove that the convergence rate can be improved to $\mathcal{O}(\varepsilon)$ for the
+latent variables as well. Numerical results verify that both estimates are sharp not only for $d'
+=1$, but also for arbitrary $d'$. In the setting of general $d'$, we do obtain convergence, but with
+the non-sharp rate of $\mathcal{O}(\sqrt{\varepsilon})$ for both the atomic and latent variables.

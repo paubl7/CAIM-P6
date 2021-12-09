@@ -1,0 +1,19 @@
+Galaxy imaging surveys observe a vast number of objects that are affected by the instrument's Point
+Spread Function (PSF). Weak lensing missions, in particular, aim at measuring the shape of galaxies,
+and PSF effects represent an important source of systematic errors which must be handled appropriately.
+This demands a high accuracy in the modelling as well as the estimation of the PSF at galaxy positions.
+Sometimes referred to as non-parametric PSF estimation, the goal of this paper is to estimate a PSF
+at galaxy positions, starting from a set of noisy star image observations distributed over the focal
+plane. To accomplish this, we need our model to first of all, precisely capture the PSF field variations
+over the Field of View (FoV), and then to recover the PSF at the selected positions. This paper proposes
+a new method, coined MCCD (Multi-CCD PSF modelling), that creates, simultaneously, a PSF field
+model over all of the instrument's focal plane. This allows to capture global as well as local PSF
+features through the use of two complementary models which enforce different spatial constraints.
+Most existing non-parametric models build one model per Charge Coupled Device (CCD), which can
+lead to difficulties in capturing global ellipticity patterns. We first test our method on a realistic
+simulated dataset comparing it with two state-of-the-art PSF modelling methods (PSFEx and RCA).
+We outperform both of them with our proposed method. Then we contrast our approach with PSFEx on real
+data from CFIS (Canada France Imaging Survey) that uses the CFHT (Canada-France-Hawaii Telescope).
+We show that our PSF model is less noisy and achieves a 22% gain on pixel Root Mean Squared Error (RMSE)
+with respect to PSFEx. We present, and share the code of, a new PSF modelling algorithm that models
+the PSF field on all the focal plane that is mature enough to handle real data. 

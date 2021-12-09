@@ -1,0 +1,20 @@
+Binary Convolutional Neural Networks (BCNNs) can significantly improve the efficiency of Deep
+Convolutional Neural Networks (DCNNs) for their deployment on resource-constrained platforms,
+such as mobile and embedded systems. However, the accuracy degradation of BCNNs is still considerable
+compared with their full precision counterpart, impeding their practical deployment. Because
+of the inevitable binarization error in the forward propagation and gradient mismatch problem
+in the backward propagation, it is nontrivial to train BCNNs to achieve satisfactory accuracy.
+To ease the difficulty of training, the shortcut-based BCNNs, such as residual connection-based
+Bi-real ResNet and dense connection-based BinaryDenseNet, introduce additional shortcuts in
+addition to the shortcuts already present in their full precision counterparts. Furthermore,
+fractal architectures have been also been used to improve the training process of full-precision
+DCNNs since the fractal structure triggers effects akin to deep supervision and lateral student-teacher
+information flow. Inspired by the shortcuts and fractal architectures, we propose two Shortcut-based
+Fractal Architectures (SoFAr) specifically designed for BCNNs: 1. residual connection-based
+fractal architectures for binary ResNet, and 2. dense connection-based fractal architectures
+for binary DenseNet. Our proposed SoFAr combines the adoption of shortcuts and the fractal architectures
+in one unified model, which is helpful in the training of BCNNs. Results show that our proposed SoFAr
+achieves better accuracy compared with shortcut-based BCNNs. Specifically, the Top-1 accuracy
+of our proposed RF-c4d8 ResNet37(41) and DRF-c2d2 DenseNet51(53) on ImageNet outperforms Bi-real
+ResNet18(64) and BinaryDenseNet51(32) by 3.29% and 1.41%, respectively, with the same computational
+complexity overhead. 

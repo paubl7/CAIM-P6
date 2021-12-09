@@ -1,0 +1,19 @@
+The learning and usage of an API is supported by official documentation. Like source code, API documentation
+is itself a software product. Several research results show that bad design in API documentation
+can make the reuse of API features difficult. Indeed, similar to code smells or code antipatterns,
+poorly designed API documentation can also exhibit 'smells'. Such documentation smells can be
+described as bad documentation styles that do not necessarily produce an incorrect documentation
+but nevertheless make the documentation difficult to properly understand and to use. Recent research
+on API documentation has focused on finding content inaccuracies in API documentation and to complement
+API documentation with external resources (e.g., crowd-shared code examples). We are aware of
+no research that focused on the automatic detection of API documentation smells. This paper makes
+two contributions. First, we produce a catalog of five API documentation smells by consulting literature
+on API documentation presentation problems. We create a benchmark dataset of 1,000 API documentation
+units by exhaustively and manually validating the presence of the five smells in Java official API
+reference and instruction documentation. Second, we conduct a survey of 21 professional software
+developers to validate the catalog. The developers agreed that they frequently encounter all five
+smells in API official documentation and 95.2% of them reported that the presence of the documentation
+smells negatively affects their productivity. The participants wished for tool support to automatically
+detect and fix the smells in API official documentation. We develop a suite of rule-based, deep and
+shallow machine learning classifiers to automatically detect the smells. The best performing
+classifier BERT, a deep learning model, achieves F1-scores of 0.75 - 0.97. 

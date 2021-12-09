@@ -1,0 +1,18 @@
+This paper reviews the novel concept of controllable variational autoencoder (ControlVAE), discusses
+its parameter tuning to meet application needs, derives its key analytic properties, and offers
+useful extensions and applications. ControlVAE is a new variational autoencoder (VAE) framework
+that combines the automatic control theory with the basic VAE to stabilize the KL-divergence of
+VAE models to a specified value. It leverages a non-linear PI controller, a variant of the proportional-integral-derivative
+(PID) control, to dynamically tune the weight of the KL-divergence term in the evidence lower bound
+(ELBO) using the output KL-divergence as feedback. This allows us to precisely control the KL-divergence
+to a desired value (set point), which is effective in avoiding posterior collapse and learning disentangled
+representations. In order to improve the ELBO over the regular VAE, we provide simplified theoretical
+analysis to inform setting the set point of KL-divergence for ControlVAE. We observe that compared
+to other methods that seek to balance the two terms in VAE's objective, ControlVAE leads to better
+learning dynamics. In particular, it can achieve a good trade-off between reconstruction quality
+and KL-divergence. We evaluate the proposed method on three tasks: image generation, language
+modeling and disentangled representation learning. The results show that ControlVAE can achieve
+much better reconstruction quality than the other methods for comparable disentanglement. On
+the language modeling task, ControlVAE can avoid posterior collapse (KL vanishing) and improve
+the diversity of generated text. Moreover, our method can change the optimization trajectory,
+improving the ELBO and the reconstruction quality for image generation. 

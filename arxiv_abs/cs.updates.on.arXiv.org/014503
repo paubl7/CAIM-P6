@@ -1,0 +1,18 @@
+This paper proposes an online decentralized channel allocation scheme based on contextual multi-armed
+bandit (CMAB) learning in a densely deployed wireless local area network (WLAN) environment. The
+communication quality in WLANs is significantly affected by the carrier sense relationship between
+access points (APs) and the channel. To the best of our knowledge, conventional MAB-based channel
+allocation schemes dedicated to WLANs do not use any information other than the observed reward
+for learning. Therefore, we aim to validate the effectiveness of prior information (i.e., the channels
+of neighboring APs) in improving the system throughput. To this end, we propose contention-driven
+feature extraction (CDFE), which leverages the channels of neighboring APs to extract features
+corresponding to the adjacency relation of the contention graph. CMAB learning with CDFE enables
+each AP to distinguish the impact of neighboring APs on the observed throughput. Furthermore, we
+address the problem of non-convergence -- the channel allocation cycle -- which is an inherent difficulty
+in selfish decentralized learning. To prevent such a cycle, we propose a penalized JointLinUCB
+(P-JLinUCB) based on the key idea of introducing a discount parameter to the reward of exploiting
+a different channel before and after the learning round. To incorporate the effect of this discounted
+reward into a linear model, we also add a penalty term to the feature vector. A numerical evaluation
+indicates that CMAB-based channel allocation using CDFE improves the system throughput. Moreover,
+the proposed P-JLinUCB significantly reduces the number of channel adjustments, i.e., prevents
+cycles, without degrading the system throughput. 

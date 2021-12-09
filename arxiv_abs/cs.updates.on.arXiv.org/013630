@@ -1,0 +1,18 @@
+Spinal cord tumors lead to neurological morbidity and mortality. Being able to obtain morphometric
+quantification (size, location, growth rate) of the tumor, edema, and cavity can result in improved
+monitoring and treatment planning. Such quantification requires the segmentation of these structures
+into three separate classes. However, manual segmentation of 3-dimensional structures is time-consuming
+and tedious, motivating the development of automated methods. Here, we tailor a model adapted to
+the spinal cord tumor segmentation task. Data were obtained from 343 patients using gadolinium-enhanced
+T1-weighted and T2-weighted MRI scans with cervical, thoracic, and/or lumbar coverage. The dataset
+includes the three most common intramedullary spinal cord tumor types: astrocytomas, ependymomas,
+and hemangioblastomas. The proposed approach is a cascaded architecture with U-Net-based models
+that segments tumors in a two-stage process: locate and label. The model first finds the spinal cord
+and generates bounding box coordinates. The images are cropped according to this output, leading
+to a reduced field of view, which mitigates class imbalance. The tumor is then segmented. The segmentation
+of the tumor, cavity, and edema (as a single class) reached 76.7 $\pm$ 1.5% of Dice score and the segmentation
+of tumors alone reached 61.8 $\pm$ 4.0% Dice score. The true positive detection rate was above 87%
+for tumor, edema, and cavity. To the best of our knowledge, this is the first fully automatic deep
+learning model for spinal cord tumor segmentation. The multiclass segmentation pipeline is available
+in the Spinal Cord Toolbox (https://spinalcordtoolbox.com/). It can be run with custom data on
+a regular computer within seconds. 

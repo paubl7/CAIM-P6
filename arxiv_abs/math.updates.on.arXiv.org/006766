@@ -1,0 +1,18 @@
+An important limitation of standard multiple testing procedures is that the null distribution
+should be known. Here, we consider a null distribution-free approach for multiple testing in the
+following semi-supervised setting: the user does not know the null distribution, but has at hand
+a single sample drawn from this null distribution. In practical situations, this null training
+sample (NTS) can come from previous experiments, from a part of the data under test, from specific
+simulations, or from a sampling process. In this work, we present theoretical results that handle
+such a framework, with a focus on the false discovery rate (FDR) control and the Benjamini-Hochberg
+(BH) procedure. First, we introduce a procedure providing strong FDR control. Second, we also give
+a power analysis for that procedure suggesting that the price to pay for ignoring the null distribution
+is low when the NTS sample size $n$ is sufficiently large in front of the number of test $m$; namely
+$n\gtrsim m/(\max(1,k))$, where $k$ denotes the number of "detectable" alternatives. Third,
+to complete the picture, we also present a negative result that evidences an intrinsic transition
+phase to the general semi-supervised multiple testing problem {and shows that the proposed method
+is optimal in the sense that its performance boundary follows this transition phase}. Our theoretical
+properties are supported by numerical experiments, which also show that the delineated boundary
+is of correct order without further tuning any constant. Finally, we demonstrate that our approach
+provides a theoretical ground for standard practice in astronomical data analysis, and in particular
+for the procedure proposed in \cite{Origin2020} for galaxy detection. 

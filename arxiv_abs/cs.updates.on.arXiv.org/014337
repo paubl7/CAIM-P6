@@ -1,0 +1,19 @@
+Recent diarization technologies can be categorized into two approaches, i.e., clustering and
+end-to-end neural approaches, which have different pros and cons. The clustering-based approaches
+assign speaker labels to speech regions by clustering speaker embeddings such as x-vectors. While
+it can be seen as a current state-of-the-art approach that works for various challenging data with
+reasonable robustness and accuracy, it has a critical disadvantage that it cannot handle overlapped
+speech that is inevitable in natural conversational data. In contrast, the end-to-end neural diarization
+(EEND), which directly predicts diarization labels using a neural network, was devised to handle
+the overlapped speech. While the EEND, which can easily incorporate emerging deep-learning technologies,
+has started outperforming the x-vector clustering approach in some realistic database, it is difficult
+to make it work for `long' recordings (e.g., recordings longer than 10 minutes) because of, e.g.,
+its huge memory consumption. Block-wise independent processing is also difficult because it poses
+an inter-block label permutation problem, i.e., an ambiguity of the speaker label assignments
+between blocks. In this paper, we propose a simple but effective hybrid diarization framework that
+works with overlapped speech and for long recordings containing an arbitrary number of speakers.
+It modifies the conventional EEND framework to simultaneously output global speaker embeddings
+so that speaker clustering can be performed across blocks to solve the permutation problem. With
+experiments based on simulated noisy reverberant 2-speaker meeting-like data, we show that the
+proposed framework works significantly better than the original EEND especially when the input
+data is long. 

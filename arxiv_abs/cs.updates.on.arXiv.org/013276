@@ -1,0 +1,19 @@
+Manual or automatic delineation of the esophageal tumor in CT images is known to be very challenging.
+This is due to the low contrast between the tumor and adjacent tissues, the anatomical variation
+of the esophagus, as well as the occasional presence of foreign bodies (e.g. feeding tubes). Physicians
+therefore usually exploit additional knowledge such as endoscopic findings, clinical history,
+additional imaging modalities like PET scans. Achieving his additional information is time-consuming,
+while the results are error-prone and might lead to non-deterministic results. In this paper we
+aim to investigate if and to what extent a simplified clinical workflow based on CT alone, allows
+one to automatically segment the esophageal tumor with sufficient quality. For this purpose, we
+present a fully automatic end-to-end esophageal tumor segmentation method based on convolutional
+neural networks (CNNs). The proposed network, called Dilated Dense Attention Unet (DDAUnet),
+leverages spatial and channel attention gates in each dense block to selectively concentrate on
+determinant feature maps and regions. Dilated convolutional layers are used to manage GPU memory
+and increase the network receptive field. We collected a dataset of 792 scans from 288 distinct patients
+including varying anatomies with \mbox{air pockets}, feeding tubes and proximal tumors. Repeatability
+and reproducibility studies were conducted for three distinct splits of training and validation
+sets. The proposed network achieved a $\mathrm{DSC}$ value of $0.79 \pm 0.20$, a mean surface distance
+of $5.4 \pm 20.2mm$ and $95\%$ Hausdorff distance of $14.7 \pm 25.0mm$ for 287 test scans, demonstrating
+promising results with a simplified clinical workflow based on CT alone. Our code is publicly available
+via \url{https://github.com/yousefis/DenseUnet_Esophagus_Segmentation}. 

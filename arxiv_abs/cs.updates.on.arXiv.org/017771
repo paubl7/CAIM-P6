@@ -1,0 +1,19 @@
+In streaming data applications incoming samples are processed and discarded, therefore, intelligent
+decision-making is crucial for the performance of lifelong learning systems. In addition, the
+order in which samples arrive may heavily affect the performance of online (and offline) incremental
+learners. The recently introduced incremental cluster validity indices (iCVIs) provide valuable
+aid in addressing such class of problems. Their primary use-case has been cluster quality monitoring;
+nonetheless, they have been very recently integrated in a streaming clustering method to assist
+the clustering task itself. In this context, the work presented here introduces the first adaptive
+resonance theory (ART)-based model that uses iCVIs for unsupervised and semi-supervised online
+learning. Moreover, it shows for the first time how to use iCVIs to regulate ART vigilance via an iCVI-based
+match tracking mechanism. The model achieves improved accuracy and robustness to ordering effects
+by integrating an online iCVI framework as module B of a topological adaptive resonance theory predictive
+mapping (TopoARTMAP) -- thereby being named iCVI-TopoARTMAP -- and by employing iCVI-driven post-processing
+heuristics at the end of each learning step. The online iCVI framework provides assignments of input
+samples to clusters at each iteration in accordance to any of several iCVIs. The iCVI-TopoARTMAP
+maintains useful properties shared by ARTMAP models, such as stability, immunity to catastrophic
+forgetting, and the many-to-one mapping capability via the map field module. The performance (unsupervised
+and semi-supervised) and robustness to presentation order (unsupervised) of iCVI-TopoARTMAP
+were evaluated via experiments with a synthetic data set and deep embeddings of a real-world face
+image data set. 

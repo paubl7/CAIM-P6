@@ -1,0 +1,25 @@
+We investigate a class of moment problems, namely recovering a measure supported on the graph of
+a function from partial knowledge of its moments, as for instance in some problems of optimal transport
+or density estimation. We show that the sole knowledge of first degree moments of the function, namely
+linear measurements, is sufficient to obtain asymptotically all the other moments by solving a
+hierarchy of semidefinite relax-ations (viewed as moment matrix completion problems) with a specific
+sparsity inducing criterion related to a weighted 1-norm of the moment sequence of the measure.
+The resulting sequence of optimal solutions converges to the whole moment sequence of the measure
+which is shown to be the unique optimal solution of a certain infinite-dimensional linear optimization
+problem (LP). Then one may recover the function by a recent extraction algorithm based on the Christoffel-Darboux
+kernel associated with the measure. Finally, the support of such a measure supported on a graph is
+a meager, very thin (hence sparse) set. Therefore the LP on measures with this sparsity inducing
+criterion can be interpreted as an analogue for infinite-dimensional signals of the LP in super-resolution
+for (sparse) atomic signals. In data science, it is often relevant to process moments of a signal
+instead of the signal itself. For complex valued signals, the moments are Fourier coefficients,
+and many filtering operations are efficiently carried out in the sequence of moments. In numerical
+approximation algorithms, many operations on real valued signals are more efficiently implemented
+in their sequence of Chebyshev coefficients [19]. In the moment-SOS hierarchy approach, many nonlinear
+nonconvex problems are reformulated and solved approximately in the sequence of moments; see [13,
+12] and references therein. Once moments or approximate moments have been computed, one is faced
+with the inverse problem of reconstructing the signal from its moments. The recent work [15] describes
+an algorithm based on the Christoffel-Darboux kernel, to recover the graph of a function from knowledge
+of its moments. Its novelty (and distinguishing feature) is to approximate the graph of the function
+(rather than the function itself) with a semialgebraic function (namely a minimizer of a sum of squares
+of polynomials) with L 1 and pointwise convergence guarantees for an increasing number of input
+moments. In 

@@ -1,0 +1,19 @@
+While artificial intelligence (AI)-based decision-making systems are increasingly popular,
+significant concerns on the potential discrimination during the AI decision-making process have
+been observed. For example, the distribution of predictions is usually biased and dependents on
+the sensitive attributes (e.g., gender and ethnicity). Numerous approaches have therefore been
+proposed to develop decision-making systems that are discrimination-conscious by-design, which
+are typically batch-based and require the simultaneous availability of all the training data for
+model learning. However, in the real-world, the data streams usually come on the fly which requires
+the model to process each input data once "on arrival" and without the need for storage and reprocessing.
+In addition, the data streams might also evolve over time, which further requires the model to be
+able to simultaneously adapt to non-stationary data distributions and time-evolving bias patterns,
+with an effective and robust trade-off between accuracy and fairness. In this paper, we propose
+a novel framework of online decision tree with fairness in the data stream with possible distribution
+drifting. Specifically, first, we propose two novel fairness splitting criteria that encode the
+data as well as possible, while simultaneously removing dependence on the sensitive attributes,
+and further adapts to non-stationary distribution with fine-grained control when needed. Second,
+we propose two fairness decision tree online growth algorithms that fulfills different online
+fair decision-making requirements. Our experiments show that our algorithms are able to deal with
+discrimination in massive and non-stationary streaming environments, with a better trade-off
+between fairness and predictive performance. 

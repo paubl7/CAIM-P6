@@ -1,0 +1,18 @@
+High Dynamic Range (HDR) imaging via multi-exposure fusion is an important task for most modern
+imaging platforms. In spite of recent developments in both hardware and algorithm innovations,
+challenges remain over content association ambiguities caused by saturation, motion, and various
+artifacts introduced during multi-exposure fusion such as ghosting, noise, and blur. In this work,
+we propose an Attention-guided Progressive Neural Texture Fusion (APNT-Fusion) HDR restoration
+model which aims to address these issues within one framework. An efficient two-stream structure
+is proposed which separately focuses on texture feature transfer over saturated regions and multi-exposure
+tonal and texture feature fusion. A neural feature transfer mechanism is proposed which establishes
+spatial correspondence between different exposures based on multi-scale VGG features in the masked
+saturated HDR domain for discriminative contextual clues over the ambiguous image areas. A progressive
+texture blending module is designed to blend the encoded two-stream features in a multi-scale and
+progressive manner. In addition, we introduce several novel attention mechanisms, i.e., the motion
+attention module detects and suppresses the content discrepancies among the reference images;
+the saturation attention module facilitates differentiating the misalignment caused by saturation
+from those caused by motion; and the scale attention module ensures texture blending consistency
+between different coder/decoder scales. We carry out comprehensive qualitative and quantitative
+evaluations and ablation studies, which validate that these novel modules work coherently under
+the same framework and outperform state-of-the-art methods. 

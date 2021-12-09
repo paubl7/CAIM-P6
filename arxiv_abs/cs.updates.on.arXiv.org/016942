@@ -1,0 +1,18 @@
+Bioinformatics pipelines depend on shared POSIX filesystems for its input, output and intermediate
+data storage. Containerization makes it more difficult for the workloads to access the shared file
+systems. In our previous study, we were able to run both ML and non-ML pipelines on Kubeflow successfully.
+However, the storage solutions were complex and less optimal. This is because there are no established
+resource types to represent the concept of data source on Kubernetes. More and more applications
+are running on Kubernetes for batch processing. End users are burdened with configuring and optimising
+the data access, which is what we have experienced before. In this article, we are introducing a new
+concept of Dataset and its corresponding resource as a native Kubernetes object. We have leveraged
+the Dataset Lifecycle Framework which takes care of all the low-level details about data access
+in Kubernetes pods. Its pluggable architecture is designed for the development of caching, scheduling
+and governance plugins. Together, they manage the entire lifecycle of the custom resource Dataset.
+We use Dataset Lifecycle Framework to serve data from object stores to both ML and non-ML pipelines
+running on Kubeflow. With DLF, we make training data fed into ML models directly without being downloaded
+to the local disks, which makes the input scalable. We have enhanced the durability of training metadata
+by storing it into a dataset, which also simplifies the set up of the Tensorboard, separated from
+the notebook server. For the non-ML pipeline, we have simplified the 1000 Genome Project pipeline
+with datasets injected into the pipeline dynamically. In addition, our preliminary results indicate
+that the pluggable caching mechanism can improve the performance significantly. 

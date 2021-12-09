@@ -1,0 +1,19 @@
+We focus on a fundamental task of detecting meaningful line structures, a.k.a. semantic line, in
+natural scenes. Many previous methods regard this problem as a special case of object detection
+and adjust existing object detectors for semantic line detection. However, these methods neglect
+the inherent characteristics of lines, leading to sub-optimal performance. Lines enjoy much simpler
+geometric property than complex objects and thus can be compactly parameterized by a few arguments.
+To better exploit the property of lines, in this paper, we incorporate the classical Hough transform
+technique into deeply learned representations and propose a one-shot end-to-end learning framework
+for line detection. By parameterizing lines with slopes and biases, we perform Hough transform
+to translate deep representations into the parametric domain, in which we perform line detection.
+Specifically, we aggregate features along candidate lines on the feature map plane and then assign
+the aggregated features to corresponding locations in the parametric domain. Consequently, the
+problem of detecting semantic lines in the spatial domain is transformed into spotting individual
+points in the parametric domain, making the post-processing steps, i.e. non-maximal suppression,
+more efficient. Furthermore, our method makes it easy to extract contextual line features eg features
+along lines close to a specific line, that are critical for accurate line detection. In addition
+to the proposed method, we design an evaluation metric to assess the quality of line detection and
+construct a large scale dataset for the line detection task. Experimental results on our proposed
+dataset and another public dataset demonstrate the advantages of our method over previous state-of-the-art
+alternatives. 

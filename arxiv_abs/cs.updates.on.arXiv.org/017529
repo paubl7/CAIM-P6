@@ -1,0 +1,18 @@
+The accuracy of DL classifiers is unstable in that it often changes significantly when retested
+on adversarial images, imperfect images, or perturbed images. This paper adds to the small but fundamental
+body of work on benchmarking the robustness of DL classifiers on defective images. Unlike existed
+single-factor digital perturbation work, we provide state-of-the-art two-factor perturbation
+that provides two natural perturbations on images applied in different sequences. The two-factor
+perturbation includes (1) two digital perturbations (Salt & pepper noise and Gaussian noise) applied
+in both sequences. (2) one digital perturbation (salt & pepper noise) and a geometric perturbation
+(rotation) applied in different sequences. To measure robust DL classifiers, previous scientists
+provided 15 types of single-factor corruption. We created 69 benchmarking image sets, including
+a clean set, sets with single factor perturbations, and sets with two-factor perturbation conditions.
+To be best of our knowledge, this is the first report that two-factor perturbed images improves both
+robustness and accuracy of DL classifiers. Previous research evaluating deep learning (DL) classifiers
+has often used top-1/top-5 accuracy, so researchers have usually offered tables, line diagrams,
+and bar charts to display accuracy of DL classifiers. But these existed approaches cannot quantitively
+evaluate robustness of DL classifiers. We innovate a new two-dimensional, statistical visualization
+tool, including mean accuracy and coefficient of variation (CV), to benchmark the robustness of
+DL classifiers. All source codes and related image sets are shared on websites (this http URL or https://github.com/daiweiworking/RobustDeepLearningUsingPerturbations
+) to support future academic research and industry projects. 

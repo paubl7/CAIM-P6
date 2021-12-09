@@ -1,0 +1,20 @@
+Our work focuses on unsupervised and generative methods that address the following goals: (a) learning
+unsupervised generative representations that discover latent factors controlling image semantic
+attributes, (b) studying how this ability to control attributes formally relates to the issue of
+latent factor disentanglement, clarifying related but dissimilar concepts that had been confounded
+in the past, and (c) developing anomaly detection methods that leverage representations learned
+in (a). For (a), we propose a network architecture that exploits the combination of multiscale generative
+models with mutual information (MI) maximization. For (b), we derive an analytical result (Lemma
+1) that brings clarity to two related but distinct concepts: the ability of generative networks
+to control semantic attributes of images they generate, resulting from MI maximization, and the
+ability to disentangle latent space representations, obtained via total correlation minimization.
+More specifically, we demonstrate that maximizing semantic attribute control encourages disentanglement
+of latent factors. Using Lemma 1 and adopting MI in our loss function, we then show empirically that,
+for image generation tasks, the proposed approach exhibits superior performance as measured in
+the quality and disentanglement trade space, when compared to other state of the art methods, with
+quality assessed via the Frechet Inception Distance (FID), and disentanglement via mutual information
+gap. For (c), we design several systems for anomaly detection exploiting representations learned
+in (a), and demonstrate their performance benefits when compared to state-of-the-art generative
+and discriminative algorithms. The above contributions in representation learning have potential
+applications in addressing other important problems in computer vision, such as bias and privacy
+in AI. 

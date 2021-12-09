@@ -1,0 +1,20 @@
+In modern Machine Learning, model training is an iterative, experimental process that can consume
+enormous computation resources and developer time. To aid in that process, experienced model developers
+log and visualize program variables during training runs. Exhaustive logging of all variables
+is infeasible. Optimistic logging can be accompanied by program checkpoints; this allows developers
+to add log statements post-hoc, and "replay" desired log statements from checkpoint -- a process
+we refer to as hindsight logging. Unfortunately, hindsight logging raises tricky problems in data
+management and software engineering. Done poorly, hindsight logging can waste resources and generate
+technical debt embodied in multiple variants of training code. In this paper, we present methodologies
+for efficient and effective logging practices for model training, with a focus on techniques for
+hindsight logging. Our goal is for experienced model developers to learn and adopt these practices.
+To make this easier, we provide an open-source suite of tools for Fast Low-Overhead Recovery (flor)
+that embodies our design across three tasks: (i) efficient background logging in Python, (ii) adaptable
+periodic checkpointing, and (iii) an instrumentation library that codifies hindsight logging
+for efficient and automatic record-replay of model-training. Model developers can use each flor
+tool separately as they see fit, or they can use flor in hands-free mode, entrusting it to instrument
+their code end-to-end for efficient record-replay. Our solutions leverage techniques from physiological
+transaction logs and recovery in database systems. Evaluations on modern ML benchmarks demonstrate
+that flor can produce fast checkpointing with small user-specifiable overheads (e.g. 7%), and
+still provide hindsight log replay times orders of magnitude faster than restarting training from
+scratch. 

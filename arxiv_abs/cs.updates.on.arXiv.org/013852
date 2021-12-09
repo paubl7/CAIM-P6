@@ -1,0 +1,18 @@
+Systolic array-based deep neural network (DNN) accelerators have recently gained prominence
+for their low computational cost. However, their high energy consumption poses a bottleneck to
+their deployment in energy-constrained devices. To address this problem, approximate computing
+can be employed at the cost of some tolerable accuracy loss. However, such small accuracy variations
+may increase the sensitivity of DNNs towards undesired subtle disturbances, such as permanent
+faults. The impact of permanent faults in accurate DNNs has been thoroughly investigated in the
+literature. Conversely, the impact of permanent faults in approximate DNN accelerators (AxDNNs)
+is yet under-explored. The impact of such faults may vary with the fault bit positions, activation
+functions and approximation errors in AxDNN layers. Such dynamacity poses a considerable challenge
+to exploring the trade-off between their energy efficiency and fault resilience in AxDNNs. Towards
+this, we present an extensive layer-wise and bit-wise fault resilience and energy analysis of different
+AxDNNs, using the state-of-the-art Evoapprox8b signed multipliers. In particular, we vary the
+stuck-at-0, stuck-at-1 fault-bit positions, and activation functions to study their impact using
+the most widely used MNIST and Fashion-MNIST datasets. Our quantitative analysis shows that the
+permanent faults exacerbate the accuracy loss in AxDNNs when compared to the accurate DNN accelerators.
+For instance, a permanent fault in AxDNNs can lead up to 66\% accuracy loss, whereas the same faulty
+bit can lead to only 9\% accuracy loss in an accurate DNN accelerator. Our results demonstrate that
+the fault resilience in AxDNNs is orthogonal to the energy efficiency. 

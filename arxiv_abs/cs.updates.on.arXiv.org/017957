@@ -1,0 +1,19 @@
+Heatmap regression has become the mainstream methodology for deep learning-based semantic landmark
+localization, including in facial landmark localization and human pose estimation. Though heatmap
+regression is robust to large variations in pose, illumination, and occlusion in unconstrained
+settings, it usually suffers from a sub-pixel localization problem. Specifically, considering
+that the activation point indices in heatmaps are always integers, quantization error thus appears
+when using heatmaps as the representation of numerical coordinates. Previous methods to overcome
+the sub-pixel localization problem usually rely on high-resolution heatmaps. As a result, there
+is always a trade-off between achieving localization accuracy and computational cost, where the
+computational complexity of heatmap regression depends on the heatmap resolution in a quadratic
+manner. In this paper, we formally analyze the quantization error of vanilla heatmap regression
+and propose a simple yet effective quantization system to address the sub-pixel localization problem.
+The proposed quantization system induced by the randomized rounding operation 1) encodes the fractional
+part of numerical coordinates into the ground truth heatmap using a probabilistic approach during
+training; and 2) decodes the predicted numerical coordinates from a set of activation points during
+testing. We prove that the proposed quantization system for heatmap regression is unbiased and
+lossless. Experimental results on popular facial landmark localization datasets (WFLW, 300W,
+COFW, and AFLW) and human pose estimation datasets (MPII and COCO) demonstrate the effectiveness
+of the proposed method for efficient and accurate semantic landmark localization. Code is available
+at this http URL 

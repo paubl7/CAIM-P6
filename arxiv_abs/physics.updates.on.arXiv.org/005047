@@ -1,0 +1,19 @@
+In this paper, the unified gas-kinetic wave-particle (UGKWP) method is further developed for diatomic
+gas with the energy exchange between translational and rotational modes for flow study in all regimes.
+The multiscale transport mechanism in UGKWP is coming from the direct modeling in a discretized
+space, where the cell's Knudsen number, defined by the ratio of particle mean free path over the numerical
+cell size, determines the flow physics simulated by the wave particle formulation. The non-equilibrium
+distribution function in UGKWP is tracked by the discrete particle and analytical wave. The weights
+of distributed particle and wave in different regimes are controlled by the accumulating evolution
+solution of particle transport and collision within a time step, where distinguishable macroscopic
+flow variables of particle and wave are updated inside each control volume. With the variation of
+local cell's Knudsen number, the UGKWP becomes a particle method in the highly rarefied flow regime
+and converges to the gas-kinetic scheme (GKS) for the Navier-Stokes solution in the continuum flow
+regime without particles. Even targeting on the same solution as the discrete velocity method (DVM)-based
+unified gas-kinetic scheme (UGKS), the computational cost and memory requirement in UGKWP could
+be reduced by several orders of magnitude for the high speed and high temperature flow simulation,
+where the translational and rotational non-equilibrium becomes important in the transition and
+rarefied regime. As a result, 3D hypersonic computations around a flying vehicle in all regimes
+can be conducted using a personal computer. The UGKWP method for diatomic gas will be validated in
+various cases from one dimensional shock structure to three dimensional flow over a sphere, and
+the numerical solutions will be compared with the reference DSMC results and experimental measurements.

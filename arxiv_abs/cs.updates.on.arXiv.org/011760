@@ -1,0 +1,19 @@
+When machine learning supports decision-making in safety-critical systems, it is important to
+verify and understand the reasons why a particular output is produced. Although feature importance
+calculation approaches assist in interpretation, there is a lack of consensus regarding how features'
+importance is quantified, which makes the explanations offered for the outcomes mostly unreliable.
+A possible solution to address the lack of agreement is to combine the results from multiple feature
+importance quantifiers to reduce the variance of estimates. Our hypothesis is that this will lead
+to more robust and trustworthy interpretations of the contribution of each feature to machine learning
+predictions. To assist test this hypothesis, we propose an extensible Framework divided in four
+main parts: (i) traditional data pre-processing and preparation for predictive machine learning
+models; (ii) predictive machine learning; (iii) feature importance quantification and (iv) feature
+importance decision fusion using an ensemble strategy. We also introduce a novel fusion metric
+and compare it to the state-of-the-art. Our approach is tested on synthetic data, where the ground
+truth is known. We compare different fusion approaches and their results for both training and test
+sets. We also investigate how different characteristics within the datasets affect the feature
+importance ensembles studied. Results show that our feature importance ensemble Framework overall
+produces 15% less feature importance error compared to existing methods. Additionally, results
+reveal that different levels of noise in the datasets do not affect the feature importance ensembles'
+ability to accurately quantify feature importance, whereas the feature importance quantification
+error increases with the number of features and number of orthogonal informative features. 

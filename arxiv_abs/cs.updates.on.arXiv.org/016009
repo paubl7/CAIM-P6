@@ -1,0 +1,19 @@
+In this contribution, we predict the wellhead protection area (WHPA, target), the shape and extent
+of which is influenced by the distribution of hydraulic conductivity (K), from a small number of
+tracing experiments (predictor). Our first objective is to make stochastic predictions of the
+WHPA within the Bayesian Evidential Learning (BEL) framework, which aims to find a direct relationship
+between predictor and target using machine learning. This relationship is learned from a small
+set of training models (400) sampled from the prior distribution of K. The associated 400 pairs of
+simulated predictors and targets are obtained through forward modelling. Newly collected field
+data can then be directly used to predict the approximate posterior distribution of the corresponding
+WHPA. The uncertainty range of the posterior WHPA distribution is affected by the number and position
+of data sources (injection wells). Our second objective is to extend BEL to identify the optimal
+design of data source locations that minimizes the posterior uncertainty of the WHPA. This can be
+done explicitly, without averaging or approximating because once trained, the BEL model allows
+the computation of the posterior uncertainty corresponding to any new input data. We use the Modified
+Hausdorff Distance and the Structural Similarity index metrics to estimate the posterior uncertainty
+range of the WHPA. Increasing the number of injection wells effectively reduces the derived posterior
+WHPA uncertainty. Our approach can also estimate which injection wells are more informative than
+others, as validated through a k-fold cross-validation procedure. Overall, the application of
+BEL to experimental design makes it possible to identify the data sources maximizing the information
+content of any measurement data. 

@@ -1,0 +1,19 @@
+Cardiac segmentation of atriums, ventricles, and myocardium in computed tomography (CT) images
+is an important first-line task for presymptomatic cardiovascular disease diagnosis. In several
+recent studies, deep learning models have shown significant breakthroughs in medical image segmentation
+tasks. Unlike other organs such as the lungs and liver, the cardiac organ consists of multiple substructures,
+i.e., ventricles, atriums, aortas, arteries, veins, and myocardium. These cardiac substructures
+are proximate to each other and have indiscernible boundaries (i.e., homogeneous intensity values),
+making it difficult for the segmentation network focus on the boundaries between the substructures.
+In this paper, to improve the segmentation accuracy between proximate organs, we introduce a novel
+model to exploit shape and boundary-aware features. We primarily propose a shape-aware attention
+module, that exploits distance regression, which can guide the model to focus on the edges between
+substructures so that it can outperform the conventional contour-based attention method. In the
+experiments, we used the Multi-Modality Whole Heart Segmentation dataset that has 20 CT cardiac
+images for training and validation, and 40 CT cardiac images for testing. The experimental results
+show that the proposed network produces more accurate results than state-of-the-art networks
+by improving the Dice similarity coefficient score by 4.97%. Our proposed shape-aware contour
+attention mechanism demonstrates that distance transformation and boundary features improve
+the actual attention map to strengthen the responses in the boundary area. Moreover, our proposed
+method significantly reduces the false-positive responses of the final output, resulting in accurate
+segmentation. 

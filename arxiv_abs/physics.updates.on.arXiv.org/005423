@@ -1,0 +1,19 @@
+For many geophysical measurements, such as direct current or electromagnetic induction methods,
+information fades away with depth. This has to be taken into account when interpreting models estimated
+from such measurements. For that reason, a measurement sensitivity analysis and determining the
+depth of investigation are standard steps during geophysical data processing. In deterministic
+gradient-based inversion, the most used sensitivity measure, the differential sensitivity,
+is readily available since these inversions require the computation of Jacobian matrices. In contrast,
+differential sensitivity may not be readily available in Monte Carlo inversion methods, since
+these methods do not necessarily include a linearization of the forward problem. Instead, a prior
+ensemble is used to simulate an ensemble of forward responses. Then, the prior ensemble is updated
+according to Bayesian inference. We propose to use the covariance between the prior ensemble and
+the forward response ensemble for constructing sensitivity measures. In Monte Carlo approaches,
+the estimation of this covariance does not require additional computations of the forward model.
+Normalizing this covariance by the variance of the prior ensemble, one obtains a simplied regression
+coefficient. We investigate differences between this simplified regression coefficient and
+differential sensitivity using simple forward models. For linear forward models, the simplied
+regression coefficient is equal to differential sensitivity, except for the influences of the
+sampling error and of the correlation structure of the prior distribution. In the non-linear case,
+the behaviour of the simplified regression coefficient as sensitivity measure is analysed for
+a simple non-linear forward model and a frequency-domain electromagnetic forward model. [...]

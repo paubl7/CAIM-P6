@@ -1,0 +1,19 @@
+The development of next-generation autonomous control of fission systems, such as nuclear power
+plants, will require leveraging advancements in machine learning. For fission systems, accurate
+prediction of nuclear transport is important to quantify the safety margin and optimize performance.
+The state-of-the-art approach to this problem is costly Monte Carlo (MC) simulations to approximate
+solutions of the neutron transport equation. Such an approach is feasible for offline calculations
+e.g., for design or licensing, but is precluded from use as a model-based controller. In this work,
+we explore the use of Artificial Neural Networks (ANN), Gradient Boosting Regression (GBR), Gaussian
+Process Regression (GPR) and Support Vector Regression (SVR) to generate empirical models. The
+empirical model can then be deployed, e.g., in a model predictive controller. Two fission systems
+are explored: the subcritical MIT Graphite Exponential Pile (MGEP), and the critical MIT Research
+Reactor (MITR). Findings from this work establish guidelines for developing empirical models
+for multidimensional regression of neutron transport. An assessment of the accuracy and precision
+finds that the SVR, followed closely by ANN, performs the best. For both MGEP and MITR, the optimized
+SVR model exhibited a domain-averaged, test, mean absolute percentage error of 0.17 %. A spatial
+distribution of performance metrics indicates that physical regions of poor performance coincide
+with locations of largest neutron flux perturbation -- this outcome is mitigated by ANN and SVR.
+Even at local maxima, ANN and SVR bias is within experimental uncertainty bounds. A comparison of
+the performance vs. training dataset size found that SVR is more data-efficient than ANN. Both ANN
+and SVR achieve a greater than 7 order reduction in evaluation time vs. a MC simulation. 

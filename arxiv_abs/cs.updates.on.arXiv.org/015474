@@ -1,0 +1,19 @@
+In this article, we consider colorable variations of the Unit Disk Cover ({\it UDC}) problem as follows.
+{\it $k$-Colorable Discrete Unit Disk Cover ({\it $k$-CDUDC})}: Given a set $P$ of $n$ points, and
+a set $D$ of $m$ unit disks (of radius=1), both lying in the plane, and a parameter $k$, the objective
+is to compute a set $D'\subseteq D$ such that every point in $P$ is covered by at least one disk in $D'$
+and there exists a function $\chi:D'\rightarrow C$ that assigns colors to disks in $D'$ such that
+for any $d$ and $d'$ in $D'$ if $d\cap d'\neq\emptyset$, then $\chi(d)\neq\chi(d')$, where $C$
+denotes a set containing $k$ distinct colors. For the {\it $k$-CDUDC} problem, our proposed algorithms
+approximate the number of colors used in the coloring if there exists a $k$-colorable cover. We first
+propose a 4-approximation algorithm in $O(m^{7k}n\log k)$ time for this problem and then show that
+the running time can be improved by a multiplicative factor of $m^k$, where a positive integer $k$
+denotes the cardinality of a color-set. The previous best known result for the problem when $k=3$
+is due to the recent work of Biedl et al., (2021), who proposed a 2-approximation algorithm in $O(m^{25}n)$
+time. For $k=3$, our algorithm runs in $O(m^{18}n)$ time, faster than the previous best algorithm,
+but gives a 4-approximate result. We then generalize our approach to exhibit a $O((1+\lceil\frac{2}{\tau}\rceil)^2)$-approximation
+algorithm in $O(m^{(\lfloor\frac{4\pi+8\tau+\tau^2}{\sqrt{12}}\rfloor)k}n\log k)$ time
+for a given $1 \leq \tau \leq 2$. We also extend our algorithm to solve the {\it $k$-Colorable Line
+Segment Disk Cover ({\it $k$-CLSDC})} and {\it $k$-Colorable Rectangular Region Cover ({\it $k$-CRRC})}
+problems, in which instead of the set $P$ of $n$ points, we are given a set $S$ of $n$ line segments,
+and a rectangular region $\cal R$, respectively. 

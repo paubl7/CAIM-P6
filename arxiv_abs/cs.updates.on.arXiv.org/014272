@@ -1,0 +1,20 @@
+Understanding the power of quantum supremacy experiments is one of the most pressing topics in the
+NISQ era. In this work we make progress toward bridging the remaining gaps between theory and experiment,
+incorporating the effects of experimental noise into the theoretical hardness arguments. First,
+we improve the robustness of prior hardness results in this area. For random circuit sampling, we
+show that computing the output probability of an $m$-gate random quantum circuit to within additive
+imprecision $2^{-O(m\log m)}$ is $\#\mathsf{P}$-hard, an exponential improvement over the prior
+hardness results of Bouland et al. and Movassagh which were resistant to imprecision $2^{-O(m^3)}$.
+This nearly reaches the threshold ($2^{-O(m)}$) sufficient to establish the hardness of sampling
+for constant-depth random circuits. For BosonSampling, we show $\#\mathsf{P}$-hardness of computing
+output probabilities of $n$-photon $m=\text{poly}(n)$ mode BosonSampling experiments to additive
+error $2^{-O(n\log n)}$. This is within a constant factor in the exponent of the robustness required
+for hardness of sampling. To prove these results we introduce a new robust Berlekamp-Welch argument
+over the Reals, and moreover substantially simplify prior robustness arguments. Second, we show
+that in the random circuit sampling case, these results are still true in the presence of a constant
+rate of noise, so long as the noise rate is below the error detection threshold. That is, even though
+random circuits with a constant noise rate converge rapidly to the maximally mixed state, the small
+deviations in their output probabilities away from uniform remain difficult to compute. Interestingly,
+we then show that our results are in tension with one another, and the latter result implies the former
+is essentially optimal with respect to additive imprecision, even with generalizations of our
+techniques. 

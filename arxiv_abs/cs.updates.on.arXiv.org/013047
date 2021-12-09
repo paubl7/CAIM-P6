@@ -1,0 +1,19 @@
+The verification of concurrent programs remains an open challenge due to the non-determinism in
+inter-process communication. Instead of exploring concrete executions, stateless model-checking
+(SMC) techniques partition the execution space into equivalence classes, and explore each class
+as opposed to each execution. For the relaxed memory models of TSO and PSO (total/partial store order),
+the standard equivalence has been Shasha-Snir traces, seen as an extension of the classic Mazurkiewicz
+equivalence from SC (sequential consistency) to TSO and PSO. The reads-from (RF) equivalence was
+recently shown to be coarser than the Mazurkiewicz equivalence, leading to impressive scalability
+improvements for SMC under SC. The generalization of RF to TSO and PSO requires to overcome two challenges,
+namely, verifying execution consistency and SMC algorithm. We address these two fundamental problems
+in this work. Our first set of contributions is on the problem of verifying TSO- and PSO-consistent
+executions given a reads-from map, VTSO-rf and VPSO-rf, respectively. The problem has been heavily
+studied under SC due to its numerous applications, but little is known for TSO and PSO. For an execution
+of $n$ events over $k$ threads and $d$ variables, we establish novel bounds that scale as $n^{k+1}$
+for TSO and as $n^{k+1}\cdot \min(n^{k^2}, 2^{k\cdot d})$ for PSO. Our second contribution is an
+algorithm for SMC under TSO and PSO using the RF equivalence. Our algorithm is exploration-optimal,
+in the sense that it is guaranteed to explore each class of the RF partitioning exactly once, and spends
+polynomial time per class when $k$ is bounded. Our experimental evaluation shows that the RF equivalence
+is often exponentially coarser than Shasha-Snir traces, and our SMC algorithm scales much better
+than state-of-the-art tools based on Shasha-Snir traces. 

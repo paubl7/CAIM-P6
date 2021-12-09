@@ -1,0 +1,19 @@
+Ontology-Based Data Access (OBDA) has traditionally focused on providing a unified view of heterogeneous
+datasets, either by materializing integrated data into RDF or by performing on-the fly querying
+via SPARQL query translation. In the specific case of tabular datasets represented as several CSV
+or Excel files, query translation approaches have been applied by considering each source as a single
+table that can be loaded into a relational database management system (RDBMS). Nevertheless, constraints
+over these tables are not represented; thus, neither consistency among attributes nor indexes
+over tables are enforced. As a consequence, efficiency of the SPARQL-to-SQL translation process
+may be affected, as well as the completeness of the answers produced during the evaluation of the
+generated SQL query. Our work is focused on applying implicit constraints on the OBDA query translation
+process over tabular data. We propose Morph-CSV, a framework for querying tabular data that exploits
+information from typical OBDA inputs (e.g., mappings, queries) to enforce constraints that can
+be used together with any SPARQL-to-SQL OBDA engine. Morph-CSV relies on both a constraint component
+and a set of constraint operators. For a given set of constraints, the operators are applied to each
+type of constraint with the aim of enhancing query completeness and performance. We evaluate Morph-CSV
+in several domains: e-commerce with the BSBM benchmark; transportation with a benchmark using
+the GTFS dataset from the Madrid subway; and biology with a use case extracted from the Bio2RDF project.
+We compare and report the performance of two SPARQL-to-SQL OBDA engines, without and with the incorporation
+of MorphCSV. The observed results suggest that Morph-CSV is able to speed up the total query execution
+time by up to two orders of magnitude, while it is able to produce all the query answers. 

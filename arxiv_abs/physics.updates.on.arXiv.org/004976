@@ -1,0 +1,18 @@
+Large Eddy Simulation (LES) of turbulence in complex geometries is often conducted using discretizations
+with highly inhomogeneous resolution. The issues associated with resolution inhomogeneity are
+related to the noncommutativity of the filtering and differentiation operators, which introduces
+a commutation term into the governing equations. Neglect of this commutation term gives rise to
+commutation error. While the commutation error is well recognized, it is often ignored in practice.
+Moreover, the commutation error related to the implicit filter (i.e., projection onto the underlying
+discretization) has not been well investigated. Modeling of the commutation term that arises from
+the noncommutativity between numerical projection and differentiation is crucial for correcting
+errors induced by resolution inhomogeneity in practical LES settings, which typically rely solely
+on implicit filtering. Here, we investigate how this implicit commutation error manifests in simulation
+and demonstrate its impact on the convection of a packet of homogeneous isotropic turbulence through
+an inhomogeneous grid. A connection is made between the implicit commutation error and the propagation
+properties of the underlying numerics. We also introduce a statistical description of the commutation
+term that can be used in situ to determine the importance of the commutator relative to the subgrid
+stress term. A model is proposed for the correction of these issues in the case considered here, which
+highlights several important characteristics of commutation modeling for LES and the importance
+of considering numerical properties during the formulation of LES models in general. Several insights
+are discussed that could also be applied to other issues in LES, such as discretization error. 

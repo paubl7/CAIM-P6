@@ -1,0 +1,18 @@
+In the past decade, advances in Artificial Neural Networks (ANNs) have allowed them to perform extremely
+well for a wide range of tasks. In fact, they have reached human parity when performing image recognition,
+for example. Unfortunately, the accuracy of these ANNs comes at the expense of a large number of cache
+and/or memory accesses and compute operations. Spiking Neural Networks (SNNs), a type of neuromorphic,
+or brain-inspired network, have recently gained significant interest as power-efficient alternatives
+to ANNs, because they are sparse, accessing very few weights, and typically only use addition operations
+instead of the more power-intensive multiply-and-accumulate (MAC) operations. The vast majority
+of neuromorphic hardware designs support rate-encoded SNNs, where the information is encoded
+in spike rates. Rate-encoded SNNs could be seen as inefficient as an encoding scheme because it involves
+the transmission of a large number of spikes. A more efficient encoding scheme, Time-To-First-Spike
+(TTFS) encoding, encodes information in the relative time of arrival of spikes. While TTFS-encoded
+SNNs are more efficient than rate-encoded SNNs, they have, up to now, performed poorly in terms of
+accuracy compared to previous methods. Hence, in this work, we aim to overcome the limitations of
+TTFS-encoded neuromorphic systems. To accomplish this, we propose: (1) a novel optimization algorithm
+for TTFS-encoded SNNs converted from ANNs and (2) a novel hardware accelerator for TTFS-encoded
+SNNs, with a scalable and low-power design. Overall, our work in TTFS encoding and training improves
+the accuracy of SNNs to achieve state-of-the-art results on MNIST MLPs, while reducing power consumption
+by 1.46$\times$ over the state-of-the-art neuromorphic hardware. 

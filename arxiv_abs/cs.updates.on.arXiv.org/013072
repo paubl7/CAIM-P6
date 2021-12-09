@@ -1,0 +1,18 @@
+Since many safety-critical systems, such as surgical robots and autonomous driving cars, are in
+unstable environments with sensor noise and incomplete data, it is desirable for object detectors
+to take into account the confidence of localization prediction. There are three limitations of
+the prior uncertainty estimation methods for anchor-based object detection. 1) They model the
+uncertainty based on object properties having different characteristics, such as location (center
+point) and scale (width, height). 2) they model a box offset and ground-truth as Gaussian distribution
+and Dirac delta distribution, which leads to the model misspecification problem. Because the Dirac
+delta distribution is not exactly represented as Gaussian, i.e., for any $\mu$ and $\Sigma$. 3)
+Since anchor-based methods are sensitive to hyper-parameters of anchor, the localization uncertainty
+modeling is also sensitive to these parameters. Therefore, we propose a new localization uncertainty
+estimation method called Gaussian-FCOS for anchor-free object detection. Our method captures
+the uncertainty based on four directions of box offsets~(left, right, top, bottom) that have similar
+properties, which enables to capture which direction is uncertain and provide a quantitative value
+in range~[0, 1]. To this end, we design a new uncertainty loss, negative power log-likelihood loss,
+to measure uncertainty by weighting IoU to the likelihood loss, which alleviates the model misspecification
+problem. Experiments on COCO datasets demonstrate that our Gaussian-FCOS reduces false positives
+and finds more missing-objects by mitigating over-confidence scores with the estimated uncertainty.
+We hope Gaussian-FCOS serves as a crucial component for the reliability-required task. 

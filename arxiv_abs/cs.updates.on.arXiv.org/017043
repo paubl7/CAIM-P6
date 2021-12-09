@@ -1,0 +1,18 @@
+Hyperspectral (HS) images are characterized by approximately contiguous spectral information,
+enabling the fine identification of materials by capturing subtle spectral discrepancies. Owing
+to their excellent locally contextual modeling ability, convolutional neural networks (CNNs)
+have been proven to be a powerful feature extractor in HS image classification. However, CNNs fail
+to mine and represent the sequence attributes of spectral signatures well due to the limitations
+of their inherent network backbone. To solve this issue, we rethink HS image classification from
+a sequential perspective with transformers, and propose a novel backbone network called \ul{SpectralFormer}.
+Beyond band-wise representations in classic transformers, SpectralFormer is capable of learning
+spectrally local sequence information from neighboring bands of HS images, yielding group-wise
+spectral embeddings. More significantly, to reduce the possibility of losing valuable information
+in the layer-wise propagation process, we devise a cross-layer skip connection to convey memory-like
+components from shallow to deep layers by adaptively learning to fuse "soft" residuals across layers.
+It is worth noting that the proposed SpectralFormer is a highly flexible backbone network, which
+can be applicable to both pixel- and patch-wise inputs. We evaluate the classification performance
+of the proposed SpectralFormer on three HS datasets by conducting extensive experiments, showing
+the superiority over classic transformers and achieving a significant improvement in comparison
+with state-of-the-art backbone networks. The codes of this work will be available at \url{https://sites.google.com/view/danfeng-hong}
+for the sake of reproducibility. 

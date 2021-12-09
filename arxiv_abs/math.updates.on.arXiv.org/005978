@@ -1,0 +1,20 @@
+The recent development of deep learning methods provides a new approach to optimize the belief propagation
+(BP) decoding of linear codes. However, the limitation of existing works is that the scale of neural
+networks increases rapidly with the codelength, thus they can only support short to moderate codelengths.
+From the point view of practicality, we propose a high-performance neural min-sum (MS) decoding
+method that makes full use of the lifting structure of protograph low-density parity-check (LDPC)
+codes. By this means, the size of the parameter array of each layer in the neural decoder only equals
+the number of edge-types for arbitrary codelengths. In particular, for protograph LDPC codes,
+the proposed neural MS decoder is constructed in a special way such that identical parameters are
+shared by a bundle of edges derived from the same edge-type. To reduce the complexity and overcome
+the vanishing gradient problem in training the proposed neural MS decoder, an iteration-by-iteration
+(i.e., layer-by-layer in neural networks) greedy training method is proposed. With this, the proposed
+neural MS decoder tends to be optimized with faster convergence, which is aligned with the early
+termination mechanism widely used in practice. To further enhance the generalization ability
+of the proposed neural MS decoder, a codelength/rate compatible training method is proposed, which
+randomly selects samples from a set of codes lifted from the same base code. As a theoretical performance
+evaluation tool, a trajectory-based extrinsic information transfer (T-EXIT) chart is developed
+for various decoders. Both T-EXIT and simulation results show that the optimized MS decoding can
+provide faster convergence and up to 1dB gain compared with the plain MS decoding and its variants
+with only slightly increased complexity. In addition, it can even outperform the sum-product algorithm
+for some short codes. 

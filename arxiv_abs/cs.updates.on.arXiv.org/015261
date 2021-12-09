@@ -1,0 +1,20 @@
+We study the backward stability of running a backward stable eigenstructure solver on a pencil $S(\lambda)$
+that is a strong linearization of a rational matrix $R(\lambda)$ expressed in the form $R(\lambda)=D(\lambda)+
+C(\lambda I_\ell-A)^{-1}B$, where $D(\lambda)$ is a polynomial matrix and $C(\lambda I_\ell-A)^{-1}B$
+is a minimal state-space realization. We consider the family of block Kronecker linearizations
+of $R(\lambda)$, which are highly structured pencils. Backward stable eigenstructure solvers
+applied to $S(\lambda)$ will compute the exact eigenstructure of a perturbed pencil $\widehat
+S(\lambda):=S(\lambda)+\Delta_S(\lambda)$ and the special structure of $S(\lambda)$ will
+be lost. In order to link this perturbed pencil with a nearby rational matrix, we construct a strictly
+equivalent pencil $\widetilde S(\lambda)$ to $\widehat S(\lambda)$ that restores the original
+structure, and hence is a block Kronecker linearization of a perturbed rational matrix $\widetilde
+R(\lambda) = \widetilde D(\lambda)+ \widetilde C(\lambda I_\ell- \widetilde A)^{-1} \widetilde
+B$, where $\widetilde D(\lambda)$ is a polynomial matrix with the same degree as $D(\lambda)$.
+Moreover, we bound appropriate norms of $\widetilde D(\lambda)- D(\lambda)$, $\widetilde C -
+C$, $\widetilde A - A$ and $\widetilde B - B$ in terms of an appropriate norm of $\Delta_S(\lambda)$.
+These bounds may be inadmissibly large, but we also introduce a scaling that allows us to make them
+satisfactorily tiny. Thus, for this scaled representation, we prove that the staircase and the
+$QZ$ algorithms compute the exact eigenstructure of a rational matrix $\widetilde R(\lambda)$
+that can be expressed in exactly the same form as $R(\lambda)$ with the parameters defining the representation
+very near to those of $R(\lambda)$. This shows that this approach is backward stable in a structured
+sense. 

@@ -1,0 +1,20 @@
+Although automatic emotion recognition from facial expressions and speech has made remarkable
+progress, emotion recognition from body gestures has not been thoroughly explored. People often
+use a variety of body language to express emotions, and it is difficult to enumerate all emotional
+body gestures and collect enough samples for each category. Therefore, recognizing new emotional
+body gestures is critical for better understanding human emotions. However, the existing methods
+fail to accurately determine which emotional state a new body gesture belongs to. In order to solve
+this problem, we introduce a Generalized Zero-Shot Learning (GZSL) framework, which consists
+of three branches to infer the emotional state of the new body gestures with only their semantic descriptions.
+The first branch is a Prototype-Based Detector (PBD) which is used to determine whether an sample
+belongs to a seen body gesture category and obtain the prediction results of the samples from the
+seen categories. The second branch is a Stacked AutoEncoder (StAE) with manifold regularization,
+which utilizes semantic representations to predict samples from unseen categories. Note that
+both of the above branches are for body gesture recognition. We further add an emotion classifier
+with a softmax layer as the third branch in order to better learn the feature representations for
+this emotion classification task. The input features for these three branches are learned by a shared
+feature extraction network, i.e., a Bidirectional Long Short-Term Memory Networks (BLSTM) with
+a self-attention module. We treat these three branches as subtasks and use multi-task learning
+strategies for joint training. The performance of our framework on an emotion recognition dataset
+is significantly superior to the traditional method of emotion classification and state-of-the-art
+zero-shot learning methods. 

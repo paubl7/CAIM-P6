@@ -1,0 +1,18 @@
+This paper proposes a framework for modeling sound change that combines deep convolutional neural
+networks and iterative learning. Acquisition and transmission of speech across generations is
+modeled by training generations of Generative Adversarial Networks (Goodfellow et al. arXiv:1406.2661,Donahue
+et al. arXiv:1705.07904) on unannotated raw speech data. The paper argues that several properties
+of sound change emerge from the proposed architecture. Four generations of Generative Adversarial
+Networks were trained on an allophonic distribution in English where voiceless stops are aspirated
+word-initially before stressed vowels except if preceded by [s]. The first generation of networks
+is trained on the relevant sequences in human speech from the TIMIT database. The subsequent generations
+are not trained on TIMIT, but on generated outputs from the previous generation and thus start learning
+from each other in an iterative learning task. The initial allophonic distribution is progressively
+being lost with each generation, likely due to pressures from the global distribution of aspiration
+in the training data that resembles phonological pressures in natural language. The networks show
+signs of a gradual shift in phonetic targets characteristic of a gradual phonetic sound change.
+At endpoints, the networks' outputs superficially resemble a phonological change -- rule loss
+-- driven by imperfect learning. The model features signs of stability, one of the more challenging
+aspects of computational models of sound change. The results suggest that the proposed Generative
+Adversarial models of phonetic and phonological acquisition have the potential to yield new insights
+into the long-standing question of how to model language change. 

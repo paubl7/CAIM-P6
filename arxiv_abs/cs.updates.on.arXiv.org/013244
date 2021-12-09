@@ -1,0 +1,20 @@
+Autonomous discovery of discrete symbols and rules from continuous interaction experience is
+a crucial building block of robot AI, but remains a challenging problem. Solving it will overcome
+the limitations in scalability, flexibility, and robustness of manually-designed symbols and
+rules, and will constitute a substantial advance towards autonomous robots that can learn and reason
+at abstract levels in open-ended environments. Towards this goal, we propose a novel and general
+method that finds action-grounded, discrete object and effect categories and builds probabilistic
+rules over them that can be used in complex action planning. Our robot interacts with single and multiple
+objects using a given action repertoire and observes the effects created in the environment. In
+order to form action-grounded object, effect, and relational categories, we employ a binarized
+bottleneck layer of a predictive, deep encoder-decoder network that takes as input the image of
+the scene and the action applied, and generates the resulting object displacements in the scene
+(action effects) in pixel coordinates. The binary latent vector represents a learned, action-driven
+categorization of objects. To distill the knowledge represented by the neural network into rules
+useful for symbolic reasoning, we train a decision tree to reproduce its decoder function. From
+its branches we extract probabilistic rules and represent them in PPDDL, allowing off-the-shelf
+planners to operate on the robot's sensorimotor experience. Our system is verified in a physics-based
+3d simulation environment where a robot arm-hand system learned symbols that can be interpreted
+as 'rollable', 'insertable', 'larger-than' from its push and stack actions; and generated effective
+plans to achieve goals such as building towers from given cubes, balls, and cups using off-the-shelf
+probabilistic planners. 

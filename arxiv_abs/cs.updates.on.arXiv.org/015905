@@ -1,0 +1,19 @@
+Brain graphs (i.e, connectomes) constructed from medical scans such as magnetic resonance imaging
+(MRI) have become increasingly important tools to characterize the abnormal changes in the human
+brain. Due to the high acquisition cost and processing time of multimodal MRI, existing deep learning
+frameworks based on Generative Adversarial Network (GAN) focused on predicting the missing multimodal
+medical images from a few existing modalities. While brain graphs help better understand how a particular
+disorder can change the connectional facets of the brain, synthesizing a target brain multigraph
+(i.e, multiple brain graphs) from a single source brain graph is strikingly lacking. Additionally,
+existing graph generation works mainly learn one model for each target domain which limits their
+scalability in jointly predicting multiple target domains. Besides, while they consider the global
+topological scale of a graph (i.e., graph connectivity structure), they overlook the local topology
+at the node scale (e.g., how central a node is in the graph). To address these limitations, we introduce
+topology-aware graph GAN architecture (topoGAN), which jointly predicts multiple brain graphs
+from a single brain graph while preserving the topological structure of each target graph. Its three
+key innovations are: (i) designing a novel graph adversarial auto-encoder for predicting multiple
+brain graphs from a single one, (ii) clustering the encoded source graphs in order to handle the mode
+collapse issue of GAN and proposing a cluster-specific decoder, (iii) introducing a topological
+loss to force the prediction of topologically sound target brain graphs. The experimental results
+using five target domains demonstrated the outperformance of our method in brain multigraph prediction
+from a single graph in comparison with baseline approaches. 

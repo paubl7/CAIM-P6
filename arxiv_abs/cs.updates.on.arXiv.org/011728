@@ -1,0 +1,19 @@
+We have developed a framework for crisis response and management that incorporates the latest technologies
+in computer vision (CV), inland flood prediction, damage assessment and data visualization. The
+framework uses data collected before, during, and after the crisis to enable rapid and informed
+decision making during all phases of disaster response. Our computer-vision model analyzes spaceborne
+and airborne imagery to detect relevant features during and after a natural disaster and creates
+metadata that is transformed into actionable information through web-accessible mapping tools.
+In particular, we have designed an ensemble of models to identify features including water, roads,
+buildings, and vegetation from the imagery. We have investigated techniques to bootstrap and reduce
+dependency on large data annotation efforts by adding use of open source labels including OpenStreetMaps
+and adding complementary data sources including Height Above Nearest Drainage (HAND) as a side
+channel to the network's input to encourage it to learn other features orthogonal to visual characteristics.
+Modeling efforts include modification of connected U-Nets for (1) semantic segmentation, (2)
+flood line detection, and (3) for damage assessment. In particular for the case of damage assessment,
+we added a second encoder to U-Net so that it could learn pre-event and post-event image features
+simultaneously. Through this method, the network is able to learn the difference between the pre-
+and post-disaster images, and therefore more effectively classify the level of damage. We have
+validated our approaches using publicly available data from the National Oceanic and Atmospheric
+Administration (NOAA)'s Remote Sensing Division, which displays the city and street-level details
+as mosaic tile images as well as data released as part of the Xview2 challenge. 

@@ -1,0 +1,20 @@
+Emerging AI-enabled applications such as augmented/virtual reality (AR/VR) leverage multiple
+deep neural network (DNN) models for sub-tasks such as object detection, hand tracking, and so on.
+Because of the diversity of the sub-tasks, the layers within and across the DNN models are highly
+heterogeneous in operation and shape. Such layer heterogeneity is a challenge for a fixed dataflow
+accelerator (FDA) that employs a fixed dataflow on a single accelerator substrate since each layer
+prefers different dataflows (computation order and parallelization) and tile sizes. Reconfigurable
+DNN accelerators (RDAs) have been proposed to adapt their dataflows to diverse layers to address
+the challenge. However, the dataflow flexibility in RDAs is enabled at the area and energy costs
+of expensive hardware structures (switches, controller, etc.) and per-layer reconfiguration.
+Alternatively, this work proposes a new class of accelerators, heterogeneous dataflow accelerators
+(HDAs), which deploys multiple sub-accelerators each supporting a different dataflow. HDAs enable
+coarser-grained dataflow flexibility than RDAs with higher energy efficiency and lower area cost
+comparable to FDAs. To exploit such benefits, hardware resource partitioning across sub-accelerators
+and layer execution schedule need to be carefully optimized. Therefore, we also present Herald,
+which co-optimizes hardware partitioning and layer execution schedule. Using Herald on a suite
+of AR/VR and MLPerf workloads, we identify a promising HDA architecture, Maelstrom, which demonstrates
+65.3% lower latency and 5.0% lower energy than the best FDAs and 22.0% lower energy at the cost of 20.7%
+higher latency than a state-of-the-art RDA. The results suggest that HDA is an alternative class
+of Pareto-optimal accelerators to RDA with strength in energy, which can be a better choice than
+RDAs depending on the use cases. 

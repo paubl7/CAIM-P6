@@ -1,0 +1,20 @@
+Medical image registration and segmentation are two of the most frequent tasks in medical image
+analysis. As these tasks are complementary and correlated, it would be beneficial to apply them
+simultaneously in a joint manner. In this paper, we formulate registration and segmentation as
+a joint problem via a Multi-Task Learning (MTL) setting, allowing these tasks to leverage their
+strengths and mitigate their weaknesses through the sharing of beneficial information. We propose
+to merge these tasks not only on the loss level, but on the architectural level as well. We studied
+this approach in the context of adaptive image-guided radiotherapy for prostate cancer, where
+planning and follow-up CT images as well as their corresponding contours are available for training.
+The study involves two datasets from different manufacturers and institutes. The first dataset
+was divided into training (12 patients) and validation (6 patients), and was used to optimize and
+validate the methodology, while the second dataset (14 patients) was used as an independent test
+set. We carried out an extensive quantitative comparison between the quality of the automatically
+generated contours from different network architectures as well as loss weighting methods. Moreover,
+we evaluated the quality of the generated deformation vector field (DVF). We show that MTL algorithms
+outperform their Single-Task Learning (STL) counterparts and achieve better generalization
+on the independent test set. The best algorithm achieved a mean surface distance of $1.06 \pm 0.3$
+mm, $1.27 \pm 0.4$ mm, $0.91 \pm 0.4$ mm, and $1.76 \pm 0.8$ mm on the validation set for the prostate,
+seminal vesicles, bladder, and rectum, respectively. The high accuracy of the proposed method
+combined with the fast inference speed, makes it a promising method for automatic re-contouring
+of follow-up scans for adaptive radiotherapy. 

@@ -1,0 +1,20 @@
+In the current context of Big Data, the nature of many forecasting problems has changed from predicting
+isolated time series to predicting many time series from similar sources. This has opened up the
+opportunity to develop competitive global forecasting models that simultaneously learn from
+many time series. But, it still remains unclear when global forecasting models can outperform the
+univariate benchmarks, especially along the dimensions of the homogeneity/heterogeneity of
+series, the complexity of patterns in the series, the complexity of forecasting models, and the
+lengths/number of series. Our study attempts to address this problem through investigating the
+effect from these factors, by simulating a number of datasets that have controllable time series
+characteristics. Specifically, we simulate time series from simple data generating processes
+(DGP), such as Auto Regressive (AR) and Seasonal AR, to complex DGPs, such as Chaotic Logistic Map,
+Self-Exciting Threshold Auto-Regressive, and Mackey-Glass Equations. The data heterogeneity
+is introduced by mixing time series generated from several DGPs into a single dataset. The lengths
+and the number of series in the dataset are varied in different scenarios. We perform experiments
+on these datasets using global forecasting models including Recurrent Neural Networks (RNN),
+Feed-Forward Neural Networks, Pooled Regression (PR) models and Light Gradient Boosting Models
+(LGBM), and compare their performance against standard statistical univariate forecasting techniques.
+Our experiments demonstrate that when trained as global forecasting models, techniques such as
+RNNs and LGBMs, which have complex non-linear modelling capabilities, are competitive methods
+in general under challenging forecasting scenarios such as series having short lengths, datasets
+with heterogeneous series and having minimal prior knowledge of the patterns of the series. 

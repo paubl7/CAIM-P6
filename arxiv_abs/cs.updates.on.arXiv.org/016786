@@ -1,0 +1,18 @@
+Many learning-based 3D shape semantic segmentation methods assign labels to shape atoms (e.g.
+points in a point cloud or faces in a mesh) with a single-pass approach trained in an end-to-end fashion.
+Such methods achieve impressive performance but require large amounts of labeled training data.
+This paradigm entangles two separable subproblems: (1) decomposing a shape into regions and (2)
+assigning semantic labels to these regions. We claim that disentangling these subproblems reduces
+the labeled data burden: (1) region decomposition requires no semantic labels and could be performed
+in an unsupervised fashion, and (2) labeling shape regions instead of atoms results in a smaller
+search space and should be learnable with less labeled training data. In this paper, we investigate
+this second claim by presenting the Neurally-Guided Shape Parser (NGSP), a method that learns how
+to assign semantic labels to regions of an over-segmented 3D shape. We solve this problem via MAP
+inference, modeling the posterior probability of a labeling assignment conditioned on an input
+shape. We employ a Monte Carlo importance sampling approach guided by a neural proposal network,
+a search-based approach made feasible by assuming the input shape is decomposed into discrete regions.
+We evaluate NGSP on the task of hierarchical semantic segmentation on manufactured 3D shapes from
+PartNet. We find that NGSP delivers significant performance improvements over baselines that
+learn to label shape atoms and then aggregate predictions for each shape region, especially in low-data
+regimes. Finally, we demonstrate that NGSP is robust to region granularity, as it maintains strong
+segmentation performance even as the regions undergo significant corruption. 

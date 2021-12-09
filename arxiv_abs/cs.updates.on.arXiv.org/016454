@@ -1,0 +1,18 @@
+Recently, Balliu, Brandt, and Olivetti [FOCS '20] showed the first $\omega(\log^* n)$ lower bound
+for the maximal independent set (MIS) problem in trees. In this work we prove lower bounds for a much
+more relaxed family of distributed symmetry breaking problems. As a by-product, we obtain improved
+lower bounds for the distributed MIS problem in trees. For a parameter $k$ and an orientation of the
+edges of a graph $G$, we say that a subset $S$ of the nodes of $G$ is a $k$-outdegree dominating set if
+$S$ is a dominating set of $G$ and if in the induced subgraph $G[S]$, every node in $S$ has outdegree
+at most $k$. Note that for $k=0$, this definition coincides with the definition of an MIS. For a given
+$k$, we consider the problem of computing a $k$-outdegree dominating set. We show that, even in regular
+trees of degree at most $\Delta$, in the standard \LOCAL model, there exists a constant $\epsilon>0$
+such that for $k\leq \Delta^\epsilon$, for the problem of computing a $k$-outdegree dominating
+set, any randomized algorithm requires at least $\Omega(\min\{\log\Delta,\sqrt{\log\log n}\})$
+rounds and any deterministic algorithm requires at least $\Omega(\min\{\log\Delta,\sqrt{\log
+n}\})$ rounds. The proof of our lower bounds is based on the recently highly successful round elimination
+technique. We provide a novel way to do simplifications for round elimination, which we expect to
+be of independent interest. Our new proof is considerably simpler than the lower bound proof in [FOCS
+'20]. In particular, our round elimination proof uses a family of problems that can be described
+by only a constant number of labels. The existence of such a proof for the MIS problem was believed
+impossible by the authors of [FOCS '20]. 

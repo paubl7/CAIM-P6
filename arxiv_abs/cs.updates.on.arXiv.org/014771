@@ -1,0 +1,18 @@
+Differentially private (DP) stochastic convex optimization (SCO) is a fundamental problem, where
+the goal is to approximately minimize the population risk with respect to a convex loss function,
+given a dataset of i.i.d. samples from a distribution, while satisfying differential privacy with
+respect to the dataset. Most of the existing works in the literature of private convex optimization
+focus on the Euclidean (i.e., $\ell_2$) setting, where the loss is assumed to be Lipschitz (and possibly
+smooth) w.r.t. the $\ell_2$ norm over a constraint set with bounded $\ell_2$ diameter. Algorithms
+based on noisy stochastic gradient descent (SGD) are known to attain the optimal excess risk in this
+setting. In this work, we conduct a systematic study of DP-SCO for $\ell_p$-setups. For $p=1$, under
+a standard smoothness assumption, we give a new algorithm with nearly optimal excess risk. This
+result also extends to general polyhedral norms and feasible sets. For $p\in(1, 2)$, we give two
+new algorithms, whose central building block is a novel privacy mechanism, which generalizes the
+Gaussian mechanism. Moreover, we establish a lower bound on the excess risk for this range of $p$,
+showing a necessary dependence on $\sqrt{d}$, where $d$ is the dimension of the space. Our lower
+bound implies a sudden transition of the excess risk at $p=1$, where the dependence on $d$ changes
+from logarithmic to polynomial, resolving an open question in prior work [TTZ15] . For $p\in (2,
+\infty)$, noisy SGD attains optimal excess risk in the low-dimensional regime; in particular,
+this proves the optimality of noisy SGD for $p=\infty$. Our work draws upon concepts from the geometry
+of normed spaces, such as the notions of regularity, uniform convexity, and uniform smoothness.

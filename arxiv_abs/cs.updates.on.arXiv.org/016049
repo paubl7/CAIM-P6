@@ -1,0 +1,20 @@
+The Database field is undergoing significant changes. Although relational systems are still predominant,
+the interest in NoSQL systems is continuously increasing. In this scenario, polyglot persistence
+is envisioned as the database architecture to be prevalent in the future. Multi-model database
+tools normally use a generic or unified metamodel to represent schemas of the data model that they
+support. Such metamodels facilitate developing utilities, as they can be built on a common representation.
+Also, the number of mappings required to migrate databases from a data model to another is reduced,
+and integrability is favored. In this paper, we present the U-Schema unified metamodel able to represent
+logical schemas for the four most popular NoSQL paradigms (columnar, document, key-value, and
+graph) as well as relational schemas. We will formally define the mappings between U-Schema and
+the data model defined for each paradigm. How these mappings have been implemented and validated
+will be discussed, and some applications of U-Schema will be shown. To achieve flexibility to respond
+to data changes, most of NoSQL systems are "schema-on-write," and the declaration of schemas is
+not required. Such an absence of schema declaration makes structural variability possible, i.e.,
+stored data of the same entity type can have different structure. Moreover, data relationships
+supported by each data model are different. We will show how all these issues have been tackled in
+our approach. Our metamodel goes beyond the existing proposals by distinguishing entity types
+and relationship types, representing aggregation and reference relationships, and including
+the notion of structural variability. Our contributions also include developing schema extraction
+strategies for schemaless systems of each NoSQL data model, and tackling performance and scalability
+in the implementation for each store. 

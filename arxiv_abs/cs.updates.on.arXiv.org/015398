@@ -1,0 +1,20 @@
+Knowledge distillation (KD) has been actively studied for image classification tasks in deep learning,
+aiming to improve the performance of a student model based on the knowledge from a teacher model.
+However, there have been very few efforts for applying KD in image regression with a scalar response,
+and there is no KD method applicable to both tasks. Moreover, existing KD methods often require a
+practitioner to carefully choose or adjust the teacher and student architectures, making these
+methods less scalable in practice. Furthermore, although KD is usually conducted in scenarios
+with limited labeled data, very few techniques are developed to alleviate such data insufficiency.
+To solve the above problems in an all-in-one manner, we propose in this paper a unified KD framework
+based on conditional generative adversarial networks (cGANs), termed cGAN-KD. Fundamentally
+different from existing KD methods, cGAN-KD distills and transfers knowledge from a teacher model
+to a student model via cGAN-generated samples. This unique mechanism makes cGAN-KD suitable for
+both classification and regression tasks, compatible with other KD methods, and insensitive to
+the teacher and student architectures. Also, benefiting from the recent advances in cGAN methodology
+and our specially designed subsampling and filtering procedures, cGAN-KD also performs well when
+labeled data are scarce. An error bound of a student model trained in the cGAN-KD framework is derived
+in this work, which theoretically explains why cGAN-KD takes effect and guides the implementation
+of cGAN-KD in practice. Extensive experiments on CIFAR-10 and Tiny-ImageNet show that we can incorporate
+state-of-the-art KD methods into the cGAN-KD framework to reach a new state of the art. Also, experiments
+on RC-49 and UTKFace demonstrate the effectiveness of cGAN-KD in image regression tasks, where
+existing KD methods are inapplicable. 

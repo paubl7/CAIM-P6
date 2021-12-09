@@ -1,0 +1,20 @@
+The rapid growth of the Industrial Internet of Things (IIoT) has brought embedded systems into focus
+as major targets for both security analysts and malicious adversaries. Due to the non-standard
+hardware and diverse software, embedded devices present unique challenges to security analysts
+for the accurate analysis of firmware binaries. The diversity in hardware components and tight
+coupling between firmware and hardware makes it hard to perform dynamic analysis, which must have
+the ability to execute firmware code in virtualized environments. However, emulating the large
+expanse of hardware peripherals makes analysts have to frequently modify the emulator for executing
+various firmware code in different virtualized environments, greatly limiting the ability of
+security analysis. In this work, we explore the problem of firmware re-hosting related to the real-time
+operating system (RTOS). Specifically, developers create a Board Support Package (BSP) and develop
+device drivers to make that RTOS run on their platform. By providing high-level replacements for
+BSP routines and device drivers, we can make the minimal modification of the firmware that is to be
+migrated from its original hardware environment into a virtualized one. We show that an approach
+capable of offering the ability to execute firmware at scale through patching firmware in an automated
+manner without modifying the existing emulators. Our approach, called static binary-level porting,
+first identifies the BSP and device drivers in target firmware, then patches the firmware with pre-built
+BSP routines and drivers that can be adapted to the existing emulators. Finally, we demonstrate
+the practicality of the proposed method on multiple hardware platforms and firmware samples for
+security analysis. The result shows that the approach is flexible enough to emulate firmware for
+vulnerability assessment and exploits development. 

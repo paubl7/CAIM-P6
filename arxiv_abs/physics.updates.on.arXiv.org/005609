@@ -1,0 +1,20 @@
+Bus systems involve complex bus-bus and bus-passengers interactions. We study the problem of assigning
+buses to bus stops to minimise the average waiting time of passengers, W. An analytical theory for
+two specific cases of interactions is formulated: normal situation where all buses board passengers
+from every bus stop, versus novel express buses where disjoint subsets of non-interacting buses
+serve disjoint subsets of bus stops. Our formulation allows exact calculation of W for general loops
+in the two cases examined. Compared with regular buses, we present scenarios where express buses
+show improvement in W. Useful insights are obtained from our theory: 1) there is a minimum number
+of buses needed, 2) splitting a crowded bus stop into two less crowded ones always increases W for
+regular buses, 3) changing the destination of passengers and location of bus stops do not influence
+W. In the second part, we introduce a reinforcement-learning platform that overcomes limitations
+of our analytical method to search for better allocations of buses to bus stops that minimise W. Compared
+with the previous cases, any possible interaction between buses is allowed, unlocking novel emergent
+strategies. We apply this tool to a simple toy model and three empirically-motivated bus loops,
+based on data collected from the Nanyang Technological University shuttle bus system. In the simplified
+model, we observe an unexpected strategy emerging that could not be analysed with our mathematical
+formulation and displays chaotic behaviour. The possible configurations in the three empirically-motivated
+scenarios are approximately 10^11, 10^11 and 10^20, so a brute-force approach is impossible. Our
+algorithm reduces W by 12% to 32% compared with regular buses and 12% to 29% compared with express
+buses. This tool has practical applications because it works independently of the specific characteristics
+of a bus loop. 

@@ -1,0 +1,18 @@
+Collaborative Filtering (CF) signals are crucial for a Recommender System~(RS) model to learn
+user and item embeddings. High-order information can alleviate the cold-start issue of CF-based
+methods, which is modelled through propagating the information over the user-item bipartite graph.
+Recent Graph Neural Networks~(GNNs) propose to stack multiple aggregation layers to propagate
+high-order signals. However, the oscillation problem, varying locality of bipartite graph, and
+the fix propagation pattern spoil the ability of multi-layer structure to propagate information.
+The oscillation problem results from the bipartite structure, as the information from users only
+propagates to items. Besides oscillation problem, varying locality suggests the density of nodes
+should be considered in the propagation process. Moreover, the layer-fixed propagation pattern
+introduces redundant information between layers. In order to tackle these problems, we propose
+a new RS model, named as \textbf{D}eoscillated \textbf{G}raph \textbf{C}ollaborative \textbf{F}iltering~(DGCF).
+We introduce cross-hop propagation layers in it to break the bipartite propagating structure,
+thus resolving the oscillation problem. Additionally, we design innovative locality-adaptive
+layers which adaptively propagate information. Stacking multiple cross-hop propagation layers
+and locality layers constitutes the DGCF model, which models high-order CF signals adaptively
+to the locality of nodes and layers. Extensive experiments on real-world datasets show the effectiveness
+of DGCF. Detailed analyses indicate that DGCF solves oscillation problem, adaptively learns local
+factor, and has layer-wise propagation pattern. Our code is available online at https://github.com/JimLiu96/DeosciRec.

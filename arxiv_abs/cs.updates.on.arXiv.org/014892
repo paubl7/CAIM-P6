@@ -1,0 +1,20 @@
+Centered Gaussian random fields (GRFs) indexed by compacta such as smooth, bounded Euclidean domains
+or smooth, compact and orientable manifolds are determined by their covariance operators. We consider
+centered GRFs given as variational solutions to coloring operator equations driven by spatial
+white noise, with an elliptic self-adjoint pseudodifferential coloring operator from the H\"ormander
+class. This includes the Mat\'ern class of GRFs as a special case. Using biorthogonal multiresolution
+analyses on the manifold, we prove that the precision and covariance operators, respectively,
+may be identified with bi-infinite matrices and finite sections may be diagonally preconditioned
+rendering the condition number independent of the dimension $p$ of this section. We prove that a
+tapering strategy by thresholding applied on finite sections of the bi-infinite precision and
+covariance matrices results in optimally numerically sparse approximations. That is, asymptotically
+only linearly many nonzero matrix entries are sufficient to approximate the original section of
+the bi-infinite covariance or precision matrix using this tapering strategy to arbitrary precision.
+The locations of these nonzero matrix entries are known a priori. The tapered covariance or precision
+matrices may also be optimally diagonally preconditioned. Analysis of the relative size of the
+entries of the tapered covariance matrices motivates novel, multilevel Monte Carlo (MLMC) oracles
+for covariance estimation, in sample complexity that scales log-linearly with respect to the number
+$p$ of parameters. In addition, we propose and analyze a novel compressive algorithm for simulating
+and kriging of GRFs. The complexity (work and memory vs. accuracy) of these three algorithms scales
+near-optimally in terms of the number of parameters $p$ of the sample-wise approximation of the
+GRF in Sobolev scales. 

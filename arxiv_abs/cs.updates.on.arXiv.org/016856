@@ -1,0 +1,19 @@
+High-resolution manometry (HRM) is the primary procedure used to diagnose esophageal motility
+disorders. Its interpretation and classification includes an initial evaluation of swallow-level
+outcomes and then derivation of a study-level diagnosis based on Chicago Classification (CC),
+using a tree-like algorithm. This diagnostic approach on motility disordered using HRM was mirrored
+using a multi-stage modeling framework developed using a combination of various machine learning
+approaches. Specifically, the framework includes deep-learning models at the swallow-level
+stage and feature-based machine learning models at the study-level stage. In the swallow-level
+stage, three models based on convolutional neural networks (CNNs) were developed to predict swallow
+type, swallow pressurization, and integrated relaxation pressure (IRP). At the study-level stage,
+model selection from families of the expert-knowledge-based rule models, xgboost models and artificial
+neural network(ANN) models were conducted, with the latter two model designed and augmented with
+motivation from the export knowledge. A simple model-agnostic strategy of model balancing motivated
+by Bayesian principles was utilized, which gave rise to model averaging weighted by precision scores.
+The averaged (blended) models and individual models were compared and evaluated, of which the best
+performance on test dataset is 0.81 in top-1 prediction, 0.92 in top-2 predictions. This is the first
+artificial-intelligence-style model to automatically predict CC diagnosis of HRM study from
+raw multi-swallow data. Moreover, the proposed modeling framework could be easily extended to
+multi-modal tasks, such as diagnosis of esophageal patients based on clinical data from both HRM
+and functional luminal imaging probe panometry (FLIP). 

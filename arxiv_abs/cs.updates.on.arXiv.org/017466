@@ -1,0 +1,20 @@
+Person re-identification (Re-ID) aims to match person images across non-overlapping camera views.
+The majority of Re-ID methods focus on small-scale surveillance systems in which each pedestrian
+is captured in different camera views of adjacent scenes. However, in large-scale surveillance
+systems that cover larger areas, it is required to track a pedestrian of interest across distant
+scenes (e.g., a criminal suspect escapes from one city to another). Since most pedestrians appear
+in limited local areas, it is difficult to collect training data with cross-camera pairs of the same
+person. In this work, we study intra-camera supervised person re-identification across distant
+scenes (ICS-DS Re-ID), which uses cross-camera unpaired data with intra-camera identity labels
+for training. It is challenging as cross-camera paired data plays a crucial role for learning camera-invariant
+features in most existing Re-ID methods. To learn camera-invariant representation from cross-camera
+unpaired training data, we propose a cross-camera feature prediction method to mine cross-camera
+self supervision information from camera-specific feature distribution by transforming fake
+cross-camera positive feature pairs and minimize the distances of the fake pairs. Furthermore,
+we automatically localize and extract local-level feature by a transformer. Joint learning of
+global-level and local-level features forms a global-local cross-camera feature prediction
+scheme for mining fine-grained cross-camera self supervision information. Finally, cross-camera
+self supervision and intra-camera supervision are aggregated in a framework. The experiments
+are conducted in the ICS-DS setting on Market-SCT, Duke-SCT and MSMT17-SCT datasets. The evaluation
+results demonstrate the superiority of our method, which gains significant improvements of 15.4
+Rank-1 and 22.3 mAP on Market-SCT as compared to the second best method. 

@@ -1,0 +1,19 @@
+Radiomics is an active area of research in medical image analysis, the low reproducibility of radiomics
+has limited its applicability to clinical practice. This issue is especially prominent when radiomic
+features are calculated from noisy images, such as low dose computed tomography (CT) scans. In this
+article, we investigate the possibility of improving the reproducibility of radiomic features
+calculated on noisy CTs by using generative models for denoising.One traditional denoising method
+- non-local means - and two generative models - encoder-decoder networks (EDN) and conditional
+generative adversarial networks (CGANs) - were selected as the test models. We added noise to the
+sinograms of full dose CTs to mimic low dose CTs with two different levels of noise: low-noise CT and
+high-noise CT. Models were trained on high-noise CTs and used to denoise low-noise CTs without re-training.
+We also test the performance of our model in real data, using dataset of same-day repeat low dose CTs
+to assess the reproducibility of radiomic features in denoised images. The EDN and the CGAN improved
+the concordance correlation coefficients (CCC) of radiomic features for low-noise images from
+0.87 to 0.92 and for high-noise images from 0.68 to 0.92 respectively. Moreover, the EDN and the CGAN
+improved the test-retest reliability of radiomic features (mean CCC increased from 0.89 to 0.94)
+based on real low dose CTs. The results show that denoising using EDN and CGANs can improve the reproducibility
+of radiomic features calculated on noisy CTs. Moreover, images with different noise levels can
+be denoised to improve the reproducibility using these models without re-training, as long as the
+noise intensity is equal or lower than that in high-noise CTs. To the authors' knowledge, this is
+the first effort to improve the reproducibility of radiomic features calculated on low dose CT scans.

@@ -1,0 +1,18 @@
+We introduce a new graph-theoretic concept in the area of network monitoring. A set $M$ of vertices
+of a graph $G$ is a \emph{distance-edge-monitoring set} if for every edge $e$ of $G$, there is a vertex
+$x$ of $M$ and a vertex $y$ of $G$ such that $e$ belongs to all shortest paths between $x$ and $y$. We
+denote by $dem(G)$ the smallest size of such a set in $G$. The vertices of $M$ represent distance probes
+in a network modeled by $G$; when the edge $e$ fails, the distance from $x$ to $y$ increases, and thus
+we are able to detect the failure. It turns out that not only we can detect it, but we can even correctly
+locate the failing edge. In this paper, we initiate the study of this new concept. We show that for
+a nontrivial connected graph $G$ of order $n$, $1\leq dem(G)\leq n-1$ with $dem(G)=1$ if and only
+if $G$ is a tree, and $dem(G)=n-1$ if and only if it is a complete graph. We compute the exact value of
+$dem$ for grids, hypercubes, and complete bipartite graphs. Then, we relate $dem$ to other standard
+graph parameters. We show that $demG)$ is lower-bounded by the arboricity of the graph, and upper-bounded
+by its vertex cover number. It is also upper-bounded by twice its feedback edge set number. Moreover,
+we characterize connected graphs $G$ with $dem(G)=2$. Then, we show that determining $dem(G)$
+for an input graph $G$ is an NP-complete problem, even for apex graphs. There exists a polynomial-time
+logarithmic-factor approximation algorithm, however it is NP-hard to compute an asymptotically
+better approximation, even for bipartite graphs of small diameter and for bipartite subcubic graphs.
+For such instances, the problem is also unlikey to be fixed parameter tractable when parameterized
+by the solution size. 

@@ -1,0 +1,18 @@
+Intelligent systems are transforming the world, as well as our healthcare system. We propose a deep
+learning-based cough sound classification model that can distinguish between children with healthy
+versus pathological coughs such as asthma, upper respiratory tract infection (URTI), and lower
+respiratory tract infection (LRTI). In order to train a deep neural network model, we collected
+a new dataset of cough sounds, labelled with clinician's diagnosis. The chosen model is a bidirectional
+long-short term memory network (BiLSTM) based on Mel Frequency Cepstral Coefficients (MFCCs)
+features. The resulting trained model when trained for classifying two classes of coughs -- healthy
+or pathology (in general or belonging to a specific respiratory pathology), reaches accuracy exceeding
+84\% when classifying cough to the label provided by the physicians' diagnosis. In order to classify
+subject's respiratory pathology condition, results of multiple cough epochs per subject were
+combined. The resulting prediction accuracy exceeds 91\% for all three respiratory pathologies.
+However, when the model is trained to classify and discriminate among the four classes of coughs,
+overall accuracy dropped: one class of pathological coughs are often misclassified as other. However,
+if one consider the healthy cough classified as healthy and pathological cough classified to have
+some kind of pathologies, then the overall accuracy of four class model is above 84\%. A longitudinal
+study of MFCC feature space when comparing pathological and recovered coughs collected from the
+same subjects revealed the fact that pathological cough irrespective of the underlying conditions
+occupy the same feature space making it harder to differentiate only using MFCC features. 

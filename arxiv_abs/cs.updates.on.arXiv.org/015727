@@ -1,0 +1,18 @@
+Autonomous vehicles (AVs) must always have a safe motion to guarantee that they are not causing any
+accidents. In an AV system, the motion of the vehicle is represented as a trajectory. A trajectory
+planning component is responsible to compute such a trajectory at run-time, taking into account
+the perception information about the environment, the dynamics of the vehicles, the predicted
+future states of other road users and a number of safety aspects. Due to the enormous amount of information
+to be considered, trajectory planning algorithms are complex, which makes it non-trivial to guarantee
+the safety of all planned trajectories. In this way, it is necessary to have an extra component to
+assess the safety of the planned trajectories at run-time. Such trajectory safety assessment component
+gives a diverse observation on the safety of AV trajectories and ensures that the AV only follows
+safe trajectories. We use the term trajectory checker to refer to the trajectory safety assessment
+component. The trajectory checker must evaluate planned trajectories against various safety
+rules, taking into account a large number of possibilities, including the worst-case behavior
+of other traffic participants. This must be done while guaranteeing hard real-time performance
+since the safety assessment is carried out while the vehicle is moving and in constant interaction
+with the environment. In this paper, we present a prototype of the trajectory checker we have developed
+at IVEX. We show how our approach works smoothly and accomplish real-time constraints embedded
+in an Infineon Aurix TC397B automotive platform. Finally, we measure the performance of our trajectory
+checker prototype against a set of NCAPS-inspired scenarios. 

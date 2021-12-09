@@ -1,0 +1,19 @@
+In this paper, a unified batch-online learning approach is introduced to learn a linear representation
+of nonlinear system dynamics using the Koopman operator. The presented system modeling approach
+leverages a novel incremental Koopman-based update law that retrieves a mini-batch of samples
+stored in a memory to not only minimizes the instantaneous Koopman operator's identification errors
+but also the identification errors for the batch of retrieved samples. Discontinuous modifications
+of gradient flows are presented for the online update law to assure finite-time convergence under
+easy-to-verify conditions defined on the batch of data. Therefore, this unified online-batch
+framework allows performing joint sample- and time-domain analysis for converging the Koopman
+operator's parameters. More specifically, it is shown that if the collected mini-batch of samples
+guarantees a rank condition, then finite-time guarantee in the time domain can be certified and
+the settling time depends on the quality of collected samples being reused in the update law. Moreover,
+the efficiency of the proposed Koopman-based update law is further analyzed by showing that the
+identification regret in continuous time grows sub-linearly with time. Furthermore, to avoid
+learning corrupted dynamics due to the selection of an inappropriate set of Koopman observables,
+a higher-layer meta learner employs a discrete Bayesian optimization algorithm to obtain the best
+library of observable functions for the operator. Since finite-time convergence of the Koopman
+model for each set of observable is guaranteed under a rank condition on stored data, the fitness
+of each set of observables can be obtained based on the identification error on the stored samples
+in the proposed framework and even without implementing any controller based on the learned system.

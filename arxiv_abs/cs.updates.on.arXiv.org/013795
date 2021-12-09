@@ -1,0 +1,20 @@
+Meshfree discretizations of state-based peridynamic models are attractive due to their ability
+to naturally describe fracture of general materials. However, two factors conspire to prevent
+meshfree discretizations of state-based peridynamics from converging to corresponding local
+solutions as resolution is increased: quadrature error prevents an accurate prediction of bulk
+mechanics, and the lack of an explicit boundary representation presents challenges when applying
+traction loads. In this paper, we develop a reformulation of the linear peridynamic solid (LPS)
+model to address these shortcomings, using improved meshfree quadrature, a reformulation of the
+nonlocal dilitation, and a consistent handling of the nonlocal traction condition to construct
+a model with rigorous accuracy guarantees. In particular, these improvements are designed to enforce
+discrete consistency in the presence of evolving fractures, whose {\it a priori} unknown location
+render consistent treatment difficult. In the absence of fracture, when a corresponding classical
+continuum mechanics model exists, our improvements provide asymptotically compatible convergence
+to corresponding local solutions, eliminating surface effects and issues with traction loading
+which have historically plagued peridynamic discretizations. When fracture occurs, our formulation
+automatically provides a sharp representation of the fracture surface by breaking bonds, avoiding
+the loss of mass. We provide rigorous error analysis and demonstrate convergence for a number of
+benchmarks, including manufactured solutions, free-surface, nonhomogeneous traction loading,
+and composite material problems. Finally, we validate simulations of brittle fracture against
+a recent experiment of dynamic crack branching in soda-lime glass, providing evidence that the
+scheme yields accurate predictions for practical engineering problems. 

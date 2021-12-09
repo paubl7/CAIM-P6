@@ -1,0 +1,19 @@
+The spectrum cartography (SC) technique constructs multi-domain (e.g., frequency, space, and
+time) radio frequency (RF) maps from limited measurements, which can be viewed as an ill-posed tensor
+completion problem. Model-based cartography techniques often rely on handcrafted priors (e.g.,
+sparsity, smoothness and low-rank structures) for the completion task. Such priors may be inadequate
+to capture the essence of complex wireless environments -- especially when severe shadowing happens.
+To circumvent such challenges, offline-trained deep neural models of radio maps were considered
+for SC, as deep neural networks (DNNs) are able to "learn" intricate underlying structures from
+data. However, such deep learning (DL)-based SC approaches encounter serious challenges in both
+off-line model learning (training) and completion (generalization), possibly because the latent
+state space for generating the radio maps is prohibitively large. In this work, an emitter radio
+map disaggregation-based approach is proposed, under which only individual emitters' radio maps
+are modeled by DNNs. This way, the learning and generalization challenges can both be substantially
+alleviated. Using the learned DNNs, a fast nonnegative matrix factorization-based two-stage
+SC method and a performance-enhanced iterative optimization algorithm are proposed. Theoretical
+aspects -- such as recoverability of the radio tensor, sample complexity, and noise robustness
+-- under the proposed framework are characterized, and such theoretical properties have been elusive
+in the context of DL-based radio tensor completion. Experiments using synthetic and real-data
+from indoor and heavily shadowed environments are employed to showcase the effectiveness of the
+proposed methods. 

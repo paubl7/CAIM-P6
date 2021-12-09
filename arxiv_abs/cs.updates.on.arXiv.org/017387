@@ -1,0 +1,19 @@
+Pulmonary embolus (PE) refers to obstruction of pulmonary arteries by blood clots. PE accounts
+for approximately 100,000 deaths per year in the United States alone. The clinical presentation
+of PE is often nonspecific, making the diagnosis challenging. Thus, rapid and accurate risk stratification
+is of paramount importance. High-risk PE is caused by right ventricular (RV) dysfunction from acute
+pressure overload, which in return can help identify which patients require more aggressive therapy.
+Reconstructed four-chamber views of the heart on chest CT can detect right ventricular enlargement.
+CT pulmonary angiography (CTPA) is the golden standard in the diagnostic workup of suspected PE.
+Therefore, it can link between diagnosis and risk stratification strategies. We developed a weakly
+supervised deep learning algorithm, with an emphasis on a novel attention mechanism, to automatically
+classify RV strain on CTPA. Our method is a 3D DenseNet model with integrated 3D residual attention
+blocks. We evaluated our model on a dataset of CTPAs of emergency department (ED) PE patients. This
+model achieved an area under the receiver operating characteristic curve (AUC) of 0.88 for classifying
+RV strain. The model showed a sensitivity of 87% and specificity of 83.7%. Our solution outperforms
+state-of-the-art 3D CNN networks. The proposed design allows for a fully automated network that
+can be trained easily in an end-to-end manner without requiring computationally intensive and
+time-consuming preprocessing or strenuous labeling of the data.We infer that unmarked CTPAs can
+be used for effective RV strain classification. This could be used as a second reader, alerting for
+high-risk PE patients. To the best of our knowledge, there are no previous deep learning-based studies
+that attempted to solve this problem. 

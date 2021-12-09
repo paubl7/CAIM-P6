@@ -1,0 +1,19 @@
+We establish stable finite element (FE) approximations of convection-diffusion initial boundary
+value problems using the automatic variationally stable finite element (AVS-FE) method. The transient
+convection-diffusion problem leads to issues in classical FE methods as the differential operator
+can be considered singular perturbation in both space and time. The unconditional stability of
+the AVS-FE method, regardless of the underlying differential operator, allows us significant
+flexibility in the construction of FE approximations. We take two distinct approaches to the FE
+discretization of the convection-diffusion problem: i) considering a space-time approach in
+which the temporal discretization is established using finite elements, and ii) a method of lines
+approach in which we employ the AVS-FE method in space whereas the temporal domain is discretized
+using the generalized-alpha method. In the generalized-alpha method, we discretize the temporal
+domain into finite sized time-steps and adopt the generalized-alpha method as time integrator.
+Then, we derive a corresponding norm for the obtained operator to guarantee the temporal stability
+of the method. We present numerical verifications for both approaches, including numerical asymptotic
+convergence studies highlighting optimal convergence properties. Furthermore, in the spirit
+of the discontinuous Petrov-Galerkin method by Demkowicz and Gopalakrishnan, the AVS-FE method
+also leads to readily available a posteriori error estimates through a Riesz representer of the
+residual of the AVS-FE approximations. Hence, the norm of the resulting local restrictions of these
+estimates serve as error indicators in both space and time for which we present multiple numerical
+verifications adaptive strategies. 

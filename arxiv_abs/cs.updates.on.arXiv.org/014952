@@ -1,0 +1,19 @@
+Stateflow models are complex software models, often used as part of safety-critical software solutions
+designed with Matlab Simulink. They incorporate design principles that are typically very hard
+to verify formally. In particular, the standard exhaustive formal verification techniques are
+unlikely to scale well for the complex designs that are developed in industry. Furthermore, the
+Stateflow language lacks a formal semantics, which additionally hinders the formal analysis.
+To address these challenges, we lay here the foundations of a scalable technique for provably correct
+formal analysis of Stateflow models, with respect to invariant properties, based on bounded model
+checking (BMC) over symbolic executions. The crux of our technique is: i) a representation of the
+state space of Stateflow models as a symbolic transition system (STS) over the symbolic configurations
+of the model, as the basis for BMC, and ii) application of incremental BMC, to generate verification
+results after each unrolling of the next-state relation of the transition system. To this end, we
+develop a symbolic structural operational semantics (SSOS) for Stateflow, starting from an existing
+structural operational semantics (SOS), and show the preservation of invariant properties between
+the two. Next, we define bounded invariant checking for STS over symbolic configurations as a satisfiability
+problem. We develop an automated procedure for generating the initial and next-state predicates
+of the STS, and propose an encoding scheme of the bounded invariant checking problem as a set of constraints,
+ready for automated analysis with standard, off-the-shelf satisfiability solvers. Finally,
+we present preliminary results from an experimental comparison of our technique against the Simulink
+Design Verifier, the proprietary built-in tool of the Simulink environment. 

@@ -1,0 +1,18 @@
+Real-world blind denoising poses a unique image restoration challenge due to the non-deterministic
+nature of the underlying noise distribution. Prevalent discriminative networks trained on synthetic
+noise models have been shown to generalize poorly to real-world noisy images. While curating real-world
+noisy images and improving ground truth estimation procedures remain key points of interest, a
+potential research direction is to explore extensions to the widely used convolutional neuron
+model to enable better generalization with fewer data and lower network complexity, as opposed
+to simply using deeper Convolutional Neural Networks (CNNs). Operational Neural Networks (ONNs)
+and their recent variant, Self-organized ONNs (Self-ONNs), propose to embed enhanced non-linearity
+into the neuron model and have been shown to outperform CNNs across a variety of regression tasks.
+However, all such comparisons have been made for compact networks and the efficacy of deploying
+operational layers as a drop-in replacement for convolutional layers in contemporary deep architectures
+remains to be seen. In this work, we tackle the real-world blind image denoising problem by employing,
+for the first time, a deep Self-ONN. Extensive quantitative and qualitative evaluations spanning
+multiple metrics and four high-resolution real-world noisy image datasets against the state-of-the-art
+deep CNN network, DnCNN, reveal that deep Self-ONNs consistently achieve superior results with
+performance gains of up to 1.76dB in PSNR. Furthermore, Self-ONNs with half and even quarter the
+number of layers that require only a fraction of computational resources as that of DnCNN can still
+achieve similar or better results compared to the state-of-the-art. 

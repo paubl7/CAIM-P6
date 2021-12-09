@@ -1,0 +1,18 @@
+In the recent decade, high-throughput plant phenotyping techniques, which combine non-invasive
+image analysis and machine learning, have been successfully applied to identify and quantify plant
+health and diseases. However, these techniques usually do not consider the progressive nature
+of plant stress and often require images showing severe signs of stress to ensure high confidence
+detection, thereby reducing the feasibility for early detection and recovery of plants under stress.
+To overcome the problem mentioned above, we propose a deep learning pipeline for the temporal analysis
+of the visual changes induced in the plant due to stress and apply it for the specific case of water
+stress identification in Chickpea plant shoot images. For this, we have considered an image dataset
+of two chickpea varieties JG-62 and Pusa-372, under three water stress conditions; control, young
+seedling, and before flowering, captured over five months. We have employed a variant of the Long-term
+Recurrent Convolutional Network (LRCN) to learn spatio-temporal patterns from the chickpea plant
+dataset and use them for water stress classification. Our model has achieved ceiling level classification
+performance of 98.52% on JG-62 and 97.78% on Pusa-372 chickpea plant data and has outperformed the
+state-of-the-art time-invariant technique by at least 14% for both JG-62 and Pusa-372 species,
+to the best of our knowledge. Furthermore, our LRCN model has demonstrated robustness to noisy input,
+with a less than 2.5% dip in average model accuracy and a small standard deviation about the mean for
+both species. Lastly, we have performed an ablation study to analyze the performance of the LRCN
+model by decreasing the number of temporal session data used for training. 

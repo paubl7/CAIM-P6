@@ -1,0 +1,19 @@
+We consider the problem of constructing pointwise confidence intervals in the multiple isotonic
+regression model. Recently, [HZ19] obtained a pointwise limit distribution theory for the so-called
+block max-min and min-max estimators [FLN17] in this model, but inference remains a difficult problem
+due to the nuisance parameter in the limit distribution that involves multiple unknown partial
+derivatives of the true regression function. In this paper, we show that this difficult nuisance
+parameter can be effectively eliminated by taking advantage of information beyond point estimates
+in the block max-min and min-max estimators. Formally, let $\hat{u}(x_0)$ (resp. $\hat{v}(x_0)$)
+be the maximizing lower-left (resp. minimizing upper-right) vertex in the block max-min (resp.
+min-max) estimator, and $\hat{f}_n$ be the average of the block max-min and min-max estimators.
+If all (first-order) partial derivatives of $f_0$ are non-vanishing at $x_0$, then the following
+pivotal limit distribution theory holds: $$ \sqrt{n_{\hat{u},\hat{v}}(x_0)}\big(\hat{f}_n(x_0)-f_0(x_0)\big)\rightsquigarrow
+\sigma\cdot \mathbb{L}_{1_d}. $$ Here $n_{\hat{u},\hat{v}}(x_0)$ is the number of design points
+in the block $[\hat{u}(x_0),\hat{v}(x_0)]$, $\sigma$ is the standard deviation of the errors,
+and $\mathbb{L}_{1_d}$ is a universal limit distribution free of nuisance parameters. This immediately
+yields confidence intervals for $f_0(x_0)$ with asymptotically exact confidence level and oracle
+length. Notably, the construction of the confidence intervals, even new in the univariate setting,
+requires no more efforts than performing an isotonic regression for once using the block max-min
+and min-max estimators, and can be easily adapted to other common monotone models. Extensive simulations
+are carried out to support our theory. 

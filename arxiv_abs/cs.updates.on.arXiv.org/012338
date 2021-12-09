@@ -1,0 +1,21 @@
+We address in this paper a model for the simulation of turbulent deflagrations in industrial applications.
+The flow is governed by the Euler equations for a variable composition mixture and the combustion
+modelling is based on a phenomenological approach: the flame propagation is represented by the
+transport of the characteristic function of the burnt zone, where the chemical reaction is complete;
+outside this zone, the atmosphere remains in its fresh state. Numerically, we approximate this
+problem by a penalization-like approach, i.e. using a finite conversion rate with a characteristic
+time tending to zero with the space and time steps. The numerical scheme works on staggered, possibly
+unstructured, meshes. The time-marching algorithm is of segregated type, and consists in solving
+in a first step the chemical species mass balances and then, in a second step, mass, momentum and energy
+balances. For this latter stage of the algorithm, we use a pressure correction technique, and solve
+a balance equation for the so-called sensible enthalpy instead of the total energy balance, with
+corrective terms for consistency. The scheme is shown to satisfy the same stability properties
+as the continuous problem: the chemical species mass fractions are kept in the [0, 1] interval, the
+density and the sensible internal energy stay positive and the integral over the computational
+domain of a discrete total energy is conserved. In addition, we show that the scheme is in fact conservative,
+i.e. that its solution satisfy a conservative discrete total energy balance equation, with space
+and time discretizations which are unusual but consistent in the Lax-Wendroff sense. Finally,
+we observe numerically that the penalization procedure converges, i.e. that making the chemical
+time scale tend to zero allows to converge to the solution of the target (infinitely fast chemistry)
+continuous problem. Tests also evidence that the scheme accuracy dramatically depends on the discretization
+of the convection operator in the chemical species mass balances. October 14, 2020. 

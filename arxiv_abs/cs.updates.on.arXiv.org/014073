@@ -1,0 +1,20 @@
+Providing provenance in scientific workflows is essential for reproducibility and auditability
+purposes. Workflow systems model and record provenance describing the steps performed to obtain
+the final results of a computation. In this work, we propose a framework that verifies the correctness
+of the statistical test results that are conducted by a researcher while protecting individuals'
+privacy in the researcher's dataset. The researcher publishes the workflow of the conducted study,
+its output, and associated metadata. They keep the research dataset private while providing, as
+part of the metadata, a partial noisy dataset (that achieves local differential privacy). To check
+the correctness of the workflow output, a verifier makes use of the workflow, its metadata, and results
+of another statistical study (using publicly available datasets) to distinguish between correct
+statistics and incorrect ones. We use case the proposed framework in the genome-wide association
+studies (GWAS), in which the goal is to identify highly associated point mutations (variants) with
+a given phenotype. For evaluation, we use real genomic data and show that the correctness of the workflow
+output can be verified with high accuracy even when the aggregate statistics of a small number of
+variants are provided. We also quantify the privacy leakage due to the provided workflow and its
+associated metadata in the GWAS use-case and show that the additional privacy risk due to the provided
+metadata does not increase the existing privacy risk due to sharing of the research results. Thus,
+our results show that the workflow output (i.e., research results) can be verified with high confidence
+in a privacy-preserving way. We believe that this work will be a valuable step towards providing
+provenance in a privacy-preserving way while providing guarantees to the users about the correctness
+of the results. 

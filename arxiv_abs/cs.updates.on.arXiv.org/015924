@@ -1,0 +1,18 @@
+C/C++/OpenCL-based high-level synthesis (HLS) becomes more and more popular for field-programmable
+gate array (FPGA) accelerators in many application domains in recent years, thanks to its competitive
+quality of results (QoR) and short development cycles compared with the traditional register-transfer
+level design approach. Yet, limited by the sequential C semantics, it remains challenging to adopt
+the same highly productive high-level programming approach in many other application domains,
+where coarse-grained tasks run in parallel and communicate with each other at a fine-grained level.
+While current HLS tools do support task-parallel programs, the productivity is greatly limited
+(1) in the code development cycle due to the poor programmability, (2) in the correctness verification
+cycle due to restricted software simulation, and (3) in the QoR tuning cycle due to slow code generation.
+Such limited productivity often defeats the purpose of HLS and hinder programmers from adopting
+HLS for task-parallel FPGA accelerators. In this paper, we extend the HLS C++ language and present
+a fully automated framework with programmer-friendly interfaces, unconstrained software simulation,
+and fast hierarchical code generation to overcome these limitations and demonstrate how task-parallel
+programs can be productively supported in HLS. Experimental results based on a wide range of real-world
+task-parallel programs show that, on average, the lines of kernel and host code are reduced by 22%
+and 51%, respectively, which considerably improves the programmability. The correctness verification
+and the iterative QoR tuning cycles are both greatly shortened by 3.2x and 6.8x, respectively. Our
+work is open-source at https://github.com/UCLA-VAST/tapa/. 

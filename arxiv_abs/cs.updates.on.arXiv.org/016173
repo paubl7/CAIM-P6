@@ -1,0 +1,19 @@
+The H-frame (also known as H-Bot) architecture is a simple and elegant two-axis parallel positioning
+system used to construct the XY stage of 3D printers. It holds potential for high speed and excellent
+dynamic performance due to the use of frame-mounted motors that reduce the moving mass of the printer
+while allowing for the use of (heavy) higher torque motors. However, the H-frame's dynamic accuracy
+is limited during high-acceleration and high-speed motion due to racking -- i.e., parasitic torsional
+motions of the printer's gantry due to a force couple. Mechanical solutions to the racking problem
+are either costly or detract from the simplicity of the H-frame. In this paper, we introduce a feedforward
+software compensation algorithm, based on the filtered B-splines (FBS) method, that rectifies
+errors due to racking. The FBS approach expresses the motion command to the machine as a linear combination
+of B-splines. The B-splines are filtered through an identified model of the machine dynamics and
+the control points of the B-spline based motion command are optimized such that the tracking error
+is minimized. To compensate racking using the FBS algorithm, an accurate frequency response function
+of the racking motion is obtained and coupled to the H-frame's x- and y-axis dynamics with a kinematic
+model. The result is a coupled linear parameter varying model of the H-frame that is utilized in the
+FBS framework to compensate racking. An approximation of the proposed racking compensation algorithm,
+that decouples the x- and y-axis compensation, is developed to significantly improve its computational
+efficiency with almost no loss of compensation accuracy. Experiments on an H-frame 3D printer demonstrate
+a 43 percent improvement in the shape accuracy of a printed part using the proposed algorithm compared
+to the standard FBS approach without racking compensation. 

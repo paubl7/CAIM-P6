@@ -1,0 +1,19 @@
+We introduce a modern Hopfield network with continuous states and a corresponding update rule.
+The new Hopfield network can store exponentially (with the dimension of the associative space)
+many patterns, retrieves the pattern with one update, and has exponentially small retrieval errors.
+It has three types of energy minima (fixed points of the update): (1) global fixed point averaging
+over all patterns, (2) metastable states averaging over a subset of patterns, and (3) fixed points
+which store a single pattern. The new update rule is equivalent to the attention mechanism used in
+transformers. This equivalence enables a characterization of the heads of transformer models.
+These heads perform in the first layers preferably global averaging and in higher layers partial
+averaging via metastable states. The new modern Hopfield network can be integrated into deep learning
+architectures as layers to allow the storage of and access to raw input data, intermediate results,
+or learned prototypes. These Hopfield layers enable new ways of deep learning, beyond fully-connected,
+convolutional, or recurrent networks, and provide pooling, memory, association, and attention
+mechanisms. We demonstrate the broad applicability of the Hopfield layers across various domains.
+Hopfield layers improved state-of-the-art on three out of four considered multiple instance learning
+problems as well as on immune repertoire classification with several hundreds of thousands of instances.
+On the UCI benchmark collections of small classification tasks, where deep learning methods typically
+struggle, Hopfield layers yielded a new state-of-the-art when compared to different machine learning
+methods. Finally, Hopfield layers achieved state-of-the-art on two drug design datasets. The
+implementation is available at: https://github.com/ml-jku/hopfield-layers 

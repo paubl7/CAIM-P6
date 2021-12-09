@@ -1,0 +1,19 @@
+We introduce a simple yet effective distillation framework that is able to boost the vanilla ResNet-50
+to 80%+ Top-1 accuracy on ImageNet without tricks. We construct such a framework through analyzing
+the problems in the existing classification system and simplify the base method ensemble knowledge
+distillation via discriminators by: (1) adopting the similarity loss and discriminator only on
+the final outputs and (2) using the average of softmax probabilities from all teacher ensembles
+as the stronger supervision. Intriguingly, three novel perspectives are presented for distillation:
+(1) weight decay can be weakened or even completely removed since the soft label also has a regularization
+effect; (2) using a good initialization for students is critical; and (3) one-hot/hard label is
+not necessary in the distillation process if the weights are well initialized. We show that such
+a straight-forward framework can achieve state-of-the-art results without involving any commonly-used
+techniques, such as architecture modification; outside training data beyond ImageNet; autoaug/randaug;
+cosine learning rate; mixup/cutmix training; label smoothing; etc. Our method obtains 80.67%
+top-1 accuracy on ImageNet using a single crop-size of 224x224 with vanilla ResNet-50, outperforming
+the previous state-of-the-arts by a significant margin under the same network structure. Our result
+can be regarded as a strong baseline using knowledge distillation, and to our best knowledge, this
+is also the first method that is able to boost vanilla ResNet-50 to surpass 80% on ImageNet without
+architecture modification or additional training data. On smaller ResNet-18, our distillation
+framework consistently improves from 69.76% to 73.19%, which shows tremendous practical values
+in real-world applications. Our code and models are available at: https://github.com/szq0214/MEAL-V2.

@@ -1,0 +1,20 @@
+Physics-Informed Neural Networks (PINNs) are a class of deep neural networks that are trained,
+using automatic differentiation, to compute the response of systems governed by partial differential
+equations (PDEs). The training of PINNs is simulation-free, and does not require any training dataset
+to be obtained from numerical PDE solvers. Instead, it only requires the physical problem description,
+including the governing laws of physics, domain geometry, initial/boundary conditions, and the
+material properties. This training usually involves solving a non-convex optimization problem
+using variants of the stochastic gradient descent method, with the gradient of the loss function
+approximated on a batch of collocation points, selected randomly in each iteration according to
+a uniform distribution. Despite the success of PINNs in accurately solving a wide variety of PDEs,
+the method still requires improvements in terms of computational efficiency. To this end, in this
+paper, we study the performance of an importance sampling approach for efficient training of PINNs.
+Using numerical examples together with theoretical evidences, we show that in each training iteration,
+sampling the collocation points according to a distribution proportional to the loss function
+will improve the convergence behavior of the PINNs training. Additionally, we show that providing
+a piecewise constant approximation to the loss function for faster importance sampling can further
+improve the training efficiency. This importance sampling approach is straightforward and easy
+to implement in the existing PINN codes, and also does not introduce any new hyperparameter to calibrate.
+The numerical examples include elasticity, diffusion and plane stress problems, through which
+we numerically verify the accuracy and efficiency of the importance sampling approach compared
+to the predominant uniform sampling approach. 

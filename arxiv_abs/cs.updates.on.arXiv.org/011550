@@ -1,0 +1,18 @@
+Evolutionary Neural Architecture Search (ENAS) can automatically design the architectures of
+Deep Neural Networks (DNNs) using evolutionary computation algorithms. It has been greatly witnessed
+by DNN researchers owing to the promising performance of automatically designing the satisfied
+DNN architectures. However, most ENAS algorithms require intensive computational resource which
+is not necessarily available to each of the users interested. Performance predictors are a type
+of regression models, can assist to accomplish the search without much computational resource.
+Despite various performance predictors have been designed, they employ the same training protocol
+to build the regression models: 1) sampling a set of DNNs with performance as the training dataset,
+2) training the model with the mean square error criterion, and 3) predicting the performance of
+DNNs newly generated during the ENAS. In this paper, we point out that the three steps constituting
+the training protocol are not reasonable through intuitive and illustrative examples. Further,
+we propose a new training protocol to address the issues, consisting of designing a pair-wise ranking
+indicator to construct the training target, proposing to use the logistic regression to fit the
+training samples, and developing a differential method to building the training instances. To
+verify the effectiveness of the proposed training protocol, four widely used regression models
+in the field of machine learning have been chosen to perform the comparisons on two benchmark datasets.
+The experimental results of all the comparisons demonstrate that the proposed protocol can significantly
+improve the performance prediction accuracy against the traditional training protocol. 

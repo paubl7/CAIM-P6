@@ -1,0 +1,18 @@
+This paper introduces an automated vision system for animal detection in trail-camera images taken
+from a field under the administration of the Texas Parks and Wildlife Department. As traditional
+wildlife counting techniques are intrusive and labor intensive to conduct, trail-camera imaging
+is a comparatively non-intrusive method for capturing wildlife activity. However, given the large
+volume of images produced from trail-cameras, manual analysis of the images remains time-consuming
+and inefficient. We implemented a two-stage deep convolutional neural network pipeline to find
+animal-containing images in the first stage and then process these images to detect birds in the
+second stage. The animal classification system classifies animal images with more than 87% sensitivity
+and 96% specificity. The bird detection system achieves better than 93% sensitivity, 92% specificity,
+and 68% average Intersection-over-Union rate. The entire pipeline processes an image in less than
+0.5 seconds as opposed to an average 30 seconds for a human labeler. We also addressed post-deployment
+issues related to data drift for the animal classification system as image features vary with seasonal
+changes. This system utilizes an automatic retraining algorithm to detect data drift and update
+the system. We introduce a novel technique for detecting drifted images and triggering the retraining
+procedure. Two statistical experiments are also presented to explain the prediction behavior
+of the animal classification system. These experiments investigate the cues that steers the system
+towards a particular decision. Statistical hypothesis testing demonstrates that the presence
+of an animal in the input image significantly contributes to the system's decisions. 

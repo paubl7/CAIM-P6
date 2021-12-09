@@ -1,0 +1,19 @@
+Adversarial Training (AT) with Projected Gradient Descent (PGD) is an effective approach for improving
+the robustness of the deep neural networks. However, PGD AT has been shown to suffer from two main
+limitations: i) high computational cost, and ii) extreme overfitting during training that leads
+to reduction in model generalization. While the effect of factors such as model capacity and scale
+of training data on adversarial robustness have been extensively studied, little attention has
+been paid to the effect of a very important parameter in every network optimization on adversarial
+robustness: the learning rate. In particular, we hypothesize that effective learning rate scheduling
+during adversarial training can significantly reduce the overfitting issue, to a degree where
+one does not even need to adversarially train a model from scratch but can instead simply adversarially
+fine-tune a pre-trained model. Motivated by this hypothesis, we propose a simple yet very effective
+adversarial fine-tuning approach based on a $\textit{slow start, fast decay}$ learning rate scheduling
+strategy which not only significantly decreases computational cost required, but also greatly
+improves the accuracy and robustness of a deep neural network. Experimental results show that the
+proposed adversarial fine-tuning approach outperforms the state-of-the-art methods on CIFAR-10,
+CIFAR-100 and ImageNet datasets in both test accuracy and the robustness, while reducing the computational
+cost by 8-10$\times$. Furthermore, a very important benefit of the proposed adversarial fine-tuning
+approach is that it enables the ability to improve the robustness of any pre-trained deep neural
+network without needing to train the model from scratch, which to the best of the authors' knowledge
+has not been previously demonstrated in research literature. 

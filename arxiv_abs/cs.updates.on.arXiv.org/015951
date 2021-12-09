@@ -1,0 +1,19 @@
+Drug-induced parkinsonism affects many older adults with dementia, often causing gait disturbances.
+New advances in vision-based human pose-estimation have opened possibilities for frequent and
+unobtrusive analysis of gait in residential settings. This work proposes novel spatial-temporal
+graph convolutional network (ST-GCN) architectures and training procedures to predict clinical
+scores of parkinsonism in gait from video of individuals with dementia. We propose a two-stage training
+approach consisting of a self-supervised pretraining stage that encourages the ST-GCN model to
+learn about gait patterns before predicting clinical scores in the finetuning stage. The proposed
+ST-GCN models are evaluated on joint trajectories extracted from video and are compared against
+traditional (ordinal, linear, random forest) regression models and temporal convolutional network
+baselines. Three 2D human pose-estimation libraries (OpenPose, Detectron, AlphaPose) and the
+Microsoft Kinect (2D and 3D) are used to extract joint trajectories of 4787 natural walking bouts
+from 53 older adults with dementia. A subset of 399 walks from 14 participants is annotated with scores
+of parkinsonism severity on the gait criteria of the Unified Parkinson's Disease Rating Scale (UPDRS)
+and the Simpson-Angus Scale (SAS). Our results demonstrate that ST-GCN models operating on 3D joint
+trajectories extracted from the Kinect consistently outperform all other models and feature sets.
+Prediction of parkinsonism scores in natural walking bouts of unseen participants remains a challenging
+task, with the best models achieving macro-averaged F1-scores of 0.53 +/- 0.03 and 0.40 +/- 0.02
+for UPDRS-gait and SAS-gait, respectively. Pre-trained model and demo code for this work is available:
+https://github.com/TaatiTeam/stgcn_parkinsonism_prediction. 

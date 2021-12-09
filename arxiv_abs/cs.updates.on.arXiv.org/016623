@@ -1,0 +1,18 @@
+In this work we investigate the min-max-min robust optimization problem applied to combinatorial
+problems with uncertain cost-vectors which are contained in a convex uncertainty set. The idea
+of the approach is to calculate a set of k feasible solutions which are worst-case optimal if in each
+possible scenario the best of the k solutions would be implemented. It is known that the min-max-min
+robust problem can be solved efficiently if k is at least the dimension of the problem, while it is
+theoretically and computationally hard if k is small. While both cases are well studied in the literature
+nothing is known about the intermediate case, namely if k is smaller than but close to the dimension
+of the problem. We approach this open question and show that for a selection of combinatorial problems
+the min-max-min problem can be solved exactly and approximately in polynomial time if some problem
+specific values are fixed. Furthermore we approach a second open question and present the first
+implementable algorithm with oracle-pseudopolynomial runtime for the case that k is at least the
+dimension of the problem. The algorithm is based on a projected subgradient method where the projection
+problem is solved by the classical Frank-Wolfe algorithm. Additionally we derive a branch & bound
+method to solve the min-max-min problem for arbitrary values of k and perform tests on knapsack and
+shortest path instances. The experiments show that despite its theoretical impact the projected
+subgradient method cannot compete with an already existing method. On the other hand the performance
+of the branch & bound method scales very well with the number of solutions. Thus we are able to solve
+instances where k is above some small threshold very efficiently. 

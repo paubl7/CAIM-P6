@@ -1,0 +1,20 @@
+Hyperspectral acquisitions have proven to be the most informative Earth observation data source
+for the estimation of nitrogen (N) content, which is the main limiting nutrient for plant growth
+and thus agricultural production. In the past, empirical algorithms have been widely employed
+to retrieve information on this biochemical plant component from canopy reflectance. However,
+these approaches do not seek for a cause-effect relationship based on physical laws. Moreover,
+most studies solely relied on the correlation of chlorophyll content with nitrogen, and thus neglected
+the fact that most N is bound in proteins. Our study presents a hybrid retrieval method using a physically-based
+approach combined with machine learning regression to estimate crop N content. Within the workflow,
+the leaf optical properties model PROSPECT-PRO including the newly calibrated specific absorption
+coefficients (SAC) of proteins, was coupled with the canopy reflectance model 4SAIL to PROSAIL-PRO.
+The latter was then employed to generate a training database to be used for advanced probabilistic
+machine learning methods: a standard homoscedastic Gaussian process (GP) and a heteroscedastic
+GP regression that accounts for signal-to-noise relations. Both GP models have the property of
+providing confidence intervals for the estimates, which sets them apart from other machine learners.
+GP-based band analysis identified optimal spectral settings with ten bands mainly situated in
+the shortwave infrared (SWIR) spectral region. Use of well-known protein absorption bands from
+the literature showed comparative results. Finally, the heteroscedastic GP model was successfully
+applied on airborne hyperspectral data for N mapping. We conclude that GP algorithms, and in particular
+the heteroscedastic GP, should be implemented for global agricultural monitoring of aboveground
+N from future imaging spectroscopy data. 

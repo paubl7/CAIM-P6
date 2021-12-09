@@ -1,0 +1,18 @@
+Generalized Zero-Shot Learning (GZSL) aims to recognize images from both seen and unseen categories.
+Most GZSL methods typically learn to synthesize CNN visual features for the unseen classes by leveraging
+entire semantic information, e.g., tags and attributes, and the visual features of the seen classes.
+Within the visual features, we define two types of features that semantic-consistent and semantic-unrelated
+to represent the characteristics of images annotated in attributes and less informative features
+of images respectively. Ideally, the semantic-unrelated information is impossible to transfer
+by semantic-visual relationship from seen classes to unseen classes, as the corresponding characteristics
+are not annotated in the semantic information. Thus, the foundation of the visual feature synthesis
+is not always solid as the features of the seen classes may involve semantic-unrelated information
+that could interfere with the alignment between semantic and visual modalities. To address this
+issue, in this paper, we propose a novel feature disentangling approach based on an encoder-decoder
+architecture to factorize visual features of images into these two latent feature spaces to extract
+corresponding representations. Furthermore, a relation module is incorporated into this architecture
+to learn semantic-visual relationship, whilst a total correlation penalty is applied to encourage
+the disentanglement of two latent representations. The proposed model aims to distill quality
+semantic-consistent representations that capture intrinsic features of seen images, which are
+further taken as the generation target for unseen classes. Extensive experiments conducted on
+seven GZSL benchmark datasets have verified the state-of-the-art performance of the proposal.

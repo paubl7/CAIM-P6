@@ -1,0 +1,18 @@
+Digital twins are meant to bridge the gap between real-world physical systems and virtual representations.
+Both stand-alone and descriptive digital twins incorporate 3D geometric models, which are the
+physical representations of objects in the digital replica. Digital twin applications are required
+to rapidly update internal parameters with the evolution of their physical counterpart. Due to
+an essential need for having high-quality geometric models for accurate physical representations,
+the storage and bandwidth requirements for storing 3D model information can quickly exceed the
+available storage and bandwidth capacity. In this work, we demonstrate a novel approach to geometric
+change detection in the context of a digital twin. We address the issue through a combined solution
+of Dynamic Mode Decomposition (DMD) for motion detection, YOLOv5 for object detection, and 3D machine
+learning for pose estimation. DMD is applied for background subtraction, enabling detection of
+moving foreground objects in real-time. The video frames containing detected motion are extracted
+and used as input to the change detection network. The object detection algorithm YOLOv5 is applied
+to extract the bounding boxes of detected objects in the video frames. Furthermore, the rotational
+pose of each object is estimated in a 3D pose estimation network. A series of convolutional neural
+networks conducts feature extraction from images and 3D model shapes. Then, the network outputs
+the estimated Euler angles of the camera orientation with respect to the object in the input image.
+By only storing data associated with a detected change in pose, we minimize necessary storage and
+bandwidth requirements while still being able to recreate the 3D scene on demand. 

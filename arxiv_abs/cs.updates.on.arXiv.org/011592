@@ -1,0 +1,18 @@
+Spatial classification with limited feature observations has been a challenging problem in machine
+learning. The problem exists in applications where only a subset of sensors are deployed at certain
+spots or partial responses are collected in field surveys. Existing research mostly focuses on
+addressing incomplete or missing data, e.g., data cleaning and imputation, classification models
+that allow for missing feature values or model missing features as hidden variables in the EM algorithm.
+These methods, however, assume that incomplete feature observations only happen on a small subset
+of samples, and thus cannot solve problems where the vast majority of samples have missing feature
+observations. To address this issue, we recently proposed a new approach that incorporates physics-aware
+structural constraint into the model representation. Our approach assumes that a spatial contextual
+feature is observed for all sample locations and establishes spatial structural constraint from
+the underlying spatial contextual feature map. We design efficient algorithms for model parameter
+learning and class inference. This paper extends our recent approach by allowing feature values
+of samples in each class to follow a multi-modal distribution. We propose learning algorithms for
+the extended model with multi-modal distribution. Evaluations on real-world hydrological applications
+show that our approach significantly outperforms baseline methods in classification accuracy,
+and the multi-modal extension is more robust than our early single-modal version especially when
+feature distribution in training samples is multi-modal. Computational experiments show that
+the proposed solution is computationally efficient on large datasets. 

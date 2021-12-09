@@ -1,0 +1,18 @@
+Annually the gaming industry spends approximately $15 billion in marketing reinvestment. However,
+this amount is spent without any consideration for the skill and luck of the player. For a casino,
+an unskilled player could fetch ~4 times more revenue than a skilled player. This paper describes
+a video recognition system that is based on an extension of the Mask R-CNN model. Our system digitizes
+the game of blackjack by detecting cards and player bets in real-time and processes decisions they
+took in order to create accurate player personas. Our proposed supervised learning approach consists
+of a specialized three-stage pipeline that takes images from two viewpoints of the casino table
+and does instance segmentation to generate masks on proposed regions of interest. These predicted
+masks along with derivative features are used to classify image attributes that are passed onto
+the next stage to assimilate the gameplay understanding. Our end-to-end model yields an accuracy
+of ~95% for the main bet detection and ~97% for card detection in a controlled environment trained
+using transfer learning approach with 900 training examples. Our approach is generalizable and
+scalable and shows promising results in varied gaming scenarios and test data. Such granular level
+gathered data, helped in understanding player's deviation from optimum strategy and thereby separate
+the skill of the player from the luck of the game. Our system also assesses the likelihood of card counting
+by correlating the player's betting pattern to the deck's scaled count. Such a system lets casinos
+flag fraudulent activity and calculate expected personalized profitability for each player and
+tailor their marketing reinvestment decisions. 

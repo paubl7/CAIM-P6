@@ -1,0 +1,19 @@
+The vast quantity of strong galaxy-galaxy gravitational lenses expected by future large-scale
+surveys necessitates the development of automated methods to efficiently model their mass profiles.
+For this purpose, we train an approximate Bayesian convolutional neural network (CNN) to predict
+mass profile parameters and associated uncertainties, and compare its accuracy to that of conventional
+parametric modelling for a range of increasingly complex lensing systems. These include standard
+smooth parametric density profiles, hydrodynamical EAGLE galaxies and the inclusion of foreground
+mass structures, combined with parametric sources and sources extracted from the Hubble Ultra
+Deep Field. In addition, we also present a method for combining the CNN with traditional parametric
+density profile fitting where the CNN provides initial priors on the latter's parameters. Across
+the test sets of images, the CNN achieved errors 19 $\pm$ 22 per cent lower than the traditional method's
+blind modelling. Using these CNN-predicted parameters as priors for this method to use in an automated
+fashion instead achieved 27 $\pm$ 11 per cent lower errors over the latter. This was reduced further
+to 37 $\pm$ 11 per cent when also incorporating the CNN-predicted uncertainties into the priors,
+helping it to avoid local minima in parameter space, with errors also 17 $\pm$ 21 per cent lower than
+the CNN by itself. While the CNN is undoubtedly the fastest modelling method, the combination of
+the two increases the speed of conventional fitting alone by a factor of 1.73 and 1.19 with and without
+CNN-predicted uncertainties, respectively. This, combined with greatly improved accuracy,
+highlights the benefits one can obtain through combining neural networks with conventional techniques
+in order to achieve an efficient automated modelling approach. 

@@ -1,0 +1,19 @@
+Reduced-order models are essential tools to deal with parametric problems in the context of optimization,
+uncertainty quantification, or control and inverse problems. The set of parametric solutions
+lies in a low-dimensional manifold (with dimension equal to the number of independent parameters)
+embedded in a large-dimensional space (dimension equal to the number of degrees of freedom of the
+full-order discrete model). A posteriori model reduction is based on constructing a basis from
+a family of snapshots (solutions of the full-order model computed offline), and then use this new
+basis to solve the subsequent instances online. Proper Orthogonal Decomposition (POD) reduces
+the problem into a linear subspace of lower dimension, eliminating redundancies in the family of
+snapshots. The strategy proposed here is to use a nonlinear dimensionality reduction technique,
+namely the kernel Principal Component Analysis (kPCA), in order to find a nonlinear manifold, with
+an expected much lower dimension, and to solve the problem in this low-dimensional manifold. Guided
+by this paradigm, the methodology devised here introduces different novel ideas, namely: 1) characterizing
+the nonlinear manifold using local tangent spaces, where the reduced-order problem is linear and
+based on the neighbouring snapshots, 2) the approximation space is enriched with the cross-products
+of the snapshots, introducing a quadratic description, 3) the kernel for kPCA is defined ad-hoc,
+based on physical considerations, and 4) the iterations in the reduced-dimensional space are performed
+using an algorithm based on a Delaunay tessellation of the cloud of snapshots in the reduced space.
+The resulting computational strategy is performing outstandingly in the numerical tests, alleviating
+many of the problems associated with POD and improving the numerical accuracy. 

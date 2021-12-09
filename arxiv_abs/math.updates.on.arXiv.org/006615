@@ -1,0 +1,18 @@
+Companies require modern capital assets such as wind turbines, trains and hospital equipment to
+experience minimal downtime. Ideally, assets are maintained right before failure to ensure maximum
+availability at minimum maintenance costs. To this end, two challenges arise: failure times of
+assets are unknown a priori and assets can be part of a larger asset network. Nowadays, it is common
+for assets to be equipped with real-time monitoring that emits alerts, typically triggered by the
+first signs of degradation. Thus, it becomes crucial to plan maintenance considering information
+received via alerts, asset locations and maintenance costs. This problem is referred to as the Dynamic
+Traveling Maintainer Problem with Alerts (DTMPA). We propose a modeling framework for the DTMPA,
+where the alerts are early and imperfect indicators of failures. The objective is to minimize discounted
+maintenance costs accrued over an infinite time horizon. We propose three methods to solve this
+problem, leveraging different information levels from the alert signals. The proposed methods
+comprise various greedy heuristics that rank assets based on proximity, urgency and economic risk;
+a Traveling Maintainer Heuristic employing combinatorial optimization to optimize near-future
+costs; a Deep Reinforcement Learning (DRL) method trained to minimize the long-term costs using
+exclusively the history of alerts. In a simulated environment, all methods can approximate optimal
+policies with access to perfect condition information for small asset networks. For larger networks,
+where computing the optimal policy is intractable, the proposed methods yield competitive maintenance
+policies, with DRL consistently achieving the lowest costs. 

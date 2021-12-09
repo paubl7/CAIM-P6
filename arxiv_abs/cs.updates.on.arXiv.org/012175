@@ -1,0 +1,18 @@
+We present a new approximation algorithm for the treewidth problem which constructs a corresponding
+tree decomposition as well. Our algorithm is a faster variation of Reed's classical algorithm.
+For the benefit of the reader, and to be able to compare these two algorithms, we start with a detailed
+time analysis for Reed's algorithm. We fill in many details that have been omitted in Reed's paper.
+Computing tree decompositions parameterized by the treewidth $k$ is fixed parameter tractable
+(FPT), meaning that there are algorithms running in time $O(f(k) g(n))$ where $f$ is a computable
+function, $g$ is a polynomial function, and $n$ is the number of vertices. An analysis of Reed's algorithm
+shows $f(k) = 2^{O(k \log k)}$ and $g(n) = n \log n$ for a 5-approximation. Reed simply claims time
+$O(n \log n)$ for bounded $k$ for his constant factor approximation algorithm, but the bound of $2^{\Omega(k
+\log k)} n \log n$ is well known. From a practical point of view, we notice that the time of Reed's algorithm
+also contains a term of $O(k^2 2^{24k} n \log n)$, which for small $k$ is much worse than the asymptotically
+leading term of $2^{O(k \log k)} n \log n$. We analyze $f(k)$ more precisely, because the purpose
+of this paper is to improve the running times for all reasonably small values of $k$. Our algorithm
+runs in $\mathcal{O}(f(k)n\log{n})$ too, but with a much smaller dependence on $k$. In our case,
+$f(k) = 2^{\mathcal{O}(k)}$. This algorithm is simple and fast, especially for small values of
+$k$. We should mention that Bodlaender et al.\ [2016] have an asymptotically faster algorithm running
+in time $2^{\mathcal{O}(k)} n$. It relies on a very sophisticated data structure and does not claim
+to be useful for small values of $k$. 

@@ -1,0 +1,18 @@
+OODIDA (On-board/Off-board Distributed Data Analytics) is a platform for distributed real-time
+analytics, targeting fleets of reference vehicles in the automotive industry. Its users are data
+analysts. The bulk of the data analytics tasks are performed by clients (on-board), while a central
+cloud server performs supplementary tasks (off-board). OODIDA can be automatically packaged
+and deployed, which necessitates restarting parts of the system, or all of it. As this is potentially
+disruptive, we added the ability to execute user-defined Python modules on clients as well as the
+server. These modules can be replaced without restarting any part of the system; they can even be
+replaced between iterations of an ongoing assignment. This feature is referred to as active-code
+replacement. It facilitates use cases such as iterative A/B testing of machine learning algorithms
+or modifying experimental algorithms on-the-fly. Consistency of results is achieved by majority
+vote, which prevents tainted state. Active-code replacement can be done in less than a second in
+an idealized setting whereas a standard deployment takes many orders of magnitude more time. The
+main contribution of this paper is the description of a relatively straightforward approach to
+active-code replacement that is very user-friendly. It enables a data analyst to quickly execute
+custom code on the cloud server as well as on client devices. Sensible safeguards and design decisions
+ensure that this feature can be used by non-specialists who are not familiar with the implementation
+of OODIDA in general or this feature in particular. As a consequence of adding the active-code replacement
+feature, OODIDA is now very well-suited for rapid prototyping. 

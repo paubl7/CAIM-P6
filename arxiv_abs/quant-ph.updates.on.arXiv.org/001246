@@ -1,0 +1,20 @@
+Current, near-term quantum devices have shown great progress in recent years culminating with
+a demonstration of quantum supremacy. In the medium-term, however, quantum machines will need
+to transition to greater reliability through error correction, likely through promising techniques
+such as surface codes which are well suited for near-term devices with limited qubit connectivity.
+We discover quantum memory, particularly resonant cavities with transmon qubits arranged in a
+2.5D architecture, can efficiently implement surface codes with substantial hardware savings
+and performance/fidelity gains. Specifically, we *virtualize logical qubits* by storing them
+in layers distributed across qubit memories connected to each transmon. Surprisingly, distributing
+each logical qubit across many memories has a minimal impact on fault tolerance and results in substantially
+more efficient operations. Our design permits fast transversal CNOT operations between logical
+qubits sharing the same physical address which are 6x faster than lattice surgery CNOTs. We develop
+a novel embedding which saves ~10x in transmons with another 2x from an additional optimization
+for compactness. Although Virtualized Logical Qubits (VLQ) pays a 10x penalty in serialization,
+advantages in the transversal CNOT and area efficiency result in performance comparable to 2D transmon-only
+architectures. Our simulations show fault tolerance comparable to 2D architectures while saving
+substantial hardware. Furthermore, VLQ can produce magic states 1.22x faster for a fixed number
+of transmon qubits. This is a critical benchmark for future fault-tolerant quantum computers.
+VLQ substantially reduces the hardware requirements for fault tolerance and puts within reach
+a proof-of-concept experimental demonstration of around 10 logical qubits, requiring only 11
+transmons and 9 attached cavities in total. 

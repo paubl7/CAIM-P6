@@ -1,0 +1,18 @@
+The principal limitation in many areas of astronomy, especially for directly imaging exoplanets,
+arises from instability in the point spread function (PSF) delivered by the telescope and instrument.
+To understand the transfer function, it is often necessary to infer a set of optical aberrations
+given only the intensity distribution on the sensor - the problem of phase retrieval. This can be
+important for post-processing of existing data, or for the design of optical phase masks to engineer
+PSFs optimized to achieve high contrast, angular resolution, or astrometric stability. By exploiting
+newly efficient and flexible technology for automatic differentiation, which in recent years
+has undergone rapid development driven by machine learning, we can perform both phase retrieval
+and design in a way that is systematic, user-friendly, fast, and effective. By using modern gradient
+descent techniques, this converges efficiently and is easily extended to incorporate constraints
+and regularization. We illustrate the wide-ranging potential for this approach using our new package,
+Morphine. Challenging applications performed with this code include precise phase retrieval
+for both discrete and continuous phase distributions, even where information has been censored
+such as heavily-saturated sensor data. We also show that the same algorithms can optimize continuous
+or binary phase masks that are competitive with existing best solutions for two example problems:
+an Apodizing Phase Plate (APP) coronagraph for exoplanet direct imaging, and a diffractive pupil
+for narrow-angle astrometry. The Morphine source code and examples are available open-source,
+with a similar interface to the popular physical optics package Poppy. 

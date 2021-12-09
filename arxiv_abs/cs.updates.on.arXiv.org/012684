@@ -1,0 +1,19 @@
+Training a deep neural network is an optimization problem with four main ingredients: the design
+of the deep neural network, the per-sample loss function, the population loss function, and the
+optimizer. However, methods developed to compete in recent BraTS challenges tend to focus only
+on the design of deep neural network architectures, while paying less attention to the three other
+aspects. In this paper, we experimented with adopting the opposite approach. We stuck to a generic
+and state-of-the-art 3D U-Net architecture and experimented with a non-standard per-sample loss
+function, the generalized Wasserstein Dice loss, a non-standard population loss function, corresponding
+to distributionally robust optimization, and a non-standard optimizer, Ranger. Those variations
+were selected specifically for the problem of multi-class brain tumor segmentation. The generalized
+Wasserstein Dice loss is a per-sample loss function that allows taking advantage of the hierarchical
+structure of the tumor regions labeled in BraTS. Distributionally robust optimization is a generalization
+of empirical risk minimization that accounts for the presence of underrepresented subdomains
+in the training dataset. Ranger is a generalization of the widely used Adam optimizer that is more
+stable with small batch size and noisy labels. We found that each of those variations of the optimization
+of deep neural networks for brain tumor segmentation leads to improvements in terms of Dice scores
+and Hausdorff distances. With an ensemble of three deep neural networks trained with various optimization
+procedures, we achieved promising results on the validation dataset of the BraTS 2020 challenge.
+Our ensemble ranked fourth out of the 693 registered teams for the segmentation task of the BraTS
+2020 challenge. 

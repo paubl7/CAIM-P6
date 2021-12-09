@@ -1,0 +1,19 @@
+Graph convolutional neural networks (GCNNs) have received much attention recently, owing to their
+capability in handling graph-structured data. Among the existing GCNNs, many methods can be viewed
+as instances of a neural message passing motif; features of nodes are passed around their neighbors,
+aggregated and transformed to produce better nodes' representations. Nevertheless, these methods
+seldom use node transition probabilities, a measure that has been found useful in exploring graphs.
+Furthermore, when the transition probabilities are used, their transition direction is often
+improperly considered in the feature aggregation step, resulting in an inefficient weighting
+scheme. In addition, although a great number of GCNN models with increasing level of complexity
+have been introduced, the GCNNs often suffer from over-fitting when being trained on small graphs.
+Another issue of the GCNNs is over-smoothing, which tends to make nodes' representations indistinguishable.
+This work presents a new method to improve the message passing process based on node transition probabilities
+by properly considering the transition direction, leading to a better weighting scheme in nodes'
+features aggregation compared to the existing counterpart. Moreover, we propose a novel regularization
+method termed DropNode to address the over-fitting and over-smoothing issues simultaneously.
+DropNode randomly discards part of a graph, thus it creates multiple deformed versions of the graph,
+leading to data augmentation regularization effect. Additionally, DropNode lessens the connectivity
+of the graph, mitigating the effect of over-smoothing in deep GCNNs. Extensive experiments on eight
+benchmark datasets for node and graph classification tasks demonstrate the effectiveness of the
+proposed methods in comparison with the state of the art. 

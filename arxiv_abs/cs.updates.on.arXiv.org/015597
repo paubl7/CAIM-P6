@@ -1,0 +1,18 @@
+This paper studies the problem of distributed beam scheduling for 5G millimeter-Wave (mm-Wave)
+cellular networks where base stations (BSs) belonging to different operators share the same spectrum
+without any centralized coordination among them. Our goal is to design efficient distributed beam
+scheduling algorithms to maximize the network utility, which is a function of the achieved throughput
+by the user equipment (UEs), subject to average and instantaneous transmit power constraints of
+the BSs. We propose a Media Access Control (MAC) and a power allocation/adaptation mechanism utilizing
+the Lyapunov stochastic optimization framework and non-cooperative games. In particular, we
+first transform the original utility maximization problem into two sub-optimization problems
+for each time frame, which are a convex optimization problem and a non-convex optimization problem,
+respectively. By formulating the distributed scheduling problem as a non-cooperative game in
+which each BS is a player attempting to optimize its own utility, we provide a distributed solution
+to the non-convex sub-optimization problem by solving the Nash Equilibrium (NE) of the scheduling
+game. We prove the existence of NE and provide sufficient conditions guaranteeing the uniqueness
+of NE by utilizing the equivalence between the non-cooperative game and the Variational Inequality
+(VI) problem. A corresponding parallel updating algorithm for finding the NE is proposed which
+is proved to globally converge. Finally, we conduct simulation under various network settings
+to show the effectiveness of the proposed game-based beam scheduling algorithm in comparison to
+several baseline MAC schemes including $p$-persistent and CSMA/CA MAC protocols. 

@@ -1,0 +1,20 @@
+Despite successful seminal works on passive systems in the literature, learning free-form physical
+laws for controlled dynamical systems given experimental data is still an open problem. For decades,
+symbolic mathematical equations and system identification were the golden standards. Unfortunately,
+a set of assumptions about the properties of the underlying system is required, which makes the model
+very rigid and unable to adapt to unforeseen changes in the physical system. Neural networks, on
+the other hand, are known universal function approximators but are prone to over-fit, limited accuracy,
+and bias problems, which makes them alone unreliable candidates for such tasks. In this paper, we
+propose SyReNets, an approach that leverages neural networks for learning symbolic relations
+to accurately describe dynamic physical systems from data. It explores a sequence of symbolic layers
+that build, in a residual manner, mathematical relations that describes a given desired output
+from input variables. We apply it to learn the symbolic equation that describes the Lagrangian of
+a given physical system. We do this by only observing random samples of position, velocity, and acceleration
+as input and torque as output. Therefore, using the Lagrangian as a latent representation from which
+we derive torque using the Euler-Lagrange equations. The approach is evaluated using a simulated
+controlled double pendulum and compared with neural networks, genetic programming, and traditional
+system identification. The results demonstrate that, compared to neural networks and genetic
+programming, SyReNets converges to representations that are more accurate and precise throughout
+the state space. Despite having slower convergence than traditional system identification, similar
+to neural networks, the approach remains flexible enough to adapt to an unforeseen change in the
+physical system structure. 

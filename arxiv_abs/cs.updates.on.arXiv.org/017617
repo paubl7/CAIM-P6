@@ -1,0 +1,18 @@
+Numerous neural retrieval models have been proposed in recent years. These models learn to compute
+a ranking score between the given query and document. The majority of existing models are trained
+in pairwise fashion using human-judged labels directly without further calibration. The traditional
+pairwise schemes can be time-consuming and require pre-defined positive-negative document pairs
+for training, potentially leading to learning bias due to document distribution mismatch between
+training and test conditions. Some popular existing listwise schemes rely on the strong pre-defined
+probabilistic assumptions and stark difference between relevant and non-relevant documents
+for the given query, which may limit the model potential due to the low-quality or ambiguous relevance
+labels. To address these concerns, we turn to a physics-inspired ranking balance scheme and propose
+PoolRank, a pooling-based listwise learning framework. The proposed scheme has four major advantages:
+(1) PoolRank extracts training information from the best candidates at the local level based on
+model performance and relative ranking among abundant document candidates. (2) By combining four
+pooling-based loss components in a multi-task learning fashion, PoolRank calibrates the ranking
+balance for the partially relevant and the highly non-relevant documents automatically without
+costly human inspection. (3) PoolRank can be easily generalized to any neural retrieval model without
+requiring additional learnable parameters or model structure modifications. (4) Compared to
+pairwise learning and existing listwise learning schemes, PoolRank yields better ranking performance
+for all studied retrieval models while retaining efficient convergence rates. 

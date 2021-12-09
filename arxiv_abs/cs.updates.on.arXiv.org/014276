@@ -1,0 +1,19 @@
+Artificial Intelligence (AI) software systems, such as Sentiment Analysis (SA) systems, typically
+learn from large amounts of data that may reflect human biases. Consequently, the machine learning
+model in such software systems may exhibit unintended demographic bias based on specific characteristics
+(e.g., gender, occupation, country-of-origin, etc.). Such biases manifest in an SA system when
+it predicts a different sentiment for similar texts that differ only in the characteristic of individuals
+described. Existing studies on revealing bias in SA systems rely on the production of sentences
+from a small set of short, predefined templates. To address this limitation, we present BisaFinder,
+an approach to discover biased predictions in SA systems via metamorphic testing. A key feature
+of BisaFinder is the automatic curation of suitable templates based on the pieces of text from a large
+corpus, using various Natural Language Processing (NLP) techniques to identify words that describe
+demographic characteristics. Next, BisaFinder instantiates new text from these templates by
+filling in placeholders with words associated with a class of a characteristic (e.g., gender-specific
+words such as female names, "she", "her"). These texts are used to tease out bias in an SA system. BisaFinder
+identifies a bias-uncovering test case when it detects that the SA system exhibits demographic
+bias for a pair of texts, i.e., it predicts a different sentiment for texts that differ only in words
+associated with a different class (e.g., male vs. female) of a target characteristic (e.g., gender).
+Our empirical evaluation showed that BisaFinder can effectively create a large number of realistic
+and diverse test cases that uncover various biases in an SA system with a high true positive rate of
+up to 95.8\%. 

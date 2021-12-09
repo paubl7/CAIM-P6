@@ -1,0 +1,19 @@
+The Dynamic Pickup and Delivery Problem (DPDP) is aimed at dynamically scheduling vehicles among
+multiple sites in order to minimize the cost when delivery orders are not known a priori. Although
+DPDP plays an important role in modern logistics and supply chain management, state-of-the-art
+DPDP algorithms are still limited on their solution quality and efficiency. In practice, they fail
+to provide a scalable solution as the numbers of vehicles and sites become large. In this paper, we
+propose a data-driven approach, Spatial-Temporal Aided Double Deep Graph Network (ST-DDGN),
+to solve industry-scale DPDP. In our method, the delivery demands are first forecast using spatial-temporal
+prediction method, which guides the neural network to perceive spatial-temporal distribution
+of delivery demand when dispatching vehicles. Besides, the relationships of individuals such
+as vehicles are modelled by establishing a graph-based value function. ST-DDGN incorporates attention-based
+graph embedding with Double DQN (DDQN). As such, it can make the inference across vehicles more efficiently
+compared with traditional methods. Our method is entirely data driven and thus adaptive, i.e.,
+the relational representation of adjacent vehicles can be learned and corrected by ST-DDGN from
+data periodically. We have conducted extensive experiments over real-world data to evaluate our
+solution. The results show that ST-DDGN reduces 11.27% number of the used vehicles and decreases
+13.12% total transportation cost on average over the strong baselines, including the heuristic
+algorithm deployed in our UAT (User Acceptance Test) environment and a variety of vanilla DRL methods.
+We are due to fully deploy our solution into our online logistics system and it is estimated that millions
+of USD logistics cost can be saved per year. 

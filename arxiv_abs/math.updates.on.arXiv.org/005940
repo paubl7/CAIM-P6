@@ -1,0 +1,19 @@
+A new representation of splines that targets efficiency in the analysis of functional data is implemented.
+The efficiency is achieved through two novel features: using the recently introduced orthonormal
+spline bases, the so-called {\it splinets} and accounting for the spline support sets in the proposed
+spline object representation. The recently-introduced orthogonal splinets are evaluated by
+{\it dyadic orthogonalization} of the $B$-splines. The package is built around the {\it Splinets}-object
+that represents a collection of splines. It treats splines as mathematical functions and contains
+information about the support sets and the values of the derivatives at the knots that uniquely define
+these functions. Algebra and calculus of splines utilize the Taylor expansions at the knots within
+the support sets. Several orthonormalization procedures of the $B$-splines are implemented including
+the recommended dyadic method leading to the splinets. The method bases on a dyadic algorithm that
+can be also viewed as the efficient method of diagonalizing a band matrix. The locality of the $B$-splines
+in terms of the support sets is, to a great extend, preserved in the corresponding splinet. This together
+with implemented algorithms utilizing locality of the supports provides a valuable computational
+tool for functional data analysis. The benefits are particularly evident when the sparsity in the
+data plays an important role. Various diagnostic tools are provided allowing to maintain the stability
+of the computations. Finally, the projection operation to the space of splines is implemented that
+facilitates functional data analysis. An example of a simple functional analysis of the data using
+the tools in the package is presented. The functionality of the package extends beyond the splines
+to piecewise polynomial functions, although the splines are its focus. 

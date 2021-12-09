@@ -1,0 +1,18 @@
+While the researches on single image super-resolution (SISR), especially equipped with deep neural
+networks (DNNs), have achieved tremendous successes recently, they still suffer from two major
+limitations. Firstly, the real image degradation is usually unknown and highly variant from one
+to another, making it extremely hard to train a single model to handle the general SISR task. Secondly,
+most of current methods mainly focus on the downsampling process of the degradation, but ignore
+or underestimate the inevitable noise contamination. For example, the commonly-used independent
+and identically distributed (i.i.d.) Gaussian noise distribution always largely deviates from
+the real image noise (e.g., camera sensor noise), which limits their performance in real scenarios.
+To address these issues, this paper proposes a model-based unsupervised SISR method to deal with
+the general SISR task with unknown degradations. Instead of the traditional i.i.d. Gaussian noise
+assumption, a novel patch-based non-i.i.d. noise modeling method is proposed to fit the complex
+real noise. Besides, a deep generator parameterized by a DNN is used to map the latent variable to
+the high-resolution image, and the conventional hyper-Laplacian prior is also elaborately embedded
+into such generator to further constrain the image gradients. Finally, a Monte Carlo EM algorithm
+is designed to solve our model, which provides a general inference framework to update the image
+generator both w.r.t. the latent variable and the network parameters. Comprehensive experiments
+demonstrate that the proposed method can evidently surpass the current state of the art (SotA) method
+(about 1dB PSNR) not only with a slighter model (0.34M vs. 2.40M) but also faster speed. 

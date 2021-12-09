@@ -1,0 +1,18 @@
+Nonlinear optical spectroscopies are powerful tools for probing quantum dynamics in molecular
+and nanoscale systems. While intuition about ultrafast spectroscopies is often built by considering
+impulsive optical pulses, actual experiments have finite-duration pulses, which can be important
+for interpreting and predicting experimental results. We present a new freely available open source
+method for spectroscopic modeling, called Ultrafast Ultrafast (UF$^2$) Spectroscopy, which
+enables computationally efficient and convenient prediction of nonlinear spectra, including
+treatment of arbitrary finite duration pulse shapes. UF$^2$ is a Fourier-based method that requires
+diagonalization of the Liouvillian propagator of the system density matrix. We also present a Runge-Kutta
+Euler (RKE) direct propagation method. We include open-systems dynamics in the secular Redfield,
+full Redfield, and Lindblad formalisms with Markovian baths. For non-Markovian systems, the degrees
+of freedom corresponding to memory effects are brought into the system and treated nonperturbatively.
+We analyze the computational complexity of the algorithms and demonstrate numerically that, including
+the cost of diagonalizing the propagator, UF$^2$ is 20-200 times faster than the direct propagation
+method for secular Redfield models with arbitrary Hilbert space dimension; that it is similarly
+faster for full Redfield models at least up to system dimensions where the propagator requires more
+than 20 GB to store; and that for Lindblad models it is faster up to dimension near 100, with speedups
+for small systems by factors of over 500. UF$^2$ and RKE are part of a larger open source Ultrafast
+Software Suite, which includes tools for automatic generation and calculation of Feynman diagrams.

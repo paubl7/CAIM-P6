@@ -1,0 +1,19 @@
+With the rise of deep learning, there has been increased interest in using neural networks for histopathology
+image analysis, a field that investigates the properties of biopsy or resected specimens that are
+traditionally manually examined under a microscope by pathologists. In histopathology image
+analysis, however, challenges such as limited data, costly annotation, and processing high-resolution
+and variable-size images create a high barrier of entry and make it difficult to quickly iterate
+over model designs. Throughout scientific history, many significant research directions have
+leveraged small-scale experimental setups as petri dishes to efficiently evaluate exploratory
+ideas, which are then validated in large-scale applications. For instance, the Drosophila fruit
+fly in genetics and MNIST in computer vision are well-known petri dishes. In this paper, we introduce
+a minimalist histopathology image analysis dataset (MHIST), an analogous petri dish for histopathology
+image analysis. MHIST is a binary classification dataset of 3,152 fixed-size images of colorectal
+polyps, each with a gold-standard label determined by the majority vote of seven board-certified
+gastrointestinal pathologists and annotator agreement level. MHIST occupies less than 400 MB
+of disk space, and a ResNet-18 baseline can be trained to convergence on MHIST in just 6 minutes using
+3.5 GB of memory on a NVIDIA RTX 3090. As example use cases, we use MHIST to study natural questions
+such as how dataset size, network depth, transfer learning, and high-disagreement examples affect
+model performance. By introducing MHIST, we hope to not only help facilitate the work of current
+histopathology imaging researchers, but also make histopathology image analysis more accessible
+to the general computer vision community. Our dataset is available at https://bmirds.github.io/MHIST.

@@ -1,0 +1,18 @@
+This paper presents DWIE, the 'Deutsche Welle corpus for Information Extraction', a newly created
+multi-task dataset that combines four main Information Extraction (IE) annotation subtasks:
+(i) Named Entity Recognition (NER), (ii) Coreference Resolution, (iii) Relation Extraction (RE),
+and (iv) Entity Linking. DWIE is conceived as an entity-centric dataset that describes interactions
+and properties of conceptual entities on the level of the complete document. This contrasts with
+currently dominant mention-driven approaches that start from the detection and classification
+of named entity mentions in individual sentences. Further, DWIE presented two main challenges
+when building and evaluating IE models for it. First, the use of traditional mention-level evaluation
+metrics for NER and RE tasks on entity-centric DWIE dataset can result in measurements dominated
+by predictions on more frequently mentioned entities. We tackle this issue by proposing a new entity-driven
+metric that takes into account the number of mentions that compose each of the predicted and ground
+truth entities. Second, the document-level multi-task annotations require the models to transfer
+information between entity mentions located in different parts of the document, as well as between
+different tasks, in a joint learning setting. To realize this, we propose to use graph-based neural
+message passing techniques between document-level mention spans. Our experiments show an improvement
+of up to 5.5 F1 percentage points when incorporating neural graph propagation into our joint model.
+This demonstrates DWIE's potential to stimulate further research in graph neural networks for
+representation learning in multi-task IE. We make DWIE publicly available at https://github.com/klimzaporojets/DWIE.

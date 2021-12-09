@@ -1,0 +1,19 @@
+Millimeter wave (mmWave) and terahertz MIMO systems rely on pre-defined beamforming codebooks
+for both initial access and data transmission. Being pre-defined, however, these codebooks are
+commonly not optimized for specific environments, user distributions, and/or possible hardware
+impairments. This leads to large codebook sizes with high beam training overhead which increases
+the initial access/tracking latency and makes it hard for these systems to support highly mobile
+applications. To overcome these limitations, this paper develops a deep reinforcement learning
+framework that learns how to iteratively optimize the codebook beam patterns (shapes) relying
+only on the receive power measurements and without requiring any explicit channel knowledge. The
+developed model learns how to autonomously adapt the beam patterns to best match the surrounding
+environment, user distribution, hardware impairments, and array geometry. Further, this approach
+does not require any knowledge about the channel, array geometry, RF hardware, or user positions.
+To reduce the learning time, the proposed model designs a novel Wolpertinger-variant architecture
+that is capable of efficiently searching for an optimal policy in a large discrete action space,
+which is important for large antenna arrays with quantized phase shifters. This complex-valued
+neural network architecture design respects the practical RF hardware constraints such as the
+constant-modulus and quantized phase shifter constraints. Simulation results based on the publicly
+available DeepMIMO dataset confirm the ability of the developed framework to learn near-optimal
+beam patterns for both line-of-sight (LOS) and non-LOS scenarios and for arrays with hardware impairments
+without requiring any channel knowledge. 

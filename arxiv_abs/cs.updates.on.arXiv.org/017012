@@ -1,0 +1,19 @@
+The so-called block-term decomposition (BTD) tensor model, especially in its rank-$(L_r,L_r,1)$
+version, has been recently receiving increasing attention due to its enhanced ability of representing
+systems and signals that are composed of \emph{blocks} of rank higher than one, a scenario encountered
+in numerous and diverse applications. Uniqueness conditions and fitting methods have thus been
+thoroughly studied. Nevertheless, the challenging problem of estimating the BTD model structure,
+namely the number of block terms, $R$, and their individual ranks, $L_r$, has only recently started
+to attract significant attention, mainly through regularization-based approaches which entail
+the need to tune the regularization parameter(s). In this work, we build on ideas of sparse Bayesian
+learning (SBL) and put forward a fully automated Bayesian approach. Through a suitably crafted
+multi-level \emph{hierarchical} probabilistic model, which gives rise to heavy-tailed prior
+distributions for the BTD factors, structured sparsity is \emph{jointly} imposed. Ranks are then
+estimated from the numbers of blocks ($R$) and columns ($L_r$) of non-negligible energy. Approximate
+posterior inference is implemented, within the variational inference framework. The resulting
+iterative algorithm completely avoids hyperparameter tuning, which is a significant defect of
+regularization-based methods. Alternative probabilistic models are also explored and the connections
+with their regularization-based counterparts are brought to light with the aid of the associated
+maximum a-posteriori (MAP) estimators. We report simulation results with both synthetic and real-word
+data, which demonstrate the merits of the proposed method in terms of both rank estimation and model
+fitting as compared to state-of-the-art relevant methods. 

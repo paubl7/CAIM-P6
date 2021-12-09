@@ -1,0 +1,19 @@
+Feature descriptors of point clouds are used in several applications, such as registration and
+part segmentation of 3D point clouds. Learning discriminative representations of local geometric
+features is unquestionably the most important task for accurate point cloud analyses. However,
+it is challenging to develop rotation or scale-invariant descriptors. Most previous studies have
+either ignored rotations or empirically studied optimal scale parameters, which hinders the applicability
+of the methods for real-world datasets. In this paper, we present a new local feature description
+method that is robust to rotation, density, and scale variations. Moreover, to improve representations
+of the local descriptors, we propose a global aggregation method. First, we place kernels aligned
+around each point in the normal direction. To avoid the sign problem of the normal vector, we use a
+symmetric kernel point distribution in the tangential plane. From each kernel point, we first projected
+the points from the spatial space to the feature space, which is robust to multiple scales and rotation,
+based on angles and distances. Subsequently, we perform graph convolutions by considering local
+kernel point structures and long-range global context, obtained by a global aggregation method.
+We experimented with our proposed descriptors on benchmark datasets (i.e., ModelNet40 and ShapeNetPart)
+to evaluate the performance of registration, classification, and part segmentation on 3D point
+clouds. Our method showed superior performances when compared to the state-of-the-art methods
+by reducing 70$\%$ of the rotation and translation errors in the registration task. Our method also
+showed comparable performance in the classification and part-segmentation tasks with simple
+and low-dimensional architectures. 

@@ -1,0 +1,20 @@
+Processing of medical images such as MRI or CT presents unique challenges compared to RGB images
+typically used in computer vision. These include a lack of labels for large datasets, high computational
+costs, and metadata to describe the physical properties of voxels. Data augmentation is used to
+artificially increase the size of the training datasets. Training with image patches decreases
+the need for computational power. Spatial metadata needs to be carefully taken into account in order
+to ensure a correct alignment of volumes. We present TorchIO, an open-source Python library to enable
+efficient loading, preprocessing, augmentation and patch-based sampling of medical images for
+deep learning. TorchIO follows the style of PyTorch and integrates standard medical image processing
+libraries to efficiently process images during training of neural networks. TorchIO transforms
+can be composed, reproduced, traced and extended. We provide multiple generic preprocessing and
+augmentation operations as well as simulation of MRI-specific artifacts. Source code, comprehensive
+tutorials and extensive documentation for TorchIO can be found at https://github.com/fepegar/torchio.
+The package can be installed from the Python Package Index running 'pip install torchio'. It includes
+a command-line interface which allows users to apply transforms to image files without using Python.
+Additionally, we provide a graphical interface within a TorchIO extension in 3D Slicer to visualize
+the effects of transforms. TorchIO was developed to help researchers standardize medical image
+processing pipelines and allow them to focus on the deep learning experiments. It encourages open
+science, as it supports reproducibility and is version controlled so that the software can be cited
+precisely. Due to its modularity, the library is compatible with other frameworks for deep learning
+with medical images. 

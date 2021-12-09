@@ -1,0 +1,20 @@
+We built the largest database for kinship recognition. The data were labeled using a novel clustering
+algorithm that used label proposals as side information to guide more accurate clusters. Great
+savings in time and human input was had. Statistically, FIW shows enormous gains over its predecessors.
+We have several benchmarks in kinship verification, family classification, tri-subject verification,
+and large-scale search and retrieval. We also trained CNNs on FIW and deployed the model on the renowned
+KinWild I and II to gain SOTA. Most recently, we further augmented FIW with MM. Now, video dynamics,
+audio, and text captions can be used in the decision making of kinship recognition systems. We expect
+FIW will significantly impact research and reality. Additionally, we tackled the classic problem
+of facial landmark localization. A majority of these networks have objectives based on L1 or L2 norms,
+which inherit several disadvantages. The locations of landmarks are determined from generated
+heatmaps from which predicted landmark locations get penalized without accounting for the spread:
+a high scatter corresponds to low confidence and vice-versa. To address this, we introduced an objective
+that penalizes for low confidence. Another issue is a dependency on labeled data, which is expensive
+to collect and susceptible to error. We addressed both issues by proposing an adversarial training
+framework that leverages unlabeled data to improve model performance. Our method claims SOTA on
+renowned benchmarks. Furthermore, our model is robust with a reduced size: 1/8 the number of channels
+is comparable to SOTA in real-time on a CPU. Finally, we built BFW to serve as a proxy to measure bias
+across ethnicity and gender subgroups, allowing us to characterize FR performances per subgroup.
+We show performances are non-optimal when a single threshold is used to determine whether sample
+pairs are genuine. 

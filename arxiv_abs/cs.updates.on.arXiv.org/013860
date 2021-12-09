@@ -1,0 +1,19 @@
+The performance of graph programs depends highly on the algorithm, the size and structure of the
+input graphs, as well as the features of the underlying hardware. No single set of optimizations
+or one hardware platform works well across all settings. To achieve high performance, the programmer
+must carefully select which set of optimizations and hardware platforms to use. The GraphIt programming
+language makes it easy for the programmer to write the algorithm once and optimize it for different
+inputs using a scheduling language. However, GraphIt currently has no support for generating high
+performance code for GPUs. Programmers must resort to re-implementing the entire algorithm from
+scratch in a low-level language with an entirely different set of abstractions and optimizations
+in order to achieve high performance on GPUs. We propose GG, an extension to the GraphIt compiler
+framework, that achieves high performance on both CPUs and GPUs using the same algorithm specification.
+GG significantly expands the optimization space of GPU graph processing frameworks with a novel
+GPU scheduling language and compiler that enables combining graph optimizations for GPUs. GG also
+introduces two performance optimizations, Edge-based Thread Warps CTAs load balancing (ETWC)
+and EdgeBlocking, to expand the optimization space for GPUs. ETWC improves load balancing by dynamically
+partitioning the edges of each vertex into blocks that are assigned to threads, warps, and CTAs for
+execution. EdgeBlocking improves the locality of the program by reordering the edges and restricting
+random memory accesses to fit within the L2 cache. We evaluate GG on 5 algorithms and 9 input graphs
+on both Pascal and Volta generation NVIDIA GPUs, and show that it achieves up to 5.11x speedup over
+state-of-the-art GPU graph processing frameworks, and is the fastest on 66 out of the 90 experiments.

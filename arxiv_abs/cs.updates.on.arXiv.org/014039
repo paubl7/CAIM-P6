@@ -1,0 +1,18 @@
+With the increasing adoption of graph neural networks (GNNs) in the machine learning community,
+GPUs have become an essential tool to accelerate GNN training. However, training GNNs on very large
+graphs that do not fit in GPU memory is still a challenging task. Unlike conventional neural networks,
+mini-batching input samples in GNNs requires complicated tasks such as traversing neighboring
+nodes and gathering their feature values. While this process accounts for a significant portion
+of the training time, we find existing GNN implementations using popular deep neural network (DNN)
+libraries such as PyTorch are limited to a CPU-centric approach for the entire data preparation
+step. This "all-in-CPU" approach has negative impact on the overall GNN training performance as
+it over-utilizes CPU resources and hinders GPU acceleration of GNN training. To overcome such limitations,
+we introduce PyTorch-Direct, which enables a GPU-centric data accessing paradigm for GNN training.
+In PyTorch-Direct, GPUs are capable of efficiently accessing complicated data structures in host
+memory directly without CPU intervention. Our microbenchmark and end-to-end GNN training results
+show that PyTorch-Direct reduces data transfer time by 47.1% on average and speeds up GNN training
+by up to 1.6x. Furthermore, by reducing CPU utilization, PyTorch-Direct also saves system power
+by 12.4% to 17.5% during training. To minimize programmer effort, we introduce a new "unified tensor"
+type along with necessary changes to the PyTorch memory allocator, dispatch logic, and placement
+rules. As a result, users need to change at most two lines of their PyTorch GNN training code for each
+tensor object to take advantage of PyTorch-Direct. 

@@ -1,0 +1,18 @@
+Meta-learning automatically infers an inductive bias by observing data from a number of related
+tasks. The inductive bias is encoded by hyperparameters that determine aspects of the model class
+or training algorithm, such as initialization or learning rate. Meta-learning assumes that the
+learning tasks belong to a task environment, and that tasks are drawn from the same task environment
+both during meta-training and meta-testing. This, however, may not hold true in practice. In this
+paper, we introduce the problem of transfer meta-learning, in which tasks are drawn from a target
+task environment during meta-testing that may differ from the source task environment observed
+during meta-training. Novel information-theoretic upper bounds are obtained on the transfer
+meta-generalization gap, which measures the difference between the meta-training loss, available
+at the meta-learner, and the average loss on meta-test data from a new, randomly selected, task in
+the target task environment. The first bound, on the average transfer meta-generalization gap,
+captures the meta-environment shift between source and target task environments via the KL divergence
+between source and target data distributions. The second, PAC-Bayesian bound, and the third, single-draw
+bound, account for this shift via the log-likelihood ratio between source and target task distributions.
+Furthermore, two transfer meta-learning solutions are introduced. For the first, termed Empirical
+Meta-Risk Minimization (EMRM), we derive bounds on the average optimality gap. The second, referred
+to as Information Meta-Risk Minimization (IMRM), is obtained by minimizing the PAC-Bayesian bound.
+IMRM is shown via experiments to potentially outperform EMRM. 

@@ -1,0 +1,19 @@
+We analyse three time integration schemes for unfitted methods in fluid structure interaction.
+In Alghorithm 1 we propose a fully discrete monolithic algorithm with P1 P1 stabilized finite elements
+for the fluid problem; for this alghorithm we prove well-posedness, unconditional stability and
+convergence in the case of linearized problem (see Propositions 2.4.2, 2.4.3 and Theorem 3.3.7,
+respectively). The analysis optimal convergence rates as expected from the Euler scheme, and the
+supposed regularity of the solution to the continuous problem. Moreover we introduce two algorithms
+that allow for a partitioning of the coupled problem by exploiting an explicit-implicit treatment
+of the transmission conditions. Algorithm 2 represents, essentially, a simplification of Algorithm
+1 since it simply treat the solid elastic forces in explicit form using the displacement and velocities
+of the structure evaluated in the previous time steps. Instead, Algorithm 3, is really a splitting
+algorithm that involves the solution of two staggered problems. It splits the forces that solid
+transfers to fluid in two contributions: the inertial contribution that is treated in implicit
+form and the elastic contribution that is treated in explicit form. We perform the stability analysis
+for both the schemes in Theorems 4.3.1 and 4.3.3. Algorithm 2 results conditionally stable for all
+the extrapolations considered, instead Algorithm 3 is unconditionally stable, for extrapolations
+of order zero and one, and conditionally stable for the extrapolation of order two. Since Algorithm
+3 is the most promising, we perform the convergence analysis in the linearized case (see Theorem
+4.4.2) obtaining results in line with those of the monolithic case, in particular the splitting
+introduced preserves optimal conevegence rates. 

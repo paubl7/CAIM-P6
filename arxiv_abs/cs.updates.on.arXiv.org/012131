@@ -1,0 +1,18 @@
+Influence maximization (IM) aims at maximizing the spread of influence by offering discounts to
+influential users (called seeding). In many applications, due to user's privacy concern, overwhelming
+network scale etc., it is hard to target any user in the network as one wishes. Instead, only a small
+subset of users is initially accessible. Such access limitation would significantly impair the
+influence spread, since IM often relies on seeding high degree users, which are particularly rare
+in such a small subset due to the power-law structure of social networks. In this paper, we attempt
+to solve the limited IM in real-world scenarios by the adaptive approach with seeding and diffusion
+uncertainty considered. Specifically, we consider fine-grained discounts and assume users accept
+the discount probabilistically. The diffusion process is depicted by the independent cascade
+model. To overcome the access limitation, we prove the set-wise friendship paradox (FP) phenomenon
+that neighbors have higher degree in expectation, and propose a two-stage seeding model with the
+FP embedded, where neighbors are seeded. On this basis, for comparison we formulate the non-adaptive
+case and adaptive case, both proven to be NP-hard. In the non-adaptive case, discounts are allocated
+to users all at once. We show the monotonicity of influence spread w.r.t. discount allocation and
+design a two-stage coordinate descent framework to decide the discount allocation. In the adaptive
+case, users are sequentially seeded based on observations of existing seeding and diffusion results.
+We prove the adaptive submodularity and submodularity of the influence spread function in two stages.
+Then, a series of adaptive greedy algorithms are proposed with constant approximation ratio. 

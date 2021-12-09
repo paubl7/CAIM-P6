@@ -1,0 +1,19 @@
+Various model-based diagnosis scenarios require the computation of most preferred fault explanations.
+Existing algorithms that are sound (i.e., output only actual fault explanations) and complete
+(i.e., can return all explanations), however, require exponential space to achieve this task.
+As a remedy, we propose two novel diagnostic search algorithms, called RBF-HS (Recursive Best-First
+Hitting Set Search) and HBF-HS (Hybrid Best-First Hitting Set Search), which build upon tried and
+tested techniques from the heuristic search domain. RBF-HS can enumerate an arbitrary predefined
+finite number of fault explanations in best-first order within linear space bounds, without sacrificing
+the desirable soundness or completeness properties. The idea of HBF-HS is to find a trade-off between
+runtime optimization and a restricted space consumption that does not exceed the available memory.
+In extensive experiments on real-world diagnosis cases we compared our approaches to Reiter's
+HS-Tree, a state-of-the-art method that gives the same theoretical guarantees and is as general(ly
+applicable) as the suggested algorithms. For the computation of minimum-cardinality fault explanations,
+we find that (1) RBF-HS reduces memory requirements substantially in most cases by up to several
+orders of magnitude, (2) in more than a third of the cases, both memory savings and runtime savings
+are achieved, and (3) given the runtime overhead is significant, using HBF-HS instead of RBF-HS
+reduces the runtime to values comparable with HS-Tree while keeping the used memory reasonably
+bounded. When computing most probable fault explanations, we observe that RBF-HS tends to trade
+memory savings more or less one-to-one for runtime overheads. Again, HBF-HS proves to be a reasonable
+remedy to cut down the runtime while complying with practicable memory bounds. 

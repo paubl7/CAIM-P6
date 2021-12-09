@@ -1,0 +1,20 @@
+Transient execution attacks that exploit speculation have raised significant concerns in computer
+systems. Typically, branch predictors are leveraged to trigger mis-speculation in transient
+execution attacks. In this work, we demonstrate a new class of speculation-based attack that targets
+branch prediction unit (BPU). We find that speculative resolution of conditional branches (i.e.,
+in nested speculation) alter the states of pattern history table (PHT) in modern processors, which
+are not restored after the corresponding branches are later squashed. Such characteristic allows
+attackers to exploit BPU as the secret transmitting medium in transient execution attacks. To evaluate
+the discovered vulnerability, we build a novel attack framework, BranchSpectre, that enables
+exfiltration of unintended secrets through observing speculative PHT updates (in the form of covert
+and side channels). We further investigate PHT collision mechanism in the history-based predictor
+as well as the branch prediction mode transitions in Intel processors. Built upon such knowledge,
+we implement an ultra high-speed covert channel (BranchSpectre-cc) as well as two side channels
+(i.e., BranchSpectre-v1 and BranchSpectre-v2) that merely rely on BPU for mis-speculation trigger
+and secret inference in the speculative domain. Notably, BranchSpectre side channels can take
+advantage of much simpler code patterns than the ones used in Spectre attacks. We present an extensive
+BranchSpectre code gadget analysis on a set of popular real-world application code bases followed
+by a demonstration of real-world side channel attack on OpenSSL. The evaluation results show substantial
+wider existence and higher exploitability of BranchSpectre code patterns in real-world software.
+Finally, we discuss several secure branch prediction mechanisms that can mitigate transient execution
+attacks exploiting modern branch predictors. 

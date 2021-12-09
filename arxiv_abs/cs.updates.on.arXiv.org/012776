@@ -1,0 +1,20 @@
+Genome assembly asks to reconstruct an unknown string from many shorter substrings of it. Even though
+it is one of the key problems in Bioinformatics, it is generally lacking major theoretical advances.
+Its hardness stems both from practical issues (size and errors of real data), and from the fact that
+problem formulations inherently admit multiple solutions. Given these, at their core, most state-of-the-art
+assemblers are based on finding non-branching paths (unitigs) in an assembly graph. If one defines
+a genome assembly solution as a closed arc-covering walk of the graph, then unitigs appear in all
+solutions, being thus safe partial solutions. All all such safe walks were recently characterized
+as omnitigs, leading to the first safe and complete genome assembly algorithm. Even if omnitig finding
+was improved to quadratic time, it remained open whether the crucial linear-time feature of finding
+unitigs can be attained with omnitigs. We describe a surprising $O(m)$-time algorithm to identify
+all maximal omnitigs of a graph with $n$ nodes and $m$ arcs, notwithstanding the existence of families
+of graphs with $\Theta(mn)$ total maximal omnitig size. This is based on the discovery of a family
+of walks (macrotigs) with the property that all the non-trivial omnitigs are univocal extensions
+of subwalks of a macrotig, with two consequences: (1) A linear-time output-sensitive algorithm
+enumerating all maximal omnitigs. (2) A compact $O(m)$ representation of all maximal omnitigs,
+which allows, e.g., for $O(m)$-time computation of various statistics on them. Our results close
+a long-standing theoretical question inspired by practical genome assemblers, originating with
+the use of unitigs in 1995. We envision our results to be at the core of a reverse transfer from theory
+to practical and complete genome assembly programs, as has been the case for other key Bioinformatics
+problems. 

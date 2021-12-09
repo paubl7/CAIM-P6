@@ -1,0 +1,20 @@
+Mutation-based fuzzing typically uses an initial set of non-crashing seed inputs (a corpus) from
+which to generate new inputs by mutation. A corpus of potential seeds will often contain thousands
+of similar inputs. This lack of diversity can lead to wasted fuzzing effort by exhaustive mutation
+from all available seeds. To address this, fuzzers come with distillation tools (e.g., afl-cmin)
+that select the smallest subset of seeds that triggers the same range of instrumentation data points
+as the full corpus. Common practice suggests that minimizing the number and cumulative size of the
+seeds leads to more efficient fuzzing, which we explore systematically. We present results of 34+
+CPU-years of fuzzing with five distillation approaches to understand their impact in finding bugs
+in real-world software. We evaluate a number of techniques, includibng the existing afl-cmin and
+Minset, and also MoonLight---a freely available, configurable, state-of-the-art, open-source,
+tool. Our experiments compare the effectiveness of distillation approaches, targeting the Google
+Fuzzer Test Suite and a diverse set of six real-world libraries and programs, covering 13 different
+input file formats across 16 programs. Our results show that distillation is a necessary precursor
+to any fuzzing campaign when starting with a large initial corpus. We compare the effectiveness
+of alternative distillation approaches. Notably, our experiments reveal that state-of-the-art
+distillation tools (such as MoonLight and Minset) do not exclusively find all of the 33 bugs (in the
+real-world targets) exposed by our combined campaign: each technique appears to have its own strengths.
+We find (and report) new bugs with MoonLight that are not found by Minset, and vice versa. Moreover,
+afl-cmin fails to reveal many of these bugs. Of the 33 bugs revealed in our campaign, seven new bugs
+have received CVEs. 

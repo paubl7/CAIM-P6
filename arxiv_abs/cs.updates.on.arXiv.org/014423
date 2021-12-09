@@ -1,0 +1,20 @@
+Knowledge base completion (KBC) methods aim at inferring missing facts from the information present
+in a knowledge base (KB) by estimating the likelihood of candidate facts. In the prevailing evaluation
+paradigm, models do not actually decide whether a new fact should be accepted or not but are solely
+judged on the position of true facts in a likelihood ranking with other candidates. We argue that
+consideration of binary predictions is essential to reflect the actual KBC quality, and propose
+a novel evaluation paradigm, designed to provide more transparent model selection criteria for
+a realistic scenario. We construct the data set FB14k-QAQ where instead of single facts, we use KB
+queries, i.e., facts where one entity is replaced with a variable, and construct corresponding
+sets of entities that are correct answers. We randomly remove some of these correct answers from
+the data set, simulating the realistic scenario of real-world entities missing from a KB. This way,
+we can explicitly measure a model's ability to handle queries that have more correct answers in the
+real world than in the KB, including the special case of queries without any valid answer. The latter
+especially contrasts the ranking setting. We evaluate a number of state-of-the-art KB embeddings
+models on our new benchmark. The differences in relative performance between ranking-based and
+classification-based evaluation that we observe in our experiments confirm our hypothesis that
+good performance on the ranking task does not necessarily translate to good performance on the actual
+completion task. Our results motivate future work on KB embedding models with better prediction
+separability and, as a first step in that direction, we propose a simple variant of TransE that encourages
+thresholding and achieves a significant improvement in classification F1 score relative to the
+original TransE. 

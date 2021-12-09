@@ -1,0 +1,19 @@
+Stokes inversion techniques are very powerful methods for obtaining information on the thermodynamic
+and magnetic properties of solar and stellar atmospheres. In recent years, very sophisticated
+inversion codes have been developed that are now routinely applied to spectro-polarimetric observations.
+Most of these inversion codes are designed for finding an optimum solution to the nonlinear inverse
+problem. However, to obtain the location of potentially multimodal cases (ambiguities), the degeneracies,
+and the uncertainties of each parameter inferred from the inversions, algorithms such as Markov
+chain Monte Carlo (MCMC), require to evaluate the likelihood of the model thousand of times and are
+computationally costly. Variational methods are a quick alternative to Monte Carlo methods by
+approximating the posterior distribution by a parametrized distribution. In this study, we introduce
+a highly flexible variational inference method to perform fast Bayesian inference, known as normalizing
+flows. Normalizing flows are a set of invertible, differentiable, and parametric transformations
+that convert a simple distribution into an approximation of any other complex distribution. If
+the transformations are conditioned on observations, the normalizing flows can be trained to return
+Bayesian posterior probability estimates for any observation. We illustrate the ability of the
+method using a simple Milne-Eddington model and a complex non-LTE inversion. However, the method
+is extremely general and other more complex forward models can be applied. The training procedure
+need only be performed once for a given prior parameter space and the resulting network can then generate
+samples describing the posterior distribution several orders of magnitude faster than existing
+techniques. 

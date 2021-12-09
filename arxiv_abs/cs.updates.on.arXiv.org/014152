@@ -1,0 +1,20 @@
+Although deep reinforcement learning has led to breakthroughs in many difficult domains, these
+successes have required an ever-increasing number of samples, affording only a shrinking segment
+of the AI community access to their development. Resolution of these limitations requires new,
+sample-efficient methods. To facilitate research in this direction, we propose this second iteration
+of the MineRL Competition. The primary goal of the competition is to foster the development of algorithms
+which can efficiently leverage human demonstrations to drastically reduce the number of samples
+needed to solve complex, hierarchical, and sparse environments. To that end, participants compete
+under a limited environment sample-complexity budget to develop systems which solve the MineRL
+ObtainDiamond task in Minecraft, a sequential decision making environment requiring long-term
+planning, hierarchical control, and efficient exploration methods. The competition is structured
+into two rounds in which competitors are provided several paired versions of the dataset and environment
+with different game textures and shaders. At the end of each round, competitors submit containerized
+versions of their learning algorithms to the AIcrowd platform where they are trained from scratch
+on a hold-out dataset-environment pair for a total of 4-days on a pre-specified hardware platform.
+In this follow-up iteration to the NeurIPS 2019 MineRL Competition, we implement new features to
+expand the scale and reach of the competition. In response to the feedback of the previous participants,
+we introduce a second minor track focusing on solutions without access to environment interactions
+of any kind except during test-time. Further we aim to prompt domain agnostic submissions by implementing
+several novel competition mechanics including action-space randomization and desemantization
+of observations and actions. 

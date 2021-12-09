@@ -1,0 +1,19 @@
+A prophet inequality states, for some $\alpha\in[0,1]$, that the expected value achievable by
+a gambler who sequentially observes random variables $X_1,\dots,X_n$ and selects one of them is
+at least an $\alpha$ fraction of the maximum value in the sequence. We obtain three distinct improvements
+for a setting that was first studied by Correa et al. (EC, 2019) and is particularly relevant to modern
+applications in algorithmic pricing. In this setting, the random variables are i.i.d. from an unknown
+distribution and the gambler has access to an additional $\beta n$ samples for some $\beta\geq 0$.
+We first give improved lower bounds on $\alpha$ for a wide range of values of $\beta$; specifically,
+$\alpha\geq(1+\beta)/e$ when $\beta\leq 1/(e-1)$, which is tight, and $\alpha\geq 0.648$ when
+$\beta=1$, which improves on a bound of around $0.635$ due to Correa et al. (SODA, 2020). Adding to
+their practical appeal, specifically in the context of algorithmic pricing, we then show that the
+new bounds can be obtained even in a streaming model of computation and thus in situations where the
+use of relevant data is complicated by the sheer amount of data available. We finally establish that
+the upper bound of $1/e$ for the case without samples is robust to additional information about the
+distribution, and applies also to sequences of i.i.d. random variables whose distribution is itself
+drawn, according to a known distribution, from a finite set of known candidate distributions. This
+implies a tight prophet inequality for exchangeable sequences of random variables, answering
+a question of Hill and Kertz (Contemporary Mathematics, 1992), but leaves open the possibility
+of better guarantees when the number of candidate distributions is small, a setting we believe is
+of strong interest to applications. 

@@ -1,0 +1,19 @@
+Kernelized Gram matrix $W$ constructed from data points $\{x_i\}_{i=1}^N$ as $W_{ij}= k_0( \frac{
+\| x_i - x_j \|^2} {\sigma^2} ) $ is widely used in graph-based geometric data analysis and unsupervised
+learning. An important question is how to choose the kernel bandwidth $\sigma$, and a common practice
+called self-tuned kernel adaptively sets a $\sigma_i$ at each point $x_i$ by the $k$-nearest neighbor
+(kNN) distance. When $x_i$'s are sampled from a $d$-dimensional manifold embedded in a possibly
+high-dimensional space, unlike with fixed-bandwidth kernels, theoretical results of graph Laplacian
+convergence with self-tuned kernels, however, have been incomplete. This paper proves the convergence
+of graph Laplacian operator $L_N$ to manifold (weighted-)Laplacian for a new family of kNN self-tuned
+kernels $W^{(\alpha)}_{ij} = k_0( \frac{ \| x_i - x_j \|^2}{ \epsilon \hat{\rho}(x_i) \hat{\rho}(x_j)})/\hat{\rho}(x_i)^\alpha
+\hat{\rho}(x_j)^\alpha$, where $\hat{\rho}$ is the estimated bandwidth function {by kNN}, and
+the limiting operator is also parametrized by $\alpha$. When $\alpha = 1$, the limiting operator
+is the weighted manifold Laplacian $\Delta_p$. Specifically, we prove the pointwise convergence
+of $L_N f $ and convergence of the graph Dirichlet form with rates. Our analysis is based on first establishing
+a $C^0$ consistency for $\hat{\rho}$ which bounds the relative estimation error $|\hat{\rho}
+- \bar{\rho}|/\bar{\rho}$ uniformly with high probability, where $\bar{\rho} = p^{-1/d}$, and
+$p$ is the data density function. Our theoretical results reveal the advantage of self-tuned kernel
+over fixed-bandwidth kernel via smaller variance error in low-density regions. In the algorithm,
+no prior knowledge of $d$ or data density is needed. The theoretical results are supported by numerical
+experiments. 

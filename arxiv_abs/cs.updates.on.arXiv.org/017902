@@ -1,0 +1,20 @@
+In this thesis, we introduce Greenformers, a collection of model efficiency methods to improve
+the model efficiency of the recently renowned transformer models with a low-rank approximation
+approach. The development trend of deep learning models tends to results in a more complex and larger
+model. Although it leads to a better and more accurate prediction, the resulting model becomes even
+more costly, as it requires weeks of training with a huge amount of GPU resources. Particularly,
+the size and computational cost of transformer-based models have increased tremendously since
+its first debut in 2017 from ~100 million parameters up to ~1.6 trillion parameters in early 2021.
+This computationally hungry model also incurs a substantial cost to the environment and even reaches
+an alarming level of carbon footprint. Some of these models are so massive that it is even impossible
+to run the model without a GPU cluster. Greenformers improve the model efficiency of transformer
+models by applying low-rank approximation approaches. Specifically, we propose a low-rank factorization
+approach to improve the efficiency of the transformer model called Low-Rank Transformer. We further
+compare our model with an existing low-rank factorization approach called Linformer. Based on
+our analysis, the Low-Rank Transformer model is suitable for improving both the time and memory
+efficiency in processing short-sequence (<= 512) input data, while the Linformer model is suitable
+for improving the efficiency in processing long-sequence input data (>= 512). We also show that
+Low-Rank Transformer is more suitable for on-device deployment, as it significantly reduces the
+model size. Additionally, we estimate that applying LRT to the existing BERT-base model can significantly
+reduce the computational, economical, and environmental costs for developing such models by more
+than 30% of its original costs. 

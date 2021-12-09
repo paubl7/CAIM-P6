@@ -1,0 +1,18 @@
+Real-time state estimation and forecasting is critical for efficient operation of power grids.
+In this paper, a physics-informed Gaussian process regression (PhI-GPR) method is presented and
+used for probabilistic forecasting and estimating the phase angle, angular speed, and wind mechanical
+power of a three-generator power grid system using sparse measurements. In standard data-driven
+Gaussian process regression (GPR), parameterized models for the prior statistics are fit by maximizing
+the marginal likelihood of observed data, whereas in PhI-GPR, we compute the prior statistics by
+solving stochastic equations governing power grid dynamics. The short-term forecast of a power
+grid system dominated by wind generation is complicated by the stochastic nature of the wind and
+the resulting uncertain mechanical wind power. Here, we assume that the power-grid dynamic is governed
+by the swing equations, and we treat the unknown terms in the swing equations (specifically, the
+mechanical wind power) as random processes, which turns these equations into stochastic differential
+equations. We solve these equations for the mean and variance of the power grid system using the Monte
+Carlo simulations method. We demonstrate that the proposed PhI-GPR method can accurately forecast
+and estimate both observed and unobserved states, including the mean behavior and associated uncertainty.
+For observed states, we show that PhI-GPR provides a forecast comparable to the standard data-driven
+GPR, with both forecasts being significantly more accurate than the autoregressive integrated
+moving average (ARIMA) forecast. We also show that the ARIMA forecast is much more sensitive to observation
+frequency and measurement errors than the PhI-GPR forecast. 

@@ -1,0 +1,19 @@
+In this work, we consider the problem of sampling a $k$-clique in a graph from an almost uniform distribution
+in sublinear time in the general graph query model. Specifically the algorithm should output each
+$k$-clique with probability $(1\pm \epsilon)/n_k$, where $n_k$ denotes the number of $k$-cliques
+in the graph and $\epsilon$ is a given approximation parameter. We prove that the query complexity
+of this problem is \[ \Theta^*\left(\max\left\{ \left(\frac{(n\alpha)^{k/2}}{ n_k}\right)^{\frac{1}{k-1}}
+,\; \min\left\{n\alpha,\frac{n\alpha^{k-1}}{n_k} \right\}\right\}\right). \] where $n$
+is the number of vertices in the graph, $\alpha$ is its arboricity, and $\Theta^*$ suppresses the
+dependence on $(\log n/\epsilon)^{O(k)}$. Interestingly, this establishes a separation between
+approximate counting and approximate uniform sampling in the sublinear regime. For example, if
+$k=3$, $\alpha = O(1)$, and $n_3$ (the number of triangles) is $\Theta(n)$, then we get a lower bound
+of $\Omega(n^{1/4})$ (for constant $\epsilon$), while under these conditions, a $(1\pm \epsilon)$-approximation
+of $n_3$ can be obtained by performing $\textrm{poly}(\log(n/\epsilon))$ queries (Eden, Ron
+and Seshadhri, SODA20). Our lower bound follows from a construction of a family of graphs with arboricity
+$\alpha$ such that in each graph there are $n_k$ cliques (of size $k$), where one of these cliques
+is "hidden" and hence hard to sample. Our upper bound is based on defining a special auxiliary graph
+$H_k$, such that sampling edges almost uniformly in $H_k$ translates to sampling $k$-cliques almost
+uniformly in the original graph $G$. We then build on a known edge-sampling algorithm (Eden, Ron
+and Rosenbaum, ICALP19) to sample edges in $H_k$, where the challenge is simulate queries to $H_k$
+while being given access only to $G$. 

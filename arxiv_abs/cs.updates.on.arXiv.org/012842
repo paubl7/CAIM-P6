@@ -1,0 +1,20 @@
+In recent years, edge computing has become a popular choice for latency-sensitive applications
+like facial recognition and augmented reality because it is closer to the end users compared to the
+cloud. Although infrastructure providers are working toward creating managed edge networks,
+personal devices such as laptops and tablets, which are widely available and are underutilized,
+can also be used as potential edge devices. We call such devices Unmanaged Edge Devices (UEDs). Scheduling
+application tasks on such an unmanaged edge system is not straightforward because of three fundamental
+reasons-heterogeneity in the computational capacity of the UEDs, uncertainty in the availability
+of the UEDs (due to devices leaving the system), and interference among multiple tasks sharing a
+UED. In this paper, we present I-BOT, an interference-based orchestration scheme for latency-sensitive
+tasks on an Unmanaged Edge Platform (UEP). It minimizes the completion time of applications and
+is bandwidth efficient. I-BOT brings forth three innovations. First, it profiles and predicts
+the interference patterns of the tasks to make scheduling decisions. Second, it uses a feedback
+mechanism to adjust for changes in the computational capacity of the UEDs and a prediction mechanism
+to handle their sporadic exits. Third, it accounts for input dependence of tasks in its scheduling
+decision (such as, two tasks requiring the same input data). To evaluate I-BOT, we run end-to-end
+simulations with applications representing autonomous driving, composed of multiple tasks.
+We compare to two basic baselines (random and round-robin) and two state-of-the-arts, Lavea [SEC-2017]
+and Petrel [MSN-2018]. Compared to these baselines, I-BOT significantly reduces the average service
+time of application tasks. This reduction is more pronounced in dynamic heterogeneous environments,
+which would be the case in a UEP. 

@@ -1,0 +1,19 @@
+We use the refined isogeometric analysis (rIGA) to solve generalized Hermitian eigenproblems
+$({Ku=\lambda Mu})$. The rIGA framework conserves the desirable properties of maximum-continuity
+isogeometric analysis (IGA) discretizations while reducing the computation cost of the solution
+through partitioning the computational domain by adding zero-continuity basis functions. As
+a result, rIGA enriches the approximation space and decreases the interconnection between degrees
+of freedom. We compare computational costs of rIGA versus those of IGA when employing a Lanczos eigensolver
+with a shift-and-invert spectral transformation. When all eigenpairs within a given interval
+${[\lambda_s,\lambda_e]}$ are of interest, we select several shifts ${\sigma_k\in[\lambda_s,\lambda_e]}$
+using a spectrum slicing technique. For each shift $\sigma_k$, the cost of factorization of the
+spectral transformation matrix ${K-\sigma_k M}$ drives the total computational cost of the eigensolution.
+Several multiplications of the operator matrices ${(K-\sigma_k M)^{-1} M}$ by vectors follow
+this factorization. Let $p$ be the polynomial degree of basis functions and assume that IGA has maximum
+continuity of ${p-1}$, while rIGA introduces $C^0$ separators to minimize the factorization cost.
+For this setup, our theoretical estimates predict computational savings to compute a fixed number
+of eigenpairs of up to ${O(p^2)}$ in the asymptotic regime, that is, large problem sizes. Yet, our
+numerical tests show that for moderately-sized eigenproblems, the total computational cost reduction
+is $O(p)$. Nevertheless, rIGA improves the accuracy of every eigenpair of the first $N_0$ eigenvalues
+and eigenfunctions. Here, we allow $N_0$ to be as large as the total number of eigenmodes of the original
+maximum-continuity IGA discretization. 

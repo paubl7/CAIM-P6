@@ -1,0 +1,18 @@
+Extreme Learning Machine is a powerful classification method very competitive existing classification
+methods. It is extremely fast at training. Nevertheless, it cannot perform face verification tasks
+properly because face verification tasks require comparison of facial images of two individuals
+at the same time and decide whether the two faces identify the same person. The structure of Extreme
+Leaning Machine was not designed to feed two input data streams simultaneously, thus, in 2-input
+scenarios Extreme Learning Machine methods are normally applied using concatenated inputs. However,
+this setup consumes two times more computational resources and it is not optimized for recognition
+tasks where learning a separable distance metric is critical. For these reasons, we propose and
+develop a Siamese Extreme Learning Machine (SELM). SELM was designed to be fed with two data streams
+in parallel simultaneously. It utilizes a dual-stream Siamese condition in the extra Siamese layer
+to transform the data before passing it along to the hidden layer. Moreover, we propose a Gender-Ethnicity-Dependent
+triplet feature exclusively trained on a variety of specific demographic groups. This feature
+enables learning and extracting of useful facial features of each group. Experiments were conducted
+to evaluate and compare the performances of SELM, Extreme Learning Machine, and DCNN. The experimental
+results showed that the proposed feature was able to perform correct classification at 97.87% accuracy
+and 99.45% AUC. They also showed that using SELM in conjunction with the proposed feature provided
+98.31% accuracy and 99.72% AUC. They outperformed the well-known DCNN and Extreme Leaning Machine
+methods by a wide margin. 

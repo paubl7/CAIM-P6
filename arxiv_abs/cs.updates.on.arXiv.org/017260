@@ -1,0 +1,19 @@
+Similar question retrieval is a core task in community-based question answering (CQA) services.
+To balance the effectiveness and efficiency, the question retrieval system is typically implemented
+as multi-stage rankers: The first-stage ranker aims to recall potentially relevant questions
+from a large repository, and the latter stages attempt to re-rank the retrieved results. Most existing
+works on question retrieval mainly focused on the re-ranking stages, leaving the first-stage ranker
+to some traditional term-based methods. However, term-based methods often suffer from the vocabulary
+mismatch problem, especially on short texts, which may block the re-rankers from relevant questions
+at the very beginning. An alternative is to employ embedding-based methods for the first-stage
+ranker, which compress texts into dense vectors to enhance the semantic matching. However, these
+methods often lose the discriminative power as term-based methods, thus introduce noise during
+retrieval and hurt the recall performance. In this work, we aim to tackle the dilemma of the first-stage
+ranker, and propose a discriminative semantic ranker, namely DenseTrans, for high-recall retrieval.
+Specifically, DenseTrans is a densely connected Transformer, which learns semantic embeddings
+for texts based on Transformer layers. Meanwhile, DenseTrans promotes low-level features through
+dense connections to keep the discriminative power of the learned representations. DenseTrans
+is inspired by DenseNet in computer vision (CV), but poses a new way to use the dense connectivity
+which is totally different from its original design purpose. Experimental results over two question
+retrieval benchmark datasets show that our model can obtain significant gain on recall against
+strong term-based methods as well as state-of-the-art embedding-based methods. 

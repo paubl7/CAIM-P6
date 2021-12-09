@@ -1,0 +1,19 @@
+Statistical machine learning has widespread application in various domains. These methods include
+probabilistic algorithms, such as Markov Chain Monte-Carlo (MCMC), which rely on generating random
+numbers from probability distributions. These algorithms are computationally expensive on conventional
+processors, yet their statistical properties, namely interpretability and uncertainty quantification
+(UQ) compared to deep learning, make them an attractive alternative approach. Therefore, hardware
+specialization can be adopted to address the shortcomings of conventional processors in running
+these applications. In this paper, we propose a high-throughput accelerator for Markov Random
+Field (MRF) inference, a powerful model for representing a wide range of applications, using MCMC
+with Gibbs sampling. We propose a tiled architecture which takes advantage of near-memory computing,
+and memory optimizations tailored to the semantics of MRF. Additionally, we propose a novel hybrid
+on-chip/off-chip memory system and logging scheme to efficiently support UQ. This memory system
+design is not specific to MRF models and is applicable to applications using probabilistic algorithms.
+In addition, it dramatically reduces off-chip memory bandwidth requirements. We implemented
+an FPGA prototype of our proposed architecture using high-level synthesis tools and achieved 146MHz
+frequency for an accelerator with 32 function units on an Intel Arria 10 FPGA. Compared to prior work
+on FPGA, our accelerator achieves 26X speedup. Furthermore, our proposed memory system and logging
+scheme to support UQ reduces off-chip bandwidth by 71% for two applications. ASIC analysis in 15nm
+shows our design with 2048 function units running at 3GHz outperforms GPU implementations of motion
+estimation and stereo vision on Nvidia RTX2080Ti by 120X-210X, occupying only 7.7% of the area.

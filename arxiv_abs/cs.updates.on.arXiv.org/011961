@@ -1,0 +1,19 @@
+While existing predictive frameworks are able to handle Euclidean structured data (i.e, brain
+images), they might fail to generalize to geometric non-Euclidean data such as brain networks.
+Besides, these are rooted the sample selection step in using Euclidean or learned similarity measure
+between vectorized training and testing brain networks. Such sample connectomic representation
+might include irrelevant and redundant features that could mislead the training sample selection
+step. Undoubtedly, this fails to exploit and preserve the topology of the brain connectome. To overcome
+this major drawback, we propose Residual Embedding Similarity-Based Network selection (RESNets)
+for predicting brain network evolution trajectory from a single timepoint. RESNets first learns
+a compact geometric embedding of each training and testing sample using adversarial connectome
+embedding network. This nicely reduces the high-dimensionality of brain networks while preserving
+their topological properties via graph convolutional networks. Next, to compute the similarity
+between subjects, we introduce the concept of a connectional brain template (CBT), a fixed network
+reference, where we further represent each training and testing network as a deviation from the
+reference CBT in the embedding space. As such, we select the most similar training subjects to the
+testing subject at baseline by comparing their learned residual embeddings with respect to the
+pre-defined CBT. Once the best training samples are selected at baseline, we simply average their
+corresponding brain networks at follow-up timepoints to predict the evolution trajectory of the
+testing network. Our experiments on both healthy and disordered brain networks demonstrate the
+success of our proposed method in comparison to RESNets ablated versions and traditional approaches.

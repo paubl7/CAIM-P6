@@ -1,0 +1,18 @@
+Purpose: To experimentally validate the Fastcat cone beam CT (CBCT) simulator against kV and MV
+CBCT images acquired with a Varian Truebeam linac. Methods: kV and MV CBCT images of a Catphan 504
+phantom were acquired using a 100 kVp beam with the on-board imager (OBI) and a 6 MV treatment beam
+with the electronic portal imaging device (EPID), respectively. The kV Fastcat simulation was
+performed using detailed models of the x-ray source, bowtie filter, a high resolution voxelized
+virtual Catphan phantom, anti-scatter grid, and the CsI scintillating detector. Likewise, an
+MV Fastcat CBCT was simulated with detailed models for the beam energy spectrum, flattening filter,
+a high resolution voxelized virtual Catphan phantom, and the GOS scintillating detector. Experimental
+and simulated CBCT images of the phantom were compared with respect to HU values, contrast to noise
+ratio (CNR),and dose linearity. Detector modulation transfer function (MTF) for the two detectors
+were also experimentally validated. Fastcat's dose calculations were compared to MC dose calculations
+performed with Topas. Results: For the kV and MV simulations, respectively: Contrast agreed within
+14 and 9 HUs and detector MTF agreed within 4.2% and 2.5%. Likewise, CNR had a root mean squared error
+(RMSE) of 2.6% and 1.4%. Dose agreed within 2.4% and 1.6% of MC values. The kV and MV CBCT images took
+71 and 72 seconds to simulate in Fastcat with 887 and 493 projections, respectively. Conclusions:
+We present a multi energy experimental validation of a fast and accurate CBCT simulator against
+a commercial linac. The simulator is open source and all models found in this work can be downloaded
+from https://github.com/jerichooconnell/fastcat.git 

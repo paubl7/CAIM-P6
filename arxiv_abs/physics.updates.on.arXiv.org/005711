@@ -1,0 +1,20 @@
+In this article we describe a unifying framework for variational electromagnetic particle schemes
+of spectral type, and we propose a novel spectral Particle-In-Cell (PIC) scheme that preserves
+a discrete Hamiltonian structure. Our work is based on a new abstract variational derivation of
+particle schemes which builds on a de Rham complex where Low's Lagrangian is discretized using a
+particle approximation of the distribution function. In this framework, which extends the recent
+Finite Element based Geometric Electromagnetic PIC (GEMPIC) method to a variety of field solvers,
+the discretization of the electromagnetic potentials and fields is represented by a de Rham sequence
+of compatible spaces, and the particle-field coupling procedure is described by approximation
+operators that commute with the differential operators in the sequence. In particular, for spectral
+Maxwell solvers the choice of truncated $L^2$ projections using continuous Fourier transform
+coefficients for the commuting approximation operators yields the gridless Particle-in-Fourier
+method, whereas spectral Particle-in-Cell methods are obtained by using discrete Fourier transform
+coefficients computed from a grid. By introducing a new sequence of spectral pseudo-differential
+approximation operators, we then obtain a novel variational spectral PIC method with discrete
+Hamiltonian structure that we call Fourier-GEMPIC. Fully discrete schemes are then derived using
+a Hamiltonian splitting procedure, leading to explicit time steps that preserve the Gauss laws
+and the discrete Poisson bracket associated with the Hamiltonian structure. These explicit steps
+share many similarities with standard spectral PIC methods. As arbitrary filters are allowed in
+our framework, we also discuss aliasing errors and study a natural back-filtering procedure to
+mitigate the damping caused by anti-aliasing smoothing particle shapes. 

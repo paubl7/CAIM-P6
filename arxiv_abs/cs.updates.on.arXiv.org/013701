@@ -1,0 +1,20 @@
+Because of their highly directional transmissions, radios operating at millimeter wave (mmWave)
+frequencies need to perform beam management to establish and maintain reliable mmWave links. Existing
+solutions rely on explicit coordination between the transmitter (TX) and the receiver (RX), which
+reduces the airtime available for communication and complicates the network protocol design.
+This paper presents DeepBeam, a framework for beam management in mmWave networks that does not require
+pilot sequences from the transmitter, nor any beam sweeping or synchronization from the receiver.
+This is achieved by inferring (i) the Angle of Arrival (AoA) of the beam and (ii) the actual beam being
+used by the transmitter through waveform-level deep learning on ongoing transmissions between
+the TX to other receivers. This is possible because different beam patterns introduce different
+"impairments" to the waveform, which can be subsequently learned by a convolutional neural network
+(CNN). To demonstrate DeepBeam's generality, we conduct an extensive experimental campaign where
+we collect more than 4 TB of mmWave waveforms with (i) 4 phased array antennas at 60.48 GHz, (ii) 2 codebooks
+containing 24 one-dimensional beams and 12 two-dimensional beams; (iii) 3 receiver gains; (iv)
+3 different AoAs; (v) multiple TX and RX locations. We also collect waveform data with two custom-designed
+mmWave software-defined radios with fully-digital beamforming architectures at 58 GHz, and implement
+our learning models in FPGA to evaluate latency performance. DeepBeam (i) achieves accuracy of
+up to 96%, 84% and 77% with a 5-beam, 12-beam and 24-beam codebook, respectively; and (ii) reduces
+latency by up to 7x with respect to the 5G NR initial beam sweep in a default configuration and with
+a 12-beam codebook. Additionally, we pledge to share our waveform dataset and the full DeepBeam
+code repo with the community. 

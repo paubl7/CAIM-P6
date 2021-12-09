@@ -1,0 +1,19 @@
+The ubiquity of smart voice assistants has made conversational shopping commonplace. This is especially
+true for low consideration segments like grocery. A central problem in conversational grocery
+is the automatic generation of short product titles that can be read out fast during a conversation.
+Several supervised models have been proposed in the literature that leverage manually labeled
+datasets and additional product features to generate short titles automatically. However, obtaining
+large amounts of labeled data is expensive and most grocery item pages are not as feature-rich as
+other categories. To address this problem we propose a pre-training based solution that makes use
+of unlabeled data to learn contextual product representations which can then be fine-tuned to obtain
+better title compression even in a low resource setting. We use a self-attentive BiLSTM encoder
+network with a time distributed softmax layer for the title compression task. We overcome the vocabulary
+mismatch problem by using a hybrid embedding layer that combines pre-trained word embeddings with
+trainable character level convolutions. We pre-train this network as a discriminator on a replaced-token
+detection task over a large number of unlabeled grocery product titles. Finally, we fine tune this
+network, without any modifications, with a small labeled dataset for the title compression task.
+Experiments on Walmart's online grocery catalog show our model achieves performance comparable
+to state-of-the-art models like BERT and XLNet. When fine tuned on all of the available training
+data our model attains an F1 score of 0.8558 which lags the best performing model, BERT-Base, by 2.78%
+and XLNet by 0.28% only, while using 55 times lesser parameters than both. Further, when allowed
+to fine tune on 5% of the training data only, our model outperforms BERT-Base by 24.3% in F1 score.

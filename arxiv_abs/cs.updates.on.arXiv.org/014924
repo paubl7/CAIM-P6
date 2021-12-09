@@ -1,0 +1,19 @@
+Spiking Neural Networks (SNNs) are brain-inspired, event-driven machine learning algorithms
+that have been widely recognized in producing ultra-high-energy-efficient hardware. Among existing
+SNNs, unsupervised SNNs based on synaptic plasticity, especially Spike-Timing-Dependent Plasticity
+(STDP), are considered to have great potential in imitating the learning process of the biological
+brain. Nevertheless, the existing STDP-based SNNs have limitations in constrained learning capability
+and/or slow learning speed. Most STDP-based SNNs adopted a slow-learning Fully-Connected (FC)
+architecture and used a sub-optimal vote-based scheme for spike decoding. In this paper, we overcome
+these limitations with: 1) a design of high-parallelism network architecture, inspired by the
+Inception module in Artificial Neural Networks (ANNs); 2) use of a Vote-for-All (VFA) decoding
+layer as a replacement to the standard vote-based spike decoding scheme, to reduce the information
+loss in spike decoding and, 3) a proposed adaptive repolarization (resetting) mechanism that accelerates
+SNNs' learning by enhancing spiking activities. Our experimental results on two established benchmark
+datasets (MNIST/EMNIST) show that our network architecture resulted in superior performance
+compared to the widely used FC architecture and a more advanced Locally-Connected (LC) architecture,
+and that our SNN achieved competitive results with state-of-the-art unsupervised SNNs (95.64%/80.11%
+accuracy on the MNIST/EMNISE dataset) while having superior learning efficiency and robustness
+against hardware damage. Our SNN achieved great classification accuracy with only hundreds of
+training iterations, and random destruction of large numbers of synapses or neurons only led to
+negligible performance degradation. 

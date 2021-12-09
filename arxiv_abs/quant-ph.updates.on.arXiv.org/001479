@@ -1,0 +1,18 @@
+We investigate the problem of synthesizing T-depth-optimal quantum circuits over the universal
+fault-tolerant Clifford+T gate set, where the implementation of the non-Clifford T-gate is the
+most expensive. We apply the nested-meet-in-the-middle(MITM) technique of Mosca,Mukhopadhyay(2020)
+and obtain a space-time trade-off to provably synthesize both depth and T-depth-optimal circuits.
+Specifically, using channel representation we design $O\left(|\mathbb{V}_n|^{\left\lceil\frac{d}{c}\right\rceil}
+\right)$ time algorithm for T-depth-optimal circuits. $\mathbb{V}_n$ is the set of some special
+T-depth-1 unitaries and $d$ is the minimum T-depth of input unitary. The MITM technique of Amy.et.al.(2013)
+has a complexity $\left(\left|\mathcal{V}_n\right|^{d/2}\right)$, where $\mathcal{V}_n$
+is the set of T-depth-1 circuits. Since $|\mathbb{V}_n| \ll|\mathcal{V}_{n}|$, our algorithm
+is much more efficient. For example, we take 2.152 seconds to generate $\mathbb{V}_3$ (size 2282),
+Amy et al. takes about 4 days ($\approx 3.5\times 10^6$ seconds) to generate $\mathcal{V}_{3}$
+(size > 92,897,280). Inspired by the observations made by Mosca and Mukhopadhyay(2020), we design
+a $\poly((\log N)!,N,d)$ complexity heuristic algorithm for synthesizing T-depth-optimal circuits,
+where $N=2^n$. We synthesized previously unknown T-depth-optimal circuits for Fredkin, Peres,
+Negated-Toffoli and Quantum-XOR in $\approx$ 27-28 minutes, and random 2 and 3-qubit unitaries
+with input T-depth in the range 2-20 and 2-7 respectively, and obtained output T-depth $\leq$ input.
+There are no efficient T-depth-optimal synthesis algorithm to verify our results, but it is a good
+indication about the correctness of our claims for most unitaries. 

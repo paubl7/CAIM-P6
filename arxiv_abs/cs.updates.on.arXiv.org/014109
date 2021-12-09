@@ -1,0 +1,19 @@
+In 2015, Guth proved that if $S$ is a collection of $n$ $g$-dimensional semi-algebraic sets in $\mathbb{R}^d$
+and if $D\geq 1$ is an integer, then there is a $d$-variate polynomial $P$ of degree at most $D$ so that
+each connected component of $\mathbb{R}^d\setminus Z(P)$ intersects $O(n/D^{d-g})$ sets from
+$S$. Such a polynomial is called a generalized partitioning polynomial. We present a randomized
+algorithm that computes such polynomials efficiently -- the expected running time of our algorithm
+is linear in $|S|$. Our approach exploits the technique of quantifier elimination combined with
+that of $\epsilon$-samples. We also present an extension of our construction to multi-level polynomial
+partitioning for semi-algebraic sets in $\mathbb{R}^d$. We present five applications of our result.
+The first is a data structure for answering point-enclosure queries among a family of semi-algebraic
+sets in $\mathbb{R}^d$ in $O(\log n)$ time, with storage complexity and expected preprocessing
+time of $O(n^{d+\epsilon})$. The second is a data structure for answering range-searching queries
+with semi-algebraic ranges in $\mathbb{R}^d$ in $O(\log n)$ time, with $O(n^{t+\epsilon})$ storage
+and expected preprocessing time, where $t > 0$ is an integer that depends on $d$ and the description
+complexity of the ranges. The third is a data structure for answering vertical ray-shooting queries
+among semi-algebraic sets in $\mathbb{R}^{d}$ in $O(\log^2 n)$ time, with $O(n^{d+\epsilon})$
+storage and expected preprocessing time. The fourth is an efficient algorithm for cutting algebraic
+curves in $\mathbb{R}^2$ into pseudo-segments. The fifth application is for eliminating depth
+cycles among triangles in $\mathbb{R}^3$, where we show a nearly-optimal algorithm to cut $n$ pairwise
+disjoint non-vertical triangles in $\mathbb{R}^3$ into pieces that form a depth order. 

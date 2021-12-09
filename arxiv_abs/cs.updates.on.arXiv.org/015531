@@ -1,0 +1,20 @@
+We propose a novel distributed monetary system called Hearsay that tolerates both Byzantine and
+rational behavior without the need for agents to reach consensus on executed transactions. Recent
+work [5, 10, 15] has shown that distributed monetary systems do not require consensus and can operate
+using a broadcast primitive with weaker guarantees, such as reliable broadcast. However, these
+protocols assume that some number of agents may be Byzantine and the remaining agents are perfectly
+correct. For the application of a monetary system in which the agents are real people with economic
+interests, the assumption that agents are perfectly correct may be too strong. We expand upon this
+line of thought by weakening the assumption of correctness and instead adopting a fault tolerance
+model which allows up to $t < \frac{N}{3}$ agents to be Byzantine and the remaining agents to be rational.
+A rational agent is one which will deviate from the protocol if it is in their own best interest. Under
+this fault tolerance model, Hearsay implements a monetary system in which all rational agents achieve
+agreement on executed transactions. Moreover, Hearsay requires only a single broadcast per transaction.
+In order to incentivize rational agents to behave correctly in Hearsay, agents are rewarded with
+transaction fees for participation in the protocol and punished for noticeable deviations from
+the protocol. Additionally, Hearsay uses a novel broadcast primitive called Rational Reliable
+Broadcast to ensure that agents can broadcast messages under Hearsay's fault tolerance model.
+Rational Reliable Broadcast achieves equivalent guarantees to Byzantine Reliable Broadcast
+[7] but can tolerate the presence of rational agents. To show this, we prove that following the Rational
+Reliable Broadcast protocol constitutes a Nash equilibrium between rational agents and may therefore
+be of independent interest. 

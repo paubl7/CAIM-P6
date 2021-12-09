@@ -1,0 +1,20 @@
+Physical photographs now can be conveniently scanned by smartphones and stored forever as a digital
+version, yet the scanned photos are not restored well. One solution is to train a supervised deep
+neural network on many digital photos and the corresponding scanned photos. However, it requires
+a high labor cost, leading to limited training data. Previous works create training pairs by simulating
+degradation using image processing techniques. Their synthetic images are formed with perfectly
+scanned photos in latent space. Even so, the real-world degradation in smartphone photo scanning
+remains unsolved since it is more complicated due to lens defocus, lighting conditions, losing
+details via printing. Besides, locally structural misalignment still occurs in data due to distorted
+shapes captured in a 3-D world, reducing restoration performance and the reliability of the quantitative
+evaluation. To solve these problems, we propose a semi-supervised Deep Photo Scan (DPScan). First,
+we present a way of producing real-world degradation and provide the DIV2K-SCAN dataset for smartphone-scanned
+photo restoration. Also, Local Alignment is proposed to reduce the minor misalignment remaining
+in data. Second, we simulate many different variants of the real-world degradation using low-level
+image transformation to gain a generalization in smartphone-scanned image properties, then train
+a degradation network to generalize all styles of degradation and provide pseudo-scanned photos
+for unscanned images as if they were scanned by a smartphone. Finally, we propose a Semi-Supervised
+Learning that allows our restoration network to be trained on both scanned and unscanned images,
+diversifying training image content. As a result, the proposed DPScan quantitatively and qualitatively
+outperforms its baseline architecture, state-of-the-art academic research, and industrial
+products in smartphone photo scanning. 

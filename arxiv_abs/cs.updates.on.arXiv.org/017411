@@ -1,0 +1,18 @@
+Within the framework of diffuse interface methods, we derive a pressure-based Baer-Nunziato type
+model well-suited to weakly compressible multiphase flows. The model can easily deal with different
+equation of states and it includes relaxation terms characterized by user-defined finite parameters,
+which drive the pressure and velocity of each phase toward the equilibrium. There is no clear notion
+of speed of sound, and thus, most of the classical low Mach approximation cannot easily be cast in
+this context. The proposed solution strategy consists of two operators: a semi-implicit finite-volume
+solver for the hyperbolic part and an ODE integrator for the relaxation processes. Being the acoustic
+terms in the hyperbolic part integrated implicitly, the stability condition on the time step is
+lessened. The discretization of non-conservative terms involving the gradient of the volume fraction
+fulfills by construction the non-disturbance condition on pressure and velocity to avoid oscillations
+across the multimaterial interfaces. The developed simulation tool is validated through one-dimensional
+simulations of shock-tube and Riemann-problems, involving water-aluminum and water-air mixtures,
+vapor-liquid mixture of water and of carbon dioxide, and almost pure flows. The numerical results
+match analytical and reference ones, except some expected discrepancies across shocks, which
+however remain acceptable (errors within some percentage points). All tests were performed with
+acoustic CFL numbers greater than one, and no stability issues arose, even for CFL greater than 10.
+The effects of different values of relaxation parameters and of different amount equations of state
+-- stiffened gas and Peng-Robinson -- were investigated. 

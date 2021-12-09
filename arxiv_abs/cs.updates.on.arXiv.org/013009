@@ -1,0 +1,18 @@
+Multiple wireless sensing tasks, e.g., radar detection for driver safety, involve estimating
+the "channel" or relationship between signal transmitted and received. In this work, we focus on
+a certain channel model known as the delay-doppler channel. This model begins to be useful in the
+high frequency carrier setting, which is increasingly common with developments in millimeter-wave
+technology. Moreover, the delay-doppler model then continues to be applicable even when using
+signals of large bandwidth, which is a standard approach to achieving high resolution channel estimation.
+However, when high resolution is desirable, this standard approach results in a tension with the
+desire for efficiency because, in particular, it immediately implies that the signals in play live
+in a space of very high dimension $N$ (e.g., ~$10^6$ in some applications), as per the Shannon-Nyquist
+sampling theorem. To address this difficulty, we propose a novel randomized estimation scheme
+called Sparse Channel Estimation, or SCE for short, for channel estimation in the $k$-sparse setting
+(e.g., $k$ objects in radar detection). This scheme involves an estimation procedure with sampling
+and space complexity both on the order of $k(logN)^3$, and arithmetic complexity on the order of
+$k(log N)^3 + k^2$, for $N$ sufficiently large. To the best of our knowledge, Sparse Channel Estimation
+(SCE) is the first of its kind to achieve these complexities simultaneously -- it seems to be extremely
+efficient! As an added advantage, it is a simple combination of three ingredients, two of which are
+well-known and widely used, namely digital chirp signals and discrete Gaussian filter functions,
+and the third being recent developments in sparse fast fourier transform algorithms. 

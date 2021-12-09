@@ -1,0 +1,19 @@
+Nowadays, there are ubiquitousness of GPS sensors in various devices collecting, transmitting
+and storing tremendous trajectory data. However, such an unprecedented scale of GPS data has posed
+an urgent demand for not only an effective storage mechanism but also an efficient query mechanism.
+Line simplification in online mode, searving as a mainstream trajectory compression method, plays
+an important role to attack this issue. But for the existing algorithms, either their time cost is
+extremely high, or the accuracy loss after the compression is completely unacceptable. To attack
+this issue, we propose $\epsilon \_$Region based Online trajectory Compression with Error bounded
+(ROCE for short), which makes the best balance among the accuracy loss, the time cost and the compression
+rate. The range query serves as a primitive, yet quite essential operation on analyzing trajectories.
+Each trajectory is usually seen as a sequence of discrete points, and in most previous work, a trajectory
+is judged to be overlapped with the query region R iff there is at least one point in this trajectory
+falling in R. But this traditional criteria is not suitable when the queried trajectories are compressed,
+because there may be hundreds of points discarded between each two adjacent points and the points
+in each compressed trajectory are quite sparse. And many trajectories could be missing in the result
+set. To address this, in this paper, a new criteria based on the probability and an efficient Range
+Query processing algorithm on Compressed trajectories RQC are proposed. In addition, an efficient
+index \emph{ASP\_tree} and lots of novel techniques are also presented to accelerate the processing
+of trajectory compression and range queries obviously. Extensive experiments have been done on
+multiple real datasets, and the results demonstrate superior performance of our methods. 

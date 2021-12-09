@@ -1,0 +1,19 @@
+The quality of healthcare provided by hospitals is subject to considerable variability. Consequently,
+accurate measurements of hospital performance are essential for various decision-makers, including
+patients, hospital managers and health insurers. Hospital performance is assessed via the health
+outcomes of their patients. However, as the risk profiles of patients between hospitals vary, measuring
+hospital performance requires adjustment for patient risk. This task is formalized in the state-of-the-art
+procedure through a hierarchical generalized linear model, that isolates hospital fixed-effects
+from the effect of patient risk on health outcomes. Due to the linear nature of this approach, any
+non-linear relations or interaction terms between risk variables are neglected. In this work,
+we propose a novel method for measuring hospital performance adjusted for patient risk. This method
+captures non-linear relationships as well as interactions among patient risk variables, specifically
+the effect of co-occurring health conditions on health outcomes. For this purpose, we develop a
+tailored neural network architecture that is partially interpretable: a non-linear part is used
+to encode risk factors, while a linear structure models hospital fixed-effects, such that the risk-adjusted
+hospital performance can be estimated. We base our evaluation on more than 13 million patient admissions
+across almost 1,900 US hospitals as provided by the Nationwide Readmissions Database. Our model
+improves the ROC-AUC over the state-of-the-art by 4.1 percent. These findings demonstrate that
+a large portion of the variance in health outcomes can be attributed to non-linear relationships
+between patient risk variables and implicate that the current approach of measuring hospital performance
+should be expanded. 

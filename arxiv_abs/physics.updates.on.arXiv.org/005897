@@ -1,0 +1,18 @@
+Analyzing large-scale data from simulations of turbulent flows is memory intensive, requiring
+significant resources. This major challenge highlights the need for data compression techniques.
+In this study, we apply a physics-informed Deep Learning technique based on vector quantization
+to generate a discrete, low-dimensional representation of data from simulations of three-dimensional
+turbulent flows. The deep learning framework is composed of convolutional layers and incorporates
+physical constraints on the flow, such as preserving incompressibility and global statistical
+characteristics of the velocity gradients. The accuracy of the model is assessed using statistical,
+comparison-based similarity and physics-based metrics. The training data set is produced from
+Direct Numerical Simulation of an incompressible, statistically stationary, isotropic turbulent
+flow. The performance of this lossy data compression scheme is evaluated not only with unseen data
+from the stationary, isotropic turbulent flow, but also with data from decaying isotropic turbulence,
+a Taylor-Green vortex flow, and a turbulent channel flow. Defining the compression ratio (CR) as
+the ratio of original data size to the compressed one, the results show that our model based on vector
+quantization can offer CR$=85$ with a mean square error (MSE) of $O(10^{-3})$, and predictions
+that faithfully reproduce the statistics of the flow, except at the very smallest scales where there
+is some loss. Compared to the recent study of Glaws. et. al. (Physical Review Fluids, 5(11):114602,
+2020), which was based on a conventional autoencoder (where compression is performed in a continuous
+space), our model improves the CR by more than $30$ percent... 

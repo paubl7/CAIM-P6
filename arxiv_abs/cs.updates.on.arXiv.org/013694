@@ -1,0 +1,19 @@
+Context: In search-based software engineering we often use popular heuristics with default configurations,
+which typically lead to suboptimal results, or we perform experiments to identify configurations
+on a trial-and-error basis, which may lead to better results for a specific problem. We consider
+the problem of generating test suites for mobile applications (apps) and rely on \Sapienz, a state-of-the-art
+approach to this problem that uses a popular heuristic (NSGA-II) with a default configuration.
+Objective: We want to achieve better results in generating test suites with \Sapienz while avoiding
+trial-and-error experiments to identify a more suitable configuration of \Sapienz. Method: We
+conducted a fitness landscape analysis of \Sapienz to analytically understand the search problem,
+which allowed us to make informed decisions about the heuristic and configuration of \Sapienz when
+developing \SapienzDiv. We comprehensively evaluated \SapienzDiv in a head-to-head comparison
+with \Sapienz on 34 apps. Results: Analyzing the fitness landscape of \Sapienz, we observed a lack
+of diversity of the evolved test suites and a stagnation of the search after 25 generations. \SapienzDiv
+realizes mechanisms that preserve the diversity of the test suites being evolved. The evaluation
+showed that \SapienzDiv achieves better or at least similar test results than \Sapienz concerning
+coverage and the number of revealed faults. However, \SapienzDiv typically produces longer test
+sequences and requires more execution time than \Sapienz. Conclusions: The understanding of the
+search problem obtained by the fitness landscape analysis helped us to find a more suitable configuration
+of \Sapienz without trial-and-error experiments. By promoting diversity of test suites during
+the search, improved or at least similar test results in terms of faults and coverage can be achieved.

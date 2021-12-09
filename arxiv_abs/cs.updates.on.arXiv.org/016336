@@ -1,0 +1,19 @@
+In package recommendations, a set of items is regarded as a unified package towards a single common
+goal, whereas conventional recommender systems treat items independently. For example, for music
+playlist recommendations, each package (i.e., playlist) should be consistent with respect to
+the genres. In group recommendations, items are recommended to a group of users, whereas conventional
+recommender systems recommend items to an individual user. Different from the conventional settings,
+it is difficult to measure the utility of group recommendations because it involves more than one
+user. In particular, fairness is crucial in group recommendations. Even if some members in a group
+are substantially satisfied with a recommendation, it is undesirable if other members are ignored
+to increase the total utility. Various methods for evaluating and applying the fairness of group
+recommendations have been proposed in the literature. However, all these methods maximize the
+score and output only a single package. This is in contrast to conventional recommender systems,
+which output several (e.g., top-$K$) candidates. This can be problematic because a group can be
+dissatisfied with the recommended package owing to some unobserved reasons, even if the score is
+high. In particular, each fairness measure is not absolute, and users may call for different fairness
+criteria than the one adopted in the recommender system in operation. To address this issue, we propose
+a method to enumerate fair packages so that a group can select their favorite packages from the list.
+Our proposed method can enumerate fair packages efficiently, and users can search their favorite
+packages by various filtering queries. We confirm that our algorithm scales to large datasets and
+can balance several aspects of the utility of the packages. 

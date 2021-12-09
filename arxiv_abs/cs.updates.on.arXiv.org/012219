@@ -1,0 +1,19 @@
+High-level applications, such as machine learning, are evolving from simple models based on multilayer
+perceptrons for simple image recognition to much deeper and more complex neural networks for self-driving
+vehicle control systems.The rapid increase in the consumption of memory and computational resources
+by these models demands the use of multi-core parallel systems to scale the execution of the complex
+emerging applications that depend on them. However, parallel programs running on high-performance
+computers often suffer from data communication bottlenecks, limited memory bandwidth, and synchronization
+overhead due to irregular critical sections. In this paper, we propose a framework to reduce the
+data communication and improve the scalability and performance of these applications in multi-core
+systems. We design a vertex cut framework for partitioning LLVM IR graphs into clusters while taking
+into consideration the data communication and workload balance among clusters. First, we construct
+LLVM graphs by compiling high-level programs into LLVM IR, instrumenting code to obtain the execution
+order of basic blocks and the execution time for each memory operation, and analyze data dependencies
+in dynamic LLVM traces. Next, we formulate the problem as Weight Balanced $p$-way Vertex Cut, and
+propose a generic and flexible framework, wherein four different greedy algorithms are proposed
+for solving this problem. Lastly, we propose a memory-centric run-time mapping of the linear time
+complexity to map clusters generated from the vertex cut algorithms onto a multi-core platform.
+We conclude that our best algorithm, WB-Libra, provides performance improvements of 1.56x and
+1.86x over existing state-of-the-art approaches for 8 and 1024 clusters running on a multi-core
+platform, respectively. 

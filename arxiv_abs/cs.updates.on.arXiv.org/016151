@@ -1,0 +1,18 @@
+Machine learning (ML)-based network intrusion detection system (NIDS) plays a critical role in
+discovering unknown and novel threats in a large-scale cyberspace. It has been widely adopted as
+a mainstream hunting method in many organizations, such as financial institutes, manufacturing
+companies and government agencies. However, there are two challenging issues in the existing designs:
+1) achieving excellent performance of threat detection is often at the cost of a large number of false
+positives, leading to the problem of alert fatigue and 2) the interpretability of detection results
+is low, making it difficult for the security analyst to obtain the insight of threats and take promptly
+actions against the attacks. To tackle the above issues, in this paper we propose a defense mechanism,
+DarkHunter, that includes three parts: stream processor, detection engine and incident analyzer.
+The stream processor converts raw network packet streams into data records of a set of statistical
+features that can be effectively used for learning; The detection engine leverages an efficient
+ensemble neural network (EnsembleNet) to identify anomalous network traffic; The incident analyzer
+applies a correlation analysis to filter out the mis-predictions from EnsembleNet, traces each
+detected threat from its statistical representation back to its source traffic flow to enhance
+its intelligibility and prioritizes the threats to be responded to minimize security risks. Our
+evaluations, based on the UNSW-NB15 testbed, show that DarkHunter significantly outperforms
+state-of-the-art ML-based NIDS designs by achieving higher accuracy, higher detection rate,
+higher precision, higher F1 score while keeping lower false alarm rate. 

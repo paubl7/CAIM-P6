@@ -1,0 +1,20 @@
+In this work, we determine the full expression of the local truncation error of hyperbolic partial
+differential equations (PDEs) on a uniform mesh. If we are employing a stable numerical scheme and
+the global solution error is of the same order of accuracy as the global truncation error, we make
+the following observations in the asymptotic regime, where the truncation error is dominated by
+the powers of $\Delta x$ and $\Delta t$ rather than their coefficients. Assuming that we reach the
+asymptotic regime before the machine precision error takes over, (a) the order of convergence of
+stable numerical solutions of hyperbolic PDEs at constant ratio of $\Delta t$ to $\Delta x$ is governed
+by the minimum of the orders of the spatial and temporal discretizations, and (b) convergence cannot
+even be guaranteed under only spatial or temporal refinement. We have tested our theory against
+numerical methods employing Method of Lines and not against ones that treat space and time together,
+and we have not taken into consideration the reduction in the spatial and temporal orders of accuracy
+resulting from slope-limiting monotonicity-preserving strategies commonly applied to finite
+volume methods. Otherwise, our theory applies to any hyperbolic PDE, be it linear or non-linear,
+and employing finite difference, finite volume, or finite element discretization in space, and
+advanced in time with a predictor-corrector, multistep, or a deferred correction method. If the
+PDE is reduced to an ordinary differential equation (ODE) by specifying the spatial gradients of
+the dependent variable and the coefficients and the source terms to be zero, then the standard local
+truncation error of the ODE is recovered. We perform the analysis with generic and specific hyperbolic
+PDEs using the symbolic algebra package SymPy, and conduct a number of numerical experiments to
+demonstrate our theoretical findings. 

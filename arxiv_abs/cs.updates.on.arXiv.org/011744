@@ -1,0 +1,19 @@
+In breakthrough work, Tardos (Oper. Res. '86) gave a proximity based framework for solving linear
+programming (LP) in time depending only on the constraint matrix in the bit complexity model. In
+Tardos's framework, one reduces solving the LP $\min \langle c,{x}\rangle$, $Ax=b$, $x \geq 0$,
+$A \in \mathbb{Z}^{m \times n}$, to solving $O(nm)$ LPs in $A$ having small integer coefficient
+objectives and right-hand sides using any exact LP algorithm. This gives rise to an LP algorithm
+in time poly$(n,m\log\Delta_A)$, where $\Delta_A$ is the largest subdeterminant of $A$. A significant
+extension to the real model of computation was given by Vavasis and Ye (Math. Prog. '96), giving a
+specialized interior point method that runs in time poly$(n,m,\log\bar\chi_A)$, depending on
+Stewart's $\bar{\chi}_A$, a well-studied condition number. In this work, we extend Tardos's original
+framework to obtain such a running time dependence. In particular, we replace the exact LP solves
+with approximate ones, enabling us to directly leverage the tremendous recent algorithmic progress
+for approximate linear programming. More precisely, we show that the fundamental "accuracy" needed
+to exactly solve any LP in $A$ is inverse polynomial in $n$ and $\log\bar{\chi}_A$. Plugging in the
+recent algorithm of van den Brand (SODA '20), our method computes an optimal primal and dual solution
+using ${O}(m n^{\omega+1} \log (n)\log(\bar{\chi}_A+n))$ arithmetic operations, outperforming
+the specialized interior point method of Vavasis and Ye and its recent improvement by Dadush et al
+(STOC '20). At a technical level, our framework combines together approximate LP solutions to compute
+exact ones, making use of constructive proximity theorems -- which bound the distance between solutions
+of "nearby" LPs -- to keep the required accuracy low. 

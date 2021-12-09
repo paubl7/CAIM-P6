@@ -1,0 +1,20 @@
+Despite its important applications in Machine Learning, min-max optimization of nonconvex-nonconcave
+objectives remains elusive. Not only are there no known first-order methods converging even to
+approximate local min-max points, but the computational complexity of identifying them is also
+poorly understood. In this paper, we provide a characterization of the computational complexity
+of the problem, as well as of the limitations of first-order methods in constrained min-max optimization
+problems with nonconvex-nonconcave objectives and linear constraints. As a warm-up, we show that,
+even when the objective is a Lipschitz and smooth differentiable function, deciding whether a min-max
+point exists, in fact even deciding whether an approximate min-max point exists, is NP-hard. More
+importantly, we show that an approximate local min-max point of large enough approximation is guaranteed
+to exist, but finding one such point is PPAD-complete. The same is true of computing an approximate
+fixed point of Gradient Descent/Ascent. An important byproduct of our proof is to establish an unconditional
+hardness result in the Nemirovsky-Yudin model. We show that, given oracle access to some function
+$f : P \to [-1, 1]$ and its gradient $\nabla f$, where $P \subseteq [0, 1]^d$ is a known convex polytope,
+every algorithm that finds a $\varepsilon$-approximate local min-max point needs to make a number
+of queries that is exponential in at least one of $1/\varepsilon$, $L$, $G$, or $d$, where $L$ and
+$G$ are respectively the smoothness and Lipschitzness of $f$ and $d$ is the dimension. This comes
+in sharp contrast to minimization problems, where finding approximate local minima in the same
+setting can be done with Projected Gradient Descent using $O(L/\varepsilon)$ many queries. Our
+result is the first to show an exponential separation between these two fundamental optimization
+problems. 

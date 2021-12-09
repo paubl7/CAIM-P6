@@ -1,0 +1,20 @@
+Scoring systems are highly interpretable and widely used to evaluate time-to-event outcomes in
+healthcare research. However, existing time-to-event scores are predominantly created ad-hoc
+using a few manually selected variables based on clinician's knowledge, suggesting an unmet need
+for a robust and efficient generic score-generating method. AutoScore was previously developed
+as an interpretable machine learning score generator, integrated both machine learning and point-based
+scores in the strong discriminability and accessibility. We have further extended it to time-to-event
+data and developed AutoScore-Survival, for automatically generating time-to-event scores with
+right-censored survival data. Random survival forest provides an efficient solution for selecting
+variables, and Cox regression was used for score weighting. We illustrated our method in a real-life
+study of 90-day mortality of patients in intensive care units and compared its performance with
+survival models (i.e., Cox) and the random survival forest. The AutoScore-Survival-derived scoring
+model was more parsimonious than survival models built using traditional variable selection methods
+(e.g., penalized likelihood approach and stepwise variable selection), and its performance was
+comparable to survival models using the same set of variables. Although AutoScore-Survival achieved
+a comparable integrated area under the curve of 0.782 (95% CI: 0.767-0.794), the integer-valued
+time-to-event scores generated are favorable in clinical applications because they are easier
+to compute and interpret. Our proposed AutoScore-Survival provides an automated, robust and easy-to-use
+machine learning-based clinical score generator to studies of time-to-event outcomes. It provides
+a systematic guideline to facilitate the future development of time-to-event scores for clinical
+applications. 

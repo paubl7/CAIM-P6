@@ -1,0 +1,20 @@
+We initiate the study of fine-grained completeness theorems for exact and approximate optimization
+in the polynomial-time regime. Inspired by the first completeness results for decision problems
+in P (Gao, Impagliazzo, Kolokolova, Williams, TALG 2019) as well as the classic class MaxSNP and
+MaxSNP-completeness for NP optimization problems (Papadimitriou, Yannakakis, JCSS 1991), we
+define polynomial-time analogues MaxSP and MinSP, which contain a number of natural optimization
+problems in P, including Maximum Inner Product, general forms of nearest neighbor search and optimization
+variants of the $k$-XOR problem. Specifically, we define MaxSP as the class of problems definable
+as $\max_{x_1,\dots,x_k} \#\{ (y_1,\dots,y_\ell) : \phi(x_1,\dots,x_k, y_1,\dots,y_\ell)
+\}$, where $\phi$ is a quantifier-free first-order property over a given relational structure
+(with MinSP defined analogously). On $m$-sized structures, we can solve each such problem in time
+$O(m^{k+\ell-1})$. Our results are: - We determine (a sparse variant of) the Maximum/Minimum Inner
+Product problem as complete under *deterministic* fine-grained reductions: A strongly subquadratic
+algorithm for Maximum/Minimum Inner Product would beat the baseline running time of $O(m^{k+\ell-1})$
+for *all* problems in MaxSP/MinSP by a polynomial factor. - This completeness transfers to approximation:
+Maximum/Minimum Inner Product is also complete in the sense that a strongly subquadratic $c$-approximation
+would give a $(c+\varepsilon)$-approximation for all MaxSP/MinSP problems in time $O(m^{k+\ell-1-\delta})$,
+where $\varepsilon > 0$ can be chosen arbitrarily small. Combining our completeness with~(Chen,
+Williams, SODA 2019), we obtain the perhaps surprising consequence that refuting the OV Hypothesis
+is *equivalent* to giving a $O(1)$-approximation for all MinSP problems in faster-than-$O(m^{k+\ell-1})$
+time. 

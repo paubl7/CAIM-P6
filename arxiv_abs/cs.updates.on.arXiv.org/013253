@@ -1,0 +1,18 @@
+We propose model-plant mismatch learning offset-free model predictive control (MPC), which learns
+and applies the intrinsic model-plant mismatch, to effectively exploit the advantages of model-based
+and data-driven control strategies and overcome the limitations of each approach. In this study,
+the model-plant mismatch map on steady-state manifold in the controlled variable space is approximated
+via a general regression neural network from the steady-state data for each setpoint. Though the
+learned model-plant mismatch map can provide the information at the equilibrium point (i.e., setpoint),
+it cannot provide model-plant mismatch information during the transient state. Moreover, the
+intrinsic model-plant mismatch can vary due to system characteristics changes during operation.
+Therefore, we additionally apply a supplementary disturbance variable which is updated from the
+disturbance estimator based on the nominal offset-free MPC scheme. Then, the combined disturbance
+signal is applied to the target problem and finite-horizon optimal control problem of offset-free
+MPC to improve the prediction accuracy and closed-loop performance of the controller. By this,
+we can exploit both the learned model-plant mismatch information and the stabilizing property
+of the nominal disturbance estimator approach. The closed-loop simulation results demonstrate
+that the developed scheme can properly learn the intrinsic model-plant mismatch and efficiently
+improve the model-plant mismatch compensating performance in offset-free MPC. Moreover, we examine
+the robust asymptotic stability of the developed offset-free MPC scheme, which is known to be difficult
+to analyze in nominal offset-free MPC, by exploiting the learned model-plant mismatch information.

@@ -1,0 +1,20 @@
+The multi-scale flow mechanism is crucial for force and heat loaded on near-space and reentry vehicles,
+the control of spacecraft by thrusters, the propelling and cooling of MEMS, etc. Since the continuum
+flow and rarefied flow often exist simultaneously, the modeling and prediction for such a multi-scale
+flow field is very complicated. One important and efficient way of predicting the multi-scale flow
+is constructing numerical methods by adapting the multi-scale properties of the temporal integral
+solutions (or equivalent characteristic line solutions) for the model equations in the gas-kinetic
+theory. The model equations can be classified into FP-type and BGK-type, and the numerical methods
+can have deterministic form or stochastic particle form. Since these numerical methods are strictly
+based on model equations, they are also restricted by the model equations. The difficulty and complexity
+in constructing model equation that has complete asymptotic preserving property for gas mixture
+with non-equilibrium internal energy will prevent the further extension of these methods. Therefore,
+this paper addresses the question whether a multi-scale numerical method can be established not
+on the model equations, but directly adapts the relaxation rates of macroscopic variables such
+as stress and heat flux. Since the algorithm of multi-scale particle method based on BGK-type equation
+is clear and simple, its collision step is modified in this work, where the macroscopic variables
+firstly evolve according to their relaxation rates, and then the molecules that participate in
+inter-molecular collisions get their after-collision velocities from the after-evolution macroscopic
+variables. Therefore, this direct relaxation process does not depend on the model equations anymore.
+Finally, the validity and accuracy of the particle method with direct relaxation process are examined
+with five test cases. 

@@ -1,0 +1,19 @@
+Bayesian Networks (BNs) have become a powerful technology for reasoning under uncertainty, particularly
+in areas that require causal assumptions that enable us to simulate the effect of intervention.
+The graphical structure of these models can be determined by causal knowledge, learnt from data,
+or a combination of both. While it seems plausible that the best approach in constructing a causal
+graph involves combining knowledge with machine learning, this approach remains underused in
+practice. This paper describes and evaluates a set of information fusion methods that have been
+implemented in the open-source Bayesys structure learning system. The methods enable users to
+specify pre-existing knowledge and rule-based information that can be obtained from heterogeneous
+sources, to constrain or guide structure learning. Each method is assessed in terms of structure
+learning impact, including graphical accuracy, model fitting, complexity and runtime. The results
+are illustrated both with limited and big data, with application to three BN structure learning
+algorithms available in Bayesys, and reveal interesting inconsistencies about their effectiveness
+where the results obtained from graphical measures often contradict those obtained from model
+fitting measures. While the overall results show that information fusion methods become less effective
+with big data due to higher learning accuracy rendering knowledge less important, some information
+fusion methods do perform better with big data. Lastly, amongst the main conclusions is the observation
+that reduced search space obtained from knowledge constraints does not imply reduced computational
+complexity, which can happen when the constraints set up a tension between what the data indicate
+and what the constraints are trying to enforce. 

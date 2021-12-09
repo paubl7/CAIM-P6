@@ -1,0 +1,19 @@
+One of the most basic graph problems, All-Pairs Shortest Paths (APSP) is known to be solvable in $n^{3-o(1)}$
+time, and it is widely open whether it has an $O(n^{3-\epsilon})$ time algorithm for $\epsilon >
+0$. To better understand APSP, one often strives to obtain subcubic time algorithms for structured
+instances of APSP and problems equivalent to it, such as the Min-Plus matrix product. A natural structured
+version of Min-Plus product is Monotone Min-Plus product which has been studied in the context of
+the Batch Range Mode [SODA'20] and Dynamic Range Mode [ICALP'20] problems. This paper improves
+the known algorithms for Monotone Min-Plus Product and for Batch and Dynamic Range Mode, and establishes
+a connection between Monotone Min-Plus Product and the Single Source Replacement Paths (SSRP)
+problem on an $n$-vertex graph with potentially negative edge weights in $\{-M, \ldots, M\}$. SSRP
+with positive integer edge weights bounded by $M$ can be solved in $\tilde{O}(Mn^\omega)$ time,
+whereas the prior fastest algorithm for graphs with possibly negative weights [FOCS'12] runs in
+$O(M^{0.7519} n^{2.5286})$ time, the current best running time for directed APSP with small integer
+weights. Using Monotone Min-Plus Product, we obtain an improved $O(M^{0.8043} n^{2.4957})$ time
+SSRP algorithm, showing that SSRP with constant negative integer weights is likely easier than
+directed unweighted APSP, a problem that is believed to require $n^{2.5-o(1)}$ time. Complementing
+our algorithm for SSRP, we give a reduction from the Bounded-Difference Min-Plus Product problem
+studied by Bringmann et al. [FOCS'16] to negative weight SSRP. This reduction shows that it might
+be difficult to obtain an $\tilde{O}(M n^{\omega})$ time algorithm for SSRP with negative weight
+edges, thus separating the problem from SSRP with only positive weight edges. 

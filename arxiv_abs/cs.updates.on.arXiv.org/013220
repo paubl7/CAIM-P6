@@ -1,0 +1,20 @@
+Most of the existing path-following navigation algorithms cannot guarantee global convergence
+to desired paths or enable following self-intersected desired paths due to the existence of singular
+points where navigation algorithms return unreliable or even no solutions. One typical example
+arises in vector-field guided path-following (VF-PF) navigation algorithms. These algorithms
+are based on a vector field, and the singular points are exactly where the vector field diminishes.
+In this paper, we show that it is mathematically impossible for conventional VF-PF algorithms to
+achieve global convergence to desired paths that are self-intersected or even just simple closed
+(precisely, homeomorphic to the unit circle). Motivated by this new impossibility result, we propose
+a novel method to transform self-intersected or simple closed desired paths to non-self-intersected
+and unbounded (precisely, homeomorphic to the real line) counterparts in a higher-dimensional
+space. Corresponding to this new desired path, we construct a singularity-free guiding vector
+field on a higher-dimensional space. The integral curves of this new guiding vector field is thus
+exploited to enable global convergence to the higher-dimensional desired path, and therefore
+the projection of the integral curves on a lower-dimensional subspace converge to the physical
+(lower-dimensional) desired path. Rigorous theoretical analysis is carried out for the theoretical
+results using dynamical systems theory. In addition, we show both by theoretical analysis and numerical
+simulations that our proposed method is an extension combining conventional VF-PF algorithms
+and trajectory tracking algorithms. Finally, to show the practical value of our proposed approach
+for complex engineering systems, we conduct outdoor experiments with a fixed-wing airplane in
+windy environment to follow both 2D and 3D desired paths. 

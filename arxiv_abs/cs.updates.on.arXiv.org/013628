@@ -1,0 +1,19 @@
+Autonomous 3D acquisition of outdoor environments poses special challenges. Different from indoor
+scenes, where the room space is delineated by clear boundaries and separations (e.g., walls and
+furniture), an outdoor environment is spacious and unbounded (thinking of a campus). Therefore,
+unlike for indoor scenes where the scanning effort is mainly devoted to the discovery of boundary
+surfaces, scanning an open and unbounded area requires actively delimiting the extent of scanning
+region and dynamically planning a traverse path within that region. Thus, for outdoor scenes, we
+formulate the planning of an energy-efficient autonomous scanning through a discrete-continuous
+optimization of robot scanning paths. The discrete optimization computes a topological map, through
+solving an online traveling sales problem (Online TSP), which determines the scanning goals and
+paths on-the-fly. The dynamic goals are determined as a collection of visit sites with high reward
+of visibility-to-unknown. A visit graph is constructed via connecting the visit sites with edges
+weighted by traversing cost. This topological map evolves as the robot scans via deleting outdated
+sites that are either visited or become rewardless and inserting newly discovered ones. The continuous
+part optimizes the traverse paths geometrically between two neighboring visit sites via maximizing
+the information gain of scanning along the paths. The discrete and continuous processes alternate
+until the traverse cost of the current graph exceeds the remaining energy capacity of the robot.
+Our approach is evaluated with both synthetic and field tests, demonstrating its effectiveness
+and advantages over alternatives. The project is at this http URL, and the codes are available at
+https://github.com/alualu628628/Autonomous-Outdoor-Scanning-via-Online-Topological-and-Geometric-Path-Optimization.

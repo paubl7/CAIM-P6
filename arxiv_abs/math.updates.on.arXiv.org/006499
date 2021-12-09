@@ -1,0 +1,20 @@
+In this work, we propose and develop efficient and accurate numerical methods for solving the Kirchhoff-Love
+plate model in domains with complex geometries. The algorithms proposed here employ curvilinear
+finite-difference methods for spatial discretization of the governing PDEs on general composite
+overlapping grids. The coupling of different components of the composite overlapping grid is through
+numerical interpolations. However, interpolations introduce perturbation to the finite-difference
+discretization, which causes numerical instability for time-stepping schemes used to advance
+the resulted semi-discrete system. To address the instability, we propose to add a fourth-order
+hyper-dissipation to the spatially discretized system to stabilize its time integration; this
+additional dissipation term captures the essential upwinding effect of the original upwind scheme.
+The investigation of strategies for incorporating the upwind dissipation term into several time-stepping
+schemes (both explicit and implicit) leads to the development of four novel algorithms. For each
+algorithm, formulas for determining a stable time step and a sufficient dissipation coefficient
+on curvilinear grids are derived by performing a local Fourier analysis. Quadratic eigenvalue
+problems for a simplified model plate in 1D domain are considered to reveal the weak instability
+due to the presence of interpolating equations in the spatial discretization. This model problem
+is further investigated for the stabilization effects of the proposed algorithms. Carefully designed
+numerical experiments are carried out to validate the accuracy and stability of the proposed algorithms,
+followed by two benchmark problems to demonstrate the capability and efficiency of our approach
+for solving realistic applications. Results that concern the performance of the proposed algorithms
+are also presented. 

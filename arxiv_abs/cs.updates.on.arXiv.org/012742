@@ -1,0 +1,19 @@
+We consider a generalization of the standard cache problem called file-bundle caching, where different
+queries (tasks), each containing $l\ge 1$ files, sequentially arrive. An online algorithm that
+does not know the sequence of queries ahead of time must adaptively decide on what files to keep in
+the cache to incur the minimum number of cache misses. Here a cache miss refers to the case where at
+least one file in a query is missing among the cache files. In the special case where $l=1$, this problem
+reduces to the standard cache problem. We first analyze the performance of the classic least recently
+used (LRU) algorithm in this setting and show that LRU is a near-optimal online deterministic algorithm
+for file-bundle caching with regard to competitive ratio. We then extend our results to a generalized
+$(h,k)$-paging problem in this file-bundle setting, where the performance of the online algorithm
+with a cache size $k$ is compared to an optimal offline benchmark of a smaller cache size $h<k$. In
+this latter case, we provide a randomized $O(l \ln \frac{k}{k-h})$-competitive algorithm for
+our generalized $(h,k)$-paging problem, which can be viewed as an extension of the classic marking
+algorithm. We complete this result by providing a matching lower bound for the competitive ratio,
+indicating that the performance of this modified marking algorithm is within a factor of two of any
+randomized online algorithm. Finally, we look at the distributed version of the file-bundle caching
+problem where there are $m\ge 1$ identical caches in the system. In this case we show that for $m=l+1$
+caches, there is a deterministic distributed caching algorithm which is $(l^2+l)$-competitive
+and a randomized distributed caching algorithm which is $O(l\ln(2l+1))$-competitive when $l\ge
+2$. 

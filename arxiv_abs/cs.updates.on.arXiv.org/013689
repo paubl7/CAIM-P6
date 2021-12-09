@@ -1,0 +1,19 @@
+A connectional brain template (CBT) is a normalized graph-based representation of a population
+of brain networks also regarded as an average connectome. CBTs are powerful tools for creating representative
+maps of brain connectivity in typical and atypical populations. Particularly, estimating a well-centered
+and representative CBT for populations of multi-view brain networks (MVBN) is more challenging
+since these networks sit on complex manifolds and there is no easy way to fuse different heterogeneous
+network views. This problem remains unexplored with the exception of a few recent works rooted in
+the assumption that the relationship between connectomes are mostly linear. However, such an assumption
+fails to capture complex patterns and non-linear variation across individuals. Besides, existing
+methods are simply composed of sequential MVBN processing blocks without any feedback mechanism,
+leading to error accumulation. To address these issues, we propose Deep Graph Normalizer (DGN),
+the first geometric deep learning (GDL) architecture for normalizing a population of MVBNs by integrating
+them into a single connectional brain template. Our end-to-end DGN learns how to fuse multi-view
+brain networks while capturing non-linear patterns across subjects and preserving brain graph
+topological properties by capitalizing on graph convolutional neural networks. We also introduce
+a randomized weighted loss function which also acts as a regularizer to minimize the distance between
+the population of MVBNs and the estimated CBT, thereby enforcing its centeredness. We demonstrate
+that DGN significantly outperforms existing state-of-the-art methods on estimating CBTs on both
+small-scale and large-scale connectomic datasets in terms of both representativeness and discriminability
+(i.e., identifying distinctive connectivities fingerprinting each brain network population).

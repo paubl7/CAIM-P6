@@ -1,0 +1,19 @@
+In this paper, we study the problem of fast constructions of source-wise round-trip spanners in
+weighted directed graphs. For a source vertex set $S\subseteq V$ in a graph $G(V,E)$, an $S$-sourcewise
+round-trip spanner of $G$ of stretch $k$ is a subgraph $H$ of $G$ such that for every pair of vertices
+$u,v\in S\times V$, their round-trip distance in $H$ is at most $k$ times of their round-trip distance
+in $G$. We show that for a graph $G(V,E)$ with $n$ vertices and $m$ edges, an $s$-sized source vertex
+set $S\subseteq V$ and an integer $k>1$, there exists an algorithm that in time $O(ms^{1/k}\log^5n)$
+constructs an $S$-sourcewise round-trip spanner of stretch $O(k\log n)$ and $O(ns^{1/k}\log^2n)$
+edges with high probability. Compared to the fast algorithms for constructing all-pairs round-trip
+spanners \cite{PRS+18,CLR+20}, our algorithm improve the running time and the number of edges
+in the spanner when $k$ is super-constant. Compared with the existing algorithm for constructing
+source-wise round-trip spanners \cite{ZL17}, our algorithm significantly improves their construction
+time $\Omega(\min\{ms,n^\omega\})$ (where $\omega \in [2,2.373)$ and 2.373 is the matrix multiplication
+exponent) to nearly linear $O(ms^{1/k}\log^5n)$, at the expense of paying an extra $O(\log n)$
+in the stretch. As an important building block of the algorithm, we develop a graph partitioning
+algorithm to partition $G$ into clusters of bounded radius and prove that for every $u,v\in S\times
+V$ at small round-trip distance, the probability of separating them in different clusters is small.
+The algorithm takes the size of $S$ as input and does not need the knowledge of $S$. With the algorithm
+and a reachability vertex size estimation algorithm, we show that the recursive algorithm for constructing
+standard round-trip spanners \cite{PRS+18} can be adapted to the source-wise setting. 

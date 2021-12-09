@@ -1,0 +1,20 @@
+Recommending cold-start items is a long-standing and fundamental challenge in recommender systems.
+Without any historical interaction on cold-start items, CF scheme fails to use collaborative signals
+to infer user preference on these items. To solve this problem, extensive studies have been conducted
+to incorporate side information into the CF scheme. Specifically, they employ modern neural network
+techniques (e.g., dropout, consistency constraint) to discover and exploit the coalition effect
+of content features and collaborative representations. However, we argue that these works less
+explore the mutual dependencies between content features and collaborative representations
+and lack sufficient theoretical supports, thus resulting in unsatisfactory performance. In this
+work, we reformulate the cold-start item representation learning from an information-theoretic
+standpoint. It aims to maximize the mutual dependencies between item content and collaborative
+signals. Specifically, the representation learning is theoretically lower-bounded by the integration
+of two terms: mutual information between collaborative embeddings of users and items, and mutual
+information between collaborative embeddings and feature representations of items. To model
+such a learning process, we devise a new objective function founded upon contrastive learning and
+develop a simple yet effective Contrastive Learning-based Cold-start Recommendation framework(CLCRec).
+In particular, CLCRec consists of three components: contrastive pair organization, contrastive
+embedding, and contrastive optimization modules. It allows us to preserve collaborative signals
+in the content representations for both warm and cold-start items. Through extensive experiments
+on four publicly accessible datasets, we observe that CLCRec achieves significant improvements
+over state-of-the-art approaches in both warm- and cold-start scenarios. 

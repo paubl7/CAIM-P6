@@ -1,0 +1,19 @@
+Generative Adversarial Networks (GANs) are a revolutionary class of Deep Neural Networks (DNNs)
+that have been successfully used to generate realistic images, music, text, and other data. However,
+GAN training presents many challenges, notably it can be very resource-intensive. A potential
+weakness in GANs is that it requires a lot of data for successful training and data collection can
+be an expensive process. Typically, the corrective feedback from discriminator DNNs to generator
+DNNs (namely, the discriminator's assessment of the generated example) is calculated using only
+one real-numbered value (loss). By contrast, we propose a new class of GAN we refer to as xAI-GAN that
+leverages recent advances in explainable AI (xAI) systems to provide a "richer" form of corrective
+feedback from discriminators to generators. Specifically, we modify the gradient descent process
+using xAI systems that specify the reason as to why the discriminator made the classification it
+did, thus providing the "richer" corrective feedback that helps the generator to better fool the
+discriminator. Using our approach, we observe xAI-GANs provide an improvement of up to 23.18% in
+the quality of generated images on both MNIST and FMNIST datasets over standard GANs as measured
+by Fr\'echet Inception Distance (FID). We further compare xAI-GAN trained on 20% of the data with
+standard GAN trained on 100% of data on the CIFAR10 dataset and find that xAI-GAN still shows an improvement
+in FID score. Further, we compare our work with Differentiable Augmentation - which has been shown
+to make GANs data-efficient - and show that xAI-GANs outperform GANs trained on Differentiable
+Augmentation. Moreover, both techniques can be combined to produce even better results. Finally,
+we argue that xAI-GAN enables users greater control over how models learn than standard GANs. 

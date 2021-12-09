@@ -1,0 +1,19 @@
+Low-power wide-area network technologies such as LoRaWAN are promising for collecting low-rate
+monitoring data from geographically distributed sensors, in which timestamping the sensor data
+is a critical system function. This paper considers a synchronization-free approach to timestamping
+LoRaWAN uplink data based on signal arrival time at the gateway, which well matches LoRaWAN's one-hop
+star topology and releases bandwidth from transmitting timestamps and synchronizing end devices'
+clocks at all times. However, we show that this approach is susceptible to a {\em frame delay attack}
+consisting of malicious frame collision and delayed replay. Real experiments show that the attack
+can affect the end devices in large areas up to about $50,000\,\text{m}^2$. In a broader sense, the
+attack threatens any system functions requiring timely deliveries of LoRaWAN frames. To address
+this threat, we propose a $\mathsf{LoRaTS}$ gateway design that integrates a commodity LoRaWAN
+gateway and a low-power software-defined radio receiver to track the inherent frequency biases
+of the end devices. Based on an analytic model of LoRa's chirp spread spectrum modulation, we develop
+signal processing algorithms to estimate the frequency biases with high accuracy beyond that achieved
+by LoRa's default demodulation. The accurate frequency bias tracking capability enables the detection
+of the attack that introduces additional frequency biases. We also investigate and implement a
+more crafty attack that uses advanced radio apparatuses to eliminate the frequency biases. To address
+this crafty attack, we propose a pseudorandom interval hopping scheme to enhance our frequency
+bias tracking approach. Extensive experiments show the effectiveness of our approach in deployments
+with real affecting factors such as temperature variations. 

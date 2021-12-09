@@ -1,0 +1,19 @@
+Sleep staging plays an important role on the diagnosis of sleep disorders. In general, experts classify
+sleep stages manually based on polysomnography (PSG), which is quite time-consuming. Meanwhile,
+the acquisition process of multiple signals is much complex, which can affect the subject's sleep.
+Therefore, the use of single-channel electroencephalogram (EEG) for automatic sleep staging
+has become a popular research topic. In the literature, a large number of sleep staging methods based
+on single-channel EEG have been proposed with promising results and achieve the preliminary automation
+of sleep staging. However, the performance for most of these methods in the N1 stage do not satisfy
+the needs of the diagnosis. In this paper, we propose a deep learning model multi scale dual attention
+network(MSDAN) based on raw EEG, which utilizes multi-scale convolution to extract features in
+different waveforms contained in the EEG signal, connects channel attention and spatial attention
+mechanisms in series to filter and highlight key information, and uses soft thresholding to remove
+redundant information. Experiments were conducted using two datasets with 5-fold cross-validation
+and hold-out validation method. The final average accuracy, overall accuracy, macro F1 score and
+Cohen's Kappa coefficient of the model reach 96.70%, 91.74%, 0.8231 and 0.8723 on the Sleep-EDF
+dataset, 96.14%, 90.35%, 0.7945 and 0.8284 on the Sleep-EDFx dataset. Significantly, our model
+performed superiorly in the N1 stage, with F1 scores of 54.41% and 52.79% on the two datasets respectively.
+The results show the superiority of our network over the existing methods, reaching a new state-of-the-art.
+In particular, the proposed method achieves excellent results in the N1 sleep stage compared to
+other methods. 

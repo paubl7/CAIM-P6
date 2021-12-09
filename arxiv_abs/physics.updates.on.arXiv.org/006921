@@ -1,0 +1,20 @@
+Adaptive radiotherapy (ART), especially online ART, effectively accounts for positioning errors
+and anatomical changes. One key component of online ART is accurately and efficiently delineating
+organs at risk (OARs) and targets on online images, such as CBCT, to meet the online demands of plan
+evaluation and adaptation. Deep learning (DL)-based automatic segmentation has gained great
+success in segmenting planning CT, but its applications to CBCT yielded inferior results due to
+the low image quality and limited available contour labels for training. To overcome these obstacles
+to online CBCT segmentation, we propose a registration-guided DL (RgDL) segmentation framework
+that integrates image registration algorithms and DL segmentation models. The registration algorithm
+generates initial contours, which were used as guidance by DL model to obtain accurate final segmentations.
+We had two implementations the proposed framework--Rig-RgDL (Rig for rigid body) and Def-RgDL
+(Def for deformable)--with rigid body (RB) registration or deformable image registration (DIR)
+as the registration algorithm respectively and U-Net as DL model architecture. The two implementations
+of RgDL framework were trained and evaluated on seven OARs in an institutional clinical Head and
+Neck (HN) dataset. Compared to the baseline approaches using the registration or the DL alone, RgDL
+achieved more accurate segmentation, as measured by higher mean Dice similarity coefficients
+(DSC) and other distance-based metrics. Rig-RgDL achieved a DSC of 84.5% on seven OARs on average,
+higher than RB or DL alone by 4.5% and 4.7%. The DSC of Def-RgDL is 86.5%, higher than DIR or DL alone
+by 2.4% and 6.7%. The inference time took by the DL model to generate final segmentations of seven
+OARs is less than one second in RgDL. The resulting segmentation accuracy and efficiency show the
+promise of applying RgDL framework for online ART. 

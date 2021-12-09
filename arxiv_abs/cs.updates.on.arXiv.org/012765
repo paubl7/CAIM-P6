@@ -1,0 +1,20 @@
+In advanced metering infrastructure (AMI), smart meters (SMs), which are installed at the consumer
+side, send fine-grained power consumption readings periodically to the electricity utility for
+load monitoring and energy management. Change and transmit (CAT) is an efficient approach to collect
+these readings, where the readings are not transmitted when there is no enough change in consumption.
+However, this approach causes a privacy problem that is by analyzing the transmission pattern of
+an SM, sensitive information on the house dwellers can be inferred. For instance, since the transmission
+pattern is distinguishable when dwellers are on travel, attackers may analyze the pattern to launch
+a presence-privacy attack (PPA) to infer whether the dwellers are absent from home. In this paper,
+we propose a scheme, called "STDL", for efficient collection of power consumption readings in AMI
+networks while preserving the consumers' privacy by sending spoofing transmissions (redundant
+real readings) using a deep-learning approach. We first use a clustering technique and real power
+consumption readings to create a dataset for transmission patterns using the CAT approach. Then,
+we train an attacker model using deep-learning, and our evaluations indicate that the success rate
+of the attacker is about 91%. Finally, we train a deep-learning-based defense model to send spoofing
+transmissions efficiently to thwart the PPA. Extensive evaluations are conducted, and the results
+indicate that our scheme can reduce the attacker's success rate, to 13.52% in case he knows the defense
+model and to 3.15% in case he does not know the model, while still achieving high efficiency in terms
+of the number of readings that should be transmitted. Our measurements indicate that the proposed
+scheme can reduce the number of readings that should be transmitted by about 41% compared to continuously
+transmitting readings. 

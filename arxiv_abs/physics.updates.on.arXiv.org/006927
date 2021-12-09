@@ -1,0 +1,18 @@
+In multiscale modelling, multiple models are used simultaneously to describe scale-dependent
+phenomena in a system of interest. Here we introduce a machine learning (ML)-based multiscale modelling
+framework for modelling hierarchical multiscale problems. In these problems, closure relations
+are required for the macroscopic problem in the form of constitutive relations. However, forming
+explicit closures for nonlinear and hysteretic processes remains challenging. Instead, we provide
+a framework for learning constitutive mappings given microscale data generated according to micro
+and macro transitions governed by two-scale homogenisation rules. The resulting data-driven
+model is then coupled to a macroscale simulator leading to a hybrid ML-physics-based modelling
+approach. Accordingly, we apply the multiscale framework within the context of transient phenomena
+in dual-porosity geomaterials. In these materials, the inter-porosity flow is a complex time-dependent
+function making its adoption within flow simulators challenging. We explore nonlinear feedforward
+autoregressive ML strategies for the constitutive modelling of this sequential problem. We demonstrate
+how to inject the resulting surrogate constitutive model into a simulator. We then compare the resulting
+hybrid approach to traditional dual-porosity and microscale models on a variety of tests. We show
+the hybrid approach to give high-quality results with respect to explicit microscale simulations
+without the computational burden of the latter. Lastly, the steps provided by the multiscale framework
+herein are sufficiently general to be applied to a variety of multiscale settings, using different
+data generation and learning techniques accordingly. 

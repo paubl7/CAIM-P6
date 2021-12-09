@@ -1,0 +1,19 @@
+This paper contributes to the development and evaluation of a deep learning workflow that accurately
+and efficiently predicts the temporal-spatial evolution of pressure and CO2 plumes during injection
+and post-injection periods of geologic CO2 sequestration (GCS) operations. Based on a Fourier
+Neuron Operator, the deep learning workflow takes input variables or features including rock properties,
+well operational controls and time steps, and predicts the state variables of pressure and CO2 saturation.
+To further improve the predictive fidelity, separate deep learning models are trained for CO2 injection
+and post-injection periods due the difference in primary driving force of fluid flow and transport
+during these two phases. We also explore different combinations of features to predict the state
+variables. We use a realistic example of CO2 injection and storage in a 3D heterogeneous saline aquifer,
+and apply the deep learning workflow that is trained from physics-based simulation data and emulate
+the physics process. Through this numerical experiment, we demonstrate that using two separate
+deep learning models to distinguish post-injection from injection period generates the most accurate
+prediction of pressure, and a single deep learning model of the whole GCS process including the cumulative
+injection volume of CO2 as a deep learning feature, leads to the most accurate prediction of CO2 saturation.
+For the post-injection period, it is key to use cumulative CO2 injection volume to inform the deep
+learning models about the total carbon storage when predicting either pressure or saturation.
+The deep learning workflow not only provides high predictive fidelity across temporal and spatial
+scales, but also offers a speedup of 250 times compared to full physics reservoir simulation, and
+thus will be a significant predictive tool for engineers to manage the long term process of GCS. 

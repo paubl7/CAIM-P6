@@ -1,0 +1,20 @@
+This study derives a method to consistently recover the second-order convergence of the lattice
+Boltzmann method (LBM), which is frequently degraded by the improper discretisation of required
+source terms. The work focuses on advection-diffusion models in which the source terms are dependent
+on the intensity of transported fields. The main findings are applicable to a wide range of formulations
+within the LBM framework. All considered source terms are interpreted as contributions to the zeroth-moment
+of the distribution function. These account for sources in a scalar field, such as density, concentration
+or temperature. In addition to this, certain immersed boundary methods can be interpreted as a source
+term in their formulation, highlighting a further application for this work. This paper makes three
+primary contributions to the current state-of-the-art. Firstly, it identifies the differences
+observed between the ways source terms are included in the LBM schemes present in the literature.
+The algebraic manipulations are explicitly presented in this paper to clarify the differences
+observed, and identify their origin. Secondly, it derives in full detail, the implicit relation
+between the value of the transported macroscopic field, and the sum of the LBM densities. Moreover,
+this relation is valid for any source term discretization scheme, and three equivalent forms of
+the second-order accurate collision operator are presented. Finally, closed-form solutions
+of this implicit relation are shown for a variety of common models. The second-order convergence
+of the proposed LBM schemes is verified on both linear and non-linear source terms. Commonly used
+diffusive and acoustic scalings are discussed, and their pitfalls are identified. Moreover, for
+a simplified case, the competing errors are shown visually with isolines of error in the space of
+spatial and temporal resolutions. 

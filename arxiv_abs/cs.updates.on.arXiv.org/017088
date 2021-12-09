@@ -1,0 +1,20 @@
+A major goal of materials design is to find material structures with desired properties and in a second
+step to find a processing path to reach one of these structures. In this paper, we propose and investigate
+a deep reinforcement learning approach for the optimization of processing paths. The goal is to
+find optimal processing paths in the material structure space that lead to target-structures,
+which have been identified beforehand to result in desired material properties. There exists a
+target set containing one or multiple different structures. Our proposed methods can find an optimal
+path from a start structure to a single target structure, or optimize the processing paths to one
+of the equivalent target-structures in the set. In the latter case, the algorithm learns during
+processing to simultaneously identify the best reachable target structure and the optimal path
+to it. The proposed methods belong to the family of model-free deep reinforcement learning algorithms.
+They are guided by structure representations as features of the process state and by a reward signal,
+which is formulated based on a distance function in the structure space. Model-free reinforcement
+learning algorithms learn through trial and error while interacting with the process. Thereby,
+they are not restricted to information from a priori sampled processing data and are able to adapt
+to the specific process. The optimization itself is model-free and does not require any prior knowledge
+about the process itself. We instantiate and evaluate the proposed methods by optimizing paths
+of a generic metal forming process. We show the ability of both methods to find processing paths leading
+close to target structures and the ability of the extended method to identify target-structures
+that can be reached effectively and efficiently and to focus on these targets for sample efficient
+processing path optimization. 

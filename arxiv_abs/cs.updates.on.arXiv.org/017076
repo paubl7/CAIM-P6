@@ -1,0 +1,20 @@
+Predicting the next interaction of a short-term interaction session is a challenging task in session-based
+recommendation. Almost all existing works rely on item transition patterns, and neglect the impact
+of user historical sessions while modeling user preference, which often leads to non-personalized
+recommendation. Additionally, existing personalized session-based recommenders capture user
+preference only based on the sessions of the current user, but ignore the useful item-transition
+patterns from other user's historical sessions. To address these issues, we propose a novel Heterogeneous
+Global Graph Neural Networks (HG-GNN) to exploit the item transitions over all sessions in a subtle
+manner for better inferring user preference from the current and historical sessions. To effectively
+exploit the item transitions over all sessions from users, we propose a novel heterogeneous global
+graph that contains item transitions of sessions, user-item interactions and global co-occurrence
+items. Moreover, to capture user preference from sessions comprehensively, we propose to learn
+two levels of user representations from the global graph via two graph augmented preference encoders.
+Specifically, we design a novel heterogeneous graph neural network (HGNN) on the heterogeneous
+global graph to learn the long-term user preference and item representations with rich semantics.
+Based on the HGNN, we propose the Current Preference Encoder and the Historical Preference Encoder
+to capture the different levels of user preference from the current and historical sessions, respectively.
+To achieve personalized recommendation, we integrate the representations of the user current
+preference and historical interests to generate the final user preference representation. Extensive
+experimental results on three real-world datasets show that our model outperforms other state-of-the-art
+methods. 

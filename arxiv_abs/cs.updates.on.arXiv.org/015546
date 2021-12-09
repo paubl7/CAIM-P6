@@ -1,0 +1,18 @@
+Graph neural networks (GNNs) have been widely used in deep learning on graphs. They can learn effective
+node representations that achieve superior performances in graph analysis tasks such as node classification
+and node clustering. However, most methods ignore the heterogeneity in real-world graphs. Methods
+designed for heterogeneous graphs, on the other hand, fail to learn complex semantic representations
+because they only use meta-paths instead of meta-graphs. Furthermore, they cannot fully capture
+the content-based correlations between nodes, as they either do not use the self-attention mechanism
+or only use it to consider the immediate neighbors of each node, ignoring the higher-order neighbors.
+We propose a novel Higher-order Attribute-Enhancing (HAE) framework that enhances node embedding
+in a layer-by-layer manner. Under the HAE framework, we propose a Higher-order Attribute-Enhancing
+Graph Neural Network (HAEGNN) for heterogeneous network representation learning. HAEGNN simultaneously
+incorporates meta-paths and meta-graphs for rich, heterogeneous semantics, and leverages the
+self-attention mechanism to explore content-based nodes interactions. The unique higher-order
+architecture of HAEGNN allows examining the first-order as well as higher-order neighborhoods.
+Moreover, HAEGNN shows good explainability as it learns the importances of different meta-paths
+and meta-graphs. HAEGNN is also memory-efficient, for it avoids per meta-path based matrix calculation.
+Experimental results not only show HAEGNN superior performance against the state-of-the-art
+methods in node classification, node clustering, and visualization, but also demonstrate its
+superiorities in terms of memory efficiency and explainability. 

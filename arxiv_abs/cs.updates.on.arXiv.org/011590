@@ -1,0 +1,20 @@
+Data dependent triangulations are triangulations of point sets in the plane that are computed under
+consideration not only of the points' $x$- and $y$-coordinates but also of additional data (e.g.,
+elevation). In particular, min-error criteria have been suggested to compute triangulations
+that approximate a given surface. In this article, we show how data dependent triangulations with
+min-error criteria can be used to reconstruct a dynamic surface over a longer time period if height
+values are continuously monitored at a sparse set of stations and, additionally for few epochs or
+a single one an accurate reference surface is given. The basic idea is to learn an height-optimal
+triangulation based on the available reference data and to use the learned triangulation to compute
+piece-wise linear surface models for epochs in which only the observations of the monitoring stations
+are given. In addition, we combine our approach of height-optimal triangulation with $k$-order
+Delaunay triangulation to stabilize the triangles geometrically. We consider these approaches
+particularly useful for reconstructing the historical evolution of a sea surface by combining
+tide-gauge measurements with data of modern satellite altimetry. We show how to learn a height-optimal
+triangulation and a $k$-order height-optimal triangulation using an exact algorithm based on
+integer linear programming and evaluate our approaches both with respect to its running times and
+the quality of the reconstructions in contrast to a solution by a Delaunay triangulation which has
+earlier been used for sea-surface modeling. For existing data of the North Sea we show that we can
+better reconstruct the dynamic sea surface for about 156 months back in time using the height-optimal
+triangulation than the Delaunay triangulation and even for about 180 months using the $k$-order
+height-optimal triangulation for $k=2$. 

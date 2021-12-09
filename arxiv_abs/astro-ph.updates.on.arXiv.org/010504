@@ -1,0 +1,19 @@
+Survey telescopes such as the Vera C. Rubin Observatory and the Square Kilometre Array will discover
+billions of static and dynamic astronomical sources. Properly mined, these enormous datasets
+will likely be wellsprings of rare or unknown astrophysical phenomena. The challenge is that the
+datasets are so large that most data will never be seen by human eyes; currently the most robust instrument
+we have to detect relevant anomalies. Machine learning is a useful tool for anomaly detection in
+this regime. However, it struggles to distinguish between interesting anomalies and irrelevant
+data such as instrumental artefacts or rare astronomical sources that are simply not of interest
+to a particular scientist. Active learning combines the flexibility and intuition of the human
+brain with the raw processing power of machine learning. By strategically choosing specific objects
+for expert labelling, it minimises the amount of data that scientists have to look through while
+maximising potential scientific return. Here we introduce Astronomaly: a general anomaly detection
+framework with a novel active learning approach designed to provide personalised recommendations.
+Astronomaly can operate on most types of astronomical data, including images, light curves and
+spectra. We use the Galaxy Zoo dataset to demonstrate the effectiveness of Astronomaly, as well
+as simulated data to thoroughly test our new active learning approach. We find that for both datasets,
+Astronomaly roughly doubles the number of interesting anomalies found in the first 100 objects
+viewed by the user. Astronomaly is easily extendable to include new feature extraction techniques,
+anomaly detection algorithms and even different active learning approaches. The code is publicly
+available at https://github.com/MichelleLochner/astronomaly. 

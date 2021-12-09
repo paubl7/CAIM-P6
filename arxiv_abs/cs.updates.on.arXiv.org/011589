@@ -1,0 +1,19 @@
+Monadic comprehensions reign over the realm of language-integrated query (LINQ), and for good
+reasons. Indeed, comprehensions are tightly integrated with general purpose programming languages
+and close enough to common query languages, such as SQL, to guarantee their translation into effective
+queries. Comprehensions also support features for writing reusable and composable queries, such
+as the handling of nested data and the use of functional abstractions. In parallel to these developments,
+optics have emerged in recent years as the technology of choice to write programs that manipulate
+complex data structures with nested components. Optic abstractions are easily composable and,
+in principle, permit both data access and updates. This paper attempts to exploit the notion of optic
+for LINQ as a higher-level language that complements comprehension-based approaches. In order
+to do this, we lift a restricted subset of optics, namely getters, affine folds and folds, into a full-blown
+DSL. The type system of the resulting language of optics, that we have named Optica, distills their
+compositional properties, whereas its denotational semantics is given by standard optics. This
+formal specification of the concept of optic enables the definition of non-standard optic representations
+beyond van Laarhoven, profunctor optics, etc. In particular, the paper demonstrates that a restricted
+subset of XQuery can be understood as an optic representation; it introduces Triplets, a non-standard
+semantic domain to normalize optic expressions and facilitate the generation of SQL queries; and
+it describes how to generate comprehension-based queries from optic expressions, thus showing
+that both approaches can coexist.The paper also describes S-Optica, a Scala implementation of
+Optica using the tagless-final approach. 

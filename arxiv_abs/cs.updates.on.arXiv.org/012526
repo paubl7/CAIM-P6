@@ -1,0 +1,19 @@
+Refactoring is the art of improving the design of a system without altering its external behavior.
+Refactoring has become a well established and disciplined software engineering practice that
+has attracted a significant amount of research presuming that refactoring is primarily motivated
+by the need to improve system structures. However, recent studies have shown that developers may
+incorporate refactorings in other development activities that go beyond improving the design.
+Unfortunately, these studies are limited to developer interviews and a reduced set of projects.
+To cope with the above-mentioned limitations, we aim to better understand what motivates developers
+to apply refactoring by mining and classifying a large set of 111,884 commits containing refactorings,
+extracted from 800 Java projects. We trained a multi-class classifier to categorize these commits
+into 3 categories, namely, Internal QA, External QA, and Code Smell Resolution, along with the traditional
+BugFix and Functional categories. This classification challenges the original definition of
+refactoring, being exclusive to improving the design and fixing code smells. Further, to better
+understand our classification results, we analyzed commit messages to extract textual patterns
+that developers regularly use to describe their refactorings. The results show that (1) fixing
+code smells is not the main driver for developers to refactoring their codebases. Refactoring is
+solicited for a wide variety of reasons, going beyond its traditional definition; (2) the distribution
+of refactorings differs between production and test files; (3) developers use several patterns
+to purposefully target refactoring; (4) the textual patterns, extracted from commit messages,
+provide better coverage for how developers document their refactorings. 

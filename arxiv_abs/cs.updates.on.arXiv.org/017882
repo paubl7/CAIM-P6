@@ -1,0 +1,18 @@
+Multi-Agent Reinforcement Learning (MARL) has seen revolutionary breakthroughs with its successful
+application to multi-agent cooperative tasks such as robot swarms control, autonomous vehicle
+coordination, and computer games. Recent works have applied the Proximal Policy Optimization
+(PPO) to the multi-agent tasks, such as Independent PPO (IPPO); and vanilla Multi-agent PPO (MAPPO)
+which has a centralized value function. However, previous literature shows that MAPPO may not perform
+as well as Independent PPO (IPPO) and the Fine-tuned QMIX. Thus MAPPO-Feature-Pruned (MAPPO-FP)
+further improves the performance of MAPPO by the carefully designed artificial features. In addition,
+there is no literature that gives a theoretical analysis of the working mechanism of MAPPO. In this
+paper, we firstly theoretically generalize single-agent PPO to the vanilla MAPPO, which shows
+that the vanilla MAPPO is approximately equivalent to optimizing a multi-agent joint policy with
+the original PPO. Secondly, we find that MAPPO faces the problem of \textit{The Policies Overfitting
+in Multi-agent Cooperation(POMAC)}, as they learn policies by the sampled centralized advantage
+values. Then POMAC may lead to updating the policies of some agents in a suboptimal direction and
+prevent the agents from exploring better trajectories. To solve the POMAC, we propose two novel
+policy perturbation methods, i.e, Noisy-Value MAPPO (NV-MAPPO) and Noisy-Advantage MAPPO (NA-MAPPO),
+which disturb the advantage values via random Gaussian noise. The experimental results show that
+the performance of our methods is better than that of Fine-tuned QMIX and MAPPO-FP, and achieves
+SOTA in Starcraft Multi-Agent Challenge (SMAC). We open-source the code at \url{https://github.com/hijkzzz/noisy-mappo}.

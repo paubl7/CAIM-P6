@@ -1,0 +1,19 @@
+Probing is a general technique that is used to reduce the variance of the Hutchinson stochastic estimator
+for the trace of the inverse of a large, sparse matrix $A$. The variance of the estimator is the sum
+of the squares of the off-diagonal elements of $A^{-1}$. Therefore, this technique computes probing
+vectors that when used in the estimator they annihilate the largest off-diagonal elements. For
+matrices that display decay of the magnitude of $|A^{-1}_{ij}|$ with the graph distance between
+nodes $i$ and $j$, this is achieved through graph coloring of increasing powers $A^p$. Equivalently,
+when a matrix stems from a lattice discretization, it is computationally beneficial to find a distance-$p$
+coloring of the lattice. In this work, we study probing for the more general problem of computing
+the trace of a permutation of $A^{-1}$, say $PA^{-1}$, motivated from Lattice QCD where we need to
+construct "disconnected diagrams" to extract flavor-separated Generalized Parton functions.
+In Lattice QCD, where the matrix has a 4D toroidal lattice structure, these non-local operators
+correspond to a $PA^{-1}$ where $P$ is the permutation relating to some displacement in one or more
+dimensions. We focus on a single dimension displacement ($k$) but our methods are general. We show
+that probing on $A^p$ or $(PA)^p$ do not annihilate the largest magnitude elements. To resolve this
+issue, our displacement-based probing works on $PA^p$ using a new coloring scheme that works directly
+on appropriately displaced neighborhoods on the lattice. We prove lower bounds on the number of
+colors needed, and study the effect of this scheme on variance reduction, both theoretically and
+experimentally on a real-world Lattice QCD calculation. We achieve orders of magnitude speedup
+over the un-probed or the naively probed methods. 

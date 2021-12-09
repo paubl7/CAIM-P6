@@ -1,0 +1,20 @@
+Given a system that does not work as expected, Sequential Diagnosis (SD) aims at suggesting a series
+of system measurements to isolate the true explanation for the system's misbehavior from a potentially
+exponential set of possible explanations. To reason about the best next measurement, SD methods
+usually require a sample of possible fault explanations at each step of the iterative diagnostic
+process. The computation of this sample can be accomplished by various diagnostic search algorithms.
+Among those, Reiter's HS-Tree is one of the most popular due its desirable properties and general
+applicability. Usually, HS-Tree is used in a stateless fashion throughout the SD process to (re)compute
+a sample of possible fault explanations in each iteration, each time given the latest (updated)
+system knowledge including all so-far collected measurements. At this, the built search tree is
+discarded between two iterations, although often large parts of the tree have to be rebuilt in the
+next iteration, involving redundant operations and calls to costly reasoning services. As a remedy
+to this, we propose DynamicHS, a variant of HS-Tree that maintains state throughout the diagnostic
+session and additionally embraces special strategies to minimize the number of expensive reasoner
+invocations. In this vein, DynamicHS provides an answer to a longstanding question posed by Raymond
+Reiter in his seminal paper from 1987. Extensive evaluations on real-world diagnosis problems
+prove the reasonability of the DynamicHS and testify its clear superiority to HS-Tree wrt. computation
+time. More specifically, DynamicHS outperformed HS-Tree in 96% of the executed sequential diagnosis
+sessions and, per run, the latter required up to 800% the time of the former. Remarkably, DynamicHS
+achieves these performance improvements while preserving all desirable properties as well as
+the general applicability of HS-Tree. 

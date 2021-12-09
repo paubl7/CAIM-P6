@@ -1,0 +1,19 @@
+Human brain activity generates scalp potentials (electroencephalography EEG), intracranial
+potentials (iEEG), and external magnetic fields (magnetoencephalography MEG), all capable of
+being recorded, often simultaneously, for use in research and clinical applications. The so-called
+forward problem is the modeling of these fields at their sensors for a given putative neural source
+configuration. While early generations modeled the head as a simple set of isotropic spheres, today
+s ubiquitous magnetic resonance imaging (MRI) data allows detailed descriptions of head compartments
+with assigned isotropic and anisotropic conductivities. In this paper, we present a complete pipeline,
+integrated into the Brainstorm software, that allows users to generate an individual and accurate
+head model from the MRI and then calculate the electromagnetic forward solution using the finite
+element method (FEM). The head model generation is performed by the integration of the latest tools
+for MRI segmentation and FEM mesh generation. The final head model is divided into five main compartments:
+white matter, grey matter, CSF, skull, and scalp. For the isotropic compartments, widely-used
+default conductivity values are assigned. For the brain tissues, we use the process of the effective
+medium approach (EMA) to estimate anisotropic conductivity tensors from diffusion-weighted
+imaging (DWI) data. The FEM electromagnetic calculations are performed by the DUNEuro library,
+integrated into Brainstorm and accessible with a user-friendly graphical interface. This integrated
+pipeline, with full tutorials and example data sets freely available on the Brainstorm website,
+gives the neuroscience community easy access to advanced tools for electromagnetic modeling using
+FEM. 

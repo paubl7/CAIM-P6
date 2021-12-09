@@ -1,0 +1,18 @@
+Polls are a common way of collecting data, including product reviews and feedback forms. However,
+few data collectors give upfront privacy guarantees. Additionally, when privacy guarantees are
+given upfront, they are often vague claims about 'anonymity'. Instead, we propose giving quantifiable
+privacy guarantees through the statistical notion of differential privacy. Nevertheless, privacy
+does not come for free. At the heart of differential privacy lies an inherent trade-off between accuracy
+and privacy that needs to be balanced. Thus, it is vital to properly adjust the accuracy-privacy
+trade-off before setting out to collect data. Altogether, getting started with differentially
+private data collection can be challenging. Ideally, a data analyst should not have to be concerned
+about all the details of differential privacy, but rather get differential privacy by design. Still,
+to the best of our knowledge, no tools for gathering poll data under differential privacy exists.
+Motivated by the lack of tools to gather poll data under differential privacy, we set out to engineer
+our own tool. Specifically, to make local differential privacy accessible for all, in this systems
+paper we present Randori, a set of novel open source tools for differentially private poll data collection.
+Randori is intended to help data analysts keep their focus on what data their poll is collecting,
+as opposed to how they should collect it. Our tools also allow the data analysts to analytically predict
+the accuracy of their poll. Furthermore, we show that differential privacy alone is not enough to
+achieve end-to-end privacy in a server-client setting. Consequently, we also investigate and
+mitigate implicit data leaks in Randori. 

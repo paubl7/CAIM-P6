@@ -1,0 +1,18 @@
+Subsampling unconditional generative adversarial networks (GANs) to improve the overall image
+quality has been studied recently. However, these methods often require high training costs (e.g.,
+storage space, parameter tuning) and may be inefficient or even inapplicable for subsampling conditional
+GANs, such as class-conditional GANs and continuous conditional GANs (CcGANs), when the condition
+has many distinct values. In this paper, we propose an efficient method called conditional density
+ratio estimation in feature space with conditional Softplus loss (cDRE-F-cSP). With cDRE-F-cSP,
+we estimate an image's conditional density ratio based on a novel conditional Softplus (cSP) loss
+in the feature space learned by a specially designed ResNet-34 or sparse autoencoder. We then derive
+the error bound of a conditional density ratio model trained with the proposed cSP loss. Finally,
+we propose a rejection sampling scheme, termed cDRE-F-cSP+RS, which can subsample both class-conditional
+GANs and CcGANs efficiently. An extra filtering scheme is also developed for CcGANs to increase
+the label consistency. Experiments on CIFAR-10 and Tiny-ImageNet datasets show that cDRE-F-cSP+RS
+can substantially improve the Intra-FID and FID scores of BigGAN. Experiments on RC-49 and UTKFace
+datasets demonstrate that cDRE-F-cSP+RS also improves Intra-FID, Diversity, and Label Score
+of CcGANs. Moreover, to show the high efficiency of cDRE-F-cSP+RS, we compare it with the state-of-the-art
+unconditional subsampling method (i.e., DRE-F-SP+RS). With comparable or even better performance,
+cDRE-F-cSP+RS only requires about \textbf{10}\% and \textbf{1.7}\% of the training costs spent
+respectively on CIFAR-10 and UTKFace by DRE-F-SP+RS. 

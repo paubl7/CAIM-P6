@@ -1,0 +1,19 @@
+With a Coronavirus disease (COVID-19) case count exceeding 10 million worldwide, there is an increased
+need for a diagnostic capability. The main variables in increasing diagnostic capability are reduced
+cost, turnaround or diagnosis time, and upfront equipment cost and accessibility. Two candidates
+for machine learning COVID-19 diagnosis are Computed Tomography (CT) scans and plain chest X-rays.
+While CT scans score higher in sensitivity, they have a higher cost, maintenance requirement, and
+turnaround time as compared to plain chest X-rays. The use of portable chest X-radiograph (CXR)
+is recommended by the American College of Radiology (ACR) since using CT places a massive burden
+on radiology services. Therefore, X-ray imagery paired with machine learning techniques is proposed
+a first-line triage tool for COVID-19 diagnostics. In this paper we propose a computer-aided diagnosis
+(CAD) to accurately classify chest X-ray scans of COVID-19 and normal subjects by fine-tuning several
+neural networks (ResNet18, ResNet50, DenseNet201) pre-trained on the ImageNet dataset. These
+neural networks are fused in a parallel architecture and the voting criteria are applied in the final
+classification decision between the candidate object classes where the output of each neural network
+is representing a single vote. Several experiments are conducted on the weakly labeled COVID-19-CT-CXR
+dataset consisting of 263 COVID-19 CXR images extracted from PubMed Central Open Access subsets
+combined with 25 normal classification CXR images. These experiments show an optimistic result
+and a capability of the proposed model to outperforming many state-of-the-art algorithms on several
+measures. Using k-fold cross-validation and a bagging classifier ensemble, we achieve an accuracy
+of 99.7% and a sensitivity of 100%. 

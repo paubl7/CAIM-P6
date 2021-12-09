@@ -1,0 +1,20 @@
+This paper presents an arbitrary h.o. accurate ADER DG method on space-time adaptive meshes (AMR)
+for the solution of two important families of non-linear time dependent PDE for compr. dissipative
+flows: the compr. Navier-Stokes equations and the equations of visc. and res. MHD in 2 and 3 space-dimensions.
+The work continues a recent series of papers concerning the development and application of a proper
+a posteriori subcell FV limiting procedure suitable for DG methods. It is a well known fact that a
+major weakness of h.o. DG methods lies in the difficulty of limiting discontinuous solutions, which
+generate spurious oscillations, namely the so-called 'Gibbs phenomenon'. In the present work
+the main benefits of the MOOD paradigm, i.e. the computational robustness even in the presence of
+strong shocks, are preserved and the numerical diffusion is considerably reduced also for the limited
+cells by resorting to a proper sub-grid. An important feature of our new scheme is its ability to cure
+even floating point errors that may occur during a simulation, for example when taking real roots
+of negative numbers or after divisions by zero. We apply the whole approach for the first time to the
+equations of compr. gas dynamics and MHD in the presence of viscosity, thermal conductivity and
+magnetic resistivity, therefore extending our family of adaptive ADER-DG schemes to cases for
+which the numerical fluxes also depend on the gradient of the state vector. The distinguished high-resolution
+properties of the presented numerical scheme stands out against a wide number of non-trivial test
+cases both for the compr. Navier-Stokes and the viscous and resistive MHD equations. The present
+results show clearly that the shock-capturing capability of the news schemes are significantly
+enhanced within a cell-by-cell Adaptive Mesh Refinement implementation together with time accurate
+local time stepping (LTS). 

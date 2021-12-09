@@ -1,0 +1,19 @@
+The recent research explosion around implicit neural representations, such as NeRF, shows that
+there is immense potential for implicitly storing high-quality scene and lighting information
+in neural networks. However, one major limitation preventing the use of NeRF in interactive and
+real-time rendering applications is the prohibitive computational cost of excessive network
+evaluations along each view ray, requiring dozens of petaFLOPS when aiming for real-time rendering
+on consumer hardware. In this work, we take a step towards bringing neural representations closer
+to practical rendering of synthetic content in interactive and real-time applications, such as
+games and virtual reality. We show that the number of samples required for each view ray can be significantly
+reduced when local samples are placed around surfaces in the scene. To this end, we propose a depth
+oracle network, which predicts ray sample locations for each view ray with a single network evaluation.
+We show that using a classification network around logarithmically discretized and spherically
+warped depth values is essential to encode surface locations rather than directly estimating depth.
+The combination of these techniques leads to DONeRF, a dual network design with a depth oracle network
+as a first step and a locally sampled shading network for ray accumulation. With our design, we reduce
+the inference costs by up to 48x compared to NeRF. Using an off-the-shelf inference API in combination
+with simple compute kernels, we are the first to render raymarching-based neural representations
+at interactive frame rates (15 frames per second at 800x800) on a single GPU. At the same time, since
+we focus on the important parts of the scene around surfaces, we achieve equal or better quality compared
+to NeRF to enable interactive high-quality rendering. 

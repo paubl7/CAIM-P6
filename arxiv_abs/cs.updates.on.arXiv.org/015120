@@ -1,0 +1,19 @@
+COVID-19 patient triaging with predictive outcome of the patients upon first present to emergency
+department (ED) is crucial for improving patient prognosis, as well as better hospital resources
+management and cross-infection control. We trained a deep feature fusion model to predict patient
+outcomes, where the model inputs were EHR data including demographic information, co-morbidities,
+vital signs and laboratory measurements, plus patient's CXR images. The model output was patient
+outcomes defined as the most insensitive oxygen therapy required. For patients without CXR images,
+we employed Random Forest method for the prediction. Predictive risk scores for COVID-19 severe
+outcomes ("CO-RISK" score) were derived from model output and evaluated on the testing dataset,
+as well as compared to human performance. The study's dataset (the "MGB COVID Cohort") was constructed
+from all patients presenting to the Mass General Brigham (MGB) healthcare system from March 1st
+to June 1st, 2020. ED visits with incomplete or erroneous data were excluded. Patients with no test
+order for COVID or confirmed negative test results were excluded. Patients under the age of 15 were
+also excluded. Finally, electronic health record (EHR) data from a total of 11060 COVID-19 confirmed
+or suspected patients were used in this study. Chest X-ray (CXR) images were also collected from
+each patient if available. Results show that CO-RISK score achieved area under the Curve (AUC) of
+predicting MV/death (i.e. severe outcomes) in 24 hours of 0.95, and 0.92 in 72 hours on the testing
+dataset. The model shows superior performance to the commonly used risk scores in ED (CURB-65 and
+MEWS). Comparing with physician's decisions, CO-RISK score has demonstrated superior performance
+to human in making ICU/floor decisions. 

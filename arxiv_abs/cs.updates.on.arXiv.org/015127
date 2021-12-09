@@ -1,0 +1,18 @@
+Goal: This paper presents an algorithm for estimating pelvis, thigh, shank, and foot kinematics
+during walking using only two or three wearable inertial sensors. Methods: The algorithm makes
+novel use of a Lie-group-based extended Kalman filter. The algorithm iterates through the prediction
+(kinematic equation), measurement (pelvis position pseudo-measurements, zero-velocity update,
+and flat-floor assumption), and constraint update (hinged knee and ankle joints, constant leg
+lengths). Results: The inertial motion capture algorithm was extensively evaluated on two datasets
+showing its performance against two standard benchmark approaches in optical motion capture (i.e.,
+plug-in gait (commonly used in gait analysis) and a kinematic fit (commonly used in animation, robotics,
+and musculoskeleton simulation)), giving insight into the similarity and differences between
+the said approaches used in different application areas. The overall mean body segment position
+(relative to mid-pelvis origin) and orientation error magnitude of our algorithm ($n=14$ participants)
+for free walking was $5.93 \pm 1.33$ cm and $13.43 \pm 1.89^\circ$ when using three IMUs placed on
+the feet and pelvis, and $6.35 \pm 1.20$ cm and $12.71 \pm 1.60^\circ$ when using only two IMUs placed
+on the feet. Conclusion: The algorithm was able to track the joint angles in the sagittal plane for
+straight walking well, but requires improvement for unscripted movements (e.g., turning around,
+side steps), especially for dynamic movements or when considering clinical applications. Significance:
+This work has brought us closer to comprehensive remote gait monitoring using IMUs on the shoes.
+The low computational cost also suggests that it can be used in real-time with gait assistive devices.

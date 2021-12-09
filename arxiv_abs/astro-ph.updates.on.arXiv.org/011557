@@ -1,0 +1,19 @@
+Neutrino-matter interactions play an important role in core-collapse supernova (CCSN) explosions
+as they contribute to both lepton number and/or four-momentum exchange between neutrinos and matter,
+and thus act as the agent for neutrino-driven explosions. Due to the multiscale nature of neutrino
+transport in CCSN simulations, an implicit treatment of neutrino-matter interactions is desired,
+which requires solutions of coupled nonlinear systems in each step of the time integration scheme.
+In this paper we design and compare nonlinear iterative solvers for implicit systems with energy
+coupling neutrino-matter interactions commonly used in CCSN simulations. Specifically, we consider
+electron neutrinos and antineutrinos, which interact with static matter configurations through
+the Bruenn~85 opacity set. The implicit systems arise from the discretization of a non-relativistic
+two-moment model for neutrino transport, which employs the discontinuous Galerkin (DG) method
+for phase-space discretization and an implicit-explicit (IMEX) time integration scheme. In the
+context of this DG-IMEX scheme, we propose two approaches to formulate the nonlinear systems --
+a coupled approach and a nested approach. For each approach, the resulting systems are solved with
+Anderson-accelerated fixed-point iteration and Newton's method. The performance of these four
+iterative solvers has been compared on relaxation problems with various degree of collisionality,
+as well as proto-neutron star deleptonization problems with several matter profiles adopted from
+spherically symmetric CCSN simulations. Numerical results suggest that the nested Anderson-accelerated
+fixed-point solver is more efficient than other tested solvers for solving implicit nonlinear
+systems with energy coupling neutrino-matter interactions. 

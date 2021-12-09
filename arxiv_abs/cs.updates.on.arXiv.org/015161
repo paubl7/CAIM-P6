@@ -1,0 +1,19 @@
+Convolutional neural networks have been extremely successful for 2D images and are readily extended
+to handle 3D voxel data. Meshes are a more common 3D shape representation that quantize the shape
+surface instead of the ambient space as with voxels, hence giving access to surface properties such
+as normals or appearances. The formulation of deep neural networks on meshes is, however, more complex
+since they are irregular data structures where the number of neighbors varies across vertices.
+While graph convolutional networks have previously been proposed over mesh vertex data, in this
+paper we explore how these networks can be extended to the dual face-based representation of triangular
+meshes, where nodes represent triangular faces in place of vertices. In comparison to the primal
+vertex mesh, its face dual offers several advantages, including, importantly, that the dual mesh
+is regular in the sense that each triangular face has exactly three neighbors. Moreover, the dual
+mesh suggests the use of a number of input features that are naturally defined over faces, such as
+surface normals and face areas. We evaluate the dual approach on the shape correspondence task on
+the FAUST human shape dataset and other versions of it with varying mesh topology. While applying
+generic graph convolutions to the dual mesh shows already improvements over primal mesh inputs,
+our experiments demonstrate that building additionally convolutional models that explicitly
+leverage the neighborhood size regularity of dual meshes enables learning shape representations
+that perform on par or better than previous approaches in terms of correspondence accuracy and mean
+geodesic error, while being more robust to topological changes in the meshes between training and
+testing shapes. 

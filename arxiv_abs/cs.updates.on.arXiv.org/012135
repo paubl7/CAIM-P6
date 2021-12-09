@@ -1,0 +1,18 @@
+Large content providers and content distribution network operators usually connect with large
+Internet service providers (eyeball networks) through dedicated private peering. The capacity
+of these private network interconnects is provisioned to match the volume of the real content demand
+by the users. Unfortunately, in case of a surge in traffic demand, for example due to a content trending
+in a certain country, the capacity of the private interconnect may deplete and the content provider/distributor
+would have to reroute the excess traffic through transit providers. Although, such overflow events
+are rare, they have significant negative impacts on content providers, Internet service providers,
+and end-users. These include unexpected delays and disruptions reducing the user experience quality,
+as well as direct costs paid by the Internet service provider to the transit providers. If the traffic
+overflow events could be predicted, the Internet service providers would be able to influence the
+routes chosen for the excess traffic to reduce the costs and increase user experience quality. In
+this article we propose a method based on an ensemble of deep learning models to predict overflow
+events over a short term horizon of 2-6 hours and predict the specific interconnections that will
+ingress the overflow traffic. The method was evaluated with 2.5 years' traffic measurement data
+from a large European Internet service provider resulting in a true-positive rate of 0.8 while maintaining
+a 0.05 false-positive rate. The lockdown imposed by the COVID-19 pandemic reduced the overflow
+prediction accuracy. Nevertheless, starting from the end of April 2020 with the gradual lockdown
+release, the old models trained before the pandemic perform equally well. 

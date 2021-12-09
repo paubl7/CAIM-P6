@@ -1,0 +1,19 @@
+We revisit the fundamental problem of I/O-efficiently computing $r$-way separators on planar
+graphs. An $r$-way separator divides a planar graph with $N$ vertices into $O(r)$ regions of size
+$O(N/r)$ and $O(\sqrt {Nr})$ boundary vertices in total, where boundary vertices are vertices
+that are adjacent to more than one region. Such separators are used in I/O-efficient solutions to
+many fundamental problems on planar graphs such as breadth-first search, finding single-source
+shortest paths, topological sorting, and finding strongly connected components. Our main result
+is an I/O-efficient sampling-based algorithm that, given a Koebe-embedding of a graph with $N$
+vertices and a parameter $r$, computes an $r$-way separator for the graph under certain assumptions
+on the size of internal memory. Computing a Koebe-embedding of a planar graph is difficult in practice
+and no known I/O-efficient algorithm currently exists. Therefore, we show how our algorithm can
+be generalized and applied directly to Delaunay triangulations without relying on a Koebe-embedding.
+This adaptation can produce many boundary vertices in the worst-case, however, to our knowledge
+our result is the first to be implemented in practice due to the many non-trivial and complex techniques
+used in previous results. Furthermore, we show that our algorithm performs well on real-world data
+and that the number of boundary vertices is small in practice. Motivated by applications in geometric
+information systems, we show how our algorithm for Delaunay triangulations can be applied to compute
+the flow accumulation over a terrain, which models how much water flows over the vertices of a terrain.
+When given an $r$-way separator, our implementation of the algorithm outperforms traditional
+sweep-line-based algorithms on the publicly available digital elevation model of Denmark. 

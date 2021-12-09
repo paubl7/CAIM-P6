@@ -1,0 +1,19 @@
+In graph sparsification, the goal has almost always been of {global} nature: compress a graph into
+a smaller subgraph ({sparsifier}) that maintains certain features of the original graph. Algorithms
+can then run on the sparsifier, which in many cases leads to improvements in the overall runtime and
+memory. This paper studies sparsifiers that have bounded (maximum) degree, and are thus {locally}
+sparse, aiming to improve local measures of runtime and memory. To improve those local measures,
+it is important to be able to compute such sparsifiers {locally}. We initiate the study of local algorithms
+for bounded degree sparsifiers in unweighted sparse graphs, focusing on the problems of vertex
+cover, matching, and independent set. Let $\epsilon > 0$ be a slack parameter and $\alpha \ge 1$ be
+a density parameter. We devise local algorithms for computing: (1) A $(1+\epsilon)$-vertex cover
+sparsifier of degree $O(\alpha / \epsilon)$, for any graph of {arboricity} $\alpha$. (2) A $(1+\epsilon)$-maximum
+matching sparsifier and also a $(1+\epsilon)$-maximal matching sparsifier of degree $O(\alpha
+/ \epsilon)$, for any graph of arboricity $\alpha$. (3) A $(1+\epsilon)$-independent set sparsifier
+of degree $O(\alpha^2 / \epsilon)$, for any graph of average degree $\alpha$. Our algorithms require
+only a single communication round in the standard message passing models of distributed computing,
+and moreover, they can be simulated locally in a trivial way. As an immediate application we can extend
+results from distributed computing and local computation algorithms that apply to graphs of degree
+bounded by $d$ to graphs of arboricity $O(d / \epsilon)$ or average degree $O(d^2 / \epsilon)$, at
+the expense of increasing the approximation guarantee by a factor of $(1+\epsilon)$. In particular,
+we can extend the plethora of recent local computation algorithms [...] 

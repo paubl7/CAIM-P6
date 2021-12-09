@@ -1,0 +1,19 @@
+This paper proposes piece-wise matching layer as a novel layer in representation learning methods
+for electrocardiogram (ECG) classification. Despite the remarkable performance of representation
+learning methods in the analysis of time series, there are still several challenges associated
+with these methods ranging from the complex structures of methods, the lack of generality of solutions,
+the need for expert knowledge, and large-scale training datasets. We introduce the piece-wise
+matching layer that works based on two levels to address some of the aforementioned challenges.
+At the first level, a set of morphological, statistical, and frequency features and comparative
+forms of them are computed based on each periodic part and its neighbors. At the second level, these
+features are modified by predefined transformation functions based on a receptive field scenario.
+Several scenarios of offline processing, incremental processing, fixed sliding receptive field,
+and event-based triggering receptive field can be implemented based on the choice of length and
+mechanism of indicating the receptive field. We propose dynamic time wrapping as a mechanism that
+indicates a receptive field based on event triggering tactics. To evaluate the performance of this
+method in time series analysis, we applied the proposed layer in two publicly available datasets
+of PhysioNet competitions in 2015 and 2017 where the input data is ECG signal. We compared the performance
+of our method against a variety of known tuned methods from expert knowledge, machine learning,
+deep learning methods, and the combination of them. The proposed approach improves the state of
+the art in two known completions 2015 and 2017 around 4% and 7% correspondingly while it does not rely
+on in advance knowledge of the classes or the possible places of arrhythmia. 

@@ -1,0 +1,20 @@
+We present alfonso, an open-source Matlab package for solving conic optimization problems over
+nonsymmetric convex cones. The implementation is based on the authors' corrected analysis of a
+primal-dual interior-point method of Skajaa and Ye. This method enables optimization over any
+convex cone as long as a logarithmically homogeneous self-concordant barrier is available for
+the cone or its dual. This includes many nonsymmetric cones, for example, hyperbolicity cones and
+their duals (such as sum-of-squares cones), semidefinite and second-order cone representable
+cones, power cones, and the exponential cone. Besides enabling the solution of problems which cannot
+be cast as optimization problems over a symmetric cone, it also offers performance advantages for
+problems whose symmetric cone programming representation requires a large number of auxiliary
+variables or has a special structure that can be exploited in the barrier computation. The worst-case
+iteration complexity of alfonso is the best known for non-symmetric cone optimization: $O(\sqrt{\nu}\log(1/\epsilon))$
+iterations to reach an $\epsilon$-optimal solution, where $\nu$ is the barrier parameter of the
+barrier function used in the optimization. alfonso can be interfaced with a Matlab function (supplied
+by the user) that computes the Hessian of a barrier function for the cone. For convenience, a simplified
+interface is also available to optimize over the direct product of cones for which a barrier function
+has already been built into the software. This interface can be easily extended to include new cones.
+Both interfaces are illustrated by solving linear programs. The oracle interface and the efficiency
+of alfonso are also demonstrated using a design of experiments problem in which the tailored barrier
+computation greatly decreases the solution time compared to using state-of-the-art conic optimization
+software. 

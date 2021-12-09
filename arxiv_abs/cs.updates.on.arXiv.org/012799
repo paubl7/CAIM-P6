@@ -1,0 +1,20 @@
+With the proliferation of Android malware, the demand for an effective and efficient malware detection
+system is on the rise. The existing device-end learning based solutions tend to extract limited
+syntax features (e.g., permissions and API calls) to meet a certain time constraint of mobile devices.
+However, syntax features lack the semantics which can represent the potential malicious behaviors
+and further result in more robust model with high accuracy for malware detection. In this paper,
+we propose an efficient Android malware detection system, named SeqMobile, which adopts behavior-based
+sequence features and leverages customized deep neural networks on mobile devices instead of the
+server. Different from the traditional sequence-based approaches on server, to meet the performance
+demand, SeqMobile accepts three effective performance optimization methods to reduce the time
+cost. To evaluate the effectiveness and efficiency of our system, we conduct experiments from the
+following aspects 1) the detection accuracy of different recurrent neural networks; 2) the feature
+extraction performance on different mobile devices, 3) the detection accuracy and prediction
+time cost of different sequence lengths. The results unveil that SeqMobile can effectively detect
+malware with high accuracy. Moreover, our performance optimization methods have proven to improve
+the performance of training and prediction by at least twofold. Additionally, to discover the potential
+performance optimization from the SOTA TensorFlow model optimization toolkit for our approach,
+we also provide an evaluation on the toolkit, which can serve as a guidance for other systems leveraging
+on sequence-based learning approach. Overall, we conclude that our sequence-based approach,
+together with our performance optimization methods, enable us to detect malware under the performance
+demands of mobile devices. 

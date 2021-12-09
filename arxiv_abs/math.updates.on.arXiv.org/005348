@@ -1,0 +1,19 @@
+Generalized inverses are important in statistics and other areas of applied matrix algebra. A \emph{generalized
+inverse} of a real matrix $A$ is a matrix $H$ that satisfies the Moore-Penrose (M-P) property $AHA=A$.
+If $H$ also satisfies the M-P property $HAH=H$, then it is called \emph{reflexive}. Reflexivity
+of a generalized inverse is equivalent to minimum rank, a highly desirable property. We consider
+aspects of symmetry related to the calculation of various \emph{sparse} reflexive generalized
+inverses of $A$. As is common, we use (vector) 1-norm minimization for both inducing sparsity and
+for keeping the magnitude of entries under control. When $A$ is symmetric, a symmetric $H$ is highly
+desirable, but generally such a restriction on $H$ will not lead to a 1-norm minimizing reflexive
+generalized inverse. We investigate a block construction method to produce a symmetric reflexive
+generalized inverse that is structured and has guaranteed sparsity. Letting the rank of $A$ be $r$,
+we establish that the 1-norm minimizing generalized inverse of this type is a 1-norm minimizing
+symmetric generalized inverse when (i) $r=1$ and when (ii) $r=2$ and $A$ is nonnegative. Another
+aspect of symmetry that we consider relates to another M-P property: $H$ is \emph{ah-symmetric}
+if $AH$ is symmetric. The ah-symmetry property is sufficient for a generalized inverse to be used
+to solve the least-squares problem $\min\{\|Ax-b\|_2:~x\in\mathbb{R}^n\}$ using $H$, via $x:=Hb$.
+We investigate a column block construction method to produce an ah-symmetric reflexive generalized
+inverse that is structured and has guaranteed sparsity. We establish that the 1-norm minimizing
+ah-symmetric generalized inverse of this type is a 1-norm minimizing ah-symmetric generalized
+inverse when (i) $r=1$ and when (ii) $r=2$ and $A$ satisfies a technical condition. 

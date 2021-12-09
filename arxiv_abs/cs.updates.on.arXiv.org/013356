@@ -1,0 +1,20 @@
+Embedded systems have proliferated in various consumer and industrial applications with the evolution
+of Cyber-Physical Systems and the Internet of Things. These systems are subjected to stringent
+constraints so that embedded software must be optimized for multiple objectives simultaneously,
+namely reduced energy consumption, execution time, and code size. Compilers offer optimization
+phases to improve these metrics. However, proper selection and ordering of them depends on multiple
+factors and typically requires expert knowledge. State-of-the-art optimizers facilitate different
+platforms and applications case by case, and they are limited by optimizing one metric at a time,
+as well as requiring a time-consuming adaptation for different targets through dynamic profiling.
+To address these problems, we propose the novel MLComp methodology, in which optimization phases
+are sequenced by a Reinforcement Learning-based policy. Training of the policy is supported by
+Machine Learning-based analytical models for quick performance estimation, thereby drastically
+reducing the time spent for dynamic profiling. In our framework, different Machine Learning models
+are automatically tested to choose the best-fitting one. The trained Performance Estimator model
+is leveraged to efficiently devise Reinforcement Learning-based multi-objective policies for
+creating quasi-optimal phase sequences. Compared to state-of-the-art estimation models, our
+Performance Estimator model achieves lower relative error (<2%) with up to 50x faster training
+time over multiple platforms and application domains. Our Phase Selection Policy improves execution
+time and energy consumption of a given code by up to 12% and 6%, respectively. The Performance Estimator
+and the Phase Selection Policy can be trained efficiently for any target platform and application
+domain. 

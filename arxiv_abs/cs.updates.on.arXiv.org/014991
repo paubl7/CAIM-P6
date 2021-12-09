@@ -1,0 +1,19 @@
+Graphs model real-world circumstances in many applications where they may constantly change to
+capture the dynamic behavior of the phenomena. Topological persistence which provides a set of
+birth and death pairs for the topological features is one instrument for analyzing such changing
+graph data. However, standard persistent homology defined over a growing space cannot always capture
+such a dynamic process unless shrinking with deletions is also allowed. Hence, zigzag persistence
+which incorporates both insertions and deletions of simplices is more appropriate in such a setting.
+Unlike standard persistence which admits nearly linear-time algorithms for graphs, such results
+for the zigzag version improving the general $O(m^\omega)$ time complexity are not known, where
+$\omega< 2.37286$ is the matrix multiplication exponent. In this paper, we propose algorithms
+for zigzag persistence on graphs which run in near-linear time. Specifically, given a filtration
+with $m$ additions and deletions on a graph with $n$ vertices and edges, the algorithm for $0$-dimension
+runs in $O(m\log^2 n+m\log m)$ time and the algorithm for 1-dimension runs in $O(m\log^4 n)$ time.
+The algorithm for $0$-dimension draws upon another algorithm designed originally for pairing
+critical points of Morse functions on $2$-manifolds. The algorithm for $1$-dimension pairs a negative
+edge with the earliest positive edge so that a $1$-cycle containing both edges resides in all intermediate
+graphs. Both algorithms achieve the claimed time complexity via dynamic graph data structures
+proposed by Holm et al. In the end, using Alexander duality, we extend the algorithm for $0$-dimension
+to compute the $(p-1)$-dimensional zigzag persistence for $\mathbb{R}^p$-embedded complexes
+in $O(m\log^2 n+m\log m+n\log n)$ time. 

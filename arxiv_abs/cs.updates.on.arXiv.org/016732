@@ -1,0 +1,20 @@
+The utilization of computer technology to solve problems in medical scenarios has attracted considerable
+attention in recent years, which still has great potential and space for exploration. Among them,
+machine learning has been widely used in the prediction, diagnosis and even treatment of Sepsis.
+However, state-of-the-art methods require large amounts of labeled medical data for supervised
+learning. In real-world applications, the lack of labeled data will cause enormous obstacles if
+one hospital wants to deploy a new Sepsis detection system. Different from the supervised learning
+setting, we need to use known information (e.g., from another hospital with rich labeled data) to
+help build a model with acceptable performance, i.e., transfer learning. In this paper, we propose
+a semi-supervised optimal transport with self-paced ensemble framework for Sepsis early detection,
+called SPSSOT, to transfer knowledge from the other that has rich labeled data. In SPSSOT, we first
+extract the same clinical indicators from the source domain (e.g., hospital with rich labeled data)
+and the target domain (e.g., hospital with little labeled data), then we combine the semi-supervised
+domain adaptation based on optimal transport theory with self-paced under-sampling to avoid a
+negative transfer possibly caused by covariate shift and class imbalance. On the whole, SPSSOT
+is an end-to-end transfer learning method for Sepsis early detection which can automatically select
+suitable samples from two domains respectively according to the number of iterations and align
+feature space of two domains. Extensive experiments on two open clinical datasets demonstrate
+that comparing with other methods, our proposed SPSSOT, can significantly improve the AUC values
+with only 1% labeled data in the target domain in two transfer learning scenarios, MIMIC $rightarrow$
+Challenge and Challenge $rightarrow$ MIMIC. 

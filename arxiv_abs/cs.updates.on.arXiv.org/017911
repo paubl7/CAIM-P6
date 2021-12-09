@@ -1,0 +1,19 @@
+For deep learning methods of image super-resolution, the most critical issue is whether the paired
+low and high resolution images for training accurately reflect the sampling process of real cameras.
+Low and high resolution (LR$\sim$HR) image pairs synthesized by existing degradation models (e.g.
+bicubic downsampling) deviate from those in reality; thus the super-resolution CNN trained by
+these synthesized LR$\sim$HR image pairs does not perform well when being applied to real images.
+In this paper, we propose a novel method to capture a large set of realistic LR$\sim$HR image pairs
+using real cameras. The data acquisition is carried out under controllable lab conditions with
+minimum human intervention and at high throughput (about 500 image pairs per hour). The high level
+of automation makes it easy to produce a set of real LR$\sim$HR training image pairs for each camera.Our
+innovation is to shoot images displayed on an ultra-high quality screen at different resolutions.
+There are three distinctive advantages of our method for image super-resolution. First, as the
+LR and HR images are taken of a 3D planar surface (the screen) the registration problem fits exactly
+to a homography model and we can display specially designed markers on the image to improve the registration
+precision. Second, the displayed digital image file can be exploited as a reference to optimize
+the high frequency content of the restored image. Third, this high-efficiency data collection
+method makes it possible to collect a customized dataset for each camera sensor, for which one can
+train a specific model for the intended camera sensor. Experimental results show that training
+a super-resolution CNN by our LR$\sim$HR dataset has superior restoration performance than training
+it by existing datasets on real world images at the inference stage. 

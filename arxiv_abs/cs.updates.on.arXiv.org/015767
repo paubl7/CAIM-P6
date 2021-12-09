@@ -1,0 +1,19 @@
+Recent deep-learning-based techniques for the reconstruction of geometries from different input
+representations such as images and point clouds have been instrumental in advancing research in
+geometric machine learning. Most of these techniques rely on a triangular mesh representation
+for representing the geometry, with very recent attempts in using B-splines. While Non-Uniform
+Rational B-splines (NURBS) are the de facto standard in the CAD industry, minimal efforts have been
+made to bridge the gap between deep-learning frameworks and the NURBS representation for geometry.
+The backbone of modern deep learning techniques is the use of a fully automatic differentiable definition
+for each mathematical operation to enable backpropagation of losses while training. In order to
+integrate the NURBS representation of CAD models with deep learning methods, we propose a differentiable
+NURBS layer for evaluating the curve or surface given a set of NURBS parameters. We have developed
+a NURBS layer defining the forward and backward pass required for automatic differentiation. Our
+implementation is GPU accelerated and is directly integrated with PyTorch, a popular deep learning
+framework. We demonstrate the efficacy of our NURBS layer by automatically incorporating it with
+the stochastic gradient descent algorithm and performing CAD operations such as curve or surface
+fitting and surface offsetting. Further, we show its utility in deep learning applications such
+as point cloud reconstruction and structural modeling and analysis of shell structures such as
+heart valves. These examples show that our layer has better performance for certain deep learning
+frameworks and can be directly integrated with any CAD deep-learning framework that require the
+use of NURBS. 

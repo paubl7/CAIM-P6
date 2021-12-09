@@ -1,0 +1,20 @@
+Male infertility is a disease which affects approximately 7% of men. Sperm morphology analysis
+(SMA) is one of the main diagnosis methods for this problem. Manual SMA is an inexact, subjective,
+non-reproducible, and hard to teach process. As a result, in this paper, we introduce a novel automatic
+SMA based on a neural architecture search algorithm termed Genetic Neural Architecture Search
+(GeNAS). For this purpose, we used a collection of images called MHSMA dataset contains 1,540 sperm
+images which have been collected from 235 patients with infertility problems. GeNAS is a genetic
+algorithm that acts as a meta-controller which explores the constrained search space of plain convolutional
+neural network architectures. Every individual of the genetic algorithm is a convolutional neural
+network trained to predict morphological deformities in different segments of human sperm (head,
+vacuole, and acrosome), and its fitness is calculated by a novel proposed method named GeNAS-WF
+especially designed for noisy, low resolution, and imbalanced datasets. Also, a hashing method
+is used to save each trained neural architecture fitness, so we could reuse them during fitness evaluation
+and speed up the algorithm. Besides, in terms of running time and computation power, our proposed
+architecture search method is far more efficient than most of the other existing neural architecture
+search algorithms. Additionally, other proposed methods have been evaluated on balanced datasets,
+whereas GeNAS is built specifically for noisy, low quality, and imbalanced datasets which are common
+in the field of medical imaging. In our experiments, the best neural architecture found by GeNAS
+has reached an accuracy of 91.66%, 77.33%, and 77.66% in the vacuole, head, and acrosome abnormality
+detection, respectively. In comparison to other proposed algorithms for MHSMA dataset, GeNAS
+achieved state-of-the-art results. 

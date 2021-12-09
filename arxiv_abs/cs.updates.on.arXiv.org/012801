@@ -1,0 +1,18 @@
+Game semantics has proven to be a robust method to give compositional semantics for a variety of higher-order
+programming languages. However, due to the complexity of most game models, game semantics has remained
+unapproachable for non-experts. In this paper, we aim at making game semantics more accessible
+by viewing it as a syntactic translation into a session typed pi-calculus, referred to as metalanguage,
+followed by a semantics interpretation of the metalanguage into a particular game model. The syntactic
+translation can be defined for a wide range of programming languages without knowledge of the particular
+game model used. Simple reasoning on the model (soundness, and adequacy) can be done at the level
+of the metalanguage, escaping tedious technical proofs usually found in game semantics. We call
+this methodology programming game semantics. We design a metalanguage (PiDiLL) inspired from
+Differential Linear Logic (DiLL), which is concise but expressive enough to support features required
+by concurrent game semantics. We then demonstrate our methodology by yielding the first causal,
+non-angelic and interactive game model of CML, a higher-order call-by-value language with shared
+memory concurrency. We translate CML into PiDiLL and show that the translation is adequate. We give
+a causal and non-angelic game semantics model using event structures, which supports a simple semantics
+interpretation of PiDiLL. Combining both of these results, we obtain the first interactive model
+of a concurrent language of this expressivity which is adequate with respect to the standard weak
+bisimulation, and fully abstract for the contextual equivalence on second-order terms. We have
+implemented a prototype which can explore the generated causal object from a subset of OCaml. 

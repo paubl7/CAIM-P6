@@ -1,0 +1,18 @@
+Model interpretability is one of the most intriguing problems in most of the Machine Learning models,
+particularly for those that are mathematically sophisticated. Computing Shapley Values are arguably
+the best approach so far to find the importance of each feature in a model, at the row level. In other
+words, Shapley values represent the importance of a feature for a particular row, especially for
+Classification or Regression problems. One of the biggest limitations of Shapley vales is that,
+Shapley value calculations assume all the features are uncorrelated (independent of each other),
+this assumption is often incorrect. To address this problem, we present a unified framework to calculate
+Shapley values with correlated features. To be more specific, we do an adjustment (Matrix formulation)
+of the features while calculating Independent Shapley values for the rows. Moreover, we have given
+a Mathematical proof against the said adjustments. With these adjustments, Shapley values (Importance)
+for the features become independent of the correlations existing between them. We have also enhanced
+this adjustment concept for more than features. As the Shapley values are additive, to calculate
+combined effect of two features, we just have to add their individual Shapley values. This is again
+not right if one or more of the features (used in the combination) are correlated with the other features
+(not in the combination). We have addressed this problem also by extending the correlation adjustment
+for one feature to multiple features in the said combination for which Shapley values are determined.
+Our implementation of this method proves that our method is computationally efficient also, compared
+to original Shapley method. 

@@ -1,0 +1,19 @@
+In this work we introduce a novel semi-implicit structure-preserving finite-volume/finite-difference
+scheme for the viscous and resistive equations of magnetohydrodynamics (MHD) based on an appropriate
+3-split of the governing PDE system, which is decomposed into a first convective subsystem, a second
+subsystem involving the coupling of the velocity field with the magnetic field and a third subsystem
+involving the pressure-velocity coupling. The nonlinear convective terms are discretized explicitly,
+while the remaining two subsystems accounting for the Alfven waves and the magneto-acoustic waves
+are treated implicitly. The final algorithm is at least formally constrained only by a mild CFL stability
+condition depending on the velocity field of the pure hydrodynamic convection. To preserve the
+divergence-free constraint of the magnetic field exactly at the discrete level, a proper set of
+overlapping dual meshes is employed. The resulting linear algebraic systems are shown to be symmetric
+and therefore can be solved by means of an efficient standard matrix-free conjugate gradient algorithm.
+One of the peculiarities of the presented algorithm is that the magnetic field is defined on the edges
+of the main grid, while the electric field is on the faces. The final scheme can be regarded as a novel
+shock-capturing, conservative and structure preserving semi-implicit scheme for the nonlinear
+viscous and resistive MHD equations. Several numerical tests are presented to show the main features
+of our novel solver: linear-stability in the sense of Lyapunov is verified at a prescribed constant
+equilibrium solution; a 2nd-order of convergence is numerically estimated; shock-capturing
+capabilities are proven against a standard set of stringent MHD shock-problems; accuracy and robustness
+are verified against a nontrivial set of 2- and 3-dimensional MHD problems. 

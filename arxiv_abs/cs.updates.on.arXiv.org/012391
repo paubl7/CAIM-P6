@@ -1,0 +1,18 @@
+Human-Object Interaction (HOI) Detection infers the action predicate on a <subject, predicate,
+object> triplet. Whilst contextual information has been found critical in this task, even with
+the advent of deep learning, researchers still grapple to understand how to best leverage contextual
+cues for inference. What is the best way to integrate visual, spatial, semantic, and pose information?
+Many works have used a subset of cues or limited their analysis to single subject-object pair for
+inference. Few works have studied the disambiguating contribution of subsidiary relations made
+available via graph networks. In this work, we contribute a two-stream (multi-branched) network
+that effectively aggregates a series of contextual cues. In a first study, we propose a dual graph
+attention network to dynamically aggregate the visual, instance spatial, and semantic cues from
+primary subject-object relations as well as subsidiary ones to enhance inference. Subsequently,
+we incorporate human pose features and propose a second network stream that runs a pose-based modular
+network. The latter is composed of dual branches that run a graph convolutional network and multi-layer
+perceptrons to improve detection in crowded scenes. The result is a graph mixture network that processes
+a wide set of contextual cues effectively. We call our model: Visual-Semantic-Pose Graph Mixture
+Networks (VSP-GMNs). Our final model outperforms state-of-the-art on the challenging HICO-DET
+dataset by significant margins of almost 10%, especially in long-tail cases that are harder to interpret.
+We also achieve a competitive performance on the smaller V-COCO dataset. Code, video, and supplementary
+material information are available at www.juanrojas.net/VSPGMN. 

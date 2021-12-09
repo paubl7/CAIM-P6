@@ -1,0 +1,18 @@
+Fruit tree pruning and fruit thinning require a powerful vision system that can provide high resolution
+segmentation of the fruit trees and their branches. However, recent works only consider the dormant
+season, where there are minimal occlusions on the branches or fit a polynomial curve to reconstruct
+branch shape and hence, losing information about branch thickness. In this work, we apply two state-of-the-art
+supervised learning models U-Net and DeepLabv3, and a conditional Generative Adversarial Network
+Pix2Pix (with and without the discriminator) to segment partially occluded 2D-open-V apple trees.
+Binary accuracy, Mean IoU, Boundary F1 score and Occluded branch recall were used to evaluate the
+performances of the models. DeepLabv3 outperforms the other models at Binary accuracy, Mean IoU
+and Boundary F1 score, but is surpassed by Pix2Pix (without discriminator) and U-Net in Occluded
+branch recall. We define two difficulty indices to quantify the difficulty of the task: (1) Occlusion
+Difficulty Index and (2) Depth Difficulty Index. We analyze the worst 10 images in both difficulty
+indices by means of Branch Recall and Occluded Branch Recall. U-Net outperforms the other two models
+in the current metrics. On the other hand, Pix2Pix (without discriminator) provides more information
+on branch paths, which are not reflected by the metrics. This highlights the need for more specific
+metrics on recovering occluded information. Furthermore, this shows the usefulness of image-transfer
+networks for hallucination behind occlusions. Future work is required to further enhance the models
+to recover more information from occlusions such that this technology can be applied to automating
+agricultural tasks in a commercial environment. 

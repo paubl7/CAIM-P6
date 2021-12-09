@@ -1,0 +1,19 @@
+Rating prediction is a core problem in recommender systems to quantify users preferences towards
+different items. Due to the imbalanced rating distributions in training data, existing recommendation
+methods suffer from the biased prediction problem that generates biased prediction results. Thus,
+their performance on predicting ratings which rarely appear in training data is unsatisfactory.
+In this paper, inspired by the superior capability of Extreme Value Distribution (EVD)-based methods
+in modeling the distribution of rare data, we propose a novel \underline{\emph{G}}umbel Distribution-based
+\underline{\emph{R}}ating \underline{\emph{P}}rediction framework (GRP) which can accurately
+predict both frequent and rare ratings between users and items. In our approach, we first define
+different Gumbel distributions for each rating level, which can be learned by historical rating
+statistics of users and items. Second, we incorporate the Gumbel-based representations of users
+and items with their original representations learned from the rating matrix and/or reviews to
+enrich the representations of users and items via a proposed multi-scale convolutional fusion
+layer. Third, we propose a data-driven rating prediction module to predict the ratings of user-item
+pairs. It's worthy to note that our approach can be readily applied to existing recommendation methods
+for addressing their biased prediction problem. To verify the effectiveness of GRP, we conduct
+extensive experiments on eight benchmark datasets. Compared with several baseline models, the
+results show that: 1) GRP achieves state-of-the-art overall performance on all eight datasets;
+2) GRP makes a substantial improvement in predicting rare ratings, which shows the effectiveness
+of our model in addressing the bias prediction problem. 

@@ -1,0 +1,18 @@
+In echocardiography (echo), an electrocardiogram (ECG) is conventionally used to temporally
+align different cardiac views for assessing critical measurements. However, in emergencies or
+point-of-care situations, acquiring an ECG is often not an option, hence motivating the need for
+alternative temporal synchronization methods. Here, we propose Echo-SyncNet, a self-supervised
+learning framework to synchronize various cross-sectional 2D echo series without any external
+input. The proposed framework takes advantage of both intra-view and inter-view self supervisions.
+The former relies on spatiotemporal patterns found between the frames of a single echo cine and the
+latter on the interdependencies between multiple cines. The combined supervisions are used to
+learn a feature-rich embedding space where multiple echo cines can be temporally synchronized.
+We evaluate the framework with multiple experiments: 1) Using data from 998 patients, Echo-SyncNet
+shows promising results for synchronizing Apical 2 chamber and Apical 4 chamber cardiac views;
+2) Using data from 3070 patients, our experiments reveal that the learned representations of Echo-SyncNet
+outperform a supervised deep learning method that is optimized for automatic detection of fine-grained
+cardiac phase; 3) We show the usefulness of the learned representations in a one-shot learning scenario
+of cardiac keyframe detection. Without any fine-tuning, keyframes in 1188 validation patient
+studies are identified by synchronizing them with only one labeled reference study. We do not make
+any prior assumption about what specific cardiac views are used for training and show that Echo-SyncNet
+can accurately generalize to views not present in its training set. Project repository: github.com/fatemehtd/Echo-SyncNet.

@@ -1,0 +1,20 @@
+Neural network pruning is a fruitful area of research with surging interest in high sparsity regimes.
+Benchmarking in this domain heavily relies on faithful representation of the sparsity of subnetworks,
+which has been traditionally computed as the fraction of removed connections (direct sparsity).
+This definition, however, fails to recognize unpruned parameters that detached from input or output
+layers of underlying subnetworks, potentially underestimating actual effective sparsity: the
+fraction of inactivated connections. While this effect might be negligible for moderately pruned
+networks (up to 10-100 compression rates), we find that it plays an increasing role for thinner subnetworks,
+greatly distorting comparison between different pruning algorithms. For example, we show that
+effective compression of a randomly pruned LeNet-300-100 can be orders of magnitude larger than
+its direct counterpart, while no discrepancy is ever observed when using SynFlow for pruning [Tanaka
+et al., 2020]. In this work, we adopt the lens of effective sparsity to reevaluate several recent
+pruning algorithms on common benchmark architectures (e.g., LeNet-300-100, VGG-19, ResNet-18)
+and discover that their absolute and relative performance changes dramatically in this new and
+more appropriate framework. To aim for effective, rather than direct, sparsity, we develop a low-cost
+extension to most pruning algorithms. Further, equipped with effective sparsity as a reference
+frame, we partially reconfirm that random pruning with appropriate sparsity allocation across
+layers performs as well or better than more sophisticated algorithms for pruning at initialization
+[Su et al., 2020]. In response to this observation, using a simple analogy of pressure distribution
+in coupled cylinders from physics, we design novel layerwise sparsity quotas that outperform all
+existing baselines in the context of random pruning. 

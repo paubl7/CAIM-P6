@@ -1,0 +1,20 @@
+Parameter retrieval and model inversion are key problems in remote sensing and Earth observation.
+Currently, different approximations exist: a direct, yet costly, inversion of radiative transfer
+models (RTMs); the statistical inversion with in situ data that often results in problems with extrapolation
+outside the study area; and the most widely adopted hybrid modeling by which statistical models,
+mostly nonlinear and non-parametric machine learning algorithms, are applied to invert RTM simulations.
+We will focus on the latter. Among the different existing algorithms, in the last decade kernel based
+methods, and Gaussian Processes (GPs) in particular, have provided useful and informative solutions
+to such RTM inversion problems. This is in large part due to the confidence intervals they provide,
+and their predictive accuracy. However, RTMs are very complex, highly nonlinear, and typically
+hierarchical models, so that often a shallow GP model cannot capture complex feature relations
+for inversion. This motivates the use of deeper hierarchical architectures, while still preserving
+the desirable properties of GPs. This paper introduces the use of deep Gaussian Processes (DGPs)
+for bio-geo-physical model inversion. Unlike shallow GP models, DGPs account for complicated
+(modular, hierarchical) processes, provide an efficient solution that scales well to big datasets,
+and improve prediction accuracy over their single layer counterpart. In the experimental section,
+we provide empirical evidence of performance for the estimation of surface temperature and dew
+point temperature from infrared sounding data, as well as for the prediction of chlorophyll content,
+inorganic suspended matter, and coloured dissolved matter from multispectral data acquired by
+the Sentinel-3 OLCI sensor. The presented methodology allows for more expressive forms of GPs in
+remote sensing model inversion problems. 

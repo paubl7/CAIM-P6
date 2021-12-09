@@ -1,0 +1,18 @@
+Automated skin lesion analysis for simultaneous detection and recognition is still challenging
+for inter-class homogeneity and intra-class heterogeneity, leading to low generic capability
+of a Single Convolutional Neural Network (CNN) with limited datasets. This article proposes an
+end-to-end deep CNN-based framework for simultaneous detection and recognition of the skin lesions,
+named Dermo-DOCTOR, consisting of two encoders. The feature maps from two encoders are fused channel-wise,
+called Fused Feature Map (FFM). The FFM is utilized for decoding in the detection sub-network, concatenating
+each stage of two encoders' outputs with corresponding decoder layers to retrieve the lost spatial
+information due to pooling in the encoders. For the recognition sub-network, the outputs of three
+fully connected layers, utilizing feature maps of two encoders and FFM, are aggregated to obtain
+a final lesion class. We train and evaluate the proposed Dermo-Doctor utilizing two publicly available
+benchmark datasets, such as ISIC-2016 and ISIC-2017. The achieved segmentation results exhibit
+mean intersection over unions of 85.0 % and 80.0 % respectively for ISIC-2016 and ISIC-2017 test
+datasets. The proposed Dermo-DOCTOR also demonstrates praiseworthy success in lesion recognition,
+providing the areas under the receiver operating characteristic curves of 0.98 and 0.91 respectively
+for those two datasets. The experimental results show that the proposed Dermo-DOCTOR outperforms
+the alternative methods mentioned in the literature, designed for skin lesion detection and recognition.
+As the Dermo-DOCTOR provides better-results on two different test datasets, even with limited
+training data, it can be an auspicious computer-aided assistive tool for dermatologists. 

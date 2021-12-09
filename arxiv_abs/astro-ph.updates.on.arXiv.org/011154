@@ -1,0 +1,19 @@
+Gravitational waves are ripples in the space time fabric when high energy events such as black hole
+mergers or neutron star collisions take place. The first Gravitational Wave (GW) detection (GW150914)
+was made by the Laser Interferometer Gravitational-wave Observatory (LIGO) and Virgo Collaboration
+on September 14, 2015. Furthermore, the proof of the existence of GWs had countless implications
+from Stellar Evolution to General Relativity. Gravitational waves detection requires multiple
+filters and the filtered data has to be studied intensively to come to conclusions on whether the
+data is a just a glitch or an actual gravitational wave detection. However, with the use of Deep Learning
+the process is simplified heavily, as it reduces the level of filtering greatly, and the output is
+more definitive, even though the model produces a probabilistic result. Our technique, Deep Learning,
+utilizes a different implementation of a one-dimensional convolutional neural network (CNN).
+The model is trained by a composite of real LIGO noise, and injections of GW waveform templates. The
+CNN effectively uses classification to differentiate weak GW time series from non-gaussian noise
+from glitches in the LIGO data stream. In addition, we are the first study to utilize fine-tuning
+as a means to train the model with a second pass of data, while maintaining all the learned features
+from the initial training iteration. This enables our model to have a sensitivity (1.00) higher
+than all prior studies in this field, when making real-time detections of GWs at an extremely low
+SNR (4), while still being less computationally expensive. In part, this sensitivity is also achieved
+through the use of deep signal manifolds from both the Hanford and Livingston detectors, which enable
+the neural network to be responsive to false positives. 

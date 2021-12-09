@@ -1,0 +1,19 @@
+Domain adaptation (DA) has drawn high interest for its capacity to adapt a model trained on labeled
+source data to perform well on unlabeled or weakly labeled target data from a different domain. Most
+common DA techniques require concurrent access to the input images of both the source and target
+domains. However, in practice, privacy concerns often impede the availability of source images
+in the adaptation phase. This is a very frequent DA scenario in medical imaging, where, for instance,
+the source and target images could come from different clinical sites. We introduce a source-free
+domain adaptation for image segmentation. Our formulation is based on minimizing a label-free
+entropy loss defined over target-domain data, which we further guide with a domain-invariant prior
+on the segmentation regions. Many priors can be derived from anatomical information. Here, a class
+ratio prior is estimated from anatomical knowledge and integrated in the form of a Kullback Leibler
+(KL) divergence in our overall loss function. Furthermore, we motivate our overall loss with an
+interesting link to maximizing the mutual information between the target images and their label
+predictions. We show the effectiveness of our prior aware entropy minimization in a variety of domain-adaptation
+scenarios, with different modalities and applications, including spine, prostate, and cardiac
+segmentation. Our method yields comparable results to several state of the art adaptation techniques,
+despite having access to much less information, as the source images are entirely absent in our adaptation
+phase. Our straightforward adaptation strategy uses only one network, contrary to popular adversarial
+techniques, which are not applicable to a source-free DA setting. Our framework can be readily used
+in a breadth of segmentation problems, and our code is publicly available: https://github.com/mathilde-b/SFDA

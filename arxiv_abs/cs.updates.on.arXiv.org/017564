@@ -1,0 +1,19 @@
+A key task for speech recognition systems is to reduce the mismatch between training and evaluation
+data that is often attributable to speaker differences. Speaker adaptation techniques play a vital
+role to reduce the mismatch. Model-based speaker adaptation approaches often require sufficient
+amounts of target speaker data to ensure robustness. When the amount of speaker level data is limited,
+speaker adaptation is prone to overfitting and poor generalization. To address the issue, this
+paper proposes a full Bayesian learning based DNN speaker adaptation framework to model speaker-dependent
+(SD) parameter uncertainty given limited speaker specific adaptation data. This framework is
+investigated in three forms of model based DNN adaptation techniques: Bayesian learning of hidden
+unit contributions (BLHUC), Bayesian parameterized activation functions (BPAct), and Bayesian
+hidden unit bias vectors (BHUB). In the three methods, deterministic SD parameters are replaced
+by latent variable posterior distributions for each speaker, whose parameters are efficiently
+estimated using a variational inference based approach. Experiments conducted on 300-hour speed
+perturbed Switchboard corpus trained LF-MMI TDNN/CNN-TDNN systems suggest the proposed Bayesian
+adaptation approaches consistently outperform the deterministic adaptation on the NIST Hub5'00
+and RT03 evaluation sets. When using only the first five utterances from each speaker as adaptation
+data, significant word error rate reductions up to 1.4% absolute (7.2% relative) were obtained
+on the CallHome subset. The efficacy of the proposed Bayesian adaptation techniques is further
+demonstrated in a comparison against the state-of-the-art performance obtained on the same task
+using the most recent systems reported in the literature. 

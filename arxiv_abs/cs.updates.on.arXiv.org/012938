@@ -1,0 +1,19 @@
+The target identification in brain-computer interface (BCI) speller systems refers to the multi-channel
+electroencephalogram (EEG) classification for predicting the target character that the user
+intends to spell. The EEG in such systems is known to include the steady-state visually evoked potentials
+(SSVEP) signal, which is the brain response when the user concentrates on the target while being
+visually presented a matrix of certain alphanumeric each of which flickers at a unique frequency.
+The SSVEP in this setting is characteristically dominated at varying degrees by the harmonics of
+the stimulation frequency; hence, a pattern analysis of the SSVEP can solve for the mentioned multi-class
+classification problem. To this end, we propose a novel deep neural network (DNN) architecture
+for the target identification in BCI SSVEP spellers. The proposed DNN is an end-to-end system: it
+receives the multi-channel SSVEP signal, proceeds with convolutions across the sub-bands of the
+harmonics, channels and time, and classifies at the fully connected layer. Our experiments are
+on two publicly available (the benchmark and the BETA) datasets consisting of in total 105 subjects
+with 40 characters. We train in two stages. The first stage obtains a global perspective into the
+whole SSVEP data by exploiting the commonalities, and transfers the global model to the second stage
+that fine tunes it down to each subject separately by exploiting the individual statistics. In our
+extensive comparisons, our DNN is demonstrated to significantly outperform the state-of-the-art
+on the both two datasets, by achieving the information transfer rates (ITR) 265.23 bits/min and
+196.59 bits/min, respectively. To the best of our knowledge, our ITRs are the highest ever reported
+performance results on these datasets. The code, and the proposed DNN model are available at https://github.com/osmanberke/Deep-SSVEP-BCI.

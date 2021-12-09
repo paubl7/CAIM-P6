@@ -1,0 +1,20 @@
+Massively parallel systolic arrays and resource-efficient depthwise separable convolutions
+are two promising techniques to accelerate DNN inference on the edge. Interestingly, their combination
+is inefficient: Computational patterns of depthwise separable convolutions do not exhibit a rhythmic
+systolic flow and lack sufficient data reuse to saturate systolic arrays. We formally analyse this
+inefficiency and propose an efficient operator, an optimal hardware dataflow, and a superior training
+methodology towards alleviating this. The efficient operator, called FuSeConv, is a drop-in replacement
+for depthwise separable convolutions. FuSeConv factorizes convolution fully along their spatial
+and depth dimensions. The resultant computation efficiently maps to systolic arrays. The optimal
+dataflow, called Spatial-Tiled Output Stationary (ST-OS), maximizes the efficiency of FuSeConv
+on systolic arrays. It maps independent convolutions to rows of the array to maximize resource utilization
+with negligible VLSI overheads. Neural Operator Scaffolding (NOS) scaffolds the training of FuSeConv
+by distilling knowledge from the expensive depthwise separable convolutions. This bridges the
+accuracy gap between FuSeConv networks and baselines. Additionally, NOS can be combined with Neural
+Architecture Search (NAS) to trade-off latency and accuracy. The HW/SW co-design of FuSeConv with
+ST-OS achieves a significant speedup of 4.1-9.25X with state-of-the-art efficient networks for
+ImageNet. The parameter efficiency of FuSeConv and its significant out-performance over depthwise
+separable convolutions on systolic arrays illustrates their promise as a strong solution on the
+edge. Training FuSeConv networks with NOS achieves accuracy comparable to the baselines. Further,
+by combining NOS with NAS, we design networks that define state-of-the-art models improving on
+both accuracy and latency on systolic arrays. 

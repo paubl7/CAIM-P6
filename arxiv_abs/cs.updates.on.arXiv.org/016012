@@ -1,0 +1,20 @@
+Online reconstruction based on RGB-D sequences has thus far been restrained to relatively slow
+camera motions (<1m/s). Under very fast camera motion (e.g., 3m/s), the reconstruction can easily
+crumble even for the state-of-the-art methods. Fast motion brings two challenges to depth fusion:
+1) the high nonlinearity of camera pose optimization due to large inter-frame rotations and 2) the
+lack of reliably trackable features due to motion blur. We propose to tackle the difficulties of
+fast-motion camera tracking in the absence of inertial measurements using random optimization,
+in particular, the Particle Filter Optimization (PFO). To surmount the computation-intensive
+particle sampling and update in standard PFO, we propose to accelerate the randomized search via
+updating a particle swarm template (PST). PST is a set of particles pre-sampled uniformly within
+the unit sphere in the 6D space of camera pose. Through moving and rescaling the pre-sampled PST guided
+by swarm intelligence, our method is able to drive tens of thousands of particles to locate and cover
+a good local optimum extremely fast and robustly. The particles, representing candidate poses,
+are evaluated with a fitness function defined based on depth-model conformance. Therefore, our
+method, being depth-only and correspondence-free, mitigates the motion blur impediment as ToF-based
+depths are often resilient to motion blur. Thanks to the efficient template-based particle set
+evolution and the effective fitness function, our method attains good quality pose tracking under
+fast camera motion (up to 4m/s) in a realtime framerate without including loop closure or global
+pose optimization. Through extensive evaluations on public datasets of RGB-D sequences, especially
+on a newly proposed benchmark of fast camera motion, we demonstrate the significant advantage of
+our method over the state of the arts. 

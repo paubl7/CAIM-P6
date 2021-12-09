@@ -1,0 +1,18 @@
+Due to the special no-cloning principle, quantum states appear to be very useful in cryptography.
+But this very same property also has drawbacks: when receiving a quantum state, it is nearly impossible
+for the receiver to efficiently check non-trivial properties on that state without destroying
+it. In this work, we initiate the study of Non-Destructive Zero-Knowledge Proofs on Quantum States.
+Our method binds a quantum state to a classical encryption of that quantum state. That way, the receiver
+can obtain guarantees on the quantum state by asking to the sender to prove properties directly on
+the classical encryption. This method is therefore non-destructive, and it is possible to verify
+a very large class of properties. For instance, we can force the sender to send different categories
+of states depending on whether they know a classical password or not. Moreover, we can also provide
+guarantees to the sender: for example, we can ensure that the receiver will never learn whether the
+sender knows the password or not. We also extend this method to the multi-party setting. We show how
+it can prove useful to distribute a GHZ state between different parties, in such a way that only parties
+knowing a secret can be part of this GHZ. Moreover, the identity of the parties that are part of the
+GHZ remains hidden to any malicious party. A direct application would be to allow a server to create
+a secret sharing of a qubit between unknown parties, authorized for example by a third party Certification
+Authority. Finally, we provide simpler "blind" versions of the protocols that could prove useful
+in Anonymous Transmission or Quantum Onion Routing, and we explicit a cryptographic function required
+in our protocols based on the Learning With Errors hardness problem. 

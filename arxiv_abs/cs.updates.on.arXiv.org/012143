@@ -1,0 +1,19 @@
+Purpose: To develop a Breast Imaging Reporting and Data System (BI-RADS) breast density deep learning
+(DL) model in a multi-site setting for synthetic two-dimensional mammography (SM) images derived
+from digital breast tomosynthesis exams using full-field digital mammography (FFDM) images and
+limited SM data. Materials and Methods: A DL model was trained to predict BI-RADS breast density
+using FFDM images acquired from 2008 to 2017 (Site 1: 57492 patients, 187627 exams, 750752 images)
+for this retrospective study. The FFDM model was evaluated using SM datasets from two institutions
+(Site 1: 3842 patients, 3866 exams, 14472 images, acquired from 2016 to 2017; Site 2: 7557 patients,
+16283 exams, 63973 images, 2015 to 2019). Each of the three datasets were then split into training,
+validation, and test datasets. Adaptation methods were investigated to improve performance on
+the SM datasets and the effect of dataset size on each adaptation method is considered. Statistical
+significance was assessed using confidence intervals (CI), estimated by bootstrapping. Results:
+Without adaptation, the model demonstrated substantial agreement with the original reporting
+radiologists for all three datasets (Site 1 FFDM: linearly-weighted $\kappa_w$ = 0.75 [95% CI:
+0.74, 0.76]; Site 1 SM: $\kappa_w$ = 0.71 [95% CI: 0.64, 0.78]; Site 2 SM: $\kappa_w$ = 0.72 [95% CI:
+0.70, 0.75]). With adaptation, performance improved for Site 2 (Site 1: $\kappa_w$ = 0.72 [95% CI:
+0.66, 0.79], 0.71 vs 0.72, P = .80; Site 2: $\kappa_w$ = 0.79 [95% CI: 0.76, 0.81], 0.72 vs 0.79, P $<$
+.001) using only 500 SM images from that site. Conclusion: A BI-RADS breast density DL model demonstrated
+strong performance on FFDM and SM images from two institutions without training on SM images and
+improved using few SM images. 

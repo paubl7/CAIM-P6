@@ -1,0 +1,19 @@
+In magnetic confinement fusion research, the achievement of high plasma pressure is key to reaching
+the goal of net energy production. The magnetohydrodynamic (MHD) model is used to self-consistently
+calculate the effects the plasma pressure induces on the magnetic field used to confine the plasma.
+Such MHD calculations serve as input for the assessment of a number of important physics questions.
+The VMEC code is the most widely used to evaluate 3D ideal-MHD equilibria, as prominently present
+in stellarators. However, considering the computational cost, it is rarely used in large-scale
+or online applications. Access to fast MHD equilbria is a challenging problem in fusion research,
+one which machine learning could effectively address. In this paper, we present artificial neural
+network (NN) models able to quickly compute the equilibrium magnetic field of W7-X. Magnetic configurations
+that extensively cover the device operational space, and plasma profiles with volume averaged
+normalized plasma pressure $\langle \beta \rangle$ ($\beta$ = $\frac{2 \mu_0 p}{B^2}$) up to 5%
+and non-zero net toroidal current are included in the data set. By using convolutional layers, the
+spectral representation of the magnetic flux surfaces can be efficiently computed with a single
+network. To discover better models, a Bayesian hyper-parameter search is carried out, and 3D convolutional
+neural networks are found to outperform feed-forward fully-connected neural networks. The achieved
+normalized root-mean-squared error ranges from 1% to 20% across the different scenarios. The model
+inference time for a single equilibrium is on the order of milliseconds. Finally, this work shows
+the feasibility of a fast NN drop-in surrogate model for VMEC, and it opens up new operational scenarios
+where target applications could make use of magnetic equilibria at unprecedented scales. 

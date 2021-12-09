@@ -1,0 +1,18 @@
+Very large time series are increasingly available from an ever wider range of IoT-enabled sensors
+deployed in different environments. Significant insights can be obtained through mining temporal
+patterns from these time series. Unlike traditional pattern mining, temporal pattern mining (TPM)
+adds additional temporal aspect into extracted patterns, thus making them more expressive. However,
+adding the temporal dimension into patterns results in an exponential growth of the search space,
+significantly increasing the mining process complexity. Current TPM approaches either cannot
+scale to large datasets, or typically work on pre-processed event sequences rather than directly
+on time series. This paper presents our comprehensive Frequent Temporal Pattern Mining from Time
+Series (FTPMfTS) approach which provides the following contributions: (1) The end-to-end FTPMfTS
+process that directly takes time series as input and produces frequent temporal patterns as output.
+(2) The efficient Hierarchical Temporal Pattern Graph Mining (HTPGM) algorithm that uses efficient
+data structures to enable fast computations for support and confidence. (3) A number of pruning
+techniques for HTPGM that yield significantly faster mining. (4) An approximate version of HTPGM
+which relies on mutual information to prune unpromising time series, and thus significantly reduce
+the search space. (5) An extensive experimental evaluation on real-world datasets from the energy
+and smart city domains which shows that HTPGM outperforms the baselines and can scale to large datasets.
+The approximate HTPGM achieves up to 3 orders of magnitude speedup compared to the baselines and
+consumes significantly less memory, while obtaining high accuracy compared to the exact HTPGM.

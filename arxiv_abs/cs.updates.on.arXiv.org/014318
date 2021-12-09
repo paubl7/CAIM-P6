@@ -1,0 +1,19 @@
+State-of-the-art object detectors are vulnerable to localized patch hiding attacks where an adversary
+introduces a small adversarial patch to make detectors miss the detection of salient objects. In
+this paper, we propose the first general framework for building provably robust detectors against
+the localized patch hiding attack called DetectorGuard. To start with, we propose a general approach
+for transferring the robustness from image classifiers to object detectors, which builds a bridge
+between robust image classification and robust object detection. We apply a provably robust image
+classifier to a sliding window over the image and aggregates robust window classifications at different
+locations for a robust object detection. Second, in order to mitigate the notorious trade-off between
+clean performance and provable robustness, we use a prediction pipeline in which we compare the
+outputs of a conventional detector and a robust detector for catching an ongoing attack. When no
+attack is detected, DetectorGuard outputs the precise bounding boxes predicted by the conventional
+detector to achieve a high clean performance; otherwise, DetectorGuard triggers an attack alert
+for security. Notably, our prediction strategy ensures that the robust detector incorrectly missing
+objects will not hurt the clean performance of DetectorGuard. Moreover, our approach allows us
+to formally prove the robustness of DetectorGuard on certified objects, i.e., it either detects
+the object or triggers an alert, against any patch hiding attacker. Our evaluation on the PASCAL
+VOC and MS COCO datasets shows that DetectorGuard has the almost same clean performance as conventional
+detectors, and more importantly, that DetectorGuard achieves the first provable robustness against
+localized patch hiding attacks. 

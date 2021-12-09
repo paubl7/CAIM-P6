@@ -1,0 +1,18 @@
+The Cherenkov Telescope Array (CTA) is the future ground-based gamma-ray observatory and will
+be composed of two arrays of imaging atmospheric Cherenkov telescopes (IACTs) located in the Northern
+and Southern hemispheres respectively. The first CTA prototype telescope built on-site, the Large-Sized
+Telescope (LST-1), is under commissioning in La Palma and has already taken data on numerous known
+sources. IACTs detect the faint flash of Cherenkov light indirectly produced after a very energetic
+gamma-ray photon has interacted with the atmosphere and generated an atmospheric shower. Reconstruction
+of the characteristics of the primary photons is usually done using a parameterization up to the
+third order of the light distribution of the images. In order to go beyond this classical method,
+new approaches are being developed using state-of-the-art methods based on convolutional neural
+networks (CNN) to reconstruct the properties of each event (incoming direction, energy and particle
+type) directly from the telescope images. While promising, these methods are notoriously difficult
+to apply to real data due to differences (such as different levels of night sky background) between
+Monte Carlo (MC) data used to train the network and real data. The GammaLearn project, based on these
+CNN approaches, has already shown an increase in sensitivity on MC simulations for LST-1 as well
+as a lower energy threshold. This work applies the GammaLearn network to real data acquired by LST-1
+and compares the results to the classical approach that uses random forests trained on extracted
+image parameters. The improvements on the background rejection, event direction, and energy reconstruction
+are discussed in this contribution. 

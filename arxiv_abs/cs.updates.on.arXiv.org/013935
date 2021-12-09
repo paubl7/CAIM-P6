@@ -1,0 +1,19 @@
+Real-time identification of electrical equivalent circuit models is a critical requirement in
+many practical systems, such as batteries and electric motors. Significant work has been done in
+the past developing different types of algorithms for system identification using reduced equivalent
+circuit models. However, little work was done in analyzing the theoretical performance bounds
+of these approaches. Proper understanding of theoretical bounds will help in designing a system
+that is economical in cost and robust in performance. In this paper, we analyze the performance of
+a linear recursive least squares approach to equivalent circuit model identification and show
+that the least squares approach is both unbiased and efficient when the signal-to-noise ratio is
+high enough. However, we show that, when the signal-to-noise ratio is low - resembling the case in
+many practical applications - the least squares estimator becomes significantly biased. Consequently,
+we develop a parameter estimation approach based on total least squares method and show it to be asymptotically
+unbiased and efficient at practically low signal-to-noise ratio regions. Further, we develop
+a recursive implementation of the total least square algorithm and find it to be slow to converge;
+for this, we employ a Kalman filter to improve the convergence speed of the total least squares method.
+The resulting total Kalman filter is shown to be both unbiased and efficient in equivalent circuit
+model parameter identification. The performance of this filter is analyzed using real-world current
+profile under fluctuating signal-to-noise ratios. Finally, the applicability of the algorithms
+and analysis in this paper in identifying higher order electrical equivalent circuit models is
+explained. 

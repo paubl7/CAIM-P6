@@ -1,0 +1,20 @@
+We study a distributed machine learning problem carried out by an edge server and multiple agents
+in a wireless network. The objective is to minimize a global function that is a sum of the agents' local
+loss functions. And the optimization is conducted by analog over-the-air model training. Specifically,
+each agent modulates its local gradient onto a set of waveforms and transmits to the edge server simultaneously.
+From the received analog signal the edge server extracts a noisy aggregated gradient which is distorted
+by the channel fading and interference, and uses it to update the global model and feedbacks to all
+the agents for another round of local computing. Since the electromagnetic interference generally
+exhibits a heavy-tailed intrinsic, we use the $\alpha$-stable distribution to model its statistic.
+In consequence, the global gradient has an infinite variance that hinders the use of conventional
+techniques for convergence analysis that rely on second-order moments' existence. To circumvent
+this challenge, we take a new route to establish the analysis of convergence rate, as well as generalization
+error, of the algorithm. Our analyses reveal a two-sided effect of the interference on the overall
+training procedure. On the negative side, heavy tail noise slows down the convergence rate of the
+model training: the heavier the tail in the distribution of interference, the slower the algorithm
+converges. On the positive side, heavy tail noise has the potential to increase the generalization
+power of the trained model: the heavier the tail, the better the model generalizes. This perhaps
+counterintuitive conclusion implies that the prevailing thinking on interference -- that it is
+only detrimental to the edge learning system -- is outdated and we shall seek new techniques that
+exploit, rather than simply mitigate, the interference for better machine learning in wireless
+networks. 

@@ -1,0 +1,20 @@
+The ODE method has been a workhorse for algorithm design and analysis since the introduction of the
+stochastic approximation. It is now understood that convergence theory amounts to establishing
+robustness of Euler approximations for ODEs, while theory of rates of convergence requires finer
+probabilistic analysis. This paper sets out to extend this theory to quasi-stochastic approximation,
+based on algorithms in which the "noise" is based on deterministic signals. The main results are
+obtained under minimal assumptions: the usual Lipschitz conditions for ODE vector fields, and
+it is assumed that there is a well defined linearization near the optimal parameter $\theta^*$,
+with Hurwitz linearization matrix. The main contributions are as follows: (i) If the algorithm
+gain is $a_t=g/(1+t)^\rho$ with $g>0$ and $\rho\in(0,1)$, then the rate of convergence of the algorithm
+is $1/t^\rho$. There is also a well defined "finite-$t$" approximation: \[ a_t^{-1}\{\ODEstate_t-\theta^*\}=\bar{Y}+\XiI_t+o(1)
+\] where $\bar{Y}\in\Re^d$ is a vector identified in the paper, and $\{\XiI_t\}$ is bounded with
+zero temporal mean. (ii) With gain $a_t = g/(1+t)$ the results are not as sharp: the rate of convergence
+$1/t$ holds only if $I + g A^*$ is Hurwitz. (iii) Based on the Ruppert-Polyak averaging technique
+of stochastic approximation, one would expect that a convergence rate of $1/t$ can be obtained by
+averaging: \[ \ODEstate^{\text{RP}}_T=\frac{1}{T}\int_{0}^T \ODEstate_t\,dt \] where the
+estimates $\{\ODEstate_t\}$ are obtained using the gain in (i). The preceding sharp bounds imply
+that averaging results in $1/t$ convergence rate if and only if $\bar{Y}=\Zero$. This condition
+holds if the noise is additive, but appears to fail in general. (iv) The theory is illustrated with
+applications to gradient-free optimization and policy gradient algorithms for reinforcement
+learning. 

@@ -1,0 +1,18 @@
+Machine learning (ML) algorithms are currently spreading to almost every aspect of computational
+chemistry, and to obtain reliable results it is important to maintain the balance between the intrinsic
+black-box nature of ML frameworks and physical assumptions about the properties of the system under
+study. One of the most appealing quantum-chemical properties for the regression models is the electron
+density, and recently some of us have proposed a transferable and scalable machine learning model
+based on decomposition of the density field onto an atom-centered basis set. The decomposition,
+as well as the training of the model, is at its core a minimization of some quadratic loss function,
+which can be arbitrarily chosen and may lead to results of different quality. Well-studied in context
+of density fitting (DF) within the density functional theory, the impact of this choice on the performance
+of machine learning models has not been analyzed yet. In this work, we used the overlap and the Coulomb
+repulsion metrics in both -- decomposition and training -- roles and compared the electrostatic
+potential and dipole moments predicted by these four models. As expected, the Coulomb metric used
+as both the DF and ML loss function leads to the best results. The main source of this difference is
+the fact that the model is not constrained to predict densities which integrates to the exact number
+of electrons $N$, and the Coulomb metric tends to yield more accurate $N$. Since an \textit{a posteriori}
+correction of the number of electrons decreases the errors, we proposed a modification of the model
+where $N$ is included directly into the ML kernel function, which allowed to decrease noticeably
+the errors on the test and out-of-sample sets. 

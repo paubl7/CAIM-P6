@@ -1,0 +1,19 @@
+We present an algorithm that, given finite simplicial sets $X$, $A$, $Y$ with an action of a finite
+group $G$, computes the set $[X,Y]^A_G$ of homotopy classes of equivariant maps $\ell \colon X \to
+Y$ extending a given equivariant map $f \colon A \to Y$ under the stability assumption $\dim X^H \leq
+2 \operatorname{conn} Y^H$ and $\operatorname{conn} Y^H \geq 1$, for all subgroups $H\leq G$.
+For fixed $n = \operatorname{dim} X$, the algorithm runs in polynomial time. When the stability
+condition is dropped, the problem is undecidable already in the non-equivariant setting. The algorithm
+is obtained as a special case of a more general result: For finite diagrams of simplicial sets $X$,
+$A$, $Y$, i.e. functors $\mathcal{I}^\mathrm{op} \to \mathsf{sSet}$, in the stable range $\operatorname{dim}
+X \leq 2 \operatorname{conn} Y$ and $\operatorname{conn} Y > 1$, we give an algorithm that computes
+the set $[X, Y]^A$ of homotopy classes of maps of diagrams $\ell \colon X \to Y$ extending a given $f
+\colon A \to Y$. Again, for fixed $n = \dim X$, the running time of the algorithm is polynomial. The
+algorithm can be utilized to compute homotopy invariants in the equivariant setting -- for example,
+one can algorithmically compute equivariant stable homotopy groups. Further, one can apply the
+result to solve problems from computational topology, which we showcase on the following Tverberg-type
+problem: Given a $k$-dimensional simplicial complex $K$, is there a map $K \to \mathbb{R}^{d}$
+without $r$-tuple intersection points? In the metastable range of dimensions, $rd \geq (r+1)k
++3$, the result of Mabillard and Wagner shows this problem equivalent to the existence of a particular
+equivariant map. In this range, our algorithm is applicable and, thus, the $r$-Tverberg problem
+is algorithmically decidable (in polynomial time when $k$, $d$ and $r$ are fixed). 

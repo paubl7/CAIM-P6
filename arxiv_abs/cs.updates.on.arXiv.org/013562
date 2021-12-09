@@ -1,0 +1,20 @@
+Nearest neighbor search has found numerous applications in machine learning, data mining and massive
+data processing systems. The past few years have witnessed the popularity of the graph-based nearest
+neighbor search paradigm because of its superiority over the space-partitioning algorithms.
+While a lot of empirical studies demonstrate the efficiency of graph-based algorithms, not much
+attention has been paid to a more fundamental question: why graph-based algorithms work so well
+in practice? And which data property affects the efficiency and how? In this paper, we try to answer
+these questions. Our insight is that "the probability that the neighbors of a point o tends to be neighbors
+in the KNN graph" is a crucial data property for query efficiency. For a given dataset, such a property
+can be qualitatively measured by clustering coefficient of the KNN graph. To show how clustering
+coefficient affects the performance, we identify that, instead of the global connectivity, the
+local connectivity around some given query q has more direct impact on recall. Specifically, we
+observed that high clustering coefficient makes most of the k nearest neighbors of q sit in a maximum
+strongly connected component (SCC) in the graph. From the algorithmic point of view, we show that
+the search procedure is actually composed of two phases - the one outside the maximum SCC and the other
+one in it, which is different from the widely accepted single or multiple paths search models. We
+proved that the commonly used graph-based search algorithm is guaranteed to traverse the maximum
+SCC once visiting any point in it. Our analysis reveals that high clustering coefficient leads to
+large size of the maximum SCC, and thus provides good answer quality with the help of the two-phase
+search procedure. Extensive empirical results over a comprehensive collection of datasets validate
+our findings. 

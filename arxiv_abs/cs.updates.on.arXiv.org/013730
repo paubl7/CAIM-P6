@@ -1,0 +1,18 @@
+Highly configurable systems are highly complex systems, with the Linux kernel arguably being one
+of the most well-known ones. Since 2007, it has been a frequent target of the research community,
+conducting empirical studies and building dedicated methods and tools for analyzing, configuring,
+testing, optimizing, and maintaining the kernel in the light of its vast configuration space. However,
+despite a large body of work, mainly bug fixes that were the result of such research made it back into
+the kernel's source tree. Unfortunately, Linux users still struggle with kernel configuration
+and resolving configuration conflicts, since the kernel largely lacks automated support. Additionally,
+there are technical and community requirements for supporting automated conflict resolution
+in the kernel, such as, for example, using a pure C-based solution that uses only compatible third-party
+libraries (if any). With the aim of contributing back to the Linux community, we present CONFIGFIX,
+a tooling that we integrated with the kernel configurator, that is purely implemented in C, and that
+is finally a working solution able to produce fixes for configuration conflicts. In this experience
+report, we describe our experiences ranging over a decade of building upon the large body of work
+from research on the Linux kernel configuration mechanisms as well as how we designed and realized
+CONFIGFIX while adhering to the Linux kernel's community requirements and standards. While CONFIGFIX
+helps Linux kernel users obtaining their desired configuration, the sound semantic abstraction
+we implement provides the basis for many of the above techniques supporting kernel configuration,
+helping researchers and kernel developers. 

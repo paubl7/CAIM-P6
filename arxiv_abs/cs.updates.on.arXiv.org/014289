@@ -1,0 +1,19 @@
+The widespread application of deep neural network (DNN) techniques is being challenged by adversarial
+examples, the legitimate input added with imperceptible and well-designed perturbations that
+can fool DNNs easily in the DNN testing/deploying stage. Previous adversarial example generation
+algorithms for adversarial white-box attacks used Jacobian gradient information to add perturbations.
+This information is too imprecise and inexplicit, which will cause unnecessary perturbations
+when generating adversarial examples. This paper aims to address this issue. We first propose to
+apply a more informative and distilled gradient information, namely integrated gradient, to generate
+adversarial examples. To further make the perturbations more imperceptible, we propose to employ
+the restriction combination of $L_0$ and $L_1/L_2$ secondly, which can restrict the total perturbations
+and perturbation points simultaneously. Meanwhile, to address the non-differentiable problem
+of $L_1$, we explore a proximal operation of $L_1$ thirdly. Based on these three works, we propose
+two Integrated gradient based White-box Adversarial example generation algorithms (IWA): IFPA
+and IUA. IFPA is suitable for situations where there are a determined number of points to be perturbed.
+IUA is suitable for situations where no perturbation point number is preset in order to obtain more
+adversarial examples. We verify the effectiveness of the proposed algorithms on both structured
+and unstructured datasets, and we compare them with five baseline generation algorithms. The results
+show that our proposed algorithms do craft adversarial examples with more imperceptible perturbations
+and satisfactory crafting rate. $L_2$ restriction is more suitable for unstructured dataset and
+$L_1$ restriction performs better in structured dataset. 

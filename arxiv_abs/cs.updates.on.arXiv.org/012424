@@ -1,0 +1,18 @@
+With the ever-increasing adoption of machine learning for data analytics, maintaining a machine
+learning pipeline is becoming more complex as both the datasets and trained models evolve with time.
+In a collaborative environment, the changes and updates due to pipeline evolution often cause cumbersome
+coordination and maintenance work, raising the costs and making it hard to use. Existing solutions,
+unfortunately, do not address the version evolution problem, especially in a collaborative environment
+where non-linear version control semantics are necessary to isolate operations made by different
+user roles. The lack of version control semantics also incurs unnecessary storage consumption
+and lowers efficiency due to data duplication and repeated data pre-processing, which are avoidable.
+In this paper, we identify two main challenges that arise during the deployment of machine learning
+pipelines, and address them with the design of versioning for an end-to-end analytics system MLCask.
+The system supports multiple user roles with the ability to perform Git-like branching and merging
+operations in the context of the machine learning pipelines. We define and accelerate the metric-driven
+merge operation by pruning the pipeline search tree using reusable history records and pipeline
+compatibility information. Further, we design and implement the prioritized pipeline search,
+which gives preference to the pipelines that probably yield better performance. The effectiveness
+of MLCask is evaluated through an extensive study over several real-world deployment cases. The
+performance evaluation shows that the proposed merge operation is up to 7.8x faster and saves up
+to 11.9x storage space than the baseline method that does not utilize history records. 

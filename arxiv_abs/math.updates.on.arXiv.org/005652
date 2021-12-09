@@ -1,0 +1,20 @@
+We consider high-dimensional least-squares regression when a fraction $\epsilon$ of the labels
+are contaminated by an arbitrary adversary. We analyze such problem in the statistical learning
+framework with a subgaussian distribution and linear hypothesis class on the space of $d_1\times
+d_2$ matrices. As such, we allow the noise to be heterogeneous. This framework includes sparse linear
+regression and low-rank trace-regression. For a $p$-dimensional $s$-sparse parameter, we show
+that a convex regularized $M$-estimator using a sorted Huber-type loss achieves the near-optimal
+subgaussian rate $$ \sqrt{s\log(ep/s)}+\sqrt{\log(1/\delta)/n}+\epsilon\log(1/\epsilon),
+$$ with probability at least $1-\delta$. For a $(d_1\times d_2)$-dimensional parameter with rank
+$r$, a nuclear-norm regularized $M$-estimator using the same sorted Huber-type loss achieves
+the subgaussian rate $$ \sqrt{rd_1/n}+\sqrt{rd_2/n}+\sqrt{\log(1/\delta)/n}+\epsilon\log(1/\epsilon),
+$$ again optimal up to a log factor. In a second part, we study the trace-regression problem when the
+parameter is the sum of a matrix with rank $r$ plus a $s$-sparse matrix assuming the "low-spikeness"
+condition. Unlike multivariate regression studied in previous work, the design in trace-regression
+lacks positive-definiteness in high-dimensions. Still, we show that a regularized least-squares
+estimator achieves the subgaussian rate $$ \sqrt{rd_1/n}+\sqrt{rd_2/n}+\sqrt{s\log(d_1d_2)/n}
++\sqrt{\log(1/\delta)/n}. $$ Lastly, we consider noisy matrix completion with non-uniform sampling
+when a fraction $\epsilon$ of the sampled low-rank matrix is corrupted by outliers. If only the low-rank
+matrix is of interest, we show that a nuclear-norm regularized Huber-type estimator achieves,
+up to log factors, the optimal rate adaptively to the corruption level. The above mentioned rates
+require no information on $(s,r,\epsilon)$. 

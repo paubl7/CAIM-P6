@@ -1,0 +1,19 @@
+Code retrieval and summarization are useful tasks for developers, but it is also challenging to
+build indices or summaries of code that capture both syntactic and semantic essential information
+of the code. To build a decent model on source code, one needs to collect a large amount of data from
+code hosting platforms, such as Github, Bitbucket, etc., label them and train it from a scratch for
+each task individually. Such an approach has two limitations: (1) training a new model for every
+new task is time-consuming; and (2) tremendous human effort is required to label the data for individual
+downstream tasks. To address these limitations, we are proposing Corder, a self-supervised contrastive
+learning framework that trains code representation models on unlabeled data. The pre-trained
+model from Corder can be used in two ways: (1) it can produce vector representation of code and can
+be applied to code retrieval tasks that does not have labelled data; (2) it can be used in a fine-tuning
+process for tasks that might still require label data such as code summarization. The key innovation
+is that we train the source code model by asking it to recognize similar and dissimilar code snippets
+through a \textit{contrastive learning paradigm}. We use a set of semantic-preserving transformation
+operators to generate code snippets that are syntactically diverse but semantically equivalent.
+The contrastive learning objective, at the same time, maximizes the agreement between different
+views of the same snippets and minimizes the agreement between transformed views of different snippets.
+Through extensive experiments, we have shown that our Corder pretext task substantially outperform
+the other baselines for code-to-code retrieval, text-to-code retrieval and code-to-text summarization
+tasks. 

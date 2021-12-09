@@ -1,0 +1,19 @@
+Federated learning enables machine learning algorithms to be trained over a network of multiple
+decentralized edge devices without requiring the exchange of local datasets. Successfully deploying
+federated learning requires ensuring that agents (e.g., mobile devices) faithfully execute the
+intended algorithm, which has been largely overlooked in the literature. In this study, we first
+use risk bounds to analyze how the key feature of federated learning, unbalanced and non-i.i.d.
+data, affects agents' incentives to voluntarily participate and obediently follow traditional
+federated learning algorithms. To be more specific, our analysis reveals that agents with less
+typical data distributions and relatively more samples are more likely to opt out of or tamper with
+federated learning algorithms. To this end, we formulate the first faithful implementation problem
+of federated learning and design two faithful federated learning mechanisms which satisfy economic
+properties, scalability, and privacy. Further, the time complexity of computing all agents' payments
+in the number of agents is $\mathcal{O}(1)$. First, we design a Faithful Federated Learning (FFL)
+mechanism which approximates the Vickrey-Clarke-Groves (VCG) payments via an incremental computation.
+We show that it achieves (probably approximate) optimality, faithful implementation, voluntary
+participation, and some other economic properties (such as budget balance). Second, by partitioning
+agents into several subsets, we present a scalable VCG mechanism approximation. We further design
+a scalable and Differentially Private FFL (DP-FFL) mechanism, the first differentially private
+faithful mechanism, that maintains the economic properties. Our mechanism enables one to make
+three-way performance tradeoffs among privacy, the iterations needed, and payment accuracy loss.

@@ -1,0 +1,20 @@
+Web applications are constantly evolving to integrate new features and fix reported bugs. Even
+an imperceptible change can sometimes entail significant modifications of the Document Object
+Model (DOM), which is the underlying model used by browsers to render all the elements included in
+a web application. Scripts that interact with web applications (e.g. web test scripts, crawlers,
+or robotic process automation) rely on this continuously evolving DOM which means they are often
+particularly fragile. More precisely, the major cause of breakages observed in automation scripts
+are element locators, which are identifiers used by automation scripts to navigate across the DOM.
+When the DOM evolves, these identifiers tend to break, thus causing the related scripts to no longer
+locate the intended target elements. For this reason, several contributions explored the idea
+of automatically repairing broken locators on a page. These works attempt to repair a given broken
+locator by scanning all elements in the new DOM to find the most similar one. Unfortunately, this
+approach fails to scale when the complexity of web pages grows, leading either to long computation
+times or incorrect element repairs. This article, therefore, adopts a different perspective on
+this problem by introducing a new locator repair solution that leverages tree matching algorithms
+to relocate broken locators. This solution, named Erratum, implements a holistic approach to reduce
+the element search space, which greatly eases the locator repair task and drastically improves
+repair accuracy. We compare the robustness of Erratum on a large-scale benchmark composed of realistic
+and synthetic mutations applied to popular web applications currently deployed in production.
+Our empirical results demonstrate that Erratum outperforms the accuracy of WATER, a state-of-the-art
+solution, by 67%. 

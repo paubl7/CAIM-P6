@@ -1,0 +1,18 @@
+We propose a new hierarchy of semidefinite programming relaxations for inference problems. As
+test cases, we consider the problem of community detection in block models. The vertices are partitioned
+into $k$ communities, and a graph is sampled conditional on a prescribed number of inter- and intra-community
+edges. The problem of detection, where we are to decide with high probability whether a graph was
+drawn from this model or the uniform distribution on regular graphs, is conjectured to undergo a
+computational phase transition at a point called the Kesten-Stigum (KS) threshold. In this work,
+we consider two models of random graphs namely the well-studied (irregular) stochastic block model
+and a distribution over random regular graphs we'll call the Degree Regular Block Model. For both
+these models, we show that sufficiently high constant levels of our hierarchy can perform detection
+arbitrarily close to the KS threshold and that our algorithm is robust to up to a linear number of adversarial
+edge perturbations. Furthermore, in the case of Degree Regular Block Model (DRBM), we show that
+below the Kesten-Stigum threshold no constant level can do so. In the case of the (irregular) Stochastic
+Block Model, it is known that efficient algorithms exist all the way down to this threshold, although
+none are robust to a linear number of adversarial perturbations of the graph when the average degree
+is small. More importantly, there is little complexity-theoretic evidence that detection is hard
+below the threshold. In the DRBM with more than two groups, it has not to our knowledge been proven
+that any algorithm succeeds down to the KS threshold, let alone that one can do so robustly, and there
+is a similar dearth of evidence for hardness below this point. 

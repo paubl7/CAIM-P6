@@ -1,0 +1,19 @@
+Independent low-rank matrix analysis (ILRMA) is the state-of-the-art algorithm for blind source
+separation (BSS) in the determined situation (the number of microphones is greater than or equal
+to that of source signals). ILRMA achieves a great separation performance by modeling the power
+spectrograms of the source signals via the nonnegative matrix factorization (NMF). Such a highly
+developed source model can solve the permutation problem of the frequency-domain BSS to a large
+extent, which is the reason for the excellence of ILRMA. In this paper, we further improve the separation
+performance of ILRMA by additionally considering the general structure of spectrograms, which
+is called consistency, and hence we call the proposed method Consistent ILRMA. Since a spectrogram
+is calculated by an overlapping window (and a window function induces spectral smearing called
+main- and side-lobes), the time-frequency bins depend on each other. In other words, the time-frequency
+components are related to each other via the uncertainty principle. Such co-occurrence among the
+spectral components can function as an assistant for solving the permutation problem, which has
+been demonstrated by a recent study. On the basis of these facts, we propose an algorithm for realizing
+Consistent ILRMA by slightly modifying the original algorithm. Its performance was extensively
+evaluated through experiments performed with various window lengths and shift lengths. The results
+indicated several tendencies of the original and proposed ILRMA that include some topics not fully
+discussed in the literature. For example, the proposed Consistent ILRMA tends to outperform the
+original ILRMA when the window length is sufficiently long compared to the reverberation time of
+the mixing system. 

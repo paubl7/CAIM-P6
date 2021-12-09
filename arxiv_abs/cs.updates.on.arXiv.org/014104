@@ -1,0 +1,20 @@
+Internet traffic recognition is an essential tool for access providers since recognizing traffic
+categories related to different data packets transmitted on a network help them define adapted
+priorities. That means, for instance, high priority requirements for an audio conference and low
+ones for a file transfer, to enhance user experience. As internet traffic becomes increasingly
+encrypted, the mainstream classic traffic recognition technique, payload inspection, is rendered
+ineffective. This paper uses machine learning techniques for encrypted traffic classification,
+looking only at packet size and time of arrival. Spiking neural networks (SNN), largely inspired
+by how biological neurons operate, were used for two reasons. Firstly, they are able to recognize
+time-related data packet features. Secondly, they can be implemented efficiently on neuromorphic
+hardware with a low energy footprint. Here we used a very simple feedforward SNN, with only one fully-connected
+hidden layer, and trained in a supervised manner using the newly introduced method known as Surrogate
+Gradient Learning. Surprisingly, such a simple SNN reached an accuracy of 95.9% on ISCX datasets,
+outperforming previous approaches. Besides better accuracy, there is also a very significant
+improvement on simplicity: input size, number of neurons, trainable parameters are all reduced
+by one to four orders of magnitude. Next, we analyzed the reasons for this good accuracy. It turns
+out that, beyond spatial (i.e. packet size) features, the SNN also exploits temporal ones, mostly
+the nearly synchronous (within a 200ms range) arrival times of packets with certain sizes. Taken
+together, these results show that SNNs are an excellent fit for encrypted internet traffic classification:
+they can be more accurate than conventional artificial neural networks (ANN), and they could be
+implemented efficiently on low power embedded systems. 

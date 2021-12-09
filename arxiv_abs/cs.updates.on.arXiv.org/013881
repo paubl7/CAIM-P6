@@ -1,0 +1,20 @@
+We introduce a fast and robust algorithm for finding a plane $\Gamma$ with given normal $\vec{n}_\Gamma$,
+which truncates an arbitrary polyhedron $\mathcal{P}$ such that the remaining sub-polyhedron
+admits a given volume $\alpha|\mathcal{P}|$. In the literature, this is commonly referred to as
+Volume-of-Fluid (VoF) interface positioning problem. The novelty of our work is twofold: firstly,
+by recursive application of the Gaussian divergence theorem, the volume of a truncated polyhedron
+can be computed at high efficiency, based on summation over quantities associated to the faces of
+the polyhedron. One obtains a very convenient piecewise parametrization (within so-called brackets)
+in terms of the signed distance s to the plane $\Gamma$. As an implication, one can restrain from the
+costly necessity to establish topological connectivity, rendering the present approach most
+suitable for the application to unstructured computational meshes. Secondly, in the vicinity
+of the truncation position s, the volume can be expressed exactly, i.e. in terms of a cubic polynomial
+of the normal distance to the PLIC plane. The local knowledge of derivatives enables to construct
+a root-finding algorithm that pairs bracketing and higher-order approximation. The performance
+is assessed by conducting an extensive set of numerical experiments, considering convex and non-convex
+polyhedra of genus (i.e., number of holes) zero and one in combination with carefully selected volume
+fractions $\alpha$ (including $\alpha\approx0$ and $\alpha\approx1$) and normal orientations
+$\vec{n}_\Gamma$. For all configurations we obtain a significant reduction of the number of (computationally
+costly) truncations required for the positioning: on average, our algorithm requires between
+one and two polyhedron truncations to find the position of the plane $\Gamma$, outperforming existing
+methods. 

@@ -1,0 +1,19 @@
+First-price auctions have largely replaced traditional bidding approaches based on Vickrey auctions
+in programmatic advertising. As far as learning is concerned, first-price auctions are more challenging
+because the optimal bidding strategy does not only depend on the value of the item but also requires
+some knowledge of the other bids. They have already given rise to several works in sequential learning,
+many of which consider models for which the value of the buyer or the opponents' maximal bid is chosen
+in an adversarial manner. Even in the simplest settings, this gives rise to algorithms whose regret
+grows as $\sqrt{T}$ with respect to the time horizon $T$. Focusing on the case where the buyer plays
+against a stationary stochastic environment, we show how to achieve significantly lower regret:
+when the opponents' maximal bid distribution is known we provide an algorithm whose regret can be
+as low as $\log^2(T)$; in the case where the distribution must be learnt sequentially, a generalization
+of this algorithm can achieve $T^{1/3+ \epsilon}$ regret, for any $\epsilon>0$. To obtain these
+results, we introduce two novel ideas that can be of interest in their own right. First, by transposing
+results obtained in the posted price setting, we provide conditions under which the first-price
+biding utility is locally quadratic around its optimum. Second, we leverage the observation that,
+on small sub-intervals, the concentration of the variations of the empirical distribution function
+may be controlled more accurately than by using the classical Dvoretzky-Kiefer-Wolfowitz inequality.
+Numerical simulations confirm that our algorithms converge much faster than alternatives proposed
+in the literature for various bid distributions, including for bids collected on an actual programmatic
+advertising platform. 

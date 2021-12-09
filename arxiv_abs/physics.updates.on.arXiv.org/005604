@@ -1,0 +1,20 @@
+The prediction of chemical properties using Machine Learning (ML) techniques calls for a set of
+appropriate descriptors that accurately describe atomic and, on a larger scale, molecular environments.
+A mapping of conformational information on a space spanned by atom-centred symmetry functions
+(SF) has become a standard technique for energy and force predictions using high-dimensional neural
+network potentials (HDNNP). Established atom-centred SFs, however, are limited in their flexibility,
+since their functional form restricts the angular domain that can be sampled. Here, we introduce
+a class of atom-centred symmetry functions based on polynomials with compact support called polynomial
+symmetry functions (PSF), which enable a free choice of both, the angular and the radial domain covered.
+We demonstrate that the accuracy of PSFs is either on par or considerably better than that of conventional,
+atom-centred SFs, with reductions in force prediction errors over a test set approaching 50% for
+certain organic molecules. Contrary to established atom-centred SFs, computation of PSF does
+not involve any exponentials, and their intrinsic compact support supersedes use of separate cutoff
+functions. Most importantly, the number of floating point operations required to compute polynomial
+SFs introduced here is considerably lower than that of other SFs, enabling their efficient implementation
+without the need of highly optimised code structures or caching, with speedups with respect to other
+state-of-the-art SFs reaching a factor of 4.5 to 5. This low-effort performance benefit substantially
+simplifies their use in new programs and emerging platforms such as graphical processing units
+(GPU). Overall, polynomial SFs with compact support improve accuracy of both, energy and force
+predictions with HDNNPs while enabling significant speedups with respect to their well-established
+counterparts. 

@@ -1,0 +1,19 @@
+It is a commonly observed pattern for applications to utilize multiple heterogeneous databases
+where each is used to serve a specific need such as storing the canonical form of data or providing
+advanced search capabilities. For applications it is hence desired to keep multiple databases
+in sync. We have observed a series of distinct patterns that have tried to solve this problem such
+as dual-writes and distributed transactions. However, these approaches have limitations with
+regard to feasibility, robustness, and maintenance. An alternative approach that has recently
+emerged is to utilize Change-Data-Capture (CDC) in order to capture changed rows from a database's
+transaction log and eventually deliver them downstream with low latency. In order to solve the data
+synchronization problem one also needs to replicate the full state of a database and transaction
+logs typically do not contain the full history of changes. At the same time, there are use cases that
+require high availability of the transaction log events so that databases stay as closely in-sync
+as possible. To address the above challenges, we developed a novel CDC framework for databases,
+namely DBLog. DBLog utilizes a watermark based approach that allows us to interleave transaction
+log events with rows that we directly select from tables to capture the full state. Our solution allows
+log events to continue progress without stalling while processing selects. Selects can be triggered
+at any time on all tables, a specific table, or for specific primary keys of a table. DBLog executes
+selects in chunks and tracks progress, allowing them to pause and resume. The watermark approach
+does not use locks and has minimum impact on the source. DBLog is currently used in production by tens
+of microservices at Netflix. 

@@ -1,0 +1,19 @@
+Evolutionary neural architecture search (ENAS) has recently received increasing attention by
+effectively finding high-quality neural architectures, which however consumes high computational
+cost by training the architecture encoded by each individual for complete epochs in individual
+evaluation. Numerous ENAS approaches have been developed to reduce the evaluation cost, but it
+is often difficult for most of these approaches to achieve high evaluation accuracy. To address
+this issue, in this paper we propose an accelerated ENAS via multifidelity evaluation termed MFENAS,
+where the individual evaluation cost is significantly reduced by training the architecture encoded
+by each individual for only a small number of epochs. The balance between evaluation cost and evaluation
+accuracy is well maintained by suggesting a multi-fidelity evaluation, which identifies the potentially
+good individuals that cannot survive from previous generations by integrating multiple evaluations
+under different numbers of training epochs. For high diversity of neural architectures, a population
+initialization strategy is devised to produce different neural architectures varying from ResNet-like
+architectures to Inception-like ones. Experimental results on CIFAR-10 show that the architecture
+obtained by the proposed MFENAS achieves a 2.39% test error rate at the cost of only 0.6 GPU days on
+one NVIDIA 2080TI GPU, demonstrating the superiority of the proposed MFENAS over state-of-the-art
+NAS approaches in terms of both computational cost and architecture quality. The architecture
+obtained by the proposed MFENAS is then transferred to CIFAR-100 and ImageNet, which also exhibits
+competitive performance to the architectures obtained by existing NAS approaches. The source
+code of the proposed MFENAS is available at https://github.com/DevilYangS/MFENAS/. 

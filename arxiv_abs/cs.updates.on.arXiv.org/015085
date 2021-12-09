@@ -1,0 +1,20 @@
+Adversarial poisoning attacks distort training data in order to corrupt the test-time behavior
+of a classifier. A provable defense provides a certificate for each test sample, which is a lower
+bound on the magnitude of any adversarial distortion of the training set that can corrupt the test
+sample's classification. We propose two novel provable defenses against poisoning attacks: (i)
+Deep Partition Aggregation (DPA), a certified defense against a general poisoning threat model,
+defined as the insertion or deletion of a bounded number of samples to the training set -- by implication,
+this threat model also includes arbitrary distortions to a bounded number of images and/or labels;
+and (ii) Semi-Supervised DPA (SS-DPA), a certified defense against label-flipping poisoning
+attacks. DPA is an ensemble method where base models are trained on partitions of the training set
+determined by a hash function. DPA is related to both subset aggregation, a well-studied ensemble
+method in classical machine learning, as well as to randomized smoothing, a popular provable defense
+against evasion attacks. Our defense against label-flipping attacks, SS-DPA, uses a semi-supervised
+learning algorithm as its base classifier model: each base classifier is trained using the entire
+unlabeled training set in addition to the labels for a partition. SS-DPA significantly outperforms
+the existing certified defense for label-flipping attacks on both MNIST and CIFAR-10: provably
+tolerating, for at least half of test images, over 600 label flips (vs. < 200 label flips) on MNIST
+and over 300 label flips (vs. 175 label flips) on CIFAR-10. Against general poisoning attacks, where
+no prior certified defenses exists, DPA can certify >= 50% of test images against over 500 poison
+image insertions on MNIST, and nine insertions on CIFAR-10. These results establish new state-of-the-art
+provable defenses against poisoning attacks. 

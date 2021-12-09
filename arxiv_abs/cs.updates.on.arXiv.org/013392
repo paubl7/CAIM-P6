@@ -1,0 +1,18 @@
+Our work expands the use of capsule networks to the task of object segmentation for the first time
+in the literature. This is made possible via the introduction of locally-constrained routing and
+transformation matrix sharing, which reduces the parameter/memory burden and allows for the segmentation
+of objects at large resolutions. To compensate for the loss of global information in constraining
+the routing, we propose the concept of "deconvolutional" capsules to create a deep encoder-decoder
+style network, called SegCaps. We extend the masked reconstruction regularization to the task
+of segmentation and perform thorough ablation experiments on each component of our method. The
+proposed convolutional-deconvolutional capsule network, SegCaps, shows state-of-the-art
+results while using a fraction of the parameters of popular segmentation networks. To validate
+our proposed method, we perform experiments segmenting pathological lungs from clinical and pre-clinical
+thoracic computed tomography (CT) scans and segmenting muscle and adipose (fat) tissue from magnetic
+resonance imaging (MRI) scans of human subjects' thighs. Notably, our experiments in lung segmentation
+represent the largest-scale study in pathological lung segmentation in the literature, where
+we conduct experiments across five extremely challenging datasets, containing both clinical
+and pre-clinical subjects, and nearly 2000 computed-tomography scans. Our newly developed segmentation
+platform outperforms other methods across all datasets while utilizing less than 5% of the parameters
+in the popular U-Net for biomedical image segmentation. Further, we demonstrate capsules' ability
+to generalize to unseen rotations/reflections on natural images. 

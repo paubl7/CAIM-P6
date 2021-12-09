@@ -1,0 +1,19 @@
+\textit{Graph Neural Network} (GNN) is a promising approach for analyzing graph-structured data
+that tactfully captures their dependency information via node-level message passing. It has achieved
+state-of-the-art performances in many tasks, such as node classification, graph matching, clustering,
+and graph generation. As GNNs operate on non-Euclidean data, their irregular data access patterns
+cause considerable computational costs and overhead on conventional architectures, such as GPU
+and CPU. Our analysis shows that GNN adopts a hybrid computing model. The \textit{Aggregation}
+(or \textit{Message Passing}) phase performs vector additions where vectors are fetched with
+irregular strides. The \textit{Transformation} (or \textit{Node Embedding}) phase can be either
+dense or sparse-dense matrix multiplication. In this work, We propose \textit{VersaGNN}, an ultra-efficient,
+systolic-array-based versatile hardware accelerator that unifies dense and sparse matrix multiplication.
+By applying this single optimized systolic array to both aggregation and transformation phases,
+we have significantly reduced chip sizes and energy consumption. We then divide the computing engine
+into blocked systolic arrays to support the \textit{Strassen}'s algorithm for dense matrix multiplication,
+dramatically scaling down the number of multiplications and enabling high-throughput computation
+of GNNs. To balance the workload of sparse-dense matrix multiplication, we also introduced a greedy
+algorithm to combine sparse sub-matrices of compressed format into condensed ones to reduce computational
+cycles. Compared with current state-of-the-art GNN software frameworks, \textit{VersaGNN}
+achieves on average 3712$\times$ speedup with 1301.25$\times$ energy reduction on CPU, and 35.4$\times$
+speedup with 17.66$\times$ energy reduction on GPU. 

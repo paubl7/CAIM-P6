@@ -1,0 +1,20 @@
+The use of Gaussian processes (GPs) as models for astronomical time series datasets has recently
+become almost ubiquitous, given their ease of use and flexibility. GPs excel in particular at marginalization
+over the stellar signal in cases where the variability due to starspots rotating in and out of view
+is treated as a nuisance, such as in exoplanet transit modeling. However, these effective models
+are less useful in cases where the starspot signal is of primary interest since it is not obvious how
+the parameters of the GP model are related to the physical properties of interest, such as the size,
+contrast, and latitudinal distribution of the spots. Instead, it is common practice to explicitly
+model the effect of individual starspots on the light curve and attempt to infer their properties
+via optimization or posterior inference. Unfortunately, this process is degenerate, ill-posed,
+and often computationally intractable when applied to stars with more than a few spots and/or to
+ensembles of many light curves. In this paper, we derive a closed-form expression for the mean and
+covariance of a Gaussian process model that describes the light curve of a rotating, evolving stellar
+surface conditioned on a given distribution of starspot sizes, contrasts, and latitudes. We demonstrate
+that this model is correctly calibrated, allowing one to robustly infer physical parameters of
+interest from one or more stellar light curves, including the typical radii and the mean and variance
+of the latitude distribution of starspots. Our GP has far-ranging implications for understanding
+the variability and magnetic activity of stars from both light curves and radial velocity (RV) measurements,
+as well as for robustly modeling correlated noise in both transiting and RV exoplanet searches.
+Our implementation is efficient, user-friendly, and open source, available as the Python package
+starry-process. 

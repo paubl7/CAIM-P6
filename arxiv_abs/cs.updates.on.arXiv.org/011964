@@ -1,0 +1,19 @@
+Representation learning has been proven to play an important role in the unprecedented success
+of machine learning models in numerous tasks, such as machine translation, face recognition and
+recommendation. The majority of existing representation learning approaches often require a
+large number of consistent and noise-free labels. However, due to various reasons such as budget
+constraints and privacy concerns, labels are very limited in many real-world scenarios. Directly
+applying standard representation learning approaches on small labeled data sets will easily run
+into over-fitting problems and lead to sub-optimal solutions. Even worse, in some domains such
+as education, the limited labels are usually annotated by multiple workers with diverse expertise,
+which yields noises and inconsistency in such crowdsourcing settings. In this paper, we propose
+a novel framework which aims to learn effective representations from limited data with crowdsourced
+labels. Specifically, we design a grouping based deep neural network to learn embeddings from a
+limited number of training samples and present a Bayesian confidence estimator to capture the inconsistency
+among crowdsourced labels. Furthermore, to expedite the training process, we develop a hard example
+selection procedure to adaptively pick up training examples that are misclassified by the model.
+Extensive experiments conducted on three real-world data sets demonstrate the superiority of
+our framework on learning representations from limited data with crowdsourced labels, comparing
+with various state-of-the-art baselines. In addition, we provide a comprehensive analysis on
+each of the main components of our proposed framework and also introduce the promising results it
+achieved in our real production to fully understand the proposed framework. 

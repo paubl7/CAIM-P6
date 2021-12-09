@@ -1,0 +1,19 @@
+Background: Transrectal ultrasound guided systematic biopsies of the prostate is a routine procedure
+to establish a prostate cancer diagnosis. However, the 10-12 prostate core biopsies only sample
+a relatively small volume of the prostate, and tumour lesions in regions between biopsy cores can
+be missed, leading to a well-known low sensitivity to detect clinically relevant cancer. As a proof-of-principle,
+we developed and validated a deep convolutional neural network model to distinguish between morphological
+patterns in benign prostate biopsy whole slide images from men with and without established cancer.
+Methods: This study included 14,354 hematoxylin and eosin stained whole slide images from benign
+prostate biopsies from 1,508 men in two groups: men without an established prostate cancer (PCa)
+diagnosis and men with at least one core biopsy diagnosed with PCa. 80% of the participants were assigned
+as training data and used for model optimization (1,211 men), and the remaining 20% (297 men) as a
+held-out test set used to evaluate model performance. An ensemble of 10 deep convolutional neural
+network models was optimized for classification of biopsies from men with and without established
+cancer. Hyperparameter optimization and model selection was performed by cross-validation in
+the training data . Results: Area under the receiver operating characteristic curve (ROC-AUC)
+was estimated as 0.727 (bootstrap 95% CI: 0.708-0.745) on biopsy level and 0.738 (bootstrap 95%
+CI: 0.682 - 0.796) on man level. At a specificity of 0.9 the model had an estimated sensitivity of 0.348.
+Conclusion: The developed model has the ability to detect men with risk of missed PCa due to under-sampling
+of the prostate. The proposed model has the potential to reduce the number of false negative cases
+in routine systematic prostate biopsies and to indicate men who could benefit from MRI-guided re-biopsy.

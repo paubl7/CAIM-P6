@@ -1,0 +1,20 @@
+A noteworthy aspect in blood flow modeling is the definition of the mechanical interaction between
+the fluid flow and the biological structure that contains it, namely the vessel wall. It has been
+demonstrated that the addition of a viscous contribution to the mechanical characterization of
+vessels brings positive results when compared to in-vivo measurements. In this context, the implementation
+of boundary conditions able to keep memory of the viscoelastic contribution of vessel walls assumes
+an important role, especially when dealing with large circulatory systems. In this work, viscoelasticity
+is taken into account in entire networks via the Standard Linear Solid Model. The implementation
+of the viscoelastic contribution at boundaries, namely inlet, outlet and junction, is carried
+out considering the natively hyperbolic nature of the mathematical model. A non-linear system
+is established based on the definition of a specific Riemann Problem at junctions. Basic junction
+test cases are analyzed, such as a trivial 2-vessels junction, for both a generic artery and a generic
+vein, and a simple 3-vessels junction, considering an aortic bifurcation scenario. The chosen
+IMEX-SSP2 Finite Volume scheme is demonstrated to be second-order accurate in the whole domain
+and well-balanced, even when including junctions. Two benchmark arterial networks are then implemented,
+differing in number of vessels and in viscoelastic parameters. Comparison of the results obtained
+in the two networks underlines the high sensitivity of the model to the chosen viscoelastic parameters.
+In these numerical tests, the network-wise conservation of the contribution provided by the viscoelastic
+characterization of vessel walls is assessed. Finally, numerical results of pressure waveforms
+in the common carotid artery and in the femoral artery of the second network simulated are compared
+with in-vivo data. 

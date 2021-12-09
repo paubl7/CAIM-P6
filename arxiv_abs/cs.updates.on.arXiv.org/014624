@@ -1,0 +1,19 @@
+Graph sparsification is to approximate an arbitrary graph by a sparse graph and is useful in many
+applications, such as simplification of social networks, least squares problems, numerical solution
+of symmetric positive definite linear systems and etc. In this paper, inspired by the well-known
+sparse signal recovery algorithm called orthogonal matching pursuit (OMP), we introduce a deterministic,
+greedy edge selection algorithm called universal greedy approach (UGA) for graph sparsification.
+For a general spectral sparsification problem, e.g., positive subset selection problem from a
+set of $m$ vectors from $\mathbb{R}^n$, we propose a nonnegative UGA algorithm which needs $O(mn^2+
+n^3/\epsilon^2)$ time to find a $\frac{1+\epsilon/\beta}{1-\epsilon/\beta}$-spectral sparsifier
+with positive coefficients with sparsity $\le\lceil\frac{n}{\epsilon^2}\rceil$, where $\beta$
+is the ratio between the smallest length and largest length of the vectors. The convergence of the
+nonnegative UGA algorithm will be established. For the graph sparsification problem, another
+UGA algorithm will be proposed which can output a $\frac{1+O(\epsilon)}{1-O(\epsilon)}$-spectral
+sparsifier with $\lceil\frac{n}{\epsilon^2}\rceil$ edges in $O(m+n^2/\epsilon^2)$ time from
+a graph with $m$ edges and $n$ vertices under some mild assumptions. This is a linear time algorithm
+in terms of the number of edges that the community of graph sparsification is looking for. The best
+result in the literature to the knowledge of the authors is the existence of a deterministic algorithm
+which is almost linear, i.e. $O(m^{1+o(1)})$ for some $o(1)=O(\frac{(\log\log(m))^{2/3}}{\log^{1/3}(m)})$.
+Finally, extensive experimental results, including applications to graph clustering and least
+squares regression, show the effectiveness of proposed approaches. 

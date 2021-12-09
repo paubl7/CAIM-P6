@@ -1,0 +1,20 @@
+Isostasy explains why observed gravity anomalies are generally much weaker than what is expected
+from topography alone, and why planetary crusts can support high topography without breaking up.
+Classical isostasy, however, neglects internal stresses and geoid contributions to topographical
+support, and yields ambiguous predictions of geoid anomalies. Isostasy should instead be defined
+either by minimizing deviatoric elastic stresses within the elastic shell, or by studying the dynamic
+response of the body in the long-time limit. I implement here the first option by formulating Airy
+isostatic equilibrium as the response of an elastic shell to surface and internal loads. Isostatic
+ratios are defined in terms of deviatoric Love numbers which quantify deviations with respect to
+a fluid state. The Love number approach separates the physics of isostasy from the technicalities
+of elastic-gravitational spherical deformations, and provides flexibility in the choice of the
+interior structure. Since elastic isostasy is invariant under a global rescaling of the shell shear
+modulus, it can be defined in the fluid shell limit, which reveals a deep connection with viscous
+isostasy. If the shell is homogeneous, minimum stress isostasy is dual to a variant of elastic isostasy
+called zero deflection isostasy, which is less physical but simpler to compute. Each isostatic
+model is combined with general boundary conditions applied at the surface and bottom of the shell,
+resulting in one-parameter isostatic families. At long wavelength, the influence of boundary
+conditions disappears as all isostatic families members yield the same isostatic ratios. At short
+wavelength, topography is supported by shallow stresses so that Airy isostasy becomes similar
+to either pure top or bottom loading. The isostatic ratios of incompressible bodies with three homogeneous
+layers are implemented in freely available software. 

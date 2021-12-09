@@ -1,0 +1,19 @@
+Automated three-dimensional (3D) object reconstruction is the task of building a geometric representation
+of a physical object by means of sensing its surface. Even though new single view reconstruction
+techniques can predict the surface, they lead to incomplete models, specially, for non commons
+objects such as antique objects or art sculptures. Therefore, to achieve the task's goals, it is
+essential to automatically determine the locations where the sensor will be placed so that the surface
+will be completely observed. This problem is known as the next-best-view problem. In this paper,
+we propose a data-driven approach to address the problem. The proposed approach trains a 3D convolutional
+neural network (3D CNN) with previous reconstructions in order to regress the \btxt{position of
+the} next-best-view. To the best of our knowledge, this is one of the first works that directly infers
+the next-best-view in a continuous space using a data-driven approach for the 3D object reconstruction
+task. We have validated the proposed approach making use of two groups of experiments. In the first
+group, several variants of the proposed architecture are analyzed. Predicted next-best-views
+were observed to be closely positioned to the ground truth. In the second group of experiments, the
+proposed approach is requested to reconstruct several unseen objects, namely, objects not considered
+by the 3D CNN during training nor validation. Coverage percentages of up to 90 \% were observed. With
+respect to current state-of-the-art methods, the proposed approach improves the performance
+of previous next-best-view classification approaches and it is quite fast in running time (3 frames
+per second), given that it does not compute the expensive ray tracing required by previous information
+metrics. 

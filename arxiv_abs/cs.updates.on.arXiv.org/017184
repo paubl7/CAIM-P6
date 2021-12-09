@@ -1,0 +1,19 @@
+Image super-resolution (SR) methods can generate remote sensing images with high spatial resolution
+without increasing the cost, thereby providing a feasible way to acquire high-resolution remote
+sensing images, which are difficult to obtain due to the high cost of acquisition equipment and complex
+weather. Clearly, image super-resolution is a severe ill-posed problem. Fortunately, with the
+development of deep learning, the powerful fitting ability of deep neural networks has solved this
+problem to some extent. In this paper, we propose a network based on the generative adversarial network
+(GAN) to generate high resolution remote sensing images, named the multi-attention generative
+adversarial network (MA-GAN). We first designed a GAN-based framework for the image SR task. The
+core to accomplishing the SR task is the image generator with post-upsampling that we designed.
+The main body of the generator contains two blocks; one is the pyramidal convolution in the residual-dense
+block (PCRDB), and the other is the attention-based upsample (AUP) block. The attentioned pyramidal
+convolution (AttPConv) in the PCRDB block is a module that combines multi-scale convolution and
+channel attention to automatically learn and adjust the scaling of the residuals for better results.
+The AUP block is a module that combines pixel attention (PA) to perform arbitrary multiples of upsampling.
+These two blocks work together to help generate better quality images. For the loss function, we
+design a loss function based on pixel loss and introduce both adversarial loss and feature loss to
+guide the generator learning. We have compared our method with several state-of-the-art methods
+on a remote sensing scene image dataset, and the experimental results consistently demonstrate
+the effectiveness of the proposed MA-GAN. 

@@ -1,0 +1,18 @@
+The Nyquist-Shannon theorem states that the information accessible by discrete Fourier protocols
+saturates when the sampling rate reaches twice the bandwidth of the detected continuous time signal.
+This maximum rate (the NS-limit) plays a prominent role in Magnetic Resonance Imaging (MRI). Nevertheless,
+reconstruction methods other than Fourier analysis can extract useful information from data oversampled
+with respect to the NS-limit, given that relevant prior knowledge is available. Here we present
+PhasE-Constrained OverSampled MRI (PECOS), a method that exploits data oversampling in combination
+with prior knowledge of the physical interactions between electromagnetic fields and spins in
+MRI systems. In PECOS, highly oversampled-in-time k-space data are fed into a phase-constrained
+variant of Kaczmarz's algebraic reconstruction algorithm, where prior knowledge of the expected
+spin contributions to the signal is codified into an encoding matrix. PECOS can be used for scan acceleration
+in relevant scenarios by oversampling along frequency-encoded directions, which is innocuous
+in MRI systems under reasonable conditions. We find situations in which the reconstruction quality
+can be higher than with NS-limited acquisitions and traditional Fourier reconstruction. Besides,
+we compare the performance of a variety of encoding pulse sequences as well as image reconstruction
+protocols, and find that accelerated spiral trajectories in k-space combined with algebraic reconstruction
+techniques are particularly advantageous. The proposed sampling and reconstruction method is
+able to improve image quality for fully-sampled k-space trajectories, while allowing accelerated
+or undersampled acquisitions without regularization or signal extrapolation to unmeasured regions.

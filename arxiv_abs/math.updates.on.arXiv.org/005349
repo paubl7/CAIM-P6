@@ -1,0 +1,19 @@
+Krylov subspace recycling is a powerful tool for solving long series of large, sparse linear systems
+that change slowly. In PDE constrained shape optimization, these appear naturally, as hundreds
+or more optimization steps are needed with only small changes in the geometry. In this setting, however,
+applying Krylov subspace recycling can be difficult. As the geometry evolves, so does the finite
+element mesh, especially if re-meshing is needed. As a result, the number of algebraic degrees of
+freedom in the system may change from one optimization step to the next, and with it the size of the
+finite element system matrix. Changes in the mesh also lead to structural changes in the matrices.
+In the case of remeshing, even if the geometry changes only a little, the corresponding mesh might
+differ substantially from the previous one. This prevents any straightforward mapping of the approximate
+invariant subspace of the linear system matrix (the focus of recycling in this paper) from one step
+to the next; similar problems arise for other selected subspaces. We present an algorithm for general
+meshes to map an approximate invariant subspace of the system matrix for the previous optimization
+step to an approximate invariant subspace of the system matrix for the current optimization step.
+We exploit the map from coefficient vectors to finite element functions on the mesh combined with
+function approximation on the finite element mesh. In addition, we develop a straightforward warm-start
+adaptation of the Krylov-Schur algorithm [G.W. Stewart, SIAM J. Matrix Anal. Appl. 23, 2001] to
+improve the approximate invariant subspace at the start of a new optimization step if needed. We
+demonstrate the effectiveness of our approach numerically with several proof of concept studies
+for a specific meshing technique. 

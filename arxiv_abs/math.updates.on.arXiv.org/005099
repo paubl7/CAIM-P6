@@ -1,0 +1,18 @@
+State estimation aims at approximately reconstructing the solution $u$ to a parametrized partial
+differential equation from $m$ linear measurements, when the parameter vector $y$ is unknown.
+Fast numerical recovery methods have been proposed based on reduced models which are linear spaces
+of moderate dimension $n$ which are tailored to approximate the solution manifold $\mathcal{M}$
+where the solution sits. These methods can be viewed as deterministic counterparts to Bayesian
+estimation approaches, and are proved to be optimal when the prior is expressed by approximability
+of the solution with respect to the reduced model. However, they are inherently limited by their
+linear nature, which bounds from below their best possible performance by the Kolmogorov width
+$d_m(\mathcal{M})$ of the solution manifold. In this paper we propose to break this barrier by using
+simple nonlinear reduced models that consist of a finite union of linear spaces $V_k$, each having
+dimension at most $m$ and leading to different estimators $u_k^*$. A model selection mechanism
+based on minimizing the PDE residual over the parameter space is used to select from this collection
+the final estimator $u^*$. Our analysis shows that $u^*$ meets optimal recovery benchmarks that
+are inherent to the solution manifold and not tied to its Kolmogorov width. The residual minimization
+procedure is computationally simple in the relevant case of affine parameter dependence in the
+PDE. In addition, it results in an estimator $y^*$ for the unknown parameter vector. In this setting,
+we also discuss an alternating minimization (coordinate descent) algorithm for joint state and
+parameter estimation, that potentially improves the quality of both estimators. 

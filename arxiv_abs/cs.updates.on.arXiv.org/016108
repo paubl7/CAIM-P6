@@ -1,0 +1,18 @@
+There is a trivial $O(\frac{n^3}{T})$ time algorithm for approximate triangle counting where
+$T$ is the number of triangles in the graph and $n$ the number of vertices. At the same time, one may
+count triangles exactly using fast matrix multiplication in time $\tilde{O}(n^\omega)$. Is it
+possible to get a negative dependency on the number of triangles $T$ while retaining the $n^\omega$
+dependency on $n$? We answer this question positively by providing an algorithm which runs in time
+$O\big(\frac{n^\omega}{T^{\omega - 2}}\big) \cdot \text{poly}(n^{o(1)}/\epsilon)$. This
+is optimal in the sense that as long as the exponent of $T$ is independent of $n, T$, it cannot be improved
+while retaining the dependency on $n$; this as follows from the lower bound of Eden and Rosenbaum
+[APPROX/RANDOM 2018]. Our algorithm improves upon the state of the art when $T = \omega(1)$ and $T
+= o(n)$. We also consider the problem of approximate triangle counting in sparse graphs, parameterizing
+by the number of edges $m$. The best known algorithm runs in time $\tilde{O}\big(\frac{m^{3/2}}{T}\big)$
+[Eden et al., SIAM Journal on Computing, 2017]. There is also a well known algorithm for exact triangle
+counting that runs in time $\tilde{O}(m^{2\omega/(\omega + 1)})$. We again get an algorithm that
+retains the exponent of $m$ while running faster on graphs with larger number of triangles. Specifically,
+our algorithm runs in time $O\Big(\frac{m^{2\omega/(\omega+1)}}{ T^{2(\omega-1)/(\omega+1)}}\Big)
+\cdot \text{poly}(n^{o(1)}/\epsilon)$. This is again optimal in the sense that if the exponent
+of $T$ is to be constant, it cannot be improved without worsening the dependency on $m$. This algorithm
+improves upon the state of the art when $T = \omega(1)$ and $T = o(\sqrt{m})$. 

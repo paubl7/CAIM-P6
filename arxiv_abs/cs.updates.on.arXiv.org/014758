@@ -1,0 +1,19 @@
+We investigate two questions in this paper: First, we ask to what extent "MPC friendly" models are
+already supported by major Machine Learning frameworks such as TensorFlow or PyTorch. Prior works
+provide protocols that only work on fixed-point integers and specialized activation functions,
+two aspects that are not supported by popular Machine Learning frameworks, and the need for these
+specialized model representations means that it is hard, and often impossible, to use e.g., TensorFlow
+to design, train and test models that later have to be evaluated securely. Second, we ask to what extent
+the functionality for evaluating Neural Networks already exists in general-purpose MPC frameworks.
+These frameworks have received more scrutiny, are better documented and supported on more platforms.
+Furthermore, they are typically flexible in terms of the threat model they support. In contrast,
+most secure evaluation protocols in the literature are targeted to a specific threat model and their
+implementations are only a "proof-of-concept", making it very hard for their adoption in practice.
+We answer both of the above questions in a positive way: We observe that the quantization techniques
+supported by both TensorFlow, PyTorch and MXNet can provide models in a representation that can
+be evaluated securely; and moreover, that this evaluation can be performed by a general purpose
+MPC framework. We perform extensive benchmarks to understand the exact trade-offs between different
+corruption models, network sizes and efficiency. These experiments provide an interesting insight
+into cost between active and passive security, as well as honest and dishonest majority. Our work
+shows then that the separating line between existing ML frameworks and existing MPC protocols may
+be narrower than implicitly suggested by previous works. 

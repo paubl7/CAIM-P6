@@ -1,0 +1,19 @@
+An ordering constraint satisfaction problem (OCSP) is given by a positive integer $k$ and a constraint
+predicate $\Pi$ mapping permutations on $\{1,\ldots,k\}$ to $\{0,1\}$. Given an instance of OCSP$(\Pi)$
+on $n$ variables and $m$ constraints, the goal is to find an ordering of the $n$ variables that maximizes
+the number of constraints that are satisfied, where a constraint specifies a sequence of $k$ distinct
+variables and the constraint is satisfied by an ordering on the $n$ variables if the ordering induced
+on the $k$ variables in the constraint satisfies $\Pi$. OCSPs capture natural problems including
+"Maximum acyclic subgraph (MAS)" and "Betweenness". In this work we consider the task of approximating
+the maximum number of satisfiable constraints in the (single-pass) streaming setting, where an
+instance is presented as a stream of constraints. We show that for every $\Pi$, OCSP$(\Pi)$ is approximation-resistant
+to $o(n)$-space streaming algorithms. This space bound is tight up to polylogarithmic factors.
+In the case of MAS our result shows that for every $\epsilon>0$, MAS is not $1/2+\epsilon$-approximable
+in $o(n)$ space. The previous best inapproximability result only ruled out a $3/4$-approximation
+in $o(\sqrt n)$ space. Our results build on recent works of Chou, Golovnev, Sudan, Velingker, and
+Velusamy who show tight, linear-space inapproximability results for a broad class of (non-ordering)
+constraint satisfaction problems over arbitrary (finite) alphabets. We design a family of appropriate
+CSPs (one for every $q$) from any given OCSP, and apply their work to this family of CSPs. We show that
+the hard instances from this earlier work have a particular "small-set expansion" property. By
+exploiting this combinatorial property, in combination with the hardness results of the resulting
+families of CSPs, we give optimal inapproximability results for all OCSPs. 

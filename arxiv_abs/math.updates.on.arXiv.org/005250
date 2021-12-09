@@ -1,0 +1,18 @@
+Reducing a chain complex (whilst preserving its homotopy-type) using algebraic Morse theory gives
+the same end-result as Gaussian elimination, but AMT does it only on certain rows/columns and with
+several pivots (in all matrices simultaneously). Crucially, instead of doing costly row/column
+operations on a sparse matrix, it computes traversals of a bipartite digraph. This significantly
+reduces the running time and memory load (smaller fill-in and coefficient growth of the matrices).
+However, computing with AMT requires the construction of a valid set of pivots (called a Morse matching).
+We discover a family of Morse matchings on any chain complex of free modules of finite rank. We show
+that every acyclic matching is a subset of some member of our family, so all maximal Morse matchings
+are of this type. Both the input and output of AMT are chain complexes, so the procedure can be used
+iteratively. When working over a field or a local PID, this process ends in a chain complex with zero
+matrices, which produces homology. However, even over more general rings, the process often reveals
+homology, or at least reduces the complex so much that other algorithms can finish the job. Moreover,
+it also returns homotopy equivalences to the reduced complexes, which reveal the generators of
+the homology and the induced maps $H_\ast(\varphi)$. We design a new algorithm for reducing a chain
+complex and implement it. We test that it outperforms other CASs. As a special case, given a sparse
+matrix over any field, the algorithm offers a new way of computing the rank and a sparse basis of the
+kernel (or null space), cokernel (or quotient space, or complementary subspace), image, preimage,
+sum and intersection subspace. It outperforms built-in algorithms in other CASs. 

@@ -1,0 +1,20 @@
+A new horizontally explicit/vertically implicit (HEVI) time splitting scheme for atmospheric
+modelling is introduced, for which the horizontal divergence terms are applied within the implicit
+vertical substep. The new HEVI scheme is implemented in conjunction with a mixed mimetic spectral
+element spatial discretisation and semi-implicit vertical time stepping scheme that both preserve
+the skew-symmetric structure of the non-canonical Hamiltonian form of the equations of motion.
+Within this context the new HEVI scheme allows for the exact balance of all energetic exchanges in
+space and time. However since the choice of horizontal fluxes for which this balance is satisfied
+is not consistent with the horizontal velocity at the end of the time level the scheme still admits
+a temporal energy conservation error. Linearised eigenvalue analysis shows that similar to a fully
+implicit method, the new HEVI scheme is neutrally stable for all buoyancy modes, and unlike a second
+order trapezoidal HEVI scheme is stable for all acoustic modes below a certain horizontal CFL number.
+The scheme is validated against standard test cases for both planetary and nonhydrostatic regimes.
+For the planetary scale baroclinic instability test case, the new formulation exhibits a secondary
+oscillation in the potential to kinetic energy power exchanges, with a temporal frequency approximately
+four times that exhibited by a horizontally third order, vertically second order trapezoidal scheme.
+For the nonhydrostatic test case, the vertical upwinding of the potential temperature diagnostic
+equation is shown to reduce spurious oscillations without altering the energetics of the solution,
+since this upwinding is performed in an energetically consistent manner. For this test case, which
+is configured on an affine geometry, the exact balance of energy exchanges allows the model to run
+stably without any form of dissipation. 

@@ -1,0 +1,19 @@
+Portrait matting is an important research problem with a wide range of applications, such as video
+conference app, image/video editing, and post-production. The goal is to predict an alpha matte
+that identifies the effect of each pixel on the foreground subject. Traditional approaches and
+most of the existing works utilized an additional input, e.g., trimap, background image, to predict
+alpha matte. However, providing additional input is not always practical. Besides, models are
+too sensitive to these additional inputs. In this paper, we introduce an additional input-free
+approach to perform portrait matting using Generative Adversarial Nets (GANs). We divide the main
+task into two subtasks. For this, we propose a segmentation network for the person segmentation
+and the alpha generation network for alpha matte prediction. While the segmentation network takes
+an input image and produces a coarse segmentation map, the alpha generation network utilizes the
+same input image as well as a coarse segmentation map that is produced by the segmentation network
+to predict the alpha matte. Besides, we present a segmentation encoding block to downsample the
+coarse segmentation map and provide feature representation to the residual block. Furthermore,
+we propose border loss to penalize only the borders of the subject separately which is more likely
+to be challenging and we also adapt perceptual loss for portrait matting. To train the proposed system,
+we combine two different popular training datasets to improve the amount of data as well as diversity
+to address domain shift problems in the inference time. We tested our model on three different benchmark
+datasets, namely Adobe Image Matting dataset, Portrait Matting dataset, and Distinctions dataset.
+The proposed method outperformed the MODNet method that also takes a single input. 

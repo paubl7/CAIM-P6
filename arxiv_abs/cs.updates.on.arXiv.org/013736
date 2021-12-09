@@ -1,0 +1,18 @@
+Given the critical role played by natural gas in providing electricity, heat, and other essential
+services, better models are needed to understand the dynamics of natural gas networks during extreme
+events. This paper aims at establishing appropriate and fast simulation models to capture the slow
+dynamics of linepack depletion for ideal isothermal natural gas pipeline networks. Instead of
+solving partial differential equations (PDE) on a large scale, three alternative implicit ordinary
+differential equation (ODE) simulation techniques are derived and discussed. The first one is
+commonly used in the literature with a slack node assumption. We show that the system of equations
+associated with this model is degenerate when flux injections are controlled (i.e. specified)
+at all nodes. To recover regularity under such a condition, two novel implicit ODE models are proposed,
+both with different techniques for specifying boundary conditions. They are easy to derive and
+efficient to simulate with standard ODE solvers. More importantly, they present useful frameworks
+for analyzing how networks respond to system-wide mass flux imbalances. These techniques offer
+different alternatives for simulating system dynamics based on how sources and loads are chosen
+to be modeled, and they are all proven to be regular (non-degenerate) in tree-structured networks.
+These proposed techniques are all tested on the 20-node Belgium network. The simulation results
+show that the conventional model with the slack node assumption cannot effectively capture linepack
+depletion under long term system-wide mass flux imbalance, while the proposed models can characterize
+the network behavior until the linepack is completely depleted. 

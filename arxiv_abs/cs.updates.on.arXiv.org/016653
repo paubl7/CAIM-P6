@@ -1,0 +1,19 @@
+Digitalization offers a large number of promising tools for large internal combustion engines
+such as condition monitoring or condition-based maintenance. This includes the status evaluation
+of key engine components such as cylinder liners, whose inner surfaces are subject to constant wear
+due to their movement relative to the pistons. Existing state-of-the-art methods for quantifying
+wear require disassembly and cutting of the examined liner followed by a high-resolution microscopic
+surface depth measurement that quantitatively evaluates wear based on bearing load curves (also
+known as Abbott-Firestone curves). Such reference methods are destructive, time-consuming and
+costly. The goal of the research presented here is to develop nondestructive yet reliable methods
+for quantifying the surface condition. A deep-learning framework is proposed that allows computation
+of the bearing load curves from reflection RGB images of the liner surface that can be collected with
+a wide variety of simple imaging devices, without the need to remove and destroy the investigated
+liner. For this purpose, a convolutional neural network is trained to predict the bearing load curve
+of the corresponding depth profile from the collected RGB images, which in turn can be used for further
+wear evaluation. Training of the network is performed using a custom-built database containing
+depth profiles and reflection images of liner surfaces of large gas engines. The results of the proposed
+method are visually examined and quantified considering several probabilistic distance metrics
+and comparison of roughness indicators between ground truth and model predictions. The observed
+success of the proposed method suggests its great potential for quantitative wear assessment on
+engines during service directly on site. 

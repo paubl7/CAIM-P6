@@ -1,0 +1,19 @@
+Recapturing attack can be employed as a simple but effective anti-forensic tool for digital document
+images. Inspired by the document inspection process that compares a questioned document against
+a reference sample, we proposed a document recapture detection scheme by employing Siamese network
+to compare and extract distinct features in a recapture document image. The proposed algorithm
+takes advantages of both metric learning and image forensic techniques. Instead of adopting Euclidean
+distance-based loss function, we integrate the forensic similarity function with a triplet loss
+and a normalized softmax loss. After training with the proposed triplet selection strategy, the
+resulting feature embedding clusters the genuine samples near the reference while pushes the recaptured
+samples apart. In the experiment, we consider practical domain generalization problems, such
+as the variations in printing/imaging devices, substrates, recapturing channels, and document
+types. To evaluate the robustness of different approaches, we benchmark some popular off-the-shelf
+machine learning-based approaches, a state-of-the-art document image detection scheme, and
+the proposed schemes with different network backbones under various experimental protocols.
+Experimental results show that the proposed schemes with different network backbones have consistently
+outperformed the state-of-the-art approaches under different experimental settings. Specifically,
+under the most challenging scenario in our experiment, i.e., evaluation across different types
+of documents that produced by different devices, we have achieved less than 5.00% APCER (Attack
+Presentation Classification Error Rate) and 5.56% BPCER (Bona Fide Presentation Classification
+Error Rate) by the proposed network with ResNeXt101 backbone at 5% BPCER decision threshold. 

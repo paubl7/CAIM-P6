@@ -1,0 +1,19 @@
+Generalization beyond a training dataset is a main goal of machine learning, but theoretical understanding
+of generalization remains an open problem for many models. The need for a new theory is exacerbated
+by recent observations in deep neural networks where overparameterization leads to better performance,
+contradicting the conventional wisdom from classical statistics. In this paper, we investigate
+generalization error for kernel regression, which, besides being a popular machine learning method,
+also includes infinitely overparameterized neural networks trained with gradient descent. We
+use techniques from statistical mechanics to derive an analytical expression for generalization
+error applicable to any kernel or data distribution. We present applications of our theory to real
+and synthetic datasets, and for many kernels including those that arise from training deep neural
+networks in the infinite-width limit. We elucidate an inductive bias of kernel regression to explain
+data with "simple functions", which are identified by solving a kernel eigenfunction problem on
+the data distribution. This notion of simplicity allows us to characterize whether a kernel is compatible
+with a learning task, facilitating good generalization performance from a small number of training
+examples. We show that more data may impair generalization when noisy or not expressible by the kernel,
+leading to non-monotonic learning curves with possibly many peaks. To further understand these
+phenomena, we turn to the broad class of rotation invariant kernels, which is relevant to training
+deep neural networks in the infinite-width limit, and present a detailed mathematical analysis
+of them when data is drawn from a spherically symmetric distribution and the number of input dimensions
+is large. 

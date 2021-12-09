@@ -1,0 +1,18 @@
+Intelligent vehicles clearly benefit from the expanded Field of View (FoV) of the 360-degree sensors,
+but the vast majority of available semantic segmentation training images are captured with pinhole
+cameras. In this work, we look at this problem through the lens of domain adaptation and bring panoramic
+semantic segmentation to a setting, where labelled training data originates from a different distribution
+of conventional pinhole camera images. First, we formalize the task of unsupervised domain adaptation
+for panoramic semantic segmentation, where a network trained on labelled examples from the source
+domain of pinhole camera data is deployed in a different target domain of panoramic images, for which
+no labels are available. To validate this idea, we collect and publicly release DensePASS - a novel
+densely annotated dataset for panoramic segmentation under cross-domain conditions, specifically
+built to study the Pinhole-to-Panoramic transfer and accompanied with pinhole camera training
+examples obtained from Cityscapes. DensePASS covers both, labelled- and unlabelled 360-degree
+images, with the labelled data comprising 19 classes which explicitly fit the categories available
+in the source domain (i.e. pinhole) data. To meet the challenge of domain shift, we leverage the current
+progress of attention-based mechanisms and build a generic framework for cross-domain panoramic
+semantic segmentation based on different variants of attention-augmented domain adaptation
+modules. Our framework facilitates information exchange at local- and global levels when learning
+the domain correspondences and improves the domain adaptation performance of two standard segmentation
+networks by 6.05% and 11.26% in Mean IoU. 

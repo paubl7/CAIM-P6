@@ -1,0 +1,19 @@
+In recent years, reinforcement learning has seen interest because of deep Q-Learning, where the
+model is a convolutional neural network. Deep Q-Learning has shown promising results in games such
+as Atari and AlphaGo. Instead of learning the entire Q-table, it learns an estimate of the Q function
+that determines a state's policy action. We use Q-Learning and deep Q-learning, to learn control
+policies of four constraint satisfaction games (15-Puzzle, Minesweeper, 2048, and Sudoku). 15-Puzzle
+is a sliding permutation puzzle and provides a challenge in addressing its large state space. Minesweeper
+and Sudoku involve partially observable states and guessing. 2048 is also a sliding puzzle but allows
+for easier state representation (compared to 15-Puzzle) and uses interesting reward shaping to
+solve the game. These games offer unique insights into the potential and limits of reinforcement
+learning. The Q agent is trained with no rules of the game, with only the reward corresponding to each
+state's action. Our unique contribution is in choosing the reward structure, state representation,
+and formulation of the deep neural network. For low shuffle, 15-Puzzle, achieves a 100% win rate,
+the medium and high shuffle achieve about 43% and 22% win rates respectively. On a standard 16x16
+Minesweeper board, both low and high-density boards achieve close to 45% win rate, whereas medium
+density boards have a low win rate of 15%. For 2048, the 1024 win rate was achieved with significant
+ease (100%) with high win rates for 2048, 4096, 8192 and 16384 as 40%, 0.05%, 0.01% and 0.004% , respectively.
+The easy Sudoku games had a win rate of 7%, while medium and hard games had 2.1% and 1.2% win rates, respectively.
+This paper explores the environment complexity and behavior of a subset of constraint games using
+reward structures which can get us closer to understanding how humans learn. 

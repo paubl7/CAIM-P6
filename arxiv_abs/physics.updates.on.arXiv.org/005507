@@ -1,0 +1,18 @@
+The \kovats retention index is a dimensionless quantity that characterizes the rate at which a compound
+is processed through a gas chromatography column. This quantity is independent of many experimental
+variables and, as such, is considered a near-universal descriptor of retention time on a chromatography
+column. The \kovats retention indices of a large number of molecules have been determined experimentally.
+The "NIST 20: GC Method\slash Retention Index Library" database has collected and, more importantly,
+curated retention indices of a subset of these compounds resulting in a highly valued reference
+database. The experimental data in the library form an ideal data set for training machine learning
+models for the prediction of retention indices of unknown compounds. In this article, we describe
+the training of a graph neural network model to predict the \kovats retention index for compounds
+in the NIST library and compare this approach with previous work \cite{2019Matyushin}. We predict
+the \kovats retention index with a mean unsigned error of 28 index units as compared to 44, the putative
+best result using a convolutional neural network \cite{2019Matyushin}. The NIST library also
+incorporates an estimation scheme based on a group contribution approach that achieves a mean unsigned
+error of 114 compared to the experimental data. Our method uses the same input data source as the group
+contribution approach, making its application straightforward and convenient to apply to existing
+libraries. Our results convincingly demonstrate the predictive powers of systematic, data-driven
+approaches leveraging deep learning methodologies applied to chemical data and for the data in
+the NIST 20 library outperform previous models. 

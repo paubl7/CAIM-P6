@@ -1,0 +1,20 @@
+Understanding subjectivity demands reasoning skills beyond the realm of common knowledge. It
+requires a machine learning model to process sentiment and to perform opinion mining. In this work,
+I've exploited a recently released dataset for span-selection Question Answering, namely SubjQA.
+SubjQA is the first QA dataset that contains questions that ask for subjective opinions corresponding
+to review paragraphs from six different domains. Hence, to answer these subjective questions,
+a learner must extract opinions and process sentiment for various domains, and additionally, align
+the knowledge extracted from a paragraph with the natural language utterances in the corresponding
+question, which together enhance the difficulty of a QA task. The primary goal of this thesis was
+to investigate the inner workings (i.e., latent representations) of a Transformer-based architecture
+to contribute to a better understanding of these not yet well understood "black-box" models. Transformer's
+hidden representations, concerning the true answer span, are clustered more closely in vector
+space than those representations corresponding to erroneous predictions. This observation holds
+across the top three Transformer layers for both objective and subjective questions and generally
+increases as a function of layer dimensions. Moreover, the probability to achieve a high cosine
+similarity among hidden representations in latent space concerning the true answer span tokens
+is significantly higher for correct compared to incorrect answer span predictions. These results
+have decisive implications for down-stream applications, where it is crucial to know about why
+a neural network made mistakes, and in which point, in space and time the mistake has happened (e.g.,
+to automatically predict correctness of an answer span prediction without the necessity of labeled
+data). 

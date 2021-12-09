@@ -1,0 +1,19 @@
+Semantic text matching models have been widely used in community question answering, information
+retrieval, and dialogue. However, these models cannot well address the long-form text matching
+problem. That is because there are usually many noises in the setting of long-form text matching,
+and it is difficult for existing semantic text matching to capture the key matching signals from
+this noisy information. Besides, these models are computationally expensive because they simply
+use all textual data indiscriminately in the matching process. To tackle the effectiveness and
+efficiency problem, we propose a novel hierarchical noise filtering model in this paper, namely
+Match-Ignition. The basic idea is to plug the well-known PageRank algorithm into the Transformer,
+to identify and filter both sentence and word level noisy information in the matching process. Noisy
+sentences are usually easy to detect because the sentence is the basic unit of a long-form text, so
+we directly use PageRank to filter such information, based on a sentence similarity graph. While
+words need to rely on their contexts to express concrete meanings, so we propose to jointly learn
+the filtering process and the matching process, to reflect the contextual dependencies between
+words. Specifically, a word graph is first built based on the attention scores in each self-attention
+block of Transformer, and keywords are then selected by applying PageRank on this graph. In this
+way, noisy words will be filtered out layer by layer in the matching process. Experimental results
+show that Match-Ignition outperforms both traditional text matching models for short text and
+recent long-form text matching models. We also conduct detailed analysis to show that Match-Ignition
+can efficiently capture important sentences or words, which are helpful for long-form text matching.

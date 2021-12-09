@@ -1,0 +1,19 @@
+Cryptocurrencies such as Bitcoin and Ethereum have made payment transactions possible without
+a trusted third party, but they have a scalability issue due to their consensus mechanisms. Payment
+networks have emerged to overcome this limitation by executing transactions outside of the blockchain,
+which is why these are referred to as off-chain transactions. In order to establish a payment channel
+between two users, the users lock their deposits in the blockchain, and then they can pay each other
+through the channel. Furthermore, payment networks support multi-hop payments that allow users
+to transfer their balances to other users who are connected to them via multiple channels. However,
+multi-hop payments are hard to be accomplished, as they are heavily dependent on routing users on
+a payment path from a sender to a receiver. Although routing hubs can make multi-hop payments more
+practical and efficient, they need a lot of collateral locked for a long period and have privacy issues
+in terms of payment history. We propose RouTEE, a secure payment routing hub that is fully feasible
+without the hub's deposit. Unlike existing payment networks, RouTEE provides high balance liquidity,
+and details about payments are concealed from hosts by leveraging trusted execution environments
+(TEEs). RouTEE is designed to make rational hosts behave honestly, by introducing a new routing
+fee scheme and a secure settlement method. Moreover, users do not need to monitor the blockchain
+in real-time or run full nodes. They can participate in RouTEE by simply verifying block headers
+through light clients; furthermore, having only one channel with RouTEE is sufficient to interact
+with other users. Our implementation demonstrates that RouTEE is highly efficient and outperforms
+Lightning Network that is the state-of-the-art payment network. 

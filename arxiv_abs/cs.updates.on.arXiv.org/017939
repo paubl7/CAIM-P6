@@ -1,0 +1,19 @@
+Structural Clustering ($DynClu$) is one of the most popular graph clustering paradigms. In this
+paper, we consider $StrClu$ under two commonly adapted similarities, namely Jaccard similarity
+and cosine similarity on a dynamic graph, $G = \langle V, E\rangle$, subject to edge insertions and
+deletions (updates). The goal is to maintain certain information under updates, so that the $StrClu$
+clustering result on~$G$ can be retrieved in $O(|V| + |E|)$ time, upon request. The state-of-the-art
+worst-case cost is $O(|V|)$ per update; we improve this update-time bound significantly with the
+$\rho$-approximate notion. Specifically, for a specified failure probability, $\delta^*$,
+and every sequence of $M$ updates (no need to know $M$'s value in advance), our algorithm, $DynELM$,
+achieves $O(\log^2 |V| + \log |V| \cdot \log \frac{M}{\delta^*})$ amortized cost for each update,
+at all times in linear space. Moreover, $DynELM$ provides a provable "sandwich" guarantee on the
+clustering quality at all times after \emph{each update} with probability at least $1 - \delta^*$.
+We further develop $DynELM$ into our ultimate algorithm, $DynStrClu$, which also supports cluster-group-by
+queries. Given $Q\subseteq V$, this puts the non-empty intersection of $Q$ and each $StrClu$ cluster
+into a distinct group. $DynStrClu$ not only achieves all the guarantees of $DynELM$, but also runs
+cluster-group-by queries in $O(|Q|\cdot \log |V|)$ time. We demonstrate the performance of our
+algorithms via extensive experiments, on 15 real datasets. Experimental results confirm that
+our algorithms are up to three orders of magnitude more efficient than state-of-the-art competitors,
+and still provide quality structural clustering results. Furthermore, we study the difference
+between the two similarities w.r.t. the quality of approximate clustering results. 

@@ -1,0 +1,20 @@
+This work presents a non-intrusive surrogate modeling scheme based on machine learning technology
+for predictive modeling of complex systems, described by parametrized time-dependent PDEs. For
+these problems, typical finite element approaches involve the spatiotemporal discretization
+of the PDE and the solution of the corresponding linear system of equations at each time step. Instead,
+the proposed method utilizes a convolutional autoencoder in conjunction with a feed forward neural
+network to establish a low-cost and accurate mapping from the problem's parametric space to its
+solution space. For this purpose, time history response data are collected by solving the high-fidelity
+model via FEM for a reduced set of parameter values. Then, by applying the convolutional autoencoder
+to this data set, a low-dimensional representation of the high-dimensional solution matrices
+is provided by the encoder, while the reconstruction map is obtained by the decoder. Using the latent
+representation given by the encoder, a feed-forward neural network is efficiently trained to map
+points from the problem's parametric space to the compressed version of the respective solution
+matrices. This way, the encoded response of the system at new parameter values is given by the neural
+network, while the entire response is delivered by the decoder. This approach effectively bypasses
+the need to serially formulate and solve the system's governing equations at each time increment,
+thus resulting in a significant cost reduction and rendering the method ideal for problems requiring
+repeated model evaluations or 'real-time' computations. The elaborated methodology is demonstrated
+on the stochastic analysis of time-dependent PDEs solved with the Monte Carlo method, however,
+it can be straightforwardly applied to other similar-type problems, such as sensitivity analysis,
+design optimization, etc. 

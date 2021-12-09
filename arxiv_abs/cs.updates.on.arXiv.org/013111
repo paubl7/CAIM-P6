@@ -1,0 +1,18 @@
+Deep Learning is able to solve a plethora of once impossible problems. However, they are vulnerable
+to input adversarial attacks preventing them from being autonomously deployed in critical applications.
+Several algorithm-centered works have discussed methods to cause adversarial attacks and improve
+adversarial robustness of a Deep Neural Network (DNN). In this work, we elicit the advantages and
+vulnerabilities of hybrid 6T-8T memories to improve the adversarial robustness and cause adversarial
+attacks on DNNs. We show that bit-error noise in hybrid memories due to erroneous 6T-SRAM cells have
+deterministic behaviour based on the hybrid memory configurations (V_DD, 8T-6T ratio). This controlled
+noise (surgical noise) can be strategically introduced into specific DNN layers to improve the
+adversarial accuracy of DNNs. At the same time, surgical noise can be carefully injected into the
+DNN parameters stored in hybrid memory to cause adversarial attacks. To improve the adversarial
+robustness of DNNs using surgical noise, we propose a methodology to select appropriate DNN layers
+and their corresponding hybrid memory configurations to introduce the required surgical noise.
+Using this, we achieve 2-8% higher adversarial accuracy without re-training against white-box
+attacks like FGSM, than the baseline models (with no surgical noise introduced). To demonstrate
+adversarial attacks using surgical noise, we design a novel, white-box attack on DNN parameters
+stored in hybrid memory banks that causes the DNN inference accuracy to drop by more than 60% with
+over 90% confidence value. We support our claims with experiments, performed using benchmark datasets-CIFAR10
+and CIFAR100 on VGG19 and ResNet18 networks. 

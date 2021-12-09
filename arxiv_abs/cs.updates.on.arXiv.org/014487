@@ -1,0 +1,18 @@
+In deformable registration, the geometric framework - large deformation diffeomorphic metric
+mapping or LDDMM, in short - has inspired numerous techniques for comparing, deforming, averaging
+and analyzing shapes or images. Grounded in flows, which are akin to the equations of motion used
+in fluid dynamics, LDDMM algorithms solve the flow equation in the space of plausible deformations,
+i.e. diffeomorphisms. In this work, we make use of deep residual neural networks to solve the non-stationary
+ODE (flow equation) based on a Euler's discretization scheme. The central idea is to represent time-dependent
+velocity fields as fully connected ReLU neural networks (building blocks) and derive optimal weights
+by minimizing a regularized loss function. Computing minimizing paths between deformations,
+thus between shapes, turns to find optimal network parameters by back-propagating over the intermediate
+building blocks. Geometrically, at each time step, ResNet-LDDMM searches for an optimal partition
+of the space into multiple polytopes, and then computes optimal velocity vectors as affine transformations
+on each of these polytopes. As a result, different parts of the shape, even if they are close (such
+as two fingers of a hand), can be made to belong to different polytopes, and therefore be moved in different
+directions without costing too much energy. Importantly, we show how diffeomorphic transformations,
+or more precisely bilipshitz transformations, are predicted by our algorithm. We illustrate these
+ideas on diverse registration problems of 3D shapes under complex topology-preserving transformations.
+We thus provide essential foundations for more advanced shape variability analysis under a novel
+joint geometric-neural networks Riemannian-like framework, i.e. ResNet-LDDMM. 

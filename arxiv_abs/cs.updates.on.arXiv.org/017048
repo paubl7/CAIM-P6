@@ -1,0 +1,18 @@
+The cost-sharing connection game is a variant of routing games on a network. In this model, given
+a directed graph with edge-costs and edge-capacities, each agent wants to construct a path from
+a source to a sink with low cost. The cost of each edge is shared by the users based on a cost-sharing
+function. One of simple cost-sharing functions is defined as the cost divided by the number of users.
+In fact, most of the previous papers about cost-sharing connection games addressed this cost-sharing
+function. It models an ideal setting, where no overhead arises when people share things, though
+it might be quite rare in real life; it is more realistic to consider the setting that the cost paid
+by an agent is the original cost per the number of the agents plus the overhead. In this paper, we model
+the more realistic scenario of cost-sharing connection games by generalizing cost-sharing functions.
+The arguments on the model do not depend on specific cost-sharing functions, and are applicable
+for a wide class of cost-sharing functions satisfying the following natural properties: they are
+(1) non-increasing, (2) lower bounded by the original cost per the number of the agents, and (3) upper
+bounded by the original cost, which enables to represent various scenarios of cost-sharing. We
+investigate the Price of Anarchy (PoA) and the Price of Stability (PoS) under sum-cost and max-cost
+criteria with the generalized cost-sharing function. In spite of the generalization, we obtain
+the same bounds of PoA and PoS as the cost-sharing with no overhead except PoS under sum-cost. Note
+that these bounds are tight. In the case of sum-cost, the lower bound on PoS increases from $\log n$
+to $n+1/n-1$ by the generalization, which is also almost tight because the upper bound is $n$. 

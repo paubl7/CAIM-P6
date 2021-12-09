@@ -1,0 +1,19 @@
+The latest trend in the bottom-up perspective for arbitrary-shape scene text detection is to reason
+the links between text segments using Graph Convolutional Network (GCN). Notwithstanding, the
+performance of the best performing bottom-up method is still inferior to that of the best performing
+top-down method even with the help of GCN. We argue that this is not mainly caused by the limited feature
+capturing ability of the text proposal backbone or GCN, but by their failure to make a full use of visual-relational
+features for suppressing false detection, as well as the sub-optimal route-finding mechanism
+used for grouping text segments. In this paper, we revitalize the classic text detection frameworks
+by aggregating the visual-relational features of text with two effective false positive/negative
+suppression mechanisms. First, dense overlapping text segments depicting the `characterness'
+and `streamline' of text are generated for further relational reasoning and weakly supervised
+segment classification. Here, relational graph features are used for suppressing false positives/negatives.
+Then, to fuse the relational features with visual features, a Location-Aware Transfer (LAT) module
+is designed to transfer text's relational features into visual compatible features with a Fuse
+Decoding (FD) module to enhance the representation of text regions for the second step suppression.
+Finally, a novel multiple-text-map-aware contour-approximation strategy is developed, instead
+of the widely-used route-finding process. Experiments conducted on five benchmark datasets,
+i.e., CTW1500, Total-Text, ICDAR2015, MSRA-TD500, and MLT2017 demonstrate that our method outperforms
+the state-of-the-art performance when being embedded in a classic text detection framework, which
+revitalises the superb strength of the bottom-up methods. 

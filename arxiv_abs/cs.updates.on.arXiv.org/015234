@@ -1,0 +1,18 @@
+Since the renaissance of deep learning (DL), facial expression recognition (FER) has received
+a lot of interest, with continual improvement in the performance. Hand-in-hand with performance,
+new challenges have come up. Modern FER systems deal with face images captured under uncontrolled
+conditions (also called in-the-wild scenario) including occlusions and pose variations. They
+successfully handle such conditions using deep networks that come with various components like
+transfer learning, attention mechanism and local-global context extractor. However, these deep
+networks are highly complex with large number of parameters, making them unfit to be deployed in
+real scenarios. Is it possible to build a light-weight network that can still show significantly
+good performance on FER under in-the-wild scenario? In this work, we methodically build such a network
+and call it as Imponderous Net. We leverage on the aforementioned components of deep networks for
+FER, and analyse, carefully choose and fit them to arrive at Imponderous Net. Our Imponderous Net
+is a low calorie net with only 1.45M parameters, which is almost 50x less than that of a state-of-the-art
+(SOTA) architecture. Further, during inference, it can process at the real time rate of 40 frames
+per second (fps) in an intel-i7 cpu. Though it is low calorie, it is still power packed in its performance,
+overpowering other light-weight architectures and even few high capacity architectures. Specifically,
+Imponderous Net reports 87.09\%, 88.17\% and 62.06\% accuracies on in-the-wild datasets RAFDB,
+FERPlus and AffectNet respectively. It also exhibits superior robustness under occlusions and
+pose variations in comparison to other light-weight architectures from the literature. 

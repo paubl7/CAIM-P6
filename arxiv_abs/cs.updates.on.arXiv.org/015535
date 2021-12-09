@@ -1,0 +1,18 @@
+Deformable image registration is a fundamental task in medical imaging. Due to the large computational
+complexity of deformable registration of volumetric images, conventional iterative methods
+usually face the tradeoff between the registration accuracy and the computation time in practice.
+In order to boost the registration performance in both accuracy and runtime, we propose a fast convolutional
+neural network. Specially, to efficiently utilize the memory resources and enlarge the model capacity,
+we adopt additive forwarding instead of channel concatenation and deepen the network in each encoder
+and decoder stage. To facilitate the learning efficiency, we leverage skip connection within the
+encoder and decoder stages to enable residual learning and employ an auxiliary loss at the bottom
+layer with lowest resolution to involve deep supervision. Particularly, the low-resolution auxiliary
+loss is weighted by an exponentially decayed parameter during the training phase. In conjunction
+with the main loss in high-resolution grid, a coarse-to-fine learning strategy is achieved. Last
+but not least, we introduce an auxiliary loss based on the segmentation prior to improve the registration
+performance in Dice score. Comparing to the auxiliary loss using average Dice score, the proposed
+multi-label segmentation loss does not induce additional memory cost in the training phase and
+can be employed on images with arbitrary amount of categories. In the experiments, we show FDRN outperforms
+the existing state-of-the-art registration methods for brain MR images by resorting to the compact
+network structure and efficient learning. Besides, FDRN is a generalized framework for image registration
+which is not confined to a particular type of medical images or anatomy. 

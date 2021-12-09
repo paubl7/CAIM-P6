@@ -1,0 +1,18 @@
+In this paper we study the distributed average consensus problem in multi-agent systems with directed
+communication links that are subject to quantized information flow. Specifically, we present
+and analyze a distributed averaging algorithm which operates exclusively with quantized values
+(i.e., the information stored, processed and exchanged between neighboring agents is subject
+to deterministic uniform quantization) and relies on event-driven updates (e.g., to reduce energy
+consumption, communication bandwidth, network congestion, and/or processor usage). The main
+idea of the proposed algorithm is that each node (i) models its initial state as two quantized fractions
+which have numerators equal to the node's initial state and denominators equal to one, and (ii) transmits
+one fraction randomly while it keeps the other stored. Then, every time it receives one or more fractions,
+it averages their numerators with the numerator of the fraction it stored, and then transmits them
+to randomly selected out-neighbors. We characterize the properties of the proposed distributed
+algorithm and show that its execution, on any static and strongly connected digraph, allows each
+agent to reach in finite time a fixed state that is equal (within one quantisation level) to the average
+of the initial states. We extend the operation of the algorithm to achieve finite-time convergence
+in the presence of a dynamic directed communication topology subject to some connectivity conditions.
+Finally, we provide examples to illustrate the operation, performance, and potential advantages
+of the proposed algorithm. We compare against state-of-the-art quantized average consensus algorithms
+and show that our algorithm's convergence speed significantly outperforms most existing protocols.

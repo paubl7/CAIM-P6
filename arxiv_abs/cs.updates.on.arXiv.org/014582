@@ -1,0 +1,19 @@
+The current increasing need for privacy-preserving voice communications is leading to new ideas
+for securing voice transmission. This paper refers to a relatively new concept of sending encrypted
+speech as pseudo-speech in the audio domain over digital voice communication infrastructures,
+like 3G cellular network and VoIP. This work presents a novel distortion-tolerant speech encryption
+scheme for secure voice communications over voice channels that combines the robustness of analog
+speech scrambling and elevated security offered by digital ciphers like AES-CTR. The system scrambles
+vocal parameters of a speech signal (loudness, pitch, timbre) using distance-preserving pseudo-random
+translations and rotations on a hypersphere of parameters. Next, scrambled parameters are encoded
+to a pseudo-speech signal adapted to transmission over digital voice channels equipped with voice
+activity detection. Upon reception of this pseudo-speech signal, the legitimate receiver restores
+distorted copies of the initial vocal parameters. Despite some deciphering errors, an integrated
+neural-based vocoder based on the LPCNet architecture reconstructs an intelligible speech. The
+experimental implementation of this speech encryption scheme has been tested by simulations and
+sending an encrypted signal over FaceTime between two iPhones 6 connected to the same WiFi network.
+Moreover, speech excerpts restored from encrypted signals were evaluated by a speech quality assessment
+on a group of about 40 participants. The experiments demonstrated that the proposed scheme produces
+intelligible speech with a gracefully progressive quality degradation depending on the channel
+noise. Finally, the preliminary computational analysis suggested that the presented setting
+may operate on high-end portable devices in nearly real-time. 

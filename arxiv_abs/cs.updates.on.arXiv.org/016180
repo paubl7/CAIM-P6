@@ -1,0 +1,18 @@
+Object recognition in unseen indoor environments remains a challenging problem for visual perception
+of mobile robots. In this letter, we propose the use of topologically persistent features, which
+rely on the objects' shape information, to address this challenge. In particular, we extract two
+kinds of features, namely, sparse persistence image (PI) and amplitude, by applying persistent
+homology to multi-directional height function-based filtrations of the cubical complexes representing
+the object segmentation maps. The features are then used to train a fully connected network for recognition.
+For performance evaluation, in addition to a widely used shape dataset and a benchmark indoor scenes
+dataset, we collect a new dataset, comprising scene images from two different environments, namely,
+a living room and a mock warehouse. The scenes are captured using varying camera poses under different
+illumination conditions and include up to five different objects from a given set of fourteen objects.
+On the benchmark indoor scenes dataset, sparse PI features show better recognition performance
+in unseen environments than the features learned using the widely used ResNetV2-56 and EfficientNet-B4
+models. Further, they provide slightly higher recall and accuracy values than Faster R-CNN, an
+end-to-end object detection method, and its state-of-the-art variant, Domain Adaptive Faster
+R-CNN. The performance of our methods also remains relatively unchanged from the training environment
+(living room) to the unseen environment (mock warehouse) in the new dataset. In contrast, the performance
+of the object detection methods drops substantially. We also implement the proposed method on a
+real-world robot to demonstrate its usefulness. 

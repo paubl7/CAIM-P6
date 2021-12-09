@@ -1,0 +1,19 @@
+Accurately predicting the behavior of a nuclear reactor requires multiphysics simulation of coupled
+neutronics, thermal-hydraulics and fuel thermo-mechanics. The fuel thermo-mechanical response
+provides essential information for operational limits and safety analysis. Traditionally, fuel
+performance analysis is performed standalone, using calculated spatial-temporal power distribution
+and thermal boundary conditions from the coupled neutronics-thermal-hydraulics simulation
+as input. Such one-way coupling is result of the high cost induced by the full-core fuel performance
+analysis, which provides more realistic and accurate prediction of the core-wide response than
+the "peak rod" analysis. It is therefore desirable to improve the computational efficiency of full-core
+fuel performance modeling by constructing fast-running surrogate, such that fuel performance
+modeling can be utilized in the core reload design optimization. This work presents methodologies
+for full-core surrogate construction based on several realistic equilibrium PWR core designs.
+As a fast and conventional approach, look-up tables are only effective for certain fuel performance
+quantities of interest (QoIs). Several representative machine-learning algorithms are introduced
+to capture the complicated physics for other fuel performance QoIs. Rule-based model is useful
+as a feature extraction technique to account for the spatial-temporal complexity of operating
+conditions. Constructed surrogates achieve at least ten thousand time acceleration with satisfying
+prediction accuracy. Current work lays foundation for tighter coupling of fuel performance modeling
+into the core design optimization framework. It also sets stage for full-core fuel performance
+analysis with BISON where the computational cost becomes more burdensome. 

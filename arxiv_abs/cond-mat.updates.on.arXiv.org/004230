@@ -1,0 +1,18 @@
+Crystal structure prediction is one of the major unsolved problems in materials science. Traditionally,
+this problem is formulated as a global optimization problem for which global search algorithms
+are combined with first principle free energy calculations to predict the ground-state crystal
+structure given only a material composition or a chemical system. These ab initio algorithms usually
+cannot exploit a large amount of implicit physicochemical rules or geometric constraints (deep
+knowledge) of atom configurations embodied in a large number of known crystal structures. Inspired
+by the deep learning enabled breakthrough in protein structure prediction, herein we propose AlphaCrystal,
+a crystal structure prediction algorithm that combines a deep residual neural network model that
+learns deep knowledge to guide predicting the atomic contact map of a target crystal material followed
+by reconstructing its 3D crystal structure using genetic algorithms. Based on the experiments
+of a selected set of benchmark crystal materials, we show that our AlphaCrystal algorithm can predict
+structures close to the ground truth structures. It can also speed up the crystal structure prediction
+process by predicting and exploiting the predicted contact map so that it has the potential to handle
+relatively large systems. We believe that our deep learning based ab initio crystal structure prediction
+method that learns from existing material structures can be used to scale up current crystal structure
+prediction practice. To our knowledge, AlphaCrystal is the first neural network based algorithm
+for crystal structure contact map prediction and the first method for directly reconstructing
+crystal structures from materials composition, which can be further optimized by DFT calculations.

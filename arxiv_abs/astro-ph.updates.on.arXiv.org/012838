@@ -1,0 +1,18 @@
+The covariance matrix $\boldsymbol{\Sigma}$ of non-linear clustering statistics that are measured
+in current and upcoming surveys is of fundamental interest for comparing cosmological theory and
+data and a crucial ingredient for the likelihood approximations underlying widely used parameter
+inference and forecasting methods. The extreme number of simulations needed to estimate $\boldsymbol{\Sigma}$
+to sufficient accuracy poses a severe challenge. Approximating $\boldsymbol{\Sigma}$ using
+inexpensive but biased surrogates introduces model error with respect to full simulations, especially
+in the non-linear regime of structure growth. To address this problem we develop a matrix generalization
+of Convergence Acceleration by Regression and Pooling (CARPool) to combine a small number of simulations
+with fast surrogates and obtain low-noise estimates of $\boldsymbol{\Sigma}$ that are unbiased
+by construction. Our numerical examples use CARPool to combine GADGET-III $N$-body simulations
+with fast surrogates computed using COmoving Lagrangian Acceleration (COLA). Even at the challenging
+redshift $z=0.5$, we find variance reductions of at least $\mathcal{O}(10^1)$ and up to $\mathcal{O}(10^4)$
+for the elements of the matter power spectrum covariance matrix on scales $8.9\times 10^{-3}<k_\mathrm{max}
+<1.0$ $h {\rm Mpc^{-1}}$. We demonstrate comparable performance for the covariance of the matter
+bispectrum, the matter correlation function and probability density function of the matter density
+field. We compare eigenvalues, likelihoods, and Fisher matrices computed using the CARPool covariance
+estimate with the standard sample covariance estimators and generally find considerable improvement
+except in cases where $\Sigma$ is severely ill-conditioned. 

@@ -1,0 +1,19 @@
+Java is the backbone of widely used big data frameworks, such as Apache Spark, due to its productivity,
+portability from JVM-based execution, and support for a rich set of libraries. However, the performance
+of these applications can widely vary depending on the runtime flags chosen out of all existing JVM
+flags. Manually tuning these flags is both cumbersome and error-prone. Automated tuning approaches
+can ease the task, but current solutions either require considerable processing time or target
+a subset of flags to avoid time and space requirements. In this paper, we present OneStopTuner, a
+Machine Learning based novel framework for autotuning JVM flags. OneStopTuner controls the amount
+of data generation by leveraging batch mode active learning to characterize the user application.
+Based on the user-selected optimization metric, OneStopTuner then discards the irrelevant JVM
+flags by applying feature selection algorithms on the generated data. Finally, it employs sample
+efficient methods such as Bayesian optimization and regression guided Bayesian optimization
+on the shortlisted JVM flags to find the optimal values for the chosen set of flags. We evaluated OneStopTuner
+on widely used Spark benchmarks and compare its performance with the traditional simulated annealing
+based autotuning approach. We demonstrate that for optimizing execution time, the flags chosen
+by OneStopTuner provides a speedup of up to 1.35x over default Spark execution, as compared to 1.15x
+speedup by using the flag configurations proposed by simulated annealing. OneStopTuner was able
+to reduce the number of executions for data-generation by 70% and was able to suggest the optimal
+flag configuration 2.4x faster than the standard simulated annealing based approach, excluding
+the time for data-generation. 

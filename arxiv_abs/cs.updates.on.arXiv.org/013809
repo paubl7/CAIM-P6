@@ -1,0 +1,20 @@
+One of the major challenges for low-rank multi-fidelity (MF) approaches is the assumption that
+low-fidelity (LF) and high-fidelity (HF) models admit "similar" low-rank kernel representations.
+Low-rank MF methods have traditionally attempted to exploit low-rank representations of linear
+kernels, which are kernel functions of the form $K(u,v) = v^T u$ for vectors $u$ and $v$. However,
+such linear kernels may not be able to capture low-rank behavior, and they may admit LF and HF kernels
+that are not similar. Such a situation renders a naive approach to low-rank MF procedures ineffective.
+In this paper, we propose a novel approach for the selection of a near-optimal kernel function for
+use in low-rank MF methods. The proposed framework is a two-step strategy wherein: (1) hyperparameters
+of a library of kernel functions are optimized, and (2) a particular combination of the optimized
+kernels is selected, through either a convex mixture (Additive Kernels) or through a data-driven
+optimization (Adaptive Kernels). The two resulting methods for this generalized framework both
+utilize only the available inexpensive low-fidelity data and thus no evaluation of high-fidelity
+simulation model is needed until a kernel is chosen. These proposed approaches are tested on five
+non-trivial problems including multi-fidelity surrogate modeling for one- and two-species molecular
+systems, gravitational many-body problem, associating polymer networks, plasmonic nano-particle
+arrays, and an incompressible flow in channels with stenosis. The results for these numerical experiments
+demonstrate the numerical stability efficiency of both proposed kernel function selection procedures,
+as well as high accuracy of their resultant predictive models for estimation of quantities of interest.
+Comparisons against standard linear kernel procedures also demonstrate increased accuracy of
+the optimized kernel approaches. 

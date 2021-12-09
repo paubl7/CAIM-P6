@@ -1,0 +1,19 @@
+Traditional recommender systems encounter several challenges such as data sparsity and unexplained
+recommendation. To address these challenges, many works propose to exploit semantic information
+from review data. However, these methods have two major limitations in terms of the way to model textual
+features and capture textual interaction. For textual modeling, they simply concatenate all the
+reviews of a user/item into a single review. However, feature extraction at word/phrase level can
+violate the meaning of the original reviews. As for textual interaction, they defer the interactions
+to the prediction layer, making them fail to capture complex correlations between users and items.
+To address those limitations, we propose a novel Hierarchical Text Interaction model(HTI) for
+rating prediction. In HTI, we propose to model low-level word semantics and high-level review representations
+hierarchically. The hierarchy allows us to exploit textual features at different granularities.
+To further capture complex user-item interactions, we propose to exploit semantic correlations
+between each user-item pair at different hierarchies. At word level, we propose an attention mechanism
+specialized to each user-item pair, and capture the important words for representing each review.
+At review level, we mutually propagate textual features between the user and item, and capture the
+informative reviews. The aggregated review representations are integrated into a collaborative
+filtering framework for rating prediction. Experiments on five real-world datasets demonstrate
+that HTI outperforms state-of-the-art models by a large margin. Further case studies provide a
+deep insight into HTI's ability to capture semantic correlations at different levels of granularities
+for rating prediction. 

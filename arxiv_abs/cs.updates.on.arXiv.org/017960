@@ -1,0 +1,20 @@
+Smart contracts are programs that are deployed and executed on the blockchain. Typically, smart
+contracts govern assets; popular smart contracts can govern assets worth millions. Just like traditional
+programs, smart contracts are subject to programming mistakes. However, a major difference is
+that smart contracts cannot be patched once deployed. Several approaches have been studied to improve
+smart contract security, by detecting bugs prior to deployment, allowing contracts to be updated,
+or modifying clients to prevent attacking transactions. The most elegant solution would be to automatically
+eliminate bugs prior to deployment. Merely identifying bugs is not enough. This became evident
+when the Parity wallet was hacked a second time after being manually patched following a security
+audit. Automatic pre-deployment patching offers a powerful promise to strengthen smart contract
+defenses. Current approaches are limited in the types of vulnerabilities that can be patched, in
+the flexibility of the patching process, and in scalability. In this paper we propose Elysium, a
+scalable approach towards automatic smart contract repair, that combines template-based patching
+with semantic patching by inferring context information from the bytecode. Elysium can currently
+automatically patch 7 known vulnerabilities in smart contracts using external bug-finding tools,
+and it can easily be extended with new templates and new bug-finding tools. We evaluate effectiveness
+and correctness of Elysium using 3 different datasets by replaying more than 500K transactions
+against patched contracts. We find that Elysium outperforms existing tools by patching at least
+30% more contracts. Finally, we compare the overhead in terms of deployment and transaction cost
+increase. In comparison to other tools, Elysium minimizes transaction cost (up to a factor of 1.9),
+for only a marginally higher deployment cost. 

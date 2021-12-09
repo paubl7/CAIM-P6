@@ -1,0 +1,19 @@
+The problem of $X$-secure $T$-colluding symmetric Private Polynomial Computation (PPC) from
+coded storage system with $B$ Byzantine and $U$ unresponsive servers is studied in this paper. Specifically,
+a dataset consisting of $M$ files are stored across $N$ distributed servers according to $(N,K+X)$
+Maximum Distance Separable (MDS) codes such that any group of up to $X$ colluding servers can not
+learn anything about the data files. A user wishes to privately evaluate one out of a set of candidate
+polynomial functions over the $M$ files from the system, while guaranteeing that any $T$ colluding
+servers can not learn anything about the identity of the desired function and the user can not learn
+anything about the $M$ data files more than the desired polynomial function, in the presence of $B$
+Byzantine servers that can send arbitrary responses maliciously to confuse the user and $U$ unresponsive
+servers that will not respond any information at all. Two novel symmetric PPC schemes using Lagrange
+encoding are proposed. Both the two schemes achieve the same PPC rate $1-\frac{G(K+X-1)+T+2B}{N-U}$,
+secrecy rate $\frac{G(K+X-1)+T}{N-(G(K+X-1)+T+2B+U)}$, finite field size and decoding complexity,
+where $G$ is the maximum degree over all the candidate polynomial functions. Particularly, the
+first scheme focuses on the general case that the candidate functions are consisted of arbitrary
+polynomials, and the second scheme restricts the candidate functions to be a finite-dimensional
+vector space (or sub-space) of polynomials over $\mathbb{F}_p$ but requires less upload cost,
+query complexity and server computation complexity. Remarkably, the PPC setup studied in this
+paper generalizes all the previous MDS coded PPC setups and the two degraded schemes strictly outperform
+the best known schemes in terms of (asymptotical) PPC rate, which is the main concern of the PPC schemes.

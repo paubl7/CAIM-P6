@@ -1,0 +1,19 @@
+We consider the problem of reconstructing an unknown function $u\in L^2(D,\mu)$ from its evaluations
+at given sampling points $x^1,\dots,x^m\in D$, where $D\subset \mathbb R^d$ is a general domain
+and $\mu$ a probability measure. The approximation is picked from a linear space $V_n$ of interest
+where $n=\dim(V_n)$. Recent results have revealed that certain weighted least-squares methods
+achieve near best approximation with a sampling budget $m$ that is proportional to $n$, up to a logarithmic
+factor $\ln(2n/\varepsilon)$, where $\varepsilon>0$ is a probability of failure. The sampling
+points should be picked at random according to a well-chosen probability measure $\sigma$ whose
+density is given by the inverse Christoffel function that depends both on $V_n$ and $\mu$. While
+this approach is greatly facilitated when $D$ and $\mu$ have tensor product structure, it becomes
+problematic for domains $D$ with arbitrary geometry since the optimal measure depends on an orthonormal
+basis of $V_n$ in $L^2(D,\mu)$ which is not explicitly given, even for simple polynomial spaces.
+Therefore sampling according to this measure is not practically feasible. In this paper, we discuss
+practical sampling strategies, which amount to using a perturbed measure $\widetilde \sigma$
+that can be computed in an offline stage, not involving the measurement of $u$. We show that near best
+approximation is attained by the resulting weighted least-squares method at near-optimal sampling
+budget and we discuss multilevel approaches that preserve optimality of the cumulated sampling
+budget when the spaces $V_n$ are iteratively enriched. These strategies rely on the knowledge of
+a-priori upper bounds on the inverse Christoffel function. We establish such bounds for spaces
+$V_n$ of multivariate algebraic polynomials, and for general domains $D$. 

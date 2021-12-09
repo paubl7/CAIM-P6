@@ -1,0 +1,20 @@
+Domain specific search has always been a challenging information retrieval task due to several
+challenges such as the domain specific language, the unique task setting, as well as the lack of accessible
+queries and corresponding relevance judgements. In the last years, pretrained language models,
+such as BERT, revolutionized web and news search. Naturally, the community aims to adapt these advancements
+to cross-domain transfer of retrieval models for domain specific search. In the context of legal
+document retrieval, Shao et al. propose the BERT-PLI framework by modeling the Paragraph Level
+Interactions with the language model BERT. In this paper we reproduce the original experiments,
+we clarify pre-processing steps, add missing scripts for framework steps and investigate different
+evaluation approaches, however we are not able to reproduce the evaluation results. Contrary to
+the original paper, we demonstrate that the domain specific paragraph-level modelling does not
+appear to help the performance of the BERT-PLI model compared to paragraph-level modelling with
+the original BERT. In addition to our legal search reproducibility study, we investigate BERT-PLI
+for document retrieval in the patent domain. We find that the BERT-PLI model does not yet achieve
+performance improvements for patent document retrieval compared to the BM25 baseline. Furthermore,
+we evaluate the BERT-PLI model for cross-domain retrieval between the legal and patent domain on
+individual components, both on a paragraph and document-level. We find that the transfer of the
+BERT-PLI model on the paragraph-level leads to comparable results between both domains as well
+as first promising results for the cross-domain transfer on the document-level. For reproducibility
+and transparency as well as to benefit the community we make our source code and the trained models
+publicly available. 

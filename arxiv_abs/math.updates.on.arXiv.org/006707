@@ -1,0 +1,18 @@
+This paper aims to answer the research question as to optimal design of decision-making processes
+for autonomous vehicles (AVs), including dynamical selection of driving velocity and route choices
+on a transportation network. Dynamic traffic assignment (DTA) has been widely used to model travelers's
+route choice or/and departure-time choice and predict dynamic traffic flow evolution in the short
+term. However, the existing DTA models do not explicitly describe one's selection of driving velocity
+on a road link. Driving velocity choice may not be crucial for modeling the movement of human drivers
+but it is a must-have control to maneuver AVs. In this paper, we aim to develop a game-theoretic model
+to solve for AVs's optimal driving strategies of velocity control in the interior of a road link and
+route choice at a junction node. To this end, we will first reinterpret the DTA problem as an N-car
+differential game and show that this game can be tackled with a general mean field game-theoretic
+framework. The developed mean field game is challenging to solve because of the forward and backward
+structure for velocity control and the complementarity conditions for route choice. An efficient
+algorithm is developed to address these challenges. The model and the algorithm are illustrated
+on the Braess network and the OW network with a single destination. On the Braess network, we first
+compare the LWR based DTA model with the proposed game and find that the driving and routing control
+navigates AVs with overall lower costs. We then compare the total travel cost without and with the
+middle link and find that the Braess paradox may still arise under certain conditions. We also test
+our proposed model and solution algorithm on the OW network. 

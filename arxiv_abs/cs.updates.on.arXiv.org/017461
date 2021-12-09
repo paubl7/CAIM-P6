@@ -1,0 +1,19 @@
+In recent years, with the advent of deep-learning, face recognition has achieved exceptional success.
+However, many of these deep face recognition models perform much better in handling frontal faces
+compared to profile faces. The major reason for poor performance in handling of profile faces is
+that it is inherently difficult to learn pose-invariant deep representations that are useful for
+profile face recognition. In this paper, we hypothesize that the profile face domain possesses
+a latent connection with the frontal face domain in a latent feature subspace. We look to exploit
+this latent connection by projecting the profile faces and frontal faces into a common latent subspace
+and perform verification or retrieval in the latent domain. We leverage a coupled conditional generative
+adversarial network (cpGAN) structure to find the hidden relationship between the profile and
+frontal images in a latent common embedding subspace. Specifically, the cpGAN framework consists
+of two conditional GAN-based sub-networks, one dedicated to the frontal domain and the other dedicated
+to the profile domain. Each sub-network tends to find a projection that maximizes the pair-wise
+correlation between the two feature domains in a common embedding feature subspace. The efficacy
+of our approach compared with the state-of-the-art is demonstrated using the CFP, CMU Multi-PIE,
+IJB-A, and IJB-C datasets. Additionally, we have also implemented a coupled convolutional neural
+network (cpCNN) and an adversarial discriminative domain adaptation network (ADDA) for profile
+to frontal face recognition. We have evaluated the performance of cpCNN and ADDA and compared it
+with the proposed cpGAN. Finally, we have also evaluated our cpGAN for reconstruction of frontal
+faces from input profile faces contained in the VGGFace2 dataset. 

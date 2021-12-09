@@ -1,0 +1,18 @@
+Face aging is to render a given face to predict its future appearance, which plays an important role
+in the information forensics and security field as the appearance of the face typically varies with
+age. Although impressive results have been achieved with conditional generative adversarial
+networks (cGANs), the existing cGANs-based methods typically use a single network to learn various
+aging effects between any two different age groups. However, they cannot simultaneously meet three
+essential requirements of face aging -- including image quality, aging accuracy, and identity
+preservation -- and usually generate aged faces with strong ghost artifacts when the age gap becomes
+large. Inspired by the fact that faces gradually age over time, this paper proposes a novel progressive
+face aging framework based on generative adversarial network (PFA-GAN) to mitigate these issues.
+Unlike the existing cGANs-based methods, the proposed framework contains several sub-networks
+to mimic the face aging process from young to old, each of which only learns some specific aging effects
+between two adjacent age groups. The proposed framework can be trained in an end-to-end manner to
+eliminate accumulative artifacts and blurriness. Moreover, this paper introduces an age estimation
+loss to take into account the age distribution for an improved aging accuracy, and proposes to use
+the Pearson correlation coefficient as an evaluation metric measuring the aging smoothness for
+face aging methods. Extensively experimental results demonstrate superior performance over
+existing (c)GANs-based methods, including the state-of-the-art one, on two benchmarked datasets.
+The source code is available at~\url{https://github.com/Hzzone/PFA-GAN}. 

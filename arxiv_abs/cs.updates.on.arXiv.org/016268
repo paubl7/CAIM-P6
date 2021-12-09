@@ -1,0 +1,18 @@
+Deep neural networks (DNN) have achieved remarkable success in computer vision (CV). However,
+training and inference of DNN models are both memory and computation intensive, incurring significant
+overhead in terms of energy consumption and silicon area. In particular, inference is much more
+cost-sensitive than training because training can be done offline with powerful platforms, while
+inference may have to be done on battery powered devices with constrained form factors, especially
+for mobile or edge vision applications. In order to accelerate DNN inference, model quantization
+was proposed. However previous works only focus on the quantization rate without considering the
+efficiency of operations. In this paper, we propose Dendrite-Tree based Neural Network (DTNN)
+for energy-efficient inference with table lookup operations enabled by activation quantization.
+In DTNN both costly weight access and arithmetic computations are eliminated for inference. We
+conducted experiments on various kinds of DNN models such as LeNet-5, MobileNet, VGG, and ResNet
+with different datasets, including MNIST, Cifar10/Cifar100, SVHN, and ImageNet. DTNN achieved
+significant energy saving (19.4X and 64.9X improvement on ResNet-18 and VGG-11 with ImageNet,
+respectively) with negligible loss of accuracy. To further validate the effectiveness of DTNN
+and compare with state-of-the-art low energy implementation for edge vision, we design and implement
+DTNN based MLP image classifiers using off-the-shelf FPGAs. The results show that DTNN on the FPGA,
+with higher accuracy, could achieve orders of magnitude better energy consumption and latency
+compared with the state-of-the-art low energy approaches reported that use ASIC chips. 

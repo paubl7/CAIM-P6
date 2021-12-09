@@ -1,0 +1,19 @@
+We consider the problem of allocating $m$ balls into $n$ bins with incomplete information. In the
+classical two-choice process, a ball first queries the load of $\textit{two}$ randomly chosen
+bins and is then placed in the least loaded bin. In our setting, each ball also samples two random bins
+but can only estimate a bin's load by sending $\textit{binary queries}$ of the form "Is the load at
+least the median?" or "Is the load at least $100$?". For the lightly loaded case $m=O(n)$, one can
+achieve an $O(\sqrt{\log n/\log \log n})$ maximum load with one query per chosen bin using an oblivious
+strategy, as shown by Feldheim and Gurel-Gurevich (2018). For the case $m=\Omega(n)$, the authors
+conjectured that the same strategy achieves a maximum load of $m/n+O(\sqrt{\log n/\log \log n})$.
+In this work, we disprove this conjecture by showing a lower bound of $m/n+\Omega( \sqrt{\log n})$
+for a fixed $m=\Theta(n \sqrt{\log n})$, and a lower bound of $m/n+\Omega(\log n/\log\log n)$ for
+some $m$ depending on the used strategy. Surprisingly, these lower bounds hold even for any $\textit{adaptive
+strategy}$ with one query, i.e., queries may depend on the full history of the process. We complement
+this negative result by proving a positive result for multiple queries. In particular, we show that
+with only two binary queries per chosen bin, there is an oblivious strategy which ensures a maximum
+load of $m/n+O(\sqrt{\log n})$ whp for any $m \geq 1$. For any $k=O(\log \log n)$ binary queries,
+the upper bound on the maximum load improves to $m/n+O(k(\log n)^{1/k})$ whp for any $m \geq 1$. Hence
+for $k=\Theta(\log\log n)$, we recover the two-choice result up to a constant multiplicative factor,
+including the heavily loaded case where $m=\Omega(n)$. One novel aspect of our proof techniques
+is the use of multiple super-exponential potential functions, which might be of use in future work.

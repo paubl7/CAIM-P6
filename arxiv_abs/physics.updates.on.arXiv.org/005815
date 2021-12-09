@@ -1,0 +1,20 @@
+We present a unified variational mechanics framework for cavitating turbulent flows and structural
+motions via a stabilized finite element formulation. To model the finite mass transfer rate in cavitation
+phenomena, we employ the homogenous mixture-based approach via phenomenological scalar transport
+differential equations. Stable linearizations of the finite mass transfer terms for the mass continuity
+equation and the scalar transport equations are derived for robust and accurate implementation.
+The linearized matrices for the cavitation equation are imparted a positivity-preserving property
+to address numerical oscillations arising from high-density gradients typical of two-phase cavitating
+flows. The proposed formulation is strongly coupled in a partitioned manner with an incompressible
+3D Navier-Stokes finite element solver, and the unsteady problem is advanced in time using a fully-implicit
+generalized-$\alpha$ time integration scheme. We first verify the implementation on the benchmark
+case of Rayleigh bubble collapse. We demonstrate the accuracy and convergence of the cavitation
+solver by comparing the numerical solutions with the analytical solutions of the Rayleigh-Plesset
+equation for bubble dynamics. We find our solver to be robust for large time steps and the absence
+of spurious oscillations in the pressure field. The cavitating flow solver is coupled with a hybrid
+URANS-LES turbulence model with a turbulence viscosity corrected for the presence of vapor. We
+validate the coupled solver for a very high Reynolds number turbulent cavitating flow over a NACA0012
+hydrofoil section. Finally, the proposed method is solved in an Arbitrary Lagrangian-Eulerian
+framework to study turbulent cavitating flow over a pitching hydrofoil section and the coupled
+FSI results are explored for characteristic features of cavitating flows such as re-entrant jet
+and periodic cavity shedding. 

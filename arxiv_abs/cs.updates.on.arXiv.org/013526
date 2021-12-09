@@ -1,0 +1,19 @@
+Bilinear pooling (BLP) refers to a family of operations recently developed for fusing features
+from different modalities predominantly developed for VQA models. A bilinear (outer-product)
+expansion is thought to encourage models to learn interactions between two feature spaces and has
+experimentally outperformed `simpler' vector operations (concatenation and element-wise-addition/multiplication)
+on VQA benchmarks. Successive BLP techniques have yielded higher performance with lower computational
+expense and are often implemented alongside attention mechanisms. However, despite significant
+progress in VQA, BLP methods have not been widely applied to more recently explored video question
+answering (video-QA) tasks. In this paper, we begin to bridge this research gap by applying BLP techniques
+to various video-QA benchmarks, namely: TVQA, TGIF-QA, Ego-VQA and MSVD-QA. We share our results
+on the TVQA baseline model, and the recently proposed heterogeneous-memory-enchanced multimodal
+attention (HME) model. Our experiments include both simply replacing feature concatenation in
+the existing models with BLP, and a modified version of the TVQA baseline to accommodate BLP we name
+the `dual-stream' model. We find that our relatively simple integration of BLP does not increase,
+and mostly harms, performance on these video-QA benchmarks. Using recently proposed theoretical
+multimodal fusion taxonomies, we offer insight into why BLP-driven performance gain for video-QA
+benchmarks may be more difficult to achieve than in earlier VQA models. We suggest a few additional
+`best-practices' to consider when applying BLP to video-QA. We stress that video-QA models should
+carefully consider where the complex representational potential from BLP is actually needed to
+avoid computational expense on `redundant' fusion. 

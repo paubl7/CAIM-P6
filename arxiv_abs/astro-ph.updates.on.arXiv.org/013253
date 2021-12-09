@@ -1,0 +1,20 @@
+The Hubble constant ($H_0$) is one of the fundamental parameters in cosmology, but there is a heated
+debate on the $>$4$\sigma$ tension between the local Cepheid distance ladder and the early Universe
+measurements. Strongly lensed Type Ia supernovae (LSNe Ia) are an independent and direct way to
+measure $H_0$, where a time-delay measurement between the multiple supernova (SN) images is required.
+In this work, we present two machine learning approaches to measure time delays in LSNe Ia, namely,
+a fully connected neural network (FCNN) and a Random Forest (RF). For the training of the FCNN and
+the RF, we simulate mock LSNe Ia from theoretical SN Ia models including observational noise and
+microlensing. We test the transfer learning capability of both machine learning models, by using
+a final test set based on empirical LSN Ia light curves not used in the training process, and we find
+that only the RF provides low enough bias to achieve precision cosmology, which is therefore preferred
+to our FCNN approach for applications to real systems. For the RF with single-band photometry in
+the $i$-band, we obtain an accuracy better than 1 % in all investigated cases for time delays longer
+than 15 days, assuming follow-up observations with a 5$\sigma$ point-source depth of 24.7, a two
+day cadence with a few random gaps and a detection of the LSNe Ia 8 to 10 days before peak in the observer
+frame. In terms of precision, we can achieve under the same assumptions on the $i$ band $\sim$1.5
+days uncertainty for a typical source redshift of $\sim$0.8. To improve the measurement we find
+that three bands, where we train a RF for each band separately and combine them afterwards, help to
+reduce the uncertainty to $\sim$1.0 day. The dominant source of uncertainty is the observational
+noise and therefore the depth is an especially important factor when follow-up observations are
+triggered. 

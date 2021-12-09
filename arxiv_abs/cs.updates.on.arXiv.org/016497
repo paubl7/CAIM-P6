@@ -1,0 +1,18 @@
+Deep reinforcement learning has achieved significant success in many decision-making tasks in
+various fields. However, it requires a large training time of dense neural networks to obtain a good
+performance. This hinders its applicability on low-resource devices where memory and computation
+are strictly constrained. In a step towards enabling deep reinforcement learning agents to be applied
+to low-resource devices, in this work, we propose for the first time to dynamically train deep reinforcement
+learning agents with sparse neural networks from scratch. We adopt the evolution principles of
+dynamic sparse training in the reinforcement learning paradigm and introduce a training algorithm
+that optimizes the sparse topology and the weight values jointly to dynamically fit the incoming
+data. Our approach is easy to be integrated into existing deep reinforcement learning algorithms
+and has many favorable advantages. First, it allows for significant compression of the network
+size which reduces the memory and computation costs substantially. This would accelerate not only
+the agent inference but also its training process. Second, it speeds up the agent learning process
+and allows for reducing the number of required training steps. Third, it can achieve higher performance
+than training the dense counterpart network. We evaluate our approach on OpenAI gym continuous
+control tasks. The experimental results show the effectiveness of our approach in achieving higher
+performance than one of the state-of-art baselines with a 50\% reduction in the network size and
+floating-point operations (FLOPs). Moreover, our proposed approach can reach the same performance
+achieved by the dense network with a 40-50\% reduction in the number of training steps. 

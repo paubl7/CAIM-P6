@@ -1,0 +1,19 @@
+Purpose: Radiotherapy presents unique challenges and clinical requirements for longitudinal
+tumor and organ-at-risk (OAR) prediction during treatment. The challenges include tumor inflammation/edema
+and radiation-induced changes in organ geometry, whereas the clinical requirements demand flexibility
+in input/output sequence timepoints to update the predictions on rolling basis and the grounding
+of all predictions in relationship to the pre-treatment imaging information for response and toxicity
+assessment in adaptive radiotherapy. Methods: To deal with the aforementioned challenges and
+to comply with the clinical requirements, we present a novel 3D sequence-to-sequence model based
+on Convolution Long Short Term Memory (ConvLSTM) that makes use of series of deformation vector
+fields (DVF) between individual timepoints and reference pre-treatment/planning CTs to predict
+future anatomical deformations and changes in gross tumor volume as well as critical OARs. High-quality
+DVF training data is created by employing hyper-parameter optimization on the subset of the training
+data with DICE coefficient and mutual information metric. We validated our model on two radiotherapy
+datasets: a publicly available head-and-neck dataset (28 patients with manually contoured pre-,
+mid-, and post-treatment CTs), and an internal non-small cell lung cancer dataset (63 patients
+with manually contoured planning CT and 6 weekly CBCTs). Results: The use of DVF representation
+and skip connections overcomes the blurring issue of ConvLSTM prediction with the traditional
+image representation. The mean and standard deviation of DICE for predictions of lung GTV at week
+4, 5, and 6 were 0.83$\pm$0.09, 0.82$\pm$0.08, and 0.81$\pm$0.10, respectively, and for post-treatment
+ipsilateral and contralateral parotids, were 0.81$\pm$0.06 and 0.85$\pm$0.02. 

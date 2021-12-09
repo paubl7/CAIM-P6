@@ -1,0 +1,18 @@
+A fundamental problem in computational biology is the construction of phylogenetic trees, also
+called evolutionary trees, for a set of organisms. A graph-theoretic approach takes as input a similarity
+graph $G$ on the set of organisms, with adjacency denoting evolutionary closeness, and asks for
+a tree $T$ whose leaves are the set of organisms, with two vertices adjacent in $G$ if and only if the
+distance between them in the tree is less than some specified distance bound. If this exists $G$ is
+called a leaf power. Over 20 years ago, [Nishimura et al., J. Algorithms, 2002] posed the question
+if leaf powers could be recognized in polynomial time. In this paper we explore this still unanswered
+question from the perspective of two alternative models of leaf powers that have been rather overlooked.
+These models do not rely on a variable distance bound and are therefore more apt for generalization.
+Our first result concerns leaf powers with a linear structure and uses a model where the edges of the
+tree $T$ are weighted by rationals between 0 and 1, and the distance bound is fixed to 1. We show that
+the graphs having such a model with $T$ a caterpillar are exactly the co-threshold tolerance graphs
+and can therefore be recognized in $O(n^2)$ time by an algorithm of [Golovach et al., Discret. Appl.
+Math., 2017]. Our second result concerns leaf powers with a star structure and concerns the geometric
+NeS model used by [Brandst\"adt et al., Discret. Math., 2010]. We show that the graphs having a NeS
+model where the main embedding tree is a star can be recognized in polynomial time. These results
+pave the way for an attack on the main question, to settle the issue if leaf powers can be recognized
+in polynomial time. 

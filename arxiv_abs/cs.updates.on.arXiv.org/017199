@@ -1,0 +1,18 @@
+The mainstream approach for filter pruning is usually either to force a hard-coded importance estimation
+upon a computation-heavy pretrained model to select "important" filters, or to impose a hyperparameter-sensitive
+sparse constraint on the loss objective to regularize the network training. In this paper, we present
+a novel filter pruning method, dubbed dynamic-coded filter fusion (DCFF), to derive compact CNNs
+in a computation-economical and regularization-free manner for efficient image classification.
+Each filter in our DCFF is firstly given an inter-similarity distribution with a temperature parameter
+as a filter proxy, on top of which, a fresh Kullback-Leibler divergence based dynamic-coded criterion
+is proposed to evaluate the filter importance. In contrast to simply keeping high-score filters
+in other methods, we propose the concept of filter fusion, i.e., the weighted averages using the
+assigned proxies, as our preserved filters. We obtain a one-hot inter-similarity distribution
+as the temperature parameter approaches infinity. Thus, the relative importance of each filter
+can vary along with the training of the compact CNN, leading to dynamically changeable fused filters
+without both the dependency on the pretrained model and the introduction of sparse constraints.
+Extensive experiments on classification benchmarks demonstrate the superiority of our DCFF over
+the compared counterparts. For example, our DCFF derives a compact VGGNet-16 with only 72.77M FLOPs
+and 1.06M parameters while reaching top-1 accuracy of 93.47% on CIFAR-10. A compact ResNet-50 is
+obtained with 63.8% FLOPs and 58.6% parameter reductions, retaining 75.60% top-1 accuracy on ILSVRC-2012.
+Our code, narrower models and training logs are available at https://github.com/lmbxmu/DCFF.

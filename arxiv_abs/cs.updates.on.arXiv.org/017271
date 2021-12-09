@@ -1,0 +1,19 @@
+The sensitivity of a string compression algorithm $C$ asks how much the output size $C(T)$ for an
+input string $T$ can increase when a single character edit operation is performed on $T$. This notion
+enables one to measure the robustness of compression algorithms in terms of errors and/or dynamic
+changes occurring in the input string. In this paper, we analyze the worst-case multiplicative
+sensitivity of string compression algorithms, defined by $\max_{T \in \Sigma^n}\{C(T')/C(T)
+: ed(T, T') = 1\}$, where $ed(T, T')$ denotes the edit distance between $T$ and $T'$. For the most common
+versions of the Lempel-Ziv 77 compressors, we prove that the worst-case multiplicative sensitivity
+is only a small constant (2 or 3, depending on the version of the Lempel-Ziv 77 and the edit operation
+type). We strengthen our upper bound results by presenting matching lower bounds on the worst-case
+sensitivity for all these major versions of the Lempel-Ziv 77 factorizations. This contrasts with
+the previously known related results such that the size $z_{\rm 78}$ of the Lempel-Ziv 78 factorization
+can increase by a factor of $\Omega(n^{3/4})$ [Lagarde and Perifel, 2018], and the number $r$ of
+runs in the Burrows-Wheeler transform can increase by a factor of $\Omega(\log n)$ [Giuliani et
+al., 2021] when a character is prepended to an input string of length $n$. We also study the worst-case
+sensitivity of several grammar compression algorithms including Bisection, AVL-grammar, GCIS,
+and CDAWG. Further, we extend the notion of the worst-case sensitivity to string repetitiveness
+measures such as the smallest string attractor size $\gamma$ and the substring complexity $\delta$,
+and present matching upper and lower bounds of the worst-case multiplicative sensitivity for $\gamma$
+and $\delta$. 

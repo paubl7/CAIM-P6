@@ -1,0 +1,18 @@
+The main memory access latency has not much improved for more than two decades while the CPU performance
+had been exponentially increasing until recently. Approximate memory is a technique to reduce
+the DRAM access latency in return of losing data integrity. It is beneficial for applications that
+are robust to noisy input and intermediate data such as artificial intelligence, multimedia processing,
+and graph processing. To obtain reasonable outputs from applications on approximate memory, it
+is crucial to protect critical data while accelerating accesses to non-critical data. We refer
+the minimum size of a continuous memory region that the same error rate is applied in approximate
+memory to as the approximation granularity. A fundamental limitation of approximate memory is
+that the approximation granularity is as large as a few kilo bytes. However, applications may have
+critical and non-critical data interleaved with smaller granularity. For example, a data structure
+for graph nodes can have pointers (critical) to neighboring nodes and its score (non-critical,
+depending on the use-case). This data structure cannot be directly mapped to approximate memory
+due to the gap between the approximation granularity and the granularity of data criticality. We
+refer to this issue as the granularity gap problem. In this paper, we first show that many applications
+potentially suffer from this problem. Then we propose a framework to quantitatively evaluate the
+performance overhead of a possible method to avoid this problem using known techniques. The evaluation
+results show that the performance overhead is non-negligible compared to expected benefit from
+approximate memory, suggesting that the granularity gap problem is a significant concern. 

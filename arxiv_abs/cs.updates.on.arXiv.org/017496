@@ -1,0 +1,20 @@
+We present a new 3D lattice Boltzmann (LB) algorithm based on central moments for the D3Q27 lattice
+using a cuboid grid, which is parameterized by two grid aspect ratios that are related to the ratios
+of the particle speeds with respect to that along a reference coordinate direction. The use of the
+cuboid lattice grid enables the method to compute flows having different characteristic length
+scales in different directions more efficiently. It is constructed to simulate the Navier-Stokes
+equations consistently via introducing counteracting corrections to the second order moment
+equilibria obtained via a Chapman-Enskog analysis that eliminate the errors associated with the
+grid anisotropy and the non-Galilean invariant terms. The implementation is shown to be compact
+and modular, with an interpretation based on special matrices, admitting ready extension of the
+standard algorithm for the cubic lattice to the cuboid lattice via appropriate scaling of moments
+based on grid aspect ratios before and after collision step and equilibria corrections. The resulting
+formulation is general in that the same grid corrections developed for the D3Q27 lattice for recovering
+the correct viscous stress tensor is applicable for other lattice subsets, and a variety of collision
+models, including those based on the relaxation of raw moments, central moments and cumulants,
+as well as their special case involving the distribution functions. The cuboid central moment LBM
+is validated against a variety of benchmark flows, and when used in lieu of the corresponding raw
+moment formulation for simulating shear flows, we show that it results in significant improvements
+in numerical stability. Finally, we demonstrate that our cuboid LB approach is efficient in simulating
+anisotropic shear flow problems with significant savings in computational cost and memory storage
+when compared to that based on the cubic lattice. 

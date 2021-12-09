@@ -1,0 +1,19 @@
+What is the power of constant-depth circuits with $MOD_m$ gates, that can count modulo $m$? Can they
+efficiently compute MAJORITY and other symmetric functions? When $m$ is a constant prime power,
+the answer is well understood: Razborov and Smolensky proved in the 1980s that MAJORITY and $MOD_m$
+require super-polynomial-size $MOD_q$ circuits, where $q$ is any prime power not dividing $m$.
+However, relatively little is known about the power of $MOD_m$ circuits for non-prime-power $m$.
+For example, it is still open whether every problem in $EXP$ can be computed by depth-$3$ circuits
+of polynomial size and only $MOD_6$ gates. We shed some light on the difficulty of proving lower bounds
+for $MOD_m$ circuits, by giving new upper bounds. We construct $MOD_m$ circuits computing symmetric
+functions with non-prime power $m$, with size-depth tradeoffs that beat the longstanding lower
+bounds for $AC^0[m]$ circuits for prime power $m$. Our size-depth tradeoff circuits have essentially
+optimal dependence on $m$ and $d$ in the exponent, under a natural circuit complexity hypothesis.
+For example, we show for every $\varepsilon > 0$ that every symmetric function can be computed with
+depth-3 $MOD_m$ circuits of $\exp(O(n^{\varepsilon}))$ size, for a constant $m$ depending only
+on $\varepsilon > 0$. That is, depth-$3$ $CC^0$ circuits can compute any symmetric function in \emph{subexponential}
+size. This demonstrates a significant difference in the power of depth-$3$ $CC^0$ circuits, compared
+to other models: for certain symmetric functions, depth-$3$ $AC^0$ circuits require $2^{\Omega(\sqrt{n})}$
+size [H{\aa}stad 1986], and depth-$3$ $AC^0[p^k]$ circuits (for fixed prime power $p^k$) require
+$2^{\Omega(n^{1/6})}$ size [Smolensky 1987]. Even for depth-two $MOD_p \circ MOD_m$ circuits,
+$2^{\Omega(n)}$ lower bounds were known [Barrington Straubing Th\'erien 1990]. 

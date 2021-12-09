@@ -1,0 +1,18 @@
+Many approaches for conducting Bayesian inference on discretely observed diffusions involve
+imputing diffusion bridges between observations. This can be computationally challenging in
+settings in which the temporal horizon between subsequent observations is large, due to the poor
+scaling of algorithms for simulating bridges as observation distance increases. It is common in
+practical settings to use a blocking scheme, in which the path is split into a (user-specified) number
+of overlapping segments and a Gibbs sampler is employed to update segments in turn. Substituting
+the independent simulation of diffusion bridges for one obtained using blocking introduces an
+inherent trade-off: we are now imputing shorter bridges at the cost of introducing a dependency
+between subsequent iterations of the bridge sampler. This is further complicated by the fact that
+there are a number of possible ways to implement the blocking scheme, each of which introduces a different
+dependency structure between iterations. Although blocking schemes have had considerable empirical
+success in practice, there has been no analysis of this trade-off nor guidance to practitioners
+on the particular specifications that should be used to obtain a computationally efficient implementation.
+In this article we conduct this analysis (under the simplifying assumption that the underlying
+diffusion is a Gaussian process), and demonstrate that the expected computational cost of a blocked
+path-space rejection sampler scales asymptotically at an almost cubic rate with respect to the
+observation distance. Numerical experiments suggest applicability of both the results of our
+paper and the guidance we provide beyond the class of linear diffusions considered. 

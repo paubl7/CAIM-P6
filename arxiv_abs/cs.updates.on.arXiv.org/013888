@@ -1,0 +1,18 @@
+In the online non-metric variant of the facility location problem, there is a given graph consisting
+of a set $F$ of facilities (each with a certain opening cost), a set $C$ of potential clients, and weighted
+connections between them. The online part of the input is a sequence of clients from $C$, and in response
+to any requested client, an online algorithm may open an additional subset of facilities and must
+connect the given client to an open facility. We give an online, polynomial-time deterministic
+algorithm for this problem, with a competitive ratio of $O(\log |F| \cdot (\log |C| + \log \log |F|))$.
+The result is optimal up to loglog factors. Our algorithm improves over the $O((\log |C| + \log |F|)
+\cdot (\log |C| + \log \log |F|))$-competitive construction that first reduces the facility location
+instance to a set cover one and then later solves such instance using the deterministic algorithm
+by Alon et al. [TALG 2006]. This is an asymptotic improvement in a typical scenario where $|F| \ll
+|C|$. We achieve this by a more direct approach: we design an algorithm for a fractional relaxation
+of the non-metric facility location problem with clustered facilities. To handle the constraints
+of such non-covering LP, we combine the dual fitting and multiplicative weight updates approach.
+By maintaining certain additional monotonicity properties of the created fractional solution,
+we can handle the dependencies between facilities and connections in a rounding routine. Our result,
+combined with the algorithm by Naor et al. [FOCS 2011] yields the first deterministic algorithm
+for the online node-weighted Steiner tree problem. The resulting competitive ratio is $O(\log
+k \cdot \log^2 \ell)$ on graphs of $\ell$ nodes and $k$ terminals. 

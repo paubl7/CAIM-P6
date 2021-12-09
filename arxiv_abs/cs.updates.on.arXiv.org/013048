@@ -1,0 +1,18 @@
+Estimating post-click conversion rate (CVR) accurately is crucial in E-commerce. However, CVR
+prediction usually suffers from three major challenges in practice: i) data sparsity: compared
+with impressions, conversion samples are often extremely scarce; ii) sample selection bias: conventional
+CVR models are trained with clicked impressions while making inference on the entire space of all
+impressions; iii) delayed feedback: many conversions can only be observed after a relatively long
+and random delay since clicks happened, resulting in many false negative labels during training.
+Previous studies mainly focus on one or two issues while ignoring the others. In this paper, we propose
+a novel neural network framework ESDF to tackle the above three challenges simultaneously. Unlike
+existing methods, ESDF models the CVR prediction from a perspective of entire space, and combines
+the advantage of user sequential behavior pattern and the time delay factor. Specifically, ESDF
+utilizes sequential behavior of user actions on the entire space with all impressions to alleviate
+the sample selection bias problem. By sharing the embedding parameters between CTR and CVR networks,
+data sparsity problem is greatly relieved. Different from conventional delayed feedback methods,
+ESDF does not make any special assumption about the delay distribution. We discretize the delay
+time by day slot and model the probability based on survival analysis with deep neural network, which
+is more practical and suitable for industrial situations. Extensive experiments are conducted
+to evaluate the effectiveness of our method. To the best of our knowledge, ESDF is the first attempt
+to unitedly solve the above three challenges in CVR prediction area. 

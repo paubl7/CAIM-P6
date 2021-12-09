@@ -1,0 +1,19 @@
+In spite of several notable efforts, explaining the generalization of deterministic non-smooth
+deep nets, e.g., ReLU-nets, has remained challenging. Existing approaches for deterministic
+non-smooth deep nets typically need to bound the Lipschitz constant of such deep nets but such bounds
+are quite large, may even increase with the training set size yielding vacuous generalization bounds.
+In this paper, we present a new family of de-randomized PAC-Bayes margin bounds for deterministic
+non-convex and non-smooth predictors, e.g., ReLU-nets. Unlike PAC-Bayes, which applies to Bayesian
+predictors, the de-randomized bounds apply to deterministic predictors like ReLU-nets. A specific
+instantiation of the bound depends on a trade-off between the (weighted) distance of the trained
+weights from the initialization and the effective curvature (`flatness') of the trained predictor.
+To get to these bounds, we first develop a de-randomization argument for non-convex but smooth predictors,
+e.g., linear deep networks (LDNs), which connects the performance of the deterministic predictor
+with a Bayesian predictor. We then consider non-smooth predictors which for any given input realized
+as a smooth predictor, e.g., ReLU-nets become some LDNs for any given input, but the realized smooth
+predictors can be different for different inputs. For such non-smooth predictors, we introduce
+a new PAC-Bayes analysis which takes advantage of the smoothness of the realized predictors, e.g.,
+LDN, for a given input, and avoids dependency on the Lipschitz constant of the non-smooth predictor.
+After careful de-randomization, we get a bound for the deterministic non-smooth predictor. We
+also establish non-uniform sample complexity results based on such bounds. Finally, we present
+extensive empirical results of our bounds over changing training set size and randomness in labels.

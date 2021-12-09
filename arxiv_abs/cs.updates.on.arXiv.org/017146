@@ -1,0 +1,19 @@
+Extracting accurate foregrounds from natural images benefits many downstream applications such
+as film production and augmented reality. However, the furry characteristics and various appearance
+of the foregrounds, e.g., animal and portrait, challenge existing matting methods, which usually
+require extra user inputs such as trimap or scribbles. To resolve these problems, we study the distinct
+roles of semantics and details for image matting and decompose the task into two parallel sub-tasks:
+high-level semantic segmentation and low-level details matting. Specifically, we propose a novel
+Glance and Focus Matting network (GFM), which employs a shared encoder and two separate decoders
+to learn both tasks in a collaborative manner for end-to-end natural image matting. Besides, due
+to the limitation of available natural images in the matting task, previous methods typically adopt
+composite images for training and evaluation, which result in limited generalization ability
+on real-world images. In this paper, we investigate the domain gap issue between composite images
+and real-world images systematically by conducting comprehensive analyses of various discrepancies
+between foreground and background images. We find that a carefully designed composition route
+RSSN that aims to reduce the discrepancies can lead to a better model with remarkable generalization
+ability. Furthermore, we provide a benchmark containing 2,000 high-resolution real-world animal
+images and 10,000 portrait images along with their manually labeled alpha mattes to serve as a test
+bed for evaluating matting model's generalization ability on real-world images. Comprehensive
+empirical studies have demonstrated that GFM outperforms state-of-the-art methods and effectively
+reduces the generalization error. The code and the dataset will be released. 

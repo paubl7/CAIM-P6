@@ -1,0 +1,19 @@
+Coil complexity is a critical consideration in stellarator design. The traditional two-step optimization
+approach, in which the plasma boundary is optimized for physics properties and the coils are subsequently
+optimized to be consistent with this boundary, can result in plasma shapes which cannot be produced
+with sufficiently simple coils. To address this challenge, we propose a method to incorporate considerations
+of coil complexity in the optimization of the plasma boundary. Coil complexity metrics are computed
+from the current potential solution obtained with the REGCOIL code (Landreman 2017 Nucl. Fusion
+57 046003). We compute the local sensitivity of these metrics with respect to perturbations of the
+plasma boundary using the shape gradient (Landreman & Paul 2018 Nucl. Fusion 58 076023). We extend
+REGCOIL to compute derivatives of these metrics with respect to parameters describing the plasma
+boundary. In keeping with previous research on winding surface optimization (Paul et al. 2018 Nucl.
+Fusion 58 076015), the shape derivatives are computed with a discrete adjoint method. In contrast
+with the previous work, derivatives are computed with respect to the plasma rather than the winding
+surface parameters. To further reduce the required resolution, we present a more efficient representation
+of the plasma surface using a single Fourier series to describe the radial distance from a coordinate
+axis and a spectrally condensed poloidal angle. This representation is advantageous over the standard
+cylindrical representation used in the VMEC code (Hirshman & Whitson 1983 The Physics of Fluids
+26 3553-3568), as it provides a uniquely defined poloidal angle, eliminating a null space in the
+optimization of the plasma surface. The resulting shape gradient highlights features of the plasma
+boundary consistent with simple coils and can be used to couple coil and fixed-boundary optimization.

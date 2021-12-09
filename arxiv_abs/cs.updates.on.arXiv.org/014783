@@ -1,0 +1,20 @@
+Deep Convolutional Neural Networks (CNNs), trained extensively on very large labeled datasets,
+learn to recognize inferentially powerful features in their input patterns and represent efficiently
+their objective content. Such objectivity of their internal representations enables deep CNNs
+to readily transfer and successfully apply these representations to new classification tasks.
+Deep CNNs develop their internal representations through a challenging process of error backpropagation-based
+supervised training. In contrast, deep neural networks of the cerebral cortex develop their even
+more powerful internal representations in an unsupervised process, apparently guided at a local
+level by contextual information. Implementing such local contextual guidance principles in a
+single-layer CNN architecture, we propose an efficient algorithm for developing broad-purpose
+representations (i.e., representations transferable to new tasks without additional training)
+in shallow CNNs trained on limited-size datasets. A contextually guided CNN (CG-CNN) is trained
+on groups of neighboring image patches picked at random image locations in the dataset. Such neighboring
+patches are likely to have a common context and therefore are treated for the purposes of training
+as belonging to the same class. Across multiple iterations of such training on different context-sharing
+groups of image patches, CNN features that are optimized in one iteration are then transferred to
+the next iteration for further optimization, etc. In this process, CNN features acquire higher
+pluripotency, or inferential utility for any arbitrary classification task, which we quantify
+as a transfer utility. In our application to natural images, we find that CG-CNN features show the
+same, if not higher, transfer utility and classification accuracy as comparable transferable
+features in the first CNN layer of the well-known deep networks. 

@@ -1,0 +1,19 @@
+The pre-trained model (PTM) is revolutionizing Artificial intelligence (AI) technology. It learns
+a model with general language features on the vast text and then fine-tunes the model using a task-specific
+dataset. Unfortunately, PTM training requires prohibitively expensive computing devices, especially
+fine-tuning, which is still a game for a small proportion of people in the AI community. Enabling
+PTMs training on low-quality devices, PatrickStar now makes PTM accessible to everyone. PatrickStar
+reduces memory requirements of computing platforms by using the CPU-GPU heterogeneous memory
+space to store model data, consisting of parameters, gradients, and optimizer states. We observe
+that the GPU memory available for model data changes regularly, in a tide-like pattern, decreasing
+and increasing iteratively. However, the existing heterogeneous training works do not take advantage
+of this pattern. Instead, they statically partition the model data among CPU and GPU, leading to
+both memory waste and memory abuse. In contrast, PatrickStar manages model data in chunks, which
+are dynamically distributed in heterogeneous memory spaces. Chunks consist of stateful tensors
+which run as finite state machines during training. Guided by the runtime memory statistics collected
+in a warm-up iteration, chunks are orchestrated efficiently in heterogeneous memory and generate
+lower CPU-GPU data transmission volume. Symbiosis with the Zero Redundancy Optimizer, PatrickStar
+scales to multiple GPUs using data parallelism, with the lowest communication bandwidth requirements
+and more efficient bandwidth utilization. Experimental results show PatrickStar trains a 12 billion
+parameters GPT model, 2x larger than the STOA work, on an 8-V100 and 240GB CPU memory node, and is also
+more efficient on the same model size. 

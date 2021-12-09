@@ -1,0 +1,18 @@
+In this paper, we introduce a generalization of graphlets to heterogeneous networks called typed
+graphlets. Informally, typed graphlets are small typed induced subgraphs. Typed graphlets generalize
+graphlets to rich heterogeneous networks as they explicitly capture the higher-order typed connectivity
+patterns in such networks. To address this problem, we describe a general framework for counting
+the occurrences of such typed graphlets. The proposed algorithms leverage a number of combinatorial
+relationships for different typed graphlets. For each edge, we count a few typed graphlets, and
+with these counts along with the combinatorial relationships, we obtain the exact counts of the
+other typed graphlets in o(1) constant time. Notably, the worst-case time complexity of the proposed
+approach matches the time complexity of the best known untyped algorithm. In addition, the approach
+lends itself to an efficient lock-free and asynchronous parallel implementation. While there
+are no existing methods for typed graphlets, there has been some work that focused on computing a
+different and much simpler notion called colored graphlet. The experiments confirm that our proposed
+approach is orders of magnitude faster and more space-efficient than methods for computing the
+simpler notion of colored graphlet. Unlike these methods that take hours on small networks, the
+proposed approach takes only seconds on large networks with millions of edges. Notably, since typed
+graphlet is more general than colored graphlet (and untyped graphlets), the counts of various typed
+graphlets can be combined to obtain the counts of the much simpler notion of colored graphlets. The
+proposed methods give rise to new opportunities and applications for typed graphlets. 

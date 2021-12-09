@@ -1,0 +1,19 @@
+This paper develops high-order accurate entropy stable (ES) adaptive moving mesh finite difference
+schemes for the two- and three-dimensional special relativistic hydrodynamic (RHD) and magnetohydrodynamic
+(RMHD) equations, which is the high-order accurate extension of [J.M. Duan and H.Z. Tang, Entropy
+stable adaptive moving mesh schemes for 2D and 3D special relativistic hydrodynamics, J. Comput.
+Phys., 426(2021), 109949]. The key point is the derivation of the higher-order accurate entropy
+conservative (EC) and ES finite difference schemes in the curvilinear coordinates by carefully
+dealing with the discretization of the temporal and spatial metrics and the Jacobian of the coordinate
+transformation and constructing the high-order EC and ES fluxes with the discrete metrics. The
+spatial derivatives in the source terms of the symmetrizable RMHD equations and the geometric conservation
+laws are discretized by using the linear combinations of the corresponding second-order case to
+obtain high-order accuracy. Based on the proposed high-order accurate EC schemes and the high-order
+accurate dissipation terms built on the WENO reconstruction, the high-order accurate ES schemes
+are obtained for the RHD and RMHD equations in the curvilinear coordinates. The mesh iteration redistribution
+or adaptive moving mesh strategy is built on the minimization of the mesh adaption functional. Several
+numerical tests are conducted to validate the shock-capturing ability and high efficiency of our
+high-order accurate ES adaptive moving mesh methods on the parallel computer system with the MPI
+communication. The numerical results show that the high-order accurate ES adaptive moving mesh
+schemes outperform both their counterparts on the uniform mesh and the second-order ES adaptive
+moving mesh schemes. 

@@ -1,0 +1,19 @@
+In this paper, we present two deep learning-based hybrid data-driven reduced order models for the
+prediction of unsteady fluid flows. The first model projects the high-fidelity time series data
+from a finite element Navier-Stokes solver to a low-dimensional subspace via proper orthogonal
+decomposition (POD). The time-dependent coefficients in the POD subspace are propagated by the
+recurrent net (closed-loop encoder-decoder updates) and mapped to a high-dimensional state via
+the mean flow field and POD basis vectors. This model is referred as POD-RNN. The second model, referred
+to as convolution recurrent autoencoder network (CRAN), employs convolutional neural networks
+(CNN) as layers of linear kernels with nonlinear activations, to extract low-dimensional features
+from flow field snapshots. The flattened features are advanced using a recurrent (closed-loop
+manner) net and up-sampled (transpose convoluted) gradually to high-dimensional snapshots.
+Two benchmark problems of the flow past a cylinder and flow past a side-by-side cylinder are selected
+as the test problems to assess the efficacy of these models. For the problem of flow past a single cylinder,
+the performance of both the models is satisfactory, with CRAN being a bit overkill. However, it completely
+outperforms the POD-RNN model for a more complicated problem of flow past side-by-side cylinders.
+Owing to the scalability of CRAN, we briefly introduce an observer-corrector method for the calculation
+of integrated pressure force coefficients on the fluid-solid boundary on a reference grid. This
+reference grid, typically a structured and uniform grid, is used to interpolate scattered high-dimensional
+field data as snapshot images. These input images are convenient in training CRAN. This motivates
+us to further explore the application of CRAN models for the prediction of fluid flows. 

@@ -1,0 +1,19 @@
+Change detection, i.e. identification per pixel of changes for some classes of interest from a set
+of bi-temporal co-registered images, is a fundamental task in the field of remote sensing. It remains
+challenging due to unrelated forms of change that appear at different times in input images. Here,
+we propose a reliable deep learning framework for the task of semantic change detection in very high-resolution
+aerial images. Our framework consists of a new loss function, new attention modules, new feature
+extraction building blocks, and a new backbone architecture that is tailored for the task of semantic
+change detection. Specifically, we define a new form of set similarity, that is based on an iterative
+evaluation of a variant of the Dice coefficient. We use this similarity metric to define a new loss
+function as well as a new spatial and channel convolution Attention layer (the FracTAL). The new
+attention layer, designed specifically for vision tasks, is memory efficient, thus suitable for
+use in all levels of deep convolutional networks. Based on these, we introduce two new efficient
+self-contained feature extraction convolution units. We validate the performance of these feature
+extraction building blocks on the CIFAR10 reference data and compare the results with standard
+ResNet modules. Further, we introduce a new encoder/decoder scheme, a network macro-topology,
+that is tailored for the task of change detection. Our network moves away from any notion of subtraction
+of feature layers for identifying change. We validate our approach by showing excellent performance
+and achieving state of the art score (F1 and Intersection over Union-hereafter IoU) on two building
+change detection datasets, namely, the LEVIRCD (F1: 0.918, IoU: 0.848) and the WHU (F1: 0.938, IoU:
+0.882) datasets. 

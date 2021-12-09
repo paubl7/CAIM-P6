@@ -1,0 +1,20 @@
+Graph matching aims to find the latent vertex correspondence between two edge-correlated graphs
+and has found numerous applications across different fields. In this paper, we study a seeded graph
+matching problem, which assumes that a set of seeds, i.e., pre-mapped vertex-pairs, is given in
+advance. While most previous work requires all seeds to be correct, we focus on the setting where
+the seeds are partially correct. Specifically, consider two correlated graphs whose edges are
+sampled independently from a parent \ER graph $\mathcal{G}(n,p)$. A mapping between the vertices
+of the two graphs is provided as seeds, of which an unknown $\beta$ fraction is correct. We first analyze
+a simple algorithm that matches vertices based on the number of common seeds in the $1$-hop neighborhoods,
+and then further propose a new algorithm that uses seeds in the $2$-hop neighborhoods. We establish
+non-asymptotic performance guarantees of perfect matching for both $1$-hop and $2$-hop algorithms,
+showing that our new $2$-hop algorithm requires substantially fewer correct seeds than the $1$-hop
+algorithm when graphs are sparse. Moreover, by combining our new performance guarantees for the
+$1$-hop and $2$-hop algorithms, we attain the best-known results (in terms of the required fraction
+of correct seeds) across the entire range of graph sparsity and significantly improve the previous
+results in \cite{10.14778/2794367.2794371,lubars2018correcting} when $p\ge n^{-5/6}$. For
+instance, when $p$ is a constant or $p=n^{-3/4}$, we show that only $\Omega(\sqrt{n\log n})$ correct
+seeds suffice for perfect matching, while the previously best-known results demand $\Omega(n)$
+and $\Omega(n^{3/4}\log n)$ correct seeds, respectively. Numerical experiments corroborate
+our theoretical findings, demonstrating the superiority of our $2$-hop algorithm on a variety
+of synthetic and real graphs. 

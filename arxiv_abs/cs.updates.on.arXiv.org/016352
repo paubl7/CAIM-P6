@@ -1,0 +1,18 @@
+This paper presents algorithms for the included-sums and excluded-sums problems used by scientific
+computing applications such as the fast multipole method. These problems are defined in terms of
+a $d$-dimensional array of $N$ elements and a binary associative operator~$\oplus$ on the elements.
+The included-sum problem requires that the elements within overlapping boxes cornered at each
+element within the array be reduced using $\oplus$. The excluded-sum problem reduces the elements
+outside each box. The weak versions of these problems assume that the operator $\oplus$ has an inverse
+$\ominus$, whereas the strong versions do not require this assumption. In addition to studying
+existing algorithms to solve these problems, we introduce three new algorithms. The bidirectional
+box-sum (BDBS) algorithm solves the strong included-sums problem in $\Theta(d N)$ time, asymptotically
+beating the classical summed-area table (SAT) algorithm, which runs in $\Theta(2^d N)$ and which
+only solves the weak version of the problem. Empirically, the BDBS algorithm outperforms the SAT
+algorithm in higher dimensions by up to $17.1\times$. The \defn{box-complement} algorithm can
+solve the strong excluded-sums problem in $\Theta(d N)$ time, asymptotically beating the state-of-the-art
+corners algorithm by Demaine et al., which runs in $\Omega(2^d N)$ time. In 3 dimensions the box-complement
+algorithm empirically outperforms the corners algorithm by about $1.4\times$ given similar amounts
+of space. The weak excluded-sums problem can be solved in $\Theta(d N)$ time by the bidirectional
+box-sum complement (BDBSC) algorithm, which is a trivial extension of the BDBS algorithm. Given
+an operator inverse $\ominus$, BDBSC can beat box-complement by up to a factor of $4$. 

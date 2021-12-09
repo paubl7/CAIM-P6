@@ -1,0 +1,20 @@
+We introduce a hybrid "Modified Genetic Algorithm-Multilevel Stochastic Gradient Descent" (MGA-MSGD)
+training algorithm that considerably improves accuracy and efficiency of solving 3D mechanical
+problems described, in strong-form, by PDEs via ANNs (Artificial Neural Networks). This presented
+approach allows the selection of a number of locations of interest at which the state variables are
+expected to fulfil the governing equations associated with a physical problem. Unlike classical
+PDE approximation methods such as finite differences or the finite element method, there is no need
+to establish and reconstruct the physical field quantity throughout the computational domain
+in order to predict the mechanical response at specific locations of interest. The basic idea of
+MGA-MSGD is the manipulation of the learnable parameters' components responsible for the error
+explosion so that we can train the network with relatively larger learning rates which avoids trapping
+in local minima. The proposed training approach is less sensitive to the learning rate value, training
+points density and distribution, and the random initial parameters. The distance function to minimise
+is where we introduce the PDEs including any physical laws and conditions (so-called, Physics Informed
+ANN). The Genetic algorithm is modified to be suitable for this type of ANN in which a Coarse-level
+Stochastic Gradient Descent (CSGD) is exploited to make the decision of the offspring qualification.
+Employing the presented approach, a considerable improvement in both accuracy and efficiency,
+compared with standard training algorithms such as classical SGD and Adam optimiser, is observed.
+The local displacement accuracy is studied and ensured by introducing the results of Finite Element
+Method (FEM) at sufficiently fine mesh as the reference displacements. A slightly more complex
+problem is solved ensuring its feasibility. 

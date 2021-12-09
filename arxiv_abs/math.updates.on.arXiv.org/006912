@@ -1,0 +1,18 @@
+Sparse coding is a class of unsupervised methods for learning a sparse representation of the input
+data in the form of a linear combination of a dictionary and a sparse code. This learning framework
+has led to state-of-the-art results in various image and video processing tasks. However, classical
+methods learn the dictionary and the sparse code based on alternating optimizations, usually without
+theoretical guarantees for either optimality or convergence due to non-convexity of the problem.
+Recent works on sparse coding with a complete dictionary provide strong theoretical guarantees
+thanks to the development of the non-convex optimization. However, initial non-convex approaches
+learn the dictionary in the sparse coding problem sequentially in an atom-by-atom manner, which
+leads to a long execution time. More recent works seek to directly learn the entire dictionary at
+once, which substantially reduces the execution time. However, the associated recovery performance
+is degraded with a finite number of data samples. In this paper, we propose an efficient sparse coding
+scheme with a two-stage optimization. The proposed scheme leverages the global and local Riemannian
+geometry of the two-stage optimization problem and facilitates fast implementation for superb
+dictionary recovery performance by a finite number of samples without atom-by-atom calculation.
+We further prove that, with high probability, the proposed scheme can exactly recover any atom in
+the target dictionary with a finite number of samples if it is adopted to recover one atom of the dictionary.
+An application on wireless sensor data compression is also proposed. Experiments on both synthetic
+and real-world data verify the efficiency and effectiveness of the proposed scheme. 

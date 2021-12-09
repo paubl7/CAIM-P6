@@ -1,0 +1,20 @@
+Graph Neural Networks (GNNs) have attracted considerable attention and have emerged as a new promising
+paradigm to process graph-structured data. GNNs are usually stacked to multiple layers and the
+node representations in each layer are computed through propagating and aggregating the neighboring
+node features with respect to the graph. By stacking to multiple layers, GNNs are able to capture
+the long-range dependencies among the data on the graph and thus bring performance improvements.
+To train a GNN with multiple layers effectively, some normalization techniques (e.g., node-wise
+normalization, batch-wise normalization) are necessary. However, the normalization techniques
+for GNNs are highly task-relevant and different application tasks prefer to different normalization
+techniques, which is hard to know in advance. To tackle this deficiency, in this paper, we propose
+to learn graph normalization by optimizing a weighted combination of normalization techniques
+at four different levels, including node-wise normalization, adjacency-wise normalization,
+graph-wise normalization, and batch-wise normalization, in which the adjacency-wise normalization
+and the graph-wise normalization are newly proposed in this paper to take into account the local
+structure and the global structure on the graph, respectively. By learning the optimal weights,
+we are able to automatically select a single best or a best combination of multiple normalizations
+for a specific task. We conduct extensive experiments on benchmark datasets for different tasks,
+including node classification, link prediction, graph classification and graph regression,
+and confirm that the learned graph normalization leads to competitive results and that the learned
+weights suggest the appropriate normalization techniques for the specific task. Source code is
+released here https://github.com/cyh1112/GraphNormalization. 

@@ -1,0 +1,18 @@
+Visual perception of the objects in a 3D environment is a key to successful performance in autonomous
+driving and simultaneous localization and mapping (SLAM). In this paper, we present a real time
+approach for estimating the distances to multiple objects in a scene using only a single-shot image.
+Given a 2D Bounding Box (BBox) and object parameters, a 3D distance to the object can be calculated
+directly using 3D reprojection; however, such methods are prone to significant errors because
+an error from the 2D detection can be amplified in 3D. In addition, it is also challenging to apply
+such methods to a real-time system due to the computational burden. In the case of the traditional
+multi-object detection methods, %they mostly pay attention to existing works have been developed
+for specific tasks such as object segmentation or 2D BBox regression. These methods introduce the
+concept of anchor BBox for elaborate 2D BBox estimation, and predictors are specialized and trained
+for specific 2D BBoxes. In order to estimate the distances to the 3D objects from a single 2D image,
+we introduce the notion of \textit{anchor distance} based on an object's location and propose a
+method that applies the anchor distance to the multi-object detector structure. We let the predictors
+catch the distance prior using anchor distance and train the network based on the distance. The predictors
+can be characterized to the objects located in a specific distance range. By propagating the distance
+prior using a distance anchor to the predictors, it is feasible to perform the precise distance estimation
+and real-time execution simultaneously. The proposed method achieves about 30 FPS speed, and shows
+the lowest RMSE compared to the existing methods. 

@@ -1,0 +1,19 @@
+Coronavirus Disease 2019 (COVID-19) has caused great casualties and becomes almost the most urgent
+public health events worldwide. Computed tomography (CT) is a significant screening tool for COVID-19
+infection, and automated segmentation of lung infection in COVID-19 CT images will greatly assist
+diagnosis and health care of patients. However, accurate and automatic segmentation of COVID-19
+lung infections remains to be challenging. In this paper we propose a dilated dual attention U-Net
+(D2A U-Net) for COVID-19 lesion segmentation in CT slices based on dilated convolution and a novel
+dual attention mechanism to address the issues above. We introduce a dilated convolution module
+in model decoder to achieve large receptive field, which refines decoding process and contributes
+to segmentation accuracy. Also, we present a dual attention mechanism composed of two attention
+modules which are inserted to skip connection and model decoder respectively. The dual attention
+mechanism is utilized to refine feature maps and reduce semantic gap between different levels of
+the model. The proposed method has been evaluated on open-source dataset and outperforms cutting
+edges methods in semantic segmentation. Our proposed D2A U-Net with pretrained encoder achieves
+a Dice score of 0.7298 and recall score of 0.7071. Besides, we also build a simplified D2A U-Net without
+pretrained encoder to provide a fair comparison with other models trained from scratch, which still
+outperforms popular U-Net family models with a Dice score of 0.7047 and recall score of 0.6626. Our
+experiment results have shown that by introducing dilated convolution and dual attention mechanism,
+the number of false positives is significantly reduced, which improves sensitivity to COVID-19
+lesions and subsequently brings significant increase to Dice score. 

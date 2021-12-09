@@ -1,0 +1,19 @@
+The combinatorial auction (CA) is an efficient mechanism for resource allocation in different
+fields, including cloud computing. It can obtain high economic efficiency and user flexibility
+by allowing bidders to submit bids for combinations of different items instead of only for individual
+items. However, the problem of allocating items among the bidders to maximize the auctioneers"
+revenue, i.e., the winner determination problem (WDP), is NP-complete to solve and inapproximable.
+Existing works for WDPs are generally based on mathematical optimization techniques and most of
+them focus on the single-unit WDP, where each item only has one unit. On the contrary, few works consider
+the multi-unit WDP in which each item may have multiple units. Given that the multi-unit WDP is more
+complicated but prevalent in cloud computing, we propose leveraging machine learning (ML) techniques
+to develop a novel low-complexity algorithm for solving this problem with negligible revenue loss.
+Specifically, we model the multi-unit WDP as an augmented bipartite bid-item graph and use a graph
+neural network (GNN) with half-convolution operations to learn the probability of each bid belonging
+to the optimal allocation. To improve the sample generation efficiency and decrease the number
+of needed labeled instances, we propose two different sample generation processes. We also develop
+two novel graph-based post-processing algorithms to transform the outputs of the GNN into feasible
+solutions. Through simulations on both synthetic instances and a specific virtual machine (VM)
+allocation problem in a cloud computing platform, we validate that our proposed method can approach
+optimal performance with low complexity and has good generalization ability in terms of problem
+size and user-type distribution. 

@@ -1,0 +1,19 @@
+CNN visualization and interpretation methods, like class activation maps (CAMs), are typically
+used to highlight the image regions linked to the class predictions. These models allow to simultaneously
+classify images and yield pixel-wise localization scores, without the need for costly pixel-level
+annotations. However, they are prone to high false positive localization, and thus poor visualisations
+when processing challenging images, such as histology images for cancer grading and localization.
+In this paper, an active learning (AL) framework is proposed to alleviate this issue by progressively
+integrating pixel-wise annotation during training. Given training data with global class-level
+labels, our deep weakly-supervised learning (WSL) model simultaneously allows for supervised
+learning for classification, and active learning for segmentation of images selected for pixel-level
+annotation by an oracle. Unlike traditional AL methods that focus on acquisition method, we also
+propose leveraging the unlabeled images to improve model accuracy with less oracle-annotation.
+To this end, self-learning is considered where the model is used to pseudo-annotate a large number
+of relevant unlabeled samples, which are then integrated during the learning process with oracle-annotated
+samples. Our extensive experiments are conducted on complex high resolution medical and natural
+images from two benchmark datasets -- GlaS for colon cancer, and CUB-200-2011 for bird species.
+Results indicate that by using simply random acquisition, our approach can significantly outperform
+segmentation obtained with state-of the-art CAMs and AL methods, using an identical oracle-supervision
+budget. Our method provides an efficient solution to improve the regions of interest (ROI) segmentation
+accuracy for real-world visual recognition applications. 

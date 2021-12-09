@@ -1,0 +1,19 @@
+One of the key elements of explanatory analysis of a predictive model is to assess the importance
+of individual variables. Rapid development of the area of predictive model exploration (also called
+explainable artificial intelligence or interpretable machine learning) has led to the popularization
+of methods for local (instance level) and global (dataset level) methods, such as Permutational
+Variable Importance, Shapley Values (SHAP), Local Interpretable Model Explanations (LIME),
+Break Down and so on. However, these methods do not use information about the correlation between
+features which significantly reduce the explainability of the model behaviour. In this work, we
+propose new methods to support model analysis by exploiting the information about the correlation
+between variables. The dataset level aspect importance measure is inspired by the block permutations
+procedure, while the instance level aspect importance measure is inspired by the LIME method. We
+show how to analyze groups of variables (aspects) both when they are proposed by the user and when
+they should be determined automatically based on the hierarchical structure of correlations between
+variables. Additionally, we present the new type of model visualisation, triplot, which exploits
+a hierarchical structure of variable grouping to produce a high information density model visualisation.
+This visualisation provides a consistent illustration for either local or global model and data
+exploration. We also show an example of real-world data with 5k instances and 37 features in which
+a significant correlation between variables affects the interpretation of the effect of variable
+importance. The proposed method is, to our knowledge, the first to allow direct use of the correlation
+between variables in exploratory model analysis. 

@@ -1,0 +1,20 @@
+As Machine Learning (ML) becomes pervasive in various real world systems, the need for models to
+be understandable has increased. We focus on interpretability, noting that models often need to
+be constrained in size for them to be considered interpretable, e.g., a decision tree of depth 5 is
+easier to interpret than one of depth 50. But smaller models also tend to have high bias. This suggests
+a trade-off between interpretability and accuracy. We propose a model agnostic technique to minimize
+this trade-off. Our strategy is to first learn a powerful, possibly black-box, probabilistic model
+- referred to as the oracle - on the training data. Uncertainty in the oracle's predictions are used
+to learn a sampling distribution for the training data. The interpretable model is trained on a sample
+obtained using this distribution. We demonstrate that such a model often is significantly more
+accurate than one trained on the original data. Determining the sampling strategy is formulated
+as an optimization problem. Our solution to this problem possesses the following key favorable
+properties: (1) the number of optimization variables is independent of the dimensionality of the
+data: a fixed number of seven variables are used (2) our technique is model agnostic - in that both
+the interpretable model and the oracle may belong to arbitrary model families. Results using multiple
+real world datasets, using Linear Probability Models and Decision Trees as interpretable models,
+with Gradient Boosted Model and Random Forest as oracles, are presented. We observe significant
+relative improvements in the F1-score in most cases, occasionally seeing improvements greater
+than 100%. Additionally, we discuss an interesting application of our technique where a Gated Recurrent
+Unit network is used to improve the sequence classification accuracy of a Decision Tree that uses
+character n-grams as features. 

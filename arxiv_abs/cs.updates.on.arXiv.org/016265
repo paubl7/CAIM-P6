@@ -1,0 +1,19 @@
+Studying distributed computing through the lens of algebraic topology has been the source of many
+significant breakthroughs during the last two decades, especially in the design of lower bounds
+or impossibility results for deterministic algorithms. This paper aims at studying randomized
+synchronous distributed computing through the lens of algebraic topology. We do so by studying
+the wide class of (input-free) symmetry-breaking tasks, e.g., leader election, in synchronous
+fault-free anonymous systems. We show that it is possible to redefine solvability of a task "locally",
+i.e., for each simplex of the protocol complex individually, without requiring any global consistency.
+However, this approach has a drawback: it eliminates the topological aspect of the computation,
+since a single facet has a trivial topological structure. To overcome this issue, we introduce a
+"projection" $\pi$ of both protocol and output complexes, where every simplex $\sigma$ is mapped
+to a complex $\pi(\sigma)$; the later has a rich structure that replaces the structure we lost by
+considering one single facet at a time. To show the significance and applicability of our topological
+approach, we derive necessary and sufficient conditions for solving leader election in synchronous
+fault-free anonymous shared-memory and message-passing models. In both models, we consider scenarios
+in which there might be correlations between the random values provided to the nodes. In particular,
+different parties might have access to the same randomness source so their randomness is not independent
+but equal. Interestingly, we find that solvability of leader election relates to the number of parties
+that possess correlated randomness, either directly or via their greatest common divisor, depending
+on the specific communication model. 

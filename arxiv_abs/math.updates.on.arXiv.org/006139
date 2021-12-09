@@ -1,0 +1,20 @@
+Lattice-Boltzmann methods are known for their simplicity, efficiency and ease of parallelization,
+usually relying on uniform Cartesian meshes with a strong bond between spatial and temporal discretization.
+This fact complicates the crucial issue of reducing the computational cost and the memory impact
+by automatically coarsening the grid where a fine mesh is unnecessary, still ensuring the overall
+quality of the numerical solution through error control. This work provides a possible answer to
+this interesting question, by connecting, for the first time, the field of lattice-Boltzmann Methods
+(LBM) to the adaptive multiresolution (MR) approach based on wavelets. To this end, we employ a MR
+multi-scale transform to adapt the mesh as the solution evolves in time according to its local regularity.
+The collision phase is not affected due to its inherent local nature and because we do not modify the
+speed of the sound, contrarily to most of the LBM/Adaptive Mesh Refinement (AMR) strategies proposed
+in literature, thus preserving the original structure of any LBM scheme. Besides, an original use
+of the MR allows the scheme to resolve the proper physics by efficiently controlling the accuracy
+of the transport phase. We carefully test our method to conclude on its adaptability to a wide family
+of existing lattice Boltzmann schemes, treating both hyperbolic and parabolic systems of equation,
+thus being less problem-dependent than the AMR approaches, which have a hard time granting an effective
+control on the error. The ability of the method to yield a very efficient compression rate and thus
+a computational cost reduction for solutions involving localized structures with loss of regularity
+is also shown, while guaranteeing a precise control on the approximation error introduced by the
+spatial adaptation of the mesh. The numerical strategy is implemented on a specific open-source
+platform called SAMURAI with a dedicated data-structure relying on set algebra. 

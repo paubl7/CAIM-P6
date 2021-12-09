@@ -1,0 +1,20 @@
+Commonsense knowledge graph (CKG) is a special type of knowledge graph (KG), where entities are
+composed of free-form text. However, most existing CKG completion methods focus on the setting
+where all the entities are presented at training time. Although this setting is standard for conventional
+KG completion, it has limitations for CKG completion. At test time, entities in CKGs can be unseen
+because they may have unseen text/names and entities may be disconnected from the training graph,
+since CKGs are generally very sparse. Here, we propose to study the inductive learning setting for
+CKG completion where unseen entities may present at test time. We develop a novel learning framework
+named InductivE. Different from previous approaches, InductiveE ensures the inductive learning
+capability by directly computing entity embeddings from raw entity attributes/text. InductiveE
+consists of a free-text encoder, a graph encoder, and a KG completion decoder. Specifically, the
+free-text encoder first extracts the textual representation of each entity based on the pre-trained
+language model and word embedding. The graph encoder is a gated relational graph convolutional
+neural network that learns from a densified graph for more informative entity representation learning.
+We develop a method that densifies CKGs by adding edges among semantic-related entities and provide
+more supportive information for unseen entities, leading to better generalization ability of
+entity embedding for unseen entities. Finally, inductiveE employs Conv-TransE as the CKG completion
+decoder. Experimental results show that InductiveE significantly outperforms state-of-the-art
+baselines in both standard and inductive settings on ATOMIC and ConceptNet benchmarks. InductivE
+performs especially well on inductive scenarios where it achieves above 48% improvement over present
+methods. 

@@ -1,0 +1,19 @@
+Numerical integral operators of convolution type form the basis of most wave-equation-based methods
+for processing and imaging of seismic data. As several of these methods require the solution of an
+inverse problem, multiple forward and adjoint passes of the modelling operator must be performed
+to converge to a satisfactory solution. This work highlights the challenges that arise when implementing
+such operators on 3D seismic datasets and it provides insights into their usage for solving large
+systems of integral equations. A Python framework is presented that leverages libraries for distributed
+storage and computing, and provides an high-level symbolic representation of linear operators.
+To validate its effectiveness, the forward and adjoint implementations of a multi-dimensional
+convolution operator are evaluated with respect to increasing size of the kernel and number of computational
+resources. Our computational framework is further shown to be suitable for both classic on-premise
+High-Performance Computing and cloud computing architectures. An example of target-oriented
+imaging of a 3D synthetic dataset which comprises of two subsequent steps of seismic redatuming
+is finally presented. In both cases, the redatumed fields are estimated by means of least-squares
+inversion using the full dataset as well as spatially decimated versions of the dataset as a way to
+investigate the robustness of both inverse problems to spatial aliasing in the input dataset. We
+observe that less strict sampling requirements apply in three dimensions for these algorithms
+compared to their two dimensions counterparts. Whilst aliasing introduces noise in the redatumed
+fields, they are however deprived of the well-known spurious artefacts arising from incorrect
+handling of the overburden propagation in cheaper, adjoint-based redatuming techniques. 

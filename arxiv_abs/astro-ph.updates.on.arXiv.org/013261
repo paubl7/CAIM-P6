@@ -1,0 +1,18 @@
+Orbit-determination programs find the orbit solution that best fits a set of observations by minimizing
+the RMS of the residuals of the fit. For near-Earth asteroids, the uncertainty of the orbit solution
+may be compatible with trajectories that impact Earth. This paper shows how incorporating the impact
+condition as an observation in the orbit-determination process results in a robust technique for
+finding the regions in parameter space leading to impacts. The impact pseudo-observation residuals
+are the b-plane coordinates at the time of close approach and the uncertainty is set to a fraction
+of the Earth radius. The extended orbit-determination filter converges naturally to an impacting
+solution if allowed by the observations. The uncertainty of the resulting orbit provides an excellent
+geometric representation of the virtual impactor. As a result, the impact probability can be efficiently
+estimated by exploring this region in parameter space using importance sampling. The proposed
+technique can systematically handle a large number of estimated parameters, account for nongravitational
+forces, deal with nonlinearities, and correct for non-Gaussian initial uncertainty distributions.
+The algorithm has been implemented into a new impact monitoring system at JPL called Sentry-II,
+which is undergoing extensive testing. The main advantages of Sentry-II over JPL's currently operating
+impact monitoring system Sentry are that Sentry-II can systematically process orbits perturbed
+by nongravitational forces and that it is generally more robust when dealing with pathological
+cases. The runtimes and completeness of both systems are comparable, with the impact probability
+of Sentry-II for 99% completeness being $3\times10^{-7}$. 

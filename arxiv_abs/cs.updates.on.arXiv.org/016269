@@ -1,0 +1,20 @@
+Early-stage plant density is an essential trait that determines the fate of a genotype under given
+environmental conditions and management practices. The use of RGB images taken from UAVs may replace
+traditional visual counting in fields with improved throughput, accuracy and access to plant localization.
+However, high-resolution (HR) images are required to detect small plants present at early stages.
+This study explores the impact of image ground sampling distance (GSD) on the performances of maize
+plant detection at 3-5 leaves stage using Faster-RCNN. Data collected at HR (GSD=0.3cm) over 6 contrasted
+sites were used for model training. Two additional sites with images acquired both at high and low
+(GSD=0.6cm) resolution were used for model evaluation. Results show that Faster-RCNN achieved
+very good plant detection and counting (rRMSE=0.08) performances when native HR images are used
+both for training and validation. Similarly, good performances were observed (rRMSE=0.11) when
+the model is trained over synthetic low-resolution (LR) images obtained by down-sampling the native
+training HR images, and applied to the synthetic LR validation images. Conversely, poor performances
+are obtained when the model is trained on a given spatial resolution and applied to another spatial
+resolution. Training on a mix of HR and LR images allows to get very good performances on the native
+HR (rRMSE=0.06) and synthetic LR (rRMSE=0.10) images. However, very low performances are still
+observed over the native LR images (rRMSE=0.48), mainly due to the poor quality of the native LR images.
+Finally, an advanced super-resolution method based on GAN (generative adversarial network) that
+introduces additional textural information derived from the native HR images was applied to the
+native LR validation images. Results show some significant improvement (rRMSE=0.22) compared
+to bicubic up-sampling approach. 

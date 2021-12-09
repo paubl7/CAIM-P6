@@ -1,0 +1,20 @@
+E-commerce companies have to face abnormal sellers who sell potentially-risky products. Typically,
+the risk can be identified by jointly considering product content (e.g., title and image) and seller
+behavior. This work focuses on behavior feature extraction as behavior sequences can provide valuable
+clues for the risk discovery by reflecting the sellers' operation habits. Traditional feature
+extraction techniques heavily depend on domain experts and adapt poorly to new tasks. In this paper,
+we propose a self-supervised method InfoBehavior to automatically extract meaningful representations
+from ultra-long raw behavior sequences instead of the costly feature selection procedure. InfoBehavior
+utilizes Bidirectional Transformer as feature encoder due to its excellent capability in modeling
+long-term dependency. However, it is intractable for commodity GPUs because the time and memory
+required by Transformer grow quadratically with the increase of sequence length. Thus, we propose
+a hierarchical grouping strategy to aggregate ultra-long raw behavior sequences to length-processable
+high-level embedding sequences. Moreover, we introduce two types of pretext tasks. Sequence-related
+pretext task defines a contrastive-based training objective to correctly select the masked-out
+coarse-grained/fine-grained behavior sequences against other "distractor" behavior sequences;
+Domain-related pretext task designs a classification training objective to correctly predict
+the domain-specific statistical results of anomalous behavior. We show that behavior representations
+from the pre-trained InfoBehavior can be directly used or integrated with features from other side
+information to support a wide range of downstream tasks. Experimental results demonstrate that
+InfoBehavior significantly improves the performance of Product Risk Management and Intellectual
+Property Protection. 

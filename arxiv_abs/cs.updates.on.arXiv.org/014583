@@ -1,0 +1,18 @@
+OCaml function calls consume space on the system stack. Operating systems set default limits on
+the stack space which are much lower than the available memory. If a program runs out of stack space,
+they get the dreaded "Stack Overflow" exception -- they crash. As a result, OCaml programmers have
+to be careful, when they write recursive functions, to remain in the so-called _tail-recursive_
+fragment, using _tail_ calls that do not consume stack space. This discipline is a source of difficulties
+for both beginners and experts. Beginners have to be taught recursion, and then tail-recursion.
+Experts disagree on the "right" way to write `List.map`. The direct version is beautiful but not
+tail-recursive, so it crashes on larger inputs. The naive tail-recursive transformation is (slightly)
+slower than the direct version, and experts may want to avoid that cost. Some libraries propose horrible
+implementations, unrolling code by hand, to compensate for this performance loss. In general,
+tail-recursion requires the programmer to manually perform sophisticated program transformations.
+In this work we propose an implementation of "Tail Modulo Cons" (TMC) for OCaml. TMC is a program transformation
+for a fragment of non-tail-recursive functions, that rewrites them in _destination-passing style_.
+The supported fragment is smaller than other approaches such as continuation-passing-style,
+but the performance of the transformed code is on par with the direct, non-tail-recursive version.
+Many useful functions that traverse a recursive datastructure and rebuild another recursive structure
+are in the TMC fragment, in particular `List.map` (and `List.filter`, `List.append`, etc.). Finally
+those functions can be written in a way that is beautiful, correct on all inputs, and efficient. 

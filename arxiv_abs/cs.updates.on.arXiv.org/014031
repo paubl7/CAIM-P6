@@ -1,0 +1,18 @@
+One of the obstacles hindering the scaling-up of the initial successes of machine learning in practical
+engineering applications is the dependence of the accuracy on the size of the database that "drives"
+the algorithms. Incorporating the already-known physical laws into the training process can significantly
+reduce the size of the required database. In this study, we establish a neural network-based computational
+framework to characterize the finite deformation of elastic plates, which in classic theories
+is described by the F\"oppl--von K\'arm\'an (FvK) equations with a set of boundary conditions (BCs).
+A neural network is constructed by taking the spatial coordinates as the input and the displacement
+field as the output to approximate the exact solution of the FvK equations. The physical information
+(PDEs, BCs, and potential energies) is then incorporated into the loss function, and a pseudo dataset
+is sampled without knowing the exact solution to finally train the neural network. The prediction
+accuracy of the modeling framework is carefully examined by applying it to four different loading
+cases: in-plane tension with non-uniformly distributed stretching forces, in-plane central-hole
+tension, out-of-plane deflection, and buckling under compression. \hl{Three ways of formulating
+the loss function are compared: 1) purely data-driven, 2) PDE-based, and 3) energy-based. Through
+the comparison with the finite element simulations, it is found that all the three approaches can
+characterize the elastic deformation of plates with a satisfactory accuracy if trained properly.
+Compared with incorporating the PDEs and BCs in the loss, using the total potential energy shows
+certain advantage in terms of the simplicity of hyperparameter tuning and the computational efficiency.

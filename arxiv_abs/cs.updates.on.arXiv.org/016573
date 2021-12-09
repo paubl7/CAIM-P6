@@ -1,0 +1,19 @@
+For IoT to reach its full potential, the sharing and reuse of information in different applications
+and across verticals is of paramount importance. However, there are a plethora of IoT platforms
+using different representations, protocols and interaction patterns. To address this issue,
+the Fed4IoT project has developed an IoT virtualization platform that, on the one hand, integrates
+information from many different source platforms and, on the other hand, makes the information
+required by the respective users available in the target platform of choice. To enable this, information
+is translated into a common, neutral exchange format. The format of choice is NGSI-LD, which is being
+standardized by the ETSI Industry Specification Group on Context Information Management (ETSI
+ISG CIM). Thing Visors are the components that translate the source information to NGSI-LD, which
+is then delivered to the target platform and translated into the target format. ThingVisors can
+be implemented by hand, but this requires significant human effort, especially considering the
+heterogeneity of low level information produced by a multitude of sensors. Thus, supporting the
+human developer and, ideally, fully automating the process of extracting and enriching data and
+translating it to NGSI-LD is a crucial step. Machine learning is a promising approach for this, but
+it typically requires large amounts of hand-labelled data for training, an effort that makes it
+unrealistic in many IoT scenarios. A programmatic labelling approach called knowledge infusion
+that encodes expert knowledge is used for matching a schema or ontology extracted from the data with
+a target schema or ontology, providing the basis for annotating the data and facilitating the translation
+to NGSI-LD. 

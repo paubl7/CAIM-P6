@@ -1,0 +1,20 @@
+Deciding what's next? is a fundamental problem in robotics and Artificial Intelligence. Under
+belief space planning (BSP), in a partially observable setting, it involves calculating the expected
+accumulated belief-dependent reward, where the expectation is with respect to all future measurements.
+Since solving this general un-approximated problem quickly becomes intractable, state of the
+art approaches turn to approximations while still calculating planning sessions from scratch.
+In this work we propose a novel paradigm, Incremental BSP (iX-BSP), based on the key insight that
+calculations across planning sessions are similar in nature and can be appropriately re-used.
+We calculate the expectation incrementally by utilizing Multiple Importance Sampling techniques
+for selective re-sampling and re-use of measurement from previous planning sessions. The formulation
+of our approach considers general distributions and accounts for data association aspects. We
+demonstrate how iX-BSP could benefit existing approximations of the general problem, introducing
+iML-BSP, which re-uses calculations across planning sessions under the common Maximum Likelihood
+assumption. We evaluate both methods and demonstrate a substantial reduction in computation time
+while statistically preserving accuracy. The evaluation includes both simulation and real-world
+experiments considering autonomous vision-based navigation and SLAM. As a further contribution,
+we introduce to iX-BSP the non-integral wildfire approximation, allowing one to trade accuracy
+for computational performance by averting from updating re-used beliefs when they are "close enough".
+We evaluate iX-BSP under wildfire demonstrating a substantial reduction in computation time while
+controlling the accuracy sacrifice. We also provide analytical and empirical bounds of the effect
+wildfire holds over the objective value. 

@@ -1,0 +1,20 @@
+To ensure secure and trustworthy execution of applications, vendors frequently embed trusted
+execution environments into their systems. Here, applications are protected from adversaries,
+including a malicious operating system. TEEs are usually built by integrating protection mechanisms
+directly into the processor or by using dedicated external secure elements. However, both of these
+approaches only cover a narrow threat model resulting in limited security guarantees. Enclaves
+in the application processor typically provide weak isolation between the secure and non-secure
+domain, especially when considering side-channel attacks. Although secure elements do provide
+strong isolation, the slow communication interface to the application processor is exposed to
+adversaries and restricts the use cases. Independently of the used implementation approach, TEEs
+often lack the possibility to establish secure communication to external peripherals, and most
+operating systems executed inside TEEs do not provide state-of-the-art defense strategies, making
+them vulnerable against various attacks. We argue that TEEs implemented on the main application
+processor are insecure, especially when considering side-channel attacks. We demonstrate how
+a heterogeneous architecture can be utilized to realize a secure TEE design. We directly embed a
+processor into our architecture to provide strong isolation between the secure and non-secure
+domain. The tight coupling of TEE and REE enables HECTOR-V to provide mechanisms for establishing
+secure communication channels. We further introduce RISC-V Secure Co-Processor, a security-hardened
+processor tailored for TEEs. To secure applications executed inside the TEE, RVSCP provides control-flow
+integrity, rigorously restricts I/O accesses to certain execution states, and provides operating
+system services directly in hardware. 

@@ -1,0 +1,19 @@
+Over half a million individuals are diagnosed with head and neck cancer each year worldwide. Radiotherapy
+is an important curative treatment for this disease, but it requires manual time consuming delineation
+of radio-sensitive organs at risk (OARs). This planning process can delay treatment, while also
+introducing inter-operator variability with resulting downstream radiation dose differences.
+While auto-segmentation algorithms offer a potentially time-saving solution, the challenges
+in defining, quantifying and achieving expert performance remain. Adopting a deep learning approach,
+we demonstrate a 3D U-Net architecture that achieves expert-level performance in delineating
+21 distinct head and neck OARs commonly segmented in clinical practice. The model was trained on
+a dataset of 663 deidentified computed tomography (CT) scans acquired in routine clinical practice
+and with both segmentations taken from clinical practice and segmentations created by experienced
+radiographers as part of this research, all in accordance with consensus OAR definitions. We demonstrate
+the model's clinical applicability by assessing its performance on a test set of 21 CT scans from
+clinical practice, each with the 21 OARs segmented by two independent experts. We also introduce
+surface Dice similarity coefficient (surface DSC), a new metric for the comparison of organ delineation,
+to quantify deviation between OAR surface contours rather than volumes, better reflecting the
+clinical task of correcting errors in the automated organ segmentations. The model's generalisability
+is then demonstrated on two distinct open source datasets, reflecting different centres and countries
+to model training. With appropriate validation studies and regulatory approvals, this system
+could improve the efficiency, consistency, and safety of radiotherapy pathways. 

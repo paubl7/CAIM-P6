@@ -1,0 +1,20 @@
+We introduce wave encoded acquisition and reconstruction techniques for highly accelerated echo
+planar imaging (EPI) with reduced g-factor penalty and image artifacts. Wave-EPI involves playing
+sinusoidal gradients during the EPI readout while employing interslice shifts as in blipped-CAIPI
+acquisitions. This spreads the aliasing in all spatial directions, thereby taking better advantage
+of 3D coil sensitivity profiles. The amount of voxel spreading that can be achieved by the wave gradients
+during the short EPI readout period is constrained by the slew rate of the gradient coils and peripheral
+nerve stimulation (PNS) monitor. We propose to use a half-cycle sinusoidal gradient to increase
+the amount of voxel spreading that can be achieved while respecting the slew and stimulation constraints.
+Extending wave-EPI to multi-shot acquisition minimizes geometric distortion and voxel blurring
+at high in-plane resolution, while structured low-rank regularization mitigates shot-to-shot
+phase variations without additional navigators. We propose to use different point spread functions
+(PSFs) for the k-space lines with positive and negative polarities, which are calibrated with a
+FLEET-based reference scan and allow for addressing gradient imperfections. Wave-EPI provided
+whole-brain single-shot gradient echo (GE) and multi-shot spin echo (SE) EPI acquisitions at high
+acceleration factors and was combined with g-Slider slab encoding to boost the SNR level in 1mm isotropic
+diffusion imaging. Relative to blipped-CAIPI, wave-EPI reduced average and maximum g-factors
+by up to 1.21- and 1.37-fold, respectively. In conclusion, wave-EPI allows highly accelerated
+single- and multi-shot EPI with reduced g-factor and artifacts and may facilitate clinical and
+neuroscientific applications of EPI by improving the spatial and temporal resolution in functional
+and diffusion imaging. 

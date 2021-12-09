@@ -1,0 +1,18 @@
+Much recent research is devoted to exploring tradeoffs between computational accuracy and energy
+efficiency at different levels of the system stack. Approximation at the floating point unit (FPU)
+allows saving energy by simply reducing the number of computed floating point bits in return for
+accuracy loss. Although, finding the most energy efficient approximation for various applications
+with minimal effort is the main challenge. To address this issue, we propose NEAT: a pin tool that
+helps users automatically explore the accuracy-energy tradeoff space induced by various floating
+point implementations. NEAT helps programmers explore the effects of simultaneously using multiple
+floating point implementations to achieve the lowest energy consumption for an accuracy constraint
+or vice versa. NEAT accepts one or more user-defined floating point implementations and programmable
+placement rules for where/when to apply them. NEAT then automatically replaces floating point
+operations with different implementations based on the user-specified rules during the runtime
+and explores the resulting tradeoff space to find the best use of approximate floating point implementations
+for the precision tuning throughout the program. We evaluate NEAT by enforcing combinations of
+24/53 different floating point implementations with three sets of placement rules on a wide range
+of benchmarks. We find that heuristic precision tuning at the function level provides up to 22% and
+48% energy savings at 1% and 10% accuracy loss comparing to applying a single implementation for
+the whole application. Also, NEAT is applicable to neural networks where it finds the optimal precision
+level for each layer considering an accuracy target for the model. 

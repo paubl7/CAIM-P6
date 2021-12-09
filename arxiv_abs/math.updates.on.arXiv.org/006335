@@ -1,0 +1,20 @@
+In this paper we propose a convolution estimator for estimating the density of a response variable
+that employs an underlying multiple regression framework to enhance the accuracy of the estimates
+through the incorporation of auxiliary information. Suppose we have a sample of $N$ observations
+of a response variable and an associated set of covariates, along with an additional auxiliary sample
+featuring $M$ observations of the covariates only. We prove that the mean square error of the multiple
+regression-enhanced estimator converges as $O(N^{-1})$, and additionally, for a large fixed
+$N$, the mean square error converges as $O(M^{-4/5})$ before eventually tailing off as a saturation
+point is reached. Thus, while the incorporation of auxiliary covariate information isn't quite
+as effective as incorporating more complete case information, it nevertheless allows for significant
+improvements in accuracy. In contrast to convolution estimators based on the Nadaraya-Watson
+estimator for a nonlinear regression model, the convolution estimator proposed herein utilizes
+the ordinary least squares estimator for a multiple linear regression model. While this type of
+underlying estimator is not suited to strongly nonlinear data, its strength lies in the fact that
+it allows the multiple regression-enhanced convolution estimator to provide better performance
+on data that is generally linear or well fit by low order polynomials, since the ordinary least squares
+estimator estimator does not suffer from the curse of dimensionality and does not require one to
+choose hyperparameters. The estimator proposed in this paper is particularly useful estimating
+the density of a response variable that is challenging to measure, while being in possession of a
+large amount of auxiliary information. In fact, an application of this type from the field of ophthalmology
+motivated our work in this paper. 

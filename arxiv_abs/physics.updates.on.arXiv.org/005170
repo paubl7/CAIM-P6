@@ -1,0 +1,19 @@
+FastCAT, a fast cone-beam computed tomography (CBCT) simulator is demonstrated. The fastCAT application
+uses pre-calculated Monte Carlo (MC) CBCT scatter and detector response functions to reduce simulation
+time for kV and MV CBCT. Pre-calculated x-ray beam energy spectra, detector optical spread functions
+and energy deposition, and phantom scatter kernels are combined with beam filtration and GPU raytracing
+to produce CBCT volumes. Source spectra are either simulated in EGSnrc using 2.5 and 6 MeV electron
+beams incident on a variety of target materials or analytical spectra from a tungsten x-ray tube.
+Detectors were modelled in Geant4 extended by Topas including optical transport in the scintillators.
+Two MV detectors were modelled, a standard Varian AS1200 GOS detector and a novel CWO high quantum
+efficiency detector. Energy dependent scatter kernels were created in Topas for a two 16-cm diameter
+water phantoms: a Catphan 515 contrast phantom and a spatial resolution phantom. The Catphan phantom
+contained inserts of 1-5 mm in diameter of six different tissue types. These pre-calculated MC datasets
+allow the user to create CT volumes with custom phantom inserts, imaging beam, focal spots and detector
+combinations. FastCAT simulations retain high fidelity to measurements and MC simulations: MTF
+curves were within 1.1% and 4.8% of measured values for the CWO and GOS detectors, respectively.
+Contrast in a fastCAT Catphan 515 simulation was seen to be within 1% of an equivalent MC simulation
+for all of the tissues. A fastCAT simulation of the Catphan 515 module at a resolution of 1024x1024x10
+took 61 seconds on a GPU while the equivalent Topas MC was estimated to take approximately 5.6 CPU
+years. We present an open source fast CBCT simulation with high fidelity to MC simulations. The fastCAT
+application can be found at https://github.com/jerichooconnell/fastCATs.git 

@@ -1,0 +1,18 @@
+Accurate prediction of laminar-turbulent transition is a critical element of computational fluid
+dynamics simulations for aerodynamic design across multiple flow regimes. Traditional methods
+of transition prediction cannot be easily extended to flow configurations where the transition
+process depends on a large set of parameters. In comparison, neural network methods allow higher
+dimensional input features to be considered without compromising the efficiency and accuracy
+of the traditional data driven models. Neural network methods proposed earlier follow a cumbersome
+methodology of predicting instability growth rates over a broad range of frequencies, which are
+then processed to obtain the N-factor envelope, and then, the transition location based on the correlating
+N-factor. This paper presents an end-to-end transition model based on a recurrent neural network,
+which sequentially processes the mean boundary-layer profiles along the surface of the aerodynamic
+body to directly predict the N-factor envelope and the transition locations over a two-dimensional
+airfoil. The proposed transition model has been developed and assessed using a large database of
+53 airfoils over a wide range of chord Reynolds numbers and angles of attack. The sequence-to-sequence
+transduction model proposed herein provides a more direct approach for accurate predictions of
+the transition location than the earlier neural network methods, which predict the local amplification
+rate of a single instability mode at a fixed location along the airfoil. The large universe of airfoils
+encountered in various applications causes additional difficulties. As such, we provide further
+insights on selecting training datasets from large amounts of available data. 

@@ -1,0 +1,20 @@
+Computing the dominant Fourier coefficients of a vector is a common task in many fields, such as signal
+processing, learning theory, and computational complexity. In the Sparse Fast Fourier Transform
+(Sparse FFT) problem, one is given oracle access to a $d$-dimensional vector $x$ of size $N$, and
+is asked to compute the best $k$-term approximation of its Discrete Fourier Transform, quickly
+and using few samples of the input vector $x$. While the sample complexity of this problem is quite
+well understood, all previous approaches either suffer from an exponential dependence of runtime
+on the dimension $d$ or can only tolerate a trivial amount of noise. This is in sharp contrast with
+the classical FFT algorithm of Cooley and Tukey, which is stable and completely insensitive to the
+dimension of the input vector: its runtime is $O(N\log N)$ in any dimension $d$. In this work, we introduce
+a new high-dimensional Sparse FFT toolkit and use it to obtain new algorithms, both on the exact,
+as well as in the case of bounded $\ell_2$ noise. This toolkit includes i) a new strategy for exploring
+a pruned FFT computation tree that reduces the cost of filtering, ii) new structural properties
+of adaptive aliasing filters recently introduced by Kapralov, Velingker and Zandieh'SODA'19,
+and iii) a novel lazy estimation argument, suited to reducing the cost of estimation in FFT tree-traversal
+approaches. Our robust algorithm can be viewed as a highly optimized sparse, stable extension of
+the Cooley-Tukey FFT algorithm. Finally, we explain the barriers we have faced by proving a conditional
+quadratic lower bound on the running time of the well-studied non-equispaced Fourier transform
+problem. This resolves a natural and frequently asked question in computational Fourier transforms.
+Lastly, we provide a preliminary experimental evaluation comparing the runtime of our algorithm
+to FFTW and SFFT 2.0. 

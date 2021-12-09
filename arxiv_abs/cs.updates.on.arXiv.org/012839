@@ -1,0 +1,18 @@
+Self-Organizing Map algorithms have been used for almost 40 years across various application domains
+such as biology, geology, healthcare, industry and humanities as an interpretable tool to explore,
+cluster and visualize high-dimensional data sets. In every application, practitioners need to
+know whether they can \textit{trust} the resulting mapping, and perform model selection to tune
+algorithm parameters (e.g. the map size). Quantitative evaluation of self-organizing maps (SOM)
+is a subset of clustering validation, which is a challenging problem as such. Clustering model selection
+is typically achieved by using clustering validity indices. While they also apply to self-organized
+clustering models, they ignore the topology of the map, only answering the question: do the SOM code
+vectors approximate well the data distribution? Evaluating SOM models brings in the additional
+challenge of assessing their topology: does the mapping preserve neighborhood relationships
+between the map and the original data? The problem of assessing the performance of SOM models has
+already been tackled quite thoroughly in literature, giving birth to a family of quality indices
+incorporating neighborhood constraints, called \textit{topographic} indices. Commonly used
+examples of such metrics are the topographic error, neighborhood preservation or the topographic
+product. However, open-source implementations are almost impossible to find. This is the issue
+we try to solve in this work: after a survey of existing SOM performance metrics, we implemented them
+in Python and widely used numerical libraries, and provide them as an open-source library, SOMperf.
+This paper introduces each metric available in our module along with usage examples. 

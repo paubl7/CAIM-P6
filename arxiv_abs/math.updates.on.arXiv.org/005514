@@ -1,0 +1,19 @@
+A service system with multiple types of arriving customers is considered. There is an infinite number
+of homogeneous servers. Multiple customers can be placed for simultaneous service into one server,
+subject to general packing constraints. Each new arriving customer is placed for service immediately,
+either into an occupied server, as long as packing constraints are not violated, or into an empty
+server. After service completion, each customer leaves its server and the system. The basic objective
+is to minimize the number of occupied servers in steady state. We study a Greedy-Random (GRAND) placement
+(packing) algorithm, introduced in [23]. This is a simple online algorithm, which places each arriving
+customer uniformly at random into either one of the already occupied servers that can still fit the
+customer, or one of the so-called zero-servers, which are empty servers designated to be available
+to new arrivals. In [23], a version of the algorithm, labeled GRAND($aZ$), was considered, where
+the number of zero servers is $aZ$, with $Z$ being the current total number of customers in the system,
+and $a>0$ being an algorithm parameter. GRAND($aZ$) was shown in [23] to be asymptotically optimal
+in the following sense: (a) the steady-state optimality gap grows linearly in the system scale $r$
+(the mean total number of customers in service), i.e. as $c(a) r$ for some $c(a)> 0$; and (b) $c(a)
+\to 0$ as $a\to 0$. In this paper, we consider the GRAND($Z^p$) algorithm, in which the number of zero-servers
+is $Z^p$, where $p \in (1-1/(8\kappa),1)$ is an algorithm parameter, and $(\kappa-1)$ is the maximum
+possible number of customers that a server can fit. We prove the asymptotic optimality of GRAND($Z^p$)
+in the sense that the steady-state optimality gap is $o(r)$, sublinear in the system scale. This
+is a stronger form of asymptotic optimality than that of GRAND($aZ$). 

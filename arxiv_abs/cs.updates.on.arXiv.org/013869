@@ -1,0 +1,18 @@
+Current emotion detection classifiers predict discrete emotions. However, literature in psychology
+has documented that compound and ambiguous facial expressions are often evoked by humans. As a stride
+towards development of machine learning models that more accurately reflect compound and ambiguous
+emotions, we replace traditional one-hot encoded label representations with a crowd's distribution
+of labels. We center our study on the Child Affective Facial Expression (CAFE) dataset, a gold standard
+dataset of pediatric facial expressions which includes 100 human labels per image. We first acquire
+crowdsourced labels for 207 emotions from CAFE and demonstrate that the consensus labels from the
+crowd tend to match the consensus from the original CAFE raters, validating the utility of crowdsourcing.
+We then train two versions of a ResNet-152 classifier on CAFE images with two types of labels (1) traditional
+one-hot encoding and (2) vector labels representing the crowd distribution of responses. We compare
+the resulting output distributions of the two classifiers. While the traditional F1-score for
+the one-hot encoding classifier is much higher (94.33% vs. 78.68%), the output probability vector
+of the crowd-trained classifier much more closely resembles the distribution of human labels (t=3.2827,
+p=0.0014). For many applications of affective computing, reporting an emotion probability distribution
+that more closely resembles human interpretation can be more important than traditional machine
+learning metrics. This work is a first step for engineers of interactive systems to account for machine
+learning cases with ambiguous classes and we hope it will generate a discussion about machine learning
+with ambiguous labels and leveraging crowdsourcing as a potential solution. 

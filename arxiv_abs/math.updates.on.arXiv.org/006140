@@ -1,0 +1,20 @@
+In this paper, we develop and study approximately smooth basis constructions for isogeometric
+analysis over two-patch domains. One key element of isogeometric analysis is that it allows high
+order smoothness within one patch. However, for representing complex geometries, a multi-patch
+construction is needed. In this case, a $C^0$-smooth basis is easy to obtain, whereas $C^1$-smooth
+isogeometric functions require a special construction. Such spaces are of interest when solving
+numerically fourth-order PDE problems, such as the biharmonic equation and the Kirchhoff-Love
+plate or shell formulation, using an isogeometric Galerkin method. With the construction of so-called
+analysis-suitable $G^1$ (in short, AS-$G^1$) parametrizations, as introduced in (Collin, Sangalli,
+Takacs; CAGD, 2016), it is possible to construct $C^1$ isogeometric spaces which possess optimal
+approximation properties. These geometries need to satisfy certain constraints along the interfaces
+and additionally require that the regularity $r$ and degree $p$ of the underlying spline space satisfy
+$1 \leq r \leq p-2$. The problem is that most complex geometries are not AS-$G^1$ geometries. Therefore,
+we define basis functions for isogeometric spaces by enforcing approximate $C^1$ conditions following
+the basis construction from (Kapl, Sangalli, Takacs; CAGD, 2017). For this reason, the defined
+function spaces are not exactly $C^1$ but only approximately. We study the convergence behavior
+and define function spaces that converge optimally under $h$-refinement, by locally introducing
+functions of higher polynomial degree and lower regularity. The convergence rate is optimal in
+several numerical tests performed on domains with non-trivial interfaces. While an extension
+to more general multi-patch domains is possible, we restrict ourselves to the two-patch case and
+focus on the construction over a single interface. 

@@ -1,0 +1,18 @@
+Most of the existing work on FPGA acceleration of Convolutional Neural Network (CNN) focus on employing
+a single strategy (algorithm, dataflow, etc.) across all the layers. Such an approach does not achieve
+optimal latency on complex and deep CNNs. Emerging CNNs have diverse per-layer computation characteristics
+including parallelism, arithmetic intensity, locality, and memory footprint. Per-layer strategy
+selection and fine-grained tuning are required to achieve low end-to-end latency. However, specialized
+hardware modules dedicated to each layer limit the per-layer utilization and adversely affect
+end-to-end latency. In this paper, we address these problems by an algorithm-architecture co-optimization
+framework, DYNAMAP, consisting of (1) a unified hardware overlay that can be reused across layers,
+supporting dynamic mapping of all three families of popular convolution algorithms, and further
+allowing flexible dataflow switching to maximize hardware utilization for each layer; (2) a novel
+software Design Space Exploration (DSE) flow that customizes the hardware overlay and chooses
+optimal strategy mapping. We show that the algorithm mapping space increases exponentially with
+network depth, and while the optimal algorithm selection problem is NP-hard in general, by exploiting
+the series-parallel structure of CNN models, we demonstrate a polynomial-time solution for optimal
+algorithm mapping. DYNAMAP is optimized for any CNN, including those having diverse computation
+and memory requirements across the layers. We demonstrate DYNAMAP using two state-of-the-art
+CNNs - GoogleNet and Inception-V4. The generated accelerators achieve up to $2.8\times$ and $1.4\times$
+speedups, respectively, wrt inference latency compared with the state-of-the-art FPGA implementations.

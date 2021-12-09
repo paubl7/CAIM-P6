@@ -1,0 +1,18 @@
+In this paper, we revisit the problem of Differentially Private Stochastic Convex Optimization
+(DP-SCO) and provide excess population risks for some special classes of functions that are faster
+than the previous results of general convex and strongly convex functions. In the first part of the
+paper, we study the case where the population risk function satisfies the Tysbakov Noise Condition
+(TNC) with some parameter $\theta>1$. Specifically, we first show that under some mild assumptions
+on the loss functions, there is an algorithm whose output could achieve an upper bound of $\tilde{O}((\frac{1}{\sqrt{n}}+\frac{\sqrt{d\log
+\frac{1}{\delta}}}{n\epsilon})^\frac{\theta}{\theta-1})$ for $(\epsilon, \delta)$-DP
+when $\theta\geq 2$, here $n$ is the sample size and $d$ is the dimension of the space. Then we address
+the inefficiency issue, improve the upper bounds by $\text{Poly}(\log n)$ factors and extend to
+the case where $\theta\geq \bar{\theta}>1$ for some known $\bar{\theta}$. Next we show that the
+excess population risk of population functions satisfying TNC with parameter $\theta>1$ is always
+lower bounded by $\Omega((\frac{d}{n\epsilon})^\frac{\theta}{\theta-1}) $ and $\Omega((\frac{\sqrt{d\log
+\frac{1}{\delta}}}{n\epsilon})^\frac{\theta}{\theta-1})$ for $\epsilon$-DP and $(\epsilon,
+\delta)$-DP, respectively. In the second part, we focus on a special case where the population risk
+function is strongly convex. Unlike the previous studies, here we assume the loss function is {\em
+non-negative} and {\em the optimal value of population risk is sufficiently small}. With these
+additional assumptions, we propose a new method whose output could achieve an upper bound of $O(\frac{d\log\frac{1}{\delta}}{n^2\epsilon^2}+\frac{1}{n^{\tau}})$
+for any $\tau\geq 1$ in $(\epsilon,\delta)$-DP model if the sample size $n$ is sufficiently large.

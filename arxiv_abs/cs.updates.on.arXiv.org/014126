@@ -1,0 +1,20 @@
+We consider the problem of filtering in linear state-space models (e.g., the Kalman filter setting)
+through the lens of regret optimization. Different assumptions on the driving disturbance and
+the observation noise sequences give rise to different estimators: in the stochastic setting to
+the celebrated Kalman filter, and in the deterministic setting of bounded energy disturbances
+to $H_\infty$ estimators. In this work, we formulate a novel criterion for filter design based on
+the concept of regret between the estimation error energy of a clairvoyant estimator that has access
+to all future observations (a so-called smoother) and a causal one that only has access to current
+and past observations. The regret-optimal estimator is chosen to minimize this worst-case difference
+across all bounded-energy noise sequences. The resulting estimator is adaptive in the sense that
+it aims to mimic the behavior of the clairvoyant estimator, irrespective of what the realization
+of the noise will be and thus interpolates between the stochastic and deterministic approaches.
+We provide a solution for the regret estimation problem at two different levels. First, we provide
+a solution at the operator level by reducing it to the Nehari problem. Second, for state-space models,
+we explicitly find the estimator that achieves the optimal regret. From a computational perspective,
+the regret-optimal estimator can be easily implemented by solving three Riccati equations and
+a single Lyapunov equation. For a state-space model of dimension $n$, the regret-optimal estimator
+has a state-space structure of dimension $3n$. We demonstrate the applicability and efficacy of
+the estimator in a variety of problems and observe that the estimator has average and worst-case
+performances that are simultaneously close to their optimal values. We therefore argue that regret-optimality
+is a viable approach to estimator design. 

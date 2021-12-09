@@ -1,0 +1,19 @@
+Building a highly accurate predictive model for these tasks usually requires a large number of manually
+annotated labels and pixel regions (bounding boxes) of abnormalities. However, it is expensive
+to acquire such annotations, especially the bounding boxes. Recently, contrastive learning has
+shown strong promise in leveraging unlabeled natural images to produce highly generalizable and
+discriminative features. However, extending its power to the medical image domain is under-explored
+and highly non-trivial, since medical images are much less amendable to data augmentations. In
+contrast, their domain knowledge, as well as multi-modality information, is often crucial. To
+bridge this gap, we propose an end-to-end semi-supervised cross-modal contrastive learning framework,
+that simultaneously performs disease classification and localization tasks. The key knob of our
+framework is a unique positive sampling approach tailored for the medical images, by seamlessly
+integrating radiomic features as an auxiliary modality. Specifically, we first apply an image
+encoder to classify the chest X-rays and to generate the image features. We next leverage Grad-CAM
+to highlight the crucial (abnormal) regions for chest X-rays (even when unannotated), from which
+we extract radiomic features. The radiomic features are then passed through another dedicated
+encoder to act as the positive sample for the image features generated from the same chest X-ray.
+In this way, our framework constitutes a feedback loop for image and radiomic modality features
+to mutually reinforce each other. Their contrasting yields cross-modality representations that
+are both robust and interpretable. Extensive experiments on the NIH Chest X-ray dataset demonstrate
+that our approach outperforms existing baselines in both classification and localization tasks.

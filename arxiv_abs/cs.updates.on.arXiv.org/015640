@@ -1,0 +1,18 @@
+Drone imagery is increasingly used in automated inspection for infrastructure surface defects,
+especially in hazardous or unreachable environments. In machine vision, the key to crack detection
+rests with robust and accurate algorithms for image processing. To this end, this paper proposes
+a deep learning approach using hierarchical convolutional neural networks with feature preservation
+(HCNNFP) and an intercontrast iterative thresholding algorithm for image binarization. First,
+a set of branch networks is proposed, wherein the output of previous convolutional blocks is half-sizedly
+concatenated to the current ones to reduce the obscuration in the down-sampling stage taking into
+account the overall information loss. Next, to extract the feature map generated from the enhanced
+HCNN, a binary contrast-based autotuned thresholding (CBAT) approach is developed at the post-processing
+step, where patterns of interest are clustered within the probability map of the identified features.
+The proposed technique is then applied to identify surface cracks on the surface of roads, bridges
+or pavements. An extensive comparison with existing techniques is conducted on various datasets
+and subject to a number of evaluation criteria including the average F-measure (AF\b{eta}) introduced
+here for dynamic quantification of the performance. Experiments on crack images, including those
+captured by unmanned aerial vehicles inspecting a monorail bridge. The proposed technique outperforms
+the existing methods on various tested datasets especially for GAPs dataset with an increase of
+about 1.4% in terms of AF\b{eta} while the mean percentage error drops by 2.2%. Such performance
+demonstrates the merits of the proposed HCNNFP architecture for surface defect inspection. 

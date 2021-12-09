@@ -1,0 +1,19 @@
+Bidirectional mapping-based generative models have achieved remarkable performance for the
+generalized zero-shot learning (GZSL) recognition by learning to construct visual features from
+class semantics and reconstruct class semantics back from generated visual features. The performance
+of these models relies on the quality of synthesized features. This depends on the ability of the
+model to capture the underlying seen data distribution by relating semantic-visual spaces, learning
+discriminative information, and re-purposing the learned distribution to recognize unseen data.
+This means learning the seen-unseen domains joint distribution is crucial for GZSL tasks. However,
+existing models only learn the underlying distribution of the seen domain as unseen data is inaccessible.
+In this work, we propose to utilize the available unseen class semantics along with seen class semantics
+and learn dual-domain joint distribution through a strong visual-semantic coupling. Therefore,
+we propose a bidirectional mapping coupled generative adversarial network (BMCoGAN) by extending
+the coupled generative adversarial network (CoGAN) into a dual-domain learning bidirectional
+mapping model. We further integrate a Wasserstein generative adversarial optimization to supervise
+the joint distribution learning. For retaining distinctive information in the synthesized visual
+space and reducing bias towards seen classes, we design an optimization, which pushes synthesized
+seen features towards real seen features and pulls synthesized unseen features away from real seen
+features. We evaluate BMCoGAN on several benchmark datasets against contemporary methods and
+show its superior performance. Also, we present ablative analysis to demonstrate the importance
+of different components in BMCoGAN. 

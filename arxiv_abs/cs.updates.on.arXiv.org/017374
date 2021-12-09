@@ -1,0 +1,20 @@
+Phase Change Memory (PCM) is an attractive candidate for main memory as it offers non-volatility
+and zero leakage power, while providing higher cell densities, longer data retention time, and
+higher capacity scaling compared to DRAM. In PCM, data is stored in the crystalline or amorphous
+state of the phase change material. The typical electrically-controlled PCM (EPCM), however,
+suffers from longer write latency and higher write energy compared to DRAM and limited multi-level
+cell (MLC) capacities. These challenges limit the performance of data-intensive applications
+running on computing systems with EPCMs. Recently, researchers demonstrated optically-controlled
+PCM (OPCM) cells, with support for 5 bits/cell in contrast to 2 bits/cell in EPCM. These OPCM cells
+can be accessed directly with optical signals that are multiplexed in high-bandwidth-density
+silicon-photonic links. The higher MLC capacity in OPCM and the direct cell access using optical
+signals enable an increased read/write throughput and lower energy per access than EPCM. However,
+due to the direct cell access using optical signals, OPCM systems cannot be designed using conventional
+memory architecture. We need a complete redesign of the memory architecture that is tailored to
+the properties of OPCM technology. This paper presents the design of a unified network and main memory
+system called COSMOS that combines OPCM and silicon-photonic links to achieve high memory throughput.
+COSMOS is composed of a hierarchical multi-banked OPCM array with novel read and write access protocols,
+and uses an Electrical-Optical-Electrical (E-O-E) control unit to interface with the processor.
+Our evaluation of a 2.5D-integrated system containing a processor and COSMOS demonstrates 2.14x
+average speedup compared to an EPCM system. COSMOS consumes 3.8x lower read energy-per-bit and
+5.97x lower write energy-per-bit compared to EPCM. 

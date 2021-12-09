@@ -1,0 +1,20 @@
+Prophet inequalities are a useful tool for designing online allocation procedures and comparing
+their performance to the optimal offline allocation. In the basic setting of $k$-unit prophet inequalities,
+the magical procedure of Alaei (2011) with its celebrated performance guarantee of $1-\frac{1}{\sqrt{k+3}}$
+has found widespread adoption in mechanism design and other online allocation problems in online
+advertising, healthcare scheduling, and revenue management. Despite being commonly used for
+implementing online allocation, the tightness of Alaei's procedure for a given $k$ has remained
+unknown. In this paper we resolve this question, characterizing the tight bound by identifying
+the structure of the optimal online implementation, and consequently improving the best-known
+guarantee for $k$-unit prophet inequalities for all $k>1$. We also consider a more general online
+stochastic knapsack problem where each individual allocation can consume an arbitrary fraction
+of the initial capacity. We introduce a new "best-fit" procedure for implementing a fractionally-feasible
+knapsack solution online, with a performance guarantee of $\frac{1}{3+e^{-2}}\approx0.319$,
+which we also show is tight. This improves the previously best-known guarantee of 0.2 for online
+knapsack. Our analysis differs from existing ones by eschewing the need to split items into "large"
+or "small" based on capacity consumption, using instead an invariant for the overall utilization
+on different sample paths. Finally, we refine our technique for the unit-density special case of
+knapsack, and improve the guarantee from 0.321 to 0.3557 in the multi-resource appointment scheduling
+application of Stein et al. (2020). All in all, our results imply \textit{tight} Online Contention
+Resolution Schemes for $k$-uniform matroids and the knapsack polytope, respectively, which has
+further implications in mechanism design. 

@@ -1,0 +1,20 @@
+The leakage of security-critical information has become an ever-increasing problem for cryptographic
+systems. Profiled side-channel analysis (SCA) leverages this leakage to extract sensitive data
+(e.g., the secret key) from cryptographic implementations. When combined with advanced methods
+in neural networks (NNs), profiled SCA can successfully attack even those crypto-cores assumed
+to be protected against SCA. Nevertheless and despite the rise in the number of studies devoted to
+NN-based SCA, a range of questions remain unanswered, namely: how to choose an NN with an adequate
+size, how to tune hyperparameters in the NN, when to stop the training, and how to explain the performance
+of the NN model in quantitative terms, in the context of SCA. Our proposed approach, "InfoNEAT,"
+tackles these issues in a natural way. InfoNEAT relies on the concept of evolution of NNs (both the
+network architecture and parameters, so-called nueroevolution), enhanced by incorporating
+information-theoretic metrics to guide the evolution, halt it with a novel stopping criteria,
+and improve the time-complexity and memory footprint of it. Interestingly enough, our approach
+can be employed in various domains, although InfoNEAT, as presented in this paper, is tailored to
+the specific requirements of SCA. The performance of InfoNEAT is evaluated by applying that against
+publicly available datasets composed of real side-channel measurements. According to our assessment
+and on the basis of our results, InfoNEAT achieves the same performance (in terms of key recovery)
+as the state-of-the-art NN-based SCA. In addition to the considerable advantages regarding the
+automated configuration of NNs, InfoNEAT also demonstrates significant improvements over other
+approaches: the number of epochs and width of the NN (i.e., the number of nodes in a layer) is reduced
+at least by factor 1.25, and 6.66, respectively. 

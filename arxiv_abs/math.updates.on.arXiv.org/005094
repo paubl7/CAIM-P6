@@ -1,0 +1,20 @@
+We propose a new binary classification model in Machine Learning, called Phase Separation Binary
+Classifier (PSBC). It consists of a discretization of a nonlinear reaction-diffusion equation
+(the Allen-Cahn equation), coupled with an ODE. Unlike many feedforward networks that are said
+to mimic brain or cortical cells functioning, the PSBC is inspired by fluid behavior, namely, on
+how binary fluids phase separate. Thus, (hyper)parameters have physical meaning, whose effects
+are carefully studied in several different scenarios: for instance, diffusion introduces interaction
+among features, whereas reaction plays an active role in classification. PSBC's coefficients
+are trainable weights, chosen according to a minimization problem using Gradient Descent; optimization
+relies on a classical Backpropagation Algorithm using weight sharing. Moreover, the model can
+be seen under the framework of feedforward networks, and is endowed with a nonlinear activation
+function that is linear in trainable weights but polynomial in other variables. In view of the model's
+connection with ODEs and parabolic PDEs, forward propagation amounts to an initial value problem.
+Thus, stability conditions are established through meshgrid constraints, discrete maximum principles,
+and, overall, exploiting the concept of Invariant regions, as developed in the work of Chueh, Conway,
+Smoller, and particularly in the application of their theory to finite-difference methods in the
+work of Hoff. The PSBC also has interesting model compression properties which are thoroughly discussed.
+We apply the model to the subset of numbers "0" and "1" of the classical MNIST database, where we are
+able to discern individuals from both classes with more than 94\% accuracy, sometimes using less
+than $80$ variables, a feature that is out of reach of Artificial Neural Networks without weight
+sharing or feature engineering. 

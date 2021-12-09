@@ -1,0 +1,19 @@
+We consider the plurality consensus problem among $n$ agents. Initially, each agent has one of $k$
+different opinions. Agents choose random interaction partners and revise their state according
+to a fixed transition function, depending on their own state and the state of the interaction partners.
+The goal is to reach a consensus configuration in which all agents agree on the same opinion, and if
+there is initially a sufficiently large bias towards one opinion, that opinion should prevail.
+We analyze a synchronized variant of the undecided state dynamics defined as follows. The agents
+act in phases, consisting of a decision and a boosting part. In the decision part, any agent that encounters
+an agent with a different opinion becomes undecided. In the boosting part, undecided agents adopt
+the first opinion they encounter. We consider this dynamics in the population model and the gossip
+model. For the population model, our protocol reaches consensus (w.h.p.) in $O(\log^2 n)$ parallel
+time, providing the first polylogarithmic result for $k > 2$ (w.h.p.) in this model. Without any
+assumption on the bias, fast consensus has only been shown for $k = 2$ for the unsynchronized version
+of the undecided state dynamics [Clementi et al., MFCS'18]. We show that the synchronized variant
+of the undecided state dynamics reaches consensus (w.h.p.) in time $O(\log^2 n)$, independently
+of the initial number, bias, or distribution of opinions. In both models, we guarantee that if there
+is an initial bias of $\Omega(\sqrt{n \log n})$, then (w.h.p.) that opinion wins. A simple extension
+of our protocol in the gossip model yields a dynamics that does not depend on $n$ or $k$, is anonymous,
+and has (w.h.p.) runtime $O(\log^2 n)$. This solves an open problem formulated by Becchetti et al.~[Distributed
+Computing,~2017]. 

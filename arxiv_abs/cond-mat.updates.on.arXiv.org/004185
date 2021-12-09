@@ -1,0 +1,18 @@
+Recent advances in machine learning have become increasingly popular in the applications of phase
+transitions and critical phenomena. By machine learning approaches, we try to identify the physical
+characteristics in the two-dimensional percolation model. To achieve this, we adopt Monte Carlo
+simulation to generate dataset at first, and then we employ several approaches to analyze the dataset.
+Four kinds of convolutional neural networks (CNNs), one variational autoencoder (VAE), one convolutional
+VAE (cVAE), one principal component analysis (PCA), and one $k$-means are used for identifying
+order parameter, the permeability, and the critical transition point. The former three kinds of
+CNNs can simulate the two order parameters and the permeability with high accuracy, and good extrapolating
+performance. The former two kinds of CNNs have high anti-noise ability. To validate the robustness
+of the former three kinds of CNNs, we also use the VAE and the cVAE to generate new percolating configurations
+to add perturbations into the raw configurations. We find that there is no difference by using the
+raw or the perturbed configurations to identify the physical characteristics, under the prerequisite
+of corresponding labels. In the case of lacking labels, we use unsupervised learning to detect the
+physical characteristics. The PCA, a classical unsupervised learning, performs well when identifying
+the permeability but fails to deduce order parameter. Hence, we apply the fourth kinds of CNNs with
+different preset thresholds, and identify a new order parameter and the critical transition point.
+Our findings indicate that the effectiveness of machine learning still needs to be evaluated in
+the applications of phase transitions and critical phenomena. 

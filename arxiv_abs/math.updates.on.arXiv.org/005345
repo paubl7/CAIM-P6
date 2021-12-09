@@ -1,0 +1,19 @@
+Fundamental in matrix algebra and its applications, a \emph{generalized inverse} of a real matrix
+$A$ is a matrix $H$ that satisfies the Moore-Penrose (M-P) property $AHA=A$. If $H$ also satisfies
+the additional useful M-P property, $HAH=H$, it is called a \emph{reflexive generalized inverse}.
+Reflexivity is equivalent to minimum rank, so we are particularly interested in reflexive generalized
+inverses. We consider aspects of symmetry related to the calculation of a \emph{sparse} reflexive
+generalized inverse of $A$. As is common, and following Lee and Fampa (2018) for calculating sparse
+generalized inverses, we use (vector) 1-norm minimization for inducing sparsity and for keeping
+the magnitude of entries under control. When $A$ is symmetric, we may naturally desire a symmetric
+$H$; while generally such a restriction on $H$ may not lead to a 1-norm minimizing reflexive generalized
+inverse. We investigate a block construction method to produce a symmetric reflexive generalized
+inverse that is structured and has guaranteed sparsity. We provide a theoretically-efficient
+and practical local-search algorithm to block-construct an approximate 1-norm minimizing symmetric
+reflexive generalized inverse. Another aspect of symmetry that we consider relates to another
+M-P property: $H$ is \emph{ah-symmetric} if $AH$ is symmetric. The ah-symmetry property is the
+key one for solving least-squares problems using $H$. Here we do not assume that $A$ is symmetric,
+and we do not impose symmetry on $H$. We investigate a column block construction method to produce
+an ah-symmetric reflexive generalized inverse that is structured and has guaranteed sparsity.
+We provide a theoretically-efficient and practical local-search algorithm to column block construct
+an approximate 1-norm minimizing ah-symmetric reflexive generalized inverse. 

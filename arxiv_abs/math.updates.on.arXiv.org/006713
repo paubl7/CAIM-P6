@@ -1,0 +1,19 @@
+Achieving accurate numerical results of hydrodynamic loads based on the potential-flow theory
+is very challenging for structures with sharp edges, due to the singular behavior of the local-flow
+velocities. In this paper, we introduce the Extended Finite Element Method (XFEM) to solve fluid-structure
+interaction problems involving sharp edges on structures. Four different FEM solvers, including
+conventional linear and quadratic FEMs as well as their corresponding XFEM versions with local
+enrichment by singular basis functions at sharp edges, are implemented and compared. To demonstrate
+the accuracy and efficiency of the XFEMs, a thin flat plate in an infinite fluid domain and a forced
+heaving rectangle at the free surface, both in two dimensions, will be studied. For the flat plate,
+the mesh convergence studies are carried out for both the velocity potential in the fluid domain
+and the added mass, and the XFEMs show apparent advantages thanks to their local enhancement at the
+sharp edges. Three different enrichment strategies are also compared, and suggestions will be
+made for the practical implementation of the XFEM. For the forced heaving rectangle, the linear
+and 2nd order mean wave loads are studied. Our results confirm the previous conclusion in the literature
+that it is not difficult for a conventional numerical model to obtain convergent results for added
+mass and damping coefficients. However, when the 2nd order mean wave loads requiring the computation
+of velocity components are calculated via direct pressure integration, it takes a tremendously
+large number of elements for the conventional FEMs to get convergent results. On the contrary, the
+numerical results of XFEMs converge rapidly even with very coarse meshes, especially for the quadratic
+XFEM. 

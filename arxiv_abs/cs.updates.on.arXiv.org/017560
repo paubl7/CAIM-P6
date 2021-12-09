@@ -1,0 +1,19 @@
+In clinical practice and biomedical research, measurements are often collected sparsely and irregularly
+in time while the data acquisition is expensive and inconvenient. Examples include measurements
+of spine bone mineral density, cancer growth through mammography or biopsy, a progression of defective
+vision, or assessment of gait in patients with neurological disorders. Since the data collection
+is often costly and inconvenient, estimation of progression from sparse observations is of great
+interest for practitioners. From the statistical standpoint, such data is often analyzed in the
+context of a mixed-effect model where time is treated as both a fixed-effect (population progression
+curve) and a random-effect (individual variability). Alternatively, researchers analyze Gaussian
+processes or functional data where observations are assumed to be drawn from a certain distribution
+of processes. These models are flexible but rely on probabilistic assumptions, require very careful
+implementation, specific to the given problem, and tend to be slow in practice. In this study, we
+propose an alternative elementary framework for analyzing longitudinal data, relying on matrix
+completion. Our method yields estimates of progression curves by iterative application of the
+Singular Value Decomposition. Our framework covers multivariate longitudinal data, regression,
+and can be easily extended to other settings. As it relies on existing tools for matrix algebra it
+is efficient and easy to implement. We apply our methods to understand trends of progression of motor
+impairment in children with Cerebral Palsy. Our model approximates individual progression curves
+and explains 30% of the variability. Low-rank representation of progression trends enables identification
+of different progression trends in subtypes of Cerebral Palsy. 

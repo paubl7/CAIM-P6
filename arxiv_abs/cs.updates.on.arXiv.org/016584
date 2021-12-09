@@ -1,0 +1,19 @@
+Metric learning algorithms aim to learn a distance function that brings the semantically similar
+data items together and keeps dissimilar ones at a distance. The traditional Mahalanobis distance
+learning is equivalent to find a linear projection. In contrast, Deep Metric Learning (DML) methods
+are proposed that automatically extract features from data and learn a non-linear transformation
+from input space to a semantically embedding space. Recently, many DML methods are proposed focused
+to enhance the discrimination power of the learned metric by providing novel sampling strategies
+or loss functions. This approach is very helpful when both the training and test examples are coming
+from the same set of categories. However, it is less effective in many applications of DML such as
+image retrieval and person-reidentification. Here, the DML should learn general semantic concepts
+from observed classes and employ them to rank or identify objects from unseen categories. Neglecting
+the generalization ability of the learned representation and just emphasizing to learn a more discriminative
+embedding on the observed classes may lead to the overfitting problem. To address this limitation,
+we propose a framework to enhance the generalization power of existing DML methods in a Zero-Shot
+Learning (ZSL) setting by general yet discriminative representation learning and employing a
+class adversarial neural network. To learn a more general representation, we propose to employ
+feature maps of intermediate layers in a deep neural network and enhance their discrimination power
+through an attention mechanism. Besides, a class adversarial network is utilized to enforce the
+deep model to seek class invariant features for the DML task. We evaluate our work on widely used machine
+vision datasets in a ZSL setting. 

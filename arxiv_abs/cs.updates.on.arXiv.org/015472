@@ -1,0 +1,19 @@
+Assigning geospatial objects of aerial images with specific categories at the pixel level is a fundamental
+task in urban scene interpretation. Along with rapid developments in sensor technologies, aerial
+images can be captured at multiple spatial resolutions (MSR) with information content manifested
+at different scales. Extracting information from these MSR aerial images represents huge opportunities
+for enhanced feature representation and characterisation. However, MSR images suffer from two
+critical issues: 1) increased variation in the sizes of geospatial objects and 2) information and
+informative feature loss at coarse spatial resolutions. In this paper, we propose a novel scale-aware
+neural network (SaNet) for semantic labelling of MSR aerial images to address these two issues.
+SaNet deploys a densely connected feature network (DCFPN) module to capture high-quality multi-scale
+context, such as to address the scale variation issue and increase the quality of segmentation for
+both large and small objects simultaneously. A spatial feature recalibration (SFR) module is further
+incorporated into the network to learn complete semantic features with enhanced spatial relationships,
+where the effects of information and informative feature loss are addressed. The combination of
+DCFPN and SFR allows the proposed SaNet to learn scale-aware features from MSR aerial images. Extensive
+experiments undertaken on ISPRS semantic segmentation datasets demonstrated the outstanding
+accuracy of the proposed SaNet in cross-resolution segmentation, with an average OA of 83.4% on
+the Vaihingen dataset and an average F1 score of 80.4% on the Potsdam dataset, outperforming state-of-the-art
+deep learning approaches, including FPN (80.2% and 76.6%), PSPNet (79.8% and 76.2%) and Deeplabv3+
+(80.8% and 76.1%) as well as DDCM-Net (81.7% and 77.6%) and EaNet (81.5% and 78.3%). 

@@ -1,0 +1,20 @@
+The periodic table is a fundamental representation of chemical elements that plays essential theoretical
+and practical roles. The research article discusses the experiences of unsupervised training
+of neural networks to represent elements on the 2D latent space based on their electron configurations
+while forcing disentanglement. To emphasize chemical properties of the elements, the original
+data of electron configurations has been realigned towards the outermost valence orbitals. Recognizing
+seven shells and four subshells, the input data has been arranged as (7x4) images. Latent space representation
+has been performed using a convolutional beta variational autoencoder (beta-VAE). Despite discrete
+and sparse input data, the beta-VAE disentangles elements of different periods, blocks, groups,
+and types, while retaining the order along atomic numbers. In addition, it isolates outliers on
+the latent space that turned out to be known cases of Madelung's rule violations for lanthanide and
+actinide elements. Considering the generative capabilities of beta-VAE and discrete input data,
+the supervised machine learning has been set to find out if there are insightful patterns distinguishing
+electron configurations between real elements and decoded artificial ones. Also, the article
+addresses the capability of dual representation by autoencoders. Conventionally, autoencoders
+represent observations of input data on the latent space. However, by transposing and duplicating
+original input data, it is possible to represent variables on the latent space as well. The latest
+can lead to the discovery of meaningful patterns among input variables. Applying that unsupervised
+learning for transposed data of electron configurations, the order of input variables that has
+been arranged by the encoder on the latent space has turned out to exactly match the sequence of Madelung's
+rule. 

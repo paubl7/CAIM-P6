@@ -1,0 +1,19 @@
+Quantitative measures of uptake in caudate, putamen, and globus pallidus in dopamine transporter
+(DaT) brain SPECT have potential as biomarkers for the severity of Parkinson disease. Reliable
+quantification of uptake requires accurate segmentation of these regions. However, segmentation
+is challenging in DaT SPECT due to partial-volume effects, system noise, physiological variability,
+and the small size of these regions. To address these challenges, we propose an estimation-based
+approach to segmentation. This approach estimates the posterior mean of the fractional volume
+occupied by caudate, putamen, and globus pallidus within each voxel of a 3D SPECT image. The estimate
+is obtained by minimizing a cost function based on the binary cross-entropy loss between the true
+and estimated fractional volumes over a population of SPECT images, where the distribution of the
+true fractional volumes is obtained from magnetic resonance images from clinical populations.
+The proposed method accounts for both the sources of partial-volume effects in SPECT, namely the
+limited system resolution and tissue-fraction effects. The method was implemented using an encoder-decoder
+network and evaluated using realistic clinically guided SPECT simulation studies, where the ground-truth
+fractional volumes were known. The method significantly outperformed all other considered segmentation
+methods and yielded accurate segmentation with dice similarity coefficients of ~ 0.80 for all regions.
+The method was relatively insensitive to changes in voxel size. Further, the method was relatively
+robust up to +/- 10 degrees of patient head tilt along transaxial, sagittal, and coronal planes.
+Overall, the results demonstrate the efficacy of the proposed method to yield accurate fully automated
+segmentation of caudate, putamen, and globus pallidus in 3D DaT-SPECT images. 

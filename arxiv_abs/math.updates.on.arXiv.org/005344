@@ -1,0 +1,18 @@
+In this paper, we propose a primal-dual algorithm with a novel momentum term using the partial gradients
+of the coupling function that can be viewed as a generalization of the method proposed by Chambolle
+and Pock in 2016 to solve saddle point problems defined by a convex-concave function $\mathcal L(x,y)=f(x)+\Phi(x,y)-h(y)$
+with a general coupling term $\Phi(x,y)$ that is not assumed to be bilinear. Assuming $\nabla_x\Phi(\cdot,y)$
+is Lipschitz for any fixed $y$, and $\nabla_y\Phi(\cdot,\cdot)$ is Lipschitz, we show that the
+iterate sequence converges to a saddle point; and for any $(x,y)$, we derive error bounds in terms
+of $\mathcal L(\bar{x}_k,y)-\mathcal L(x,\bar{y}_k)$ for the ergodic sequence $\{\bar{x}_k,\bar{y}_k\}$.
+In particular, we show $\mathcal O(1/k)$ rate when the problem is merely convex in $x$. Furthermore,
+assuming $\Phi(x,\cdot)$ is linear for each fixed $x$ and $f$ is strongly convex, we obtain the ergodic
+convergence rate of $\mathcal O(1/k^2)$ -- we are not aware of another single-loop method in the
+related literature achieving the same rate when $\Phi$ is not bilinear. Finally, we propose a backtracking
+technique which does not require the knowledge of Lipschitz constants while ensuring the same convergence
+results. We also consider convex optimization problems with nonlinear functional constraints
+and we show that using the backtracking scheme, the optimal convergence rate can be achieved even
+when the dual domain is unbounded. We tested our method against other state-of-the-art first-order
+algorithms and interior-point methods for solving quadratically constrained quadratic problems
+with synthetic data, the kernel matrix learning, and regression with fairness constraints arising
+in machine learning. 

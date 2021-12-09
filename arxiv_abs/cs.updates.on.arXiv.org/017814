@@ -1,0 +1,20 @@
+Anomalies are ubiquitous in all scientific fields and can express an unexpected event due to incomplete
+knowledge about the data distribution or an unknown process that suddenly comes into play and distorts
+observations. Due to such events' rarity, to train deep learning models on the Anomaly Detection
+(AD) task, scientists only rely on "normal" data, i.e., non-anomalous samples. Thus, letting the
+neural network infer the distribution beneath the input data. In such a context, we propose a novel
+framework, named Multi-layer One-Class ClassificAtion (MOCCA),to train and test deep learning
+models on the AD task. Specifically, we applied it to autoencoders. A key novelty in our work stems
+from the explicit optimization of intermediate representations for the AD task. Indeed, differently
+from commonly used approaches that consider a neural network as a single computational block, i.e.,
+using the output of the last layer only, MOCCA explicitly leverages the multi-layer structure of
+deep architectures. Each layer's feature space is optimized for AD during training, while in the
+test phase, the deep representations extracted from the trained layers are combined to detect anomalies.
+With MOCCA, we split the training process into two steps. First, the autoencoder is trained on the
+reconstruction task only. Then, we only retain the encoder tasked with minimizing the L_2 distance
+between the output representation and a reference point, the anomaly-free training data centroid,
+at each considered layer. Subsequently, we combine the deep features extracted at the various trained
+layers of the encoder model to detect anomalies at inference time. To assess the performance of the
+models trained with MOCCA, we conduct extensive experiments on publicly available datasets. We
+show that our proposed method reaches comparable or superior performance to state-of-the-art
+approaches available in the literature. 

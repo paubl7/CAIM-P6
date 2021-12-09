@@ -1,0 +1,20 @@
+The Stabbing Planes proof system was introduced to model the reasoning carried out in practical
+mixed integer programming solvers. As a proof system, it is powerful enough to simulate Cutting
+Planes and to refute the Tseitin formulas -- certain unsatisfiable systems of linear equations
+mod 2 -- which are canonical hard examples for many algebraic proof systems. In a recent (and surprising)
+result, Dadush and Tiwari showed that these short refutations of the Tseitin formulas could be translated
+into quasi-polynomial size and depth Cutting Planes proofs, refuting a long-standing conjecture.
+This translation raises several interesting questions. First, whether all Stabbing Planes proofs
+can be efficiently simulated by Cutting Planes. This would allow for the substantial analysis done
+on the Cutting Planes system to be lifted to practical mixed integer programming solvers. Second,
+whether the quasi-polynomial depth of these proofs is inherent to Cutting Planes. In this paper
+we make progress towards answering both of these questions. First, we show that any Stabbing Planes
+proof with bounded coefficients SP* can be translated into Cutting Planes. As a consequence of the
+known lower bounds for Cutting Planes, this establishes the first exponential lower bounds on SP*.
+Using this translation, we extend the result of Dadush and Tiwari to show that Cutting Planes has
+short refutations of any unsatisfiable system of linear equations over a finite field. Like the
+Cutting Planes proofs of Dadush and Tiwari, our refutations also incur a quasi-polynomial blow-up
+in depth, and we conjecture that this is inherent. As a step towards this conjecture, we develop a
+new geometric technique for proving lower bounds on the depth of Cutting Planes proofs. This allows
+us to establish the first lower bounds on the depth of Semantic Cutting Planes proofs of the Tseitin
+formulas. 

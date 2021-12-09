@@ -1,0 +1,18 @@
+Prediction models are often employed in estimating parameters of optimization models. Despite
+the fact that in an end-to-end view, the real goal is to achieve good optimization performance, the
+prediction performance is measured on its own. While it is usually believed that good prediction
+performance in estimating the parameters will result in good subsequent optimization performance,
+formal theoretical guarantees on this are notably lacking. In this paper, we explore conditions
+that allow us to explicitly describe how the prediction performance governs the optimization performance.
+Our weaker condition allows for an asymptotic convergence result, while our stronger condition
+allows for exact quantification of the optimization performance in terms of the prediction performance.
+In general, verification of these conditions is a non-trivial task. Nevertheless, we show that
+our weaker condition is equivalent to the well-known Fisher consistency concept from the learning
+theory literature. This then allows us to easily check our weaker condition for several loss functions.
+We also establish that the squared error loss function satisfies our stronger condition. Consequently,
+we derive the exact theoretical relationship between prediction performance measured with the
+squared loss, as well as a class of symmetric loss functions, and the subsequent optimization performance.
+In a computational study on portfolio optimization, fractional knapsack and multiclass classification
+problems, we compare the optimization performance of using of several prediction loss functions
+(some that are Fisher consistent and some that are not) and demonstrate that lack of consistency
+of the loss function can indeed have a detrimental effect on performance. 

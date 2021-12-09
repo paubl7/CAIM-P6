@@ -1,0 +1,20 @@
+Development, deployment and maintenance of networked software has been revolutionized by DevOps
+practices, which boost system software quality and agile evolution. However, as the Internet of
+Things (IoT) connects low-power, microcontroller-based devices which take part in larger distributed
+cyberphysical systems, such low-power IoT devices are not easy to integrate in DevOps workflows.
+In this paper, we contribute to mitigate this problem by designing Femto-Containers, a new hardware-independent
+mechanism which enable the virtualization and isolation of software modules embedded on microcontrollers,
+using an approach extending and adapting Berkeley Packet Filters (eBPF). We implement a Femto-Container
+hosting engine, which we integrate in a common low-power IoT operating system (RIOT), and is thus
+enhanced with the ability to start, update or terminate Femto-Containers on demand, securely over
+a standard IPv6/6LoWPAN network. We evaluate the performance of Femto-Containers in a variety
+of use cases. We show that Femto-Containers can virtualize and isolate multiple software modules
+executed concurrently, with very small memory footprint overhead (below 10%) and very small startup
+time (tens of microseconds) compared to native code execution. We carry out experiments deploying
+Femto-Containers on a testbed using heterogeneous IoT hardware based on the popular microcontroller
+architectures Arm Cortex-M, ESP32 and RISC-V. We show that compared to prior work on software-based
+low-power virtualization and isolation, Femto-Containers offer an attractive trade-off in terms
+of memory footprint, energy consumption, and security. The characteristics of Femto-Containers
+satisfy both the requirements of software modules hosting high-level logic coded in a variety of
+common programming languages, and the constraints of low-level debug snippets inserted on a hot
+code path. 

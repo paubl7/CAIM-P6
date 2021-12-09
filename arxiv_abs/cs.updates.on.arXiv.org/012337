@@ -1,0 +1,18 @@
+Prior solutions for mitigating Byzantine failures in federated learning, such as element-wise
+median of the stochastic gradient descent (SGD) based updates from the clients, tend to leverage
+the similarity of updates from the non-Byzantine clients. However, when data is non-IID, as is typical
+in mobile networks, the updates received from non-Byzantine clients are quite diverse, resulting
+in poor convergence performance of such approaches. On the other hand, current algorithms that
+address heterogeneous data distribution across clients are limited in scope and do not perform
+well when there is variability in the number and identities of the Byzantine clients, or when general
+non-convex loss functions are considered. We propose `DiverseFL' that jointly addresses three
+key challenges of Byzantine resilient federated learning -- (i) non-IID data distribution across
+clients, (ii) variable Byzantine fault model, and (iii) generalization to non-convex and non-smooth
+optimization. DiverseFL leverages computing capability of the federated learning server that
+for each iteration, computes a `guiding' gradient for each client over a tiny sample of data received
+only once from the client before start of the training. The server uses `per client' criteria for
+flagging Byzantine clients, by comparing the corresponding guiding gradient with the client's
+gradient update. The server then updates the model using the gradients received from the non-flagged
+clients. As we demonstrate in our experiments with benchmark datasets and popular Byzantine attacks,
+our proposed approach performs better than the prior algorithms, almost matching the performance
+of the `Oracle SGD', where the server knows the identities of the Byzantine clients. 

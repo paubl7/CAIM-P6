@@ -1,0 +1,19 @@
+Most graph convolutional neural networks (GCNs) perform poorly in graphs where neighbors typically
+have different features/classes (heterophily) and when stacking multiple layers (oversmoothing).
+These two seemingly unrelated problems have been studied independently, but there is recent empirical
+evidence that solving one problem may benefit the other. In this work, going beyond empirical observations,
+we aim to: (1) propose a new perspective to analyze the heterophily and oversmoothing problems under
+a unified theoretical framework, (2) identify the common causes of the two problems based on the
+proposed framework, and (3) propose simple yet effective strategies that address the common causes.
+Focusing on the node classification task, we use linear separability of node representations as
+an indicator to reflect the performance of GCNs and we propose to study the linear separability by
+analyzing the statistical change of the node representations in the graph convolution. We find
+that the relative degree of a node (compared to its neighbors) and the heterophily level of a node's
+neighborhood are the root causes that influence the separability of node representations. Our
+analysis suggests that: (1) Nodes with high heterophily always produce less separable representations
+after graph convolution; (2) Even with low heterophily, degree disparity between nodes can influence
+the network dynamics and result in a pseudo-heterophily situation, which helps to explain oversmoothing.
+Based on our insights, we propose simple modifications to the GCN architecture -- i.e., degree corrections
+and signed messages -- which alleviate the root causes of these issues, and also show this empirically
+on 9 real networks. Compared to other approaches, which tend to work well in one regime but fail in
+others, our modified GCN model consistently performs well across all settings. 

@@ -1,0 +1,19 @@
+Data assimilation (DA) is widely used to combine physical knowledge and observations. It is nowadays
+commonly used in geosciences to perform parametric calibration. In a context of climate change,
+old calibrations can not necessarily be used for new scenarios. This raises the question of DA computational
+cost, as costly physics-based numerical models need to be reanalyzed. Reduction and metamodelling
+represent therefore interesting perspectives, for example proposed in recent contributions
+as hybridization between ensemble and variational methods, to combine their advantages (efficiency,
+non-linear framework). They are however often based on Monte Carlo (MC) type sampling, which often
+requires considerable increase of the ensemble size for better efficiency, therefore representing
+a computational burden in ensemble-based methods as well. To address these issues, two methods
+to replace the complex model by a surrogate are proposed and confronted : (i) PODEn3DVAR directly
+inspired from PODEn4DVAR, relies on an ensemble-based joint parameter-state Proper Orthogonal
+Decomposition (POD), which provides a linear metamodel ; (ii) POD-PCE-3DVAR, where the model states
+are POD reduced then learned using Polynomial Chaos Expansion (PCE), resulting in a non-linear
+metamodel. Both metamodels allow to write an approximate cost function whose minimum can be analytically
+computed, or deduced by a gradient descent at negligible cost. Furthermore, adapted metamodelling
+error covariance matrix is given for POD-PCE-3DVAR, allowing to substantially improve the metamodel-based
+DA analysis. Proposed methods are confronted on a twin experiment, and compared to classical 3DVAR
+on a measurement-based problem. Results are promising, in particular superior with POD-PCE-3DVAR,
+showing good convergence to classical 3DVAR and robustness to noise. 

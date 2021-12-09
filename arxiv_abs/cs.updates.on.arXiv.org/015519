@@ -1,0 +1,20 @@
+Multimodal image registration has many applications in diagnostic medical imaging and image-guided
+interventions, such as Transcatheter Arterial Chemoembolization (TACE) of liver cancer guided
+by intraprocedural CBCT and pre-operative MR. The ability to register peri-procedurally acquired
+diagnostic images into the intraprocedural environment can potentially improve the intra-procedural
+tumor targeting, which will significantly improve therapeutic outcomes. However, the intra-procedural
+CBCT often suffers from suboptimal image quality due to lack of signal calibration for Hounsfield
+unit, limited FOV, and motion/metal artifacts. These non-ideal conditions make standard intensity-based
+multimodal registration methods infeasible to generate correct transformation across modalities.
+While registration based on anatomic structures, such as segmentation or landmarks, provides
+an efficient alternative, such anatomic structure information is not always available. One can
+train a deep learning-based anatomy extractor, but it requires large-scale manual annotations
+on specific modalities, which are often extremely time-consuming to obtain and require expert
+radiological readers. To tackle these issues, we leverage annotated datasets already existing
+in a source modality and propose an anatomy-preserving domain adaptation to segmentation network
+(APA2Seg-Net) for learning segmentation without target modality ground truth. The segmenters
+are then integrated into our anatomy-guided multimodal registration based on the robust point
+matching machine. Our experimental results on in-house TACE patient data demonstrated that our
+APA2Seg-Net can generate robust CBCT and MR liver segmentation, and the anatomy-guided registration
+framework with these segmenters can provide high-quality multimodal registrations. Our code
+is available at https://github.com/bbbbbbzhou/APA2Seg-Net. 

@@ -1,0 +1,20 @@
+Artificial intelligence (AI) in phishing email detection typically focuses on centralized data
+training that eventually accesses sensitive raw email data from the collected data repository.
+Due to privacy, organizations are reluctant to share their email data, and it is uncommon to find
+enough data in one organization to forming a global AI model. Thus, a privacy-friendly AI technique
+such as federated learning (FL) is a desideratum. FL enables machine learning over multi-organizational
+email datasets to preserve their privacy without the requirement of accessing them and sharing
+with other organizations during the learning in a distributed computing framework. To the best
+of our knowledge, this work is the first to investigate FL in email anti-phishing. Building upon
+a Recurrent Convolutional Neural Network for phishing email detection, we analyze and evaluate
+FL-entangled learning performance under various settings, including (i) balanced and imbalanced
+data distribution among organizations, (ii) scalability, and (iii) communication overhead.
+Our results positively corroborate comparable performance statistics of FL in phishing email
+detection to centralized learning. As a trade-off to privacy and distributed learning, FL has a
+communication overhead of 0.179 GB per global epoch per its organizations, and a gradual degradation
+in performance if we increase the number of organizations but keep the same total email dataset.
+However, if we allow to increase the total email dataset with the introduction of new organizations
+in the FL framework, the organization-level performance is improved. For example, a newly added
+organization in FL makes an improvement in testing accuracy by 1.87% and fast convergence compared
+to centralized learning. Besides, our empirical results find that FL has a good performance over
+imbalanced email dataset. 

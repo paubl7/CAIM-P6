@@ -1,0 +1,19 @@
+We present a novel approach for data-driven modeling of the time-domain induced polarization (IP)
+phenomenon using variational autoencoders (VAE). VAEs are Bayesian neural networks that aim to
+learn a latent statistical distribution to encode extensive data sets as lower dimension representations.
+We collected 1 600 319 IP decay curves in various regions of Canada, the United States and Kazakhstan,
+and compiled them to train a deep VAE. The proposed deep learning approach is strictly unsupervised
+and data-driven: it does not require manual processing or ground truth labeling of IP data. Moreover,
+our VAE approach avoids the pitfalls of IP parametrization with the empirical Cole-Cole and Debye
+decomposition models, simple power-law models, or other sophisticated mechanistic models. We
+demonstrate four applications of VAEs to model and process IP data: (1) representative synthetic
+data generation, (2) unsupervised Bayesian denoising and data uncertainty estimation, (3) quantitative
+evaluation of the signal-to-noise ratio, and (4) automated outlier detection. We also interpret
+the IP compilation's latent representation and reveal a strong correlation between its first dimension
+and the average chargeability of IP decays. Finally, we experiment with varying VAE latent space
+dimensions and demonstrate that a single real-valued scalar parameter contains sufficient information
+to encode our extensive IP data compilation. This new finding suggests that modeling time-domain
+IP data using mathematical models governed by more than one free parameter is ambiguous, whereas
+modeling only the average chargeability is justified. A pre-trained implementation of our model
+-- readily applicable to new IP data from any geolocation -- is available as open-source Python code
+for the applied geophysics community. 

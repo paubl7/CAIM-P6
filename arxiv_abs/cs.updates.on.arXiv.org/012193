@@ -1,0 +1,18 @@
+Semi-supervised learning (SSL) based on deep neural networks (DNNs) has recently been proven effective.
+However, recent work [Oliver et al., 2018] shows that the performance of SSL could degrade substantially
+when the unlabeled set has out-of-distribution examples (OODs). In this work, we first study the
+key causes about the negative impact of OOD on SSL. We found that (1) OODs close to the decision boundary
+have a larger effect on the performance of existing SSL algorithms than the OODs far away from the
+decision boundary and (2) Batch Normalization (BN), a popular module in deep networks, could degrade
+the performance of a DNN for SSL substantially when the unlabeled set contains OODs. To address these
+causes, we proposed a novel unified robust SSL approach for many existing SSL algorithms in order
+to improve their robustness against OODs. In particular, we proposed a simple modification to batch
+normalization, called weighted batch normalization, capable of improving the robustness of BN
+against OODs. We developed two efficient hyperparameter optimization algorithms that have different
+tradeoffs in computational efficiency and accuracy. The first is meta-approximation and the second
+is implicit-differentiation based approximation. Both algorithms learn to reweight the unlabeled
+samples in order to improve the robustness of SSL against OODs. Extensive experiments on both synthetic
+and real-world datasets demonstrate that our proposed approach significantly improves the robustness
+of four representative SSL algorithms against OODs, in comparison with four state-of-the-art
+robust SSL approaches. We performed an ablation study to demonstrate which components of our approach
+are most important for its success. 

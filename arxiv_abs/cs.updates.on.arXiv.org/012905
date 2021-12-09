@@ -1,0 +1,18 @@
+Where are the Earth's streams flowing right now? Inland surface waters expand with floods and contract
+with droughts, so there is no one map of our streams. Current satellite approaches are limited to
+monthly observations that map only the widest streams. These are fed by smaller tributaries that
+make up much of the dendritic surface network but whose flow is unobserved. A complete map of our daily
+waters can give us an early warning for where droughts are born: the receding tips of the flowing network.
+Mapping them over years can give us a map of impermanence of our waters, showing where to expect water,
+and where not to. To that end, we feed the latest high-res sensor data to multiple deep learning models
+in order to map these flowing networks every day, stacking the times series maps over many years.
+Specifically, i) we enhance water segmentation to $50$ cm/pixel resolution, a 60$\times$ improvement
+over previous state-of-the-art results. Our U-Net trained on 30-40cm WorldView3 images can detect
+streams as narrow as 1-3m (30-60$\times$ over SOTA). Our multi-sensor, multi-res variant, WasserNetz,
+fuses a multi-day window of 3m PlanetScope imagery with 1m LiDAR data, to detect streams 5-7m wide.
+Both U-Nets produce a water probability map at the pixel-level. ii) We integrate this water map over
+a DEM-derived synthetic valley network map to produce a snapshot of flow at the stream level. iii)
+We apply this pipeline, which we call Pix2Streams, to a 2-year daily PlanetScope time-series of
+three watersheds in the US to produce the first high-fidelity dynamic map of stream flow frequency.
+The end result is a new map that, if applied at the national scale, could fundamentally improve how
+we manage our water resources around the world. 

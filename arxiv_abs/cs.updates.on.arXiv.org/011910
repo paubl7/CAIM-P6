@@ -1,0 +1,20 @@
+Despite the interest in the complexity class MA, the randomized analog of NP, just a few natural MA-complete
+problems are known. The first problem was found by (Bravyi and Terhal, SIAM Journal of Computing
+2009); it was then followed by (Crosson, Bacon and Brown, PRE 2010) and (Bravyi, Quantum Information
+and Computation 2015). Surprisingly, two of these problems are defined using terminology from
+quantum computation, while the third is inspired by quantum computation and keeps a physical terminology.
+This prevents classical complexity theorists from studying these problems, delaying potential
+progress, e.g., on the NP vs. MA question. Here, we define two new combinatorial problems and prove
+their MA-completeness. The first problem, ACAC, gets as input a succinctly described graph, with
+some marked vertices. The problem is to decide whether there is a connected component with only unmarked
+vertices, or the graph is far from having this property. The second problem, SetCSP, generalizes
+standard constraint satisfaction problem (CSP) into constraints involving sets of strings. Technically,
+our proof that SetCSP is MA-complete is based on an observation by (Aharonov and Grilo, FOCS 2019),
+in which it was noted that a restricted case of Bravyi and Terhal's problem (namely, the uniform case)
+is already MA-complete; a simple trick allows to state this restricted case using combinatorial
+language. The fact that the first, more natural, problem of ACAC is MA-hard follows quite naturally
+from this proof, while the containment of ACAC in MA is based on the theory of random walks. We notice
+that the main result of Aharonov and Grilo carries over to the SetCSP problem in a straightforward
+way, implying that finding a gap-amplification procedure for SetCSP (as in Dinur's PCP proof) is
+equivalent to MA=NP. This provides an alternative new path towards the major problem of derandomizing
+MA. 

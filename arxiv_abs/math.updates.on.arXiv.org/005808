@@ -1,0 +1,19 @@
+The likelihood-informed subspace (LIS) method offers a viable route to reducing the dimensionality
+of high-dimensional probability distributions arisen in Bayesian inference. LIS identifies
+an intrinsic low-dimensional linear subspace where the target distribution differs the most from
+some tractable reference distribution. Such a subspace can be identified using the leading eigenvectors
+of a Gram matrix of the gradient of the log-likelihood function. Then, the original high-dimensional
+target distribution is approximated through various forms of ridge approximations of the likelihood
+function, in which the approximated likelihood only has support on the intrinsic low-dimensional
+subspace. This approximation enables the design of inference algorithms that can scale sub-linearly
+with the apparent dimensionality of the problem. Intuitively, the accuracy of the approximation,
+and hence the performance of the inference algorithms, are influenced by three factors -- the dimension
+truncation error in identifying the subspace, Monte Carlo error in estimating the Gram matrices,
+and Monte Carlo error in constructing ridge approximations. This work establishes a unified framework
+to analysis each of these three factors and their interplay. Under mild technical assumptions,
+we establish error bounds for a range of existing dimension reduction techniques based on the principle
+of LIS. Our error bounds also provide useful insights into the accuracy comparison of these methods.
+In addition, we analyze the integration of LIS with sampling methods such as Markov Chain Monte Carlo
+(MCMC) and sequential Monte Carlo (SMC). We also demonstrate our analyses on a linear inverse problem
+with Gaussian prior, which shows that all the estimates can be dimension-independent if the prior
+covariance is a trace-class operator. 

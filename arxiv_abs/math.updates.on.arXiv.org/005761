@@ -1,0 +1,19 @@
+Given an undirected measurement graph $G = ([n], E)$, the classical angular synchronization problem
+consists of recovering unknown angles $\theta_1,\dots,\theta_n$ from a collection of noisy pairwise
+measurements of the form $(\theta_i - \theta_j) \mod 2\pi$, for each $\{i,j\} \in E$. This problem
+arises in a variety of applications, including computer vision, time synchronization of distributed
+networks, and ranking from preference relationships. In this paper, we consider a generalization
+to the setting where there exist $k$ unknown groups of angles $\theta_{l,1}, \dots,\theta_{l,n}$,
+for $l=1,\dots,k$. For each $ \{i,j\} \in E$, we are given noisy pairwise measurements of the form
+$\theta_{\ell,i} - \theta_{\ell,j}$ for an unknown $\ell \in \{1,2,\ldots,k\}$. This can be thought
+of as a natural extension of the angular synchronization problem to the heterogeneous setting of
+multiple groups of angles, where the measurement graph has an unknown edge-disjoint decomposition
+$G = G_1 \cup G_2 \ldots \cup G_k$, where the $G_i$'s denote the subgraphs of edges corresponding
+to each group. We propose a probabilistic generative model for this problem, along with a spectral
+algorithm for which we provide a detailed theoretical analysis in terms of robustness against both
+sampling sparsity and noise. The theoretical findings are complemented by a comprehensive set
+of numerical experiments, showcasing the efficacy of our algorithm under various parameter regimes.
+Finally, we consider an application of bi-synchronization to the graph realization problem, and
+provide along the way an iterative graph disentangling procedure that uncovers the subgraphs $G_i$,
+$i=1,\ldots,k$ which is of independent interest, as it is shown to improve the final recovery accuracy
+across all the experiments considered. 

@@ -1,0 +1,19 @@
+In today's networked society, many real-world problems can be formalized as predicting links in
+networks, such as Facebook friendship suggestions, e-commerce recommendations, and the prediction
+of scientific collaborations in citation networks. Increasingly often, link prediction problem
+is tackled by means of network embedding methods, owing to their state-of-the-art performance.
+However, these methods lack transparency when compared to simpler baselines, and as a result their
+robustness against adversarial attacks is a possible point of concern: could one or a few small adversarial
+modifications to the network have a large impact on the link prediction performance when using a
+network embedding model? Prior research has already investigated adversarial robustness for
+network embedding models, focused on classification at the node and graph level. Robustness with
+respect to the link prediction downstream task, on the other hand, has been explored much less. This
+paper contributes to filling this gap, by studying adversarial robustness of Conditional Network
+Embedding (CNE), a state-of-the-art probabilistic network embedding model, for link prediction.
+More specifically, given CNE and a network, we measure the sensitivity of the link predictions of
+the model to small adversarial perturbations of the network, namely changes of the link status of
+a node pair. Thus, our approach allows one to identify the links and non-links in the network that
+are most vulnerable to such perturbations, for further investigation by an analyst. We analyze
+the characteristics of the most and least sensitive perturbations, and empirically confirm that
+our approach not only succeeds in identifying the most vulnerable links and non-links, but also
+that it does so in a time-efficient manner thanks to an effective approximation. 

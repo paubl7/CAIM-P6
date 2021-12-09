@@ -1,0 +1,18 @@
+Cartoon face recognition is challenging as they typically have smooth color regions and emphasized
+edges, the key to recognize cartoon faces is to precisely perceive their sparse and critical shape
+patterns. However, it is quite difficult to learn a shape-oriented representation for cartoon
+face recognition with convolutional neural networks (CNNs). To mitigate this issue, we propose
+the GraphJigsaw that constructs jigsaw puzzles at various stages in the classification network
+and solves the puzzles with the graph convolutional network (GCN) in a progressive manner. Solving
+the puzzles requires the model to spot the shape patterns of the cartoon faces as the texture information
+is quite limited. The key idea of GraphJigsaw is constructing a jigsaw puzzle by randomly shuffling
+the intermediate convolutional feature maps in the spatial dimension and exploiting the GCN to
+reason and recover the correct layout of the jigsaw fragments in a self-supervised manner. The proposed
+GraphJigsaw avoids training the classification model with the deconstructed images that would
+introduce noisy patterns and are harmful for the final classification. Specially, GraphJigsaw
+can be incorporated at various stages in a top-down manner within the classification model, which
+facilitates propagating the learned shape patterns gradually. GraphJigsaw does not rely on any
+extra manual annotation during the training process and incorporates no extra computation burden
+at inference time. Both quantitative and qualitative experimental results have verified the feasibility
+of our proposed GraphJigsaw, which consistently outperforms other face recognition or jigsaw-based
+methods on two popular cartoon face datasets with considerable improvements. 

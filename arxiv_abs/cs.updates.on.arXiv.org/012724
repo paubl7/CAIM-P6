@@ -1,0 +1,18 @@
+Editing facial images created by StyleGAN is a popular research topic with important applications.
+Through editing the latent vectors, it is possible to control the facial attributes such as smile,
+age, \textit{etc}. However, facial attributes are entangled in the latent space and this makes
+it very difficult to independently control a specific attribute without affecting the others.
+The key to developing neat semantic control is to completely disentangle the latent space and perform
+image editing in an unsupervised manner. In this paper, we present a new technique termed Structure-Texture
+Independent Architecture with Weight Decomposition and Orthogonal Regularization (STIA-WO)
+to disentangle the latent space. The GAN model, applying STIA-WO, is referred to as STGAN-WO. STGAN-WO
+performs weight decomposition by utilizing the style vector to construct a fully controllable
+weight matrix for controlling the image synthesis, and utilizes orthogonal regularization to
+ensure each entry of the style vector only controls one factor of variation. To further disentangle
+the facial attributes, STGAN-WO introduces a structure-texture independent architecture which
+utilizes two independently and identically distributed (i.i.d.) latent vectors to control the
+synthesis of the texture and structure components in a disentangled way.Unsupervised semantic
+editing is achieved by moving the latent code in the coarse layers along its orthogonal directions
+to change texture related attributes or changing the latent code in the fine layers to manipulate
+structure related ones. We present experimental results which show that our new STGAN-WO can achieve
+better attribute editing than state of the art methods (The code is available at https://github.com/max-liu-112/STGAN-WO)

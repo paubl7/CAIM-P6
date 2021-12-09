@@ -1,0 +1,19 @@
+Proximity tracing apps have been proposed as an aide in dealing with the COVID-19 crisis. Some of
+those apps leverage attenuation of Bluetooth beacons from mobile devices to build a record of proximate
+encounters between a pair of device owners. The underlying protocols are known to suffer from false
+positive and re-identification attacks. We present evidence that the attacker's difficulty in
+mounting such attacks has been overestimated. Indeed, an attacker leveraging a moderately successful
+app or SDK with Bluetooth and location access can eavesdrop and interfere with these proximity tracing
+systems at no hardware cost and perform these attacks against users who do not have this app or SDK
+installed. We describe concrete examples of actors who would be in a good position to execute such
+attacks. We further present a novel attack, which we call a biosurveillance attack, which allows
+the attacker to monitor the exposure risk of a smartphone user who installs their app or SDK but who
+does not use any contact tracing system and may falsely believe that they have opted out of the system.
+Through traffic auditing with an instrumented testbed, we characterize precisely the behaviour
+of one such SDK that we found in a handful of apps---but installed on more than one hundred million
+mobile devices. Its behaviour is functionally indistinguishable from a re-identification or
+biosurveillance attack and capable of executing a false positive attack with minimal effort. We
+also discuss how easily an attacker could acquire a position conducive to such attacks, by leveraging
+the lax logic for granting permissions to apps in the Android framework: any app with some geolocation
+permission could acquire the necessary Bluetooth permission through an upgrade, without any additional
+user prompt. Finally we discuss motives for conducting such attacks. 

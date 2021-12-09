@@ -1,0 +1,19 @@
+Age of information (AoI), a notion that measures the information freshness, is an essential performance
+measure for time-critical applications in Internet of Things (IoT). With the surge of computing
+resources at the IoT devices, it is possible to preprocess the information packets that contain
+the status update before sending them to the destination so as to alleviate the transmission burden.
+However, the additional time and energy expenditure induced by computing also make the optimal
+updating a non-trivial problem. In this paper, we consider a time-critical IoT system, where the
+IoT device is capable of preprocessing the status update before the transmission. Particularly,
+we aim to jointly design the preprocessing and transmission so that the weighted sum of the average
+AoI of the destination and the energy consumption of the IoT device is minimized. Due to the heterogeneity
+in transmission and computation capacities, the durations of distinct actions of the IoT device
+are non-uniform. Therefore, we formulate the status updating problem as an infinite horizon average
+cost semi-Markov decision process (SMDP) and then transform it into a discrete-time Markov decision
+process. We demonstrate that the optimal policy is of threshold type with respect to the AoI. Equipped
+with this, a structure-aware relative policy iteration algorithm is proposed to obtain the optimal
+policy of the SMDP. Our analysis shows that preprocessing is more beneficial in regimes of high AoIs,
+given it can reduce the time required for updates. We further prove the switching structure of the
+optimal policy in a special scenario, where the status updates are transmitted over a reliable channel,
+and derive the optimal threshold. Finally, simulation results demonstrate the efficacy of preprocessing
+and show that the proposed policy outperforms two baseline policies. 

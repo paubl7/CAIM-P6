@@ -1,0 +1,18 @@
+The rapid growth of Decentralized Finance (DeFi) boosts the Ethereum ecosystem. At the same time,
+attacks towards DeFi applications (apps) are increasing. However, to the best of our knowledge,
+existing smart contract vulnerability detection tools cannot be directly used to detect DeFi attacks.
+That's because they lack the capability to recover and understand high-level DeFi semantics, e.g.,
+a user trades a token pair X and Y in a Decentralized EXchange (DEX). In this work, we focus on the detection
+of two types of new attacks on DeFi apps, including direct and indirect price manipulation attacks.
+The former one means that an attacker directly manipulates the token price in DEX by performing an
+unwanted trade in the same DEX by attacking the vulnerable DeFi app. The latter one means that an attacker
+indirectly manipulates the token price of the vulnerable DeFi app (e.g., a lending app). To this
+end, we propose a platform-independent way to recover high-level DeFi semantics by first constructing
+the cash flow tree from raw Ethereum transactions and then lifting the low-level semantics to high-level
+ones, including token trade, liquidity mining, and liquidity cancel. Finally, we detect price
+manipulation attacks using the patterns expressed with the recovered DeFi semantics. We have implemented
+a prototype named \tool{} and applied it to more than 350 million transactions. It successfully
+detected 432 real-world attacks in the wild. We confirm that they belong to four known security incidents
+and five zero-day ones. We reported our findings. Two CVEs have been assigned. We further performed
+an attack analysis to reveal the root cause of the vulnerability, the attack footprint, and the impact
+of the attack. Our work urges the need to secure the DeFi ecosystem. 

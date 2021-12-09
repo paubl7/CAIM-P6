@@ -1,0 +1,20 @@
+Calibration plays an important role in ensuring device accuracy within safety-critical IoT deployments.
+The process of calibration involves a number of parties which must collaborate to support calibration.
+Calibration checks often precede safety-critical operations such as preparing a robot for surgery,
+requiring inter-party interaction to complete checks. At the same time, the parties involved in
+a calibration ecosystem may share an adversarial relationship with a subset of other parties. For
+instance, a surgical robot manufacturer may wish to hide the identities of third-parties from the
+operator (hospital), in order to maintain confidentiality of business relationships around its
+robot products. Thus, information flows that reveal who-calibrates-for-whom need to be managed
+to ensure confidentiality. Similarly, information about what-is-being-calibrated and how-often-it-is-calibrated
+may compromise operational confidentiality. For example, calibration-verification of connected
+medical devices may reveal the timing of surgical procedures and compromise PII when combined with
+other meta information. We show that the challenge of managing information flows between the parties
+involved in calibration cannot be met by any of the classical access control models, as any one of
+them or a simple conjunction of a subset such as the lattice model fails to meet the desired access
+control requirements. We demonstrate that a new unified access control model that combines BIBA,
+BLP, and Chinese Walls holds rich promise. We study the case for unification, system properties,
+and develop an XACML-based authorisation framework which enforces the unified model. Upon evaluation
+against a baseline simple conjunction of the three models individually, our unified model outperforms
+this, demonstrating it is capable of solving the novel access control challenges thrown up by digital-calibration
+supply chains. 

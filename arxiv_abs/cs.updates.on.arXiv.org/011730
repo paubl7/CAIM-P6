@@ -1,0 +1,19 @@
+Attorneys and others have a strong interest in having a digital library with suitable services (e.g.,
+summarizing, searching, and browsing) to help them work with large corpora of legal depositions.
+Their needs often involve understanding the semantics of such documents. That depends in part on
+the role of the deponent, e.g., plaintiff, defendant, law enforcement personnel, expert, etc.
+In the case of tort litigation associated with property and casualty insurance claims, such as relating
+to an injury, it is important to know not only about liability, but also about events, accidents,
+physical conditions, and treatments. We hypothesize that a legal deposition consists of various
+aspects that are discussed as part of the deponent testimony. Accordingly, we developed an ontology
+of aspects in a legal deposition for accident and injury cases. Using that, we have developed a classifier
+that can identify portions of text for each of the aspects of interest. Doing so was complicated by
+the peculiarities of this genre, e.g., that deposition transcripts generally consist of data in
+the form of question-answer (QA) pairs. Accordingly, our automated system starts with pre-processing,
+and then transforms the QA pairs into a canonical form made up of declarative sentences. Classifying
+the declarative sentences that are generated, according to the aspect, can then help with downstream
+tasks such as summarization, segmentation, question-answering, and information retrieval.
+Our methods have achieved a classification F1 score of 0.83. Having the aspects classified with
+a good accuracy will help in choosing QA pairs that can be used as candidate summary sentences, and
+to generate an informative summary for legal professionals or insurance claim agents. Our methodology
+could be extended to legal depositions of other kinds, and to aid services like searching. 

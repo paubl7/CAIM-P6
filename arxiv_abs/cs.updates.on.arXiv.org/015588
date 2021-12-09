@@ -1,0 +1,20 @@
+We introduce Air Learning, an open-source simulator, and a gym environment for deep reinforcement
+learning research on resource-constrained aerial robots. Equipped with domain randomization,
+Air Learning exposes a UAV agent to a diverse set of challenging scenarios. We seed the toolset with
+point-to-point obstacle avoidance tasks in three different environments and Deep Q Networks (DQN)
+and Proximal Policy Optimization (PPO) trainers. Air Learning assesses the policies' performance
+under various quality-of-flight (QoF) metrics, such as the energy consumed, endurance, and the
+average trajectory length, on resource-constrained embedded platforms like a Raspberry Pi. We
+find that the trajectories on an embedded Ras-Pi are vastly different from those predicted on a high-end
+desktop system, resulting in up to 40% longer trajectories in one of the environments. To understand
+the source of such discrepancies, we use Air Learning to artificially degrade high-end desktop
+performance to mimic what happens on a low-end embedded system. We then propose a mitigation technique
+that uses the hardware-in-the-loop to determine the latency distribution of running the policy
+on the target platform (onboard compute on the aerial robot). A randomly sampled latency from the
+latency distribution is then added as an artificial delay within the training loop. Training the
+policy with artificial delays allows us to minimize the hardware gap (discrepancy in the flight
+time metric reduced from 37.73% to 0.5%). Thus, Air Learning with hardware-in-the-loop characterizes
+those differences and exposes how the onboard compute's choice affects the aerial robot's performance.
+We also conduct reliability studies to assess the effect of sensor failures on the learned policies.
+All put together, Air Learning enables a broad class of deep RL research on UAVs. The source code is
+available at:this http URL 

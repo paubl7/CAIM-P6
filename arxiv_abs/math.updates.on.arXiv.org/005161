@@ -1,0 +1,18 @@
+For providing quick and accurate search results, a search engine maintains a local snapshot of the
+entire web. And, to keep this local cache fresh, it employs a crawler for tracking changes across
+various web pages. It would have been ideal if the crawler managed to update the local snapshot as
+soon as a page changed on the web. However, finite bandwidth availability and server restrictions
+mean that there is a bound on how frequently the different pages can be crawled. This then brings forth
+the following optimisation problem: maximise the freshness of the local cache subject to the crawling
+frequency being within the prescribed bounds. Recently, tractable algorithms have been proposed
+to solve this optimisation problem under different cost criteria. However, these assume the knowledge
+of exact page change rates, which is unrealistic in practice. We address this issue here. Specifically,
+we provide three novel schemes for online estimation of page change rates. All these schemes only
+need partial information about the page change process, i.e., they only need to know if the page has
+changed or not since the last crawl instance. Our first scheme is based on the law of large numbers,
+the second on the theory of stochastic approximation, while the third is an extension of the second
+and involves an additional momentum term. For all of these schemes, we prove convergence and, also,
+provide their convergence rates. As far as we know, the results concerning the third estimator is
+quite novel. Specifically, this is the first convergence type result for a stochastic approximation
+algorithm with momentum. Finally, we provide some numerical experiments (on real as well as synthetic
+data) to compare the performance of our proposed estimators with the existing ones (e.g., MLE).

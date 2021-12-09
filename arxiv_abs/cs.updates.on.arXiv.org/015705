@@ -1,0 +1,19 @@
+Machine learning models are typically made available to potential client users via inference APIs.
+Model extraction attacks occur when a malicious client uses information gleaned from queries to
+the inference API of a victim model $F_V$ to build a surrogate model $F_A$ that has comparable functionality.
+Recent research has shown successful model extraction attacks against image classification,
+and NLP models. In this paper, we show the first model extraction attack against real-world generative
+adversarial network (GAN) image translation models. We present a framework for conducting model
+extraction attacks against image translation models, and show that the adversary can successfully
+extract functional surrogate models. The adversary is not required to know $F_V$'s architecture
+or any other information about it beyond its intended image translation task, and queries $F_V$'s
+inference interface using data drawn from the same domain as the training data for $F_V$. We evaluate
+the effectiveness of our attacks using three different instances of two popular categories of image
+translation: (1) Selfie-to-Anime and (2) Monet-to-Photo (image style transfer), and (3) Super-Resolution
+(super resolution). Using standard performance metrics for GANs, we show that our attacks are effective
+in each of the three cases -- the differences between $F_V$ and $F_A$, compared to the target are in
+the following ranges: Selfie-to-Anime: FID $13.36-68.66$, Monet-to-Photo: FID $3.57-4.40$,
+and Super-Resolution: SSIM: $0.06-0.08$ and PSNR: $1.43-4.46$. Furthermore, we conducted a large
+scale (125 participants) user study on Selfie-to-Anime and Monet-to-Photo to show that human perception
+of the images produced by the victim and surrogate models can be considered equivalent, within an
+equivalence bound of Cohen's $d=0.3$. 

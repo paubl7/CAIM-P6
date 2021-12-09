@@ -1,0 +1,18 @@
+A decent number of lower bounds for non-elitist population-based evolutionary algorithms has
+been shown by now. Most of them are technically demanding due to the (hard to avoid) use of negative
+drift theorems -- general results which translate an expected progress away from the target into
+a high hitting time. We propose a simple negative drift theorem for multiplicative drift scenarios
+and show that it can simplify existing analyses. We discuss in more detail Lehre's (PPSN 2010) \emph{negative
+drift in populations} method, one of the most general tools to prove lower bounds on the runtime of
+non-elitist mutation-based evolutionary algorithms for discrete search spaces. Together with
+other arguments, we obtain an alternative and simpler proof, which also strengthens and simplifies
+this method. In particular, now only three of the five technical conditions of the previous result
+have to be verified. The lower bounds we obtain are explicit instead of only asymptotic. This allows
+to compute concrete lower bounds for concrete algorithms, but also enables us to show that super-polynomial
+runtimes appear already when the reproduction rate is only a $(1 - \omega(n^{-1/2}))$ factor below
+the threshold. For the special case of algorithms using standard bit mutation with a random mutation
+rate (called uniform mixing in the language of hyper-heuristics), we prove the result stated by
+Dang and Lehre (PPSN 2016) and extend it to mutation rates other than $\Theta(1/n)$, which includes
+the heavy-tailed mutation operator proposed by Doerr, Le, Makhmara, and Nguyen (GECCO 2017). We
+finally apply our method and a novel domination argument to show an exponential lower bound for the
+runtime of the mutation-only simple genetic algorithm on \onemax for arbitrary population size.

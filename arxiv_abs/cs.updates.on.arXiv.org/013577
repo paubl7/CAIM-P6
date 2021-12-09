@@ -1,0 +1,19 @@
+Sequential experiments are often characterized by an exploration-exploitation tradeoff that
+is captured by the multi-armed bandit (MAB) framework. This framework has been studied and applied,
+typically when at each time period feedback is received only on the action that was selected at that
+period. However, in many practical settings additional data may become available between decision
+epochs. We introduce a generalized MAB formulation, which considers a broad class of distributions
+that are informative about mean rewards, and allows observations from these distributions to arrive
+according to an arbitrary and a priori unknown arrival process. When it is known how to map auxiliary
+data to reward estimates, by obtaining matching lower and upper bounds we characterize a spectrum
+of minimax complexities for this class of problems as a function of the information arrival process,
+which captures how salient characteristics of this process impact achievable performance. In
+terms of achieving optimal performance, we establish that upper confidence bound and posterior
+sampling policies possess natural robustness with respect to the information arrival process
+without any adjustments, which uncovers a novel property of these popular policies and further
+lends credence to their appeal. When the mappings connecting auxiliary data and rewards are a priori
+unknown, we characterize necessary and sufficient conditions under which auxiliary information
+allows performance improvement. We devise a new policy that is based on two different upper confidence
+bounds (one that accounts for auxiliary observation and one that does not) and establish the near-optimality
+of this policy. We use data from a large media site to analyze the value that may be captured in practice
+by leveraging auxiliary data for designing content recommendations. 

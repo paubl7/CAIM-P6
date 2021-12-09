@@ -1,0 +1,18 @@
+Alchemical binding free energy (BFE) calculations offer an efficient and thermodynamically rigorous
+approach to in silico binding affinity predictions. As a result of decades of methodological improvements
+and recent advances in computer technology, alchemical BFE calculations are now widely used in
+drug discovery research. They help guide the prioritization of candidate drug molecules by predicting
+their binding affinities for a biomolecular target of interest (and potentially selectivity against
+undesirable anti-targets). Statistical variance associated with such calculations, however,
+may undermine the reliability of their predictions, introducing uncertainty both in ranking candidate
+molecules and in benchmarking their predictive accuracy. Here, we present a computational method
+that substantially improves the statistical precision in BFE calculations for a set of ligands
+binding to a common receptor by dynamically allocating computational resources to different BFE
+calculations according to an optimality objective established in a previous work from our group
+and extended in this work. Our method, termed Network Binding Free Energy (NetBFE), performs adaptive
+binding free energy calculations in iterations, re-optimizing the allocations in each iteration
+based on the statistical variances estimated from previous iterations. Using examples of NetBFE
+calculations for protein-binding of congeneric ligand series, we demonstrate that NetBFE approaches
+the optimal allocation in a small number (<= 5) of iterations and that NetBFE reduces the statistical
+variance in the binding free energy estimates by approximately a factor of two when compared to a
+previously published and widely used allocation method at the same total computational cost. 

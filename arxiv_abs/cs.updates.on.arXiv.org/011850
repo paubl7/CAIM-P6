@@ -1,0 +1,20 @@
+Crystallographic symmetry classifications from real-world images with periodicities in two
+dimensions (2D) are of interest to crystallographers and practitioners of computer vision studies
+alike. Currently, these classifications are typically made by both communities in a subjective
+manner that relies on arbitrary thresholds for judgments, and are reported under the pretense of
+being definitive, which is impossible. Moreover, the computer vision community tends to use direct
+space methods to make such classifications instead of more powerful and computationally efficient
+Fourier space methods. This is because the proper functioning of those methods requires more periodic
+repeats of a unit cell motif than are commonly present in images analyzed by the computer vision community.
+We demonstrate a novel approach to plane symmetry group classifications that is enabled by Kenichi
+Kanatani's Geometric Akaike Information Criterion and associated Geometric Akaike weights.
+Our approach leverages the advantages of working in Fourier space, is well suited for handling the
+hierarchic nature of crystallographic symmetries, and yields probabilistic results that are
+generalized noise level dependent. The latter feature means crystallographic symmetry classifications
+can be updated when less noisy image data and more accurate processing algorithms become available.
+We demonstrate the ability of our approach to objectively estimate the plane symmetry and pseudosymmetries
+of sets of synthetic 2D-periodic images with varying amounts of red-green-blue and spread noise.
+Additionally, we suggest a simple solution to the problem of too few periodic repeats in an input
+image for practical application of Fourier space methods. In doing so, we effectively solve the
+decades-old and heretofore intractable problem from computer vision of symmetry detection and
+classification from images in the presence of noise. 

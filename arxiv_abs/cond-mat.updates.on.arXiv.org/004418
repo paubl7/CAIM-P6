@@ -1,0 +1,18 @@
+We propose a deep neural network (DNN) as a fast surrogate model for local stress (and in principle
+strain) calculation in inhomogeneous non-linear material systems. We show that the DNN predicts
+the local stresses with about 3.8% mean absolute percentage error (MAPE) for the case of heterogeneous
+elastic media and a mechanical phase contrast of up to factor of 1.5 among neighboring domains, while
+performing 103 times faster than spectral solvers. The speed-up arises from the fact that after
+training, the DNN predicts the stress without any iterations, as opposed to the iterative nature
+of standard non-linear solvers. The new DNN surrogate model also proves suited for general purposes:
+it is capable to reproduce the stress distribution in geometries topologically far different from
+those used for training, implying effective learning of scenarios described by the underlying
+partial differential equations. Even in the case of elasto-plastic materials with up to 2 times
+mechanical contrast in elastic stiffness and 4 times in yield stress among adjacent regions, where
+conventional solvers typically require a substantial number of iterations to arrive at stress
+predictions, the trained model simulates the micromechanics with a MAPE of 6.4% in one single forward
+evaluation step of the network, i.e. without any iterative calculations even for the case of such
+a non-linear problem. The results reveal a completely new and highly efficient approach to solve
+non-linear mechanical boundary value problems and/or augment existing solution methods in corresponding
+hybrid variants, with an acceleration up to factor of 8300 for heterogeneous elastic-plastic materials
+in comparison to the currently fastest available solvers. 

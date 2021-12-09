@@ -1,0 +1,18 @@
+In this paper, we address the text-to-audio grounding issue, namely, grounding the segments of
+the sound event described by a natural language query in the untrimmed audio. This is a newly proposed
+but challenging audio-language task, since it requires to not only precisely localize all the on-
+and off-sets of the desired segments in the audio, but to perform comprehensive acoustic and linguistic
+understandings and reason the multimodal interactions between the audio and query. To tackle those
+problems, the existing method treats the query holistically as a single unit by a global query representation,
+which fails to highlight the keywords that contain rich semantics. Besides, this method has not
+fully exploited interactions between the query and audio. Moreover, since the audio and queries
+are arbitrary and variable in length, many meaningless parts of them are not filtered out in this
+method, which hinders the grounding of the desired segments. To this end, we propose a novel Query
+Graph with Cross-gating Attention (QGCA) model, which models the comprehensive relations between
+the words in query through a novel query graph. Besides, to capture the fine-grained interactions
+between audio and query, a cross-modal attention module that assigns higher weights to the keywords
+is introduced to generate the snippet-specific query representations. Finally, we also design
+a cross-gating module to emphasize the crucial parts as well as weaken the irrelevant ones in the
+audio and query. We extensively evaluate the proposed QGCA model on the public Audiogrounding dataset
+with significant improvements over several state-of-the-art methods. Moreover, further ablation
+study shows the consistent effectiveness of different modules in the proposed QGCA model. 

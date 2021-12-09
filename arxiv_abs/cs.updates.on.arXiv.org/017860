@@ -1,0 +1,20 @@
+Over the last few decades, Gyro-Free IMUs have been extensively researched to overcome the limitations
+of gyroscopes. This research presents a Non-coplanar Accelerometer Array (NAA) for estimating
+angular velocity with non-specific geometric arrangement of four or more triaxial accelerometers
+with non-coplanarity constraint. The presented proof of non-coplanar spacial arrangement also
+provides insights into propagation of the sensor noise and construction of the noise covariance
+matrices. The system noise depends on the singular values of the relative displacement matrix (between
+the sensors). A dynamical system model with uncorrelated process and measurement noise is proposed
+where the accelerometer readings are used simultaneously as process and measurement inputs. The
+angular velocity is estimated using an EKF that discretizes and linearizes the continuous-discrete
+time dynamical system. The simulations are performed on a Cube-NAA (Cu-NAA) comprising four accelerometers
+placed at different vertices of a cube. They analyze the estimation error for static and dynamic
+movement as the distance between the accelerometers is varied. Here, the system noise is observed
+to decrease inversely with the length of the cube edge as the arrangement is kept identical. Consequently,
+the simulation results indicate asymptotic decrease in the standard error of estimation with edge
+length. The experiments are conducted on a Cu-NAA with five reflective optical markers. The reflective
+markers are visually tracked using VICON to construct the ground truth. This unique experimental
+setup, apart from providing three degrees of rotational freedom of movement, also allows for three
+degrees of spacial translation (linear acceleration of the Cu-NAA in space). The simulation and
+experimental results indicate better performance of the proposed EKF as compared to one with correlated
+process and measurement noises. 

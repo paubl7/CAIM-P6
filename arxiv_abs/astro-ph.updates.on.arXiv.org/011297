@@ -1,0 +1,18 @@
+The estimation of spectroscopic and photometric redshifts (spec-z and photo-z) is crucial for
+future cosmological surveys. It can directly affect several powerful measurements of the Universe,
+e.g. weak lensing and galaxy clustering. In this work, we explore the accuracies of spec-z and photo-z
+that can be obtained in the China Space Station Optical Surveys (CSS-OS), which is a next-generation
+space survey, using neural networks. The 1-dimensional Convolutional Neural Networks (1-d CNN)
+and Multi-Layer Perceptron (MLP, one of the simplest forms of Artificial Neural Network) are employed
+to derive the spec-z and photo-z, respectively. The mock spectral and photometric data used for
+training and testing the networks are generated based on the COSMOS catalog. The networks have been
+trained with noisy data by creating Gaussian random realizations to reduce the statistical effects,
+resulting in similar redshift accuracy for both high-SNR (signal to noise ratio) and low-SNR data.
+The probability distribution functions (PDFs) of the predicted redshifts are also derived via
+Gaussian random realizations of the testing data, and then the best-fit redshifts and 1-sigma errors
+also can be obtained. We find that our networks can provide excellent redshift estimates with accuracies
+~0.001 and 0.01 on spec-z and photo-z, respectively. Compared to existing photo-z codes, our MLP
+has similar accuracy but is more efficient in the training process. The fractions of catastrophic
+redshifts or outliers can be dramatically suppressed comparing to the ordinary template-fitting
+method. This indicates that the neural network method is feasible and powerful for spec-z and photo-z
+estimations in future cosmological surveys. 

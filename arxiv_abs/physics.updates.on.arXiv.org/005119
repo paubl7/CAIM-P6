@@ -1,0 +1,18 @@
+We present the extension of the Tinker-HP package (Lagard\`ere et al., Chem. Sci., 2018,9, 956-972)
+to the use of Graphics Processing Unit (GPU) cards to accelerate molecular dynamics simulations
+using polarizable many-body force fields. The new high-performance module allows for an efficient
+use of single- and multi-GPU architectures ranging from research laboratories to modern pre-exascale
+supercomputer centers. After detailing an analysis of our general scalable strategy that relies
+on OpenACC and CUDA, we discuss the various capabilities of the package. Among them, the multi-precision
+possibilities of the code are discussed. If an efficient double precision implementation is provided
+to preserve the possibility of fast reference computations, we show that a lower precision arithmetic
+is preferred providing a similar accuracy for molecular dynamics while exhibiting superior performances.
+As Tinker-HP is mainly dedicated to accelerate simulations using new generation point dipole polarizable
+force field, we focus our study on the implementation of the AMOEBA model and provide illustrative
+benchmarks of the code for single- and multi-cards simulations on large biosystems encompassing
+up to millions of atoms.The new code strongly reduces time to solution and offers the best performances
+ever obtained using the AMOEBA polarizable force field. Perspectives toward the strong-scaling
+performance of our multi-node massive parallelization strategy, unsupervised adaptive sampling
+and large scale applicability of the Tinker-HP code in biophysics are discussed. The present software
+has been released in phase advance on GitHub in link with the High Performance Computing community
+COVID-19 research efforts and is free for Academics (see https://github.com/TinkerTools/tinker-hp).

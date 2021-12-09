@@ -1,0 +1,20 @@
+Outcomes with a natural order, such as quality of life scores or movie ratings, commonly occur in
+prediction tasks. The available input data are often a mixture of complex inputs like images and
+tabular predictors. Deep Learning (DL) methods have shown outstanding performances on perceptual
+tasks. Yet, most DL applications treat ordered outcomes as unordered classes and lack interpretability
+of individual predictors. In contrast, traditional ordinal regression models are specific for
+ordered outcomes and enable to interpret predictor effects but are limited to tabular input data.
+Here, we present the highly modular class of ordinal neural network transformation models (ONTRAMs)
+which can include both tabular and complex data using multiple neural networks. All neural networks
+are jointly trained to optimize the likelihood, which is parametrized to take the outcome's natural
+order into account. We recapitulate statistical ordinal regression models and discuss how they
+can be understood as transformation models. Transformation models use a parametric transformation
+function and a simple distribution, the former of which determines the flexibility and interpretability
+of the individual model components. We demonstrate how to set up interpretable ONTRAMs with tabular
+and/or image data. We show that the most flexible ONTRAMs achieve on-par performance with existing
+DL approaches while outperforming them in training speed. We highlight that ONTRAMs with image
+and tabular predictors yield correct effect estimates while keeping the high prediction performance
+of DL methods. We showcase how to interpret individual components of ONTRAMs and discuss the case
+where the included tabular predictors are correlated with the image data. In this work, we demonstrate
+how to join the benefits of DL and statistical regression methods to create efficient and interpretable
+models for ordinal outcomes. 

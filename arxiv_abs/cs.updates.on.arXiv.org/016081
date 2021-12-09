@@ -1,0 +1,19 @@
+APR techniques can be extremely time consuming since (1) a large number of patches can be generated
+for a given bug, and (2) each patch needs to be executed on the original tests to ensure its correctness.
+In the literature, various techniques (e.g., based on learning, mining, and constraint solving)
+have been proposed/studied to reduce the number of patches. However, there is limited study on the
+impact of test selection for each patch (e.g., only the tests affected by the patch need to be executed
+as the other tests would keep the same outcomes and can be skipped), and few APR systems actually apply
+test selection. Therefore, this paper conducts the first extensive study to investigate the impact
+of Regression Test Selection (RTS) on APR. More specifically, we implemented widely-used RTS techniques
+at different levels for 12 state-of-the-art APR systems with over 2M patches. Our study reveals
+various practical guidelines for future APR, including: (1) the number of patches widely used for
+measuring APR efficiency can incur skewed conclusions, and the use of inconsistent RTS configurations
+can further skew the conclusion; (2) all studied RTS techniques can substantially improve APR efficiency
+and should be considered in future APR work; (3) method- and statement-level RTS outperform class-level
+RTS substantially, and should be preferred; (4) RTS techniques can substantially outperform state-of-the-art
+test prioritization techniques for APR, and combining them can further improve APR efficiency;
+and (5) traditional regression test prioritization widely studied in regression testing performs
+even better than APR-specific test prioritization when combined with most RTS techniques. Furthermore,
+we also present the detailed impact of different patch categories and patch validation strategies
+on our findings. 

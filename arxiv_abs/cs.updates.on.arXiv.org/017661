@@ -1,0 +1,19 @@
+We take a unifying approach to single selection optimal stopping problems with random arrival order
+and independent sampling of items. In the problem we consider, a decision maker (DM) initially gets
+to sample each of $N$ items independently with probability $p$, and can observe the relative rankings
+of these sampled items. Then, the DM faces the remaining items in an online fashion, observing the
+relative rankings of all revealed items. While scanning the sequence the DM makes irrevocable stop/continue
+decisions and her reward for stopping the sequence facing the item with rank $i$ is $Y_i$. The goal
+of the DM is to maximize her reward. We start by studying the case in which the values $Y_i$ are known
+to the DM, and then move to the case in which these values are adversarial. For the former case, we write
+the natural linear program that captures the performance of an algorithm, and take its continuous
+limit. We prove a structural result about this continuous limit, which allows us to reduce the problem
+to a relatively simple real optimization problem. We establish that the optimal algorithm is given
+by a sequence of thresholds $t_1\le t_2\le\cdots$ such that the DM should stop if seeing an item with
+current ranking $i$ after time $t_i$. Additionally we are able to recover several classic results
+in the area such as those for secretary problem and the minimum ranking problem. For the adversarial
+case, we obtain a similar linear program with an additional stochastic dominance constraint. Using
+the same machinery we are able to pin down the optimal competitive ratios for all values of $p$. Notably,
+we prove that as $p$ approaches 1, our guarantee converges linearly to 0.745, matching that of the
+i.i.d.~prophet inequality. Also interesting is the case $p=1/2$, where our bound evaluates to
+$0.671$, which improves upon the state of the art. 

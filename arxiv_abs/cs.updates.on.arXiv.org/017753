@@ -1,0 +1,19 @@
+The work presented in this paper is to propose a reliable high-quality system of Convolutional Neural
+Network (CNN) for brain tumor segmentation with a low computation requirement. The system consists
+of a CNN for the main processing for the segmentation, a pre-CNN block for data reduction and post-CNN
+refinement block. The unique CNN consists of 7 convolution layers involving only 108 kernels and
+20308 trainable parameters. It is custom-designed, following the proposed paradigm of ASCNN (application
+specific CNN), to perform mono-modality and cross-modality feature extraction, tumor localization
+and pixel classification. Each layer fits the task assigned to it, by means of (i) appropriate normalization
+applied to its input data, (ii) correct convolution modes for the assigned task, and (iii) suitable
+nonlinear transformation to optimize the convolution results. In this specific design context,
+the number of kernels in each of the 7 layers is made to be just-sufficient for its task, instead of
+exponentially growing over the layers, to increase information density and to reduce randomness
+in the processing. The proposed activation function Full-ReLU helps to halve the number of kernels
+in convolution layers of high-pass filtering without degrading processing quality. A large number
+of experiments with BRATS2018 dataset have been conducted to measure the processing quality and
+reproducibility of the proposed system. The results demonstrate that the system reproduces reliably
+almost the same output to the same input after retraining. The mean dice scores for enhancing tumor,
+whole tumor and tumor core are 77.2%, 89.2% and 76.3%, respectively. The simple structure and reliable
+high processing quality of the proposed system will facilitate its implementation and medical
+applications. 

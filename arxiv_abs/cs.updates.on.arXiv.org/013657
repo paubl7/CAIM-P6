@@ -1,0 +1,20 @@
+Mixed Integer Programming (MIP) solvers rely on an array of sophisticated heuristics developed
+with decades of research to solve large-scale MIP instances encountered in practice. Machine learning
+offers to automatically construct better heuristics from data by exploiting shared structure
+among instances in the data. This paper applies learning to the two key sub-tasks of a MIP solver,
+generating a high-quality joint variable assignment, and bounding the gap in objective value between
+that assignment and an optimal one. Our approach constructs two corresponding neural network-based
+components, Neural Diving and Neural Branching, to use in a base MIP solver such as SCIP. Neural Diving
+learns a deep neural network to generate multiple partial assignments for its integer variables,
+and the resulting smaller MIPs for un-assigned variables are solved with SCIP to construct high
+quality joint assignments. Neural Branching learns a deep neural network to make variable selection
+decisions in branch-and-bound to bound the objective value gap with a small tree. This is done by
+imitating a new variant of Full Strong Branching we propose that scales to large instances using
+GPUs. We evaluate our approach on six diverse real-world datasets, including two Google production
+datasets and MIPLIB, by training separate neural networks on each. Most instances in all the datasets
+combined have $10^3-10^6$ variables and constraints after presolve, which is significantly larger
+than previous learning approaches. Comparing solvers with respect to primal-dual gap averaged
+over a held-out set of instances, the learning-augmented SCIP is 2x to 10x better on all datasets
+except one on which it is $10^5$x better, at large time limits. To the best of our knowledge, ours is
+the first learning approach to demonstrate such large improvements over SCIP on both large-scale
+real-world application datasets and MIPLIB. 

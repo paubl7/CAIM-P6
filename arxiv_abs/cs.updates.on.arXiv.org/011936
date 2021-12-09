@@ -1,0 +1,20 @@
+This paper proposes a new approach to sales forecasting for new products with long lead time but short
+product life cycle. These SKUs are usually sold for one season only, without any replenishments.
+An exponential factorization machine (EFM) sales forecast model is developed to solve this problem
+which not only considers SKU attributes, but also pairwise interactions. The EFM model is significantly
+different from the original Factorization Machines (FM) from two-fold: (1) the attribute-level
+formulation for explanatory variables and (2) exponential formulation for the positive response
+variable. The attribute-level formation excludes infeasible intra-attribute interactions
+and results in more efficient feature engineering comparing with the conventional one-hot encoding,
+while the exponential formulation is demonstrated more effective than the log-transformation
+for the positive but not skewed distributed responses. In order to estimate the parameters, percentage
+error squares (PES) and error squares (ES) are minimized by a proposed adaptive batch gradient descent
+method over the training set. Real-world data provided by a footwear retailer in Singapore is used
+for testing the proposed approach. The forecasting performance in terms of both mean absolute percentage
+error (MAPE) and mean absolute error (MAE) compares favourably with not only off-the-shelf models
+but also results reported by extant sales and demand forecasting studies. The effectiveness of
+the proposed approach is also demonstrated by two external public datasets. Moreover, we prove
+the theoretical relationships between PES and ES minimization, and present an important property
+of the PES minimization for regression models; that it trains models to underestimate data. This
+property fits the situation of sales forecasting where unit-holding cost is much greater than the
+unit-shortage cost. 

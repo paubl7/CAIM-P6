@@ -1,0 +1,19 @@
+In this work, we study a generalization of hidden subspace states to hidden coset states (first introduced
+by Aaronson and Christiano [STOC '12]). This notion was considered independently by Vidick and
+Zhang [Eurocrypt '21], in the context of proofs of quantum knowledge from quantum money schemes.
+We explore unclonable properties of coset states and several applications: - We show that assuming
+indistinguishability obfuscation (iO), hidden coset states possess a certain direct product
+hardness property, which immediately implies a tokenized signature scheme in the plain model.
+Previously, it was known only relative to an oracle, from a work of Ben-David and Sattath [QCrypt
+'17]. - Combining a tokenized signature scheme with extractable witness encryption, we give a construction
+of an unclonable decryption scheme in the plain model. The latter primitive was recently proposed
+by Georgiou and Zhandry [ePrint '20], who gave a construction relative to a classical oracle. - We
+conjecture that coset states satisfy a certain natural (information-theoretic) monogamy-of-entanglement
+property. Assuming this conjecture is true, we remove the requirement for extractable witness
+encryption in our unclonable decryption construction, by relying instead on compute-and-compare
+obfuscation for the class of unpredictable distributions. - Finally, we give a construction of
+a copy-protection scheme for pseudorandom functions (PRFs) in the plain model. Our scheme is secure
+either assuming iO, OWF, and extractable witness encryption, or assuming iO, OWF, compute-and-compare
+obfuscation for the class of unpredictable distributions, and the conjectured monogamy property
+mentioned above. This is the first example of a copy-protection scheme with provable security in
+the plain model for a class of functions that is not evasive. 

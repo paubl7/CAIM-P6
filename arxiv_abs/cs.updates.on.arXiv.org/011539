@@ -1,0 +1,19 @@
+Computer-aided diagnosis (CAD) has long become an integral part of radiological management of
+breast disease, facilitating a number of important clinical applications, including quantitative
+assessment of breast density and early detection of malignancies based on X-ray mammography. Common
+to such applications is the need to automatically discriminate between breast tissue and adjacent
+anatomy, with the latter being predominantly represented by pectoralis major (or pectoral muscle).
+Especially in the case of mammograms acquired in the mediolateral oblique (MLO) view, the muscle
+is easily confusable with some elements of breast anatomy due to their morphological and photometric
+similarity. As a result, the problem of automatic detection and segmentation of pectoral muscle
+in MLO mammograms remains a challenging task, innovative approaches to which are still required
+and constantly searched for. To address this problem, the present paper introduces a two-step segmentation
+strategy based on a combined use of data-driven prediction (deep learning) and graph-based image
+processing. In particular, the proposed method employs a convolutional neural network (CNN) which
+is designed to predict the location of breast-pectoral boundary at different levels of spatial
+resolution. Subsequently, the predictions are used by the second stage of the algorithm, in which
+the desired boundary is recovered as a solution to the shortest path problem on a specially designed
+graph. The proposed algorithm has been tested on three different datasets (i.e., MIAS, CBIS-DDSm
+and InBreast) using a range of quantitative metrics. The results of comparative analysis show considerable
+improvement over state-of-the-art, while offering the possibility of model-free and fully automatic
+processing. 

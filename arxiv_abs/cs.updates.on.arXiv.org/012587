@@ -1,0 +1,19 @@
+Centrality measures characterize important nodes in networks. Efficiently computing such nodes
+has received a lot of attention. When considering the generalization of computing central groups
+of nodes, challenging optimization problems occur. In this work, we study two such problems, group-harmonic
+maximization and group-closeness maximization both from a theoretical and from an algorithm engineering
+perspective. On the theoretical side, we obtain the following results. For group-harmonic maximization,
+unless $P=NP$, there is no polynomial-time algorithm that achieves an approximation factor better
+than $1-1/e$ (directed) and $1-1/(4e)$ (undirected), even for unweighted graphs. On the positive
+side, we show that a greedy algorithm achieves an approximation factor of $\lambda(1-2/e)$ (directed)
+and $\lambda(1-1/e)/2$ (undirected), where $\lambda$ is the ratio of minimal and maximal edge
+weights. For group-closeness maximization, the undirected case is $NP$-hard to be approximated
+to within a factor better than $1-1/(e+1)$ and a constant approximation factor is achieved by a local-search
+algorithm. For the directed case, however, we show that, for any $\epsilon<1/2$, the problem is
+$NP$-hard to be approximated within a factor of $4|V|^{-\epsilon}$. From the algorithm engineering
+perspective, we provide efficient implementations of the above greedy and local search algorithms.
+In our experimental study we show that, on small instances where an optimum solution can be computed
+in reasonable time, the quality of both the greedy and the local search algorithms come very close
+to the optimum. On larger instances, our local search algorithms yield results with superior quality
+compared to existing greedy and local search solutions, at the cost of additional running time.
+We thus advocate local search for scenarios where solution quality is of highest concern. 

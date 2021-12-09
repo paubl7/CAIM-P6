@@ -1,0 +1,18 @@
+Stochastic gradient methods (SGMs) are predominant approaches for solving stochastic optimization.
+On smooth nonconvex problems, a few acceleration techniques have been applied to improve the convergence
+rate of SGMs. However, little exploration has been made on applying a certain acceleration technique
+to a stochastic subgradient method (SsGM) for nonsmooth nonconvex problems. In addition, few efforts
+have been made to analyze an (accelerated) SsGM with delayed derivatives. The information delay
+naturally happens in a distributed system, where computing workers do not coordinate with each
+other. In this paper, we propose an inertial proximal SsGM for solving nonsmooth nonconvex stochastic
+optimization problems. The proposed method can have guaranteed convergence even with delayed
+derivative information in a distributed environment. Convergence rate results are established
+to three classes of nonconvex problems: weakly-convex nonsmooth problems with a convex regularizer,
+composite nonconvex problems with a nonsmooth convex regularizer, and smooth nonconvex problems.
+For each problem class, the convergence rate is $O(1/K^{\frac{1}{2}})$ in the expected value of
+the gradient norm square, for $K$ iterations. In a distributed environment, the convergence rate
+of the proposed method will be slowed down by the information delay. Nevertheless, the slow-down
+effect will decay with the number of iterations for the latter two problem classes. We test the proposed
+method on three applications. The numerical results clearly demonstrate the advantages of using
+the inertial-based acceleration. Furthermore, we observe higher parallelization speed-up in
+asynchronous updates over the synchronous counterpart, though the former uses delayed derivatives.

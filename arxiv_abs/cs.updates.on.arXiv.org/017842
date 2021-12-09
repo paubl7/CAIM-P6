@@ -1,0 +1,20 @@
+Recent works report that increasing the learning rate or decreasing the minibatch size in stochastic
+gradient descent (SGD) can improve test set performance. We argue this is expected under some conditions
+in models with a loss function with multiple local minima. Our main contribution is an approximate
+but analytical approach inspired by methods in Physics to study the role of the SGD learning rate
+and batch size in generalization. We characterize test set performance under a shift between the
+training and test data distributions for loss functions with multiple minima. The shift can simply
+be due to sampling, and is therefore typically present in practical applications. We show that the
+resulting shift in local minima worsens test performance by picking up curvature, implying that
+generalization improves by selecting wide and/or little-shifted local minima. We then specialize
+to SGD, and study its test performance under stationarity. Because obtaining the exact stationary
+distribution of SGD is intractable, we derive a Fokker-Planck approximation of SGD and obtain its
+stationary distribution instead. This process shows that the learning rate divided by the minibatch
+size plays a role analogous to temperature in statistical mechanics, and implies that SGD, including
+its stationary distribution, is largely invariant to changes in learning rate or batch size that
+leave its temperature constant. We show that increasing SGD temperature encourages the selection
+of local minima with lower curvature, and can enable better generalization. We provide experiments
+on CIFAR10 demonstrating the temperature invariance of SGD, improvement of the test loss as SGD
+temperature increases, and quantifying the impact of sampling versus domain shift in driving this
+effect. Finally, we present synthetic experiments showing how our theory applies in a simplified
+loss with two local minima. 

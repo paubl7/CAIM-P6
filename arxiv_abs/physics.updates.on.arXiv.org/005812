@@ -1,0 +1,19 @@
+Large-scale modelling of three-dimensional controlled-source electromagnetic (CSEM) surveys
+used to be feasible only for large companies and research consortia. This has changed over the last
+few years, and today there exists a selection of different open-source codes. Using four different
+codes in the Python ecosystem, we perform simulations for increasingly complex models. We first
+verify the computed fields with semi-analytical solutions for a simple layered model. Then we validate
+the responses of a more complex block model by comparing results obtained from each code. Finally
+we compare the responses of a real world model with results from the industry. These validations
+show that the open-source codes are able to compute comparable CSEM responses for challenging,
+large-scale models. Our comparison includes finite-element and finite-volume codes using structured
+rectilinear and octree meshes as well as unstructured tetrahedral meshes. Accurate responses
+can be obtained independently of the chosen method and the chosen mesh type. The runtime and memory
+requirements vary greatly based on the choice of iterative or direct solvers. However, we have found
+that much more time was spent on designing the mesh and setting up the simulations than running the
+actual computation. The challenging task is, irrespective of the chosen code, to appropriately
+discretize the model. We provide three models, each with their corresponding discretization and
+responses of four codes, which can be used for validation of new and existing codes. The collaboration
+of four code maintainers trying to achieve the same task brought in the end all four codes a significant
+step further. This includes improved meshing and interpolation capabilities, resulting in shorter
+runtimes for the same accuracy. 

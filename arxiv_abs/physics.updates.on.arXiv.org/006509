@@ -1,0 +1,18 @@
+While the advances in synchrotron light sources, together with the development of focusing optics
+and detectors, allow nanoscale ptychographic imaging of materials and biological specimens,
+the corresponding experiments can yield terabyte-scale large volumes of data that can impose a
+heavy burden on the computing platform. While Graphical Processing Units (GPUs) provide high performance
+for such large-scale ptychography datasets, a single GPU is typically insufficient for analysis
+and reconstruction. Several existing works have considered leveraging multiple GPUs to accelerate
+the ptychographic reconstruction. However, they utilize only Message Passing Interface (MPI)
+to handle the communications between GPUs. It poses inefficiency for the configuration that has
+multiple GPUs in a single node, especially while processing a single large projection, since it
+provides no optimizations to handle the heterogeneous GPU interconnections containing both low-speed
+links, e.g., PCIe, and high-speed links, e.g., NVLink. In this paper, we provide a multi-GPU implementation
+that can effectively solve large-scale ptychographic reconstruction problem with optimized
+performance on intra-node multi-GPU. We focus on the conventional maximum-likelihood reconstruction
+problem using conjugate-gradient (CG) for the solution and propose a novel hybrid parallelization
+model to address the performance bottlenecks in CG solver. Accordingly, we develop a tool called
+PtyGer (Ptychographic GPU(multiple)-based reconstruction), implementing our hybrid parallelization
+model design. The comprehensive evaluation verifies that PtyGer can fully preserve the original
+algorithm's accuracy while achieving outstanding intra-node GPU scalability. 

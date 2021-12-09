@@ -1,0 +1,19 @@
+Multi-pass streaming algorithm for Maximum Matching have been studied since more than 15 years
+and various algorithmic results are known today, including $2$-pass streaming algorithms that
+break the $1/2$-approximation barrier, and $(1-\epsilon)$-approximation streaming algorithms
+that run in $O(\text{poly} \frac{1}{\epsilon})$ passes in bipartite graphs and in $O( (\frac{1}{\epsilon})^{\frac{1}{\epsilon}})$
+or $O(\text{poly} (\frac{1}{\epsilon}) \cdot \log n)$ passes in general graphs, where $n$ is the
+number of vertices of the input graph. However, proving impossibility results for such algorithms
+has so far been elusive, and, for example, even the existence of $2$-pass small space streaming algorithms
+with approximation factor $0.999$ has not yet been ruled out. The key building block of all multi-pass
+streaming algorithms for Maximum Matching is the Greedy matching algorithm. Our aim is to understand
+the limitations of this approach: How many passes are required if the algorithm solely relies on
+the invocation of the Greedy algorithm? In this paper, we initiate the study of lower bounds for restricted
+families of multi-pass streaming algorithms for Maximum Matching. We focus on the simple yet powerful
+class of algorithms that in each pass run Greedy on a vertex-induced subgraph of the input graph.
+In bipartite graphs, we show that $3$ passes are necessary and sufficient to improve on the trivial
+approximation factor of $1/2$: We give a lower bound of $0.6$ on the approximation ratio of such algorithms,
+which is optimal. We further show that $\Omega( \frac{1}{\epsilon})$ passes are required for computing
+a $(1-\epsilon)$-approximation, even in bipartite graphs. Last, the considered class of algorithms
+is not well-suited to general graphs: We show that $\Omega(n)$ passes are required in order to improve
+on the trivial approximation factor of $1/2$. 

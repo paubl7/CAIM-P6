@@ -1,0 +1,20 @@
+Recent studies show a close connection between neural networks (NN) and kernel methods. However,
+most of these analyses (e.g., NTK) focus on the influence of (infinite) width instead of the depth
+of NN models. There remains a gap between theory and practical network designs that benefit from
+the depth. This paper first proposes a novel kernel family named Neural Optimization Kernel (NOK).
+Our kernel is defined as the inner product between two $T$-step updated functionals in RKHS w.r.t.
+a regularized optimization problem. Theoretically, we proved the monotonic descent property
+of our update rule for both convex and non-convex problems, and a $O(1/T)$ convergence rate of our
+updates for convex problems. Moreover, we propose a data-dependent structured approximation
+of our NOK, which builds the connection between training deep NNs and kernel methods associated
+with NOK. The resultant computational graph is a ResNet-type finite width NN. Our structured approximation
+preserved the monotonic descent property and $O(1/T)$ convergence rate. Namely, a $T$-layer NN
+performs $T$-step monotonic descent updates. Notably, we show our $T$-layered structured NN with
+ReLU maintains a $O(1/T)$ convergence rate w.r.t. a convex regularized problem, which explains
+the success of ReLU on training deep NN from a NN architecture optimization perspective. For the
+unsupervised learning and the shared parameter case, we show the equivalence of training structured
+NN with GD and performing functional gradient descent in RKHS associated with a fixed (data-dependent)
+NOK at an infinity-width regime. For finite NOKs, we prove generalization bounds. Remarkably,
+we show that overparameterized deep NN (NOK) can increase the expressive power to reduce empirical
+risk and reduce the generalization bound at the same time. Extensive experiments verify the robustness
+of our structured NOK blocks. 

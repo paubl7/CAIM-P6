@@ -1,0 +1,19 @@
+As an important problem in modern data analytics, classification has witnessed varieties of applications
+from different domains. Different from conventional classification approaches, fair classification
+concerns the issues of unintentional biases against the sensitive features (e.g., gender, race).
+Due to high nonconvexity of fairness measures, existing methods are often unable to model exact
+fairness, which can cause inferior fair classification outcomes. This paper fills the gap by developing
+a novel unified framework to jointly optimize accuracy and fairness. The proposed framework is
+versatile and can incorporate different fairness measures studied in literature precisely as
+well as can be applicable to many classifiers including deep classification models. Specifically,
+in this paper, we first prove Fisher consistency of the proposed framework. We then show that many
+classification models within this framework can be recast as mixed-integer convex programs, which
+can be solved effectively by off-the-shelf solvers when the instance sizes are moderate and can
+be used as benchmarks to compare the efficiency of approximation algorithms. We prove that in the
+proposed framework, when the classification outcomes are known, the resulting problem, termed
+"unbiased subdata selection," is strongly polynomial-solvable and can be used to enhance the classification
+fairness by selecting more representative data points. This motivates us to develop an iterative
+refining strategy (IRS) to solve the large-scale instances, where we improve the classification
+accuracy and conduct the unbiased subdata selection in an alternating fashion. We study the convergence
+property of IRS and derive its approximation bound. More broadly, this framework can be leveraged
+to improve classification models with unbalanced data by taking F1 score into consideration. 

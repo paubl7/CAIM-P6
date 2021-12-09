@@ -1,0 +1,19 @@
+Motivated by recent progress on symmetry breaking problems such as maximal independent set (MIS)
+and maximal matching in the low-memory Massively Parallel Computation (MPC) model (e.g., Behnezhad
+et al.~PODC 2019; Ghaffari-Uitto SODA 2019), we investigate the complexity of ruling set problems
+in this model. The MPC model has become very popular as a model for large-scale distributed computing
+and it comes with the constraint that the memory-per-machine is strongly sublinear in the input
+size. For graph problems, extremely fast MPC algorithms have been designed assuming $\tilde{\Omega}(n)$
+memory-per-machine, where $n$ is the number of nodes in the graph (e.g., the $O(\log\log n)$ MIS
+algorithm of Ghaffari et al., PODC 2018). However, it has proven much more difficult to design fast
+MPC algorithms for graph problems in the low-memory MPC model, where the memory-per-machine is
+restricted to being strongly sublinear in the number of nodes, i.e., $O(n^\eps)$ for $0 < \eps < 1$.
+In this paper, we present an algorithm for the 2-ruling set problem, running in $\tilde{O}(\log^{1/6}
+\Delta)$ rounds whp, in the low-memory MPC model. We then extend this result to $\beta$-ruling sets
+for any integer $\beta > 1$. Specifically, we show that a $\beta$-ruling set can be computed in the
+low-memory MPC model with $O(n^\eps)$ memory-per-machine in $\tilde{O}(\beta \cdot \log^{1/(2^{\beta+1}-2)}
+\Delta)$ rounds, whp. From this it immediately follows that a $\beta$-ruling set for $\beta = \Omega(\log\log\log
+\Delta)$-ruling set can be computed in in just $O(\beta \log\log n)$ rounds whp. The above results
+assume a total memory of $\tilde{O}(m + n^{1+\eps})$. We also present algorithms for $\beta$-ruling
+sets in the low-memory MPC model assuming that the total memory over all machines is restricted to
+$\tilde{O}(m)$. 

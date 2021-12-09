@@ -1,0 +1,20 @@
+Complex sensors like video cameras include tens of configurable parameters, which can be set by
+end-users to customize the sensors to specific application scenarios. Although parameter settings
+significantly affect the quality of the sensor output and the accuracy of insights derived from
+sensor data, most end-users use a fixed parameter setting because they lack the skill or understanding
+to appropriately configure these parameters. We propose CamTuner, which is a system to automatically,
+and dynamically adapt the complex sensor to changing environments. CamTuner includes two key components.
+First, a bespoke analytics quality estimator, which is a deep-learning model to automatically
+and continuously estimate the quality of insights from an analytics unit as the environment around
+a sensor change. Second, a reinforcement learning (RL) module, which reacts to the changes in quality,
+and automatically adjusts the camera parameters to enhance the accuracy of insights. We improve
+the training time of the RL module by an order of magnitude by designing virtual models to mimic essential
+behavior of the camera: we design virtual knobs that can be set to different values to mimic the effects
+of assigning different values to the camera's configurable parameters, and we design a virtual
+camera model that mimics the output from a video camera at different times of the day. These virtual
+models significantly accelerate training because (a) frame rates from a real camera are limited
+to 25-30 fps while the virtual models enable processing at 300 fps, (b) we do not have to wait until
+the real camera sees different environments, which could take weeks or months, and (c) virtual knobs
+can be updated instantly, while it can take 200-500 ms to change the camera parameter settings. Our
+dynamic tuning approach results in up to 12% improvement in the accuracy of insights from several
+video analytics tasks. 

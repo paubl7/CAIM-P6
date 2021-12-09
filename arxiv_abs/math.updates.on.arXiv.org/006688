@@ -1,0 +1,19 @@
+Parameters in climate models are usually calibrated manually, exploiting only small subsets of
+the available data. This precludes both optimal calibration and quantification of uncertainties.
+Traditional Bayesian calibration methods that allow uncertainty quantification are too expensive
+for climate models; they are also not robust in the presence of internal climate variability. For
+example, Markov chain Monte Carlo (MCMC) methods typically require $O(10^5)$ model runs and are
+sensitive to internal variability noise, rendering them infeasible for climate models. Here we
+demonstrate an approach to model calibration and uncertainty quantification that requires only
+$O(10^2)$ model runs and can accommodate internal climate variability. The approach consists
+of three stages: (i) a calibration stage uses variants of ensemble Kalman inversion to calibrate
+a model by minimizing mismatches between model and data statistics; (ii) an emulation stage emulates
+the parameter-to-data map with Gaussian processes (GP), using the model runs in the calibration
+stage for training; (iii) a sampling stage approximates the Bayesian posterior distributions
+by sampling the GP emulator with MCMC. We demonstrate the feasibility and computational efficiency
+of this calibrate-emulate-sample (CES) approach in a perfect-model setting. Using an idealized
+general circulation model, we estimate parameters in a simple convection scheme from synthetic
+data generated with the model. The CES approach generates probability distributions of the parameters
+that are good approximations of the Bayesian posteriors, at a fraction of the computational cost
+usually required to obtain them. Sampling from this approximate posterior allows the generation
+of climate predictions with quantified parametric uncertainties. 

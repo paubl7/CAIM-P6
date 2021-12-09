@@ -1,0 +1,18 @@
+Designing robust and accurate predictive models for stock price prediction has been an active area
+of research for a long time. While on one side, the supporters of the efficient market hypothesis
+claim that it is impossible to forecast stock prices accurately, many researchers believe otherwise.
+There exist propositions in the literature that have demonstrated that if properly designed and
+optimized, predictive models can very accurately and reliably predict future values of stock prices.
+This paper presents a suite of deep learning based models for stock price prediction. We use the historical
+records of the NIFTY 50 index listed in the National Stock Exchange of India, during the period from
+December 29, 2008 to July 31, 2020, for training and testing the models. Our proposition includes
+two regression models built on convolutional neural networks and three long and short term memory
+network based predictive models. To forecast the open values of the NIFTY 50 index records, we adopted
+a multi step prediction technique with walk forward validation. In this approach, the open values
+of the NIFTY 50 index are predicted on a time horizon of one week, and once a week is over, the actual
+index values are included in the training set before the model is trained again, and the forecasts
+for the next week are made. We present detailed results on the forecasting accuracies for all our
+proposed models. The results show that while all the models are very accurate in forecasting the
+NIFTY 50 open values, the univariate encoder decoder convolutional LSTM with the previous two weeks
+data as the input is the most accurate model. On the other hand, a univariate CNN model with previous
+one week data as the input is found to be the fastest model in terms of its execution speed. 

@@ -1,0 +1,18 @@
+This paper presents a multiple learner algorithm called the 'Three Ensemble Clustering 3EC' algorithm
+that classifies unlabeled data into quality clusters as a part of unsupervised learning. It offers
+the flexibility to explore the context of new clusters formed by an ensemble of algorithms based
+on internal validation indices. It is worth mentioning that the input data set is considered to be
+a cluster of clusters. An anomaly can possibly manifest as a cluster as well. Each partitioned cluster
+is considered to be a new data set and is a candidate to explore the most optimal algorithm and its number
+of partition splits until a predefined stopping criteria is met. The algorithms independently
+partition the data set into clusters and the quality of the partitioning is assessed by an ensemble
+of internal cluster validation indices. The 3EC algorithm presents the validation index scores
+from a choice of algorithms and its configuration of partitions and it is called the Tau Grid. 3EC
+chooses the most optimal score. The 3EC algorithm owes its name to the two input ensembles of algorithms
+and internal validation indices and an output ensemble of final clusters. Quality plays an important
+role in this clustering approach and it also acts as a stopping criteria from further partitioning.
+Quality is determined based on the quality of the clusters provided by an algorithm and its optimal
+number of splits. The 3EC algorithm determines this from the score of the ensemble of validation
+indices. The user can configure the stopping criteria by providing quality thresholds for the score
+range of each of the validation indices and the optimal size of the output cluster. The users can experiment
+with different sets of stopping criteria and choose the most 'sensible group' of quality clusters

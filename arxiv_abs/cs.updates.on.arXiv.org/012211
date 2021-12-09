@@ -1,0 +1,19 @@
+Enabling robust intelligence in the wild entails learning systems that offer uninterrupted inference
+while affording sustained learning from varying amounts of data and supervision. The machine learning
+community has organically broken down this challenging task into manageable sub tasks such as supervised,
+few-shot, continual, and self-supervised learning; each affording distinct challenges and a
+unique set of methods. Notwithstanding this remarkable progress, the simplified and isolated
+nature of these experimental setups has resulted in methods that excel in their specific settings,
+but struggle to generalize beyond them. To foster research towards more general ML systems, we present
+a new learning and evaluation framework - In The Wild (NED). NED naturally integrates the objectives
+of previous frameworks while removing many of the overly strong assumptions such as predefined
+training and test phases, sufficient amounts of labeled data for every class, and the closed-world
+assumption. In NED, a learner faces a stream of data and must make sequential predictions while choosing
+how to update itself, adapt quickly to novel classes, and deal with changing data distributions;
+while optimizing for the total amount of compute. We present novel insights from NED that contradict
+the findings of less realistic or smaller-scale experiments which emphasizes the need to move towards
+more pragmatic setups. For example, we show that meta-training causes larger networks to overfit
+in a way that supervised training does not, few-shot methods break down outside of their narrow experimental
+setting, and self-supervised method MoCo performs significantly worse when the downstream task
+contains new and old classes. Additionally, we present two new methods (Exemplar Tuning and Minimum
+Distance Thresholding) that significantly outperform all other methods evaluated in NED. 

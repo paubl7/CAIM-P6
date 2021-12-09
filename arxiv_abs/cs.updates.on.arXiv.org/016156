@@ -1,0 +1,18 @@
+In this work, we analyze an unfitted discontinuous Galerkin discretization for the numerical solution
+of the Stokes system based on equal higher-order discontinuous velocities and pressures. This
+approach combines the best from both worlds, firstly the advantages of a piece-wise discontinuous
+high-order accurate approximation and secondly the advantages of an unfitted to the true geometry
+grid around possibly complex objects and/or geometrical deformations. Utilizing a fictitious
+domain framework, the physical domain of interest is embedded in an unfitted background mesh and
+the geometrically unfitted discretization is built upon symmetric interior penalty discontinuous
+Galerkin formulation. To enhance stability we enrich the discrete variational formulation with
+a pressure stabilization term. Moreover, the present contribution adopts high order ghost penalty
+strategies to address the ill conditioning of the system matrix caused by small truncated elements
+with respect to the unfitted boundary. Motivated by continuous unfitted FEM [21,75,76] along with
+other unfitted mesh surveys grounded on discontinuous spaces [10,44-46,74], we use proper velocity
+and pressure ghost penalties defined on faces of cut cells to establish a robust high-order method,
+in spite of the cell agglomeration technique usually applied on dG methods. The current presentation
+should prove valuable in engineering applications where special emphasis is placed on the optimal
+effective approximation attaining much smaller relative errors in coarser meshes. Inf-sup stability,
+the optimal order of convergence, and the condition number sensitivity with respect to cut configuration
+are investigated. Numerical examples verify the theoretical results. 

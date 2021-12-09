@@ -1,0 +1,19 @@
+In many practical applications, deep neural networks have been typically deployed to operate as
+a black box predictor. Despite the high amount of work on interpretability and high demand on the
+reliability of these systems, they typically still have to include a human actor in the loop, to validate
+the decisions and handle unpredictable failures and unexpected corner cases. This is true in particular
+for failure-critical application domains, such as medical diagnosis. We present a novel approach
+to explain and support an interpretation of the decision-making process to a human expert operating
+a deep learning system based on Convolutional Neural Network (CNN). By modeling activation statistics
+on selected layers of a trained CNN via Gaussian Mixture Models (GMM), we develop a novel perceptual
+code in binary vector space that describes how the input sample is processed by the CNN. By measuring
+distances between pairs of samples in this perceptual encoding space, for any new input sample,
+we can now retrieve a set of most perceptually similar and dissimilar samples from an existing atlas
+of labeled samples, to support and clarify the decision made by the CNN model. Possible uses of this
+approach include for example Computer-Aided Diagnosis (CAD) systems working with medical imaging
+data, such as Magnetic Resonance Imaging (MRI) or Computed Tomography (CT) scans. We demonstrate
+the viability of our method in the domain of medical imaging for patient condition diagnosis, as
+the proposed decision explanation method via similar ground truth domain examples (e.g. from existing
+diagnosis archives) will be interpretable by the operating medical personnel. Our results indicate
+that our method is capable of detecting distinct prediction strategies that enable us to identify
+the most similar predictions from an existing atlas. 

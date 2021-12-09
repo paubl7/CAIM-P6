@@ -1,0 +1,18 @@
+Topographic laser scanning is a remote sensing method to create detailed 3D point cloud representations
+of the Earth's surface. Since data acquisition is expensive, simulations can complement real data
+given certain premises are available: i) a model of 3D scene and scanner, ii) a model of the beam-scene
+interaction, simplified to a computationally feasible while physically realistic level, and
+iii) an application for which simulated data is fit for use. A number of laser scanning simulators
+for different purposes exist, which we enrich by presenting HELIOS++. HELIOS++ is an open-source
+simulation framework for terrestrial static, mobile, UAV-based and airborne laser scanning implemented
+in C++. The HELIOS++ concept provides a flexible solution for the trade-off between physical accuracy
+(realism) and computational complexity (runtime, memory footprint), as well as ease of use and
+of configuration. Unique features of HELIOS++ include the availability of Python bindings (pyhelios)
+for controlling simulations, and a range of model types for 3D scene representation. HELIOS++ further
+allows the simulation of beam divergence using a subsampling strategy, and is able to create full-waveform
+outputs as a basis for detailed analysis. As generation and analysis of waveforms can strongly impact
+runtimes, the user may set the level of detail for the subsampling, or optionally disable full-waveform
+output altogether. A detailed assessment of computational considerations and a comparison of
+HELIOS++ to its predecessor, HELIOS, reveal reduced runtimes by up to 83 %. At the same time, memory
+requirements are reduced by up to 94 %, allowing for much larger (i.e. more complex) 3D scenes to be
+loaded into memory and hence to be virtually acquired by laser scanning simulation. 

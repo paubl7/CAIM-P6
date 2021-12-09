@@ -1,0 +1,18 @@
+Broadbent and Islam (TCC '20) proposed a quantum cryptographic primitive called quantum encryption
+with certified deletion. In this primitive, a receiver in possession of a quantum ciphertext can
+generate a classical certificate that the encrypted message is deleted. Although their construction
+is information-theoretically secure, it is limited to the setting of one-time symmetric key encryption
+(SKE), where a sender and receiver have to share a common key in advance and the key can be used only
+once. Moreover, the sender has to generate a quantum state and send it to the receiver over a quantum
+channel in their construction. Although deletion certificates are privately verifiable, which
+means a verification key for a certificate has to be kept secret, in the definition by Broadbent and
+Islam, we can also consider public verifiability. In this work, we present various constructions
+of encryption with certified deletion. - Quantum communication case: We achieve (reusable-key)
+public key encryption (PKE) and attribute-based encryption (ABE) with certified deletion. Our
+PKE scheme with certified deletion is constructed assuming the existence of IND-CPA secure PKE,
+and our ABE scheme with certified deletion is constructed assuming the existence of indistinguishability
+obfuscation and one-way function. These two schemes are privately verifiable. - Classical communication
+case: We also achieve PKE with certified deletion that uses only classical communication. We give
+two schemes, a privately verifiable one and a publicly verifiable one. The former is constructed
+assuming the LWE assumption in the quantum random oracle model. The latter is constructed assuming
+the existence of one-shot signatures and extractable witness encryption. 

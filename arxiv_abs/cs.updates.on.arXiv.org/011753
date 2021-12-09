@@ -1,0 +1,18 @@
+The $k$-segmentation of a video stream is used to partition it into $k$ piecewise-linear segments,
+so that each linear segment has a meaningful interpretation. Such segmentation may be used to summarize
+large videos using a small set of images, to identify anomalies within segments and change points
+between segments, and to select critical subsets for training machine learning models. Exact and
+approximate segmentation methods for $k$-segmentation exist in the literature. Each of these
+algorithms occupies a different spot in the trade-off between computational complexity and accuracy.
+A novel heuristic algorithm is proposed in this paper to improve upon existing methods. It is empirically
+found to provide accuracies competitive with exact methods at a fraction of the computational expense.
+The new algorithm is inspired by Lloyd's algorithm for K-Means and Lloyd-Max algorithm for scalar
+quantization, and is called the LM algorithm for convenience. It works by iteratively minimizing
+a cost function from any given initialisation; the commonly used $L_2$ cost is chosen in this paper.
+While the greedy minimization makes the algorithm sensitive to initialisation, the ability to
+converge from any initial guess to a local optimum allows the algorithm to be integrated into other
+existing algorithms. Three variants of the algorithm are tested over a large number of synthetic
+datasets, one being a standalone LM implementation, and two others that combine with existing algorithms.
+One of the latter two -- LM-enhanced-Bottom-Up segmentation -- is found to have the best accuracy
+and the lowest computational complexity among all algorithms. This variant of LM can provide $k$-segmentations
+over data sets with up to a million image frames within several seconds. 

@@ -1,0 +1,18 @@
+Zero-knowledge succinct non-interactive argument of knowledge (zkSNARK) allows a party, known
+as the prover, to convince another party, known as the verifier, that he knows a private value $v$,
+without revealing it, such that $F(u,v)=y$ for some function $F$ and public values $u$ and $y$. There
+are various versions of zk-SNARK, among them, Quadratic Arithmetic Program (QAP)-based zk-SNARK
+has been widely used in practice, specially in Blockchain technology. This is attributed to two
+desirable features; its fixed-size proof and the very light computation load of the verifier. However,
+the computation load of the prover in QAP-based zkSNARKs, is very heavy, even-though it is designed
+to be very efficient. This load can be beyond the prover's computation power to handle, and has to
+be offloaded to some external servers. In the existing offloading solutions, either (i) the load
+of computation, offloaded to each sever, is a fraction of the prover's primary computation (e.g.,
+DZIK), however the servers need to be trusted, (ii) the servers are not required to be trusted, but
+the computation complexity imposed to each one is the same as the prover's primary computation (e.g.,
+Trinocchio). In this paper, we present a scheme, which has the benefits of both solutions. In particular,
+we propose a secure multi-party proof generation algorithm where the prover can delegate its task
+to $N $ servers, where (i) even if a group of $T \in \mathbb{N}$ servers, $T\le N$, collude, they cannot
+gain any information about the secret value $v$, (ii) the computation complexity of each server
+is less than $1/(N-T)$ of the prover's primary computation. The design is such that we don't lose
+the efficiency of the prover's algorithm in the process of delegating the tasks to external servers.

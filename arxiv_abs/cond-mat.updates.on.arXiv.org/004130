@@ -1,0 +1,19 @@
+The Perdew-Zunger self-interaction correction(PZ-SIC) improves the performance of density
+functional approximations(DFAs) for the properties that involve significant self-interaction
+error(SIE), as in stretched bond situations, but overcorrects for equilibrium properties where
+SIE is insignificant. This overcorrection is often reduced by LSIC, local scaling of the PZ-SIC
+to the local spin density approximation(LSDA). Here we propose a new scaling factor to use in an LSIC-like
+approach that satisfies an additional important constraint: the correct coefficient of atomic
+number Z in the asymptotic expansion of the exchange-correlation(xc) energy for atoms. LSIC and
+LSIC+ are scaled by functions of the iso-orbital indicator z{\sigma}, which distinguishes one-electron
+regions from many-electron regions. LSIC+ applied to LSDA works better for many equilibrium properties
+than LSDA-LSIC and the Perdew, Burke, and Ernzerhof(PBE) generalized gradient approximation(GGA),
+and almost as well as the strongly constrained and appropriately normed(SCAN) meta-GGA. LSDA-LSIC
+and LSDA-LSIC+, however, both fail to predict interaction energies involving weaker bonds, in
+sharp contrast to their earlier successes. It is found that more than one set of localized SIC orbitals
+can yield a nearly degenerate energetic description of the same multiple covalent bond, suggesting
+that a consistent chemical interpretation of the localized orbitals requires a new way to choose
+their Fermi orbital descriptors. To make a locally scaled-down SIC to functionals beyond LSDA requires
+a gauge transformation of the functional's energy density. The resulting SCAN-sdSIC, evaluated
+on SCAN-SIC total and localized orbital densities, leads to an acceptable description of many equilibrium
+properties including the dissociation energies of weak bonds. 

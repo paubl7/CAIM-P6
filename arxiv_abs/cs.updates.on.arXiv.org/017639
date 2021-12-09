@@ -1,0 +1,18 @@
+The neuroimage analysis community has neglected the automated segmentation of the olfactory bulb
+(OB) despite its crucial role in olfactory function. The lack of an automatic processing method
+for the OB can be explained by its challenging properties. Nonetheless, recent advances in MRI acquisition
+techniques and resolution have allowed raters to generate more reliable manual annotations. Furthermore,
+the high accuracy of deep learning methods for solving semantic segmentation problems provides
+us with an option to reliably assess even small structures. In this work, we introduce a novel, fast,
+and fully automated deep learning pipeline to accurately segment OB tissue on sub-millimeter T2-weighted
+(T2w) whole-brain MR images. To this end, we designed a three-stage pipeline: (1) Localization
+of a region containing both OBs using FastSurferCNN, (2) Segmentation of OB tissue within the localized
+region through four independent AttFastSurferCNN - a novel deep learning architecture with a self-attention
+mechanism to improve modeling of contextual information, and (3) Ensemble of the predicted label
+maps. The OB pipeline exhibits high performance in terms of boundary delineation, OB localization,
+and volume estimation across a wide range of ages in 203 participants of the Rhineland Study. Moreover,
+it also generalizes to scans of an independent dataset never encountered during training, the Human
+Connectome Project (HCP), with different acquisition parameters and demographics, evaluated
+in 30 cases at the native 0.7mm HCP resolution, and the default 0.8mm pipeline resolution. We extensively
+validated our pipeline not only with respect to segmentation accuracy but also to known OB volume
+effects, where it can sensitively replicate age effects. 

@@ -1,0 +1,18 @@
+Automated inspection plays an important role in monitoring large-scale photovoltaic power plants.
+Commonly, electroluminescense measurements are used to identify various types of defects on solar
+modules but have not been used to determine the power of a module. However, knowledge of the power
+at maximum power point is important as well, since drops in the power of a single module can affect
+the performance of an entire string. By now, this is commonly determined by measurements that require
+to discontact or even dismount the module, rendering a regular inspection of individual modules
+infeasible. In this work, we bridge the gap between electroluminescense measurements and the power
+determination of a module. We compile a large dataset of 719 electroluminescense measurementsof
+modules at various stages of degradation, especially cell cracks and fractures, and the corresponding
+power at maximum power point. Here,we focus on inactive regions and cracks as the predominant type
+of defect. We set up a baseline regression model to predict the power from electroluminescense measurements
+with a mean absolute error of 9.0+/-3.7$W_P$ (4.0+/-8.4%). Then, we show that deep-learning can
+be used to train a model that performs significantly better (7.3+/-2.7$W_P$ or 3.2+/-6.5%) and
+propose a variant of class activation maps to obtain the per cell power loss, as predicted by the model.
+With this work, we aim to open a new research topic. Therefore, we publicly release the dataset, the
+code and trained models to empower other researchers to compare against our results. Finally, we
+present a thorough evaluation of certain boundary conditions like the dataset size and an automated
+preprocessing pipeline for on-site measurements showing multiple modules at once. 

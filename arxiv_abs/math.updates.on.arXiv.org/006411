@@ -1,0 +1,20 @@
+Current dense symmetric eigenvalue (EIG) and singular value decomposition (SVD) implementations
+may suffer from the lack of concurrency during the tridiagonal and bidiagonal reductions, respectively.
+This performance bottleneck is typical for the two-sided transformations due to the Level-2 BLAS
+memory-bound calls. Therefore, the current state-of-the-art EIG and SVD implementations may
+achieve only a small fraction of the system's sustained peak performance. The QR-based Dynamically
+Weighted Halley (QDWH) algorithm may be used as a pre-processing step toward the EIG and SVD solvers,
+while mitigating the aforementioned bottleneck. QDWH-EIG and QDWH-SVD expose more parallelism,
+while relying on compute-bound matrix operations. Both run closer to the sustained peak performance
+of the system, but at the expense of performing more FLOPS than the standard EIG and SVD algorithms.
+In this paper, we introduce a new QDWH-based solver for computing the partial spectrum for EIG (QDWHpartial-EIG)
+and SVD (QDWHpartial-SVD) problems. By optimizing the rational function underlying the algorithms
+only in the desired part of the spectrum, QDWHpartial-EIG and QDWHpartial-SVD algorithms efficiently
+compute a fraction (say 1-20%) of the corresponding spectrum. We develop high-performance implementations
+of QDWHpartial-EIG and QDWHpartial-SVD on distributed-memory anymore systems and demonstrate
+their numerical robustness. Experimental results using up to 36K MPI processes show performance
+speedups for QDWHpartial-SVD up to 6X and 2X against PDGESVD from ScaLAPACK and KSVD, respectively.
+QDWHpartial-EIG outperforms PDSYEVD from ScaLAPACK up to 3.5X but remains slower compared to ELPA.
+QDWHpartial-EIG achieves, however, a better occupancy of the underlying hardware by extracting
+higher sustained peak performance than ELPA, which is critical moving forward with accelerator-based
+supercomputers. 

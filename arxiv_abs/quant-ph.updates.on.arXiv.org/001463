@@ -1,0 +1,18 @@
+Farhi et al. recently proposed a class of quantum algorithms, the Quantum Approximate Optimization
+Algorithm (QAOA), for approximately solving combinatorial optimization problems. A level-p
+QAOA circuit consists of p steps; in each step a classical Hamiltonian, derived from the cost function,
+is applied followed by a mixing Hamiltonian. The 2p times for which these two Hamiltonians are applied
+are the parameters of the algorithm, which are to be optimized classically for the best performance.
+As p increases, parameter optimization becomes inefficient due to the curse of dimensionality.
+The success of the QAOA approach will depend, in part, on finding effective parameter-setting strategies.
+Here, we analytically and numerically study parameter setting for QAOA applied to MaxCut. For level-1
+QAOA, we derive an analytical expression for a general graph. In principle, expressions for higher
+p could be derived, but the number of terms quickly becomes prohibitive. For a special case of MaxCut,
+the ring of disagrees, or the 1D antiferromagnetic ring, we provide an analysis for arbitrarily
+high level. Using a fermionic representation, the evolution of the system under QAOA translates
+into quantum control of an ensemble of independent spins. This treatment enables us to obtain analytical
+expressions for the performance of QAOA for any p. It also greatly simplifies numerical search for
+the optimal values of the parameters. By exploring symmetries, we identify a lower-dimensional
+sub-manifold of interest; the search effort can be accordingly reduced. This analysis also explains
+an observed symmetry in the optimal parameter values. Further, we numerically investigate the
+parameter landscape and show that it is a simple one in the sense of having no local optima. 

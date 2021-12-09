@@ -1,0 +1,18 @@
+Many current neural networks for medical imaging generalise poorly to data unseen during training.
+Such behaviour can be caused by networks overfitting easy-to-learn, or statistically dominant,
+features while disregarding other potentially informative features. For example, indistinguishable
+differences in the sharpness of the images from two different scanners can degrade the performance
+of the network significantly. All neural networks intended for clinical practice need to be robust
+to variation in data caused by differences in imaging equipment, sample preparation and patient
+populations. To address these challenges, we evaluate the utility of spectral decoupling as an
+implicit bias mitigation method. Spectral decoupling encourages the neural network to learn more
+features by simply regularising the networks' unnormalised prediction scores with an L2 penalty,
+thus having no added computational costs. We show that spectral decoupling allows training neural
+networks on datasets with strong spurious correlations. Networks trained without spectral decoupling
+do not learn the original task and appear to make false predictions based on the spurious correlations.
+Spectral decoupling also increases networks' robustness for data distribution shifts. To validate
+our findings, we train networks with and without spectral decoupling to detect prostate cancer
+tissue slides and COVID-19 in chest radiographs. Networks trained with spectral decoupling achieve
+substantially higher performance on all evaluation datasets. Our results show that spectral decoupling
+helps with generalisation issues associated with neural networks. We recommend using spectral
+decoupling as an implicit bias mitigation method in any neural network intended for clinical use.

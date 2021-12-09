@@ -1,0 +1,19 @@
+Since the 2000's, an increased number of nanosatellites have accessed space. However, studies
+show that the number of unsuccessful nanosatellite missions is very expressive. Moreover, these
+statistics are correlated to poor verification and validation processes used by hobbyists satellite
+developers because major space agencies keep high successful ratings even with small/nano satellites
+missions due to its rigorous V\&V processes. Aiming to improve payloads integration testing of
+NanosatC-BR-2, a 2-U Cubesat based nanosatellite under development by INPE, the fault injection
+technique has been used. It is very useful technique to test systems prototypes. We present the design
+and implementation of a Failure Emulator Mechanism (FEM) on I2C communication bus for testing the
+interaction among the NCBR2 subsystems, supporting interoperability and robustness requirements
+verification. The FEM is modelled to work at the communication bus emulating eventual faults of
+the communicating subsystems in the messages exchanged. Using an Arduino board for the FEM and NI
+LabView environment it is possible to program the mechanism to inject different faults at the I2C
+bus during different operation modes. Based on a serial architecture, the FEM will be able to intercept
+all messages and implement different faults as service and timing faults. The FEM interface with
+the tester is designed in LabView environment. Control and observation facilities are available
+to generate and upload the faultload script to FEM Arduino board. The proposed FEM architecture
+and its implementation are validated using two subsystems under testing prototypes: the OnBoard
+Data Handling Computer and the Langmuir Probe NCBR2 payload. For this analysis purpose, the prototypes
+simulate in two different Arduinos boards the expected behavior of each subsystem in the communication.

@@ -1,0 +1,19 @@
+Clinical coding is the task of assigning a set of alphanumeric codes, referred to as ICD (International
+Classification of Diseases), to a medical event based on the context captured in a clinical narrative.
+The latest version of ICD, ICD-10, includes more than 70,000 codes. As this is a labor-intensive
+and error-prone task, automatic ICD coding of medical reports using machine learning has gained
+significant interest in the last decade. Existing literature has modeled this problem as a multi-label
+task. Nevertheless, such multi-label approach is challenging due to the extremely large label
+set size. Furthermore, the interpretability of the predictions is essential for the endusers (e.g.,
+healthcare providers and insurance companies). In this paper, we propose a novel approach for automatic
+ICD coding by reformulating the extreme multi-label problem into a simpler multi-class problem
+using a hierarchical solution. We made this approach viable through extensive data collection
+to acquire phrase-level human coder annotations to supervise our models on learning the specific
+relations between the input text and predicted ICD codes. Our approach employs two independently
+trained networks, the sentence tagger and the ICD classifier, stacked hierarchically to predict
+a codeset for a medical report. The sentence tagger identifies focus sentences containing a medical
+event or concept relevant to an ICD coding. Using a supervised attention mechanism, the ICD classifier
+then assigns each focus sentence with an ICD code. The proposed approach outperforms strong baselines
+by large margins of 23% in subset accuracy, 18% in micro-F1, and 15% in instance based F-1. With our
+proposed approach, interpretability is achieved not through implicitly learned attention scores
+but by attributing each prediction to a particular sentence and words selected by human coders.

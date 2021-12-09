@@ -1,0 +1,18 @@
+In this paper, we consider the problem of restoring the correspondence matrix based on the observations
+of real correspondences in Moscow. Following the conventional approach, the transport network
+is considered as a directed graph whose edges correspond to road sections and the graph vertices
+correspond to areas that the traffic participants leave or enter. The number of city residents is
+considered constant. The problem of restoring the correspondence matrix is to calculate all the
+correspondence from the $i$ area to the $j$ area. To restore the matrix, we propose to use one of the
+most popular methods of calculating the correspondence matrix in urban studies -- the entropy model.
+In our work, we describe the evolutionary justification of the entropy model and the main idea of
+the transition to solving the problem of entropy-linear programming (ELP) in calculating the correspondence
+matrix. To solve the ELP problem, it is proposed to pass to the dual problem. In this paper, we describe
+several numerical optimization methods for solving this problem: the Sinkhorn method and the Accelerated
+Sinkhorn method. We provide numerical experiments for the following variants of cost functions:
+a linear cost function and a superposition of the power and logarithmic cost functions. In these
+functions, the cost is a combination of average time and distance between areas, which depends on
+the parameters. The correspondence matrix is calculated for multiple sets of parameters and then
+we calculate the quality of the restored matrix relative to the known correspondence matrix. We
+assume that the noise in the restored correspondence matrix is Gaussian, as a result, we use the standard
+deviation as a quality metric. 

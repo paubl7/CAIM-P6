@@ -1,0 +1,19 @@
+Catastrophic forgetting means that a trained neural network model gradually forgets the previously
+learned tasks when being retrained on new tasks. Overcoming the forgetting problem is a major problem
+in machine learning. Numerous continual learning algorithms are very successful in incremental
+learning of classification tasks, where new samples with their labels appear frequently. However,
+there is currently no research that addresses the catastrophic forgetting problem in regression
+tasks as far as we know. This problem has emerged as one of the primary constraints in some applications,
+such as renewable energy forecasts. This article clarifies problem-related definitions and proposes
+a new methodological framework that can forecast targets and update itself by means of continual
+learning. The framework consists of forecasting neural networks and buffers, which store newly
+collected data from a non-stationary data stream in an application. The changed probability distribution
+of the data stream, which the framework has identified, will be learned sequentially. The framework
+is called CLeaR (Continual Learning for Regression Tasks), where components can be flexibly customized
+for a specific application scenario. We design two sets of experiments to evaluate the CLeaR framework
+concerning fitting error (training), prediction error (test), and forgetting ratio. The first
+one is based on an artificial time series to explore how hyperparameters affect the CLeaR framework.
+The second one is designed with data collected from European wind farms to evaluate the CLeaR framework's
+performance in a real-world application. The experimental results demonstrate that the CLeaR
+framework can continually acquire knowledge in the data stream and improve the prediction accuracy.
+The article concludes with further research issues arising from requirements to extend the framework.

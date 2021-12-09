@@ -1,0 +1,20 @@
+Previous reversible data hiding in encrypted images (RDHEI) schemes can be either carried out by
+vacating room before or after data encryption, which leads to a separation of the search field in
+RDHEI. Besides, high capacity relies heavily on vacating room before encryption (VRBE), which
+significantly lowers the payload of vacating room after encryption (VRAE) based schemes. To address
+this issue, this paper proposes a framework for high-capacity RDHEI for both VRBE and VRAE cases
+using pixel predictions and entropy encoding. We propose an embedding room generation algorithm
+to produce vacated room by generating the prediction-error histogram (PEH) of the selected cover
+using adjacency prediction and the median edge detector (MED). In the VRBE scenario, we propose
+a scheme that generates the embedding room using the proposed algorithm, and encrypts the preprocessed
+image by using the stream cipher with two encryption keys. In the VRAE scenario, we propose a scheme
+that involves an improved block modulation and permutation encryption algorithm where the spatial
+redundancy in the plain-text image can be largely preserved. Then the proposed algorithm is applied
+on the encrypted image to generate the embedding room. At the data hider's side of both the schemes,
+the data hider locates the embedding room and embeds the encrypted additional data. On receiving
+the marked encrypted image, the receivers with different authentication can respectively conduct
+error-free data extraction and/or error-free image recovery. The experimental results show that
+the two schemes in the proposed framework can outperform many previous state-of-the-art RDHEI
+arts. Besides, the proposed schemes can ensure high information security in that little detail
+of the original image can be directly discovered from the encrypted images or the marked encrypted
+images. 

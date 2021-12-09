@@ -1,0 +1,19 @@
+The nuclear community has performed two decades of research on coupling three-dimensional Computational
+Fluid Dynamic (CFD) models with one-dimensional thermal-hydraulic system (STH) codes. Nevertheless,
+the computational cost of coupled simulations is still too high for nuclear safety studies that
+require of a large number of different system configurations to be analyzed. As the CFD solver is
+accountable for the largest part of the computational time, this work proposes to replace it by a
+reduced order model (ROM) of a high fidelity CFD code. More precisely, the best-estimate system
+code RELAP5-MOD3.3 and a ROM of the finite volume CFD solver OpenFOAM are coupled by a partitioned
+domain decomposition coupling algorithm. An implicit coupling scheme based on a Quasi-Newton
+algorithm is adopted. The finite-volume based ROM is developed with a Proper Orthogonal Decomposition
+technique in combination with a Galerkin projection technique. The reduced bases are determined
+using the velocity and pressure fields obtained by performing a coupled RELAP5/CFD simulation
+for a certain parameter set. To demonstrate the performance of the coupled models, tests are carried
+out on simple open and closed pipe flow configurations. The coupling methodology is evaluated by
+comparing the time evolution of the mass flow rate and area-averaged pressure calculated with the
+RELAP5/CFD models at a coupling interface with stand-alone system thermal-hydraulics solutions.
+Furthermore, the performance of the coupled RELAP5/ROM models and the coupled RELAP5/CFD models
+are compared. The results for new parameter sets show that the coupled RELAP5/ROM models are capable
+of predicting the coupled RELAP5/CFD results with good accuracy. Finally, simulations performed
+with the RELAP5/ROM models are about 3 to 5 times faster than the coupled RELAP5/CFD simulations.

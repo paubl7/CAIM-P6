@@ -1,0 +1,18 @@
+Many problems in interprocedural program analysis can be modeled as the context-free language
+(CFL) reachability problem on graphs and can be solved in cubic time. Despite years of efforts, there
+are no known truly sub-cubic algorithms for this problem. We study the related certification task:
+given an instance of CFL reachability, are there small and efficiently checkable certificates
+for the existence and for the non-existence of a path? We show that, in both scenarios, there exist
+succinct certificates ($O(n^2)$ in the size of the problem) and these certificates can be checked
+in subcubic (matrix multiplication) time. The certificates are based on grammar-based compression
+of paths (for positive instances) and on invariants represented as matrix constraints (for negative
+instances). Thus, CFL reachability lies in nondeterministic and co-nondeterministic subcubic
+time. A natural question is whether faster algorithms for CFL reachability will lead to faster algorithms
+for combinatorial problems such as Boolean satisfiability (SAT). As a consequence of our certification
+results, we show that there cannot be a fine-grained reduction from SAT to CFL reachability for a
+conditional lower bound stronger than $n^\omega$, unless the nondeterministic strong exponential
+time hypothesis (NSETH) fails. Our results extend to related subcubic equivalent problems: pushdown
+reachability and two-way nondeterministic pushdown automata (2NPDA) language recognition.
+For example, we describe succinct certificates for pushdown non-reachability (inductive invariants)
+and observe that they can be checked in matrix multiplication time. We also extract a new hardest
+2NPDA language, capturing the "hard core" of all these problems. 

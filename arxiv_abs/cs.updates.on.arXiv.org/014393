@@ -1,0 +1,19 @@
+Various autonomous or assisted driving strategies have been facilitated through the accurate
+and reliable perception of the environment around a vehicle. Among the commonly used sensors, radar
+has usually been considered as a robust and cost-effective solution even in adverse driving scenarios,
+e.g., weak/strong lighting or bad weather. Instead of considering to fuse the unreliable information
+from all available sensors, perception from pure radar data becomes a valuable alternative that
+is worth exploring. In this paper, we propose a deep radar object detection network, named RODNet,
+which is cross-supervised by a camera-radar fused algorithm without laborious annotation efforts,
+to effectively detect objects from the radio frequency (RF) images in real-time. First, the raw
+signals captured by millimeter-wave radars are transformed to RF images in range-azimuth coordinates.
+Second, our proposed RODNet takes a sequence of RF images as the input to predict the likelihood of
+objects in the radar field of view (FoV). Two customized modules are also added to handle multi-chirp
+information and object relative motion. Instead of using human-labeled ground truth for training,
+the proposed RODNet is cross-supervised by a novel 3D localization of detected objects using a camera-radar
+fusion (CRF) strategy in the training stage. Finally, we propose a method to evaluate the object
+detection performance of the RODNet. Due to no existing public dataset available for our task, we
+create a new dataset, named CRUW, which contains synchronized RGB and RF image sequences in various
+driving scenarios. With intensive experiments, our proposed cross-supervised RODNet achieves
+86% average precision and 88% average recall of object detection performance, which shows the robustness
+to noisy scenarios in various driving conditions. 

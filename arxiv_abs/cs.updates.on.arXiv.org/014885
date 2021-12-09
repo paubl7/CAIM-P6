@@ -1,0 +1,20 @@
+We study computational aspects of a well-known single-winner voting rule called the Schulze method
+[Schulze, 2003] which is used broadly in practice. In this method the voters give (weak) ordinal
+preference ballots which are used to define the weighted majority graph (WMG) of direct comparisons
+between pairs of candidates. The choice of the winner comes from indirect comparisons in the graph,
+and more specifically from considering directed paths instead of direct comparisons between candidates.
+When the input is the WMG, to our knowledge, the fastest algorithm for computing all possible winners
+in the Schulze method uses a folklore reduction to the All-Pairs Bottleneck Paths (APBP) problem
+and runs in $O(m^{2.69})$ time, where $m$ is the number of candidates. It is an interesting open question
+whether this can be improved. Our first result is a combinatorial algorithm with a nearly quadratic
+running time for computing all possible winners. If the input to the possible winners problem is
+not the WMG but the preference profile, then constructing the WMG is a bottleneck that increases
+the running time significantly; in the special case when there are $O(m)$ voters and candidates,
+the running time becomes $O(m^{2.69})$, or $O(m^{2.5})$ if there is a nearly-linear time algorithm
+for multiplying dense square matrices. To address this bottleneck, we prove a formal equivalence
+between the well-studied Dominance Product problem and the problem of computing the WMG. We prove
+a similar connection between the so called Dominating Pairs problem and the problem of verifying
+whether a given candidate is a possible winner. Our paper is the first to bring fine-grained complexity
+into the field of computational social choice. Using it we can identify voting protocols that are
+unlikely to be practical for large numbers of candidates and/or voters, as their complexity is likely,
+say at least cubic. 

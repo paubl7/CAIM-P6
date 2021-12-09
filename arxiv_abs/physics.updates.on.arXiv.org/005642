@@ -1,0 +1,20 @@
+In the present study, we propose a new surrogate model, called common kernel-smoothed proper orthogonal
+decomposition (CKSPOD), to efficiently emulate the spatiotemporal evolution of fluid flow dynamics.
+The proposed surrogate model integrates and extends recent developments in Gaussian process learning,
+high-fidelity simulations, projection-based model reduction, uncertainty quantification,
+and experimental design, rendering a systematic, multidisciplinary framework. The novelty of
+the CKSPOD emulation lies in the construction of a common Gram matrix, which results from the Hadamard
+product of Gram matrices of all observed design settings. The Gram matrix is a spatially averaged
+temporal correlation matrix and contains the temporal dynamics of the corresponding sampling
+point. The common Gram matrix synthesizes the temporal dynamics by transferring POD modes into
+spatial functions at each observed design setting, which remedies the phase-difference issue
+encountered in the kernel-smoothed POD (KSPOD) emulation, a recent fluid flow emulator proposed
+in Chang et al. (2020). The CKSPOD methodology is demonstrated through a model study of flow dynamics
+of swirl injectors with three design parameters. A total of 30 training design settings and 8 validation
+design settings are included. Both qualitative and quantitative results show that the CKSPOD emulation
+outperforms the KSPOD emulation for all validation cases, and is capable of capturing small-scale
+wave structures on the liquid-film surface faithfully. The turbulent kinetic energy prediction
+using CKSPOD reveals lower predictive uncertainty than KSPOD, thereby allowing for more accurate
+and precise flow predictions. The turnaround time of the CKSPOD emulation is about 5 orders of magnitude
+faster than the corresponding high-fidelity simulation, which enables an efficient and scalable
+framework for design exploration and optimization. 

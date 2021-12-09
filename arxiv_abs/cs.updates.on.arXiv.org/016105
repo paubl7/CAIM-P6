@@ -1,0 +1,20 @@
+The Reward-Biased Maximum Likelihood Estimate (RBMLE) for adaptive control of Markov chains was
+proposed to overcome the central obstacle of what is variously called the fundamental "closed-identifiability
+problem" of adaptive control, the "dual control problem", or, contemporaneously, the "exploration
+vs. exploitation problem". It exploited the key observation that since the maximum likelihood
+parameter estimator can asymptotically identify the closed-transition probabilities under
+a certainty equivalent approach, the limiting parameter estimates must necessarily have an optimal
+reward that is less than the optimal reward attainable for the true but unknown system. Hence it proposed
+a counteracting reverse bias in favor of parameters with larger optimal rewards, providing a solution
+to the fundamental problem alluded to above. It thereby proposed an optimistic approach of favoring
+parameters with larger optimal rewards, now known as "optimism in the face of uncertainty". The
+RBMLE approach has been proved to be long-term average reward optimal in a variety of contexts. However,
+modern attention is focused on the much finer notion of "regret", or finite-time performance. Recent
+analysis of RBMLE for multi-armed stochastic bandits and linear contextual bandits has shown that
+it not only has state-of-the-art regret, but it also exhibits empirical performance comparable
+to or better than the best current contenders, and leads to strikingly simple index policies. Motivated
+by this, we examine the finite-time performance of RBMLE for reinforcement learning tasks that
+involve the general problem of optimal control of unknown Markov Decision Processes. We show that
+it has a regret of $\mathcal{O}( \log T)$ over a time horizon of $T$ steps, similar to state-of-the-art
+algorithms. Simulation studies show that RBMLE outperforms other algorithms such as UCRL2 and
+Thompson Sampling. 

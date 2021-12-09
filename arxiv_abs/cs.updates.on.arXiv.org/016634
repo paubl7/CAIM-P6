@@ -1,0 +1,18 @@
+RGB-Infrared (IR) person re-identification aims to retrieve person-of-interest between heterogeneous
+modalities, suffering from large modality discrepancy caused by different sensory devices. Existing
+methods mainly focus on global-level modality alignment, whereas neglect sample-level modality
+divergence to some extent, leading to performance degradation. This paper attempts to find RGB-IR
+ReID solutions from tackling sample-level modality difference, and presents a Geometry-Guided
+Dual-Alignment learning framework (G$^2$DA), which jointly enhances modality-invariance and
+reinforces discriminability with human topological structure in features to boost the overall
+matching performance. Specifically, G$^2$DA extracts accurate body part features with a pose
+estimator, serving as a semantic bridge complementing the missing local details in global descriptor.
+Based on extracted local and global features, a novel distribution constraint derived from optimal
+transport is introduced to mitigate the modality gap in a fine-grained sample-level manner. Beyond
+pair-wise relations across two modalities, it additionally measures the structural similarity
+of different parts, thus both multi-level features and their relations are kept consistent in the
+common feature space. Considering the inherent human-topology information, we further advance
+a geometry-guided graph learning module to refine each part features, where relevant regions can
+be emphasized while meaningless ones are suppressed, effectively facilitating robust feature
+learning. Extensive experiments on two standard benchmark datasets validate the superiority
+of our proposed method, yielding competitive performance over the state-of-the-art approaches.

@@ -1,0 +1,19 @@
+The main success stories of deep learning, starting with ImageNet, depend on deep convolutional
+networks, which on certain tasks perform significantly better than traditional shallow classifiers,
+such as support vector machines, and also better than deep fully connected networks; but what is
+so special about deep convolutional networks? Recent results in approximation theory proved an
+exponential advantage of deep convolutional networks with or without shared weights in approximating
+functions with hierarchical locality in their compositional structure. More recently, the hierarchical
+structure was proved to be hard to learn from data, suggesting that it is a powerful prior embedded
+in the architecture of the network. These mathematical results, however, do not say which real-life
+tasks correspond to input-output functions with hierarchical locality. To evaluate this, we consider
+a set of visual tasks where we disrupt the local organization of images via "deterministic scrambling"
+to later perform a visual task on these images structurally-altered in the same way for training
+and testing. For object recognition we find, as expected, that scrambling does not affect the performance
+of shallow or deep fully connected networks contrary to the out-performance of convolutional networks.
+Not all tasks involving images are however affected. Texture perception and global color estimation
+are much less sensitive to deterministic scrambling showing that the underlying functions corresponding
+to these tasks are not hierarchically local; and also counter-intuitively showing that these tasks
+are better approximated by networks that are not deep (texture) nor convolutional (color). Altogether,
+these results shed light into the importance of matching a network architecture with its embedded
+prior of the task to be learned. 

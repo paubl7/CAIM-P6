@@ -1,0 +1,18 @@
+We discuss combinatorial algorithms for finding a maximum weight $f$-factor on an arbitrary multigraph,
+for given integral weights of magnitude at most $W$. For simple bipartite graphs the best-known
+time bound is $O(n^{2/3}\, m\, \log nW)$ (\cite{GT89}; $n$ and $m$ are respectively the number of
+vertices and edges). A recent algorithm of Duan and He et al. \cite{DHZ} for $f$-factors of simple
+graphs comes within logarithmic factors of this bound, $\widetilde{O} (n^{2/3}\, m\, \log W)$.
+The best-known bound for bipartite multigraphs is $O(\sqrt {\Phi}\, m\, \log \Phi W)$ ($\Phi\le
+m$ is the size of the $f$-factor, $\Phi=\sum_{v\in V}f(v)/2$). This bound is more general than the
+restriction to simple graphs, and is even superior on "small" simple graphs, i.e., $\Phi=o(n^{4/3})$.
+We present an algorithm that comes within a $\sqrt {\log \Phi}$ factor of this bound, i.e., $O(\sqrt
+{\Phi \log \Phi}\,m \,\log \Phi W)$. The algorithm is a direct generalization of the algorithm of
+Gabow and Tarjan \cite{GT} for the special case of ordinary matching ($f\equiv 1$). We present our
+algorithm first for ordinary matching, as the analysis is a simplified version of \cite{GT}. Furthermore
+the algorithm and analysis both get incorporated without modification into the multigraph algorithm.
+To extend these ideas to $f$-factors, the first step is "expanding" edges (i.e., replacing an edge
+by a length 3 alternating path). \cite{DHZ} uses a one-time expansion of the entire graph. Our algorithm
+keeps the graph small by only expanding selected edges, and "compressing" them back to their original
+source when no longer needed. Several other ideas are needed, including a relaxation of the notion
+of "blossom" to e-blossom ("expanded blossom"). 

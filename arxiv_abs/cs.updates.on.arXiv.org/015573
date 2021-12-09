@@ -1,0 +1,19 @@
+Traditional learning approaches for classification implicitly assume that each mistake has the
+same cost. In many real-world problems though, the utility of a decision depends on the underlying
+context $x$ and decision $y$. However, directly incorporating these utilities into the learning
+objective is often infeasible since these can be quite complex and difficult for humans to specify.
+We formally study this as agnostic learning with unknown utilities: given a dataset $S = \{x_1, \ldots,
+x_n\}$ where each data point $x_i \sim \mathcal{D}$, the objective of the learner is to output a function
+$f$ in some class of decision functions $\mathcal{F}$ with small excess risk. This risk measures
+the performance of the output predictor $f$ with respect to the best predictor in the class $\mathcal{F}$
+on the unknown underlying utility $u^*$. This utility $u^*$ is not assumed to have any specific structure.
+This raises an interesting question whether learning is even possible in our setup, given that obtaining
+a generalizable estimate of utility $u^*$ might not be possible from finitely many samples. Surprisingly,
+we show that estimating the utilities of only the sampled points~$S$ suffices to learn a decision
+function which generalizes well. We study mechanisms for eliciting information which allow a learner
+to estimate the utilities $u^*$ on the set $S$. We introduce a family of elicitation mechanisms by
+generalizing comparisons, called the $k$-comparison oracle, which enables the learner to ask
+for comparisons across $k$ different inputs $x$ at once. We show that the excess risk in our agnostic
+learning framework decreases at a rate of $O\left(\frac{1}{k} \right)$. This result brings out
+an interesting accuracy-elicitation trade-off -- as the order $k$ of the oracle increases, the
+comparative queries become harder to elicit from humans but allow for more accurate learning. 

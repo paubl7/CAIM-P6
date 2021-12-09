@@ -1,0 +1,20 @@
+Having access to an exploring restart distribution (the so-called wide coverage assumption) is
+critical with policy gradient methods. This is due to the fact that, while the objective function
+is insensitive to updates in unlikely states, the agent may still need improvements in those states
+in order to reach a nearly optimal payoff. For this reason, wide coverage is used in some form when
+analyzing theoretical properties of practical policy gradient methods. However, this assumption
+can be unfeasible in certain environments, for instance when learning is online, or when restarts
+are possible only from a fixed initial state. In these cases, classical policy gradient algorithms
+can have very poor convergence properties and sample efficiency. In this paper, we develop Curious
+Explorer, a novel and simple iterative state space exploration strategy that can be used with any
+starting distribution $\rho$. Curious Explorer starts from $\rho$, then using intrinsic rewards
+assigned to the set of poorly visited states produces a sequence of policies, each one more exploratory
+than the previous one in an informed way, and finally outputs a restart model $\mu$ based on the state
+visitation distribution of the exploratory policies. Curious Explorer is provable, in the sense
+that we provide theoretical upper bounds on how often an optimal policy visits poorly visited states.
+These bounds can be used to prove PAC convergence and sample efficiency results when a PAC optimizer
+is plugged in Curious Explorer. This allows to achieve global convergence and sample efficiency
+results without any coverage assumption for REINFORCE, and potentially for any other policy gradient
+method ensuring PAC convergence with wide coverage. Finally, we plug (the output of) Curious Explorer
+into REINFORCE and TRPO, and show empirically that it can improve performance in MDPs with challenging
+exploration. 

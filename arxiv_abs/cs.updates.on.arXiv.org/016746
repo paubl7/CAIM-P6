@@ -1,0 +1,18 @@
+Aspect-based sentiment analysis (ABSA) aims to predict the sentiment expressed in a review with
+respect to a given aspect. The core of ABSA is to model the interaction between the context and given
+aspect to extract the aspect-related information. In prior work, attention mechanisms and dependency
+graph networks are commonly adopted to capture the relations between the context and given aspect.
+And the weighted sum of context hidden states is used as the final representation fed to the classifier.
+However, the information related to the given aspect may be already discarded and adverse information
+may be retained in the context modeling processes of existing models. This problem cannot be solved
+by subsequent modules and there are two reasons: first, their operations are conducted on the encoder-generated
+context hidden states, whose value cannot change after the encoder; second, existing encoders
+only consider the context while not the given aspect. To address this problem, we argue the given
+aspect should be considered as a new clue out of context in the context modeling process. As for solutions,
+we design several aspect-aware context encoders based on different backbones: an aspect-aware
+LSTM and three aspect-aware BERTs. They are dedicated to generate aspect-aware hidden states which
+are tailored for ABSA task. In these aspect-aware context encoders, the semantics of the given aspect
+is used to regulate the information flow. Consequently, the aspect-related information can be
+retained and aspect-irrelevant information can be excluded in the generated hidden states. We
+conduct extensive experiments on several benchmark datasets with empirical analysis, demonstrating
+the efficacies and advantages of our proposed aspect-aware context encoders. 

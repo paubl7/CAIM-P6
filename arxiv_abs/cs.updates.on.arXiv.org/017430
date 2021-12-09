@@ -1,0 +1,18 @@
+The use of multiple and semantically correlated sources can provide complementary information
+to each other that may not be evident when working with individual modalities on their own. In this
+context, multi-modal models can help producing more accurate and robust predictions in machine
+learning tasks where audio-visual data is available. This paper presents a multi-modal model for
+automatic scene classification that exploits simultaneously auditory and visual information.
+The proposed approach makes use of two separate networks which are respectively trained in isolation
+on audio and visual data, so that each network specializes in a given modality. The visual subnetwork
+is a pre-trained VGG16 model followed by a bidiretional recurrent layer, while the residual audio
+subnetwork is based on stacked squeeze-excitation convolutional blocks trained from scratch.
+After training each subnetwork, the fusion of information from the audio and visual streams is performed
+at two different stages. The early fusion stage combines features resulting from the last convolutional
+block of the respective subnetworks at different time steps to feed a bidirectional recurrent structure.
+The late fusion stage combines the output of the early fusion stage with the independent predictions
+provided by the two subnetworks, resulting in the final prediction. We evaluate the method using
+the recently published TAU Audio-Visual Urban Scenes 2021, which contains synchronized audio
+and video recordings from 12 European cities in 10 different scene classes. The proposed model has
+been shown to provide an excellent trade-off between prediction performance (86.5%) and system
+complexity (15M parameters) in the evaluation results of the DCASE 2021 Challenge. 

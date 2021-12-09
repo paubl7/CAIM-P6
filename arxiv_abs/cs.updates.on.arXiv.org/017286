@@ -1,0 +1,18 @@
+State-of-the-art 2D image compression schemes rely on the power of convolutional neural networks
+(CNNs). Although CNNs offer promising perspectives for 2D image compression, extending such models
+to omnidirectional images is not straightforward. First, omnidirectional images have specific
+spatial and statistical properties that can not be fully captured by current CNN models. Second,
+basic mathematical operations composing a CNN architecture, e.g., translation and sampling,
+are not well-defined on the sphere. In this paper, we study the learning of representation models
+for omnidirectional images and propose to use the properties of HEALPix uniform sampling of the
+sphere to redefine the mathematical tools used in deep learning models for omnidirectional images.
+In particular, we: i) propose the definition of a new convolution operation on the sphere that keeps
+the high expressiveness and the low complexity of a classical 2D convolution; ii) adapt standard
+CNN techniques such as stride, iterative aggregation, and pixel shuffling to the spherical domain;
+and then iii) apply our new framework to the task of omnidirectional image compression. Our experiments
+show that our proposed on-the-sphere solution leads to a better compression gain that can save 13.7%
+of the bit rate compared to similar learned models applied to equirectangular images. Also, compared
+to learning models based on graph convolutional networks, our solution supports more expressive
+filters that can preserve high frequencies and provide a better perceptual quality of the compressed
+images. Such results demonstrate the efficiency of the proposed framework, which opens new research
+venues for other omnidirectional vision tasks to be effectively implemented on the sphere manifold.

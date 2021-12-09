@@ -1,0 +1,19 @@
+There has been a long history of using Ordinary Differential Equations (ODEs) to understand the
+dynamic of discrete-time algorithms (DTAs). However, there are two major difficulties to apply
+this approach: (i) it is unclear how to obtain a suitable ODE from a DTA, and (ii) it is unclear what
+is the connection between the convergence of a DTA and the convergence of its corresponding ODE.
+Inspired by the recent work \cite{shi2018understanding}, we propose an $O(s^r)$-resolution
+ODE framework, which (partially) resolves the above two difficulties. More specifically, we propose
+the $r$-th degree ODE expansion of a discrete-time optimization algorithm, which provides a principal
+approach to construct the unique $O(s^r)$-resolution ODE for a given DTA, where $s$ is the step-size
+of the algorithm. Furthermore, we propose the $O(s^r)$-linear-convergence condition of a DTA
+under which the $O(s^r)$-resolution ODE converges linearly to optimal solution. These conditions
+are usually obvious from the $O(s^r)$-resolution ODE, and more importantly, we show that such conditions
+can automatically guarantee the linear convergence of a large class of DTAs. To better illustrate
+this machinery, we utilize it to study three classic algorithms -- gradient method (GM), proximal
+point method (PPM) and extra-gradient method (EGM) -- for solving the unconstrained minimax problem
+$\min_{x\in\RR^n} \max_{y\in \RR^m} L(x,y)$. Their $O(s)$-resolution ODEs explain the puzzling
+convergent/divergent behaviors of GM, PPM and EGM when $L(x,y)$ is a bilinear function. Moreover,
+the $O(s)$-linear-convergence condition on $L(x,y)$ not only unifies the known linear convergence
+rate of PPM and EGM, but also showcases that these two algorithms exhibit linear convergence in broader
+contexts, including solving a class of nonconvex-nonconcave minimax problems. 

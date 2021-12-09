@@ -1,0 +1,20 @@
+In the last ten years, full-waveform inversion has emerged as a robust and efficient high-resolution
+velocity model-building tool for seismic imaging, with the unique ability to recover complex subsurface
+structures. Originally based on a data fitting process using a least-squares cost function, it
+suffered from high sensitivity to cycle-skipping and was therefore of poor efficiency in handling
+large time shifts between observed and modelled seismic events. To tackle this problem, a common
+practice is to start the inversion using the low temporal frequencies of the data and selecting diving
+wave events. Complementary to this, the use of other cost functions has been investigated. Among
+these, cost functions based on optimal transport appeared appealing to possibly handle large time
+shifts between seismic events. Several strategies inspired by optimal transport have been proposed,
+taking into account the specificities of seismic data. Among them, the approach based on the Kantorovich-Rubinstein
+norm offers the possibility of the direct use of seismic data and an efficient numerical implementation
+allowing for a multidimensional (data coordinate space) application. We present here an analysis
+of the Kantorovich-Rubinstein norm, discussing its theoretical and practical aspects. A key component
+of our analysis is the back-propagated adjoint-source. We highlight its piecewise linearity,
+analyze its frequency content and amplitude balancing. We also emphasize the benefit of having
+a multidimensional implementation. Furthermore, we give practical rules for setting the tuning
+parameters of the numerical implementation. Our set of synthetic and field data examples demonstrate
+the improvements brought by the use of the Kantorovich-Rubinstein norm over least-squares full-waveform
+inversion, and highlight the improvements brought by the multidimensional approach over the one-dimensional
+one. 

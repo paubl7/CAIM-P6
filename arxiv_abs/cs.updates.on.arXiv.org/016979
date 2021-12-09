@@ -1,0 +1,18 @@
+Federated learning(FL) is an emerging distributed learning paradigm with default client privacy
+because clients can keep sensitive data on their devices and only share local training parameter
+updates with the federated server. However, recent studies reveal that gradient leakages in FL
+may compromise the privacy of client training data. This paper presents a gradient leakage resilient
+approach to privacy-preserving federated learning with per training example-based client differential
+privacy, coined as Fed-CDP. It makes three original contributions. First, we identify three types
+of client gradient leakage threats in federated learning even with encrypted client-server communications.
+We articulate when and why the conventional server coordinated differential privacy approach,
+coined as Fed-SDP, is insufficient to protect the privacy of the training data. Second, we introduce
+Fed-CDP, the per example-based client differential privacy algorithm, and provide a formal analysis
+of Fed-CDP with the $(\epsilon, \delta)$ differential privacy guarantee, and a formal comparison
+between Fed-CDP and Fed-SDP in terms of privacy accounting. Third, we formally analyze the privacy-utility
+trade-off for providing differential privacy guarantee by Fed-CDP and present a dynamic decay
+noise-injection policy to further improve the accuracy and resiliency of Fed-CDP. We evaluate
+and compare Fed-CDP and Fed-CDP(decay) with Fed-SDP in terms of differential privacy guarantee
+and gradient leakage resilience over five benchmark datasets. The results show that the Fed-CDP
+approach outperforms conventional Fed-SDP in terms of resilience to client gradient leakages
+while offering competitive accuracy performance in federated learning. 

@@ -1,0 +1,20 @@
+The computation demand for machine learning (ML) has grown rapidly recently, which comes with a
+number of costs. Estimating the energy cost helps measure its environmental impact and finding
+greener strategies, yet it is challenging without detailed information. We calculate the energy
+use and carbon footprint of several recent large models-T5, Meena, GShard, Switch Transformer,
+and GPT-3-and refine earlier estimates for the neural architecture search that found Evolved Transformer.
+We highlight the following opportunities to improve energy efficiency and CO2 equivalent emissions
+(CO2e): Large but sparsely activated DNNs can consume <1/10th the energy of large, dense DNNs without
+sacrificing accuracy despite using as many or even more parameters. Geographic location matters
+for ML workload scheduling since the fraction of carbon-free energy and resulting CO2e vary ~5X-10X,
+even within the same country and the same organization. We are now optimizing where and when large
+models are trained. Specific datacenter infrastructure matters, as Cloud datacenters can be ~1.4-2X
+more energy efficient than typical datacenters, and the ML-oriented accelerators inside them
+can be ~2-5X more effective than off-the-shelf systems. Remarkably, the choice of DNN, datacenter,
+and processor can reduce the carbon footprint up to ~100-1000X. These large factors also make retroactive
+estimates of energy cost difficult. To avoid miscalculations, we believe ML papers requiring large
+computational resources should make energy consumption and CO2e explicit when practical. We are
+working to be more transparent about energy use and CO2e in our future research. To help reduce the
+carbon footprint of ML, we believe energy usage and CO2e should be a key metric in evaluating models,
+and we are collaborating with MLPerf developers to include energy usage during training and inference
+in this industry standard benchmark. 

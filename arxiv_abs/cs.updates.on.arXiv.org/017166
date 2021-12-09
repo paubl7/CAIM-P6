@@ -1,0 +1,19 @@
+We propose the use of PAKE for achieving and enhancing entity authentication (EA) and key management
+(KM) in the context of decentralized end-to-end encrypted email and secure messaging, i.e., where
+neither a public key infrastructure nor trusted third parties are used. This approach not only simplifies
+the EA process by requiring users to share only a low-entropy secret, e.g., a memorable word, but
+it also allows us to establish a high-entropy secret key; this key enables a series of cryptographic
+enhancements and security properties, which are hard to achieve using out-of-band (OOB) authentication.
+We first study a few vulnerabilities in voice-based OOB authentication, in particular a combinatorial
+attack against lazy users, which we analyze in the context of a secure email solution. We then propose
+tackling public key authentication by solving the problem of "secure equality test" using PAKE,
+and discuss various protocols and their properties. This method enables the automation of important
+KM tasks (e.g. key renewal and future key pair authentications), reduces the impact of human errors,
+and lends itself to the asynchronous nature of email and modern messaging. It also provides cryptographic
+enhancements including multi-device synchronization and secure secret storage/retrieval,
+and paves the path for forward secrecy, deniability and post-quantum security. We also discuss
+the use of auditable PAKEs for mitigating a class of online guess and abort attacks in authentication
+protocols. To demonstrate the feasibility of our proposal, we present PakeMail, an implementation
+of the core idea, and discuss some of its cryptographic details, implemented features and efficiency
+aspects. We conclude with some design and security considerations, followed by future lines of
+work. 

@@ -1,0 +1,19 @@
+Recent advances in deep clustering and unsupervised representation learning are based on the idea
+that different views of an input image (generated through data augmentation techniques) must either
+be closer in the representation space, or have a similar cluster assignment. In this work, we leverage
+this idea together with ensemble learning to perform clustering and representation learning.
+Ensemble learning is widely used in the supervised learning setting but has not yet been practical
+in deep clustering. Previous works on ensemble learning for clustering neither work on the feature
+space nor learn features. We propose a novel ensemble learning algorithm dubbed Consensus Clustering
+with Unsupervised Representation Learning (ConCURL) which learns representations by creating
+a consensus on multiple clustering outputs. Specifically, we generate a cluster ensemble using
+random transformations on the embedding space, and define a consensus loss function that measures
+the disagreement among the constituents of the ensemble. Thus, diverse ensembles minimize this
+loss function in a synergistic way, which leads to better representations that work with all cluster
+ensemble constituents. Our proposed method ConCURL is easy to implement and integrate into any
+representation learning or deep clustering block. ConCURL outperforms all state of the art methods
+on various computer vision datasets. Specifically, we beat the closest state of the art method by
+5.9 percent on the ImageNet-10 dataset, and by 18 percent on the ImageNet-Dogs dataset in terms of
+clustering accuracy. We further shed some light on the under-studied overfitting issue in clustering
+and show that our method does not overfit as much as existing methods, and thereby generalizes better
+for new data samples. 

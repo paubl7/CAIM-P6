@@ -1,0 +1,19 @@
+Distributed linearly separable computation, where a user asks some distributed servers to compute
+a linearly separable function, was recently formulated by the same authors and aims to alleviate
+the bottlenecks of stragglers and communication cost in distributed computation. For this purpose,
+the data center assigns a subset of input datasets to each server, and each server computes some coded
+packets on the assigned datasets, which are then sent to the user. The user should recover the task
+function from the answers of a subset of servers, such the effect of stragglers could be tolerated.
+In this paper, we formulate a novel secure framework for this distributed linearly separable computation,
+where we aim to let the user only retrieve the desired task function without obtaining any other information
+about the input datasets, even if it receives the answers of all servers. In order to preserve the
+security of the input datasets, some common randomness variable independent of the datasets should
+be introduced into the transmission. We show that any non-secure linear-coding based computing
+scheme for the original distributed linearly separable computation problem, can be made secure
+without increasing the communication cost. Then we focus on the case where the computation cost
+of each server is minimum and aim to minimize the size of the randomness variable introduced in the
+system while achieving the optimal communication cost. We first propose an information theoretic
+converse bound on the randomness size. We then propose secure computing schemes based on two well-known
+data assignments, namely fractional repetition assignment and cyclic assignment. We then propose
+a computing scheme with novel assignment, which strictly outperforms the above two schemes. Some
+additional optimality results are also obtained. 

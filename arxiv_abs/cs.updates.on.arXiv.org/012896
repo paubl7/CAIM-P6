@@ -1,0 +1,20 @@
+One method to obtain a proper vertex coloring of graphs using a reasonable number of colors is to start
+from any arbitrary proper coloring and then repeat some local re-coloring techniques to reduce
+the number of color classes. The Grundy (First-Fit) coloring and color-dominating colorings of
+graphs are two well-known such techniques. The color-dominating colorings are also known and commonly
+referred as {\rm b}-colorings. But these two topics have been studied separately in graph theory.
+We introduce a new coloring procedure which combines the strategies of these two techniques and
+satisfies an additional property. We first prove that the vertices of every graph $G$ can be effectively
+colored using color classes say $C_1, \ldots, C_k$ such that $(i)$ for any two colors $i$ and $j$ with
+$1\leq i< j \leq k$, any vertex of color $j$ is adjacent to a vertex of color $i$, $(ii)$ there exists
+a set $\{u_1, \ldots, u_k\}$ of vertices of $G$ such that $u_j\in C_j$ for any $j\in \{1, \ldots, k\}$
+and $u_k$ is adjacent to $u_j$ for each $1\leq j \leq k$ with $j\not= k$, and $(iii)$ for each $i$ and
+$j$ with $i\not= j$, the vertex $u_j$ has a neighbor in $C_i$. This provides a new vertex coloring
+heuristic which improves both Grundy and color-dominating colorings. Denote by $z(G)$ the maximum
+number of colors used in any proper vertex coloring satisfying the above properties. The $z(G)$
+quantifies the worst-case behavior of the heuristic. We prove the existence of $\{G_n\}_{n\geq
+1}$ such that $\min \{\Gamma(G_n), b(G_n)\} \rightarrow \infty$ but $z(G_n)\leq 3$ for each $n$.
+For each positive integer $t$ we construct a family of finitely many colored graphs ${\mathcal{D}}_t$
+satisfying the property that if $z(G)\geq t$ for a graph $G$ then $G$ contains an element from ${\mathcal{D}}_t$
+as a colored subgraph. This provides an algorithmic method for proving numeric upper bounds for
+$z(G)$. 

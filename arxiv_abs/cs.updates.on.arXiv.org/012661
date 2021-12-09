@@ -1,0 +1,18 @@
+Pathfinding in Euclidean space is a common problem faced in robotics and computer games. For long-distance
+navigation on the surface of the earth or in outer space however, approximating the geometry as Euclidean
+can be insufficient for real-world applications such as the navigation of spacecraft, aeroplanes,
+drones and ships. This article describes an any-angle pathfinding algorithm for calculating the
+shortest path between point pairs over the surface of a sphere. Introducing several novel adaptations,
+it is shown that Anya as described by (Harabor & Grastien, 2013) for Euclidean space can be extended
+to Spherical geometry. There, where the shortest-distance line between coordinates is defined
+instead by a great-circle path, the optimal solution is typically a curved line in Euclidean space.
+In addition the turning points for optimal paths in Spherical geometry are not necessarily corner
+points as they are in Euclidean space, as will be shown, making further substantial adaptations
+to Anya necessary. Spherical Anya returns the optimal path on the sphere, given these different
+properties of world maps defined in Spherical geometry. It preserves all primary benefits of Anya
+in Euclidean geometry, namely the Spherical Anya algorithm always returns an optimal path on a sphere
+and does so entirely on-line, without any preprocessing or large memory overheads. Performance
+benchmarks are provided for several game maps including Starcraft and Warcraft III as well as for
+sea navigation on Earth using the NOAA bathymetric dataset. Always returning the shorter path compared
+with the Euclidean approximation yielded by Anya, Spherical Anya is shown to be faster than Anya
+for the majority of sea routes and slower for Game Maps and Random Maps. 

@@ -1,0 +1,18 @@
+We propose ZeroSARAH -- a novel variant of the variance-reduced method SARAH (Nguyen et al., 2017)
+-- for minimizing the average of a large number of nonconvex functions $\frac{1}{n}\sum_{i=1}^{n}f_i(x)$.
+To the best of our knowledge, in this nonconvex finite-sum regime, all existing variance-reduced
+methods, including SARAH, SVRG, SAGA and their variants, need to compute the full gradient over
+all $n$ data samples at the initial point $x^0$, and then periodically compute the full gradient
+once every few iterations (for SVRG, SARAH and their variants). Note that SVRG, SAGA and their variants
+typically achieve weaker convergence results than variants of SARAH: $n^{2/3}/\epsilon^2$ vs.
+$n^{1/2}/\epsilon^2$. Thus we focus on the variant of SARAH. The proposed ZeroSARAH and its distributed
+variant D-ZeroSARAH are the \emph{first} variance-reduced algorithms which \emph{do not require
+any full gradient computations}, not even for the initial point. Moreover, for both standard and
+distributed settings, we show that ZeroSARAH and D-ZeroSARAH obtain new state-of-the-art convergence
+results, which can improve the previous best-known result (given by e.g., SPIDER, SARAH, and PAGE)
+in certain regimes. Avoiding any full gradient computations (which are time-consuming steps)
+is important in many applications as the number of data samples $n$ usually is very large. Especially
+in the distributed setting, periodic computation of full gradient over all data samples needs to
+periodically synchronize all clients/devices/machines, which may be impossible or unaffordable.
+Thus, we expect that ZeroSARAH/D-ZeroSARAH will have a practical impact in distributed and federated
+learning where full device participation is impractical. 

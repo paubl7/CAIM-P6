@@ -1,0 +1,19 @@
+Sleep staging assumes an important role in the diagnosis of sleep disorders. In general, experts
+classify sleep stages manually based on polysomnography (PSG), which is quite time-consuming.
+Meanwhile, the acquisition of multiple signals is complex, which can affect the subject's sleep.
+Therefore, the use of single-channel electroencephalogram (EEG) for automatic sleep staging
+has become mainstream. In the literature, a large number of sleep staging methods based on single-channel
+EEG have been proposed with good results and realize the preliminary automation of sleep staging.
+However, the performance for most of these methods in the N1 stage is generally not high. In this paper,
+we propose a deep learning model SDAN based on raw EEG. The method utilises a one-dimensional convolutional
+neural network (CNN) to automatically extract features from raw EEG. It serially combines the channel
+attention and spatial attention mechanisms to filter and highlight key information and then uses
+soft threshold to eliminate redundant information. Additionally, we introduce a residual network
+to avoid degradation problems caused by network deepening. Experiments were conducted using two
+datasets with 5-fold cross-validation and hold-out validation method. The final average accuracy,
+overall accuracy, macro F1 score and Cohen's Kappa coefficient of the model reach 96.74%, 91.86%,
+82.64% and 0.8742 on the Sleep-EDF dataset, and 95.98%, 89.96%, 79.08% and 0.8216 on the Sleep-EDFx
+dataset. Significantly, our model performed superiorly in the N1 stage, with F1 scores of 54.08%
+and 52.49% on the two datasets respectively. The results show the superiority of our network over
+the best existing methods, reaching a new state-of-the-art. In particular, the present method
+achieves excellent results in the N1 sleep stage compared to other methods. 

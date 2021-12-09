@@ -1,0 +1,19 @@
+The census of open clusters in the Milky Way is in a never-before seen state of flux. Recent works have
+reported hundreds of new open clusters thanks to the incredible astrometric quality of the Gaia
+satellite, but other works have also reported that many open clusters discovered in the pre Gaia
+era may be associations. We aim to conduct a comparison of clustering algorithms used to detect open
+clusters, attempting to statistically quantify their strengths and weaknesses by deriving the
+sensitivity, specificity, and precision of each as well as their true positive rate against a larger
+sample. We selected DBSCAN, HDBSCAN, and Gaussian mixture models for further study, owing to their
+speed and appropriateness for use with Gaia data. We developed a preprocessing pipeline for Gaia
+data and developed the algorithms further for the specific application to open clusters. We derived
+detection rates for all 1385 open clusters in the fields in our study as well as more detailed performance
+statistics for 100 of these open clusters. DBSCAN was sensitive to 50% to 62% of the true positive
+open clusters in our sample, with generally very good specificity and precision. HDBSCAN traded
+precision for a higher sensitivity of up to 82%, especially across different distances and scales
+of open clusters. Gaussian mixture models were slow and only sensitive to 33% of open clusters in
+our sample, which tended to be larger objects. Additionally, we report on 41 new open cluster candidates
+detected by HDBSCAN, three of which are closer than 500 pc. When used with additional post-processing
+to mitigate its false positives, we have found that HDBSCAN is the most sensitive and effective algorithm
+for recovering open clusters in Gaia data. Our results suggest that many more new and already reported
+open clusters have yet to be detected in Gaia data. 

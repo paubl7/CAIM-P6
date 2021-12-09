@@ -1,0 +1,18 @@
+Scanning transmission electron microscopy (STEM) is now the primary tool for exploring functional
+materials on the atomic level. Often, features of interest are highly localized in specific regions
+in the material, such as ferroelectric domain walls, extended defects, or second phase inclusions.
+Selecting regions to image for structural and chemical discovery via atomically resolved imaging
+has traditionally proceeded via human operators making semi-informed judgements on sampling
+locations and parameters. Recent efforts at automation for structural and physical discovery
+have pointed towards the use of "active learning" methods that utilize Bayesian optimization with
+surrogate models to quickly find relevant regions of interest. Yet despite the potential importance
+of this direction, there is a general lack of certainty in selecting relevant control algorithms
+and how to balance a priori knowledge of the material system with knowledge derived during experimentation.
+Here we address this gap by developing the automated experiment workflows with several combinations
+to both illustrate the effects of these choices and demonstrate the tradeoffs associated with each
+in terms of accuracy, robustness, and susceptibility to hyperparameters for structural discovery.
+We discuss possible methods to build descriptors using the raw image data and deep learning based
+semantic segmentation, as well as the implementation of variational autoencoder based representation.
+Furthermore, each workflow is applied to a range of feature sizes including NiO pillars within a
+La:SrMnO$_3$ matrix, ferroelectric domains in BiFeO$_3$, and topological defects in graphene.
+The code developed in this manuscript are open sourced and will be released at github.com/creangnc/AE_Workflows.

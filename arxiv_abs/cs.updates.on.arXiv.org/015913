@@ -1,0 +1,20 @@
+The state of the art in video super-resolution (SR) are techniques based on deep learning, but they
+perform poorly on real-world videos (see Figure 1). The reason is that training image-pairs are
+commonly created by downscaling a high-resolution image to produce a low-resolution counterpart.
+Deep models are therefore trained to undo downscaling and do not generalize to super-resolving
+real-world images. Several recent publications present techniques for improving the generalization
+of learning-based SR, but are all ill-suited for real-time application. We present a novel approach
+to synthesizing training data by simulating two digital-camera image-capture processes at different
+scales. Our method produces image-pairs in which both images have properties of natural images.
+Training an SR model using this data leads to far better generalization to real-world images and
+videos. In addition, deep video-SR models are characterized by a high operations-per-pixel count,
+which prohibits their application in real-time. We present an efficient CNN architecture, which
+enables real-time application of video SR on low-power edge-devices. We split the SR task into two
+sub-tasks: a control-flow which estimates global properties of the input video and adapts the weights
+and biases of a processing-CNN that performs the actual processing. Since the process-CNN is tailored
+to the statistics of the input, its capacity kept low, while retaining effectivity. Also, since
+video-statistics evolve slowly, the control-flow operates at a much lower rate than the video frame-rate.
+This reduces the overall computational load by as much as two orders of magnitude. This framework
+of decoupling the adaptivity of the algorithm from the pixel processing, can be applied in a large
+family of real-time video enhancement applications, e.g., video denoising, local tone-mapping,
+stabilization, etc. 

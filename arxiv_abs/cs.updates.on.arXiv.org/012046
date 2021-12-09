@@ -1,0 +1,19 @@
+Learning generic user representations which can then be applied to other user-related tasks (e.g.,
+profile prediction and recommendation) has recently attracted much attention. Existing approaches
+often derive an individual set of model parameters for each task by training their own data. However,
+the representation of a user usually has some potential commonalities. As such, these separately
+trained representations could be suboptimal in performance as well as inefficient in terms of parameter
+sharing. In this paper, we delve on the research to continually learn user representations task
+by task, whereby new tasks are learned while using parameters from old ones. A new problem arises
+since when new tasks are trained, previously learned parameters are very likely to be modified,
+and thus, an artificial neural network (ANN)-based model may lose its capacity to serve for well-trained
+previous tasks forever, termed as catastrophic forgetting. To address this issue, we present Conure
+which is the first continual, or lifelong, user representation learner -- i.e., learning new tasks
+over time without forgetting old ones. Specifically, we propose iteratively removing unimportant
+weights by pruning on a well-optimized backbone representation model, enlightened by fact that
+neural network models are highly over-parameterized. Then, we are able to learn a coming task by
+sharing previous parameters and training new ones only on the empty space after pruning. We conduct
+extensive experiments on two real-world datasets across nine tasks and demonstrate that Conure
+performs largely better than common models without purposely preserving such old "knowledge",
+and is competitive or sometimes better than models which are trained either individually for each
+task or simultaneously by preparing all task data together. 

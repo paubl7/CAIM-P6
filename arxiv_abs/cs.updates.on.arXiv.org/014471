@@ -1,0 +1,19 @@
+Graphon control has been proposed and developed in [1]-[3] to approximately solve control problems
+for very large-scale networks (VLSNs) of linear dynamical systems based on graphon limits. This
+paper provides a solution method based on invariant subspace decompositions for a class of graphon
+linear quadratic regulation (LQR) problems where the local dynamics share homogeneous parameters
+but the graphon couplings may be heterogeneous among the coupled agents. Graphon couplings in this
+paper appear in states, controls and costs, and these couplings may be represented by different
+graphons. By exploring a common invariant subspace of the couplings, the original problem is decomposed
+into a network coupled LQR problem of finite dimension and a decoupled infinite dimensional LQR
+problem. A centralized optimal solution, and a nodal collaborative optimal control solution where
+each agent computes its part of the optimal solution locally, are established. The application
+of these solutions to finite network LQR problems may be via (i) the graphon control methodology
+[3], or (ii) the representation of finite LQR problems as special cases of graphon LQR problems.
+The complexity of these solutions involves solving one nd X nd dimensional Riccati equation and
+one n X n Riccati equation, where n is the dimension of each nodal agent state and d is the dimension
+of the nontrivial common invariant subspace of the coupling operators, whereas a direct approach
+involves solving an nN X nN dimensional Riccati equation, where N is the size of the network. For situations
+where the graphon couplings do not admit exact low-rank representations, approximate control
+is developed based on low-rank approximations. Finally, an application to the regulation of harmonic
+oscillators coupled over large networks with uncertainties is demonstrated. 

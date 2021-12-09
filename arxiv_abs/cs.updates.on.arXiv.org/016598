@@ -1,0 +1,18 @@
+We tackle the problem of goal-directed graph construction: given a starting graph, a global objective
+function (e.g., communication efficiency), and a budget of modifications, the aim is to find a set
+of edges whose addition to the graph maximally improves the objective. This problem emerges in many
+networks of great importance for society such as transportation and critical infrastructure networks.
+We identify two significant shortcomings with present methods. Firstly, they focus exclusively
+on network topology while ignoring spatial information; however, in many real-world networks,
+nodes are embedded in space, which yields different global objectives and governs the range and
+density of realizable connections. Secondly, existing RL methods scale poorly to large networks
+due to the high cost of training a model and the scaling factors of the action space and global objectives.
+In this work, we formulate the problem of goal-directed construction of spatial networks as a deterministic
+MDP. We adopt the Monte Carlo Tree Search framework for planning in this domain, prioritizing the
+optimality of final solutions over the speed of policy evaluation. We propose several improvements
+over the standard UCT algorithm for this family of problems, addressing their single-agent nature,
+the trade-off between the costs of edges and their contribution to the objective, and an action space
+linear in the number of nodes. We demonstrate the suitability of this approach for improving the
+global efficiency and attack resilience of a variety of synthetic and real-world networks, including
+Internet backbone networks and metro systems. We obtain 24% better solutions on average compared
+to UCT on the largest networks tested, and scalability superior to previous methods. 

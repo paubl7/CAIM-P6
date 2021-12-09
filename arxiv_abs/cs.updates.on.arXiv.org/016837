@@ -1,0 +1,20 @@
+Temperature monitoring during the life time of heat source components in engineering systems becomes
+essential to ensure the normal work and even the long working life of these heat sources. However,
+prior methods, which mainly use the interpolate estimation to reconstruct the whole temperature
+field with the temperature value from limited monitoring points, require large amounts of temperature
+tensors for an accurate estimation. This may decrease the availability and reliability of the system
+and sharply increase the monitoring cost. Furthermore, limited number of labelled training samples
+are available for the training of deep models. To solve this problem, this work develops a novel physics-informed
+deep reversible regression models for temperature field reconstruction of heat-source systems
+(TFR-HSS), which can better reconstruct the temperature field with the given limited monitoring
+points unsupervisedly. First, we define the temperature field reconstruction task of heat-source
+systems mathematically, numerically model the problem, and further transform the problem as an
+image-to-image regression problem. Then, based on the law of forward and backward propagation
+of deep models, this work develops the deep reversible regression model which can better learn the
+physical information near the boundary and improve the reconstruction performance. Finally,
+considering the physical characteristics of heat conduction as well as the boundary conditions,
+this work proposes the physics-informed reconstruction loss including four training losses and
+joint learns the deep surrogate model with these losses unsupervisedly. Experimental studies
+have conducted over typical two-dimensional heat-source systems to demonstrate the effectiveness
+and efficiency of the proposed physics-informed deep reversible regression models for TFR-HSS
+task. 

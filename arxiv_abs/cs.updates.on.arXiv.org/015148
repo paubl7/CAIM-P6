@@ -1,0 +1,19 @@
+Inertial Measurement Unit (IMU) sensors are becoming increasingly ubiquitous in everyday devices
+such as smartphones, fitness watches, etc. As a result, the array of health-related applications
+that tap onto this data has been growing, as well as the importance of designing accurate prediction
+models for tasks such as human activity recognition (HAR). However, one important task that has
+received little attention is the prediction of an individual's heart rate when undergoing a physical
+activity using IMU data. This could be used, for example, to determine which activities are safe
+for a person without having him/her actually perform them. We propose a neural architecture for
+this task composed of convolutional and LSTM layers, similarly to the state-of-the-art techniques
+for the closely related task of HAR. However, our model includes a convolutional network that extracts,
+based on sensor data from a previously executed activity, a physical conditioning embedding (PCE)
+of the individual to be used as the LSTM's initial hidden state. We evaluate the proposed model, dubbed
+PCE-LSTM, when predicting the heart rate of 23 subjects performing a variety of physical activities
+from IMU-sensor data available in public datasets (PAMAP2, PPG-DaLiA). For comparison, we use
+as baselines the only model specifically proposed for this task, and an adapted state-of-the-art
+model for HAR. PCE-LSTM yields over 10% lower mean absolute error. We demonstrate empirically that
+this error reduction is in part due to the use of the PCE. Last, we use the two datasets (PPG-DaLiA,
+WESAD) to show that PCE-LSTM can also be successfully applied when photoplethysmography (PPG)
+sensors are available to rectify heart rate measurement errors caused by movement, outperforming
+the state-of-the-art deep learning baselines by more than 30%. 

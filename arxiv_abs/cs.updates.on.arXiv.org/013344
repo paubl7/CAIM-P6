@@ -1,0 +1,18 @@
+As memory capacity has outstripped TLB coverage, applications that use large data sets suffer from
+frequent page table walks. The underlying problem is that traditional tree-based page tables are
+designed to save memory capacity through the use of fine-grained indirection, which is a poor match
+for today's systems which have significant memory capacity but high latencies for indirections.
+In this work we reduce the penalty of page table walks by both reducing the number of indirections
+required for page walks and by reducing the number of main memory accesses required for the indirections.
+We achieve this by first flattening the page table by allocating page table nodes in large pages.
+This results in fewer levels in the page table, which reduces the number of indirections needed to
+walk it. While the use of large pages in the page table does waste memory capacity for unused entries,
+this cost is small compared to using large pages for data as the page table itself is far smaller. Second
+we prioritize caching page table entries during phases of high TLB misses. This slightly increases
+data misses, but does so during phases of low-locality, and the resulting decrease in page walk latency
+outweighs this loss. By flattening the page table we are able to reduce the number of indirections
+needed for a page walk from 4 to 2 in a non-virtualized system and from 24 to 8 under virtualization.
+However, the actual effect is much smaller as the Page Walker/Paging Structure Cache already captures
+most locality in the first two levels of the page table. Overall we are able to reduce the number of
+main memory accesses per page walk from 1.6 to 1.0 for non-virtualized systems and from 4.6 to 3.0
+for virtualized systems. 

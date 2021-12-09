@@ -1,0 +1,18 @@
+Mobile malware are malicious programs that target mobile devices. They are an increasing problem,
+as seen in the rise of detected mobile malware samples per year. The number of active smartphone users
+is expected to grow, stressing the importance of research on the detection of mobile malware. Detection
+methods for mobile malware exist but are still limited. In this paper, we provide an overview of the
+performance of machine learning (ML) techniques to detect malware on Android, without using privileged
+access. The ML-classifiers use device information such as the CPU usage, battery usage, and memory
+usage for the detection of 10 subtypes of Mobile Trojans on the Android Operating System (OS). We
+use a real-life dataset containing device and malware data from 47 users for a year (2016). We examine
+which features, i.e. aspects, of a device, are most important to monitor to detect (subtypes of)
+Mobile Trojans. The focus of this paper is on dynamic hardware features. Using these dynamic features
+we apply state-of-the-art machine learning classifiers: Random Forest, K-Nearest Neighbour,
+and AdaBoost. We show classification results on different feature sets, making a distinction between
+global device features, and specific app features. None of the measured feature sets require privileged
+access. Our results show that the Random Forest classifier performs best as a general malware classifier:
+across 10 subtypes of Mobile Trojans, it achieves an F1 score of 0.73 with a False Positive Rate (FPR)
+of 0.009 and a False Negative Rate (FNR) of 0.380. The Random Forest, K-Nearest Neighbours, and AdaBoost
+classifiers achieve F1 scores above 0.72, an FPR below 0.02 and, an FNR below 0.33, when trained separately
+to detect each subtype of Mobile Trojans. 

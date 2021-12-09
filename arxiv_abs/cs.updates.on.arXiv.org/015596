@@ -1,0 +1,19 @@
+Graph pattern mining applications try to find all embeddings that match specific patterns. Compared
+to the traditional graph computation, graph mining applications are computation-intensive.
+The state-of-the-art method, pattern enumeration, constructs the embeddings that match the pattern.
+The key operation -- intersection -- of two edge lists, poses challenges to conventional architectures
+and requires substantial execution time. In this paper, we propose IntersectX, a vertically designed
+accelerator for pattern enumeration with stream instruction set extension and architectural
+supports based on conventional processor. The stream based ISA can be considered as a natural extension
+to the traditional instructions that operate on scalar values. We develop the IntersectX architecture
+composed of specialized mechanisms that efficiently implement the stream ISA extensions, including:
+(1) Stream Mapping Table (SMT) that records the mapping between stream ID and stream register; (2)
+the read-only Stream Cache (S-Cache) that enables efficient stream data movements; (3) tracking
+the dependency between streams with a property of intersection; (4) Stream Value Processing Unit
+(SVPU) that implements sparse value computations; and (5) the nested intersection translator
+that generates micro-op sequences for implementing nested intersections. We implement IntersectX
+ISA and architecture on zSim, and test it with seven popular graph mining applications (triangle/three-chain/tailed-traingle
+counting, 3-motif mining, 4/5-clique counting, and FSM) on ten real graphs. We develop our own implementation
+of AutoMine (InHouseAutomine). The results show that IntersectX significantly outperforms InHouseAutomine
+on CPU, on average 10.7 times and up to 83.9 times ; and GRAMER, a state-of-the-art graph pattern mining
+accelerator, based on exhaustive check, on average 40.1 times and up to 181.8 times. 

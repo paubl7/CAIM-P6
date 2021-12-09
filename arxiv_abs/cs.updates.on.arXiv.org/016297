@@ -1,0 +1,19 @@
+We prove that the evidence lower bound (ELBO) employed by variational auto-encoders (VAEs) admits
+non-trivial solutions having constant posterior variances under certain mild conditions, removing
+the need to learn variances in the encoder. The proof follows from an unexpected journey through
+an array of topics: the closed form optimal decoder for Gaussian VAEs, a proof that the decoder is
+always smooth, a proof that the ELBO at its stationary points is equal to the exact log evidence, and
+the posterior variance is merely part of a stochastic estimator of the decoder Hessian. The penalty
+incurred from using a constant posterior variance is small under mild conditions, and otherwise
+discourages large variations in the decoder Hessian. From here we derive a simplified formulation
+of the ELBO as an expectation over a batch, which we call the Batch Information Lower Bound (BILBO).
+Despite the use of Gaussians, our analysis is broadly applicable -- it extends to any likelihood
+function that induces a Riemannian metric. Regarding learned likelihoods, we show that the ELBO
+is optimal in the limit as the likelihood variances approach zero, where it is equivalent to the change
+of variables formulation employed in normalizing flow networks. Standard optimization procedures
+are unstable in this limit, so we propose a bounded Gaussian likelihood that is invariant to the scale
+of the data using a measure of the aggregate information in a batch, which we call Bounded Aggregate
+Information Sampling (BAGGINS). Combining the two formulations, we construct VAE networks with
+only half the outputs of ordinary VAEs (no learned variances), yielding improved ELBO scores and
+scale invariance in experiments. As we perform our analyses irrespective of any particular network
+architecture, our reformulations may apply to any VAE implementation. 

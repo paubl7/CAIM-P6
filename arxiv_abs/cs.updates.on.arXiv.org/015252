@@ -1,0 +1,18 @@
+This work proposes RaNNC (Rapid Neural Network Connector) as middleware for automatic hybrid parallelism.
+In recent deep learning research, as exemplified by T5 and GPT-3, the size of neural network models
+continues to grow. Since such models do not fit into the memory of accelerator devices, they need
+to be partitioned by model parallelism techniques. Moreover, to accelerate training for huge training
+data, we need a combination of model and data parallelisms, i.e., hybrid parallelism. Given a model
+description for PyTorch without any specification for model parallelism, RaNNC automatically
+partitions the model into a set of subcomponents so that (1) each subcomponent fits a device memory
+and (2) a high training throughput for pipeline parallelism is achieved by balancing the computation
+times of the subcomponents. In our experiments, we compared RaNNC with two popular frameworks,
+Megatron-LM (hybrid parallelism) and GPipe (originally proposed for model parallelism, but a
+version allowing hybrid parallelism also exists), for training models with increasingly greater
+numbers of parameters. In the pre-training of enlarged BERT models, RaNNC successfully trained
+models five times larger than those Megatron-LM could, and RaNNC's training throughputs were comparable
+to Megatron-LM's when pre-training the same models. RaNNC also achieved better training throughputs
+than GPipe on both the enlarged BERT model pre-training (GPipe with hybrid parallelism) and the
+enlarged ResNet models (GPipe with model parallelism) in all of the settings we tried. These results
+are remarkable, since RaNNC automatically partitions models without any modification to their
+descriptions; Megatron-LM and GPipe require users to manually rewrite the models' descriptions.

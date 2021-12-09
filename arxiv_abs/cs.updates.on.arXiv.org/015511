@@ -1,0 +1,19 @@
+Model predictive control (MPC) has been widely employed as an effective method for model-based
+constrained control. For systems with unknown dynamics, reinforcement learning (RL) and adaptive
+dynamic programming (ADP) have received notable attention to solving adaptive optimal control
+problems. Recently, works on the use of RL in the framework of MPC have emerged, which can enhance
+the ability of MPC for data-driven control. However, the safety under state constraints and the
+closed-loop robustness are difficult to be verified due to approximation errors of RL with function
+approximation structures. Aiming at the above problem, we propose a data-driven robust MPC solution
+based on incremental RL, called data-driven robust learning-based predictive control (dr-LPC),
+for perturbed unknown nonlinear systems subject to safety constraints. A data-driven robust MPC
+(dr-MPC) is firstly formulated with a learned predictor. The incremental Dual Heuristic Programming
+(DHP) algorithm using an actor-critic architecture is then utilized to solve the online optimization
+problem of dr-MPC. In each prediction horizon, the actor and critic learn time-varying laws for
+approximating the optimal control policy and costate respectively, which is different from classical
+MPCs. The state and control constraints are enforced in the learning process via building a Hamilton-Jacobi-Bellman
+(HJB) equation and a regularized actor-critic learning structure using logarithmic barrier functions.
+The closed-loop robustness and safety of the dr-LPC are proven under function approximation errors.
+Simulation results on two control examples have been reported, which show that the dr-LPC can outperform
+the DHP and dr-MPC in terms of state regulation, and its average computational time is much smaller
+than that with the dr-MPC in both examples. 

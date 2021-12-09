@@ -1,0 +1,19 @@
+Processing-using-DRAM has been proposed for a limited set of basic operations (i.e., logic operations,
+addition). However, in order to enable full adoption of processing-using-DRAM, it is necessary
+to provide support for more complex operations. In this paper, we propose SIMDRAM, a flexible general-purpose
+processing-using-DRAM framework that (1) enables the efficient implementation of complex operations,
+and (2) provides a flexible mechanism to support the implementation of arbitrary user-defined
+operations. The SIMDRAM framework comprises three key steps. The first step builds an efficient
+MAJ/NOT representation of a given desired operation. The second step allocates DRAM rows that are
+reserved for computation to the operation's input and output operands, and generates the required
+sequence of DRAM commands to perform the MAJ/NOT implementation of the desired operation in DRAM.
+The third step uses the SIMDRAM control unit located inside the memory controller to manage the computation
+of the operation from start to end, by executing the DRAM commands generated in the second step of
+the framework. We design the hardware and ISA support for SIMDRAM framework to (1) address key system
+integration challenges, and (2) allow programmers to employ new SIMDRAM operations without hardware
+changes. We evaluate SIMDRAM for reliability, area overhead, throughput, and energy efficiency
+using a wide range of operations and seven real-world applications to demonstrate SIMDRAM's generality.
+Using 16 DRAM banks, SIMDRAM provides (1) 88x and 5.8x the throughput, and 257x and 31x the energy
+efficiency, of a CPU and a high-end GPU, respectively, over 16 operations; (2) 21x and 2.1x the performance
+of the CPU and GPU, over seven real-world applications. SIMDRAM incurs an area overhead of only 0.2%
+in a high-end CPU. 

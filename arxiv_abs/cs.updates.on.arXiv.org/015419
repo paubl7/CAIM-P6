@@ -1,0 +1,20 @@
+For lower arm amputees, robotic prosthetic hands offer the promise to regain the capability to perform
+fine object manipulation in activities of daily living. Current control methods based on physiological
+signals such as EEG and EMG are prone to poor inference outcomes due to motion artifacts, variability
+of skin electrode junction impedance over time, muscle fatigue, and other factors. Visual evidence
+is also susceptible to its own artifacts, most often due to object occlusion, lighting changes,
+variable shapes of objects depending on view-angle, among other factors. Multimodal evidence
+fusion using physiological and vision sensor measurements is a natural approach due to the complementary
+strengths of these modalities. In this paper, we present a Bayesian evidence fusion framework for
+grasp intent inference using eye-view video, gaze, and EMG from the forearm processed by neural
+network models. We analyze individual and fused performance as a function of time as the hand approaches
+the object to grasp it. For this purpose, we have also developed novel data processing and augmentation
+techniques to train neural network components. Our experimental data analyses demonstrate that
+EMG and visual evidence show complementary strengths, and as a consequence, fusion of multimodal
+evidence can outperform each individual evidence modality at any given time. Specifically, results
+indicate that, on average, fusion improves the instantaneous upcoming grasp type classification
+accuracy while in the reaching phase by 13.66% and 14.8%, relative to EMG and visual evidence individually.
+An overall fusion accuracy of 95.3% among 13 labels (compared to a chance level of 7.7%) is achieved,
+and more detailed analysis indicate that the correct grasp is inferred sufficiently early and with
+high confidence compared to the top contender, in order to allow successful robot actuation to close
+the loop. 

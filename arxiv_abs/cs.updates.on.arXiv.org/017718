@@ -1,0 +1,19 @@
+Many machine learning systems are vulnerable to small perturbations made to inputs either at test
+time or at training time. This has received much recent interest on the empirical front due to applications
+where reliability and security are critical. However, theoretical understanding of algorithms
+that are robust to adversarial perturbations is limited. In this work we focus on Principal Component
+Analysis (PCA), a ubiquitous algorithmic primitive in machine learning. We formulate a natural
+robust variant of PCA where the goal is to find a low dimensional subspace to represent the given data
+with minimum projection error, that is in addition robust to small perturbations measured in $\ell_q$
+norm (say $q=\infty$). Unlike PCA which is solvable in polynomial time, our formulation is computationally
+intractable to optimize as it captures a variant of the well-studied sparse PCA objective as a special
+case. We show the following results: -Polynomial time algorithm that is constant factor competitive
+in the worst-case with respect to the best subspace, in terms of the projection error and the robustness
+criterion. -We show that our algorithmic techniques can also be made robust to adversarial training-time
+perturbations, in addition to yielding representations that are robust to adversarial perturbations
+at test time. Specifically, we design algorithms for a strong notion of training-time perturbations,
+where every point is adversarially perturbed up to a specified amount. -We illustrate the broad
+applicability of our algorithmic techniques in addressing robustness to adversarial perturbations,
+both at training time and test time. In particular, our adversarially robust PCA primitive leads
+to computationally efficient and robust algorithms for both unsupervised and supervised learning
+problems such as clustering and learning adversarially robust classifiers. 

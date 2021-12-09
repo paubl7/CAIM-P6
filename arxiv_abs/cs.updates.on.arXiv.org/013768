@@ -1,0 +1,19 @@
+Image steganography plays a vital role in securing secret data by embedding it in the cover images.
+Usually, these images are communicated in a compressed format. Existing techniques achieve this
+but have low embedding capacity. Enhancing this capacity causes a deterioration in the visual quality
+of the stego-image. Hence, our goal here is to enhance the embedding capacity while preserving the
+visual quality of the stego-image. We also intend to ensure that our scheme is resistant to steganalysis
+attacks. This paper proposes a Compressed Sensing Image Steganography (CSIS) scheme to achieve
+our goal while embedding binary data in images. The novelty of our scheme is the combination of three
+components in attaining the above-listed goals. First, we use compressed sensing to sparsify cover
+image block-wise, obtain its linear measurements, and then uniquely select permissible measurements.
+Further, before embedding the secret data, we encrypt it using the Data Encryption Standard (DES)
+algorithm, and finally, we embed two bits of encrypted data into each permissible measurement.
+Second, we propose a novel data extraction technique, which is lossless and completely recovers
+our secret data. Third, for the reconstruction of the stego-image, we use the least absolute shrinkage
+and selection operator (LASSO) for the resultant optimization problem. We perform experiments
+on several standard grayscale images and a color image, and evaluate embedding capacity, PSNR value,
+mean SSIM index, NCC coefficients, and entropy. We achieve 1.53 times more embedding capacity as
+compared to the most recent scheme. We obtain an average of 37.92 dB PSNR value, and average values
+close to 1 for both the mean SSIM index and the NCC coefficients, which are considered good. Moreover,
+the entropy of cover images and their corresponding stego-images are nearly the same. 

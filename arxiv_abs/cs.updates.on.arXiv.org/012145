@@ -1,0 +1,19 @@
+Despite its groundbreaking success in Go and computer games, Monte Carlo Tree Search (MCTS) is computationally
+expensive as it requires a substantial number of rollouts to construct the search tree, which calls
+for effective parallelization. However, how to design effective parallel MCTS algorithms has
+not been systematically studied and remains poorly understood. In this paper, we seek to lay its
+first theoretical foundation, by examining the potential performance loss caused by parallelization
+when achieving a desired speedup. In particular, we discover the necessary conditions of achieving
+a desirable parallelization performance, and highlight two of their practical benefits. First,
+by examining whether existing parallel MCTS algorithms satisfy these conditions, we identify
+key design principles that should be inherited by future algorithms, for example tracking the unobserved
+samples (used in WU-UCT (Liu et al., 2020)). We theoretically establish this essential design facilitates
+$\mathcal{O} ( \ln n + M / \sqrt{\ln n} )$ cumulative regret when the maximum tree depth is 2, where
+$n$ is the number of rollouts and $M$ is the number of workers. A regret of this form is highly desirable,
+as compared to $\mathcal{O} ( \ln n )$ regret incurred by a sequential counterpart, its excess part
+approaches zero as $n$ increases. Second, and more importantly, we demonstrate how the proposed
+necessary conditions can be adopted to design more effective parallel MCTS algorithms. To illustrate
+this, we propose a new parallel MCTS algorithm, called BU-UCT, by following our theoretical guidelines.
+The newly proposed algorithm, albeit preliminary, out-performs four competitive baselines on
+11 out of 15 Atari games. We hope our theoretical results could inspire future work of more effective
+parallel MCTS. 

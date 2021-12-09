@@ -1,0 +1,19 @@
+We propose a method for computing space-resolved correlation properties of the two-dimensional
+Hubbard model within a quantum-classical embedding strategy that uses a Noisy, Intermediate Scale
+Quantum (NISQ) computer to solve the embedded model. While previous approaches were limited to
+purely local, one-impurity embedded models, requiring at most four qubits and relatively shallow
+circuits, we solve a two-impurity model requiring eight qubits with an advanced hybrid scheme on
+top of the Variational Quantum Eigensolver algorithm. This iterative scheme, dubbed Natural Orbitalization
+(NOization), gradually transforms the single-particle basis to the approximate Natural-Orbital
+basis, in which the ground state can be minimally expressed, at the cost of measuring the one-particle
+reduced density-matrix of the embedded problem. We show that this transformation tends to make
+the variational optimization of existing (but too deep) ansatz circuits faster and more accurate,
+and we propose an ansatz, the Multi-Reference Excitation Preserving (MREP) ansatz, that achieves
+great expressivity without requiring a prohibitive gate count. The one-impurity version of the
+ansatz has only one parameter, making the ground state preparation a trivial step, which supports
+the optimal character of our approach. Within a Rotationally Invariant Slave Boson embedding scheme
+that requires a minimal number of bath sites and does not require computing the full Green's function,
+the NOization combined with the MREP ansatz allow us to compute accurate, space-resolved quasiparticle
+weights and static self-energies for the Hubbard model even in the presence of noise levels representative
+of current NISQ processors. This paves the way to a controlled solution of the Hubbard model with
+larger and larger embedded problems solved by quantum computers. 

@@ -1,0 +1,18 @@
+Arising from structural graph theory, treewidth has become a focus of study in fixed-parameter
+tractable algorithms in various communities including combinatorics, integer-linear programming,
+and numerical analysis. Many NP-hard problems are known to be solvable in $\widetilde{O}(n \cdot
+2^{O(\mathrm{tw})})$ time, where $\mathrm{tw}$ is the treewidth of the input graph. Analogously,
+many problems in P should be solvable in $\widetilde{O}(n \cdot \mathrm{tw}^{O(1)})$ time; however,
+due to the lack of appropriate tools, only a few such results are currently known. [Fom+18] conjectured
+this to hold as broadly as all linear programs; in our paper, we show this is true: Given a linear program
+of the form $\min_{Ax=b,\ell \leq x\leq u} c^{\top} x$, and a width-$\tau$ tree decomposition of
+a graph $G_A$ related to $A$, we show how to solve it in time $$\widetilde{O}(n \cdot \tau^2 \log (1/\varepsilon)),$$
+where $n$ is the number of variables and $\varepsilon$ is the relative accuracy. Combined with existing
+techniques in vertex separators, this leads to algorithms with $\widetilde{O}(n \cdot \mathrm{tw}^4
+\log (1/\varepsilon))$ and $\widetilde{O}(n \cdot \mathrm{tw}^2 \log (1/\varepsilon) + n^{1.5})$
+run-times when a tree decomposition is not given. Besides being the first of its kind, our algorithm
+has run-time nearly matching the fastest run-time for solving the sub-problem $Ax=b$ (under the
+assumption that no fast matrix multiplication is used). We obtain these results by combining recent
+techniques in interior-point methods (IPMs), sketching, and a novel representation of the solution
+under a multiscale basis similar to the wavelet basis. This representation further yields the first
+IPM with $o(\operatorname{rank}(A))$ time per iteration when the treewidth is small. 

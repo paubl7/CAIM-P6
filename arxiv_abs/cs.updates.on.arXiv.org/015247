@@ -1,0 +1,20 @@
+Finding a maximum independent set is a fundamental NP-hard problem that is used in many real-world
+applications. Given an unweighted graph, this problem asks for a maximum cardinality set of pairwise
+non-adjacent vertices. Some of the most successful algorithms for this problem are based on the
+branch-and-bound or branch-and-reduce paradigms. In particular, branch-and-reduce algorithms,
+which combine branch-and-bound with reduction rules, achieved substantial results, solving
+many previously infeasible instances. These results were to a large part achieved by developing
+new, more practical reduction rules. However, other components that have been shown to have an impact
+on the performance of these algorithms have not received as much attention. One of these is the branching
+strategy, which determines what vertex is included or excluded in a potential solution. The most
+commonly used strategy selects vertices based on their degree and does not take into account other
+factors that contribute to the performance. In this work, we develop and evaluate several novel
+branching strategies for both branch-and-bound and branch-and-reduce algorithms. Our strategies
+are based on one of two approaches. They either (1) aim to decompose the graph into two or more connected
+components which can then be solved independently, or (2) try to remove vertices that hinder the
+application of a reduction rule. Our experiments on a large set of real-world instances indicate
+that our strategies are able to improve the performance of the state-of-the-art branch-and-reduce
+algorithms. To be more specific, our reduction-based packing branching rule is able to outperform
+the default branching strategy of selecting a vertex of highest degree on 65% of all instances tested.
+Furthermore, our decomposition-based strategy based on edge cuts is able to achieve a speedup of
+2.29 on sparse networks (1.22 on all instances). 

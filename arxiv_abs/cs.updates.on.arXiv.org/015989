@@ -1,0 +1,19 @@
+Graph-modification problems, where we add/delete a small number of vertices/edges to make the
+given graph to belong to a simpler graph class, is a well-studied optimization problem in all algorithmic
+paradigms including classical, approximation and parameterized complexity. Specifically,
+graph-deletion problems, where one needs to delete at most $k$ vertices to place it in a given non-trivial
+hereditary (closed under induced subgraphs) graph class, captures several well-studied problems
+including {\sc Vertex Cover}, {\sc Feedback Vertex Set}, {\sc Odd Cycle Transveral}, {\sc Cluster
+Vertex Deletion}, and {\sc Perfect Deletion}. Investigation into these problems in parameterized
+complexity has given rise to powerful tools and techniques. While a precise characterization of
+the graph classes for which the problem is {\it fixed-parameter tractable} (FPT) is elusive, it
+has long been known that if the graph class is characterized by a {\it finite} set of forbidden graphs,
+then the problem is FPT. In this paper, we initiate a study of a natural variation of the problem of
+deletion to {\it scattered graph classes} where we need to delete at most $k$ vertices so that in the
+resulting graph, each connected component belongs to one of a constant number of graph classes.
+A simple hitting set based approach is no longer feasible even if each of the graph classes is characterized
+by finite forbidden sets. As our main result, we show that this problem is fixed-parameter tractable
+(FPT) when the deletion problem corresponding to each of the finite classes is known to be FPT and
+the properties that a graph belongs to each of the classes is expressible in CMSO logic. When each
+graph class has a finite forbidden set, we give a faster FPT algorithm using the well-known techniques
+of iterative compression and important separators. 

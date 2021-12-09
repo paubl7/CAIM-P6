@@ -1,0 +1,18 @@
+Suppose an oracle knows a string $S$ that is unknown to us and we want to determine. The oracle can answer
+queries of the form "Is $s$ a substring of $S$?". The \emph{Substring Query Complexity} of a string
+$S$, denoted $\chi(S)$, is the minimum number of adaptive substring queries that are needed to exactly
+reconstruct (or learn) $S$. It has been introduced in 1995 by Skiena and Sundaram, who showed that
+$\chi(S) \geq \sigma n/4 -O(n)$ in the worst case, where $\sigma$ is the size of the alphabet of $S$
+and $n$ its length, and gave an algorithm that spends $(\sigma-1)n+O(\sigma \sqrt{n})$ queries
+to reconstruct $S$. We show that for any binary string $S$, $\chi(S)$ is asymptotically equal to
+the Kolmogorov complexity of $S$ and therefore lower bounds any other measure of compressibility.
+However, since this result does not yield an efficient algorithm for the reconstruction, we present
+new algorithms to compute a set of substring queries whose size grows as a function of other known
+measures of complexity, e.g., the number {\sf rle} of runs in $S$, the size $g$ of the smallest grammar
+producing (only) $S$ or the size $z_{no}$ of the non-overlapping LZ77 factorization of $S$. We first
+show that any string of length $n$ over an integer alphabet of size $\sigma$ with {\sf rle} runs can
+be reconstructed with $q=O({\sf rle} (\sigma + \log \frac{n}{{\sf rle}}))$ substring queries
+in linear time and space. We then present an algorithm that spends $q \in O(\sigma g\log n) \subseteq
+O(\sigma z_{no}\log (n/z_{no})\log n)$ substring queries and runs in $O(n(\log n + \log \sigma)+
+q)$ time using linear space. This algorithm actually reconstructs the suffix tree of the string
+using a dynamic approach based on the centroid decomposition. 

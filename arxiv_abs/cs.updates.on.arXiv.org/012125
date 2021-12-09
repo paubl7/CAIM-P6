@@ -1,0 +1,19 @@
+Graph neural networks (GNNs) are effective models for representation learning on graph-structured
+data. However, standard GNNs are limited in their expressive power, as they cannot distinguish
+graphs beyond the capability of the Weisfeiler-Leman (1-WL) graph isomorphism heuristic. This
+limitation motivated a large body of work, including higher-order GNNs, which are provably more
+powerful models. To date, higher-order invariant and equivariant networks are the only models
+with known universality results, but these results are practically hindered by prohibitive computational
+complexity. Thus, despite their limitations, standard GNNs are commonly used, due to their strong
+practical performance. In practice, GNNs have shown a promising performance when enhanced with
+random node initialization (RNI), where the idea is to train and run the models with randomized initial
+node features. In this paper, we analyze the expressive power of GNNs with RNI, and pose the following
+question: are GNNs with RNI more expressive than GNNs? We prove that this is indeed the case, by showing
+that GNNs with RNI are universal, a first such result for GNNs not relying on computationally demanding
+higher-order properties. We then empirically analyze the effect of RNI on GNNs, based on carefully
+constructed datasets. Our empirical findings support the superior performance of GNNs with RNI
+over standard GNNs. In fact, we demonstrate that the performance of GNNs with RNI is often comparable
+with or better than that of higher-order GNNs, while keeping the much lower memory requirements
+of standard GNNs. However, this improvement typically comes at the cost of slower model convergence.
+Somewhat surprisingly, we found that the convergence rate and the accuracy of the models can be improved
+by using only a partial random initialization regime. 

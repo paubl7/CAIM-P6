@@ -1,0 +1,19 @@
+In recent years, several online platforms have seen a rapid increase in the number of review systems
+that request users to provide aspect-level feedback. Document-level Multi-aspect Sentiment
+Classification (DMSC), where the goal is to predict the ratings/sentiment from a review at an individual
+aspect level, has become a challenging and imminent problem. To tackle this challenge, we propose
+a deliberate self-attention-based deep neural network model, namely FEDAR, for the DMSC problem,
+which can achieve competitive performance while also being able to interpret the predictions made.
+FEDAR is equipped with a highway word embedding layer to transfer knowledge from pre-trained word
+embeddings, an RNN encoder layer with output features enriched by pooling and factorization techniques,
+and a deliberate self-attention layer. In addition, we also propose an Attention-driven Keywords
+Ranking (AKR) method, which can automatically discover aspect keywords and aspect-level opinion
+keywords from the review corpus based on the attention weights. These keywords are significant
+for rating predictions by FEDAR. Since crowdsourcing annotation can be an alternate way to recover
+missing ratings of reviews, we propose a LEcture-AuDience (LEAD) strategy to estimate model uncertainty
+in the context of multi-task learning, so that valuable human resources can focus on the most uncertain
+predictions. Our extensive set of experiments on five different open-domain DMSC datasets demonstrate
+the superiority of the proposed FEDAR and LEAD models. We further introduce two new DMSC datasets
+in the healthcare domain and benchmark different baseline models and our models on them. Attention
+weights visualization results and visualization of aspect and opinion keywords demonstrate the
+interpretability of our model and the effectiveness of our AKR method. 

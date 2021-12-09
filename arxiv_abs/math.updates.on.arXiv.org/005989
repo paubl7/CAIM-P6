@@ -1,0 +1,20 @@
+We study the problem of detecting infeasibility of large-scale linear programming problems using
+the primal-dual hybrid gradient method (PDHG) of Chambolle and Pock (2011). The literature on PDHG
+has mostly focused on settings where the problem at hand is assumed to be feasible. When the problem
+is not feasible, the iterates of the algorithm do not converge. In this scenario, we show that the
+iterates diverge at a controlled rate towards a well-defined ray. The direction of this ray is known
+as the infimal displacement vector $v$. The first contribution of our work is to prove that this vector
+recovers certificates of primal and dual infeasibility whenever they exist. Based on this fact,
+we propose a simple way to extract approximate infeasibility certificates from the iterates of
+PDHG. We study three different sequences that converge to the infimal displacement vector: the
+difference of iterates, the normalized iterates, and the normalized average. All of them are easy
+to compute, and thus the approach is suitable for large-scale problems. Our second contribution
+is to establish tight convergence rates for these sequences. We demonstrate that the normalized
+iterates and the normalized average achieve a convergence rate of $O(1/k)$, improving over the
+known rate of $O(1/\sqrt{k})$. This rate is general and applies to any fixed-point iteration of
+a nonexpansive operator. Thus, it is a result of independent interest since it covers a broad family
+of algorithms, including, for example, ADMM, and can be applied settings beyond linear programming,
+such as quadratic and semidefinite programming. Further, in the case of linear programming we show
+that, under nondegeneracy assumptions, the iterates of PDHG identify the active set of an auxiliary
+feasible problem in finite time, which ensures that the difference of iterates exhibits eventual
+linear convergence to the infimal displacement vector. 

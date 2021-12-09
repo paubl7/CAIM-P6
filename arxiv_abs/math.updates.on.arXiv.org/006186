@@ -1,0 +1,20 @@
+Tree tensor networks, or tree-based tensor formats, are prominent model classes for the approximation
+of high-dimensional functions in computational and data science. They correspond to sum-product
+neural networks with a sparse connectivity associated with a dimension tree and widths given by
+a tuple of tensor ranks. The approximation power of these models has been proved to be (near to) optimal
+for classical smoothness classes. However, in an empirical risk minimization framework with a
+limited number of observations, the dimension tree and ranks should be selected carefully to balance
+estimation and approximation errors. We propose and analyze a complexity-based model selection
+method for tree tensor networks in an empirical risk minimization framework and we analyze its performance
+over a wide range of smoothness classes. Given a family of model classes associated with different
+trees, ranks, tensor product feature spaces and sparsity patterns for sparse tensor networks,
+a model is selected (\`a la Barron, Birg\'e, Massart) by minimizing a penalized empirical risk,
+with a penalty depending on the complexity of the model class and derived from estimates of the metric
+entropy of tree tensor networks. This choice of penalty yields a risk bound for the selected predictor.
+In a least-squares setting, after deriving fast rates of convergence of the risk, we show that our
+strategy is (near to) minimax adaptive to a wide range of smoothness classes including Sobolev or
+Besov spaces (with isotropic, anisotropic or mixed dominating smoothness) and analytic functions.
+We discuss the role of sparsity of the tensor network for obtaining optimal performance in several
+regimes. In practice, the amplitude of the penalty is calibrated with a slope heuristics method.
+Numerical experiments in a least-squares regression setting illustrate the performance of the
+strategy. 

@@ -1,0 +1,18 @@
+We consider a wireless communication system that consists of a background emitter, a transmitter,
+and an adversary. The transmitter is equipped with a deep neural network (DNN) classifier for detecting
+the ongoing transmissions from the background emitter and transmits a signal if the spectrum is
+idle. Concurrently, the adversary trains its own DNN classifier as the surrogate model by observing
+the spectrum to detect the ongoing transmissions of the background emitter and generate adversarial
+attacks to fool the transmitter into misclassifying the channel as idle. This surrogate model may
+differ from the transmitter's classifier significantly because the adversary and the transmitter
+experience different channels from the background emitter and therefore their classifiers are
+trained with different distributions of inputs. This system model may represent a setting where
+the background emitter is a primary user, the transmitter is a secondary user, and the adversary
+is trying to fool the secondary user to transmit even though the channel is occupied by the primary
+user. We consider different topologies to investigate how different surrogate models that are
+trained by the adversary (depending on the differences in channel effects experienced by the adversary)
+affect the performance of the adversarial attack. The simulation results show that the surrogate
+models that are trained with different distributions of channel-induced inputs severely limit
+the attack performance and indicate that the transferability of adversarial attacks is neither
+readily available nor straightforward to achieve since surrogate models for wireless applications
+may significantly differ from the target model depending on channel effects. 

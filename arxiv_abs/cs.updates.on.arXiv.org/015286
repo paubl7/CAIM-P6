@@ -1,0 +1,19 @@
+The iterative and incremental nature of software development using models typically makes a model
+of a system incomplete (i.e., partial) until a more advanced and complete stage of development is
+reached. Existing model execution approaches (interpretation of models or code generation) do
+not support the execution of partial models. Supporting the execution of partial models at the early
+stages of software development allows early detection of defects, which can be fixed more easily
+and at a lower cost. This paper proposes a conceptual framework for the execution of partial models,
+which consists of three steps: static analysis, automatic refinement, and input-driven execution.
+First, a static analysis that respects the execution semantics of models is applied to detect problematic
+elements of models that cause problems for the execution. Second, using model transformation techniques,
+the models are refined automatically, mainly by adding decision points where missing information
+can be supplied. Third, refined models are executed, and when the execution reaches the decision
+points, it uses inputs obtained either interactively or by a script that captures how to deal with
+partial elements. We created an execution engine called PMExec for the execution of partial models
+of UML-RT (i.e., a modeling language for the development of soft real-time systems) that embodies
+our proposed framework. We evaluated PMExec based on several use-cases that show that the static
+analysis, refinement, and application of user input can be carried out with reasonable performance
+and that the overhead of approach, which is mostly due to the refinement and the increase in model
+complexity it causes, is manageable. We also discuss the properties of the refinement formally
+and show how the refinement preserves the original behaviors of the model. 

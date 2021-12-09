@@ -1,0 +1,19 @@
+The immersed boundary method (IBM) of Peskin (J. Comput. Phys., 1977), and derived forms such as
+the projection method of Taira and Colonius (J. Comput. Phys., 2007), have been useful for simulating
+flow physics in problems with moving interfaces on stationary grids. However, in their interface
+treatment, these methods do not distinguish one side from the other, but rather, apply the motion
+constraint to both sides, and the associated interface force is an inseparable mix of contributions
+from each side. In cases in which the interface separates an intentional region (such as a fluid)
+from a superfluous one (such as a body interior), it is impossible to distinguish the physically-meaningful
+force on one side from the spurious force generated in the other. In this work, we address this issue
+by defining a discrete Heaviside function, a natural companion to the familiar discrete Dirac delta
+function (DDF), to define a masked version of each field on the grid which, to within the error of the
+DDF, takes the intended value of the field on the respective sides of the interface. From discrete
+identities, we develop extended forms of prototypical partial differential equations, including
+Poisson, convection-diffusion, and incompressible Navier-Stokes, that govern the discrete
+masked fields. These equations contain the familiar forcing term of the IBM, but also additional
+terms that regularize the jumps in field quantities onto the grid and enable us to individually specify
+the constraints on field behavior on each side of the interface. Drawing the connection between
+these terms and the layer potentials in elliptic problems, we refer to them generically as immersed
+layers. We demonstrate the application of the method to several representative problems, including
+two-dimensional incompressible flows inside a rotating cylinder and external to a rotating square.

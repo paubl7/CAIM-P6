@@ -1,0 +1,18 @@
+SC-Flip (SCF) is a low-complexity polar code decoding algorithm with improved performance, and
+is an alternative to high-complexity (CRC)-aided SC-List (CA-SCL) decoding. However, the performance
+improvement of SCF is limited since it can correct up to only one channel error ($\omega=1$). Dynamic
+SCF (DSCF) algorithm tackles this problem by tackling multiple errors ($\omega \geq 1$), but it
+requires logarithmic and exponential computations, which make it infeasible for practical applications.
+In this work, we propose simplifications and approximations to make DSCF practically feasible.
+First, we reduce the transcendental computations of DSCF decoding to a constant approximation.
+Then, we show how to incorporate special node decoding techniques into DSCF algorithm, creating
+the Fast-DSCF decoding. Next, we reduce the search span within the special nodes to further reduce
+the computational complexity. Following, we describe a hardware architecture for the Fast-DSCF
+decoder, in which we introduce additional simplifications such as metric normalization and sorter
+length reduction. All the simplifications and approximations are shown to have minimal impact
+on the error-correction performance, and the reported Fast-DSCF decoder is the only SCF-based
+architecture that can correct multiple errors. The Fast-DSCF decoders synthesized using TSMC
+$65$nm CMOS technology can achieve a $1.25$, $1.06$ and $0.93$ Gbps throughput for $\omega \in \{1,2,3\}$,
+respectively. Compared to the state-of-the-art fast CA-SCL decoders with equivalent FER performance,
+the proposed decoders are up to $5.8\times$ more area-efficient. Finally, observations at energy
+dissipation indicate that the Fast-DSCF is more energy-efficient than its CA-SCL-based counterparts.

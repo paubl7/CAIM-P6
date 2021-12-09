@@ -1,0 +1,19 @@
+The accumulation of aberrations along the optical path in a telescope produces distortions and
+speckles in the resulting images, limiting the performance of cameras at high angular resolution.
+It is important to achieve the highest possible sensitivity to faint sources such as planets, using
+both hardware and data analysis software. While analytic methods are efficient, real systems are
+better-modelled numerically, but such models with many parameters can be hard to understand, optimize
+and apply. Automatic differentiation software developed for machine learning now makes calculating
+derivatives with respect to aberrations straightforward for arbitrary optical systems. We apply
+this powerful new tool to enhance high-angular-resolution astronomical imaging. Self-calibrating
+observables such as the 'closure phase' or 'bispectrum' have been widely used in optical and radio
+astronomy to mitigate optical aberrations and achieve high-fidelity imagery. Kernel phases are
+a generalization of closure phases in the limit of small phase errors. Using automatic differentiation,
+we reproduce existing kernel phase theory within this framework and demonstrate an extension to
+the Lyot coronagraph, finding self-calibrating combinations of speckles which are resistant
+to phase noise, but only in the very high-wavefront-quality regime. As an illustrative example,
+we reanalyze Palomar adaptive optics observations of the binary alpha Ophiuchi, finding consistency
+between the new pipeline and the existing standard. We present a new Python package 'morphine' that
+incorporates these ideas, with an interface similar to the popular package poppy, for optical simulation
+with automatic differentiation. These methods may be useful for designing improved astronomical
+optical systems by gradient descent. 

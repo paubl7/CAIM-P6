@@ -1,0 +1,18 @@
+Deep Neural Networks (DNNs) are being deployed in a wide range of settings today, from safety-critical
+applications like autonomous driving to commercial applications involving image classifications.
+However, recent research has shown that DNNs can be brittle to even slight variations of the input
+data. Therefore, rigorous testing of DNNs has gained widespread attention. While DNN robustness
+under norm-bound perturbation got significant attention over the past few years, our knowledge
+is still limited when natural variants of the input images come. These natural variants, e.g. a rotated
+or a rainy version of the original input, are especially concerning as they can occur naturally in
+the field without any active adversary and may lead to undesirable consequences. Thus, it is important
+to identify the inputs whose small variations may lead to erroneous DNN behaviors. The very few studies
+that looked at DNN's robustness under natural variants, however, focus on estimating the overall
+robustness of DNNs across all the test data rather than localizing such error-producing points.
+This work aims to bridge this gap. To this end, we study the local per-input robustness properties
+of the DNNs and leverage those properties to build a white-box (DEEPROBUST-W) and a black-box (DEEPROBUST-B)
+tool to automatically identify the non-robust points. Our evaluation of these methods on nine DNN
+models spanning three widely used image classification datasets shows that they are effective
+in flagging points of poor robustness. In particular, DEEPROBUST-W and DEEPROBUST-B are able to
+achieve an F1 score of up to 91.4% and 99.1%, respectively. We further show that DEEPROBUST-W can
+be applied to a regression problem for a self-driving car application. 

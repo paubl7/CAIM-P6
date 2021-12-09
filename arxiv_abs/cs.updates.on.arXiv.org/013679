@@ -1,0 +1,19 @@
+Layer decomposition to separate an input image into base and detail layers has been steadily used
+for image restoration. Existing residual networks based on an additive model require residual
+layers with a small output range for fast convergence and visual quality improvement. However,
+in inverse halftoning, homogenous dot patterns hinder a small output range from the residual layers.
+Therefore, a new layer decomposition network based on the Gaussian convolution model (GCM) and
+structure-aware deblurring strategy is presented to achieve residual learning for both the base
+and detail layers. For the base layer, a new GCM-based residual subnetwork is presented. The GCM
+utilizes a statistical distribution, in which the image difference between a blurred continuous-tone
+image and a blurred halftoned image with a Gaussian filter can result in a narrow output range. Subsequently,
+the GCM-based residual subnetwork uses a Gaussian-filtered halftoned image as input and outputs
+the image difference as residual, thereby generating the base layer, i.e., the Gaussian-blurred
+continuous-tone image. For the detail layer, a new structure-aware residual deblurring subnetwork
+(SARDS) is presented. To remove the Gaussian blurring of the base layer, the SARDS uses the predicted
+base layer as input and outputs the deblurred version. To more effectively restore image structures
+such as lines and texts, a new image structure map predictor is incorporated into the deblurring
+network to induce structure-adaptive learning. This paper provides a method to realize the residual
+learning of both the base and detail layers based on the GCM and SARDS. In addition, it is verified
+that the proposed method surpasses state-of-the-art methods based on U-Net, direct deblurring
+networks, and progressively residual networks. 

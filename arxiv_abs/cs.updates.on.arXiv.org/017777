@@ -1,0 +1,19 @@
+Objective: Neural network de-identification studies have focused on individual datasets. These
+studies assume the availability of a sufficient amount of human-annotated data to train models
+that can generalize to corresponding test data. In real-world situations, however, researchers
+often have limited or no in-house training data. Existing systems and external data can help jump-start
+de-identification on in-house data; however, the most efficient way of utilizing existing systems
+and external data is unclear. This article investigates the transferability of a state-of-the-art
+neural clinical de-identification system, NeuroNER, across a variety of datasets, when it is modified
+architecturally for domain generalization and when it is trained strategically for domain transfer.
+Methods and Materials: We conducted a comparative study of the transferability of NeuroNER using
+four clinical note corpora with multiple note types from two institutions. We modified NeuroNER
+architecturally to integrate two types of domain generalization approaches. We evaluated each
+architecture using three training strategies. We measured: transferability from external sources;
+transferability across note types; the contribution of external source data when in-domain training
+data are available; and transferability across institutions. Results and Conclusions: Transferability
+from a single external source gave inconsistent results. Using additional external sources consistently
+yielded an F1-score of approximately 80%. Fine-tuning emerged as a dominant transfer strategy,
+with or without domain generalization. We also found that external sources were useful even in cases
+where in-domain training data were available. Transferability across institutions differed
+by note type and annotation label but resulted in improved performance. 

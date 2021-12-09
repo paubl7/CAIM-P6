@@ -1,0 +1,20 @@
+The dynamics of planetesimals plays an important role in planet formation, because their velocity
+distribution sets the growth rate to larger bodies. When planetesimals form in protoplanetary
+discs, their orbits are nearly circular and planar due to the effect of gas drag. However, mutual
+close encounters of the planetesimals increase eccentricities and inclinations until an equilibrium
+between stirring and damping is reached. After disc dissipation, there is no more gas drag and mutual
+close encounters as well as encounters with planets stir the orbits again. The high number of planetesimals
+in protoplanetary discs renders it difficult to simulate their dynamics by means of direct N-body
+simulations of planet formation. Therefore, we developed a novel method for the dynamical evolution
+of planetesimals that is based on following close encounters between planetesimal-mass bodies
+and gravitational stirring by planet-mass bodies. To separate the orbital motion from the close
+encounters, we employ a Hamiltonian splitting scheme as used in symplectic N-body integrators.
+Close encounters are identified using a cell algorithm with linear scaling in the number of bodies.
+A grouping algorithm is used to create small groups of interacting bodies which are integrated separately.
+Our method allows simulating a high number of planetesimals interacting through gravity and collisions
+with low computational cost. The typical computational time is of the order of minutes or hours,
+up to a few days for more complex simulations, as compared to several hours or even weeks for the same
+setup with full N-body. The dynamical evolution of the bodies is sufficiently well reproduced.
+This will make it possible to study the growth of planetesimals through collisions and pebble accretion
+coupled to their dynamics for a much higher number of bodies than previously accessible with full
+N-body simulations. 

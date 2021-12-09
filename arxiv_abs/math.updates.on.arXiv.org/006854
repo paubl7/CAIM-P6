@@ -1,0 +1,20 @@
+A connected partition is a partition of the vertices of a graph into sets that induce connected subgraphs.
+Such partitions naturally occur in many application areas such as road networks, and image processing.
+We consider Balanced Connected Partitions (BCP), where the two classical objectives for BCP are
+to maximize the weight of the smallest, or minimize the weight of the largest component. We study
+BCP on c-claw-free graphs, the class of graphs that do not have $K_{1,c}$ as an induced subgraph,
+and present efficient (c-1)-approximation algorithms for both objectives. In particular, due
+to the (3-)claw-freeness of line graphs, this also implies a 2-approximations for the edge-partition
+version of BCP in general graphs. In the 1970s Gy\H{o}ri and Lov\'{a}sz showed for natural numbers
+$w_1,\dots,w_k$ where $\sum_i w_i$ is the vertex size, that if $G$ is k-connected, then there exist
+a connected k-partition with part sizes $w_1,\dots,w_k$. However, to this day no polynomial algorithm
+to compute such partitions exists for k>4. Towards finding such a partition $T_1,\dots, T_k$, we
+show how to efficiently compute connected partitions that at least approximately meet the target
+weights, subject to the mild assumption that each $w_i$ is greater than the weight of the heaviest
+vertex. In particular, we give a 3-approximation for both the lower and the upper bounded version
+i.e. we guarantee that each $T_i$ has weight at least $\frac{w_i}{3}$ or that each $T_i$ has weight
+most $3w_i$, respectively. Also, we present a both-side bounded version that produces a connected
+partition where each $T_i$ has size at least $\frac{w_i}{3}$ and at most $\max(\{r,3\}) w_i$, where
+$r \geq 1$ is the ratio between the largest and smallest value in $w_1, \dots, w_k$. In particular
+for the balanced version, i.e.~$w_1=w_2=, \dots,=w_k$, this gives a partition with $\frac{1}{3}w_i
+\leq w(T_i) \leq 3w_i$. 

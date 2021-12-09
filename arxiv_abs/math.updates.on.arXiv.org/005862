@@ -1,0 +1,19 @@
+It was shown recently by Su et al. (2016) that Nesterov's accelerated gradient method for minimizing
+a smooth convex function $f$ can be thought of as the time discretization of a second-order ODE, and
+that $f(x(t))$ converges to its optimal value at a rate of $\mathcal{O}(1/t^2)$ along any trajectory
+$x(t)$ of this ODE. A variational formulation was introduced in Wibisono et al. (2016) which allowed
+for accelerated convergence at a rate of $\mathcal{O}(1/t^p)$, for arbitrary $p>0$, in normed
+vector spaces. This framework was exploited in Duruisseaux et al. (2020) to design efficient explicit
+algorithms for symplectic accelerated optimization. In Alimisis et al. (2020), a second-order
+ODE was proposed as the continuous-time limit of a Riemannian accelerated algorithm, and it was
+shown that the objective function $f(x(t))$ converges to its optimal value at a rate of $\mathcal{O}(1/t^2)$
+along solutions of this ODE. In this paper, we show that on Riemannian manifolds, the convergence
+rate of $f(x(t))$ to its optimal value can also be accelerated to an arbitrary convergence rate $\mathcal{O}(1/t^p)$,
+by considering a family of time-dependent Bregman Lagrangian and Hamiltonian systems on Riemannian
+manifolds. This generalizes the results of Wibisono et al. (2016) to Riemannian manifolds and also
+provides a variational framework for accelerated optimization on Riemannian manifolds. An approach
+based on the time-invariance property of the family of Bregman Lagrangians and Hamiltonians was
+used to construct very efficient optimization algorithms in Duruisseaux et al. (2020), and we establish
+a similar time-invariance property in the Riemannian setting. One expects that a geometric numerical
+integrator that is time-adaptive, symplectic, and Riemannian manifold preserving will yield
+a class of promising optimization algorithms on manifolds. 

@@ -1,0 +1,20 @@
+This paper presents a vehicle speed planning system called the energy-optimal deceleration planning
+system (EDPS), which aims to maximize energy recuperation of regenerative braking of connected
+and autonomous electrified vehicles. A recuperation energy-optimal speed profile is computed
+based on the impending deceleration requirements for turning or stopping at an intersection. This
+is computed to maximize the regenerative braking energy while satisfying the physical limits of
+an electrified powertrain. In automated driving, the powertrain of an electrified vehicle can
+be directly controlled by the vehicle control unit such that it follows the computed optimal speed
+profile. To obtain smooth optimal deceleration speed profiles, optimal deceleration commands
+are determined by a parameterized polynomial-based deceleration model that is obtained by regression
+analyses with real vehicle driving test data. The parameters are dependent on preview information
+such as residual time and distance as well as target speed. The key design parameter is deceleration
+time, which determines the deceleration speed profile to satisfy the residual time and distance
+constraints as well as the target speed requirement. The bounds of deceleration commands corresponding
+to the physical limits of the powertrain are deduced from realistic deceleration test driving.
+The state constraints are dynamically updated by considering the anticipated road load and the
+deceleration preference. For validation and comparisons of the EDPS with different preview distances,
+driving simulation tests with a virtual road environment and vehicle-to-infrastructure connectivity
+are presented. It is shown that the longer preview distance in the EDPS, the more energy-recuperation.
+In comparison with driver-in-the-loop simulation tests, EDPS-based autonomous driving shows
+improvements in energy recuperation and reduction in trip time. 

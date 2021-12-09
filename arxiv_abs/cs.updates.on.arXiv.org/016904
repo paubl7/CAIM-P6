@@ -1,0 +1,19 @@
+Voter eligibility in United States elections is determined by a patchwork of state databases containing
+information about which citizens are eligible to vote. Administrators at the state and local level
+are faced with the exceedingly difficult task of ensuring that each of their jurisdictions is properly
+managed, while also monitoring for improper modifications to the database. Monitoring changes
+to Voter Registration Files (VRFs) is crucial, given that a malicious actor wishing to disrupt the
+democratic process in the US would be well-advised to manipulate the contents of these files in order
+to achieve their goals. In 2020, we saw election officials perform admirably when faced with administering
+one of the most contentious elections in US history, but much work remains to secure and monitor the
+election systems Americans rely on. Using data created by comparing snapshots taken of VRFs over
+time, we present a set of methods that make use of machine learning to ease the burden on analysts and
+administrators in protecting voter rolls. We first evaluate the effectiveness of multiple unsupervised
+anomaly detection methods in detecting VRF modifications by modeling anomalous changes as sparse
+additive noise. In this setting we determine that statistical models comparing administrative
+districts within a short time span and non-negative matrix factorization are most effective for
+surfacing anomalous events for review. These methods were deployed during 2019-2020 in our organization's
+monitoring system and were used in collaboration with the office of the Iowa Secretary of State.
+Additionally, we propose a newly deployed model which uses historical and demographic metadata
+to label the likely root cause of database modifications. We hope to use this model to predict which
+modifications have known causes and therefore better identify potentially anomalous modifications.

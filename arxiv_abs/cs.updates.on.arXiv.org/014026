@@ -1,0 +1,20 @@
+Meningiomas are the most common type of primary brain tumor, accounting for approximately 30% of
+all brain tumors. A substantial number of these tumors are never surgically removed but rather monitored
+over time. Automatic and precise meningioma segmentation is therefore beneficial to enable reliable
+growth estimation and patient-specific treatment planning. In this study, we propose the inclusion
+of attention mechanisms over a U-Net architecture: (i) Attention-gated U-Net (AGUNet) and (ii)
+Dual Attention U-Net (DAUNet), using a 3D MRI volume as input. Attention has the potential to leverage
+the global context and identify features' relationships across the entire volume. To limit spatial
+resolution degradation and loss of detail inherent to encoder-decoder architectures, we studied
+the impact of multi-scale input and deep supervision components. The proposed architectures are
+trainable end-to-end and each concept can be seamlessly disabled for ablation studies. The validation
+studies were performed using a 5-fold cross validation over 600 T1-weighted MRI volumes from St.
+Olavs University Hospital, Trondheim, Norway. For the best performing architecture, an average
+Dice score of 81.6% was reached for an F1-score of 95.6%. With an almost perfect precision of 98%,
+meningiomas smaller than 3ml were occasionally missed hence reaching an overall recall of 93%.
+Leveraging global context from a 3D MRI volume provided the best performances, even if the native
+volume resolution could not be processed directly. Overall, near-perfect detection was achieved
+for meningiomas larger than 3ml which is relevant for clinical use. In the future, the use of multi-scale
+designs and refinement networks should be further investigated to improve the performance. A larger
+number of cases with meningiomas below 3ml might also be needed to improve the performance for the
+smallest tumors. 

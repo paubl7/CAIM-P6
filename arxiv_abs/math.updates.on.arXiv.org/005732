@@ -1,0 +1,20 @@
+Dynamical systems arise in a wide variety of mathematical models from science and engineering.
+A common challenge is to quantify uncertainties on model inputs (parameters) that correspond to
+a quantitative characterization of uncertainties on observable Quantities of Interest (QoI).
+To this end, we consider a stochastic inverse problem (SIP) with a solution described by a pullback
+probability measure. We call this an observation-consistent solution, as its subsequent push-forward
+through the QoI map matches the observed probability distribution on model outputs. A distinction
+is made between QoI useful for solving the SIP and arbitrary model output data. In dynamical systems,
+model output data are often given as a series of state variable responses recorded over a particular
+time window. Consequently, the dimension of output data can easily exceed $\mathcal{O}(1E4)$
+or more due to the frequency of observations, and the correct choice or construction of a QoI from
+this data is not self-evident. We present a new framework, Learning Uncertain Quantities (LUQ),
+that facilitates the tractable solution of SIPs for dynamical systems. Given ensembles of predicted
+(simulated) time series and (noisy) observed data, LUQ provides routines for filtering data, unsupervised
+learning of the underlying dynamics, classifying observations, and feature extraction to learn
+the QoI map. Subsequently, time series data are transformed into samples of the underlying predicted
+and observed distributions associated with the QoI so that solutions to the SIP are computable.
+Following the introduction and demonstration of LUQ, numerical results from several SIPs are presented
+for a variety of dynamical systems arising in the life and physical sciences. For scientific reproducibility,
+we provide links to our Python implementation of LUQ and to all data and scripts required to reproduce
+the results in this manuscript. 

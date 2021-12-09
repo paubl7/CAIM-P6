@@ -1,0 +1,19 @@
+API developers evolve software libraries to fix bugs, add new features, or refactor code. To benefit
+from such library evolution, the programmers of client projects have to repetitively upgrade their
+library usages and adapt their codebases to any library API breaking changes (e.g., API renaming).
+Such adaptive changes can be tedious and error-prone. Existing tools provide limited support to
+help programmers migrate client projects from old library versions to new ones. For instance, some
+tools extract API mappings be-tween library versions and only suggest simple adaptive changes
+(i.e., statement updates); other tools suggest or automate more complicated edits (e.g., statement
+insertions) based on user-provided exemplar code migrations. However, when new library versions
+are available, it is usually cumbersome and time-consuming for users to provide sufficient human-crafted
+samples in order to guide automatic migration. In this paper, we propose a novel approach, AutoUpdate,
+to further improve the state of the art. Instead of learning from change examples, we designed AutoUpdate
+to automate migration in a compiler-directed way. Namely, given a compilation error triggered
+by upgrading libraries, AutoUpdate exploits 13 migration opera-tors to generate candidate edits,
+and tentatively applies each edit until the error is resolved or all edits are explored. We conducted
+two experiments. The first experiment involves migrating 371 tutorial examples between versions
+of 5 popular libraries. AutoUpdate reduced migration-related compilation errors for 92.7% of
+tasks. It eliminated such errors for 32.4% of tasks, and 33.9% of the tasks have identical edits to
+manual migrations. In the second experiment, we applied AutoUpdate to migrate two real client projects
+of lucene. AutoUpdate successfully migrated both projects, and the migrated code passed all tests.

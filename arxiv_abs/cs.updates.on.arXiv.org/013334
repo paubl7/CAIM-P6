@@ -1,0 +1,19 @@
+Many Deep Learning approaches solve complicated classification and regression problems by hierarchically
+constructing complex features from the raw input data. Although a few works have investigated the
+application of deep neural networks in recommendation domain, they mostly extract entity features
+by exploiting unstructured auxiliary data such as visual and textual information, and when it comes
+to using user-item rating matrix, feature extraction is done by using matrix factorization. As
+matrix factorization has some limitations, some works have been done to replace it with deep neural
+network. but these works either need to exploit unstructured data such item's reviews or images,
+or are specially designed to use implicit data and don't take user-item rating matrix into account.
+In this paper, we investigate the usage of novel representation learning algorithms to extract
+users and items representations from rating matrix, and offer a deep neural network for Collaborative
+Filtering. Our proposed approach is a modular algorithm consisted of two main phases: REpresentation
+eXtraction and a deep neural NETwork (RexNet). Using two joint and parallel neural networks in RexNet
+enables it to extract a hierarchy of features for each entity in order to predict the degree of interest
+of users to items. The resulted predictions are then used for the final recommendation. Unlike other
+deep learning recommendation approaches, RexNet is not dependent to unstructured auxiliary data
+such as visual and textual information, instead, it uses only the user-item rate matrix as its input.
+We evaluated RexNet in an extensive set of experiments against state of the art recommendation methods.
+The results show that RexNet significantly outperforms the baseline algorithms in a variety of
+data sets with different degrees of density. 

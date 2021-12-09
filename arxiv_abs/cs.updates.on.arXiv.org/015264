@@ -1,0 +1,19 @@
+In several crucial applications, domain knowledge is encoded by a system of ordinary differential
+equations (ODE), often stemming from underlying physical and biological processes. A motivating
+example is intensive care unit patients: the dynamics of vital physiological functions, such as
+the cardiovascular system with its associated variables (heart rate, cardiac contractility and
+output and vascular resistance) can be approximately described by a known system of ODEs. Typically,
+some of the ODE variables are directly observed (heart rate and blood pressure for example) while
+some are unobserved (cardiac contractility, output and vascular resistance), and in addition
+many other variables are observed but not modeled by the ODE, for example body temperature. Importantly,
+the unobserved ODE variables are known-unknowns: We know they exist and their functional dynamics,
+but cannot measure them directly, nor do we know the function tying them to all observed measurements.
+As is often the case in medicine, and specifically the cardiovascular system, estimating these
+known-unknowns is highly valuable and they serve as targets for therapeutic manipulations. Under
+this scenario we wish to learn the parameters of the ODE generating each observed time-series, and
+extrapolate the future of the ODE variables and the observations. We address this task with a variational
+autoencoder incorporating the known ODE function, called GOKU-net for Generative ODE modeling
+with Known Unknowns. We first validate our method on videos of single and double pendulums with unknown
+length or mass; we then apply it to a model of the cardiovascular system. We show that modeling the
+known-unknowns allows us to successfully discover clinically meaningful unobserved system parameters,
+leads to much better extrapolation, and enables learning using much smaller training sets. 

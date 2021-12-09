@@ -1,0 +1,19 @@
+NIDSs identify malicious activities by analyzing network traffic. NIDSs are trained with the samples
+of benign and intrusive network traffic. Training samples belong to either majority or minority
+classes depending upon the number of available instances. Majority classes consist of abundant
+samples for the normal traffic as well as for recurrent intrusions. Whereas, minority classes include
+fewer samples for unknown events or infrequent intrusions. NIDSs trained on such imbalanced data
+tend to give biased predictions against minority attack classes, causing undetected or misclassified
+intrusions. Past research works handled this class imbalance problem using data-level approaches
+that either increase minority class samples or decrease majority class samples in the training
+data set. Although these data-level balancing approaches indirectly improve the performance
+of NIDSs, they do not address the underlying issue in NIDSs i.e. they are unable to identify attacks
+having limited training data only. This paper proposes an algorithm-level approach called I-SiamIDS,
+which is a two-layer ensemble for handling class imbalance problem. I-SiamIDS identifies both
+majority and minority classes at the algorithm-level without using any data-level balancing techniques.
+The first layer of I-SiamIDS uses an ensemble of b-XGBoost, Siamese-NN and DNN for hierarchical
+filtration of input samples to identify attacks. These attacks are then sent to the second layer
+of I-SiamIDS for classification into different attack classes using m-XGBoost. As compared to
+its counterparts, I-SiamIDS showed significant improvement in terms of Accuracy, Recall, Precision,
+F1-score and values of AUC for both NSL-KDD and CIDDS-001 datasets. To further strengthen the results,
+computational cost analysis was also performed to study the acceptability of the proposed I-SiamIDS.

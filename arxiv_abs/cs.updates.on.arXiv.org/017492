@@ -1,0 +1,20 @@
+Voice authentication has become an integral part in security-critical operations, such as bank
+transactions and call center conversations. The vulnerability of automatic speaker verification
+systems (ASVs) to spoofing attacks instigated the development of countermeasures (CMs), whose
+task is to tell apart bonafide and spoofed speech. Together, ASVs and CMs form today's voice authentication
+platforms, advertised as an impregnable access control mechanism. We develop the first practical
+attack on CMs, and show how a malicious actor may efficiently craft audio samples to bypass voice
+authentication in its strictest form. Previous works have primarily focused on non-proactive
+attacks or adversarial strategies against ASVs that do not produce speech in the victim's voice.
+The repercussions of our attacks are far more severe, as the samples we generate sound like the victim,
+eliminating any chance of plausible deniability. Moreover, the few existing adversarial attacks
+against CMs mistakenly optimize spoofed speech in the feature space and do not take into account
+the existence of ASVs, resulting in inferior synthetic audio that fails in realistic settings.
+We eliminate these obstacles through our key technical contribution: a novel joint loss function
+that enables mounting advanced adversarial attacks against combined ASV/CM deployments directly
+in the time domain. Our adversarials achieve concerning black-box success rates against state-of-the-art
+authentication platforms (up to 93.57\%). Finally, we perform the first targeted, over-telephony-network
+attack on CMs, bypassing several challenges and enabling various potential threats, given the
+increased use of voice biometrics in call centers. Our results call into question the security of
+modern voice authentication systems in light of the real threat of attackers bypassing these measures
+to gain access to users' most valuable resources. 

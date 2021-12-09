@@ -1,0 +1,19 @@
+By encoding computing tasks, coded computing can not only mitigate straggling problems in federated
+learning (FL), but also preserve privacy of sensitive data uploaded/contributed by participating
+mobile users (MUs) to the centralized server, owned by a mobile application provider (MAP). However,
+these advantages come with extra coding cost/complexity and communication overhead (referred
+to as \emph{privacy cost}) that must be considered given the limited computing/communications
+resources at MUs/MAP, the rationality and incentive competition among MUs in contributing data
+to the MAP. This article proposes a novel coded FL-based framework for a privacy-aware mobile application
+service to address these challenges. In particular, the MAP first determines a set of the best MUs
+for the FL process based on MUs' provided information/features. Then, each selected MU can propose
+a contract to the MAP according to its expected trainable local data and privacy-protected coded
+data. To find the optimal contracts that can maximize utilities of the MAP and all the participating
+MUs while maintaining high learning quality of the whole system, we first develop a multi-principal
+one-agent contract-based problem leveraging coded FL-based multiple utility functions under
+the MUs' privacy cost, the MAP's limited computing resource, and asymmetric information between
+the MAP and MUs. Then, we transform the problem into an equivalent low-complexity problem and develop
+an iterative algorithm to solve it. Experiments with a real-world dataset show that our framework
+can speed up training time up to 49% and improve prediction accuracy up to 4.6 times while enhancing
+network's social welfare, i.e., total utility of all participating entities, up to 114% under the
+privacy cost consideration compared with those of baseline methods. 

@@ -1,0 +1,19 @@
+The subgraph-centric programming model is a promising approach and has been applied in many state-of-the-art
+distributed graph computing frameworks. However, traditional graph partition algorithms have
+significant difficulties in processing large-scale power-law graphs. The major problem is the
+communication bottleneck found in many subgraph-centric frameworks. Detailed analysis indicates
+that the communication bottleneck is caused by the huge communication volume or the extreme message
+imbalance among partitioned subgraphs. The traditional partition algorithms do not consider
+both factors at the same time, especially on power-law graphs. In this paper, we propose a novel efficient
+and balanced vertex-cut graph partition algorithm (EBV) which grants appropriate weights to the
+overall communication cost and communication balance. We observe that the number of replicated
+vertices and the balance of edge and vertex assignment have a great influence on communication patterns
+of distributed subgraph-centric frameworks, which further affect the overall performance. Based
+on this insight, We design an evaluation function that quantifies the proportion of replicated
+vertices and the balance of edges and vertices assignments as important parameters. Besides, we
+sort the order of edge processing by the sum of end-vertices' degrees from small to large. Experiments
+show that EBV reduces replication factor and communication by at least 21.8% and 23.7% respectively
+than other self-based partition algorithms. When deployed in the subgraph-centric framework,
+it reduces the running time on power-law graphs by an average of 16.8% compared with the state-of-the-art
+partition algorithm. Our results indicate that EBV has a great potential in improving the performance
+of subgraph-centric frameworks for the parallel large-scale power-law graph processing. 

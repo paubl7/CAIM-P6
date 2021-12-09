@@ -1,0 +1,20 @@
+We present a faster symbolic algorithm for the following central problem in probabilistic verification:
+Compute the maximal end-component (MEC) decomposition of Markov decision processes (MDPs). This
+problem generalizes the SCC decomposition problem of graphs and closed recurrent sets of Markov
+chains. The model of symbolic algorithms is widely used in formal verification and model-checking,
+where access to the input model is restricted to only symbolic operations (e.g., basic set operations
+and computation of one-step neighborhood). For an input MDP with $n$ vertices and $m$ edges, the
+classical symbolic algorithm from the 1990s for the MEC decomposition requires $O(n^2)$ symbolic
+operations and $O(1)$ symbolic space. The only other symbolic algorithm for the MEC decomposition
+requires $O(n \sqrt{m})$ symbolic operations and $O(\sqrt{m})$ symbolic space. A main open question
+is whether the worst-case $O(n^2)$ bound for symbolic operations can be beaten. We present a symbolic
+algorithm that requires $\widetilde{O}(n^{1.5})$ symbolic operations and $\widetilde{O}(\sqrt{n})$
+symbolic space. Moreover, the parametrization of our algorithm provides a trade-off between symbolic
+operations and symbolic space: for all $0<\epsilon \leq 1/2$ the symbolic algorithm requires $\widetilde{O}(n^{2-\epsilon})$
+symbolic operations and $\widetilde{O}(n^{\epsilon})$ symbolic space ($\widetilde{O}$ hides
+poly-logarithmic factors). Using our techniques we present faster algorithms for computing the
+almost-sure winning regions of $\omega$-regular objectives for MDPs. We consider the canonical
+parity objectives for $\omega$-regular objectives, and for parity objectives with $d$-priorities
+we present an algorithm that computes the almost-sure winning region with $\widetilde{O}(n^{2-\epsilon})$
+symbolic operations and $\widetilde{O}(n^{\epsilon})$ symbolic space, for all $0 < \epsilon
+\leq 1/2$. 

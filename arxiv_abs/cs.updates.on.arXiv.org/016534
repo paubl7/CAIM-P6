@@ -1,0 +1,18 @@
+Motivation: Researchers need a rich trove of genomic datasets that they can leverage to gain a better
+understanding of the genetic basis of the human genome and identify associations between phenotypes
+and specific parts of DNA. However, sharing genomic datasets that include sensitive genetic or
+medical information of individuals can lead to serious privacy-related consequences if data lands
+in the wrong hands. Restricting access to genomic datasets is one solution, but this greatly reduces
+their usefulness for research purposes. To allow sharing of genomic datasets while addressing
+these privacy concerns, several studies propose privacy-preserving mechanisms for data sharing.
+Differential privacy (DP) is one of such mechanisms that formalize rigorous mathematical foundations
+to provide privacy guarantees while sharing aggregated statistical information about a dataset.
+However, it has been shown that the original privacy guarantees of DP-based solutions degrade when
+there are dependent tuples in the dataset, which is a common scenario for genomic datasets (due to
+the existence of family members). Results: In this work, we introduce a near-optimal mechanism
+to mitigate the vulnerabilities of the inference attacks on differentially private query results
+from genomic datasets including dependent tuples. We propose a utility-maximizing and privacy-preserving
+approach for sharing statistics by hiding selective SNPs of the family members as they participate
+in a genomic dataset. By evaluating our mechanism on a real-world genomic dataset, we empirically
+demonstrate that our proposed mechanism can achieve up to 40% better privacy than state-of-the-art
+DP-based solutions, while near-optimally minimizing the utility loss. 

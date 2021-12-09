@@ -1,0 +1,19 @@
+Many-query problems, arising from uncertainty quantification, Bayesian inversion, Bayesian
+optimal experimental design, and optimization under uncertainty-require numerous evaluations
+of a parameter-to-output map. These evaluations become prohibitive if this parametric map is high-dimensional
+and involves expensive solution of partial differential equations (PDEs). To tackle this challenge,
+we propose to construct surrogates for high-dimensional PDE-governed parametric maps in the form
+of projected neural networks that parsimoniously capture the geometry and intrinsic low-dimensionality
+of these maps. Specifically, we compute Jacobians of these PDE-based maps, and project the high-dimensional
+parameters onto a low-dimensional derivative-informed active subspace; we also project the possibly
+high-dimensional outputs onto their principal subspace. This exploits the fact that many high-dimensional
+PDE-governed parametric maps can be well-approximated in low-dimensional parameter and output
+subspace. We use the projection basis vectors in the active subspace as well as the principal output
+subspace to construct the weights for the first and last layers of the neural network, respectively.
+This frees us to train the weights in only the low-dimensional layers of the neural network. The architecture
+of the resulting neural network captures to first order, the low-dimensional structure and geometry
+of the parametric map. We demonstrate that the proposed projected neural network achieves greater
+generalization accuracy than a full neural network, especially in the limited training data regime
+afforded by expensive PDE-based parametric maps. Moreover, we show that the number of degrees of
+freedom of the inner layers of the projected network is independent of the parameter and output dimensions,
+and high accuracy can be achieved with weight dimension independent of the discretization dimension.

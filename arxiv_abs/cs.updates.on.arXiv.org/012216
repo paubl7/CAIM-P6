@@ -1,0 +1,18 @@
+Real world traffic sign recognition is an important step towards building autonomous vehicles,
+most of which highly dependent on Deep Neural Networks (DNNs). Recent studies demonstrated that
+DNNs are surprisingly susceptible to adversarial examples. Many attack methods have been proposed
+to understand and generate adversarial examples, such as gradient based attack, score based attack,
+decision based attack, and transfer based attacks. However, most of these algorithms are ineffective
+in real-world road sign attack, because (1) iteratively learning perturbations for each frame
+is not realistic for a fast moving car and (2) most optimization algorithms traverse all pixels equally
+without considering their diverse contribution. To alleviate these problems, this paper proposes
+the targeted attention attack (TAA) method for real world road sign attack. Specifically, we have
+made the following contributions: (1) we leverage the soft attention map to highlight those important
+pixels and skip those zero-contributed areas - this also helps to generate natural perturbations,
+(2) we design an efficient universal attack that optimizes a single perturbation/noise based on
+a set of training images under the guidance of the pre-trained attention map, (3) we design a simple
+objective function that can be easily optimized, (4) we evaluate the effectiveness of TAA on real
+world data sets. Experimental results validate that the TAA method improves the attack successful
+rate (nearly 10%) and reduces the perturbation loss (about a quarter) compared with the popular
+RP2 method. Additionally, our TAA also provides good properties, e.g., transferability and generalization
+capability. We provide code and data to ensure the reproducibility: https://github.com/AdvAttack/RoadSignAttack.

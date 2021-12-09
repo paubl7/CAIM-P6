@@ -1,0 +1,19 @@
+In computer networks, participants may cooperate in processing tasks, so that loads are balanced
+among them. We present local distributed algorithms that (repeatedly) use local imbalance criteria
+to transfer loads concurrently across the participants of the system, iterating until all loads
+are balanced. Our algorithms are based on a short local deal-agreement communication of proposal/deal,
+based on the neighborhood loads. They converge monotonically, always providing a better state
+as the execution progresses. Besides, our algorithms avoid making loads temporarily negative.
+Thus, they may be considered anytime ones, in the sense that they can be stopped at any time during
+the execution. We show that our synchronous load balancing algorithms achieve $\epsilon$-Balanced
+state for the continuous setting and 1-Balanced state for the discrete setting in all graphs, within
+$O(n D \log(n K/\epsilon))$ and $O(n D \log(n K/D) + n D^2)$ time, respectively, where $n$ is the number
+of nodes, $K$ is the initial discrepancy, $D$ is the graph diameter, and $\epsilon$ is the final discrepancy.
+Our other monotonic synchronous and asynchronous algorithms for the discrete setting are generalizations
+of the first presented algorithms, where load balancing is performed concurrently with more than
+one neighbor. These algorithms arrive at a 1-Balanced state in time $O(n K^2)$ in general graphs,
+but have a potential to be faster as the loads are balanced among all neighbors, rather than with only
+one; we describe a scenario that demonstrates the potential for a fast ($O(1)$) convergence. Our
+asynchronous algorithm avoids the need to wait for the slowest participants' activity prior to
+making the next load balancing steps as synchronous settings restrict. We also introduce a self-stabilizing
+version of our asynchronous algorithm. 

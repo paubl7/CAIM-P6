@@ -1,0 +1,18 @@
+In order to quickly adapt to new data, few-shot learning aims at learning from few examples, often
+by using already acquired knowledge. The new data often differs from the previously seen data due
+to a domain shift, that is, a change of the input-target distribution. While several methods perform
+well on small domain shifts like new target classes with similar inputs, larger domain shifts are
+still challenging. Large domain shifts may result in high-level concepts that are not shared between
+the original and the new domain, whereas low-level concepts like edges in images might still be shared
+and useful. For cross-domain few-shot learning, we suggest representation fusion to unify different
+abstraction levels of a deep neural network into one representation. We propose Cross-domain Hebbian
+Ensemble Few-shot learning (CHEF), which achieves representation fusion by an ensemble of Hebbian
+learners acting on different layers of a deep neural network. Ablation studies show that representation
+fusion is a decisive factor to boost cross-domain few-shot learning. On the few-shot datasets miniImagenet
+and tieredImagenet with small domain shifts, CHEF is competitive with state-of-the-art methods.
+On cross-domain few-shot benchmark challenges with larger domain shifts, CHEF establishes novel
+state-of-the-art results in all categories. We further apply CHEF on a real-world cross-domain
+application in drug discovery. We consider a domain shift from bioactive molecules to environmental
+chemicals and drugs with twelve associated toxicity prediction tasks. On these tasks, that are
+highly relevant for computational drug discovery, CHEF significantly outperforms all its competitors.
+Github: https://github.com/ml-jku/chef 

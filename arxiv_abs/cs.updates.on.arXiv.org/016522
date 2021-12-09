@@ -1,0 +1,18 @@
+Deep neural networks (DNNs), while accurate, are expensive to train. Many practitioners, therefore,
+outsource the training process to third parties or use pre-trained DNNs. This practice makes DNNs
+vulnerable to $backdoor$ $attacks$: the third party who trains the model may act maliciously to
+inject hidden behaviors into the otherwise accurate model. Until now, the mechanism to inject backdoors
+has been limited to $poisoning$. We argue that such a supply-chain attacker has more attack techniques
+available. To study this hypothesis, we introduce a handcrafted attack that directly manipulates
+the parameters of a pre-trained model to inject backdoors. Our handcrafted attacker has more degrees
+of freedom in manipulating model parameters than poisoning. This makes it difficult for a defender
+to identify or remove the manipulations with straightforward methods, such as statistical analysis,
+adding random noises to model parameters, or clipping their values within a certain range. Further,
+our attacker can combine the handcrafting process with additional techniques, $e.g.$, jointly
+optimizing a trigger pattern, to inject backdoors into complex networks effectively$-$the meet-in-the-middle
+attack. In evaluations, our handcrafted backdoors remain effective across four datasets and four
+network architectures with a success rate above 96%. Our backdoored models are resilient to both
+parameter-level backdoor removal techniques and can evade existing defenses by slightly changing
+the backdoor attack configurations. Moreover, we demonstrate the feasibility of suppressing
+unwanted behaviors otherwise caused by poisoning. Our results suggest that further research is
+needed for understanding the complete space of supply-chain backdoor attacks. 

@@ -1,0 +1,20 @@
+This paper considers the problem of multi-server Private Linear Computation, under the joint and
+individual privacy guarantees. In this problem, identical copies of a dataset comprised of $K$
+messages are stored on $N$ non-colluding servers, and a user wishes to obtain one linear combination
+of a $D$-subset of messages belonging to the dataset. The goal is to design a scheme for performing
+the computation such that the total amount of information downloaded from the servers is minimized,
+while the privacy of the $D$ messages required for the computation is protected. When joint privacy
+is required, the identities of all of these $D$ messages must be kept private jointly, and when individual
+privacy is required, the identity of every one of these $D$ messages must be kept private individually.
+In this work, we characterize the capacity, which is defined as the maximum achievable download
+rate, under both joint and individual privacy requirements. In particular, we show that the capacity
+is given respectively by ${(1+1/N+\dots+1/N^{K-D})^{-1}}$ or ${(1+1/N+\dots+1/N^{\lceil
+K/D\rceil-1})^{-1}}$ when joint or individual privacy is required. Our converse proofs are based
+on reduction from two variants of the multi-server Private Information Retrieval problem in the
+presence of side information. Our achievability schemes build up on our recently proposed schemes
+for single-server Private Linear Transformation and the multi-server private computation scheme
+proposed by Sun and Jafar. Using similar proof techniques, we also establish upper and lower bounds
+on the capacity for the cases in which the user wants to compute $L$ (potentially more than one) linear
+combinations. Specifically, we show that the capacity is upper and lower bounded respectively
+by ${(1+1/N+\dots+1/N^{(K-D)/L})^{-1}}$ and ${(1+1/N+\dots+1/N^{K-D+L-1})^{-1}}$, when
+joint privacy is required. 

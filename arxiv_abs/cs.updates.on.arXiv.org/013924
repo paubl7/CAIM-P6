@@ -1,0 +1,20 @@
+Many software engineering tasks, such as testing, and anomaly detection can benefit from the ability
+to infer a behavioral model of the software.Most existing inference approaches assume access to
+code to collect execution sequences. In this paper, we investigate a black-box scenario, where
+the system under analysis cannot be instrumented, in this granular fashion.This scenario is particularly
+prevalent with control systems' log analysis in the form of continuous signals. In this situation,
+an execution trace amounts to a multivariate time-series of input and output signals, where different
+states of the system correspond to different `phases` in the time-series. The main challenge is
+to detect when these phase changes take place. Unfortunately, most existing solutions are either
+univariate, make assumptions on the data distribution, or have limited learning power.Therefore,
+we propose a hybrid deep neural network that accepts as input a multivariate time series and applies
+a set of convolutional and recurrent layers to learn the non-linear correlations between signals
+and the patterns over time.We show how this approach can be used to accurately detect state changes,
+and how the inferred models can be successfully applied to transfer-learning scenarios, to accurately
+process traces from different products with similar execution characteristics. Our experimental
+results on two UAV autopilot case studies indicate that our approach is highly accurate (over 90%
+F1 score for state classification) and significantly improves baselines (by up to 102% for change
+point detection).Using transfer learning we also show that up to 90% of the maximum achievable F1
+scores in the open-source case study can be achieved by reusing the trained models from the industrial
+case and only fine tuning them using as low as 5 labeled samples, which reduces the manual labeling
+effort by 98%. 

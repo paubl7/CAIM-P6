@@ -1,0 +1,18 @@
+A challenge arising from the local Bayesian assimilation of data in an atmospheric flow simulation
+is the imbalances it may introduce. Acoustic fast-mode imbalances of the order of the slower dynamics
+can be negated by employing a blended numerical model with seamless access to the compressible and
+the soundproof pseudo-incompressible dynamics. Here, the blended modelling strategy by Benacchio
+et al., MWR, vol. 142 (2014) is upgraded in an advanced numerical framework and extended with a Bayesian
+local ensemble data assimilation method. Upon assimilation of data, the model configuration is
+switched to the pseudo-incompressible regime for one time-step. After that, the model configuration
+is switched back to the compressible model for the duration of the assimilation window. The switching
+between model regimes is repeated for each subsequent assimilation window. An improved blending
+strategy for the numerical model ensures that a single time-step in the pseudo-incompressible
+regime is sufficient to suppress imbalances coming from the initialisation and data assimilation.
+This improvement is based on three innovations: (i) the association of pressure fields computed
+at different stages of the numerical integration with actual time levels; (ii) a conversion of pressure-related
+variables between the model regimes derived from low Mach number asymptotics; and (iii) a judicious
+selection of the pressure variables used in converting numerical model states when a switch of models
+occurs. Idealised two-dimensional travelling vortex and buoyancy-driven bubble convection
+experiments show that acoustic imbalances arising from data assimilation can be eliminated by
+using this blended model, thereby achieving balanced analysis fields. 

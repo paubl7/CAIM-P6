@@ -1,0 +1,18 @@
+DoS and DDoS attacks have been growing in size and number over the last decade and existing solutions
+to mitigate these attacks are in general inefficient. Compared to other types of malicious cyber
+attacks, DoS and DDoS attacks are particularly more challenging to combat. With their ability to
+mask themselves as legitimate traffic, developing methods to detect these types of attacks on a
+packet or flow level, has proven to be a difficult task. In this paper, we explore the potential of
+Variational Autoencoders to serve as a component within an intelligent security solution that
+differentiates between normal and malicious traffic. Two methods based on the ability of Variational
+Autoencoders to learn latent representations from network traffic flows are proposed. The first
+method resorts to a classifier based on the latent encodings obtained from Variational Autoencoders
+learned from traffic traces. The second method is rather an anomaly detection method where the Variational
+Autoencoder is used to learn the abstract feature representations of exclusively legitimate traffic.
+Then anomalies are filtered out by relying on the reconstruction loss of the Variational Autoencoder.
+Both of the proposed methods have been thoroughly tested on two separate datasets with a similar
+feature space. The results show that both methods are promising, with a slight superiority of the
+classifier based method over the anomaly based one. %that the first method is able to successfully
+detect individual traffic flows with high precision on the training and validation data, slightly
+less successfully on the test data. For the second method, the Variational Autoencoder will require
+further adjustments to be able to sufficiently filter out anomalies from network traffic flows.

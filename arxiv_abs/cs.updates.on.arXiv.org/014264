@@ -1,0 +1,20 @@
+A useful approach to solve inverse problems is to pair the parameter-to-data map with a stochastic
+dynamical system for the parameter, and then employ techniques from filtering to estimate the parameter
+given the data. Three classical approaches to filtering of nonlinear systems are the extended,
+ensemble and unscented Kalman filters. The extended Kalman inversion (ExKI) is impractical when
+the forward map is not readily differentiable and given as a black box, and also for high dimensional
+parameter spaces because of the need to propagate large covariance matrices. Ensemble Kalman inversion
+(EKI) has emerged as a useful tool which overcomes both of these issues: it is derivative free and
+works with a low-rank covariance approximation formed from the ensemble. In this paper, we demonstrate
+that unscented Kalman methods also provide an effective tool for derivative-free inversion in
+the setting of black-box forward models, introducing unscented Kalman inversion (UKI). Theoretical
+analysis is provided for linear inverse problems, and a smoothing property of the data mis-fit under
+the unscented transform is explained. We provide numerical experiments, including various applications:
+learning subsurface flow permeability parameters; learning the structure damage field; learning
+the Navier-Stokes initial condition; and learning subgrid-scale parameters in a general circulation
+model. The theory and experiments show that the UKI outperforms the EKI on parameter learning problems
+with moderate numbers of parameters and outperforms the ExKI on problems where the forward model
+is not readily differentiable, or where the derivative is very sensitive. In particular, UKI based
+methods are of particular value for parameter estimation problems in which the number of parameters
+is moderate but the forward model is expensive and provided as a black box which is impractical to
+differentiate. 

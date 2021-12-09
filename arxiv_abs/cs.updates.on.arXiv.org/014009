@@ -1,0 +1,20 @@
+Effective and rapid detection of lesions in the Gastrointestinal tract is critical to gastroenterologist's
+response to some life-threatening diseases. Wireless Capsule Endoscopy (WCE) has revolutionized
+traditional endoscopy procedure by allowing gastroenterologists visualize the entire GI tract
+non-invasively. Once the tiny capsule is swallowed, it sequentially capture images of the GI tract
+at about 2 to 6 frames per second (fps). A single video can last up to 8 hours producing between 30,000
+to 100,000 images. Automating the detection of frames containing specific lesion in WCE video would
+relieve gastroenterologists the arduous task of reviewing the entire video before making diagnosis.
+While the WCE produces large volume of images, only about 5\% of the frames contain lesions that aid
+the diagnosis process. Convolutional Neural Network (CNN) based models have been very successful
+in various image classification tasks. However, they suffer excessive parameters, are sample
+inefficient and rely on very large amount of training data. Deploying a CNN classifier for lesion
+detection task will require time-to-time fine-tuning to generalize to any unforeseen category.
+In this paper, we propose a metric-based learning framework followed by a few-shot lesion recognition
+in WCE data. Metric-based learning is a meta-learning framework designed to establish similarity
+or dissimilarity between concepts while few-shot learning (FSL) aims to identify new concepts
+from only a small number of examples. We train a feature extractor to learn a representation for different
+small bowel lesions using metric-based learning. At the testing stage, the category of an unseen
+sample is predicted from only a few support examples, thereby allowing the model to generalize to
+a new category that has never been seen before. We demonstrated the efficacy of this method on real
+patient capsule endoscopy data. 

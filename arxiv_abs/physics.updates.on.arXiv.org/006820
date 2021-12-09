@@ -1,0 +1,18 @@
+We perform a sparse identification of nonlinear dynamics (SINDy) for low-dimensionalized complex
+flow phenomena. We first apply the SINDy with two regression methods, the thresholded least square
+algorithm (TLSA) and the adaptive Lasso (Alasso) which show reasonable ability with a wide range
+of sparsity constant in our preliminary tests, to a two-dimensional single cylinder wake at $Re_D=100$,
+its transient process, and a wake of two-parallel cylinders, as examples of high-dimensional fluid
+data. To handle these high dimensional data with SINDy whose library matrix is suitable for low-dimensional
+variable combinations, a convolutional neural network-based autoencoder (CNN-AE) is utilized.
+The CNN-AE is employed to map a high-dimensional dynamics into a low-dimensional latent space.
+The SINDy then seeks a governing equation of the mapped low-dimensional latent vector. Temporal
+evolution of high-dimensional dynamics can be provided by combining the predicted latent vector
+by SINDy with the CNN decoder which can remap the low-dimensional latent vector to the original dimension.
+The SINDy can provide a stable solution as the governing equation of the latent dynamics and the CNN-SINDy
+based modeling can reproduce high-dimensional flow fields successfully, although more terms
+are required to represent the transient flow and the two-parallel cylinder wake than the periodic
+shedding. A nine-equation turbulent shear flow model is finally considered to examine the applicability
+of SINDy to turbulence, although without using CNN-AE. The present results suggest that the proposed
+scheme with an appropriate parameter choice enables us to analyze high-dimensional nonlinear
+dynamics with interpretable low-dimensional manifolds. 

@@ -1,0 +1,19 @@
+This thesis explores a particular class of distributed optimization methods for various separable
+resource allocation problems, which are of high interest in a wide array of multi-agent settings.
+A distinctly motivating application for this thesis is real-time power dispatch of distributed
+energy resources for providing frequency control in a distribution grid or microgrid with high
+renewable energy penetration. In this application, it is paramount that agent data be shared as
+sparsely as possible in the interest of conserving user privacy, and it is required that algorithms
+scale gracefully as the network size increases to the order of thousands or millions of resources
+and devices. Distributed algorithms are naturally well-poised to address these challenges, in
+contrast to more traditional centralized algorithms which scale poorly and require global access
+to information. The class of distributed optimization methods explored here can be broadly described
+as Newton-like or second-order, implying utilization of second-derivative information of the
+cost functions, in contrast to well-studied gradient-based or first-order methods. We consider
+three formulations of separable resource-allocation problems and develop a Newton-like algorithm
+for each. The analysis and simulation studies in the subsequent chapters demonstrate the advantages
+of our approaches over existing methods; most commonly, we note that convergence rates are substantially
+improved. We supplement our algorithm development for these three problem formulations with a
+network design technique, in which we can construct a maximally-connected network by adding some
+edges to the underlying communication graph, and a real demonstration of distributed algorithms
+on a large set of heterogeneous devices on the UC San Diego microgrid. 

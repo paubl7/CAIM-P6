@@ -1,0 +1,19 @@
+While vector-based language representations from pretrained language models have set a new standard
+for many NLP tasks, there is not yet a complete accounting of their inner workings. In particular,
+it is not entirely clear what aspects of sentence-level syntax are captured by these representations,
+nor how (if at all) they are built along the stacked layers of the network. In this paper, we aim to address
+such questions with a general class of interventional, input perturbation-based analyses of representations
+from pretrained language models. Importing from computational and cognitive neuroscience the
+notion of representational invariance, we perform a series of probes designed to test the sensitivity
+of these representations to several kinds of structure in sentences. Each probe involves swapping
+words in a sentence and comparing the representations from perturbed sentences against the original.
+We experiment with three different perturbations: (1) random permutations of n-grams of varying
+width, to test the scale at which a representation is sensitive to word position; (2) swapping of
+two spans which do or do not form a syntactic phrase, to test sensitivity to global phrase structure;
+and (3) swapping of two adjacent words which do or do not break apart a syntactic phrase, to test sensitivity
+to local phrase structure. Results from these probes collectively suggest that Transformers build
+sensitivity to larger parts of the sentence along their layers, and that hierarchical phrase structure
+plays a role in this process. More broadly, our results also indicate that structured input perturbations
+widens the scope of analyses that can be performed on often-opaque deep learning systems, and can
+serve as a complement to existing tools (such as supervised linear probes) for interpreting complex
+black-box models. 

@@ -1,0 +1,19 @@
+In solving optimization problems, objective functions generally need to be minimized or maximized.
+However, objective functions cannot always be formulated explicitly in a mathematical form for
+complicated problem settings. Although several regression techniques infer the approximate
+forms of objective functions, they are at times expensive to evaluate. Optimal points of "black-box"
+objective functions are computed in such scenarios, while effectively using a small number of clues.
+Recently, an efficient method by use of inference by sparse prior for a black-box objective function
+with binary variables has been proposed. In this method, a surrogate model was proposed in the form
+of a quadratic unconstrained binary optimization (QUBO) problem, and was iteratively solved to
+obtain the optimal solution of the black-box objective function. In the present study, we employ
+the D-Wave 2000Q quantum annealer, which can solve QUBO by driving the binary variables by quantum
+fluctuations. The D-Wave 2000Q quantum annealer does not necessarily output the ground state at
+the end of the protocol due to freezing effect during the process. We investigate effects from the
+output of the D-Wave quantum annealer in performing black-box optimization. We demonstrate a benchmark
+test by employing the sparse Sherrington-Kirkpatrick (SK) model as the black-box objective function,
+by introducing a parameter controlling the sparseness of the interaction coefficients. Comparing
+the results of the D-Wave quantum annealer to those of the simulated annealing (SA) and semidefinite
+programming (SDP), our results by the D-Wave quantum annealer and SA exhibit superiority in black-box
+optimization with SDP. On the other hand, we did not find any advantage of the D-Wave quantum annealer
+over the simulated annealing. As far as in our case, any effects by quantum fluctuation are not found.

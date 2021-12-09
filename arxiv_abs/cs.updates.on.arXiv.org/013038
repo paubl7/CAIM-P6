@@ -1,0 +1,18 @@
+Machine Learning (ML) applications are proliferating in the enterprise. Relational data which
+are prevalent in enterprise applications are typically normalized; as a result, data has to be denormalized
+via primary/foreign-key joins to be provided as input to ML algorithms. In this paper, we study the
+implementation of popular nonlinear ML models, Gaussian Mixture Models (GMM) and Neural Networks
+(NN), over normalized data addressing both cases of binary and multi-way joins over normalized
+relations. For the case of GMM, we show how it is possible to decompose computation in a systematic
+way both for binary joins and for multi-way joins to construct mixture models. We demonstrate that
+by factoring the computation, one can conduct the training of the models much faster compared to
+other applicable approaches, without any loss in accuracy. For the case of NN, we propose algorithms
+to train the network taking normalized data as the input. Similarly, we present algorithms that
+can conduct the training of the network in a factorized way and offer performance advantages. The
+redundancy introduced by denormalization can be exploited for certain types of activation functions.
+However, we demonstrate that attempting to explore this redundancy is helpful up to a certain point;
+exploring redundancy at higher layers of the network will always result in increased costs and is
+not recommended. We present the results of a thorough experimental evaluation, varying several
+parameters of the input relations involved and demonstrate that our proposals for the training
+of GMM and NN yield drastic performance improvements typically starting at 100%, which become increasingly
+higher as parameters of the underlying data vary, without any loss in accuracy. 

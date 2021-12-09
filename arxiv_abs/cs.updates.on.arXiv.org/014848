@@ -1,0 +1,18 @@
+Mispronunciation detection and diagnosis (MDD) is designed to identify pronunciation errors
+and provide instructive feedback to guide non-native language learners, which is a core component
+in computer-assisted pronunciation training (CAPT) systems. However, MDD often suffers from
+the data-sparsity problem due to that collecting non-native data and the associated annotations
+is time-consuming and labor-intensive. To address this issue, we explore a fully end-to-end (E2E)
+neural model for MDD, which processes learners' speech directly based on raw waveforms. Compared
+to conventional hand-crafted acoustic features, raw waveforms retain more acoustic phenomena
+and potentially can help neural networks discover better and more customized representations.
+To this end, our MDD model adopts a co-called SincNet module to take input a raw waveform and covert
+it to a suitable vector representation sequence. SincNet employs the cardinal sine (sinc) function
+to implement learnable bandpass filters, drawing inspiration from the convolutional neural network
+(CNN). By comparison to CNN, SincNet has fewer parameters and is more amenable to human interpretation.
+Extensive experiments are conducted on the L2-ARCTIC dataset, which is a publicly-available non-native
+English speech corpus compiled for research on CAPT. We find that the sinc filters of SincNet can
+be adapted quickly for non-native language learners of different nationalities. Furthermore,
+our model can achieve comparable mispronunciation detection performance in relation to state-of-the-art
+E2E MDD models that take input the standard handcrafted acoustic features. Besides that, our model
+also provides considerable improvements on phone error rate (PER) and diagnosis accuracy. 

@@ -1,0 +1,18 @@
+In this paper, we study new batch-dynamic algorithms for the $k$-clique counting problem, which
+are dynamic algorithms where the updates are batches of edge insertions and deletions. We study
+this problem in the parallel setting, where the goal is to obtain algorithms with low (polylogarithmic)
+depth. Our first result is a new parallel batch-dynamic triangle counting algorithm with $O(\Delta\sqrt{\Delta+m})$
+amortized work and $O(\log^* (\Delta+m))$ depth with high probability, and $O(\Delta+m)$ space
+for a batch of $\Delta$ edge insertions or deletions. Our second result is an algebraic algorithm
+based on parallel fast matrix multiplication. Assuming that a parallel fast matrix multiplication
+algorithm exists with parallel matrix multiplication constant $\omega_p$, the same algorithm
+solves dynamic $k$-clique counting with $O\left(\min\left(\Delta m^{\frac{(2k - 1)\omega_p}{3(\omega_p
++ 1)}}, (\Delta+m)^{\frac{2(k + 1)\omega_p}{3(\omega_p + 1)}}\right)\right)$ amortized work
+and $O(\log (\Delta+m))$ depth with high probability, and $O\left((\Delta+m)^{\frac{2(k + 1)\omega_p}{3(\omega_p
++ 1)}}\right)$ space. Using a recently developed parallel $k$-clique counting algorithm, we also
+obtain a simple batch-dynamic algorithm for $k$-clique counting on graphs with arboricity $\alpha$
+running in $O(\Delta(m+\Delta)\alpha^{k-4})$ expected work and $O(\log^{k-2} n)$ depth with
+high probability, and $O(m + \Delta)$ space. Finally, we present a multicore CPU implementation
+of our parallel batch-dynamic triangle counting algorithm. On a 72-core machine with two-way hyper-threading,
+our implementation achieves 36.54--74.73x parallel speedup, and in certain cases achieves significant
+speedups over existing parallel algorithms for the problem, which are not theoretically-efficient.

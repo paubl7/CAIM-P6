@@ -1,0 +1,19 @@
+Most edge AI focuses on prediction tasks on resource-limited edge devices while the training is
+done at server machines. However, retraining or customizing a model is required at edge devices
+as the model is becoming outdated due to environmental changes over time. To follow such a concept
+drift, a neural-network based on-device learning approach is recently proposed, so that edge devices
+train incoming data at runtime to update their model. In this case, since a training is done at distributed
+edge devices, the issue is that only a limited amount of training data can be used for each edge device.
+To address this issue, one approach is a cooperative learning or federated learning, where edge
+devices exchange their trained results and update their model by using those collected from the
+other devices. In this paper, as an on-device learning algorithm, we focus on OS-ELM (Online Sequential
+Extreme Learning Machine) to sequentially train a model based on recent samples and combine it with
+autoencoder for anomaly detection. We extend it for an on-device federated learning so that edge
+devices can exchange their trained results and update their model by using those collected from
+the other edge devices. This cooperative model update is one-shot while it can be repeatedly applied
+to synchronize their model. Our approach is evaluated with anomaly detection tasks generated from
+a driving dataset of cars, a human activity dataset, and MNIST dataset. The results demonstrate
+that the proposed on-device federated learning can produce a merged model by integrating trained
+results from multiple edge devices as accurately as traditional backpropagation based neural
+networks and a traditional federated learning approach with lower computation or communication
+cost. 

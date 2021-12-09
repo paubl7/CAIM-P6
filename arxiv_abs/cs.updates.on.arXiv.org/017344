@@ -1,0 +1,20 @@
+Video moment retrieval targets at retrieving a moment in a video for a given language query. The challenges
+of this task include 1) the requirement of localizing the relevant moment in an untrimmed video,
+and 2) bridging the semantic gap between textual query and video contents. To tackle those problems,
+early approaches adopt the sliding window or uniform sampling to collect video clips first and then
+match each clip with the query. Obviously, these strategies are time-consuming and often lead to
+unsatisfied accuracy in localization due to the unpredictable length of the golden moment. To avoid
+the limitations, researchers recently attempt to directly predict the relevant moment boundaries
+without the requirement to generate video clips first. One mainstream approach is to generate a
+multimodal feature vector for the target query and video frames (e.g., concatenation) and then
+use a regression approach upon the multimodal feature vector for boundary detection. Although
+some progress has been achieved by this approach, we argue that those methods have not well captured
+the cross-modal interactions between the query and video frames. In this paper, we propose an Attentive
+Cross-modal Relevance Matching (ACRM) model which predicts the temporal boundaries based on an
+interaction modeling. In addition, an attention module is introduced to assign higher weights
+to query words with richer semantic cues, which are considered to be more important for finding relevant
+video contents. Another contribution is that we propose an additional predictor to utilize the
+internal frames in the model training to improve the localization accuracy. Extensive experiments
+on two datasets TACoS and Charades-STA demonstrate the superiority of our method over several state-of-the-art
+methods. Ablation studies have been also conducted to examine the effectiveness of different modules
+in our ACRM model. 

@@ -1,0 +1,18 @@
+Database fingerprinting schemes have been widely adopted to prevent unauthorized sharing of data
+and identify the source of data leakages. Although existing schemes are robust against common attacks,
+such as random bit flipping and subset attack, their robustness degrades significantly if attackers
+utilize the inherent correlations among database entries. In this paper, we first demonstrate
+this vulnerability of the existing database fingerprinting schemes by identifying different
+correlation attacks: column-wise correlation attack, row-wise correlation attack, and the integration
+of them. To provide robust fingerprinting against the identified correlation attacks, we then
+develop mitigation techniques, which can work as post-processing steps for any off-the-shelf
+database fingerprinting schemes. The proposed mitigation techniques also preserve the utility
+of the fingerprinted database considering different utility metrics. We empirically investigate
+the impact of the identified correlation attacks and the performance of mitigation techniques
+using two real-world relational databases. Our results show (i) high success rates of the identified
+correlation attacks against existing fingerprinting schemes (e.g., the integrated correlation
+attack can distort 64.8% fingerprint bits by just modifying 14.2% entries in a fingerprinted database),
+and (ii) high robustness of the proposed mitigation techniques (e.g., after the proposed mitigation
+techniques, the integrated correlation attack can only distort 3% fingerprint bits). Furthermore,
+we show that the proposed mitigation techniques effectively alleviate correlation attacks even
+if the database owner has less accurate knowledge about data correlations compared to the attacker.

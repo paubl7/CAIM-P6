@@ -1,0 +1,19 @@
+A signed distance function (SDF) as the 3D shape description is one of the most effective approaches
+to represent 3D geometry for rendering and reconstruction. Our work is inspired by the state-of-the-art
+method DeepSDF that learns and analyzes the 3D shape as the iso-surface of its shell and this method
+has shown promising results especially in the 3D shape reconstruction and compression domain.
+In this paper, we consider the degeneration problem of reconstruction coming from the capacity
+decrease of the DeepSDF model, which approximates the SDF with a neural network and a single latent
+code. We propose Local Geometry Code Learning (LGCL), a model that improves the original DeepSDF
+results by learning from a local shape geometry of the full 3D shape. We add an extra graph neural network
+to split the single transmittable latent code into a set of local latent codes distributed on the
+3D shape. Mentioned latent codes are used to approximate the SDF in their local regions, which will
+alleviate the complexity of the approximation compared to the original DeepSDF. Furthermore,
+we introduce a new geometric loss function to facilitate the training of these local latent codes.
+Note that other local shape adjusting methods use the 3D voxel representation, which in turn is a
+problem highly difficult to solve or even is insolvable. In contrast, our architecture is based
+on graph processing implicitly and performs the learning regression process directly in the latent
+code space, thus make the proposed architecture more flexible and also simple for realization.
+Our experiments on 3D shape reconstruction demonstrate that our LGCL method can keep more details
+with a significantly smaller size of the SDF decoder and outperforms considerably the original
+DeepSDF method under the most important quantitative metrics. 

@@ -1,0 +1,19 @@
+In this paper, we propose a Light Gradient Boosting (LightGBM) to forecast dominant wave periods
+in oceanic waters. First, we use the data collected from CDIP buoys and apply various data filtering
+methods. The data filtering methods allow us to obtain a high-quality dataset for training and validation
+purposes. We then extract various wave-based features like wave heights, periods, skewness, kurtosis,
+etc., and atmospheric features like humidity, pressure, and air temperature for the buoys. Afterward,
+we train algorithms that use LightGBM and Extra Trees through a hv-block cross-validation scheme
+to forecast dominant wave periods for up to 30 days ahead. LightGBM has the R2 score of 0.94, 0.94,
+and 0.94 for 1-day ahead, 15-day ahead, and 30-day ahead prediction. Similarly, Extra Trees (ET)
+has an R2 score of 0.88, 0.86, and 0.85 for 1-day ahead, 15-day ahead, and 30 day ahead prediction.
+In case of the test dataset, LightGBM has R2 score of 0.94, 0.94, and 0.94 for 1-day ahead, 15-day ahead
+and 30-day ahead prediction. ET has R2 score of 0.88, 0.86, and 0.85 for 1-day ahead, 15-day ahead,
+and 30-day ahead prediction. A similar R2 score for both training and the test dataset suggests that
+the machine learning models developed in this paper are robust. Since the LightGBM algorithm outperforms
+ET for all the windows tested, it is taken as the final algorithm. Note that the performance of both
+methods does not decrease significantly as the forecast horizon increases. Likewise, the proposed
+method outperforms the numerical approaches included in this paper in the test dataset. For 1 day
+ahead prediction, the proposed algorithm has SI, Bias, CC, and RMSE of 0.09, 0.00, 0.97, and 1.78
+compared to 0.268, 0.40, 0.63, and 2.18 for the European Centre for Medium-range Weather Forecasts
+(ECMWF) model, which outperforms all the other methods in the test dataset. 

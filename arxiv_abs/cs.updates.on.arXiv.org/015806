@@ -1,0 +1,20 @@
+We present an automated approach to detect and longitudinally track skin lesions on 3D total-body
+skin surfaces scans. The acquired 3D mesh of the subject is unwrapped to a 2D texture image, where
+a trained region convolutional neural network (R-CNN) localizes the lesions within the 2D domain.
+These detected skin lesions are mapped back to the 3D surface of the subject and, for subjects imaged
+multiple times, the anatomical correspondences among pairs of meshes and the geodesic distances
+among lesions are leveraged in our longitudinal lesion tracking algorithm. We evaluated the proposed
+approach using three sources of data. Firstly, we augmented the 3D meshes of human subjects from
+the public FAUST dataset with a variety of poses, textures, and images of lesions. Secondly, using
+a handheld structured light 3D scanner, we imaged a mannequin with multiple synthetic skin lesions
+at selected location and with varying shapes, sizes, and colours. Finally, we used 3DBodyTex, a
+publicly available dataset composed of 3D scans imaging the colored (textured) skin of 200 human
+subjects. We manually annotated locations that appeared to the human eye to contain a pigmented
+skin lesion as well as tracked a subset of lesions occurring on the same subject imaged in different
+poses. Our results, on test subjects annotated by three human annotators, suggest that the trained
+R-CNN detects lesions at a similar performance level as the human annotators. Our lesion tracking
+algorithm achieves an average accuracy of 80% when identifying corresponding pairs of lesions
+across subjects imaged in different poses. As there currently is no other large-scale publicly
+available dataset of 3D total-body skin lesions, we publicly release the 10 mannequin meshes and
+over 25,000 3DBodyTex manual annotations, which we hope will further research on total-body skin
+lesion analysis. 

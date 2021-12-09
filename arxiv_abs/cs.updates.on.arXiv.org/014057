@@ -1,0 +1,19 @@
+Visual object tracking, which is representing a major interest in image processing field, has facilitated
+numerous real world applications. Among them, equipping unmanned aerial vehicle (UAV) with real
+time robust visual trackers for all day aerial maneuver, is currently attracting incremental attention
+and has remarkably broadened the scope of applications of object tracking. However, prior tracking
+methods have merely focused on robust tracking in the well-illuminated scenes, while ignoring
+trackers' capabilities to be deployed in the dark. In darkness, the conditions can be more complex
+and harsh, easily posing inferior robust tracking or even tracking failure. To this end, this work
+proposed a novel discriminative correlation filter based tracker with illumination adaptive
+and anti dark capability, namely ADTrack. ADTrack firstly exploits image illuminance information
+to enable adaptability of the model to the given light condition. Then, by virtue of an efficient
+and effective image enhancer, ADTrack carries out image pretreatment, where a target aware mask
+is generated. Benefiting from the mask, ADTrack aims to solve a dual regression problem where dual
+filters, i.e., the context filter and target focused filter, are trained with mutual constraint.
+Thus ADTrack is able to maintain continuously favorable performance in all-day conditions. Besides,
+this work also constructed one UAV nighttime tracking benchmark UAVDark135, comprising of more
+than 125k manually annotated frames, which is also very first UAV nighttime tracking benchmark.
+Exhaustive experiments are extended on authoritative daytime benchmarks, i.e., UAV123 10fps,
+DTB70, and the newly built dark benchmark UAVDark135, which have validated the superiority of ADTrack
+in both bright and dark conditions on a single CPU. 

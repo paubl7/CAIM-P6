@@ -1,0 +1,19 @@
+The introduction of fully-actuated multirotors has opened the door to new possibilities and more
+efficient solutions to many real-world applications. However, their integration had been slower
+than expected, partly due to the need for new tools to take full advantage of these robots. As far as
+we know, all the groups currently working on the fully-actuated multirotors develop new full-pose
+(6-D) tools and methods to use their robots, which is inefficient, time-consuming, and requires
+many resources. We propose a way of bridging the gap between the tools already available for underactuated
+robots and the new fully-actuated vehicles. The approach can extend the existing underactuated
+flight controllers to support the fully-actuated robots, or enhance the existing fully-actuated
+controllers to support existing underactuated flight stacks. We introduce attitude strategies
+that work with the underactuated controllers, tools, planners and remote control interfaces,
+all while allowing taking advantage of the full actuation. Moreover, new methods are proposed that
+can properly handle the limited lateral thrust suffered by many fully-actuated UAV designs. The
+strategies are lightweight, simple, and allow rapid integration of the available tools with these
+new vehicles for the fast development of new real-world applications. The real experiments on our
+robots and simulations on several UAV architectures with different underlying controller methods
+show how these strategies can be utilized to extend existing flight controllers for fully-actuated
+applications. We have provided the source code for the PX4 firmware enhanced with our proposed methods
+to showcase an example flight controller for underactuated multirotors that can be modified to
+seamlessly support fully-actuated vehicles while retaining the rest of the flight stack unchanged.

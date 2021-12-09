@@ -1,0 +1,19 @@
+The min-entropy is an important metric to quantify randomness of generated random numbers in cryptographic
+applications; it measures the difficulty of guessing the most-likely output. One of the important
+min-entropy estimator is the compression estimator of NIST Special Publication (SP) 800-90B,
+which relies on Maurer's universal test. In this paper, we propose two kinds of min-entropy estimators
+to improve computational complexity and estimation accuracy by leveraging two variations of Maurer's
+test: Coron's test (for Shannon entropy) and Kim's test (for Renyi entropy). First, we propose a
+min-entropy estimator based on Coron's test which is computationally efficient than the compression
+estimator while maintaining the estimation accuracy. The secondly proposed estimator relies
+on Kim's test that computes the Renyi entropy. This proposed estimator improves estimation accuracy
+as well as computational complexity. We analytically characterize an interesting trade-off relation
+between theoretical gap of accuracy and variance of min-entropy estimates, which depends on the
+order of Renyi entropy. By taking into account this trade-off relation, we observe that the order
+of two is a proper assignment since the proposed estimator based on the collision entropy (i.e.,
+the Renyi entropy of order two) provides the most accurate estimates. Moreover, the proposed estimator
+based on the collision entropy has a closed-form solution whereas both the compression estimator
+and the proposed estimator based on Coron's test do not have closed-from solutions. Numerical evaluations
+demonstrate that the first proposed estimator achieves the same accuracy as the compression estimator
+with much less computations. Moreover, the second estimator can even improve the accuracy as well
+as reduce the computational complexity. 

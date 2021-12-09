@@ -1,0 +1,20 @@
+High order accurate and explicit time-stable solvers are well suited for hyperbolic wave propagation
+problems. As a result of the complexities of real geometries, internal interfaces and nonlinear
+boundary and interface conditions, discontinuities and sharp wave fronts may become fundamental
+features of the solution. Thus, geometrically flexible and adaptive numerical algorithms are
+critical for high fidelity and efficient simulations of wave phenomena in many applications. Adaptive
+curvilinear meshes hold promise to minimise the effort to represent complicated geometries or
+heterogeneous material data avoiding the bottleneck of feature-preserving meshing. To enable
+the design of stable DG methods on three space dimensional (3D) curvilinear elements we construct
+a structure preserving anti-symmetric coordinate transformation motivated by the underlying
+physics. Using a physics-based numerical penalty-flux, we develop a 3D provably energy-stable
+discontinuous Galerkin finite element approximation of the elastic wave equation in geometrically
+complex and heterogenous media. By construction, our numerical flux is upwind and yields a discrete
+energy estimate analogous to the continuous energy estimate. The ability to treat conforming and
+non-conforming curvilinear elements allows for flexible adaptive mesh refinement strategies.
+The numerical scheme has been implemented in ExaHyPE, a simulation engine for parallel dynamically
+adaptive simulations of wave problems on adaptive Cartesian meshes. We present 3D numerical experiments
+of wave propagation in heterogeneous isotropic and anisotropic elastic solids demonstrating
+stability and high order accuracy. We demonstrate the potential of our approach for computational
+seismology in a regional wave propagation scenario in a geologically constrained 3D model including
+the geometrically complex free-surface topography of Mount Zugspitze, Germany. 

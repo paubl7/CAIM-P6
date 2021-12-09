@@ -1,0 +1,19 @@
+Semi-implicit time-stepping schemes for atmosphere and ocean models require elliptic solvers
+that work efficiently on modern supercomputers. This paper reports our study of the potential computational
+savings when using mixed precision arithmetic in the elliptic solvers. The essential components
+of a representative elliptic solver are run at precision levels as low as half (16 bits), and accompanied
+with a detailed evaluation of the impact of reduced precision on the solver convergence and the solution
+quality. A detailed inquiry into reduced precision requires a model configuration that is meaningful
+but cheaper to run and easier to evaluate than full atmosphere/ocean models. This study is therefore
+conducted in the context of a novel semi-implicit shallow-water model on the sphere, purposely
+designed to mimic numerical intricacies of modern all-scale weather and climate (W&C) models with
+the numerical stability independent on celerity of all wave motions. The governing algorithm of
+the shallow-water model is based on the non-oscillatory MPDATA methods for geophysical flows,
+whereas the resulting elliptic problem employs a strongly preconditioned non-symmetric Krylov-subspace
+solver GCR, proven in advanced atmospheric applications. The classical longitude/latitude grid
+is deliberately chosen to retain the stiffness of global W&C models posed in thin spherical shells
+as well as to better understand the performance of reduced-precision arithmetic in the vicinity
+of grid singularities. Precision reduction is done on a software level, using an emulator. The reduced-precision
+experiments are conducted for established dynamical-core test-cases, like the Rossby-Haurwitz
+wave number 4 and a zonal orographic flow. The study shows that selected key components of the elliptic
+solver, most prominently the preconditioning, can be performed at the level of half precision.

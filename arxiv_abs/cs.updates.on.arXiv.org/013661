@@ -1,0 +1,19 @@
+Advances in vehicular communication technologies are expected to facilitate cooperative driving.
+Connected and Automated Vehicles (CAVs) are able to collaboratively plan and execute driving maneuvers
+by sharing their perceptual knowledge and future plans. In this paper, an architecture for autonomous
+navigation of tight multi-lane platoons travelling on public roads is presented. Using the proposed
+approach, CAVs are able to form single or multi-lane platoons of various geometrical configurations.
+They are able to reshape and adjust their configurations according to changes in the environment.
+The proposed architecture consists of two main components: an offline motion planner system and
+an online hierarchical control system. The motion planner uses an optimization-based approach
+for cooperative formation and reconfiguration in tight spaces. A constrained optimization scheme
+is used to plan smooth, dynamically feasible and collision-free trajectories for all the vehicles
+within the platoon. The paper addresses online computation limitations by employing a family of
+maneuvers precomputed offline and stored on a look-up table on the vehicles. The online hierarchical
+control system is composed of three levels: a traffic operation system (TOS), a decision-maker,
+and a path-follower. The TOS determines the desired platoon reconfiguration. The decision-maker
+checks the feasibility of the reconfiguration plan. The reconfiguration maneuver is executed
+by a low-level path-following feedback controller in real-time. The effectiveness of the approach
+is demonstrated through simulations of three case studies: 1) formation reconfiguration 2) obstacle
+avoidance, and 3) benchmarking against behavior-based planning in which the desired formation
+is achieved using a sequence of motion primitives. Videos and software can be found online https://github.com/RoyaFiroozi/Centralized-Planning.

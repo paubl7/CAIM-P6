@@ -1,0 +1,20 @@
+Crew Pairing Optimization aims at generating a set of flight sequences (crew pairings), covering
+all flights in an airline's flight schedule, at minimum cost, while satisfying several legality
+constraints. CPO is critically important for airlines' business viability, considering that
+the crew operating cost is their second-largest expense. It poses an NP-hard combinatorial optimization
+problem, to tackle which, the state-of-the-art relies on relaxing the underlying Integer Programming
+Problem (IPP) into a Linear Programming Problem (LPP), solving the latter through Column Generation
+(CG) technique, and integerization of the resulting LPP solution. However, with the growing scale
+and complexity of the flight networks (those with a large number of flights, multiple crew bases
+and/or multiple hub-and-spoke subnetworks), the utility of the conventional CG-practices has
+become questionable. This paper proposed an Airline Crew Pairing Optimization Framework, AirCROP,
+whose constitutive modules include the Legal Crew Pairing Generator, Initial Feasible Solution
+Generator, and an Optimization Engine built on heuristic-based CG-implementation. In this paper,
+besides the design of AirCROP's modules, insights into important questions related to how these
+modules interact, which the literature is otherwise silent on, have been shared. These relate to
+the sensitivity of AirCROP's performance towards: sources of variability over multiple runs for
+a given problem, initialization method, and termination parameters for LPP-solutioning and IPP-solutioning.
+The efficacy of the AirCROP has been demonstrated on real-world large-scale and complex flight
+networks (with over 4200 flights, 15 crew bases, and billion-plus pairings). It is hoped that with
+the emergence of such complex flight networks, this paper shall serve as an important milestone
+for affiliated research and applications. 

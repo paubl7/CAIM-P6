@@ -1,0 +1,19 @@
+A proof of sequential work allows a prover to convince a resource-bounded verifier that the prover
+invested a substantial amount of sequential time to perform some underlying computation. Proofs
+of sequential work have many applications including time-stamping, blockchain design, and universally
+verifiable CPU benchmarks. Mahmoody, Moran, and Vadhan (ITCS 2013) gave the first construction
+of proofs of sequential work in the random oracle model though the construction relied on expensive
+depth-robust graphs. In a recent breakthrough, Cohen and Pietrzak (EUROCRYPT 2018) gave an efficient
+construction that does not require expensive depth-robust graphs. In each of these constructions,
+the prover commits to a labeling of a directed acyclic graph $G$ with $N$ nodes and the verifier audits
+the prover by checking that a small subset of labels are locally consistent, e.g., $\ell_v = H(v,\ell_{v_1},\ldots,\ell_{v_\delta})$,
+where $v_1,\ldots,v_\delta$ denote the parents of node $v$. Provided that the graph $G$ satisfies
+certain structural properties (e.g., depth-robustness) security can be established by arguing
+that any prover who does not produce a long $\mathcal{H}$-sequence will fail the audit with high
+probability. In this paper, we introduce the parallel quantum random oracle model and prove that
+any quantum attacker running in sequential time $T-1$ will fail to produce an $\mathcal{H}$-sequence
+except with negligible probability -- even if the attacker submits a large batch of quantum queries
+in each round. The proof highlights the power of Zhandry's recent compressed oracle technique (CRYPTO
+2019). We further extend this result to establish post-quantum security of a non-interactive proof
+of sequential work obtained by applying the Fiat-Shamir transform to Cohen and Pietrzak's efficient
+construction (EUROCRYPT 2018). (See the paper for the full abstract.) 

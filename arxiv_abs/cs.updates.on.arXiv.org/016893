@@ -1,0 +1,19 @@
+Let $S$ be a set of $n$ sites, each associated with a point in $\mathbb{R}^2$ and a radius $r_s$ and
+let $\mathcal{D}(S)$ be the disk graph on $S$. We consider the problem of designing data structures
+that maintain the connectivity structure of $\mathcal{D}(S)$ while allowing the insertion and
+deletion of sites. For unit disk graphs we describe a data structure that has $O(\log^2n)$ amortized
+update time and $O((\log n)/(\log\log n))$ amortized query time. For disk graphs where the ratio
+$\Psi$ between the largest and smallest radius is bounded, we consider the decremental and the incremental
+case separately, in addition to the fully dynamic case. In the fully dynamic case we achieve amortized
+$O(\Psi \lambda_6(\log n) \log^{9}n)$ update time and $O(\log n)$ query time, where $\lambda_s(n)$
+is the maximum length of a Davenport-Schinzel sequence of order $s$ on $n$ symbols. This improves
+the update time of the currently best known data structure by a factor of $\Psi$ at the cost of an additional
+$O(\log \log n)$ factor in the query time. In the incremental case we manage to achieve a logarithmic
+dependency on $\Psi$ with a data structure with $O(\alpha(n))$ query and $O(\log\Psi \lambda_6(\log
+n) \log^{9}n)$ update time. For the decremental setting we first develop a new dynamic data structure
+that allows us to maintain two sets $B$ and $P$ of disks, such than at a deletion of a disk from $B$ we
+can efficiently report all disks in $P$ that no longer intersect any disk of $B$. Having this data
+structure at hand, we get decremental data structures with an amortized query time of $O((\log n)/(\log
+\log n))$ supporting $m$ deletions in $O((n\log^{5}n + m \log^{9}n) \lambda_6(\log n) + n\log\Psi\log^4n)$
+overall time for bounded radius ratio $\Psi$ and $O(( n\log^{6} n + m \log^{10}n) \lambda_6(\log
+n))$ for general disk graphs. 

@@ -1,0 +1,20 @@
+Sequential experiments are often characterized by an exploration-exploitation tradeoff that
+is captured by the multi-armed bandit (MAB) framework. This framework has been studied and applied,
+typically when at each time epoch feedback is received only on the action that was selected at that
+epoch. However, in many practical settings additional information may become available between
+decision steps. We introduce a generalized MAB formulation, which considers a broad class of distributions
+that are informative about mean rewards, and allows observations from these distributions to arrive
+at arbitrary and a priori unknown times. We characterize the minimax complexity of this family of
+problems as a function of the information arrival process, and identify how salient characteristics
+of this process impact policy design and achievable performance. We establish that: (i) upper confidence
+bound and posterior sampling policies possess natural robustness with respect to the information
+arrival process without any adjustments, which uncovers a novel property of these popular families
+of policies and further lends credence to their appeal; and (ii) policies with exogenous exploration
+rate do not possess such robustness. For such policies, we devise a novel virtual time indices method
+for dynamically controlling the effective exploration rate to attain the best performance that
+is achievable when the information arrival process is a priori known. When the relation of auxiliary
+data to rewards is unknown, we characterize necessary and sufficient conditions under which auxiliary
+information still allows performance improvement, and devise new policies based on upper confidence
+bound that uniformly guarantee rate optimality. We use data from a large media site to analyze the
+value that may be captured in practice by leveraging auxiliary information for designing content
+recommendations. 

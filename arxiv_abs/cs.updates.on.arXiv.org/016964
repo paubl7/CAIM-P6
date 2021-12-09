@@ -1,0 +1,19 @@
+In this paper, we study the online Euclidean spanners problem for points in $\mathbb{R}^d$. Suppose
+we are given a sequence of $n$ points $(s_1,s_2,\ldots, s_n)$ in $\mathbb{R}^d$, where point $s_i$
+is presented in step~$i$ for $i=1,\ldots, n$. The objective of an online algorithm is to maintain
+a geometric $t$-spanner on $S_i=\{s_1,\ldots, s_i\}$ for each step~$i$. First, we establish a
+lower bound of $\Omega(\varepsilon^{-1}\log n / \log \varepsilon^{-1})$ for the competitive
+ratio of any online $(1+\varepsilon)$-spanner algorithm, for a sequence of $n$ points in 1-dimension.
+We show that this bound is tight, and there is an online algorithm that can maintain a $(1+\varepsilon)$-spanner
+with competitive ratio $O(\varepsilon^{-1}\log n / \log \varepsilon^{-1})$. Next, we design
+online algorithms for sequences of points in $\mathbb{R}^d$, for any constant $d\ge 2$, under the
+$L_2$ norm. We show that previously known incremental algorithms achieve a competitive ratio $O(\varepsilon^{-(d+1)}\log
+n)$. However, if the algorithm is allowed to use additional points (Steiner points), then it is possible
+to substantially improve the competitive ratio in terms of $\varepsilon$. We describe an online
+Steiner $(1+\varepsilon)$-spanner algorithm with competitive ratio $O(\varepsilon^{(1-d)/2}
+\log n)$. As a counterpart, we show that the dependence on $n$ cannot be eliminated in dimensions
+$d \ge 2$. In particular, we prove that any online spanner algorithm for a sequence of $n$ points in
+$\mathbb{R}^d$ under the $L_2$ norm has competitive ratio $\Omega(f(n))$, where $\lim_{n\rightarrow
+\infty}f(n)=\infty$. Finally, we provide improved lower bounds under the $L_1$ norm: $\Omega(\varepsilon^{-2}/\log
+\varepsilon^{-1})$ in the plane and $\Omega(\varepsilon^{-d})$ in $\mathbb{R}^d$ for $d\geq
+3$. 

@@ -1,0 +1,20 @@
+Deep Neural Networks (DNNs) have achieved tremendous success for cognitive applications. The
+core operation in a DNN is the dot product between quantized inputs and weights. Prior works exploit
+the weight/input repetition that arises due to quantization to avoid redundant computations in
+Convolutional Neural Networks (CNNs). However, in this paper we show that their effectiveness
+is severely limited when applied to Fully-Connected (FC) layers, which are commonly used in state-of-the-art
+DNNs, as it is the case of modern Recurrent Neural Networks (RNNs) and Transformer models. To improve
+energy-efficiency of FC computation we present CREW, a hardware accelerator that implements Computation
+Reuse and an Efficient Weight Storage mechanism to exploit the large number of repeated weights
+in FC layers. CREW first performs the multiplications of the unique weights by their respective
+inputs and stores the results in an on-chip buffer. The storage requirements are modest due to the
+small number of unique weights and the relatively small size of the input compared to convolutional
+layers. Next, CREW computes each output by fetching and adding its required products. To this end,
+each weight is replaced offline by an index in the buffer of unique products. Indices are typically
+smaller than the quantized weights, since the number of unique weights for each input tends to be
+much lower than the range of quantized weights, which reduces storage and memory bandwidth requirements.
+Overall, CREW greatly reduces the number of multiplications and provides significant savings
+in model memory footprint and memory bandwidth usage. We evaluate CREW on a diverse set of modern
+DNNs. On average, CREW provides 2.61x speedup and 2.42x energy savings over a TPU-like accelerator.
+Compared to UCNN, a state-of-art computation reuse technique, CREW achieves 2.10x speedup and
+2.08x energy savings on average. 

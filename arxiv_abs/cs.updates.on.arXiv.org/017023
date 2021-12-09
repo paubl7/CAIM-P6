@@ -1,0 +1,19 @@
+Image editing techniques enable people to modify the content of an image without leaving visual
+traces and thus may cause serious security risks. Hence the detection and localization of these
+forgeries become quite necessary and challenging. Furthermore, unlike other tasks with extensive
+data, there is usually a lack of annotated forged images for training due to annotation difficulties.
+In this paper, we propose a self-adversarial training strategy and a reliable coarse-to-fine network
+that utilizes a self-attention mechanism to localize forged regions in forgery images. The self-attention
+module is based on a Channel-Wise High Pass Filter block (CW-HPF). CW-HPF leverages inter-channel
+relationships of features and extracts noise features by high pass filters. Based on the CW-HPF,
+a self-attention mechanism, called forgery attention, is proposed to capture rich contextual
+dependencies of intrinsic inconsistency extracted from tampered regions. Specifically, we append
+two types of attention modules on top of CW-HPF respectively to model internal interdependencies
+in spatial dimension and external dependencies among channels. We exploit a coarse-to-fine network
+to enhance the noise inconsistency between original and tampered regions. More importantly, to
+address the issue of insufficient training data, we design a self-adversarial training strategy
+that expands training data dynamically to achieve more robust performance. Specifically, in each
+training iteration, we perform adversarial attacks against our network to generate adversarial
+examples and train our model on them. Extensive experimental results demonstrate that our proposed
+algorithm steadily outperforms state-of-the-art methods by a clear margin in different benchmark
+datasets. 

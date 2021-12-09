@@ -1,0 +1,20 @@
+Existing prognostic tools mainly focus on predicting the risk of mortality among patients with
+coronavirus disease 2019. However, clinical evidence suggests that COVID-19 can result in non-mortal
+complications that affect patient prognosis. To support patient risk stratification, we aimed
+to develop a prognostic system that predicts complications common to COVID-19. In this retrospective
+study, we used data collected from 3,352 COVID-19 patient encounters admitted to 18 facilities
+between April 1 and April 30, 2020, in Abu Dhabi (AD), UAE. The hospitals were split based on geographical
+proximity to assess for our proposed system's learning generalizability, AD Middle region and
+AD Western & Eastern regions, A and B, respectively. Using data collected during the first 24 hours
+of admission, the machine learning-based prognostic system predicts the risk of developing any
+of seven complications during the hospital stay. The complications include secondary bacterial
+infection, AKI, ARDS, and elevated biomarkers linked to increased patient severity, including
+d-dimer, interleukin-6, aminotransferases, and troponin. During training, the system applies
+an exclusion criteria, hyperparameter tuning, and model selection for each complication-specific
+model. The system achieves good accuracy across all complications and both regions. In test set
+A (587 patient encounters), the system achieves 0.91 AUROC for AKI and >0.80 AUROC for most of the
+other complications. In test set B (225 patient encounters), the respective system achieves 0.90
+AUROC for AKI, elevated troponin, and elevated interleukin-6, and >0.80 AUROC for most of the other
+complications. The best performing models, as selected by our system, were mainly gradient boosting
+models and logistic regression. Our results show that a data-driven approach using machine learning
+can predict the risk of such complications with high accuracy. 

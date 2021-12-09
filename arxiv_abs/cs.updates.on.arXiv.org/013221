@@ -1,0 +1,20 @@
+Distribution testing can be described as follows: $q$ samples are being drawn from some unknown
+distribution $P$ over a known domain $[n]$. After the sampling process, a decision must be made about
+whether $P$ holds some property, or is far from it. The most studied problem in the field is arguably
+uniformity testing, where one needs to distinguish the case that $P$ is uniform over $[n]$ from the
+case that $P$ is $\epsilon$-far from being uniform (in $\ell_1$). In the classic model, it is known
+that $\Theta\left(\sqrt{n}/\epsilon^2\right)$ samples are necessary and sufficient for this
+task. This problem was recently considered in various restricted models that pose, for example,
+communication or memory constraints. In more than one occasion, the known optimal solution boils
+down to counting collisions among the drawn samples (each two samples that have the same value add
+one to the count), an idea that dates back to the first uniformity tester, and was coined the name "collision-based
+tester". In this paper, we introduce the notion of comparison graphs and use it to formally define
+a generalized collision-based tester. Roughly speaking, the edges of the graph indicate the tester
+which pairs of samples should be compared (that is, the original tester is induced by a clique, where
+all pairs are being compared). We prove a structural theorem that gives a sufficient condition for
+a comparison graph to induce a good uniformity tester. As an application, we develop a generic method
+to test uniformity, and devise nearly-optimal uniformity testers under various computational
+constraints. We improve and simplify a few known results, and introduce a new constrained model
+in which the method also produces an efficient tester. The idea behind our method is to translate
+computational constraints of a certain model to ones on the comparison graph, which paves the way
+to finding a good graph. 

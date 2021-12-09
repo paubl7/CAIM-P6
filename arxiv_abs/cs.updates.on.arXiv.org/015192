@@ -1,0 +1,18 @@
+Sampling-Based Optimal(SBO) path planning has been mainly used for robotic arm manipulation tasks.
+Several research works have been carried out in order to evaluate performances of various SBO planners
+for arm manipulation. However, not much of work is available that highlights performances of SBO
+planners in context of mobile robot navigation in outdoor 3D environments. This paper evaluates
+performances of major SBO planners in Open Motion Planning Library(OMPL) for that purpose. Due
+to large number of existing SBO planners, experimenting and selecting a proper planner for a planning
+problem can be burdensome and ambiguous. SBO planner's probabilistic nature can also add a bias
+to this procedure. To address this, we evaluate performances of all available SBO planners in OMPL
+with a randomized planning problem generation method iteratively. Evaluations are done in various
+state spaces suiting for different differential constraints of mobile robots. The planning setups
+are focused for navigation of mobile robots in outdoor environments. The outdoor environment representation
+is done with prebuilt OctoMaps, collision checks are performed between a 3D box representing robot
+body and OctoMap for validation of sampled states. Several evaluation metrics such as resulting
+path's length, smoothness and status of acquired final solutions are selected. According to selected
+metrics, performances from different SBO planners are presented comparatively. Experimental
+results shows the significance of parallel computing towards quicker convergence rates for optimal
+solutions. Several SBO methods that takes advantage of parallel computing produced better results
+consistently in all state spaces for different planning inquiries. 

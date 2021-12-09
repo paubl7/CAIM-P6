@@ -1,0 +1,19 @@
+Background and objective: In this paper, a modified U-Net based framework is presented, which leverages
+techniques from Squeeze-and-Excitation (SE) block, Atrous Spatial Pyramid Pooling (ASPP) and
+residual learning for accurate and robust liver CT segmentation, and the effectiveness of the proposed
+method was tested on two public datasets LiTS17 and SLiver07. Methods: A new network architecture
+called SAR-U-Net was designed. Firstly, the SE block is introduced to adaptively extract image
+features after each convolution in the U-Net encoder, while suppressing irrelevant regions, and
+highlighting features of specific segmentation task; Secondly, ASPP was employed to replace the
+transition layer and the output layer, and acquire multi-scale image information via different
+receptive fields. Thirdly, to alleviate the degradation problem, the traditional convolution
+block was replaced with the residual block and thus prompt the network to gain accuracy from considerably
+increased depth. Results: In the LiTS17 experiment, the mean values of Dice, VOE, RVD, ASD and MSD
+were 95.71, 9.52, -0.84, 1.54 and 29.14, respectively. Compared with other closely related 2D-based
+models, the proposed method achieved the highest accuracy. In the experiment of the SLiver07, the
+mean values of Dice, VOE, RVD, ASD and MSD were 97.31, 5.37, -1.08, 1.85 and 27.45, respectively.
+Compared with other closely related models, the proposed method achieved the highest segmentation
+accuracy except for the RVD. Conclusion: The proposed model enables a great improvement on the accuracy
+compared to 2D-based models, and its robustness in circumvent challenging problems, such as small
+liver regions, discontinuous liver regions, and fuzzy liver boundaries, is also well demonstrated
+and validated. 

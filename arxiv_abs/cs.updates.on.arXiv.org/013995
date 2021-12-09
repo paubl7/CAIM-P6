@@ -1,0 +1,18 @@
+Federated learning (FL), as a distributed machine learning paradigm, promotes personal privacy
+by clients' processing raw data locally. However, relying on a centralized server for model aggregation,
+standard FL is vulnerable to server malfunctions, untrustworthy server, and external attacks.
+To address this issue, we propose a decentralized FL framework by integrating blockchain into FL,
+namely, blockchain assisted decentralized federated learning (BLADE-FL). In a round of the proposed
+BLADE-FL, each client broadcasts its trained model to other clients, competes to generate a block
+based on the received models, and then aggregates the models from the generated block before its
+local training of the next round. We evaluate the learning performance of BLADE-FL, and develop
+an upper bound on the global loss function. Then we verify that this bound is convex with respect to
+the number of overall rounds K, and optimize the computing resource allocation for minimizing the
+upper bound. We also note that there is a critical problem of training deficiency, caused by lazy
+clients who plagiarize others' trained models and add artificial noises to disguise their cheating
+behaviors. Focusing on this problem, we explore the impact of lazy clients on the learning performance
+of BLADE-FL, and characterize the relationship among the optimal K, the learning parameters, and
+the proportion of lazy clients. Based on the MNIST and Fashion-MNIST datasets, we show that the experimental
+results are consistent with the analytical ones. To be specific, the gap between the developed upper
+bound and experimental results is lower than 5%, and the optimized K based on the upper bound can effectively
+minimize the loss function. 

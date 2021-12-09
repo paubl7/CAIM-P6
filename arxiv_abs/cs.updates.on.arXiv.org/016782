@@ -1,0 +1,20 @@
+Recent researches show that deep learning model is susceptible to backdoor attacks. Many defenses
+against backdoor attacks have been proposed. However, existing defense works require high computational
+overhead or backdoor attack information such as the trigger size, which is difficult to satisfy
+in realistic scenarios. In this paper, a novel backdoor detection method based on adversarial examples
+is proposed. The proposed method leverages intentional adversarial perturbations to detect whether
+an image contains a trigger, which can be applied in both the training stage and the inference stage
+(sanitize the training set in training stage and detect the backdoor instances in inference stage).
+Specifically, given an untrusted image, the adversarial perturbation is added to the image intentionally.
+If the prediction of the model on the perturbed image is consistent with that on the unperturbed image,
+the input image will be considered as a backdoor instance. Compared with most existing defense works,
+the proposed adversarial perturbation based method requires low computational resources and
+maintains the visual quality of the images. Experimental results show that, the backdoor detection
+rate of the proposed defense method is 99.63%, 99.76% and 99.91% on Fashion-MNIST, CIFAR-10 and
+GTSRB datasets, respectively. Besides, the proposed method maintains the visual quality of the
+image as the l2 norm of the added perturbation are as low as 2.8715, 3.0513 and 2.4362 on Fashion-MNIST,
+CIFAR-10 and GTSRB datasets, respectively. In addition, it is also demonstrated that the proposed
+method can achieve high defense performance against backdoor attacks under different attack settings
+(trigger transparency, trigger size and trigger pattern). Compared with the existing defense
+work (STRIP), the proposed method has better detection performance on all the three datasets, and
+is more efficient than STRIP. 

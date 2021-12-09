@@ -1,0 +1,20 @@
+Since late 2019, COVID-19 has been spreading over the world and caused the death of many people. The
+high transmission rate of the virus demands the rapid identification of infected patients to reduce
+the spread of the disease. The current gold-standard test, Reverse-Transcription Polymerase
+Chain Reaction (RT-PCR), suffers from a high rate of false negatives. Diagnosis from CT-scan images
+as an alternative with higher accuracy and sensitivity has the challenge of distinguishing COVID-19
+from other lung diseases which demand expert radiologists. In peak times, artificial intelligence
+(AI) based diagnostic systems can help radiologists to accelerate the process of diagnosis, increase
+the accuracy, and understand the severity of the disease. We designed an interpretable deep neural
+network to distinguish healthy people, patients with COVID-19, and patients with other lung diseases
+from chest CT-scan images. Our model also detects the infected areas of the lung and is able to calculate
+the percentage of the infected volume. We preprocessed the images to eliminate the batch effect
+related to CT-scan devices and medical centers and then adopted a weakly supervised method to train
+the model without having any label for infected parts and any tags for the slices of the CT-scan images
+that had signs of disease. We trained and evaluated the model on a large dataset of 3359 CT-scan images
+from 6 medical centers. The model reached a sensitivity of 97.75% and a specificity of 87% in separating
+healthy people from the diseased and a sensitivity of 98.15% and a specificity of 81.03% in distinguishing
+COVID-19 from other diseases. The model also reached similar metrics in 1435 samples from 6 unseen
+medical centers that prove its generalizability. The performance of the model on a large diverse
+dataset, its generalizability, and interpretability makes it suitable to be used as a diagnostic
+system. 

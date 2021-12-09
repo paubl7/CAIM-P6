@@ -1,0 +1,19 @@
+Attribution maps have gained popularity as tools for explaining neural networks predictions.
+By assigning an importance value to each input dimension that represents their influence towards
+the outcome, they give an intuitive explanation of the decision process. However, recent work has
+discovered vulnerability of these maps to imperceptible, carefully crafted changes in the input
+that lead to significantly different attributions, rendering them meaningless. By borrowing
+notions of traditional adversarial training - a method to achieve robust predictions - we propose
+a novel framework for attributional robustness (FAR) to mitigate this vulnerability. Central
+assumption is that similar inputs should yield similar attribution maps, while keeping the prediction
+of the network constant. Specifically, we define a new generic regularization term and training
+objective that minimizes the maximal dissimilarity of attribution maps in a local neighbourhood
+of the input. We then show how current state-of-the-art methods can be recovered through principled
+instantiations of these objectives. Moreover, we propose two new training methods, AAT and AdvAAT,
+derived from the framework, that directly optimize for robust attributions and predictions. We
+showcase the effectivity of our training methods by comparing them to current state-of-the-art
+attributional robustness approaches on widely used vision datasets. Experiments show that they
+perform better or comparably to current methods in terms of attributional robustness, while being
+applicable to any attribution method and input data domain. We finally show that our methods mitigate
+undesired dependencies of attributional robustness and some training and estimation parameters,
+which seem to critically affect other methods. 

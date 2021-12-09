@@ -1,0 +1,18 @@
+Point-spread function (PSF) estimation in spatially undersampled images is challenging because
+large pixels average fine-scale spatial information. This is problematic when fine-resolution
+details are necessary, as in optimal photometry where knowledge of the illumination pattern beyond
+the native spatial resolution of the image may be required. Here, we introduce a method of PSF reconstruction
+where point sources are artificially sampled beyond the native resolution of an image and combined
+together via stacking to return a finely sampled estimate of the PSF. This estimate is then deconvolved
+from the pixel-gridding function to return a superresolution kernel that can be used for optimally
+weighted photometry. We benchmark against the < 1% photometric error requirement of the upcoming
+SPHEREx mission to assess performance in a concrete example. We find that standard methods like
+Richardson--Lucy deconvolution are not sufficient to achieve this stringent requirement. We
+investigate a more advanced method with significant heritage in image analysis called iterative
+back-projection (IBP) and demonstrate it using idealized Gaussian cases and simulated SPHEREx
+images. In testing this method on real images recorded by the LORRI instrument on New Horizons, we
+are able to identify systematic pointing drift. Our IBP-derived PSF kernels allow photometric
+accuracy significantly better than the requirement in individual SPHEREx exposures. This PSF
+reconstruction method is broadly applicable to a variety of problems and combines computationally
+simple techniques in a way that is robust to complicating factors such as severe undersampling,
+spatially complex PSFs, noise, crowded fields, or limited source numbers. 

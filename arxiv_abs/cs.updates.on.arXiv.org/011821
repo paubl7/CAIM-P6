@@ -1,0 +1,20 @@
+Affine registration of one or several brain image(s) onto a common reference space is a necessary
+prerequisite for many image processing tasks, such as brain segmentation or functional analysis.
+Manual assessment of registration quality is a tedious and time-consuming task, especially in
+studies comprising a large amount of data. An automated and reliable quality control (QC) becomes
+mandatory. Moreover, the computation time of the QC must be also compatible with the processing
+of massive datasets. Therefore, an automated deep neural network approaches appear as a method
+of choice to automatically assess registration quality. In the current study, a compact 3D convolutional
+neural network (CNN), referred to as RegQCNET, is introduced to quantitatively predict the amplitude
+of an affine registration mismatch between a registered image and a reference template. This quantitative
+estimation of registration error is expressed using metric unit system. Therefore, a meaningful
+task-specific threshold can be manually or automatically defined in order to distinguish usable
+and non-usable images. The robustness of the proposed RegQCNET is first analyzed on lifespan brain
+images undergoing various simulated spatial transformations and intensity variations between
+training and testing. Secondly, the potential of RegQCNET to classify images as usable or non-usable
+is evaluated using both manual and automatic thresholds. During our experiments, automatic thresholds
+are estimated using several computer-assisted classification models through cross-validation.
+To this end we used expert's visual quality control estimated on a lifespan cohort of 3953 brains.
+Finally, the RegQCNET accuracy is compared to usual image features. Results show that the proposed
+deep learning QC is robust, fast and accurate to estimate affine registration error in processing
+pipeline. 

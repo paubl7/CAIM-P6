@@ -1,0 +1,18 @@
+A hybrid Eulerian-Lagrangian solver RYrhoCentralFoam is developed based on OpenFOAM to simulate
+detonative combustion in two-phase gas-liquid mixtures. For Eulerian gas phase, RYrhoCentralFoam
+enjoys second order of accuracy in time and space discretizations and is based on finite volume method
+on polyhedral cells. The following developments are made based on the standard compressible flow
+solver rhoCentralFoam in OpenFOAM: (1) multi-component species transport, (2) detailed fuel
+chemistry for gas phase combustion, and (3) Lagrangian solver for gas-droplet two-phase flows
+and sub-models for liquid droplets. To extensively verify and validate the developments and implementations
+of the solver and models, a series of benchmark cases are studied, including non-reacting multi-component
+gaseous flows, purely gaseous detonations, and two-phase gas-droplet mixtures. The results show
+that the RYrhoCentralFoam solver can accurately predict the flow discontinuities (e.g. shock
+wave and expansion wave), molecular diffusion, auto-ignition and shock-induced ignition. Also,
+the RYrhoCentralFoam solver can accurately simulate gaseous detonation propagation for different
+fuels (e.g. hydrogen and methane), about propagation speed, detonation frontal structures and
+cell size. Sub-models related to the droplet phase are verified and/or validated against analytical
+and experimental data. It is also found that the RYrhoCentralFoam solver is able to capture the main
+quantities and features of the gas-droplet two-phase detonations, including detonation propagation
+speed, interphase interactions and detonation frontal structures. As our future work, RYrhoCentralFoam
+solver can also be extended for simulating two-phase detonations in dense droplet sprays. 

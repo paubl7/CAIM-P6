@@ -1,0 +1,18 @@
+The purpose of this paper is to design a solution to the problem of facial recognition by use of convolutional
+neural networks, with the intention of applying the solution in a camera-based home-entry access
+control system. More specifically, the paper focuses on solving the supervised classification
+problem of taking images of people as input and classifying the person in the image as one of the authors
+or not. Two approaches are proposed: (1) building and training a neural network called WoodNet from
+scratch and (2) leveraging transfer learning by utilizing a network pre-trained on the ImageNet
+database and adapting it to this project's data and classes. In order to train the models to recognize
+the authors, a dataset containing more than 150 000 images has been created, balanced over the authors
+and others. Image extraction from videos and image augmentation techniques were instrumental
+for dataset creation. The results are two models classifying the individuals in the dataset with
+high accuracy, achieving over 99% accuracy on held-out test data. The pre-trained model fitted
+significantly faster than WoodNet, and seems to generalize better. However, these results come
+with a few caveats. Because of the way the dataset was compiled, as well as the high accuracy, one has
+reason to believe the models over-fitted to the data to some degree. An added consequence of the data
+compilation method is that the test dataset may not be sufficiently different from the training
+data, limiting its ability to validate generalization of the models. However, utilizing the models
+in a web-cam based system, classifying faces in real-time, shows promising results and indicates
+that the models generalized fairly well for at least some of the classes (see the accompanying video).

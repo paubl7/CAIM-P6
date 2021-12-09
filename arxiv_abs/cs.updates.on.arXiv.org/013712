@@ -1,0 +1,20 @@
+While post-training model compression can greatly reduce the inference cost of a deep neural network,
+uncompressed training still consumes a huge amount of hardware resources, run-time and energy.
+It is highly desirable to directly train a compact neural network from scratch with low memory and
+low computational cost. Low-rank tensor decomposition is one of the most effective approaches
+to reduce the memory and computing requirements of large-size neural networks. However, directly
+training a low-rank tensorized neural network is a very challenging task because it is hard to determine
+a proper tensor rank {\it a priori}, which controls the model complexity and compression ratio in
+the training process. This paper presents a novel end-to-end framework for low-rank tensorized
+training of neural networks. We first develop a flexible Bayesian model that can handle various
+low-rank tensor formats (e.g., CP, Tucker, tensor train and tensor-train matrix) that compress
+neural network parameters in training. This model can automatically determine the tensor ranks
+inside a nonlinear forward model, which is beyond the capability of existing Bayesian tensor methods.
+We further develop a scalable stochastic variational inference solver to estimate the posterior
+density of large-scale problems in training. Our work provides the first general-purpose rank-adaptive
+framework for end-to-end tensorized training. Our numerical results on various neural network
+architectures show orders-of-magnitude parameter reduction and little accuracy loss (or even
+better accuracy) in the training process. Specifically, on a very large deep learning recommendation
+system with over $4.2\times 10^9$ model parameters, our method can reduce the variables to only
+$1.6\times 10^5$ automatically in the training process (i.e., by $2.6\times 10^4$ times) while
+achieving almost the same accuracy. 

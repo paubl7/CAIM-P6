@@ -1,0 +1,19 @@
+The well-known secretary problem in sequential analysis and optimal stopping theory asks one to
+maximize the probability of finding the optimal candidate in a sequentially examined list under
+the constraint that accept/reject decisions are made in real-time. The problem has received significant
+interest in the mathematics community and is related to practical questions arising in online search,
+data streaming, daily purchase modeling and multi-arm bandit mechanisms. A version of the problem
+is the postdoc problem, for which the question of interest is to devise a strategy that identifies
+the second-best candidate with highest possible probability of success. We solve the postdoc problem
+for the untraditional setting where the candidates are not presented uniformly at random but rather
+according to permutations drawn from the Mallows distribution. The Mallows distribution represents
+the counterpart of a Gaussian distribution for rankings. To address the problem, we extend the work
+of Jones for the secretary setting and introduce a number of new proof techniques. Our results reveal
+that the optimal stopping criteria depends on the choice of the Mallows model parameter t: For t>1,
+we reject the first k'(t) candidates and then accept the next left-to-right (abbreviated as l-r)
+second-best candidate. This coincides with the optimal strategy for the classical postdoc problem
+independently derived by Rose and Vanderbei. For 0<t<=1/2, we reject the first k"(t) candidates
+and then accept the next l-r best candidate; if no selection is made before the last candidate, then
+the last candidate is accepted. The most interesting strategy arises for 1/2<t<1, we reject the
+first k_1(t) candidates and then accept the next l-r maximum, or reject the first k_2(t)>=k_1(t)
+candidates and then accept the next l-r second maximum, whichever comes first. 

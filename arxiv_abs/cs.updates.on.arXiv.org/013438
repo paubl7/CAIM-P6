@@ -1,0 +1,20 @@
+Many neural network models have been successful at classification problems, but their operation
+is still treated as a black box. Here, we developed a theory for one-layer perceptrons that can predict
+performance on classification tasks. This theory is a generalization of an existing theory for
+predicting the performance of Echo State Networks and connectionist models for symbolic reasoning
+known as Vector Symbolic Architectures. In this paper, we first show that the proposed perceptron
+theory can predict the performance of Echo State Networks, which could not be described by the previous
+theory. Second, we apply our perceptron theory to the last layers of shallow randomly connected
+and deep multi-layer networks. The full theory is based on Gaussian statistics, but it is analytically
+intractable. We explore numerical methods to predict network performance for problems with a small
+number of classes. For problems with a large number of classes, we investigate stochastic sampling
+methods and a tractable approximation to the full theory. The quality of predictions is assessed
+in three experimental settings, using reservoir computing networks on a memorization task, shallow
+randomly connected networks on a collection of classification datasets, and deep convolutional
+networks with the ImageNet dataset. This study offers a simple, bipartite approach to understand
+deep neural networks: the input is encoded by the last-but-one layers into a high-dimensional representation.
+This representation is mapped through the weights of the last layer into the postsynaptic sums of
+the output neurons. Specifically, the proposed perceptron theory uses the mean vector and covariance
+matrix of the postsynaptic sums to compute classification accuracies for the different classes.
+The first two moments of the distribution of the postsynaptic sums can predict the overall network
+performance quite accurately. 

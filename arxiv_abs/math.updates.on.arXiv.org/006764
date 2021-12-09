@@ -1,0 +1,18 @@
+We revisit the problem of tolerant distribution testing. That is, given samples from an unknown
+distribution $p$ over $\{1, \dots, n\}$, is it $\varepsilon_1$-close to or $\varepsilon_2$-far
+from a reference distribution $q$ (in total variation distance)? Despite significant interest
+over the past decade, this problem is well understood only in the extreme cases. In the noiseless
+setting (i.e., $\varepsilon_1 = 0$) the sample complexity is $\Theta(\sqrt{n})$, strongly sublinear
+in the domain size. At the other end of the spectrum, when $\varepsilon_1 = \varepsilon_2/2$, the
+sample complexity jumps to the barely sublinear $\Theta(n/\log n)$. However, very little is known
+about the intermediate regime. We fully characterize the price of tolerance in distribution testing
+as a function of $n$, $\varepsilon_1$, $\varepsilon_2$, up to a single $\log n$ factor. Specifically,
+we show the sample complexity to be \[\tilde \Theta\left(\frac{\sqrt{n}}{\varepsilon_2^{2}}
++ \frac{n}{\log n} \cdot \max \left\{\frac{\varepsilon_1}{\varepsilon_2^2},\left(\frac{\varepsilon_1}{\varepsilon_2^2}\right)^{\!\!2}\right\}\right),\]
+providing a smooth tradeoff between the two previously known cases. We also provide a similar characterization
+for the problem of tolerant equivalence testing, where both $p$ and $q$ are unknown. Surprisingly,
+in both cases, the main quantity dictating the sample complexity is the ratio $\varepsilon_1/\varepsilon_2^2$,
+and not the more intuitive $\varepsilon_1/\varepsilon_2$. Of particular technical interest
+is our lower bound framework, which involves novel approximation-theoretic tools required to
+handle the asymmetry between $\varepsilon_1$ and $\varepsilon_2$, a challenge absent from previous
+works. 

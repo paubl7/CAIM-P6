@@ -1,0 +1,19 @@
+We apply deep-neural-network-based techniques to quantum state classification and reconstruction.
+We demonstrate high classification accuracies and reconstruction fidelities, even in the presence
+of noise and with little data. Using optical quantum states as examples, we first demonstrate how
+convolutional neural networks (CNNs) can successfully classify several types of states distorted
+by, e.g., additive Gaussian noise or photon loss. We further show that a CNN trained on noisy inputs
+can learn to identify the most important regions in the data, which potentially can reduce the cost
+of tomography by guiding adaptive data collection. Secondly, we demonstrate reconstruction of
+quantum-state density matrices using neural networks that incorporate quantum-physics knowledge.
+The knowledge is implemented as custom neural-network layers that convert outputs from standard
+feedforward neural networks to valid descriptions of quantum states. Any standard feed-forward
+neural-network architecture can be adapted for quantum state tomography (QST) with our method.
+We present further demonstrations of our proposed [arXiv:2008.03240] QST technique with conditional
+generative adversarial networks (QST-CGAN). We motivate our choice of a learnable loss function
+within an adversarial framework by demonstrating that the QST-CGAN outperforms, across a range
+of scenarios, generative networks trained with standard loss functions. For pure states with additive
+or convolutional Gaussian noise, the QST-CGAN is able to adapt to the noise and reconstruct the underlying
+state. The QST-CGAN reconstructs states using up to two orders of magnitude fewer iterative steps
+than a standard iterative maximum likelihood (iMLE) method. Further, the QST-CGAN can reconstruct
+both pure and mixed states from two orders of magnitude fewer randomly chosen data points than iMLE.

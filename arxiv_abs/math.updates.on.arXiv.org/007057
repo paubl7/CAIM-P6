@@ -1,0 +1,19 @@
+Failure trajectories, identifying the probable failure zones, and damage statistics are some
+of the key quantities of relevance in brittle fracture applications. High-fidelity numerical
+solvers that reliably estimate these relevant quantities exist but they are computationally demanding
+requiring a high resolution of the crack. Moreover, independent intensive simulations need to
+be carried out even for a small change in domain parameters and/or material properties. Therefore,
+fast and generalizable surrogate models are needed to alleviate the computational burden but the
+discontinuous nature of fracture mechanics presents a major challenge to developing such models.
+We propose a physics-informed variational formulation of DeepONet (V-DeepONet) for brittle fracture
+analysis. V-DeepONet is trained to map the initial configuration of the defect to the relevant fields
+of interests (e.g., damage and displacement fields). Once the network is trained, the entire global
+solution can be rapidly obtained for any initial crack configuration and loading steps on that domain.
+While the original DeepONet is solely data-driven, we take a different path to train the V-DeepONet
+by imposing the governing equations in variational form and we also use some labelled data. We demonstrate
+the effectiveness of V-DeepOnet through two benchmarks of brittle fracture, and we verify its accuracy
+using results from high-fidelity solvers. Encoding the physical laws and also some data to train
+the network renders the surrogate model capable of accurately performing both interpolation and
+extrapolation tasks, considering that fracture modeling is very sensitive to fluctuations. The
+proposed hybrid training of V-DeepONet is superior to state-of-the-art methods and can be applied
+to a wide array of dynamical systems with complex responses. 

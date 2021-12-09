@@ -1,0 +1,19 @@
+Despite many applications, dimensionality reduction in the $\ell_1$-norm is much less understood
+than in the Euclidean norm. We give two new oblivious dimensionality reduction techniques for the
+$\ell_1$-norm which improve exponentially over prior ones: 1. We design a distribution over random
+matrices $S \in \mathbb{R}^{r \times n}$, where $r = 2^{\tilde O(d/(\varepsilon \delta))}$, such
+that given any matrix $A \in \mathbb{R}^{n \times d}$, with probability at least $1-\delta$, simultaneously
+for all $x$, $\|SAx\|_1 = (1 \pm \varepsilon)\|Ax\|_1$. Note that $S$ is linear, does not depend
+on $A$, and maps $\ell_1$ into $\ell_1$. Our distribution provides an exponential improvement
+on the previous best known map of Wang and Woodruff (SODA, 2019), which required $r = 2^{2^{\Omega(d)}}$,
+even for constant $\varepsilon$ and $\delta$. Our bound is optimal, up to a polynomial factor in
+the exponent, given a known $2^{\sqrt d}$ lower bound for constant $\varepsilon$ and $\delta$.
+2. We design a distribution over matrices $S \in \mathbb{R}^{k \times n}$, where $k = 2^{O(q^2)}(\varepsilon^{-1}
+q \log d)^{O(q)}$, such that given any $q$-mode tensor $A \in (\mathbb{R}^{d})^{\otimes q}$, one
+can estimate the entrywise $\ell_1$-norm $\|A\|_1$ from $S(A)$. Moreover, $S = S^1 \otimes S^2
+\otimes \cdots \otimes S^q$ and so given vectors $u_1, \ldots, u_q \in \mathbb{R}^d$, one can compute
+$S(u_1 \otimes u_2 \otimes \cdots \otimes u_q)$ in time $2^{O(q^2)}(\varepsilon^{-1} q \log d)^{O(q)}$,
+which is much faster than the $d^q$ time required to form $u_1 \otimes u_2 \otimes \cdots \otimes
+u_q$. Our linear map gives a streaming algorithm for independence testing using space $2^{O(q^2)}(\varepsilon^{-1}
+q \log d)^{O(q)}$, improving the previous doubly exponential $(\varepsilon^{-1} \log d)^{q^{O(q)}}$
+space bound of Braverman and Ostrovsky (STOC, 2010). 

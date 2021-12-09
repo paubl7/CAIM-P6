@@ -1,0 +1,20 @@
+Chest x-rays are a vital tool in the workup of many patients. Similar to most medical imaging modalities,
+they are profoundly multi-modal and are capable of visualising a variety of combinations of conditions.
+There is an ever pressing need for greater quantities of labelled data to develop new diagnostic
+tools, however this is in direct opposition to concerns regarding patient confidentiality which
+constrains access through permission requests and ethics approvals. Previous work has sought
+to address these concerns by creating class-specific GANs that synthesise images to augment training
+data. These approaches cannot be scaled as they introduce computational trade offs between model
+size and class number which places fixed limits on the quality that such generates can achieve. We
+address this concern by introducing latent class optimisation which enables efficient, multi-modal
+sampling from a GAN and with which we synthesise a large archive of labelled generates. We apply a
+PGGAN to the task of unsupervised x-ray synthesis and have radiologists evaluate the clinical realism
+of the resultant samples. We provide an in depth review of the properties of varying pathologies
+seen on generates as well as an overview of the extent of disease diversity captured by the model.
+We validate the application of the Fr\'echet Inception Distance (FID) to measure the quality of
+x-ray generates and find that they are similar to other high resolution tasks. We quantify x-ray
+clinical realism by asking radiologists to distinguish between real and fake scans and find that
+generates are more likely to be classed as real than by chance, but there is still progress required
+to achieve true realism. We confirm these findings by evaluating synthetic classification model
+performance on real scans. We conclude by discussing the limitations of PGGAN generates and how
+to achieve controllable, realistic generates. 

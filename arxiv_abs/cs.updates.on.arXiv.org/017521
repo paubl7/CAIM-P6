@@ -1,0 +1,19 @@
+We describe a stacked model for predicting the cumulative fluid production for an oil well with a
+multistage-fracture completion based on a combination of Ridge Regression and CatBoost algorithms.
+The model is developed based on an extended digital field data base of reservoir, well and fracturing
+design parameters. The database now includes more than 5000 wells from 23 oilfields of Western Siberia
+(Russia), with 6687 fracturing operations in total. Starting with 387 parameters characterizing
+each well, including construction, reservoir properties, fracturing design features and production,
+we end up with 38 key parameters used as input features for each well in the model training process.
+The model demonstrates physically explainable dependencies plots of the target on the design parameters
+(number of stages, proppant mass, average and final proppant concentrations and fluid rate). We
+developed a set of methods including those based on the use of Euclidean distance and clustering
+techniques to perform similar (offset) wells search, which is useful for a field engineer to analyze
+earlier fracturing treatments on similar wells. These approaches are also adapted for obtaining
+the optimization parameters boundaries for the particular pilot well, as part of the field testing
+campaign of the methodology. An inverse problem (selecting an optimum set of fracturing design
+parameters to maximize production) is formulated as optimizing a high dimensional black box approximation
+function constrained by boundaries and solved with four different optimization methods: surrogate-based
+optimization, sequential least squares programming, particle swarm optimization and differential
+evolution. A recommendation system containing all the above methods is designed to advise a production
+stimulation engineer on an optimized fracturing design. 

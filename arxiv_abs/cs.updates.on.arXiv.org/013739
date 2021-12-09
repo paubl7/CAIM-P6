@@ -1,0 +1,18 @@
+We investigate the use of parametrized families of information-theoretic measures to generalize
+the loss functions of generative adversarial networks (GANs) with the objective of improving performance.
+A new generator loss function, called least $k$th-order GAN (L$k$GAN), is first introduced, generalizing
+the least squares GANs (LSGANs) by using a $k$th order absolute error distortion measure with $k
+\geq 1$ (which recovers the LSGAN loss function when $k=2$). It is shown that minimizing this generalized
+loss function under an (unconstrained) optimal discriminator is equivalent to minimizing the
+$k$th-order Pearson-Vajda divergence. Another novel GAN generator loss function is next proposed
+in terms of R\'{e}nyi cross-entropy functionals with order $\alpha >0$, $\alpha\neq 1$. It is demonstrated
+that this R\'{e}nyi-centric generalized loss function, which provably reduces to the original
+GAN loss function as $\alpha\to1$, preserves the equilibrium point satisfied by the original GAN
+based on the Jensen-R\'{e}nyi divergence, a natural extension of the Jensen-Shannon divergence.
+Experimental results indicate that the proposed loss functions, applied to the MNIST and CelebA
+datasets, under both DCGAN and StyleGAN architectures, confer performance benefits by virtue
+of the extra degrees of freedom provided by the parameters $k$ and $\alpha$, respectively. More
+specifically, experiments show improvements with regard to the quality of the generated images
+as measured by the Fr\'echet Inception Distance (FID) score and training stability. While it was
+applied to GANs in this study, the proposed approach is generic and can be used in other applications
+of information theory to deep learning, e.g., the issues of fairness or privacy in artificial intelligence.

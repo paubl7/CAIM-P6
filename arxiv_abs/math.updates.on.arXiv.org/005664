@@ -1,0 +1,20 @@
+In this paper, we study the three-dimensional (3D) path planning for a cellular-connected unmanned
+aerial vehicle (UAV) to minimize its flying distance from given initial to final locations, while
+ensuring a target link quality in terms of the expected signal-to-interference-plus-noise ratio
+(SINR) at the UAV receiver with each of its associated ground base stations (GBSs) during the flight.
+To exploit the location-dependent and spatially varying channel as well as interference over the
+3D space, we propose a new radio map based path planning framework for the UAV. Specifically, we consider
+the channel gain map of each GBS that provides its large-scale channel gains with uniformly sampled
+locations on a 3D grid, which are due to static and large-size obstacles (e.g., buildings) and thus
+assumed to be time-invariant. Based on the channel gain maps of GBSs as well as their loading factors,
+we then construct an SINR map that depicts the expected SINR levels over the sampled 3D locations.
+By leveraging the obtained SINR map, we proceed to derive the optimal UAV path by solving an equivalent
+shortest path problem (SPP) in graph theory. We further propose a grid quantization approach where
+the grid points in the SINR map are more coarsely sampled by exploiting the spatial channel/interference
+correlation over neighboring grids. Then, we solve an approximate SPP over the reduced-size SINR
+map (graph) with reduced complexity. Numerical results show that the proposed solution can effectively
+minimize the flying distance/time of the UAV subject to its communication quality constraint,
+and a flexible trade-off between performance and complexity can be achieved by adjusting the grid
+quantization ratio in the SINR map. Moreover, the proposed solution significantly outperforms
+various benchmark schemes without fully exploiting the channel/interference spatial distribution
+in the network. 

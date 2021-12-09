@@ -1,0 +1,18 @@
+An instance of the multiperiod binary knapsack problem (MPBKP) is given by a horizon length $T$,
+a non-decreasing vector of knapsack sizes $(c_1, \ldots, c_T)$ where $c_t$ denotes the cumulative
+size for periods $1,\ldots,t$, and a list of $n$ items. Each item is a triple $(r, q, d)$ where $r$ denotes
+the reward of the item, $q$ its size, and $d$ its time index (or, deadline). The goal is to choose, for
+each deadline $t$, which items to include to maximize the total reward, subject to the constraints
+that for all $t=1,\ldots,T$, the total size of selected items with deadlines at most $t$ does not
+exceed the cumulative capacity of the knapsack up to time $t$. We also consider the multiperiod binary
+knapsack problem with soft capacity constraints (MPBKP-S) where the capacity constraints are
+allowed to be violated by paying a penalty that is linear in the violation. The goal is to maximize
+the total profit, i.e., the total reward of selected items less the total penalty. Finally, we consider
+the multiperiod binary knapsack problem with soft stochastic capacity constraints (MPBKP-SS),
+where the non-decreasing vector of knapsack sizes $(c_1, \ldots, c_T)$ follow some arbitrary joint
+distribution but we are given access to the profit as an oracle, and we choose a subset of items to maximize
+the total expected profit, i.e., the total reward less the total expected penalty. For MPBKP, we
+exhibit a fully polynomial-time approximation scheme with runtime $\tilde{\mathcal{O}}\left(\min\left\{n+\frac{T^{3.25}}{\epsilon^{2.25}},n+\frac{T^{2}}{\epsilon^{3}},\frac{nT}{\epsilon^2},\frac{n^2}{\epsilon}\right\}\right)$
+that achieves $(1+\epsilon)$ approximation; for MPBKP-S, the $(1+\epsilon)$ approximation
+can be achieved in $\mathcal{O}\left(\frac{n\log n}{\epsilon}\cdot\min\left\{\frac{T}{\epsilon},n\right\}\right)$;
+for MPBKP-SS, a greedy algorithm is a 2-approximation when items have the same size. 

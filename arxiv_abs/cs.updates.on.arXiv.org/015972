@@ -1,0 +1,19 @@
+This thesis develops a framework for formalizing reasoning about specifications of systems written
+in LF. This formalization centers around the development of a reasoning logic that can express the
+sorts of properties which arise in reasoning about such specifications. In this logic, type inhabitation
+judgements in LF serve as atomic formulas, and quantification is permitted over both contexts and
+terms in these judgements. The logic permits arbitrary relations over derivations of LF judgements
+to be expressed using a collection of logical connectives, in contrast to other systems for reasoning
+about LF specifications. Defining a semantics for these formulas raises issues which we must address,
+such as how to interpret both term and context quantification as well as the relation between atomic
+formulas and the LF judgements they are meant to encode. This thesis also develops a proof system
+which captures informal reasoning steps as sound inference rules for the logic. To achieve this
+we develop a collection of proof rules including mechanisms for both case analysis and inductive
+reasoning over the derivations of judgements in LF. The proof system also supports applying LF meta-theorems
+through proof rules that enforce requirements of the LF meta-theorem that cannot be expressed in
+the logic. We also implement a proof assistant called Adelfa that provides a means for mechanizing
+this approach to reasoning about specifications written in LF. A characteristic of this proof assistant
+is that it uses the proof rules that complement the logic to describe a collection of tactics that
+are used to develop proofs in goal-driven fashion. The Adelfa system is used to develop a collection
+of examples which demonstrate the effectiveness of the framework and showcase how informal reasoning
+about specifications written in LF can be formalized using the logic and associated proof system.

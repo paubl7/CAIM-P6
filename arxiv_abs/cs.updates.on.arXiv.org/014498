@@ -1,0 +1,19 @@
+Domain name encryptions (DoTH and ESNI) have been proposed to improve security and privacy while
+browsing the web. Although the security benefit is clear, the positive impact on user privacy is
+still questionable. Given that the mapping between domains and their hosting IPs can be easily obtained,
+the websites a user visits can still be inferred by a network-level observer based on the destination
+IPs of user connections. However, content delivery networks, DNS-based load balancing, co-hosting
+of different websites on the same server, and IP churn, all contribute towards making domain-IP
+mappings unstable, and prevent straightforward IP-based browsing tracking for the majority of
+websites. We show that this instability is not a roadblock for browsing tracking (assuming a universal
+DoTH and ESNI deployment), by introducing an IP-based fingerprinting technique that allows a network-level
+observer to identify the website a user visits with high accuracy, based solely on the IP address
+information obtained from the encrypted traffic. Our technique exploits the complex structure
+of most websites, which load resources from several domains besides their own primary domain. We
+extract the domains contacted while browsing 220K websites to construct domain-based fingerprints.
+Each domain-based fingerprint is then converted to an IP-based fingerprint by periodically performing
+DNS lookups. Using the generated fingerprints, we could successfully identify 91% of the websites
+when observing solely destination IPs. We also evaluated the fingerprints' robustness over time,
+and demonstrate that they are still effective at identifying 70% of the tested websites after two
+months. We conclude by discussing strategies for website owners and hosting providers to hinder
+IP-based website fingerprinting and maximize the privacy benefits offered by domain name encryption.

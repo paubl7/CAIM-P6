@@ -1,0 +1,20 @@
+The success of automated program repair (APR) depends significantly on its ability to localize
+the defects it is repairing. For fault localization (FL), APR tools typically use either spectrum-based
+(SBFL) techniques that use test executions or information-retrieval-based (IRFL) techniques
+that use bug reports. These two approaches often complement each other, patching different defects.
+No existing repair tool uses both SBFL and IRFL. We develop RAFL (Rank-Aggregation-Based Fault
+Localization), a novel FL approach that combines multiple FL techniques. We also develop Blues,
+a new IRFL technique that uses bug reports, and an unsupervised approach to localize defects. On
+a dataset of 818 real-world defects, SBIR (combined SBFL and Blues) consistently localizes more
+bugs and ranks buggy statements higher than the two underlying techniques. For example, SBIR correctly
+identifies a buggy statement as the most suspicious for 18.1% of the defects, while SBFL does so for
+10.9% and Blues for 3.1%. We extend SimFix, a state-of-the-art APR tool, to use SBIR, SBFL, and Blues.
+SimFix using SBIR patches 112 out of the 818 defects; 110 when using SBFL, and 55 when using Blues.
+The 112 patched defects include 55 defects patched exclusively using SBFL, 7 patched exclusively
+using IRFL, 47 patched using both SBFL and IRFL and 3 new defects. SimFix using Blues significantly
+outperforms iFixR, the state-of-the-art IRFL-based APR tool. Overall, SimFix using our FL techniques
+patches ten defects no prior tools could patch. By evaluating on a benchmark of 818 defects, 442 previously
+unused in APR evaluations, we find that prior evaluations on the overused Defects4J benchmark have
+led to overly generous findings. Our paper is the first to (1) use combined FL for APR, (2) apply a more
+rigorous methodology for measuring patch correctness, and (3) evaluate on the new, substantially
+larger version of Defects4J. 

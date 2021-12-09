@@ -1,0 +1,18 @@
+Although galactic winds play a critical role in regulating galaxy formation, hydrodynamic cosmological
+simulations do not resolve the scales that govern the interaction between winds and the ambient
+circumgalactic medium (CGM). We implement the Physically Evolved Wind (PhEW) model of Huang et
+al. (2020) in the GIZMO hydrodynamics code and perform test cosmological simulations with different
+choices of model parameters and numerical resolution. PhEW adopts an explicit subgrid model that
+treats each wind particle as a collection of clouds that exchange mass, metals, and momentum with
+their surroundings and evaporate by conduction and hydrodynamic instabilities as calibrated
+on much higher resolution cloud scale simulations. In contrast to a conventional wind algorithm,
+we find that PhEW results are robust to numerical resolution and implementation details because
+the small scale interactions are defined by the model itself. Compared to conventional wind simulations
+with the same resolution, our PhEW simulations produce similar galaxy stellar mass functions at
+$z\geq 1$ but are in better agreement with low-redshift observations at $M_* < 10^{11}M_\odot$
+because PhEW particles shed mass to the CGM before escaping low mass halos. PhEW radically alters
+the CGM metal distribution because PhEW particles disperse metals to the ambient medium as their
+clouds dissipate, producing a CGM metallicity distribution that is skewed but unimodal and is similar
+between cold and hot gas. While the temperature distributions and radial profiles of gaseous halos
+are similar in simulations with PhEW and conventional winds, these changes in metal distribution
+will affect their predicted UV/X-ray properties in absorption and emission. 

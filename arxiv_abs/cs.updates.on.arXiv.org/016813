@@ -1,0 +1,19 @@
+The suffix array, describing the lexicographic order of suffixes of a given text, is the central
+data structure in string algorithms. The suffix array of a length-$n$ text uses $\Theta(n \log n)$
+bits, which is prohibitive in many applications. To address this, Grossi and Vitter [STOC 2000]
+and, independently, Ferragina and Manzini [FOCS 2000] introduced space-efficient versions of
+the suffix array, known as the compressed suffix array (CSA) and the FM-index. For a length-$n$ text
+over an alphabet of size $\sigma$, these data structures use only $O(n \log \sigma)$ bits. Immediately
+after their discovery, they almost completely replaced plain suffix arrays in practical applications,
+and a race started to develop efficient construction procedures. Yet, after more than 20 years,
+even for $\sigma=2$, the fastest algorithm remains stuck at $O(n)$ time [Hon et al., FOCS 2003],
+which is slower by a $\Theta(\log n)$ factor than the lower bound of $\Omega(n / \log n)$ (following
+simply from the necessity to read the entire input). We break this long-standing barrier with a new
+data structure that takes $O(n \log \sigma)$ bits, answers suffix array queries in $O(\log^{\epsilon}
+n)$ time, and can be constructed in $O(n\log \sigma / \sqrt{\log n})$ time using $O(n\log \sigma)$
+bits of space. Our result is based on several new insights into the recently developed notion of string
+synchronizing sets [STOC 2019]. In particular, compared to their previous applications, we eliminate
+orthogonal range queries, replacing them with new queries that we dub prefix rank and prefix selection
+queries. As a further demonstration of our techniques, we present a new pattern-matching index
+that simultaneously minimizes the construction time and the query time among all known compact
+indexes (i.e., those using $O(n \log \sigma)$ bits). 

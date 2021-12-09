@@ -1,0 +1,19 @@
+Acute Lymphoblastic Leukemia (ALL) is a blood cell cancer characterized by numerous immature lymphocytes.
+Even though automation in ALL prognosis is an essential aspect of cancer diagnosis, it is challenging
+due to the morphological correlation between malignant and normal cells. The traditional ALL classification
+strategy demands experienced pathologists to carefully read the cell images, which is arduous,
+time-consuming, and often suffers inter-observer variations. This article has automated the
+ALL detection task from microscopic cell images, employing deep Convolutional Neural Networks
+(CNNs). We explore the weighted ensemble of different deep CNNs to recommend a better ALL cell classifier.
+The weights for the ensemble candidate models are estimated from their corresponding metrics,
+such as accuracy, F1-score, AUC, and kappa values. Various data augmentations and pre-processing
+are incorporated for achieving a better generalization of the network. We utilize the publicly
+available C-NMC-2019 ALL dataset to conduct all the comprehensive experiments. Our proposed weighted
+ensemble model, using the kappa values of the ensemble candidates as their weights, has outputted
+a weighted F1-score of 88.6 %, a balanced accuracy of 86.2 %, and an AUC of 0.941 in the preliminary
+test set. The qualitative results displaying the gradient class activation maps confirm that the
+introduced model has a concentrated learned region. In contrast, the ensemble candidate models,
+such as Xception, VGG-16, DenseNet-121, MobileNet, and InceptionResNet-V2, separately produce
+coarse and scatter learned areas for most example cases. Since the proposed kappa value-based weighted
+ensemble yields a better result for the aimed task in this article, it can experiment in other domains
+of medical diagnostic applications. 

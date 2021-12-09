@@ -1,0 +1,18 @@
+Although the expectation maximisation (EM) algorithm was introduced in 1970, it remains somewhat
+inaccessible to machine learning practitioners due to its obscure notation, terse proofs and lack
+of concrete links to modern machine learning techniques like autoencoded variational Bayes. This
+has resulted in gaps in the AI literature concerning the meaning of such concepts like "latent variables"
+and "variational lower bound," which are frequently used but often not clearly explained. The roots
+of these ideas lie in the EM algorithm. We first give a tutorial presentation of the EM algorithm for
+estimating the parameters of a $K$-component mixture density. The Gaussian mixture case is presented
+in detail using $K$-ary scalar hidden (or latent) variables rather than the more traditional binary
+valued $K$-dimenional vectors. This presentation is motivated by mixture modelling from the target
+tracking literature. In a similar style to Bishop's 2009 book, we present variational Bayesian
+inference as a generalised EM algorithm stemming from the variational (or evidential) lower bound,
+as well as the technique of mean field approximation (or product density transform). We continue
+the evolution from EM to variational autoencoders, developed by Kingma & Welling in 2014. In so doing,
+we establish clear links between the EM algorithm and its variational counterparts, hence clarifying
+the meaning of "latent variables." We provide a detailed coverage of the "reparametrisation trick"
+and focus on how the AEVB differs from conventional variational Bayesian inference. Throughout
+the tutorial, consistent notational conventions are used. This unifies the narrative and clarifies
+the concepts. Some numerical examples are given to further illustrate the algorithms. 

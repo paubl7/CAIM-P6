@@ -1,0 +1,20 @@
+The newly discovered Corona virus Disease 2019 (COVID-19) has been globally spreading and causing
+hundreds of thousands of deaths around the world as of its first emergence in late 2019. Computed
+tomography (CT) scans have shown distinctive features and higher sensitivity compared to other
+diagnostic tests, in particular the current gold standard, i.e., the Reverse Transcription Polymerase
+Chain Reaction (RT-PCR) test. Current deep learning-based algorithms are mainly developed based
+on Convolutional Neural Networks (CNNs) to identify COVID-19 pneumonia cases. CNNs, however,
+require extensive data augmentation and large datasets to identify detailed spatial relations
+between image instances. Furthermore, existing algorithms utilizing CT scans, either extend
+slice-level predictions to patient-level ones using a simple thresholding mechanism or rely on
+a sophisticated infection segmentation to identify the disease. In this paper, we propose a two-stage
+fully-automated CT-based framework for identification of COVID-19 positive cases referred to
+as the "COVID-FACT". COVID-FACT utilizes Capsule Networks, as its main building blocks and is,
+therefore, capable of capturing spatial information. In particular, to make the proposed COVID-FACT
+independent from sophisticated segmentation of the area of infection, slices demonstrating infection
+are detected at the first stage and the second stage is responsible for classifying patients into
+COVID and non-COVID cases. COVID-FACT detects slices with infection, and identifies positive
+COVID-19 cases using an in-house CT scan dataset, containing COVID-19, community acquired pneumonia,
+and normal cases. Based on our experiments, COVID-FACT achieves an accuracy of 90.82%, a sensitivity
+of 94.55%, a specificity of 86.04%, and an Area Under the Curve (AUC) of 0.98, while depending on far
+less supervision and annotation, in comparison to its counterparts. 

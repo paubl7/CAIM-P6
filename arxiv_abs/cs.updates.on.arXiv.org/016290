@@ -1,0 +1,19 @@
+Chest X-rays are the most commonly available and affordable radiological examination for screening
+thoracic diseases. According to the domain knowledge of screening chest X-rays, the pathological
+information usually lay on the lung and heart regions. However, it is costly to acquire region-level
+annotation in practice, and model training mainly relies on image-level class labels in a weakly
+supervised manner, which is highly challenging for computer-aided chest X-ray screening. To address
+this issue, some methods have been proposed recently to identify local regions containing pathological
+information, which is vital for thoracic disease classification. Inspired by this, we propose
+a novel deep learning framework to explore discriminative information from lung and heart regions.
+We design a feature extractor equipped with a multi-scale attention module to learn global attention
+maps from global images. To exploit disease-specific cues effectively, we locate lung and heart
+regions containing pathological information by a well-trained pixel-wise segmentation model
+to generate binarization masks. By introducing element-wise logical AND operator on the learned
+global attention maps and the binarization masks, we obtain local attention maps in which pixels
+are $1$ for lung and heart region and $0$ for other regions. By zeroing features of non-lung and heart
+regions in attention maps, we can effectively exploit their disease-specific cues in lung and heart
+regions. Compared to existing methods fusing global and local features, we adopt feature weighting
+to avoid weakening visual cues unique to lung and heart regions. Evaluated by the benchmark split
+on the publicly available chest X-ray14 dataset, the comprehensive experiments show that our method
+achieves superior performance compared to the state-of-the-art methods. 

@@ -1,0 +1,20 @@
+Learning from noisy labels is an important concern because of the lack of accurate ground-truth
+labels in plenty of real-world scenarios. In practice, various approaches for this concern first
+make some corrections corresponding to potentially noisy-labeled instances, and then update
+predictive model with information of the made corrections. However, in specific areas, such as
+medical histopathology whole slide image analysis (MHWSIA), it is often difficult or even impossible
+for experts to manually achieve the noisy-free ground-truth labels which leads to labels with complex
+noise. This situation raises two more difficult problems: 1) the methodology of approaches making
+corrections corresponding to potentially noisy-labeled instances has limitations due to the
+complex noise existing in labels; and 2) the appropriate evaluation strategy for validation/testing
+is unclear because of the great difficulty in collecting the noisy-free ground-truth labels. In
+this paper, we focus on alleviating these two problems. For the problem 1), we present one-step abductive
+multi-target learning (OSAMTL) that imposes a one-step logical reasoning upon machine learning
+via a multi-target learning procedure to constrain the predictions of the learning model to be subject
+to our prior knowledge about the true target. For the problem 2), we propose a logical assessment
+formula (LAF) that evaluates the logical rationality of the outputs of an approach by estimating
+the consistencies between the predictions of the learning model and the logical facts narrated
+from the results of the one-step logical reasoning of OSAMTL. Applying OSAMTL and LAF to the Helicobacter
+pylori (H. pylori) segmentation task in MHWSIA, we show that OSAMTL is able to enable the machine
+learning model achieving logically more rational predictions, which is beyond various state-of-the-art
+approaches in handling complex noisy labels. 

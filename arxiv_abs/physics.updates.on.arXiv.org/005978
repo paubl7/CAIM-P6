@@ -1,0 +1,19 @@
+Accurate low dimension chemical kinetic models for methane are an essential component in the design
+of efficient gas turbine combustors. Kinetic models coupled to computational fluid dynamics (CFD)
+provide quick and efficient ways to test the effect of operating conditions, fuel composition and
+combustor design compared to physical experiments. However, detailed chemical kinetic models
+are too computationally expensive for use in CFD. We propose a novel data orientated three-step
+methodology to produce compact models that replicate a target set of detailed model properties
+to a high fidelity. In the first step, a reduced kinetic model is obtained by removing all non-essential
+species from the detailed model containing 118 species using path flux analysis (PFA). It is then
+numerically optimised to replicate the detailed model's prediction in two rounds; First, to selected
+species (OH,H,CO and CH4) profiles in perfectly stirred reactor (PSR) simulations and then re-optimised
+to the detailed model's prediction of the laminar flame speed. This is implemented by a purposely
+developed Machine Learned Optimisation of Chemical Kinetics (MLOCK) algorithm. The MLOCK algorithm
+systematically perturbs all three Arrhenius parameters for selected reactions and assesses the
+suitability of the new parameters through an objective error function which quantifies the error
+in the compact model's calculation of the optimisation target. This strategy is demonstrated through
+the production of a 19 species and a 15 species compact model for methane/air combustion. Both compact
+models are validated across a range of 0D and 1D calculations across both lean and rich conditions
+and shows good agreement to the parent detailed mechanism. The 15 species model is shown to outperform
+the current state-of-art models in both accuracy and range of conditions the model is valid over.

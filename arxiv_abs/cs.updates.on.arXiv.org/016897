@@ -1,0 +1,18 @@
+Semi-supervised learning is a challenging problem which aims to construct a model by learning from
+a limited number of labeled examples. Numerous methods have been proposed to tackle this problem,
+with most focusing on utilizing the predictions of unlabeled instances consistency alone to regularize
+networks. However, treating labeled and unlabeled data separately often leads to the discarding
+of mass prior knowledge learned from the labeled examples, and failure to mine the feature interaction
+between the labeled and unlabeled image pairs. In this paper, we propose a novel method for semi-supervised
+semantic segmentation named GuidedMix-Net, by leveraging labeled information to guide the learning
+of unlabeled instances. Specifically, we first introduce a feature alignment objective between
+labeled and unlabeled data to capture potentially similar image pairs and then generate mixed inputs
+from them. The proposed mutual information transfer (MITrans), based on the cluster assumption,
+is shown to be a powerful knowledge module for further progressive refining features of unlabeled
+data in the mixed data space. To take advantage of the labeled examples and guide unlabeled data learning,
+we further propose a mask generation module to generate high-quality pseudo masks for the unlabeled
+data. Along with supervised learning for labeled data, the prediction of unlabeled data is jointly
+learned with the generated pseudo masks from the mixed data. Extensive experiments on PASCAL VOC
+2012, PASCAL-Context and Cityscapes demonstrate the effectiveness of our GuidedMix-Net, which
+achieves competitive segmentation accuracy and significantly improves the mIoU by +7$\%$ compared
+to previous state-of-the-art approaches. 

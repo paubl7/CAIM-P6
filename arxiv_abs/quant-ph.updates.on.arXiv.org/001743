@@ -1,0 +1,18 @@
+We provide a rigorous analysis of the quantum optimal control problem in the setting of a linear combination
+$s(t)B+(1-s(t))C$ of two noncommuting Hamiltonians $B$ and $C$. This includes both quantum annealing
+(QA) and the quantum approximate optimization algorithm (QAOA). The target is to minimize the energy
+of the final ``problem'' Hamiltonian $C$, for a time-dependent and bounded control schedule $s(t)\in
+[0,1]$ and $t\in \mc{I}:= [0,t_f]$. It was recently shown, in a purely closed system setting, that
+the optimal solution to this problem is a ``bang-anneal-bang'' schedule, with the bangs characterized
+by $s(t)= 0$ and $s(t)= 1$ in finite subintervals of $\mc{I}$, in particular $s(0)=0$ and $s(t_f)=1$,
+in contrast to the standard prescription $s(0)=1$ and $s(t_f)=0$ of quantum annealing. Here we
+extend this result to the open system setting, where the system is described by a density matrix rather
+than a pure state. This is the natural setting for experimental realizations of QA and QAOA. For finite-dimensional
+environments and without any approximations we identify sufficient conditions ensuring that
+either the bang-anneal, anneal-bang, or bang-anneal-bang schedules are optimal, and recover
+the optimality of $s(0)=0$ and $s(t_f)=1$. However, for infinite-dimensional environments and
+a system described by an adiabatic Redfield master equation we do not recover the bang-type optimal
+solution. In fact we can only identify conditions under which $s(t_f)=1$, and even this result is
+not recovered in the fully Markovian limit. The analysis, which we carry out entirely within the
+geometric framework of Pontryagin Maximum Principle, simplifies using the density matrix formulation
+compared to the state vector formulation. 

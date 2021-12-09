@@ -1,0 +1,18 @@
+In light of the increasing coupling between electricity and gas networks, this paper introduces
+two novel iterative methods for efficiently solving the multiperiod optimal electricity and gas
+flow (MOEGF) problem. The first is an iterative MILP-based method and the second is an iterative
+LP-based method with an elaborate procedure for ensuring an integral solution. The convergence
+of the two approaches is founded on two key features. The first is a penalty term with a single, automatically
+tuned, parameter for controlling the step size of the gas network iterates. The second is a sequence
+of supporting hyperplanes together with an increasing number of carefully constructed halfspaces
+for controlling the convergence of the electricity network iterates. Moreover, the two proposed
+algorithms use as a warm start the solution from a novel polyhedral relaxation of the MOEGF problem,
+for a noticeable improvement in computation time as compared to a cold start. Unlike the first method,
+which invokes a branch-and-bound algorithm to find an integral solution, the second method implements
+an elaborate steering procedure that guides the continuous variables to take integral values at
+the solution. Numerical evaluation demonstrates that the two proposed methods can converge to
+high-quality feasible solutions in computation times at least two orders of magnitude faster than
+both a state-of-the-art nonlinear branch-and-bound (NLBB) MINLP solver and a mixed-integer convex
+programming (MICP) relaxation of the MOEGF problem. The experimental setup consists of five test
+cases, three of which involve the real electricity and gas transmission networks of the state of
+Victoria with actual linepack and demand profiles. 

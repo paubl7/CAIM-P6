@@ -1,0 +1,20 @@
+The field of dynamic graph algorithms aims at achieving a thorough understanding of real-world
+networks whose topology evolves with time. Traditionally, the focus has been on the classic sequential,
+centralized setting where the main quality measure of an algorithm is its update time, i.e. the time
+needed to restore the solution after each update. While real-life networks are very often distributed
+across multiple machines, the fundamental question of finding efficient dynamic, distributed
+graph algorithms received little attention to date. The goal in this setting is to optimize both
+the round and message complexities incurred per update step, ideally achieving a message complexity
+that matches the centralized update time in $O(1)$ (perhaps amortized) rounds. Toward initiating
+a systematic study of dynamic, distributed algorithms, we study some of the most central symmetry-breaking
+problems: maximal independent set (MIS), maximal matching/(approx-) maximum cardinality matching
+(MM/MCM), and $(\Delta + 1)$-vertex coloring. This paper focuses on dynamic, distributed algorithms
+that are deterministic, and in particular -- robust against an adaptive adversary. Most of our focus
+is on the MIS algorithm, which achieves $O\left(m^{2/3}\log^2 n\right)$ amortized messages in
+$O\left(\log^2 n\right)$ amortized rounds in the Congest model. Notably, the amortized message
+complexity of our algorithm matches the amortized update time of the best-known deterministic
+centralized MIS algorithm by Gupta and Khan [SOSA'21] up to a polylog $n$ factor. The previous best
+deterministic distributed MIS algorithm, by Assadi et al. [STOC'18], uses $O(m^{3/4})$ amortized
+messages in $O(1)$ amortized rounds, i.e., we achieve a polynomial improvement in the message complexity
+by a polylog $n$ increase to the round complexity; moreover, the algorithm of Assadi et al. makes
+an implicit assumption that the [...] 

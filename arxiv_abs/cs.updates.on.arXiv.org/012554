@@ -1,0 +1,20 @@
+Large scale eCommerce platforms such as eBay carry a wide variety of inventory and provide several
+buying choices to online shoppers. It is critical for eCommerce search engines to showcase in the
+top results the variety and selection of inventory available, specifically in the context of the
+various buying intents that may be associated with a search query. Search rankers are most commonly
+powered by learning-to-rank models which learn the preference between items during training.
+However, they score items independent of other items at runtime. Although the items placed at top
+of the results by such scoring functions may be independently optimal, they can be sub-optimal as
+a set. This may lead to a mismatch between the ideal distribution of items in the top results vs what
+is actually impressed. In this paper, we present methods to address the purchase-impression gap
+observed in top search results on eCommerce sites. We establish the ideal distribution of items
+based on historic shopping patterns. We then present a sequential reranker that methodically reranks
+top search results produced by a conventional pointwise scoring ranker. The reranker produces
+a reordered list by sequentially selecting candidates trading off between their independent relevance
+and potential to address the purchase-impression gap by utilizing specially constructed features
+that capture impression distribution of items already added to a reranked list. The sequential
+reranker enables addressing purchase impression gap with respect to multiple item aspects. Early
+version of the reranker showed promising lifts in conversion and engagement metrics at eBay. Based
+on experiments on randomly sampled validation datasets, we observe that the reranking methodology
+presented produces around 10% reduction in purchase-impression gap at an average for the top 20
+results, while making improvements to conversion metrics. 

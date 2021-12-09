@@ -1,0 +1,18 @@
+The goals of this research were to search for Convolutional Neural Network (CNN) architectures,
+suitable for an on-device processor with limited computing resources, performing at substantially
+lower Network Architecture Search (NAS) costs. A new algorithm entitled an Early Exit Population
+Initialisation (EE-PI) for Evolutionary Algorithm (EA) was developed to achieve both goals. The
+EE-PI reduces the total number of parameters in the search process by filtering the models with fewer
+parameters than the maximum threshold. It will look for a new model to replace those models with parameters
+more than the threshold. Thereby, reducing the number of parameters, memory usage for model storage
+and processing time while maintaining the same performance or accuracy. The search time was reduced
+to 0.52 GPU day. This is a huge and significant achievement compared to the NAS of 4 GPU days achieved
+using NSGA-Net, 3,150 GPU days by the AmoebaNet model, and the 2,000 GPU days by the NASNet model.
+As well, Early Exit Evolutionary Algorithm networks (EEEA-Nets) yield network architectures
+with minimal error and computational cost suitable for a given dataset as a class of network algorithms.
+Using EEEA-Net on CIFAR-10, CIFAR-100, and ImageNet datasets, our experiments showed that EEEA-Net
+achieved the lowest error rate among state-of-the-art NAS models, with 2.46% for CIFAR-10, 15.02%
+for CIFAR-100, and 23.8% for ImageNet dataset. Further, we implemented this image recognition
+architecture for other tasks, such as object detection, semantic segmentation, and keypoint detection
+tasks, and, in our experiments, EEEA-Net-C2 outperformed MobileNet-V3 on all of these various
+tasks. (The algorithm code is available at https://github.com/chakkritte/EEEA-Net). 

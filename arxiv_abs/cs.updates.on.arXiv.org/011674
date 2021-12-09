@@ -1,0 +1,19 @@
+Git metadata contains rich information for developers to understand the overall context of a large
+software development project. Thus it can help new developers, managers, and testers understand
+the history of development without needing to dig into a large pile of unfamiliar source code. However,
+the current tools for Git visualization are not adequate to analyze and explore the metadata: They
+focus mainly on improving the usability of Git commands instead of on helping users understand the
+development history. Furthermore, they do not scale for large and complex Git commit graphs, which
+can play an important role in understanding the overall development history. In this paper, we present
+Githru, an interactive visual analytics system that enables developers to effectively understand
+the context of development history through the interactive exploration of Git metadata. We design
+an interactive visual encoding idiom to represent a large Git graph in a scalable manner while preserving
+the topological structures in the Git graph. To enable scalable exploration of a large Git commit
+graph, we propose novel techniques (graph reconstruction, clustering, and Context-Preserving
+Squash Merge (CSM) methods) to abstract a large-scale Git commit graph. Based on these Git commit
+graph abstraction techniques, Githru provides an interactive summary view to help users gain an
+overview of the development history and a comparison view in which users can compare different clusters
+of commits. The efficacy of Githru has been demonstrated by case studies with domain experts using
+real-world, in-house datasets from a large software development team at a major international
+IT company. A controlled user study with 12 developers comparing Githru to previous tools also confirms
+the effectiveness of Githru in terms of task completion time. 

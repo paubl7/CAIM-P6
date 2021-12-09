@@ -1,0 +1,18 @@
+Estimation of the initial state of turbulent channel flow from spatially and temporally resolved
+wall data is performed using adjoint-variational data assimilation. The accuracy of the predicted
+flow deteriorates with distance from the wall, most precipitously across the buffer layer beyond
+which only large-scale structures are reconstructed. To quantify the difficulty of the state estimation,
+the Hessian of the associated cost function is evaluated at the true solution. The forward-adjoint
+duality is exploited to efficiently compute the Hessian matrix from the ensemble-averaged cross-correlation
+of the adjoint fields due to impulses at the sensing locations and times. Characteristics of the
+Hessian are examined when observations correspond to the streamwise or spanwise wall shear stress
+or wall pressure. Most of the eigenmodes decay beyond the buffer layer, thus demonstrating weak
+sensitivity of wall observations to the turbulence in the bulk. However, when the measurement time
+$t_m^+ \gtrsim 20$, some streamwise-elongated Hessian eigenfunctions remain finite in the outer
+flow, which corresponds to the sensitivity of wall observations to outer large-scale motions.
+Furthermore, we report statistics of the adjoint-field kinetic-energy budget at long times, which
+are distinctly different from those of the forward model. One notable difference is the high concentration
+of energy within the buffer layer and its narrower support. A large and exponentially amplifying
+adjoint field in that region leads to large gradients of the cost function, smaller step size in the
+gradient-based optimization, and difficulty to achieve convergence especially elsewhere in
+the domain where the gradients are comparatively small. 

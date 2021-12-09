@@ -1,0 +1,20 @@
+Nonsmooth optimization problems arising in practice tend to exhibit beneficial smooth substructure:
+their domains stratify into "active manifolds" of smooth variation, which common proximal algorithms
+"identify" in finite time. Identification then entails a transition to smooth dynamics, and accommodates
+second-order acceleration techniques. While identification is clearly useful algorithmically,
+empirical evidence suggests that even those algorithms that do not identify the active manifold
+in finite time -- notably the subgradient method -- are nonetheless affected by it. This work seeks
+to explain this phenomenon, asking: how do active manifolds impact the subgradient method in nonsmooth
+optimization? In this work, we answer this question by introducing two algorithmically useful
+properties -- aiming and subgradient approximation -- that fully expose the smooth substructure
+of the problem. We show that these properties imply that the shadow of the (stochastic) subgradient
+method along the active manifold is precisely an inexact Riemannian gradient method with an implicit
+retraction. We prove that these properties hold for a wide class of problems, including cone reducible/decomposable
+functions and generic semialgebraic problems. Moreover, we develop a thorough calculus, proving
+such properties are preserved under smooth deformations and spectral lifts. This viewpoint then
+leads to several algorithmic consequences that parallel results in smooth optimization, despite
+the nonsmoothness of the problem: local rates of convergence, asymptotic normality, and saddle
+point avoidance. The asymptotic normality results appear to be new even in the most classical setting
+of stochastic nonlinear programming. The results culminate in the following observation: the
+perturbed subgradient method on generic, Clarke regular semialgebraic problems, converges only
+to local minimizers. 

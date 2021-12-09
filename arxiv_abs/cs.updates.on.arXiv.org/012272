@@ -1,0 +1,18 @@
+Opioid overdose rates have increased in the United States over the past decade and reflect a major
+public health crisis. Modeling and prediction of drug and opioid hotspots, where a high percentage
+of events fall in a small percentage of space-time, could help better focus limited social and health
+services. In this work we present a spatial-temporal point process model for drug overdose clustering.
+The data input into the model comes from two heterogeneous sources: 1) high volume emergency medical
+calls for service (EMS) records containing location and time, but no information on the type of non-fatal
+overdose and 2) fatal overdose toxicology reports from the coroner containing location and high-dimensional
+information from the toxicology screen on the drugs present at the time of death. We first use non-negative
+matrix factorization to cluster toxicology reports into drug overdose categories and we then develop
+an EM algorithm for integrating the two heterogeneous data sets, where the mark corresponding to
+overdose category is inferred for the EMS data and the high volume EMS data is used to more accurately
+predict drug overdose death hotspots. We apply the algorithm to drug overdose data from Indianapolis,
+showing that the point process defined on the integrated data outperforms point processes that
+use only homogeneous EMS (AUC improvement .72 to .8) or coroner data (AUC improvement .81 to .85).We
+also investigate the extent to which overdoses are contagious, as a function of the type of overdose,
+while controlling for exogenous fluctuations in the background rate that might also contribute
+to clustering. We find that drug and opioid overdose deaths exhibit significant excitation, with
+branching ratio ranging from .72 to .98. 

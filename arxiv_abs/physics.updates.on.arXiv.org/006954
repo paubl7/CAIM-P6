@@ -1,0 +1,18 @@
+The physical world is governed by the laws of physics, often represented in form of nonlinear partial
+differential equations (PDEs). Unfortunately, solution of PDEs is non-trivial and often involves
+significant computational time. With recent developments in the field of artificial intelligence
+and machine learning, the solution of PDEs using neural network has emerged as a domain with huge
+potential. However, most of the developments in this field are based on either fully connected neural
+networks (FNN) or convolutional neural networks (CNN). While FNN is computationally inefficient
+as the number of network parameters can be potentially huge, CNN necessitates regular grid and simpler
+domain. In this work, we propose a novel framework referred to as the Graph Attention Differential
+Equation (GrADE) for solving time dependent nonlinear PDEs. The proposed approach couples FNN,
+graph neural network, and recently developed Neural ODE framework. The primary idea is to use graph
+neural network for modeling the spatial domain, and Neural ODE for modeling the temporal domain.
+The attention mechanism identifies important inputs/features and assign more weightage to the
+same; this enhances the performance of the proposed framework. Neural ODE, on the other hand, results
+in constant memory cost and allows trading of numerical precision for speed. We also propose depth
+refinement as an effective technique for training the proposed architecture in lesser time with
+better accuracy. The effectiveness of the proposed framework is illustrated using 1D and 2D Burgers'
+equations. Results obtained illustrate the capability of the proposed framework in modeling PDE
+and its scalability to larger domains without the need for retraining. 

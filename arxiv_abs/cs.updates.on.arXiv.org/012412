@@ -1,0 +1,20 @@
+Today's high-performance computing (HPC) applications are producing vast volumes of data, which
+are challenging to store and transfer efficiently during the execution, such that data compression
+is becoming a critical technique to mitigate the storage burden and data movement cost. Huffman
+coding is arguably the most efficient Entropy coding algorithm in information theory, such that
+it could be found as a fundamental step in many modern compression algorithms such as DEFLATE. On
+the other hand, today's HPC applications are more and more relying on the accelerators such as GPU
+on supercomputers, while Huffman encoding suffers from low throughput on GPUs, resulting in a significant
+bottleneck in the entire data processing. In this paper, we propose and implement an efficient Huffman
+encoding approach based on modern GPU architectures, which addresses two key challenges: (1) how
+to parallelize the entire Huffman encoding algorithm, including codebook construction, and (2)
+how to fully utilize the high memory-bandwidth feature of modern GPU architectures. The detailed
+contribution is four-fold. (1) We develop an efficient parallel codebook construction on GPUs
+that scales effectively with the number of input symbols. (2) We propose a novel reduction based
+encoding scheme that can efficiently merge the codewords on GPUs. (3) We optimize the overall GPU
+performance by leveraging the state-of-the-art CUDA APIs such as Cooperative Groups. (4) We evaluate
+our Huffman encoder thoroughly using six real-world application datasets on two advanced GPUs
+and compare with our implemented multi-threaded Huffman encoder. Experiments show that our solution
+can improve the encoding throughput by up to 5.0X and 6.8X on NVIDIA RTX 5000 and V100, respectively,
+over the state-of-the-art GPU Huffman encoder, and by up to 3.3X over the multi-thread encoder on
+two 28-core Xeon Platinum 8280 CPUs. 

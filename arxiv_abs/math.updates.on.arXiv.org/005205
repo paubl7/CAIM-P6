@@ -1,0 +1,20 @@
+The task of scheduling jobs to machines while minimizing the total makespan, the sum of weighted
+completion times, or a norm of the load vector, are among the oldest and most fundamental tasks in
+combinatorial optimization. Since all of these problems are in general NP-hard, much attention
+has been given to the regime where there is only a small number $k$ of job types, but possibly the number
+of jobs $n$ is large; this is the few job types, high-multiplicity regime. Despite many positive
+results, the hardness boundary of this regime was not understood until now. We show that makespan
+minimization on uniformly related machines ($Q|HM|C_{\max}$) is NP-hard already with $6$ job
+types, and that the related Cutting Stock problem is NP-hard already with $8$ item types. For the
+more general unrelated machines model ($R|HM|C_{\max}$), we show that if either the largest job
+size $p_{\max}$, or the number of jobs $n$ are polynomially bounded in the instance size $|I|$, there
+are algorithms with complexity $|I|^{\textrm{poly}(k)}$. Our main result is that this is unlikely
+to be improved, because $Q||C_{\max}$ is W[1]-hard parameterized by $k$ already when $n$, $p_{\max}$,
+and the numbers describing the speeds are polynomial in $|I|$; the same holds for $R|HM|C_{\max}$
+(without speeds) when the job sizes matrix has rank $2$. Our positive and negative results also extend
+to the objectives $\ell_2$-norm minimization of the load vector and, partially, sum of weighted
+completion times $\sum w_j C_j$. Along the way, we answer affirmatively the question whether makespan
+minimization on identical machines ($P||C_{\max}$) is fixed-parameter tractable parameterized
+by $k$, extending our understanding of this fundamental problem. Together with our hardness results
+for $Q||C_{\max}$ this implies that the complexity of $P|HM|C_{\max}$ is the only remaining open
+case. 

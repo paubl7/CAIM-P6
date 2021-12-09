@@ -1,0 +1,20 @@
+Reflecting on the last few years, the biggest breakthroughs in deep reinforcement learning (RL)
+have been in the discrete action domain. Robotic manipulation, however, is inherently a continuous
+control environment, but these continuous control reinforcement learning algorithms often depend
+on actor-critic methods that are sample-inefficient and inherently difficult to train, due to
+the joint optimisation of the actor and critic. To that end, we explore how we can bring the stability
+of discrete action RL algorithms to the robot manipulation domain. We extend the recently released
+ARM algorithm, by replacing the continuous next-best pose agent with a discrete next-best pose
+agent. Discretisation of rotation is trivial given its bounded nature, while translation is inherently
+unbounded, making discretisation difficult. We formulate the translation prediction as the voxel
+prediction problem by discretising the 3D space; however, voxelisation of a large workspace is
+memory intensive and would not work with a high density of voxels, crucial to obtaining the resolution
+needed for robotic manipulation. We therefore propose to apply this voxel prediction in a coarse-to-fine
+manner by gradually increasing the resolution. In each step, we extract the highest valued voxel
+as the predicted location, which is then used as the centre of the higher-resolution voxelisation
+in the next step. This coarse-to-fine prediction is applied over several steps, giving a near-lossless
+prediction of the translation. We show that our new coarse-to-fine algorithm is able to accomplish
+RLBench tasks much more efficiently than the continuous control equivalent, and even train some
+real-world tasks, tabular rasa, in less than 7 minutes, with only 3 demonstrations. Moreover, we
+show that by moving to a voxel representation, we are able to easily incorporate observations from
+multiple cameras. 

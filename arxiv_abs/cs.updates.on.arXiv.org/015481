@@ -1,0 +1,20 @@
+Several software defect prediction techniques have been developed over the past decades. These
+techniques predict defects at the granularity of typical software assets, such as components and
+files. In this paper, we investigate feature-oriented defect prediction: predicting defects
+at the granularity of features -- domain-entities that represent software functionality and often
+cross-cut software assets. Feature-oriented defect prediction can be beneficial since: (i) some
+features might be more error-prone than others, (ii) characteristics of defective features might
+be useful to predict other error-prone features, and (iii) feature-specific code might be prone
+to faults arising from feature interactions. We explore the feasibility and solution space for
+feature-oriented defect prediction. Our study relies on 12 software projects from which we analyzed
+13,685 bug-introducing and corrective commits, and systematically generated 62,868 training
+and test datasets to evaluate classifiers, metrics, and scenarios. The datasets were generated
+based on the 13,685 commits, 81 releases, and 24, 532 permutations of our 12 projects depending on
+the scenario addressed. We covered scenarios such as just-in-time (JIT) and cross-project defect
+prediction. Our results confirm the feasibility of feature-oriented defect prediction. We found
+the best performance (i.e., precision and robustness) when using the Random Forest classifier,
+with process and structure metrics. Surprisingly, single-project JIT and release-level predictions
+had median AUC-ROC values greater than 95% and 90% respectively, contrary to studies that assert
+poor performance due to insufficient training data. We also found that a model trained on release-level
+data from one of the twelve projects could predict defect-proneness of features in the other eleven
+projects with median AUC-ROC of 82%, without retraining. 

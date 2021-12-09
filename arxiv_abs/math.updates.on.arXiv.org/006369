@@ -1,0 +1,19 @@
+We study the complexity of a range of propositional proof systems which allow inference rules of
+the form: from a set of clauses $\Gamma$ derive the set of clauses $\Gamma \cup \{ C \}$ where, due to
+some syntactic condition, $\Gamma \cup \{ C \}$ is satisfiable if $\Gamma$ is, but where $\Gamma$
+does not necessarily imply $C$. These inference rules include BC, RAT, SPR and PR (respectively
+short for blocked clauses, resolution asymmetric tautologies, subset propagation redundancy
+and propagation redundancy), which arose from work in satisfiability (SAT) solving. We introduce
+a new, more general rule SR (substitution redundancy). If the new clause $C$ is allowed to include
+new variables then the systems based on these rules are all equivalent to extended resolution. We
+focus on restricted systems that do not allow new variables. The systems with deletion, where we
+can delete a clause from our set at any time, are denoted DBC${}^-$, DRAT${}^-$, DSPR${}^-$, DPR${}^-$
+and DSR${}^-$. The systems without deletion are BC${}^-$, RAT${}^-$, SPR${}^-$, PR${}^-$ and
+SR${}^-$. With deletion, we show that DRAT${}^-$, DSPR${}^-$ and DPR${}^-$ are equivalent. By
+earlier work of Kiesl, Rebola-Pardo and Heule, they are also equivalent to DBC${}^-$. Without deletion,
+we show that SPR${}^-$ can simulate PR${}^-$ provided only short clauses are inferred by SPR inferences.
+We also show that many of the well-known "hard" principles have small SPR${}^-$ refutations. These
+include the pigeonhole principle, bit pigeonhole principle, parity principle, Tseitin tautologies
+and clique-coloring tautologies. SPR${}^-$ can also handle or-fication and xor-ification, and
+lifting with an index gadget. Our final result is an exponential size lower bound for RAT${}^-$ refutations,
+giving exponential separations between RAT${}^-$ and both DRAT${}^-$ and SPR${}^-$. 

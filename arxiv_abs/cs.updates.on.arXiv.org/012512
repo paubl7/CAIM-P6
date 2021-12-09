@@ -1,0 +1,19 @@
+We consider the classical problem of learning rates for classes with finite VC dimension. It is well
+known that fast learning rates up to $O\left(\frac{d}{n}\right)$ are achievable by the empirical
+risk minimization algorithm (ERM) if low noise or margin assumptions are satisfied. These usually
+require the optimal Bayes classifier to be in the class, and it has been shown that when this is not
+the case, the fast rates cannot be achieved even in the noise free case. In this paper, we further investigate
+the question of the fast rates under the misspecification, when the Bayes classifier is not in the
+class (also called the agnostic setting). First, we consider classification with a reject option,
+namely Chow's reject option model, and show that by slightly lowering the impact of hard instances,
+a learning rate of order $O\left(\frac{d}{n}\log \frac{n}{d}\right)$ is always achievable in
+the agnostic setting by a specific learning algorithm. Similar results were only known under special
+versions of margin assumptions. We also show that the performance of the proposed algorithm is never
+worse than the performance of ERM. Based on those results, we derive the necessary and sufficient
+conditions for classification (without a reject option) with fast rates in the agnostic setting
+achievable by improper learners. This simultaneously extends the work of Massart and N\'{e}d\'{e}lec
+(Ann. of Statistics, 2006), which studied this question in the case where the Bayesian optimal rule
+belongs to the class, and the work of Ben-David and Urner (COLT, 2014), which allows the misspecification
+but is limited to the no noise setting. Our result also provides the first general setup in statistical
+learning theory in which an improper learning algorithm may significantly improve the learning
+rate for non-convex losses. 

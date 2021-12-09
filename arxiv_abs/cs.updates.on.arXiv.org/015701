@@ -1,0 +1,18 @@
+Spiking Neural Networks (SNNs) are a promising alternative to traditional deep learning methods
+since they perform event-driven information processing. However, a major drawback of SNNs is high
+inference latency. The efficiency of SNNs could be enhanced using compression methods such as pruning
+and quantization. Notably, SNNs, unlike their non-spiking counterparts, consist of a temporal
+dimension, the compression of which can lead to latency reduction. In this paper, we propose spatial
+and temporal pruning of SNNs. First, structured spatial pruning is performed by determining the
+layer-wise significant dimensions using principal component analysis of the average accumulated
+membrane potential of the neurons. This step leads to 10-14X model compression. Additionally,
+it enables inference with lower latency and decreases the spike count per inference. To further
+reduce latency, temporal pruning is performed by gradually reducing the timesteps while training.
+The networks are trained using surrogate gradient descent based backpropagation and we validate
+the results on CIFAR10 and CIFAR100, using VGG architectures. The spatiotemporally pruned SNNs
+achieve 89.04% and 66.4% accuracy on CIFAR10 and CIFAR100, respectively, while performing inference
+with 3-30X reduced latency compared to state-of-the-art SNNs. Moreover, they require 8-14X lesser
+compute energy compared to their unpruned standard deep learning counterparts. The energy numbers
+are obtained by multiplying the number of operations with energy per operation. These SNNs also
+provide 1-4% higher robustness against Gaussian noise corrupted inputs. Furthermore, we perform
+weight quantization and find that performance remains reasonably stable up to 5-bit quantization.

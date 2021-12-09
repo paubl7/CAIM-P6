@@ -1,0 +1,19 @@
+Remote attestation is one of the ways to verify the state of an untrusted device. Earlier research
+has attempted remote verification of a devices' state using hardware, software, or hybrid approaches.
+Majority of them have used Attestation Key as a hardware root of trust, which does not detect hardware
+modification or counterfeit issues. In addition, they do not have a secure communication channel
+between verifier and prover, which makes them susceptible to modern security attacks. This paper
+presents SEDAT, a novel methodology for remote attestation of the device via a security enhanced
+communication channel. SEDAT performs hardware, firmware, and software attestation. SEDAT enhances
+the communication protocol security between verifier and prover by using the Single Packet Authorization
+(SPA) technique, which provides replay and Denial of Service (DoS) protection. SEDAT provides
+a way for verifier to get on-demand device integrity and authenticity status via a secure channel.
+It also enables the verifier to detect counterfeit hardware, change in firmware, and software code
+on the device. SEDAT validates the manufacturers` root CA certificate, platform certificate,
+endorsement certificate (EK), and attributes certificates to perform platform hardware attestation.
+SEDAT is the first known tool that represents firmware, and Integrity Measurement Authority (IMA)
+event logs in the Canonical Event Logs (CEL) format (recommended by Trusted Computing Group). SEDAT
+is the first implementation, to the best of our knowledge, that showcases end to end hardware, firmware,
+and software remote attestation using Trusted Platform Module (TPM2.0) which is resilient to DoS
+and replay attacks. SEDAT is the first remote verifier that is capable of retrieving a TPM2.0 quote
+from prover and validate it after regeneration, using a software TPM2.0 quote check. 

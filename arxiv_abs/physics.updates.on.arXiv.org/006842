@@ -1,0 +1,20 @@
+This work discusses the numerical aspects of representing the diffusional (condensational) growth
+in particulate systems such as atmospheric clouds. It focuses on the Eulerian modeling approach,
+in which the evolution of the particle size spectrum is carried out using a fixed-bin discretization
+associated with inherent numerical diffusion. Focus is on the applications of MPDATA numerical
+schemes (variants explored include: infinite-gauge, non-oscillatory, third-order-terms and
+recursive antidiffusive correction). Methodology for handling coordinate transformations
+associated with both particle size distribution variable choice and numerical grid layout are
+expounded. Analysis of the performance of the scheme is performed using: (i) an analytically solvable
+box-model test case, and (ii) the single-column "KiD" test case in which the size-spectral advection
+due to condensation is solved simultaneously with the spatial advection in the vertical physical
+coordinate, and in which the supersaturation evolution is coupled with the droplet growth through
+water mass budget. The single-column problem involves numerical solution of a two-dimensional
+advection problem (spectral and spatial dimensions). The box-model simulations demonstrate
+that, for the problem considered, even a tenfold decrease of the spurious numerical spectral broadening
+can be obtained by a proper choice of the MPDATA variant (maintaining the same spatial and temporal
+resolution), yet at an increased computational cost. Analyses using the single-column test case
+reveal that the width of the droplet size spectrum is affected by numerical diffusion pertinent
+to both spatial and spectral advection. Application of even a single corrective iteration of MPDATA
+robustly decreases the relative dispersion of the droplet spectrum, roughly by a factor of two at
+the levels of maximal liquid water content. 

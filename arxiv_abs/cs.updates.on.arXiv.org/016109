@@ -1,0 +1,19 @@
+Nowadays, we are witnessing an increasing demand in both corporates and academia for exploiting
+Deep Learning (DL) to solve complex real-world problems. A DL program encodes the network structure
+of a desirable DL model and the process by which the model learns from the training dataset. Like any
+software, a DL program can be faulty, which implies substantial challenges of software quality
+assurance, especially in safety-critical domains. It is therefore crucial to equip DL development
+teams with efficient fault detection techniques and tools. In this paper, we propose NeuraLint,
+a model-based fault detection approach for DL programs, using meta-modelling and graph transformations.
+First, we design a meta-model for DL programs that includes their base skeleton and fundamental
+properties. Then, we construct a graph-based verification process that covers 23 rules defined
+on top of the meta-model and implemented as graph transformations to detect faults and design inefficiencies
+in the generated models (i.e., instances of the meta-model). First, the proposed approach is evaluated
+by finding faults and design inefficiencies in 28 synthesized examples built from common problems
+reported in the literature. Then NeuraLint successfully finds 64 faults and design inefficiencies
+in 34 real-world DL programs extracted from Stack Overflow posts and GitHub repositories. The results
+show that NeuraLint effectively detects faults and design issues in both synthesized and real-world
+examples with a recall of 70.5 % and a precision of 100 %. Although the proposed meta-model is designed
+for feedforward neural networks, it can be extended to support other neural network architectures
+such as recurrent neural networks. Researchers can also expand our set of verification rules to
+cover more types of issues in DL programs. 

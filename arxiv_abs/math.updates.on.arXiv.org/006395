@@ -1,0 +1,20 @@
+In this paper, we consider user selection and downlink precoding for an over-loaded single-cell
+massive multiple-input multiple-output (MIMO) system in frequency division duplexing (FDD)
+mode, where the base station is equipped with a dual-polarized uniform planar array (DP-UPA) and
+serves a large number of single-antenna users. Due to the absence of uplink-downlink channel reciprocity
+and the high-dimensionality of channel matrices, it is extremely challenging to design downlink
+precoders using closed-loop channel probing and feedback with limited spectrum resource. To address
+these issues, a novel methodology -- active channel sparsification (ACS) -- has been proposed recently
+in the literature for uniform linear array (ULA) to design sparsifying precoders, which boosts
+spectral efficiency for multi-user downlink transmission with substantially reduced channel
+feedback overhead. Pushing forward this line of research, we aim to facilitate the potential deployment
+of ACS in practical FDD massive MIMO systems, by extending it from ULA to DP-UPA with explicit user
+selection and making the current ACS implementation simplified. To this end, by leveraging Toeplitz
+structure of channel covariance matrices, we extend the original ACS using scale-weight bipartite
+graph representation to the matrix-weight counterpart. Building upon this, we propose a multi-dimensional
+ACS (MD-ACS) method, which is a generalization of original ACS formulation and is more suitable
+for DP-UPA antenna configurations. The nonlinear integer program formulation of MD-ACS can be
+classified as a generalized multi-assignment problem (GMAP), for which we propose a simple yet
+efficient greedy algorithm to solve it. Simulation results demonstrate the performance improvement
+of the proposed MD-ACS with greedy algorithm over the state-of-the-art methods based on the QuaDRiGa
+channel models. 

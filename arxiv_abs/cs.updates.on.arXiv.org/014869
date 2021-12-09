@@ -1,0 +1,19 @@
+Autonomous driving systems are set to become a reality in transport systems and, so, maximum acceptance
+is being sought among users. Currently, the most advanced architectures require driver intervention
+when functional system failures or critical sensor operations take place, presenting problems
+related to driver state, distractions, fatigue, and other factors that prevent safe control. Therefore,
+this work presents a redundant, accurate, robust, and scalable LiDAR odometry system with fail-aware
+system features that can allow other systems to perform a safe stop manoeuvre without driver mediation.
+All odometry systems have drift error, making it difficult to use them for localisation tasks over
+extended periods. For this reason, the paper presents an accurate LiDAR odometry system with a fail-aware
+indicator. This indicator estimates a time window in which the system manages the localisation
+tasks appropriately. The odometry error is minimised by applying a dynamic 6-DoF model and fusing
+measures based on the Iterative Closest Points (ICP), environment feature extraction, and Singular
+Value Decomposition (SVD) methods. The obtained results are promising for two reasons: First,
+in the KITTI odometry data set, the ranking achieved by the proposed method is twelfth, considering
+only LiDAR-based methods, where its translation and rotation errors are 1.00% and 0.0041 deg/m,
+respectively. Second, the encouraging results of the fail-aware indicator demonstrate the safety
+of the proposed LiDAR odometry system. The results depict that, in order to achieve an accurate odometry
+system, complex models and measurement fusion techniques must be used to improve its behaviour.
+Furthermore, if an odometry system is to be used for redundant localisation features, it must integrate
+a fail-aware indicator for use in a safe manner. 

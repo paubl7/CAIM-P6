@@ -1,0 +1,19 @@
+In this work, we consider the distributed optimization problem in which each node has its own convex
+cost function and can communicate directly only with its neighbors, as determined by a directed
+communication topology (directed graph or digraph). First, we reformulate the optimization problem
+so that Alternating Direction Method of Multipliers (ADMM) can be utilized. Then, we propose an
+algorithm, herein called Distributed Alternating Direction Method of Multipliers using Finite-Time
+Exact Ratio Consensus (D-ADMM-FTERC), to solve the multi-node convex optimization problem, in
+which every node performs iterative computations and exchanges information with its neighbors.
+At every iteration of D-ADMM-FTERC, each node solves a local convex optimization problem for the
+one of the primal variables and utilizes a finite-time exact consensus protocol to obtain the optimal
+value of the other variable, since the cost function for the second primal variable is not decomposable.
+Since D-ADMM-FTERC requires to know the upper bound on the number of nodes in the network, we furthermore
+propose a new algorithm, called Fully D-ADMM Finite-Time Distributed Termination (FD-ADMM-FTDT)
+algorithm, which does not need any global information. If the individual cost functions are convex
+and not-necessarily differentiable, the proposed algorithms converge at a rate of O(1/k), where
+k is the iteration counter. Additionally, if the global objective function is strongly convex and
+smooth, the proposed algorithms have an "approximate" R-linear convergence rate. The efficacy
+of FD-ADMM-FTDT is demonstrated via a distributed L1 regularized logistic regression optimization
+example. Additionally, comparisons with other state-of-the-art algorithms are provided on large-scale
+networks showing the superior precision and time-efficient performance of FD-ADMM-FTDT. 

@@ -1,0 +1,19 @@
+We consider the allocation of limited resources to heterogeneous customers who arrive in an online
+fashion. We would like to allocate the resources "fairly", so that no group of customers is marginalized
+in terms of their overall service rate. We study whether this is possible to do so in an online fashion,
+and if so, what a good online allocation policy is. We model this problem using online bipartite matching
+under stationary arrivals, a fundamental model in the literature typically studied under the objective
+of maximizing the total number of customers served. We instead study the objective of maximizing
+the minimum service rate across all groups, and propose two notions of fairness: long-run and short-run.
+For these fairness objectives, we analyze how competitive online algorithms can be, in comparison
+to offline algorithms which know the sequence of demands in advance. For long-run fairness, we propose
+two online heuristics (Sampling and Pooling) which establish asymptotic optimality in different
+regimes (no specialized supplies, no rare demand types, or imbalanced supply/demand). By contrast,
+outside all of these regimes, we show that the competitive ratio of online algorithms is between
+0.632 and 0.732. For short-run fairness, we show for complete bipartite graphs that the competitive
+ratio of online algorithms is between 0.863 and 0.942; we also derive a probabilistic rejection
+algorithm which is asymptotically optimal in the total demand. Depending on the overall scarcity
+of resources, either our Sampling or Pooling heuristics could be desirable. The most difficult
+situation for online allocation occurs when the total supply is just enough to serve the total demand.
+We simulate our algorithms on a public ride-hailing dataset, which both demonstrates the efficacy
+of our heuristics and validates our managerial insights. 

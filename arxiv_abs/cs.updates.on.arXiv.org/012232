@@ -1,0 +1,18 @@
+During the past two decades, multi-agent optimization problems have drawn increased attention
+from the research community. When multiple objective functions are present among agents, many
+works optimize the sum of these objective functions. However, this formulation implies a decision
+regarding the relative importance of each objective function. In fact, optimizing the sum is a special
+case of a multi-objective problem in which all objectives are prioritized equally. In this paper,
+a distributed optimization algorithm that explores Pareto optimal solutions for non-homogeneously
+weighted sums of objective functions is proposed. This exploration is performed through a new rule
+based on agents' priorities that generates edge weights in agents' communication graph. These
+weights determine how agents update their decision variables with information received from other
+agents in the network. Agents initially disagree on the priorities of the objective functions though
+they are driven to agree upon them as they optimize. As a result, agents still reach a common solution.
+The network-level weight matrix is (non-doubly) stochastic, which contrasts with many works on
+the subject in which it is doubly-stochastic. New theoretical analyses are therefore developed
+to ensure convergence of the proposed algorithm. This paper provides a gradient-based optimization
+algorithm, proof of convergence to solutions, and convergence rates of the proposed algorithm.
+It is shown that agents' initial priorities influence the convergence rate of the proposed algorithm
+and that these initial choices affect its long-run behavior. Numerical results performed with
+different numbers of agents illustrate the performance and efficiency of the proposed algorithm.

@@ -1,0 +1,19 @@
+Let $\theta_0,\theta_1 \in \mathbb{R}^d$ be the population risk minimizers associated to some
+loss $\ell:\mathbb{R}^d\times \mathcal{Z}\to\mathbb{R}$ and two distributions $\mathbb{P}_0,\mathbb{P}_1$
+on $\mathcal{Z}$. The models $\theta_0,\theta_1$ are unknown, and $\mathbb{P}_0,\mathbb{P}_1$
+can be accessed by drawing i.i.d samples from them. Our work is motivated by the following model discrimination
+question: "What sizes of the samples from $\mathbb{P}_0$ and $\mathbb{P}_1$ allow to distinguish
+between the two hypotheses $\theta^*=\theta_0$ and $\theta^*=\theta_1$ for given $\theta^*\in\{\theta_0,\theta_1\}$?"
+Making the first steps towards answering it in full generality, we first consider the case of a well-specified
+linear model with squared loss. Here we provide matching upper and lower bounds on the sample complexity
+as given by $\min\{1/\Delta^2,\sqrt{r}/\Delta\}$ up to a constant factor; here $\Delta$ is a measure
+of separation between $\mathbb{P}_0$ and $\mathbb{P}_1$ and $r$ is the rank of the design covariance
+matrix. We then extend this result in two directions: (i) for general parametric models in asymptotic
+regime; (ii) for generalized linear models in small samples ($n\le r$) under weak moment assumptions.
+In both cases we derive sample complexity bounds of a similar form while allowing for model misspecification.
+In fact, our testing procedures only access $\theta^*$ via a certain functional of empirical risk.
+In addition, the number of observations that allows us to reach statistical confidence does not
+allow to "resolve" the two models $-$ that is, recover $\theta_0,\theta_1$ up to $O(\Delta)$ prediction
+accuracy. These two properties allow to use our framework in applied tasks where one would like to
+$\textit{identify}$ a prediction model, which can be proprietary, while guaranteeing that the
+model cannot be actually $\textit{inferred}$ by the identifying agent. 

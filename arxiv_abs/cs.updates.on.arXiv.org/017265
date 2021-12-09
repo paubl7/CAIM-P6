@@ -1,0 +1,18 @@
+For smooth finite fields $F_q$ (i.e., when $q-1$ factors into small primes) the Fast Fourier Transform
+(FFT) leads to the fastest known algebraic algorithms for many basic polynomial operations, such
+as multiplication, division, interpolation and multi-point evaluation. However, the same operations
+over fields with no smooth order root of unity suffer from an asymptotic slowdown. The classical
+algorithm of Schonhage and Strassen incurred a multiplicative slowdown factor of $\log \log n$
+on top of the smooth case. Recent remarkable results of Harvey, van der Hoeven and Lecerf dramatically
+reduced this multiplicative overhead to $\exp(\log^* (n))$. We introduce a new approach to fast
+algorithms for polynomial operations over all large finite fields. The key idea is to replace the
+group of roots of unity with a set of points $L \subset F$ suitably related to a well-chosen elliptic
+curve group (the set $L$ itself is not a group). The key advantage of this approach is that elliptic
+curve groups can be of any size in the Hasse-Weil interval $[q+1 \pm 2\sqrt{q}]$ and thus can have
+subgroups of large, smooth order, which an FFT-like divide and conquer algorithm can exploit. Compare
+this with multiplicative subgroups over whose order must divide $q-1$. For polynomials represented
+by their evaluation over subsets of $L$, we show that multiplication, division, degree-computation,
+interpolation, evaluation and Reed-Solomon encoding (also known as low-degree extension) with
+fixed evaluation points can all be computed with arithmetic circuits of size similar to what is achievable
+with the classical FFTs when the field size is special. For several problems, this yields the asymptotically
+smallest known arithmetic circuits even in the standard monomial representation of polynomials.

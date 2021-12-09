@@ -1,0 +1,19 @@
+Objective: Breast cancer screening is of great significance in contemporary women's health prevention.
+The existing machines embedded in the AI system do not reach the accuracy that clinicians hope. How
+to make intelligent systems more reliable is a common problem. Methods: 1) Ultrasound image super-resolution:
+the SRGAN super-resolution network reduces the unclearness of ultrasound images caused by the
+device itself and improves the accuracy and generalization of the detection model. 2) In response
+to the needs of medical images, we have improved the YOLOv4 and the CenterNet models. 3) Multi-AI
+model: based on the respective advantages of different AI models, we employ two AI models to determine
+clinical resuls cross validation. And we accept the same results and refuses others. Results: 1)
+With the help of the super-resolution model, the YOLOv4 model and the CenterNet model both increased
+the mAP score by 9.6% and 13.8%. 2) Two methods for transforming the target model into a classification
+model are proposed. And the unified output is in a specified format to facilitate the call of the molti-AI
+model. 3) In the classification evaluation experiment, concatenated by the YOLOv4 model (sensitivity
+57.73%, specificity 90.08%) and the CenterNet model (sensitivity 62.64%, specificity 92.54%),
+the multi-AI model will refuse to make judgments on 23.55% of the input data. Correspondingly, the
+performance has been greatly improved to 95.91% for the sensitivity and 96.02% for the specificity.
+Conclusion: Our work makes the AI model more reliable in medical image diagnosis. Significance:
+1) The proposed method makes the target detection model more suitable for diagnosing breast ultrasound
+images. 2) It provides a new idea for artificial intelligence in medical diagnosis, which can more
+conveniently introduce target detection models from other fields to serve medical lesion screening.

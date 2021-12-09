@@ -1,0 +1,20 @@
+This work focuses on the following question related to the Gathering problem of $n$ autonomous,
+mobile robots in the Euclidean plane: Is it possible to solve Gathering of robots that do not agree
+on any axis of their coordinate systems (disoriented robots) and see other robots only up to a constant
+distance (limited visibility) in $o(n^2)$ fully synchronous rounds? The best known algorithm
+that solves Gathering of disoriented robots with limited visibility assuming oblivious robots
+needs $\Theta(n^2)$ rounds [SPAA'11]. The lower bound for this algorithm even holds in a simplified
+closed chain model, where each robot has exactly two neighbors and the chain connections form a cycle.
+The only existing algorithms achieving a linear number of rounds for disoriented robots assume
+robots that are located on a two dimensional grid [IPDPS'16] and [SPAA'16]. Both algorithms make
+use of locally visible lights (the LUMINOUS model). In this work, we show for the closed chain model,
+that $n$ disoriented robots with limited visibility in the Euclidean plane can be gathered in $\Theta\left(n\right)$
+rounds assuming the LUMINOUS model. The lights are used to initiate and perform so-called runs along
+the chain. For the start of such runs, locally unique robots need to be determined. In contrast to
+the grid [IPDPS'16], this is not possible in every configuration in the Euclidean plane. Based on
+the theory of isogonal polygons by Gr\"unbaum, we identify the class of isogonal configurations
+in which no such locally unique robots can be identified. Our solution combines two algorithms:
+The first one gathers isogonal configurations; it works without any lights. The second one works
+for non-isogonal configurations; it identifies locally unique robots to start runs, using a constant
+number of lights. Interleaving these algorithms solves the Gathering problem in $\mathcal{O}(n)$
+rounds. 

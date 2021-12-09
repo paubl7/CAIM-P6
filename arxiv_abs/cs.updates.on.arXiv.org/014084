@@ -1,0 +1,19 @@
+Retrieval and ranking models are the backbone of many applications such as web search, open domain
+QA, or text-based recommender systems. The latency of neural ranking models at query time is largely
+dependent on the architecture and deliberate choices by their designers to trade-off effectiveness
+for higher efficiency. This focus on low query latency of a rising number of efficient ranking architectures
+make them feasible for production deployment. In machine learning an increasingly common approach
+to close the effectiveness gap of more efficient models is to apply knowledge distillation from
+a large teacher model to a smaller student model. We find that different ranking architectures tend
+to produce output scores in different magnitudes. Based on this finding, we propose a cross-architecture
+training procedure with a margin focused loss (Margin-MSE), that adapts knowledge distillation
+to the varying score output distributions of different BERT and non-BERT passage ranking architectures.
+We apply the teachable information as additional fine-grained labels to existing training triples
+of the MSMARCO-Passage collection. We evaluate our procedure of distilling knowledge from state-of-the-art
+concatenated BERT models to four different efficient architectures (TK, ColBERT, PreTT, and a
+BERT CLS dot product model). We show that across our evaluated architectures our Margin-MSE knowledge
+distillation significantly improves re-ranking effectiveness without compromising their efficiency.
+Additionally, we show our general distillation method to improve nearest neighbor based index
+retrieval with the BERT dot product model, offering competitive results with specialized and much
+more costly training methods. To benefit the community, we publish the teacher-score training
+files in a ready-to-use package. 

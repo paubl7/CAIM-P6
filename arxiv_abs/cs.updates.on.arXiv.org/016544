@@ -1,0 +1,20 @@
+An exciting recent development is the uptake of deep learning in many scientific fields, where the
+objective is seeking novel scientific insights and discoveries. To interpret a learning outcome,
+researchers perform hypothesis testing for explainable features to advance scientific domain
+knowledge. In such a situation, testing for a blackbox learner poses a severe challenge because
+of intractable models, unknown limiting distributions of parameter estimates, and high computational
+constraints. In this article, we derive two consistent tests for the feature relevance of a blackbox
+learner. The first one evaluates a loss difference with perturbation on an inference sample, which
+is independent of an estimation sample used for parameter estimation in model fitting. The second
+further splits the inference sample into two but does not require data perturbation. Also, we develop
+their combined versions by aggregating the order statistics of the $p$-values based on repeated
+sample splitting. To estimate the splitting ratio and the perturbation size, we develop adaptive
+splitting schemes for suitably controlling the Type \rom{1} error subject to computational constraints.
+By deflating the \textit{bias-sd-ratio}, we establish asymptotic null distributions of the test
+statistics and their consistency in terms of statistical power. Our theoretical power analysis
+and simulations indicate that the one-split test is more powerful than the two-split test, though
+the latter is easier to apply for large datasets. Moreover, the combined tests are more stable while
+compensating for a power loss by repeated sample splitting. Numerically, we demonstrate the utility
+of the proposed tests on two benchmark examples. Accompanying this paper is our Python library {\tt
+dnn-inference} https://dnn-inference.readthedocs.io/en/latest/ that implements the proposed
+tests. 

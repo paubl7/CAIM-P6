@@ -1,0 +1,19 @@
+The new generation of machine learning processors have evolved from multi-core and parallel architectures
+that were designed to efficiently implement matrix-vector-multiplications (MVMs). This is because
+at the fundamental level, neural network and machine learning operations extensively use MVM operations
+and hardware compilers exploit the inherent parallelism in MVM operations to achieve hardware
+acceleration on GPUs and FPGAs. However, many IoT and edge computing platforms require embedded
+ML devices close to the network in order to compensate for communication cost and latency. Hence
+a natural question to ask is whether MVM operations are even necessary to implement ML algorithms
+and whether simpler hardware primitives can be used to implement an ultra-energy-efficient ML
+processor/architecture. In this paper we propose an alternate hardware-software codesign of
+ML and neural network architectures where instead of using MVM operations and non-linear activation
+functions, the architecture only uses simple addition and thresholding operations to implement
+inference and learning. At the core of the proposed approach is margin-propagation (MP) based computation
+that maps multiplications into additions and additions into a dynamic rectifying-linear-unit
+(ReLU) operations. This mapping results in significant improvement in computational and hence
+energy cost. In this paper, we show how the MP network formulation can be applied for designing linear
+classifiers, shallow multi-layer perceptrons and support vector networks suitable fot IoT platforms
+and tiny ML applications. We show that these MP based classifiers give comparable results to that
+of their traditional counterparts for benchmark UCI datasets, with the added advantage of reduction
+in computational complexity enabling an improvement in energy efficiency. 

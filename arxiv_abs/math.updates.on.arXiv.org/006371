@@ -1,0 +1,18 @@
+This article addresses several fundamental issues associated with the approximation theory of
+neural networks, including the characterization of approximation spaces, the determination
+of the metric entropy of these spaces, and approximation rates of neural networks. For any activation
+function $\sigma$, we show that the largest Banach space of functions which can be efficiently approximated
+by the corresponding shallow neural networks is the space whose norm is given by the gauge of the closed
+convex hull of the set $\{\pm\sigma(\omega\cdot x + b)\}$. We characterize this space for the ReLU$^k$
+and cosine activation functions and, in particular, show that the resulting gauge space is equivalent
+to the spectral Barron space if $\sigma=\cos$ and is equivalent to the Barron space when $\sigma={\rm
+ReLU}$. Our main result establishes the precise asymptotics of the $L^2$-metric entropy of the
+unit ball of these guage spaces and, as a consequence, the optimal approximation rates for shallow
+ReLU$^k$ networks. The sharpest previous results hold only in the special case that $k=0$ and $d=2$,
+where the metric entropy has been determined up to logarithmic factors. When $k > 0$ or $d > 2$, there
+is a significant gap between the previous best upper and lower bounds. We close all of these gaps and
+determine the precise asymptotics of the metric entropy for all $k \geq 0$ and $d\geq 2$, including
+removing the logarithmic factors previously mentioned. Finally, we use these results to quantify
+how much is lost by Barron's spectral condition relative to the convex hull of $\{\pm\sigma(\omega\cdot
+x + b)\}$ when $\sigma={\rm ReLU}^k$. Finally, we also show that the orthogonal greedy algorithm
+can algorithmically realize the improved approximation rates which have been derived. 

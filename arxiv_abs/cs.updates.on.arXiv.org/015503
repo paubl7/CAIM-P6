@@ -1,0 +1,18 @@
+This paper presents two novel approaches for uncertainty estimation adapted and extended for the
+multi-link bus travel time problem. The uncertainty is modeled directly as part of recurrent artificial
+neural networks, but using two fundamentally different approaches: one based on Deep Quantile
+Regression (DQR) and the other on Bayesian Recurrent Neural Networks (BRNN). Both models predict
+multiple time steps into the future, but handle the time-dependent uncertainty estimation differently.
+We present a sampling technique in order to aggregate quantile estimates for link level travel time
+to yield the multi-link travel time distribution needed for a vehicle to travel from its current
+position to a specific downstream stop point or transfer site. To motivate the relevance of uncertainty-aware
+models in the domain, we focus on the connection assurance application as a case study: An expert
+system to determine whether a bus driver should hold and wait for a connecting service, or break the
+connection and reduce its own delay. Our results show that the DQR-model performs overall best for
+the 80%, 90% and 95% prediction intervals, both for a 15 minute time horizon into the future (t + 1),
+but also for the 30 and 45 minutes time horizon (t + 2 and t + 3), with a constant, but very small underestimation
+of the uncertainty interval (1-4 pp.). However, we also show, that the BRNN model still can outperform
+the DQR for specific cases. Lastly, we demonstrate how a simple decision support system can take
+advantage of our uncertainty-aware travel time models to prioritize the difference in travel time
+uncertainty for bus holding at strategic points, thus reducing the introduced delay for the connection
+assurance application. 

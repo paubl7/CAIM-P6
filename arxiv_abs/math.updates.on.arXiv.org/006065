@@ -1,0 +1,19 @@
+Neural Ordinary Differential Equations (NODEs), a framework of continuous-depth neural networks,
+have been widely applied, showing exceptional efficacy in coping with some representative datasets.
+Recently, an augmented framework has been successfully developed for conquering some limitations
+emergent in application of the original framework. Here we propose a new class of continuous-depth
+neural networks with delay, named as Neural Delay Differential Equations (NDDEs), and, for computing
+the corresponding gradients, we use the adjoint sensitivity method to obtain the delayed dynamics
+of the adjoint. Since the differential equations with delays are usually seen as dynamical systems
+of infinite dimension possessing more fruitful dynamics, the NDDEs, compared to the NODEs, own
+a stronger capacity of nonlinear representations. Indeed, we analytically validate that the NDDEs
+are of universal approximators, and further articulate an extension of the NDDEs, where the initial
+function of the NDDEs is supposed to satisfy ODEs. More importantly, we use several illustrative
+examples to demonstrate the outstanding capacities of the NDDEs and the NDDEs with ODEs' initial
+value. Specifically, (1) we successfully model the delayed dynamics where the trajectories in
+the lower-dimensional phase space could be mutually intersected, while the traditional NODEs
+without any argumentation are not directly applicable for such modeling, and (2) we achieve lower
+loss and higher accuracy not only for the data produced synthetically by complex models but also
+for the real-world image datasets, i.e., CIFAR10, MNIST, and SVHN. Our results on the NDDEs reveal
+that appropriately articulating the elements of dynamical systems into the network design is truly
+beneficial to promoting the network performance. 

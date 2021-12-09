@@ -1,0 +1,18 @@
+The explicit split-operator algorithm has been extensively used for solving not only linear but
+also nonlinear time-dependent Schr\"{o}dinger equations. When applied to the nonlinear Gross-Pitaevskii
+equation, the method remains time-reversible, norm-conserving, and retains its second-order
+accuracy in the time step. However, this algorithm is not suitable for all types of nonlinear Schr\"{o}dinger
+equations. Indeed, we demonstrate that local control theory, a technique for the quantum control
+of a molecular state, translates into a nonlinear Schr\"{o}dinger equation with a more general
+nonlinearity, for which the explicit split-operator algorithm loses time reversibility and efficiency
+(because it has only first-order accuracy). Similarly, the trapezoidal rule (the Crank-Nicolson
+method), while time-reversible, does not conserve the norm of the state propagated by a nonlinear
+Schr\"{o}dinger equation. To overcome these issues, we present high-order geometric integrators
+suitable for general time-dependent nonlinear Schr\"{o}dinger equations and also applicable
+to nonseparable Hamiltonians. These integrators, based on the symmetric compositions of the implicit
+midpoint method, are both norm-conserving and time-reversible. The geometric properties of the
+integrators are proven analytically and demonstrated numerically on the local control of a two-dimensional
+model of retinal. For highly accurate calculations, the higher-order integrators are more efficient.
+For example, for a wavefunction error of $10^{-9}$, using the eighth-order algorithm yields a $48$-fold
+speedup over the second-order implicit midpoint method and trapezoidal rule, and $400000$-fold
+speedup over the explicit split-operator algorithm. 

@@ -1,0 +1,19 @@
+This paper challenges the common assumption that the weight $\beta$, in $\beta$-VAE, should be
+larger than $1$ in order to effectively disentangle latent factors. We demonstrate that $\beta$-VAE,
+with $\beta < 1$, can not only attain good disentanglement but also significantly improve reconstruction
+accuracy via dynamic control. The paper removes the inherent trade-off between reconstruction
+accuracy and disentanglement for $\beta$-VAE. Existing methods, such as $\beta$-VAE and FactorVAE,
+assign a large weight to the KL-divergence term in the objective function, leading to high reconstruction
+errors for the sake of better disentanglement. To mitigate this problem, a ControlVAE has recently
+been developed that dynamically tunes the KL-divergence weight in an attempt to control the trade-off
+to more a favorable point. However, ControlVAE fails to eliminate the conflict between the need
+for a large $\beta$ (for disentanglement) and the need for a small $\beta$. Instead, we propose DynamicVAE
+that maintains a different $\beta$ at different stages of training, thereby decoupling disentanglement
+and reconstruction accuracy. In order to evolve the weight, $\beta$, along a trajectory that enables
+such decoupling, DynamicVAE leverages a modified incremental PI (proportional-integral) controller,
+and employs a moving average as well as a hybrid annealing method to evolve the value of KL-divergence
+smoothly in a tightly controlled fashion. We theoretically prove the stability of the proposed
+approach. Evaluation results on three benchmark datasets demonstrate that DynamicVAE significantly
+improves the reconstruction accuracy while achieving disentanglement comparable to the best
+of existing methods. The results verify that our method can separate disentangled representation
+learning and reconstruction, removing the inherent tension between the two. 

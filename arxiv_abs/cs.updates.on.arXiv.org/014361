@@ -1,0 +1,19 @@
+The ubiquity of massive graph data sets in numerous applications requires fast algorithms for extracting
+knowledge from these data. We are motivated here by three electrical measures for the analysis of
+large small-world graphs $G = (V, E)$ -- i.e., graphs with diameter in $O(\log |V|)$, which are abundant
+in complex network analysis. From a computational point of view, the three measures have in common
+that their crucial component is the diagonal of the graph Laplacian's pseudoinverse, $L^\dagger$.
+Computing diag$(L^\dagger)$ exactly by pseudoinversion, however, is as expensive as dense matrix
+multiplication -- and the standard tools in practice even require cubic time. Moreover, the pseudoinverse
+requires quadratic space -- hardly feasible for large graphs. Resorting to approximation by, e.g.,
+using the Johnson-Lindenstrauss transform, requires the solution of $O(\log |V| / \epsilon^2)$
+Laplacian linear systems to guarantee a relative error, which is still very expensive for large
+inputs. In this paper, we present a novel approximation algorithm that requires the solution of
+only one Laplacian linear system. The remaining parts are purely combinatorial -- mainly sampling
+uniform spanning trees, which we relate to diag$(L^\dagger)$ via effective resistances. For small-world
+networks, our algorithm obtains a $\pm \epsilon$-approximation with high probability, in a time
+that is nearly-linear in $|E|$ and quadratic in $1 / \epsilon$. Another positive aspect of our algorithm
+is its parallel nature due to independent sampling. We thus provide two parallel implementations
+of our algorithm: one using OpenMP, one MPI + OpenMP. In our experiments against the state of the art,
+our algorithm (i) yields more accurate results, (ii) is much faster and more memory-efficient,
+and (iii) obtains good parallel speedups, in particular in the distributed setting. 

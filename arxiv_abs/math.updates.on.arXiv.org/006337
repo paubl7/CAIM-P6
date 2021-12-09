@@ -1,0 +1,19 @@
+Stochastic MPECs have found increasing relevance for modeling a broad range of settings in engineering
+and statistics. Yet, there seem to be no efficient first/zeroth-order schemes equipped with non-asymptotic
+rate guarantees for resolving even deterministic variants of such problems. We consider MPECs
+where the parametrized lower-level equilibrium problem is given by a deterministic/stochastic
+VI problem whose mapping is strongly monotone, uniformly in upper-level decisions. We develop
+a zeroth-order implicit algorithmic framework by leveraging a locally randomized spherical smoothing
+scheme. We make three sets of contributions: (i) Convex settings. When the implicit problem is convex
+and the lower-level decision is obtainable by inexactly solving a strongly monotone stochastic
+VI to compute an $\epsilon$-solution, we derive iteration complexity guarantees of $\mathcal{O}\left(\tfrac{L_0^2n^2}{\epsilon^2}\right)$
+(upper-level) and $\mathcal{O}\left(\tfrac{L_0^2 n^2}{\epsilon^2} \ln(\tfrac{L_0 n}{\epsilon})\right)$
+(lower-level); (ii) Exact oracles and accelerated schemes. When the lower-level problem can be
+resolved exactly, employing accelerated schemes, the complexity improves to $\mathcal{O}(\tfrac{1}{\epsilon})$
+and $\mathcal{O}(\tfrac{1}{\epsilon^{2+\delta}})$, respectively. Notably, this guarantee
+extends to stochastic MPECs with equilibrium constraints imposed in an almost sure sense; (iii)
+Nonconvex regimes. When the implicit problem is not necessarily convex and the lower-level problem
+can be inexactly resolved via a stochastic approximation framework, computing an $\epsilon$-stationary
+point is equipped with complexity bounds of $\mathcal{O}\left(\tfrac{L_0^2n^2}{\epsilon}\right)$
+(upper-level) and $\mathcal{O}\left(\tfrac{L_0^6n^6}{\epsilon^3}\right)$ (lower-level).
+We also provide numerical results for validating the theoretical findings in this work. 

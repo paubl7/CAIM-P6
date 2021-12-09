@@ -1,0 +1,19 @@
+It has been shown that the majority of existing adversarial defense methods achieve robustness
+at the cost of sacrificing prediction accuracy. The undesirable severe drop in accuracy adversely
+affects the reliability of machine learning algorithms and prohibits their deployment in realistic
+applications. This paper aims to address this dilemma by proposing a novel preprocessing framework,
+which we term Robust and Accurate Image classificatioN(RAIN), to improve the robustness of given
+CNN classifiers and, at the same time, preserve their high prediction accuracies. RAIN introduces
+a new randomization-enhancement scheme. It applies randomization over inputs to break the ties
+between the model forward prediction path and the backward gradient path, thus improving the model
+robustness. However, similar to existing preprocessing-based methods, the randomized process
+will degrade the prediction accuracy. To understand why this is the case, we compare the difference
+between original and processed images, and find it is the loss of high-frequency components in the
+input image that leads to accuracy drop of the classifier. Based on this finding, RAIN enhances the
+input's high-frequency details to retain the CNN's high prediction accuracy. Concretely, RAIN
+consists of two novel randomization modules: randomized small circular shift (RdmSCS) and randomized
+down-upsampling (RdmDU). The RdmDU module randomly downsamples the input image, and then the RdmSCS
+module circularly shifts the input image along a randomly chosen direction by a small but random
+number of pixels. Finally, the RdmDU module performs upsampling with a detail-enhancement model,
+such as deep super-resolution networks. We conduct extensive experiments on the STL10 and ImageNet
+datasets to verify the effectiveness of RAIN against various types of adversarial attacks. 

@@ -1,0 +1,20 @@
+Recently, segmentation methods based on Convolutional Neural Networks (CNNs) showed promising
+performance in automatic Multiple Sclerosis (MS) lesions segmentation. These techniques have
+even outperformed human experts in controlled evaluation condition. However state-of-the-art
+approaches trained to perform well on highly-controlled datasets fail to generalize on clinical
+data from unseen datasets. Instead of proposing another improvement of the segmentation accuracy,
+we propose a novel method robust to domain shift and performing well on unseen datasets, called DeepLesionBrain
+(DLB). This generalization property results from three main contributions. First, DLB is based
+on a large ensemble of compact 3D CNNs. This ensemble strategy ensures a robust prediction despite
+the risk of generalization failure of some individual networks. Second, DLB includes a new image
+quality data augmentation to reduce dependency to training data specificity (e.g., acquisition
+protocol). Finally, to learn a more generalizable representation of MS lesions, we propose a hierarchical
+specialization learning (HSL). HSL is performed by pre-training a generic network over the whole
+brain, before using its weights as initialization to locally specialized networks. By this end,
+DLB learns both generic features extracted at global image level and specific features extracted
+at local image level. At the time of publishing this paper, DLB is among the Top 3 performing published
+methods on ISBI Challenge while using only half of the available modalities. DLB generalization
+has also been compared to other state-of-the-art approaches, during cross-dataset experiments
+on MSSEG'16, ISBI challenge, and in-house datasets. DLB improves the segmentation performance
+and generalization over classical techniques, and thus proposes a robust approach better suited
+for clinical practice. 

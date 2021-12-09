@@ -1,0 +1,19 @@
+The emerging vision-and-language navigation (VLN) problem aims at learning to navigate an agent
+to the target location in unseen photo-realistic environments according to the given language
+instruction. The main challenges of VLN arise mainly from two aspects: first, the agent needs to
+attend to the meaningful paragraphs of the language instruction corresponding to the dynamically-varying
+visual environments; second, during the training process, the agent usually imitate the shortest-path
+to the target location. Due to the discrepancy of action selection between training and inference,
+the agent solely on the basis of imitation learning does not perform well. Sampling the next action
+from its predicted probability distribution during the training process allows the agent to explore
+diverse routes from the environments, yielding higher success rates. Nevertheless, without being
+presented with the shortest navigation paths during the training process, the agent may arrive
+at the target location through an unexpected longer route. To overcome these challenges, we design
+a cross-modal grounding module, which is composed of two complementary attention mechanisms,
+to equip the agent with a better ability to track the correspondence between the textual and visual
+modalities. We then propose to recursively alternate the learning schemes of imitation and exploration
+to narrow the discrepancy between training and inference. We further exploit the advantages of
+both these two learning schemes via adversarial learning. Extensive experimental results on the
+Room-to-Room (R2R) benchmark dataset demonstrate that the proposed learning scheme is generalized
+and complementary to prior arts. Our method performs well against state-of-the-art approaches
+in terms of effectiveness and efficiency. 

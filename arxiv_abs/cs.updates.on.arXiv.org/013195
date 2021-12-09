@@ -1,0 +1,19 @@
+Process mining techniques enable organizations to analyze business process execution traces
+in order to identify opportunities for improving their operational performance. Oftentimes,
+such execution traces contain private information. For example, the execution traces of a healthcare
+process are likely to be privacy-sensitive. In such cases, organizations need to deploy Privacy-Enhancing
+Technologies (PETs) to strike a balance between the benefits they get from analyzing these data
+and the requirements imposed onto them by privacy regulations, particularly that of minimizing
+re-identification risks when data are disclosed to a process analyst. Among many available PETs,
+differential privacy stands out for its ability to prevent predicate singling out attacks and its
+composable privacy guarantees. A drawback of differential privacy is the lack of interpretability
+of the main privacy parameter it relies upon, namely epsilon. This leads to the recurrent question
+of how much epsilon is enough? This article proposes a method to determine the epsilon value to be
+used when disclosing the output of a process mining technique in terms of two business-relevant
+metrics, namely absolute percentage error metrics capturing the loss of accuracy (a.k.a. utility
+loss) resulting from adding noise to the disclosed data, and guessing advantage, which captures
+the increase in the probability that an adversary may guess information about an individual as a
+result of a disclosure. The article specifically studies the problem of protecting the disclosure
+of the so-called Directly-Follows Graph (DFGs), which is a process mining artifact produced by
+most process mining tools. The article reports on an empirical evaluation of the utility-risk trade-offs
+that the proposed approach achieves on a collection of 13 real-life event logs. 

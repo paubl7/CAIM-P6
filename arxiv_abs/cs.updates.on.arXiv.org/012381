@@ -1,0 +1,19 @@
+We introduce the lazy search tree data structure. The lazy search tree is a comparison-based data
+structure on the pointer machine that supports order-based operations such as rank, select, membership,
+predecessor, successor, minimum, and maximum while providing dynamic operations insert, delete,
+change-key, split, and merge. We analyze the performance of our data structure based on a partition
+of current elements into a set of gaps $\{\Delta_i\}$ based on rank. A query falls into a particular
+gap and splits the gap into two new gaps at a rank $r$ associated with the query operation. If we define
+$B = \sum_i |\Delta_i| \log_2(n/|\Delta_i|)$, our performance over a sequence of $n$ insertions
+and $q$ distinct queries is $O(B + \min(n \log \log n, n \log q))$. We show $B$ is a lower bound. Effectively,
+we reduce the insertion time of binary search trees from $\Theta(\log n)$ to $O(\min(\log(n/|\Delta_i|)
++ \log \log |\Delta_i|, \; \log q))$, where $\Delta_i$ is the gap in which the inserted element falls.
+Over a sequence of $n$ insertions and $q$ queries, a time bound of $O(n \log q + q \log n)$ holds; better
+bounds are possible when queries are non-uniformly distributed. As an extreme case of non-uniformity,
+if all queries are for the minimum element, the lazy search tree performs as a priority queue with
+$O(\log \log n)$ time insert and decrease-key operations. The same data structure supports queries
+for any rank, interpolating between binary search trees and efficient priority queues. Lazy search
+trees can be implemented to operate mostly on arrays, requiring only $O(\min(q, n))$ pointers.
+Via direct reduction, our data structure also supports the efficient access theorems of the splay
+tree, providing a powerful data structure for non-uniform element access, both when the number
+of accesses is small and large. 

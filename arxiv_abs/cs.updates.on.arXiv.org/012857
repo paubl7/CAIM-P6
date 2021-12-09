@@ -1,0 +1,19 @@
+This paper considers parallel machine scheduling with incompatibilities between jobs. The jobs
+form a graph and no two jobs connected by an edge are allowed to be assigned to the same machine. In particular,
+we study the case where the graph is a collection of disjoint cliques. Scheduling with incompatibilities
+between jobs represents a well-established line of research in scheduling theory and the case of
+disjoint cliques has received increasing attention in recent years. While the research up to this
+point has been focused on the makespan objective, we broaden the scope and study the classical total
+completion time criterion. In the setting without incompatibilities, this objective is well known
+to admit polynomial time algorithms even for unrelated machines via matching techniques. We show
+that the introduction of incompatibility cliques results in a richer, more interesting picture.
+Scheduling on identical machines remains solvable in polynomial time, while scheduling on unrelated
+machines becomes APX-hard. Furthermore, we study the problem under the paradigm of fixed-parameter
+tractable algorithms (FPT). In particular, we consider a problem variant with assignment restrictions
+for the cliques rather than the jobs. We prove that it is NP-hard and can be solved in FPT time with respect
+to the number of cliques. Moreover, we show that the problem on unrelated machines can be solved in
+FPT time for reasonable parameters, e.g., the parameter pair: number of machines and maximum processing
+time. The latter result is a natural extension of known results for the case without incompatibilities
+and can even be extended to the case of total weighted completion time. All of the FPT results make
+use of n-fold Integer Programs that recently have received great attention by proving their usefulness
+for scheduling problems. 

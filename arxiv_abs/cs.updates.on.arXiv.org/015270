@@ -1,0 +1,18 @@
+Segmentation of enhancing tumours or lesions from MRI is important for detecting new disease activity
+in many clinical contexts. However, accurate segmentation requires the inclusion of medical images
+(e.g., T1 post contrast MRI) acquired after injecting patients with a contrast agent (e.g., Gadolinium),
+a process no longer thought to be safe. Although a number of modality-agnostic segmentation networks
+have been developed over the past few years, they have been met with limited success in the context
+of enhancing pathology segmentation. In this work, we present HAD-Net, a novel offline adversarial
+knowledge distillation (KD) technique, whereby a pre-trained teacher segmentation network,
+with access to all MRI sequences, teaches a student network, via hierarchical adversarial training,
+to better overcome the large domain shift presented when crucial images are absent during inference.
+In particular, we apply HAD-Net to the challenging task of enhancing tumour segmentation when access
+to post-contrast imaging is not available. The proposed network is trained and tested on the BraTS
+2019 brain tumour segmentation challenge dataset, where it achieves performance improvements
+in the ranges of 16% - 26% over (a) recent modality-agnostic segmentation methods (U-HeMIS, U-HVED),
+(b) KD-Net adapted to this problem, (c) the pre-trained student network and (d) a non-hierarchical
+version of the network (AD-Net), in terms of Dice scores for enhancing tumour (ET). The network also
+shows improvements in tumour core (TC) Dice scores. Finally, the network outperforms both the baseline
+student network and AD-Net in terms of uncertainty quantification for enhancing tumour segmentation
+based on the BraTs 2019 uncertainty challenge metrics. Our code is publicly available at: https://github.com/SaverioVad/HAD_Net

@@ -1,0 +1,18 @@
+Many convex optimization problems can be represented through conic extended formulations with
+auxiliary variables and constraints using only the small number of standard cones recognized by
+advanced conic solvers such as MOSEK 9. Such extended formulations are often significantly larger
+and more complex than equivalent conic natural formulations, which can use a much broader class
+of exotic cones. We define an exotic cone as a proper cone for which we can implement efficient logarithmically
+homogeneous self-concordant barrier oracles for the cone or its dual. Our goal is to establish whether
+a generic conic interior point method supporting natural formulations can outperform an advanced
+conic solver specialized for standard cones. We introduce Hypatia, a highly-configurable open-source
+conic primal-dual interior point solver with a generic interface for exotic cones. Hypatia is written
+in Julia and accessible through JuMP, and currently implements several dozen useful predefined
+cones. We define a subset of these cones, including some that have not been implemented before, and
+we propose several new efficient logarithmically homogeneous self-concordant barriers. We also
+describe and analyze techniques for constructing extended formulations for exotic conic constraints.
+For optimization problems from a variety of applications, we introduce natural formulations using
+our exotic cones, and we show that the natural formulations have much smaller dimensions and often
+lower barrier parameters than the equivalent extended formulations. Our computational experiments
+demonstrate the potential advantages, especially in terms of solve time and memory usage, of solving
+natural formulations with Hypatia compared to solving extended formulations with Hypatia or MOSEK.

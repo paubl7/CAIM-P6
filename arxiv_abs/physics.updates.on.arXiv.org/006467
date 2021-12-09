@@ -1,0 +1,20 @@
+In subsurface multiphase flow simulations, poor nonlinear solver performance is a significant
+runtime sink. The system of fully implicit mass balance equations is highly nonlinear and often
+difficult to solve for the nonlinear solver, generally Newton(-Raphson). Strong nonlinearities
+can cause Newton iterations to converge very slowly. This frequently results in time step cuts,
+leading to computationally expensive simulations. Much literature has looked into how to improve
+the nonlinear solver through enhancements or safeguarding updates. In this work, we take a different
+approach; we aim to improve convergence with a smoother finite volume discretization scheme which
+is more suitable for the Newton solver. Building on recent work, we propose a novel total velocity
+hybrid upwinding scheme with weighted average flow mobilities (WA-HU TV) that is unconditionally
+monotone and extends to compositional multiphase simulations. Analyzing the solution space of
+a one-cell problem, we demonstrate the improved properties of the scheme and explain how it leverages
+the advantages of both phase potential upwinding and arithmetic averaging. This results in a flow
+subproblem that is smooth with respect to changes in the sign of phase fluxes, and is well-behaved
+when phase velocities are large or when co-current viscous forces dominate. Additionally, we propose
+a WA-HU scheme with a total mass (WA-HU TM) formulation that includes phase densities in the weighted
+averaging. The proposed WA-HU TV consistently outperforms existing schemes, yielding benefits
+from 5\% to over 50\% reduction in nonlinear iterations. The WA-HU TM scheme also shows promising
+results; in some cases leading to even more efficiency. However, WA-HU TM can occasionally also
+lead to convergence issues. Overall, based on the current results, we recommend the adoption of
+the WA-HU TV scheme as it is highly efficient and robust. 

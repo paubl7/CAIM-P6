@@ -1,0 +1,19 @@
+We study the problem of PAC learning halfspaces on $\mathbb{R}^d$ with Massart noise under Gaussian
+marginals. In the Massart noise model, an adversary is allowed to flip the label of each point $\mathbf{x}$
+with probability $\eta(\mathbf{x}) \leq \eta$, for some parameter $\eta \in [0,1/2]$. The goal
+of the learner is to output a hypothesis with missclassification error $\mathrm{opt} + \epsilon$,
+where $\mathrm{opt}$ is the error of the target halfspace. Prior work studied this problem assuming
+that the target halfspace is homogeneous and that the parameter $\eta$ is strictly smaller than
+$1/2$. We explore how the complexity of the problem changes when either of these assumptions is removed,
+establishing the following threshold phenomena: For $\eta = 1/2$, we prove a lower bound of $d^{\Omega
+(\log(1/\epsilon))}$ on the complexity of any Statistical Query (SQ) algorithm for the problem,
+which holds even for homogeneous halfspaces. On the positive side, we give a new learning algorithm
+for arbitrary halfspaces in this regime with sample complexity and running time $O_\epsilon(1)
+\, d^{O(\log(1/\epsilon))}$. For $\eta <1/2$, we establish a lower bound of $d^{\Omega(\log(1/\gamma))}$
+on the SQ complexity of the problem, where $\gamma = \max\{\epsilon, \min\{\mathbf{Pr}[f(\mathbf{x})
+= 1], \mathbf{Pr}[f(\mathbf{x}) = -1]\} \}$ and $f$ is the target halfspace. In particular, this
+implies an SQ lower bound of $d^{\Omega (\log(1/\epsilon) )}$ for learning arbitrary Massart halfspaces
+(even for small constant $\eta$). We complement this lower bound with a new learning algorithm for
+this regime with sample complexity and runtime $d^{O_{\eta}(\log(1/\gamma))} \mathrm{poly}(1/\epsilon)$.
+Taken together, our results qualitatively characterize the complexity of learning halfspaces
+in the Massart model. 

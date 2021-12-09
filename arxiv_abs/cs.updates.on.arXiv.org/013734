@@ -1,0 +1,18 @@
+Using state-of-the-art deep learning models for cancer diagnosis presents several challenges
+related to the nature and availability of labeled histology images. In particular, cancer grading
+and localization in these images normally relies on both image- and pixel-level labels, the latter
+requiring a costly annotation process. In this survey, deep weakly-supervised learning (WSL)
+models are investigated to identify and locate diseases in histology images, without the need for
+pixel-level annotations. Given training data with global image-level labels, these models allow
+to simultaneously classify histology images and yield pixel-wise localization scores, thereby
+identifying the corresponding regions of interest (ROI). Since relevant WSL models have mainly
+been investigated within the computer vision community, and validated on natural scene images,
+we assess the extent to which they apply to histology images which have challenging properties,
+e.g. very large size, similarity between foreground/background, highly unstructured regions,
+stain heterogeneity, and noisy/ambiguous labels. The most relevant models for deep WSL are compared
+experimentally in terms of accuracy (classification and pixel-wise localization) on several
+public benchmark histology datasets for breast and colon cancer -- BACH ICIAR 2018, BreaKHis, CAMELYON16,
+and GlaS. Furthermore, for large-scale evaluation of WSL models on histology images, we propose
+a protocol to construct WSL datasets from Whole Slide Imaging. Results indicate that several deep
+learning models can provide a high level of classification accuracy, although accurate pixel-wise
+localization of cancer regions remains an issue for such images. Code is publicly available. 

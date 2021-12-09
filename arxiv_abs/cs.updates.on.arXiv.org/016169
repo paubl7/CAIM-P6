@@ -1,0 +1,19 @@
+We introduce Korean Language Understanding Evaluation (KLUE) benchmark. KLUE is a collection
+of 8 Korean natural language understanding (NLU) tasks, including Topic Classification, Semantic
+Textual Similarity, Natural Language Inference, Named Entity Recognition, Relation Extraction,
+Dependency Parsing, Machine Reading Comprehension, and Dialogue State Tracking. We build all
+of the tasks from scratch from diverse source corpora while respecting copyrights, to ensure accessibility
+for anyone without any restrictions. With ethical considerations in mind, we carefully design
+annotation protocols. Along with the benchmark tasks and data, we provide suitable evaluation
+metrics and fine-tuning recipes for pretrained language models for each task. We furthermore release
+the pretrained language models (PLM), KLUE-BERT and KLUE-RoBERTa, to help reproduce baseline
+models on KLUE and thereby facilitate future research. We make a few interesting observations from
+the preliminary experiments using the proposed KLUE benchmark suite, already demonstrating the
+usefulness of this new benchmark suite. First, we find KLUE-RoBERTa-large outperforms other baselines,
+including multilingual PLMs and existing open-source Korean PLMs. Second, we see minimal degradation
+in performance even when we replace personally identifiable information from the pretraining
+corpus, suggesting that privacy and NLU capability are not at odds with each other. Lastly, we find
+that using BPE tokenization in combination with morpheme-level pre-tokenization is effective
+in tasks involving morpheme-level tagging, detection and generation. In addition to accelerating
+Korean NLP research, our comprehensive documentation on creating KLUE will facilitate creating
+similar resources for other languages in the future. KLUE is available at this https URL (https://klue-benchmark.com/).

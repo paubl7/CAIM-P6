@@ -1,0 +1,19 @@
+Self-supervised learning methods for computer vision have demonstrated the effectiveness of
+pre-training feature representations, resulting in well-generalizing Deep Neural Networks,
+even if the annotated data are limited. However, representation learning techniques require a
+significant amount of time for model training, with most of the time spent on precise hyper-parameter
+optimization and selection of augmentation techniques. We hypothesized that if the annotated
+dataset has enough morphological diversity to capture the diversity of the general population,
+as is common in medical imaging due to conserved similarities of tissue morphology, the variance
+error of the trained model is the dominant component of the Bias-Variance Trade-off. Therefore,
+we proposed the Variance Aware Training (VAT) method that exploits this data property by introducing
+the variance error into the model loss function, thereby, explicitly regularizing the model. Additionally,
+we provided a theoretical formulation and proof of the proposed method to aid interpreting the approach.
+Our method requires selecting only one hyper-parameter and matching or improving the performance
+of state-of-the-art self-supervised methods while achieving an order of magnitude reduction
+in the GPU training time. We validated VAT on three medical imaging datasets from diverse domains
+and for various learning objectives. These included a Magnetic Resonance Imaging (MRI) dataset
+for the heart semantic segmentation (MICCAI 2017 ACDC challenge), fundus photography dataset
+for ordinary regression of diabetic retinopathy progression (Kaggle 2019 APTOS Blindness Detection
+challenge), and classification of histopathologic scans of lymph node sections (PatchCamelyon
+dataset). Our code is available at https://github.com/DmitriiShubin/Variance-Aware-Training.

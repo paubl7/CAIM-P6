@@ -1,0 +1,19 @@
+Recently, FCNs have attracted widespread attention in the CD field. In pursuit of better CD performance,
+it has become a tendency to design deeper and more complicated FCNs, which inevitably brings about
+huge numbers of parameters and an unbearable computational burden. With the goal of designing a
+quite deep architecture to obtain more precise CD results while simultaneously decreasing parameter
+numbers to improve efficiency, in this work, we present a very deep and efficient CD network, entitled
+EffCDNet. In EffCDNet, to reduce the numerous parameters associated with deep architecture, an
+efficient convolution consisting of depth-wise convolution and group convolution with a channel
+shuffle mechanism is introduced to replace standard convolutional layers. In terms of the specific
+network architecture, EffCDNet does not use mainstream UNet-like architecture, but rather adopts
+the architecture with a very deep encoder and a lightweight decoder. In the very deep encoder, two
+very deep siamese streams stacked by efficient convolution first extract two highly representative
+and informative feature maps from input image-pairs. Subsequently, an efficient ASPP module is
+designed to capture multi-scale change information. In the lightweight decoder, a recurrent criss-cross
+self-attention (RCCA) module is applied to efficiently utilize non-local similar feature representations
+to enhance discriminability for each pixel, thus effectively separating the changed and unchanged
+regions. Moreover, to tackle the optimization problem in confused pixels, two novel loss functions
+based on information entropy are presented. On two challenging CD datasets, our approach outperforms
+other SOTA FCN-based methods, with only benchmark-level parameter numbers and quite low computational
+overhead. 

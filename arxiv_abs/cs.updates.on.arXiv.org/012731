@@ -1,0 +1,19 @@
+Given a function dictionary $\cal D$ and an approximation budget $N\in\mathbb{N}^+$, nonlinear
+approximation seeks the linear combination of the best $N$ terms $\{T_n\}_{1\le n\le N}\subseteq{\cal
+D}$ to approximate a given function $f$ with the minimum approximation error\[\varepsilon_{L,f}:=\min_{\{g_n\}\subseteq{\mathbb{R}},\{T_n\}\subseteq{\cal
+D}}\|f(x)-\sum_{n=1}^N g_n T_n(x)\|.\]Motivated by recent success of deep learning, we propose
+dictionaries with functions in a form of compositions, i.e.,\[T(x)=T^{(L)}\circ T^{(L-1)}\circ\cdots\circ
+T^{(1)}(x)\]for all $T\in\cal D$, and implement $T$ using ReLU feed-forward neural networks (FNNs)
+with $L$ hidden layers. We further quantify the improvement of the best $N$-term approximation
+rate in terms of $N$ when $L$ is increased from $1$ to $2$ or $3$ to show the power of compositions. In
+the case when $L>3$, our analysis shows that increasing $L$ cannot improve the approximation rate
+in terms of $N$. In particular, for any function $f$ on $[0,1]$, regardless of its smoothness and
+even the continuity, if $f$ can be approximated using a dictionary when $L=1$ with the best $N$-term
+approximation rate $\varepsilon_{L,f}={\cal O}(N^{-\eta})$, we show that dictionaries with
+$L=2$ can improve the best $N$-term approximation rate to $\varepsilon_{L,f}={\cal O}(N^{-2\eta})$.
+We also show that for H\"older continuous functions of order $\alpha$ on $[0,1]^d$, the application
+of a dictionary with $L=3$ in nonlinear approximation can achieve an essentially tight best $N$-term
+approximation rate $\varepsilon_{L,f}={\cal O}(N^{-2\alpha/d})$. Finally, we show that dictionaries
+consisting of wide FNNs with a few hidden layers are more attractive in terms of computational efficiency
+than dictionaries with narrow and very deep FNNs for approximating H\"older continuous functions
+if the number of computer cores is larger than $N$ in parallel computing. 

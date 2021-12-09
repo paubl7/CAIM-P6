@@ -1,0 +1,19 @@
+Data-driven turbulence modelling approaches are gaining increasing interest from the CFD community.
+However, the introduction of a machine learning (ML) model introduces a new source of uncertainty,
+the ML model itself. Quantification of this uncertainty is essential since the predictive capability
+of a data-driven model diminishes when predicting physics not seen during training. In this work,
+we explore the suitability of Mondrian forests (MF's) for data-driven turbulence modelling. MF's
+are claimed to possess many of the advantages of the commonly used random forest (RF) machine learning
+algorithm, whilst offering principled uncertainty estimates. An example test case is constructed,
+with a turbulence anisotropy constant derived from high fidelity turbulence resolving simulations.
+Shapley values, borrowed from game theory, are used to interpret the MF predictions. Predictive
+uncertainty is found to be large in regions where the training data is not representative. Additionally,
+the MF predictive uncertainty is found to exhibit stronger correlation with predictive errors
+compared to an a priori statistical distance measure, which indicates it is a better measure of prediction
+confidence. The MF predictive uncertainty is also found to be better calibrated and less computationally
+costly than the uncertainty estimated from applying jackknifing to random forest predictions.
+Finally, Mondrian forests are used to predict the Reynolds discrepancies in a convergent-divergent
+channel, which are subsequently propagated through a modified CFD solver. The resulting flowfield
+predictions are in close agreement with the high fidelity data. A procedure for sampling the Mondrian
+forests' uncertainties is introduced. Propagating these samples enables quantification of the
+uncertainty in output quantities of interest. 

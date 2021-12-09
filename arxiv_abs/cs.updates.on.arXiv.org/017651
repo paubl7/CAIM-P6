@@ -1,0 +1,19 @@
+The identification of Alzheimer's disease (AD) and its early stages using structural magnetic
+resonance imaging (MRI) has been attracting the attention of researchers. Various data-driven
+approaches have been introduced to capture subtle and local morphological changes of the brain
+accompanied by the disease progression. One of the typical approaches for capturing subtle changes
+is patch-level feature representation. However, the predetermined regions to extract patches
+can limit classification performance by interrupting the exploration of potential biomarkers.
+In addition, the existing patch-level analyses have difficulty explaining their decision-making.
+To address these problems, we propose the BrainBagNet with a position-based gate (PG-BrainBagNet),
+a framework for jointly learning pathological region localization and AD diagnosis in an end-to-end
+manner. In advance, as all scans are aligned to a template in image processing, the position of brain
+images can be represented through the 3D Cartesian space shared by the overall MRI scans. The proposed
+method represents the patch-level response from whole-brain MRI scans and discriminative brain-region
+from position information. Based on the outcomes, the patch-level class evidence is calculated,
+and then the image-level prediction is inferred by a transparent aggregation. The proposed models
+were evaluated on the ADNI datasets. In five-fold cross-validation, the classification performance
+of the proposed method outperformed that of the state-of-the-art methods in both AD diagnosis (AD
+vs. normal control) and mild cognitive impairment (MCI) conversion prediction (progressive MCI
+vs. stable MCI) tasks. In addition, changes in the identified discriminant regions and patch-level
+class evidence according to the patch size used for model training are presented and analyzed. 

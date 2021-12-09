@@ -1,0 +1,20 @@
+We introduce the Voronoi fundamental zone octonion interpolation framework for grain boundary
+(GB) structure-property models and surrogates. The VFZO framework offers an advantage over other
+five degree-of-freedom based property interpolation methods because it is constructed as a point
+set in a manifold. This means that directly computed Euclidean distances approximate the original
+octonion distance with significantly reduced computation runtime (~7 CPU minutes vs. 153 CPU days
+for a 50000x50000 pairwise-distance matrix). This increased efficiency facilitates lower interpolation
+error through the use of significantly more input data. We demonstrate grain boundary energy interpolation
+results for a non-smooth validation function and simulated bi-crystal datasets for Fe and Ni using
+four interpolation methods: barycentric interpolation, Gaussian process regression (GPR),
+inverse-distance weighting, and nearest-neighbor interpolation. These are evaluated for 50000
+random input GBs and 10 000 random prediction GBs. The best performance was achieved with GPR, which
+resulted in a reduction of the root mean square error (RMSE) by 83.0% relative to RMSE of a constant,
+average model. Likewise, interpolation on a large, noisy, molecular statics Fe simulation dataset
+improves performance by 34.4% compared to 21.2% in prior work. Interpolation on a small, low-noise
+MS Ni simulation dataset is similar to interpolation results for the original octonion metric (57.6%
+vs. 56.4%). A vectorized, parallelized, MATLAB interpolation function (interp5DOF.m) and related
+routines are available in our VFZO repository (github.com/sgbaird-5dof/interp) which can be
+applied to other crystallographic point groups. The VFZO framework offers advantages for computing
+distances between GBs, estimating property values for arbitrary GBs, and modeling surrogates
+of computationally expensive 5DOF functions and simulations. 

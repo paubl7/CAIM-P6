@@ -1,0 +1,18 @@
+3D face reconstruction from a single image is challenging due to its ill-posed nature. Model-based
+face autoencoders address this issue effectively by fitting a face model to the target image in a
+weakly supervised manner. However, in unconstrained environments occlusions distort the face
+reconstruction because the model often erroneously tries to adapt to occluded face regions. Supervised
+occlusion segmentation is a viable solution to avoid the fitting of occluded face regions, but it
+requires a large amount of annotated training data. In this work, we enable model-based face autoencoders
+to segment occluders accurately without requiring any additional supervision during training,
+and this separates regions where the model will be fitted from those where it will not be fitted. To
+achieve this, we extend face autoencoders with a segmentation network. The segmentation network
+decides which regions the model should adapt to by reaching balances in a trade-off between including
+pixels and adapting the model to them, and excluding pixels so that the model fitting is not negatively
+affected and reaches higher overall reconstruction accuracy on pixels showing the face. This leads
+to a synergistic effect, in which the occlusion segmentation guides the training of the face autoencoder
+to constrain the fitting in the non-occluded regions, while the improved fitting enables the segmentation
+model to better predict the occluded face regions. Qualitative and quantitative experiments on
+the CelebA-HQ database and the AR database verify the effectiveness of our model in improving 3D
+face reconstruction under occlusions and in enabling accurate occlusion segmentation from weak
+supervision only. Code available at https://github.com/unibas-gravis/Occlusion-Robust-MoFA.

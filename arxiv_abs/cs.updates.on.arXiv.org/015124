@@ -1,0 +1,19 @@
+This brief technical note introduces PRZI (Parameterised-Response Zero Intelligence), a new
+form of zero-intelligence trader intended for use in simulation studies of auction markets. Like
+Gode & Sunder's classic Zero-Intelligence Constrained (ZIC) trader, PRZI generates quote-prices
+from a random distribution over some specified domain of discretely-valued allowable quote-prices.
+Unlike ZIC, which uses a uniform distribution to generate prices, the probability distribution
+in a PRZI trader is parameterised in such a way that its probability mass function (PMF) is determined
+by a real-valued control variable s in the range [-1.0, +1.0] that determines the strategy for that
+trader. When s is zero, a PRZI trader behaves identically to the ZIC strategy, with a flat/rectangular
+PMF; but when s is close to plus or minus one the PRZI trader's PMF becomes asymptotically maximally
+skewed to one extreme or the other of the price-range, thereby enabling the PRZI trader to act in the
+same way as the "Shaver" strategy (SHVR) or the "Giveaway" strategy (GVWY), both of which have recently
+been demonstrated to be surprisingly dominant over more sophisticated, and supposedly more profitable,
+trader-strategies that incorporate adaptive mechanisms and machine learning. Depending on the
+value of s, a PRZI trader will behave either as a ZIC, or as a SHVR, or as a GVWY, or as some hybrid strategy
+part-way between two of these three previously-reported strategies. The novel smoothly-varying
+strategy in PRZI has value in giving trader-agents plausibly useful "market impact" responses
+to imbalances in an auction-market's limit-order-book, and also allows for the study of co-adaptive
+dynamics in continuous strategy-spaces rather than the discrete spaces that have traditionally
+been studied in the literature. 

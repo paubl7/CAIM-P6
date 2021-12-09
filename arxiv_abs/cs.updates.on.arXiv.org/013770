@@ -1,0 +1,19 @@
+The weighted maximal bisection problem is, given an edge weighted graph, to find a bipartition of
+the vertex set into two sets such that their cardinality differs by at most one and the sum of the weight
+of the edges between vertices that are not in the same set is maximized. This problem is known to be
+NP-hard, even when a tree decomposition of width $t$ and $\mathcal O(n)$ nodes is given as an advice
+as part of the input, where $n$ is the number of vertices of the input graph. But, given such an advice,
+the problem is decidable in FPT time in $n$ parametrized by $t$. In particular Jansen et al. presented
+an algorithm with running time $\mathcal O(2^tn^3)$. Hanaka, Kobayashi, and Sone enhanced the
+analysis of the complexity to $\mathcal O(2^t(nt)^2)$. By slightly modifying the approach, we
+improve the running time to $\mathcal O(2^tn^2)$ in the RAM model, which is asymptotically optimal
+in $n$ under the hardness of MinConv. We proof that this is also asymptotically optimal in its dependence
+on $t$ assuming SETH by showing for a slightly easier problem (maximal cut) that there is no $\mathcal
+O(2^{\epsilon t} \operatorname{poly} n)$ algorithm for any $\varepsilon < 1$ under SETH. This
+was already claimed by Hanaka, Kobayashi, and Sone but without a correct proof. We also present a
+hardness result (no $\mathcal O(2^t n^{2-\varepsilon})$ algorithm for any $\varepsilon > 0$)
+for a broad family of subclasses of the weighted maximal bisection problem that are characterized
+only by the dependence of $t$ from $n$, more precisely, all instances with $t = f(n)$ for an arbitrary
+but fixed $f(n) \in \operatorname o(\log n)$. This holds even when only considering planar graphs.
+Moreover we present a detailed description of the implementation details and assumptions that
+are necessary to achieve the optimal running time. 

@@ -1,0 +1,19 @@
+Purpose: We propose a general framework for quantifying predictive uncertainties of dose-related
+quantities and leveraging this information in a dose mimicking problem in the context of automated
+radiation therapy treatment planning. Methods: A three-step pipeline, comprising feature extraction,
+dose statistic prediction and dose mimicking, is employed. In particular, the features are produced
+by a convolutional variational autoencoder and used as inputs in a previously developed nonparametric
+Bayesian statistical method, estimating the multivariate predictive distribution of a collection
+of predefined dose statistics. Specially developed objective functions are then used to construct
+a probabilistic dose mimicking problem based on the produced distributions, creating deliverable
+treatment plans. Results: The numerical experiments are performed using a dataset of 94 retrospective
+treatment plans of prostate cancer patients. We show that the features extracted by the variational
+autoencoder capture geometric information of substantial relevance to the dose statistic prediction
+problem and are related to dose statistics in a more regularized fashion than hand-crafted features.
+The estimated predictive distributions are reasonable and outperforms a non-input-dependent
+benchmark method, and the deliverable plans produced by the probabilistic dose mimicking agree
+better with their clinical counterparts than for a non-probabilistic formulation. Conclusions:
+We demonstrate that prediction of dose-related quantities may be extended to include uncertainty
+estimation and that such probabilistic information may be leveraged in a dose mimicking problem.
+The treatment plans produced by the proposed pipeline resemble their original counterparts well,
+illustrating the merits of a holistic approach to automated planning based on probabilistic modeling.

@@ -1,0 +1,20 @@
+Brain connectivity networks, derived from magnetic resonance imaging (MRI), non-invasively
+quantify the relationship in function, structure, and morphology between two brain regions of
+interest (ROIs) and give insights into gender-related connectional differences. However, to
+the best of our knowledge, studies on gender differences in brain connectivity were limited to investigating
+pairwise (i.e., low-order) relationship ROIs, overlooking the complex high-order interconnectedness
+of the brain as a network. To address this limitation, brain multiplexes have been introduced to
+model the relationship between at least two different brain networks. However, this inhibits their
+application to datasets with single brain networks such as functional networks. To fill this gap,
+we propose the first work on predicting brain multiplexes from a source network to investigate gender
+differences. Recently, generative adversarial networks (GANs) submerged the field of medical
+data synthesis. However, although conventional GANs work well on images, they cannot handle brain
+networks due to their non-Euclidean topological structure. Differently, in this paper, we tap
+into the nascent field of geometric-GANs (G-GAN) to design a deep multiplex prediction architecture
+comprising (i) a geometric source to target network translator mimicking a U-Net architecture
+with skip connections and (ii) a conditional discriminator which classifies predicted target
+intra-layers by conditioning on the multiplex source intra-layers. Such architecture simultaneously
+learns the latent source network representation and the deep non-linear mapping from the source
+to target multiplex intra-layers. Our experiments on a large dataset demonstrated that predicted
+multiplexes significantly boost gender classification accuracy compared with source networks
+and identifies both low and high-order gender-specific multiplex connections. 

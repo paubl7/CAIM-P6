@@ -1,0 +1,18 @@
+The proliferation of optical, electron, and scanning probe microscopies gives rise to large volumes
+of imaging data of objects as diversified as cells, bacteria, pollen, to nanoparticles and atoms
+and molecules. In most cases, the experimental data streams contain images having arbitrary rotations
+and translations within the image. At the same time, for many cases, small amounts of labeled data
+are available in the form of prior published results, image collections, and catalogs, or even theoretical
+models. Here we develop an approach that allows generalizing from a small subset of labeled data
+with a weak orientational disorder to a large unlabeled dataset with a much stronger orientational
+(and positional) disorder, i.e., it performs a classification of image data given a small number
+of examples even in the presence of a distribution shift between the labeled and unlabeled parts.
+This approach is based on the semi-supervised rotationally invariant variational autoencoder
+(ss-rVAE) model consisting of the encoder-decoder "block" that learns a rotationally (and translationally)
+invariant continuous latent representation of data and a classifier that encodes data into a finite
+number of discrete classes. The classifier part of the trained ss-rVAE inherits the rotational
+(and translational) invariances and can be deployed independently of the other parts of the model.
+The performance of the ss-rVAE is illustrated using the synthetic data sets with known factors of
+variation. We further demonstrate its application for experimental data sets of nanoparticles,
+creating nanoparticle libraries and disentangling the representations defining the physical
+factors of variation in the data. The code reproducing the results is available at https://github.com/ziatdinovmax/Semi-Supervised-VAE-nanoparticles.

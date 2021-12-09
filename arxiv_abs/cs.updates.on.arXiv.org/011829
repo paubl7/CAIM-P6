@@ -1,0 +1,20 @@
+The peridynamic theory reformulates the governing equation of continuum mechanics in an integro-differential
+form,which brings advantages in dealing with discontinuities,dynamics,and non-locality.The
+integro-differential formulation poses challenges to numerical solutions of complicated problems.While
+various numerical methods based on discretizing the computational domain have been developed
+and have their own merits,some important issues are yet to be solved,such as the computation of infinite
+domains,the treatment of softening of boundaries due to an incomplete horizon,and time error accumulation
+in dynamic processes.In this work,we develop the peridynamic boundary element method (PD-BEM).To
+this end,the boundary integral equations for static and dynamic problems are derived,and the corresponding
+numerical frameworks are presented.For static loading,this method gives the explicit equation
+solved directly without iterations.For dynamic loading,we solve the problem in the Laplace domain
+and obtain the results in the time domain via inversion.This treatment eliminates time error accumulation,and
+facilitates parallel computation.The computational results on static and dynamic examples within
+the bond-based peridynamic formulation exhibit several features.First,for non-destructive
+cases,the PD-BEM can be one to two orders of magnitude faster than the peridynamic meshless particle
+method (PD-MPM);second,it conserves the total energy much better than the PD-MPM;third,it does
+not exhibit spurious boundary softening phenomena.For destructive cases where new boundaries
+emerge during the loading process,we propose a coupling scheme where the PD-MPM is applied to the
+cracked region and the PD-BEM is applied to the un-cracked region such that the time of computation
+can be significantly reduced.The present method can be generalized to other subjects such as diffusion
+and multi-physical problems. 

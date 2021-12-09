@@ -1,0 +1,20 @@
+The efficient and accurate calculation of how ionic quantum and thermal fluctuations impact the
+free energy of a crystal, its atomic structure, and phonon spectrum is one of the main challenges
+of solid state physics, especially when strong anharmonicy invalidates any perturbative approach.
+To tackle this problem, we present the implementation on a modular Python code of the stochastic
+self-consistent harmonic approximation method. This technique rigorously describes the full
+thermodyamics of crystals accounting for nuclear quantum and thermal anharmonic fluctuations.
+The approach requires the evaluation of the Born-Oppenheimer energy, as well as its derivatives
+with respect to ionic positions (forces) and cell parameters (stress tensor) in supercells, which
+can be provided, for instance, by first principles density-functional-theory codes. The method
+performs crystal geometry relaxation on the quantum free energy landscape, optimizing the free
+energy with respect to all degrees of freedom of the crystal structure. It can be used to determine
+the phase diagram of any crystal at finite temperature. It enables the calculation of phase boundaries
+for both first-order and second-order phase transitions from the Hessian of the free energy. Finally,
+the code can also compute the anharmonic phonon spectra, including the phonon linewidths, as well
+as phonon spectral functions. We review the theoretical framework of the stochastic self-consistent
+harmonic approximation and its dynamical extension, making particular emphasis on the physical
+interpretation of the variables present in the theory that can enlighten the comparison with any
+other anharmonic theory. A modular and flexible Python environment is used for the implementation,
+which allows for a clean interaction with other packages. We briefly present a toy-model calculation
+to illustrate the potential of the code. 

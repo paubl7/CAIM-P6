@@ -1,0 +1,19 @@
+Recommender systems rely heavily on increasing computation resources to improve their business
+goal. By deploying computation-intensive models and algorithms, these systems are able to inference
+user interests and exhibit certain ads or commodities from the candidate set to maximize their business
+goals. However, such systems are facing two challenges in achieving their goals. On the one hand,
+facing massive online requests, computation-intensive models and algorithms are pushing their
+computation resources to the limit. On the other hand, the response time of these systems is strictly
+limited to a short period, e.g. 300 milliseconds in our real system, which is also being exhausted
+by the increasingly complex models and algorithms. In this paper, we propose the computation resource
+allocation solution (CRAS) that maximizes the business goal with limited computation resources
+and response time. We comprehensively illustrate the problem and formulate such a problem as an
+optimization problem with multiple constraints, which could be broken down into independent sub-problems.
+To solve the sub-problems, we propose the revenue function to facilitate the theoretical analysis,
+and obtain the optimal computation resource allocation strategy. To address the applicability
+issues, we devise the feedback control system to help our strategy constantly adapt to the changing
+online environment. The effectiveness of our method is verified by extensive experiments based
+on the real dataset from Taobao.com. We also deploy our method in the display advertising system
+of Alibaba. The online results show that our computation resource allocation solution achieves
+significant business goal improvement without any increment of computation cost, which demonstrates
+the efficacy of our method in real industrial practice. 

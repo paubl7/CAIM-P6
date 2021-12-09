@@ -1,0 +1,20 @@
+The compression of deep learning models is of fundamental importance in deploying such models to
+edge devices. Incorporating hardware model and application constraints during compression maximizes
+the benefits but makes it specifically designed for one case. Therefore, the compression needs
+to be automated. Searching for the optimal compression method parameters is considered an optimization
+problem. This article introduces a Multi-Objective Hardware-Aware Quantization (MOHAQ) method,
+which considers both hardware efficiency and inference error as objectives for mixed-precision
+quantization. The proposed method makes the evaluation of candidate solutions in a large search
+space feasible by relying on two steps. First, post-training quantization is applied for fast solution
+evaluation. Second, we propose a search technique named "beacon-based search" to retrain selected
+solutions only in the search space and use them as beacons to know the effect of retraining on other
+solutions. To evaluate the optimization potential, we chose a speech recognition model using the
+TIMIT dataset. The model is based on Simple Recurrent Unit (SRU) due to its considerable speedup
+over other recurrent units. We applied our method to run on two platforms: SiLago and Bitfusion.
+Experimental evaluations showed that SRU can be compressed up to 8x by post-training quantization
+without any significant increase in the error and up to 12x with only a 1.5 percentage point increase
+in error. On SiLago, the inference-only search found solutions that achieve 80\% and 64\% of the
+maximum possible speedup and energy saving, respectively, with a 0.5 percentage point increase
+in the error. On Bitfusion, with a constraint of a small SRAM size, beacon-based search reduced the
+error gain of inference-only search by 4 percentage points and increased the possible reached speedup
+to be 47x compared to the Bitfusion baseline. 

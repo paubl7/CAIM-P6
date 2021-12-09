@@ -1,0 +1,17 @@
+The problem of solving linear systems is one of the most fundamental problems in computer science,
+where given a satisfiable linear system $(A,b)$, for $A \in \mathbb{R}^{n \times n}$ and $b \in \mathbb{R}^n$,
+we wish to find a vector $x \in \mathbb{R}^n$ such that $Ax = b$. The current best algorithms for solving
+dense linear systems reduce the problem to matrix multiplication, and run in time $O(n^{\omega})$.
+We consider the problem of finding $\varepsilon$-approximate solutions to linear systems with
+respect to the $L_2$-norm, that is, given a satisfiable linear system $(A \in \mathbb{R}^{n \times
+n}, b \in \mathbb{R}^n)$, find an $x \in \mathbb{R}^n$ such that $||Ax - b||_2 \leq \varepsilon||b||_2$.
+Our main result is a fine-grained reduction from computing the rank of a matrix to finding $\varepsilon$-approximate
+solutions to linear systems. In particular, if the best known $O(n^\omega)$ time algorithm for
+computing the rank of $n \times O(n)$ matrices is optimal (which we conjecture is true), then finding
+an $\varepsilon$-approximate solution to a dense linear system also requires $\tilde{\Omega}(n^{\omega})$
+time, even for $\varepsilon$ as large as $(1 - 1/\text{poly}(n))$. We also prove (under some modified
+conjectures for the rank-finding problem) optimal hardness of approximation for sparse linear
+systems, linear systems over positive semidefinite matrices, well-conditioned linear systems,
+and approximately solving linear systems with respect to the $L_p$-norm, for $p \geq 1$. At the heart
+of our results is a novel reduction from the rank problem to a decision version of the approximate
+linear systems problem. This reduction preserves properties such as matrix sparsity and bit complexity.

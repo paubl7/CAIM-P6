@@ -1,0 +1,19 @@
+This paper proposes a new framework based on a wavelet transform and deep neural network for identifying
+noisy Raman spectrum since, in practice, it is relatively difficult to classify the spectrum under
+baseline noise and additive white Gaussian noise environments. The framework consists of two main
+engines. Wavelet transform is proposed as the framework front-end for transforming 1-D noise Raman
+spectrum to two-dimensional data. This two-dimensional data will be fed to the framework back-end
+which is a classifier. The optimum classifier is chosen by implementing several traditional machine
+learning (ML) and deep learning (DL) algorithms, and then we investigated their classification
+accuracy and robustness performances. The four MLs we choose included a Naive Bayes (NB), a Support
+Vector Machine (SVM), a Random Forest (RF) and a K-Nearest Neighbor (KNN) where a deep convolution
+neural network (DCNN) was chosen for a DL classifier. Noise-free, Gaussian noise, baseline noise,
+and mixed-noise Raman spectrums were applied to train and validate the ML and DCNN models. The optimum
+back-end classifier was obtained by testing the ML and DCNN models with several noisy Raman spectrums
+(10-30 dB noise power). Based on the simulation, the accuracy of the DCNN classifier is 9% higher
+than the NB classifier, 3.5% higher than the RF classifier, 1% higher than the KNN classifier, and
+0.5% higher than the SVM classifier. In terms of robustness to the mixed noise scenarios, the framework
+with DCNN back-end showed superior performance than the other ML back-ends. The DCNN back-end achieved
+90% accuracy at 3 dB SNR while NB, SVM, RF, and K-NN back-ends required 27 dB, 22 dB, 27 dB, and 23 dB SNR,
+respectively. In addition, in the low-noise test data set, the F-measure score of the DCNN back-end
+exceeded 99.1% while the F-measure scores of the other ML engines were below 98.7%. 

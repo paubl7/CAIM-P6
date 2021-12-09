@@ -1,0 +1,19 @@
+Temporal graphs represent interactions between entities over the time. These interactions may
+be direct (a contact between two nodes at some time instant), or indirect, through sequences of contacts
+called temporal paths (journeys). Deciding whether an entity can reach another through a journey
+is useful for various applications in communication networks and epidemiology, among other fields.
+In this paper, we present a data structure which maintains temporal reachability information under
+the addition of new contacts (i.e., triplets $(u,v,t)$ indicating that node $u$ and node $v$ interacted
+at time $t$). In contrast to previous works, the contacts can be inserted in arbitrary order -- in
+particular, non-chronologically -- which corresponds to systems where the information is collected
+a posteriori (e.g. when trying to reconstruct contamination chains among people). The main component
+of our data structure is a generalization of transitive closure called timed transitive closure
+(TTC), which allows us to maintain reachability information relative to all nested time intervals,
+without storing all these intervals, nor the journeys themselves. TTCs are of independent interest
+and we study a number of their general properties. Let $n$ be the number of nodes and $\tau$ be the number
+of timestamps in the lifetime of the temporal graph. Our data structure answers reachability queries
+regarding the existence of a journey from a given node to another within given time interval in time
+$O(\log\tau)$; it has an amortized insertion time of $O(n^2\log\tau)$; and it can reconstruct
+a valid journey that witnesses reachability in time $O(k\log\tau)$, where $k<n$ is the maximum
+number of edges of this journey. Finally, the space complexity of our reachability data structure
+is $O(n^2\tau)$, which remains within the worst-case size of the temporal graph itself. 

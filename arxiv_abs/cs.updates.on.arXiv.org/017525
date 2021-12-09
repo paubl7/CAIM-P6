@@ -1,0 +1,18 @@
+We consider the corner-stone broadcast task with an adaptive adversary that controls a fixed number
+of $t$ edges in the input communication graph. In this model, the adversary sees the entire communication
+in the network and the random coins of the nodes, while maliciously manipulating the messages sent
+through a set of $t$ edges (unknown to the nodes). Since the influential work of [Pease, Shostak and
+Lamport, JACM'80], broadcast algorithms against plentiful adversarial models have been studied
+in both theory and practice for over more than four decades. Despite this extensive research, there
+is no round efficient broadcast algorithm for general graphs in the CONGEST model of distributed
+computing. We provide the first round-efficient broadcast algorithms against adaptive edge adversaries.
+Our two key results for $n$-node graphs of diameter $D$ are as follows: 1. For $t=1$, there is a deterministic
+algorithm that solves the problem within $\widetilde{O}(D^2)$ rounds, provided that the graph
+is 3 edge-connected. This round complexity beats the natural barrier of $O(D^3)$ rounds, the existential
+lower bound on the maximal length of $3$ edge-disjoint paths between a given pair of nodes in $G$.
+This algorithm can be extended to a $\widetilde{O}(D^{O(t)})$-round algorithm against $t$ adversarial
+edges in $(2t+1)$ edge-connected graphs. 2. For expander graphs with edge connectivity of $\Omega(t^2\log
+n)$, there is an improved broadcast algorithm with $O(t \log ^2 n)$ rounds against $t$ adversarial
+edges. This algorithm exploits the connectivity and conductance properties of G-subgraphs obtained
+by employing the Karger's edge sampling technique. Our algorithms mark a new connection between
+the areas of fault-tolerant network design and reliable distributed communication. 

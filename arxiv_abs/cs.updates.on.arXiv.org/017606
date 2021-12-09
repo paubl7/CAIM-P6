@@ -1,0 +1,19 @@
+Curvelet frame is of special significance for photoacoustic tomography (PAT) due to its sparsifying
+and microlocalisation properties. We derive a one-to-one map between wavefront directions in
+image and data spaces in PAT which suggests near equivalence between the recovery of the initial
+pressure and PAT data from compressed/subsampled measurements when assuming sparsity in Curvelet
+frame. As the latter is computationally more tractable, investigation to which extent this equivalence
+holds conducted in this paper is of immediate practical significance. To this end we formulate and
+compare DR, a two step approach based on the recovery of the complete volume of the photoacoustic
+data from the subsampled data followed by the acoustic inversion, and p0R, a one step approach where
+the photoacoustic image (the initial pressure, p0) is directly recovered from the subsampled data.
+Effective representation of the photoacoustic data requires basis defined on the range of the photoacoustic
+forward operator. To this end we propose a novel wedge-restriction of Curvelet transform which
+enables us to construct such basis. Both recovery problems are formulated in a variational framework.
+As the Curvelet frame is heavily overdetermined, we use reweighted l1 norm penalties to enhance
+the sparsity of the solution. The data reconstruction problem DR is a standard compressed sensing
+recovery problem, which we solve using an ADMMtype algorithm, SALSA. Subsequently, the initial
+pressure is recovered using time reversal as implemented in the k-Wave Toolbox. The p0 reconstruction
+problem, p0R, aims to recover the photoacoustic image directly via FISTA, or ADMM when in addition
+including a non-negativity constraint. We compare and discuss the relative merits of the two approaches
+and illustrate them on 2D simulated and 3D real data in a fair and rigorous manner. 

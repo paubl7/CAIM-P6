@@ -1,0 +1,20 @@
+The task of repeatedly solving parametrized partial differential equations (pPDEs) in, e.g. optimization
+or interactive applications, makes it imperative to design highly efficient and equally accurate
+surrogate models. The reduced basis method (RBM) presents as such an option. Enabled by a mathematically
+rigorous error estimator, RBM constructs a low-dimensional subspace of the parameter-induced
+high fidelity solution manifold from which an approximate solution is computed. It can improve
+efficiency by several orders of magnitudes leveraging an offline-online decomposition procedure.
+However, this decomposition, usually through the empirical interpolation method (EIM) when the
+PDE is nonlinear or its parameter dependence nonaffine, is either challenging to implement, or
+severely degrades online efficiency. In this paper, we augment and extend the EIM approach as a direct
+solver, as opposed to an assistant, for solving nonlinear pPDEs on the reduced level. The resulting
+method, called Reduced Over-Collocation method (ROC), is stable and capable of avoiding the efficiency
+degradation inherent to a traditional application of EIM. Two critical ingredients of the scheme
+are collocation at about twice as many locations as the dimension of the reduced solution space,
+and an efficient L1-norm-based error indicator for the strategic selection of the parameter values
+to build the reduced solution space. Together, these two ingredients render the proposed L1-ROC
+scheme both offline- and online-efficient. A distinctive feature is that the efficiency degradation
+appearing in alternative RBM approaches that utilize EIM for nonlinear and nonaffine problems
+is circumvented, both in the offline and online stages. Numerical tests on different families of
+time-dependent and steady-state nonlinear problems demonstrate the high efficiency and accuracy
+of L1-ROC and its superior stability performance. 

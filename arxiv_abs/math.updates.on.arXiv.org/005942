@@ -1,0 +1,20 @@
+Ultrasound tomography (UST) scanners allow quantitative images of the human breast's acoustic
+properties to be derived with potential applications in screening, diagnosis and therapy planning.
+Time domain full waveform inversion (TD-FWI) is a promising UST image formation technique that
+fits the parameter fields of a wave physics model by gradient-based optimization. For high resolution
+3D UST, it holds three key challenges: Firstly, its central building block, the computation of the
+gradient for a single US measurement, has a restrictively large memory footprint. Secondly, this
+building block needs to be computed for each of the $10^3-10^4$ measurements, resulting in a massive
+parallel computation usually performed on large computational clusters for days. Lastly, the
+structure of the underlying optimization problem may result in slow progression of the solver and
+convergence to a local minimum. In this work, we design and evaluate a comprehensive computational
+strategy to overcome these challenges: Firstly, we introduce a novel gradient computation based
+on time reversal that dramatically reduces the memory footprint at the expense of one additional
+wave simulation per source. Secondly, we break the dependence on the number of measurements by using
+source encoding (SE) to compute stochastic gradient estimates. Also we describe a more accurate,
+TD-specific SE technique with a finer variance control and use a state-of-the-art stochastic LBFGS
+method. Lastly, we design an efficient TD multi-grid scheme together with preconditioning to speed
+up the convergence while avoiding local minima. All components are evaluated in extensive numerical
+proof-of-concept studies simulating a bowl-shaped 3D UST breast scanner prototype. Finally,
+we demonstrate that their combination allows us to obtain an accurate 442x442x222 voxel image with
+a resolution of 0.5mm using Matlab on a single GPU within 24h. 

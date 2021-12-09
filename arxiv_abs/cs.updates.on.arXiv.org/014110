@@ -1,0 +1,19 @@
+Incomplete factorization is a widely used preconditioning technique for Krylov subspace methods
+for solving large-scale sparse linear systems. Its multilevel variants, such as ILUPACK, are more
+robust for many symmetric or unsymmetric linear systems than the traditional, single-level incomplete
+LU (or ILU) techniques. However, the previous multilevel ILU techniques still lacked robustness
+and efficiency for some large-scale saddle-point problems, which often arise from systems of partial
+differential equations (PDEs). We introduce HILUCSI, or Hierarchical Incomplete LU-Crout with
+Scalability-oriented and Inverse-based dropping. As a multilevel preconditioner, HILUCSI statically
+and dynamically permutes individual rows and columns to the next level for deferred factorization.
+Unlike ILUPACK, HILUCSI applies symmetric preprocessing techniques at the top levels but always
+uses unsymmetric preprocessing and unsymmetric factorization at the coarser levels. The deferring
+combined with mixed preprocessing enabled a unified treatment for nearly or partially symmetric
+systems, and simplified the implementation by avoiding mixed 1\times1 and 2\times2 pivots for
+symmetric indefinite systems. We show that this combination improves robustness for indefinite
+systems without compromising efficiency. Furthermore, to enable superior efficiency for large-scale
+systems with millions or more unknowns, HILUCSI introduces a scalability-oriented dropping in
+conjunction with a variant of inverse-based dropping. We demonstrate the effectiveness of HILUCSI
+for dozens of benchmark problems, including those from the mixed formulation of the Poisson equation,
+Stokes equations, and Navier-Stokes equations. We also compare its performance with ILUPACK,
+the supernodal ILUTP in SuperLU, and multithreaded direct solvers in PARDISO and MUMPS. 

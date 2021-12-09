@@ -1,0 +1,19 @@
+We put forth new models for universal channel coding. Unlike standard codes which are designed for
+a specific type of channel, our most general universal code makes communication resilient on every
+channel, provided the noise level is below the tolerated bound, where the noise level t of a channel
+is the logarithm of its ambiguity (the maximum number of strings that can be distorted into a given
+one). The other more restricted universal codes still work for large classes of natural channels.
+In a universal code, encoding is channel-independent, but the decoding function knows the type
+of channel. We allow the encoding and the decoding functions to share randomness, which is unavailable
+to the channel. There are two scenarios for the type of attack that a channel can perform. In the oblivious
+scenario, codewords belong to an additive group and the channel distorts a codeword by adding a vector
+from a fixed set. The selection is based on the message and the encoding function, but not on the codeword.
+In the Hamming scenario, the channel knows the codeword and is fully adversarial. For a universal
+code, there are two parameters of interest: the rate, which is the ratio between the message length
+k and the codeword length n, and the number of shared random bits. We show the existence in both scenarios
+of universal codes with rate 1-t/n - o(1), which is optimal modulo the o(1) term. The number of shared
+random bits is O(log n) in the oblivious scenario, and O(n) in the Hamming scenario, which, for typical
+values of the noise level, we show to be optimal, modulo the constant hidden in the O() notation. In
+both scenarios, the universal encoding is done in time polynomial in n, but the channel-dependent
+decoding procedures are in general not efficient. For some weaker classes of channels we construct
+universal codes with polynomial-time encoding and decoding. 

@@ -1,0 +1,19 @@
+Deep learning has been widely applied in many computer vision applications, with remarkable success.
+However, running deep learning models on mobile devices is generally challenging due to the limitation
+of computing resources. A popular alternative is to use cloud services to run deep learning models
+to process raw data. This, however, imposes privacy risks. Some prior arts proposed sending the
+features extracted from raw data to the cloud. Unfortunately, these extracted features can still
+be exploited by attackers to recover raw images and to infer embedded private attributes. In this
+paper, we propose an adversarial training framework, DeepObfuscator, which prevents the usage
+of the features for reconstruction of the raw images and inference of private attributes. This is
+done while retaining useful information for the intended cloud service. DeepObfuscator includes
+a learnable obfuscator that is designed to hide privacy-related sensitive information from the
+features by performing our proposed adversarial training algorithm. The proposed algorithm is
+designed by simulating the game between an attacker who makes efforts to reconstruct raw image and
+infer private attributes from the extracted features and a defender who aims to protect user privacy.
+By deploying the trained obfuscator on the smartphone, features can be locally extracted and then
+sent to the cloud. Our experiments on CelebA and LFW datasets show that the quality of the reconstructed
+images from the obfuscated features of the raw image is dramatically decreased from 0.9458 to 0.3175
+in terms of multi-scale structural similarity. The person in the reconstructed image, hence, becomes
+hardly to be re-identified. The classification accuracy of the inferred private attributes that
+can be achieved by the attacker is significantly reduced to a random-guessing level. 

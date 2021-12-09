@@ -1,0 +1,19 @@
+In $k$-Digraph Coloring we are given a digraph and are asked to partition its vertices into at most
+$k$ sets, so that each set induces a DAG. This well-known problem is NP-hard, as it generalizes (undirected)
+$k$-Coloring, but becomes trivial if the input digraph is acyclic. This poses the natural parameterized
+complexity question what happens when the input is "almost" acyclic. In this paper we study this
+question using parameters that measure the input's distance to acyclicity in either the directed
+or the undirected sense. It is already known that, for all $k\ge 2$, $k$-Digraph Coloring is NP-hard
+on digraphs of DFVS at most $k+4$. We strengthen this result to show that, for all $k\ge 2$, $k$-Digraph
+Coloring is NP-hard for DFVS $k$. Refining our reduction we obtain two further consequences: (i)
+for all $k\ge 2$, $k$-Digraph Coloring is NP-hard for graphs of feedback arc set (FAS) at most $k^2$;
+interestingly, this leads to a dichotomy, as we show that the problem is FPT by $k$ if FAS is at most
+$k^2-1$; (ii) $k$-Digraph Coloring is NP-hard for graphs of DFVS $k$, even if the maximum degree
+$\Delta$ is at most $4k-1$; we show that this is also almost tight, as the problem becomes FPT for DFVS
+$k$ and $\Delta\le 4k-3$. We then consider parameters that measure the distance from acyclicity
+of the underlying graph. We show that $k$-Digraph Coloring admits an FPT algorithm parameterized
+by treewidth, whose parameter dependence is $(tw!)k^{tw}$. Then, we pose the question of whether
+the $tw!$ factor can be eliminated. Our main contribution in this part is to settle this question
+in the negative and show that our algorithm is essentially optimal, even for the much more restricted
+parameter treedepth and for $k=2$. Specifically, we show that an FPT algorithm solving $2$-Digraph
+Coloring with dependence $td^{o(td)}$ would contradict the ETH. 

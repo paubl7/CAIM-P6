@@ -1,0 +1,19 @@
+Significant development of ride-sharing services presents a plethora of opportunities to transform
+urban mobility by providing personalized and convenient transportation while ensuring efficiency
+of large-scale ride pooling. However, a core problem for such services is route planning for each
+driver to fulfill the dynamically arriving requests while satisfying given constraints. Current
+models are mostly limited to static routes with only two rides per vehicle (optimally) or three (with
+heuristics). In this paper, we present a dynamic, demand aware, and pricing-based vehicle-passenger
+matching and route planning framework that (1) dynamically generates optimal routes for each vehicle
+based on online demand, pricing associated with each ride, vehicle capacities and locations. This
+matching algorithm starts greedily and optimizes over time using an insertion operation, (2) involves
+drivers in the decision-making process by allowing them to propose a different price based on the
+expected reward for a particular ride as well as the destination locations for future rides, which
+is influenced by supply-and demand computed by the Deep Q-network, (3) allows customers to accept
+or reject rides based on their set of preferences with respect to pricing and delay windows, vehicle
+type and carpooling preferences, and (4) based on demand prediction, our approach re-balances
+idle vehicles by dispatching them to the areas of anticipated high demand using deep Reinforcement
+Learning (RL). Our framework is validated using the New York City Taxi public dataset; however,
+we consider different vehicle types and designed customer utility functions to validate the setup
+and study different settings. Experimental results show the effectiveness of our approach in real-time
+and large scale settings. 

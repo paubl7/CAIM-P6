@@ -1,0 +1,19 @@
+In this paper, based on neural networks, we develop a data-driven model for extremely fast prediction
+of steady-state heat convection of a hot object with arbitrary complex geometry in a two-dimensional
+space. According to the governing equations, the steady-state heat convection is dominated by
+convection and thermal diffusion terms, thus the distribution of the physical fields would exhibit
+stronger correlations between adjacent points. Therefore, the proposed neural network model
+uses Convolutional Neural Network (CNN) layers as the encoder and Deconvolutional Neural Network
+(DCNN) layers as the decoder. Compared with fully connected (FC) network model, the CNN based model
+is good for capturing and reconstructing the spatial relationships of low-rank feature spaces,
+such as edge intersections, parallelism and symmetry. Furthermore, we applied the signed distance
+function (SDF) as the network input for representing the problem geometry, which contains more
+information compared to a binary image. For displaying the strong learning and generalization
+ability of the proposed network model, the training dataset only contains hot objects with simple
+geometries: triangles, quadrilaterals, pentagons, hexagons and dodecagons; while the validating
+cases use arbitrary and complex geometries. According to the study, the trained network model can
+accurately predict the velocity and temperature field of the problems with complex geometries
+which has never been seen by the network model during the model training; and the prediction speed
+is four orders faster than the CFD. The ability of the accurate and extremely faster prediction of
+the network model suggests the potentials of applying such kind of models to the applications of
+real-time control, optimization, and design in future. 

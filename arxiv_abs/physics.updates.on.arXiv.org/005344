@@ -1,0 +1,18 @@
+The use of spectral proper orthogonal decomposition (SPOD) to construct low-order models for broadband
+turbulent flows is explored. The choice of SPOD modes as basis vectors is motivated by their optimality
+and space-time coherence properties for statistically stationary flows. This work follows the
+modeling paradigm that complex nonlinear fluid dynamics can be approximated as stochastically
+forced linear systems. The proposed model combines ideas from Galerkin projection and linear multi-level
+regression (MLR) modeling. The resulting stochastic two-level SPOD-Galerkin model governs a
+compound state consisting of the modal expansion coefficients and forcing coefficients. In the
+first level, the modal expansion coefficients are advanced by the forced linearized Navier-Stokes
+operator under the linear time-invariant assumption. The second level governs the forcing coefficients,
+which compensate for the offset between the linear approximation and the true state. At this level,
+least squares regression is used to achieve closure by modeling nonlinear interactions between
+modes. The statistics of the remaining residue are used to construct a dewhitening filter. This
+filter facilitates the use of white noise to drive the stochastic flow model. The model is demonstrated
+on large eddy simulation data of a turbulent jet at Mach number 0.9 and a Reynolds number of approximately
+1M. The surrogate data obtained from the model accurately reproduces the second-order statistics
+and dynamics of the input data, and instantaneous instances of the surrogate flow field are visually
+indistinguishable from the original data. The model uncertainty, predictability, and stability
+are quantified analytically, when possible, and through Monte Carlo simulation. 

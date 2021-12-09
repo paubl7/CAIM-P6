@@ -1,0 +1,18 @@
+The high precision and conformity of intensity-modulated particle therapy (IMPT) comes at the
+cost of susceptibility to treatment uncertainties in particle range and patient set-up. Dose uncertainty
+quantification and mitigation, which is usually based on sampled error scenarios, however becomes
+challenging when computing the dose with computationally expensive but accurate Monte Carlo (MC)
+simulations. This paper introduces an importance (re-)weighting method in MC history scoring
+to concurrently construct estimates for error scenarios, the expected dose and its variance from
+a single set of MC simulated particle histories. The approach relies on a multivariate Gaussian
+input and uncertainty model, which assigns probabilities to the initial phase space sample, enabling
+the use of different correlation models. Exploring and adapting bivariate emittance parametrizations
+for the beam shape, accuracy can be traded between that of the uncertainty or the nominal dose estimate.
+The method was implemented using the MC code TOPAS and tested for proton IMPT plan delivery in comparison
+to a reference scenario estimate. We achieve accurate results for set-up uncertainties ($\gamma_{3mm/3\%}
+\geq 99.99\%$) and expectedly lower but still sufficient agreement for range uncertainties, which
+are approximated with uncertainty over the energy distribution ($\gamma_{3 mm/3\%} \geq 99.50\%$
+($E[\boldsymbol{d}]$), $\gamma_{3mm/3\%} \geq 91.69\%$ ($\sigma(\boldsymbol{d})$) ). Initial
+experiments on a water phantom, a prostate and a liver case show that the re-weighting approach lowers
+the CPU time by more than an order of magnitude. Further, we show that uncertainty induced by interplay
+and other dynamic influences may be approximated using suitable error correlation models. 

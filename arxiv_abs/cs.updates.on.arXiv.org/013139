@@ -1,0 +1,19 @@
+This paper presents stability analysis tools for model predictive control (MPC) with and without
+terminal weight. Stability analysis of MPC with a limited horizon but without terminal weight is
+a long-standing open problem. By using a modified value function as an Lyapunov function candidate
+and the principle of optimality, this paper establishes stability conditions for this type of widely
+spread MPC algorithms. A new stability guaranteed MPC algorithm without terminal weight (MPCS)
+is presented, which has a promising property that its feasibility implies stability. With the help
+of designing a new level set defined by the value function of one step ahead stage cost, conditions
+for checking its recursive feasibility and stability of the proposed MPC algorithm are presented.
+The new stability condition and the derived MPCS overcome the difficulties arising in the existing
+terminal weight based MPC framework, including the need of searching a suitable terminal weight,
+possible poor performance caused by an inappropriate terminal weight and not being horizon dependent.
+This work is further extended to MPC with a terminal weight for the completeness. It is shown that
+the proposed stability condition is much less conservative than the existing ones that form the
+foundation of the current `standard' MPC framework in the sense that this condition is met as long
+as the current stability conditions are met. Numerical examples are presented to demonstrate the
+effectiveness of the proposed tool, whereas the existing stability analysis tools are either not
+applicable or lead to quite conservative results. It shows that the proposed tools offer a number
+of mechanisms to achieve stability: adjusting state and/or control weights, extending the length
+of horizon, and adding a simple extra constraint on the first or second state in the optimisation.

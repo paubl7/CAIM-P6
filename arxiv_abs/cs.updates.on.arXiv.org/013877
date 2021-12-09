@@ -1,0 +1,18 @@
+This study proposes a data-driven method that detects cable damage from measured cable forces by
+recognizing biased patterns from the intact conditions. The proposed method solves the pattern
+recognition problem for cable damage detection through time series classification (TSC) in deep
+learning, considering that the cable's behavior can be implicitly represented by the measured
+cable force series. A deep learning model, long short term memory fully convolutional network (LSTM-FCN),
+is leveraged by assigning appropriate inputs and representative class labels for the TSC problem,
+First, a TSC classifier is trained and validated using the data collected under intact conditions
+of stay cables, setting the segmented data series as input and the cable (or cable pair) ID as class
+labels. Subsequently, the classifier is tested using the data collected under possible damaged
+conditions. Finally, the cable or cable pair corresponding to the least classification accuracy
+is recommended as the most probable damaged cable or cable pair. The proposed method was tested on
+an in-service cable-stayed bridge with damaged stay cables. Two scenarios in the proposed TSC scheme
+were investigated: 1) raw time series of cable forces were fed into the classifiers; and 2) cable
+force ratios were inputted in the classifiers considering the possible variation of force distribution
+between cable pairs due to cable damage. Combining the results of TSC testing in these two scenarios,
+the cable with rupture was correctly identified. This study proposes a data-driven methodology
+for cable damage detection that requires the least data preprocessing and feature engineering,
+which enables fast and convenient early detection in real applications. 

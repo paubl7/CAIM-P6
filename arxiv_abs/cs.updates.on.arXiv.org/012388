@@ -1,0 +1,18 @@
+Under a commonly-studied "backdoor" poisoning attack against classification models, an attacker
+adds a small "trigger" to a subset of the training data, such that the presence of this trigger at test
+time causes the classifier to always predict some target class. It is often implicitly assumed that
+the poisoned classifier is vulnerable exclusively to the adversary who possesses the trigger.
+In this paper, we show empirically that this view of backdoored classifiers is fundamentally incorrect.
+We demonstrate that anyone with access to the classifier, even without access to any original training
+data or trigger, can construct several alternative triggers that are as effective or more so at eliciting
+the target class at test time. We construct these alternative triggers by first generating adversarial
+examples for a smoothed version of the classifier, created with a recent process called Denoised
+Smoothing, and then extracting colors or cropped portions of adversarial images. We demonstrate
+the effectiveness of our attack through extensive experiments on ImageNet and TrojAI datasets,
+including a user study which demonstrates that our method allows users to easily determine the existence
+of such backdoors in existing poisoned classifiers. Furthermore, we demonstrate that our alternative
+triggers can in fact look entirely different from the original trigger, highlighting that the backdoor
+actually learned by the classifier differs substantially from the trigger image itself. Thus,
+we argue that there is no such thing as a "secret" backdoor in poisoned classifiers: poisoning a classifier
+invites attacks not just by the party that possesses the trigger, but from anyone with access to the
+classifier. Code is available at https://github.com/locuslab/breaking-poisoned-classifier.

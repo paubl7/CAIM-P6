@@ -1,0 +1,19 @@
+Online stores often utilize product relationships such as bundles and substitutes to improve their
+catalog quality and guide customers through myriad choices. Entity resolution using pairwise
+product matching models offers a means of inferring relationships between products. In mature
+data repositories, the relationships may be mostly correct but require incremental improvements
+owing to errors in the original data or in the entity resolution system. It is critical to devise incremental
+entity resolution (IER) approaches for improving the health of relationships. However, most existing
+research on IER focuses on the addition of new products or information into existing relationships.
+Relatively little research has been done for detecting low quality within current relationships.
+This paper proposes a novel method for identifying inconsistent clusters (IC), existing groups
+of related products that do not belong together. We propose to treat the identification of inconsistent
+clusters as a supervised learning task which predicts whether a graph of products with similarities
+as weighted edges should be partitioned into multiple clusters. In this case, the problem becomes
+a classification task on weighted graphs and represents an interesting application area for modern
+tools such as Graph Neural Networks (GNNs). We demonstrate that existing Message Passing neural
+networks perform well at this task, exceeding traditional graph processing techniques. We also
+develop a novel message aggregation scheme for Message Passing Neural Networks that further improves
+the performance of GNNs on this task. We apply the model to synthetic datasets, a public benchmark
+dataset, and an internal application. Our results demonstrate the value of graph classification
+in IER and the ability of graph neural networks to develop useful representations for graph partitioning.

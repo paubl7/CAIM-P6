@@ -1,0 +1,18 @@
+Adding domain knowledge to a learning system is known to improve results. In multi-parameter Bayesian
+frameworks, such knowledge is incorporated as a prior. On the other hand, various model parameters
+can have different learning rates in real-world problems, especially with skewed data. Two often-faced
+challenges in Operation Management and Management Science applications are the absence of informative
+priors, and the inability to control parameter learning rates. In this study, we propose a hierarchical
+Empirical Bayes approach that addresses both challenges, and that can generalize to any Bayesian
+framework. Our method learns empirical meta-priors from the data itself and uses them to decouple
+the learning rates of first-order and second-order features (or any other given feature grouping)
+in a Generalized Linear Model. As the first-order features are likely to have a more pronounced effect
+on the outcome, focusing on learning first-order weights first is likely to improve performance
+and convergence time. Our Empirical Bayes method clamps features in each group together and uses
+the deployed model's observed data to empirically compute a hierarchical prior in hindsight. We
+report theoretical results for the unbiasedness, strong consistency, and optimal frequentist
+cumulative regret properties of our meta-prior variance estimator. We apply our method to a standard
+supervised learning optimization problem, as well as an online combinatorial optimization problem
+in a contextual bandit setting implemented in an Amazon production system. Both during simulations
+and live experiments, our method shows marked improvements, especially in cases of small traffic.
+Our findings are promising, as optimizing over sparse data is often a challenge. 

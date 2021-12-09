@@ -1,0 +1,20 @@
+Generative models are widely used for publishing synthetic datasets. Despite practical successes,
+recent works have shown that generative models may leak privacy of the data that have been used during
+training. Specifically, membership inference attacks aim to determine whether a sample has been
+used in the training set given query access to the model API. However, many of the attacks designed
+against generative models need to know very specific attributes from the learned models (e.g. discriminator
+scores, generated images, etc.). Furthermore, many of these attacks are only heuristic-based
+and do not provide effective bounds for privacy loss. In this work, we formally study the membership
+privacy leakage risk of generative models and propose a membership privacy estimation framework.
+We formulate membership privacy as a statistical divergence between training samples and hold-out
+samples, and propose sample-based methods to estimate this divergence. Unlike previous works,
+our proposed metric and estimators make realistic and flexible assumptions. First, we use a generalizable
+metric as an alternative to accuracy, since practical model training often leads to imbalanced
+train/hold-out splits. Second, our estimators are capable of estimating statistical divergence
+using any scalar or vector valued attributes from the learned model instead of very specific attributes.
+This allows our framework to provide data-driven certificates for trained generative models.
+Finally, we show a connection to differential privacy which allows our proposed estimators to be
+used to understand the privacy budget needed for differentially private generative models. We
+demonstrate the utility of our framework through experimental demonstrations on different generative
+models using various model attributes yielding some new insights about membership leakage and
+vulnerabilities of models. 

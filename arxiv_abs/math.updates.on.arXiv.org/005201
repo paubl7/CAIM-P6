@@ -1,0 +1,19 @@
+This PhD thesis lays out algebraic and topological structures relevant for the study of probabilistic
+graphical models. Marginal estimation algorithms are introduced as diffusion equations of the
+form $\dot u = \delta \varphi$. They generalise the traditional belief propagation (BP) algorithm,
+and provide an alternative for contrastive divergence (CD) or Markov chain Monte Carlo (MCMC) algorithms,
+typically involved in estimating a free energy functional and its gradient w.r.t. model parameters.
+We propose a new homological picture where parameters are a collections of local interaction potentials
+$(u_\alpha) \in A_0$, for $\alpha$ running over the factor nodes of a given region graph. The boundary
+operator $\delta$ mapping heat fluxes $(\varphi_{\alpha\beta}) \in A_1$ to a subspace $\delta
+A_1 \subseteq A_0$ is the discrete analog of a divergence. The total energy $H = \sum_\alpha u_\alpha$
+defining the global probability $p = e^{-H} / Z$ is in one-to-one correspondence with a homology
+class $[u] = u + \delta A_1$ of interaction potentials, so that total energy remains constant when
+$u$ evolves up to a boundary term $\delta \varphi$. Stationary states of diffusion are shown to lie
+at the intersection of a homology class of potentials with a non-linear constraint surface enforcing
+consistency of the local marginals estimates. This picture allows us to precise and complete a proof
+on the correspondence between stationary states of BP and critical points of a local free energy
+functional (obtained by Bethe-Kikuchi approximations) and to extend the uniqueness result for
+acyclic graphs (i.e. trees) to a wider class of hypergraphs. In general, bifurcations of equilibria
+are related to the spectral singularities of a local diffusion operator, yielding new explicit
+examples of the degeneracy phenomenon. Work supervised by Pr. Daniel Bennequin 

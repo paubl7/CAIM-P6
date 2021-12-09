@@ -1,0 +1,18 @@
+Image-based fiducial markers are useful in problems such as object tracking in cluttered or textureless
+environments, camera (and multi-sensor) calibration tasks, and vision-based simultaneous localization
+and mapping (SLAM). The state-of-the-art fiducial marker detection algorithms rely on the consistency
+of the ambient lighting. This paper introduces LiDARTag, a novel fiducial tag design and detection
+algorithm suitable for light detection and ranging (LiDAR) point clouds. The proposed method runs
+in real-time and can process data at 100 Hz, which is faster than the currently available LiDAR sensor
+frequencies. Because of the LiDAR sensors' nature, rapidly changing ambient lighting will not
+affect the detection of a LiDARTag; hence, the proposed fiducial marker can operate in a completely
+dark environment. In addition, the LiDARTag nicely complements and is compatible with existing
+visual fiducial markers, such as AprilTags, allowing for efficient multi-sensor fusion and calibration
+tasks. We further propose a concept of minimizing a fitting error between a point cloud and the marker's
+template to estimate the marker's pose. The proposed method achieves millimeter error in translation
+and a few degrees in rotation. Due to LiDAR returns' sparsity, the point cloud is lifted to a continuous
+function in a reproducing kernel Hilbert space where the inner product can be used to determine a
+marker's ID. The experimental results, verified by a motion capture system, confirm that the proposed
+method can reliably provide a tag's pose and unique ID code. The rejection of false positives is validated
+on the Google Cartographer indoor dataset and the Honda H3D outdoor dataset. All implementations
+are coded in C++ and are available at: https://github.com/UMich-BipedLab/LiDARTag. 

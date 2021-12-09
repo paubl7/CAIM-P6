@@ -1,0 +1,18 @@
+Federated learning (FL) and split learning (SL) are two recent distributed machine learning (ML)
+approaches that have gained attention due to their inherent privacy-preserving capabilities.
+Both approaches follow a model-to-data scenario, in that an ML model is sent to clients for network
+training and testing. However, FL and SL show contrasting strengths and weaknesses. For example,
+while FL performs faster than SL due to its parallel client-side model generation strategy, SL provides
+better privacy than FL due to the ML model architecture split between clients and the server. In contrast
+to FL, SL enables ML training with clients having low computing resources as the client trains only
+the first few layers of the split ML network model. In this paper, we present a novel approach, named
+splitfed (SFL), that amalgamates the two approaches eliminating their inherent drawbacks. SFL
+splits the network architecture between the clients and server as in SL to provide a higher level
+of privacy than FL. Moreover, it offers better efficiency than SL by incorporating the parallel
+ML model update paradigm of FL. Our empirical results, on uniformly distributed horizontally partitioned
+HAM10000 and MNIST datasets with multiple clients, show that SFL provides similar communication
+efficiency and test accuracy as SL, while significantly decreasing - by four to six times - its computation
+time per global epoch than in SL for both datasets. Furthermore, as in SL, its communication efficiency
+over FL improves with the number of clients. To further enhance privacy, we integrate a differentially
+private local model training mechanism to SFL and test its performance on AlexNet with the MNIST
+dataset under various privacy levels. 

@@ -1,0 +1,19 @@
+To unravel the structures of C12H12O7 isomers, identified as light-absorbing photooxidation
+products of syringol in atmospheric chamber experiments, we apply a graph-based molecule generator
+and machine learning workflow. To accomplish this in a bias-free manner, molecular graphs of the
+entire chemical subspace of C12H12O7 were generated, assuming that the isomers contain two C6-rings;
+this led to 260 million molecular graphs and 120 million stable structures. Using quantum chemistry
+excitation energies and oscillator strengths as training data, we predicted these quantities
+using kernel ridge regression and simulated UV/Vis absorption spectra. Then we determined the
+probability of the molecules to cause the experimental spectrum within the errors of the different
+methods. Molecules whose spectra were likely to match the experimental spectrum were clustered
+according to structural features, resulting in clusters of > 500,000 molecules. While we identified
+several features that correlate with a high probability to cause the experimental spectrum, no
+clear composition of necessary features can be given. Thus, the absorption spectrum is not sufficient
+to uniquely identify one specific isomer structure. If more structural features were known from
+experimental data, the number of structures could be reduced to a few tens of thousands candidates.
+We offer a procedure to detect when sufficient fragmentation data has been included to reduce the
+number of possible molecules. The most efficient strategy to obtain valid candidates is obtained
+if structural data is applied already at the bias-free molecule generation stage. The systematic
+enumeration, however, is necessary to avoid mis-identification of molecules, while it guarantees
+that there are no other molecules that would also fit the spectrum in question. 

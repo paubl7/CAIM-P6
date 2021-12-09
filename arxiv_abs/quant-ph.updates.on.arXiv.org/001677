@@ -1,0 +1,19 @@
+Simulating quantum dynamics is expected to be performed more easily on a quantum computer than on
+a classical computer. However, the currently available quantum devices lack the capability to
+implement fault-tolerant quantum algorithms for quantum simulation. Hybrid classical quantum
+algorithms such as the variational quantum algorithms have been proposed to effectively use current
+term quantum devices. One promising approach to quantum simulation in the noisy intermediate-scale
+quantum (NISQ) era is the diagonalisation based approach, with some of the promising examples being
+the subspace Variational Quantum Simulator (SVQS), Variational Fast Forwarding (VFF), fixed-state
+Variational Fast Forwarding (fs-VFF), and the Variational Hamiltonian Diagonalisation (VHD)
+algorithms. However, these algorithms require a feedback loop between the classical and quantum
+computers, which can be a crucial bottleneck in practical application. Here, we present the Classical
+Quantum Fast Forwarding (CQFF) as an alternative diagonalisation based algorithm for quantum
+simulation. CQFF shares some similarities with SVQS, VFF, fs-VFF and VHD but removes the need for
+a classical-quantum feedback loop and controlled multi-qubit unitaries. The CQFF algorithm does
+not suffer from the barren plateau problem and the accuracy can be systematically increased. Furthermore,
+if the Hamiltonian to be simulated is expressed as a linear combination of tensored-Pauli matrices,
+the CQFF algorithm reduces to the task of sampling some many-body quantum state in a set of Pauli-rotated
+bases, which is easy to do in the NISQ era. We run the CQFF algorithm on existing quantum processors
+and demonstrate the promise of the CQFF algorithm for current-term quantum hardware. Our work provides
+a $10^4$ improvement over the previous record. 

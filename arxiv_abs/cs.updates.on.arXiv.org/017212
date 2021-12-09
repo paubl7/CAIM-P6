@@ -1,0 +1,20 @@
+Identifying potential threats concealed within the baggage is of prime concern for the security
+staff. Many researchers have developed frameworks that can detect baggage threats from X-ray scans.
+However, to the best of our knowledge, all of these frameworks require extensive training on large-scale
+and well-annotated datasets, which are hard to procure in the real world. This paper presents a novel
+unsupervised anomaly instance segmentation framework that recognizes baggage threats, in X-ray
+scans, as anomalies without requiring any ground truth labels. Furthermore, thanks to its stylization
+capacity, the framework is trained only once, and at the inference stage, it detects and extracts
+contraband items regardless of their scanner specifications. Our one-staged approach initially
+learns to reconstruct normal baggage content via an encoder-decoder network utilizing a proposed
+stylization loss function. The model subsequently identifies the abnormal regions by analyzing
+the disparities within the original and the reconstructed scans. The anomalous regions are then
+clustered and post-processed to fit a bounding box for their localization. In addition, an optional
+classifier can also be appended with the proposed framework to recognize the categories of these
+extracted anomalies. A thorough evaluation of the proposed system on four public baggage X-ray
+datasets, without any re-training, demonstrates that it achieves competitive performance as
+compared to the conventional fully supervised methods (i.e., the mean average precision score
+of 0.7941 on SIXray, 0.8591 on GDXray, 0.7483 on OPIXray, and 0.5439 on COMPASS-XP dataset) while
+outperforming state-of-the-art semi-supervised and unsupervised baggage threat detection
+frameworks by 67.37%, 32.32%, 47.19%, and 45.81% in terms of F1 score across SIXray, GDXray, OPIXray,
+and COMPASS-XP datasets, respectively. 

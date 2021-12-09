@@ -1,0 +1,19 @@
+To exploit the power of next-generation large-scale structure surveys, ensembles of numerical
+simulations are necessary to give accurate theoretical predictions of the statistics of observables.
+High-fidelity simulations come at a towering computational cost. Therefore, approximate but
+fast simulations, surrogates, are widely used to gain speed at the price of introducing model error.
+We propose a general method that exploits the correlation between simulations and surrogates to
+compute fast, reduced-variance statistics of large-scale structure observables without model
+error at the cost of only a few simulations. We call this approach Convergence Acceleration by Regression
+and Pooling (CARPool). In numerical experiments with intentionally minimal tuning, we apply CARPool
+to a handful of GADGET-III $N$-body simulations paired with surrogates computed using COmoving
+Lagrangian Acceleration (COLA). We find $\sim 100$-fold variance reduction even in the non-linear
+regime, up to $k_\mathrm{max} \approx 1.2$ $h {\rm Mpc^{-1}}$ for the matter power spectrum. CARPool
+realises similar improvements for the matter bispectrum. In the nearly linear regime CARPool attains
+far larger sample variance reductions. By comparing to the 15,000 simulations from the Quijote
+suite, we verify that the CARPool estimates are unbiased, as guaranteed by construction, even though
+the surrogate misses the simulation truth by up to $60\%$ at high $k$. Furthermore, even with a fully
+configuration-space statistic like the non-linear matter density probability density function,
+CARPool achieves unbiased variance reduction factors of up to $\sim 10$, without any further tuning.
+Conversely, CARPool can be used to remove model error from ensembles of fast surrogates by combining
+them with a few high-accuracy simulations. 

@@ -1,0 +1,18 @@
+Consider an online facility assignment problem where a set of facilities $F = \{ f_1, f_2, f_3, \cdots,
+f_{|F|} \}$ of equal capacity $l$ is situated on a metric space and customers arrive one by one in an
+online manner on that space. We assign a customer $c_i$ to a facility $f_j$ before a new customer $c_{i+1}$
+arrives. The cost of this assignment is the distance between $c_i$ and $f_j$. The objective of this
+problem is to minimize the sum of all assignment costs. Recently Ahmed et al. (TCS, 806, pp. 455-467,
+2020) studied the problem where the facilities are situated on a line and computed competitive ratio
+of "Algorithm Greedy" which assigns the customer to the nearest available facility. They computed
+competitive ratio of algorithm named "Algorithm Optimal-Fill" which assigns the new customer
+considering optimal assignment of all previous customers. They also studied the problem where
+the facilities are situated on a connected unweighted graph. In this paper we first consider that
+$F$ is situated on the vertices of a connected unweighted grid graph $G$ of size $r \times c$ and customers
+arrive one by one having positions on the vertices of $G$. We show that Algorithm Greedy has competitive
+ratio $r \times c + r + c$ and Algorithm Optimal-Fill has competitive ratio $O(r \times c)$. We later
+show that the competitive ratio of Algorithm Optimal-Fill is $2|F|$ for any arbitrary graph. Our
+bound is tight and better than the previous result. We also consider the facilities are distributed
+arbitrarily on a plane and provide an algorithm for the scenario. We also provide an algorithm that
+has competitive ratio $(2n-1)$. Finally, we consider a straight line metric space and show that
+no algorithm for the online facility assignment problem has competitive ratio less than $9.001$.

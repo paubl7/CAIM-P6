@@ -1,0 +1,20 @@
+The performance of an error correcting code is evaluated by its error probability, rate, and en/decoding
+complexity. The performance of a series of codes is evaluated by, as the block lengths approach infinity,
+whether their error probabilities decay to zero, whether their rates converge to capacity, and
+whether their growth in complexities stays under control. Over any discrete memoryless channel,
+I build codes such that: (1) their error probabilities and rates scale like random codes; and (2)
+their en/decoding complexities scale like polar codes. Quantitatively, for any constants $p,r>0$
+s.t. $p+2r<1$, I construct a series of codes with block length $N$ approaching infinity, error probability
+$\exp(-N^p)$, rate $N^{-r}$ less than the capacity, and en/decoding complexity $O(N\log N)$ per
+block. Over any discrete memoryless channel, I also build codes such that: (1) they achieve capacity
+rapidly; and (2) their en/decoding complexities outperform all known codes over non-BEC channels.
+Quantitatively, for any constants $t,r>0$ s.t. $2r<1$, I construct a series of codes with block
+length $N$ approaching infinity, error probability $\exp(-(\log N)^t)$, rate $N^{-r}$ less than
+the capacity, and en/decoding complexity $O(N\log(\log N))$ per block. The two aforementioned
+results are built upon two pillars: a versatile framework that generates codes on the basis of channel
+polarization, and a calculus-probability machinery that evaluates the performances of codes.
+The framework that generates codes and the machinery that evaluates codes can be extended to many
+other scenarios in network information theory. To name a few: lossless compression, lossy compression,
+Slepian-Wolf, Wyner-Ziv, multiple access channel, wiretap channel, and broadcast channel. In
+each scenario, the adapted notions of error probability and rate approach their limits at the same
+paces as specified above. 

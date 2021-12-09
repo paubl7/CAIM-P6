@@ -1,0 +1,20 @@
+Malignant melanoma (MM) is one of the deadliest types of skin cancer. Analysing dermatoscopic images
+plays an important role in the early detection of MM and other pigmented skin lesions. Among different
+computer-based methods, deep learning-based approaches and in particular convolutional neural
+networks have shown excellent classification and segmentation performances for dermatoscopic
+skin lesion images. These models can be trained end-to-end without requiring any hand-crafted
+features. However, the effect of using lesion segmentation information on classification performance
+has remained an open question. In this study, we explicitly investigated the impact of using skin
+lesion segmentation masks on the performance of dermatoscopic image classification. To do this,
+first, we developed a baseline classifier as the reference model without using any segmentation
+masks. Then, we used either manually or automatically created segmentation masks in both training
+and test phases in different scenarios and investigated the classification performances. Evaluated
+on the ISIC 2017 challenge dataset which contained two binary classification tasks (i.e. MM vs.
+all and seborrheic keratosis (SK) vs. all) and based on the derived area under the receiver operating
+characteristic curve scores, we observed four main outcomes. Our results show that 1) using segmentation
+masks did not significantly improve the MM classification performance in any scenario, 2) in one
+of the scenarios (using segmentation masks for dilated cropping), SK classification performance
+was significantly improved, 3) removing all background information by the segmentation masks
+significantly degraded the overall classification performance, and 4) in case of using the appropriate
+scenario (using segmentation for dilated cropping), there is no significant difference of using
+manually or automatically created segmentation masks. 

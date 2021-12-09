@@ -1,0 +1,19 @@
+We consider a classical scheduling problem on $m$ identical machines. For an arbitrary constant
+$q>1$, the aim is to assign jobs to machines such that $\sum_{i=1}^m C_i^q$ is minimized, where $C_i$
+is the total processing time of jobs assigned to machine $i$. It is well known that this problem is
+strongly NP-hard. Under mild assumptions, the running time of an $(1+\epsilon)$-approximation
+algorithm for a strongly NP-hard problem cannot be polynomial on $1/\epsilon$, unless $\text{P}=\text{NP}$.
+For most problems in the literature, this translates into algorithms with running time at least
+as large as $2^{\Omega(1/\varepsilon)}+n^{O(1)}$. For the natural scheduling problem above,
+we establish the existence of an algorithm which violates this threshold. More precisely, we design
+a PTAS that runs in $2^{\tilde{O}(\sqrt{1/\epsilon})}+n^{O(1)}$ time. This result is in sharp
+contrast to the closely related minimum makespan variant, where an exponential lower bound is known
+under the exponential time hypothesis (ETH). We complement our result with an essentially matching
+lower bound on the running time, showing that our algorithm is best-possible under ETH. The lower
+bound proof exploits new number-theoretical constructions for variants of progression-free
+sets, which might be of independent interest. Furthermore, we provide a fine-grained characterization
+on the running time of a PTAS for this problem depending on the relation between $\epsilon$ and the
+number of machines $m$. More precisely, our lower bound only holds when $m=\Theta(\sqrt{1/\epsilon})$.
+Better algorithms, that go beyond the lower bound, exist for other values of $m$. In particular,
+there even exists an algorithm with running time polynomial in $1/\epsilon$ if we restrict ourselves
+to instances with $m=\Omega(1/\epsilon\log^21/\epsilon)$. 

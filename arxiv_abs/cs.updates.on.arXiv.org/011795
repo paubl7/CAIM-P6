@@ -1,0 +1,18 @@
+$\newcommand{\EC}{\mathsf{EC}}\newcommand{\KW}{\mathsf{KW}}\newcommand{\DT}{\mathsf{DT}}\newcommand{\psens}{\mathsf{psens}}
+\newcommand{\calB}{{\cal B}} $ For a Boolean function $f:\{0,1\}^n \to \{0,1\}$ computed by a
+circuit $C$ over a finite basis $\mathcal{B}$, the energy complexity of $C$ (denoted by $\EC_{\calB}(C)$)
+is the maximum over all inputs $\{0,1\}^n$ the numbers of gates of the circuit $C$ (excluding the
+inputs) that output a one. Energy Complexity of a Boolean function over a finite basis $\calB$ denoted
+by $\EC_\calB(f):= \min_C \EC_{\calB}(C)$ where $C$ is a circuit over $\calB$ computing $f$. We
+study the case when $\calB = \{\land_2, \lor_2, \lnot\}$, the standard Boolean basis. It is known
+that any Boolean function can be computed by a circuit (with potentially large size) with an energy
+of at most $3n(1+\epsilon(n))$ for a small $ \epsilon(n)$(which we observe is improvable to $3n-1$).
+We show several new results and connections between energy complexity and other well-studied parameters
+of Boolean functions. * For all Boolean functions $f$, $\EC(f) \le O(\DT(f)^3)$ where $\DT(f)$
+is the optimal decision tree depth of $f$. * We define a parameter \textit{positive sensitivity}
+(denoted by $\psens$), a quantity that is smaller than sensitivity and defined in a similar way,
+and show that for any Boolean circuit $C$ computing a Boolean function $f$, $ \EC(C) \ge \psens(f)/3$.
+* For a monotone function $f$, we show that $\EC(f) = \Omega(\KW^+(f))$ where $\KW^+(f)$ is the cost
+of monotone Karchmer-Wigderson game of $f$. * Restricting the above notion of energy complexity
+to Boolean formulas, we show $\EC(F) = \Omega\left (\sqrt{L(F)}-depth(F)\right )$ where $L(F)$
+is the size and $depth(F)$ is the depth of a formula $F$. 

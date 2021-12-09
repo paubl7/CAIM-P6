@@ -1,0 +1,19 @@
+Background. Many mutation reduction strategies, which aim to reduce the number of mutants, have
+been proposed. Problem. It is important to measure the ability of a mutation reduction strategy
+to maintain test suite effectiveness evaluation. However, existing evaluation indicators are
+unable to measure the "order-preserving ability". Objective. We aim to propose evaluation indicators
+to measure the "order-preserving ability" of a mutation reduction strategy, which is important
+but missing in our community. Method. Given a test suite on a Software Under Test (SUT) with a set of
+original mutants, we leverage the test suite to generate a group of test suites that have a partial
+order relationship in fault detecting potential. When evaluating a reduction strategy, we first
+construct two partial order relationships among the generated test suites in terms of mutation
+score, one with the original mutants and another with the reduced mutants. Then, we measure the extent
+to which the two partial order relationships are consistent. The more consistent the two partial
+order relationships are, the stronger the Order Preservation (OP) of the mutation reduction strategy
+is, and the more effective the reduction strategy is. Furthermore, we propose Effort-aware Relative
+Order Preservation (EROP) to measure how much gain a mutation reduction strategy can provide compared
+with a random reduction strategy. Result. The experimental results show that OP and EROP are able
+to efficiently measure the "order-preserving ability" of a mutation reduction strategy. As a result,
+they have a better ability to distinguish various mutation reduction strategies compared with
+the existing evaluation indicators. Conclusion. We suggest, for the researchers, that OP and EROP
+should be used to measure the effectiveness of a mutant reduction strategy. 

@@ -1,0 +1,20 @@
+We implement a procedure-based on the Wishart-Laguerre distribution-recently outlined by {\.Z}yczkowski
+and Khvedelidze, Rogojin and Abgaryan, for the generation of random (complex or real) $N \times
+N$ density matrices of rank $k \leq N$ with respect to Hilbert-Schmidt (HS) measure. In the complex
+case, one commences with a Ginibre matrix $A$ of dimensions $k \times k+ 2 (N-k)$, while for a real
+scenario, one employs a Ginibre matrix $B$ of dimensions $k \times k+1+ 2 (N-k)$. Then, the $k \times
+k$ product $A A^{\dagger}$ or $B B^T$ is diagonalized-padded with zeros to size $N \times N$-and
+rotated, obtaining a random density matrix. Implementing the procedure for rank-4 rebit-retrit
+states, for 800 million Ginibre-matrix realizations, 6,192,047 were found separable, for a sample
+probability of .00774006-suggestive of an exact value $\frac{387}{5000} =\frac{3^2 \cdot 43}{2^3
+\cdot 5^4}=.0774$. A conjecture for the HS separability probability of rebit-retrit systems of
+full rank is $\frac{860}{6561} =\frac{2^2 \cdot 5 \cdot 43}{3^8} \approx 0.1310775$ (the two-rebit
+counterpart has been proven to be $\frac{29}{64}=\frac{29}{2^6}$). Subject to these conjectures,
+the ratio of the rank-4 to rank-6 probabilities would be $\frac{59049}{1000000}=\frac{3^{10}}{2^6
+\cdot 5^6} \approx 0.059049$, with the common factor 43 cancelling. As to the intermediate rank-5
+probability, a 2006 theorem of Szarek, Bengtsson and {\.Z}ycskowski informs us that it must be one-half
+the rank-6 probability-itself conjectured to be $\frac{27}{1000} =\frac{3^3}{2^3 \cdot 5^3}$,
+while for rank 3 or less, the associated probabilities must be 0 by a 2009 result of Ruskai and Werner.
+We are led to re-examine a 2005 qubit-qutrit analysis of ours, in these regards, and now find evidence
+for a $\frac{70}{2673}=\frac{2 \cdot 5 \cdot 7}{ 3^5 \cdot 11} \approx 0.0261878$ rank-4 to rank-6
+probability ratio. 

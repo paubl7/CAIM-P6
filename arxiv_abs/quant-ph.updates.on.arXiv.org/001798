@@ -1,0 +1,19 @@
+Simulating quantum systems is one of the most important potential applications of quantum computers
+to demonstrate its advantages over classical algorithms. The high-level circuit defining the
+simulation needs to be transformed into one that compiles with hardware limitations such as qubit
+connectivity and hardware gate set. Many techniques have been developed to efficiently compile
+quantum circuits while minimizing compilation overhead. However, general-purpose quantum compilers
+work at the gate level and have little knowledge of the mathematical properties of quantum applications,
+missing further optimization opportunities. In this work, we exploit one application-level property
+in Hamiltonian simulation, which is, the flexibility of permuting different operators in the Hamiltonian
+(no matter whether they commute). We develop a compiler, named 2QAN, to optimize quantum circuits
+for 2-local qubit Hamiltonian simulation problems, a framework which includes the important quantum
+approximate optimization algorithm (QAOA). In particular, we propose permutation-aware qubit
+mapping, qubit routing, gate optimization and scheduling techniques to minimize the compilation
+overhead. We evaluate 2QAN by compiling three applications (up to 50 qubits) onto three quantum
+computers that have different qubit topologies and hardware two-qubit gates, namely, Google Sycamore,
+IBMQ Montreal and Rigetti Aspen. Compared to state-of-the-art quantum compilers, 2QAN can reduce
+the number of inserted SWAP gates by up to 11.5X, reduce overhead in hardware gate count by up to 30.7X,
+and reduce overhead in circuit depth by up to 21X. This significant overhead reduction will help
+improve application performance. Experimental results on the Montreal device demonstrate that
+benchmarks compiled by 2QAN achieve highest fidelity. 

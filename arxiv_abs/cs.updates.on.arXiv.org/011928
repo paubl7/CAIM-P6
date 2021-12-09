@@ -1,0 +1,19 @@
+Each year there are nearly 57 million deaths around the world, with over 2.7 million in the United
+States. Timely, accurate and complete death reporting is critical in public health, as institutions
+and government agencies rely on death reports to analyze vital statistics and to formulate responses
+to communicable diseases. Inaccurate death reporting may result in potential misdirection of
+public health policies. Determining the causes of death is, nevertheless, challenging even for
+experienced physicians. To facilitate physicians in accurately reporting causes of death, we
+present an advanced AI approach to determine a chronically ordered sequence of clinical conditions
+that lead to death, based on decedent's last hospital admission discharge record. The sequence
+of clinical codes on the death report is named as causal chain of death, coded in the tenth revision
+of International Statistical Classification of Diseases (ICD-10); the priority-ordered clinical
+conditions on the discharge record are coded in ICD-9. We identify three challenges in proposing
+the causal chain of death: two versions of coding system in clinical codes, medical domain knowledge
+conflict, and data interoperability. To overcome the first challenge in this sequence-to-sequence
+problem, we apply neural machine translation models to generate target sequence. We evaluate the
+quality of generated sequences with the BLEU (BiLingual Evaluation Understudy) score and achieve
+16.44 out of 100. To address the second challenge, we incorporate expert-verified medical domain
+knowledge as constraint in generating output sequence to exclude infeasible causal chains. Lastly,
+we demonstrate the usability of our work in a Fast Healthcare Interoperability Resources (FHIR)
+interface to address the third challenge. 

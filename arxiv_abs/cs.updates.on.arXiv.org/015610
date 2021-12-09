@@ -1,0 +1,19 @@
+Crystal structure determines properties of materials. With the crystal structure of a chemical
+substance, many physical and chemical properties can be predicted by first-principles calculations
+or machine learning models. Since it is relatively easy to generate a hypothetical chemically valid
+formula, crystal structure prediction becomes an important method for discovering new materials.
+In our previous work, we proposed a contact map-based crystal structure prediction method, which
+uses global optimization algorithms such as genetic algorithms to maximize the match between the
+contact map of the predicted structure and the contact map of the real crystal structure to search
+for the coordinates at the Wyckoff Positions(WP). However, when predicting the crystal structure
+with high symmetry, we found that the global optimization algorithm has difficulty to find an effective
+combination of WPs that satisfies the chemical formula, which is mainly caused by the inconsistency
+between the dimensionality of the contact map of the predicted crystal structure and the dimensionality
+of the contact map of the target crystal structure. This makes it challenging to predict the crystal
+structures of high-symmetry crystals. In order to solve this problem, here we propose to use PyXtal
+to generate and filter random crystal structures with given symmetry constraints based on the information
+such as chemical formulas and space groups. With contact map as the optimization goal, we use differential
+evolution algorithms to search for non-special coordinates at the Wyckoff positions to realize
+the structure prediction of high-symmetry crystal materials. Our experimental results show that
+our proposed algorithm CMCrystalHS can effectively solve the problem of inconsistent contact
+map dimensions and predict the crystal structures with high symmetry. 

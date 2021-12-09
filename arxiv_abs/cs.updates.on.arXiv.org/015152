@@ -1,0 +1,18 @@
+In cryptocurrencies, the block reward is meant to serve as the incentive mechanism for miners to
+commit resources to create blocks and in effect secure the system. Existing systems primarily divide
+the reward in proportion to expended resources and follow one of two static models for total block
+reward: (i) a fixed reward for each block (e.g., Ethereum), or (ii) one where the block reward halves
+every set number of blocks (e.g., the Bitcoin model of halving roughly every 4 years) but otherwise
+remains fixed between halvings. In recent work, a game-theoretic analysis of the static model under
+asymmetric miner costs showed that an equilibrium always exists and is unique. Their analysis also
+reveals how asymmetric costs can lead to large-scale centralization in blockchain mining, a phenomenon
+that has been observed in Bitcoin and Ethereum and highlighted by other studies. In this work we introduce
+a novel family of mining reward functions, HaPPY-Mine (HAsh-Pegged Proportional Yield), which
+peg the value of the reward to the hashrate of the system, decreasing the reward as the hashrate increases.
+HaPPY-Mine distributes rewards in proportion to expended hashrate and inherits the safety properties
+of the generalized proportional reward function. We study HaPPY-Mine under a heterogeneous miner
+cost model and show that an equilibrium always exists with a unique set of miner participants and
+a unique total hashrate. Significantly, we prove that a HaPPY-Mine equilibrium is more decentralized
+than the static model equilibrium under a set of metrics including number of mining participants
+and hashrate distribution. Finally, we show that any HaPPY-Mine equilibrium is also safe against
+collusion and sybil attacks, and explore how the market value of the currency affects the equilibrium.

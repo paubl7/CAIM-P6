@@ -1,0 +1,19 @@
+In this paper, we extend the unified gas-kinetic wave-particle (UGKWP) method to the multi-species
+gas mixture and multiscale plasma transport. The construction of the scheme is based on the direct
+modeling on the mesh size and time step scales, and the local cell's Knudsen number determines the
+flow physics. The proposed scheme has the multiscale and asymptotic complexity diminishing properties.
+The multiscale property means that according to cell's Knudsen number the scheme can capture the
+non-equilibrium flow physics in the rarefied flow regime, and preserve the asymptotic Euler, Navier-Stokes,
+and magnetohydrodynamics limit in the continuum regime. The asymptotic complexity diminishing
+property means that the total degree of freedom of the scheme automatically decreases as cell's
+Knudsen number decreases. In the continuum regime, the scheme automatically degenerates from
+a kinetic solver to a hydrodynamic solver. In UGKWP, the evolution of microscopic velocity distribution
+is coupled with the evolution of macroscopic variables, and the particle evolution as well as the
+macroscopic fluxes are modeled from the time accumulating solution up to a time step scale from the
+kinetic model equation. For plasma transport, current scheme provides a smooth transition from
+particle in cell (PIC) method in the rarefied regime to the magnetohydrodynamic (MHD) solver in
+the continuum regime. In the continuum limit, the cell size and time step of the UGKWP method is not
+restricted to be less than the mean free path and mean collision time. In the highly magnetized regime,
+the cell size and time step are not restricted by the Debye length and plasma cyclotron period. The
+multiscale and asymptotic complexity diminishing properties of the scheme are verified by numerical
+tests in multiple flow regimes. 

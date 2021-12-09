@@ -1,0 +1,23 @@
+Context: Static Application Security Testing (SAST) and Runtime Application Security Protection
+(RASP) are important and complementary techniques used for detecting and enforcing application-level
+security policies in web applications. Inquiry: The current state of the art, however, does not
+allow a safe and efficient combination of SAST and RASP based on a shared set of security policies,
+forcing developers to reimplement and maintain the same policies and their enforcement code in
+both tools. Approach: In this work, we present a novel technique for deriving SAST from an existing
+RASP mechanism by using a two-phase abstract interpretation approach in the SAST component that
+avoids duplicating the effort of specifying security policies and implementing their semantics.
+The RASP mechanism enforces security policies by instrumenting a base program to trap security-relevant
+operations and execute the required policy enforcement code. The static analysis of security policies
+is then obtained from the RASP mechanism by first statically analyzing the base program without
+any traps. The results of this first phase are used in a second phase to detect trapped operations
+and abstractly execute the associated and unaltered RASP policy enforcement code. Knowledge:
+Splitting the analysis into two phases enables running each phase with a specific analysis configuration,
+rendering the static analysis approach tractable while maintaining sufficient precision. Grounding:
+We validate the applicability of our two-phase analysis approach by using it to both dynamically
+enforce and statically detect a range of security policies found in related work. Our experiments
+suggest that our two-phase analysis can enable faster and more precise policy violation detection
+compared to analyzing the full instrumented application under a single analysis configuration.
+Importance: Deriving a SAST component from a RASP mechanism enables equivalent semantics for the
+security policies across the static and dynamic contexts in which policies are verified during
+the software development lifecycle. Moreover, our two-phase abstract interpretation approach
+does not require RASP developers to reimplement the enforcement code for static analysis. 

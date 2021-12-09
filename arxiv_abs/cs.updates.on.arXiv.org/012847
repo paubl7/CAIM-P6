@@ -1,0 +1,19 @@
+The number of nodes of a network, called its size, and the largest distance between nodes of a network,
+called its diameter, are among the most important network parameters. Knowing the size and/or diameter
+is a prerequisite of many distributed network algorithms. A radio network is a collection of nodes,
+with wireless transmission and receiving capabilities. It is modeled as a simple undirected graph
+whose nodes communicate in synchronous rounds. In each round, a node can either transmit a message
+to all its neighbors, or stay silent and listen. At the receiving end, a node $v$ hears a message from
+a neighbor $w$ in a round $i$, if $v$ listens in round $i$, and if $w$ is its only neighbor that transmits
+in round $i$. If $v$ listens in a round, and multiple neighbors of $v$ transmit in this round, a collision
+occurs at $v$. If $v$ transmits in a round, it does not hear anything. If listening nodes can distinguish
+collision from silence, we say that the network has collision detection capability, otherwise
+there is no collision detection. We consider the tasks of size discovery and diameter discovery:
+finding the size (resp. the diameter) of an unknown radio network with collision detection. All
+nodes have to output the size (resp. the diameter) of the network, using a deterministic algorithm.
+Nodes have labels which are binary strings. The length of a labeling scheme is the largest length
+of a label. We concentrate on the following problems: 1. What is the shortest labeling scheme that
+permits size discovery in all radio networks of maximum degree $\Delta$? 2. What is the shortest
+labeling scheme that permits diameter discovery in all radio networks? We show that the minimum
+length of a labeling scheme that permits size discovery is $\Theta(\log\log \Delta)$. By contrast,
+we show that diameter discovery can be done using a labeling scheme of constant length. 

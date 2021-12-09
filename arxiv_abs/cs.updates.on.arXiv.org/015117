@@ -1,0 +1,18 @@
+High quality method names are descriptive and readable, which are helpful for code development
+and maintenance. The majority of recent research suggest method names based on the text summarization
+approach. They take the token sequence and abstract syntax tree of the source code as input, and generate
+method names through a powerful neural network based model. However, the tokens composing the method
+name are closely related to the entity name within its method implementation. Actually, high proportions
+of the tokens in method name can be found in its corresponding method implementation, which makes
+it possible for incorporating these common shared token information to improve the performance
+of method naming task. Inspired by this key observation, we propose a two-stage keywords guided
+method name generation approach to suggest method names. Specifically, we decompose the method
+naming task into two subtasks, including keywords extraction task and method name generation task.
+For the keywords extraction task, we apply a graph neural network based model to extract the keywords
+from source code. For the method name generation task, we utilize the extracted keywords to guide
+the method name generation model. We apply a dual selective gate in encoder to control the information
+flow, and a dual attention mechanism in decoder to combine the semantics of input code sequence and
+keywords. Experiment results on an open source dataset demonstrate that keywords guidance can
+facilitate method naming task, which enables our model to outperform the competitive state-of-the-art
+models by margins of 1.5\%-3.5\% in ROUGE metrics. Especially when programs share one common token
+with method names, our approach improves the absolute ROUGE-1 score by 7.8\%. 

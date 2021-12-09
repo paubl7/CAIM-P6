@@ -1,0 +1,18 @@
+Effective, robust and automatic tools for brain tumor segmentation are needed for extraction of
+information useful in treatment planning. In recent years, convolutional neural networks have
+shown state-of-the-art performance in the identification of tumor regions in magnetic resonance
+(MR) images. Context-aware artificial intelligence is an emerging concept for the development
+of deep learning applications for computer-aided medical image analysis. A large portion of the
+current research is devoted to the development of new network architectures to improve segmentation
+accuracy by using context-aware mechanisms. In this work it is investigated if the addition of contextual
+information from the brain anatomy in the form of white matter (WM), gray matter (GM) and cerebrospinal
+fluid (CSF) masks and probability maps improves U-Net based brain tumor segmentation. The BraTS2020
+dataset was used to train and test two standard 3D U-Net (nnU-Net) models that, in addition to the
+conventional MR image modalities, used the contextual information as extra channels. For comparison,
+a baseline model that only used the conventional MR image modalities was also trained. Median (mean)
+Dice scores of 89.3 (79.9), 89.5 (83.0) and 90.16 (80.9) were obtained on the test dataset for the
+baseline model, the contextual model using binary masks and the model using probability maps, respectively.
+Results show that there is no statistically significant difference when comparing Dice scores
+between the baseline model and the contextual information models on the test dataset (p>0.05).
+In conclusion, there is no significant improvement in segmentation performance when using contextual
+information in the form of either WM, GM and CFS masks or probability maps as extra channels. 

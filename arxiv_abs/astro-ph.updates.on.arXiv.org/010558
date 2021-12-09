@@ -1,0 +1,19 @@
+We present a catalog of quasars, their photometric redshifts, and redshift uncertainties derived
+from the Kilo-Degree Survey (KiDS) Data Release 4. We train machine learning (ML) models using optical
+ugri and near-infrared ZYJHKs bands, on objects known from SDSS spectroscopy. In 45 million objects
+of the KiDS data limited to 9-band detections, we define inference subsets based on a feature space
+built from magnitudes, their combinations, and shape classifiers. We show that projections of
+a feature space on two dimensions can be successfully used instead of the standard color-color plots,
+to support the process of building a catalog. The model testing employs two subsets of objects: randomly
+selected and the faintest ones, which allows us to properly fit the bias vs. variance trade-off.
+We test three ML models and find that XGBoost is the most robust for classification, while Artificial
+Neural Networks (ANN) are the best for combined classification and redshift. The catalog is tested
+using number counts and Gaia parallaxes. Based on these tests, we calibrate the purity vs. completeness
+trade-off with minimum classification probability for quasar candidates: p(QSO_cand)>0.9 for
+the safe inference subset at r<22, and p(QSO_cand)>0.98 for the reliable extrapolation at 22<r<23.5.
+These cuts provide 158,000 and 185,000 quasar candidates respectively. Test-data purity equals
+97%, completeness is 94%, the latter dropping by 3% in the extrapolation to data fainter by one magnitude
+than the training set. Test-data redshift error (mean and scatter) equals 0.009 +/- 0.12 in the safe
+subset, and -0.0004 +/- 0.19 in the extrapolation, averaged over redshift range 0.14<z<3.63. Our
+success of the extrapolation challenges the way that models are optimized and applied at the faint
+data end. The resulting catalog is ready for cosmological and Active Galactic Nucleus (AGN) analysis.

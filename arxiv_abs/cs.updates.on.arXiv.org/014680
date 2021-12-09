@@ -1,0 +1,20 @@
+A Boolean constraint satisfaction problem (CSP), Max-CSP$(f)$, is a maximization problem specified
+by a constraint $f:\{-1,1\}^k\to\{0,1\}$. An instance of the problem consists of $m$ constraint
+applications on $n$ Boolean variables, where each constraint application applies the constraint
+to $k$ literals chosen from the $n$ variables and their negations. The goal is to compute the maximum
+number of constraints that can be satisfied by a Boolean assignment to the $n$~variables. In the
+$(\gamma,\beta)$-approximation version of the problem for parameters $\gamma \geq \beta \in
+[0,1]$, the goal is to distinguish instances where at least $\gamma$ fraction of the constraints
+can be satisfied from instances where at most $\beta$ fraction of the constraints can be satisfied.
+In this work we completely characterize the approximability of all Boolean CSPs in the streaming
+model. Specifically, given $f$, $\gamma$ and $\beta$ we show that either (1) the $(\gamma,\beta)$-approximation
+version of Max-CSP$(f)$ has a probabilistic streaming algorithm using $O(\log n)$ space, or (2)
+for every $\varepsilon > 0$ the $(\gamma-\varepsilon,\beta+\varepsilon)$-approximation version
+of Max-CSP$(f)$ requires $\Omega(\sqrt{n})$ space for probabilistic streaming algorithms.
+Previously such a separation was known only for $k=2$. We stress that for $k=2$, there are only finitely
+many distinct problems to consider. Our positive results show wider applicability of bias-based
+algorithms used previously by [Guruswami-Velingker-Velusamy APPROX'17], [Chou-Golovnev-Velusamy
+FOCS'20] by giving a systematic way to explore biases. Our negative results combine the Fourier
+analytic methods of [Kapralov-Khanna-Sudan SODA'15], which we extend to a wider class of CSPs,
+with a rich collection of reductions among communication complexity problems that lie at the heart
+of the negative results. 

@@ -1,0 +1,19 @@
+To inhibit the spread of rumorous information and its severe consequences, traditional fact checking
+aims at retrieving relevant evidence to verify the veracity of a given claim. Fact checking methods
+typically use knowledge graphs (KGs) as external repositories and develop reasoning mechanism
+to retrieve evidence for verifying the triple claim. However, existing methods only focus on verifying
+a single claim. As real-world rumorous information is more complex and a textual statement is often
+composed of multiple clauses (i.e. represented as multiple claims instead of a single one), multiclaim
+fact checking is not only necessary but more important for practical applications. Although previous
+methods for verifying a single triple can be applied repeatedly to verify multiple triples one by
+one, they ignore the contextual information implied in a multi-claim statement and could not learn
+the rich semantic information in the statement as a whole. In this paper, we propose an end-to-end
+knowledge enhanced learning and verification method for multi-claim fact checking. Our method
+consists of two modules, KG-based learning enhancement and multi-claim semantic composition.
+To fully utilize the contextual information, the KG-based learning enhancement module learns
+the dynamic context-specific representations via selectively aggregating relevant attributes
+of entities. To capture the compositional semantics of multiple triples, the multi-claim semantic
+composition module constructs the graph structure to model claim-level interactions, and integrates
+global and salient local semantics with multi-head attention. Experimental results on a real-world
+dataset and two benchmark datasets show the effectiveness of our method for multi-claim fact checking
+over KG. 

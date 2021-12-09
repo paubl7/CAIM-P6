@@ -1,0 +1,20 @@
+Memristive crossbars suffer from non-idealities (such as, sneak paths) that degrade computational
+accuracy of the Deep Neural Networks (DNNs) mapped onto them. A 1T-1R synapse, adding a transistor
+(1T) in series with the memristive synapse (1R), has been proposed to mitigate such non-idealities.
+We observe that the non-linear characteristics of the transistor affect the overall conductance
+of the 1T-1R cell which in turn affects the Matrix-Vector-Multiplication (MVM) operation in crossbars.
+This 1T-1R non-ideality arising from the input voltage-dependent non-linearity is not only difficult
+to model or formulate, but also causes a drastic performance degradation of DNNs when mapped onto
+crossbars. In this paper, we analyse the non-linearity of the 1T-1R crossbar and propose a novel
+Non-linearity Aware Training (NEAT) method to address the non-idealities. Specifically, we first
+identify the range of network weights, which can be mapped into the 1T-1R cell within the linear operating
+region of the transistor. Thereafter, we regularize the weights of the DNNs to exist within the linear
+operating range by using iterative training algorithm. Our iterative training significantly
+recovers the classification accuracy drop caused by the non-linearity. Moreover, we find that
+each layer has a different weight distribution and in turn requires different gate voltage of transistor
+to guarantee linear operation. Based on this observation, we achieve energy efficiency while preserving
+classification accuracy by applying heterogeneous gate voltage control to the 1T-1R cells across
+different layers. Finally, we conduct various experiments on CIFAR10 and CIFAR100 benchmark datasets
+to demonstrate the effectiveness of our non-linearity aware training. Overall, NEAT yields ~20%
+energy gain with less than 1% accuracy loss (with homogeneous gate control) when mapping ResNet18
+networks on 1T-1R crossbars. 

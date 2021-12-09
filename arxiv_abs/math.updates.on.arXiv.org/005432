@@ -1,0 +1,18 @@
+This article is motivated by studying multisensory effects on brain activities in intracranial
+electroencephalography (iEEG) experiments. Differential brain activities to multisensory
+stimulus presentations are zero in most regions and non-zero in some local regions, yielding locally
+sparse functions. Such studies are essentially a function-on-scalar regression problem, with
+interest being focused not only on estimating nonparametric functions but also on recovering the
+function supports. We propose a weighted group bridge approach for simultaneous function estimation
+and support recovery in function-on-scalar mixed effect models, while accounting for heterogeneity
+present in functional data. We use B-splines to transform sparsity of functions to its sparse vector
+counterpart of increasing dimension, and propose a fast non-convex optimization algorithm using
+nested alternative direction method of multipliers (ADMM) for estimation. Large sample properties
+are established. In particular, we show that the estimated coefficient functions are rate optimal
+in the minimax sense under the $L_2$ norm and resemble a phase transition phenomenon. For support
+estimation, we derive a convergence rate under the $L_{\infty}$ norm that leads to a sparsistency
+property under $\delta$-sparsity, and provide a simple sufficient regularity condition under
+which a strict sparsistency property is established. An adjusted extended Bayesian information
+criterion is proposed for parameter tuning. The developed method is illustrated through simulation
+and an application to a novel iEEG dataset to study multisensory integration. We integrate the proposed
+method into RAVE, an R package that gains increasing popularity in the iEEG community. 

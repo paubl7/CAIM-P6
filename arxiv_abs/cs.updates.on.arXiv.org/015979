@@ -1,0 +1,19 @@
+Under increasing economic and environmental pressure, airlines are constantly seeking new technologies
+and optimizing flight operations to reduce fuel consumption. However, the current practice on
+fuel loading, which has a significant impact on aircraft weight and fuel consumption, has yet to
+be thoroughly addressed by existing studies. Excess fuel is loaded by dispatchers and (or) pilots
+to handle fuel consumption uncertainties, primarily caused by flight time uncertainties, which
+cannot be predicted by current Flight Planning Systems. In this paper, we develop a novel spatial
+weighted recurrent neural network model to provide better flight time predictions by capturing
+air traffic information at a national scale based on multiple data sources, including Automatic
+Dependent Surveillance-Broadcast, Meteorological Aerodrome Reports, and airline records.
+In this model, a spatial weighted layer is designed to extract spatial dependences among network
+delay states. Then, a new training procedure associated with the spatial weighted layer is introduced
+to extract OD-specific spatial weights. Long short-term memory networks are used to extract the
+temporal behavior patterns of network delay states. Finally, features from delays, weather, and
+flight schedules are fed into a fully connected neural network to predict the flight time of a particular
+flight. The proposed model was evaluated using one year of historical data from an airline's real
+operations. Results show that our model can provide more accurate flight time predictions than
+baseline methods, especially for flights with extreme delays. We also show that, with the improved
+flight time prediction, fuel loading can be optimized and resulting in reduced fuel consumption
+by 0.016%-1.915% without increasing the fuel depletion risk. 

@@ -1,0 +1,18 @@
+Collaborative learning, which enables collaborative and decentralized training of deep neural
+networks at multiple institutions in a privacy-preserving manner, is rapidly emerging as a valuable
+technique in healthcare applications. However, its distributed nature often leads to significant
+heterogeneity in data distributions across institutions. Existing collaborative learning approaches
+generally do not account for the presence of heterogeneity in data among institutions, or only mildly
+skewed label distributions are studied. In this paper, we present a novel generative replay strategy
+to address the challenge of data heterogeneity in collaborative learning methods. Instead of directly
+training a model for task performance, we leverage recent image synthesis techniques to develop
+a novel dual model architecture: a primary model learns the desired task, and an auxiliary "generative
+replay model" either synthesizes images that closely resemble the input images or helps extract
+latent variables. The generative replay strategy is flexible to use, can either be incorporated
+into existing collaborative learning methods to improve their capability of handling data heterogeneity
+across institutions, or be used as a novel and individual collaborative learning framework (termed
+FedReplay) to reduce communication cost. Experimental results demonstrate the capability of
+the proposed method in handling heterogeneous data across institutions. On highly heterogeneous
+data partitions, our model achieves ~4.88% improvement in the prediction accuracy on a diabetic
+retinopathy classification dataset, and ~49.8% reduction of mean absolution value on a Bone Age
+prediction dataset, respectively, compared to the state-of-the art collaborative learning methods.

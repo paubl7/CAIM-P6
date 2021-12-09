@@ -1,0 +1,19 @@
+The novel Coronavirus disease (COVID-19) is a highly contagious virus and has spread all over the
+world, posing an extremely serious threat to all countries. Automatic lung infection segmentation
+from computed tomography (CT) plays an important role in the quantitative analysis of COVID-19.
+However, the major challenge lies in the inadequacy of annotated COVID-19 datasets. Currently,
+there are several public non-COVID lung lesion segmentation datasets, providing the potential
+for generalizing useful information to the related COVID-19 segmentation task. In this paper,
+we propose a novel relation-driven collaborative learning model to exploit shared knowledge from
+non-COVID lesions for annotation-efficient COVID-19 CT lung infection segmentation. The model
+consists of a general encoder to capture general lung lesion features based on multiple non-COVID
+lesions, and a target encoder to focus on task-specific features based on COVID-19 infections.
+Features extracted from the two parallel encoders are concatenated for the subsequent decoder
+part. We develop a collaborative learning scheme to regularize feature-level relation consistency
+of given input and encourage the model to learn more general and discriminative representation
+of COVID-19 infections. Extensive experiments demonstrate that trained with limited COVID-19
+data, exploiting shared knowledge from non-COVID lesions can further improve state-of-the-art
+performance with up to 3.0% in dice similarity coefficient and 4.2% in normalized surface dice.
+Our proposed method promotes new insights into annotation-efficient deep learning for COVID-19
+infection segmentation and illustrates strong potential for real-world applications in the global
+fight against COVID-19 in the absence of sufficient high-quality annotations. 

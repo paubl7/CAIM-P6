@@ -1,0 +1,20 @@
+Since the seminal work of Venkatakrishnan et al. (2013), Plug & Play (PnP) methods have become ubiquitous
+in Bayesian imaging. These methods derive Minimum Mean Square Error (MMSE) or Maximum A Posteriori
+(MAP) estimators for inverse problems in imaging by combining an explicit likelihood function
+with a prior that is implicitly defined by an image denoising algorithm. The PnP algorithms proposed
+in the literature mainly differ in the iterative schemes they use for optimisation or for sampling.
+In the case of optimisation schemes, some recent works guarantee the convergence to a fixed point,
+albeit not necessarily a MAP estimate. In the case of sampling schemes, to the best of our knowledge,
+there is no known proof of convergence. There also remain important open questions regarding whether
+the underlying Bayesian models and estimators are well defined, well-posed, and have the basic
+regularity properties required to support these numerical schemes. To address these limitations,
+this paper develops theory, methods, and provably convergent algorithms for performing Bayesian
+inference with PnP priors. We introduce two algorithms: 1) PnP-ULA (Unadjusted Langevin Algorithm)
+for Monte Carlo sampling and MMSE inference; and 2) PnP-SGD (Stochastic Gradient Descent) for MAP
+inference. Using recent results on the quantitative convergence of Markov chains, we establish
+detailed convergence guarantees for these two algorithms under realistic assumptions on the denoising
+operators used, with special attention to denoisers based on deep neural networks. We also show
+that these algorithms approximately target a decision-theoretically optimal Bayesian model
+that is well-posed. The proposed algorithms are demonstrated on several canonical problems such
+as image deblurring, inpainting, and denoising, where they are used for point estimation as well
+as for uncertainty visualisation and quantification. 

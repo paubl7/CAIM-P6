@@ -1,0 +1,20 @@
+Convolutional neural networks (CNN) have been widely used for boosting the performance of many
+machine intelligence tasks. However, the CNN models are usually computationally intensive and
+energy consuming, since they are often designed with numerous multiply-operations and considerable
+parameters for the accuracy reason. Thus, it is difficult to directly apply them in the resource-constrained
+environments such as 'Internet of Things' (IoT) devices and smart phones. To reduce the computational
+complexity and energy burden, here we present a novel minimalist hardware architecture using adder
+convolutional neural network (AdderNet), in which the original convolution is replaced by adder
+kernel using only additions. To maximally excavate the potential energy consumption, we explore
+the low-bit quantization algorithm for AdderNet with shared-scaling-factor method, and we design
+both specific and general-purpose hardware accelerators for AdderNet. Experimental results
+show that the adder kernel with int8/int16 quantization also exhibits high performance, meanwhile
+consuming much less resources (theoretically ~81% off). In addition, we deploy the quantized AdderNet
+on FPGA (Field Programmable Gate Array) platform. The whole AdderNet can practically achieve 16%
+enhancement in speed, 67.6%-71.4% decrease in logic resource utilization and 47.85%-77.9% decrease
+in power consumption compared to CNN under the same circuit architecture. With a comprehensive
+comparison on the performance, power consumption, hardware resource consumption and network
+generalization capability, we conclude the AdderNet is able to surpass all the other competitors
+including the classical CNN, novel memristor-network, XNOR-Net and the shift-kernel based network,
+indicating its great potential in future high performance and energy-efficient artificial intelligence
+applications. 

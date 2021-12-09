@@ -1,0 +1,20 @@
+Overlapped community detection in social networks has become an important research area with the
+increasing popularity and complexity of the networks. Most of the existing solutions are either
+centralized or parallel algorithms, which are computationally intensive - require complete knowledge
+of the entire networks. But it isn't easy to collect entire network data because the size of the actual
+networks may be prohibitively large. This may be a result of either privacy concerns or technological
+impediments. Performing in-network computation solves both problems utilizing the computational
+capability of the individual nodes of the network. Simultaneously, nodes communicate and share
+data with their neighbors via message passing, which may go a long way toward mitigating individual
+nodes' privacy concerns in the network. All the aforementioned concerns motivated us to design
+a decentralized or distributed technique to detect overlapped communities in a large-scale network.
+It is desirable because this technique does not offer a single point of failure, and the system as
+a whole can continue to function even when many of the nodes fail. In this paper, we address the overlapped
+community detection problem for large-scale networks. We present an efficient distributed algorithm,
+named DOCD, to identify the overlapped communities in the network. The DOCD algorithm's efficiency
+is verified with extensive simulation study on real network data such as Dolphin, Zachary karate
+club, Football club, and Facebook ego networks. We show that DOCD algorithm is capable of keeping
+the asymptotically same results with the existing classical centralized algorithms in terms of
+community modularity and the number of identified communities. The DOCD algorithm can also efficiently
+identify the overlapped nodes and overlapped communities with a small number of rounds of communication
+and computation. 

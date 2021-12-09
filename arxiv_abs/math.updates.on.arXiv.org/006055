@@ -1,0 +1,18 @@
+This work aims to interpolate parametrized Reduced Order Model (ROM) basis constructed via the
+Proper Orthogonal Decomposition (POD) to derive a robust ROM of the system's dynamics for an unseen
+target parameter value. A novel non-intrusive Space-Time (ST) POD basis interpolation scheme
+is proposed, for which we define ROM spatial and temporal basis \emph{curves on compact Stiefel
+manifolds}. An interpolation is finally defined on a \emph{mixed part} encoded in a square matrix
+directly deduced using the space part, the singular values and the temporal part, to obtain an interpolated
+snapshot matrix, keeping track of accurate space and temporal eigenvectors. Moreover, in order
+to establish a well-defined curve on the compact Stiefel manifold, we introduce a new procedure,
+the so-called oriented SVD. Such an oriented SVD produces unique right and left eigenvectors for
+generic matrices, for which all singular values are distinct. It is important to notice that the
+ST POD basis interpolation does not require the construction and the subsequent solution of a reduced-order
+FEM model as classically is done. Hence it is avoiding the bottleneck of standard POD interpolation
+which is associated with the evaluation of the nonlinear terms of the Galerkin projection on the
+governing equations. As a proof of concept, the proposed method is demonstrated with the adaptation
+of rigid-thermoviscoplastic finite element ROMs applied to a typical nonlinear open forging metal
+forming process. Strong correlations of the ST POD models with respect to their associated high-fidelity
+FEM counterpart simulations are reported, highlighting its potential use for near real-time parametric
+simulations using off-line computed ROM POD databases. 

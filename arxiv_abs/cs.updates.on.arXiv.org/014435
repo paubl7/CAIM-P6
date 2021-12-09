@@ -1,0 +1,19 @@
+With the prosperity of mobile apps, quality assurance of mobile apps becomes crucially important.
+Automated mobile User Interface (UI) testing had arisen as a key technique for app quality assurance.
+However, despite years of efforts, existing mobile UI testing techniques still cannot achieve
+high code coverage, especially for industrial-quality apps. To substantially improve the efficacy
+of mobile UI testing, we investigate state-of-the-art techniques and find a fundamental limitation--each
+testing technique attempts to apply one predefined strategy to explore the UI space of all mobile
+apps. However, we observe that different UI design characteristics require customized UI exploration
+strategies in practice. With this finding in mind, in this paper, we propose a new direction for mobile
+UI testing--automatic customization of UI exploration strategies for each app under test. As a
+first step in this direction, we target ineffective exploration behavior, which refers to cases
+where UI testing tools fail to make progress effectively. We present Vet as a general framework for
+applying the idea of trace analysis on UI testing history to identify ineffective exploration behavior
+for a given UI testing tool on a given app. Vet embraces specialized algorithms for speculating subsequences
+in the trace that manifest ineffective exploration behavior of UI space exploration. Vet then enables
+enhancing the testing tool by guiding the exploration to avoid ineffective exploration. We evaluate
+Vet by applying it to three state-of-the-art Android UI testing tools. Vet locates ineffective
+exploration behaviors that reveal various tool-app applicability issues hindering testing efficacy.
+Vet automatically fixes the applicability issues and achieves up to 46.8% code coverage relative
+improvements on 11 of 15 industrial-quality apps under evaluation. 

@@ -1,0 +1,18 @@
+Objective: Currently, only behavioral speech understanding tests are available, which require
+active participation of the person. As this is infeasible for certain populations, an objective
+measure of speech intelligibility is required. Recently, brain imaging data has been used to establish
+a relationship between stimulus and brain response. Linear models have been successfully linked
+to speech intelligibility but require per-subject training. We present a deep-learning-based
+model incorporating dilated convolutions that can be used to predict speech intelligibility without
+subject-specific (re)training. Methods: We evaluated the performance of the model as a function
+of input segment length, EEG frequency band and receptive field size while comparing it to a baseline
+model. Next, we evaluated performance on held-out data and finetuning. Finally, we established
+a link between the accuracy of our model and the state-of-the-art behavioral MATRIX test. Results:
+The model significantly outperformed the baseline for every input segment length (p$\leq10^{-9}$),
+for all EEG frequency bands except the theta band (p$\leq0.001$) and for receptive field sizes larger
+than 125 ms (p$\leq0.05$). Additionally, finetuning significantly increased the accuracy (p$\leq0.05$)
+on a held-out dataset. Finally, a significant correlation (r=0.59, p=0.0154) was found between
+the speech reception threshold estimated using the behavioral MATRIX test and our objective method.
+Conclusion: Our proposed dilated convolutional model can be used as a proxy for speech intelligibility.
+Significance: Our method is the first to predict the speech reception threshold from EEG for unseen
+subjects, contributing to objective measures of speech intelligibility. 

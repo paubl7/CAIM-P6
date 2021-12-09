@@ -1,0 +1,18 @@
+In our data world, a host of not necessarily trusted controllers gather data on individual subjects.
+To preserve her privacy and, more generally, her informational self-determination, the individual
+has to be empowered by giving her agency on her own data. Maximum agency is afforded by local anonymization,
+that allows each individual to anonymize her own data before handing them to the data controller.
+Randomized response (RR) is a local anonymization approach able to yield multi-dimensional full
+sets of anonymized microdata that are valid for exploratory analysis and machine learning. This
+is so because an unbiased estimate of the distribution of the true data of individuals can be obtained
+from their pooled randomized data. Furthermore, RR offers rigorous privacy guarantees. The main
+weakness of RR is the curse of dimensionality when applied to several attributes: as the number of
+attributes grows, the accuracy of the estimated true data distribution quickly degrades. We propose
+several complementary approaches to mitigate the dimensionality problem. First, we present two
+basic protocols, separate RR on each attribute and joint RR for all attributes, and discuss their
+limitations. Then we introduce an algorithm to form clusters of attributes so that attributes in
+different clusters can be viewed as independent and joint RR can be performed within each cluster.
+After that, we introduce an adjustment algorithm for the randomized data set that repairs some of
+the accuracy loss due to assuming independence between attributes when using RR separately on each
+attribute or due to assuming independence between clusters in cluster-wise RR. We also present
+empirical work to illustrate the proposed methods. 

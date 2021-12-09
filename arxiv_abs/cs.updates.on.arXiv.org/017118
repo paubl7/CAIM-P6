@@ -1,0 +1,19 @@
+Harnessing the power of dependently typed languages can be difficult. Programmers must manually
+construct proofs to produce well-typed programs, which is not an easy task. In particular, migrating
+code to these languages is challenging. Gradual typing can make dependently-typed languages easier
+to use by mixing static and dynamic checking in a principled way. With gradual types, programmers
+can incrementally migrate code to a dependently typed language. However, adding gradual types
+to dependent types creates a new challenge: mixing decidable type-checking and incremental migration
+in a full-featured language is a precarious balance. Programmers expect type-checking to terminate,
+but dependent type-checkers evaluate terms at compile time, which is problematic because gradual
+types can introduce non-termination into an otherwise terminating language. Steps taken to mitigate
+this non-termination must not jeopardize the smooth transitions between dynamic and static. We
+present a gradual dependently-typed language that supports inductive type families, has decidable
+type-checking, and provably supports smooth migration between static and dynamic, as codified
+by the refined criteria for gradual typing proposed by Siek et al. (2015). Like Eremondi et al. (2019),
+we use approximate normalization for terminating compile-time evaluation. Unlike Eremondi et
+al., our normalization does not require comparison of variables, allowing us to show termination
+with a syntactic model that accommodates inductive types. Moreover, we design a novel a technique
+for tracking constraints on type indices, so that dynamic constraint violations signal run-time
+errors eagerly. To facilitate these checks, we define an algebraic notion of gradual precision,
+axiomatizing certain semantic properties of gradual terms. 

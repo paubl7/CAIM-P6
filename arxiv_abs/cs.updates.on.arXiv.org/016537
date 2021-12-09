@@ -1,0 +1,18 @@
+Achieving high performance in many multi-server systems requires finding a good assignment of
+worker threads to servers and also effectively allocating each server's resources to its assigned
+threads. The assignment and allocation components of this problem have been studied extensively
+but largely separately in the literature. In this paper, we introduce the assign and allocate (AA)
+problem, which seeks to simultaneously find an assignment and allocation that maximizes the total
+utility of the threads. Assigning and allocating the threads together can result in substantially
+better overall utility than performing the steps separately, as is traditionally done. We model
+each thread by a utility function giving its performance as a function of its assigned resources.
+We first prove that the AA problem is NP-hard. We then present a $2 (\sqrt{2}-1) > 0.828$ factor approximation
+algorithm for concave utility functions, which runs in $O(mn^2 + n (\log mC)^2)$ time for $n$ threads
+and $m$ servers with $C$ amount of resources each. We also give a faster algorithm with the same approximation
+ratio and $O(n (\log mC)^2)$ time complexity. We then extend the problem to two more general settings.
+First, we consider threads with nonconcave utility functions, and give a 1/2 factor approximation
+algorithm. Next, we give an algorithm for threads using multiple types of resources, and show the
+algorithm achieves good empirical performance. We conduct extensive experiments to test the performance
+of our algorithms on threads with both synthetic and realistic utility functions, and find that
+they achieve over 92\% of the optimal utility on average. We also compare our algorithms with a number
+of practical heuristics, and find that our algorithms achieve up to 9 times higher total utility.

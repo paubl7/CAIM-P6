@@ -1,0 +1,18 @@
+For large-scale scientific simulations, it is expensive to store raw simulation results to perform
+post-analysis. To minimize expensive I/O, "in-situ" analysis is often used, where analysis applications
+are tightly coupled with scientific simulations and can access and process the simulation results
+in memory. Increasingly, scientific domains employ Big Data approaches to analyze simulations
+for scientific discoveries. However, it remains a challenge to organize, transform, and transport
+data at scale between the two semantically different ecosystems (HPC and Cloud systems). In an effort
+to address these challenges, we design and implement the ElasticBroker software framework, which
+bridges HPC and Cloud applications to form an "in-situ" scientific workflow. Instead of writing
+simulation results to parallel file systems, ElasticBroker performs data filtering, aggregation,
+and format conversions to close the gap between an HPC ecosystem and a distinct Cloud ecosystem.
+To achieve this goal, ElasticBroker reorganizes simulation snapshots into continuous data streams
+and send them to the Cloud. In the Cloud, we deploy a distributed stream processing service to perform
+online data analysis. In our experiments, we use ElasticBroker to setup and execute a cross-ecosystem
+scientific workflow, which consists of a parallel computational fluid dynamics (CFD) simulation
+running on a supercomputer, and a parallel dynamic mode decomposition (DMD) analysis application
+running in a Cloud computing platform. Our results show that running scientific workflows consisting
+of decoupled HPC and Big Data jobs in their native environments with ElasticBroker, can achieve
+high quality of service, good scalability, and provide high-quality analytics for ongoing simulations.

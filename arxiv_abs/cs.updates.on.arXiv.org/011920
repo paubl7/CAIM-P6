@@ -1,0 +1,19 @@
+New security and privacy concerns arise due to the growing popularity of voice assistant (VA) deployments
+in home and enterprise networks. A number of past research results have demonstrated how malicious
+actors can use hidden commands to get VAs to perform certain operations even when a person may be in
+their vicinity. However, such work has not explored how compromised computers that are close to
+VAs can leverage the phone channel to exfiltrate data with the help of VAs. After characterizing
+the communication channel that is set up by commanding a VA to make a call to a phone number, we demonstrate
+how malware can encode data into audio and send it via the phone channel. Such an attack, which can
+be crafted remotely, at scale and at low cost, can be used to bypass network defenses that may be deployed
+against leakage of sensitive data. We use Dual-Tone Multi-Frequency tones to encode arbitrary
+binary data into audio that can be played over computer speakers and sent through a VA mediated phone
+channel to a remote system. We show that modest amounts of data can be transmitted with high accuracy
+with a short phone call lasting a few minutes. This can be done while making the audio nearly inaudible
+for most people by modulating it with a carrier with frequencies that are near the higher end of the
+human hearing range. Several factors influence the data transfer rate, including the distance
+between the computer and the VA, the ambient noise that may be present and the frequency of modulating
+carrier. With the help of a prototype built by us, we experimentally assess the impact of these factors
+on data transfer rates and transmission accuracy. Our results show that voice assistants in the
+vicinity of computers can pose new threats to data stored on such computers. These threats are not
+addressed by traditional host and network defenses. We briefly discuss possible mitigation ways.

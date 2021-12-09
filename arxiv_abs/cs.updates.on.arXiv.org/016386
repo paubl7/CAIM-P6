@@ -1,0 +1,19 @@
+We study the problems of counting the homomorphisms, counting the copies, and counting the induced
+copies of a $k$-vertex graph $H$ in a $d$-degenerate $n$-vertex graph $G$. Our main result establishes
+exhaustive and explicit complexity classifications for counting subgraphs and induced subgraphs.
+We show that the (not necessarily induced) copies of $H$ in $G$ can be counted in time $f(k,d)\cdot
+n^{\max(\mathsf{imn}(H),1)}\cdot \log n$, where $f$ is some computable function and $\mathsf{imn}(H)$
+is the size of the largest induced matching of $H$. Whenever the class of allowed patterns has unbounded
+induced matching number, this algorithm is essentially optimal: Unless the Exponential Time Hypothesis
+(ETH) fails, there is no algorithm running in time $f(k,d)\cdot n^{o(\mathsf{imn}(H)/\log \mathsf{imn}(H))}$
+for any function $f$. In case of counting induced subgraphs, we obtain a similar classification
+along the independence number $\alpha$: we can count the induced copies of $H$ in $G$ in time $f(k,d)\cdot
+n^{\alpha(H)}\cdot \log n$, and if the class of allowed patterns has unbounded independence number,
+an algorithm running in time $f(k,d)\cdot n^{o(\alpha(H)/\log \alpha(H))}$ is impossible, unless
+ETH fails. In the language of parameterized complexity, our results yield dichotomies in fixed-parameter
+tractable and $\#\mathsf{W}[1]$-hard cases if we parameterize by the size of the pattern and the
+degeneracy of the host graph. Our results imply that several patterns cannot be counted in time $f(k,d)\cdot
+n^{o(k/\log k)}$, including $k$-matchings, $k$-independent sets, (induced) $k$-paths, (induced)
+$k$-cycles, and induced $(k,k)$-bicliques, unless ETH fails. Those lower bounds for exact counting
+are complemented with new algorithms for approximate counting of subgraphs and induced subgraphs
+in degenerate graphs. 

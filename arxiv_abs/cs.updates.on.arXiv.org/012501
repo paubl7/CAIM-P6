@@ -1,0 +1,20 @@
+Hyperledger Fabric is a prominent and flexible solution for building permissioned distributed
+ledger platforms. It supports modular consensus protocols, which allows for selecting distinct
+trust models and performance trade-offs. Access control and identity management intrinsically
+relies on credentials issued by a certificate authority (CA) of a Membership Service Provider (MSP),
+which in turn is under a root CA that can be instantiated as aFabric-CA or an external CA. The default
+MSP instantiation relies on the Blockchain Cryptographic Service Provider interface (BCCSP),
+which only handles standard PKI methods for authentication, accommodating basically RSA and ECDSA
+classical signatures. Also, MSP-issued credentials use only a single signature scheme, making
+the credential-related functions highly attached to single classical standard primitives. Unfortunately,
+it is well-known that RSA and ECDSA are vulnerable to quantum attacks and an ongoing post-quantum
+standardization process run by NIST aims to identify quantum-safe drop-in replacements for such
+cryptographic primitives in a few years. In this paper, we propose a redesign of the credential-management
+procedures and related specifications in order to incorporate hybrid digital signatures (i.e.,
+protection against both classical and quantum attacks using two signature schemes) that include
+the quantum-safe signatures from the upcoming NIST standards. We also validate our proposal by
+providing an implementation of Fabric that integrates with the Open Quantum Safe library. Our implementation
+employs the crypto-agility concept, which allows for plugging in different algorithms in the MSP
+Credentials and performing comparative benchmarks with them. Moreover, our proposal is backwards
+compatible with the Fabric client implementations, and no SDK changes would be required for the
+client Node.JS code. 

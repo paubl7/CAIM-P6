@@ -1,0 +1,18 @@
+The fast-paced evolution of Android APIs has posed a challenging task for Android app developers.
+To leverage Android's frequently released APIs, developers must often spend considerable effort
+on API migrations. Prior research and Android official documentation typically provide enough
+information to guide developers in identifying the API calls that must be migrated and the corresponding
+API calls in an updated version of Android (what to migrate). However, API migration remains a challenging
+task since developers lack the knowledge of how to migrate the API calls. There exist code examples,
+such as Google Samples, that illustrate the usage of APIs. We posit that by analyzing the changes
+of API usage in code examples, we can learn API migration patterns to assist developers with API Migrations.
+In this paper, we propose an approach that learns API migration patterns from code examples, applies
+these patterns to the source code of Android apps for API migration, and presents the results to users
+as potential migration solutions. To evaluate our approach, we migrate API calls in open source
+Android apps by learning API migration patterns from code examples. We find that our approach can
+successfully learn API migration patterns and provide API migration assistance in 71 out of 80 cases.
+Our approach can either migrate API calls with little to no extra modifications needed or provide
+guidance to assist with the migrations. Through a user study, we find that adopting our approach
+can reduce the time spent on migrating APIs, on average, by 29%. Moreover, our interviews with app
+developers highlight the benefits of our approach when seeking API migrations. Our approach demonstrates
+the value of leveraging the knowledge contained in software repositories to facilitate API migrations.

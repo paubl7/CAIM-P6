@@ -1,0 +1,19 @@
+Recent work by Pijnenburg and Poettering (ESORICS'20) explores the novel cryptographic Encrypt-to-Self
+primitive that is dedicated to use cases of symmetric encryption where encryptor and decryptor
+coincide. The primitive is envisioned to be useful whenever a memory-bounded computing device
+is required to encrypt some data with the aim of temporarily depositing it on an untrusted storage
+device. While the new primitive protects the confidentiality of payloads as much as classic authenticated
+encryption primitives would do, it provides considerably better authenticity guarantees: Specifically,
+while classic solutions would completely fail in a context involving user corruptions, if an encrypt-to-self
+scheme is used to protect the data, all ciphertexts and messages fully remain unforgeable. To instantiate
+their encrypt-to-self primitive, Pijnenburg et al propose a mode of operation of the compression
+function of a hash function, with a carefully designed encoding function playing the central role
+in the serialization of the processed message and associated data. In the present work we revisit
+the design of this encoding function. Without questioning its adequacy for securely accomplishing
+the encrypt-to-self job, we improve on it from a technical/implementational perspective by proposing
+modifications that alleviate certain conditions that would inevitably require implementations
+to disrespect memory alignment restrictions imposed by the word-wise operation of modern CPUs,
+ultimately leading to performance penalties. Our main contributions are thus to propose an improved
+encoding function, to explain why it offers better performance, and to prove that it provides as
+much security as its predecessor. We finally report on our open-source implementation of the encrypt-to-self
+primitive based on the new encoding function. 

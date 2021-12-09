@@ -1,0 +1,19 @@
+Semantic segmentation of remote sensing images plays an important role in a wide range of applications
+including land resource management, biosphere monitoring and urban planning. Although the accuracy
+of semantic segmentation in remote sensing images has been increased significantly by deep convolutional
+neural networks, several limitations exist in standard models. First, for encoder-decoder architectures
+such as U-Net, the utilization of multi-scale features causes the underuse of information, where
+low-level features and high-level features are concatenated directly without any refinement.
+Second, long-range dependencies of feature maps are insufficiently explored, resulting in sub-optimal
+feature representations associated with each semantic class. Third, even though the dot-product
+attention mechanism has been introduced and utilized in semantic segmentation to model long-range
+dependencies, the large time and space demands of attention impede the actual usage of attention
+in application scenarios with large-scale input. This paper proposed a Multi-Attention-Network
+(MANet) to address these issues by extracting contextual dependencies through multiple efficient
+attention modules. A novel attention mechanism of kernel attention with linear complexity is proposed
+to alleviate the large computational demand in attention. Based on kernel attention and channel
+attention, we integrate local feature maps extracted by ResNeXt-101 with their corresponding
+global dependencies and reweight interdependent channel maps adaptively. Numerical experiments
+on three large-scale fine resolution remote sensing images captured by different satellite sensors
+demonstrate the superior performance of the proposed MANet, outperforming the DeepLab V3+, PSPNet,
+FastFCN, DANet, OCRNet, and other benchmark approaches. 

@@ -1,0 +1,19 @@
+We discuss the design and software implementation of a nuclear data evaluation pipeline applied
+for a fully reproducible evaluation of neutron-induced cross sections of $^{56}$Fe above the resolved
+resonance region using the nuclear model code TALYS combined with relevant experimental data.
+The emphasis is on the mathematical and technical aspects of the pipeline and not on the evaluation
+of $^{56}$Fe, which is tentative. The mathematical building blocks combined and employed in the
+pipeline are discussed in detail. A unified representation of experimental data, systematic and
+statistical errors, model parameters and defects enables the application of the Generalized Least
+Squares (GLS) and its natural extension, the Levenberg-Marquardt (LM) algorithm, on a large collection
+of experimental data. The LM algorithm tailored to nuclear data evaluation accounts for the exact
+non-linear physics model to determine best estimates of nuclear quantities. Associated uncertainty
+information is derived from a Taylor expansion at the maximum of the posterior distribution. We
+also discuss the pipeline in terms of its IT (=information technology) building blocks, such as
+those to efficiently manage and retrieve experimental data of the EXFOR library and to distribute
+computations on a scientific cluster. Relying on the mathematical and IT building blocks, we elaborate
+on the sequence of steps in the pipeline to perform the evaluation, such as the retrieval of experimental
+data, the correction of experimental uncertainties using marginal likelihood optimization (MLO)
+and after a screening of thousand TALYS parameters -- including Gaussian process priors on energy
+dependent parameters -- the fitting of about 150 parameters using the LM algorithm. The code of the
+pipeline including a manual and a Dockerfile for a simplified installation is available at www.nucleardata.com.

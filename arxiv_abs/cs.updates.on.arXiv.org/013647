@@ -1,0 +1,19 @@
+Recent advances in camera equipped drone applications and their widespread use increased the demand
+on vision based object detection algorithms for aerial images. Object detection process is inherently
+a challenging task as a generic computer vision problem, however, since the use of object detection
+algorithms on UAVs (or on drones) is relatively a new area, it remains as a more challenging problem
+to detect objects in aerial images. There are several reasons for that including: (i) the lack of
+large drone datasets including large object variance, (ii) the large orientation and scale variance
+in drone images when compared to the ground images, and (iii) the difference in texture and shape
+features between the ground and the aerial images. Deep learning based object detection algorithms
+can be classified under two main categories: (a) single-stage detectors and (b) multi-stage detectors.
+Both single-stage and multi-stage solutions have their advantages and disadvantages over each
+other. However, a technique to combine the good sides of each of those solutions could yield even
+a stronger solution than each of those solutions individually. In this paper, we propose an ensemble
+network, SyNet, that combines a multi-stage method with a single-stage one with the motivation
+of decreasing the high false negative rate of multi-stage detectors and increasing the quality
+of the single-stage detector proposals. As building blocks, CenterNet and Cascade R-CNN with pretrained
+feature extractors are utilized along with an ensembling strategy. We report the state of the art
+results obtained by our proposed solution on two different datasets: namely MS-COCO and visDrone
+with \%52.1 $mAP_{IoU = 0.75}$ is obtained on MS-COCO $val2017$ dataset and \%26.2 $mAP_{IoU = 0.75}$
+is obtained on VisDrone $test-set$. 

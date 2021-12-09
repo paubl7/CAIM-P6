@@ -1,0 +1,20 @@
+$\bf{Purpose:}$ The goal of this study was (i) to use artificial intelligence to automate the traditionally
+labor-intensive process of manual segmentation of tumor regions in pathology slides performed
+by a pathologist and (ii) to validate the use of a well-known and readily available deep learning
+architecture. Automation will reduce the human error involved in manual delineation, increase
+efficiency, and result in accurate and reproducible segmentation. This advancement will alleviate
+the bottleneck in the workflow in clinical and research applications due to a lack of pathologist
+time. Our application is patient-specific microdosimetry and radiobiological modeling, which
+builds on the contoured pathology slides. $\bf{Methods:}$ A U-Net architecture was used to segment
+tumor regions in pathology core biopsies of lung tissue with adenocarcinoma stained using hematoxylin
+and eosin. A pathologist manually contoured the tumor regions in 56 images with binary masks for
+training. Overlapping patch extraction with various patch sizes and image downsampling were investigated
+individually. Data augmentation and 8-fold cross-validation were used. $\bf{Results:}$ The
+U-Net achieved accuracy of 0.91$\pm$0.06, specificity of 0.90$\pm$0.08, sensitivity of 0.92$\pm$0.07,
+and precision of 0.8$\pm$0.1. The F1/DICE score was 0.85$\pm$0.07, with a segmentation time of
+3.24$\pm$0.03 seconds per image, achieving a 370$\pm$3 times increased efficiency over manual
+segmentation. In some cases, the U-Net correctly delineated the tumor's stroma from its epithelial
+component in regions that were classified as tumor by the pathologist. $\bf{Conclusion:}$ The
+U-Net architecture can segment images with a level of efficiency and accuracy that makes it suitable
+for tumor segmentation of histopathological images in fields such as radiotherapy dosimetry,
+specifically in the subfields of microdosimetry. 

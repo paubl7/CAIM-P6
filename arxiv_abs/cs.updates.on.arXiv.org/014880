@@ -1,0 +1,20 @@
+Accurate approximation of scalar-valued functions from sample points is a key task in computational
+science. Recently, machine learning with Deep Neural Networks (DNNs) has emerged as a promising
+tool for scientific computing, with impressive results achieved on problems where the dimension
+of the data or problem domain is large. This work broadens this perspective, focusing on approximating
+functions that are Hilbert-valued, i.e. take values in a separable, but typically infinite-dimensional,
+Hilbert space. This arises in science and engineering problems, in particular those involving
+solution of parametric Partial Differential Equations (PDEs). Such problems are challenging:
+1) pointwise samples are expensive to acquire, 2) the function domain is high dimensional, and 3)
+the range lies in a Hilbert space. Our contributions are twofold. First, we present a novel result
+on DNN training for holomorphic functions with so-called hidden anisotropy. This result introduces
+a DNN training procedure and full theoretical analysis with explicit guarantees on error and sample
+complexity. The error bound is explicit in three key errors occurring in the approximation procedure:
+the best approximation, measurement, and physical discretization errors. Our result shows that
+there exists a procedure (albeit non-standard) for learning Hilbert-valued functions via DNNs
+that performs as well as, but no better than current best-in-class schemes. It gives a benchmark
+lower bound for how well DNNs can perform on such problems. Second, we examine whether better performance
+can be achieved in practice through different types of architectures and training. We provide preliminary
+numerical results illustrating practical performance of DNNs on parametric PDEs. We consider
+different parameters, modifying the DNN architecture to achieve better and competitive results,
+comparing these to current best-in-class schemes. 

@@ -1,0 +1,19 @@
+To boost the object grabbing capability of underwater robots for open-sea farming, we propose a
+new dataset (UDD) consisting of three categories (seacucumber, seaurchin, and scallop) with 2,227
+images. To the best of our knowledge, it is the first 4K HD dataset collected in a real open-sea farm.
+We also propose a novel Poisson-blending Generative Adversarial Network (Poisson GAN) and an efficient
+object detection network (AquaNet) to address two common issues within related datasets: the class-imbalance
+problem and the problem of mass small object, respectively. Specifically, Poisson GAN combines
+Poisson blending into its generator and employs a new loss called Dual Restriction loss (DR loss),
+which supervises both implicit space features and image-level features during training to generate
+more realistic images. By utilizing Poisson GAN, objects of minority class like seacucumber or
+scallop could be added into an image naturally and annotated automatically, which could increase
+the loss of minority classes during training detectors to eliminate the class-imbalance problem;
+AquaNet is a high-efficiency detector to address the problem of detecting mass small objects from
+cloudy underwater pictures. Within it, we design two efficient components: a depth-wise-convolution-based
+Multi-scale Contextual Features Fusion (MFF) block and a Multi-scale Blursampling (MBP) module
+to reduce the parameters of the network to 1.3 million. Both two components could provide multi-scale
+features of small objects under a short backbone configuration without any loss of accuracy. In
+addition, we construct a large-scale augmented dataset (AUDD) and a pre-training dataset via Poisson
+GAN from UDD. Extensive experiments show the effectiveness of the proposed Poisson GAN, AquaNet,
+UDD, AUDD, and pre-training dataset. 

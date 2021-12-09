@@ -1,0 +1,18 @@
+We study $(\epsilon, \delta)$-PAC best arm identification, where a decision-maker must identify
+an $\epsilon$-optimal arm with probability at least $1 - \delta$, while minimizing the number of
+arm pulls (samples). Most of the work on this topic is in the sequential setting, where there is no
+constraint on the time taken to identify such an arm; this allows the decision-maker to pull one arm
+at a time. In this work, the decision-maker is given a deadline of $T$ rounds, where, on each round,
+it can adaptively choose which arms to pull and how many times to pull them; this distinguishes the
+number of decisions made (i.e., time or number of rounds) from the number of samples acquired (cost).
+Such situations occur in clinical trials, where one may need to identify a promising treatment under
+a deadline while minimizing the number of test subjects, or in simulation-based studies run on the
+cloud, where we can elastically scale up or down the number of virtual machines to conduct as many
+experiments as we wish, but need to pay for the resource-time used. As the decision-maker can only
+make $T$ decisions, she may need to pull some arms excessively relative to a sequential algorithm
+in order to perform well on all possible problems. We formalize this added difficulty with two hardness
+results that indicate that unlike sequential settings, the ability to adapt to the problem difficulty
+is constrained by the finite deadline. We propose Elastic Batch Racing (EBR), a novel algorithm
+for this setting and bound its sample complexity, showing that EBR is optimal with respect to both
+hardness results. We present simulations evaluating EBR in this setting, where it outperforms
+baselines by several orders of magnitude. 

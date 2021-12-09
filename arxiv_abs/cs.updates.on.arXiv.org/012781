@@ -1,0 +1,20 @@
+We give significantly improved explicit constructions of three related pseudorandom objects.
+1. Extremal designs: An $(n,r,s)$-design, or $(n,r,s)$-partial Steiner system, is an $r$-uniform
+hypergraph over $n$ vertices with pairwise hyperedge intersections of size $<s$. For all constants
+$r\geq s\in\mathbb{N}$ with $r$ even, we explicitly construct $(n,r,s)$-designs $(G_n)_{n\in\mathbb{N}}$
+with independence number $\alpha(G_n)\leq O(n^{\frac{2(r-s)}{r}})$. This gives the first derandomization
+of a result by R\"odl and \v{S}inajov\'a (Random Structures & Algorithms, 1994). 2. Extractors
+for adversarial sources: By combining our designs with leakage-resilient extractors (Chattopadhyay
+et al., FOCS 2020), we establish a new, simple framework for extracting from adversarial sources
+of locality $0$. As a result, we obtain significantly improved low-error extractors for these sources.
+For any constant $\delta>0$, we extract from $(N,K,n,$ polylog$(n))$-adversarial sources of
+locality $0$, given just $K\geq N^\delta$ good sources. The previous best result (Chattopadhyay
+et al., STOC 2020) required $K\geq N^{1/2+o(1)}$. 3. Extractors for small-space sources: Using
+a known reduction to adversarial sources, we immediately obtain improved low-error extractors
+for space $s$ sources over $n$ bits that require entropy $k\geq n^{1/2+\delta}\cdot s^{1/2-\delta}$,
+whereas the previous best result (Chattopadhyay et al., STOC 2020) required $k\geq n^{2/3+\delta}\cdot
+s^{1/3-\delta}$. On the other hand, using a new reduction from small-space sources to affine sources,
+we obtain near-optimal extractors for small-space sources in the polynomial error regime. Our
+extractors require just $k\geq s\cdot\log^Cn$ entropy for some constant $C$, which is an exponential
+improvement over the previous best result, which required $k\geq s^{1.1}\cdot2^{\log^{0.51}n}$
+(Chattopadhyay and Li, STOC 2016). 

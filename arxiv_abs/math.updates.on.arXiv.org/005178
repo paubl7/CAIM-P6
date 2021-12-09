@@ -1,0 +1,18 @@
+Given a symmetric network with $n$ nodes, how to estimate the number of communities $K$ is a fundamental
+problem. We propose Stepwise Goodness-of-Fit (StGoF) as a new approach to estimating $K$. For $m
+= 1, 2, \ldots$, StGoF alternately uses a community detection step (pretending $m$ is the correct
+number of communities) and a goodness-of-fit step. We use SCORE \cite{SCORE} for community detection,
+and propose a new goodness-of-fit measure. Denote the goodness-of-fit statistic in step $m$ by
+$\psi_n^{(m)}$. We show that as $n \rightarrow \infty$, $\psi_n^{(m)} \rightarrow N(0,1)$ when
+$m = K$ and $\psi_n^{(m)} \rightarrow \infty$ in probability when $m < K$. Therefore, with a proper
+threshold, StGoF terminates at $m = K$ as desired. We consider a broad setting where we allow severe
+degree heterogeneity, a wide range of sparsity, and especially weak signals. In particular, we
+propose a measure for signal-to-noise ratio (SNR) and show that there is a phase transition: when
+$\mathrm{SNR} \rightarrow 0$ as $n \rightarrow \infty$, consistent estimates for $K$ do not exist,
+and when $\mathrm{SNR} \rightarrow \infty$, StGoF is consistent, uniformly for a broad class of
+settings. In this sense, StGoF achieves the optimal phase transition. Stepwise testing algorithms
+of similar kind (e.g., \cite{wang2017likelihood, ma2018determining}) are known to face analytical
+challenges. We overcome the challenges by using a different design in the stepwise algorithm and
+by deriving sharp results in the under-fitting case $(m < K)$ and the null case ($m = K$). The key to
+our analysis is to show that SCORE has the {\it Non-Splitting Property (NSP)}. The NSP is non-obvious,
+so additional to rigorous proofs, we also provide an intuitive explanation. 

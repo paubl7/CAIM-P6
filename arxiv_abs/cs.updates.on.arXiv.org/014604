@@ -1,0 +1,18 @@
+Intravascular ultrasound (IVUS) imaging allows direct visualization of the coronary vessel wall
+and is suitable for the assessment of atherosclerosis and the degree of stenosis. Accurate segmentation
+and measurements of lumen and median-adventitia (MA) from IVUS are essential for such a successful
+clinical evaluation. However, current segmentation relies on manual operations, which is time-consuming
+and user-dependent. In this paper, we aim to develop a deep learning-based method using an encoder-decoder
+deep architecture to automatically extract both lumen and MA border. Our method named IVUS-U-Net++
+is an extension of the well-known U-Net++ model. More specifically, a feature pyramid network was
+added to the U-Net++ model, enabling the utilization of feature maps at different scales. As a result,
+the accuracy of the probability map and subsequent segmentation have been improved We collected
+1746 IVUS images from 18 patients in this study. The whole dataset was split into a training dataset
+(1572 images) for the 10-fold cross-validation and a test dataset (174 images) for evaluating the
+performance of models. Our IVUS-U-Net++ segmentation model achieved a Jaccard measure (JM) of
+0.9412, a Hausdorff distance (HD) of 0.0639 mm for the lumen border, and a JM of 0.9509, an HD of 0.0867
+mm for the MA border, respectively. Moreover, the Pearson correlation and Bland-Altman analyses
+were performed to evaluate the correlations of 12 clinical parameters measured from our segmentation
+results and the ground truth, and automatic measurements agreed well with those from the ground
+truth (all Ps<0.01). In conclusion, our preliminary results demonstrate that the proposed IVUS-U-Net++
+model has great promise for clinical use. 

@@ -1,0 +1,19 @@
+This paper introduces neuroevolution for solving differential equations. The solution is obtained
+through optimizing a deep neural network whose loss function is defined by the residual terms from
+the differential equations. Recent studies have focused on learning such physics-informed neural
+networks through stochastic gradient descent (SGD) variants, yet they face the difficulty of obtaining
+an accurate solution due to optimization challenges. In the context of solving differential equations,
+we are faced with the problem of finding globally optimum parameters of the network, instead of being
+concerned with out-of-sample generalization. SGD, which searches along a single gradient direction,
+is prone to become trapped in local optima, so it may not be the best approach here. In contrast, neuroevolution
+carries out a parallel exploration of diverse solutions with the goal of circumventing local optima.
+It could potentially find more accurate solutions with better optimized neural networks. However,
+neuroevolution can be slow, raising tractability issues in practice. With that in mind, a novel
+and computationally efficient transfer neuroevolution algorithm is proposed in this paper. Our
+method is capable of exploiting relevant experiential priors when solving a new problem, with adaptation
+to protect against the risk of negative transfer. The algorithm is applied on a variety of differential
+equations to empirically demonstrate that transfer neuroevolution can indeed achieve better
+accuracy and faster convergence than SGD. The experimental outcomes thus establish transfer neuroevolution
+as a noteworthy approach for solving differential equations, one that has never been studied in
+the past. Our work expands the resource of available algorithms for optimizing physics-informed
+neural networks. 

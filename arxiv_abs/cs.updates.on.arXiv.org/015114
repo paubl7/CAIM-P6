@@ -1,0 +1,19 @@
+In this work we formulate and test a new procedure, the Multiscale Perturbation Method for Two-Phase
+Flows (MPM-2P), for the fast, accurate and naturally parallelizable numerical solution of two-phase,
+incompressible, immiscible displacement in porous media approximated by an operator splitting
+method. The proposed procedure is based on domain decomposition and combines the Multiscale Perturbation
+Method (MPM) with the Multiscale Robin Coupled Method (MRCM). When an update of the velocity field
+is called by the operator splitting algorithm, the MPM-2P may provide, depending on the magnitude
+of a dimensionless algorithmic parameter, an accurate and computationally inexpensive approximation
+for the velocity field by reusing previously computed multiscale basis functions. Thus, a full
+update of all multiscale basis functions required by the MRCM for the construction of a new velocity
+field is avoided. There are two main steps in the formulation of the MPM-2P. Initially, for each subdomain
+one local boundary value problem with trivial Robin boundary conditions is solved (instead of a
+full set of multiscale basis functions, that would be required by the MRCM). Then, the solution of
+an inexpensive interface problem provides the velocity field on the skeleton of the decomposition
+of the domain. The resulting approximation for the velocity field is obtained by downscaling. We
+consider challenging two-phase flow problems, with high-contrast permeability fields and water-oil
+finger growth in homogeneous media. Our numerical experiments show that the use of the MPM-2P gives
+exceptional speed-up - almost 90% of reduction in computational cost - of two-phase flow simulations.
+Hundreds of MRCM solutions can be replaced by inexpensive MPM-2P solutions, and water breakthrough
+can be simulated with very few updates of the MRCM set of multiscale basis functions. 

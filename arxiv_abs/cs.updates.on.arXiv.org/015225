@@ -1,0 +1,18 @@
+Situation awareness (SA) is critical to improving takeover performance during the transition
+period from automated driving to manual driving. Although many studies measured SA during or after
+the driving task, few studies have attempted to predict SA in real time in automated driving. In this
+work, we propose to predict SA during the takeover transition period in conditionally automated
+driving using eye-tracking and self-reported data. First, a tree ensemble machine learning model,
+named LightGBM (Light Gradient Boosting Machine), was used to predict SA. Second, in order to understand
+what factors influenced SA and how, SHAP (SHapley Additive exPlanations) values of individual
+predictor variables in the LightGBM model were calculated. These SHAP values explained the prediction
+model by identifying the most important factors and their effects on SA, which further improved
+the model performance of LightGBM through feature selection. We standardized SA between 0 and 1
+by aggregating three performance measures (i.e., placement, distance, and speed estimation of
+vehicles with regard to the ego-vehicle) of SA in recreating simulated driving scenarios, after
+33 participants viewed 32 videos with six lengths between 1 and 20 s. Using only eye-tracking data,
+our proposed model outperformed other selected machine learning models, having a root-mean-squared
+error (RMSE) of 0.121, a mean absolute error (MAE) of 0.096, and a 0.719 correlation coefficient
+between the predicted SA and the ground truth. The code is available at https://github.com/refengchou/Situation-awareness-prediction.
+Our proposed model provided important implications on how to monitor and predict SA in real time
+in automated driving using eye-tracking data. 

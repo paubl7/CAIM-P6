@@ -1,0 +1,19 @@
+For a function $\mathsf{K} : \mathbb{R}^{d} \times \mathbb{R}^{d} \to \mathbb{R}_{\geq 0}$,
+and a set $P = \{ x_1, \ldots, x_n\} \subset \mathbb{R}^d$ of $n$ points, the $\mathsf{K}$ graph $G_P$
+of $P$ is the complete graph on $n$ nodes where the weight between nodes $i$ and $j$ is given by $\mathsf{K}(x_i,
+x_j)$. In this paper, we initiate the study of when efficient spectral graph theory is possible on
+these graphs. We investigate whether or not it is possible to solve the following problems in $n^{1+o(1)}$
+time for a $\mathsf{K}$-graph $G_P$ when $d < n^{o(1)}$: $\bullet$ Multiply a given vector by the
+adjacency matrix or Laplacian matrix of $G_P$ $\bullet$ Find a spectral sparsifier of $G_P$ $\bullet$
+Solve a Laplacian system in $G_P$'s Laplacian matrix For each of these problems, we consider all
+functions of the form $\mathsf{K}(u,v) = f(\|u-v\|_2^2)$ for a function $f:\mathbb{R} \rightarrow
+\mathbb{R}$. We provide algorithms and comparable hardness results for many such $\mathsf{K}$,
+including the Gaussian kernel, Neural tangent kernels, and more. For example, in dimension $d =
+\Omega(\log n)$, we show that there is a parameter associated with the function $f$ for which low
+parameter values imply $n^{1+o(1)}$ time algorithms for all three of these problems and high parameter
+values imply the nonexistence of subquadratic time algorithms assuming Strong Exponential Time
+Hypothesis ($\mathsf{SETH}$), given natural assumptions on $f$. As part of our results, we also
+show that the exponential dependence on the dimension $d$ in the celebrated fast multipole method
+of Greengard and Rokhlin cannot be improved, assuming $\mathsf{SETH}$, for a broad class of functions
+$f$. To the best of our knowledge, this is the first formal limitation proven about fast multipole
+methods. 

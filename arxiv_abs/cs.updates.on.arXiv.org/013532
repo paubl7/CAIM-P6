@@ -1,0 +1,19 @@
+A point $p \in \mathbb{R}^d$ is said to dominate another point $q \in \mathbb{R}^d$ if the coordinate
+of $p$ is greater than or equal to the coordinate of $q$ in every dimension. A set of points in $\mathbb{R}^d$
+is dominance-free if any two points do not dominate each other. We consider the problem of counting
+the dominance-free subsets of a given dataset in $\mathbb{R}^d$, or more generally, computing
+the probability that a random sample of a stochastic dataset in $\mathbb{R}^d$ where each point
+is sampled independently with its existence probability is dominance-free. In fact, we investigate
+a colored generalization of the problem, in which the points in the given stochastic dataset are
+colored and we are interested in the random samples that are inter-color dominance-free (i.e.,
+any two points with different colors do not dominate each other). We propose the first algorithm
+that solves the problem for $d=2$ in near-quadratic time. On the other hand, we show that the problem
+is #P-hard for any $d \geq 3$, even if the points have a restricted color pattern; this implies the
+#P-hardness of the uncolored version (i.e., computing the dominance-free probability of a uncolored
+stochastic dataset) for $d \geq 3$. In addition, we show that even when the existence probabilities
+of the points are all equal to 0.5, the problem remains #P-hard for any $d \geq 7$; this implies the
+#P-hardness of counting dominance-free subsets for $d \geq 7$. In order to prove our hardness results,
+we establish some results about embedding the vertices a graph into low-dimensional Euclidean
+space such that two vertices are connected by an edge in the graph iff they form a dominance pair in
+the embedding. These results may be of independent interest and can possibly be applied to other
+problems. 

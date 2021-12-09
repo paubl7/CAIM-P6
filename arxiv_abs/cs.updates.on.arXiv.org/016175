@@ -1,0 +1,18 @@
+This paper provides a unified stochastic operator framework to analyze the convergence of iterative
+optimization algorithms for both static problems and online optimization and learning. In particular,
+the framework is well suited for algorithms that are implemented in an inexact or stochastic fashion
+because of (i) stochastic errors emerging in algorithmic steps, and because (ii) the algorithm
+may feature random coordinate updates. To this end, the paper focuses on separable operators of
+the form $T x = (T_1 x, \ldots, T_n x)$, defined over the direct sum of possibly infinite-dimensional
+Hilbert spaces, and investigates the convergence of the associated stochastic Banach-Picard
+iteration. Results in terms of convergence in mean and in high-probability are presented when the
+errors affecting the operator follow a sub-Weibull distribution and when updates $T_i x$ are performed
+based on a Bernoulli random variable. In particular, the results are derived for the cases where
+$T$ is contractive and averaged in terms of convergence to the unique fixed point and cumulative
+fixed-point residual, respectively. The results do not assume vanishing errors or vanishing parameters
+of the operator, as typical in the literature (this case is subsumed by the proposed framework),
+and links with exiting results in terms of almost sure convergence are provided. In the online optimization
+context, the operator changes at each iteration to reflect changes in the underlying optimization
+problem. This leads to an online Banach-Picard iteration, and similar results are derived where
+the bounds for the convergence in mean and high-probability further depend on the evolution of fixed
+points (i.e., optimal solutions of the time-varying optimization problem). 

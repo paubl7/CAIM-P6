@@ -1,0 +1,20 @@
+Determining photometric redshifts to high accuracy is paramount to measure distances in wide-field
+cosmological experiments. With only photometric information at hand, photo-zs are prone to systematic
+uncertainties in the intervening extinction and the unknown underlying spectral-energy distribution
+of different astrophysical sources. Here, we aim to resolve these model degeneracies and obtain
+a clear separation between intrinsic physical properties of astrophysical sources and extrinsic
+systematics. We aim at estimates of the full photo-z probability distributions, and their uncertainties.
+We perform a probabilistic photo-z determination using Mixture Density Networks (MDN). The training
+data-set is composed of optical ($griz$) point-spread-function and model magnitudes and extinction
+measurements from the SDSS-DR15, and WISE midinfrared ($3.4 \mu$m and $4.6 \mu$m) model magnitudes.
+We use Infinite Gaussian Mixture models to classify the objects in our data-set as stars, galaxies
+or quasars, and to determine the number of MDN components to achieve optimal performance. The fraction
+of objects that are correctly split into the main classes is 94%. Our method improves the bias of photometric
+redshift estimation (i.e. the mean $\Delta z$ = (zp - zs)/(1 + zs)) by one order of magnitude compared
+to the SDSS photo-z, and decreases the fraction of $3 \sigma$ outliers (i.e. 3rms$(\Delta z) < \Delta
+z$). The relative, root-mean-square systematic uncertainty in our resulting photo-zs is down
+to 1.7% for low-redshift galaxies (zs $<$ 0.5). We have demonstrated the feasibility of machine-learning
+based methods that produce full probability distributions for photo-z estimates with a performance
+that is competitive with state-of-the art techniques. Our method can be applied to wide-field surveys
+where extinction can vary significantly across the sky and with sparse spectroscopic calibration
+samples. 

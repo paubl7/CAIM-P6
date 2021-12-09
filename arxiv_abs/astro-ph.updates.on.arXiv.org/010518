@@ -1,0 +1,20 @@
+We present a novel Machine Learning (ML) based strategy to search for compact binary coalescences
+(CBCs) in data from ground-based gravitational wave (GW) observatories. This is the first ML-based
+search that not only recovers all the binary black hole mergers in the first GW transients calalog
+(GWTC-1), but also makes a clean detection of GW151216, which was not significant enough to be included
+in the catalogue. Moreover, we achieve this by only adding a new coincident ranking statistic (MLStat)
+to a standard analysis that was used for GWTC-1. In CBC searches, reducing contamination by terrestrial
+and instrumental transients, which create a loud noise background by triggering numerous false
+alarms, is crucial to improving the sensitivity for detecting true events. The sheer volume of data
+and and large number of expected detections also prompts the use of ML techniques. We perform transfer
+learning to train "InceptionV3", a pre-trained deep neural network, along with curriculum learning
+to distinguish GW signals from noisy events by analysing their continuous wavelet transform (CWT)
+maps. MLStat incorporates information from this ML classifier into the standard coincident search
+likelihood used by the conventional search. This leads to at least an order of magnitude improvement
+in the inverse false-alarm-rate (IFAR) for the previously "low significance" events GW151012,
+GW170729 and GW151216. The confidence in detection of GW151216 is further strengthened by performing
+its parameter estimation using SEOBNRv4HM_ROM. Considering the impressive ability of the statistic
+to distinguish signals from glitches, the list of marginal events from MLStat could be quite reliable
+for astrophysical population studies and further follow-up. This work demonstrates the immense
+potential and readiness of MLStat for finding new sources in current data and possibility of its
+adaptation in similar searches. 

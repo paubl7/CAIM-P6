@@ -1,0 +1,18 @@
+One of the most important obligations of privacy-enhancing technologies is to bring confidentiality
+and privacy to users' browsing activities on the Internet. The website fingerprinting attack enables
+a local passive eavesdropper to predict the target user's browsing activities even she uses anonymous
+technologies, such as VPNs, IPsec, and Tor. Recently, the growth of deep learning empowers adversaries
+to conduct the website fingerprinting attack with higher accuracy. In this paper, we propose a new
+defense against website fingerprinting attack using adversarial deep learning approaches called
+Adversarial Website Adaptation (AWA). AWA creates a transformer set in each run so that each website
+has a unique transformer. Each transformer generates adversarial traces to evade the adversary's
+classifier. AWA has two versions, including Universal AWA (UAWA) and Non-Universal AWA (NUAWA).
+Unlike NUAWA, there is no need to access the entire trace of a website in order to generate an adversarial
+trace in UAWA. We accommodate secret random elements in the training phase of transformers in order
+for AWA to generate various sets of transformers in each run. We run AWA several times and create multiple
+sets of transformers. If an adversary and a target user select different sets of transformers, the
+accuracy of adversary's classifier is almost 19.52\% and 31.94\% with almost 22.28\% and 26.28\%
+bandwidth overhead in UAWA and NUAWA, respectively. If a more powerful adversary generates adversarial
+traces through multiple sets of transformers and trains a classifier on them, the accuracy of adversary's
+classifier is almost 49.10\% and 25.93\% with almost 62.52\% and 64.33\% bandwidth overhead in
+UAWA and NUAW, respectively. 

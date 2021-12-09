@@ -1,0 +1,19 @@
+Learning causal effects from observational data greatly benefits a variety of domains such as health
+care, education and sociology. For instance, one could estimate the impact of a new drug on specific
+individuals to assist the clinic plan and improve the survival rate. In this paper, we focus on studying
+the problem of estimating Conditional Average Treatment Effect (CATE) from observational data.
+The challenges for this problem are two-fold: on the one hand, we have to derive a causal estimator
+to estimate the causal quantity from observational data, where there exists confounding bias;
+on the other hand, we have to deal with the identification of CATE when the distribution of covariates
+in treatment and control groups are imbalanced. To overcome these challenges, we propose a neural
+network framework called Adversarial Balancing-based representation learning for Causal Effect
+Inference (ABCEI), based on the recent advances in representation learning. To ensure the identification
+of CATE, ABCEI uses adversarial learning to balance the distributions of covariates in treatment
+and control groups in the latent representation space, without any assumption on the form of the
+treatment selection/assignment function. In addition, during the representation learning and
+balancing process, highly predictive information from the original covariate space might be lost.
+ABCEI can tackle this information loss problem by preserving useful information for predicting
+causal effects under the regularization of a mutual information estimator. The experimental results
+show that ABCEI is robust against treatment selection bias, and matches/outperforms the state-of-the-art
+approaches. Our experiments show promising results on several datasets, representing different
+health care domains among others. 

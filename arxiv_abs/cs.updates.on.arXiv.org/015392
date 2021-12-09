@@ -1,0 +1,18 @@
+A moment function is called doubly robust if it is comprised of two nuisance functions and the estimator
+based on it is a consistent estimator of the target parameter even if one of the nuisance functions
+is misspecified. In this paper, we consider a class of doubly robust moment functions originally
+introduced in (Robins et al., 2008). We demonstrate that this moment function can be used to construct
+estimating equations for the nuisance functions. The main idea is to choose each nuisance function
+such that it minimizes the dependency of the expected value of the moment function to the other nuisance
+function. We implement this idea as a minimax optimization problem. We then provide conditions
+required for asymptotic linearity of the estimator of the parameter of interest, which are based
+on the convergence rate of the product of the errors of the nuisance functions, as well as the local
+ill-posedness of a conditional expectation operator. The convergence rates of the nuisance functions
+are analyzed using the modern techniques in statistical learning theory based on the Rademacher
+complexity of the function spaces. We specifically focus on the case that the function spaces are
+reproducing kernel Hilbert spaces, which enables us to use its spectral properties to analyze the
+convergence rates. As an application of the proposed methodology, we consider the parameter of
+average causal effect both in presence and absence of latent confounders. For the case of presence
+of latent confounders, we use the recently proposed proximal causal inference framework of (Miao
+et al., 2018; Tchetgen Tchetgen et al., 2020), and hence our results lead to a robust non-parametric
+estimator for average causal effect in this framework. 

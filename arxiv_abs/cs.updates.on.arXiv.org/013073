@@ -1,0 +1,18 @@
+Anomaly Detectors are trained on healthy operating condition data and raise an alarm when the measured
+samples deviate from the training data distribution. This means that the samples used to train the
+model should be sufficient in quantity and representative of the healthy operating conditions.
+But for industrial systems subject to changing operating conditions, acquiring such comprehensive
+sets of samples requires a long collection period and delay the point at which the anomaly detector
+can be trained and put in operation. A solution to this problem is to perform unsupervised transfer
+learning (UTL), to transfer complementary data between different units. In the literature however,
+UTL aims at finding common structure between the datasets, to perform clustering or dimensionality
+reduction. Yet, the task of transferring and combining complementary training data has not been
+studied. Our proposed framework is designed to transfer complementary operating conditions between
+different units in a completely unsupervised way to train more robust anomaly detectors. It differs,
+thereby, from other unsupervised transfer learning works as it focuses on a one-class classification
+problem. The proposed methodology enables to detect anomalies in operating conditions only experienced
+by other units. The proposed end-to-end framework uses adversarial deep learning to ensure alignment
+of the different units' distributions. The framework introduces a new loss, inspired by a dimensionality
+reduction tool, to enforce the conservation of the inherent variability of each dataset, and uses
+state-of-the art once-class approach to detect anomalies. We demonstrate the benefit of the proposed
+framework using three open source datasets. 

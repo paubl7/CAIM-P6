@@ -1,0 +1,18 @@
+Model predictive control (MPC) is an effective method for control of constrained systems but is
+susceptible to the external disturbances and modeling error often encountered in real-world applications.
+To address these issues, techniques such as Tube MPC (TMPC) utilize an ancillary offline-generated
+robust controller to ensure that the system remains within an invariant set, referred to as a tube,
+around an online-generated trajectory. However, TMPC is unable to modify its tube and ancillary
+controller in response to changing state-dependent uncertainty, often resulting in overly-conservative
+solutions. Dynamic Tube MPC (DTMPC) addresses these problems by simultaneously optimizing the
+desired trajectory and tube geometry online. Building upon this framework, Adaptive DTMPC (ADTMPC)
+produces better model approximations by reducing model uncertainty, resulting in more accurate
+control policies. This work presents an experimental analysis and performance evaluation of TMPC,
+DTMPC, and ADTMPC for an uncertain nonlinear system. In particular, DTMPC is shown to outperform
+TMPC because it is able to dynamically adjust to changing environments, limiting aggressive control
+and conservative behavior to only the cases when the constraints and uncertainty require it. Applied
+to a pendulum testbed, this enables DTMPC to use up to 30% less control effort while achieving up to
+80% higher speeds. This performance is further improved by ADTMPC, which reduces the feedback control
+effort by up to another 35%, while delivering up to 34% better trajectory tracking. This analysis
+establishes that the DTMPC and ADTMPC frameworks yield significantly more effective robust control
+policies for systems with changing uncertainty, goals, and operating conditions. 

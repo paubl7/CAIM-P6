@@ -1,0 +1,18 @@
+Diagnosis of ice accretion on wind turbine blades is all the time a hard nut to crack in condition monitoring
+of wind farms. Existing methods focus on mechanism analysis of icing process, deviation degree
+analysis of feature engineering. However, there have not been deep researches of neural networks
+applied in this field at present. Supervisory control and data acquisition (SCADA) makes it possible
+to train networks through continuously providing not only operation parameters and performance
+parameters of wind turbines but also environmental parameters and operation modes. This paper
+explores the possibility that using convolutional neural networks (CNNs), generative adversarial
+networks (GANs) and domain adaption learning to establish intelligent diagnosis frameworks under
+different training scenarios. Specifically, PGANC and PGANT are proposed for sufficient and non-sufficient
+target wind turbine labeled data, respectively. The basic idea is that we consider a two-stage training
+with parallel GANs, which are aimed at capturing intrinsic features for normal and icing samples,
+followed by classification CNN or domain adaption module in various training cases. Model validation
+on three wind turbine SCADA data shows that two-stage training can effectively improve the model
+performance. Besides, if there is no sufficient labeled data for a target turbine, which is an extremely
+common phenomenon in real industrial practices, the addition of domain adaption learning makes
+the trained model show better performance. Overall, our proposed intelligent diagnosis frameworks
+can achieve more accurate detection on the same wind turbine and more generalized capability on
+a new wind turbine, compared with other machine learning models and conventional CNNs. 

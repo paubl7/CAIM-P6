@@ -1,0 +1,18 @@
+In many scientific problems, researchers try to relate a response variable $Y$ to a set of potential
+explanatory variables $X = (X_1,\dots,X_p)$, and start by trying to identify variables that contribute
+to this relationship. In statistical terms, this goal can be posed as trying to identify $X_j$'s
+upon which $Y$ is conditionally dependent. Sometimes it is of value to simultaneously test for each
+$j$, which is more commonly known as variable selection. The conditional randomization test (CRT)
+and model-X knockoffs are two recently proposed methods that respectively perform conditional
+independence testing and variable selection by, for each $X_j$, computing any test statistic on
+the data and assessing that test statistic's significance by comparing it to test statistics computed
+on synthetic variables generated using knowledge of $X$'s distribution. Our main contribution
+is to analyze their power in a high-dimensional linear model where the ratio of the dimension $p$
+and the sample size $n$ converge to a positive constant. We give explicit expressions of the asymptotic
+power of the CRT, variable selection with CRT $p$-values, and model-X knockoffs, each with a test
+statistic based on either the marginal covariance, the least squares coefficient, or the lasso.
+One useful application of our analysis is the direct theoretical comparison of the asymptotic powers
+of variable selection with CRT $p$-values and model-X knockoffs; in the instances with independent
+covariates that we consider, the CRT provably dominates knockoffs. We also analyze the power gain
+from using unlabeled data in the CRT when limited knowledge of $X$'s distribution is available,
+and the power of the CRT when samples are collected retrospectively. 

@@ -1,0 +1,20 @@
+In order to optimally design materials, it is crucial to understand the structure-property relations
+in the material by analyzing the effect of microstructure parameters on the macroscopic properties.
+In computational homogenization, the microstructure is thus explicitly modeled inside the macrostructure,
+leading to a coupled two-scale formulation. Unfortunately, the high computational costs of such
+multiscale simulations often render the solution of design, optimization, or inverse problems
+infeasible. To address this issue, we propose in this work a non-intrusive reduced basis method
+to construct inexpensive surrogates for parametrized microscale problems; the method is specifically
+well-suited for multiscale simulations since the coupled simulation is decoupled into two independent
+problems: (1) solving the microscopic problem for different (loading or material) parameters
+and learning a surrogate model from the data; and (2) solving the macroscopic problem with the learned
+material model. The proposed method has three key features. First, the microscopic stress field
+can be fully recovered. Second, the method is able to accurately predict the stress field for a wide
+range of material parameters; furthermore, the derivatives of the effective stress with respect
+to the material parameters are available and can be readily utilized in solving optimization problems.
+Finally, it is more data efficient, i.e. requiring less training data, as compared to directly performing
+a regression on the effective stress. For the microstructures in the two test problems considered,
+the mean approximation error of the effective stress is as low as 0.1% despite using a relatively
+small training dataset. Embedded into the macroscopic problem, the reduced order model leads to
+an online speed up of approximately three orders of magnitude while maintaining a high accuracy
+as compared to the FE$^2$ solver. 

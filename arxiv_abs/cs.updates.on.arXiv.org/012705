@@ -1,0 +1,19 @@
+Deep learning recommendation models have grown to the terabyte scale. Traditional serving schemes--that
+load entire models to a single server--are unable to support this scale. One approach to support
+this scale is with distributed serving, or distributed inference, which divides the memory requirements
+of a single large model across multiple servers. This work is a first-step for the systems research
+community to develop novel model-serving solutions, given the huge system design space. Large-scale
+deep recommender systems are a novel workload and vital to study, as they consume up to 79% of all inference
+cycles in the data center. To that end, this work describes and characterizes scale-out deep learning
+recommendation inference using data-center serving infrastructure. This work specifically
+explores latency-bounded inference systems, compared to the throughput-oriented training systems
+of other recent works. We find that the latency and compute overheads of distributed inference are
+largely a result of a model's static embedding table distribution and sparsity of input inference
+requests. We further evaluate three embedding table mapping strategies of three DLRM-like models
+and specify challenging design trade-offs in terms of end-to-end latency, compute overhead, and
+resource efficiency. Overall, we observe only a marginal latency overhead when the data-center
+scale recommendation models are served with the distributed inference manner--P99 latency is
+increased by only 1% in the best case configuration. The latency overheads are largely a result of
+the commodity infrastructure used and the sparsity of embedding tables. Even more encouragingly,
+we also show how distributed inference can account for efficiency improvements in data-center
+scale recommendation serving. 

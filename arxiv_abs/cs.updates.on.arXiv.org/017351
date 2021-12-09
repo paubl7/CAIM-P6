@@ -1,0 +1,18 @@
+The developers of Ethereum smart contracts often implement administrating patterns, such as censoring
+certain users, creating or destroying balances on demand, destroying smart contracts, or injecting
+arbitrary code. These routines turn an ERC20 token into an administrated token - the type of Ethereum
+smart contract that we scrutinize in this research. We discover that many smart contracts are administrated,
+and the owners of these tokens carry lesser social and legal responsibilities compared to the traditional
+centralized actors that those tokens intend to disrupt. This entails two major problems: a) the
+owners of the tokens have the ability to quickly steal all the funds and disappear from the market;
+and b) if the private key of the owner's account is stolen, all the assets might immediately turn into
+the property of the attacker. We develop a pattern recognition framework based on 9 syntactic features
+characterizing administrated ERC20 tokens, which we use to analyze existing smart contracts deployed
+on Ethereum Mainnet. Our analysis of 84,062 unique Ethereum smart contracts reveals that nearly
+58% of them are administrated ERC20 tokens, which accounts for almost 90% of all ERC20 tokens deployed
+on Ethereum. To protect users from the frivolousness of unregulated token owners without depriving
+the ability of these owners to properly manage their tokens, we introduce SafelyAdministrated
+- a library that enforces a responsible ownership and management of ERC20 tokens. The library introduces
+three mechanisms: deferred maintenance, board of trustees and safe pause. We implement and test
+SafelyAdministrated in the form of Solidity abstract contract, which is ready to be used by the next
+generation of safely administrated ERC20 tokens. 

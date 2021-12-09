@@ -1,0 +1,20 @@
+This work presents a robust and efficient sharp interface immersed boundary (IBM) framework, which
+is applicable for all-speed flow regimes and is capable of handling arbitrarily complex bodies
+(stationary or moving). The work deploys an in-house, parallel, multi-block structured finite
+volume flow solver, which employs a 3D unsteady Favre averaged Navier Stokes equations in a generalized
+curvilinear coordinate system; while we employ a combination of HCIB (Hybrid Cartesian Immersed
+boundary) method and GC(Ghost-cell) for solution reconstruction near immersed boundary interface.
+A significant difficulty for these sharp interface approaches is of handling sharp features/edges
+of complex geometries. In this study, we observe that apart from the need for robust node classification
+strategy and higher order boundary formulations, the direction in which the reconstruction procedures
+are performed plays an important role in handling sharp edges. Taking this into account we present
+a versatile interface tracking procedure based on ray tracing algorithm and a novel three step solution
+reconstruction procedure that computes pseudo-normals in the regions where the normal is not well-defined
+and reconstructs the flow field along those directions. We demonstrate that this procedure enables
+solver to efficiently handle and accurately represent sharp-edged regions. A fifth-order weighted
+essentially non-oscillatory (WENO) scheme is used for capturing shock-induced discontinuities
+and complex fluid-solid interactions with high resolution. The developed IBM framework is applied
+to a wide range of flow phenomena encompassing all-speed regimes (M=0.001 to M = 2.0). A total of seven
+benchmark cases (three stationary and four moving bodies) are presented involving various geometries
+(cylinder, airfoil, wedge) and the predictions are found to be in excellent agreement with the published
+results. 

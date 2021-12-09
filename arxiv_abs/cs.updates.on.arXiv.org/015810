@@ -1,0 +1,19 @@
+Data privacy has become an increasingly important issue in machine learning. Many approaches have
+been developed to tackle this issue, e.g., cryptography (Homomorphic Encryption, Differential
+Privacy, etc.) and collaborative training (Secure Multi-Party Computation, Distributed Learning
+and Federated Learning). These techniques have a particular focus on data encryption or secure
+local computation. They transfer the intermediate information to the third-party to compute the
+final result. Gradient exchanging is commonly considered to be a secure way of training a robust
+model collaboratively in deep learning. However, recent researches have demonstrated that sensitive
+information can be recovered from the shared gradient. Generative Adversarial Networks (GAN),
+in particular, have shown to be effective in recovering those information. However, GAN based techniques
+require additional information, such as class labels which are generally unavailable for privacy
+persevered learning. In this paper, we show that, in Federated Learning (FL) system, image-based
+privacy data can be easily recovered in full from the shared gradient only via our proposed Generative
+Regression Neural Network (GRNN). We formulate the attack to be a regression problem and optimise
+two branches of the generative model by minimising the distance between gradients. We evaluate
+our method on several image classification tasks. The results illustrate that our proposed GRNN
+outperforms state-of-the-art methods with better stability, stronger robustness, and higher
+accuracy. It also has no convergence requirement to the global FL model. Moreover, we demonstrate
+information leakage using face re-identification. Some defense strategies are also discussed
+in this work. 

@@ -1,0 +1,20 @@
+In submodular covering problems, we are given a monotone, nonnegative submodular function $f:
+2^N \rightarrow\mathbb{R}_+$ and wish to find the min-cost set $S\subseteq N$ such that $f(S)=f(N)$.
+This captures SetCover when $f$ is a coverage function. We introduce a general framework for solving
+such problems in a fully-dynamic setting where the function $f$ changes over time, and only a bounded
+number of updates to the solution (recourse) is allowed. For concreteness, suppose a nonnegative
+monotone submodular function $g_t$ is added or removed from an active set $G^{(t)}$ at each time
+$t$. If $f^{(t)}=\sum_{g\in G^{(t)}} g$ is the sum of all active functions, we wish to maintain a
+competitive solution to SubmodularCover for $f^{(t)}$ as this active set changes, and with low
+recourse. We give an algorithm that maintains an $O(\log(f_{max}/f_{min}))$-competitive solution,
+where $f_{max}, f_{min}$ are the largest/smallest marginals of $f^{(t)}$. The algorithm guarantees
+a total recourse of $O(\log(c_{max}/ c_{min})\cdot\sum_{t\leq T}g_t(N))$, where $c_{max},c_{min}$
+are the largest/smallest costs of elements in $N$. This competitive ratio is best possible even
+in the offline setting, and the recourse bound is optimal up to the logarithmic factor. For monotone
+submodular functions that also have positive mixed third derivatives, we show an optimal recourse
+bound of $O(\sum_{t\leq T}g_t(N))$. This structured class includes set-coverage functions,
+so our algorithm matches the known $O(\log n)$-competitiveness and $O(1)$ recourse guarantees
+for fully-dynamic SetCover. Our work simultaneously simplifies and unifies previous results,
+as well as generalizes to a significantly larger class of covering problems. Our key technique is
+a new potential function inspired by Tsallis entropy. We also extensively use the idea of Mutual
+Coverage, which generalizes the classic notion of mutual information. 

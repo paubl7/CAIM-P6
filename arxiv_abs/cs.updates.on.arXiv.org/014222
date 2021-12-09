@@ -1,0 +1,20 @@
+Machine learning on encrypted data can address the concerns related to privacy and legality of sharing
+sensitive data with untrustworthy service providers. Fully Homomorphic Encryption (FHE) is a
+promising technique to enable machine learning and inferencing while providing strict guarantees
+against information leakage. Since deep convolutional neural networks (CNNs) have become the
+machine learning tool of choice in several applications, several attempts have been made to harness
+CNNs to extract insights from encrypted data. However, existing works focus only on ensuring data
+security and ignore security of model parameters. They also report high level implementations
+without providing rigorous analysis of the accuracy, security, and speed trade-offs involved
+in the FHE implementation of generic primitive operators of a CNN such as convolution, non-linear
+activation, and pooling. In this work, we consider a Machine Learning as a Service (MLaaS) scenario
+where both input data and model parameters are secured using FHE. Using the CKKS scheme available
+in the open-source HElib library, we show that operational parameters of the chosen FHE scheme such
+as the degree of the cyclotomic polynomial, depth limitations of the underlying leveled HE scheme,
+and the computational precision parameters have a major impact on the design of the machine learning
+model (especially, the choice of the activation function and pooling method). Our empirical study
+shows that choice of aforementioned design parameters result in significant trade-offs between
+accuracy, security level, and computational time. Encrypted inference experiments on the MNIST
+dataset indicate that other design choices such as ciphertext packing strategy and parallelization
+using multithreading are also critical in determining the throughput and latency of the inference
+process. 

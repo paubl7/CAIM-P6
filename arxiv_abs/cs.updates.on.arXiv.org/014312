@@ -1,0 +1,19 @@
+In ptychography experiments, redundant scanning is usually required to guarantee the stable recovery,
+such that a huge amount of frames are generated, and thus it poses a great demand of parallel computing
+in order to solve this large-scale inverse problem. In this paper, we propose the overlapping Domain
+Decomposition Methods(DDMs) to solve the nonconvex optimization problem in ptychographic imaging.
+They decouple the problem defined on the whole domain into subproblems only defined on the subdomains
+with synchronizing information in the overlapping regions of these subdomains,thus leading to
+highly parallel algorithms with good load balance. More specifically, for the nonblind recovery
+(with known probe in advance), by enforcing the continuity of the overlapping regions for the image
+(sample), the nonlinear optimization model is established based on a novel smooth-truncated amplitude-Gaussian
+metric (ST-AGM). Such metric allows for fast calculation of the proximal mapping with closed form,
+and meanwhile provides the possibility for the convergence guarantee of the first-order nonconvex
+optimization algorithm due to its Lipschitz smoothness. Then the Alternating Direction Method
+of Multipliers (ADMM) is utilized to generate an efficient Overlapping Domain Decomposition based
+Ptychography algorithm(OD2P) for the two-subdomain domain decomposition (DD), where all subproblems
+can be computed with close-form solutions.Due to the Lipschitz continuity for the gradient of the
+objective function with ST-AGM, the convergence of the proposed OD2P is derived under mild conditions.
+Moreover, it is extended to more general case including multiple-subdomain DD and blind recovery.
+Numerical experiments are further conducted to show the performance of proposed algorithms, demonstrating
+good convergence speed and robustness to the noise. 

@@ -1,0 +1,20 @@
+Click-through rate prediction is one of the core tasks in commercial recommender systems. It aims
+to predict the probability of a user clicking a particular item given user and item features. As feature
+interactions bring in non-linearity, they are widely adopted to improve the performance of CTR
+prediction models. Therefore, effectively modelling feature interactions has attracted much
+attention in both the research and industry field. The current approaches can generally be categorized
+into three classes: (1) na\"ive methods, which do not model feature interactions and only use original
+features; (2) memorized methods, which memorize feature interactions by explicitly viewing them
+as new features and assigning trainable embeddings; (3) factorized methods, which learn latent
+vectors for original features and implicitly model feature interactions through factorization
+functions. Studies have shown that modelling feature interactions by one of these methods alone
+are suboptimal due to the unique characteristics of different feature interactions. To address
+this issue, we first propose a general framework called OptInter which finds the most suitable modelling
+method for each feature interaction. Different state-of-the-art deep CTR models can be viewed
+as instances of OptInter. To realize the functionality of OptInter, we also introduce a learning
+algorithm that automatically searches for the optimal modelling method. We conduct extensive
+experiments on four large datasets. Our experiments show that OptInter improves the best performed
+state-of-the-art baseline deep CTR models by up to 2.21%. Compared to the memorized method, which
+also outperforms baselines, we reduce up to 91% parameters. In addition, we conduct several ablation
+studies to investigate the influence of different components of OptInter. Finally, we provide
+interpretable discussions on the results of OptInter. 

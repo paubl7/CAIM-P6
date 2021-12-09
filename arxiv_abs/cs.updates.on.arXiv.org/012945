@@ -1,0 +1,18 @@
+The Burrows-Wheeler Transform (BWT) is an invertible text transformation that permutes symbols
+of a text according to the lexicographical order of its suffixes. BWT is the main component of popular
+lossless compression programs (such as bzip2) as well as recent powerful compressed indexes (such
+as $r$-index [Gagie et al., J. ACM, 2020]), central in modern bioinformatics. The compression ratio
+of BWT is quantified by the number $r$ of equal-letter runs. Despite the practical significance
+of BWT, no non-trivial bound on the value of $r$ is known. This is in contrast to nearly all other known
+compression methods, whose sizes have been shown to be either always within a ${\rm polylog}\,n$
+factor (where $n$ is the length of text) from $z$, the size of Lempel-Ziv (LZ77) parsing of the text,
+or significantly larger in the worst case (by a $n^{\varepsilon}$ factor for $\varepsilon > 0$).
+In this paper, we show that $r = \mathcal{O}(z \log^2n)$ holds for every text. This result has numerous
+implications for text indexing and data compression; for example: (1) it proves that many results
+related to BWT automatically apply to methods based on LZ77, e.g., it is possible to obtain functionality
+of the suffix tree in $\mathcal{O}(z\,{\rm polylog}\,n)$ space; (2) it shows that many text processing
+tasks can be solved in the optimal time assuming the text is compressible using LZ77 by a sufficiently
+large ${\rm polylog}\,n$ factor; (3) it implies the first non-trivial relation between the number
+of runs in the BWT of the text and its reverse. In addition, we provide an $\mathcal{O}(z\,{\rm polylog}\,n)$-time
+algorithm converting the LZ77 parsing into the run-length compressed BWT. To achieve this, we develop
+a number of new data structures and techniques of independent interest. 

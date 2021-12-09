@@ -1,0 +1,18 @@
+Deep reinforcement learning has been applied to solve a variety of control problems in isolation.
+However, the learned latent representations cannot be optimally reused for other analogous tasks
+and/or control systems without additional training or tuning. In this regard, we propose a novel
+framework that can be used to learn a single control policy for a whole class of analogous control
+systems. The framework is abbreviated as CASNET and it leverages the similarities in the designs
+of analogous control-systems to learn general-purpose abstract system-representations. The
+framework uses a cascade of recurrent neural networks-based encoders to create these representations
+which are then fed to a conventional policy network as input. A similar cascade of decoders decodes
+the output of the policy network to generate system-specific output. We illustrate the effectiveness
+of this framework on arguably the most significant use-case of DRL: Robotics. In this paper, we use
+CASNET to learn generalizable control policies for two separate classes of robots: planer-manipulators
+and crawling robots, using 15+ and 55+ morphologically analogous simulated robots respectively.
+These robot models encompass the most common design variations used in the real world. Our empirical
+results using state of the art on and off policy learning algorithms show that on average, CASNET
+agent achieves zero shot optimal performance (performance equivalent to expert agents trained
+for individual robot models) on unseen robot models. These results illustrate that the performance
+of the learned policy is bound the learning algorithm rather than the framework itself. The proposed
+framework serves a major step towards universal controllers. 

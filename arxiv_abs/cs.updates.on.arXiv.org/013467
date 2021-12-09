@@ -1,0 +1,19 @@
+Purpose: Pelvic bone segmentation in CT has always been an essential step in clinical diagnosis
+and surgery planning of pelvic bone diseases. Existing methods for pelvic bone segmentation are
+either hand-crafted or semi-automatic and achieve limited accuracy when dealing with image appearance
+variations due to the multi-site domain shift, the presence of contrasted vessels, coprolith and
+chyme, bone fractures, low dose, metal artifacts, etc. Due to the lack of a large-scale pelvic CT
+dataset with annotations, deep learning methods are not fully explored. Methods: In this paper,
+we aim to bridge the data gap by curating a large pelvic CT dataset pooled from multiple sources and
+different manufacturers, including 1, 184 CT volumes and over 320, 000 slices with different resolutions
+and a variety of the above-mentioned appearance variations. Then we propose for the first time,
+to the best of our knowledge, to learn a deep multi-class network for segmenting lumbar spine, sacrum,
+left hip, and right hip, from multiple-domain images simultaneously to obtain more effective and
+robust feature representations. Finally, we introduce a post-processing tool based on the signed
+distance function (SDF) to eliminate false predictions while retaining correctly predicted bone
+fragments. Results: Extensive experiments on our dataset demonstrate the effectiveness of our
+automatic method, achieving an average Dice of 0.987 for a metal-free volume. SDF post-processor
+yields a decrease of 10.5% in hausdorff distance by maintaining important bone fragments in post-processing
+phase. Conclusion: We believe this large-scale dataset will promote the development of the whole
+community and plan to open source the images, annotations, codes, and trained baseline models at
+this URL1. 

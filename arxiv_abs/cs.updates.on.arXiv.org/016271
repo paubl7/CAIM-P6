@@ -1,0 +1,20 @@
+The ubiquity of mobile phones makes mobile GUI understanding an important task. Most previous works
+in this domain require human-created metadata of screens (e.g. View Hierarchy) during inference,
+which unfortunately is often not available or reliable enough for GUI understanding. Inspired
+by the impressive success of Transformers in NLP tasks, targeting for purely vision-based GUI understanding,
+we extend the concepts of Words/Sentence to Pixel-Words/Screen-Sentence, and propose a mobile
+GUI understanding architecture: Pixel-Words to Screen-Sentence (PW2SS). In analogy to the individual
+Words, we define the Pixel-Words as atomic visual components (text and graphic components), which
+are visually consistent and semantically clear across screenshots of a large variety of design
+styles. The Pixel-Words extracted from a screenshot are aggregated into Screen-Sentence with
+a Screen Transformer proposed to model their relations. Since the Pixel-Words are defined as atomic
+visual components, the ambiguity between their visual appearance and semantics is dramatically
+reduced. We are able to make use of metadata available in training data to auto-generate high-quality
+annotations for Pixel-Words. A dataset, RICO-PW, of screenshots with Pixel-Words annotations
+is built based on the public RICO dataset, which will be released to help to address the lack of high-quality
+training data in this area. We train a detector to extract Pixel-Words from screenshots on this dataset
+and achieve metadata-free GUI understanding during inference. We conduct experiments and show
+that Pixel-Words can be well extracted on RICO-PW and well generalized to a new dataset, P2S-UI,
+collected by ourselves. The effectiveness of PW2SS is further verified in the GUI understanding
+tasks including relation prediction, clickability prediction, screen retrieval, and app type
+classification. 

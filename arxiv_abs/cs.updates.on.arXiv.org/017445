@@ -1,0 +1,19 @@
+Reconfigurable architectures, such as FPGAs, enable the execution of code at the electronics level,
+avoiding the assumptions imposed by the general purpose black-box micro-architectures of CPUs
+and GPUs. Such tailored execution can result in increased performance and power efficiency, and
+as the HPC community moves towards exascale an important question is the role such hardware technologies
+can play in future supercomputers. In this paper we explore the porting of the PW advection kernel,
+an important code component used in a variety of atmospheric simulations and accounting for around
+40\% of the runtime of the popular Met Office NERC Cloud model (MONC). Building upon previous work
+which ported this kernel to an older generation of Xilinx FPGA, we target latest generation Xilinx
+Alveo U280 and Intel Stratix 10 FPGAs. Exploring the development of a dataflow design which is performance
+portable between vendors, we then describe implementation differences between the tool chains
+and compare kernel performance between FPGA hardware. This is followed by a more general performance
+comparison, scaling up the number of kernels on the Xilinx Alveo and Intel Stratix 10, against a 24
+core Xeon Platinum Cascade Lake CPU and NVIDIA Tesla V100 GPU. When overlapping the transfer of data
+to and from the boards with compute, the FPGA solutions considerably outperform the CPU and, whilst
+falling short of the GPU in terms of performance, demonstrate power usage benefits, with the Alveo
+being especially power efficient. The result of this work is a comparison and set of design techniques
+that apply both to this specific atmospheric advection kernel on Xilinx and Intel FPGAs, and that
+are also of interest more widely when looking to accelerate HPC codes on a variety of reconfigurable
+architectures. 

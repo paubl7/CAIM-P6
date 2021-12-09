@@ -1,0 +1,18 @@
+Self-Rating Depression Scale (SDS) questionnaire has frequently been used for efficient depression
+preliminary screening. However, the uncontrollable self-administered measure can be easily
+affected by insouciantly or deceptively answering, and producing the different results with the
+clinician-administered Hamilton Depression Rating Scale (HDRS) and the final diagnosis. Clinically,
+facial expression (FE) and actions play a vital role in clinician-administered evaluation, while
+FE and action are underexplored for self-administered evaluations. In this work, we collect a novel
+dataset of 200 subjects to evidence the validity of self-rating questionnaires with their corresponding
+question-wise video recording. To automatically interpret depression from the SDS evaluation
+and the paired video, we propose an end-to-end hierarchical framework for the long-term variable-length
+video, which is also conditioned on the questionnaire results and the answering time. Specifically,
+we resort to a hierarchical model which utilizes a 3D CNN for local temporal pattern exploration
+and a redundancy-aware self-attention (RAS) scheme for question-wise global feature aggregation.
+Targeting for the redundant long-term FE video processing, our RAS is able to effectively exploit
+the correlations of each video clip within a question set to emphasize the discriminative information
+and eliminate the redundancy based on feature pair-wise affinity. Then, the question-wise video
+feature is concatenated with the questionnaire scores for final depression detection. Our thorough
+evaluations also show the validity of fusing SDS evaluation and its video recording, and the superiority
+of our framework to the conventional state-of-the-art temporal modeling methods. 

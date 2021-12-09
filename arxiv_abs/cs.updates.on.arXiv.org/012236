@@ -1,0 +1,18 @@
+To deploy a pre-trained deep CNN on resource-constrained mobile devices, neural network pruning
+is often used to cut down the model's computational cost. For example, filter-level pruning (reducing
+the model's width) or layer-level pruning (reducing the model's depth) can both save computations
+with some sacrifice of accuracy. Besides, reducing the resolution of input images can also reach
+the same goal. Most previous methods focus on reducing one or two of these dimensions (i.e., depth,
+width, and image resolution) for acceleration. However, excessive reduction of any single dimension
+will lead to unacceptable accuracy loss, and we have to prune these three dimensions comprehensively
+to yield the best result. In this paper, a simple yet effective pruning framework is proposed to comprehensively
+consider these three dimensions. Our framework falls into two steps: 1) Determining the optimal
+depth (d*), width (w*), and image resolution (r) for the model. 2) Pruning the model in terms of (d*,
+w*, r*). Specifically, at the first step, we formulate model acceleration as an optimization problem.
+It takes depth (d), width (w) and image resolution (r) as variables and the model's accuracy as the
+optimization objective. Although it is hard to determine the expression of the objective function,
+approximating it with polynomials is still feasible, during which several properties of the objective
+function are utilized to ease and speedup the fitting process. Then the optimal d*, w* and r* are attained
+by maximizing the objective function with Lagrange multiplier theorem and KKT conditions. Extensive
+experiments are done on several popular architectures and datasets. The results show that we have
+outperformd the state-of-the-art pruning methods. The code will be published soon. 

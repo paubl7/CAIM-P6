@@ -1,0 +1,18 @@
+There has been a surge in remote sensing machine learning applications that operate on data from
+active or passive sensors as well as multi-sensor combinations (Ma et al. (2019)). Despite this
+surge, however, there has been relatively little study on the comparative value of 3D surface information
+for machine learning classification tasks. Adding 3D surface information to RGB imagery can provide
+crucial geometric information for semantic classes such as buildings, and can thus improve out-of-sample
+predictive performance. In this paper, we examine in-sample and out-of-sample classification
+performance of Fully Convolutional Neural Networks (FCNNs) and Support Vector Machines (SVMs)
+trained with and without 3D normalized digital surface model (nDSM) information. We assess classification
+performance using multispectral imagery from the International Society for Photogrammetry and
+Remote Sensing (ISPRS) 2D Semantic Labeling contest and the United States Special Operations Command
+(USSOCOM) Urban 3D Challenge. We find that providing RGB classifiers with additional 3D nDSM information
+results in little increase in in-sample classification performance, suggesting that spectral
+information alone may be sufficient for the given classification tasks. However, we observe that
+providing these RGB classifiers with additional nDSM information leads to significant gains in
+out-of-sample predictive performance. Specifically, we observe an average improvement in out-of-sample
+all-class accuracy of 14.4% on the ISPRS dataset and an average improvement in out-of-sample F1
+score of 8.6% on the USSOCOM dataset. In addition, the experiments establish that nDSM information
+is critical in machine learning and classification settings that face training sample scarcity.

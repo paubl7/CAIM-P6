@@ -1,0 +1,20 @@
+The split-plot design assigns different interventions at the whole-plot and sub-plot levels,
+respectively, and induces a group structure on the final treatment assignments. A common strategy
+is to use the OLS fit of the outcome on the treatment indicators coupled with the robust standard errors
+clustered at the whole-plot level. It does not give consistent estimator for the causal effects
+of interest when the whole-plot sizes vary. Another common strategy is to fit the linear mixed-effects
+model of the outcome with Normal random effects and errors. It is a purely model-based approach and
+can be sensitive to violations of parametric assumptions. In contrast, the design-based inference
+assumes no outcome models and relies solely on the controllable randomization mechanism determined
+by the physical experiment. We first extend the existing design-based inference based on the {\htf}
+estimator to the Hajek estimator, and establish the finite-population central limit theorem for
+both under split-plot randomization. We then reconcile the results with those under the model-based
+approach, and propose two regression strategies, namely (i) the WLS fit of the unit-level data based
+on the inverse probability weighting and (ii) the OLS fit of the aggregate data based on whole-plot
+total outcomes, to reproduce the Hajek and {\htf} estimators from least squares, respectively.
+This, together with the asymptotic conservativeness of the corresponding cluster-robust covariances
+for estimating the true design-based covariances as we establish in the process, justifies the
+validity of regression-based estimators for design-based inference. In light of the flexibility
+of regression formulation with covariate adjustment, we further extend the theory to the case with
+covariates and demonstrate the efficiency gain by regression-based covariate adjustment via
+both asymptotic theory and simulation. 

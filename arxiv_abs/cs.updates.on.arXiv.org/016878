@@ -1,0 +1,18 @@
+Uncertain graphs have been widely used to model complex linked data in many real-world applications,
+such as guaranteed-loan networks and power grids, where a node or edge may be associated with a probability.
+In these networks, a node usually has a certain chance of default or breakdown due to self-factors
+or the influence from upstream nodes. For regulatory authorities and companies, it is critical
+to efficiently identify the vulnerable nodes, i.e., nodes with high default risks, such that they
+could pay more attention to these nodes for the purpose of risk management. In this paper, we propose
+and investigate the problem of top-$k$ vulnerable nodes detection in uncertain graphs. We formally
+define the problem and prove its hardness. To identify the $k$ most vulnerable nodes, a sampling-based
+approach is proposed. Rigorous theoretical analysis is conducted to bound the quality of returned
+results. Novel optimization techniques and a bottom-$k$ sketch based approach are further developed
+in order to scale for large networks. In the experiments, we demonstrate the performance of proposed
+techniques on 3 real financial networks and 5 benchmark networks. The evaluation results show that
+the proposed methods can achieve up to 2 orders of magnitudes speedup compared with the baseline
+approach. Moreover, to further verify the advantages of our model in real-life scenarios, we integrate
+the proposed techniques with our current loan risk control system, which is deployed in the collaborated
+bank, for more evaluation. Particularly, we show that our proposed new model has superior performance
+on real-life guaranteed-loan network data, which can better predict the default risks of enterprises
+compared to the state-of-the-art techniques. 

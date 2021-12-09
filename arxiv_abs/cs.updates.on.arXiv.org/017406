@@ -1,0 +1,18 @@
+Micro-bubbles and bubbly flows are widely observed and applied in chemical engineering, medicine,
+involves deformation, rupture, and collision of bubbles, phase mixture, etc. We study bubble dynamics
+by setting up two numerical simulation cases: bubbly flow with a single bubble and multiple bubbles,
+both confined in the microchannel, with parameters corresponding to their medical backgrounds.
+Both the cases have their medical background applications. Multiphase flow simulation requires
+high computation accuracy due to possible component losses that may be caused by sparse meshing
+during the computation. Hence, data-driven methods can be adopted as an useful tool. Based on physics-informed
+neural networks (PINNs), we propose a novel deep learning framework BubbleNet, which entails three
+main parts: deep neural networks (DNN) with sub nets for predicting different physics fields; the
+semi-physics-informed part, with only the fluid continuum condition and the pressure Poisson
+equation $\mathcal{P}$ encoded within; the time discretized normalizer (TDN), an algorithm to
+normalize field data per time step before training. We apply the traditional DNN and our BubbleNet
+to train the coarsened simulation data and predict the physics fields of both the two bubbly flow
+cases. The BubbleNets are trained for both with and without $\mathcal{P}$, from which we conclude
+that the 'physics-informed' part can serve as inner supervision. Results indicate our framework
+can predict the physics fields more accurately, estimating the prediction absolute errors. Our
+deep learning predictions outperform traditional numerical methods computed with similar data
+density meshing. The proposed network can potentially be applied to many other engineering fields.

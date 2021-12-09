@@ -1,0 +1,20 @@
+Assertion checking is an invaluable programmer's tool for finding many classes of errors or verifying
+their absence in dynamic languages such as Prolog. For Prolog programmers this means being able
+to have relevant properties such as modes, types, determinacy, non-failure, sharing, constraints,
+cost, etc., checked and errors flagged without having to actually run the program. Such global static
+analysis tools are arguably most useful the earlier they are used in the software development cycle,
+and fast response times are essential for interactive use. Triggering a full and precise semantic
+analysis of a software project every time a change is made can be prohibitively expensive. In our
+static analysis and verification framework this challenge is addressed through a combination
+of modular and incremental (context- and path-sensitive) analysis that is responsive to program
+edits, at different levels of granularity. We describe how the combination of this framework within
+an integrated development environment (IDE) takes advantage of such incrementality to achieve
+a high level of reactivity when reflecting analysis and verification results back as colorings
+and tooltips directly on the program text -- the tool's VeriFly mode. The concrete implementation
+that we describe is Emacs-based and reuses in part off-the-shelf "on-the-fly" syntax checking
+facilities (flycheck). We believe that similar extensions are also reproducible with low effort
+in other mature development environments. Our initial experience with the tool shows quite promising
+results, with low latency times that provide early, continuous, and precise assertion checking
+and other semantic feedback to programmers during the development process. The tool supports Prolog
+natively, as well as other languages by semantic transformation into Horn clauses. This paper is
+under consideration for acceptance in TPLP. 

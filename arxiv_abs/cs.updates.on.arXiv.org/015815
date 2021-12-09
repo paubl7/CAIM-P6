@@ -1,0 +1,20 @@
+Location data are widely used in mobile apps, ranging from location-based recommendations, to
+social media and navigation. A specific type of interaction is that of location-based alerts, where
+mobile users subscribe to a service provider (SP) in order to be notified when a certain event occurs
+nearby. Consider, for instance, the ongoing COVID-19 pandemic, where contact tracing has been
+singled out as an effective means to control the virus spread. Users wish to be notified if they came
+in proximity to an infected individual. However, serious privacy concerns arise if the users share
+their location history with the SP in plaintext. To address privacy, recent work proposed several
+protocols that can securely implement location-based alerts. The users upload their encrypted
+locations to the SP, and the evaluation of location predicates is done directly on ciphertexts.
+When a certain individual is reported as infected, all matching ciphertexts are found (e.g., according
+to a predicate such as "10 feet proximity to any of the locations visited by the infected patient in
+the last week"), and the corresponding users notified. However, there are significant performance
+issues associated with existing protocols. The underlying searchable encryption primitives
+required to perform the matching on ciphertexts are expensive, and without a proper encoding of
+locations and search predicates, the performance can degrade a lot. In this paper, we propose a novel
+method for variable-length location encoding based on Huffman codes. By controlling the length
+required to represent encrypted locations and the corresponding matching predicates, we are able
+to significantly speed up performance. We provide a theoretical analysis of the gain achieved by
+using Huffman codes, and we show through extensive experiments that the improvement compared with
+fixed-length encoding methods is substantial. 

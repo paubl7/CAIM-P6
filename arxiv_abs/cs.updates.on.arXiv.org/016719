@@ -1,0 +1,20 @@
+Vertical federated learning is a collaborative machine learning framework to train deep leaning
+models on vertically partitioned data with privacy-preservation. It attracts much attention
+both from academia and industry. Unfortunately, applying most existing vertical federated learning
+methods in real-world applications still faces two daunting challenges. First, most existing
+vertical federated learning methods have a strong assumption that at least one party holds the complete
+set of labels of all data samples, while this assumption is not satisfied in many practical scenarios,
+where labels are horizontally partitioned and the parties only hold partial labels. Existing vertical
+federated learning methods can only utilize partial labels, which may lead to inadequate model
+update in end-to-end backpropagation. Second, computational and communication resources vary
+in parties. Some parties with limited computational and communication resources will become the
+stragglers and slow down the convergence of training. Such straggler problem will be exaggerated
+in the scenarios of horizontally partitioned labels in vertical federated learning. To address
+these challenges, we propose a novel vertical federated learning framework named Cascade Vertical
+Federated Learning (CVFL) to fully utilize all horizontally partitioned labels to train neural
+networks with privacy-preservation. To mitigate the straggler problem, we design a novel optimization
+objective which can increase straggler's contribution to the trained models. We conduct a series
+of qualitative experiments to rigorously verify the effectiveness of CVFL. It is demonstrated
+that CVFL can achieve comparable performance (e.g., accuracy for classification tasks) with centralized
+training. The new optimization objective can further mitigate the straggler problem comparing
+with only using the asynchronous aggregation mechanism during training. 

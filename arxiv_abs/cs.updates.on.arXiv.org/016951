@@ -1,0 +1,20 @@
+Even though the Hamiltonian cycle problem is NP-complete, many of its problem instances aren't.
+In fact, almost all the hard instances reside in one area: near the Koml\'os-Szemer\'edi bound,
+of $\frac{1}{2}\ v\cdot ln(v) + \frac{1}{2}\ v\cdot ln( ln(v))$ edges, where randomly generated
+graphs have an approximate 50\% chance of being Hamiltonian. If the number of edges is either much
+higher or much lower, the problem is not hard -- most backtracking algorithms decide such instances
+in (near) polynomial time. Recently however, targeted search efforts have identified very hard
+Hamiltonian cycle problem instances very far away from the Koml\'os-Szemer\'edi bound. In that
+study, the used backtracking algorithm was Vandegriend-Culberson's, which was supposedly the
+most efficient of all Hamiltonian backtracking algorithms. In this paper, we make a unified large
+scale quantitative comparison for the best known backtracking algorithms described between 1877
+and 2016. We confirm the suspicion that the Koml\'os-Szemer\'edi bound is a hard area for all backtracking
+algorithms, but also that Vandegriend-Culberson is indeed the most efficient algorithm, when
+expressed in consumed computing time. When measured in recursive effectiveness however, the algorithm
+by Frank Rubin, almost half a century old, performs best. In a more general algorithmic assessment,
+we conjecture that edge pruning and non-Hamiltonicity checks might be largely responsible for
+these recursive savings. When expressed in system time however, denser problem instances require
+much more time per recursion. This is most likely due to the costliness of the extra search pruning
+procedures, which are relatively elaborate. We supply large amounts of experimental data, and
+a unified single-program implementation for all six algorithms. All data and algorithmic source
+code is made public for further use by our colleagues. 

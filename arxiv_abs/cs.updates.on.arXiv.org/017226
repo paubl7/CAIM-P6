@@ -1,0 +1,18 @@
+We present an Expectation-Maximization (EM) Regularized Deep Learning (EMReDL) model for weakly
+supervised tumor segmentation. The proposed framework is tailored to glioblastoma, a type of malignant
+tumor characterized by its diffuse infiltration into the surrounding brain tissue, which poses
+significant challenge to treatment target and tumor burden estimation using conventional structural
+MRI. Although physiological MRI provides more specific information regarding tumor infiltration,
+the relatively low resolution hinders a precise full annotation. This has motivated us to develop
+a weakly supervised deep learning solution that exploits the partial labelled tumor regions. EMReDL
+contains two components: a physiological prior prediction model and EM-regularized segmentation
+model. The physiological prior prediction model exploits the physiological MRI by training a classifier
+to generate a physiological prior map. This map is passed to the segmentation model for regularization
+using the EM algorithm. We evaluated the model on a glioblastoma dataset with the pre-operative
+multiparametric and recurrence MRI available. EMReDL showed to effectively segment the infiltrated
+tumor from the partially labelled region of potential infiltration. The segmented core tumor and
+infiltrated tumor demonstrated high consistency with the tumor burden labelled by experts. The
+performance comparisons showed that EMReDL achieved higher accuracy than published state-of-the-art
+models. On MR spectroscopy, the segmented region displayed more aggressive features than other
+partial labelled region. The proposed model can be generalized to other segmentation tasks that
+rely on partial labels, with the CNN architecture flexible in the framework. 

@@ -1,0 +1,18 @@
+Unsupervised domain adaptation (UDA) aims to transfer knowledge from a related but different well-labeled
+source domain to a new unlabeled target domain. Most existing UDA methods require access to the source
+data, and thus are not applicable when the data are confidential and not shareable due to privacy
+concerns. This paper aims to tackle a realistic setting with only a classification model available
+trained over, instead of accessing to, the source data. To effectively utilize the source model
+for adaptation, we propose a novel approach called Source HypOthesis Transfer (SHOT), which learns
+the feature extraction module for the target domain by fitting the target data features to the frozen
+source classification module (representing classification hypothesis). Specifically, SHOT
+exploits both information maximization and self-supervised learning for the feature extraction
+module learning to ensure the target features are implicitly aligned with the features of unseen
+source data via the same hypothesis. Furthermore, we propose a new labeling transfer strategy,
+which separates the target data into two splits based on the confidence of predictions (labeling
+information), and then employ semi-supervised learning to improve the accuracy of less-confident
+predictions in the target domain. We denote labeling transfer as SHOT++ if the predictions are obtained
+by SHOT. Extensive experiments on both digit classification and object recognition tasks show
+that SHOT and SHOT++ achieve results surpassing or comparable to the state-of-the-arts, demonstrating
+the effectiveness of our approaches for various visual domain adaptation problems. Code will be
+available at \url{https://github.com/tim-learn/SHOT-plus}. 

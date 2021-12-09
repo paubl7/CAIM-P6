@@ -1,0 +1,18 @@
+Models related to the Euler's elastica energy have proven to be useful for many applications including
+image processing. Extending elastica models to color images and multi-channel data is a challenging
+task, as stable and consistent numerical solvers for these geometric models often involve high
+order derivatives. Like the single channel Euler's elastica model and the total variation (TV)
+models, geometric measures that involve high order derivatives could help when considering image
+formation models that minimize elastic properties. In the past, the Polyakov action from high energy
+physics has been successfully applied to color image processing. Here, we introduce an addition
+to the Polyakov action for color images that minimizes the color manifold curvature. The color image
+curvature is computed by applying of the Laplace-Beltrami operator to the color image channels.
+When reduced to gray-scale images, while selecting appropriate scaling between space and color,
+the proposed model minimizes the Euler's elastica operating on the image level sets. Finding a minimizer
+for the proposed nonlinear geometric model is a challenge we address in this paper. Specifically,
+we present an operator-splitting method to minimize the proposed functional. The non-linearity
+is decoupled by introducing three vector-valued and matrix-valued variables. The problem is then
+converted into solving for the steady state of an associated initial-value problem. The initial-value
+problem is time-split into three fractional steps, such that each sub-problem has a closed form
+solution, or can be solved by fast algorithms. The efficiency and robustness of the proposed method
+are demonstrated by systematic numerical experiments. 

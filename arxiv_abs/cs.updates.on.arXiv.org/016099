@@ -1,0 +1,18 @@
+Mixed-Criticality (MC) systems have recently been devised to address the requirements of real-time
+systems in industrial applications, where the system runs tasks with different criticality levels
+on a single platform. In some workloads, a high-critically task might overrun and overload the system,
+or a fault can occur during the execution. However, these systems must be fault-tolerant and guarantee
+the correct execution of all high-criticality tasks by their deadlines to avoid catastrophic consequences,
+in any situation. Furthermore, in these MC systems, the peak power consumption of the system may
+increase, especially in an overload situation and exceed the processor Thermal Design Power (TDP)
+constraint. This may cause generating heat beyond the cooling capacity, resulting the system stop
+to avoid excessive heat and halting the processor. In this paper, we propose a technique for dependent
+dual-criticality tasks in fault-tolerant multi-core MC systems to manage peak power consumption
+and temperature. The technique develops a tree of possible task mapping and scheduling at design-time
+to cover all possible scenarios and reduce the low-criticality task drop rate in the high-criticality
+mode. At run-time, the system exploits the tree to select a proper schedule according to fault occurrences
+and criticality mode changes. Experimental results show that the average task schedulability
+is 74.14% on average for the proposed method, while the peak power consumption and maximum temperature
+are improved by 16.65% and 14.9 C on average, respectively, compared to a recent work. In addition,
+for a real-life application, our method reduces the peak power and maximum temperature by up to 20.06%
+and 5 C, respectively, compared to a state-of-the-art approach. 

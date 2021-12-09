@@ -1,0 +1,19 @@
+Compared to conventional zero-shot learning (ZSL) where recognising unseen classes is the primary
+or only aim, the goal of generalized zero-shot learning (GZSL) is to recognise both seen and unseen
+classes. Most GZSL methods typically learn to synthesise visual representations from semantic
+information on the unseen classes. However, these types of models are prone to overfitting the seen
+classes, resulting in distribution overlap between the generated features of the seen and unseen
+classes. The overlapping region is filled with uncertainty as the model struggles to determine
+whether a test case from within the overlap is seen or unseen. Further, these generative methods
+suffer in scenarios with sparse training samples. The models struggle to learn the distribution
+of high dimensional visual features and, therefore, fail to capture the most discriminative inter-class
+features. To address these issues, in this paper, we propose a novel framework that leverages dual
+variational autoencoders with a triplet loss to learn discriminative latent features and applies
+the entropy-based calibration to minimize the uncertainty in the overlapped area between the seen
+and unseen classes. Specifically, the dual generative model with the triplet loss synthesises
+inter-class discriminative latent features that can be mapped from either visual or semantic space.
+To calibrate the uncertainty for seen classes, we calculate the entropy over the softmax probability
+distribution from a general classifier. With this approach, recognising the seen samples within
+the seen classes is relatively straightforward, and there is less risk that a seen sample will be
+misclassified into an unseen class in the overlapped region. Extensive experiments on six benchmark
+datasets demonstrate that the proposed method outperforms state-of-the-art approaches. 

@@ -1,0 +1,20 @@
+Real-time remote sensing applications like search and rescue missions, military target detection,
+environmental monitoring, hazard prevention and other time-critical applications require onboard
+real time processing capabilities or autonomous decision making. Some unmanned remote systems
+like satellites are physically remote from their operators, and all control of the spacecraft and
+data returned by the spacecraft must be transmitted over a wireless radio link. This link may not
+be available for extended periods when the satellite is out of line of sight of its ground station.
+Therefore, lightweight, small size and low power consumption hardware is essential for onboard
+real time processing systems. With increasing dimensionality, size and resolution of recent hyperspectral
+imaging sensors, additional challenges are posed upon remote sensing processing systems and more
+capable computing architectures are needed. Graphical Processing Units (GPUs) emerged as promising
+architecture for light weight high performance computing that can address these computational
+requirements for onboard systems. The goal of this study is to build high performance methods for
+onboard hyperspectral analysis. We propose accelerated methods for the well-known recursive
+hierarchical segmentation (RHSEG) clustering method, using GPUs, hybrid multicore CPU with a
+GPU and hybrid multi-core CPU/GPU clusters. RHSEG is a method developed by the National Aeronautics
+and Space Administration (NASA), which is designed to provide rich classification information
+with several output levels. The achieved speedups by parallel solutions compared to CPU sequential
+implementations are 21x for parallel single GPU and 240x for hybrid multi-node computer clusters
+with 16 computing nodes. The energy consumption is reduced to 74% using a single GPU compared to the
+equivalent parallel CPU cluster. 

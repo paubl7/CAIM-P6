@@ -1,0 +1,20 @@
+Genome sequence analysis has enabled significant advancements in medical and scientific areas
+such as personalized medicine, outbreak tracing, and the understanding of evolution. Unfortunately,
+it is currently bottlenecked by the computational power and memory bandwidth limitations of existing
+systems, as many of the steps in genome sequence analysis must process a large amount of data. A major
+contributor to this bottleneck is approximate string matching (ASM). We propose GenASM, the first
+ASM acceleration framework for genome sequence analysis. We modify the underlying ASM algorithm
+(Bitap) to significantly increase its parallelism and reduce its memory footprint, and we design
+the first hardware accelerator for Bitap. Our hardware accelerator consists of specialized compute
+units and on-chip SRAMs that are designed to match the rate of computation with memory capacity and
+bandwidth. We demonstrate that GenASM is a flexible, high-performance, and low-power framework,
+which provides significant performance and power benefits for three different use cases in genome
+sequence analysis: 1) GenASM accelerates read alignment for both long reads and short reads. For
+long reads, GenASM outperforms state-of-the-art software and hardware accelerators by 116x and
+3.9x, respectively, while consuming 37x and 2.7x less power. For short reads, GenASM outperforms
+state-of-the-art software and hardware accelerators by 111x and 1.9x. 2) GenASM accelerates pre-alignment
+filtering for short reads, with 3.7x the performance of a state-of-the-art pre-alignment filter,
+while consuming 1.7x less power and significantly improving the filtering accuracy. 3) GenASM
+accelerates edit distance calculation, with 22-12501x and 9.3-400x speedups over the state-of-the-art
+software library and FPGA-based accelerator, respectively, while consuming 548-582x and 67x
+less power. 

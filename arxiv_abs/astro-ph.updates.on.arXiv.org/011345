@@ -1,0 +1,18 @@
+Traditional spectral energy distribution (SED) fitting codes used to derive galaxy physical properties
+are often uncertain at the factor of a few level owing to uncertainties in galaxy star formation histories
+and dust attenuation curves. Beyond this, Bayesian fitting (which is typically used in SED fitting
+software) is an intrinsically compute-intensive task, often requiring access to expensive hardware
+for long periods of time. To overcome these shortcomings, we have developed {\sc mirkwood}: a user-friendly
+tool comprising of an ensemble of supervised machine learning-based models capable of non-linearly
+mapping galaxy fluxes to their properties. By stacking multiple models, we marginalize against
+any individual model's poor performance in a given region of the parameter space. We demonstrate
+\textsc{mirkwood}'s significantly improved performance over traditional techniques by training
+it on a combined data set of mock photometry of z=0 galaxies from the \textsc{Simba}, \textsc{EAGLE}
+and \textsc{IllustrisTNG} cosmological simulations, and comparing the derived results with
+those obtained from traditional SED fitting techniques. \textsc{mirkwood} is also able to account
+for uncertainties arising both from intrinsic noise in observations, and from finite training
+data and incorrect modeling assumptions. To increase the added value to the observational community,
+we use Shapley value explanations (SHAP) to fairly evaluate the relative importance of different
+bands to understand why particular predictions were reached. We envisage \textsc{mirkwood} to
+be an evolving, open-source framework that will provide highly accurate physical properties from
+observations of galaxies as compared to traditional SED fitting. 

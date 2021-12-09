@@ -1,0 +1,19 @@
+Constitutive models that describe the mechanical behavior of soft tissues have advanced greatly
+over the past few decades. These expert models are generalizable and require the calibration of
+a number of parameters to fit experimental data. However, inherent pitfalls stemming from the restriction
+to a specific functional form include poor fits to the data, non-uniqueness of fit, and high sensitivity
+to parameters. In this study we design and train fully connected neural networks as material models
+to replace or augment expert models. To guarantee objectivity, the neural network takes isochoric
+strain invariants as inputs, and outputs the value of strain energy and its derivatives with respect
+to the invariants. Convexity of the material model is enforced through the loss function. Direct
+prediction of the derivative functions -- rather than just predicting the energy -- serves two purposes:
+it provides flexibility during training, and it enables the calculation of the elasticity tensor
+through back-propagation. We showcase the ability of the neural network to learn the mechanical
+behavior of porcine and murine skin from biaxial test data. Crucially, we show that a multi-fidelity
+scheme which combines high fidelity experimental data with low fidelity analytical data yields
+the best performance. The neural network material model can then be interpreted as the best extension
+of an expert model: it learns the features that an expert has encoded in the analytical model while
+fitting the experimental data better. Finally, we implemented a general user material subroutine
+(UMAT) for the finite element software Abaqus and thereby make our advances available to the broader
+computational community. We expect that the methods and software generated in this work will broaden
+the use of data-driven constitutive models in biomedical applications. 

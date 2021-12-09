@@ -1,0 +1,18 @@
+For early breast cancer detection, regular screening with mammography imaging is recommended.
+Routinary examinations result in datasets with a predominant amount of negative samples. A potential
+solution to such class-imbalance is joining forces across multiple institutions. Developing
+a collaborative computer-aided diagnosis system is challenging in different ways. Patient privacy
+and regulations need to be carefully respected. Data across institutions may be acquired from different
+devices or imaging protocols, leading to heterogeneous non-IID data. Also, for learning-based
+methods, new optimization strategies working on distributed data are required. Recently, federated
+learning has emerged as an effective tool for collaborative learning. In this setting, local models
+perform computation on their private data to update the global model. The order and the frequency
+of local updates influence the final global model. Hence, the order in which samples are locally
+presented to the optimizers plays an important role. In this work, we define a memory-aware curriculum
+learning method for the federated setting. Our curriculum controls the order of the training samples
+paying special attention to those that are forgotten after the deployment of the global model. Our
+approach is combined with unsupervised domain adaptation to deal with domain shift while preserving
+data privacy. We evaluate our method with three clinical datasets from different vendors. Our results
+verify the effectiveness of federated adversarial learning for the multi-site breast cancer classification.
+Moreover, we show that our proposed memory-aware curriculum method is beneficial to further improve
+classification performance. Our code is publicly available at: https://github.com/ameliajimenez/curriculum-federated-learning.

@@ -1,0 +1,20 @@
+Java platform provides various APIs to facilitate secure coding. However, correctly using security
+APIs is usually challenging for developers who lack cybersecurity training. Prior work shows that
+many developers misuse security APIs; such misuses can introduce vulnerabilities into software,
+void security protections, and present security exploits to hackers. To eliminate such API-related
+vulnerabilities, this paper presents SEADER -- our new approach that detects and repairs security
+API misuses. Given an exemplar, insecure code snippet, and its secure counterpart, SEADER compares
+the snippets and conducts data dependence analysis to infer the security API misuse templates and
+corresponding fixing operations. Based on the inferred information, given a program, SEADER performs
+inter-procedural static analysis to search for any security API misuse and to propose customized
+fixing suggestions for those vulnerabilities. To evaluate SEADER, we applied it to 25 <insecure,
+secure> code pairs, and SEADER successfully inferred 18 unique API misuse templates and related
+fixes. With these vulnerability repair patterns, we further applied SEADER to 10 open-source projects
+that contain in total 32 known vulnerabilities. Our experiment shows that SEADER detected vulnerabilities
+with 100% precision, 84% recall, and 91% accuracy. Additionally, we applied SEADER to 100 Apache
+open-source projects and detected 988 vulnerabilities; SEADER always customized repair suggestions
+correctly. Based on SEADER's outputs, we filed 60 pull requests. Up till now, developers of 18 projects
+have offered positive feedbacks on SEADER's suggestions. Our results indicate that SEADER can
+effectively help developers detect and fix security API misuses. Whereas prior work either detects
+API misuses or suggests simple fixes, SEADER is the first tool to do both for nontrivial vulnerability
+repairs. 

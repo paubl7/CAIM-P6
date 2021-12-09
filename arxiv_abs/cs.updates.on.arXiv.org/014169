@@ -1,0 +1,19 @@
+Bluetooth has become critical as many IoT devices are arriving in the market. Most of the current
+literature focusing on Bluetooth simulation concentrates on the network protocols' performances
+and completely neglects the privacy protection recommendations introduced in the BLE standard.
+Indeed, privacy protection is one of the main issues handled in the Bluetooth standard. For instance,
+the current standard forces devices to change the identifier they embed within the public and private
+packets, known as MAC address randomization. Although randomizing MAC addresses is intended to
+preserve device privacy, recent literature shows many challenges that are still present. One of
+them is the correlation between the public packets and the emitters. Unfortunately, existing evaluation
+tools such as NS-3 are not designed to reproduce this Bluetooth standard's essential functionality.
+This makes it impossible to test solutions for different device-fingerprinting strategies as
+there is a lack of ground truth for large-scale scenarios with the majority of current BLE devices
+implementing MAC address randomization. In this paper, we first introduce a solution of standard-compliant
+MAC address randomization in the NS-3 framework, capable of emulating any real BLE device in the
+simulation and generating real-world Bluetooth traces. In addition, since the simulation run-time
+for trace-collection grows exponentially with the number of devices, we introduce an optimization
+to linearize public-packet sniffing. This made the large-scale trace-collection practically
+feasible. Then, we use the generated traces and associated ground truth to do a case study on the evaluation
+of a generic MAC address association available in the literature. Our case study reveals that close
+to 90 percent of randomized addresses could be correctly linked even in highly dense and mobile scenarios.

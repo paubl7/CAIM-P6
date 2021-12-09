@@ -1,0 +1,18 @@
+Quantum control can be employed in quantum metrology to improve the precision limit for the estimation
+of unknown parameters. The optimal control, however, typically depends on the actual values of
+the parameters and thus needs to be designed adaptively with the updated estimations of those parameters.
+Traditional methods, such as gradient ascent pulse engineering (GRAPE), need to be rerun for each
+new set of parameters encountered, making the optimization costly, especially when many parameters
+are involved. Here we study the generalizability of optimal control, namely, optimal controls
+that can be systematically updated across a range of parameters with minimal cost. In cases where
+control channels can completely reverse the shift in the Hamiltonian due to a change in parameters,
+we provide an analytical method which efficiently generates optimal controls for any parameter
+starting from an initial optimal control found by either GRAPE or reinforcement learning. When
+the control channels are restricted, the analytical scheme is invalid, but reinforcement learning
+still retains a level of generalizability, albeit in a narrower range. In cases where the shift in
+the Hamiltonian is impossible to decompose to available control channels, no generalizability
+is found for either the reinforcement learning or the analytical scheme. We argue that the generalization
+of reinforcement learning is through a mechanism similar to the analytical scheme. Our results
+provide insights into when and how the optimal control in multiparameter quantum metrology can
+be generalized, thereby facilitating efficient implementation of optimal quantum estimation
+of multiple parameters, particularly for an ensemble of systems with ranges of parameters. 

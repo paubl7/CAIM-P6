@@ -1,0 +1,19 @@
+Current state-of-the-art visual recognition systems usually rely on the following pipeline:
+(a) pretraining a neural network on a large-scale dataset (e.g., ImageNet) and (b) finetuning the
+network weights on a smaller, task-specific dataset. Such a pipeline assumes the sole weight adaptation
+is able to transfer the network capability from one domain to another domain, based on a strong assumption
+that a fixed architecture is appropriate for all domains. However, each domain with a distinct recognition
+target may need different levels/paths of feature hierarchy, where some neurons may become redundant,
+and some others are re-activated to form new network structures. In this work, we prove that dynamically
+adapting network architectures tailored for each domain task along with weight finetuning benefits
+in both efficiency and effectiveness, compared to the existing image recognition pipeline that
+only tunes the weights regardless of the architecture. Our method can be easily generalized to an
+unsupervised paradigm by replacing supernet training with self-supervised learning in the source
+domain tasks and performing linear evaluation in the downstream tasks. This further improves the
+search efficiency of our method. Moreover, we also provide principled and empirical analysis to
+explain why our approach works by investigating the ineffectiveness of existing neural architecture
+search. We find that preserving the joint distribution of the network architecture and weights
+is of importance. This analysis not only benefits image recognition but also provides insights
+for crafting neural networks. Experiments on five representative image recognition tasks such
+as person re-identification, age estimation, gender recognition, image classification, and
+unsupervised domain adaptation demonstrate the effectiveness of our method. 

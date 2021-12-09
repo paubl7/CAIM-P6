@@ -1,0 +1,19 @@
+According to recent empirical studies, a majority of users have the same, or very similar, passwords
+across multiple password-secured online services. This practice can have disastrous consequences,
+as one password being compromised puts all the other accounts at much higher risk. Generally, an
+adversary may use any side-information he/she possesses about the user, be it demographic information,
+password reuse on a previously compromised account, or any other relevant information to devise
+a better brute-force strategy (so called targeted attack). In this work, we consider a distributed
+brute-force attack scenario in which $m$ adversaries, each observing some side information, attempt
+breaching a password secured system. We compare two strategies: an uncoordinated attack in which
+the adversaries query the system based on their own side-information until they find the correct
+password, and a fully coordinated attack in which the adversaries pool their side-information
+and query the system together. For passwords $\mathbf{X}$ of length $n$, generated independently
+and identically from a distribution $P_X$, we establish an asymptotic closed-form expression
+for the uncoordinated and coordinated strategies when the side-information $\mathbf{Y}_{(m)}$
+are generated independently from passing $\mathbf{X}$ through a memoryless channel $P_{Y|X}$,
+as the length of the password $n$ goes to infinity. We illustrate our results for binary symmetric
+channels and binary erasure channels, two families of side-information channels which model password
+reuse. We demonstrate that two coordinated agents perform asymptotically better than any finite
+number of uncoordinated agents for these channels, meaning that sharing side-information is very
+valuable in distributed attacks. 

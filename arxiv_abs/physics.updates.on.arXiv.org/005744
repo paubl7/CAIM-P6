@@ -1,0 +1,19 @@
+Uncertainty quantification of groundwater (GW) aquifer parameters is critical for efficient
+management and sustainable extraction of GW resources. These uncertainties are introduced by
+the data, model, and prior information on the parameters. Here we develop a Bayesian inversion framework
+that uses Interferometric Synthetic Aperture Radar (InSAR) surface deformation data to infer
+the laterally heterogeneous permeability of a transient linear poroelastic model of a confined
+GW aquifer. The Bayesian solution of this inverse problem takes the form of a posterior probability
+density of the permeability. Exploring this posterior using classical Markov chain Monte Carlo
+(MCMC) methods is computationally prohibitive due to the large dimension of the discretized permeability
+field and the expense of solving the poroelastic forward problem. However, in many partial differential
+equation (PDE)-based Bayesian inversion problems, the data are only informative in a few directions
+in parameter space. For the poroelasticity problem, we prove this property theoretically for a
+one-dimensional problem and demonstrate it numerically for a three-dimensional aquifer model.
+We design a generalized preconditioned Crank--Nicolson (gpCN) MCMC method that exploits this
+intrinsic low dimensionality by using a low-rank based Laplace approximation of the posterior
+as a proposal, which we build scalably. The feasibility of our approach is demonstrated through
+a real GW aquifer test in Nevada. The inherently two dimensional nature of InSAR surface deformation
+data informs a sufficient number of modes of the permeability field to allow detection of major structures
+within the aquifer, significantly reducing the uncertainty in the pressure and the displacement
+quantities of interest. 

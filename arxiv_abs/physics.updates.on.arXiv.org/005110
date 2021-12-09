@@ -1,0 +1,20 @@
+The leading-order dispersion and exchange-dispersion terms in symmetry-adapted perturbation
+theory (SAPT), $E^{(20)}_{\rm disp}$ and $E^{(20)}_{\rm exch-disp}$, suffer from slow convergence
+to the complete basis set limit. To alleviate this problem, explicitly correlated variants of these
+corrections, $E^{(20)}_{\rm disp}$-F12 and $E^{(20)}_{\rm exch-disp}$-F12, have been proposed
+recently. However, the original formalism (M. Kodrycka et al., J. Chem. Theory Comput. 2019, 15,
+5965-5986), while highly successful in terms of improving convergence, was not competitive to
+conventional orbital-based SAPT in terms of computational efficiency due to the need to manipulate
+several kinds of two-electron integrals. In this work, we eliminate this need by decomposing all
+types of two-electron integrals using robust density fitting. We demonstrate that the error of
+the density fitting approximation is negligible when standard auxiliary bases such as aug-cc-pVXZ/MP2FIT
+are employed. The new implementation allowed us to study all complexes in the A24 database in basis
+sets up to aug-cc-pV5Z, and the $E^{(20)}_{\rm disp}$-F12 and $E^{(20)}_{\rm exch-disp}$-F12
+values exhibit vastly improvement basis set convergence over their conventional counterparts.
+The well-converged $E^{(20)}_{\rm disp}$-F12 and $E^{(20)}_{\rm exch-disp}$-F12 numbers can
+be substituted for conventional $E^{(20)}_{\rm disp}$ and $E^{(20)}_{\rm exch-disp}$ ones in
+a calculation of the total SAPT interaction energy at any level (SAPT0, SAPT2+3, ...). We show that
+the addition of F12 terms does not improve the accuracy of low-level SAPT treatments. However, when
+the theory errors are minimized in high-level SAPT approaches such as SAPT2+3(CCD)$\delta$MP2,
+the reduction of basis set incompleteness errors thanks to the F12 treatment substantially improves
+the accuracy of small-basis calculations. 

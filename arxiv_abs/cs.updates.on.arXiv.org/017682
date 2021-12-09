@@ -1,0 +1,18 @@
+More than 90\% of colorectal cancer is gradually transformed from colorectal polyps. In clinical
+practice, precise polyp segmentation provides important information in the early detection of
+colorectal cancer. Therefore, automatic polyp segmentation techniques are of great importance
+for both patients and doctors. Most existing methods are based on U-shape structure and use element-wise
+addition or concatenation to fuse different level features progressively in decoder. However,
+both the two operations easily generate plenty of redundant information, which will weaken the
+complementarity between different level features, resulting in inaccurate localization and
+blurred edges of polyps. To address this challenge, we propose a multi-scale subtraction network
+(MSNet) to segment polyp from colonoscopy image. Specifically, we first design a subtraction unit
+(SU) to produce the difference features between adjacent levels in encoder. Then, we pyramidally
+equip the SUs at different levels with varying receptive fields, thereby obtaining rich multi-scale
+difference information. In addition, we build a training-free network "LossNet" to comprehensively
+supervise the polyp-aware features from bottom layer to top layer, which drives the MSNet to capture
+the detailed and structural cues simultaneously. Extensive experiments on five benchmark datasets
+demonstrate that our MSNet performs favorably against most state-of-the-art methods under different
+evaluation metrics. Furthermore, MSNet runs at a real-time speed of $\sim$70fps when processing
+a $352 \times 352$ image. The source code will be publicly available at \url{https://github.com/Xiaoqi-Zhao-DLUT/MSNet}.
+\keywords{Colorectal Cancer \and Automatic Polyp Segmentation \and Subtraction \and LossNet.}

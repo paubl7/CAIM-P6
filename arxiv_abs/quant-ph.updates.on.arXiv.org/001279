@@ -1,0 +1,19 @@
+Knowledge extraction, typically studied in the classical setting, is at the heart of several cryptographic
+protocols. We introduce the notion of secure quantum extraction protocols. A secure quantum extraction
+protocol for an NP relation $\mathcal{R}$ is a classical interactive protocol between a sender
+and a receiver, where the sender gets the instance $z$ and a witness $w$, while the receiver only gets
+the instance $z$. For any efficient quantum adversarial sender (who follows the protocol but can
+choose its own randomness), there exists a quantum extractor that can extract a witness $w'$ such
+that $(z,w') \in \mathcal{R}$ while a malicious receiver should not be able to output any valid witness.
+We study and construct two types of secure quantum extraction protocols. (1) Quantum extraction
+protocols secure against quantum malicious receivers based on quantum fully homomorphic encryption
+satisfying some mild properties and quantum hardness of learning with errors. In this construction,
+we introduce a non black box technique in the quantum setting. All previous extraction techniques
+in the quantum setting were solely based on quantum rewinding. (2) Quantum extraction protocols
+secure against classical malicious receivers based on quantum hardness of learning with errors.
+As an application, based on the quantum hardness of learning with errors, we present a construction
+of constant round quantum zero-knowledge argument systems for NP that guarantee security even
+against quantum malicious verifiers; however, our soundness only holds against classical probabilistic
+polynomial time adversaries. Prior to our work, such protocols were known based, additionally,
+on the assumptions of decisional Diffie-Hellman (or other cryptographic assumptions that do not
+hold against polynomial time quantum algorithms). 

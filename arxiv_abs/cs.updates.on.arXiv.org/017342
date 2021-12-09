@@ -1,0 +1,19 @@
+Machine learning (ML) models are widely used in many important domains. For efficiently processing
+these computational- and memory-intensive applications, tensors of these over-parameterized
+models are compressed by leveraging sparsity, size reduction, and quantization of tensors. Unstructured
+sparsity and tensors with varying dimensions yield irregular computation, communication, and
+memory access patterns; processing them on hardware accelerators in a conventional manner does
+not inherently leverage acceleration opportunities. This paper provides a comprehensive survey
+on the efficient execution of sparse and irregular tensor computations of ML models on hardware
+accelerators. In particular, it discusses enhancement modules in the architecture design and
+the software support; categorizes different hardware designs and acceleration techniques and
+analyzes them in terms of hardware and execution costs; analyzes achievable accelerations for
+recent DNNs; highlights further opportunities in terms of hardware/software/model co-design
+optimizations (inter/intra-module). The takeaways from this paper include: understanding the
+key challenges in accelerating sparse, irregular-shaped, and quantized tensors; understanding
+enhancements in accelerator systems for supporting their efficient computations; analyzing
+trade-offs in opting for a specific design choice for encoding, storing, extracting, communicating,
+computing, and load-balancing the non-zeros; understanding how structured sparsity can improve
+storage efficiency and balance computations; understanding how to compile and map models with
+sparse tensors on the accelerators; understanding recent design trends for efficient accelerations
+and further opportunities. 

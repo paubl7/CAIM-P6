@@ -1,0 +1,20 @@
+This paper presents Kimera-Multi, the first multi-robot system that (i) is robust and capable of
+identifying and rejecting incorrect inter and intra-robot loop closures resulting from perceptual
+aliasing, (ii) is fully distributed and only relies on local (peer-to-peer) communication to achieve
+distributed localization and mapping, and (iii) builds a globally consistent metric-semantic
+3D mesh model of the environment in real-time, where faces of the mesh are annotated with semantic
+labels. Kimera-Multi is implemented by a team of robots equipped with visual-inertial sensors.
+Each robot builds a local trajectory estimate and a local mesh using Kimera. When communication
+is available, robots initiate a distributed place recognition and robust pose graph optimization
+protocol based on a novel distributed graduated non-convexity algorithm. The proposed protocol
+allows the robots to improve their local trajectory estimates by leveraging inter-robot loop closures
+while being robust to outliers. Finally, each robot uses its improved trajectory estimate to correct
+the local mesh using mesh deformation techniques. We demonstrate Kimera-Multi in photo-realistic
+simulations, SLAM benchmarking datasets, and challenging outdoor datasets collected using ground
+robots. Both real and simulated experiments involve long trajectories (e.g., up to 800 meters per
+robot). The experiments show that Kimera-Multi (i) outperforms the state of the art in terms of robustness
+and accuracy, (ii) achieves estimation errors comparable to a centralized SLAM system while being
+fully distributed, (iii) is parsimonious in terms of communication bandwidth, (iv) produces accurate
+metric-semantic 3D meshes, and (v) is modular and can be also used for standard 3D reconstruction
+(i.e., without semantic labels) or for trajectory estimation (i.e., without reconstructing a
+3D mesh). 

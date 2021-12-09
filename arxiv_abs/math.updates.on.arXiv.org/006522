@@ -1,0 +1,19 @@
+Coded distributed matrix multiplication (CDMM) schemes, such as MatDot codes, seek efficient
+ways to distribute matrix multiplication task(s) to a set of $N$ distributed servers so that the
+answers returned from any $R$ servers are sufficient to recover the desired product(s). For example,
+to compute the product of matrices ${\bf U, V}$, MatDot codes partition each matrix into $p>1$ sub-matrices
+to create smaller coded computation tasks that reduce the upload/storage at each server by $1/p$,
+such that ${\bf UV}$ can be recovered from the answers returned by any $R=2p-1$ servers. An important
+concern in CDMM is to reduce the recovery threshold $R$ for a given storage/upload constraint. Recently,
+Jeong et al. introduced Approximate MatDot (AMD) codes that are shown to improve the recovery threshold
+by a factor of nearly $2$, from $2p-1$ to $p$. A key observation that motivates our work is that the
+storage/upload required for approximate computing depends not only on the dimensions of the (coded)
+sub-matrices that are assigned to each server, but also on their precision levels -- a critical aspect
+that is not explored by Jeong et al. Our main contribution is a dimensional analysis of AMD codes inspired
+by the Generalized Degrees of Freedom (GDoF) framework previously developed for wireless networks,
+which indicates that for the same upload/storage, once the precision levels of the task assignments
+are accounted for, AMD codes surprisingly fall short in all aspects to even the trivial replication
+scheme which assigns the full computation task to every server. Indeed, the trivial replication
+scheme has a much better recovery threshold of $1$, better download cost, better computation cost,
+and much better encoding/decoding (none required) complexity than AMD codes. The dimensional
+analysis is supported by simple numerical experiments. 

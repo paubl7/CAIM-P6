@@ -1,0 +1,20 @@
+Suppose we wish to predict the behaviour of a physical system. We may choose to represent the system
+by model structure $S$ (a set of related mathematical models defined by parametric relationships
+between system variables), and a parameter set $\Theta$. Each parameter vector in $\Theta$ is associated
+with a completely specified model in $S$. We use $S$ with system observations in estimating the "true"
+(unknown) parameter vector. Inconveniently, multiple parameter vectors may cause $S$ to approximate
+the data equally well. If we cannot distinguish between such alternatives, and these lead to dissimilar
+predictions, we cannot confidently use $S$ in decision making. This result may render efforts in
+data collection and modelling fruitless. This outcome occurs when $S$ lacks the property of structural
+global identifiability (SGI). Fortunately, we can test various classes of structures for SGI prior
+to data collection. A non-SGI result may guide changes to our structure or experimental design towards
+obtaining a better outcome. We aim to assist the testing of structures for SGI through bespoke Maple
+2020 procedures. We consider continuous-time, uncontrolled, linear time-invariant state-space
+structures. Here, the time evolution of the state-variable vector ${\bf x}$ is modelled by a system
+of constant-coefficient, ordinary differential equations. We utilise the "transfer function"
+approach, which is also applicable to the "compartmental" subclass (mass is conserved). Our use
+of Maple's "Explore" enables an interactive consideration of a parent structure and its variants,
+obtained as the user changes which components of ${\bf x}$ are observed, or have non-zero initial
+conditions. Such changes may influence the information content of the idealised output available
+for the SGI test, and hence, its result. Our approach may inform the interactive analysis of structures
+from other classes. 

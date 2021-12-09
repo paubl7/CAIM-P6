@@ -1,0 +1,18 @@
+Building neural network classifiers with an ability to distinguish between in and out-of distribution
+inputs is an important step towards faithful deep learning systems. Some of the successful approaches
+for this, resort to architectural novelties, such as ensembles, with increased complexities in
+terms of the number of parameters and training procedures. Whereas some other approaches make use
+of surrogate samples, which are easy to create and work as proxies for actual out-of-distribution
+(OOD) samples, to train the networks for OOD detection. In this paper, we propose a very simple approach
+for enhancing the ability of a pretrained network to detect OOD inputs without even altering the
+original parameter values. We define a probabilistic trust interval for each weight parameter
+of the network and optimize its size according to the in-distribution (ID) inputs. It allows the
+network to sample additional weight values along with the original values at the time of inference
+and use the observed disagreement among the corresponding outputs for OOD detection. In order to
+capture the disagreement effectively, we also propose a measure and establish its suitability
+using empirical evidence. Our approach outperforms the existing state-of-the-art methods on
+various OOD datasets by considerable margins without using any real or surrogate OOD samples. We
+also analyze the performance of our approach on adversarial and corrupted inputs such as CIFAR-10-C
+and demonstrate its ability to clearly distinguish such inputs as well. By using fundamental theorem
+of calculus on neural networks, we explain why our technique doesn't need to observe OOD samples
+during training to achieve results better than the previous works. 

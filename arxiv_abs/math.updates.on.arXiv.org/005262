@@ -1,0 +1,19 @@
+We investigate the dual of a Multistage Stochastic Linear Program (MSLP) to study two questions
+for this class of problems. The first of these questions is the study of the optimal value of the problem
+as a function of the involved parameters. For this sensitivity analysis problem, we provide formulas
+for the derivatives of the value function with respect to the parameters and illustrate their application
+on an inventory problem. Since these formulas involve optimal dual solutions, we need an algorithm
+that computes such solutions to use them. In this context, the second question we address is the study
+of solution methods for the dual problem. Writing Dynamic Programming (DP) equations for the dual,
+we can use an SDDP type method, called Dual SDDP, which solves these DP equations. However, applying
+this method will only be possible if the Relatively Complete Recourse (RCR) holds for the dual. Since
+the RCR assumption may fail to hold, we design two variants of Dual SDDP, namely Dual SDDP with penalizations
+and Dual SDDP with feasibility cuts. The study of this second question allows us to take a fresh look
+at the notoriously difficult to solve class of MSLP with interstage dependent cost coefficients.
+Indeed, for this class of problems, cost-to-go functions are non-convex and solution methods were
+so far using SDDP for a Markov chain approximation of the cost coefficients process. For these problems,
+we propose to apply Dual SDDP with penalizations to the cost-to-go functions of the dual which are
+concave. This algorithm converges to the optimal value of the problem. Finally, as a proof of concept
+of the tools developed, we present the results of numerical experiments computing the sensitivity
+of the optimal value of an inventory problem as a function of parameters of the demand process and
+compare Primal and Dual SDDP on the inventory and a hydro-thermal planning problems. 

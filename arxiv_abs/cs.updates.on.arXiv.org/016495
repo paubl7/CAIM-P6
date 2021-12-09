@@ -1,0 +1,19 @@
+3D complete renal structures(CRS) segmentation targets on segmenting the kidneys, tumors, renal
+arteries and veins in one inference. Once successful, it will provide preoperative plans and intraoperative
+guidance for laparoscopic partial nephrectomy(LPN), playing a key role in the renal cancer treatment.
+However, no success has been reported in 3D CRS segmentation due to the complex shapes of renal structures,
+low contrast and large anatomical variation. In this study, we utilize the adversarial ensemble
+learning and propose Ensemble Multi-condition GAN(EnMcGAN) for 3D CRS segmentation for the first
+time. Its contribution is three-fold. 1)Inspired by windowing, we propose the multi-windowing
+committee which divides CTA image into multiple narrow windows with different window centers and
+widths enhancing the contrast for salient boundaries and soft tissues. And then, it builds an ensemble
+segmentation model on these narrow windows to fuse the segmentation superiorities and improve
+whole segmentation quality. 2)We propose the multi-condition GAN which equips the segmentation
+model with multiple discriminators to encourage the segmented structures meeting their real shape
+conditions, thus improving the shape feature extraction ability. 3)We propose the adversarial
+weighted ensemble module which uses the trained discriminators to evaluate the quality of segmented
+structures, and normalizes these evaluation scores for the ensemble weights directed at the input
+image, thus enhancing the ensemble results. 122 patients are enrolled in this study and the mean
+Dice coefficient of the renal structures achieves 84.6%. Extensive experiments with promising
+results on renal structures reveal powerful segmentation accuracy and great clinical significance
+in renal cancer treatment. 

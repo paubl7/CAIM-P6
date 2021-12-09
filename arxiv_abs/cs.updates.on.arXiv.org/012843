@@ -1,0 +1,20 @@
+P4 is a domain-specific language for programming and specifying packet-processing systems. It
+is based on an elegant design with high-level abstractions like parsers and match-action pipelines
+that can be compiled to efficient implementations in software or hardware. Unfortunately, like
+many industrial languages, P4 has developed without a formal foundation. The P4 Language Specification
+is a 160-page document with a mixture of informal prose, graphical diagrams, and pseudocode. The
+P4 reference implementation is a complex system, running to over 40KLoC of C++ code. Clearly neither
+of these artifacts is suitable for formal reasoning. This paper presents a new framework, called
+Petr4, that puts P4 on a solid foundation. Petr4 consists of a clean-slate definitional interpreter
+and a calculus that models the semantics of a core fragment of P4. Throughout the specification,
+some aspects of program behavior are left up to targets. Our interpreter is parameterized over a
+target interface which collects all the target-specific behavior in the specification in a single
+interface. The specification makes ad-hoc restrictions on the nesting of certain program constructs
+in order to simplify compilation and avoid the possibility of nonterminating programs. We captured
+the latter intention in our core calculus by stratifying its type system, rather than imposing unnatural
+syntactic restrictions, and we proved that all programs in this core calculus terminate. We have
+validated the interpreter against a suite of over 750 tests from the P4 reference implementation,
+exercising our target interface with tests for different targets. We established termination
+for the core calculus by induction on the stratified type system. While developing Petr4, we reported
+dozens of bugs in the language specification and the reference implementation, many of which have
+been fixed. 

@@ -1,0 +1,19 @@
+BACKGROUND: Machine learning-based security detection models have become prevalent in modern
+malware and intrusion detection systems. However, previous studies show that such models are susceptible
+to adversarial evasion attacks. In this type of attack, inputs (i.e., adversarial examples) are
+specially crafted by intelligent malicious adversaries, with the aim of being misclassified by
+existing state-of-the-art models (e.g., deep neural networks). Once the attackers can fool a classifier
+to think that a malicious input is actually benign, they can render a machine learning-based malware
+or intrusion detection system ineffective. GOAL: To help security practitioners and researchers
+build a more robust model against adversarial evasion attack through the use of ensemble learning.
+METHOD: We propose an approach called OMNI, the main idea of which is to explore methods that create
+an ensemble of "unexpected models"; i.e., models whose control hyperparameters have a large distance
+to the hyperparameters of an adversary's target model, with which we then make an optimized weighted
+ensemble prediction. RESULTS: In studies with five adversarial evasion attacks (FGSM, BIM, JSMA,
+DeepFool and Carlini-Wagner) on five security datasets (NSL-KDD, CIC-IDS-2017, CSE-CIC-IDS2018,
+CICAndMal2017 and the Contagio PDF dataset), we show that the improvement rate of OMNI's prediction
+accuracy over attack accuracy is about 53% (median value) across all datasets, with about 18% (median
+value) loss rate when comparing pre-attack accuracy and OMNI's prediction accuracy. CONCLUSIONWhen
+using ensemble learning as a defense method against adversarial evasion attacks, we suggest to
+create ensemble with unexpected models who are distant from the attacker's expected model (i.e.,
+target model) through methods such as hyperparameter optimization. 

@@ -1,0 +1,19 @@
+Active contours Model (ACM) has been extensively used in computer vision and image processing.
+In recent studies, Convolutional Neural Networks (CNNs) have been combined with active contours
+replacing the user in the process of contour evolution and image segmentation to eliminate limitations
+associated with ACM's dependence on parameters of the energy functional and initialization. However,
+prior works did not aim for automatic initialization which is addressed here. In addition to manual
+initialization, current methods are highly sensitive to initial location and fail to delineate
+borders accurately. We propose a fully automatic image segmentation method to address problems
+of manual initialization, insufficient capture range, and poor convergence to boundaries, in
+addition to the problem of assignment of energy functional parameters. We train two CNNs, which
+predict active contour weighting parameters and generate a ground truth mask to extract Distance
+Transform (DT) and an initialization circle. Distance transform is used to form a vector field pointing
+from each pixel of the image towards the closest point on the boundary, the size of which is equal to
+the Euclidean distance map. We evaluate our method on four publicly available datasets including
+two building instance segmentation datasets, Vaihingen and Bing huts, and two mammography image
+datasets, INBreast and DDSM-BCRP. Our approach outperforms latest research by 0.59 ans 2.39 percent
+in mean Intersection-over-Union (mIoU), 7.38 and 8.62 percent in Boundary F-score (BoundF) for
+Vaihingen and Bing huts datasets, respectively. Dice similarity coefficient for the INBreast
+and DDSM-BCRP datasets is 94.23% and 90.89%, respectively indicating our method is comparable
+to state-of-the-art frameworks. 

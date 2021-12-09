@@ -1,0 +1,20 @@
+The interest in dynamic processes on networks is steadily rising in recent years. In this paper,
+we consider the $(\alpha,\beta)$-Thresholded Network Dynamics ($(\alpha,\beta)$-Dynamics),
+where $\alpha\leq \beta$, in which only structural dynamics (dynamics of the network) are allowed,
+guided by local thresholding rules executed in each node. In particular, in each discrete round
+$t$, each pair of nodes $u$ and $v$ that are allowed to communicate by the scheduler, computes a value
+$\mathcal{E}(u,v)$ (the potential of the pair) as a function of the local structure of the network
+at round $t$ around the two nodes. If $\mathcal{E}(u,v) < \alpha$ then the link (if it exists) between
+$u$ and $v$ is removed; if $\alpha \leq \mathcal{E}(u,v) < \beta$ then an existing link among $u$
+and $v$ is maintained; if $\beta \leq \mathcal{E}(u,v)$ then a link between $u$ and $v$ is established
+if not already present. The microscopic structure of $(\alpha,\beta)$-Dynamics appears to be
+simple, so that we are able to rigorously argue about it, but still flexible, so that we are able to
+design meaningful microscopic local rules that give rise to interesting macroscopic behaviors.
+Our goals are the following: a) to investigate the properties of the $(\alpha,\beta)$-Thresholded
+Network Dynamics and b) to show that $(\alpha,\beta)$-Dynamics is expressive enough to solve complex
+problems on networks. Our contribution in these directions is twofold. We rigorously exhibit the
+claim about the expressiveness of $(\alpha,\beta)$-Dynamics, both by designing a simple protocol
+that provably computes the $k$-core of the network as well as by showing that $(\alpha,\beta)$-Dynamics
+is in fact Turing-Complete. Second and most important, we construct general tools for proving stabilization
+that work for a subclass of $(\alpha,\beta)$-Dynamics and prove speed of convergence in a restricted
+setting. 

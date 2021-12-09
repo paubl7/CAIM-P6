@@ -1,0 +1,20 @@
+With the improvements of computing technology, more and more applications embed powerful ARM processors
+into their devices. These systems can be attacked by redirecting the control-flow of a program to
+bypass critical pieces of code such as privilege checks or signature verifications. Control-flow
+hijacks can be performed using classical software vulnerabilities, physical fault attacks, or
+software-induced fault attacks. To cope with this threat and to protect the control-flow, dedicated
+countermeasures are needed. To counteract control-flow hijacks, control-flow integrity~(CFI)
+aims to be a generic solution. However, software-based CFI typically either protects against software
+or fault attacks, but not against both. While hardware-assisted CFI can mitigate both types of attacks,
+they require extensive hardware modifications. As hardware changes are unrealistic for existing
+ARM architectures, a wide range of systems remains unprotected and vulnerable to control-flow
+attacks. In this work, we present FIPAC, an efficient software-based CFI scheme protecting the
+execution at basic block granularity of ARM-based devices against software and fault attacks.
+FIPAC exploits ARM pointer authentication of ARMv8.6-A to implement a cryptographically signed
+control-flow graph. We cryptographically link the correct sequence of executed basic blocks to
+enforce CFI at this granularity. We use an LLVM-based toolchain to automatically instrument programs.
+The evaluation on SPEC2017 with different security policies shows a code overhead between 54-97\%
+and a runtime overhead between 35-105%. While these overheads are higher than for countermeasures
+against software attacks, FIPAC outperforms related work protecting the control-flow against
+fault attacks. FIPAC is an efficient solution to provide protection against software- and fault-based
+CFI attacks on basic block level on modern ARM devices. 

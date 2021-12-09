@@ -1,0 +1,18 @@
+Deep Learning models hold state-of-the-art performance in many fields, but their vulnerability
+to adversarial examples poses threat to their ubiquitous deployment in practical settings. Additionally,
+adversarial inputs generated on one classifier have been shown to transfer to other classifiers
+trained on similar data, which makes the attacks possible even if model parameters are not revealed
+to the adversary. This property of transferability has not yet been systematically studied, leading
+to a gap in our understanding of robustness of neural networks to adversarial inputs. In this work,
+we study the effect of network architecture, initialization, optimizer, input, weight and activation
+quantization on transferability of adversarial samples. We also study the effect of different
+attacks on transferability. Our experiments reveal that transferability is significantly hampered
+by input quantization and architectural mismatch between source and target, is unaffected by initialization
+but the choice of optimizer turns out to be critical. We observe that transferability is architecture-dependent
+for both weight and activation quantized models. To quantify transferability, we use simple metric
+and demonstrate the utility of the metric in designing a methodology to build ensembles with improved
+adversarial robustness. When attacking ensembles we observe that "gradient domination" by a single
+ensemble member model hampers existing attacks. To combat this we propose a new state-of-the-art
+ensemble attack. We compare the proposed attack with existing attack techniques to show its effectiveness.
+Finally, we show that an ensemble consisting of carefully chosen diverse networks achieves better
+adversarial robustness than would otherwise be possible with a single network. 

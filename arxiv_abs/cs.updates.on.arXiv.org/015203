@@ -1,0 +1,19 @@
+Probabilistic programming is an approach to reasoning under uncertainty by encoding inference
+problems as programs. In order to solve these inference problems, probabilistic programming languages
+(PPLs) employ different inference algorithms, such as sequential Monte Carlo (SMC), Markov chain
+Monte Carlo (MCMC), or variational methods. Existing research on such algorithms mainly concerns
+their implementation and efficiency, rather than the correctness of the algorithms themselves
+when applied in the context of expressive PPLs. To remedy this, we give a correctness proof for SMC
+methods in the context of an expressive PPL calculus, representative of popular PPLs such as WebPPL,
+Anglican, and Birch. Previous work have studied correctness of MCMC using an operational semantics,
+and correctness of SMC and MCMC in a denotational setting without term recursion. However, for SMC
+inference -- one of the most commonly used algorithms in PPLs as of today -- no formal correctness
+proof exists in an operational setting. In particular, an open question is if the resample locations
+in a probabilistic program affects the correctness of SMC. We solve this fundamental problem, and
+make four novel contributions: (i) we extend an untyped PPL lambda calculus and operational semantics
+to include explicit resample terms, expressing synchronization points in SMC inference; (ii)
+we prove, for the first time, that subject to mild restrictions, any placement of the explicit resample
+terms is valid for a generic form of SMC inference; (iii) as a result of (ii), our calculus benefits
+from classic results from the SMC literature: a law of large numbers and an unbiased estimate of the
+model evidence; and (iv) we formalize the bootstrap particle filter for the calculus and discuss
+how our results can be further extended to other SMC algorithms. 

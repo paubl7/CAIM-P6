@@ -1,0 +1,20 @@
+Many new narrowband low-power wide-area networks (LPWANs) (e.g., LoRaWAN, Sigfox) have opted
+to use pure ALOHA-like access for its reduced control overhead and asynchronous transmissions.
+Although asynchronous access reduces the energy consumption of IoT devices, the network performance
+suffers from high intra-network interference in dense deployments. Contrarily, synchronous
+access can improve throughput and fairness, but it requires time synchronization. Unfortunately,
+maintaining synchronization over the narrowband LPWANs wastes channel time and transmission
+opportunities. In this paper, we propose the use of out-of-band time-dissemination to relatively
+synchronize LoRa devices and thereby facilitate resource-efficient slotted uplink communication.
+To this end, we conceptualize and analyze a co-designed synchronization and random access mechanism
+that can effectively exploit technologies providing limited time accuracy, such as FM radio data
+system (FM-RDS). While considering the LoRa-specific parameters, we derive the throughput of
+the proposed mechanism, compare it to a generic synchronous random access using in-band synchronization,
+and design the communication parameters under time uncertainty. We scrutinize the transmission
+time uncertainty of a device by introducing a clock error model that accounts for the errors in the
+synchronization source, local clock, propagation delay, and transceiver's transmission time
+uncertainty. We characterize the time uncertainty of FM-RDS with hardware measurements and perform
+simulations to evaluate the proposed solution. The results, presented in terms of success probability,
+throughput, and fairness for a single-cell scenario, suggest that FM-RDS, despite its poor absolute
+synchronization, can be used effectively to realize slotted LoRa communication with performance
+similar to that of more accurate time-dissemination technologies. 

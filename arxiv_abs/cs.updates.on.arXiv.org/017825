@@ -1,0 +1,20 @@
+There is currently a burgeoning demand for deploying deep learning (DL) models on ubiquitous edge
+Internet of Things devices attributing to their low latency and high privacy preservation. However,
+DL models are often large in size and require large-scale computation, which prevents them from
+being placed directly onto IoT devices where resources are constrained and 32-bit floating-point
+operations are unavailable. Model quantization is a pragmatic solution, which enables DL deployment
+on mobile devices and embedded systems by effortlessly post-quantizing a large high-precision
+model into a small low-precision model while retaining the model inference accuracy. This work
+reveals that the standard quantization operation can be abused to activate a backdoor. We demonstrate
+that a full-precision backdoored model that does not have any backdoor effect in the presence of
+a trigger -- as the backdoor is dormant -- can be activated by the default TensorFlow-Lite quantization,
+the only product-ready quantization framework to date. We ascertain that all trained float-32
+backdoored models exhibit no backdoor effect even in the presence of trigger inputs. State-of-the-art
+frontend detection approaches, such as Neural Cleanse and STRIP, fail to identify the backdoor
+in the float-32 models. When each of the float-32 models is converted into an int-8 format model through
+the standard TFLite post-training quantization, the backdoor is activated in the quantized model,
+which shows a stable attack success rate close to 100% upon inputs with the trigger, while behaves
+normally upon non-trigger inputs. This work highlights that a stealthy security threat occurs
+when end users utilize the on-device post-training model quantization toolkits, informing security
+researchers of cross-platform overhaul of DL models post quantization even if they pass frontend
+inspections. 

@@ -1,0 +1,19 @@
+Depth information available from an RGB-D camera can be useful in segmenting salient objects when
+figure/ground cues from RGB channels are weak. This has motivated the development of several RGB-D
+saliency datasets and algorithms that use all four channels of the RGB-D data for both training and
+inference. Unfortunately, existing RGB-D saliency datasets are small, which may lead to overfitting
+and limited generalization for diverse scenarios. Here we propose a semi-supervised system for
+RGB-D saliency detection that can be trained on smaller RGB-D saliency datasets without saliency
+ground truth, while also make effective joint use of a large RGB saliency dataset with saliency ground
+truth together. To generalize our method on RGB-D saliency datasets, a novel prediction-guided
+cross-refinement module which jointly estimates both saliency and depth by mutual refinement
+between two respective tasks, and an adversarial learning approach are employed. Critically,
+our system does not require saliency ground-truth for the RGB-D datasets, which saves the massive
+human labor for hand labeling, and does not require the depth data for inference, allowing the method
+to be used for the much broader range of applications where only RGB data are available. Evaluation
+on seven RGB-D datasets demonstrates that even without saliency ground truth for RGB-D datasets
+and using only the RGB data of RGB-D datasets at inference, our semi-supervised system performs
+favorable against state-of-the-art fully-supervised RGB-D saliency detection methods that
+use saliency ground truth for RGB-D datasets at training and depth data at inference on two largest
+testing datasets. Our approach also achieves comparable results on other popular RGB-D saliency
+benchmarks. 

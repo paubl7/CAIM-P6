@@ -1,0 +1,19 @@
+We consider fast, provably accurate algorithms for approximating functions on the $d$-dimensional
+torus, $f: \mathbb{ T }^d \rightarrow \mathbb{C}$, that are sparse (or compressible) in the Fourier
+basis. In particular, suppose that the Fourier coefficients of $f$, $\{c_{\bf k} (f) \}_{{\bf k}
+\in \mathbb{Z}^d}$, are concentrated in a finite set $I \subset \mathbb{Z}^d$ so that $$\min_{\Omega
+\subset I s.t. |\Omega| =s } \left\| f - \sum_{{\bf k} \in \Omega} c_{\bf k} (f) e^{ -2 \pi i {\bf k} \cdot
+\circ} \right\|_2 < \epsilon \|f \|_2$$ holds for $s \ll |I|$ and $\epsilon \in (0,1)$. We aim to identify
+a near-minimizing subset $\Omega \subset I$ and accurately approximate the associated Fourier
+coefficients $\{ c_{\bf k} (f) \}_{{\bf k} \in \Omega}$ as rapidly as possible. We present both deterministic
+as well as randomized algorithms using $O(s^2 d \log^c (|I|))$-time/memory and $O(s d \log^c (|I|))$-time/memory,
+respectively. Most crucially, all of the methods proposed herein achieve these runtimes while
+satisfying theoretical best $s$-term approximation guarantees which guarantee their numerical
+accuracy and robustness to noise for general functions. These are achieved by modifying several
+one-dimensional Sparse Fourier Transform (SFT) methods to subsample a function along a reconstructing
+rank-1 lattice for the given frequency set $I$ to rapidly identify a near-minimizing subset $\Omega
+\subset I$ without using anything about the lattice beyond its generating vector. This requires
+new fast and low-memory frequency identification techniques capable of rapidly recovering vector-valued
+frequencies in $\mathbb{Z}^d$ as opposed to simple integer frequencies in the univariate setting.
+Two different strategies are proposed and analyzed, each with different accuracy versus computational
+speed and memory tradeoffs. 

@@ -1,0 +1,18 @@
+This paper proposes an $\alpha$-lift measure for data privacy and determines the optimal privatization
+scheme that minimizes the $\alpha$-lift in the watchdog method. To release data $X$ that is correlated
+with sensitive information $S$, the ratio $l(s,x) = \frac{p(s|x)}{p(s)} $ denotes the `lift' of
+the posterior belief on $S$ and quantifies data privacy. The $\alpha$-lift is proposed as the $L_\alpha$-norm
+of the lift: $\ell_{\alpha}(x) = \| (\cdot,x) \|_{\alpha} = (E[l(S,x)^\alpha])^{1/\alpha}$.
+This is a tunable measure: When $\alpha < \infty$, each lift is weighted by its likelihood of appearing
+in the dataset (w.r.t. the marginal probability $p(s)$); For $\alpha = \infty$, $\alpha$-lift
+reduces to the existing maximum lift. To generate the sanitized data $Y$, we adopt the privacy watchdog
+method using $\alpha$-lift: Obtain $\mathcal{X}_{\epsilon}$ containing all $x$'s such that
+$\ell_{\alpha}(x) > e^{\epsilon}$; Apply the randomization $r(y|x)$ to all $x \in \mathcal{X}_{\epsilon}$,
+while all other $x \in \mathcal{X} \setminus \mathcal{X}_{\epsilon}$ are published directly.
+For the resulting $\alpha$-lift $\ell_{\alpha}(y)$, it is shown that the Sibson mutual information
+$I_{\alpha}^{S}(S;Y)$ is proportional to $E[ \ell_{\alpha}(y)]$. We further define a stronger
+measure $\bar{I}_{\alpha}^{S}(S;Y)$ using the worst-case $\alpha$-lift: $\max_{y} \ell_{\alpha}(y)$.
+We prove that the optimal randomization $r^*(y|x)$ that minimizes both $I_{\alpha}^{S}(S;Y)$
+and $\bar{I}_{\alpha}^{S}(S;Y)$ is $X$-invariant, i.e., $r^*(y|x) = R(y), \forall x\in \mathcal{X}_{\epsilon}$
+for any probability distribution $R$ over $y \in \mathcal{X}_{\epsilon}$. Numerical experiments
+show that $\alpha$-lift can provide flexibility in the privacy-utility tradeoff. 

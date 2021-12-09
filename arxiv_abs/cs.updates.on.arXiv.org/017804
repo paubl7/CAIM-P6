@@ -1,0 +1,20 @@
+Efficient frequency-domain Full Waveform Inversion (FWI) of long-offset/wide-azimuth node
+data can be designed with a few discrete frequencies. However, 3D frequency-domain seismic modeling
+remains challenging since it requires solving a large and sparse linear indefinite system per frequency.
+When such systems are solved with direct methods or hybrid direct/iterative solvers, based upon
+domain decomposition preconditioner, finite-difference stencils on regular Cartesian grids
+should be designed to conciliate compactness and accuracy, the former being necessary to mitigate
+the fill-in induced by the Lower-Upper (LU) factorization. Compactness is classically implemented
+by combining several second-order accurate stencils covering the eight cells surrounding the
+collocation point, leading to the so-called 27-point stencil. Accuracy is obtained by applying
+optimal weights on the different stiffness and consistent mass matrices such that numerical dispersion
+is jointly minimized for several number of grid points per wavelength ($G$). However, with this
+approach, the same weights are used at each collocation point, leading to suboptimal accuracy in
+heterogeneous media. In this study, we propose a straightforward recipe to improve the accuracy
+of the 27-point stencil. First, we finely tabulate the values of $G$ covering the range of wavelengths
+spanned by the subsurface model and the frequency. Then, we estimate with a classical dispersion
+analysis in homogeneous media the corresponding table of optimal weights that minimize dispersion
+for each $G$ treated separately. We however apply a Tikhonov regularization to guarantee smooth
+variation of the weights with $G$. Finally, we build the impedance matrix by selecting the optimal
+weights at each collocation point according to the local wavelength, hence leading to a wavelength-adaptive
+stencil. 

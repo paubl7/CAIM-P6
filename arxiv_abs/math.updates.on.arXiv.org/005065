@@ -1,0 +1,19 @@
+We design, analyze and test a golden ratio primal-dual algorithm (GRPDA) for solving structured
+convex optimization problem, where the objective function is the sum of two closed proper convex
+functions, one of which involves a composition with a linear transform. GRPDA preserves all the
+favorable features of the classical primal-dual algorithm (PDA), i.e., the primal and the dual
+variables are updated in a Gauss-Seidel manner, and the per iteration cost is dominated by the evaluation
+of the proximal point mappings of the two component functions and two matrix-vector multiplications.
+Compared with the classical PDA, which takes an extrapolation step, the novelty of GRPDA is that
+it is constructed based on a convex combination of essentially the whole iteration trajectory.
+We show that GRPDA converges within a broader range of parameters than the classical PDA, provided
+that the reciprocal of the convex combination parameter is bounded above by the golden ratio, which
+explains the name of the algorithm. An O(1/N) ergodic convergence rate result is also established
+based on the primal-dual gap function, where N denotes the number of iterations. When either the
+primal or the dual problem is strongly convex, an accelerated GRPDA is constructed to improve the
+ergodic convergence rate from O(1/N) to O(1/N2). Moreover, we show for regularized least-squares
+and linear equality constrained problems that the reciprocal of the convex combination parameter
+can be extended from the golden ratio to 2 and meanwhile a relaxation step can be taken. Our preliminary
+numerical results on LASSO, nonnegative least-squares and minimax matrix game problems, with
+comparisons to some state-of-the-art relative algorithms, demonstrate the efficiency of the
+proposed algorithms. 

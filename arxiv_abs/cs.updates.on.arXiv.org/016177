@@ -1,0 +1,19 @@
+Over the years, population protocols with the goal of reaching consensus have been studied in great
+depth. However, many systems in the real-world do not result in all agents eventually reaching consensus,
+but rather in the opposite: they converge to a state of rich diversity. Consider for example task
+allocation in ants. If eventually all ants perform the same task, then the colony will perish (lack
+of food, no brood care, etc.). Then, it is vital for the survival of the colony to have a diverse set
+of tasks and enough ants working on each task. What complicates matters is that ants need to switch
+tasks periodically to adjust the needs of the colony; e.g., when too many foragers fell victim to
+other ant colonies. Moreover, all tasks are equally important and maybe they need to keep certain
+proportions in the distribution of the task. How can ants keep a healthy and balanced allocation
+of tasks? To answer this question, we propose a simple population protocol for $n$ agents on a complete
+graph and an arbitrary initial distribution of $k$ colours (tasks). We assume that each colour $i$
+has an associated weight (importance) $w_i \geq 1$. By denoting $w$ as the sum of the weights of different
+colours, we show that the protocol converges in $O(w^2 n \log n)$ rounds to a configuration where
+the number of agents supporting each colour $i$ is concentrated on the fair share $w_in/w$ and will
+stay concentrated for a large number of rounds, w.h.p. Our protocol has many interesting properties:
+agents do not need to know other colours and weights in the system, and our protocol requires very
+little memory per agent. Furthermore, the protocol guarantees fairness meaning that over a long
+period each agent has each colour roughly a number of times proportional to the weight of the colour.
+Finally, our protocol also fulfils sustainability meaning that no colour ever vanishes. 

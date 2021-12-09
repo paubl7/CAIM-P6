@@ -1,0 +1,18 @@
+Objective: Sleep related respiratory abnormalities are typically detected using polysomnography.
+There is a need in general medicine and critical care for a more convenient method to automatically
+detect sleep apnea from a simple, easy-to-wear device. The objective is to automatically detect
+abnormal respiration and estimate the Apnea-Hypopnea-Index (AHI) with a wearable respiratory
+device, compared to an SpO2 signal or polysomnography using a large (n = 412) dataset serving as ground
+truth. Methods: Simultaneously recorded polysomnographic (PSG) and wearable respiratory effort
+data were used to train and evaluate models in a cross-validation fashion. Time domain and complexity
+features were extracted, important features were identified, and a random forest model employed
+to detect events and predict AHI. Four models were trained: one each using the respiratory features
+only, a feature from the SpO2 (%)-signal only, and two additional models that use the respiratory
+features and the SpO2 (%)-feature, one allowing a time lag of 30 seconds between the two signals.
+Results: Event-based classification resulted in areas under the receiver operating characteristic
+curves of 0.94, 0.86, 0.82, and areas under the precision-recall curves of 0.48, 0.32, 0.51 for the
+models using respiration and SpO2, respiration-only, and SpO2-only respectively. Correlation
+between expert-labelled and predicted AHI was 0.96, 0.78, and 0.93, respectively. Conclusions:
+A wearable respiratory effort signal with or without SpO2 predicted AHI accurately. Given the large
+dataset and rigorous testing design, we expect our models are generalizable to evaluating respiration
+in a variety of environments, such as at home and in critical care. 

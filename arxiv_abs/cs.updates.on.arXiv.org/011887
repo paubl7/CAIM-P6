@@ -1,0 +1,19 @@
+Blockchain protocols differ in fundamental ways, including the mechanics of selecting users to
+produce blocks (e.g., proof-of-work vs. proof-of-stake) and the method to establish consensus
+(e.g., longest chain rules vs. Byzantine fault-tolerant (BFT) inspired protocols). These fundamental
+differences have hindered "apples-to-apples" comparisons between different categories of blockchain
+protocols and, in turn, the development of theory to formally discuss their relative merits. This
+paper presents a parsimonious abstraction sufficient for capturing and comparing properties
+of many well-known permissionless blockchain protocols, simultaneously capturing essential
+properties of both proof-of-work (PoW) and proof-of-stake (PoS) protocols, and of both longest-chain-type
+and BFT-type protocols. Our framework blackboxes the precise mechanics of the user selection process,
+allowing us to isolate the properties of the selection process that are significant for protocol
+design. We demonstrate the utility of our general framework with several concrete results: 1. We
+prove a CAP-type impossibility theorem asserting that liveness with an unknown level of participation
+rules out security in a partially synchronous setting. 2. Delving deeper into the partially synchronous
+setting, we prove that a necessary and sufficient condition for security is the production of "certificates,"
+meaning stand-alone proofs of block confirmation. 3. Restricting to synchronous settings, we
+prove that typical protocols with a known level of participation (including longest chain-type
+PoS protocols) can be adapted to provide certificates, but those with an unknown level of participation
+cannot. 4. Finally, we use our framework to articulate a modular two-step approach to blockchain
+security analysis that effectively reduces the permissionless case to the permissioned case.

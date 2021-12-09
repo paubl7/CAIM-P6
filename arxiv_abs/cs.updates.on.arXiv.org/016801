@@ -1,0 +1,20 @@
+CANs are a broadcast protocol for real-time communication of critical vehicle subsystems. Original
+equipment manufacturers of passenger vehicles hold secret their mappings of CAN data to vehicle
+signals, and these definitions vary according to make, model, and year. Without these mappings,
+the wealth of real-time vehicle information hidden in the CAN packets is uninterpretable, impeding
+vehicle-related research. Guided by the 4-part CAN signal definition, we present CAN-D (CAN-Decoder),
+a modular, 4-step pipeline for identifying each signal's boundaries (start bit, length), endianness
+(byte order), signedness (bit-to-integer encoding), and by leveraging diagnostic standards,
+augmenting a subset of the extracted signals with physical interpretation. We provide a comprehensive
+review of the CAN signal reverse engineering research. Previous methods ignore endianness and
+signedness, rendering them incapable of decoding many standard CAN signal definitions. Incorporating
+endianness grows the search space from 128 to 4.72E21 signal tokenizations and introduces a web
+of changing dependencies. We formulate, formally analyze, and provide an efficient solution to
+an optimization problem, allowing identification of the optimal set of signal boundaries and byte
+orderings. We provide two novel, state-of-the-art signal boundary classifiers-both superior
+to previous approaches in precision and recall in three different test scenarios-and the first
+signedness classification algorithm which exhibits a $>$97\% F-score. CAN-D is the only solution
+with the potential to extract any CAN signal. In evaluation on 10 vehicles, CAN-D's average $\ell^1$
+error is 5x better than all previous methods and exhibits lower ave. error, even when considering
+only signals that meet prior methods' assumptions. CAN-D is implemented in lightweight hardware,
+allowing for an OBD-II plugin for real-time in-vehicle CAN decoding. 

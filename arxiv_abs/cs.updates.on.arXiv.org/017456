@@ -1,0 +1,20 @@
+Floods wreak havoc throughout the world, causing billions of dollars in damages, and uprooting
+communities, ecosystems and economies. Accurate and robust flood detection including delineating
+open water flood areas and identifying flood levels can aid in disaster response and mitigation.
+However, estimating flood levels remotely is of essence as physical access to flooded areas is limited
+and the ability to deploy instruments in potential flood zones can be dangerous. Aligning flood
+extent mapping with local topography can provide a plan-of-action that the disaster response team
+can consider. Thus, remote flood level estimation via satellites like Sentinel-1 can prove to be
+remedial. The Emerging Techniques in Computational Intelligence (ETCI) competition on Flood
+Detection tasked participants with predicting flooded pixels after training with synthetic aperture
+radar (SAR) images in a supervised setting. We use a cyclical approach involving two stages (1) training
+an ensemble model of multiple UNet architectures with available high and low confidence labeled
+data and, (2) generating pseudo labels or low confidence labels on the unlabeled test dataset, and
+then, combining the generated labels with the previously available high confidence labeled dataset.
+This assimilated dataset is used for the next round of training ensemble models. This cyclical process
+is repeated until the performance improvement plateaus. Additionally, we post process our results
+with Conditional Random Fields. Our approach sets a high score on the public leaderboard for the
+ETCI competition with 0.7654 IoU. Our method, which we release with all the code including trained
+models, can also be used as an open science benchmark for the Sentinel-1 released dataset on GitHub.
+To the best of our knowledge we believe this the first works to try out semi-supervised learning to
+improve flood segmentation models. 

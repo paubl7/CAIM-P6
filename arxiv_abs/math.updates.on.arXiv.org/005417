@@ -1,0 +1,20 @@
+Simply randomized designs are one of the most common controlled experiments used to study causal
+effects. Failure of the assignment mechanism, to provide proper randomization of units across
+treatments, or the data collection mechanism, when data is missing not at random, can render subsequent
+analysis invalid if not properly identified. In this paper we demonstrate that such practical implementation
+errors can often be identified, fortunately, through consideration of the total unit counts resulting
+in each treatment group. Based on this observation, we introduce a sequential hypothesis test constructed
+from Bayesian multinomial-Dirichlet families for detecting practical implementation errors
+in simply randomized experiments. By establishing a Martingale property of the posterior odds
+under the null hypothesis, frequentist Type-I error is controlled under both optional stopping
+and continuation via maximal inequalities, preventing practitioners from potentially inflating
+false positive probabilities through continuous monitoring. In contrast to other statistical
+tests that are performed once all data collection is completed, the proposed test is sequential
+- frequently rejecting the null during the process of data collection itself, saving further units
+from entering an improperly-executed experiment. We illustrate the utility of this test in the
+context of online controlled experiments (OCEs), where the assignment is automated through code
+and data collected through complex processing pipelines, often in the presence of unintended bugs
+and logical errors. Confidence sequences possessing desired sequential frequentist coverage
+probabilities are provided and their connection to the Bayesian support interval is examined.
+The differences between pure Bayesian and sequential frequentist testing procedures are finally
+discussed through a conditional frequentist testing perspective. 

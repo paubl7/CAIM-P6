@@ -1,0 +1,19 @@
+Machine learning models are commonly trained end-to-end and in a supervised setting, using paired
+(input, output) data. Examples include recent super-resolution methods that train on pairs of
+(low-resolution, high-resolution) images. However, these end-to-end approaches require re-training
+every time there is a distribution shift in the inputs (e.g., night images vs daylight) or relevant
+latent variables (e.g., camera blur or hand motion). In this work, we leverage state-of-the-art
+(SOTA) generative models (here StyleGAN2) for building powerful image priors, which enable application
+of Bayes' theorem for many downstream reconstruction tasks. Our method, Bayesian Reconstruction
+through Generative Models (BRGM), uses a single pre-trained generator model to solve different
+image restoration tasks, i.e., super-resolution and in-painting, by combining it with different
+forward corruption models. We keep the weights of the generator model fixed, and reconstruct the
+image by estimating the Bayesian maximum a-posteriori (MAP) estimate over the input latent vector
+that generated the reconstructed image. We further use variational inference to approximate the
+posterior distribution over the latent vectors, from which we sample multiple solutions. We demonstrate
+BRGM on three large and diverse datasets: (i) 60,000 images from the Flick Faces High Quality dataset
+(ii) 240,000 chest X-rays from MIMIC III and (iii) a combined collection of 5 brain MRI datasets with
+7,329 scans. Across all three datasets and without any dataset-specific hyperparameter tuning,
+our simple approach yields performance competitive with current task-specific state-of-the-art
+methods on super-resolution and in-painting, while being more generalisable and without requiring
+any training. Our source code and pre-trained models are available online: https://razvanmarinescu.github.io/brgm/.

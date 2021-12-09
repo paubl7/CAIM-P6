@@ -1,0 +1,18 @@
+Community search aims at finding densely connected subgraphs for query vertices in a graph. While
+this task has been studied widely in the literature, most of the existing works only focus on finding
+homogeneous communities rather than heterogeneous communities with different labels. In this
+paper, we motivate a new problem of cross-group community search, namely Butterfly-Core Community
+(BCC), over a labeled graph, where each vertex has a label indicating its properties and an edge between
+two vertices indicates their cross relationship. Specifically, for two query vertices with different
+labels, we aim to find a densely connected cross community that contains two query vertices and consists
+of butterfly networks, where each wing of the butterflies is induced by a k-core search based on one
+query vertex and two wings are connected by these butterflies. Indeed, the BCC structure admits
+the structure cohesiveness and minimum diameter, and thus can effectively capture the heterogeneous
+and concise collaborative team. Moreover, we theoretically prove this problem is NP-hard and analyze
+its non-approximability. To efficiently tackle the problem, we develop a heuristic algorithm,
+which first finds a BCC containing the query vertices, then iteratively removes the farthest vertices
+to the query vertices from the graph. The algorithm can achieve a 2-approximation to the optimal
+solution. To further improve the efficiency, we design a butterfly-core index and develop a suite
+of efficient algorithms for butterfly-core identification and maintenance as vertices are eliminated.
+Extensive experiments on eight real-world networks and four novel case studies validate the effectiveness
+and efficiency of our algorithms. 

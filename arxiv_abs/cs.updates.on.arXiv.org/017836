@@ -1,0 +1,18 @@
+Specularity prediction is essential to many computer vision applications by giving important
+visual cues that could be used in Augmented Reality (AR), Simultaneous Localisation and Mapping
+(SLAM), 3D reconstruction and material modeling, thus improving scene understanding. However,
+it is a challenging task requiring numerous information from the scene including the camera pose,
+the geometry of the scene, the light sources and the material properties. Our previous work have
+addressed this task by creating an explicit model using an ellipsoid whose projection fits the specularity
+image contours for a given camera pose. These ellipsoid-based approaches belong to a family of models
+called JOint-LIght MAterial Specularity (JOLIMAS), where we have attempted to gradually remove
+assumptions on the scene such as the geometry of the specular surfaces. However, our most recent
+approach is still limited to uniformly curved surfaces. This paper builds upon these methods by
+generalising JOLIMAS to any surface geometry while improving the quality of specularity prediction,
+without sacrificing computation performances. The proposed method establishes a link between
+surface curvature and specularity shape in order to lift the geometric assumptions from previous
+work. Contrary to previous work, our new model is built from a physics-based local illumination
+model namely Torrance-Sparrow, providing a better model reconstruction. Specularity prediction
+using our new model is tested against the most recent JOLIMAS version on both synthetic and real sequences
+with objects of varying shape curvatures. Our method outperforms previous approaches in specularity
+prediction, including the real-time setup, as shown in the supplementary material using videos.

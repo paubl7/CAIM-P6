@@ -1,0 +1,18 @@
+Mobile application security has been a major area of focus for security research over the course
+of the last decade. Numerous application analysis tools have been proposed in response to malicious,
+curious, or vulnerable apps. However, existing tools, and specifically, static analysis tools,
+trade soundness of the analysis for precision and performance and are hence soundy. Unfortunately,
+the specific unsound choices or flaws in the design of these tools is often not known or well-documented,
+leading to misplaced confidence among researchers, developers, and users. This paper describes
+the Mutation-based Soundness Evaluation ($\mu$SE) framework, which systematically evaluates
+Android static analysis tools to discover, document, and fix flaws, by leveraging the well-founded
+practice of mutation analysis. We implemented $\mu$SE and applied it to a set of prominent Android
+static analysis tools that detect private data leaks in apps. In a study conducted previously, we
+used $\mu$SE to discover $13$ previously undocumented flaws in FlowDroid, one of the most prominent
+data leak detectors for Android apps. Moreover, we discovered that flaws also propagated to other
+tools that build upon the design or implementation of FlowDroid or its components. This paper substantially
+extends our $\mu$SE framework and offers an new in-depth analysis of two more major tools in our 2020
+study, we find $12$ new, undocumented flaws and demonstrate that all $25$ flaws are found in more
+than one tool, regardless of any inheritance-relation among the tools. Our results motivate the
+need for systematic discovery and documentation of unsound choices in soundy tools and demonstrate
+the opportunities in leveraging mutation testing in achieving this goal. 

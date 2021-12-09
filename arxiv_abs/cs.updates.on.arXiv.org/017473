@@ -1,0 +1,20 @@
+Prior measurement studies on browser fingerprinting have unfortunately largely excluded Web
+Audio API-based fingerprinting in their analysis. We address this issue by conducting the first
+systematic study of effectiveness of web audio fingerprinting mechanisms. We focus on studying
+the feasibility and diversity properties of web audio fingerprinting. Along with 3 known audio
+fingerprinting vectors, we designed and implemented 4 new audio fingerprint vectors that work
+by obtaining FFTs of waveforms generated via different methods. Our study analyzed audio fingerprints
+from 2093 web users and presents new insights into the nature of Web Audio fingerprints. First, we
+show that audio fingeprinting vectors, unlike other prior vectors, reveal an apparent fickleness
+with some users' browsers giving away differing fingerprints in repeated attempts. However, we
+show that it is possible to devise a graph-based analysis mechanism to collectively consider all
+the different fingerprints of users and thus craft a stable fingerprinting mechanism. Our analysis
+also shows that it is possible to do this in a timely fashion. Next, we investigate the diversity of
+audio fingerprints and compare this with prior techniques. Our results show that audio fingerprints
+are much less diverse than other vectors with only 95 distinct fingerprints among 2093 users. At
+the same time, further analysis shows that web audio fingerprinting can potentially bring considerable
+additive value (in terms of entropy) to existing fingerprinting mechanisms. We also show that our
+results contradict the current security and privacy recommendations provided by W3C regarding
+audio fingerprinting. Overall, our systematic study allows browser developers to gauge the degree
+of privacy invasion presented by audio fingerprinting thus helping them take a more informed stance
+when designing privacy protection features in the future. 

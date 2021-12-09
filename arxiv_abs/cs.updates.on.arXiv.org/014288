@@ -1,0 +1,18 @@
+Micro-core architectures combine many simple, low memory, low power-consuming CPU cores onto
+a single chip. Potentially providing significant performance and low power consumption, this
+technology is not only of great interest in embedded, edge, and IoT uses, but also potentially as
+accelerators for data-center workloads. Due to the restricted nature of such CPUs, these architectures
+have traditionally been challenging to program, not least due to the very constrained amounts of
+memory (often around 32KB) and idiosyncrasies of the technology. However, more recently, dynamic
+languages such as Python have been ported to a number of micro-cores, but these are often delivered
+as interpreters which have an associated performance limitation. Targeting the four objectives
+of performance, unlimited code-size, portability between architectures, and maintaining the
+programmer productivity benefits of dynamic languages, the limited memory available means that
+classic techniques employed by dynamic language compilers, such as just-in-time (JIT), are simply
+not feasible. In this paper we describe the construction of a compilation approach for dynamic languages
+on micro-core architectures which aims to meet these four objectives, and use Python as a vehicle
+for exploring the application of this in replacing the existing micro-core interpreter. Our experiments
+focus on the metrics of performance, architecture portability, minimum memory size, and programmer
+productivity, comparing our approach against that of writing native C code. The outcome of this
+work is the identification of a series of techniques that are not only suitable for compiling Python
+code, but also applicable to a wide variety of dynamic languages on micro-cores. 

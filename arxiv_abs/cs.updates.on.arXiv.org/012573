@@ -1,0 +1,18 @@
+3D dynamic point clouds provide a natural discrete representation of real-world objects or scenes
+in motion, with a wide range of applications in immersive telepresence, autonomous driving, surveillance,
+\etc. Nevertheless, dynamic point clouds are often perturbed by noise due to hardware, software
+or other causes. While a plethora of methods have been proposed for static point cloud denoising,
+few efforts are made for the denoising of dynamic point clouds, which is quite challenging due to
+the irregular sampling patterns both spatially and temporally. In this paper, we represent dynamic
+point clouds naturally on spatial-temporal graphs, and exploit the temporal consistency with
+respect to the underlying surface (manifold). In particular, we define a manifold-to-manifold
+distance and its discrete counterpart on graphs to measure the variation-based intrinsic distance
+between surface patches in the temporal domain, provided that graph operators are discrete counterparts
+of functionals on Riemannian manifolds. Then, we construct the spatial-temporal graph connectivity
+between corresponding surface patches based on the temporal distance and between points in adjacent
+patches in the spatial domain. Leveraging the initial graph representation, we formulate dynamic
+point cloud denoising as the joint optimization of the desired point cloud and underlying graph
+representation, regularized by both spatial smoothness and temporal consistency. We reformulate
+the optimization and present an efficient algorithm. Experimental results show that the proposed
+method significantly outperforms independent denoising of each frame from state-of-the-art
+static point cloud denoising approaches, on both Gaussian noise and simulated LiDAR noise. 

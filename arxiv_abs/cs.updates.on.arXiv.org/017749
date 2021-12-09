@@ -1,0 +1,19 @@
+We consider the problem of online job scheduling on a single machine or multiple unrelated machines
+with general job/machine-dependent cost functions. In this model, each job $j$ has a processing
+requirement (length) $v_{ij}$ and arrives with a nonnegative nondecreasing cost function $g_{ij}(t)$
+if it has been dispatched to machine $i$, and this information is revealed to the system upon arrival
+of job $j$ at time $r_j$. The goal is to dispatch the jobs to the machines in an online fashion and process
+them preemptively on the machines so as to minimize the generalized completion time $\sum_{j}g_{i(j)j}(C_j)$.
+Here $i(j)$ refers to the machine to which job $j$ is dispatched, and $C_j$ is the completion time
+of job $j$ on that machine. It is assumed that jobs cannot migrate between machines and that each machine
+can work on a single job at any time instance. In particular, we are interested in finding an online
+scheduling policy whose objective cost is competitive with respect to a slower optimal offline
+benchmark, i.e., the one that knows all the job specifications a priori and is slower than the online
+algorithm. We first show that for the case of a single machine and special cost functions $g_j(t)=w_jg(t)$,
+with nonnegative nondecreasing $g(t)$, the highest-density-first rule is optimal for the generalized
+fractional completion time. We then extend this result by giving a speed-augmented competitive
+algorithm for the general nondecreasing cost functions $g_j(t)$ by utilizing a novel optimal control
+framework. This approach provides a principled method for identifying dual variables in different
+settings of online job scheduling with general cost functions. Using this method, we also provide
+a speed-augmented competitive algorithm for multiple unrelated machines with convex functions
+$g_{ij}(t)$, where the competitive ratio depends on the curvature of cost functions $g_{ij}(t)$.

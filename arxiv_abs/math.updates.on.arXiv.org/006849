@@ -1,0 +1,19 @@
+In recent work, we provide computational arguments for expanding the class of proper cones recognized
+by conic optimization solvers, to permit simpler, smaller, more natural conic formulations. We
+define an exotic cone as a proper cone for which we can implement a small set of tractable (i.e. fast,
+numerically stable, analytic) oracles for a logarithmically homogeneous self-concordant barrier
+for the cone or for its dual cone. Our extensible, open source conic interior point solver, Hypatia,
+allows modeling and solving any conic optimization problem over a Cartesian product of exotic cones.
+In this paper, we introduce Hypatia's interior point algorithm. Our algorithm is based on that of
+Skajaa and Ye [2015], which we generalize by handling exotic cones without tractable primal oracles.
+With the goal of improving iteration count and solve time in practice, we propose a sequence of four
+enhancements to the interior point stepping procedure of Skajaa and Ye [2015]: (1) loosening the
+central path proximity condition, (2) adjusting the directions using a third order directional
+derivative barrier oracle, (3) performing a backtracking search on a curve, and (4) combining the
+prediction and centering directions. We implement 23 useful exotic cones in Hypatia. We summarize
+the complexity of computing oracles for these cones, showing that our new third order oracle is not
+a bottleneck, and we derive efficient and numerically stable oracle implementations for several
+cones. We generate a diverse benchmark set of 379 conic problems from 37 different applied examples.
+Our computational testing shows that each stepping enhancement improves Hypatia's iteration
+count and solve time. Altogether, the enhancements reduce the shifted geometric means of iteration
+count and solve time by over 80% and 70% respectively. 

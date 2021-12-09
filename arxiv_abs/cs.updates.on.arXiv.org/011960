@@ -1,0 +1,20 @@
+Catchy but rigorous deep learning architectures were tailored for image super-resolution (SR),
+however, these fail to generalize to non-Euclidean data such as brain connectomes. Specifically,
+building generative models for super-resolving a low-resolution (LR) brain connectome at a higher
+resolution (HR) (i.e., adding new graph nodes/edges) remains unexplored although this would circumvent
+the need for costly data collection and manual labelling of anatomical brain regions (i.e. parcellation).
+To fill this gap, we introduce GSR-Net (Graph Super-Resolution Network), the first super-resolution
+framework operating on graph-structured data that generates high-resolution brain graphs from
+low-resolution graphs. First, we adopt a U-Net like architecture based on graph convolution, pooling
+and unpooling operations specific to non-Euclidean data. However, unlike conventional U-Nets
+where graph nodes represent samples and node features are mapped to a low-dimensional space (encoding
+and decoding node attributes or sample features), our GSR-Net operates directly on a single connectome:
+a fully connected graph where conventionally, a node denotes a brain region, nodes have no features,
+and edge weights denote brain connectivity strength between two regions of interest (ROIs). In
+the absence of original node features, we initially assign identity feature vectors to each brain
+ROI (node) and then leverage the learned local receptive fields to learn node feature representations.
+Second, inspired by spectral theory, we break the symmetry of the U-Net architecture by topping
+it up with a graph super-resolution (GSR) layer and two graph convolutional network layers to predict
+a HR graph while preserving the characteristics of the LR input. Our proposed GSR-Net framework
+outperformed its variants for predicting high-resolution brain functional connectomes from
+low-resolution connectomes. 

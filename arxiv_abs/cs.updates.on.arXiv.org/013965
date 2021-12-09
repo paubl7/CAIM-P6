@@ -1,0 +1,19 @@
+Deep neural networks (DNNs) sustain high performance in today's data processing applications.
+DNN inference is resource-intensive thus is difficult to fit into a mobile device. An alternative
+is to offload the DNN inference to a cloud server. However, such an approach requires heavy raw data
+transmission between the mobile device and the cloud server, which is not suitable for mission-critical
+and privacy-sensitive applications such as autopilot. To solve this problem, recent advances
+unleash DNN services using the edge computing paradigm. The existing approaches split a DNN into
+two parts and deploy the two partitions to computation nodes at two edge computing tiers. Nonetheless,
+these methods overlook collaborative device-edge-cloud computation resources. Besides, previous
+algorithms demand the whole DNN re-partitioning to adapt to computation resource changes and network
+dynamics. Moreover, for resource-demanding convolutional layers, prior works do not give a parallel
+processing strategy without loss of accuracy at the edge side. To tackle these issues, we propose
+D3, a dynamic DNN decomposition system for synergistic inference without precision loss. The proposed
+system introduces a heuristic algorithm named horizontal partition algorithm to split a DNN into
+three parts. The algorithm can partially adjust the partitions at run time according to processing
+time and network conditions. At the edge side, a vertical separation module separates feature maps
+into tiles that can be independently run on different edge nodes in parallel. Extensive quantitative
+evaluation of five popular DNNs illustrates that D3 outperforms the state-of-the-art counterparts
+up to 3.4 times in end-to-end DNN inference time and reduces backbone network communication overhead
+up to 3.68 times. 

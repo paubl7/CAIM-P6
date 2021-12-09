@@ -1,0 +1,19 @@
+Since the original algorithm by John Vidale in 1988 to numerically solve the isotropic eikonal equation,
+there has been tremendous progress on the topic addressing an array of challenges including improvement
+of the solution accuracy, incorporation of surface topography, adding more accurate physics by
+accounting for anisotropy/attenuation in the medium, and speeding up computations using multiple
+CPUs and GPUs. Despite these advances, there is no mechanism in these algorithms to carry on information
+gained by solving one problem to the next. Moreover, these approaches may breakdown for certain
+complex forms of the eikonal equation, requiring approximation methods to estimate the solution.
+Therefore, we seek an alternate approach to address the challenge in a holistic manner, i.e., a method
+that not only makes it simpler to incorporate topography, allow accounting for any level of complexity
+in physics, benefiting from computational speedup due to the availability of multiple CPUs or GPUs,
+but also able to transfer knowledge gained from solving one problem to the next. We develop an algorithm
+based on the emerging paradigm of physics-informed neural network to solve various forms of the
+eikonal equation. We show how transfer learning and surrogate modeling can be used to speed up computations
+by utilizing information gained from prior solutions. We also propose a two-stage optimization
+scheme to expedite the training process in presence of sharper heterogeneity in the velocity model.
+Furthermore, we demonstrate how the proposed approach makes it simpler to incorporate additional
+physics and other features in contrast to conventional methods that took years and often decades
+to make these advances. Such an approach not only makes the implementation of eikonal solvers much
+simpler but also puts us on a much faster path to progress. 

@@ -1,0 +1,18 @@
+Android introduces a new permission model that allows apps to request permissions at runtime rather
+than at the installation time since 6.0 (Marshmallow, API level 23). While this runtime permission
+model provides users with greater flexibility in controlling an app's access to sensitive data
+and system features, it brings new challenges to app development. First, as users may grant or revoke
+permissions at any time while they are using an app, developers need to ensure that the app properly
+checks and requests required permissions before invoking any permission-protected APIs. Second,
+Android's permission mechanism keeps evolving and getting customized by device manufacturers.
+Developers are expected to comprehensively test their apps on different Android versions and device
+models to make sure permissions are properly requested in all situations. Unfortunately, these
+requirements are often impractical for developers. In practice, many Android apps suffer from
+various runtime permission issues (ARP issues). While existing studies have explored ARP issues,
+the understanding of such issues is still preliminary. To better characterize ARP issues, we performed
+an empirical study using 135 Stack Overflow posts that discuss ARP issues and 199 real ARP issues
+archived in popular open-source Android projects on GitHub. Via analyzing the data, we observed
+11 types of ARP issues that commonly occur in Android apps. Furthermore, we conducted a field survey
+and in-depth interviews among practitioners, to gain insights from industrial practices and learn
+practitioners' requirements of tools that can help combat ARP issues. We hope that our findings
+can shed light on future research and provide useful guidance to practitioners. 

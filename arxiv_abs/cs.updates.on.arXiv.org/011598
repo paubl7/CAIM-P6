@@ -1,0 +1,20 @@
+This paper focuses on Semi-Supervised Object Detection (SSOD). Knowledge Distillation (KD) has
+been widely used for semi-supervised image classification. However, adapting these methods for
+SSOD has the following obstacles. (1) The teacher model serves a dual role as a teacher and a student,
+such that the teacher predictions on unlabeled images may be very close to those of student, which
+limits the upper-bound of the student. (2) The class imbalance issue in SSOD hinders an efficient
+knowledge transfer from teacher to student. To address these problems, we propose a novel method
+Temporal Self-Ensembling Teacher (TSE-T) for SSOD. Differently from previous KD based methods,
+we devise a temporally evolved teacher model. First, our teacher model ensembles its temporal predictions
+for unlabeled images under stochastic perturbations. Second, our teacher model ensembles its
+temporal model weights with the student model weights by an exponential moving average (EMA) which
+allows the teacher gradually learn from the student. These self-ensembling strategies increase
+data and model diversity, thus improving teacher predictions on unlabeled images. Finally, we
+use focal loss to formulate consistency regularization term to handle the data imbalance problem,
+which is a more efficient manner to utilize the useful information from unlabeled images than a simple
+hard-thresholding method which solely preserves confident predictions. Evaluated on the widely
+used VOC and COCO benchmarks, the mAP of our method has achieved 80.73% and 40.52% on the VOC2007 test
+set and the COCO2014 minval5k set respectively, which outperforms a strong fully-supervised detector
+by 2.37% and 1.49%. Furthermore, our method sets the new state-of-the-art in SSOD on VOC2007 test
+set which outperforms the baseline SSOD method by 1.44%. The source code of this work is publicly
+available at this http URL 

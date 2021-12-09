@@ -1,0 +1,20 @@
+Image inpainting aims to restore the missing regions and make the recovery results identical to
+the originally complete image, which is different from the common generative task emphasizing
+the naturalness of generated images. Nevertheless, existing works usually regard it as a pure generation
+problem and employ cutting-edge generative techniques to address it. The generative networks
+fill the main missing parts with realistic contents but usually distort the local structures. In
+this paper, we formulate image inpainting as a mix of two problems, i.e., predictive filtering and
+deep generation. Predictive filtering is good at preserving local structures and removing artifacts
+but falls short to complete the large missing regions. The deep generative network can fill the numerous
+missing pixels based on the understanding of the whole scene but hardly restores the details identical
+to the original ones. To make use of their respective advantages, we propose the joint predictive
+filtering and generative network (JPGNet) that contains three branches: predictive filtering
+& uncertainty network (PFUNet), deep generative network, and uncertainty-aware fusion network
+(UAFNet). The PFUNet can adaptively predict pixel-wise kernels for filtering-based inpainting
+according to the input image and output an uncertainty map. This map indicates the pixels should
+be processed by filtering or generative networks, which is further fed to the UAFNet for a smart combination
+between filtering and generative results. Note that, our method as a novel framework for the image
+inpainting problem can benefit any existing generation-based methods. We validate our method
+on three public datasets, i.e., Dunhuang, Places2, and CelebA, and demonstrate that our method
+can enhance three state-of-the-art generative methods (i.e., StructFlow, EdgeConnect, and RFRNet)
+significantly with the slightly extra time cost. 

@@ -1,0 +1,20 @@
+Supermodeling is a modern, model-ensembling paradigm that integrates several self-synchronized
+imperfect sub-models by controlling a few meta-parameters to generate more accurate predictions
+of complex systems' dynamics. Continual synchronization between sub-models allows for trajectory
+predictions with superior accuracy compared to a single model or a classical ensemble of independent
+models whose decision fusion is based on the majority voting or averaging the outcomes. However,
+it comes out from numerous observations that the supermodeling procedure's convergence depends
+on a few principal factors such as (1) the number of sub-models, (2) their proper selection, and (3)
+the choice of the convergent optimization procedure, which assimilates the supermodel meta-parameters
+to data. Herein, we focus on modeling the evolution of the system described by a set of PDEs. We prove
+that supermodeling is conditionally convergent to a fixed-point attractor regarding only the
+supermodel meta-parameters. We investigate the formal conditions of the convergence of the supermodeling
+scheme theoretically. We employ the Banach fixed point theorem for the supermodeling correction
+operator, updating the synchronization constants' values iteratively. The "nudging" of the supermodel
+to the ground truth should be well balanced because both too small and too large attraction to data
+cause the supermodel desynchronization. The time-step size can control the convergence of the
+training procedure, by balancing the Lipshitz continuity constant of the PDE operator. All the
+sub-models have to be close to the ground-truth along the training trajectory but still sufficiently
+diverse to explore the phase space better. As an example, we discuss the three-dimensional supermodel
+of tumor evolution to demonstrate the supermodel's perfect fit to artificial data generated based
+on real medical images. 

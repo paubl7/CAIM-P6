@@ -1,0 +1,19 @@
+Reliable broadcast is a communication primitive guaranteeing, intuitively, that all processes
+in a distributed system deliver the same set of messages. The reason why this primitive is appealing
+is twofold: (i) we can implement it deterministically in a completely asynchronous environment,
+unlike stronger primitives like consensus and total-order broadcast, and yet (ii) reliable broadcast
+is powerful enough to implement important applications like payment systems. The problem we tackle
+in this paper is that of dynamic reliable broadcast, i.e., enabling processes to join or leave the
+system. This property is desirable for long-lived applications (aiming to be highly available),
+yet has been precluded in previous asynchronous reliable broadcast protocols. We study this property
+in a general adversarial (i.e., Byzantine) environment. We introduce the first specification
+of a dynamic Byzantine reliable broadcast (DBRB) primitive that is amenable to an asynchronous
+implementation. We then present an algorithm implementing this specification in an asynchronous
+network. Our DBRB algorithm ensures that if any correct process in the system broadcasts a message,
+then every correct process delivers that message unless it leaves the system. Moreover, if a correct
+process delivers a message, then every correct process that has not expressed its will to leave the
+system delivers that message. We assume that more than $2/3$ of processes in the system are correct
+at all times, which is tight in our context. We also show that if only one process in the system can fail---and
+it can fail only by crashing---then it is impossible to implement a stronger primitive, ensuring
+that if any correct process in the system broadcasts or delivers a message, then every correct process
+in the system delivers that message---including those that leave. 

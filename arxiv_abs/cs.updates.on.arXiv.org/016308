@@ -1,0 +1,19 @@
+Heterogeneous data are commonly adopted as the inputs for some models that predict the future trends
+of some observations. Existing predictive models typically ignore the inconsistencies and imperfections
+in heterogeneous data while also failing to consider the (1) spatial correlations among monitoring
+points or (2) predictions for the entire study area. To address the above problems, this paper proposes
+a deep learning method for fusing heterogeneous data collected from multiple monitoring points
+using graph convolutional networks (GCNs) to predict the future trends of some observations and
+evaluates its effectiveness by applying it in an air quality predictions scenario. The essential
+idea behind the proposed method is to (1) fuse the collected heterogeneous data based on the locations
+of the monitoring points with regard to their spatial correlations and (2) perform prediction based
+on global information rather than local information. In the proposed method, first, we assemble
+a fusion matrix using the proposed RBF-based fusion approach; second, based on the fused data, we
+construct spatially and temporally correlated data as inputs for the predictive model; finally,
+we employ the spatiotemporal graph convolutional network (STGCN) to predict the future trends
+of some observations. In the application scenario of air quality prediction, it is observed that
+(1) the fused data derived from the RBF-based fusion approach achieve satisfactory consistency;
+(2) the performances of the prediction models based on fused data are better than those based on raw
+data; and (3) the STGCN model achieves the best performance when compared to those of all baseline
+models. The proposed method is applicable for similar scenarios where continuous heterogeneous
+data are collected from multiple monitoring points scattered across a study area. 

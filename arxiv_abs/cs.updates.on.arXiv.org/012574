@@ -1,0 +1,18 @@
+This paper describes and develops a fast and accurate algorithm that computes the field of values
+boundary curve for every conceivable complex square matrix $A$, i.e., for all matrices, those with
+or without repeated eigenvalues and with or without Jordan block structures, with ill-conditioned
+eigenvalues or ill-conditioned ones and so forth. It relies on a matrix flow decomposition method
+that finds a block-diagonal flow representation for the hermitean matrix flow $H\!K_A(t) = \cos(t)
+H + \sin(t) K$ if this is possible. Here $H\!K_A(t)$ is a 1-parameter varying linear combination
+of the real and skew part matrices $H = (A+A^*)/2$ and $K = (A-A^*)/(2i)$ of $A$. For decomposing flows
+$H\!K_A(t)$, the algorithm decomposes the given dense general matrix $A$ unitarily into $U^*AU
+= \text { diag} (A_j)$ with diagonal blocks $A_j$ that conform in size with those of $H\!K_A$. It then
+computes the field of values boundaries separately for each diagonal block $A_j$ using the path
+following ZNN eigenvalue method. The convex hull of all sub field of values boundary points then
+determines the field of values boundary curve correctly for decomposing and non-decomposing matrices
+$A$. The algorithm removes standard restrictions for path following FoV methods that generally
+cannot deal with decomposing matrices $A$ due to possible eigencurve crossings of $H\!K_A(t)$.
+Tests and numerical comparisons are included. Our ZNN based method is coded for sequential and parallel
+computations and both versions run very accurately and very fast when compared with Johnson's global
+QR eigenvalue and Bedixon rectangle based method that computes complete eigenanalyses of $H\!K_A(t_k)$
+for every chosen $t_k \in {[} 0,2\pi{]}$ . 

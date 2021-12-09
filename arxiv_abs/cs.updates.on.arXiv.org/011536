@@ -1,0 +1,18 @@
+We propose an analytical construction of observable functions in the extended dynamic mode decomposition
+(EDMD) algorithm. EDMD is a numerical method for approximating the spectral properties of the Koopman
+operator. The choice of observable functions is fundamental for the application of EDMD to nonlinear
+problems arising in systems and control. Existing methods either start from a set of dictionary
+functions and look for the subset that best fits, in a certain sense, the underlying nonlinear dynamics;
+or they rely on machine learning algorithms, e.g., neural networks, to "learn" observable functions
+that are not explicitly available. Conversely, we start from the dynamical system model and lift
+it through the Lie derivatives, rendering it into a polynomial form. This transformation into a
+polynomial form is exact, although not unique, and it provides an adequate set of observable functions.
+The strength of the proposed approach is its applicability to a broader class of nonlinear dynamical
+systems, particularly those with nonpolynomial functions and compositions thereof. Moreover,
+it retains the physical interpretability of the underlying dynamical system and can be readily
+integrated into existing numerical libraries. The proposed approach is illustrated with an application
+to electric power systems. The modeled system consists of a single generator connected to an infinite
+bus, in which case nonlinear terms include sine and cosine functions. The results demonstrate the
+effectiveness of the proposed procedure in off-attractor nonlinear dynamics for estimation and
+prediction; the observable functions obtained from the proposed construction outperformed existing
+methods that use dictionary functions comprising monomials or radial basis functions. 

@@ -1,0 +1,20 @@
+Unsupervised domain adaptation (UDA) enables a learning machine to adapt from a labeled source
+domain to an unlabeled domain under the distribution shift. Thanks to the strong representation
+ability of deep neural networks, recent remarkable achievements in UDA resort to learning domain-invariant
+features. Intuitively, the hope is that a good feature representation, together with the hypothesis
+learned from the source domain, can generalize well to the target domain. However, the learning
+processes of domain-invariant features and source hypothesis inevitably involve domain-specific
+information that would degrade the generalizability of UDA models on the target domain. In this
+paper, motivated by the lottery ticket hypothesis that only partial parameters are essential for
+generalization, we find that only partial parameters are essential for learning domain-invariant
+information and generalizing well in UDA. Such parameters are termed transferable parameters.
+In contrast, the other parameters tend to fit domain-specific details and often fail to generalize,
+which we term as untransferable parameters. Driven by this insight, we propose Transferable Parameter
+Learning (TransPar) to reduce the side effect brought by domain-specific information in the learning
+process and thus enhance the memorization of domain-invariant information. Specifically, according
+to the distribution discrepancy degree, we divide all parameters into transferable and untransferable
+ones in each training iteration. We then perform separate updates rules for the two types of parameters.
+Extensive experiments on image classification and regression tasks (keypoint detection) show
+that TransPar outperforms prior arts by non-trivial margins. Moreover, experiments demonstrate
+that TransPar can be integrated into the most popular deep UDA networks and be easily extended to
+handle any data distribution shift scenarios. 

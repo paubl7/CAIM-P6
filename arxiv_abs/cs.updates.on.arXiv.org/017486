@@ -1,0 +1,19 @@
+In this paper, we propose an efficient algorithm for the network slicing problem which attempts
+to map multiple customized virtual network requests (also called services) to a common shared network
+infrastructure and allocate network resources to meet diverse service requirements. The problem
+has been formulated as a mixed integer linear programming (MILP) formulation in the literature.
+By exploiting the special structure of the network slicing problem, we first propose a novel linear
+programming (LP) relaxation of the MILP formulation. We show that compared with a natural LP relaxation
+of the MILP formulation, the novel LP relaxation is much more compact in terms of smaller numbers
+of variables and constraints, and much stronger in terms of providing a better LP bound, which makes
+it particularly suitable to be embedded in an LP based algorithm. Then we design an efficient two-stage
+LP rounding-and-refinement algorithm based on this novel LP relaxation. In the first stage, the
+proposed algorithm uses an iterative LP rounding procedure to place the virtual network functions
+of all services into cloud nodes while taking traffic routing of all services into consideration;
+in the second stage, the proposed algorithm uses an iterative LP refinement procedure to obtain
+a solution for traffic routing of all services with their end-to-end delay constraints being satisfied.
+Compared with the existing algorithms which either have an exponential complexity or return a low-quality
+solution, our proposed algorithm achieves a better trade-off between the solution quality and
+the computational complexity. In particular, the worst-case complexity of our proposed algorithm
+is polynomial, which makes it suitable for solving large-scale problems. Numerical results demonstrate
+the effectiveness and efficiency of our proposed algorithm. 

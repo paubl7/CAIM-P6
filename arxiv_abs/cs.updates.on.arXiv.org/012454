@@ -1,0 +1,19 @@
+Quantized neural network (NN) with a reduced bit precision is an effective solution to reduces the
+computational and memory resource requirements and plays a vital role in machine learning. However,
+it is still challenging to avoid the significant accuracy degradation due to its numerical approximation
+and lower redundancy. In this paper, a novel robustness-aware 2-bit quantization scheme is proposed
+for NN base on binary NN and generative adversarial network(GAN), witch improves the performance
+by enriching the information of binary NN, efficiently extract the structural information and
+considering the robustness of the quantized NN. Specifically, using shift addition operation
+to replace the multiply-accumulate in the quantization process witch can effectively speed the
+NN. Meanwhile, a structural loss between the original NN and quantized NN is proposed to such that
+the structural information of data is preserved after quantization. The structural information
+learned from NN not only plays an important role in improving the performance but also allows for
+further fine tuning of the quantization network by applying the Lipschitz constraint to the structural
+loss. In addition, we also for the first time take the robustness of the quantized NN into consideration
+and propose a non-sensitive perturbation loss function by introducing an extraneous term of spectral
+norm. The experiments are conducted on CIFAR-10 and ImageNet datasets with popular NN( such as MoblieNetV2,
+SqueezeNet, ResNet20, etc). The experimental results show that the proposed algorithm is more
+competitive under 2-bit-precision than the state-of-the-art quantization methods. Meanwhile,
+the experimental results also demonstrate that the proposed method is robust under the FGSM adversarial
+samples attack. 

@@ -1,0 +1,20 @@
+Deep Neural Network (DNN) trained object detectors are widely deployed in many mission-critical
+systems for real time video analytics at the edge, such as autonomous driving and video surveillance.
+A common performance requirement in these mission-critical edge services is the near real-time
+latency of online object detection on edge devices. However, even with well-trained DNN object
+detectors, the online detection quality at edge may deteriorate for a number of reasons, such as
+limited capacity to run DNN object detection models on heterogeneous edge devices, and detection
+quality degradation due to random frame dropping when the detection processing rate is significantly
+slower than the incoming video frame rate. This paper addresses these problems by exploiting multi-model
+multi-device detection parallelism for fast object detection in edge systems with heterogeneous
+edge devices. First, we analyze the performance bottleneck of running a well-trained DNN model
+at edge for real time online object detection. We use the offline detection as a reference model,
+and examine the root cause by analyzing the mismatch among the incoming video streaming rate, video
+processing rate for object detection, and output rate for real time detection visualization of
+video streaming. Second, we study performance optimizations by exploiting multi-model detection
+parallelism. We show that the model-parallel detection approach can effectively speed up the FPS
+detection processing rate, minimizing the FPS disparity with the incoming video frame rate on heterogeneous
+edge devices. We evaluate the proposed approach using SSD300 and YOLOv3 on benchmark videos of different
+video stream rates. The results show that exploiting multi-model detection parallelism can speed
+up the online object detection processing rate and deliver near real-time object detection performance
+for efficient video analytics at edge. 

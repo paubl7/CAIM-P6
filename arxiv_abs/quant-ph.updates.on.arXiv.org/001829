@@ -1,0 +1,18 @@
+In a quantum network that successfully creates links, shared Bell states between neighboring repeater
+nodes, with probability $p$ in each time slot, and performs Bell State Measurements at nodes with
+success probability $q<1$, the end to end entanglement generation rate drops exponentially with
+the distance between consumers, despite multi-path routing. If repeaters can perform multi-qubit
+projective measurements in the GHZ basis that succeed with probability $q$, the rate does not change
+with distance in a certain $(p,q)$ region, but decays exponentially outside. This region where
+the distance independent rate occurs is the supercritical region of a new percolation problem.
+We extend this GHZ protocol to incorporate a time-multiplexing blocklength $k$, the number of time
+slots over which a repeater can mix-and-match successful links to perform fusion on. As $k$ increases,
+the supercritical region expands. For a given $(p,q)$, the entanglement rate initially increases
+with $k$, and once inside the supercritical region for a high enough $k$, it decays as $1/k$ GHZ states
+per time slot. When memory coherence time exponentially distributed with mean $\mu$ is incorporated,
+it is seen that increasing $k$ does not indefinitely increase the supercritical region; it has a
+hard $\mu$ dependent limit. Finally, we find that incorporating space-division multiplexing,
+i.e., running the above protocol independently in up to $d$ disconnected network regions, where
+$d$ is the network's node degree, one can go beyond the 1 GHZ state per time slot rate that the above
+randomized local link-state protocol cannot surpass. As $(p,q)$ increases, one can approach the
+ultimate min-cut entanglement generation capacity of $d$ GHZ states per slot. 

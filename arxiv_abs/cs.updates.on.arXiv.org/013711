@@ -1,0 +1,18 @@
+This paper proposes a new robust update rule of target network for deep reinforcement learning (DRL),
+to replace the conventional update rule, given as an exponential moving average. The target network
+is for smoothly generating the reference signals for a main network in DRL, thereby reducing learning
+variance. The problem with its conventional update rule is the fact that all the parameters are smoothly
+copied with the same speed from the main network, even when some of them are trying to update toward
+the wrong directions. This behavior increases the risk of generating the wrong reference signals.
+Although slowing down the overall update speed is a naive way to mitigate wrong updates, it would
+decrease learning speed. To robustly update the parameters while keeping learning speed, a t-soft
+update method, which is inspired by student-t distribution, is derived with reference to the analogy
+between the exponential moving average and the normal distribution. Through the analysis of the
+derived t-soft update, we show that it takes over the properties of the student-t distribution.
+Specifically, with a heavy-tailed property of the student-t distribution, the t-soft update automatically
+excludes extreme updates that differ from past experiences. In addition, when the updates are similar
+to the past experiences, it can mitigate the learning delay by increasing the amount of updates.
+In PyBullet robotics simulations for DRL, an online actor-critic algorithm with the t-soft update
+outperformed the conventional methods in terms of the obtained return and/or its variance. From
+the training process by the t-soft update, we found that the t-soft update is globally consistent
+with the standard soft update, and the update rates are locally adjusted for acceleration or suppression.

@@ -1,0 +1,17 @@
+In this paper, the problem of minimizing the weighted sum of age of information (AoI) and total energy
+consumption of Internet of Things (IoT) devices is studied. In the considered model, each IoT device
+monitors a physical process that follows nonlinear dynamics. As the dynamics of the physical process
+vary over time, each device must find an optimal sampling frequency to sample the real-time dynamics
+of the physical system and send sampled information to a base station (BS). Due to limited wireless
+resources, the BS can only select a subset of devices to transmit their sampled information. Meanwhile,
+changing the sampling frequency will also impact the energy used by each device for sampling and
+information transmission. Thus, it is necessary to jointly optimize the sampling policy of each
+device and the device selection scheme of the BS so as to accurately monitor the dynamics of the physical
+process using minimum energy. This problem is formulated as an optimization problem whose goal
+is to minimize the weighted sum of AoI cost and energy consumption. To solve this problem, a distributed
+reinforcement learning approach is proposed to optimize the sampling policy. The proposed learning
+method enables the IoT devices to find the optimal sampling policy using their local observations.
+Given the sampling policy, the device selection scheme can be optimized so as to minimize the weighted
+sum of AoI and energy consumption of all devices. Simulations with real data of PM 2.5 pollution show
+that the proposed algorithm can reduce the sum of AoI by up to 17.8% and 33.9% and the total energy consumption
+by up to 13.2% and 35.1%, compared to a conventional deep Q network method and a uniform sampling policy.

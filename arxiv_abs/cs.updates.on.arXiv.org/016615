@@ -1,0 +1,19 @@
+We present a machine learning based COVID-19 cough classifier which can discriminate COVID-19
+positive coughs from both COVID-19 negative and healthy coughs recorded on a smartphone. This type
+of screening is non-contact, easy to apply, and can reduce the workload in testing centres as well
+as limit transmission by recommending early self-isolation to those who have a cough suggestive
+of COVID-19. The datasets used in this study include subjects from all six continents and contain
+both forced and natural coughs, indicating that the approach is widely applicable. The publicly
+available Coswara dataset contains 92 COVID-19 positive and 1079 healthy subjects, while the second
+smaller dataset was collected mostly in South Africa and contains 18 COVID-19 positive and 26 COVID-19
+negative subjects who have undergone a SARS-CoV laboratory test. Both datasets indicate that COVID-19
+positive coughs are 15\%-20\% shorter than non-COVID coughs. Dataset skew was addressed by applying
+the synthetic minority oversampling technique (SMOTE). A leave-$p$-out cross-validation scheme
+was used to train and evaluate seven machine learning classifiers: LR, KNN, SVM, MLP, CNN, LSTM and
+Resnet50. Our results show that although all classifiers were able to identify COVID-19 coughs,
+the best performance was exhibited by the Resnet50 classifier, which was best able to discriminate
+between the COVID-19 positive and the healthy coughs with an area under the ROC curve (AUC) of 0.98.
+An LSTM classifier was best able to discriminate between the COVID-19 positive and COVID-19 negative
+coughs, with an AUC of 0.94 after selecting the best 13 features from a sequential forward selection
+(SFS). Since this type of cough audio classification is cost-effective and easy to deploy, it is
+potentially a useful and viable means of non-contact COVID-19 screening. 

@@ -1,0 +1,20 @@
+Multi-Source Domain Adaptation (MSDA) focuses on transferring the knowledge from multiple source
+domains to the target domain, which is a more practical and challenging problem compared to the conventional
+single-source domain adaptation. In this problem, it is essential to utilize the labeled source
+data and the unlabeled target data to approach the conditional distribution of semantic label on
+target domain, which requires the joint modeling across different domains and also an effective
+domain combination scheme. The graphical structure among different domains is useful to tackle
+these challenges, in which the interdependency among various instances/categories can be effectively
+modeled. In this work, we propose two types of graphical models,i.e. Conditional Random Field for
+MSDA (CRF-MSDA) and Markov Random Field for MSDA (MRF-MSDA), for cross-domain joint modeling and
+learnable domain combination. In a nutshell, given an observation set composed of a query sample
+and the semantic prototypes i.e. representative category embeddings) on various domains, the
+CRF-MSDA model seeks to learn the joint distribution of labels conditioned on the observations.
+We attain this goal by constructing a relational graph over all observations and conducting local
+message passing on it. By comparison, MRF-MSDA aims to model the joint distribution of observations
+over different Markov networks via an energy-based formulation, and it can naturally perform label
+prediction by summing the joint likelihoods over several specific networks. Compared to the CRF-MSDA
+counterpart, the MRF-MSDA model is more expressive and possesses lower computational cost. We
+evaluate these two models on four standard benchmark data sets of MSDA with distinct domain shift
+and data complexity, and both models achieve superior performance over existing methods on all
+benchmarks. 

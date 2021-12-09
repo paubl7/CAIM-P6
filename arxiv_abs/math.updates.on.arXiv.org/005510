@@ -1,0 +1,19 @@
+We consider the problem of selfish agents in discrete-time queuing systems, where competitive
+queues try to get their packets served. In this model, a queue gets to send a packet each step to one
+of the servers, which will attempt to serve the oldest arriving packet, and unprocessed packets
+are returned to each queue. We model this as a repeated game where queues compete for the capacity
+of the servers, but where the state of the game evolves as the length of each queue varies, resulting
+in a highly dependent random process. Earlier work by the authors [EC'20] shows that with no-regret
+learners, the system needs twice the capacity as would be required in the coordinated setting to
+ensure queue lengths remain stable despite the selfish behavior of the queues. In this paper, we
+demonstrate that this way of evaluating outcomes is myopic: if more patient queues choose strategies
+that selfishly maximize their long-run success rate, stability can be ensured with just $\frac{e}{e-1}\approx
+1.58$ times extra capacity, better than what is possible assuming the no-regret property. As these
+systems induce highly dependent processes, our analysis draws heavily on techniques from probability
+theory. Though these systems are random under any fixed policies by the queues, we show that, surprisingly,
+these systems have deterministic and explicit asymptotic behavior. We show that the asymptotic
+growth rates of queues can be written as a ratio of a submodular and modular function, which provides
+significant game-theoretic properties. Our equilibrium analysis then relies on a novel deformation
+argument towards a more analyzable solution that differs significantly from previous price of
+anarchy results. While the intermediate points will not be equilibria, this analytic structure
+will ensure that this deformation is monotonic along this continuous path. 

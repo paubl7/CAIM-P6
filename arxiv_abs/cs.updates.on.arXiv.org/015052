@@ -1,0 +1,18 @@
+Along with rich health-related metadata, an ongoing imaging study has acquired MRI of over 40,000
+male and female UK Biobank participants aged 44-82 since 2014. Phenotypes derived from these images,
+such as measurements of body composition, can reveal new links between genetics, cardiovascular
+disease, and metabolic conditions. In this retrospective study, six measurements of body composition
+were automatically estimated by ResNet50 neural networks for image-based regression from neck-to-knee
+body MRI. Despite the potential for high speed and accuracy, these networks produce no output segmentations
+that could indicate the reliability of individual measurements. The presented experiments therefore
+examine mean-variance regression and ensembling for predictive uncertainty estimation, which
+can quantify individual measurement errors and thereby help to identify potential outliers, anomalies,
+and other failure cases automatically. In 10-fold cross-validation on data of about 8,500 subjects,
+mean-variance regression and ensembling showed complementary benefits, reducing the mean absolute
+error across all predictions by 12%. Both improved the calibration of uncertainties and their ability
+to identify high prediction errors. With intra-class correlation coefficients (ICC) above 0.97,
+all targets except the liver fat content yielded relative measurement errors below 5%. Testing
+on another 1,000 subjects showed consistent performance, and the method was finally deployed for
+inference to 30,000 subjects with missing reference values. The results indicate that deep regression
+ensembles could ultimately provide automated, uncertainty-aware measurements of body composition
+for more than 120,000 UK Biobank neck-to-knee body MRI that are to be acquired within the coming years.

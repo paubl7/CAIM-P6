@@ -1,0 +1,18 @@
+We are interested in solving decision problem $\exists? t \in \mathbb{N}, \cos t \theta = c$ where
+$\cos \theta$ and $c$ are algebraic numbers. We call this the $\cos t \theta$ problem. This is an exploration
+of Diophantine equations with analytic functions. Polynomial, exponential with real base and
+cosine function are closely related to this decision problem: $ \exists ? t \in \mathbb{N}, u^T M^t
+v = 0$ where $u, v \in \mathbb{Q}^n, M \in \mathbb{Q}^{n\times n}$. This problem is also known as "Skolem
+problem" and is useful in verification of linear systems. Its decidability remains unknown. Single
+variable Diophantine equations with exponential function with real algebraic base and $\cos t
+\theta$ function with $\theta$ a rational multiple of $\pi$ is decidable. This idea is central in
+proving the decidability of Skolem problem when the eigenvalues of $M$ are roots of real numbers.
+The main difficulty with the cases when eigenvalues are not roots of reals is that even for small order
+cases decidability requires application of trancendental number theory which does not scale for
+higher order cases. We provide a first attempt to overcome that by providing a $PTIME$ algorithm
+for $\cos t \theta$ when $\theta$ is not a rational multiple of $\pi$. We do so without using techniques
+from transcendental number theory. \par One of the main difficulty in Diophantine equations is
+being unable to use tools from calculus to solve this equation as the domain of variable is $\mathbb{N}$.
+We also provide an attempt to overcome that by providing reduction of Skolem problem to solving a
+one variable equation (which involves polynomials, exponentials with real bases and $\cos t \theta$
+function with $t$ ranging over reals and $\theta \in [0, \pi]$) over reals. 

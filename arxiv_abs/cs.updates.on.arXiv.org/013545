@@ -1,0 +1,18 @@
+With the development of cloud computing, the storage and processing of massive visual media data
+has gradually transferred to the cloud server. For example, if the intelligent video monitoring
+system cannot process a large amount of data locally, the data will be uploaded to the cloud. Therefore,
+how to process data in the cloud without exposing the original data has become an important research
+topic. We propose a single-server version of somewhat homomorphic encryption cryptosystem based
+on confused modulo projection theorem named CMP-SWHE, which allows the server to complete blind
+data processing without \emph{seeing} the effective information of user data. On the client side,
+the original data is encrypted by amplification, randomization, and setting confusing redundancy.
+Operating on the encrypted data on the server side is equivalent to operating on the original data.
+As an extension, we designed and implemented a blind computing scheme of accelerated version based
+on batch processing technology to improve efficiency. To make this algorithm easy to use, we also
+designed and implemented an efficient general blind computing library based on CMP-SWHE. We have
+applied this library to foreground extraction, optical flow tracking and object detection with
+satisfactory results, which are helpful for building smart cities. We also discuss how to extend
+the algorithm to deep learning applications. Compared with other homomorphic encryption cryptosystems
+and libraries, the results show that our method has obvious advantages in computing efficiency.
+Although our algorithm has some tiny errors ($10^{-6}$) when the data is too large, it is very efficient
+and practical, especially suitable for blind image and video processing. 

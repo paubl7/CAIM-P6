@@ -1,0 +1,18 @@
+Deep neural networks generalize well despite being exceedingly overparameterized and being trained
+without explicit regularization. This curious phenomenon, often termed benign overfitting,
+has inspired extensive research activity in establishing its statistical principles: Under what
+conditions is the phenomenon observed? How do these depend on the data and on the training algorithm?
+When does regularization benefit generalization? While these questions remain wide open for deep
+neural nets, recent works have attempted gaining insights by studying simpler, often linear, models.
+Our paper contributes to this growing line of work by examining binary linear classification under
+the popular generative Gaussian mixture model. Motivated by recent results on the implicit bias
+of gradient descent, we study both max-margin SVM classifiers (corresponding to logistic loss)
+and min-norm interpolating classifiers (corresponding to least-squares loss). First, we leverage
+an idea introduced in [V. Muthukumar et al., arXiv:2005.08054, (2020)] to relate the SVM solution
+to the least-squares (LS) interpolating solution. Second, we derive novel non-asymptotic bounds
+on the classification error of the LS solution. Combining the two, we present novel sufficient conditions
+on the overparameterization ratio and on the signal-to-noise ratio (SNR) for benign overfitting
+to occur. Contrary to previously studied discriminative data models, our results emphasize the
+crucial role of the SNR. Moreover, we investigate the role of regularization and identify precise
+conditions under which the interpolating estimator performs better than the regularized estimates.
+We corroborate our theoretical findings with numerical simulations. 

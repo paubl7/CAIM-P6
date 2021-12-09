@@ -1,0 +1,20 @@
+This paper introduces a semi-discrete implicit Euler (SDIE) scheme for the Allen-Cahn equation
+(ACE) with fidelity forcing on graphs. Bertozzi and Flenner (2012) pioneered the use of this differential
+equation as a method for graph classification problems, such as semi-supervised learning and image
+segmentation. In Merkurjev, Kosti\'c, and Bertozzi (2013), a Merriman-Bence-Osher (MBO) scheme
+with fidelity forcing was used instead, as the MBO scheme is heuristically similar to the ACE. This
+paper rigorously establishes the graph MBO scheme with fidelity forcing as a special case of an SDIE
+scheme for the graph ACE with fidelity forcing. This connection requires using the double-obstacle
+potential in the ACE, as was shown in Budd and Van Gennip (2020) for ACE without fidelity forcing.
+We also prove that solutions of the SDIE scheme converge to solutions of the graph ACE with fidelity
+forcing as the SDIE time step tends to zero. Next, we develop the SDIE scheme as a classification algorithm.
+We also introduce some innovations into the algorithms for the SDIE and MBO schemes. For large graphs,
+we use a QR decomposition method to compute an eigendecomposition from a Nystr\"om extension, which
+outperforms the method used in e.g. Bertozzi and Flenner (2012) in accuracy, stability, and speed.
+Moreover, we replace the Euler discretisation for the scheme's diffusion step by a computation
+based on the Strang formula for matrix exponentials. We apply this algorithm to a number of image
+segmentation problems, and compare the performance of the SDIE and MBO schemes. We find that whilst
+the general SDIE scheme does not perform better than the MBO special case at this task, our other innovations
+lead to a significantly better segmentation than that from previous literature. We also empirically
+quantify the uncertainty that this segmentation inherits from the randomness in the Nystr\"om
+extension. 

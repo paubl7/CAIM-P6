@@ -1,0 +1,19 @@
+The task of classifying mammograms is very challenging because the lesion is usually small in the
+high resolution image. The current state-of-the-art approaches for medical image classification
+rely on using the de-facto method for ConvNets - fine-tuning. However, there are fundamental differences
+between natural images and medical images, which based on existing evidence from the literature,
+limits the overall performance gain when designed with algorithmic approaches. In this paper,
+we propose to go beyond fine-tuning by introducing a novel framework called MorphHR, in which we
+highlight a new transfer learning scheme. The idea behind the proposed framework is to integrate
+function-preserving transformations, for any continuous non-linear activation neurons, to
+internally regularise the network for improving mammograms classification. The proposed solution
+offers two major advantages over the existing techniques. Firstly and unlike fine-tuning, the
+proposed approach allows for modifying not only the last few layers but also several of the first
+ones on a deep ConvNet. By doing this, we can design the network front to be suitable for learning domain
+specific features. Secondly, the proposed scheme is scalable to hardware. Therefore, one can fit
+high resolution images on standard GPU memory. We show that by using high resolution images, one
+prevents losing relevant information. We demonstrate, through numerical and visual experiments,
+that the proposed approach yields to a significant improvement in the classification performance
+over state-of-the-art techniques, and is indeed on a par with radiology experts. Moreover and for
+generalisation purposes, we show the effectiveness of the proposed learning scheme on another
+large dataset, the ChestX-ray14, surpassing current state-of-the-art techniques. 

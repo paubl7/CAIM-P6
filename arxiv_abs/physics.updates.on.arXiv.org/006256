@@ -1,0 +1,20 @@
+Four different applications of spectral proper orthogonal decomposition (SPOD): low-rank reconstruction,
+denoising, frequency-time analysis, and prewhitening are demonstrated on large-eddy simulation
+data of a turbulent jet. SPOD-based low-rank reconstruction can be performed by direct inversion
+of a truncated SPOD. This spectral inversion problem, however, is ambiguous since SPOD relies on
+spectral estimation. We demonstrate SPOD-based flow field reconstruction using direct inversion
+of the SPOD algorithm (frequency-domain approach) and propose an alternative approach based on
+projection of the time series data onto the modes (time-domain approach). While the SPOD optimally
+represents the flow in a statistical sense, the time-domain approach seeks an optimal reconstruction
+of each instantaneous flow field. We further propose a SPOD-based denoising strategy that is based
+on hard-thresholding of the SPOD eigenvalues. The proposed strategy achieves significant noise
+reduction while facilitating drastic data compression. In contrast to standard methods of frequency-time
+analysis such as wavelet transform, a proposed SPOD-based approach yields a spectrogram that characterizes
+the temporal evolution of spatially coherent flow structures. In the frequency-domain, time-varying
+expansion coefficients can be obtained by basing the SPOD on a sliding window. This approach, however,
+is computationally intractable, and an alternative strategy based on convolution in the time-domain
+is presented. When applied to the turbulent jet data, SPOD-based frequency-time analysis reveals
+that the intermittent occurrence of large-scale coherent structures is directly associated with
+high-energy events. This work suggests that the time-domain approach is preferable for low-rank
+reconstruction of individual snapshots, and the frequency-domain approach for denoising and
+frequency-time analysis. 

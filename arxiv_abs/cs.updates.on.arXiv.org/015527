@@ -1,0 +1,19 @@
+Deep neural networks (DNN) have been widely deployed in various practical applications. However,
+many researches indicated that DNN is vulnerable to backdoor attacks. The attacker can create a
+hidden backdoor in target DNN model, and trigger the malicious behaviors by submitting specific
+backdoor instance. However, almost all the existing backdoor works focused on the digital domain,
+while few studies investigate the backdoor attacks in real physical world. Restricted to a variety
+of physical constrains, the performance of backdoor attacks in the real world will be severely degraded.
+In this paper, we propose a robust physical backdoor attack method, PTB (physical transformations
+for backdoors), to implement the backdoor attacks against deep learning models in the physical
+world. Specifically, in the training phase, we perform a series of physical transformations on
+these injected backdoor instances at each round of model training, so as to simulate various transformations
+that a backdoor may experience in real world, thus improves its physical robustness. Experimental
+results on the state-of-the-art face recognition model show that, compared with the methods that
+without PTB, the proposed attack method can significantly improve the performance of backdoor
+attacks in real physical world. Under various complex physical conditions, by injecting only a
+very small ratio (0.5%) of backdoor instances, the success rate of physical backdoor attacks with
+the PTB method on VGGFace is 82%, while the attack success rate of backdoor attacks without the proposed
+PTB method is lower than 11%. Meanwhile, the normal performance of target DNN model has not been affected.
+This paper is the first work on the robustness of physical backdoor attacks, and is hopeful for providing
+guideline for the subsequent physical backdoor works. 

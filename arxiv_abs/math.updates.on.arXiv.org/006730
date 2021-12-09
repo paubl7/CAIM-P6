@@ -1,0 +1,18 @@
+In this paper, we study a probabilistic reinforcement-learning model for ants searching for the
+shortest path(s) between their nest and a source of food. In this model, the nest and the source of
+food are two distinguished nodes $N$ and $F$ in a finite graph $\mathcal G$. The ants perform a sequence
+of random walks on this graph, starting from the nest and stopped when first hitting the source of
+food. At each step of its random walk, the $n$-th ant chooses to cross a neighbouring edge with probability
+proportional to the number of preceding ants that crossed that edge at least once. We say that {\it
+the ants find the shortest path} if, almost surely as the number of ants grow to infinity, almost all
+the ants go from the nest to the source of food through one of the shortest paths, without loosing time
+on other edges of the graph. Our contribution is three-fold: (1) We prove that, if $\mathcal G$ is
+a tree rooted at $N$ whose leaves have been merged into node $F$, and with one edge between $N$ and $F$,
+then the ants indeed find the shortest path. (2) In contrast, we provide three examples of graphs
+on which the ants do not find the shortest path, suggesting that in this model and in most graphs, ants
+do not find the shortest path. (3) In all these cases, we show that the sequence of normalised edge-weights
+converge to a {\it deterministic} limit, despite a linear-reinforcement mechanism, and we conjecture
+that this is a general fact which is valid on all finite graphs. To prove these results, we use stochastic
+approximation methods, and in particular the ODE method. One difficulty comes from the fact that
+this method relies on understanding the behaviour at large times of the solution of a non-linear,
+multi-dimensional ODE. 

@@ -1,0 +1,19 @@
+A Peer-to-Peer (P2P) network is a dynamic collection of nodes that connect with each other via virtual
+overlay links built upon an underlying network (usually, the Internet). P2P networks are highly
+dynamic and can experience very heavy churn, i.e., a large number of nodes join/leave the network
+continuously. Thus, building and maintaining a stable overlay network is an important problem
+that has been studied extensively for two decades. In this paper, we present our \Pe overlay network
+called Sparse Robust Addressable Network (Spartan). Spartan can be quickly and efficiently built
+in a fully distributed fashion within $O(\log n)$ rounds. Furthermore, the Spartan overlay structure
+can be maintained, again, in a fully distributed manner despite adversarially controlled churn
+(i.e., nodes joining and leaving) and significant variation in the number of nodes. Moreover, new
+nodes can join a committee within $O(1)$ rounds and leaving nodes can leave without any notice. The
+number of nodes in the network lies in $[n, fn]$ for any fixed $f\ge 1$. Up to $\epsilon n$ nodes (for
+some small but fixed $\epsilon > 0$) can be adversarially added/deleted within {\em any} period
+of $P$ rounds for some $P \in O(\log \log n)$. Despite such uncertainty in the network, Spartan maintains
+$\Theta(n/\log n)$ committees that are stable and addressable collections of $\Theta(\log n)$
+nodes each for $O(polylog(n))$ rounds with high probability. Spartan's committees are also capable
+of performing sustained computation and passing messages between each other. Thus, any protocol
+designed for static networks can be simulated on Spartan with minimal overhead. This makes Spartan
+an ideal platform for developing applications. We experimentally show that Spartan will remain
+robust as long as each committee, on average, contains 24 nodes for networks of size up to $10240$.

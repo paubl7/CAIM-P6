@@ -1,0 +1,19 @@
+This thesis is concerned with the rejection of time-varying disturbances in linear model predictive
+control of discrete-time systems. In the literature, disturbances are widely rejected by using
+velocity models, disturbance model with observer approach or a scheme that combines the compensation
+of a disturbance observer and the feedback regulation of MPC. Contrary to the widely used methods,
+the technique proposed in this research work utilises the increment model of plants to formulate
+a control law to reject varying-disturbance. The uniqueness of the method stems from the compensation
+for disturbance magnitude and rate of change. By proposing a cost function where the increment form
+of the system disturbance is taken as an optimisation variable, a control signal that is a function
+of a computed optimal disturbance increment is formulated to ensure that the plant is driven according
+to the minimisation of the cost function. The degree of freedom introduced by using the optimal disturbance
+in the control law was exploited to introduce the estimated disturbance increment into the control
+signal such that it is always in opposition to the external disturbance increment. Moreover, the
+proposed cost function provides a weighting matrix that can be used to manipulate the impacts of
+the exogenous disturbances on the response of the system. To estimate the unmeasurable disturbances,
+a combined state and disturbance observer is designed based on a convex optimisation stated in terms
+of an H2-minimisation problem. Simulations of three different systems are used to show the benefits
+the proposed algorithm has over conventional offset-free MPC techniques. The results demonstrated
+that the proposed scheme may give better output tracking and regulation and it is particularly more
+tolerant of actuator saturation. 

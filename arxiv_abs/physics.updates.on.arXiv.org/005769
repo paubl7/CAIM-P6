@@ -1,0 +1,20 @@
+Traditionally, optimization of radiation therapy (RT) treatment plans has been done before the
+initiation of RT course, using population-wide estimates for patients' response to therapy. However,
+recent technological advancements have enabled monitoring individual patient response during
+the RT course, in the form of biomarkers. Although biomarker data remains subject to substantial
+uncertainties, information extracted from this data may allow the RT plan to be adapted in a biologically
+informative way. We present a mathematical framework that optimally adapts the treatment-length
+of an RT plan based on the acquired mid-treatment biomarker information, while accounting for the
+inexact nature of this information. We formulate the adaptive treatment-length optimization
+problem as a 2-stage problem, wherein the information about the model parameters gathered during
+the first stage influences the decisions in the second stage. Using Adjustable Robust Optimization
+(ARO) techniques we derive explicit optimal decision rules for the stage-2 decisions and solve
+the optimization problem. The problem allows for multiple worst-case optimal solutions. To discriminate
+between these, we introduce the concept of Pareto Adjustable Robustly Optimal (PARO) solutions.
+In numerical experiments using lung cancer patient data, the ARO method is benchmarked against
+several other static and adaptive methods. In case of exact biomarker information, there is sufficient
+space to adapt, and numerical results show that taking into account both robustness and adaptability
+is not necessary. In case of inexact biomarker information, accounting for adaptability and inexactness
+of biomarker information is particularly beneficial when robustness (w.r.t. organ-at-risk (OAR)
+constraint violations) is of high importance. If minor OAR violations are allowed, a nominal folding
+horizon approach is a good performing alternative. 

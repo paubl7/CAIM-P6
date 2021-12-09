@@ -1,0 +1,19 @@
+The homogeneous electron gas (HEG) is a key ingredient in the construction of most exchange-correlation
+functionals of density-functional theory. Often, the energy of the HEG is parameterized as a function
+of its spin density $n$, leading to the local density approximation (LDA) for inhomogeneous systems.
+However, the connection between the electron density and kinetic energy density of the HEG can be
+used to generalize the LDA by evaluating it on a weighted geometric average of the local spin density
+and the spin density of a HEG that has the local kinetic energy density of the inhomogeneous system,
+with a mixing ratio $x$. This leads to a new family of functionals that we term meta-local density
+approximations (meta-LDAs), which are still exact for the HEG, which are derived only from properties
+of the HEG, and which form a new rung of Jacob's ladder of density functionals. The first functional
+of this ladder, the local $\tau$ approximation (LTA) of Ernzerhof and Scuseria that corresponds
+to $x=1$ is unfortunately not stable enough to be used in self-consistent field calculations, because
+it leads to divergent potentials as we show in this work. However, a geometric averaging of the LDA
+and LTA densities with smaller values of $x$ not only leads to numerical stability of the resulting
+functional, but also yields more accurate exchange energies in atomic calculations than the LDA,
+the LTA, or the tLDA functional ($x=1/4$) of Eich and Hellgren. We choose $x=0.50$ as it gives the
+best total energy in self-consistent exchange-only calculations for the argon atom. Atomization
+energy benchmarks confirm that the choice $x=0.50$ also yields improved energetics in combination
+with correlation functionals in molecules, almost eliminating the well-known overbinding of
+the LDA and reducing its error by two thirds. 

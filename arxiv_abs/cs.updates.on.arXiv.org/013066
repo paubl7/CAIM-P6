@@ -1,0 +1,20 @@
+Among many prevailing malware, crypto-ransomware poses a significant threat as it financially
+extorts affected users by creating denial of access via unauthorized encryption of their documents
+as well as holding their documents hostage and financially extorting them. This results in millions
+of dollars of annual losses worldwide. Multiple variants of ransomware are growing in number with
+capabilities of evasion from many anti-viruses and software-only malware detection schemes that
+rely on static execution signatures. In this paper, we propose a hardware-assisted scheme, called
+RanStop, for early detection of crypto-ransomware infection in commodity processors. RanStop
+leverages the information of hardware performance counters embedded in the performance monitoring
+unit in modern processors to observe micro-architectural event sets and detects known and unknown
+crypto-ransomware variants. In this paper, we train a recurrent neural network-based machine
+learning architecture using long short-term memory (LSTM) model for analyzing micro-architectural
+events in the hardware domain when executing multiple variants of ransomware as well as benign programs.
+We create timeseries to develop intrinsic statistical features using the information of related
+HPCs and improve the detection accuracy of RanStop and reduce noise by via LSTM and global average
+pooling. As an early detection scheme, RanStop can accurately and quickly identify ransomware
+within 2ms from the start of the program execution by analyzing HPC information collected for 20
+timestamps each 100us apart. This detection time is too early for a ransomware to make any significant
+damage, if none. Moreover, validation against benign programs with behavioral (sub-routine-centric)
+similarity with that of a crypto-ransomware shows that RanStop can detect ransomware with an average
+of 97% accuracy for fifty random trials. 

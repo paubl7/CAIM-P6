@@ -1,0 +1,19 @@
+This article proposes a novel attention-based body pose encoding for human activity recognition.
+The approach is combined with RGB video data and 3D human pose information to give us a novel end-to-end
+trainable network. Most of the existing human activity recognition approaches based on 3D pose
+data often enrich the input data using additional handcrafted representations such as velocity,
+super-normal vectors, pairwise relations, and so on. The enriched data complements the 3D body
+joint position data and improves model performance. In this paper, we propose a novel approach that
+learns enhanced feature representations from a given sequence of 3D body joints. To achieve this
+encoding, the approach exploits two body pose streams: 1) a spatial stream which encodes the spatial
+relationship between various body joints at each time point to learn spatial structure involving
+the spatial distribution of different body joints 2) a temporal stream that learns the temporal
+variation of individual body joints over the entire sequence duration to present a temporally enhanced
+representation. Afterwards, these two pose streams are fused with a multi-head attention mechanism.
+% adapted from neural machine translation. We also capture the contextual information from the
+RGB video stream using a deep Convolutional Neural Network (CNN) model combined with a multi-head
+attention and a bidirectional Long Short-Term Memory (LSTM) network. Moreover, we whose performance
+is enhanced through the multi-head attention mechanism. Finally, the RGB video stream is combined
+with the fused body pose stream to give a novel end-to-end deep model for effective human activity
+recognition. The proposed model is evaluated on three datasets including the challenging NTU-RGBD
+dataset and achieves state-of-the-art results. 

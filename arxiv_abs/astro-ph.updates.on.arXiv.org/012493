@@ -1,0 +1,19 @@
+We present the open-source pyratbay framework for exoplanet atmospheric modeling, spectral synthesis,
+and Bayesian retrieval. The modular design of the code allows the users to generate atmospheric
+1D parametric models of the temperature, abundances (in thermochemical equilibrium or constant-with-altitude),
+and altitude profiles in hydrostatic equilibrium; sample ExoMol and HITRAN line-by-line cross
+sections with custom resolving power and line-wing cutoff values; compute emission or transmission
+spectra considering cross sections from molecular line transitions, collision-induced absorption,
+Rayleigh scattering, gray clouds, and alkali resonance lines; and perform Markov chain Monte Carlo
+atmospheric retrievals for a given transit or eclipse dataset. We benchmarked the pyratbay framework
+by reproducing line-by-line cross-section sampling of ExoMol cross sections, producing transmission
+and emission spectra consistent with petitRADTRANS models, accurately retrieving the atmospheric
+properties of simulated transmission and emission observations generated with TauREx models,
+and closely reproducing Aura retrieval analyses of the space-based transmission spectrum of HD
+209458b. Finally, we present a retrieval analysis of a population of transiting exoplanets, focusing
+on those observed in transmission with the HST WFC3/G141 grism. We found that this instrument alone
+can confidently identify when a dataset shows H2O-absorption features; however, it cannot distinguish
+whether a muted H2O feature is caused by clouds, high atmospheric metallicity, or low H2O abundance.
+Our results are consistent with previous retrieval analyses. The pyratbay code is available at
+PyPI (pip install pyratbay) and conda. The code is heavily documented (https://pyratbay.readthedocs.io)
+and tested to provide maximum accessibility to the community and long-term development stability.

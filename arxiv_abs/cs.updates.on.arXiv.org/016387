@@ -1,0 +1,19 @@
+Convolutional neural networks (CNNs) have achieved stateof-the-art performance for white matter
+(WM) tract segmentation based on diffusion magnetic resonance imaging (dMRI). These CNNs require
+a large number of manual delineations of the WM tracts of interest for training, which are generally
+labor-intensive and costly. The expensive manual delineation can be a particular disadvantage
+when novel WM tracts, i.e., tracts that have not been included in existing manual delineations,
+are to be analyzed. To accurately segment novel WM tracts, it is desirable to transfer the knowledge
+learned about existing WM tracts, so that even with only a few delineations of the novel WM tracts,
+CNNs can learn adequately for the segmentation. In this paper, we explore the transfer of such knowledge
+to the segmentation of novel WM tracts in the few-shot setting. Although a classic fine-tuning strategy
+can be used for the purpose, the information in the last task-specific layer for segmenting existing
+WM tracts is completely discarded. We hypothesize that the weights of this last layer can bear valuable
+information for segmenting the novel WM tracts and thus completely discarding the information
+is not optimal. In particular, we assume that the novel WM tracts can correlate with existing WM tracts
+and the segmentation of novel WM tracts can be predicted with the logits of existing WM tracts. In
+this way, better initialization of the last layer than random initialization can be achieved for
+fine-tuning. Further, we show that a more adaptive use of the knowledge in the last layer for segmenting
+existing WM tracts can be conveniently achieved by simply inserting a warmup stage before classic
+fine-tuning. The proposed method was evaluated on a publicly available dMRI dataset, where we demonstrate
+the benefit of our method for few-shot segmentation of novel WM tracts. 

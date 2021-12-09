@@ -1,0 +1,19 @@
+Wide field-of-view (FOV) cameras, which capture a larger scene area than narrow FOV cameras, are
+used in many applications including 3D reconstruction, autonomous driving, and video surveillance.
+However, wide-angle images contain distortions that violate the assumptions underlying pinhole
+camera models, resulting in object distortion, difficulties in estimating scene distance, area,
+and direction, and preventing the use of off-the-shelf deep models trained on undistorted images
+for downstream computer vision tasks. Image rectification, which aims to correct these distortions,
+can solve these problems. In this paper, we comprehensively survey progress in wide-angle image
+rectification from transformation models to rectification methods. Specifically, we first present
+a detailed description and discussion of the camera models used in different approaches. Then,
+we summarize several distortion models including radial distortion and projection distortion.
+Next, we review both traditional geometry-based image rectification methods and deep learning-based
+methods, where the former formulate distortion parameter estimation as an optimization problem
+and the latter treat it as a regression problem by leveraging the power of deep neural networks. We
+evaluate the performance of state-of-the-art methods on public datasets and show that although
+both kinds of methods can achieve good results, these methods only work well for specific camera
+models and distortion types. We also provide a strong baseline model and carry out an empirical study
+of different distortion models on synthetic datasets and real-world wide-angle images. Finally,
+we discuss several potential research directions that are expected to further advance this area
+in the future. 

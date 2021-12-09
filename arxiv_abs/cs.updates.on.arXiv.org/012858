@@ -1,0 +1,19 @@
+Spiking neural networks (SNNs) based on Leaky Integrate and Fire (LIF) model have been applied to
+energy-efficient temporal and spatiotemporal processing tasks. Thanks to the bio-plausible
+neuronal dynamics and simplicity, LIF-SNN benefits from event-driven processing, however, usually
+faces the embarrassment of reduced performance. This may because in LIF-SNN the neurons transmit
+information via spikes. To address this issue, in this work, we propose a Leaky Integrate and Analog
+Fire (LIAF) neuron model, so that analog values can be transmitted among neurons, and a deep network
+termed as LIAF-Net is built on it for efficient spatiotemporal processing. In the temporal domain,
+LIAF follows the traditional LIF dynamics to maintain its temporal processing capability. In the
+spatial domain, LIAF is able to integrate spatial information through convolutional integration
+or fully-connected integration. As a spatiotemporal layer, LIAF can also be used with traditional
+artificial neural network (ANN) layers jointly. Experiment results indicate that LIAF-Net achieves
+comparable performance to Gated Recurrent Unit (GRU) and Long short-term memory (LSTM) on bAbI
+Question Answering (QA) tasks, and achieves state-of-the-art performance on spatiotemporal
+Dynamic Vision Sensor (DVS) datasets, including MNIST-DVS, CIFAR10-DVS and DVS128 Gesture, with
+much less number of synaptic weights and computational overhead compared with traditional networks
+built by LSTM, GRU, Convolutional LSTM (ConvLSTM) or 3D convolution (Conv3D). Compared with traditional
+LIF-SNN, LIAF-Net also shows dramatic accuracy gain on all these experiments. In conclusion, LIAF-Net
+provides a framework combining the advantages of both ANNs and SNNs for lightweight and efficient
+spatiotemporal information processing. 

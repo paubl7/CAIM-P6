@@ -1,0 +1,19 @@
+Time-series representation learning is a fundamental task for time-series analysis. While significant
+progress has been made to achieve accurate representations for downstream applications, the learned
+representations often lack interpretability and do not expose semantic meanings. Different from
+previous efforts on the entangled feature space, we aim to extract the semantic-rich temporal correlations
+in the latent interpretable factorized representation of the data. Motivated by the success of
+disentangled representation learning in computer vision, we study the possibility of learning
+semantic-rich time-series representations, which remains unexplored due to three main challenges:
+1) sequential data structure introduces complex temporal correlations and makes the latent representations
+hard to interpret, 2) sequential models suffer from KL vanishing problem, and 3) interpretable
+semantic concepts for time-series often rely on multiple factors instead of individuals. To bridge
+the gap, we propose Disentangle Time Series (DTS), a novel disentanglement enhancement framework
+for sequential data. Specifically, to generate hierarchical semantic concepts as the interpretable
+and disentangled representation of time-series, DTS introduces multi-level disentanglement
+strategies by covering both individual latent factors and group semantic segments. We further
+theoretically show how to alleviate the KL vanishing problem: DTS introduces a mutual information
+maximization term, while preserving a heavier penalty on the total correlation and the dimension-wise
+KL to keep the disentanglement property. Experimental results on various real-world benchmark
+datasets demonstrate that the representations learned by DTS achieve superior performance in
+downstream applications, with high interpretability of semantic concepts. 

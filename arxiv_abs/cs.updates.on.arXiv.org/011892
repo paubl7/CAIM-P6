@@ -1,0 +1,18 @@
+We study the setup where each of $n$ users holds an element from a discrete set, and the goal is to count
+the number of distinct elements across all users, under the constraint of $(\epsilon, \delta)$-differentially
+privacy: - In the non-interactive local setting, we prove that the additive error of any protocol
+is $\Omega(n)$ for any constant $\epsilon$ and for any $\delta$ inverse polynomial in $n$. - In the
+single-message shuffle setting, we prove a lower bound of $\Omega(n)$ on the error for any constant
+$\epsilon$ and for some $\delta$ inverse quasi-polynomial in $n$. We do so by building on the moment-matching
+method from the literature on distribution estimation. - In the multi-message shuffle setting,
+we give a protocol with at most one message per user in expectation and with an error of $\tilde{O}(\sqrt(n))$
+for any constant $\epsilon$ and for any $\delta$ inverse polynomial in $n$. Our protocol is also
+robustly shuffle private, and our error of $\sqrt(n)$ matches a known lower bound for such protocols.
+Our proof technique relies on a new notion, that we call dominated protocols, and which can also be
+used to obtain the first non-trivial lower bounds against multi-message shuffle protocols for
+the well-studied problems of selection and learning parity. Our first lower bound for estimating
+the number of distinct elements provides the first $\omega(\sqrt(n))$ separation between global
+sensitivity and error in local differential privacy, thus answering an open question of Vadhan
+(2017). We also provide a simple construction that gives $\tilde{\Omega}(n)$ separation between
+global sensitivity and error in two-party differential privacy, thereby answering an open question
+of McGregor et al. (2011). 

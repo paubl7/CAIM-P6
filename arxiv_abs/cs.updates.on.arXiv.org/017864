@@ -1,0 +1,19 @@
+Present-day federated learning (FL) systems deployed over edge networks have to consistently
+deal with a large number of workers with high degrees of heterogeneity in data and/or computing capabilities.
+This diverse set of workers necessitates the development of FL algorithms that allow: (1) flexible
+worker participation that grants the workers' capability to engage in training at will, (2) varying
+number of local updates (based on computational resources) at each worker along with asynchronous
+communication with the server, and (3) heterogeneous data across workers. To address these challenges,
+in this work, we propose a new paradigm in FL called ``Anarchic Federated Learning'' (AFL). In stark
+contrast to conventional FL models, each worker in AFL has complete freedom to choose i) when to participate
+in FL, and ii) the number of local steps to perform in each round based on its current situation (e.g.,
+battery level, communication channels, privacy concerns). However, AFL also introduces significant
+challenges in algorithmic design because the server needs to handle the chaotic worker behaviors.
+Toward this end, we propose two Anarchic FedAvg-like algorithms with two-sided learning rates
+for both cross-device and cross-silo settings, which are named AFedAvg-TSLR-CD and AFedAvg-TSLR-CS,
+respectively. For general worker information arrival processes, we show that both algorithms
+retain the highly desirable linear speedup effect in the new AFL paradigm. Moreover, we show that
+our AFedAvg-TSLR algorithmic framework can be viewed as a {\em meta-algorithm} for AFL in the sense
+that they can utilize advanced FL algorithms as worker- and/or server-side optimizers to achieve
+enhanced performance under AFL. We validate the proposed algorithms with extensive experiments
+on real-world datasets. 

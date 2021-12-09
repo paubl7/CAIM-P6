@@ -1,0 +1,20 @@
+In this work, we study group recommendation in a particular scenario, namely Occasional Group Recommendation
+(OGR). Most existing works have addressed OGR by aggregating group members' personal preferences
+to learn the group representation. However, the representation learning for a group is most complex
+beyond the fusion of group member representation, as the personal preferences and group preferences
+may be in different spaces. In addition, the learned user representation is not accurate due to the
+sparsity of users' interaction data. Moreover, the group similarity in terms of common group members
+has been overlooked, which however has the great potential to improve the group representation
+learning. In this work, we focus on addressing the above challenges in group representation learning
+task, and devise a hierarchical hyperedge embedding-based group recommender, namely HyperGroup.
+Specifically, we propose to leverage the user-user interactions to alleviate the sparsity issue
+of user-item interactions, and design a GNN-based representation learning network to enhance
+the learning of individuals' preferences from their friends' preferences, which provides a solid
+foundation for learning groups' preferences. To exploit the group similarity to learn a more accurate
+group representation from highly limited group-item interactions, we connect all groups as a network
+of overlapping sets, and treat the task of group preference learning as embedding hyperedges in
+a hypergraph, where an inductive hyperedge embedding method is proposed. To further enhance the
+group-level preference modeling, we develop a joint training strategy to learn both user-item
+and group-item interactions in the same process. We conduct extensive experiments on two real-world
+datasets and the experimental results demonstrate the superiority of our proposed HyperGroup
+in comparison to the state-of-the-art baselines. 

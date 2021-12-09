@@ -1,0 +1,19 @@
+We proposed a robust segmentation and picking workflow to solve the first arrival picking problem
+for seismic signal processing. Unlike traditional classification algorithm, image segmentation
+method can utilize the location information by outputting a prediction map which has the same size
+of the input image. A parameter-free nearest point picking algorithm is proposed to further improve
+the accuracy of the first arrival picking. The algorithm is test on synthetic clean data, synthetic
+noisy data, synthetic picking-disconnected data and field data. It performs well on all of them
+and the picking deviation reaches as low as 4.8ms per receiver. The first arrival picking problem
+is formulated as the contour detection problem. Similar to \cite{wu2019semi}, we use U-net to perform
+the segmentation as it is proven to be state-of-the-art in many image segmentation tasks. Particularly,
+a Lovasz loss instead of the traditional cross-entropy loss is used to train the network for a better
+segmentation performance. Lovasz loss is a surrogate loss for Jaccard index or the so-called intersection-over-union
+(IoU) score, which is often one of the most used metrics for segmentation tasks. In the picking part,
+we use a novel nearest point picking (NPP) method to take the advantage of the coherence of the first
+arrival picking among adjacent receivers. Our model is tested and validated on both synthetic and
+field data with harmonic noises. The main contributions of this paper are as follows: 1. Used Lovasz
+loss to directly optimize the IoU for segmentation task. Improvement over the cross-entropy loss
+with regard to the segmentation accuracy is verified by the test result. 2. Proposed a nearest point
+picking post processing method to overcome any defects left by the segmentation output. 3. Conducted
+noise analysis and verified the model with both noisy synthetic and field datasets. 

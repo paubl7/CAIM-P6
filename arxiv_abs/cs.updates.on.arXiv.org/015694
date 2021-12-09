@@ -1,0 +1,18 @@
+Segmentation of organs or lesions from medical images plays an essential role in many clinical applications
+such as diagnosis and treatment planning. Though Convolutional Neural Networks (CNN) have achieved
+the state-of-the-art performance for automatic segmentation, they are often limited by the lack
+of clinically acceptable accuracy and robustness in complex cases. Therefore, interactive segmentation
+is a practical alternative to these methods. However, traditional interactive segmentation methods
+require a large amount of user interactions, and recently proposed CNN-based interactive segmentation
+methods are limited by poor performance on previously unseen objects. To solve these problems,
+we propose a novel deep learning-based interactive segmentation method that not only has high efficiency
+due to only requiring clicks as user inputs but also generalizes well to a range of previously unseen
+objects. Specifically, we first encode user-provided interior margin points via our proposed
+exponentialized geodesic distance that enables a CNN to achieve a good initial segmentation result
+of both previously seen and unseen objects, then we use a novel information fusion method that combines
+the initial segmentation with only few additional user clicks to efficiently obtain a refined segmentation.
+We validated our proposed framework through extensive experiments on 2D and 3D medical image segmentation
+tasks with a wide range of previous unseen objects that were not present in the training set. Experimental
+results showed that our proposed framework 1) achieves accurate results with fewer user interactions
+and less time compared with state-of-the-art interactive frameworks and 2) generalizes well to
+previously unseen objects. 

@@ -1,0 +1,19 @@
+We investigate the performance of wall-modeled LES for external aerodynamics in the NASA Juncture
+Flow. We characterize the errors in the prediction of mean velocity profiles and pressure coefficient
+for three different locations over the aircraft: the upstream region of the fuselage, the wing-body
+juncture, and the wing-body juncture close to the trailing-edge. The last two locations are characterized
+by strong mean-flow three-dimensionality and separation. The message conveyed by our error analysis
+is that WMLES performs as expected in regions where the flow resembles a zero-pressure-gradient
+flat plate boundary layer. However, there is a clear decline of the current models in the presence
+of wing-body junctions and, more acutely, in separated zones. The slow convergence to the solution
+in these regions renders the brute-force grid-refinement approach to improve the accuracy of the
+solution unfeasible. The results reported above pertain to the mean velocity profile predicted
+using the typical grid resolution for external aerodynamics applications, i.e., 5--20 points
+per boundary-layer thickness. The prediction of the pressure coefficient is below 5\% error for
+all grid sizes considered, even when boundary layers were marginally resolved. The latter accuracy
+can be attributed to the outer-layer nature of the mean pressure, which becomes less sensitive to
+flow details within the turbulent boundary layer. Finally, we show that boundary-layer-conforming
+grids (i.e., grids maintaining a constant number of points per boundary-layer thickness) allow
+for a more efficient distribution of grid points and smaller errors. Our results suggest that novel
+modeling venues encompassing physical insights, together with numerical and gridding advancements,
+must be exploited to attain predictions within the tolerance required for Certification by Analysis.

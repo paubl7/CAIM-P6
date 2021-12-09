@@ -1,0 +1,19 @@
+This work presents a scalable and efficient neural waveform codec (NWC) for speech compression.
+We formulate the speech coding problem as an autoencoding task, where a convolutional neural network
+(CNN) performs encoding and decoding as its feedforward routine. The proposed CNN autoencoder
+also defines quantization and entropy coding as a trainable module, so the coding artifacts and
+bitrate control are handled during the optimization process. We achieve efficiency by introducing
+compact model architectures to our fully convolutional network model, such as gated residual networks
+and depthwise separable convolution. Furthermore, the proposed models are with a scalable architecture,
+cross-module residual learning (CMRL), to cover a wide range of bitrates. To this end, we employ
+the residual coding concept to concatenate multiple NWC autoencoding modules, where an NWC module
+performs residual coding to restore any reconstruction loss that its preceding modules have created.
+CMRL can scale down to cover lower bitrates as well, for which it employs linear predictive coding
+(LPC) module as its first autoencoder. We redefine LPC's quantization as a trainable module to enhance
+the bit allocation tradeoff between LPC and its following NWC modules. Compared to the other autoregressive
+decoder-based neural speech coders, our decoder has significantly smaller architecture, e.g.,
+with only 0.12 million parameters, more than 100 times smaller than a WaveNet decoder. Compared
+to the LPCNet-based speech codec, which leverages the speech production model to reduce the network
+complexity in low bitrates, ours can scale up to higher bitrates to achieve transparent performance.
+Our lightweight neural speech coding model achieves comparable subjective scores against AMR-WB
+at the low bitrate range and provides transparent coding quality at 32 kbps. 

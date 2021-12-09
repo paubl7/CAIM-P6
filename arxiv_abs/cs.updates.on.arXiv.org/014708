@@ -1,0 +1,20 @@
+In a seminal work, Golab et al. showed that a randomized algorithm that works with atomic objects
+may lose some of its properties if we replace the atomic objects that it uses with linearizable objects.
+It was not known whether the properties that can be lost include the important property of termination
+(with probability 1). In this paper, we first show that, for randomized algorithms, termination
+can indeed be lost. Golab et al. also introduced strong linearizability, and proved that strongly
+linearizable objects can be used as if they were atomic objects, even for randomized algorithms:
+they preserve the algorithm's correctness properties, including termination. Unfortunately,
+there are important cases where strong linearizability is impossible to achieve. In particular,
+Helmi et al. MWMR registers do not have strongly linearizable implementations from SWMR registers.
+So we propose a new type of register linearizability, called write strong-linearizability, that
+is strictly stronger than linearizability but strictly weaker than strong linearizability. We
+prove that some randomized algorithms that fail to terminate with linearizable registers, work
+with write strongly-linearizable ones. In other words, there are cases where linearizability
+is not sufficient but write strong-linearizability is. In contrast to the impossibility result
+mentioned above, we prove that write strongly-linearizable MWMR registers are implementable
+from SWMR registers. Achieving write strong-linearizability, however, is harder than achieving
+just linearizability: we give a simple implementation of MWMR registers from SWMR registers and
+we prove that this implementation is linearizable but not write strongly-linearizable. Finally,
+we prove that any linearizable implementation of SWMR registers is necessarily write strongly-linearizable;
+this holds for shared-memory, message-passing, and hybrid systems. 

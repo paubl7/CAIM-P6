@@ -1,0 +1,20 @@
+Histopathologic diagnosis relies on simultaneous integration of information from a broad range
+of scales, ranging from nuclear aberrations ($\approx \mathcal{O}(0.1{\mu m})$) through cellular
+structures ($\approx \mathcal{O}(10{\mu m})$) to the global tissue architecture ($\gtrapprox
+\mathcal{O}(1{mm})$). To explicitly mimic how human pathologists combine multi-scale information,
+we introduce a family of multi-encoder FCNs with deep fusion. We present a simple block for merging
+model paths with differing spatial scales in a spatial relationship-preserving fashion, which
+can readily be included in standard encoder-decoder networks. Additionally, a context classification
+gate block is proposed as an alternative for the incorporation of global context. Our experiments
+were performed on three publicly available whole-slide images of recent challenges (PAIP 2019,
+BACH 2020, CAMELYON 2016). The multi-scale architectures consistently outperformed the baseline
+single-scale U-Nets by a large margin. They benefit from local as well as global context and particularly
+a combination of both. If feature maps from different scales are fused, doing so in a manner preserving
+spatial relationships was found to be beneficial. Deep guidance by a context classification loss
+appeared to improve model training at low computational costs. All multi-scale models had a reduced
+GPU memory footprint compared to ensembles of individual U-Nets trained on different image scales.
+Additional path fusions were shown to be possible at low computational cost, opening up possibilities
+for further, systematic and task-specific architecture optimization. The findings demonstrate
+the potential of the presented family of human-inspired, end-to-end trainable, multi-scale multi-encoder
+FCNs to improve deep histopathologic diagnosis by extensive integration of largely different
+spatial scales. 

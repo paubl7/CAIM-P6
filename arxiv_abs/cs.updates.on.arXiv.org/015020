@@ -1,0 +1,18 @@
+Deep learning models are sensitive to domain shift phenomena. A model trained on images from one
+domain cannot generalise well when tested on images from a different domain, despite capturing
+similar anatomical structures. It is mainly because the data distribution between the two domains
+is different. Moreover, creating annotation for every new modality is a tedious and time-consuming
+task, which also suffers from high inter- and intra- observer variability. Unsupervised domain
+adaptation (UDA) methods intend to reduce the gap between source and target domains by leveraging
+source domain labelled data to generate labels for the target domain. However, current state-of-the-art
+(SOTA) UDA methods demonstrate degraded performance when there is insufficient data in source
+and target domains. In this paper, we present a novel UDA method for multi-modal cardiac image segmentation.
+The proposed method is based on adversarial learning and adapts network features between source
+and target domain in different spaces. The paper introduces an end-to-end framework that integrates:
+a) entropy minimisation, b) output feature space alignment and c) a novel point-cloud shape adaptation
+based on the latent features learned by the segmentation model. We validated our method on two cardiac
+datasets by adapting from the annotated source domain, bSSFP-MRI (balanced Steady-State Free
+Procession-MRI), to the unannotated target domain, LGE-MRI (Late-gadolinium enhance-MRI),
+for the multi-sequence dataset; and from MRI (source) to CT (target) for the cross-modality dataset.
+The results highlighted that by enforcing adversarial learning in different parts of the network,
+the proposed method delivered promising performance, compared to other SOTA methods. 

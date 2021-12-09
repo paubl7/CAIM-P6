@@ -1,0 +1,19 @@
+As an important class of spiking neural networks (SNNs), recurrent spiking neural networks (RSNNs)
+possess great computational power and have been widely used for processing sequential data like
+audio and text. However, most RSNNs suffer from two problems. 1. Due to a lack of architectural guidance,
+random recurrent connectivity is often adopted, which does not guarantee good performance. 2.
+Training of RSNNs is in general challenging, bottlenecking achievable model accuracy. To address
+these problems, we propose a new type of RSNNs called Skip-Connected Self-Recurrent SNNs (ScSr-SNNs).
+Recurrence in ScSr-SNNs is introduced in a stereotyped manner by adding self-recurrent connections
+to spiking neurons, which implements local memory. The network dynamics is enriched by skip connections
+between nonadjacent layers. Constructed by simplified self-recurrent and skip connections,
+ScSr-SNNs are able to realize recurrent behaviors similar to those of more complex RSNNs while the
+error gradients can be more straightforwardly calculated due to the mostly feedforward nature
+of the network. Moreover, we propose a new backpropagation (BP) method called backpropagated intrinsic
+plasticity (BIP) to further boost the performance of ScSr-SNNs by training intrinsic model parameters.
+Unlike standard intrinsic plasticity rules that adjust the neuron's intrinsic parameters according
+to neuronal activity, the proposed BIP methods optimize intrinsic parameters based on the backpropagated
+error gradient of a well-defined global loss function in addition to synaptic weight training.
+Based upon challenging speech and neuromorphic speech datasets including TI46-Alpha, TI46-Digits,
+and N-TIDIGITS, the proposed ScSr-SNNs can boost performance by up to 2.55% compared with other
+types of RSNNs trained by state-of-the-art BP methods. 

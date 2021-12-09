@@ -1,0 +1,19 @@
+Commonsense knowledge acquisition and reasoning have long been a core artificial intelligence
+problem. However, in the past, there has been a lack of scalable methods to collect commonsense knowledge.
+In this paper, we propose to develop principles for collecting commonsense knowledge based on selectional
+preference. We generalize the definition of selectional preference from one-hop linguistic syntactic
+relations to higher-order relations over linguistic graphs. Unlike previous commonsense knowledge
+definition (e.g., ConceptNet), the selectional preference (SP) knowledge only relies on statistical
+distribution over linguistic graphs, which can be efficiently and accurately acquired from the
+unlabeled corpus with modern tools. Following this principle, we develop a large-scale eventuality
+(a linguistic term covering activity, state, and event)-based knowledge graph ASER, where each
+eventuality is represented as a dependency graph, and the relation between them is a discourse relation
+defined in shallow discourse parsing. The higher-order selectional preference over collected
+linguistic graphs reflects various kinds of commonsense knowledge. Moreover, motivated by the
+observation that humans understand events by abstracting the observed events to a higher level
+and can thus transferring their knowledge to new events, we propose a conceptualization module
+to significantly boost the coverage of ASER. In total, ASER contains 438 million eventualities
+and 648 million edges between eventualities. After conceptualization with Probase, a selectional
+preference based concept-instance relational knowledge base, our concept graph contains 15 million
+conceptualized eventualities and 224 million edges between them. Detailed analysis is provided
+to demonstrate its quality. All the collected data, APIs, and tools are available at https://github.com/HKUST-KnowComp/ASER.

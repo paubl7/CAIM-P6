@@ -1,0 +1,19 @@
+Erroneous GNSS positioning, failures in spacecraft operations and power outages due to geomagnetically
+induced currents are severe threats originating from space weather. Having knowledge of potential
+impacts on modern society in advance is key for many end-user applications. This covers not only
+the timing of severe geomagnetic storms but also predictions of substorm onsets at polar latitudes.
+In this study we aim at contributing to the timing problem of space weather impacts and propose a new
+method to predict the solar wind propagation delay between Lagrangian point L1 and the Earth based
+on machine learning, specifically decision tree models. The propagation delay is measured from
+the identification of interplanetary discontinuities detected by the Advanced Composition Explorer
+(ACE) and their subsequent sudden commencements in the magnetosphere recorded by ground-based
+magnetometers. A database of the propagation delay has been constructed on this principle including
+380 interplanetary shocks. The feature set consists of six features, the three components of each
+the solar wind speed and position of ACE around L1. The machine learning results are compared to the
+flat propagation delay and the method based on the normal vector of solar wind discontinuities (vector
+delay). The ML model achieves an RMSE of 4.5 min with respect to the measured solar wind propagation
+delay and also outperforms the physical flat and vector delay models by 50 \% and 15 \% respectively.
+To increase the confidence in the predictions of the trained GB model, we perform a performance validation,
+provide feature importance and analyse the feature impact on the model output with Shapley values.
+The major advantage of the machine learning approach is its simplicity when it comes to its application.
+After training, input from only one ACE datapoint have to be fed into the algorithm for a prediction.

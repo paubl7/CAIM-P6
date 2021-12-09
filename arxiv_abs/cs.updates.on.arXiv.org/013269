@@ -1,0 +1,20 @@
+Conversational User Interface (CUI) has become ubiquitous in everyday life, in consumer-focused
+products like Siri and Alexa or business-oriented solutions. Deep learning underlies many recent
+breakthroughs in dialogue systems but requires very large amounts of training data, often annotated
+by experts. Trained with smaller data, these methods end up severely lacking robustness (e.g. to
+disfluencies and out-of-domain input), and often just have too little generalisation power. In
+this thesis, we address the above issues by introducing a series of methods for training robust dialogue
+systems from minimal data. Firstly, we study two orthogonal approaches to dialogue: linguistically
+informed and machine learning-based - from the data efficiency perspective. We outline the steps
+to obtain data-efficient solutions with either approach. We then introduce two data-efficient
+models for dialogue response generation: the Dialogue Knowledge Transfer Network based on latent
+variable dialogue representations, and the hybrid Generative-Retrieval Transformer model (ranked
+first at the DSTC 8 Fast Domain Adaptation task). Next, we address the problem of robustness given
+minimal data. As such, propose a multitask LSTM-based model for domain-general disfluency detection.
+For the problem of out-of-domain input, we present Turn Dropout, a data augmentation technique
+for anomaly detection only using in-domain data, and introduce autoencoder-augmented models
+for efficient training with Turn Dropout. Finally, we focus on social dialogue and introduce a neural
+model for response ranking in social conversation used in Alana, the 3rd place winner in the Amazon
+Alexa Prize 2017 and 2018. We employ a novel technique of predicting the dialogue length as the main
+ranking objective and show that this approach improves upon the ratings-based counterpart in terms
+of data efficiency while matching it in performance. 

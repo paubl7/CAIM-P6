@@ -1,0 +1,19 @@
+Accurate mapping of oil palm is important for understanding its past and future impact on the environment.
+We propose to map and count oil palms by estimating tree densities per pixel for large-scale analysis.
+This allows for fine-grained analysis, for example regarding different planting patterns. To
+that end, we propose a new, active deep learning method to estimate oil palm density at large scale
+from Sentinel-2 satellite images, and apply it to generate complete maps for Malaysia and Indonesia.
+What makes the regression of oil palm density challenging is the need for representative reference
+data that covers all relevant geographical conditions across a large territory. Specifically
+for density estimation, generating reference data involves counting individual trees. To keep
+the associated labelling effort low we propose an active learning (AL) approach that automatically
+chooses the most relevant samples to be labelled. Our method relies on estimates of the epistemic
+model uncertainty and of the diversity among samples, making it possible to retrieve an entire batch
+of relevant samples in a single iteration. Moreover, our algorithm has linear computational complexity
+and is easily parallelisable to cover large areas. We use our method to compute the first oil palm
+density map with $10\,$m Ground Sampling Distance (GSD) , for all of Indonesia and Malaysia and for
+two different years, 2017 and 2019. The maps have a mean absolute error of $\pm$7.3 trees/$ha$, estimated
+from an independent validation set. We also analyse density variations between different states
+within a country and compare them to official estimates. According to our estimates there are, in
+total, $>1.2$ billion oil palms in Indonesia covering $>$15 million $ha$, and $>0.5$ billion oil
+palms in Malaysia covering $>6$ million $ha$. 

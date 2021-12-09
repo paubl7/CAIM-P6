@@ -1,0 +1,20 @@
+The most effective data-driven methods for human activities recognition (HAR) are based on supervised
+learning applied to the continuous stream of sensors data. However, these methods perform well
+on restricted sets of activities in domains for which there is a fully labeled dataset. It is still
+a challenge to cope with the intra- and inter-variability of activity execution among different
+subjects in large scale real world deployment. Semi-supervised learning approaches for HAR have
+been proposed to address the challenge of acquiring the large amount of labeled data that is necessary
+in realistic settings. However, their centralised architecture incurs in the scalability and
+privacy problems when the process involves a large number of users. Federated Learning (FL) is a
+promising paradigm to address these problems. However, the FL methods that have been proposed for
+HAR assume that the participating users can always obtain labels to train their local models. In
+this work, we propose FedHAR: a novel hybrid method for HAR that combines semi-supervised and federated
+learning. Indeed, FedHAR combines active learning and label propagation to semi-automatically
+annotate the local streams of unlabeled sensor data, and it relies on FL to build a global activity
+model in a scalable and privacy-aware fashion. FedHAR also includes a transfer learning strategy
+to personalize the global model on each user. We evaluated our method on two public datasets, showing
+that FedHAR reaches recognition rates and personalization capabilities similar to state-of-the-art
+FL supervised approaches. As a major advantage, FedHAR only requires a very limited number of annotated
+data to populate a pre-trained model and a small number of active learning questions that quickly
+decrease while using the system, leading to an effective and scalable solution for the data scarcity
+problem of HAR. 

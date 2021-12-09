@@ -1,0 +1,18 @@
+Deep learning networks have shown promising performance for accurate object localization in medial
+images, but require large amount of annotated data for supervised training, which is expensive
+and expertise burdensome. To address this problem, we present a one-shot framework for organ and
+landmark localization in volumetric medical images, which does not need any annotation during
+the training stage and could be employed to locate any landmarks or organs in test images given a support
+(reference) image during the inference stage. Our main idea comes from that tissues and organs from
+different human bodies have a similar relative position and context. Therefore, we could predict
+the relative positions of their non-local patches, thus locate the target organ. Our framework
+is composed of three parts: (1) A projection network trained to predict the 3D offset between any
+two patches from the same volume, where human annotations are not required. In the inference stage,
+it takes one given landmark in a reference image as a support patch and predicts the offset from a random
+patch to the corresponding landmark in the test (query) volume. (2) A coarse-to-fine framework
+contains two projection networks, providing more accurate localization of the target. (3) Based
+on the coarse-to-fine model, we transfer the organ boundingbox (B-box) detection to locating six
+extreme points along x, y and z directions in the query volume. Experiments on multi-organ localization
+from head-and-neck (HaN) CT volumes showed that our method acquired competitive performance in
+real time, which is more accurate and 10^5 times faster than template matching methods with the same
+setting. Code is available: https://github.com/LWHYC/RPR-Loc. 

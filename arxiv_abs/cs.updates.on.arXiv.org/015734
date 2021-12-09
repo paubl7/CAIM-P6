@@ -1,0 +1,19 @@
+In this article, we propose a new approach, optimize then agree for minimizing a sum $ f = \sum_{i=1}^n
+f_i(x)$ of convex objective functions over a directed graph. The optimize then agree approach decouples
+the optimization step and the consensus step in a distributed optimization framework. The key motivation
+for optimize then agree is to guarantee that the disagreement between the estimates of the agents
+during every iteration of the distributed optimization algorithm remains under any apriori specified
+tolerance; existing algorithms do not provide such a guarantee which is required in many practical
+scenarios. In this method, each agent during each iteration maintains an estimate of the optimal
+solution and, utilizes its locally available gradient information along with a finite-time approximate
+consensus protocol to move towards the optimal solution (hence the name Gradient-Consensus algorithm).
+We establish that the proposed algorithm has a global R-linear rate of convergence if the aggregate
+function $f$ is strongly convex and Lipschitz differentiable. We also show that under the relaxed
+assumption of $f_i$'s being convex and Lipschitz differentiable, the objective function error
+residual decreases at a Q-linear rate (in terms of the number of gradient computation steps) until
+it reaches a small value, which can be managed using the tolerance value specified on the finite-time
+approximate consensus protocol; no existing method in the literature has such strong convergence
+guarantees when $f_i$ are not necessarily strongly convex functions. The communication overhead
+for the improved guarantees on meeting constraints and better convergence of our algorithm is $O(k\log
+k)$ iterates in comparison to $O(k)$ of the traditional algorithms. Further, we numerically evaluate
+the performance of the proposed algorithm by solving a distributed logistic regression problem.

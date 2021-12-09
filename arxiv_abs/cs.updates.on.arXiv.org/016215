@@ -1,0 +1,18 @@
+Applying chaos theory for secure digital communications is promising and it is well acknowledged
+that in such applications the underlying chaotic systems should be carefully chosen. However,
+the requirements imposed on the chaotic systems are usually heuristic, without theoretic guarantee
+for the resultant communication scheme. Among all the primitives for secure communications, it
+is well-accepted that (pseudo) random numbers are most essential. Taking the well-studied two-dimensional
+coupled map lattice (2D CML) as an example, this paper performs a theoretical study towards pseudo-random
+number generation with the 2D CML. In so doing, an analytical expression of the Lyapunov exponent
+(LE) spectrum of the 2D CML is first derived. Using the LEs, one can configure system parameters to
+ensure the 2D CML only exhibits complex dynamic behavior, and then collect pseudo-random numbers
+from the system orbits. Moreover, based on the observation that least significant bit distributes
+more evenly in the (pseudo) random distribution, an extraction algorithm E is developed with the
+property that, when applied to the orbits of the 2D CML, it can squeeze uniform bits. In implementation,
+if fixed-point arithmetic is used in binary format with a precision of $z$ bits after the radix point,
+E can ensure that the deviation of the squeezed bits is bounded by $2^{-z}$ . Further simulation results
+demonstrate that the new method not only guide the 2D CML model to exhibit complex dynamic behavior,
+but also generate uniformly distributed independent bits. In particular, the squeezed pseudo
+random bits can pass both NIST 800-22 and TestU01 test suites in various settings. This study thereby
+provides a theoretical basis for effectively applying the 2D CML to secure communications. 

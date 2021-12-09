@@ -1,0 +1,18 @@
+Large-scale question-answer (QA) pairs are critical for advancing research areas like machine
+reading comprehension and question answering. To construct QA pairs from documents requires determining
+how to ask a question and what is the corresponding answer. Existing methods for QA pair generation
+usually follow a pipeline approach. Namely, they first choose the most likely candidate answer
+span and then generate the answer-specific question. This pipeline approach, however, is undesired
+in mining the most appropriate QA pairs from documents since it ignores the connection between question
+generation and answer extraction, which may lead to incompatible QA pair generation, i.e., the
+selected answer span is inappropriate for question generation. However, for human annotators,
+we take the whole QA pair into account and consider the compatibility between question and answer.
+Inspired by such motivation, instead of the conventional pipeline approach, we propose a model
+named OneStop generate QA pairs from documents in a one-stop approach. Specifically, questions
+and their corresponding answer span is extracted simultaneously and the process of question generation
+and answer extraction mutually affect each other. Additionally, OneStop is much more efficient
+to be trained and deployed in industrial scenarios since it involves only one model to solve the complex
+QA generation task. We conduct comprehensive experiments on three large-scale machine reading
+comprehension datasets: SQuAD, NewsQA, and DuReader. The experimental results demonstrate that
+our OneStop model outperforms the baselines significantly regarding the quality of generated
+questions, quality of generated question-answer pairs, and model efficiency. 

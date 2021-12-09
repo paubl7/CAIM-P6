@@ -1,0 +1,20 @@
+Many numerical methods for recovering ODE solutions from data rely on approximating the solutions
+using basis functions or kernel functions under a least square criterion. The accuracy of this approach
+hinges on the smoothness of the solutions. This paper provides a theoretical foundation for these
+methods by establishing novel results on the smoothness and covering numbers of ODE solution classes
+(as a measure of their "size"). Our results provide answers to "how do the degree of smoothness and
+the "size" of a class of ODEs affect the "size" of the associated class of solutions?" We show that:
+(1) for $y^{'}=f\left(y\right)$ and $y^{'}=f\left(x,\,y\right)$, if the absolute values of
+all $k$th ($k\leq\beta+1$) order derivatives of $f$ are bounded by $1$, then the solution can end
+up with the $(k+1)$th derivative whose magnitude grows factorially fast in $k$ -- "a curse of smoothness";
+(2) our upper bounds for the covering numbers of the $(\beta+2)-$degree smooth solution classes
+are greater than those of the "standard" $(\beta+2)-$degree smooth class of univariate functions;
+(3) the mean squared error of least squares fitting for noisy recovery has a convergence rate no larger
+than $\left(\frac{1}{n}\right)^{\frac{2\left(\beta+2\right)}{2\left(\beta+2\right)+1}}$
+if $n=\Omega\left(\left(\beta\sqrt{\log\left(\beta\vee1\right)}\right)^{4\beta+10}\right)$,
+and under this condition, the rate $\left(\frac{1}{n}\right)^{\frac{2\left(\beta+2\right)}{2\left(\beta+2\right)+1}}$
+is minimax optimal in the case of $y^{'}=f\left(x,\,y\right)$; (4) more generally, for the higher
+order Picard type ODEs, $y^{\left(m\right)}=f\left(x,\,y,\,y^{'},\,...,y^{\left(m-1\right)}\right)$,
+the covering number of the solution class is bounded from above by the product of the covering number
+of the class $\mathcal{F}$ that $f$ ranges over and the covering number of the set where initial values
+lie. 

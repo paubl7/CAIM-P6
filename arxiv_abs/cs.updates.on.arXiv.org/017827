@@ -1,0 +1,20 @@
+The non-uniform surface temperature distribution of rotating active stars is routinely mapped
+with the Doppler Imaging technique. Inhomogeneities in the surface produce features in high-resolution
+spectroscopic observations that shift in wavelength depending on their position on the visible
+hemisphere. The inversion problem has been systematically solved using maximum a-posteriori
+regularized methods assuming smoothness or maximum entropy. Our aim in this work is to solve the
+full Bayesian inference problem, by providing access to the posterior distribution of the surface
+temperature in the star. We use amortized neural posterior estimation to produce a model that approximates
+the high-dimensional posterior distribution for spectroscopic observations of selected spectral
+ranges sampled at arbitrary rotation phases. The posterior distribution is approximated with
+conditional normalizing flows, which are flexible, tractable and easy to sample approximations
+to arbitrary distributions. When conditioned on the spectroscopic observations, they provide
+a very efficient way of obtaining samples from the posterior distribution. The conditioning on
+observations is obtained through the use of Transformer encoders, which can deal with arbitrary
+wavelength sampling and rotation phases. Our model can produce thousands of posterior samples
+per second. Our validation of the model for very high signal-to-noise observations shows that it
+correctly approximates the posterior, although with some overestimation of the broadening. We
+apply the model to the moderately fast rotator II Peg, producing the first Bayesian map of its temperature
+inhomogenities. We conclude that conditional normalizing flows are a very promising tool to carry
+out approximate Bayesian inference in more complex problems in stellar physics, like constraining
+the magnetic properties. 

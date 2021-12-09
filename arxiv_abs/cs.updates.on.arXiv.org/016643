@@ -1,0 +1,20 @@
+Timely, accurate and reliable assessment of fetal brain development is essential to reduce short
+and long-term risks to fetus and mother. Fetal MRI is increasingly used for fetal brain assessment.
+Three key biometric linear measurements important for fetal brain evaluation are Cerebral Biparietal
+Diameter (CBD), Bone Biparietal Diameter (BBD), and Trans-Cerebellum Diameter (TCD), obtained
+manually by expert radiologists on reference slices, which is time consuming and prone to human
+error. The aim of this study was to develop a fully automatic method computing the CBD, BBD and TCD
+measurements from fetal brain MRI. The input is fetal brain MRI volumes which may include the fetal
+body and the mother's abdomen. The outputs are the measurement values and reference slices on which
+the measurements were computed. The method, which follows the manual measurements principle,
+consists of five stages: 1) computation of a Region Of Interest that includes the fetal brain with
+an anisotropic 3D U-Net classifier; 2) reference slice selection with a Convolutional Neural Network;
+3) slice-wise fetal brain structures segmentation with a multiclass U-Net classifier; 4) computation
+of the fetal brain midsagittal line and fetal brain orientation, and; 5) computation of the measurements.
+Experimental results on 214 volumes for CBD, BBD and TCD measurements yielded a mean $L_1$ difference
+of 1.55mm, 1.45mm and 1.23mm respectively, and a Bland-Altman 95% confidence interval ($CI_{95}$)
+of 3.92mm, 3.98mm and 2.25mm respectively. These results are similar to the manual inter-observer
+variability. The proposed automatic method for computing biometric linear measurements of the
+fetal brain from MR imaging achieves human level performance. It has the potential of being a useful
+method for the assessment of fetal brain biometry in normal and pathological cases, and of improving
+routine clinical practice. 

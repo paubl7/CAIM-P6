@@ -1,0 +1,19 @@
+There are numerous peptides discovered through past decades, which exhibit antimicrobial and
+anti-cancerous tendencies. Due to these reasons, peptides are supposed to be sound therapeutic
+candidates. Some peptides can pose low metabolic stability, high toxicity and high hemolity of
+peptides. This highlights the importance for evaluating hemolytic tendencies and toxicity of
+peptides, before using them for therapeutics. Traditional methods for evaluation of toxicity
+of peptides can be time-consuming and costly. In this study, we have extracted peptides data (Hemo-DB)
+from Database of Antimicrobial Activity and Structure of Peptides (DBAASP) based on certain hemolity
+criteria and we present a machine learning based method for prediction of hemolytic tendencies
+of peptides (i.e. Hemolytic or Non-Hemolytic). Our model offers significant improvement on hemolity
+prediction benchmarks. we also propose a reliable clustering-based train-tests splitting method
+which ensures that no peptide in train set is more than 40% similar to any peptide in test set. Using
+this train-test split, we can get reliable estimated of expected model performance on unseen data
+distribution or newly discovered peptides. Our model tests 0.9986 AUC-ROC (Area Under Receiver
+Operating Curve) and 97.79% Accuracy on test set of Hemo-DB using traditional random train-test
+splitting method. Moreover, our model tests AUC-ROC of 0.997 and Accuracy of 97.58% while using
+clustering-based train-test data split. Furthermore, we check our model on an unseen data distribution
+(at Hemo-PI 3) and we recorded 0.8726 AUC-ROC and 79.5% accuracy. Using the proposed method, potential
+therapeutic peptides can be screened, which may further in therapeutics and get reliable predictions
+for unseen amino acids distribution of peptides and newly discovered peptides. 

@@ -1,0 +1,19 @@
+The state-of-the-art driving automation system demands extreme computational resources to meet
+rigorous accuracy and latency requirements. Though emerging driving automation computing platforms
+are based on ASIC to provide better performance and power guarantee, building such an accelerator-based
+computing platform for driving automation still present challenges. First, the workloads mix
+and performance requirements exposed to driving automation system present significant variability.
+Second, with more cameras/sensors integrated in a future fully autonomous driving vehicle, a heterogeneous
+multi-accelerator architecture substrate is needed that requires a design space exploration
+for a new form of parallelism. In this work, we aim to extensively explore the above system design
+challenges and these challenges motivate us to propose a comprehensive framework that synergistically
+handles the heterogeneous hardware accelerator design principles, system design criteria, and
+task scheduling mechanism. Specifically, we propose a novel heterogeneous multi-core AI accelerator
+(HMAI) to provide the hardware substrate for the driving automation tasks with variability. We
+also define system design criteria to better utilize hardware resources and achieve increased
+throughput while satisfying the performance and energy restrictions. Finally, we propose a deep
+reinforcement learning (RL)-based task scheduling mechanism FlexAI, to resolve task mapping
+issue. Experimental results show that with FlexAI scheduling, basically 100% tasks in each driving
+route can be processed by HMAI within their required period to ensure safety, and FlexAI can also
+maximally reduce the breaking distance up to 96% as compared to typical heuristics and guided random-search-based
+algorithms. 

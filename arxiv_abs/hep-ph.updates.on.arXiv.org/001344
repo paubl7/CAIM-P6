@@ -1,0 +1,18 @@
+The demand for computational resources is steadily increasing in experimental high energy physics
+as the current collider experiments continue to accumulate huge amounts of data and physicists
+indulge in more complex and ambitious analysis strategies. This is especially true in the fields
+of hadron spectroscopy and flavour physics where the analyses often depend on complex multidimensional
+unbinned maximum-likelihood fits, with several dozens of free parameters, with an aim to study
+the internal structure of hadrons. Graphics processing units (GPUs) represent one of the most sophisticated
+and versatile parallel computing architectures that are becoming popular toolkits for high energy
+physicists to meet their computational demands. GooFit is an upcoming open-source tool interfacing
+ROOT/RooFit to the CUDA platform on NVIDIA GPUs that acts as a bridge between the MINUIT minimization
+algorithm and a parallel processor, allowing probability density functions to be estimated on
+multiple cores simultaneously. In this article, a full-fledged amplitude analysis framework
+developed using GooFit is tested for its speed and reliability. The four-dimensional fitter framework,
+one of the firsts of its kind to be built on GooFit, is geared towards the search for exotic tetraquark
+states in the $B^0 \rightarrow J/\psi K \pi$ decays and can also be seamlessly adapted for other similar
+analyses. The GooFit fitter, running on GPUs, shows a remarkable improvement in the computing speed
+compared to a ROOT/RooFit implementation of the same analysis running on multi-core CPU clusters.
+Furthermore, it shows sensitivity to components with small contributions to the overall fit. It
+has the potential to be a powerful tool for sensitive and computationally intensive physics analyses.

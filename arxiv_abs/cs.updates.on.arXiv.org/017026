@@ -1,0 +1,20 @@
+Tabular generative adversarial networks (TGAN) have recently emerged to cater to the need of synthesizing
+tabular data -- the most widely used data format. While synthetic tabular data offers the advantage
+of complying with privacy regulations, there still exists a risk of privacy leakage via inference
+attacks due to interpolating the properties of real data during training. Differential private
+(DP) training algorithms provide theoretical guarantees for training machine learning models
+by injecting statistical noise to prevent privacy leaks. However, the challenges of applying DP
+on TGAN are to determine the most optimal framework (i.e., PATE/DP-SGD) and neural network (i.e.,
+Generator/Discriminator)to inject noise such that the data utility is well maintained under a
+given privacy guarantee. In this paper, we propose DTGAN, a novel conditional Wasserstein tabular
+GAN that comes in two variants DTGAN_G and DTGAN_D, for providing a detailed comparison of tabular
+GANs trained using DP-SGD for the generator vs discriminator, respectively. We elicit the privacy
+analysis associated with training the generator with complex loss functions (i.e., classification
+and information losses) needed for high quality tabular data synthesis. Additionally, we rigorously
+evaluate the theoretical privacy guarantees offered by DP empirically against membership and
+attribute inference attacks. Our results on 3 datasets show that the DP-SGD framework is superior
+to PATE and that a DP discriminator is more optimal for training convergence. Thus, we find (i) DTGAN_D
+is capable of maintaining the highest data utility across 4 ML models by up to 18% in terms of the average
+precision score for a strict privacy budget, epsilon = 1, as compared to the prior studies and (ii)
+DP effectively prevents privacy loss against inference attacks by restricting the success probability
+of membership attacks to be close to 50%. 

@@ -1,0 +1,18 @@
+Extrapolating beyond-demonstrator (BD) through the inverse reinforcement learning (IRL) algorithm
+aims to learn from and outperform the demonstrator. In sharp contrast to the conventional reinforcement
+learning (RL) algorithms, BD-IRL can overcome the dilemma incurred in the reward function design
+and improve the exploration mechanism of RL, which opens new avenues to building superior expert
+systems. Most existing BD-IRL algorithms are performed in two stages by first inferring a reward
+function before learning a policy via RL. However, such two-stage BD-IRL algorithms suffer from
+high computational complexity, weak robustness, and large performance variations. In particular,
+a poor reward function derived in the first stage will inevitably incur severe performance loss
+in the second stage. In this work, we propose a hybrid adversarial inverse reinforcement learning
+(HAIRL) algorithm that is one-stage, model-free, generative-adversarial (GA) fashion and curiosity-driven.
+Thanks to the one-stage design, the HAIRL can integrate both the reward function learning and the
+policy optimization into one procedure, which leads to many advantages such as low computational
+complexity, high robustness, and strong adaptability. More specifically, HAIRL simultaneously
+imitates the demonstrator and explores BD performance by utilizing hybrid rewards. In particular,
+the Wasserstein-1 distance (WD) is introduced into HAIRL to stabilize the imitation procedure
+while a novel end-to-end curiosity module (ECM) is developed to improve the exploration. Finally,
+extensive simulation results confirm that HAIRL can achieve higher performance as compared to
+other similar BD-IRL algorithms. Our code is available at our GitHub website \footnote{\url{https://github.com/yuanmingqi/HAIRL}}.

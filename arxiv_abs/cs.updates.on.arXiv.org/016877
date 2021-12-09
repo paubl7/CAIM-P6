@@ -1,0 +1,24 @@
+Lyme disease is one of the most common infectious vector-borne diseases in the world. In the early
+stage, the disease manifests itself in most cases with erythema migrans (EM) skin lesions. Better
+diagnosis of these early forms would allow improving the prognosis by preventing the transition
+to a severe late form thanks to appropriate antibiotic therapy. Recent studies show that convolutional
+neural networks (CNNs) perform very well to identify skin lesions from the image but, there is not
+much work for Lyme disease prediction from EM lesion images. The main objective of this study is to
+extensively analyze the effectiveness of CNNs for diagnosing Lyme disease from images and to find
+out the best CNN architecture for the purpose. There is no publicly available EM image dataset for
+Lyme disease prediction mainly because of privacy concerns. In this study, we utilized an EM dataset
+consisting of images collected from Clermont-Ferrand University Hospital Center (CF-CHU) of
+France and the internet. CF-CHU collected the images from several hospitals in France. This dataset
+was labeled by expert dermatologists and infectiologists from CF-CHU. First, we benchmarked this
+dataset for twenty-three well-known CNN architectures in terms of predictive performance metrics,
+computational complexity metrics, and statistical significance tests. Second, to improve the
+performance of the CNNs, we used transfer learning from ImageNet pre-trained models as well as pre-trained
+the CNNs with the skin lesion dataset "Human Against Machine with 10000 training images (HAM1000)".
+In that process, we searched for the best performing number of layers to unfreeze during transfer
+learning fine-tuning for each of the CNNs. Third, for model explainability, we utilized Gradient-weighted
+Class Activation Mapping to visualize the regions of input that are significant to the CNNs for making
+predictions. Fourth, we provided guidelines for model selection based on predictive performance
+and computational complexity. Our study confirmed the effectiveness and potential of even some
+lightweight CNNs to be used for Lyme disease pre-scanner mobile applications. We also made all the
+trained models publicly available at https://dappem.limos.fr/download.html, which can be used
+by others for transfer learning and building pre-scanners for Lyme disease. 

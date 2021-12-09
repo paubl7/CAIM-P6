@@ -1,0 +1,19 @@
+Keystone is a trusted execution environment, based on RISC-V architecture. It divides the memory
+into a secure Keystone private memory and an unsecure non-Keystone memory, and allows code that
+lies inside the Keystone private memory to execute securely. Simple demand paging in Keystone ends
+up leaking sensitive access patterns of Keystone application to the Operating System(OS), that
+is assumed to be malicious. This is because, to access the unsecure non-Keystone memory, Keystone
+needs support of the OS. To mitigate this, Keystone needs to implement oblivious demand paging while
+obfuscating its page access patterns by using Oblivious RAM(ORAM) techniques. This causes substantial
+slowdown in the application execution. In this paper, we bridge the performance gap between application
+execution time with unsecure and secure demand paging in Keystone by using Deterministic, stash
+free, Write only ORAM (DetWoORAM) for oblivious demand paging. We also show why DetWoORAM, that
+is a write-only ORAM, is sufficient for oblivious demand paging. DetWoORAM logically partitions
+the memory into a main area and a holding area. The actual pages are stored in main area. We propose
+two enhancements over DetWoORAM that improves the application execution slowdown. The first enhancement,
+which we call the Eager DetWoORAM, involves page preloading that exploits the deterministic access
+pattern of DetWoORAM, and tries to hide the ORAM latency. The second enhancement, which we call the
+Parallel DetWoORAM, involves spawning multiple threads and each thread performs a part of the DetWoORAM
+memory access algorithm. Compared to DetWoORAM that shows slowdown of [1.4x, 2x, and 3.24x], Eager
+DetWoORAM and Parallel DetWoORAM provide slowdown of [1.2x, 1.8x, and 3.2x] and [1.1x, 1.1x, and
+1.4x], for k= 3, 7, and 15, respectively. 

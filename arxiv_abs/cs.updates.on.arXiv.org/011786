@@ -1,0 +1,19 @@
+Identity-based patterns for which a computational model needs to output some feature together
+with a copy of that feature are computationally challenging, but pose no problems to human learners
+and are common in world's languages. In this paper, we test whether a neural network can learn an identity-based
+pattern in speech called reduplication. To our knowledge, this is the first attempt to test identity-based
+patterns in deep convolutional networks trained on raw continuous data. Unlike existing proposals,
+we test learning in an unsupervised manner and we train the network on raw acoustic data. We use the
+ciwGAN architecture (Begu\v{s} 2020; arXiv:2006.02951) in which learning of meaningful representations
+in speech emerges from a requirement that the deep convolutional network generates informative
+data. Based on four generative tests, we argue that a deep convolutional network learns to represent
+an identity-based pattern in its latent space; by manipulating only two categorical variables
+in the latent space, we can actively turn an unreduplicated form into a reduplicated form with no
+other changes to the output in the majority of cases. We also argue that the network extends the identity-based
+pattern to unobserved data: when reduplication is forced in the output with the proposed technique
+for latent space manipulation, the network generates reduplicated data (e.g., it copies an [s]
+e.g. in [si-siju] for [siju] although it never sees any reduplicated forms containing an [s] in the
+input). Comparison with human outputs of reduplication show a high degree of similarity. Exploration
+of how meaningful representations of identity-based patterns emerge and how the latent space variables
+outside of the training range correlate with identity-based patterns in the output has general
+implications for neural network interpretability. 

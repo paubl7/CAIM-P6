@@ -1,0 +1,19 @@
+Viscoelastic surface rheology plays an important role in multiphase systems. A typical example
+is the actin cortex which surrounds most animal cells. It shows elastic properties for short time
+scales and behaves viscous for longer time scales. Hence, realistic simulations of cell shape dynamics
+require a model capturing the entire elastic to viscous spectrum. However, currently there are
+no numerical methods to simulate deforming viscoelastic surfaces. Thus models for the cell cortex,
+or other viscoelastic surfaces, are usually based on assumptions or simplifications which limit
+their applicability. In this paper we develop a first numerical approach for simulation of deforming
+viscoelastic surfaces. To this end, we derive the surface equivalent of the upper convected Maxwell
+model using the GENERIC formulation of nonequilibrium thermodynamics. The model distinguishes
+between shear dynamics and dilatational surface dynamics. The viscoelastic surface is embedded
+in a viscous fluid modelled by the Navier-Stokes equation. Both systems are solved using Finite
+Elements. The fluid and surface are combined using an Arbitrary Lagrange-Eulerian (ALE) Method
+that conserves the surface grid spacing during rotations and translations of the surface. We verify
+this numerical implementation against analytic solutions and find good agreement. To demonstrate
+its potential we simulate the experimentally observed tumbling and tank-treading of vesicles
+in shear flow. We also supply a phase-diagram to demonstrate the influence of the viscoelastic parameters
+on the behaviour of a vesicle in shear flow. Finally, we explore cytokinesis as a future application
+of the numerical method by simulating the start of cytokinesis using a spatially dependent function
+for the surface tension. 

@@ -1,0 +1,19 @@
+Abnormal event detection in video is a complex computer vision problem that has attracted significant
+attention in recent years. The complexity of the task arises from the commonly-agreed definition
+of an abnormal event, that is, a rarely occurring event that typically depends on the surrounding
+context. Following the standard formulation of abnormal event detection as outlier detection,
+we propose a scene-agnostic framework that learns from training videos containing only normal
+events. Our framework is composed of an object detector, a set of appearance and motion auto-encoders,
+and a discriminator. Since our framework only looks at object detections, it can be applied to different
+scenes, provided that abnormal events are defined identically across scenes. This makes our method
+scene agnostic, as we rely strictly on objects that can cause anomalies, and not on the background.
+To overcome the lack of abnormal data during training, we propose an adversarial learning strategy
+for the auto-encoders. We create a scene-agnostic set of out-of-domain adversarial examples,
+which are correctly reconstructed by the auto-encoders before applying gradient ascent on the
+adversarial examples. We further utilize the adversarial examples to serve as abnormal examples
+when training a binary classifier to discriminate between normal and abnormal latent features
+and reconstructions. Furthermore, to ensure that the auto-encoders focus only on the main object
+inside each bounding box image, we introduce a branch that learns to segment the main object. We compare
+our framework with the state-of-the-art methods on three benchmark data sets, using various evaluation
+metrics. Compared to existing methods, the empirical results indicate that our approach achieves
+favorable performance on all data sets. 

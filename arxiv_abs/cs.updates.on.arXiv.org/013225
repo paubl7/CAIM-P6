@@ -1,0 +1,19 @@
+For a long time the ability to solve abstract reasoning tasks was considered one of the hallmarks
+of human intelligence. Recent advances in application of deep learning (DL) methods led, as in many
+other domains, to surpassing human abstract reasoning performance, specifically in the most popular
+type of such problems - the Raven's Progressive Matrices (RPMs). While the efficacy of DL systems
+is indeed impressive, the way they approach the RPMs is very different from that of humans. State-of-the-art
+systems solving RPMs rely on massive pattern-based training and sometimes on exploiting biases
+in the dataset, whereas humans concentrate on identification of the rules / concepts underlying
+the RPM (or generally a visual reasoning task) to be solved. Motivated by this cognitive difference,
+this work aims at combining DL with human way of solving RPMs and getting the best of both worlds. Specifically,
+we cast the problem of solving RPMs into multi-label classification framework where each RPM is
+viewed as a multi-label data point, with labels determined by the set of abstract rules underlying
+the RPM. For efficient training of the system we introduce a generalisation of the Noise Contrastive
+Estimation algorithm to the case of multi-label samples. Furthermore, we propose a new sparse rule
+encoding scheme for RPMs which, besides the new training algorithm, is the key factor contributing
+to the state-of-the-art performance. The proposed approach is evaluated on two most popular benchmark
+datasets (Balanced-RAVEN and PGM) and on both of them demonstrates an advantage over the current
+state-of-the-art results. Contrary to applications of contrastive learning methods reported
+in other domains, the state-of-the-art performance reported in the paper is achieved with no need
+for large batch sizes or strong data augmentation. 

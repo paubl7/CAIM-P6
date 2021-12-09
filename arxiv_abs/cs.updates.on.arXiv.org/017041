@@ -1,0 +1,19 @@
+Filters are fast, small and approximate set membership data structures. They are often used to filter
+out expensive accesses to a remote set S for negative queries (that is, a query x not in S). Filters
+have one-sided errors: on a negative query, a filter may say "present" with a tunable false-positve
+probability of epsilon. Correctness is traded for space: filters only use log (1/\epsilon) + O(1)
+bits per element. The false-positive guarantees of most filters, however, hold only for a single
+query. In particular, if x is a false positive of a filter, a subsequent query to x is a false positive
+with probability 1, not epsilon. With this in mind, recent work has introduced the notion of an adaptive
+filter. A filter is adaptive if each query has false positive epsilon, regardless of what queries
+were made in the past. This requires "fixing" false positives as they occur. Adaptive filters not
+only provide strong false positive guarantees in adversarial environments but also improve performance
+on query practical workloads by eliminating repeated false positives. Existing work on adaptive
+filters falls into two categories. First, there are practical filters based on cuckoo filters that
+attempt to fix false positives heuristically, without meeting the adaptivity guarantee. Meanwhile,
+the broom filter is a very complex adaptive filter that meets the optimal theoretical bounds. In
+this paper, we bridge this gap by designing a practical, provably adaptive filter: the telescoping
+adaptive filter. We provide theoretical false-positive and space guarantees of our filter, along
+with empirical results where we compare its false positive performance against state-of-the-art
+filters. We also test the throughput of our filters, showing that they achieve comparable performance
+to similar non-adaptive filters. 

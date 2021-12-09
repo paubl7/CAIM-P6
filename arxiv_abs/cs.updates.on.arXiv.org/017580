@@ -1,0 +1,19 @@
+Single online handwritten Chinese character recognition~(single OLHCCR) has achieved prominent
+performance. However, in real application scenarios, users always write multiple Chinese characters
+to form one complete sentence and the contextual information within these characters holds the
+significant potential to improve the accuracy, robustness and efficiency of sentence-level OLHCCR.
+In this work, we first propose a simple and straightforward end-to-end network, namely vanilla
+compositional network~(VCN) to tackle the sentence-level OLHCCR. It couples convolutional neural
+network with sequence modeling architecture to exploit the handwritten character's previous
+contextual information. Although VCN performs much better than the state-of-the-art single OLHCCR
+model, it exposes high fragility when confronting with not well written characters such as sloppy
+writing, missing or broken strokes. To improve the robustness of sentence-level OLHCCR, we further
+propose a novel deep spatial-temporal fusion network~(DSTFN). It utilizes a pre-trained autoregresssive
+framework as the backbone component, which projects each Chinese character into word embeddings,
+and integrates the spatial glyph features of handwritten characters and their contextual information
+multiple times at multi-layer fusion module. We also construct a large-scale sentence-level handwriting
+dataset, named as CSOHD to evaluate models. Extensive experiment results demonstrate that DSTFN
+achieves the state-of-the-art performance, which presents strong robustness compared with VCN
+and exiting single OLHCCR models. The in-depth empirical analysis and case studies indicate that
+DSTFN can significantly improve the efficiency of handwriting input, with the handwritten Chinese
+character with incomplete strokes being recognized precisely. 

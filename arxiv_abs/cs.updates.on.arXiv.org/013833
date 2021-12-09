@@ -1,0 +1,20 @@
+Logic locking is a hardware security technique to intellectual property (IP) against security
+threats in the IC supply chain, especially untrusted fabs. Such techniques incorporate additional
+locking circuitry within an IC that induces incorrect functionality when an incorrect key is provided.
+The amount of error induced is known as the effectiveness of the locking technique. "SAT attacks"
+provide a strong mathematical formulation to find the correct key of locked circuits. In order to
+achieve high SAT resilience(i.e. complexity of SAT attacks), many conventional logic locking
+schemes fail to inject sufficient error into the circuit. For example, in the case of SARLock and
+Anti-SAT, there are usually very few (or only one) input minterms that cause any error at the circuit
+output. The state-of-the-art stripped functionality logic locking (SFLL) technique introduced
+a trade-off between SAT resilience and effectiveness. In this work, we prove that such a trade-off
+is universal in logic locking. In order to attain high effectiveness of locking without compromising
+SAT resilience, we propose a novel logic locking scheme, called Strong Anti-SAT (SAS). In addition
+to SAT attacks, removal-based attacks are also popular against logic locking. Based on SAS, we propose
+Robust SAS (RSAS) which is resilient to removal attacks and maintains the same SAT resilience and
+as effectiveness as SAS. SAS and RSAS have the following significant improvements over existing
+techniques. (1) SAT resilience of SAS and RSAS against SAT attack is not compromised by increase
+in effectiveness. (2) In contrast to prior work focusing solely on the circuit-level locking impact,
+we integrate SAS-locked modules into a processor and show that SAS has a high application-level
+impact. (3) Our experiments show that SAS and RSAS exhibit better SAT resilience than SFLL and have
+similar effectiveness. 

@@ -1,0 +1,20 @@
+Demand flexibility is increasingly important for power grids. Careful coordination of thermostatically
+controlled loads (TCLs) can modulate energy demand, decrease operating costs, and increase grid
+resiliency. We propose a novel distributed control framework for the Coordination Of HeterOgeneous
+Residential Thermostatically controlled loads (COHORT). COHORT is a practical, scalable, and
+versatile solution that coordinates a population of TCLs to jointly optimize a grid-level objective,
+while satisfying each TCL's end-use requirements and operational constraints. To achieve that,
+we decompose the grid-scale problem into subproblems and coordinate their solutions to find the
+global optimum using the alternating direction method of multipliers (ADMM). The TCLs' local problems
+are distributed to and computed in parallel at each TCL, making COHORT highly scalable and privacy-preserving.
+While each TCL poses combinatorial and non-convex constraints, we characterize these constraints
+as a convex set through relaxation, thereby making COHORT computationally viable over long planning
+horizons. After coordination, each TCL is responsible for its own control and tracks the agreed-upon
+power trajectory with its preferred strategy. In this work, we translate continuous power back
+to discrete on/off actuation, using pulse width modulation. COHORT is generalizable to a wide range
+of grid objectives, which we demonstrate through three distinct use cases: generation following,
+minimizing ramping, and peak load curtailment. In a notable experiment, we validated our approach
+through a hardware-in-the-loop simulation, including a real-world air conditioner (AC) controlled
+via a smart thermostat, and simulated instances of ACs modeled after real-world data traces. During
+the 15-day experimental period, COHORT reduced daily peak loads by an average of 12.5% and maintained
+comfortable temperatures. 

@@ -1,0 +1,19 @@
+We consider the problems of sampling and counting edges from a graph on $n$ vertices where our basic
+access is via uniformly sampled vertices. When we have a vertex, we can see its degree, and access
+its neighbors. Eden and Rosenbaum [SOSA 2018] have shown it is possible to sample an edge $\epsilon$-uniformly
+in $O(\sqrt{1/\epsilon}\frac{n}{\sqrt{m}})$ vertex accesses. Here, we get down to expected
+$O(\log(1/\epsilon)\frac{n}{\sqrt{m}})$ vertex accesses. Next, we consider the problem of
+sampling $s>1$ edges. For this we introduce a model that we call hash-based neighbor access. We show
+that, w.h.p, we can sample $s$ edges exactly uniformly at random, with or without replacement, in
+$\tilde{O}(\sqrt{s} \frac{n}{\sqrt{m}} + s)$ vertex accesses. We present a matching lower bound
+of $\Omega(\sqrt{s} \frac{n}{\sqrt{m}} + s)$ which holds for $\epsilon$-uniform edge multi-sampling
+with some constant $\epsilon>0$ even though our positive result has $\epsilon=0$. We then give
+an algorithm for edge counting. W.h.p., we count the number of edges to within error $\epsilon$ in
+time $\tilde{O}(\frac{n}{\epsilon\sqrt{m}} + \frac{1}{\epsilon^2})$. When $\epsilon$ is
+not too small (for $\epsilon \geq \frac{\sqrt m}{n}$), we present a near-matching lower-bound
+of $\Omega(\frac{n}{\epsilon \sqrt{m}})$. In the same range, the previous best upper and lower
+bounds were polynomially worse in $\epsilon$. Finally, we give an algorithm that instead of hash-based
+neighbor access uses the more standard pair queries (``are vertices $u$ and $v$ adjacent''). W.h.p.
+it returns $1+\epsilon$ approximation of the number of edges and runs in expected time $\tilde{O}(\frac{n}{\epsilon
+\sqrt{m}} + \frac{1}{\epsilon^4})$. This matches our lower bound when $\epsilon$ is not too small,
+specifically for $\epsilon \geq \frac{m^{1/6}}{n^{1/3}}$. 

@@ -1,0 +1,20 @@
+Magnetization dynamics in magnetic materials is modeled by the Landau-Lifshitz-Gilbert (LLG)
+equation. In the LLG equation, the length of magnetization is conserved and the system energy is
+dissipative. Implicit and semi-implicit schemes have been used in micromagnetics simulations
+due to their unconditional numerical stability. In more details, implicit schemes preserve the
+properties of the LLG equation, but solve a nonlinear system of equations per time step. In contrast,
+semi-implicit schemes only solve a linear system of equations, while additional operations are
+needed to preserve the length of magnetization. It still remains unclear which one shall be used
+if both implicit and semi-implicit schemes are available. In this work, using the implicit Crank-Nicolson
+(ICN) scheme as a benchmark, we propose to make this implicit scheme semi-implicit. It can be proved
+that both schemes are second-order accurate in space and time. For the unique solvability of nonlinear
+systems of equations in the ICN scheme, we require that the temporal step size scales quadratically
+with the spatial mesh size. It is numerically verified that the convergence of the nonlinear solver
+becomes slower for larger temporal step size and multiple magnetization profiles are obtained
+for different initial guesses. The linear systems of equations in the semi-implicit CN (SICN) scheme
+are unconditionally uniquely solvable, and the condition that the temporal step size scales linearly
+with the spatial mesh size is needed in the convergence of the SICN scheme. In terms of numerical efficiency,
+the SICN scheme achieves the same accuracy as the ICN scheme with less computational time. Based
+on these results, we conclude that a semi-implicit scheme is superior to its implicit analog both
+theoretically and numerically, and we recommend the semi-implicit scheme in micromagnetics simulations
+if both methods are available. 

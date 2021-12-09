@@ -1,0 +1,19 @@
+From the nano-scale to the macro-scale, biological tissue is spatially heterogeneous. Even when
+tissue behavior is well understood, the exact subject specific spatial distribution of material
+properties is often unknown. And, when developing computational models of biological tissue,
+it is usually prohibitively computationally expensive to simulate every plausible spatial distribution
+of material properties for each problem of interest. Therefore, one of the major challenges in developing
+accurate computational models of biological tissue is capturing the potential effects of this
+spatial heterogeneity. Recently, machine learning based metamodels have gained popularity as
+a computationally tractable way to overcome this problem because they can make predictions based
+on a limited number of direct simulation runs. These metamodels are promising, but they often still
+require a high number of direct simulations to achieve an acceptable performance. Here we show that
+transfer learning, a strategy where knowledge gained while solving one problem is transferred
+to solving a different but related problem, can help overcome this limitation. Critically, transfer
+learning can be used to leverage both low-fidelity simulation data and simulation data that is the
+outcome of solving a different but related mechanical problem. In this paper, we extend Mechanical
+MNIST, our open source benchmark dataset of heterogeneous material undergoing large deformation,
+to include a selection of low-fidelity simulation results that require 2-4 orders of magnitude
+less CPU time to run. Then, we show that transferring the knowledge stored in metamodels trained
+on these low-fidelity simulation results can vastly improve the performance of metamodels used
+to predict the results of high-fidelity simulations. 

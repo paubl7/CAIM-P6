@@ -1,0 +1,19 @@
+As autonomous systems increasingly rely on onboard sensing for localization and perception, the
+parallel tasks of motion planning and state estimation become more strongly coupled. This coupling
+is well-captured by augmenting the planning objective with a posterior-covariance penalty --
+however, prediction of the estimator covariance is challenging when the observation model depends
+on unknown landmarks, as is the case in Simultaneous Localization and Mapping (SLAM). This paper
+addresses these challenges in the case of landmark- and SLAM-based estimators, enabling efficient
+prediction (and ultimately minimization) of this performance metric. First, we provide an interval-based
+filtering approximation of the SLAM inference process which allows for recursive propagation
+of the ego-covariance while avoiding the quadratic complexity of explicitly tracking landmark
+uncertainty. Secondly, we introduce a Lie-derivative measurement bundling scheme that simplifies
+the recursive "bundled" update, representing significant computational savings for high-rate
+sensors such as cameras. Finally, we identify a large class of measurement models (which includes
+orthographic camera projection) for which the contributions from each landmark can be directly
+combined, making evaluation of the information gained at each timestep (nearly) independent of
+the number of landmarks. This also enables the generalization from finite sets of landmarks $\{\ell^{(n)}
+\}$ to distributions, foregoing the need for fully-specified linearization points at planning
+time and allowing for new landmarks to be anticipated. Taken together, these contributions allow
+SLAM performance to be accurately and efficiently predicted, paving the way for online, observability-aware
+trajectory optimization in unknown space. 

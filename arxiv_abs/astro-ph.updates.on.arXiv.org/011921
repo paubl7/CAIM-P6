@@ -1,0 +1,18 @@
+In this study we extract the deep features and investigate the compression of the Mg II k spectral
+line profiles observed in quiet Sun regions by NASA's IRIS satellite. The data set of line profiles
+used for the analysis was obtained on April 20th, 2020, at the center of the solar disc, and contains
+almost 300,000 individual Mg II k line profiles after data cleaning. The data are separated into
+train and test subsets. The train subset was used to train the autoencoder of the varying embedding
+layer size. The early stopping criterion was implemented on the test subset to prevent the model
+from overfitting. Our results indicate that it is possible to compress the spectral line profiles
+more than 27 times (which corresponds to the reduction of the data dimensionality from 110 to 4) while
+having a 4 DN average reconstruction error, which is comparable to the variations in the line continuum.
+The mean squared error and the reconstruction error of even statistical moments sharply decrease
+when the dimensionality of the embedding layer increases from 1 to 4 and almost stop decreasing for
+higher numbers. The observed occasional improvements in training for values higher than 4 indicate
+that a better compact embedding may potentially be obtained if other training strategies and longer
+training times are used. The features learned for the critical four-dimensional case can be interpreted.
+In particular, three of these four features mainly control the line width, line asymmetry, and line
+dip formation respectively. The presented results are the first attempt to obtain a compact embedding
+for spectroscopic line profiles and confirm the value of this approach, in particular for feature
+extraction, data compression, and denoising. 

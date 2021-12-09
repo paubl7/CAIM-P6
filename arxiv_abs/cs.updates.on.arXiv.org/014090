@@ -1,0 +1,19 @@
+We consider the problem of Byzantine fault-tolerance in distributed multi-agent optimization.
+In this problem, each agent has a local cost function, and in the fault-free case, the goal is to design
+a distributed algorithm that allows all the agents to find a minimum point of all the agents' aggregate
+cost function. We consider a scenario where up to $f$ (out of $n$) agents might be Byzantine faulty,
+i.e., these agents may not follow a prescribed algorithm and may share arbitrary information regarding
+their local cost functions. In the presence of such faulty agents, a more reasonable goal is to design
+an algorithm that allows all the non-faulty agents to compute, either exactly or approximately,
+the minimum point of only the non-faulty agents' aggregate cost function. From recent work we know
+that a deterministic algorithm can compute a minimum point of the non-faulty agents' aggregate
+cost exactly if and only if the non-faulty agents' cost functions satisfy a certain redundancy property
+named $2f$-redundancy. However, the $2f$-redundancy property can only be guaranteed in ideal
+systems free from noises, and thus, exact fault-tolerance is unsuitable for many practical settings.
+In this paper, we consider the problem of approximate fault-tolerance - a generalization of exact
+fault-tolerance where the goal is to only compute an approximation of a minimum point. We define
+approximate fault-tolerance formally as $(f, \, \epsilon)$-resilience where $\epsilon$ is the
+approximation error, and we show that it can be achieved under a weaker redundancy condition than
+$2f$-redundancy. In the special case when the cost functions are differentiable, we analyze the
+approximate fault-tolerance of the distributed gradient-descent method equipped with a gradient-filter;
+such as comparative gradient elimination (CGE) or coordinate-wise trimmed mean (CWTM). 

@@ -1,0 +1,17 @@
+The standard model and the bandit model are two generalizations of the mistake-bound model to online
+multiclass classification. In both models the learner guesses a classification in each round,
+but in the standard model the learner recieves the correct classification after each guess, while
+in the bandit model the learner is only told whether or not their guess is correct in each round. For
+any set $F$ of multiclass classifiers, define $opt_{std}(F)$ and $opt_{bandit}(F)$ to be the optimal
+worst-case number of prediction mistakes in the standard and bandit models respectively. Long
+(Theoretical Computer Science, 2020) claimed that for all $M > 2$ and infinitely many $k$, there
+exists a set $F$ of functions from a set $X$ to a set $Y$ of size $k$ such that $opt_{std}(F) = M$ and $opt_{bandit}(F)
+\ge (1 - o(1))(|Y|\ln{|Y|})opt_{std}(F)$. The proof of this result depended on the following lemma,
+which is false e.g. for all prime $p \ge 5$, $s = \mathbf{1}$ (the all $1$ vector), $t = \mathbf{2}$
+(the all $2$ vector), and all $z$. Lemma: Fix $n \ge 2$ and prime $p$, and let $u$ be chosen uniformly
+at random from $\left\{0, \dots, p-1\right\}^n$. For any $s, t \in \left\{1, \dots, p-1\right\}^n$
+with $s \neq t$ and for any $z \in \left\{0, \dots, p-1\right\}$, we have $\Pr(t \cdot u = z \mod p \text{
+} | \text{ } s \cdot u = z \mod p) = \frac{1}{p}$. We show that this lemma is false precisely when $s$ and
+$t$ are multiples of each other mod $p$. Then using a new lemma, we fix Long's proof to show that for
+all $M > 3$ and infinitely many $k$, there exists a set $F$ of functions from a set $X$ to a set $Y$ of size
+$k$ such that $opt_{std}(F) = M$ and $opt_{bandit}(F) \ge (1 - o(1))(|Y|\ln{|Y|})opt_{std}(F)$.

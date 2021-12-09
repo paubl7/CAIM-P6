@@ -1,0 +1,20 @@
+Cluster algorithms are increasingly popular in biomedical research due to their compelling ability
+to identify discrete subgroups in data, and their increasing accessibility in mainstream software.
+While guidelines exist for algorithm selection and outcome evaluation, there are no firmly established
+ways of computing a priori statistical power for cluster analysis. Here, we estimated power and
+accuracy for common analysis pipelines through simulation. We varied subgroup size, number, separation
+(effect size), and covariance structure. We then subjected generated datasets to dimensionality
+reduction (none, multidimensional scaling, or UMAP) and cluster algorithms (k-means, agglomerative
+hierarchical clustering with Ward or average linkage and Euclidean or cosine distance, HDBSCAN).
+Finally, we compared the statistical power of discrete (k-means), "fuzzy" (c-means), and finite
+mixture modelling approaches (which include latent profile and latent class analysis). We found
+that outcomes were driven by large effect sizes or the accumulation of many smaller effects across
+features, and were unaffected by differences in covariance structure. Sufficient statistical
+power was achieved with relatively small samples (N=20 per subgroup), provided cluster separation
+is large ({\Delta}=4). Fuzzy clustering provided a more parsimonious and powerful alternative
+for identifying separable multivariate normal distributions, particularly those with slightly
+lower centroid separation ({\Delta}=3). Overall, we recommend that researchers 1) only apply
+cluster analysis when large subgroup separation is expected, 2) aim for sample sizes of N=20 to N=30
+per expected subgroup, 3) use multidimensional scaling to improve cluster separation, and 4) use
+fuzzy clustering or finite mixture modelling approaches that are more powerful and more parsimonious
+with partially overlapping multivariate normal distributions. 

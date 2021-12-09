@@ -1,0 +1,18 @@
+There are numerous emerging applications for digitizing trees using terrestrial and aerial laser
+scanning, particularly in the fields of agriculture and forestry. Interpretation of LiDAR point
+clouds is increasingly relying on data-driven methods (such as supervised machine learning) that
+rely on large quantities of hand-labelled data. As this data is potentially expensive to capture,
+and difficult to clearly visualise and label manually, a means of supplementing real LiDAR scans
+with simulated data is becoming a necessary step in realising the potential of these methods. We
+present an open source tool, SimTreeLS (Simulated Tree Laser Scans), for generating point clouds
+which simulate scanning with user-defined sensor, trajectory, tree shape and layout parameters.
+Upon simulation, material classification is kept in a pointwise fashion so leaf and woody matter
+are perfectly known, and unique identifiers separate individual trees, foregoing post-simulation
+labelling. This allows for an endless supply of procedurally generated data with similar characteristics
+to real LiDAR captures, which can then be used for development of data processing techniques or training
+of machine learning algorithms. To validate our method, we compare the characteristics of a simulated
+scan with a real scan using similar trees and the same sensor and trajectory parameters. Results
+suggest the simulated data is significantly more similar to real data than a sample-based control.
+We also demonstrate application of SimTreeLS on contexts beyond the real data available, simulating
+scans of new tree shapes, new trajectories and new layouts, with results presenting well. SimTreeLS
+is available as an open source resource built on publicly available libraries. 

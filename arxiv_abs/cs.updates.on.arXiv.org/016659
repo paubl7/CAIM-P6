@@ -1,0 +1,19 @@
+In type theory, we can express many practical ideas by attributing some additional data to expressions
+we operate on during compilation. For instance, some substructural type theories augment variables'
+typing judgments with the information of their usage. That is, they allow one to explicitly state
+how many times - 0, 1, or many - a variable can be used. This solves the problem of resource usage control
+and allows us to treat variables as resources. What's more, it often happens that this attributed
+information is interpreted (used) during the same compilation and erased before we run a program.
+A case in the point is that in the same substructural type theories, their type checkers use these
+0, 1, or many, to ensure that all variables are used as many times as these attributions say them to
+be. Yet, there wasn't any programming language concept whose concern would be to allow a programmer
+to express these attributions in the language itself. That is, to let the programmer express which
+data the one wants to attribute to what expressions and, most importantly, the meaning of the attributed
+data in their program. As it turned out, the presence of such a concept allows us to express many practical
+ideas in the language itself. For instance, with appropriate means for assigning the meaning of
+these attributions, this concept would allow one to express linear types as functionality in a separate
+program module, without the need to refine the whole type system to add them. In this paper, we present
+such a concept - we propose type properties. It allows a programmer to express these attributions
+while fulfilling the requirement of being fully on the static level. That is, it allows one to express
+how to interpret these attributions during compilation and erases them before a program is passed
+to the runtime. 

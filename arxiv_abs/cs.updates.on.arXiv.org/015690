@@ -1,0 +1,20 @@
+This research is concerned with the novel application and investigation of `Soft Actor Critic'
+(SAC) based Deep Reinforcement Learning (DRL) to control the cooling setpoint (and hence cooling
+loads) of a large commercial building to harness energy flexibility. The research is motivated
+by the challenge associated with the development and application of conventional model-based
+control approaches at scale to the wider building stock. SAC is a model-free DRL technique that is
+able to handle continuous action spaces and which has seen limited application to real-life or high-fidelity
+simulation implementations in the context of automated and intelligent control of building energy
+systems. Such control techniques are seen as one possible solution to supporting the operation
+of a smart, sustainable and future electrical grid. This research tests the suitability of the SAC
+DRL technique through training and deployment of the agent on an EnergyPlus based environment of
+the office building. The SAC DRL was found to learn an optimal control policy that was able to minimise
+energy costs by 9.7% compared to the default rule-based control (RBC) scheme and was able to improve
+or maintain thermal comfort limits over a test period of one week. The algorithm was shown to be robust
+to the different hyperparameters and this optimal control policy was learnt through the use of a
+minimal state space consisting of readily available variables. The robustness of the algorithm
+was tested through investigation of the speed of learning and ability to deploy to different seasons
+and climates. It was found that the SAC DRL requires minimal training sample points and outperforms
+the RBC after three months of operation and also without disruption to thermal comfort during this
+period. The agent is transferable to other climates and seasons although further retraining or
+hyperparameter tuning is recommended. 

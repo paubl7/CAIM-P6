@@ -1,0 +1,18 @@
+The three body problem is a special case of the n body problem where one takes the initial positions
+and velocities of three point masses and attempts to predict their motion over time according to
+Newtonian laws of motion and universal gravitation. Though analytical solutions have been found
+for special cases, the general problem remains unsolved; the solutions that do exist are impractical.
+Fortunately, for many applications, we may not need to solve the problem completely, i.e., predicting
+with reasonable accuracy for some time steps, may be sufficient. Recently, Breen et al attempted
+to approximately solve the three body problem using a simple neural network. Although their methods
+appear to achieve some success in reducing the computational overhead, their model is extremely
+restricted, applying to a specialized 2D case. The authors do not provide explanations for critical
+decisions taken in their experimental design, no details on their model or architecture, and nor
+do they publish their code. Moreover, the model does not generalize well to unseen cases. In this
+paper, we propose a detailed experimental setup to determine the feasibility of using neural networks
+to solve the three body problem up to a certain number of time steps. We establish a benchmark on the
+dataset size and set an accuracy threshold to measure the viability of our results for practical
+applications. Then, we build our models according to the listed class of NNs using a dataset generated
+from standard numerical integrators. We gradually increase the complexity of our data set to determine
+whether NNs can learn a representation of the chaotic three body problem well enough to replace numerical
+integrators in real life scenarios. 

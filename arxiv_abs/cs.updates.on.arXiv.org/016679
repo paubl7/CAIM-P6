@@ -1,0 +1,19 @@
+Modern feedforward convolutional neural networks (CNNs) can now solve some computer vision tasks
+at super-human levels. However, these networks only roughly mimic human visual perception. One
+difference from human vision is that they do not appear to perceive illusory contours (e.g. Kanizsa
+squares) in the same way humans do. Physiological evidence from visual cortex suggests that the
+perception of illusory contours could involve feedback connections. Would recurrent feedback
+neural networks perceive illusory contours like humans? In this work we equip a deep feedforward
+convolutional network with brain-inspired recurrent dynamics. The network was first pretrained
+with an unsupervised reconstruction objective on a natural image dataset, to expose it to natural
+object contour statistics. Then, a classification decision layer was added and the model was finetuned
+on a form discrimination task: squares vs. randomly oriented inducer shapes (no illusory contour).
+Finally, the model was tested with the unfamiliar ''illusory contour'' configuration: inducer
+shapes oriented to form an illusory square. Compared with feedforward baselines, the iterative
+''predictive coding'' feedback resulted in more illusory contours being classified as physical
+squares. The perception of the illusory contour was measurable in the luminance profile of the image
+reconstructions produced by the model, demonstrating that the model really ''sees'' the illusion.
+Ablation studies revealed that natural image pretraining and feedback error correction are both
+critical to the perception of the illusion. Finally we validated our conclusions in a deeper network
+(VGG): adding the same predictive coding feedback dynamics again leads to the perception of illusory
+contours. 

@@ -1,0 +1,19 @@
+Hierarchy and compositionality are common latent properties in many natural and scientific datasets.
+Determining when a deep network's hidden activations represent hierarchy and compositionality
+is important both for understanding deep representation learning and for applying deep networks
+in domains where interpretability is crucial. However, current benchmark machine learning datasets
+either have little hierarchical or compositional structure, or the structure is not known. This
+gap impedes precise analysis of a network's representations and thus hinders development of new
+methods that can learn such properties. To address this gap, we developed a new benchmark dataset
+with known hierarchical and compositional structure. The Hangul Fonts Dataset (HFD) is comprised
+of 35 fonts from the Korean writing system (Hangul), each with 11,172 blocks (syllables) composed
+from the product of initial consonant, medial vowel, and final consonant glyphs. All blocks can
+be grouped into a few geometric types which induces a hierarchy across blocks. In addition, each
+block is composed of individual glyphs with rotations, translations, scalings, and naturalistic
+style variation across fonts. We find that both shallow and deep unsupervised methods only show
+modest evidence of hierarchy and compositionality in their representations of the HFD compared
+to supervised deep networks. Supervised deep network representations contain structure related
+to the geometrical hierarchy of the characters, but the compositional structure of the data is not
+evident. Thus, HFD enables the identification of shortcomings in existing methods, a critical
+first step toward developing new machine learning algorithms to extract hierarchical and compositional
+structure in the context of naturalistic variability. 

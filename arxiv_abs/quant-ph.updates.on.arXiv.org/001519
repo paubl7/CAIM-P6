@@ -1,0 +1,19 @@
+For universal quantum computation, a major challenge to overcome for practical implementation
+is the large amount of resources required for fault-tolerant quantum information processing.
+An important aspect is implementing arbitrary unitary operators built from logical gates within
+the quantum error correction code. A synthesis algorithm can be used to approximate any unitary
+gate up to arbitrary precision by assembling sequences of logical gates chosen from a small set of
+universal gates that are fault-tolerantly performable while encoded in a quantum error-correction
+code. However, current procedures do not yet support individual assignment of base gate costs and
+many do not support extended sets of universal base gates. We analysed cost-optimal sequences using
+an exhaustive search based on Dijkstra's pathfinding algorithm for the canonical Clifford+$T$
+set of base gates and compared them to when additionally including $Z$-rotations from higher orders
+of the Clifford hierarchy. Two approaches of assigning base gate costs were used. First, costs were
+reduced to $T$-counts by recursively applying a $Z$-rotation catalyst circuit. Second, costs
+were assigned as the average numbers of raw (i.e. physical level) magic states required to directly
+distil and implement the gates fault-tolerantly. We found that the average sequence cost decreases
+by up to $54\pm 3\%$ when using the $Z$-rotation catalyst circuit approach and by up to $33\pm 2 \%$
+when using the magic state distillation approach. In addition, we investigated observed limitations
+of certain assignments of base gate costs by developing an analytic model to estimate the proportion
+of sets of $Z$-rotation gates from higher orders of the Clifford hierarchy that are found within
+sequences approximating random target gates. 

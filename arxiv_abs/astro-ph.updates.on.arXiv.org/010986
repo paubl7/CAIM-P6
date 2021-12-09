@@ -1,0 +1,18 @@
+Direct $N$-body simulations of star clusters are accurate but expensive largely due to the numerous
+$\mathcal{O} (N^2)$ pairwise force calculations. State-of-the-art $N$-body codes can take nearly
+6 months of computer wall time to simulate a single $N=10^6$ globular cluster over a single relaxation
+time. To solve the post-million body problem, it will be necessary to use approximated force solvers,
+such as tree codes. In this work, we adapt a tree-based, optimized Fast Multipole Method (FMM) to
+the collisional $N$-body problem. The use of a rotation-accelerated translation operator and
+an error-controlled cell opening criteria leads to a code which can be tuned to arbitrary accuracy.
+We demonstrate that our code, Taichi, can be as accurate as direct summation when $N> 10^4$. This
+opens up the possibility of performing large-$N$, star-by-star simulations of massive stellar
+clusters, and would permit large parameter space studies that would require years with the current
+generation of direct summation codes. Using a series of tests and idealized models, we show that
+Taichi can accurately model collisional effects, such as dynamical friction and the core-collapse
+time of idealized clusters, producing results in strong agreement with benchmarks from other collisional
+codes such as NBODY6++GPU or PeTar. Parallelized using OpenMP and AVX, Taichi is nearly 70 times
+faster on a 28-core single machine than its direct integration counterpart. With future improvements
+to the handling of close encounters and binary evolution, we clearly demonstrate the potential
+of an optimized FMM for the modelling of collisional stellar systems, opening the door to accurate
+simulations of massive globular clusters, super star clusters, and even galactic nuclei. 

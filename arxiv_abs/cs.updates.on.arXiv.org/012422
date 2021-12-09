@@ -1,0 +1,18 @@
+This paper proposes a novel, unsupervised super-resolution (SR) approach for performing the SR
+of a clinical CT into the resolution level of a micro CT ($\mu$CT). The precise non-invasive diagnosis
+of lung cancer typically utilizes clinical CT data. Due to the resolution limitations of clinical
+CT (about $0.5 \times 0.5 \times 0.5$ mm$^3$), it is difficult to obtain enough pathological information
+such as the invasion area at alveoli level. On the other hand, $\mu$CT scanning allows the acquisition
+of volumes of lung specimens with much higher resolution ($50 \times 50 \times 50 \mu {\rm m}^3$ or
+higher). Thus, super-resolution of clinical CT volume may be helpful for diagnosis of lung cancer.
+Typical SR methods require aligned pairs of low-resolution (LR) and high-resolution (HR) images
+for training. Unfortunately, obtaining paired clinical CT and $\mu$CT volumes of human lung tissues
+is infeasible. Unsupervised SR methods are required that do not need paired LR and HR images. In this
+paper, we create corresponding clinical CT-$\mu$CT pairs by simulating clinical CT images from
+$\mu$CT images by modified CycleGAN. After this, we use simulated clinical CT-$\mu$CT image pairs
+to train an SR network based on SRGAN. Finally, we use the trained SR network to perform SR of the clinical
+CT images. We compare our proposed method with another unsupervised SR method for clinical CT images
+named SR-CycleGAN. Experimental results demonstrate that the proposed method can successfully
+perform SR of clinical CT images of lung cancer patients with $\mu$CT level resolution, and quantitatively
+and qualitatively outperformed conventional method (SR-CycleGAN), improving the SSIM (structure
+similarity) form 0.40 to 0.51. 

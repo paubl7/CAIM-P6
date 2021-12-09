@@ -1,0 +1,20 @@
+We study a specialization of the problem of broadcasting on directed acyclic graphs, namely, broadcasting
+on 2D regular grids. Consider a 2D regular grid with source vertex $X$ at layer $0$ and $k+1$ vertices
+at layer $k\geq 1$, which are at distance $k$ from $X$. Every vertex of the 2D regular grid has outdegree
+$2$, the vertices at the boundary have indegree $1$, and all other vertices have indegree $2$. At
+time $0$, $X$ is given a random bit. At time $k\geq 1$, each vertex in layer $k$ receives transmitted
+bits from its parents in layer $k-1$, where the bits pass through binary symmetric channels with
+noise level $\delta\in(0,1/2)$. Then, each vertex combines its received bits using a common Boolean
+processing function to produce an output bit. The objective is to recover $X$ with probability of
+error better than $1/2$ from all vertices at layer $k$ as $k \rightarrow \infty$. Besides their natural
+interpretation in communication networks, such broadcasting processes can be construed as 1D
+probabilistic cellular automata (PCA) with boundary conditions that limit the number of sites
+at each time $k$ to $k+1$. We conjecture that it is impossible to propagate information in a 2D regular
+grid regardless of the noise level and the choice of processing function. In this paper, we make progress
+towards establishing this conjecture, and prove using ideas from percolation and coding theory
+that recovery of $X$ is impossible for any $\delta$ provided that all vertices use either AND or XOR
+processing functions. Furthermore, we propose a martingale-based approach that establishes
+the impossibility of recovering $X$ for any $\delta$ when all NAND processing functions are used
+if certain supermartingales can be rigorously constructed. We also provide numerical evidence
+for the existence of these supermartingales by computing explicit examples for different values
+of $\delta$ via linear programming. 

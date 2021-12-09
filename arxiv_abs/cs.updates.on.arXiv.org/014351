@@ -1,0 +1,20 @@
+This paper explores Tadmor's minimum entropy principle for the relativistic hydrodynamics (RHD)
+equations and incorporates this principle into the design of robust high-order discontinuous
+Galerkin (DG) and finite volume schemes for RHD on general meshes. The schemes are proven to preserve
+numerical solutions in a global invariant region constituted by all the known intrinsic constraints:
+minimum entropy principle, the subluminal constraint on fluid velocity, and the positivity of
+pressure and rest-mass density. Relativistic effects lead to some essential difficulties in the
+present study, which are not encountered in the non-relativistic case. Most notably, in the RHD
+case the specific entropy is a highly nonlinear implicit function of the conservative variables,
+and, moreover, there is also no explicit formula of the flux in terms of the conservative variables.
+In order to overcome the resulting challenges, we first propose a novel equivalent form of the invariant
+region, by skillfully introducing two auxiliary variables. As a notable feature, all the constraints
+in the novel form are explicit and linear with respect to the conservative variables. This provides
+a highly effective approach to theoretically analyze the invariant-region-preserving (IRP)
+property of schemes for RHD, without any assumption on the IRP property of the exact Riemann solver.
+Based on this, we prove the convexity of the invariant region and establish the generalized Lax--Friedrichs
+splitting properties via technical estimates, lying the foundation for our IRP analysis. It is
+shown that the first-order Lax--Friedrichs scheme for RHD satisfies a local minimum entropy principle
+and is IRP under a CFL condition. Provably IRP high-order DG and finite volume methods are developed
+for the RHD with the help of a simple scaling limiter. Several numerical examples demonstrate the
+effectiveness of the proposed schemes. 

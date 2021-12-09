@@ -1,0 +1,19 @@
+Several important PDE systems, like magnetohydrodynamics and computational electrodynamics,
+are known to support involutions where the divergence of a vector field evolves in divergence-free
+or divergence constraint-preserving fashion. Recently, new classes of PDE systems have emerged
+for hyperelasticity, compressible multiphase flows, so-called first order reductions of the
+Einstein field equations, or a novel first order hyperbolic reformulation of Schr\"odinger's
+equation, to name a few, where the involution in the PDE supports curl-free or curl constraint-preserving
+evolution of a vector field. Since mimetic numerical schemes for the solution of the former class
+of PDEs are well-developed, we draw guidance from them for the solution of the latter class of PDEs.
+We show that a study of the curl constraint-preserving reconstruction gives us a great deal of insight
+into the design of consistent, mimetic schemes for these involutionary PDEs. The importance of
+multidimensional Riemann solvers in facilitating the design of such schemes is also documented.
+We study the problem of curl constraint-preserving reconstruction as it pertains to the design
+of mimetic discontinuous Galerkin (DG) and finite volume (FV) schemes for PDEs that support such
+an involution. This is done for two and three dimensional structured mesh problems where we deliver
+closed form expressions for the reconstruction. The role that this reconstruction plays in the
+curl-free, or curl-preserving prolongation of vector fields in adaptive mesh refinement (AMR)
+is also discussed. In two dimensions, a von Neumann analysis of structure-preserving DG-like schemes
+that mimetically satisfy the curl constraints, is also presented. Numerical results are also presented
+to show that the schemes meet their design accuracy. 

@@ -1,0 +1,18 @@
+Metal oxide (MOx) electro-chemical gas sensors are a sensible choice for many applications, due
+to their tunable sensitivity, their space-efficiency and their low price. Publicly available
+sensor datasets streamline the development and evaluation of novel algorithm and circuit designs,
+making them particularly valuable for the Artificial Olfaction / Mobile Robot Olfaction community.
+In 2013, Vergara et al. published a dataset comprising 16 months of recordings from a large MOx gas
+sensor array in a wind tunnel, which has since become a standard benchmark in the field. Here we report
+a previously undetected property of the dataset that limits its suitability for gas classification
+studies. The analysis of individual measurement timestamps reveals that gases were recorded in
+temporally clustered batches. The consequential correlation between the sensor response before
+gas exposure and the time of recording is often sufficient to predict the gas used in a given trial.
+Even if compensated by zero-offset-subtraction, residual short-term drift contains enough information
+for gas classification. We have identified a minimally drift-affected subset of the data, which
+is suitable for gas classification benchmarking after zero-offset-subtraction, although gas
+classification performance was substantially lower than for the full dataset. We conclude that
+previous studies conducted with this dataset very likely overestimate the accuracy of gas classification
+results. For the 17 potentially affected publications, we urge the authors to re-evaluate the results
+in light of our findings. Our observations emphasize the need to thoroughly document gas sensing
+datasets, and proper validation before using them for the development of algorithms. 

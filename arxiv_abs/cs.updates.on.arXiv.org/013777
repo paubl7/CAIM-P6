@@ -1,0 +1,19 @@
+The ubiquity of implicit feedback makes them the default choice to build online recommender systems.
+While the large volume of implicit feedback alleviates the data sparsity issue, the downside is
+that they are not as clean in reflecting the actual satisfaction of users. For example, in E-commerce,
+a large portion of clicks do not translate to purchases, and many purchases end up with negative reviews.
+As such, it is of critical importance to account for the inevitable noises in implicit feedback for
+recommender training. However, little work on recommendation has taken the noisy nature of implicit
+feedback into consideration. In this work, we explore the central theme of denoising implicit feedback
+for recommender training. We find serious negative impacts of noisy implicit feedback,i.e., fitting
+the noisy data prevents the recommender from learning the actual user preference. Our target is
+to identify and prune noisy interactions, so as to improve the quality of recommender training.
+By observing the process of normal recommender training, we find that noisy feedback typically
+has large loss values in the early stages. Inspired by this observation, we propose a new training
+strategy namedAdaptive Denoising Training(ADT), which adaptively prunes noisy interactions
+during training. Specifically, we devise two paradigms for adaptive loss formulation: Truncated
+Loss that discards the large-loss samples with a dynamic threshold in each iteration; and reweighted
+Loss that adaptively lowers the weight of large-loss samples. We instantiate the two paradigms
+on the widely used binary cross-entropy loss and test the proposed ADT strategies on three representative
+recommenders. Extensive experiments on three benchmarks demonstrate that ADT significantly
+improves the quality of recommendation over normal training. 

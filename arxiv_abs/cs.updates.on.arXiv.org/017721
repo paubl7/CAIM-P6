@@ -1,0 +1,20 @@
+Weakly-supervised learning (WSL) has recently triggered substantial interest as it mitigates
+the lack of pixel-wise annotations. Given global image labels, WSL methods yield pixel-level predictions
+(segmentations), which enable to interpret class predictions. Despite their recent success,
+mostly with natural images, such methods can face important challenges when the foreground and
+background regions have similar visual cues, yielding high false-positive rates in segmentations,
+as is the case in challenging histology images. WSL training is commonly driven by standard classification
+losses, which implicitly maximize model confidence, and locate the discriminative regions linked
+to classification decisions. Therefore, they lack mechanisms for modeling explicitly non-discriminative
+regions and reducing false-positive rates. We propose novel regularization terms, which enable
+the model to seek both non-discriminative and discriminative regions, while discouraging unbalanced
+segmentations. We introduce high uncertainty as a criterion to localize non-discriminative regions
+that do not affect classifier decision, and describe it with original Kullback-Leibler (KL) divergence
+losses evaluating the deviation of posterior predictions from the uniform distribution. Our KL
+terms encourage high uncertainty of the model when the latter inputs the latent non-discriminative
+regions. Our loss integrates: (i) a cross-entropy seeking a foreground, where model confidence
+about class prediction is high; (ii) a KL regularizer seeking a background, where model uncertainty
+is high; and (iii) log-barrier terms discouraging unbalanced segmentations. Comprehensive experiments
+and ablation studies over the public GlaS colon cancer data and a Camelyon16 patch-based benchmark
+for breast cancer show substantial improvements over state-of-the-art WSL methods, and confirm
+the effect of our new regularizers. 

@@ -1,0 +1,19 @@
+We propose interpretable graph neural networks for sampling and recovery of graph signals, respectively.
+To take informative measurements, we propose a new graph neural sampling module, which aims to select
+those vertices that maximally express their corresponding neighborhoods. Such expressiveness
+can be quantified by the mutual information between vertices' features and neighborhoods' features,
+which are estimated via a graph neural network. To reconstruct an original graph signal from the
+sampled measurements, we propose a graph neural recovery module based on the algorithm-unrolling
+technique. Compared to previous analytical sampling and recovery, the proposed methods are able
+to flexibly learn a variety of graph signal models from data by leveraging the learning ability of
+neural networks; compared to previous neural-network-based sampling and recovery, the proposed
+methods are designed through exploiting specific graph properties and provide interpretability.
+We further design a new multiscale graph neural network, which is a trainable multiscale graph filter
+bank and can handle various graph-related learning tasks. The multiscale network leverages the
+proposed graph neural sampling and recovery modules to achieve multiscale representations of
+a graph. In the experiments, we illustrate the effects of the proposed graph neural sampling and
+recovery modules and find that the modules can flexibly adapt to various graph structures and graph
+signals. In the task of active-sampling-based semi-supervised learning, the graph neural sampling
+module improves the classification accuracy over 10% in Cora dataset. We further validate the proposed
+multiscale graph neural network on several standard datasets for both vertex and graph classification.
+The results show that our method consistently improves the classification accuracies. 

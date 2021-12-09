@@ -1,0 +1,18 @@
+Given a graph with a source vertex $s$, the Single Source Replacement Paths (SSRP) problem is to compute,
+for every vertex $t$ and edge $e$, the length $d(s,t,e)$ of a shortest path from $s$ to $t$ that avoids
+$e$. A Single-Source Distance Sensitivity Oracle (Single-Source DSO) is a data structure that
+answers queries of the form $(t,e)$ by returning the distance $d(s,t,e)$. We show how to deterministically
+compress the output of the SSRP problem on $n$-vertex, $m$-edge graphs with integer edge weights
+in the range $[1,M]$ into a Single-Source DSO of size $O(M^{1/2}n^{3/2})$ with query time $\widetilde{O}(1)$.
+The space requirement is optimal (up to the word size) and our techniques can also handle vertex failures.
+Chechik and Cohen [SODA 2019] presented a combinatorial, randomized $\widetilde{O}(m\sqrt{n}+n^2)$
+time SSRP algorithm for undirected and unweighted graphs. Grandoni and Vassilevska Williams [FOCS
+2012, TALG 2020] gave an algebraic, randomized $\widetilde{O}(Mn^\omega)$ time SSRP algorithm
+for graphs with integer edge weights in the range $[1,M]$, where $\omega<2.373$ is the matrix multiplication
+exponent. We derandomize both algorithms for undirected graphs in the same asymptotic running
+time and apply our compression to obtain deterministic Single-Source DSOs. The $\widetilde{O}(m\sqrt{n}+n^2)$
+and $\widetilde{O}(Mn^\omega)$ preprocessing times are polynomial improvements over previous
+$o(n^2)$-space oracles. On sparse graphs with $m=O(n^{5/4-\varepsilon}/M^{7/4})$ edges, for
+any constant $\varepsilon > 0$, we reduce the preprocessing to randomized $\widetilde{O}(M^{7/8}m^{1/2}n^{11/8})=O(n^{2-\varepsilon/2})$
+time. This is the first truly subquadratic time algorithm for building Single-Source DSOs on sparse
+graphs. 

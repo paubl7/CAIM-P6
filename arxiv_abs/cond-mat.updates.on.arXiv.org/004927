@@ -1,0 +1,18 @@
+This work applies concepts of artificial neural networks to identify the parameters of a mathematical
+model based on phase fields for damage and fracture. Damage mechanics is the part of the continuum
+mechanics that models the effects of the micro-defect formation using state variables at the macroscopic
+level. The equations that define the model are derived from fundamental laws of physics and provide
+important relationships between state variables. Simulations using the model considered in this
+work produce good qualitative and quantitative results, but many parameters must be adjusted to
+reproduce a certain material behavior. The identification of model parameters is considered by
+solving an inverse problem that uses pseudo-experimental data to find the values that produce the
+best fit to the data. We apply a physics-informed neural network and combine some classical estimation
+methods to identify the material parameters that appear in the damage equation of the model. Our
+strategy consists of a neural network that acts as an approximating function of the damage evolution
+with its output regularized using the residue of the differential equation. Three stages of optimization
+seek the best possible values for the neural network and the material parameters. The training alternates
+between the fitting of only the pseudo-experimental data or the total loss that includes the regularizing
+terms. We test the robustness of the method to noisy data and its generalization capabilities using
+a simple physical case for the damage model. This procedure deals better with noisy data in comparison
+with a PDE-constrained optimization method, and it also provides good approximations of the material
+parameters and the evolution of damage. 

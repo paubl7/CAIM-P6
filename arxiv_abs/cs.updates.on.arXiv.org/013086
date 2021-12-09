@@ -1,0 +1,19 @@
+It has been widely recognized that the success of deep learning in image segmentation relies overwhelmingly
+on a myriad amount of densely annotated training data, which, however, are difficult to obtain due
+to the tremendous labor and expertise required, particularly for annotating 3D medical images.
+Although self-supervised learning (SSL) has shown great potential to address this issue, most
+SSL approaches focus only on image-level global consistency, but ignore the local consistency
+which plays a pivotal role in capturing structural information for dense prediction tasks such
+as segmentation. In this paper, we propose a PriorGuided Local (PGL) self-supervised model that
+learns the region-wise local consistency in the latent feature space. Specifically, we use the
+spatial transformations, which produce different augmented views of the same image, as a prior
+to deduce the location relation between two views, which is then used to align the feature maps of
+the same local region but being extracted on two views. Next, we construct a local consistency loss
+to minimize the voxel-wise discrepancy between the aligned feature maps. Thus, our PGL model learns
+the distinctive representations of local regions, and hence is able to retain structural information.
+This ability is conducive to downstream segmentation tasks. We conducted an extensive evaluation
+on four public computerized tomography (CT) datasets that cover 11 kinds of major human organs and
+two tumors. The results indicate that using pre-trained PGL model to initialize a downstream network
+leads to a substantial performance improvement over both random initialization and the initialization
+with global consistency-based models. Code and pre-trained weights will be made available at:
+https://git.io/PGL. 

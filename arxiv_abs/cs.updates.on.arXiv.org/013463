@@ -1,0 +1,20 @@
+A commonly adopted approach to carry out detection tasks in medical imaging is to rely on an initial
+segmentation. However, this approach strongly depends on voxel-wise annotations which are repetitive
+and time-consuming to draw for medical experts. An interesting alternative to voxel-wise masks
+are so-called "weak" labels: these can either be coarse or oversized annotations that are less precise,
+but noticeably faster to create. In this work, we address the task of brain aneurysm detection as
+a patch-wise binary classification with weak labels, in contrast to related studies that rather
+use supervised segmentation methods and voxel-wise delineations. Our approach comes with the
+non-trivial challenge of the data set creation: as for most focal diseases, anomalous patches (with
+aneurysm) are outnumbered by those showing no anomaly, and the two classes usually have different
+spatial distributions. To tackle this frequent scenario of inherently imbalanced, spatially
+skewed data sets, we propose a novel, anatomically-driven approach by using a multi-scale and multi-input
+3D Convolutional Neural Network (CNN). We apply our model to 214 subjects (83 patients, 131 controls)
+who underwent Time-Of-Flight Magnetic Resonance Angiography (TOF-MRA) and presented a total
+of 111 unruptured cerebral aneurysms. We compare two strategies for negative patch sampling that
+have an increasing level of difficulty for the network and we show how this choice can strongly affect
+the results. To assess whether the added spatial information helps improving performances, we
+compare our anatomically-informed CNN with a baseline, spatially-agnostic CNN. When considering
+the more realistic and challenging scenario including vessel-like negative patches, the former
+model attains the highest classification results (accuracy$\simeq$95\%, AUROC$\simeq$0.95,
+AUPR$\simeq$0.71), thus outperforming the baseline. 

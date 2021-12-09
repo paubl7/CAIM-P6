@@ -1,0 +1,20 @@
+We consider a bilevel attacker-defender problem to find the worst-case attack on the relays that
+control transmission grid components. The attacker infiltrates relays and renders the components
+connected to them inoperable, with the goal of maximizing load shed. The defender responds by minimizing
+the resulting load shed, re-dispatching using a DC optimal power flow (DCOPF) problem on the remaining
+network. Though worst-case interdiction problems on the transmission grid have been studied for
+years, none of the methods in the literature are exact because they rely on assumptions on the bounds
+of the dual variables of the defender problem in order to reformulate the bilevel problem as a mixed
+integer linear problem. The result is a lower bound, and additionally, the more conservatively
+the dual variables are bounded, the weaker the linear programming relaxations are and hence the
+more difficult it is to solve the problem at scale. In this work we also present a lower bound, where
+instead of bounding the dual variables, we drop the constraints corresponding to Ohm's law, relaxing
+DCOPF to capacitated network flow. This is a restriction of the original bilevel problem. We present
+theoretical results showing that, for uncongested networks, approximating DCOPF with network
+flow yields the same set of injections, and thus the same load shed, which suggests that this restriction
+likely gives a high-quality lower bound in the uncongested case. Furthermore, we show that in this
+formulation, the duals are bounded by 1, so we can solve our restriction exactly. Last, because the
+big-M values in the linearization are small and network flow has a well-known structure, we see empirically
+that this formulation scales well computationally with increased network size. Last, we find that
+this bound is almost always as tight as we can get from guessing the dual bounds, even for more congested
+networks. 

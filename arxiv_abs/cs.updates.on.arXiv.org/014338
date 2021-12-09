@@ -1,0 +1,19 @@
+Sound event detection (SED) is the task of tagging the absence or presence of audio events and their
+corresponding interval within a given audio clip. While SED can be done using supervised machine
+learning, where training data is fully labeled with access to per event timestamps and duration,
+our work focuses on weakly-supervised sound event detection (WSSED), where prior knowledge about
+an event's duration is unavailable. Recent research within the field focuses on improving segment-
+and event-level localization performance for specific datasets regarding specific evaluation
+metrics. Specifically, well-performing event-level localization requires fully labeled development
+subsets to obtain event duration estimates, which significantly benefits localization performance.
+Moreover, well-performing segment-level localization models output predictions at a coarse-scale
+(e.g., 1 second), hindering their deployment on datasets containing very short events (< 1 second).
+This work proposes a duration robust CRNN (CDur) framework, which aims to achieve competitive performance
+in terms of segment- and event-level localization. This paper proposes a new post-processing strategy
+named "Triple Threshold" and investigates two data augmentation methods along with a label smoothing
+method within the scope of WSSED. Evaluation of our model is done on the DCASE2017 and 2018 Task 4 datasets,
+and URBAN-SED. Our model outperforms other approaches on the DCASE2018 and URBAN-SED datasets
+without requiring prior duration knowledge. In particular, our model is capable of similar performance
+to strongly-labeled supervised models on the URBAN-SED dataset. Lastly, ablation experiments
+to reveal that without post-processing, our model's localization performance drop is significantly
+lower compared with other approaches. 

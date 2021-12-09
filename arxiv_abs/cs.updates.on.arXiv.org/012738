@@ -1,0 +1,19 @@
+Accurate subsurface scattering solutions require the integration of optical material properties
+along many complicated light paths. We present a method that learns a simple geometric approximation
+of random paths in a homogeneous volume of translucent material. The generated representation
+allows determining the absorption along the path as well as a direct lighting contribution, which
+is representative of all scattering events along the path. A sequence of conditional variational
+auto-encoders (CVAEs) is trained to model the statistical distribution of the photon paths inside
+a spherical region in presence of multiple scattering events. A first CVAE learns to sample the number
+of scattering events, occurring on a ray path inside the sphere, which effectively determines the
+probability of the ray being absorbed. Conditioned on this, a second model predicts the exit position
+and direction of the light particle. Finally, a third model generates a representative sample of
+photon position and direction along the path, which is used to approximate the contribution of direct
+illumination due to in-scattering. To accelerate the tracing of the light path through the volumetric
+medium toward the solid boundary, we employ a sphere-tracing strategy that considers the light
+absorption and is able to perform statistically accurate next-event estimation. We demonstrate
+efficient learning using shallow networks of only three layers and no more than 16 nodes. In combination
+with a GPU shader that evaluates the CVAEs' predictions, performance gains can be demonstrated
+for a variety of different scenarios. A quality evaluation analyzes the approximation error that
+is introduced by the data-driven scattering simulation and sheds light on the major sources of error
+in the accelerated path tracing process. 

@@ -1,0 +1,20 @@
+The ability to detect anomalies in time series is considered highly valuable in numerous application
+domains. The sequential nature of time series objects is responsible for an additional feature
+complexity, ultimately requiring specialized approaches in order to solve the task. Essential
+characteristics of time series, situated outside the time domain, are often difficult to capture
+with state-of-the-art anomaly detection methods when no transformations have been applied to
+the time series. Inspired by the success of deep learning methods in computer vision, several studies
+have proposed transforming time series into image-like representations, used as inputs for deep
+learning models, and have led to very promising results in classification tasks. In this paper,
+we first review the signal to image encoding approaches found in the literature. Second, we propose
+modifications to some of their original formulations to make them more robust to the variability
+in large datasets. Third, we compare them on the basis of a common unsupervised task to demonstrate
+how the choice of the encoding can impact the results when used in the same deep learning architecture.
+We thus provide a comparison between six encoding algorithms with and without the proposed modifications.
+The selected encoding methods are Gramian Angular Field, Markov Transition Field, recurrence
+plot, grey scale encoding, spectrogram, and scalogram. We also compare the results achieved with
+the raw signal used as input for another deep learning model. We demonstrate that some encodings
+have a competitive advantage and might be worth considering within a deep learning framework. The
+comparison is performed on a dataset collected and released by Airbus SAS, containing highly complex
+vibration measurements from real helicopter flight tests. The different encodings provide competitive
+results for anomaly detection. 

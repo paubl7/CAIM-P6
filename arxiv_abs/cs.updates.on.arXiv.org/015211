@@ -1,0 +1,19 @@
+Sorting is a fundamental and well studied problem that has been studied extensively. Sorting plays
+an important role in the area of databases, as many queries can be served much faster if the relations
+are first sorted. One of the most popular sorting algorithm in databases is merge sort. In modern
+data-centers, data is stored in storage servers, while processing takes place in compute servers.
+Hence, in order to compute queries on the data, it must travel through the network from the storage
+servers to the compute servers. This creates a potential for utilizing programmable switches to
+perform partial sorting in order to accelerate the sorting process at the server side. This is possible
+because, as mentioned above, data packets pass through the switch in any case on their way to the server.
+Alas, programmable switches offer a very restricted and non-intuitive programming model, which
+is why realizing this is not-trivial. We devised a novel partial sorting algorithm that fits the
+programming model and restrictions of programmable switches and can expedite merge sort at the
+server. We also utilize built-in parallelism in the switch to divide the data into sequential ranges.
+Thus, the server needs to sort each range separately and then concatenate them to one sorted stream.
+This way, the server needs to sort smaller sections and each of these sections is already partially
+sorted. Hence, the server does less work, and the access pattern becomes more virtual-memory friendly.
+We evaluated the performance improvements obtained when utilizing our partial sorting algorithm
+over several data stream compositions with various switch configurations. Our study exhibits
+an improvement of 20%-75% in the sorting run-time when using our approach compared to plain sorting
+on the original stream. 

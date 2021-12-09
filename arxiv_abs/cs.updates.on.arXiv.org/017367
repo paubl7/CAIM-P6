@@ -1,0 +1,19 @@
+This work builds a novel point process and tools to use the Hawkes process with interval-censored
+data. Such data records the aggregated counts of events solely during specific time intervals --
+such as the number of patients admitted to the hospital or the volume of vehicles passing traffic
+loop detectors -- and not the exact occurrence time of the events. First, we establish the Mean Behavior
+Poisson (MBP) process, a novel Poisson process with a direct parameter correspondence to the popular
+self-exciting Hawkes process. The event intensity function of the MBP is the expected intensity
+over all possible Hawkes realizations with the same parameter set. We fit MBP in the interval-censored
+setting using an interval-censored Poisson log-likelihood (IC-LL). We use the parameter equivalence
+to uncover the parameters of the associated Hawkes process. Second, we introduce two novel exogenous
+functions to distinguish the exogenous from the endogenous events. We propose the multi-impulse
+exogenous function when the exogenous events are observed as event time and the latent homogeneous
+Poisson process exogenous function when the exogenous events are presented as interval-censored
+volumes. Third, we provide several approximation methods to estimate the intensity and compensator
+function of MBP when no analytical solution exists. Fourth and finally, we connect the interval-censored
+loss of MBP to a broader class of Bregman divergence-based functions. Using the connection, we show
+that the current state of the art in popularity estimation (Hawkes Intensity Process (HIP) (Rizoiu
+et al.,2017b)) is a particular case of the MBP process. We verify our models through empirical testing
+on synthetic data and real-world data. We find that on real-world datasets that our MBP process outperforms
+HIP for the task of popularity prediction. 

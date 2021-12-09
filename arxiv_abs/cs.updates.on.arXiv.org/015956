@@ -1,0 +1,19 @@
+Millions of RFID tags are pervasively used all around the globe to inexpensively identify a wide
+variety of everyday-use objects. One of the key issues of RFID is that tags cannot use energy-hungry
+cryptography. For this reason, radio fingerprinting (RFP) is a compelling approach that leverages
+the unique imperfections in the tag's wireless circuitry to achieve large-scale RFID clone detection.
+Recent work, however, has unveiled that time-varying channel conditions can significantly decrease
+the accuracy of the RFP process. We propose the first large-scale investigation into RFP of RFID
+tags with dynamic channel conditions. Specifically, we perform a massive data collection campaign
+on a testbed composed by 200 off-the-shelf identical RFID tags and a software-defined radio (SDR)
+tag reader. We collect data with different tag-reader distances in an over-the-air configuration.
+To emulate implanted RFID tags, we also collect data with two different kinds of porcine meat inserted
+between the tag and the reader. We use this rich dataset to train and test several convolutional neural
+network (CNN)--based classifiers in a variety of channel conditions. Our investigation reveals
+that training and testing on different channel conditions drastically degrades the classifier's
+accuracy. For this reason, we propose a novel training framework based on federated machine learning
+(FML) and data augmentation (DAG) to boost the accuracy. Extensive experimental results indicate
+that (i) our FML approach improves accuracy by up to 48%; (ii) our DA approach improves the FML performance
+by up to 31%. To the best of our knowledge, this is the first paper experimentally demonstrating the
+efficacy of FML and DA on a large device population. We are sharing with the research community our
+fully-labeled 200-GB RFID waveform dataset, the entirety of our code and trained models. 

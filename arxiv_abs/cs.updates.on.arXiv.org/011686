@@ -1,0 +1,20 @@
+Identifying bio-signals based-sleep stages requires time-consuming and tedious labor of skilled
+clinicians. Deep learning approaches have been introduced in order to challenge the automatic
+sleep stage classification conundrum. However, the difficulties can be posed in replacing the
+clinicians with the automatic system due to the differences in many aspects found in individual
+bio-signals, causing the inconsistency in the performance of the model on every incoming individual.
+Thus, we aim to explore the feasibility of using a novel approach, capable of assisting the clinicians
+and lessening the workload. We propose the transfer learning framework, entitled MetaSleepLearner,
+based on Model Agnostic Meta-Learning (MAML), in order to transfer the acquired sleep staging knowledge
+from a large dataset to new individual subjects. The framework was demonstrated to require the labelling
+of only a few sleep epochs by the clinicians and allow the remainder to be handled by the system. Layer-wise
+Relevance Propagation (LRP) was also applied to understand the learning course of our approach.
+In all acquired datasets, in comparison to the conventional approach, MetaSleepLearner achieved
+a range of 5.4\% to 17.7\% improvement with statistical difference in the mean of both approaches.
+The illustration of the model interpretation after the adaptation to each subject also confirmed
+that the performance was directed towards reasonable learning. MetaSleepLearner outperformed
+the conventional approaches as a result from the fine-tuning using the recordings of both healthy
+subjects and patients. This is the first work that investigated a non-conventional pre-training
+method, MAML, resulting in a possibility for human-machine collaboration in sleep stage classification
+and easing the burden of the clinicians in labelling the sleep stages through only several epochs
+rather than an entire recording. 

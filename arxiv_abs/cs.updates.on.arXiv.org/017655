@@ -1,0 +1,18 @@
+Whitby is the server-side of an Intelligent Tutoring System application for learning System-Theoretic
+Process Analysis (STPA), a methodology used to ensure the safety of anything that can be represented
+with a systems model. The underlying logic driving the reasoning behind Whitby is Situation Calculus,
+which is a many-sorted logic with situation, action, and object sorts. The Situation Calculus is
+applied to Ontology Authoring and Contingent Scaffolding: the primary activities within Whitby.
+Thus many fluents and actions are aggregated in Whitby from these two sub-applications and from
+Whitby itself, but all are available through a common situation query interface that does not depend
+upon any of the fluents or actions. Each STPA project in Whitby is a single situation term, which is
+queried for fluents that include the ontology, and to determine what pedagogical interventions
+to offer. Initially Whitby was written in Prolog using a module system. In the interest of a cleaner
+architecture and implementation with improved code reuse and extensibility, the initial application
+was refactored into Logtalk. This refactoring includes decoupling the Situation Calculus reasoner,
+Ontology Authoring framework, and Contingent Scaffolding framework into third-party libraries
+that can be reused in other applications. This extraction was achieved by inverting dependencies
+via Logtalk protocols and categories, which are reusable interfaces and components that provide
+functionally cohesive sets of predicate declarations and predicate definitions. In this paper
+the architectures of two iterations of Whitby are evaluated with respect to the motivations behind
+the refactor: clean architecture enabling code reuse and extensibility. 

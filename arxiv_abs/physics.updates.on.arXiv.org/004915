@@ -1,0 +1,19 @@
+The requirement for accelerated and quantitatively accurate screening of NMR spectra across the
+small molecules chemical compound space (CCS), is two-fold: (1) a robust `local' machine learning
+(ML) strategy that captures the correlation between an atom's neighbourhood in a molecule and its
+`near-sighted' property---chemical shielding of its nuclear magnetic moment by the bonding electron
+density; (2) an accurate reference dataset generated with a state-of-the-art first principles
+method that can be used for training the ML model. Herein we report the QM9-NMR dataset comprising
+isotropic shielding of $^{13}$C nucleus of over 0.8 Million C atoms in 134k molecules of the QM9 dataset
+calculated at the mPW1PW91/6-311+G(2{\it d},{\it p}) level in gas phase and with implicit models
+of five common solvents. Using these accurate data for training, we present benchmark results for
+the prediction transferability of kernel-ridge regression models with popular local descriptors.
+When using the FCHL descriptor, our models based on 100k training samples, accurately predict the
+NMR shielding of 50k `hold-out' atoms with an MAE of $<1.9$ ppm. For rapid prediction of new query
+molecules, the ML models have been trained with molecular geometries calculated with the semi-empirical
+method PM7. Furthermore, we show by using $^{13}$C shifts from single point minimal basis set DFT
+calculations at the PM7 geometries as a baseline, one can apply a $\Delta$-ML strategy to quench
+the average prediction error to $<1.4$ ppm. We test the transferability of the local ML models trained
+on small molecules---with up to 9 heavy atoms---to non-trivial benchmark sets that include several
+large drug molecules, a small subset of the GDB17 dataset with molecules comprising 10 to 17 heavy
+atoms, and linear polycyclic aromatic hydrocarbons with 10--26 C atoms. 

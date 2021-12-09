@@ -1,0 +1,18 @@
+Facial Expression Recognition (FER) in the wild is extremely challenging due to occlusions, variant
+head poses, face deformation and motion blur under unconstrained conditions. Although substantial
+progresses have been made in automatic FER in the past few decades, previous studies are mainly designed
+for lab-controlled FER. Real-world occlusions, variant head poses and other issues definitely
+increase the difficulty of FER on account of these information-deficient regions and complex backgrounds.
+Different from previous pure CNNs based methods, we argue that it is feasible and practical to translate
+facial images into sequences of visual words and perform expression recognition from a global perspective.
+Therefore, we propose Convolutional Visual Transformers to tackle FER in the wild by two main steps.
+First, we propose an attentional selective fusion (ASF) for leveraging the feature maps generated
+by two-branch CNNs. The ASF captures discriminative information by fusing multiple features with
+global-local attention. The fused feature maps are then flattened and projected into sequences
+of visual words. Second, inspired by the success of Transformers in natural language processing,
+we propose to model relationships between these visual words with global self-attention. The proposed
+method are evaluated on three public in-the-wild facial expression datasets (RAF-DB, FERPlus
+and AffectNet). Under the same settings, extensive experiments demonstrate that our method shows
+superior performance over other methods, setting new state of the art on RAF-DB with 88.14%, FERPlus
+with 88.81% and AffectNet with 61.85%. We also conduct cross-dataset evaluation on CK+ show the
+generalization capability of the proposed method. 

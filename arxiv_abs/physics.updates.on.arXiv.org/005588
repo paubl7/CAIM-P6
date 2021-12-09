@@ -1,0 +1,19 @@
+Purpose: Radiation therapy treatment planning is a trial-and-error, often time-consuming process.
+An optimal dose distribution based on a specific anatomy can be predicted by pre-trained deep learning
+(DL) models. However, dose distributions are often optimized based on not only patient-specific
+anatomy but also physician preferred trade-offs between planning target volume (PTV) coverage
+and organ at risk (OAR) sparing. Therefore, it is desirable to allow physicians to fine-tune the
+dose distribution predicted based on patient anatomy. In this work, we developed a DL model to predict
+the individualized 3D dose distributions by using not only the anatomy but also the desired PTV/OAR
+trade-offs, as represented by a dose volume histogram (DVH), as inputs. Methods: The desired DVH,
+fine-tuned by physicians from the initially predicted DVH, is first projected onto the Pareto surface,
+then converted into a vector, and then concatenated with mask feature maps. The network output for
+training is the dose distribution corresponding to the Pareto optimal DVH. The training/validation
+datasets contain 77 prostate cancer patients, and the testing dataset has 20 patients. Results:
+The trained model can predict a 3D dose distribution that is approximately Pareto optimal. We calculated
+the difference between the predicted and the optimized dose distribution for the PTV and all OARs
+as a quantitative evaluation. The largest average error in mean dose was about 1.6% of the prescription
+dose, and the largest average error in the maximum dose was about 1.8%. Conclusions: In this feasibility
+study, we have developed a 3D U-Net model with the anatomy and desired DVH as inputs to predict an individualized
+3D dose distribution. The predicted dose distributions can be used as references for dosimetrists
+and physicians to rapidly develop a clinically acceptable treatment plan. 

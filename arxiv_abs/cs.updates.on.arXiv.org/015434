@@ -1,0 +1,20 @@
+Causal decision making (CDM) at scale has become a routine part of business, and increasingly CDM
+is based on machine learning algorithms. For example, businesses often target offers, incentives,
+and recommendations with the goal of affecting consumer behavior. Recently, we have seen an acceleration
+of research related to CDM and to causal effect estimation (CEE) using machine learned models. This
+article highlights an important perspective: CDM is not the same as CEE, and counterintuitively,
+accurate CEE is not necessary for accurate CDM. Our experience is that this is not well understood
+by practitioners nor by most researchers. Technically, the estimand of interest is different,
+and this has important implications both for modeling and for the use of statistical models for CDM.
+We draw on recent research to highlight three of these implications. (1) We should carefully consider
+the objective function of the causal machine learning, and if possible, we should optimize for accurate
+"treatment assignment" rather than for accurate effect-size estimation. (2) Confounding does
+not have the same effect on CDM as it does on CEE. The upshot here is that for supporting CDM it may be
+just as good to learn with confounded data as with unconfounded data. Finally, (3) causal statistical
+modeling may not be necessary at all to support CDM, because there may be (and perhaps often is) a proxy
+target for statistical modeling that can do as well or better. This observation helps to explain
+at least one broad common CDM practice that seems "wrong" at first blush: the widespread use of non-causal
+models for targeting interventions. Our perspective is that these observations open up substantial
+fertile ground for future research. Whether or not you share our perspective completely, we hope
+we facilitate future research in this area by pointing to related articles from multiple contributing
+fields. 

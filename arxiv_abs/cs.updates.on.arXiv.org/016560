@@ -1,0 +1,18 @@
+In the literature, a large body of work advocates the use of log-ratio transformation for multivariate
+statistical analysis of compositional data. In contrast, few studies have looked at how data transformation
+changes the efficacy of machine learning classifiers within geoscience. This letter presents
+experiment results and empirical observations to further explore this issue. The objective is
+to study the effects of data transformation on geozone classification performance when machine
+learning (ML) classifiers/estimators are trained using geochemical data. The training input
+consists of exploration hole assay samples obtained from a Pilbara iron-ore deposit in Western
+Australia, and geozone labels assigned based on stratigraphic units, the absence or presence and
+type of mineralization. The ML techniques considered are multinomial logistic regression, Gaussian
+na\"{i}ve Bayes, kNN, linear support vector classifier, RBF-SVM, gradient boosting and extreme
+GB, random forest (RF) and multi-layer perceptron (MLP). The transformations examined include
+isometric log-ratio (ILR), center log-ratio (CLR) coupled with principal component analysis
+(PCA) or independent component analysis (ICA), and a manifold learning approach based on local
+linear embedding (LLE). The results reveal that different ML classifiers exhibit varying sensitivity
+to these transformations, with some clearly more advantageous or deleterious than others. Overall,
+the best performing candidate is ILR which is unsurprising considering the compositional nature
+of the data. The performance of pairwise log-ratio (PWLR) transformation is better than ILR for
+ensemble and tree-based learners such as boosting and RF; but worse for MLP, SVM and other classifiers.

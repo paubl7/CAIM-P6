@@ -1,0 +1,19 @@
+The emergence of multi-parametric magnetic resonance imaging (mpMRI) has had a profound impact
+on the diagnosis of prostate cancers (PCa), which is the most prevalent malignancy in males in the
+western world, enabling a better selection of patients for confirmation biopsy. However, analyzing
+these images is complex even for experts, hence opening an opportunity for computer-aided diagnosis
+systems to seize. This paper proposes a fully automatic system based on Deep Learning that takes
+a prostate mpMRI from a PCa-suspect patient and, by leveraging the Retina U-Net detection framework,
+locates PCa lesions, segments them, and predicts their most likely Gleason grade group (GGG). It
+uses 490 mpMRIs for training/validation, and 75 patients for testing from two different datasets:
+ProstateX and IVO (Valencia Oncology Institute Foundation). In the test set, it achieves an excellent
+lesion-level AUC/sensitivity/specificity for the GGG$\geq$2 significance criterion of 0.96/1.00/0.79
+for the ProstateX dataset, and 0.95/1.00/0.80 for the IVO dataset. Evaluated at a patient level,
+the results are 0.87/1.00/0.375 in ProstateX, and 0.91/1.00/0.762 in IVO. Furthermore, on the
+online ProstateX grand challenge, the model obtained an AUC of 0.85 (0.87 when trained only on the
+ProstateX data, tying up with the original winner of the challenge). For expert comparison, IVO
+radiologist's PI-RADS 4 sensitivity/specificity were 0.88/0.56 at a lesion level, and 0.85/0.58
+at a patient level. Additional subsystems for automatic prostate zonal segmentation and mpMRI
+non-rigid sequence registration were also employed to produce the final fully automated system.
+The code for the ProstateX-trained system has been made openly available at https://github.com/OscarPellicer/prostate_lesion_detection.
+We hope that this will represent a landmark for future research to use, compare and improve upon.

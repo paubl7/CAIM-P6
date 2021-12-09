@@ -1,0 +1,19 @@
+The need for multiple interactive, real-time simulations using different parameter values has
+driven the design of fast numerical algorithms with certifiable accuracies. The reduced basis
+method (RBM) presents itself as such an option. RBM features a mathematically rigorous error estimator
+which drives the construction of a low-dimensional subspace. A surrogate solution is then sought
+in this low-dimensional space approximating the parameter-induced high fidelity solution manifold.
+However when the system is nonlinear or its parameter dependence nonaffine, this efficiency gain
+degrades tremendously, an inherent drawback of the application of the empirical interpolation
+method (EIM). In this paper, we augment and extend the EIM approach as a direct solver, as opposed
+to an assistant, for solving nonlinear partial differential equations on the reduced level. The
+resulting method, called Reduced Over-Collocation method (ROC), is stable and capable of avoiding
+the efficiency degradation. Two critical ingredients of the scheme are collocation at about twice
+as many locations as the number of basis elements for the reduced approximation space, and an efficient
+error indicator for the strategic building of the reduced solution space. The latter, the main contribution
+of this paper, results from an adaptive hyper reduction of the residuals for the reduced solution.
+Together, these two ingredients render the proposed R2-ROC scheme both offline- and online-efficient.
+A distinctive feature is that the efficiency degradation appearing in traditional RBM approaches
+that utilize EIM for nonlinear and nonaffine problems is circumvented, both in the offline and online
+stages. Numerical tests on different families of time-dependent and steady-state nonlinear problems
+demonstrate the high efficiency and accuracy of our R2-ROC and its superior stability performance.

@@ -1,0 +1,19 @@
+Runtime monitoring plays a key role in the assurance of modern intelligent cyber-physical systems,
+which are frequently data-intensive and safety-critical. While graph queries can serve as an expressive
+yet formally precise specification language to capture the safety properties of interest, there
+are no timeliness guarantees for such auto-generated runtime monitoring programs, which prevents
+their use in a real-time setting. The main challenge is that the worst-case execution time (WCET)
+bounds provided by current static WCET computation methods for such programs can only provide very
+conservative and impractical estimations, which would result in wasteful resource allocation
+or inadequate scheduling of monitors. This paper presents a WCET analysis method for data-driven
+monitoring programs derived from graph queries. The method incorporates results obtained from
+low-level timing analysis into the objective function of a modern graph solver. This allows the
+systematic generation of input graph models up to a specified size (referred to as witness models)
+for which the monitor is expected to take the most time to complete. Hence the estimated execution
+time of the monitors on these graphs can be considered as safe WCET. Moreover, in case the runtime
+graph model outgrows the size that was used to determine WCET at design time, our approach provides
+a fast but more conservative recomputation of safe execution time bounds on-the-fly using runtime
+model statistics. The benefit is that such on-line WCET estimation is still comparable to the one
+which solely relies on traditional approaches. Finally, we perform experiments with query-based
+programs executed in a real-time platform over a set of generated models to investigate the relationship
+between execution times and their estimates, and we compare WCETs obtained with the different approaches.

@@ -1,0 +1,18 @@
+In this paper, we study a multiscale method for simulating a dual-continuum unsaturated flow problem
+within complex heterogeneous fractured porous media. Mathematically, each of the dual continua
+is modeled by a multiscale Richards equation (for pressure head), and these equations are coupled
+to one another by transfer terms. On its own, Richards equation is already a nonlinear partial differential
+equation, and it is exceedingly difficult to solve numerically due to the extra nonlinear dependencies
+involving the soil water. To deal with multiple scales, our strategy is that starting from a microscopic
+scale, we upscale the coupled system of dual-continuum Richards equations via homogenization
+by the two-scale asymptotic expansion, to obtain a homogenized system, at an intermediate scale
+(level). Based on a hierarchical approach, the homogenization's effective coefficients are computed
+through solving the arising cell problems. To tackle the nonlinearity, after time discretization,
+we use Picard iteration procedure for linearization of the homogenized Richards equations. At
+each Picard iteration, some degree of multiscale still remains from the intermediate level, so
+we utilize the generalized multiscale finite element method (GMsFEM) combining with a multi-continuum
+approach, to upscale the homogenized system to a macroscopic (coarse-grid) level. This scheme
+involves building uncoupled and coupled multiscale basis functions, which are used not only to
+construct coarse-grid solution approximation with high accuracy but also (with the coupled multiscale
+basis) to capture the interactions among continua. These prospects and convergence are demonstrated
+by several numerical results for the proposed method. 

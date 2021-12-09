@@ -1,0 +1,18 @@
+The recently proposed high-order TENO scheme [Fu et al., Journal of Computational Physics, 305,
+pp.333-359] has shown great potential in predicting complex fluids owing to the novel weighting
+strategy, which ensures the high-order accuracy, the low numerical dissipation, and the sharp
+shock-capturing capability. However, the applications are still restricted to simple geometries
+with Cartesian or curvilinear meshes. In this work, a new class of high-order shock-capturing TENO
+schemes for unstructured meshes are proposed. Similar to the standard TENO schemes and some variants
+of WENO schemes, the candidate stencils include one large stencil and several small third-order
+stencils. Following a strong scale-separation procedure, a tailored novel ENO-like stencil selection
+strategy is proposed such that the high-order accuracy is restored in smooth regions by selecting
+the candidate reconstruction on the large stencil while the ENO property is enforced near discontinuities
+by adopting the candidate reconstruction from smooth small stencils. The nonsmooth stencils containing
+genuine discontinuities are explicitly excluded from the final reconstruction, leading to excellent
+numerical stability. Different from the WENO concept, such unique sharp stencil selection retains
+the low numerical dissipation without sacrificing the shock-capturing capability. The newly
+proposed framework enables arbitrarily high-order TENO reconstructions on unstructured meshes.
+For conceptual verification, the TENO schemes with third- to sixth-order accuracy are constructed.
+Without parameter tuning case by case, the performance of the proposed TENO schemes is demonstrated
+by examining a set of benchmark cases with broadband flow length scales. 

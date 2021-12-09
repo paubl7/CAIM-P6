@@ -1,0 +1,19 @@
+This paper describes a novel algorithmic framework to minimize a finite-sum of functions available
+over a network of nodes. The proposed framework, that we call~\GTVR, is stochastic and decentralized,
+and thus is particularly suitable for problems where large-scale, potentially private data, cannot
+be collected or processed at a centralized server. The \GTVR~framework leads to a family of algorithms
+with two key ingredients: (i) \textit{local variance reduction}, that enables estimating the
+local batch gradients from arbitrarily drawn samples of local data; and, (ii) \textit{global gradient
+tracking}, which fuses the gradient information across the nodes. Naturally, combining different
+variance reduction and gradient tracking techniques leads to different algorithms of interest
+with valuable practical tradeoffs and design considerations. Our focus in this paper is on two instantiations
+of the~$\GTVR$ framework, namely~\textbf{\texttt{GT-SAGA}} and~\textbf{\texttt{GT-SVRG}},
+that, similar to their centralized counterparts (\SAGA~and~\SVRG), exhibit a compromise between
+space and time. We show that both~\textbf{\texttt{GT-SAGA}} and~\textbf{\texttt{GT-SVRG}}
+achieve accelerated linear convergence for smooth and strongly convex problems and further describe
+the regimes in which they achieve non-asymptotic, network-independent linear convergence rates
+that are faster with respect to the existing decentralized first-order schemes. Moreover, we show
+that both algorithms achieve a linear speedup in such regimes, in that, the total number of gradient
+computations required at each node is reduced by a factor of $1/n$, where $n$ is the number of nodes,
+compared to their centralized counterparts that process all data at a single node. Extensive simulations
+illustrate the convergence behavior of the corresponding algorithms. 

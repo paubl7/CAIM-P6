@@ -1,0 +1,20 @@
+Deep neural networks (DNNs) are observed to be successful in pattern classification. However,
+high classification performances of DNNs are related to their large training sets. Unfortunately,
+in the literature, the datasets used to classify motor imagery (MI) electroencephalogram (EEG)
+signals contain a small number of samples. To achieve high performances with small-sized datasets,
+most of the studies have employed a transformation such as common spatial patterns (CSP) before
+the classification process. However, CSP is dependent on subjects and introduces computational
+load in real-time applications. It is observed in the literature that the augmentation process
+is not applied for increasing the classification performance of EEG signals. In this study, we have
+investigated the effect of the augmentation process on the classification performance of MI EEG
+signals instead of using a preceding transformation such as the CSP, and we have demonstrated that
+by resulting in high success rates for the classification of MI EEGs, the augmentation process is
+able to compete with the CSP. In addition to the augmentation process, we modified the DNN structure
+to increase the classification performance, to decrease the number of nodes in the structure, and
+to be used with less number of hyper parameters. A minimum distance network (MDN) following the last
+layer of the convolutional neural network (CNN) was used as the classifier instead of a fully connected
+neural network (FCNN). By augmenting the EEG dataset and focusing solely on CNN's training, the
+training algorithm of the proposed structure is strengthened without applying any transformation.
+We tested these improvements on brain-computer interface (BCI) competitions 2005 and 2008 databases
+with two and four classes, and the high impact of the augmentation on the average performances are
+demonstrated. 

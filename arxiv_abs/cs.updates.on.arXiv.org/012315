@@ -1,0 +1,19 @@
+Symbolic music datasets are important for music information retrieval and musical analysis. However,
+there is a lack of large-scale symbolic dataset for classical piano music. In this article, we create
+a GiantMIDI-Piano dataset containing 10,854 unique piano solo pieces composed by 2,786 composers.
+The dataset is collected as follows, we extract music piece names and composer names from the International
+Music Score Library Project (IMSLP). We search and download their corresponding audio recordings
+from the internet. We apply a convolutional neural network to detect piano solo pieces. Then, we
+transcribe those piano solo recordings to Musical Instrument Digital Interface (MIDI) files using
+our recently proposed high-resolution piano transcription system. Each transcribed MIDI file
+contains onset, offset, pitch and velocity attributes of piano notes, and onset and offset attributes
+of sustain pedals. GiantMIDI-Piano contains 34,504,873 transcribed notes, and contains metadata
+information of each music piece. To our knowledge, GiantMIDI-Piano is the largest classical piano
+MIDI dataset so far. We analyses the statistics of GiantMIDI-Piano including the nationalities,
+the number and duration of works of composers. We show the chroma, interval, trichord and tetrachord
+frequencies of six composers from different eras to show that GiantMIDI-Piano can be used for musical
+analysis. Our piano solo detection system achieves an accuracy of 89\%, and the piano note transcription
+achieves an onset F1 of 96.72\% evaluated on the MAESTRO dataset. GiantMIDI-Piano achieves an alignment
+error rate (ER) of 0.154 to the manually input MIDI files, comparing to MAESTRO with an alignment
+ER of 0.061 to the manually input MIDI files. We release the source code of acquiring the GiantMIDI-Piano
+dataset at https://github.com/bytedance/GiantMIDI-Piano. 

@@ -1,0 +1,19 @@
+Purpose: Diffusion MRI (dMRI) suffers from eddy currents induced by strong diffusion gradients,
+which introduce artefacts that can impair subsequent diffusion metric analysis. Existing retrospective
+correction techniques that correct for diffusion gradient induced eddy currents do not account
+for eddy current decay, which is generally effective for traditional Pulsed Gradient Spin Echo
+(PGSE) diffusion encoding. However, these techniques do not necessarily apply to advanced forms
+of dMRI that require substantial gradient slewing, such as Oscillating Gradient Spin Echo (OGSE).
+Methods: An in-house algorithm (TVEDDY), that for the first time retrospectively models eddy current
+decay, was tested on PGSE and OGSE brain images acquired at 7T. Correction performance was compared
+to conventional correction methods by evaluating the mean-squared error (MSE) between diffusion-weighted
+images acquired with opposite polarity diffusion gradients. As a ground truth comparison, images
+were corrected using field dynamics up to third order in space measured using a field monitoring
+system. Results: Time-varying eddy currents were observed for OGSE, which introduced blurring
+that was not reduced using the traditional approach but was diminished considerably with TVEDDY
+and model-based reconstruction. No MSE difference was observed between the conventional approach
+and TVEDDY for PGSE, but for OGSE TVEDDY resulted in significantly lower MSE than the conventional
+approach. The field-monitoring-informed model-based reconstruction had the lowest MSE for both
+PGSE and OGSE. Conclusion: This work establishes that it is possible to estimate time-varying eddy
+currents from the diffusion data itself, which provides substantial image quality improvements
+for gradient-intensive dMRI acquisitions like OGSE. 

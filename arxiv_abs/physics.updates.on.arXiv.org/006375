@@ -1,0 +1,20 @@
+This paper introduces an efficient algorithm for the sequential positioning (or nested dissection)
+of two planar interfaces in an arbitrary polyhedron, such that, after each truncation, the respectively
+remaining polyhedron admits a prescribed volume. This task, among others, is frequently encountered
+in the numerical simulation of three-phase flows when resorting to the geometric Volume-of-Fluid
+method. For two-phase flows, the recent work of Kromer and Bothe (arXiv:2101.03861) addresses
+the positioning of a single plane by combining an implicit bracketing of the sought position with
+up to third-order derivatives of the volume fraction. An analogous application of their highly
+efficient root-finding scheme to three-material configurations requires computing the volume
+of a twice truncated arbitrary polyhedron. The present manuscript achieves this by recursive application
+of the Gaussian divergence theorem in appropriate form, which allows to compute the volume as a sum
+of quantities associated to the faces of the original polyhedron. With a suitable choice of the coordinate
+origin, accounting for the sequential character of the truncation, the volume parametrization
+becomes co-moving with respect to the planes. This eliminates the necessity to establish topological
+connectivity and tetrahedron decomposition after each truncation. After a detailed mathematical
+description of the concept, we conduct a series of carefully designed numerical experiments to
+assess the performance in terms of polyhedron truncations. The high efficiency of the two-phase
+positioning persists for sequential application, thereby being robust with respect to input data
+and possible intersection topologies. In comparison to an existing decomposition-based approach,
+the number of truncations was reduced by up to an order of magnitude, further highlighting the superiority
+of the divergence-based volume computation. 

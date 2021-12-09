@@ -1,0 +1,20 @@
+Correspondence-based shape models are key to various medical imaging applications that rely on
+a statistical analysis of anatomies. Such shape models are expected to represent consistent anatomical
+features across the population for population-specific shape statistics. Early approaches for
+correspondence placement rely on nearest neighbor search for simpler anatomies. Coordinate transformations
+for shape correspondence hold promise to address the increasing anatomical complexities. Nonetheless,
+due to the inherent shape-level geometric complexity and population-level shape variation, the
+coordinate-wise correspondence often does not translate to the anatomical correspondence. An
+alternative, group-wise approach for correspondence placement explicitly models the trade-off
+between geometric description and the population's statistical compactness. However, these
+models achieve limited success in resolving nonlinear shape correspondence. Recent works have
+addressed this limitation by adopting an application-specific notion of correspondence through
+lifting positional data to a higher dimensional feature space. However, they heavily rely on manual
+expertise to create domain-specific features and consistent landmarks. This paper proposes an
+automated feature learning approach, using deep convolutional neural networks to extract correspondence-friendly
+features from shape ensembles. Further, an unsupervised domain adaptation scheme is introduced
+to augment the pretrained geometric features with new anatomies. Results on anatomical datasets
+of human scapula, femur, and pelvis bones demonstrate that features learned in supervised fashion
+show improved performance for correspondence estimation compared to the manual features. Further,
+unsupervised learning is demonstrated to learn complex anatomy features using the supervised
+domain adaptation from features learned on simpler anatomy. 

@@ -1,0 +1,19 @@
+Dynamic Connectivity is a fundamental algorithmic graph problem, motivated by a wide range of applications
+to social and communication networks and used as a building block in various other algorithms, such
+as the bi-connectivity and the dynamic minimal spanning tree problems. In brief, we wish to maintain
+the connected components of the graph under dynamic edge insertions and deletions. In the sequential
+case, the problem has been well-studied from both theoretical and practical perspectives. However,
+much less is known about efficient concurrent solutions to this problem. This is the gap we address
+in this paper. We start from one of the classic data structures used to solve this problem, the Euler
+Tour Tree. Our first contribution is a non-blocking single-writer implementation of it. We leverage
+this data structure to obtain the first truly concurrent generalization of dynamic connectivity,
+which preserves the time complexity of its sequential counterpart, but is also scalable in practice.
+To achieve this, we rely on three main techniques. The first is to ensure that connectivity queries,
+which usually dominate real-world workloads, are non-blocking. The second non-trivial technique
+expands the above idea by making all queries that do not change the connectivity structure non-blocking.
+The third ingredient is applying fine-grained locking for updating the connected components,
+which allows operations on disjoint components to occur in parallel. We evaluate the resulting
+algorithm on various workloads, executing on both real and synthetic graphs. The results show the
+efficiency of each of the proposed optimizations; the most efficient variant improves the performance
+of a coarse-grained based implementation on realistic scenarios up to 6x on average and up to 30x
+when connectivity queries dominate. 

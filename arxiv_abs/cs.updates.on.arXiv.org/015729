@@ -1,0 +1,20 @@
+Machine learning-based malware detection systems are often vulnerable to evasion attacks, in
+which a malware developer manipulates their malicious software such that it is misclassified as
+benign. Such software hides some properties of the real class or adopts some properties of a different
+class by applying small perturbations. A special case of evasive malware hides by repackaging a
+bonafide benign mobile app to contain malware in addition to the original functionality of the app,
+thus retaining most of the benign properties of the original app. We present a novel malware detection
+system based on metamorphic testing principles that can detect such benign-seeming malware apps.
+We apply metamorphic testing to the feature representation of the mobile app rather than to the app
+itself. That is, the source input is the original feature vector for the app and the derived input
+is that vector with selected features removed. If the app was originally classified benign and is
+indeed benign, the output for the source and derived inputs should be the same class, i.e., benign,
+but if they differ, then the app is exposed as likely malware. Malware apps originally classified
+as malware should retain that classification since only features prevalent in benign apps are removed.
+This approach enables the machine learning model to classify repackaged malware with reasonably
+few false negatives and false positives. Our training pipeline is simpler than many existing ML-based
+malware detection methods, as the network is trained end-to-end to learn appropriate features
+and perform classification. We pre-trained our classifier model on 3 million apps collected from
+the widely-used AndroZoo dataset. We perform an extensive study on other publicly available datasets
+to show our approach's effectiveness in detecting repackaged malware with more than94% accuracy,
+0.98 precision, 0.95 recall, and 0.96 F1 score. 

@@ -1,0 +1,19 @@
+Variational Hybrid Quantum Classical Algorithms (VHQCAs) are a class of quantum algorithms intended
+to run on noisy intermediate-scale quantum (NISQ) devices. These algorithms employ a parameterized
+quantum circuit (ansatz) and a quantum-classical feedback loop. A classical device is used to optimize
+the parameters in order to minimize a cost function that can be computed far more efficiently on a
+quantum device. The cost function is constructed such that finding the ansatz parameters that minimize
+its value, solves some problem of interest. We focus specifically on the Variational Quantum Linear
+Solver (VQLS), and examine the effect of several gradient-free and gradient-based classical optimizers
+on performance. We focus on both the average rate of convergence of the classical optimizers studied,
+as well as the distribution of their average termination cost values, and how these are affected
+by noise. Our work demonstrates that realistic noise levels on NISQ devices present a challenge
+to the optimization process. All classical optimizers appear to be very negatively affected by
+the presence of realistic noise. If noise levels are significantly improved, there may be a good
+reason for preferring gradient-based methods in the future, which performed better than the gradient-free
+methods with the only shot-noise present. The gradient-free optimizers, Simultaneous Perturbation
+Stochastic Approximation (SPSA) and Powell's method, and the gradient-based optimizers, AMSGrad
+and BFGS performed the best in the noisy simulation, and appear to be less affected by noise than the
+rest of the methods. SPSA appears to be the best performing method. COBYLA, Nelder-Mead and Conjugate-Gradient
+methods appear to be the most heavily affected by noise, with even slight noise levels significantly
+impacting their performance. 

@@ -1,0 +1,19 @@
+Hexahedral meshes are an ubiquitous domain for the numerical resolution of partial differential
+equations. Computing a pure hexahedral mesh from an adaptively refined grid is a prominent approach
+to automatic hexmeshing, and requires the ability to restore the all hex property around the hanging
+nodes that arise at the interface between cells having different size. The most advanced tools to
+accomplish this task are based on mesh dualization. These approaches use topological schemes to
+regularize the valence of inner vertices and edges, such that dualizing the grid yields a pure hexahedral
+mesh. In this paper we study in detail the dual approach, and propose four main contributions to it:
+(i) we enumerate all the possible transitions that dual methods must be able to handle, showing that
+prior schemes do not natively cover all of them; (ii) we show that schemes are internally asymmetric,
+therefore not only their implementation is ambiguous, but different implementation choices lead
+to hexahedral meshes with different singular structure; (iii) we explore the combinatorial space
+of dual schemes, selecting the minimum set that covers all the possible configurations and also
+yields the simplest singular structure in the output hexmesh; (iv) we enlarge the class of adaptive
+grids that can be transformed into pure hexahedral meshes, relaxing one of the tight requirements
+imposed by previous approaches, and ultimately permitting to obtain much coarser meshes for same
+geometric accuracy. Last but not least, for the first time we make grid-based hexmeshing truly reproducible,
+releasing our code and also revealing a conspicuous amount of technical details that were always
+overlooked in previous literature, creating an entry barrier that was hard to overcome for practitioners
+in the field. 

@@ -1,0 +1,20 @@
+Chest x-rays are one of the most commonly performed medical investigations globally and are vital
+to identifying a number of conditions. These images are however protected under patient confidentiality
+and as such require the removal of identifying information as well as ethical clearance to be released.
+Generative adversarial networks (GANs) are a branch of deep learning which are capable of producing
+synthetic samples of a desired distribution. Image generation is one such application with recent
+advances enabling the production of high-resolution images, a feature vital to the utility of x-rays
+given the scale of various pathologies. We apply the Progressive Growing GAN (PGGAN) to the task
+of chest x-ray generation with the goal of being able to produce images without any ethical concerns
+that may be used for medical education or in other machine learning work. We evaluate the properties
+of the generated x-rays with a practicing radiologist and demonstrate that high-quality, realistic
+images can be produced with global features consistent with pathologies seen in the NIH dataset.
+Improvements in the reproduction of small-scale details remains for future work. We train a classification
+model on the NIH images and evaluate the distribution of disease labels across the generated samples.
+We find that the model is capable of reproducing all the abnormalities in a similar proportion to
+the source image distribution as labelled by the classifier. We additionally demonstrate that
+the latent space can be optimised to produce images of a particular class despite unconditional
+training, with the model producing related features and complications for the class of interest.
+We also validate the application of the Fr'echet Inception Distance (FID) to x-ray images and determine
+that the PGGAN reproduces x-ray images with an FID of 8.02, which is similar to other high resolution
+tasks. 

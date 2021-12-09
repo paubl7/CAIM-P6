@@ -1,0 +1,18 @@
+We study the task of selecting $k$ nodes in a social network of size $n$, to seed a diffusion with maximum
+expected spread size, under the independent cascade model with cascade probability $p$. Most of
+the previous work on this problem (known as influence maximization) focuses on efficient algorithms
+to approximate the optimal seed set with provable guarantees, given the knowledge of the entire
+network. However, in practice, obtaining full knowledge of the network is very costly. To address
+this gap, we first study the achievable guarantees using $o(n)$ influence samples. We provide an
+approximation algorithm with a tight $(1-1/e){\mbox{OPT}}-\epsilon n$ guarantee, using $O_{\epsilon}(k^2\log
+n)$ influence samples and show that this dependence on $k$ is asymptotically optimal. We then propose
+a probing algorithm that queries ${O}_{\epsilon}(p n^2\log^4 n + \sqrt{k p} n^{1.5}\log^{5.5}
+n + k n\log^{3.5}{n})$ edges from the graph and use them to find a seed set with the same almost tight
+approximation guarantee. We also provide a matching (up to logarithmic factors) lower-bound on
+the required number of edges. To address the dependence of our probing algorithm on the independent
+cascade probability $p$, we show that it is impossible to maintain the same approximation guarantees
+by controlling the discrepancy between the probing and seeding cascade probabilities. Instead,
+we propose to down-sample the probed edges to match the seeding cascade probability, provided that
+it does not exceed that of probing. Finally, we test our algorithms on real world data to quantify
+the trade-off between the cost of obtaining more refined network information and the benefit of
+the added information for guiding improved seeding strategies. 
