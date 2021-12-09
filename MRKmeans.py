@@ -91,7 +91,7 @@ if __name__ == '__main__':
                 protoFile.write(aux + '\r\n')
             protoFile.close()
 
-        print("Time= %f seconds" % {(time.time() - tinit)})
+        print(f"Time= {(time.time() - tinit)} seconds")
 
         if nomove:  # If there is no changes in two consecutive iteration we can stop
             print("Algorithm converged")
