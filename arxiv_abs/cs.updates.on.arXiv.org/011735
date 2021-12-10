@@ -1,0 +1,19 @@
+Random Fourier features enable researchers to build feature map to learn the spectral distribution
+of the underlying kernel. Current distribution-based methods follow a two-stage scheme: they
+first learn and optimize the feature map by solving the kernel alignment problem, then learn a linear
+classifier on the features. However, since the ideal kernel in kernel alignment problem is not necessarily
+optimal in classification tasks, the generalization performance of the random features learned
+in this two-stage manner can perhaps be further improved. To address this issue, we propose an end-to-end,
+one-stage kernel learning approach, called generative random Fourier features, which jointly
+learns the features and the classifier. A generative network is involved to implicitly learn and
+to sample from the distribution of the latent kernel. Random features are then built via the generative
+weights and followed by a linear classifier parameterized as a full-connected layer. We jointly
+train the generative network and the classifier by solving the empirical risk minimization problem
+for a one-stage solution. Straightly minimizing the loss between predictive and true labels brings
+better generalization performance. Besides, this end-to-end strategy allows us to increase the
+depth of features, resulting in multi-layer architecture and exhibiting strong linear-separable
+pattern. Empirical results demonstrate the superiority of our method in classification tasks
+over other two-stage kernel learning methods. Finally, we investigate the robustness of proposed
+method in defending adversarial attacks, which shows that the randomization and resampling mechanism
+associated with the learned distribution can alleviate the performance decrease brought by adversarial
+examples. 

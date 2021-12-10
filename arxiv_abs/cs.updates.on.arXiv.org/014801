@@ -1,0 +1,19 @@
+In this work we study the quantum security of public key encryption schemes (PKE). Boneh and Zhandry
+(CRYPTO'13) initiated this research area for PKE and symmetric key encryption (SKE), albeit restricted
+to a classical indistinguishability phase. Gagliardoni et al. (CRYPTO'16) advanced the study
+of quantum security by giving, for SKE, the first definition with a quantum indistinguishability
+phase. For PKE, on the other hand, no notion of quantum security with a quantum indistinguishability
+phase exists. Our main result is a novel quantum security notion (qINDqCPA) for PKE with a quantum
+indistinguishability phase, which closes the aforementioned gap. We show a distinguishing attack
+against code-based schemes and against LWE-based schemes with certain parameters. We also show
+that the canonical hybrid PKE-SKE encryption construction is secure, even if the underlying PKE
+scheme by itself is not. Finally, we classify quantum-resistant PKE schemes based on the applicability
+of our security notion and discuss concurrent and independent work. Our core idea follows the approach
+of Gagliardoni et al. by using so-called type-2 operators for encrypting the challenge message.
+At first glance, type-2 operators appear unnatural for PKE, as the canonical way of building them
+requires both the secret and the public key. However, we identify a class of PKE schemes - which we
+call recoverable - and show that for this class type-2 operators require merely the public key. Moreover,
+recoverable schemes allow to realise type-2 operators even if they suffer from decryption failures,
+which in general thwarts the reversibility mandated by type-2 operators. Our work reveals that
+many real-world quantum-resistant PKE schemes, including most NIST PQC candidates and the canonical
+hybrid construction, are indeed recoverable. 

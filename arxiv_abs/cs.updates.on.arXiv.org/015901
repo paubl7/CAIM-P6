@@ -1,0 +1,20 @@
+Since the introduction of the CDC 6600 in 1965 and its `scoreboarding' technique processors have
+not (necessarily) executed instructions in program order. Programmers of high-level code may
+sequence independent instructions in arbitrary order, and it is a matter of significant programming
+abstraction and computational efficiency that the processor can be relied upon to make sensible
+parallelizations/reorderings of low-level instructions to take advantage of, eg., multiple
+ALUs. At the architectural level such reordering is typically implemented via a per-processor
+pipeline, into which instructions are fetched in order, but possibly committed out of order depending
+on local considerations, provided any reordering preserves sequential semantics from that processor's
+perspective. However multicore architectures, where several pipelines run in parallel, can expose
+these processor-level reorderings as unexpected, or `weak', behaviours. Such weak behaviours
+are hard to reason about, and (via speculative execution) underlie at least one class of widespread
+security vulnerability. In this paper we introduce a novel program operator, \emph{parallelized
+sequential composition}, which can be instantiated with a function that controls the reordering
+of atomic instructions. It generalises both sequential and parallel composition, and when appropriately
+instantiated exhibits many of the weak behaviours of well-known hardware weak memory models. Our
+framework admits the application of established compositional techniques (eg. Owicki-Gries)
+for reasoning about weak behaviours, and is convenient for abstractly expressing properties from
+the literature. The semantics and theory is encoded and verified in a theorem prover, and we give
+an implementation of the pipeline semantics which we use to empirically show conformance against
+established models of ARM and RISC-V. 

@@ -1,0 +1,20 @@
+Graphs have been widely used to represent complex data in many applications. Efficient and effective
+analysis of graphs is important for graph-based applications. However, most graph analysis tasks
+are combinatorial optimization (CO) problems, which are NP-hard. Recent studies have focused
+a lot on the potential of using machine learning (ML) to solve graph-based CO problems. Most recent
+methods follow the two-stage framework. The first stage is graph representation learning, which
+embeds the graphs into low-dimension vectors. The second stage uses ML to solve the CO problems using
+the embeddings of the graphs learned in the first stage. The works for the first stage can be classified
+into two categories, graph embedding (GE) methods and end-to-end (E2E) learning methods. For GE
+methods, learning graph embedding has its own objective, which may not rely on the CO problems to
+be solved. The CO problems are solved by independent downstream tasks. For E2E learning methods,
+the learning of graph embeddings does not have its own objective and is an intermediate step of the
+learning procedure of solving the CO problems. The works for the second stage can also be classified
+into two categories, non-autoregressive methods and autoregressive methods. Non-autoregressive
+methods predict a solution for a CO problem in one shot. A non-autoregressive method predicts a matrix
+that denotes the probability of each node/edge being a part of a solution of the CO problem. The solution
+can be computed from the matrix. Autoregressive methods iteratively extend a partial solution
+step by step. At each step, an autoregressive method predicts a node/edge conditioned to current
+partial solution, which is used to its extension. In this survey, we provide a thorough overview
+of recent studies of the graph learning-based CO methods. The survey ends with several remarks on
+future research directions. 

@@ -1,0 +1,18 @@
+The binary-forking model is a parallel computation model, formally defined by Blelloch et al. very
+recently, in which a thread can fork a concurrent child thread, recursively and asynchronously.
+The model incurs a cost of $\Theta(\log n)$ to spawn or synchronize $n$ tasks or threads. The binary-forking
+model realistically captures the performance of parallel algorithms implemented using modern
+multithreaded programming languages on multicore shared-memory machines. In contrast, the widely
+studied theoretical PRAM model does not consider the cost of spawning and synchronizing threads,
+and as a result, algorithms achieving optimal performance bounds in the PRAM model may not be optimal
+in the binary-forking model. Often, algorithms need to be redesigned to achieve optimal performance
+bounds in the binary-forking model and the non-constant synchronization cost makes the task challenging.
+Though the binary-forking model allows the use of atomic {\em test-and-set} (TS) instructions
+to reduce some synchronization overhead, assuming the availability of such instructions puts
+a stronger requirement on the hardware and may limit the portability of the algorithms using them.
+In this paper, we avoid the use of locks and atomic instructions in our algorithms except possibly
+inside the join operation which is implemented by the runtime system. In this paper, we design efficient
+parallel algorithms in the binary-forking model without atomics for three fundamental problems:
+Strassen's (and Strassen-like) matrix multiplication (MM), comparison-based sorting, and the
+Fast Fourier Transform (FFT). All our results improve over known results for the corresponding
+problem in the binary-forking model both with and without atomics. 

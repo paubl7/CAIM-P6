@@ -1,0 +1,18 @@
+The concept of tumor field effect implies that cancer is a systemic disease with its impact way beyond
+the visible tumor confines. For instance, in Glioblastoma (GBM), an aggressive brain tumor, the
+increase in intracranial pressure due to tumor burden often leads to brain herniation and poor outcomes.
+Our work is based on the rationale that highly aggressive tumors tend to grow uncontrollably, leading
+to pronounced biomechanical tissue deformations in the normal parenchyma, which when combined
+with local morphological differences in the tumor confines on MRI scans, will comprehensively
+capture tumor field effect. Specifically, we present an integrated MRI-based descriptor, radiomic-Deformation
+and Textural Heterogeneity (r-DepTH). This descriptor comprises measurements of the subtle perturbations
+in tissue deformations throughout the surrounding normal parenchyma due to mass effect. This involves
+non-rigidly aligning the patients MRI scans to a healthy atlas via diffeomorphic registration.
+The resulting inverse mapping is used to obtain the deformation field magnitudes in the normal parenchyma.
+These measurements are then combined with a 3D texture descriptor, Co-occurrence of Local Anisotropic
+Gradient Orientations (COLLAGE), which captures the morphological heterogeneity within the
+tumor confines, on MRI scans. R-DepTH, on N = 207 GBM cases (training set (St) = 128, testing set (Sv)
+= 79), demonstrated improved prognosis of overall survival by categorizing patients into low-
+(prolonged survival) and high-risk (poor survival) groups (on St, p-value = 0.0000035, and on Sv,
+p-value = 0.0024). R-DepTH descriptor may serve as a comprehensive MRI-based prognostic marker
+of disease aggressiveness and survival in solid tumors. 

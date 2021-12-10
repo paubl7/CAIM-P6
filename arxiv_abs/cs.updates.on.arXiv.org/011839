@@ -1,0 +1,18 @@
+We provide new algorithms for maintaining approximate distances in a weighted undirected graph
+$G = (V, E)$ subject to edge deletions. Our first result is an algorithm that maintains $(1+\epsilon)$-approximate
+distances from a set of $s$ sources in $\tilde{O}(sm)$ total update time, assuming that $s= n^{\Omega(1)}$,
+$\epsilon = \Omega(1)$ and $|E|= n^{1+\Omega(1)}$. This matches the best known static algorithm,
+up to polylogarithmic factors for a wide range of settings. The currently best known algorithm for
+the problem is obtained by running the single-source algorithm of [Henzinger, Krinninger and Nanongkai,
+FOCS'14] independently from each source. Our result improves over the update time bound of this
+solution by removing a $2^{\tilde{O}(\log^{3/4} n)}$ factor. Additionally, we can maintain a
+$(1+\epsilon)$-approximate single-source shortest paths with amortized update time of $2^{\tilde{O}(\sqrt{\log
+n})}$, when $0< \epsilon<1$ is a constant and $|E|= n2^{\tilde{\Omega}(\sqrt{\log n})}$. This
+improves over the best known update time of $2^{\tilde{O}(\log^{3/4} n)}$ by [Henzinger, Krinninger
+and Nanongkai, FOCS'14]. Furthermore, for any integer $k \geq 1$ we give an algorithm for maintaining
+$(2k-1)(1+\epsilon)$-approximate all-pairs-shortest-paths, in $\tilde{O}(mn^{1/k})$ total
+update time and $O(k)$ query time\footnote{Throughout this paper we use the notation $\tilde{O}(f(n))$
+to hide factors of $O(\text{polylog } (f(n)))$.}. This improves over the result of [Chechik, FOCS'18]
+in a twofold way. Namely, we improve the total update time bound by removing an $n^{o(1)}$ factor
+and reduce the query time from $O(\log \log (nW))$ to $O(k)$. Our results are based on a new decremental
+hopset construction that may be of independent interest. 

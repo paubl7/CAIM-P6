@@ -1,0 +1,18 @@
+We investigate privacy-preserving, video-based action recognition in deep learning, a problem
+with growing importance in smart camera applications. A novel adversarial training framework
+is formulated to learn an anonymization transform for input videos such that the trade-off between
+target utility task performance and the associated privacy budgets is explicitly optimized on
+the anonymized videos. Notably, the privacy budget, often defined and measured in task-driven
+contexts, cannot be reliably indicated using any single model performance because strong protection
+of privacy should sustain against any malicious model that tries to steal private information.
+To tackle this problem, we propose two new optimization strategies of model restarting and model
+ensemble to achieve stronger universal privacy protection against any attacker models. Extensive
+experiments have been carried out and analyzed. On the other hand, given few public datasets available
+with both utility and privacy labels, the data-driven (supervised) learning cannot exert its full
+power on this task. We first discuss an innovative heuristic of cross-dataset training and evaluation,
+enabling the use of multiple single-task datasets (one with target task labels and the other with
+privacy labels) in our problem. To further address this dataset challenge, we have constructed
+a new dataset, termed PA-HMDB51, with both target task labels (action) and selected privacy attributes
+(gender, age, race, nudity, and relationship) annotated on a per-frame basis. This first-of-its-kind
+video dataset and evaluation protocol can greatly facilitate visual privacy research and open
+up other opportunities. Our codes, models, and the PA-HMDB51 dataset are available at: https://github.com/VITA-Group/PA-HMDB51.

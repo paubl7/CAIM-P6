@@ -1,0 +1,19 @@
+A promising approach to useful computational quantum advantage is to use variational quantum algorithms
+for optimisation problems. Crucial for the performance of these algorithms is to ensure that the
+algorithm converges with high probability to a near-optimal solution in a small time. In Barkoutsos
+et al (Quantum 2020) an alternative class of objective functions, called Conditional Value-at-Risk
+(CVaR), was introduced and it was shown that they perform better than standard objective functions.
+Here we extend that work by introducing an evolving objective function, which we call Ascending-CVaR
+and that can be used for any optimisation problem. We test our proposed objective function, in an
+emulation environment, using as case-studies three different optimisation problems: Max-Cut,
+Number Partitioning and Portfolio Optimisation. We examine multiple instances of different sizes
+and analyse the performance using the Variational Quantum Eigensolver (VQE) with hardware-efficient
+ansatz and the Quantum Approximate Optimization Algorithm (QAOA). We show that Ascending-CVaR
+in all cases performs better than standard objective functions or the "constant" CVaR of Barkoutsos
+et al (Quantum 2020) and that it can be used as a heuristic for avoiding sub-optimal minima. Our proposal
+achieves higher overlap with the ideal state in all problems, whether we consider easy or hard instances
+-- on average it gives up to ten times greater overlap at Portfolio Optimisation and Number Partitioning,
+while it gives an 80% improvement at Max-Cut. In the hard instances we consider, for the number partitioning
+problem, standard objective functions fail to find the correct solution in almost all cases, CVaR
+finds the correct solution at 60% of the cases, while Ascending-CVaR finds the correct solution
+in 95% of the cases. 

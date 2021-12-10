@@ -1,0 +1,18 @@
+This paper proposes a method to navigate a mobile robot by estimating its state over a number of distributed
+sensor networks (DSNs) such that it can successively accomplish a sequence of tasks, i.e., its state
+enters each targeted set and stays inside no less than the desired time, under a resource-aware,
+time-efficient, and computation- and communication-constrained setting.We propose a new robot
+state estimation and navigation architecture, which integrates an event-triggered task-switching
+feedback controller for the robot and a two-time-scale distributed state estimator for each sensor.
+The architecture has three major advantages over existing approaches: First, in each task only
+one DSN is active for sensing and estimating the robot state, and for different tasks the robot can
+switch the active DSN by taking resource saving and system performance into account; Second, the
+robot only needs to communicate with one active sensor at each time to obtain its state information
+from the active DSN; Third, no online optimization is required. With the controller, the robot is
+able to accomplish a task by following a reference trajectory and switch to the next task when an event-triggered
+condition is fulfilled. With the estimator, each active sensor is able to estimate the robot state.
+Under proper conditions, we prove that the state estimation error and the trajectory tracking deviation
+are upper bounded by two time-varying sequences respectively, which play an essential role in the
+event-triggered condition. Furthermore, we find a sufficient condition for accomplishing a task
+and provide an upper bound of running time for the task. Numerical simulations of an indoor robot's
+localization and navigation are provided to validate the proposed architecture. 

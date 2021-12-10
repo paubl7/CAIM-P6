@@ -1,0 +1,19 @@
+Deep Convolutional Neural Networks (DCNNs) are hard and time-consuming to train. Normalization
+is one of the effective solutions. Among previous normalization methods, Batch Normalization
+(BN) performs well at medium and large batch sizes and is with good generalizability to multiple
+vision tasks, while its performance degrades significantly at small batch sizes. In this paper,
+we find that BN saturates at extreme large batch sizes, i.e., 128 images per worker, i.e., GPU, as
+well and propose that the degradation/saturation of BN at small/extreme large batch sizes is caused
+by noisy/confused statistic calculation. Hence without adding new trainable parameters, using
+multiple-layer or multi-iteration information, or introducing extra computation, Batch Group
+Normalization (BGN) is proposed to solve the noisy/confused statistic calculation of BN at small/extreme
+large batch sizes with introducing the channel, height and width dimension to compensate. The group
+technique in Group Normalization (GN) is used and a hyper-parameter G is used to control the number
+of feature instances used for statistic calculation, hence to offer neither noisy nor confused
+statistic for different batch sizes. We empirically demonstrate that BGN consistently outperforms
+BN, Instance Normalization (IN), Layer Normalization (LN), GN, and Positional Normalization
+(PN), across a wide spectrum of vision tasks, including image classification, Neural Architecture
+Search (NAS), adversarial learning, Few Shot Learning (FSL) and Unsupervised Domain Adaptation
+(UDA), indicating its good performance, robust stability to batch size and wide generalizability.
+For example, for training ResNet-50 on ImageNet with a batch size of 2, BN achieves Top1 accuracy
+of 66.512% while BGN achieves 76.096% with notable improvement. 

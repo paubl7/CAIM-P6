@@ -1,0 +1,20 @@
+High-order accurate summation-by-parts (SBP) finite difference (FD) methods constitute efficient
+numerical methods for simulating large-scale hyperbolic wave propagation problems. Traditional
+SBP FD operators that approximate first-order spatial derivatives with central-difference stencils
+often have spurious unresolved numerical wave-modes in their computed solutions. Recently derived
+high order accurate upwind SBP operators based upwind FD stencils have the potential to suppress
+these poisonous spurious wave-modes on marginally resolved computational grids. In this paper,
+we demonstrate that not all high order upwind SBP FD operators are applicable. Numerical dispersion
+relation analysis shows that odd-order upwind SBP FD operators also support spurious unresolved
+high-frequencies on marginally resolved meshes. Meanwhile, even-order upwind SBP FD operators
+(of order 2, 4, 6) do not support spurious unresolved high frequency wave modes and also have better
+numerical dispersion properties. We discretise the three space dimensional (3D) elastic wave
+equation on boundary-conforming curvilinear meshes. Using the energy method we prove that the
+semi-discrete approximation is stable and energy-conserving. We derive a priori error estimate
+and prove the convergence of the numerical error. Numerical experiments for the 3D elastic wave
+equation in complex geometries corroborate the theoretical analysis. Numerical simulations
+of the 3D elastic wave equation in heterogeneous media with complex non-planar free surface topography
+are given, including numerical simulations of community developed seismological benchmark problems.
+Computational results show that even-order upwind SBP FD operators are more efficient, robust
+and less prone to numerical dispersion errors on marginally resolved meshes when compared to the
+odd-order upwind and traditional SBP FD operators. 

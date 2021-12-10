@@ -1,0 +1,19 @@
+The global average treatment effect (GATE) is a primary quantity of interest in the study of causal
+inference under network interference. With a correctly specified exposure model of the interference,
+the Horvitz-Thompson (HT) and H\'ajek estimators of the GATE are unbiased and consistent, respectively,
+yet known to exhibit extreme variance under many designs and in many settings of interest. With a
+fixed clustering of the interference graph, graph cluster randomization (GCR) designs have been
+shown to greatly reduce variance compared to node-level random assignment, but even so the variance
+is still often prohibitively large. In this work we propose a randomized version of the GCR design,
+descriptively named randomized graph cluster randomization (RGCR), which uses a random clustering
+rather than a single fixed clustering. By considering an ensemble of many different cluster assignments,
+this design avoids a key problem with GCR where a given node is sometimes "lucky" or "unlucky" in a
+given clustering. We propose two randomized graph decomposition algorithms for use with RGCR,
+randomized 3-net and 1-hop-max, adapted from prior work on multiway graph cut problems. When integrating
+over their own randomness, these algorithms furnish network exposure probabilities that can be
+estimated efficiently. We develop upper bounds on the variance of the HT estimator of the GATE under
+assumptions on the metric structure of the interference graph. Where the best known variance upper
+bound for the HT estimator under a GCR design is exponential in the parameters of the metric structure,
+we give a comparable variance upper bound under RGCR that is instead polynomial in the same parameters.
+We provide extensive simulations comparing RGCR and GCR designs, observing substantial reductions
+in the mean squared error for both HT and H\'ajek estimators of the GATE in a variety of settings. 

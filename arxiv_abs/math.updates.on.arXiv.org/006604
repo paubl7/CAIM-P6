@@ -1,0 +1,20 @@
+We consider a class of constrained multi-agent optimization problems where the goal is to cooperatively
+minimize a sum of agent-specific nondifferentiable merely convex functions. The constraint set
+is characterized as a variational inequality (VI) problem where each agent is associated with a
+local monotone mapping. We first discuss how the proposed formulation can be employed in addressing
+several important classes of distributed optimization problems, including those subject to complementarity
+constraints, nonlinear equality constraints, and equilibrium constraints. Our main contributions
+are as follows: (i) We develop an iteratively regularized incremental gradient method where at
+each iteration, agents communicate over a cycle graph to update their solution iterates using their
+local information about the objective and the mapping. The proposed method is single-timescale
+in the sense that it does not involve any excessive hard-to-project computation per iteration.
+(ii) We derive non-asymptotic agent-wise convergence rates for the suboptimality of the global
+objective function and infeasibility of the VI constraints measured by a suitably defined dual
+gap function. (iii) To analyze the convergence rate in the solution space, assuming the objective
+function is strongly convex and smooth, we derive non-asymptotic agent-wise rates on an error metric
+that relates the generated iterates with the Tikhonov trajectory. The proposed method appears
+to be the first fully iterative scheme equipped with iteration complexity that can address distributed
+optimization problems with VI constraints. We provide preliminary numerical experiments for
+computing the best equilibrium in a transportation network problem. We also compare the performance
+of the proposed scheme with that of the existing incremental gradient methods in addressing constrained
+finite-sum problems. 

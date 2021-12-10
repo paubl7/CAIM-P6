@@ -1,0 +1,19 @@
+The noise in daily infection counts of an epidemic should be super-Poissonian due to intrinsic epidemiological
+and administrative clustering. Here, we use this clustering to classify the official national
+SARS-CoV-2 daily infection counts and check for infection counts that are unusually anti-clustered.
+We adopt a one-parameter model of $\phi'_i$ infections per cluster, dividing any daily count $n_i$
+into $n_i/\phi'_i$ 'clusters', for 'country' $i$. We assume that $n_i/\phi'_i$ on a given day $j$
+is drawn from a Poisson distribution whose mean is robustly estimated from the four neighbouring
+days, and calculate the inferred Poisson probability $P'_{ij}$ of the observation. The $P'_{ij}$
+values should be uniformly distributed. We find the value $\phi_i$ that minimises the Kolmogorov-Smirnov
+distance from a uniform distribution. We investigate the $(\phi_i, N_i)$ distribution, for total
+infection count $N_i$. We find that most of the daily infection count sequences are inconsistent
+with a Poissonian model. Most are found to be consistent with the $\phi_i$ model. The 28-, 14- and
+7-day least noisy sequences for several countries are best modelled as sub-Poissonian, suggesting
+a distinct epidemiological family. The 28-day least noisy sequence of Algeria has a preferred model
+that is strongly sub-Poissonian, with $\phi_i^{28} < 0.1$. TJ, TR, RU, BY, AL, AE, and NI have preferred
+models that are also sub-Poissonian, with $\phi_i^{28} < 0.5$. A statistically significant ($P^{\tau}
+< 0.05$) correlation was found between the lack of media freedom in a country, as represented by a
+high Reporters sans frontieres Press Freedom Index (PFI$^{2020}$), and the lack of statistical
+noise in the country's daily counts. The $\phi_i$ model appears to be an effective detector of suspiciously
+low statistical noise in the national SARS-CoV-2 daily infection counts. 

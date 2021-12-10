@@ -1,0 +1,20 @@
+Effective transperineal ultrasound image guidance in prostate external beam radiotherapy requires
+consistent alignment between probe and prostate at each session during patient set-up. Probe placement
+and ultrasound image inter-pretation are manual tasks contingent upon operator skill, leading
+to interoperator uncertainties that degrade radiotherapy precision. We demonstrate a method
+for ensuring accurate probe placement through joint classification of images and probe position
+data. Using a multi-input multi-task algorithm, spatial coordinate data from an optically tracked
+ultrasound probe is combined with an image clas-sifier using a recurrent neural network to generate
+two sets of predictions in real-time. The first set identifies relevant prostate anatomy visible
+in the field of view using the classes: outside prostate, prostate periphery, prostate centre.
+The second set recommends a probe angular adjustment to achieve alignment between the probe and
+prostate centre with the classes: move left, move right, stop. The algo-rithm was trained and tested
+on 9,743 clinical images from 61 treatment sessions across 32 patients. We evaluated classification
+accuracy against class labels de-rived from three experienced observers at 2/3 and 3/3 agreement
+thresholds. For images with unanimous consensus between observers, anatomical classification
+accuracy was 97.2% and probe adjustment accuracy was 94.9%. The algorithm identified optimal probe
+alignment within a mean (standard deviation) range of 3.7$^{\circ}$ (1.2$^{\circ}$) from angle
+labels with full observer consensus, comparable to the 2.8$^{\circ}$ (2.6$^{\circ}$) mean interobserver
+range. We propose such an algorithm could assist ra-diotherapy practitioners with limited experience
+of ultrasound image interpreta-tion by providing effective real-time feedback during patient
+set-up. 

@@ -1,0 +1,19 @@
+Recent trend demonstrates the effectiveness of deep neural networks (DNNs) apply on the task of
+environment perception in autonomous driving system. While large-scale and complete data can
+train out fine DNNs, collecting it is always difficult, expensive, and time-consuming. Also, the
+significance of both accuracy and efficiency cannot be over-emphasized due to the requirement
+of real-time recognition. To alleviate the conflicts between weak data and high computational
+consumption of DNNs, we propose a new training framework named Spirit Distillation(SD). It extends
+the ideas of fine-tuning-based transfer learning(FTT) and feature-based knowledge distillation.
+By allowing the student to mimic its teacher in feature extraction, the gap of general features between
+the teacher-student networks is bridged. The Image Party distillation enhancement method(IP)
+is also proposed, which shuffling images from various domains, and randomly selecting a few as mini-batch.
+With this approach, the overfitting that the student network to the general features of the teacher
+network can be easily avoided. Persuasive experiments and discussions are conducted on CityScapes
+with the prompt of COCO2017 and KITTI. Results demonstrate the boosting performance in segmentation(mIOU
+and high-precision accuracy boost by 1.4% and 8.2% respectively, with 78.2% output variance),
+and can gain a precise compact network with only 41.8\% FLOPs(see Fig. 1). This paper is a pioneering
+work on knowledge distillation applied to few-shot learning. The proposed methods significantly
+reduce the dependence on data of DNNs training, and improves the robustness of DNNs when facing rare
+situations, with real-time requirement satisfied. We provide important technical support for
+the advancement of scene perception technology for autonomous driving. 

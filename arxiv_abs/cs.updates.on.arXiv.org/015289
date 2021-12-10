@@ -1,0 +1,19 @@
+Conventionally, random forests are built from "greedy" decision trees which each consider only
+one split at a time during their construction. The sub-optimality of greedy implementation has
+been well-known, yet mainstream adoption of more sophisticated tree building algorithms has been
+lacking. We examine under what circumstances an implementation of less greedy decision trees actually
+yields outperformance. To this end, a "stepwise lookahead" variation of the random forest algorithm
+is presented for its ability to better uncover binary feature interdependencies. In contrast to
+the greedy approach, the decision trees included in this random forest algorithm, each simultaneously
+consider three split nodes in tiers of depth two. It is demonstrated on synthetic data and financial
+price time series that the lookahead version significantly outperforms the greedy one when (a)
+certain non-linear relationships between feature-pairs are present and (b) if the signal-to-noise
+ratio is particularly low. A long-short trading strategy for copper futures is then backtested
+by training both greedy and stepwise lookahead random forests to predict the signs of daily price
+returns. The resulting superior performance of the lookahead algorithm is at least partially explained
+by the presence of "XOR-like" relationships between long-term and short-term technical indicators.
+More generally, across all examined datasets, when no such relationships between features are
+present, performance across random forests is similar. Given its enhanced ability to understand
+the feature-interdependencies present in complex systems, this lookahead variation is a useful
+extension to the toolkit of data scientists, in particular for financial machine learning, where
+conditions (a) and (b) are typically met. 

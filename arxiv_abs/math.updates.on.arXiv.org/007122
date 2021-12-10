@@ -1,0 +1,20 @@
+In this paper, we propose a novel accelerated gradient method called ANITA for solving the fundamental
+finite-sum optimization problems. Concretely, we consider both general convex and strongly convex
+settings: i) For general convex finite-sum problems, ANITA improves previous state-of-the-art
+result given by Varag (Lan et al., 2019). In particular, for large-scale problems or the target error
+is not very small, i.e., $n \geq \frac{1}{\epsilon^2}$, ANITA obtains the \emph{first} optimal
+result $O(n)$, matching the lower bound $\Omega(n)$ provided by Woodworth and Srebro (2016), while
+previous results are $O(n \log \frac{1}{\epsilon})$ of Varag (Lan et al., 2019) and $O(\frac{n}{\sqrt{\epsilon}})$
+of Katyusha (Allen-Zhu, 2017). ii) For strongly convex finite-sum problems, we also show that ANITA
+can achieve the optimal convergence rate $O\big((n+\sqrt{\frac{nL}{\mu}})\log\frac{1}{\epsilon}\big)$
+matching the lower bound $\Omega\big((n+\sqrt{\frac{nL}{\mu}})\log\frac{1}{\epsilon}\big)$
+provided by Lan and Zhou (2015). Besides, ANITA enjoys a simpler loopless algorithmic structure
+unlike previous accelerated algorithms such as Varag (Lan et al., 2019) and Katyusha (Allen-Zhu,
+2017) where they use an inconvenient double-loop structure. Moreover, by exploiting the loopless
+structure of ANITA, we provide a new \emph{dynamic multi-stage convergence analysis}, which is
+the key technical part for improving previous results to the optimal rates. Finally, the numerical
+experiments show that ANITA converges faster than the previous state-of-the-art Varag (Lan et
+al., 2019), validating our theoretical results and confirming the practical superiority of ANITA.
+We believe that our new theoretical rates and convergence analysis for this fundamental finite-sum
+problem will directly lead to key improvements for many other related problems, such as distributed/federated/decentralized
+optimization problems. 

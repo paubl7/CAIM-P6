@@ -1,0 +1,18 @@
+The most studied linear algebraic operation, matrix multiplication, has surprisingly fast $O(n^\omega)$
+time algorithms for $\omega<2.373$. On the other hand, the $(\min,+)$ matrix product which is at
+the heart of many fundamental graph problems such as APSP, has received only minor improvements
+over its brute-force cubic running time and is widely conjectured to require $n^{3-o(1)}$ time.
+There is a plethora of matrix products and graph problems whose complexity seems to lie in the middle
+of these two problems. For instance, the Min-Max matrix product, the Minimum Witness matrix product,
+APSP in directed unweighted graphs and determining whether an edge-colored graph contains a monochromatic
+triangle, can all be solved in $\tilde O(n^{(3+\omega)/2})$ time. A similar phenomenon occurs
+for convolution problems, where analogous intermediate problems can be solved in $\tilde O(n^{1.5})$
+time. Can one improve upon the running times for these intermediate problems, in either the matrix
+product or the convolution world? Or, alternatively, can one relate these problems to each other
+and to other key problems in a meaningful way? This paper makes progress on these questions by providing
+a network of fine-grained reductions. We show for instance that APSP in directed unweighted graphs
+and Minimum Witness product can be reduced to both the Min-Max product and a variant of the monochromatic
+triangle problem. We also show that a natural convolution variant of monochromatic triangle is
+fine-grained equivalent to the famous 3SUM problem. As this variant is solvable in $O(n^{1.5})$
+time and 3SUM is in $O(n^2)$ time (and is conjectured to require $n^{2-o(1)}$ time), our result gives
+the first fine-grained equivalence between natural problems of different running times. 

@@ -1,0 +1,20 @@
+In this paper we introduce a method called Dirac Assisted Tree (DAT), which can handle heterogeneous
+Helmholtz equations with arbitrarily large variable wave numbers. DAT breaks an original global
+problem into many parallel tree-structured small local problems, which can be effectively solved.
+All such local solutions are then linked together to form a global solution by solving small Dirac
+assisted linking problems with an inherent tree structure. DAT is embedded with the following attractive
+features: domain decomposition for reducing the problem size, tree structure and tridiagonal
+matrices for computational efficiency, and adaptivity for further improved performance. In order
+to solve the local problems in DAT, we shall propose a compact finite difference scheme with arbitrarily
+high accuracy order and low numerical dispersion for piecewise smooth coefficients and variable
+wave numbers. Such schemes are particularly appealing for DAT, because the local problems and their
+fluxes in DAT can be computed with high accuracy. With the aid of such high-order compact finite difference
+schemes, DAT can solve heterogeneous Helmholtz equations with arbitrarily large variable wave
+numbers accurately by solving small linear systems - 4 by 4 matrices in the extreme case - with tridiagonal
+coefficient matrices in a parallel fashion. Several examples will be provided to illustrate the
+effectiveness of DAT and compact finite difference schemes in numerically solving heterogeneous
+Helmholtz equations with variable wave numbers. We shall also discuss how to solve some special
+two-dimensional Helmholtz equations using DAT developed for one-dimensional problems. As demonstrated
+in all our numerical experiments, the convergence rates of DAT measured in relative $L_2$, $L_\infty$
+and $H^1$ energy norms as a result of using our M-th order compact finite difference scheme are of
+order M. 

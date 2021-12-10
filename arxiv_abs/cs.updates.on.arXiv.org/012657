@@ -1,0 +1,18 @@
+In multiple-choice data structures each element $x$ in a set $S$ of $m$ keys is associated with a random
+set $e(x) \subseteq [n]$ of buckets with capacity $\ell \geq 1$ by hash functions. This setting is
+captured by the hypergraph $H = ([n],\{e(x) \mid x \in S\})$. Accomodating each key in an associated
+bucket amounts to finding an $\ell$-orientation of $H$ assigning to each hyperedge an incident
+vertex such that each vertex is assigned at most $\ell$ hyperedges. If each subhypergraph of $H$
+has minimum degree at most $\ell$, then an $\ell$-orientation can be found greedily and $H$ is called
+$\ell$-peelable. Peelability has a central role in invertible Bloom lookup tables and can speed
+up the construction of retrieval data structures, perfect hash functions and cuckoo hash tables.
+Many hypergraphs exhibit sharp density thresholds with respect to $\ell$-orientability and $\ell$-peelability,
+i.e. as the density $c = \frac{m}{n}$ grows past a critical value, the probability of these properties
+drops from almost $1$ to almost $0$. In fully random $k$-uniform hypergraphs the thresholds $c_{k,\ell}^*$
+for $\ell$-orientability significantly exceed the thresholds for $\ell$-peelability. In this
+paper, for every $k \geq 2$ and $\ell \geq 1$ with $(k,\ell) \neq (2,1)$ and every $z > 0$, we construct
+a new family of random $k$-uniform hypergraphs with i.i.d. random hyperedges such that both the
+$\ell$-peelability and the $\ell$-orientability thresholds approach $c_{k,\ell}^*$ as $z \rightarrow
+\infty$. We exploit the phenomenon of threshold saturation via spatial coupling discovered in
+the context of low-density parity-check codes. Once the connection to data structures is in plain
+sight, a framework by Kudekar, Richardson and Urbanke (2015) does the heavy lifting in our proof.

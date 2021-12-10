@@ -1,0 +1,18 @@
+Over the last few decades, Lung Ultrasound (LUS) has been increasingly used to diagnose and monitor
+different lung diseases in neonates. It is a non invasive tool that allows a fast bedside examination
+while minimally handling the neonate. Acquiring a LUS scan is easy, but understanding the artifacts
+concerned with each respiratory disease is challenging. Mixed artifact patterns found in different
+respiratory diseases may limit LUS readability by the operator. While machine learning (ML), especially
+deep learning can assist in automated analysis, simply feeding the ultrasound images to an ML model
+for diagnosis is not enough to earn the trust of medical professionals. The algorithm should output
+LUS features that are familiar to the operator instead. Therefore, in this paper we present a unique
+approach for extracting seven meaningful LUS features that can be easily associated with a specific
+pathological lung condition: Normal pleura, irregular pleura, thick pleura, Alines, Coalescent
+B-lines, Separate B-lines and Consolidations. These artifacts can lead to early prediction of
+infants developing later respiratory distress symptoms. A single multi-class region proposal-based
+object detection model faster-RCNN (fRCNN) was trained on lower posterior lung ultrasound videos
+to detect these LUS features which are further linked to four common neonatal diseases. Our results
+show that fRCNN surpasses single stage models such as RetinaNet and can successfully detect the
+aforementioned LUS features with a mean average precision of 86.4%. Instead of a fully automatic
+diagnosis from images without any interpretability, detection of such LUS features leave the ultimate
+control of diagnosis to the clinician, which can result in a more trustworthy intelligent system.

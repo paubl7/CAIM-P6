@@ -1,0 +1,20 @@
+The use of Artificial Intelligence (AI) to detect phishing emails is primarily dependent on large-scale
+centralized datasets, which opens it up to a myriad of privacy, trust, and legal issues. Moreover,
+organizations are loathed to share emails, given the risk of leakage of commercially sensitive
+information. So, it is uncommon to obtain sufficient emails to train a global AI model efficiently.
+Accordingly, privacy-preserving distributed and collaborative machine learning, particularly
+Federated Learning (FL), is a desideratum. Already prevalent in the healthcare sector, questions
+remain regarding the effectiveness and efficacy of FL-based phishing detection within the context
+of multi-organization collaborations. To the best of our knowledge, the work herein is the first
+to investigate the use of FL in email anti-phishing. This paper builds upon a deep neural network
+model, particularly RNN and BERT for phishing email detection. It analyzes the FL-entangled learning
+performance under various settings, including balanced and asymmetrical data distribution.
+Our results corroborate comparable performance statistics of FL in phishing email detection to
+centralized learning for balanced datasets, and low organization counts. Moreover, we observe
+a variation in performance when increasing organizational counts. For a fixed total email dataset,
+the global RNN based model suffers by a 1.8% accuracy drop when increasing organizational counts
+from 2 to 10. In contrast, BERT accuracy rises by 0.6% when going from 2 to 5 organizations. However,
+if we allow increasing the overall email dataset with the introduction of new organizations in the
+FL framework, the organizational level performance is improved by achieving a faster convergence
+speed. Besides, FL suffers in its overall global model performance due to highly unstable outputs
+if the email dataset distribution is highly asymmetric. 

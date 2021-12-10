@@ -1,0 +1,20 @@
+Numerical simulation of steady-state heat conduction is common for thermal engineering. The simulation
+process usually involves mathematical formulation, numerical discretization and iteration
+of discretized ordinary or partial differential equations depending on complexity of problems.
+In current work, we develop a data-driven model for extremely fast prediction of steady-state heat
+conduction of a hot object with arbitrary geometry in a two-dimensional space. Mathematically,
+the steady-state heat conduction can be described by the Laplace's equation, where a heat (spatial)
+diffusion term dominates the governing equation. As the intensity of the heat diffusion only depends
+on the gradient of the temperature field, the temperature distribution of the steady-state heat
+conduction displays strong features of locality. Therefore, in current approach the data-driven
+model is developed using convolution neural networks (CNNs), which is good at capturing local features
+(sub-invariant) thus can be treated as numerical discretization in some sense. Furthermore, in
+our model, a signed distance function (SDF) is proposed to represent the geometry of the problem,
+which contains more information compared to a binary image. For the training datasets, the hot objects
+are consisting of five simple geometries: triangles, quadrilaterals, pentagons, hexagons and
+dodecagons. All the geometries are different in size, shape, orientation and location. After training,
+the data-driven network model is able to accurately predict steady-state heat conduction of hot
+objects with complex geometries which has never been seen by the network model; and the prediction
+speed is three to four orders faster than numerical simulation. According to the outstanding performance
+of the network model, it is hoped that this approach can serve as a valuable tool for applications
+of engineering optimization and design in future. 

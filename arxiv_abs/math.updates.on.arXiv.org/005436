@@ -1,0 +1,18 @@
+Estimating the cardinality (number of distinct elements) of a large multiset is a classic problem
+in streaming and sketching, dating back to Flajolet and Martin's classic Probabilistic Counting
+(PCSA) algorithm from 1983. In this paper we study the intrinsic tradeoff between the space complexity
+of the sketch and its estimation error in the random oracle model. We define a new measure of efficiency
+for cardinality estimators called the Fisher-Shannon (Fish) number $\mathcal{H}/\mathcal{I}$.
+It captures the tension between the limiting Shannon entropy ($\mathcal{H}$) of the sketch and
+its normalized Fisher information ($\mathcal{I}$), which characterizes the variance of a statistically
+efficient, asymptotically unbiased estimator. Our results are as follows. We prove that all base-$q$
+variants of Flajolet and Martin's PCSA sketch have Fish-number $H_0/I_0 \approx 1.98016$ and that
+every base-$q$ variant of (Hyper)LogLog has Fish-number worse than $H_0/I_0$, but that they tend
+to $H_0/I_0$ in the limit as $q\rightarrow \infty$. Here $H_0,I_0$ are precisely defined constants.
+We describe a sketch called Fishmonger that is based on a smoothed, entropy-compressed variant
+of PCSA with a different estimator function. It is proved that with high probability, Fishmonger
+processes a multiset of $[U]$ such that at all times, its space is $O(\log^2\log U) + (1+o(1))(H_0/I_0)b
+\approx 1.98b$ bits and its standard error is $1/\sqrt{b}$. We give circumstantial evidence that
+$H_0/I_0$ is the optimum Fish-number of mergeable sketches for Cardinality Estimation. We define
+a class of linearizable sketches and prove that no member of this class can beat $H_0/I_0$. The popular
+mergeable sketches are, in fact, also linearizable. 

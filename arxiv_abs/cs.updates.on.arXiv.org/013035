@@ -1,0 +1,19 @@
+We study a family of reachability problems under waiting-time restrictions in temporal and vertex-colored
+temporal graphs. Given a temporal graph and a set of source vertices, we find the set of vertices that
+are reachable from a source via a time-respecting path, where the difference in timestamps between
+consecutive edges is at most a resting time. Given a vertex-colored temporal graph and a multiset
+query of colors, we find the set of vertices reachable from a source via a time-respecting path such
+that the vertex colors of the path agree with the multiset query and the difference in timestamps
+between consecutive edges is at most a resting time. These kind of problems have several applications
+in understanding the spread of a disease in a network, tracing contacts in epidemic outbreaks, finding
+signaling pathways in the brain network, and recommending tours for tourists. We present an algebraic
+algorithmic framework based on constrained multilinear sieving for solving the restless reachability
+problems we propose. In particular, parameterized by the length of a path $k$ sought, we show the
+problems can be solved in $O(2^k k m \Delta)$ time and $O(n \tau)$ space, where $n$ is the number of
+vertices, $m$ the number of edges, $\Delta$ the maximum resting time and $\tau$ the maximum timestamp
+of an input temporal graph. In addition, we prove that the algorithms presented for the restless
+reachability problems in vertex-colored temporal graphs are optimal under plausible complexity-theoretic
+assumptions. Finally, with an open-source implementation, we demonstrate that our algorithm
+scales to large graphs with up to one billion temporal edges, despite the problems being NP-hard.
+Specifically, we present extensive experiments to evaluate our scalability claims both on synthetic
+and real-world graphs. 

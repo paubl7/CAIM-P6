@@ -1,0 +1,18 @@
+A boardroom election is an election with a small number of voters carried out with public communications.
+We present BVOT, a self-tallying boardroom voting protocol with ballot secrecy, fairness (no tally
+information is available before the polls close), and dispute-freeness (voters can observe that
+all voters correctly followed the protocol). BVOT works by using a multiparty threshold homomorphic
+encryption system in which each candidate is associated with a masked unique prime. Each voter engages
+in an oblivious transfer with an untrusted distributor: the voter selects the index of a prime associated
+with a candidate and receives the selected prime in masked form. The voter then casts their vote by
+encrypting their masked prime and broadcasting it to everyone. The distributor does not learn the
+voter's choice, and no one learns the mapping between primes and candidates until the audit phase.
+By hiding the mapping between primes and candidates, BVOT provides voters with insufficient information
+to carry out effective cheating. The threshold feature prevents anyone from computing any partial
+tally---until everyone has voted. Multiplying all votes, their decryption shares, and the unmasking
+factor yields a product of the primes each raised to the number of votes received. In contrast to some
+existing boardroom voting protocols, BVOT does not rely on any zero-knowledge proof; instead,
+it uses oblivious transfer to assure ballot secrecy and correct vote casting. Also, BVOT can handle
+multiple candidates in one election. BVOT prevents cheating by hiding crucial information: an
+attempt to increase the tally of one candidate might increase the tally of another candidate. After
+all votes are cast, any party can tally the votes. 

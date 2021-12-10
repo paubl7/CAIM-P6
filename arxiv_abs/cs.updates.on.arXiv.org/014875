@@ -1,0 +1,19 @@
+In this paper, we address the problem of autonomous multi-robot mapping, exploration and navigation
+in unknown, GPS-denied indoor or urban environments using a swarm of robots equipped with directional
+sensors with limited sensing capabilities and limited computational resources. The robots have
+no a priori knowledge of the environment and need to rapidly explore and construct a map in a distributed
+manner using existing landmarks, the presence of which can be detected using onboard senors, although
+little to no metric information (distance or bearing to the landmarks) is available. In order to
+correctly and effectively achieve this, the presence of a necessary density/distribution of landmarks
+is ensured by design of the urban/indoor environment. We thus address this problem in two phases:
+1) During the design/construction of the urban/indoor environment we can ensure that sufficient
+landmarks are placed within the environment. To that end we develop a filtration-based approach
+for designing strategic placement of landmarks in an environment. 2) We develop a distributed algorithm
+using which a team of robots, with no a priori knowledge of the environment, can explore such an environment,
+construct a topological map requiring no metric/distance information, and use that map to navigate
+within the environment. This is achieved using a topological representation of the environment
+(called a Landmark Complex), instead of constructing a complete metric/pixel map. The representation
+is built by the robot as well as used by them for navigation through a balance between exploration
+and exploitation. We use tools from homology theory for identifying "holes" in the coverage/exploration
+of the unknown environment and hence guiding the robots towards achieving a complete exploration
+and mapping of the environment. 

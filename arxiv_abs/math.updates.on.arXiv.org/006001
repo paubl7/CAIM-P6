@@ -1,0 +1,19 @@
+Kernel methods are used frequently in various applications of machine learning. For large-scale
+applications, the success of kernel methods hinges on the ability to operate certain large dense
+kernel matrix K. To reduce the computational cost, Nystrom methods can efficiently compute a low-rank
+approximation to a symmetric positive semi-definite (SPSD) matrix K through landmark points and
+many variants have been developed in the past few years. For indefinite kernels, however, it has
+not even been justified whether Nystrom approximations are applicable. In this paper, we study
+for the first time, both theoretically and numerically, the Nystrom method for approximating general
+symmetric kernels, including indefinite ones. We first develop a unified theoretical framework
+for analyzing Nystrom approximations, which is valid for both SPSD and indefinite kernels and is
+independent of the specific scheme for selecting landmark points. To address the accuracy and numerical
+stability issues in Nystrom approximation, we then study the impact of data geometry on the spectral
+property of the corresponding kernel matrix and leverage the discrepancy theory to propose the
+anchor net method for computing Nystrom approximations. The anchor net method operates entirely
+on the dataset without requiring the access to K or its matrix-vector product and scales linearly
+for both SPSD and indefinite kernel matrices. Extensive numerical experiments suggest that indefinite
+kernels are much more challenging than SPSD kernels and most existing methods will suffer from numerical
+instability. Results on various kinds of kernels and machine learning datasets demonstrate that
+the new method resolves the numerical instability and achieves better accuracy with smaller computation
+costs compared to the state-of-the-art Nystrom methods. 

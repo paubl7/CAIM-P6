@@ -1,0 +1,19 @@
+The need to guarantee the safety of collaborative robots limits their performance, in particular,
+their speed and hence cycle time. In this work, we measure the forces exerted by two collaborative
+manipulators (UR10e and KUKA LBR iiwa) on an impact measuring device. Our contributions are the
+following: (i) a new data-driven model predicting impact forces from velocity, distance from robot
+base, and, newly, the height in the workspace; (ii) demonstration that the model can be trained on
+a limited number of data points; (iii) analysis of the force evolution upon impact. The standard
+ISO/TS 15066 defines the Power and Force Limiting operation mode and prescribes force thresholds
+that a moving robot is allowed to exert on human body parts during impact (for the back of the hand,
+280 N for transient and 140 N for quasi-static contact), along with a simple formula to obtain maximum
+allowed speed of the robot in the whole workspace. Applying this to our scenario where the impact
+has a clamping nature, the allowed end effector speed on the whole robot workspace would be only 0.13
+and 0.16 m/s for the UR10e and KUKA LBR iiwa, respectively. Our measurements reveal that if the task
+is performed for example 0.8 m away and 0.4 m above the robot base, speeds of 0.16 m/s (UR10e) and 0.20
+m/s (KUKA LBR iiwa) can be safely operated, staying within the prescribed force limit. Furthermore,
+the force evolution during impact for the UR10e reveals that clamping never occurs. With the 280
+N limit, 0.36 m/s will still be safe with the UR10e. The formulas relating robot mass, velocity, and
+impact forces from ISO/TS 15066 are insufficient -- leading both to significant underestimation
+and overestimation of velocities/forces, and thus to unnecessarily long cycle times or even dangerous
+applications. 

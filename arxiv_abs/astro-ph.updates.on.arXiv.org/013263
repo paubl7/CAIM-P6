@@ -1,0 +1,19 @@
+We present a methodology for automated real-time analysis of a radio image data stream with the goal
+to find transient sources. Contrary to previous works, the transients we are interested in occur
+on a time-scale where dispersion starts to play a role, so we must search a higher-dimensional data
+space and yet work fast enough to keep up with the data stream in real time. The approach consists of
+five main steps: quality control, source detection, association, flux measurement, and physical
+parameter inference. We present parallelized methods based on convolutions and filters that can
+be accelerated on a GPU, allowing the pipeline to run in real-time. In the parameter inference step,
+we apply a convolutional neural network to dynamic spectra that were obtained from the preceding
+steps. It infers physical parameters, among which the dispersion measure of the transient candidate.
+Based on critical values of these parameters, an alert can be sent out and data will be saved for further
+investigation. Experimentally, the pipeline is applied to simulated data and images from AARTFAAC
+(Amsterdam Astron Radio Transients Facility And Analysis Centre), a transients facility based
+on the Low-Frequency Array (LOFAR). Results on simulated data show the efficacy of the pipeline,
+and from real data it discovered dispersed pulses. The current work targets transients on time scales
+that are longer than the fast transients of beam-formed search, but shorter than slow transients
+in which dispersion matters less. This fills a methodological gap that is relevant for the upcoming
+Square-Kilometer Array (SKA). Additionally, since real-time analysis can be performed, only
+data with promising detections can be saved to disk, providing a solution to the big-data problem
+that modern astronomy is dealing with. 

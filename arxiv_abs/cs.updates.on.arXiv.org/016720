@@ -1,0 +1,18 @@
+Parareal is a well-studied algorithm for numerically integrating systems of time-dependent differential
+equations by parallelising the temporal domain. Given approximate initial values at each temporal
+sub-interval, the algorithm locates a solution in a fixed number of iterations using a predictor-corrector,
+stopping once a tolerance is met. This iterative process combines solutions located by inexpensive
+(coarse resolution) and expensive (fine resolution) numerical integrators. In this paper, we
+introduce a \textit{stochastic parareal} algorithm with the aim of accelerating the convergence
+of the deterministic parareal algorithm. Instead of providing the predictor-corrector with a
+deterministically located set of initial values, the stochastic algorithm samples initial values
+from dynamically varying probability distributions in each temporal sub-interval. All samples
+are then propagated by the numerical method in parallel. The initial values yielding the most continuous
+(smoothest) trajectory across consecutive sub-intervals are chosen as the new, more accurate,
+set of initial values. These values are fed into the predictor-corrector, converging in fewer iterations
+than the deterministic algorithm with a given probability. The performance of the stochastic algorithm,
+implemented using various probability distributions, is illustrated on systems of ordinary differential
+equations. When the number of sampled initial values is large enough, we show that stochastic parareal
+converges almost certainly in fewer iterations than the deterministic algorithm while maintaining
+solution accuracy. Additionally, it is shown that the expected value of the convergence rate decreases
+with increasing numbers of samples. 

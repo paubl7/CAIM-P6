@@ -1,0 +1,20 @@
+We consider a MapReduce-type task running in a distributed computing model which consists of ${K}$
+edge computing nodes distributed across the edge of the network and a Master node that assists the
+edge nodes to compute output functions. The Master node and the edge nodes, both equipped with some
+storage memories and computing capabilities, are connected through a multicast network. We define
+the communication time spent during the transmission for the sequential implementation (all nodes
+send symbols sequentially) and parallel implementation (the Master node can send symbols during
+the edge nodes' transmission), respectively. We propose a mixed coded distributed computing scheme
+that divides the system into two subsystems where the coded distributed computing (CDC) strategy
+proposed by Songze Li \emph{et al.} is applied into the first subsystem and a novel master-aided
+CDC strategy is applied into the second subsystem. We prove that this scheme is optimal, i.e., achieves
+the minimum communication time for both the sequential and parallel implementation, and establish
+an {\emph{optimal}} information-theoretic tradeoff between the overall communication time,
+computation load, and the Master node's storage capacity. It demonstrates that incorporating
+a Master node with storage and computing capabilities can further reduce the communication time.
+For the sequential implementation, we deduce the approximately optimal file allocation between
+the two subsystems, which shows that the Master node should map as many files as possible in order
+to achieve smaller communication time. For the parallel implementation, if the Master node's storage
+and computing capabilities are sufficiently large (not necessary to store and map all files), then
+the proposed scheme requires at most 1/2 of the minimum communication time of system without the
+help of the Master node. 

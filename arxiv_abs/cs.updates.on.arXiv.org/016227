@@ -1,0 +1,20 @@
+Wearable devices such as smartwatches, fitness trackers, and blood-pressure monitors process,
+store, and communicate sensitive and personal information related to the health, life-style,
+habits and interests of the wearer. This data is exchanged with a companion app running on a smartphone
+over a Bluetooth connection. In this work, we investigate what can be inferred from the metadata
+(such as the packet timings and sizes) of encrypted Bluetooth communications between a wearable
+device and its connected smartphone. We show that a passive eavesdropper can use traffic-analysis
+attacks to accurately recognize (a) communicating devices, even without having access to the MAC
+address, (b) human actions (e.g., monitoring heart rate, exercising) performed on wearable devices
+ranging from fitness trackers to smartwatches, (c) the mere opening of specific applications on
+a Wear OS smartwatch (e.g., the opening of a medical app, which can immediately reveal a condition
+of the wearer), (d) fine-grained actions (e.g., recording an insulin injection) within a specific
+application that helps diabetic users to monitor their condition, and (e) the profile and habits
+of the wearer by continuously monitoring her traffic over an extended period. We run traffic-analysis
+attacks by collecting a dataset of Bluetooth traces of multiple wearable devices, by designing
+features based on packet sizes and timings, and by using machine learning to classify the encrypted
+traffic to actions performed by the wearer. Then, we explore standard defense strategies; we show
+that these defenses do not provide sufficient protection against our attacks and introduce significant
+costs. Our research highlights the need to rethink how applications exchange sensitive information
+over Bluetooth, to minimize unnecessary data exchanges, and to design new defenses against traffic-analysis
+tailored to the wearable setting. 

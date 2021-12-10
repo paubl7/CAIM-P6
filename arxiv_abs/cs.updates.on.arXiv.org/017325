@@ -1,0 +1,19 @@
+Causality knowledge is vital to building robust AI systems. Deep learning models often perform
+poorly on tasks that require causal reasoning, which is often derived using some form of commonsense
+knowledge not immediately available in the input but implicitly inferred by humans. Prior work
+has unraveled spurious observational biases that models fall prey to in the absence of causality.
+While language representation models preserve contextual knowledge within learned embeddings,
+they do not factor in causal relationships during training. By blending causal relationships with
+the input features to an existing model that performs visual cognition tasks (such as scene understanding,
+video captioning, video question-answering, etc.), better performance can be achieved owing
+to the insight causal relationships bring about. Recently, several models have been proposed that
+have tackled the task of mining causal data from either the visual or textual modality. However,
+there does not exist widespread research that mines causal relationships by juxtaposing the visual
+and language modalities. While images offer a rich and easy-to-process resource for us to mine causality
+knowledge from, videos are denser and consist of naturally time-ordered events. Also, textual
+information offers details that could be implicit in videos. We propose iReason, a framework that
+infers visual-semantic commonsense knowledge using both videos and natural language captions.
+Furthermore, iReason's architecture integrates a causal rationalization module to aid the process
+of interpretability, error analysis and bias detection. We demonstrate the effectiveness of iReason
+using a two-pronged comparative analysis with language representation learning models (BERT,
+GPT-2) as well as current state-of-the-art multimodal causality models. 

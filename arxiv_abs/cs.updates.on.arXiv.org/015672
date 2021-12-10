@@ -1,0 +1,18 @@
+A significant portion of the data available today is found within tables. Therefore, it is necessary
+to use automated table extraction to obtain thorough results when data-mining. Today's popular
+state-of-the-art methods for table extraction struggle to adequately extract tables with machine-readable
+text and structural data. To make matters worse, many tables do not have machine-readable data,
+such as tables saved as images, making most extraction methods completely ineffective. In order
+to address these issues, a novel, general format table extractor tool, Tablext, is proposed. This
+tool uses a combination of computer vision techniques and machine learning methods to efficiently
+and effectively identify and extract data from tables. Tablext begins by using a custom Convolutional
+Neural Network (CNN) to identify and separate all potential tables. The identification process
+is optimized by combining the custom CNN with the YOLO object detection network. Then, the high-level
+structure of each table is identified with computer vision methods. This high-level, structural
+meta-data is used by another CNN to identify exact cell locations. As a final step, Optical Characters
+Recognition (OCR) is performed on every individual cell to extract their content without needing
+machine-readable text. This multi-stage algorithm allows for the neural networks to focus on completing
+complex tasks, while letting image processing methods efficiently complete the simpler ones.
+This leads to the proposed approach to be general-purpose enough to handle a large batch of tables
+regardless of their internal encodings or their layout complexity. Additionally, it becomes accurate
+enough to outperform competing state-of-the-art table extractors on the ICDAR 2013 table dataset.

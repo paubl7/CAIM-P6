@@ -1,0 +1,19 @@
+Inertial Measurement Unit (IMU) sensors are present in everyday devices such as smartphones and
+fitness watches. As a result, the array of health-related research and applications that tap onto
+this data has been growing, but little attention has been devoted to the prediction of an individual's
+heart rate (HR) from IMU data, when undergoing a physical activity. Would that be even possible?
+If so, this could be used to design personalized sets of aerobic exercises, for instance. In this
+work, we show that it is viable to obtain accurate HR predictions from IMU data using Recurrent Neural
+Networks, provided only access to HR and IMU data from a short-lived, previously executed activity.
+We propose a novel method for initializing an RNN's hidden state vectors, using a specialized network
+that attempts to extract an embedding of the physical conditioning (PCE) of a subject. We show that
+using a discriminator in the training phase to help the model learn whether two PCEs belong to the
+same individual further reduces the prediction error. We evaluate the proposed model when predicting
+the HR of 23 subjects performing a variety of physical activities from IMU data available in public
+datasets (PAMAP2, PPG-DaLiA). For comparison, we use as baselines the only model specifically
+proposed for this task and an adapted state-of-the-art model for Human Activity Recognition (HAR),
+a closely related task. Our method, PCE-LSTM, yields over 10% lower mean absolute error. We demonstrate
+empirically that this error reduction is in part due to the use of the PCE. Last, we use the two datasets
+(PPG-DaLiA, WESAD) to show that PCE-LSTM can also be successfully applied when photoplethysmography
+(PPG) sensors are available, outperforming the state-of-the-art deep learning baselines by more
+than 30%. 

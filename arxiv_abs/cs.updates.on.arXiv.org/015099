@@ -1,0 +1,19 @@
+India is a multilingual society with 1369 rationalized languages and dialects being spoken across
+the country (INDIA, 2011). Of these, the 22 scheduled languages have a staggering total of 1.17 billion
+speakers and 121 languages have more than 10,000 speakers (INDIA, 2011). India also has the second
+largest (and an ever growing) digital footprint (Statista, 2020). Despite this, today's state-of-the-art
+multilingual systems perform suboptimally on Indian (IN) languages. This can be explained by the
+fact that multilingual language models (LMs) are often trained on 100+ languages together, leading
+to a small representation of IN languages in their vocabulary and training data. Multilingual LMs
+are substantially less effective in resource-lean scenarios (Wu and Dredze, 2020; Lauscher et
+al., 2020), as limited data doesn't help capture the various nuances of a language. One also commonly
+observes IN language text transliterated to Latin or code-mixed with English, especially in informal
+settings (for example, on social media platforms) (Rijhwani et al., 2017). This phenomenon is not
+adequately handled by current state-of-the-art multilingual LMs. To address the aforementioned
+gaps, we propose MuRIL, a multilingual LM specifically built for IN languages. MuRIL is trained
+on significantly large amounts of IN text corpora only. We explicitly augment monolingual text
+corpora with both translated and transliterated document pairs, that serve as supervised cross-lingual
+signals in training. MuRIL significantly outperforms multilingual BERT (mBERT) on all tasks in
+the challenging cross-lingual XTREME benchmark (Hu et al., 2020). We also present results on transliterated
+(native to Latin script) test sets of the chosen datasets and demonstrate the efficacy of MuRIL in
+handling transliterated data. 

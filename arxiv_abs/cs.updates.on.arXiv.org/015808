@@ -1,0 +1,18 @@
+Event Argument extraction refers to the task of extracting structured information from unstructured
+text for a particular event of interest. The existing works exhibit poor capabilities to extract
+causal event arguments like Reason and After Effects. Furthermore, most of the existing works model
+this task at a sentence level, restricting the context to a local scope. While it may be effective
+for short spans of text, for longer bodies of text such as news articles, it has often been observed
+that the arguments for an event do not necessarily occur in the same sentence as that containing an
+event trigger. To tackle the issue of argument scattering across sentences, the use of global context
+becomes imperative in this task. In our work, we propose an external knowledge aided approach to
+infuse document-level event information to aid the extraction of complex event arguments. We develop
+a causal network for our event-annotated dataset by extracting relevant event causal structures
+from ConceptNet and phrases from Wikipedia. We use the extracted event causal features in a bi-directional
+transformer encoder to effectively capture long-range inter-sentence dependencies. We report
+the effectiveness of our proposed approach through both qualitative and quantitative analysis.
+In this task, we establish our findings on an event annotated dataset in 5 Indian languages. This
+dataset adds further complexity to the task by labelling arguments of entity type (like Time, Place)
+as well as more complex argument types (like Reason, After-Effect). Our approach achieves state-of-the-art
+performance across all the five languages. Since our work does not rely on any language-specific
+features, it can be easily extended to other languages. 

@@ -1,0 +1,20 @@
+$\newcommand{\F}{\mathbb{F}}$We study the Boolean function parameters sensitivity ($s$),
+block sensitivity ($bs$), and alternation ($alt$) under specially designed affine transforms.
+For a function $f:\F_2^n\to \{0,1\}$, and $A=Mx+b$ for $M \in \F_2^{n\times n}$ and $b\in \F_2^n$,
+the result of the transformation $g$ is defined as $\forall x\in\F_2^n, g(x)=f(Mx+b)$. We study
+alternation under linear shifts ($M$ is the identity matrix) called the shift invariant alternation
+(denoted by $salt(f)$). We exhibit an explicit family of functions for which $salt(f)$ is $2^{\Omega(s(f))}$.
+We show an affine transform $A$, such that the corresponding function $g$ satisfies $bs(f,0^n)
+\le s(g)$, using which we proving that for $F(x,y)=f(x\land y)$, the bounded error quantum communication
+complexity of $F$ with prior entanglement, $Q^*_{1/3}(F)=\Omega(\sqrt{bs(f,0^n)})$. Our proof
+builds on ideas from Sherstov (2010) where we use specific properties of the above affine transformation.
+We show, * For a prime $p$ and $0<\epsilon<1$, any $f$ with $deg_p(f)\le(1-\epsilon)\log n$ must
+satisfy $Q^*_{1/3}(F) = \Omega(\frac{n^{\epsilon/2}}{\log n})$. Here, $deg_p(f)$ denotes
+the degree of the multilinear polynomial of $f$ over $\F_p$. * For any $f$ such that there exists primes
+$p$ and $q$ with $deg_q(f) \ge \Omega(deg_p(f)^\delta)$ for $\delta > 2$, the deterministic communication
+complexity - $D(F)$ and $Q^*_{1/3}(F)$ are polynomially related. In particular, this holds when
+$deg_p(f) = O(1)$. Thus, for this class of functions, this answers an open question (see Buhrman
+and deWolf (2001)) about the relation between the two measures. We construct linear transformation
+$A$, such that $g$ satisfies, $alt(f) \le 2s(g)+1$. Using this, we exhibit a family of Boolean functions
+that rule out a potential approach to settle the XOR Log-Rank conjecture via a proof of Sensitivity
+conjecture [Hao Huang (2019)]. 

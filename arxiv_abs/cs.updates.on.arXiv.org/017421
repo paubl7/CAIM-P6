@@ -1,0 +1,20 @@
+Objective assessment of Magnetic Resonance Imaging (MRI) scans of osteoarthritis (OA) can address
+the limitation of the current OA assessment. Segmentation of bone, cartilage, and joint fluid is
+necessary for the OA objective assessment. Most of the proposed segmentation methods are not performing
+instance segmentation and suffer from class imbalance problems. This study deployed Mask R-CNN
+instance segmentation and improved it (improved-Mask R-CNN (iMaskRCNN)) to obtain a more accurate
+generalized segmentation for OA-associated tissues. Training and validation of the method were
+performed using 500 MRI knees from the Osteoarthritis Initiative (OAI) dataset and 97 MRI scans
+of patients with symptomatic hip OA. Three modifications to Mask R-CNN yielded the iMaskRCNN: adding
+a 2nd ROIAligned block, adding an extra decoder layer to the mask-header, and connecting them by
+a skip connection. The results were assessed using Hausdorff distance, dice score, and coefficients
+of variation (CoV). The iMaskRCNN led to improved bone and cartilage segmentation compared to Mask
+RCNN as indicated with the increase in dice score from 95% to 98% for the femur, 95% to 97% for tibia,
+71% to 80% for femoral cartilage, and 81% to 82% for tibial cartilage. For the effusion detection,
+dice improved with iMaskRCNN 72% versus MaskRCNN 71%. The CoV values for effusion detection between
+Reader1 and Mask R-CNN (0.33), Reader1 and iMaskRCNN (0.34), Reader2 and Mask R-CNN (0.22), Reader2
+and iMaskRCNN (0.29) are close to CoV between two readers (0.21), indicating a high agreement between
+the human readers and both Mask R-CNN and iMaskRCNN. Mask R-CNN and iMaskRCNN can reliably and simultaneously
+extract different scale articular tissues involved in OA, forming the foundation for automated
+assessment of OA. The iMaskRCNN results show that the modification improved the network performance
+around the edges. 

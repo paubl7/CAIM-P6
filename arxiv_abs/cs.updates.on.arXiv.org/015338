@@ -1,0 +1,20 @@
+Kidney stones represent a considerable burden for public health-care systems. Ureteroscopy with
+laser lithotripsy has evolved as the most commonly used technique for the treatment of kidney stones.
+Automated segmentation of kidney stones and laser fiber is an important initial step to performing
+any automated quantitative analysis of the stones, particularly stone-size estimation, that
+helps the surgeon decide if the stone requires more fragmentation. Factors such as turbid fluid
+inside the cavity, specularities, motion blur due to kidney movements and camera motion, bleeding,
+and stone debris impact the quality of vision within the kidney and lead to extended operative times.
+To the best of our knowledge, this is the first attempt made towards multi-class segmentation in
+ureteroscopy and laser lithotripsy data. We propose an end-to-end CNN-based framework for the
+segmentation of stones and laser fiber. The proposed approach utilizes two sub-networks: HybResUNet,
+a version of residual U-Net, that uses residual connections in the encoder path of U-Net and a DVFNet
+that generates DVF predictions which are then used to prune the prediction maps. We also present
+ablation studies that combine dilated convolutions, recurrent and residual connections, ASPP
+and attention gate. We propose a compound loss function that improves our segmentation performance.
+We have also provided an ablation study to determine the optimal data augmentation strategy. Our
+qualitative and quantitative results illustrate that our proposed method outperforms SOTA methods
+such as UNet and DeepLabv3+ showing an improvement of 5.2% and 15.93%, respectively, for the combined
+mean of DSC and JI in our invivo test dataset. We also show that our proposed model generalizes better
+on a new clinical dataset showing a mean improvement of 25.4%, 20%, and 11% over UNet, HybResUNet,
+and DeepLabv3+, respectively, for the same metric. 

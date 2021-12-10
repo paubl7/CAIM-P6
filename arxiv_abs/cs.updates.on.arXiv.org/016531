@@ -1,0 +1,19 @@
+Neuromorphic neural network processors, in the form of compute-in-memory crossbar arrays of memristors,
+or in the form of subthreshold analog and mixed-signal ASICs, promise enormous advantages in compute
+density and energy efficiency for NN-based ML tasks. However, these technologies are prone to computational
+non-idealities, due to process variation and intrinsic device physics. This degrades the task
+performance of networks deployed to the processor, by introducing parameter noise into the deployed
+model. While it is possible to calibrate each device, or train networks individually for each processor,
+these approaches are expensive and impractical for commercial deployment. Alternative methods
+are therefore needed to train networks that are inherently robust against parameter variation,
+as a consequence of network architecture and parameters. We present a new adversarial network optimisation
+algorithm that attacks network parameters during training, and promotes robust performance during
+inference in the face of parameter variation. Our approach introduces a regularization term penalising
+the susceptibility of a network to weight perturbation. We compare against previous approaches
+for producing parameter insensitivity such as dropout, weight smoothing and introducing parameter
+noise during training. We show that our approach produces models that are more robust to targeted
+parameter variation, and equally robust to random parameter variation. Our approach finds minima
+in flatter locations in the weight-loss landscape compared with other approaches, highlighting
+that the networks found by our technique are less sensitive to parameter perturbation. Our work
+provides an approach to deploy neural network architectures to inference devices that suffer from
+computational non-idealities, with minimal loss of performance. ... 

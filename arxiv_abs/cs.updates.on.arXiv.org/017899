@@ -1,0 +1,18 @@
+Many applications in important problem domains such as machine learning and computer vision are
+streaming applications that take a sequence of inputs over time. It is challenging to find knob settings
+that optimize the run-time performance of such applications because the optimal knob settings
+are usually functions of inputs, computing platforms, time as well as user's requirements, which
+can be very diverse. Most prior works address this problem by offline profiling followed by training
+models for control. However, profiling-based approaches incur large overhead before execution;
+it is also difficult to redeploy them in other run-time configurations. In this paper, we propose
+Sonic, a sampling-based online controller for long-running streaming applications that does
+not require profiling ahead of time. Within each phase of a streaming application's execution,
+Sonic utilizes the beginning portion to sample the knob space strategically and aims to pick the
+optimal knob setting for the rest of the phase, given a user-specified constrained optimization
+problem. A hybrid approach of machine learning regressions and Bayesian optimization are used
+for better overall sampling choices. Sonic is implemented independent of application, device,
+input, performance objective and constraints. We evaluate Sonic on traditional parallel benchmarks
+as well as on deep learning inference benchmarks across multiple platforms. Our experiments show
+that when using Sonic to control knob settings, application run-time performance is only 5.3% less
+than if optimal knob settings were used, demonstrating that Sonic is able to find near-optimal knob
+settings under diverse run-time configurations without prior knowledge quickly. 

@@ -1,0 +1,20 @@
+In current seismic acquisition practice, there is an increasing drive for sparsely (in space) acquired
+data, often in irregular geometry. These surveys can trade off subsurface information for efficiency/cost
+- creating a problem of "missing seismic data" that can greatly hinder subsequent processing and
+interpretation. Reconstruction of regularly sampled dense data from highly sparse, irregular
+data can therefore aid in processing and interpretation of these far sparser, more efficient seismic
+surveys. Here, two methods are compared to solve the reconstruction problem in both space-time
+and wavenumber-frequency domain. This requires an operator that maps sparse to dense data: the
+operator is generally unknown, being the inverse of a known data sampling operator. As such, here
+the deterministic inversion is efficiently solved by least squares optimisation using a numerically
+efficient Python-based linear operator representation. An alternative approach is probabilistic
+and uses deep learning. Here, two deep learning architectures are benchmarked against each other
+and the deterministic approach; a Recurrent Inference Machine (RIM), which is designed specifically
+to solve inverse problems given known forward operators, and the well-known U-Net. The trained
+deep learning networks are capable of successfully mapping sparse to dense seismic data for a range
+of different datasets and decimation percentages, thereby significantly reducing spatial aliasing
+in the wavenumber-frequency domain. The deterministic inversion on the contrary, could not reconstruct
+the missing data and thus did not reduce the undesired spatial aliasing. Results show that the application
+of Deep Learning for seismic reconstruction is promising, but the treatment of large-volume, multi-component
+seismic datasets will require dedicated learning architectures not yet realisable with existing
+tools. 

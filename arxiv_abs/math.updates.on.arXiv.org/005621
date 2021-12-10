@@ -1,0 +1,19 @@
+Minimal Polynomial Extrapolation (MPE) and Reduced Rank Extrapolation (RRE) are two polynomial
+methods used for accelerating the convergence of sequences of vectors $\{{x}_m\}$. They are applied
+successfully in conjunction with fixed-point iterative schemes in the solution of large and sparse
+systems of linear and nonlinear equations in different disciplines of science and engineering.
+Both methods produce approximations $s_k$ to the limit or antilimit of $\{{x}_m\}$ that are of the
+form ${s}_k=\sum^k_{i=0}\gamma_i{x}_i$ with $\sum^k_{i=0}\gamma_i=1$, for some scalars $\gamma_i$.
+The way the two methods are derived suggests that they might, somehow, be related to each other; this
+has not been explored so far, however. In this work, we tackle this issue and show that the vectors
+$s_{k}^\text{MPE}$ and $s_k^\text{RRE}$ produced by the two methods are related in more than one
+way, and independently of the way the $x_m$ are generated. One of our results states that RRE stagnates,
+in the sense that ${s}_k^\text{RRE}={s}_{k-1}^\text{RRE}$, if and only if ${s}_{k}^\text{MPE}$
+does not exist. Another result states that, when ${s}_{k}^\text{MPE}$ exists, there holds $$\mu_k{s}_k^\text{RRE}
+= \mu_{k-1}{s}_{k-1}^\text{RRE} + \nu_k{s}_{k}^\text{MPE} \quad \text{with} \quad \mu_k =
+\mu_{k-1} + \nu_k,$$ for some positive scalars $\mu_k$, $\mu_{k-1}$, and $\nu_k$ that depend only
+on ${s}_k^\text{RRE}$, ${s}_{k-1}^\text{RRE}$, and ${s}_{k}^\text{MPE}$, respectively.
+Our results are valid when MPE and RRE are defined in any weighted inner product and the norm induced
+by it. They also contain as special cases the known results pertaining to the connection between
+the method of Arnoldi and the method of generalized minimal residuals, two important Krylov subspace
+methods for solving nonsingular linear systems. 

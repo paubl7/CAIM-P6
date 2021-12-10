@@ -1,0 +1,20 @@
+Environmental understanding capability of $\textit{augmented}$ (AR) and $\textit{mixed reality}$
+(MR) devices are continuously improving through advances in sensing, computer vision, and machine
+learning. Various AR/MR applications demonstrate such capabilities i.e. scanning a space using
+a handheld or head mounted device and capturing a digital representation of the space that are accurate
+copies of the real space. However, these capabilities impose privacy risks to users: personally
+identifiable information can leak from captured 3D maps of the sensitive spaces and/or captured
+sensitive objects within the mapped space. Thus, in this work, we demonstrate how we can leverage
+3D object regeneration for preserving privacy of 3D point clouds. That is, we employ an intermediary
+layer of protection to transform the 3D point cloud before providing it to the third-party applications.
+Specifically, we use an existing adversarial autoencoder to generate copies of 3D objects where
+the likeness of the copies from the original can be varied. To test the viability and performance
+of this method as a privacy preserving mechanism, we use a 3D classifier to classify and identify
+these transformed point clouds i.e. perform $\textit{super}$-class and $\textit{intra}$-class
+classification. To measure the performance of the proposed privacy framework, we define privacy,
+$\Pi\in[0,1]$, and utility metrics, $Q\in[0,1]$, which are desired to be maximized. Experimental
+evaluation shows that the privacy framework can indeed variably effect the privacy of a 3D object
+by varying the privilege level $l\in[0,1]$ i.e. if a low $l<0.17$ is maintained, $\Pi_1,\Pi_2>0.4$
+is ensured where $\Pi_1,\Pi_2$ are super- and intra-class privacy. Lastly, the privacy framework
+can ensure relatively high intra-class privacy and utility i.e. $\Pi_2>0.63$ and $Q>0.70$, if
+the privilege level is kept within the range of $0.17<l<0.25$. 

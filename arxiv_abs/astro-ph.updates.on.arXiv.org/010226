@@ -1,0 +1,19 @@
+Machine learning has been widely applied to clearly defined problems of astronomy and astrophysics.
+However, deep learning and its conceptual differences to classical machine learning have been
+largely overlooked in these fields. The broad hypothesis behind our work is that letting the abundant
+real astrophysical data speak for itself, with minimal supervision and no labels, can reveal interesting
+patterns which may facilitate discovery of novel physical relationships. Here as the first step,
+we seek to interpret the representations a deep convolutional neural network chooses to learn,
+and find correlations in them with current physical understanding. We train an encoder-decoder
+architecture on the self-supervised auxiliary task of reconstruction to allow it to learn general
+representations without bias towards any specific task. By exerting weak disentanglement at the
+information bottleneck of the network, we implicitly enforce interpretability in the learned
+features. We develop two independent statistical and information-theoretical methods for finding
+the number of learned informative features, as well as measuring their true correlation with astrophysical
+validation labels. As a case study, we apply this method to a dataset of ~270000 stellar spectra,
+each of which comprising ~300000 dimensions. We find that the network clearly assigns specific
+nodes to estimate (notions of) parameters such as radial velocity and effective temperature without
+being asked to do so, all in a completely physics-agnostic process. This supports the first part
+of our hypothesis. Moreover, we find with high confidence that there are ~4 more independently informative
+dimensions that do not show a direct correlation with our validation parameters, presenting potential
+room for future studies. 

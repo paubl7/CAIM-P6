@@ -1,0 +1,19 @@
+We develop reinforcement learning (RL) boundary controllers to mitigate stop-and-go traffic
+congestion on a freeway segment. The traffic dynamics of the freeway segment are governed by a macroscopic
+Aw-Rascle-Zhang (ARZ) model, consisting of $2\times 2$ quasi-linear partial differential equations
+(PDEs) for traffic density and velocity. Boundary stabilization of the linearized ARZ PDE model
+has been solved by PDE backstepping, guaranteeing spatial $L^2$ norm regulation of the traffic
+state to uniform density and velocity and ensuring that traffic oscillations are suppressed. Collocated
+Proportional (P) and Proportional-Integral (PI) controllers also provide stability guarantees
+under certain restricted conditions, and are always applicable as model-free control options
+through gain tuning by trail and error, or by model-free optimization. Although these approaches
+are mathematically elegant, the stabilization result only holds locally and is usually affected
+by the change of model parameters. Therefore, we reformulate the PDE boundary control problem as
+a RL problem that pursues stabilization without knowing the system dynamics, simply by observing
+the state values. The proximal policy optimization, a neural network-based policy gradient algorithm,
+is employed to obtain RL controllers by interacting with a numerical simulator of the ARZ PDE. Being
+stabilization-inspired, the RL state-feedback boundary controllers are compared and evaluated
+against the rigorously stabilizing controllers in two cases: (i) in a system with perfect knowledge
+of the traffic flow dynamics, and then (ii) in one with only partial knowledge. We obtain RL controllers
+that nearly recover the performance of the backstepping, P, and PI controllers with perfect knowledge
+and outperform them in some cases with partial knowledge. 

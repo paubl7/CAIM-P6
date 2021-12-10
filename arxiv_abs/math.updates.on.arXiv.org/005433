@@ -1,0 +1,20 @@
+Min-max optimization of an objective function $f: \mathbb{R}^d \times \mathbb{R}^d \rightarrow
+\mathbb{R}$ is an important model for robustness in an adversarial setting, with applications
+to many areas including optimization, economics, and deep learning. In many of these applications
+$f$ may be nonconvex-nonconcave, and finding a global min-max point may be computationally intractable.
+There is a long line of work that seeks computationally tractable algorithms for alternatives to
+the min-max optimization model. However, many of the alternative models have solution points which
+are only guaranteed to exist under strong assumptions on $f$, such as convexity, monotonicity,
+or special properties of the starting point. In this paper, we propose an optimization model, the
+$\varepsilon$-greedy adversarial equilibrium, which can serve as a computationally tractable
+alternative to the min-max optimization model. Roughly, we say a point $(x^\star, y^\star)$ is
+an $\varepsilon$-greedy adversarial equilibrium if $y^\star$ is an $\varepsilon$-approximate
+local maximum for $f(x^\star,\cdot)$, and $x^\star$ is an $\varepsilon$-approximate local minimum
+for a "greedy approximation" to the function $\max_z f(x, z)$ which can be efficiently estimated
+using second-order optimization algorithms. The existence follows from an algorithm that converges
+from any starting point to such a point in a number of evaluations to $f$, $\nabla_{y} f(x,y)$, and
+$\nabla^2_y f(x,y)$, that is polynomial in $1/\varepsilon$, the dimension $d$, and the bounds
+on $f$ and its Lipschitz constant. In addition to existence, our model retains many desirable properties
+of the min-max model. For instance, it empowers the min-player to make updates that take into account
+the max-player's response, and in the case of strong convexity/concavity it corresponds to a global
+min-max solution with duality gap $O(\epsilon^2)$. 

@@ -1,0 +1,18 @@
+In deep neural network modeling, the most common practice is to stack a number of recurrent, convolutional,
+or feed-forward layers in order to obtain high-quality continuous space representations which
+in turn improves the quality of the network's prediction. Conventionally, each layer in the stack
+has its own parameters which leads to a significant increase in the number of model parameters. In
+this paper, we propose to share parameters across all layers thereby leading to a recurrently stacked
+neural network model. We report on an extensive case study on neural machine translation (NMT),
+where we apply our proposed method to an encoder-decoder based neural network model, i.e., the Transformer
+model, and experiment with three Japanese--English translation datasets. We empirically demonstrate
+that the translation quality of a model that recurrently stacks a single layer 6 times, despite having
+significantly fewer parameters, approaches that of a model that stacks 6 layers where each layer
+has different parameters. We also explore the limits of recurrent stacking where we train extremely
+deep NMT models. This paper also examines the utility of our recurrently stacked model as a student
+model through transfer learning via leveraging pre-trained parameters and knowledge distillation,
+and shows that it compensates for the performance drops in translation quality that the direct training
+of recurrently stacked model brings. We also show how transfer learning helps in faster decoding
+on top of the already reduced number of parameters due to recurrent stacking. Finally, we analyze
+the effects of recurrently stacked layers by visualizing the attentions of models that use recurrently
+stacked layers and models that do not. 

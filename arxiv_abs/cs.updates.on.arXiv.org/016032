@@ -1,0 +1,19 @@
+As an enhanced version of Random Testing (RT), Adaptive Random Testing (ART) aims to improve the
+failure detection effectiveness of RT by distributing the test cases more evenly in the input domain.
+Many ART algorithms have been proposed based on different criteria. Among them, the Fixed-Size-Candidate-Set
+ART (FSCS-ART) is one of the most effective and classical algorithms. FSCS-ART ensures high failure
+detection effectiveness using selecting the candidate test case which farthest from the previously
+executed test cases as the next test case. Although FSCS-ART has good failure detection effectiveness,
+it also has some drawbacks, such as computational overhead problem. In this paper, we propose an
+enhanced version of FSCS-ART, namely Vantage Point Partitioning Strategy based ART (VPPS-ART).
+VPPS-ART attempts to solve the computational overhead problem of FSCS-ART using vantage point
+partitioning strategy and ensures the failure detection effectiveness of FSCS-ART. VPPS-ART
+achieves the partitioning of the input domain space by using a Vantage Point tree (VP-tree) and finds
+the nearest executed test cases of a candidate test case in the partitioned sub-domains, which reduces
+the time overhead significantly compared to the entire input domain search computation. Besides,
+to match the dynamic insertion process of FSCS-ART, we modify the structure of the traditional VP-tree
+to support dynamic data. The simulation results present that VPPS-ART has a great lower time overhead
+compared to FSCS-ART, and also guarantees similar or better failure detection effectiveness than
+FSCS-ART. The VPPS-ART also shows strength in comparison with the KDFC-ART algorithms, a series
+of enhanced ART algorithms based on KD-tree. Our empirical studies also reveal that VPPS-ART is
+more cost-effective compared to FSCS-ART and KDFC-ART. 

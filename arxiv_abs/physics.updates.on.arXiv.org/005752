@@ -1,0 +1,20 @@
+Attenuation compensation (AC) is a pre-requisite for reliable quantification and beneficial
+for visual interpretation tasks in single-photon emission computed tomography (SPECT). Typical
+AC methods require the availability of an attenuation map obtained using a transmission scan, such
+as a CT scan. This has several disadvantages such as increased radiation dose, higher costs, and
+possible misalignment between SPECT and CT scans. Also, often a CT scan is unavailable. In this context,
+we and others are showing that scattered photons in SPECT contain information to estimate the attenuation
+distribution. To exploit this observation, we propose a physics and learning-based method that
+uses the SPECT emission data in the photopeak and scatter windows to perform transmission-less
+AC in SPECT. The proposed method uses data acquired in the scatter window to reconstruct an initial
+estimate of the attenuation map using a physics-based approach. A convolutional neural network
+is then trained to segment this initial estimate into different regions. Pre-defined attenuation
+coefficients are assigned to these regions, yielding the reconstructed attenuation map, which
+is then used to reconstruct the activity map using an ordered subsets expectation maximization-based
+reconstruction approach. We objectively evaluated the performance of this method using a highly
+realistic simulation study conducted on the clinically relevant task of detecting perfusion defects
+in myocardial perfusion SPECT. Our results showed no statistically significant differences between
+the performance achieved using the proposed method and that with the true attenuation maps. Visually,
+the images reconstructed using the proposed method looked similar to those with the true attenuation
+map. Overall, these results provide evidence of the capability of the proposed method to perform
+transmission-less AC and motivate further evaluation. 

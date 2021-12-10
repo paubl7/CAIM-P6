@@ -1,0 +1,19 @@
+Financial markets populated by human traders often exhibit "market impact", where the traders'
+quote-prices move in the direction of anticipated change, before any transaction has taken place,
+as an immediate reaction to the arrival of a large (i.e., "block") buy or sell order in the market:
+e.g., traders in the market know that a block buy order will push the price up, and so they immediately
+adjust their quote-prices upwards. Most major financial markets now involve many "robot traders",
+autonomous adaptive software agents, rather than humans. This paper explores how to give such trader-agents
+a reliable anticipatory sensitivity to block orders, such that markets populated entirely by robot
+traders also show market-impact effects. In a 2019 publication Church & Cliff presented initial
+results from a simple deterministic robot trader, ISHV, which exhibits this market impact effect
+via monitoring a metric of imbalance between supply and demand in the market. The novel contributions
+of our paper are: (a) we critique the methods used by Church & Cliff, revealing them to be weak, and
+argue that a more robust measure of imbalance is required; (b) we argue for the use of multi-level
+order-flow imbalance (MLOFI: Xu et al., 2019) as a better basis for imbalance-sensitive robot trader-agents;
+and (c) we demonstrate the use of the more robust MLOFI measure in extending ISHV, and also the well-known
+AA and ZIP trading-agent algorithms (which have both been previously shown to consistently outperform
+human traders). We demonstrate that the new imbalance-sensitive trader-agents introduced here
+do exhibit market impact effects, and hence are better-suited to operating in markets where impact
+is a factor of concern or interest, but do not suffer the weaknesses of the methods used by Church &
+Cliff. The source-code for our work reported here is freely available on GitHub. 

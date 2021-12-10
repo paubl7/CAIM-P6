@@ -1,0 +1,19 @@
+Metal artifacts present a frequent challenge to cone-beam CT (CBCT) in image-guided surgery, obscuring
+visualization of metal instruments and adjacent anatomy. Recent advances in mobile C-arm systems
+have enabled 3D imaging capacity with non-circular orbits. We extend a previously proposed metal
+artifacts avoidance (MAA) method to reduce the influence of metal artifacts by prospectively defining
+a non-circular orbit that avoids metal-induced biases in projection domain. Accurate geometric
+calibration is an important challenge to accurate 3D image reconstruction for such orbits. We investigate
+the performance of interpolation-based calibration from a library of circular orbits for any non-circular
+orbit. We apply the method to non-circular scans acquired for MAA, which involves: (i) coarse 3D
+localization of metal objects via only two scout views using an end-to-end trained neural network;
+(ii) calculation of the metal-induced x-ray spectral shift for all possible views; and (iii) identification
+of the non-circular orbit that minimizes the variations in spectral shift. Non-circular orbits
+with interpolation-based geometric calibration yielded reasonably accurate 3D image reconstruction.
+The end-to-end neural network accurately localized metal implants with just two scout views even
+in complex anatomical scenes, improving Dice coefficient by ~42% compared to a more conventional
+cascade of separately trained U-nets. In a spine phantom with pedicle screw instrumentation, non-circular
+orbits identified by the MAA method reduced the magnitude of metal "blomming" artifacts (apparent
+width of the screw shaft) in CBCT reconstructions by ~70%. The proposed imaging and calibration
+methods present a practical means to improve image quality in mobile C-arm CBCT by identifying non-circular
+scan protocols that improve sampling and reduce metal-induced biases in the projection data. 

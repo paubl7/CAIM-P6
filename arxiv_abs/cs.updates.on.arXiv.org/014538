@@ -1,0 +1,18 @@
+The minimum cut problem in an undirected and weighted graph $G$ is to find the minimum total weight
+of a set of edges whose removal disconnects $G$. We completely characterize the quantum query and
+time complexity of the minimum cut problem in the adjacency matrix model. If $G$ has $n$ vertices
+and edge weights at least $1$ and at most $\tau$, we give a quantum algorithm to solve the minimum cut
+problem using $\tilde O(n^{3/2}\sqrt{\tau})$ queries and time. Moreover, for every integer $1
+\le \tau \le n$ we give an example of a graph $G$ with edge weights $1$ and $\tau$ such that solving the
+minimum cut problem on $G$ requires $\Omega(n^{3/2}\sqrt{\tau})$ many queries to the adjacency
+matrix of $G$. These results contrast with the classical randomized case where $\Omega(n^2)$ queries
+to the adjacency matrix are needed in the worst case even to decide if an unweighted graph is connected
+or not. In the adjacency array model, when $G$ has $m$ edges the classical randomized complexity
+of the minimum cut problem is $\tilde \Theta(m)$. We show that the quantum query and time complexity
+are $\tilde O(\sqrt{mn\tau})$ and $\tilde O(\sqrt{mn\tau} + n^{3/2})$, respectively, where
+again the edge weights are between $1$ and $\tau$. For dense graphs we give lower bounds on the quantum
+query complexity of $\Omega(n^{3/2})$ for $\tau > 1$ and $\Omega(\tau n)$ for any $1 \leq \tau \leq
+n$. Our query algorithm uses a quantum algorithm for graph sparsification by Apers and de Wolf (FOCS
+2020) and results on the structure of near-minimum cuts by Kawarabayashi and Thorup (STOC 2015)
+and Rubinstein, Schramm and Weinberg (ITCS 2018). Our time efficient implementation builds on
+Karger's tree packing technique (STOC 1996). 

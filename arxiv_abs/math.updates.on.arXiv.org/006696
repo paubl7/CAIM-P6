@@ -1,0 +1,20 @@
+We develop a framework for simulating measure-preserving, ergodic dynamical systems on a quantum
+computer. Our approach provides a new operator-theoretic representation of classical dynamics
+by combining ergodic theory with quantum information science. The resulting \emph{quantum compiler}
+enables efficient simulation of spaces of classical observables with exponentially large dimension
+using a quadratic number of quantum gates. The compiler is based on a quantum feature map that we introduce
+for representing classical states by density operators on a reproducing kernel Hilbert space,
+$\mathcal H$. Furthermore, an embedding of classical observables into self-adjoint operators
+on $\mathcal H$ is established, such that quantum mechanical expectation values are consistent
+with pointwise function evaluation. In this scheme, quantum states and observables evolve unitarily
+under the lifted action of the Koopman evolution operators of the classical system. Moreover, by
+virtue of the reproducing property of $\mathcal H$, the quantum system is pointwise-consistent
+with the underlying classical dynamics. To achieve an exponential quantum computational advantage,
+we project the state of the quantum system onto a finite-rank density operator on a $2^n$-dimensional
+tensor product Hilbert space associated with $n$ qubits. By employing discrete Fourier-Walsh
+transforms of spectral functions, the evolution operator of the finite-dimensional quantum system
+is factorized into tensor product form, enabling implementation through an $n$-channel quantum
+circuit with an $O(n)$ gates and no interchannel communication. Furthermore, the circuit features
+a quantum Fourier transform stage with $O(n^2)$ gates, which generates predictions by measurement
+in the standard computational basis. We implement the framework in Qiskit, and demonstrate its
+consistency for prototypical periodic and quasiperiodic systems. 

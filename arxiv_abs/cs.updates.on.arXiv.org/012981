@@ -1,0 +1,18 @@
+We give efficient distributed algorithms for the minimum vertex cover problem in bipartite graphs
+in the CONGEST model. From K\H{o}nig's theorem, it is well known that in bipartite graphs the size
+of a minimum vertex cover is equal to the size of a maximum matching. We first show that together with
+an existing $O(n\log n)$-round algorithm for computing a maximum matching, the constructive proof
+of K\H{o}nig's theorem directly leads to a deterministic $O(n\log n)$-round CONGEST algorithm
+for computing a minimum vertex cover. We then show that by adapting the construction, we can also
+convert an \emph{approximate} maximum matching into an \emph{approximate} minimum vertex cover.
+Given a $(1-\delta)$-approximate matching for some $\delta>1$, we show that a $(1+O(\delta))$-approximate
+vertex cover can be computed in time $O(D+\mathrm{poly}(\frac{\log n}{\delta}))$, where $D$
+is the diameter of the graph. When combining with known graph clustering techniques, for any $\varepsilon\in(0,1]$,
+this leads to a $\mathrm{poly}(\frac{\log n}{\varepsilon})$-time deterministic and also to
+a slightly faster and simpler randomized $O(\frac{\log n}{\varepsilon^3})$-round CONGEST algorithm
+for computing a $(1+\varepsilon)$-approximate vertex cover in bipartite graphs. For constant
+$\varepsilon$, the randomized time complexity matches the $\Omega(\log n)$ lower bound for computing
+a $(1+\varepsilon)$-approximate vertex cover in bipartite graphs even in the LOCAL model. Our
+results are also in contrast to the situation in general graphs, where it is known that computing
+an optimal vertex cover requires $\tilde{\Omega}(n^2)$ rounds in the CONGEST model and where it
+is not even known how to compute any $(2-\varepsilon)$-approximation in time $o(n^2)$. 

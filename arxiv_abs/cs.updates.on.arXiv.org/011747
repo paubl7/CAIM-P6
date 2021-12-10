@@ -1,0 +1,19 @@
+In an input-queued switch, a crossbar schedule, or a matching between the input ports and the output
+ports needs to be computed in each switching cycle, or time slot. Designing switching algorithms
+with very low computational complexity, that lead to high throughput and small delay is a challenging
+problem. There appears to be a fundamental tradeoff between the computational complexity of the
+switching algorithm and the resultants throughput and delay. Parallel maximal matching algorithms
+(adapted for switching) appear to have stricken a sweet spot in this tradeoff, and prior work has
+shown the following performance guarantees. Using maximal matchings in every time slot results
+in at least 50% switch throughput and order-optimal (i.e., independent of the switch size N) average
+delay bounds for various traffic arrival processes. On the other hand, their computational complexity
+can be as low as $O(log^2N)$ per port/processor, which is much lower than those of the algorithms
+such as maximum weighted matching which ensures better throughput performance. In this work, we
+propose QPS-r, a parallel iterative switching algorithm that has the lowest possible computational
+complexity: O(1) per port. Using Lyapunov stability analysis, we show that the throughput and delay
+performance is identical to that of maximal matching algorithm. Although QPS-r builds upon an existing
+technique called Queue-Proportional Sampling (QPS), in this paper, we provide analytical guarantees
+on its throughput and delay under i.i.d. traffic as well as a Markovian traffic model which can model
+many realistic traffic patterns. We also demonstrate that QPS-3 (running 3 iterations) has comparable
+empirical throughput and delay performances as iSLIP (running $log_2 N$ iterations), a refined
+and optimized representative maximal matching algorithm adapted for switching. 

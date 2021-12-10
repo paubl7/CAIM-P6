@@ -1,0 +1,20 @@
+Present day computational fluid dynamics simulations generate extremely large amounts of data,
+sometimes on the order of TB/s. Often, a significant fraction of this data is discarded because current
+storage systems are unable to keep pace. To address this, data compression algorithms can be applied
+to data arrays containing flow quantities of interest to reduce the overall amount of storage. Compression
+methods either exactly reconstruct the original dataset (lossless compression) or provide an
+approximate representation of the original dataset (lossy compression). The matrix column interpolative
+decomposition (ID) can be implemented as a type of lossy compression for data matrices that factors
+the original data matrix into a product of two smaller factor matrices. One of these matrices consists
+of a subset of the columns of the original data matrix, while the other is a coefficient matrix which
+approximates the columns of the original data matrix as linear combinations of the selected columns.
+Motivating this work is the observation that the structure of ID algorithms makes them a natural
+fit for the asynchronous nature of task-based parallelism; they are able to operate independently
+on sub-domains of the system of interest and, as a result, provide varied levels of compression.
+Using the task-based Legion programming model, a single-pass ID algorithm (SPID) for CFD applications
+is implemented. Performance studies, scalability, and the accuracy of the compression algorithms
+are presented for an analytical Taylor-Green vortex problem, followed by a large-scale implementation
+of a compressible Taylor-Green vortex using a high-order Navier-Stokes solver. In both cases,
+compression factors exceeding 100 are achieved with relative errors at or below 10e-3. Moreover,
+strong and weak scaling results demonstrate that introducing SPID to solvers leads to negligible
+increases in runtime. 

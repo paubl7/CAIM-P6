@@ -1,0 +1,20 @@
+Bitcoin is based on a P2P network that is used to propagate transactions and blocks. While the P2P
+network design intends to hide the topology of the P2P network, information about the topology is
+required to understand the network from a scientific point of view. Thus, there is a natural tension
+between the 'desire' for unobservability on the one hand, and for observability on the other hand.
+On a middle ground, one would at least be interested on some statistical features of the Bitcoin network
+like the number of peers that participate in the propagation of transactions and blocks. This number
+is composed of the number of reachable peers that accept incoming connections and unreachable peers
+that do not accept incoming connections. While the number of reachable peers can be measured, it
+is inherently difficult to determine the number of unreachable peers. Thus, the number of unreachable
+peers can only be estimated based on some indicators. In this paper, we first define our understanding
+of unreachable peers and then propose the PAL (Passive Announcement Listening) method which gives
+an estimate of the number of unreachable peers by observing ADDR messages that announce active IP
+addresses in the network. The PAL method allows for detecting unreachable peers that indicate that
+they provide services useful to the P2P network. In conjunction with previous methods, the PAL method
+can help to get a better estimate of the number of unreachable peers. We use the PAL method to analyze
+data from a long-term measurement of the Bitcoin P2P network that gives insights into the development
+of the number of unreachable peers over five years from 2015 to 2020. Results show that about 31,000
+unreachable peers providing useful services were active per day at the end of the year 2020. An empirical
+validation indicates that the approach finds about 50 % of unreachable peers that provide useful
+services. 

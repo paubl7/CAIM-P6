@@ -1,0 +1,19 @@
+A key challenge of evolutionary game theory and multi-agent learning is to characterize the limit
+behaviour of game dynamics. Whereas convergence is often a property of learning algorithms in games
+satisfying a particular reward structure (e.g. zero-sum), it is well known, that for general payoffs
+even basic learning models, such as the replicator dynamics, are not guaranteed to converge. Worse
+yet, chaotic behavior is possible even in rather simple games, such as variants of Rock-Paper-Scissors
+games (Sato et al., 2002). Although chaotic behavior in learning dynamics can be precluded by the
+celebrated Poincar\'e-Bendixson theorem, it is only applicable to low-dimensional settings.
+Are there other characteristics of a game, which can force regularity in the limit sets of learning?
+In this paper, we show that behaviors consistent with the Poincar\'e-Bendixson theorem (limit
+cycles, but no chaotic attractor) follows purely based on the topological structure of the interaction
+graph, even for high-dimensional settings with arbitrary number of players and arbitrary payoff
+matrices. We prove our result for a wide class of follow-the-regularized leader (FoReL) dynamics,
+which generalize replicator dynamics, for games where each player has two strategies at disposal,
+and for interaction graphs where payoffs of each agent are only affected by one other agent (i.e.
+interaction graphs of indegree one). Since chaos has been observed in a game with only two players
+and three strategies, this class of non-chaotic games is in a sense maximal. Moreover, we provide
+simple conditions under which such behavior translates to social welfare guarantees, implying
+that FoReL learning achieves time average social welfare which is at least as good as that of a Nash
+equilibrium; and connecting the topology of the dynamics to the Price of Anarchy analysis. 

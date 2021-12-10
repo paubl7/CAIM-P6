@@ -1,0 +1,19 @@
+Secret sharing allows a dealer to distribute a secret among several parties such that only authorized
+subsets of parties, specified by a (monotone) access structure, can reconstruct the secret. Recently,
+Sehrawat and Desmedt (COCOON 2020) introduced hidden access structures, that remain secret until
+some authorized subset of parties collaborate. However, that scheme assumes semi-honest parties
+and only supports restricted access structures. We address these shortcomings by constructing
+a novel access structure hiding verifiable secret sharing scheme, that supports all monotone access
+structures. Our scheme is the first verifiable secret sharing scheme that guarantees verifiability
+even when a majority of the parties are malicious. As the building blocks of our scheme, we introduce
+and construct: (i) a set-system $\mathcal{H}$ with greater than $\exp\left(c\frac{2(\log h)^2}{(\log\log
+h)}\right)+2\exp\left(c\frac{(\log h)^2}{(\log\log h)}\right)$ subsets of a set of $h$ elements.
+It is defined over $\mathbb{Z}_m$, where $m$ is a non-prime-power such that the size of each set in
+$\mathcal{H}$ is divisible by $m$ but the sizes of their pairwise intersections are not, unless
+one set is a subset of another, (ii) a new variant of the learning with errors (LWE) problem, called
+PRIM-LWE, wherein the secret matrix can be sampled such that its determinant is a generator of $\mathbb{Z}_q^*$,
+where $q$ is the LWE modulus. Our scheme relies on the hardness of LWE and its maximum share size for
+$\ell$ parties is $(1+ o(1)) \dfrac{2^{\ell}}{\sqrt{\pi \ell/2}}(2 q^{\varrho + 0.5} + \sqrt{q}
++ \Theta(h))$, where $q$ is the LWE modulus and $\varrho \leq 1$ is a constant. We also discuss directions
+for future work to reduce the share size to: \[\leq \dfrac{1}{3} \left( (1+ o(1)) \dfrac{2^{\ell}}{\sqrt{\pi
+\ell/2}}(2 q^{\varrho + 0.5} + 2\sqrt{q}) \right).\] 

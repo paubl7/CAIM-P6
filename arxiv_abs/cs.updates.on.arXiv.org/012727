@@ -1,0 +1,19 @@
+The estimation of model parameters with uncertainties from observed data is a ubiquitous inverse
+problem in science and engineering. In this paper, we suggest an inexpensive and easy to implement
+parameter estimation technique that uses a heteroscedastic Bayesian Neural Network trained using
+anchored ensembling. The heteroscedastic aleatoric error of the network models the irreducible
+uncertainty due to parameter degeneracies in our inverse problem, while the epistemic uncertainty
+of the Bayesian model captures uncertainties which may arise from an input observation's out-of-distribution
+nature. We use this tool to perform real-time parameter inference in a 6 parameter G-equation model
+of a ducted, premixed flame from observations of acoustically excited flames. We train our networks
+on a library of 2.1 million simulated flame videos. Results on the test dataset of simulated flames
+show that the network recovers flame model parameters, with the correlation coefficient between
+predicted and true parameters ranging from 0.97 to 0.99, and well-calibrated uncertainty estimates.
+The trained neural networks are then used to infer model parameters from real videos of a premixed
+Bunsen flame captured using a high-speed camera in our lab. Re-simulation using inferred parameters
+shows excellent agreement between the real and simulated flames. Compared to Ensemble Kalman Filter-based
+tools that have been proposed for this problem in the combustion literature, our neural network
+ensemble achieves better data-efficiency and our sub-millisecond inference times represent
+a savings on computational costs by several orders of magnitude. This allows us to calibrate our
+reduced-order flame model in real-time and predict the thermoacoustic instability behaviour
+of the flame more accurately. 

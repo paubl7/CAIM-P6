@@ -1,0 +1,19 @@
+User attributes, such as gender and education, face severe incompleteness in social networks.
+In order to make this kind of valuable data usable for downstream tasks like user profiling and personalized
+recommendation, attribute inference aims to infer users' missing attribute labels based on observed
+data. Recently, variational autoencoder (VAE), an end-to-end deep generative model, has shown
+promising performance by handling the problem in a semi-supervised way. However, VAEs can easily
+suffer from over-fitting and over-smoothing when applied to attribute inference. To be specific,
+VAE implemented with multi-layer perceptron (MLP) can only reconstruct input data but fail in inferring
+missing parts. While using the trending graph neural networks (GNNs) as encoder has the problem
+that GNNs aggregate redundant information from neighborhood and generate indistinguishable
+user representations, which is known as over-smoothing. In this paper, we propose an attribute
+\textbf{Infer}ence model based on \textbf{A}dversarial \textbf{VAE} (Infer-AVAE) to cope with
+these issues. Specifically, to overcome over-smoothing, Infer-AVAE unifies MLP and GNNs in encoder
+to learn positive and negative latent representations respectively. Meanwhile, an adversarial
+network is trained to distinguish the two representations and GNNs are trained to aggregate less
+noise for more robust representations through adversarial training. Finally, to relieve over-fitting,
+mutual information constraint is introduced as a regularizer for decoder, so that it can make better
+use of auxiliary information in representations and generate outputs not limited by observations.
+We evaluate our model on 4 real-world social network datasets, experimental results demonstrate
+that our model averagely outperforms baselines by 7.0$\%$ in accuracy. 

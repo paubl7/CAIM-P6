@@ -1,0 +1,18 @@
+One of the limiting factors in training data-driven, rare-event prediction algorithms is the scarcity
+of the events of interest resulting in an extreme imbalance in the data. There have been many methods
+introduced in the literature for overcoming this issue; simple data manipulation through undersampling
+and oversampling, utilizing cost-sensitive learning algorithms, or by generating synthetic
+data points following the distribution of the existing data. While synthetic data generation has
+recently received a great deal of attention, there are real challenges involved in doing so for high-dimensional
+data such as multivariate time series. In this study, we explore the usefulness of the conditional
+generative adversarial network (CGAN) as a means to perform data-informed oversampling in order
+to balance a large dataset of multivariate time series. We utilize a flare forecasting benchmark
+dataset, named SWAN-SF, and design two verification methods to both quantitatively and qualitatively
+evaluate the similarity between the generated minority and the ground-truth samples. We further
+assess the quality of the generated samples by training a classical, supervised machine learning
+algorithm on synthetic data, and testing the trained model on the unseen, real data. The results
+show that the classifier trained on the data augmented with the synthetic multivariate time series
+achieves a significant improvement compared with the case where no augmentation is used. The popular
+flare forecasting evaluation metrics, TSS and HSS, report 20-fold and 5-fold improvements, respectively,
+indicating the remarkable statistical similarities, and the usefulness of CGAN-based data generation
+for complicated tasks such as flare forecasting. 

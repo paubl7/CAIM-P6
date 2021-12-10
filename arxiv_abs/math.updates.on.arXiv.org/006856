@@ -1,0 +1,20 @@
+Uncertainty sets are at the heart of robust optimization (RO) because they play a key role in determining
+the RO models' tractability, robustness, and conservativeness. Different types of uncertainty
+sets have been proposed that model uncertainty from various perspectives. Among them, polyhedral
+uncertainty sets are widely used due to their simplicity and flexible structure to model the underlying
+uncertainty. However, the conventional polyhedral uncertainty sets present certain disadvantages;
+some are too conservative while others lead to computationally expensive RO models. This paper
+proposes a systematic approach to develop data-driven polyhedral uncertainty sets that mitigate
+these drawbacks. The proposed uncertainty sets are polytopes induced by a given set of scenarios,
+capture correlation information between uncertain parameters, and allow for direct trade-offs
+between tractability and conservativeness issue of conventional polyhedral uncertainty sets.
+To develop these uncertainty sets, we use principal component analysis (PCA) to transform the correlated
+scenarios into their uncorrelated principal components and to shrink the uncertainty space dimensionality.
+Thus, decision-makers can use the number of the leading principal components as a tool to trade-off
+tractability, conservativeness, and robustness of RO models. We quantify the quality of the lower
+bound of a static RO problem with a scenario-induced uncertainty set by deriving a theoretical bound
+on the optimality gap. Additionally, we derive probabilistic guarantees for the performance of
+the proposed scenario-induced uncertainty sets by developing explicit lower bounds on the number
+of scenarios. Finally, we demonstrate the practical applicability of the proposed uncertainty
+sets to trade-off tractability, robustness, and conservativeness by examining a range of knapsack
+and power grid problems. 

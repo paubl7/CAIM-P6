@@ -1,0 +1,19 @@
+Causally consistent distributed storage systems have received significant recent attention
+due to the potential for providing a low latency data access as compared with linearizability. Current
+causally consistent data stores use partial or full replication to ensure data access to clients
+over a distributed setting. In this paper, we develop, for the first time, an erasure coding based
+algorithm called CausalEC that ensures causal consistency for a collection of read-write objects
+stored in a distributed set of nodes over an asynchronous message passing system. CausalEC can use
+an arbitrary linear erasure code for data storage, and ensures liveness and storage properties
+prescribed by the erasure code. CausalEC retains a key benefit of previously designed replication-based
+algorithms - every write operation is local, that is, a server performs only local actions before
+returning to a client that issued a write operation. For servers that store certain objects in an
+uncoded manner, read operations to those objects also return locally. In general, a read operation
+to an object can be returned by a server on contacting a small subset of other servers so long as the
+underlying erasure code allows for the object to be decoded from that subset. As a byproduct, we develop
+EventualEC, a new eventually consistent erasure coding based data storage algorithm. A novel technical
+aspect of CausalEC is the use of cross-object erasure coding, where nodes encode values across multiple
+objects, unlike previous consistent erasure coding based solutions. CausalEC navigates the technical
+challenges of cross-object erasure coding, in particular, pertaining to re-encoding the objects
+when writes update the values and ensuring that reads are served in the transient state where the
+system transitions to storing the codeword symbols corresponding to the new object versions. 

@@ -1,0 +1,18 @@
+With information technology entering new fields and levels of deployment, e.g., in areas of energy,
+mobility, and production, network security monitoring needs to be able to cope with those environments
+and their evolution. However, state-of-the-art Network Security Monitors (NSMs) typically lack
+the necessary flexibility to handle the diversity of the packet-oriented layers below the abstraction
+of TCP/IP connections. In this work, we advance the software architecture of a network security
+monitor to facilitate the flexible integration of lower-layer protocol dissectors while maintaining
+required performance levels. We proceed in three steps: First, we identify the challenges for modular
+packet-level analysis, present a refined NSM architecture to address them and specify requirements
+for its implementation. Second, we evaluate the performance of data structures to be used for protocol
+dispatching, implement the proposed design into the popular open-source NSM Zeek and assess its
+impact on the monitor performance. Our experiments show that hash-based data structures for dispatching
+introduce a significant overhead while array-based approaches qualify for practical application.
+Finally, we demonstrate the benefits of the proposed architecture and implementation by migrating
+Zeek's previously hard-coded stack of link and internet layer protocols to the new interface. Furthermore,
+we implement dissectors for non-IP based industrial communication protocols and leverage them
+to realize attack detection strategies from recent applied research. We integrate the proposed
+architecture into the Zeek open-source project and publish the implementation to support the scientific
+community as well as practitioners, promoting the transfer of research into practice. 

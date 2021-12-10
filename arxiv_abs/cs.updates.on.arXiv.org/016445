@@ -1,0 +1,19 @@
+Pretrained language models (PLMs) such as BERT adopt a training paradigm which first pretrain the
+model in general data and then finetune the model on task-specific data, and have recently achieved
+great success. However, PLMs are notorious for their enormous parameters and hard to be deployed
+on real-life applications. Knowledge distillation has been prevailing to address this problem
+by transferring knowledge from a large teacher to a much smaller student over a set of data. We argue
+that the selection of thee three key components, namely teacher, training data, and learning objective,
+is crucial to the effectiveness of distillation. We, therefore, propose a four-stage progressive
+distillation framework ERNIE-Tiny to compress PLM, which varies the three components gradually
+from general level to task-specific level. Specifically, the first stage, General Distillation,
+performs distillation with guidance from pretrained teacher, gerenal data and latent distillation
+loss. Then, General-Enhanced Distillation changes teacher model from pretrained teacher to finetuned
+teacher. After that, Task-Adaptive Distillation shifts training data from general data to task-specific
+data. In the end, Task-Specific Distillation, adds two additional losses, namely Soft-Label and
+Hard-Label loss onto the last stage. Empirical results demonstrate the effectiveness of our framework
+and generalization gain brought by ERNIE-Tiny.In particular, experiments show that a 4-layer
+ERNIE-Tiny maintains over 98.0%performance of its 12-layer teacher BERT base on GLUE benchmark,
+surpassing state-of-the-art (SOTA) by 1.0% GLUE score with the same amount of parameters. Moreover,
+ERNIE-Tiny achieves a new compression SOTA on five Chinese NLP tasks, outperforming BERT base by
+0.4% accuracy with 7.5x fewer parameters and9.4x faster inference speed. 

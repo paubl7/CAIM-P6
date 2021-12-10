@@ -1,0 +1,19 @@
+We address the aircraft conflict resolution problem under trajectory prediction uncertainty.
+We consider that aircraft velocity vectors may be perturbed due to weather effects, such as wind,
+or measurement errors. Such perturbations may affect aircraft trajectory prediction which plays
+a key role in ensuring flight safety in air traffic control. Our goal is to solve the aircraft conflict
+resolution problem in the presence of such perturbations and guarantee that aircraft are separated
+for any realization of the uncertain data. We propose an uncertainty model wherein aircraft velocities
+are represented as random variables and the uncertainty set is assumed to be polyhedral. We consider
+a robust optimization approach and embed the proposed uncertainty model within state-of-the-art
+mathematical programming formulations for aircraft conflict resolution. We then adopt the approach
+of Bertsimas and Sim (2004) to formulate the robust counterpart. We use the complex number reformulation
+and the constraint generation algorithm proposed by Dias et al. (2020a) to solve the resulting nonconvex
+optimization problem on benchmarking instances of the literature. Our numerical experiments
+reveal that perturbations of the order of $\pm 5\%$ on aircraft velocities can be accounted for without
+significantly impacting the objective function compared to the deterministic case. Our tests
+also show that for greater levels of uncertainty, several instances fail to admit conflict-free
+solutions, thus highlighting existing risk factors in aircraft conflict resolution. We attempt
+to explain this behavior by further analyzing pre- and post-optimization aircraft trajectories.
+Our findings show that most infeasible instances have both a relatively low total aircraft pairwise
+minimal distance and a high number of conflicts. 

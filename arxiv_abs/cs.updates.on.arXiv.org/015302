@@ -1,0 +1,18 @@
+This paper introduces an adaptive model-free deep reinforcement approach that can recognize and
+adapt to the diurnal patterns in the ride-sharing environment with car-pooling. Deep Reinforcement
+Learning (RL) suffers from catastrophic forgetting due to being agnostic to the timescale of changes
+in the distribution of experiences. Although RL algorithms are guaranteed to converge to optimal
+policies in Markov decision processes (MDPs), this only holds in the presence of static environments.
+However, this assumption is very restrictive. In many real-world problems like ride-sharing,
+traffic control, etc., we are dealing with highly dynamic environments, where RL methods yield
+only sub-optimal decisions. To mitigate this problem in highly dynamic environments, we (1) adopt
+an online Dirichlet change point detection (ODCP) algorithm to detect the changes in the distribution
+of experiences, (2) develop a Deep Q Network (DQN) agent that is capable of recognizing diurnal patterns
+and making informed dispatching decisions according to the changes in the underlying environment.
+Rather than fixing patterns by time of week, the proposed approach automatically detects that the
+MDP has changed, and uses the results of the new model. In addition to the adaptation logic in dispatching,
+this paper also proposes a dynamic, demand-aware vehicle-passenger matching and route planning
+framework that dynamically generates optimal routes for each vehicle based on online demand, vehicle
+capacities, and locations. Evaluation on New York City Taxi public dataset shows the effectiveness
+of our approach in improving the fleet utilization, where less than 50% of the fleet are utilized
+to serve the demand of up to 90% of the requests, while maximizing profits and minimizing idle times.

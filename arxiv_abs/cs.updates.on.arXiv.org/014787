@@ -1,0 +1,19 @@
+In real-world applications, images may be not only sub-sampled but also heavily compressed thus
+often containing various artifacts. Simple methods for enhancing the resolution of such images
+will exacerbate the artifacts, rendering them visually objectionable. In spite of its high practical
+values, super-resolving compressed images is not well studied in the literature. In this paper,
+we propose a novel compressed image super resolution (CISR) framework based on parallel and series
+integration of artifact removal and resolution enhancement. Based on maximum a posterior inference
+for estimating a clean low-resolution (LR) input image and a clean high resolution (HR) output image
+from down-sampled and compressed observations, we have designed a CISR architecture consisting
+of two deep neural network modules: the artifact reduction module (ARM) and resolution enhancement
+module (REM). ARM and REM work in parallel with both taking the compressed LR image as their inputs,
+while they also work in series with REM taking the output of ARM as one of its inputs and ARM taking the
+output of REM as its other input. A unique property of our CSIR system is that a single trained model
+is able to super-resolve LR images compressed by different methods to various qualities. This is
+achieved by exploiting deep neural net-works capacity for handling image degradations, and the
+parallel and series connections between ARM and REM to reduce the dependency on specific degradations.
+ARM and REM are trained simultaneously by the deep unfolding technique. Experiments are conducted
+on a mixture of JPEG and WebP compressed images without a priori knowledge of the compression type
+and com-pression factor. Visual and quantitative comparisons demonstrate the superiority of
+our method over state-of-the-art super resolu-tion methods. 

@@ -1,0 +1,18 @@
+Purpose: Lesion segmentation in medical imaging is key to evaluating treatment response. We have
+recently shown that reinforcement learning can be applied to radiological images for lesion localization.
+Furthermore, we demonstrated that reinforcement learning addresses important limitations of
+supervised deep learning; namely, it can eliminate the requirement for large amounts of annotated
+training data and can provide valuable intuition lacking in supervised approaches. However, we
+did not address the fundamental task of lesion/structure-of-interest segmentation. Here we introduce
+a method combining unsupervised deep learning clustering with reinforcement learning to segment
+brain lesions on MRI. Materials and Methods: We initially clustered images using unsupervised
+deep learning clustering to generate candidate lesion masks for each MRI image. The user then selected
+the best mask for each of 10 training images. We then trained a reinforcement learning algorithm
+to select the masks. We tested the corresponding trained deep Q network on a separate testing set
+of 10 images. For comparison, we also trained and tested a U-net supervised deep learning network
+on the same set of training/testing images. Results: Whereas the supervised approach quickly overfit
+the training data and predictably performed poorly on the testing set (16% average Dice score),
+the unsupervised deep clustering and reinforcement learning achieved an average Dice score of
+83%. Conclusion: We have demonstrated a proof-of-principle application of unsupervised deep
+clustering and reinforcement learning to segment brain tumors. The approach represents human-allied
+AI that requires minimal input from the radiologist without the need for hand-traced annotation.

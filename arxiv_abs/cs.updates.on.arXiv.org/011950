@@ -1,0 +1,21 @@
+Minimization of deterministic automata on finite words results in a {\em canonical\/} automaton.
+For deterministic automata on infinite words, no canonical minimal automaton exists, and a language
+may have different minimal deterministic B\"uchi (DBW) or co-B\"uchi (DCW) automata. In recent
+years, researchers have studied {\em good-for-games\/} (GFG) automata -- nondeterministic automata
+that can resolve their nondeterministic choices in a way that only depends on the past. Several applications
+of automata in formal methods, most notably synthesis, that are traditionally based on deterministic
+automata, can instead be based on GFG automata. The {\em minimization\/} problem for DBW and DCW
+is NP-complete, and it stays NP-complete for GFG B\"uchi and co-B\"uchi automata. On the other hand,
+minimization of GFG co-B\"uchi automata with {\em transition-based\/} acceptance (GFG-tNCWs)
+can be solved in polynomial time. In these automata, acceptance is defined by a set $\alpha$ of transitions,
+and a run is accepting if it traverses transitions in $\alpha$ only finitely often. This raises the
+question of canonicity of minimal deterministic and GFG automata with transition-based acceptance.
+In this paper we study this problem. We start with GFG-tNCWs and show that the safe components (that
+is, these obtained by restricting the transitions to these not in $\alpha$) of all minimal GFG-tNCWs
+are isomorphic, and that by saturating the automaton with transitions in $\alpha$ we get isomorphism
+among all minimal GFG-tNCWs. Thus, a canonical form for minimal GFG-tNCWs can be obtained in polynomial
+time. We continue to DCWs with transition-based acceptance (tDCWs), and their dual tDBWs. We show
+that here, while no canonical form for minimal automata exists, restricting attention to the safe
+components is useful, and implies that the only minimal tDCWs that have no canonical form are these
+for which the transition to the GFG model results in strictly smaller automaton, which do have a canonical
+minimal form. 

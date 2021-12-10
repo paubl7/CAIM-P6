@@ -1,0 +1,19 @@
+Social and behavioral determinants of health (SBDoH) have important roles in shaping people's
+health. In clinical research studies, especially comparative effectiveness studies, failure
+to adjust for SBDoH factors will potentially cause confounding issues and misclassification errors
+in either statistical analyses and machine learning-based models. However, there are limited
+studies to examine SBDoH factors in clinical outcomes due to the lack of structured SBDoH information
+in current electronic health record (EHR) systems, while much of the SBDoH information is documented
+in clinical narratives. Natural language processing (NLP) is thus the key technology to extract
+such information from unstructured clinical text. However, there is not a mature clinical NLP system
+focusing on SBDoH. In this study, we examined two state-of-the-art transformer-based NLP models,
+including BERT and RoBERTa, to extract SBDoH concepts from clinical narratives, applied the best
+performing model to extract SBDoH concepts on a lung cancer screening patient cohort, and examined
+the difference of SBDoH information between NLP extracted results and structured EHRs (SBDoH information
+captured in standard vocabularies such as the International Classification of Diseases codes).
+The experimental results show that the BERT-based NLP model achieved the best strict/lenient F1-score
+of 0.8791 and 0.8999, respectively. The comparison between NLP extracted SBDoH information and
+structured EHRs in the lung cancer patient cohort of 864 patients with 161,933 various types of clinical
+notes showed that much more detailed information about smoking, education, and employment were
+only captured in clinical narratives and that it is necessary to use both clinical narratives and
+structured EHRs to construct a more complete picture of patients' SBDoH factors. 

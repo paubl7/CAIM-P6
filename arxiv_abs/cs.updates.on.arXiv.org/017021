@@ -1,0 +1,19 @@
+Federated learning is an emerging research paradigm for enabling collaboratively training deep
+learning models without sharing patient data. However, the data from different institutions are
+usually heterogeneous across institutions, which may reduce the performance of models trained
+using federated learning. In this study, we propose a novel heterogeneity-aware federated learning
+method, SplitAVG, to overcome the performance drops from data heterogeneity in federated learning.
+Unlike previous federated methods that require complex heuristic training or hyper parameter
+tuning, our SplitAVG leverages the simple network split and feature map concatenation strategies
+to encourage the federated model training an unbiased estimator of the target data distribution.
+We compare SplitAVG with seven state-of-the-art federated learning methods, using centrally
+hosted training data as the baseline on a suite of both synthetic and real-world federated datasets.
+We find that the performance of models trained using all the comparison federated learning methods
+degraded significantly with the increasing degrees of data heterogeneity. In contrast, SplitAVG
+method achieves comparable results to the baseline method under all heterogeneous settings, that
+it achieves 96.2% of the accuracy and 110.4% of the mean absolute error obtained by the baseline in
+a diabetic retinopathy binary classification dataset and a bone age prediction dataset, respectively,
+on highly heterogeneous data partitions. We conclude that SplitAVG method can effectively overcome
+the performance drops from variability in data distributions across institutions. Experimental
+results also show that SplitAVG can be adapted to different base networks and generalized to various
+types of medical imaging tasks. 

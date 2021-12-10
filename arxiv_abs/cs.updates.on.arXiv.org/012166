@@ -1,0 +1,19 @@
+As reinforcement learning agents become increasingly integrated into complex, real-world environments,
+designing for safety becomes a critical consideration. We specifically focus on researching scenarios
+where agents can cause undesired side effects while executing a policy on a primary task. Since one
+can define multiple tasks for a given environment dynamics, there are two important challenges.
+First, we need to abstract the concept of safety that applies broadly to that environment independent
+of the specific task being executed. Second, we need a mechanism for the abstracted notion of safety
+to modulate the actions of agents executing different policies to minimize their side-effects.
+In this work, we propose Safety Aware Reinforcement Learning (SARL) - a framework where a virtual
+safe agent modulates the actions of a main reward-based agent to minimize side effects. The safe
+agent learns a task-independent notion of safety for a given environment. The main agent is then
+trained with a regularization loss given by the distance between the native action probabilities
+of the two agents. Since the safe agent effectively abstracts a task-independent notion of safety
+via its action probabilities, it can be ported to modulate multiple policies solving different
+tasks within the given environment without further training. We contrast this with solutions that
+rely on task-specific regularization metrics and test our framework on the SafeLife Suite, based
+on Conway's Game of Life, comprising a number of complex tasks in dynamic environments. We show that
+our solution is able to match the performance of solutions that rely on task-specific side-effect
+penalties on both the primary and safety objectives while additionally providing the benefit of
+generalizability and portability. 

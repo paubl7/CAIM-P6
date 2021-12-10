@@ -1,0 +1,19 @@
+Graph Neural Networks (GNNs) have led to state-of-the-art performance on a variety of machine learning
+tasks such as recommendation, node classification and link prediction. Graph neural network models
+generate node embeddings by merging nodes features with the aggregated neighboring nodes information.
+Most existing GNN models exploit a single type of aggregator (e.g., mean-pooling) to aggregate
+neighboring nodes information, and then add or concatenate the output of aggregator to the current
+representation vector of the center node. However, using only a single type of aggregator is difficult
+to capture the different aspects of neighboring information and the simple addition or concatenation
+update methods limit the expressive capability of GNNs. Not only that, existing supervised or semi-supervised
+GNN models are trained based on the loss function of the node label, which leads to the neglect of graph
+structure information. In this paper, we propose a novel graph neural network architecture, Graph
+Attention \& Interaction Network (GAIN), for inductive learning on graphs. Unlike the previous
+GNN models that only utilize a single type of aggregation method, we use multiple types of aggregators
+to gather neighboring information in different aspects and integrate the outputs of these aggregators
+through the aggregator-level attention mechanism. Furthermore, we design a graph regularized
+loss to better capture the topological relationship of the nodes in the graph. Additionally, we
+first present the concept of graph feature interaction and propose a vector-wise explicit feature
+interaction mechanism to update the node embeddings. We conduct comprehensive experiments on
+two node-classification benchmarks and a real-world financial news dataset. The experiments
+demonstrate our GAIN model outperforms current state-of-the-art performances on all the tasks.

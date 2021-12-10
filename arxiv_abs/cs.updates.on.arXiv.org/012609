@@ -1,0 +1,20 @@
+Question answering is an effective method for obtaining information from knowledge bases (KB).
+In this paper, we propose the Neural-Symbolic Complex Question Answering (NS-CQA) model, a data-efficient
+reinforcement learning framework for complex question answering by using only a modest number
+of training samples. Our framework consists of a neural generator and a symbolic executor that,
+respectively, transforms a natural-language question into a sequence of primitive actions, and
+executes them over the knowledge base to compute the answer. We carefully formulate a set of primitive
+symbolic actions that allows us to not only simplify our neural network design but also accelerate
+model convergence. To reduce search space, we employ the copy and masking mechanisms in our encoder-decoder
+architecture to drastically reduce the decoder output vocabulary and improve model generalizability.
+We equip our model with a memory buffer that stores high-reward promising programs. Besides, we
+propose an adaptive reward function. By comparing the generated trial with the trials stored in
+the memory buffer, we derive the curriculum-guided reward bonus, i.e., the proximity and the novelty.
+To mitigate the sparse reward problem, we combine the adaptive reward and the reward bonus, reshaping
+the sparse reward into dense feedback. Also, we encourage the model to generate new trials to avoid
+imitating the spurious trials while making the model remember the past high-reward trials to improve
+data efficiency. Our NS-CQA model is evaluated on two datasets: CQA, a recent large-scale complex
+question answering dataset, and WebQuestionsSP, a multi-hop question answering dataset. On both
+datasets, our model outperforms the state-of-the-art models. Notably, on CQA, NS-CQA performs
+well on questions with higher complexity, while only using approximately 1% of the total training
+samples. 

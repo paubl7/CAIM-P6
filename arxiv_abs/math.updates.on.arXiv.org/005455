@@ -1,0 +1,18 @@
+Over-the-air federated edge learning (Air-FEEL) is a communication-efficient solution for privacy-preserving
+distributed learning over wireless networks. Air-FEEL allows "one-shot" over-the-air aggregation
+of gradient/model-updates by exploiting the waveform superposition property of wireless channels,
+and thus promises an extremely low aggregation latency that is independent of the network size.
+However, such communication efficiency may come at a cost of learning performance degradation
+due to the aggregation error caused by the non-uniform channel fading over devices and noise perturbation.
+Prior work adopted channel inversion power control (or its variants) to reduce the aggregation
+error by aligning the channel gains, which, however, could be highly suboptimal in deep fading scenarios
+due to the noise amplification. To overcome this issue, we investigate the power control optimization
+for enhancing the learning performance of Air-FEEL. Towards this end, we first analyze the convergence
+behavior of the Air-FEEL by deriving the optimality gap of the loss-function under any given power
+control policy. Then we optimize the power control to minimize the optimality gap for accelerating
+convergence, subject to a set of average and maximum power constraints at edge devices. The problem
+is generally non-convex and challenging to solve due to the coupling of power control variables
+over different devices and iterations. To tackle this challenge, we develop an efficient algorithm
+by jointly exploiting the successive convex approximation (SCA) and trust region methods. Numerical
+results show that the optimized power control policy achieves significantly faster convergence
+than the benchmark policies such as channel inversion and uniform power transmission. 

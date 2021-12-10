@@ -1,0 +1,19 @@
+This paper deals with the state estimation problem in discrete-event systems modeled with nondeterministic
+finite automata, partially observed via a sensor measuring unit whose measurements (reported
+observations) may be vitiated by a malicious attacker. The attacks considered in this paper include
+arbitrary deletions, insertions, or substitutions of observed symbols by taking into account
+a bounded number of attacks or, more generally, a total cost constraint (assuming that each deletion,
+insertion, or substitution bears a positive cost to the attacker). An efficient approach is proposed
+to describe possible sequences of observations that match the one received by the measuring unit,
+as well as their corresponding state estimates and associated total costs. We develop an algorithm
+to obtain the least-cost matching sequences by reconstructing only a finite number of possible
+sequences, which we subsequently use to efficiently perform state estimation. We also develop
+a technique for verifying tamper-tolerant diagnosability under attacks that involve a bounded
+number of deletions, insertions, and substitutions (or, more generally, under attacks of bounded
+total cost) by using a novel structure obtained by attaching attacks and costs to the original plant.
+The overall construction and verification procedure have complexity that is of O(|X|^2 C^2),where
+|X| is the number of states of the given finite automaton and C is the maximum total cost that is allowed
+for all the deletions, insertions, and substitutions. We determine the minimum value of C such that
+the attacker can coordinate its tampering action to keep the observer indefinitely confused while
+utilizing a finite number of attacks. Several examples are presented to demonstrate the proposed
+methods. 

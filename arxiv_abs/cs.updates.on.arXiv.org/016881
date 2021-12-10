@@ -1,0 +1,19 @@
+In electrocardiography, the "classic" inverse problem is the reconstruction of electric potentials
+at a surface enclosing the heart from remote recordings at the body surface and an accurate description
+of the anatomy. The latter being affected by noise and obtained with limited resolution due to clinical
+constraints, a possibly large uncertainty may be perpetuated in the inverse reconstruction. The
+purpose of this work is to study the effect of shape uncertainty on the forward and the inverse problem
+of electrocardiography. To this aim, the problem is first recast into a boundary integral formulation
+and then discretised with a collocation method to achieve high convergence rates and a fast time
+to solution. The shape uncertainty of the domain is represented by a random deformation field defined
+on a reference configuration. We propose a periodic-in-time covariance kernel for the random field
+and approximate the Karhunen-Lo\`eve expansion using low-rank techniques for fast sampling.
+The space-time uncertainty in the expected potential and its variance is evaluated with an anisotropic
+sparse quadrature approach and validated by a quasi-Monte Carlo method. We present several numerical
+experiments on a simplified but physiologically grounded 2-dimensional geometry to illustrate
+the validity of the approach. The tested parametric dimension ranged from 100 up to 600. For the forward
+problem the sparse quadrature is very effective. In the inverse problem, the sparse quadrature
+and the quasi-Monte Carlo method perform as expected, except for the total variation regularisation,
+where convergence is limited by lack of regularity. We finally investigate an $H^{1/2}$ regularisation,
+which naturally stems from the boundary integral formulation, and compare it to more classical
+approaches. 

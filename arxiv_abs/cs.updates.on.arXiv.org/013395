@@ -1,0 +1,20 @@
+Vehicular communications disclose rich information about the vehicles and their whereabouts.
+Pseudonymous authentication secures communication while enhancing user privacy. To enhance
+location privacy, cryptographic mix-zones were proposed to facilitate vehicles covertly transition
+to new ephemeral credentials. The resilience to (syntactic and semantic) pseudonym linking (attacks)
+highly depends on the geometry of the mix-zones, mobility patterns, vehicle density, and arrival
+rates. We introduce a tracking algorithm for linking pseudonyms before and after a cryptographically
+protected mix-zone. Our experimental results show that an eavesdropper, leveraging standardized
+vehicular communication messages and road layout, could successfully link 73% of pseudonyms during
+non-rush hours and 62% of pseudonyms during rush hours after vehicles change their pseudonyms in
+a mix-zone. To mitigate such inference attacks, we present a novel cooperative mix-zone scheme
+that enhances user privacy regardless of the vehicle mobility patterns, vehicle density, and arrival
+rate to the mix-zone. A subset of vehicles, termed relaying vehicles, are selected to be responsible
+for emulating non-existing vehicles. Such vehicles cooperatively disseminate decoy traffic
+without affecting safety-critical operations: with 50% of vehicles as relaying vehicles, the
+probability of linking pseudonyms (for the entire interval) drops from 68% to 18%. On average, this
+imposes 28 ms extra computation overhead, per second, on the Roadside Units (RSUs) and 4.67 ms extra
+computation overhead, per second, on the (relaying) vehicle side; it also introduces 1.46 KB/sec
+extra communication overhead by (relaying) vehicles and 45 KB/sec by RSUs for the dissemination
+of decoy traffic. Thus, user privacy is enhanced at the cost of low computation and communication
+overhead. 

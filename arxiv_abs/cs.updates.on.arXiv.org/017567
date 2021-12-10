@@ -1,0 +1,19 @@
+Human vision is often adversely affected by complex environmental factors, especially in night
+vision scenarios. Thus, infrared cameras are often leveraged to help enhance the visual effects
+via detecting infrared radiation in the surrounding environment, but the infrared videos are undesirable
+due to the lack of detailed semantic information. In such a case, an effective video-to-video translation
+method from the infrared domain to the visible light counterpart is strongly needed by overcoming
+the intrinsic huge gap between infrared and visible fields. To address this challenging problem,
+we propose an infrared-to-visible (I2V) video translation method I2V-GAN to generate fine-grained
+and spatial-temporal consistent visible light videos by given unpaired infrared videos. Technically,
+our model capitalizes on three types of constraints: 1)adversarial constraint to generate synthetic
+frames that are similar to the real ones, 2)cyclic consistency with the introduced perceptual loss
+for effective content conversion as well as style preservation, and 3)similarity constraints
+across and within domains to enhance the content and motion consistency in both spatial and temporal
+spaces at a fine-grained level. Furthermore, the current public available infrared and visible
+light datasets are mainly used for object detection or tracking, and some are composed of discontinuous
+images which are not suitable for video tasks. Thus, we provide a new dataset for I2V video translation,
+which is named IRVI. Specifically, it has 12 consecutive video clips of vehicle and monitoring scenes,
+and both infrared and visible light videos could be apart into 24352 frames. Comprehensive experiments
+validate that I2V-GAN is superior to the compared SOTA methods in the translation of I2V videos with
+higher fluency and finer semantic details. The code and IRVI dataset are available at https://github.com/BIT-DA/I2V-GAN.

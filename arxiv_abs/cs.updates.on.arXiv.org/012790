@@ -1,0 +1,19 @@
+We consider assignment policies that allocate resources to users, where both resources and users
+are located on a one-dimensional line. First, we consider unidirectional assignment policies
+that allocate resources only to users located to their left. We propose the Move to Right (MTR) policy,
+which scans from left to right assigning nearest rightmost available resource to a user, and contrast
+it to the Unidirectional Gale-Shapley (UGS) matching policy. While both policies among all unidirectional
+policies, minimize the expected distance traveled by a request (request distance), MTR is fairer.
+Moreover, we show that when user and resource locations are modeled by statistical point processes,
+and resources are allowed to satisfy more than one user, the spatial system under unidirectional
+policies can be mapped into bulk service queueing systems, thus allowing the application of many
+queueing theory results that yield closed form expressions. As we consider a case where different
+resources can satisfy different numbers of users, we also generate new results for bulk service
+queues. We also consider bidirectional policies where there are no directional restrictions on
+resource allocation and develop an algorithm for computing the optimal assignment which is more
+efficient than known algorithms in the literature when there are more resources than users. Numerical
+evaluation of performance of unidirectional and bidirectional allocation schemes yields design
+guidelines beneficial for resource placement. \np{Finally, we present a heuristic algorithm,
+which leverages the optimal dynamic programming scheme for one-dimensional inputs to obtain approximate
+solutions to the optimal assignment problem for the two-dimensional scenario and empirically
+yields request distances within a constant factor of the optimal solution. 

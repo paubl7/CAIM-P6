@@ -1,0 +1,18 @@
+Video prediction is commonly referred to as forecasting future frames of a video sequence provided
+several past frames thereof. It remains a challenging domain as visual scenes evolve according
+to complex underlying dynamics, such as the camera's egocentric motion or the distinct motility
+per individual object viewed. These are mostly hidden from the observer and manifest as often highly
+non-linear transformations between consecutive video frames. Therefore, video prediction is
+of interest not only in anticipating visual changes in the real world but has, above all, emerged
+as an unsupervised learning rule targeting the formation and dynamics of the observed environment.
+Many of the deep learning-based state-of-the-art models for video prediction utilize some form
+of recurrent layers like Long Short-Term Memory (LSTMs) or Gated Recurrent Units (GRUs) at the core
+of their models. Although these models can predict the future frames, they rely entirely on these
+recurrent structures to simultaneously perform three distinct tasks: extracting transformations,
+projecting them into the future, and transforming the current frame. In order to completely interpret
+the formed internal representations, it is crucial to disentangle these tasks. This paper proposes
+a fully differentiable building block that can perform all of those tasks separately while maintaining
+interpretability. We derive the relevant theoretical foundations and showcase results on synthetic
+as well as real data. We demonstrate that our method is readily extended to perform motion segmentation
+and account for the scene's composition, and learns to produce reliable predictions in an entirely
+interpretable manner by only observing unlabeled video data. 

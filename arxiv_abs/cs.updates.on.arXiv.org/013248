@@ -1,0 +1,20 @@
+Fast and reliable prediction of riverine flow velocities is important in many applications, including
+flood risk management. The shallow water equations (SWEs) are commonly used for prediction of the
+flow velocities. However, accurate and fast prediction with standard SWE solvers is challenging
+in many cases. Traditional approaches are computationally expensive and require high-resolution
+riverbed profile measurement ( bathymetry) for accurate predictions. As a result, they are a poor
+fit in situations where they need to be evaluated repetitively due, for example, to varying boundary
+condition (BC), or when the bathymetry is not known with certainty. In this work, we propose a two-stage
+process that tackles these issues. First, using the principal component geostatistical approach
+(PCGA) we estimate the probability density function of the bathymetry from flow velocity measurements,
+and then we use multiple machine learning algorithms to obtain a fast solver of the SWEs, given augmented
+realizations from the posterior bathymetry distribution and the prescribed range of BCs. The first
+step allows us to predict flow velocities without direct measurement of the bathymetry. Furthermore,
+the augmentation of the distribution in the second stage allows incorporation of the additional
+bathymetry information into the flow velocity prediction for improved accuracy and generalization,
+even if the bathymetry changes over time. Here, we use three solvers, referred to as PCA-DNN (principal
+component analysis-deep neural network), SE (supervised encoder), and SVE (supervised variational
+encoder), and validate them on a reach of the Savannah river near Augusta, GA. Our results show that
+the fast solvers are capable of predicting flow velocities with good accuracy, at a computational
+cost that is significantly lower than the cost of solving the full boundary value problem with traditional
+methods. 

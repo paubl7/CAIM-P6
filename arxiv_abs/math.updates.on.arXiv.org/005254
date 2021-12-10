@@ -1,0 +1,19 @@
+Bayesian approaches have been successfully integrated into training deep neural networks. One
+popular family is stochastic gradient Markov chain Monte Carlo methods (SG-MCMC), which have gained
+increasing interest due to their scalability to handle large datasets and the ability to avoid overfitting.
+Although standard SG-MCMC methods have shown great performance in a variety of problems, they may
+be inefficient when the random variables in the target posterior densities have scale differences
+or are highly correlated. In this work, we present an adaptive Hessian approximated stochastic
+gradient MCMC method to incorporate local geometric information while sampling from the posterior.
+The idea is to apply stochastic approximation to sequentially update a preconditioning matrix
+at each iteration. The preconditioner possesses second-order information and can guide the random
+walk of a sampler efficiently. Instead of computing and saving the full Hessian of the log posterior,
+we use limited memory of the sample and their stochastic gradients to approximate the inverse Hessian-vector
+multiplication in the updating formula. Moreover, by smoothly optimizing the preconditioning
+matrix, our proposed algorithm can asymptotically converge to the target distribution with a controllable
+bias under mild conditions. To reduce the training and testing computational burden, we adopt a
+magnitude-based weight pruning method to enforce the sparsity of the network. Our method is user-friendly
+and is scalable to standard SG-MCMC updating rules by implementing an additional preconditioner.
+The sparse approximation of inverse Hessian alleviates storage and computational complexities
+for large dimensional models. The bias introduced by stochastic approximation is controllable
+and can be analyzed theoretically. Numerical experiments are performed on several problems. 

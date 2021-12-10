@@ -1,0 +1,20 @@
+General image super-resolution techniques have difficulties in recovering detailed face structures
+when applying to low resolution face images. Recent deep learning based methods tailored for face
+images have achieved improved performance by jointly trained with additional task such as face
+parsing and landmark prediction. However, multi-task learning requires extra manually labeled
+data. Besides, most of the existing works can only generate relatively low resolution face images
+(e.g., $128\times128$), and their applications are therefore limited. In this paper, we introduce
+a novel SPatial Attention Residual Network (SPARNet) built on our newly proposed Face Attention
+Units (FAUs) for face super-resolution. Specifically, we introduce a spatial attention mechanism
+to the vanilla residual blocks. This enables the convolutional layers to adaptively bootstrap
+features related to the key face structures and pay less attention to those less feature-rich regions.
+This makes the training more effective and efficient as the key face structures only account for
+a very small portion of the face image. Visualization of the attention maps shows that our spatial
+attention network can capture the key face structures well even for very low resolution faces (e.g.,
+$16\times16$). Quantitative comparisons on various kinds of metrics (including PSNR, SSIM, identity
+similarity, and landmark detection) demonstrate the superiority of our method over current state-of-the-arts.
+We further extend SPARNet with multi-scale discriminators, named as SPARNetHD, to produce high
+resolution results (i.e., $512\times512$). We show that SPARNetHD trained with synthetic data
+cannot only produce high quality and high resolution outputs for synthetically degraded face images,
+but also show good generalization ability to real world low quality face images. Codes are available
+at \url{https://github.com/chaofengc/Face-SPARNet}. 

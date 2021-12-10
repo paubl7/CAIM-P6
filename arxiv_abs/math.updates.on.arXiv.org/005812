@@ -1,0 +1,19 @@
+We consider the bilinear optimal control of an advection-reaction-diffusion system, where the
+control arises as the velocity field in the advection term. Such a problem is generally challenging
+from both theoretical analysis and algorithmic design perspectives mainly because the state variable
+depends nonlinearly on the control variable and an additional divergence-free constraint on the
+control is coupled together with the state equation. Mathematically, the proof of the existence
+of optimal solutions is delicate, and up to now, only some results are known for a few special cases
+where additional restrictions are imposed on the space dimension and the regularity of the control.
+We prove the existence of optimal controls and derive the first-order optimality conditions in
+general settings without any extra assumption. Computationally, the well-known conjugate gradient
+(CG) method can be applied conceptually. However, due to the additional divergence-free constraint
+on the control variable and the nonlinear relation between the state and control variables, it is
+challenging to compute the gradient and the optimal stepsize at each CG iteration, and thus nontrivial
+to implement the CG method. To address these issues, we advocate a fast inner preconditioned CG method
+to ensure the divergence-free constraint and an efficient inexactness strategy to determine an
+appropriate stepsize. An easily implementable nested CG method is thus proposed for solving such
+a complicated problem. For the numerical discretization, we combine finite difference methods
+for the time discretization and finite element methods for the space discretization. Efficiency
+of the proposed nested CG method is promisingly validated by the results of some preliminary numerical
+experiments. 

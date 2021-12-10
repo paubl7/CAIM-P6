@@ -1,0 +1,18 @@
+We propose conditional transport (CT) as a new divergence to measure the difference between two
+probability distributions. The CT divergence consists of the expected cost of a forward CT, which
+constructs a navigator to stochastically transport a data point of one distribution to the other
+distribution, and that of a backward CT which reverses the transport direction. To apply it to the
+distributions whose probability density functions are unknown but random samples are accessible,
+we further introduce asymptotic CT (ACT), whose estimation only requires access to mini-batch
+based discrete empirical distributions. Equipped with two navigators that amortize the computation
+of conditional transport plans, the ACT divergence comes with unbiased sample gradients that are
+straightforward to compute, making it amenable to mini-batch stochastic gradient descent based
+optimization. When applied to train a generative model, the ACT divergence is shown to strike a good
+balance between mode covering and seeking behaviors and strongly resist mode collapse. To model
+high-dimensional data, we show that it is sufficient to modify the adversarial game of an existing
+generative adversarial network (GAN) to a game played by a generator, a forward navigator, and a
+backward navigator, which try to minimize a distribution-to-distribution transport cost by optimizing
+both the distribution of the generator and conditional transport plans specified by the navigators,
+versus a critic that does the opposite by inflating the point-to-point transport cost. On a wide
+variety of benchmark datasets for generative modeling, substituting the default statistical
+distance of an existing GAN with the ACT divergence is shown to consistently improve the performance.

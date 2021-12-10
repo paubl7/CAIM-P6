@@ -1,0 +1,18 @@
+The recently proposed RCube network is a cube-based server-centric data center network (DCN),
+including two types of heterogeneous servers, called core and edge servers. Remarkably, it takes
+the latter as backup servers to deal with server failures and thus achieve high availability. This
+paper first points out that RCube is suitable as a candidate topology of DCNs for edge computing.
+Three transmission types are among core and edge servers based on the demand for applications' computation
+and instant response. We then employ protection routing to analyze the transmission failure of
+RCube DCNs. Unlike traditional protection routing, which only tolerates a single link or node failure,
+we use the multi-protection routing scheme to improve fault-tolerance capability. To configure
+a protection routing in a network, according to Tapolcai's suggestion, we need to construct two
+completely independent spanning trees (CISTs). A logic graph of RCube, denoted by $L$-$RCube(n,m,k)$,
+is a network with a recursive structure. Each basic building element consists of $n$ core servers
+and $m$ edge servers, where the order $k$ is the number of recursions applied in the structure. In
+this paper, we provide algorithms to construct $\min\{n,\lfloor(n+m)/2\rfloor\}$ CISTs in $L$-$RCube(n,m,k)$
+for $n+m\geqslant 4$ and $n>1$. From a combination of the multiple CISTs, we can configure the desired
+multi-protection routing. In our simulation, we configure up to 10 protection routings for RCube
+DCNs. As far as we know, in past research, there were at most three protection routings developed
+in other network structures. Finally, we summarize some crucial analysis viewpoints about the
+transmission efficiency of DCNs with heterogeneous edge-core servers from the simulation results.

@@ -1,0 +1,18 @@
+Let $G$ be a graph on $n$ nodes. In the stochastic population protocol model, a collection of $n$ indistinguishable,
+resource-limited nodes collectively solve tasks via pairwise interactions. In each interaction,
+two randomly chosen neighbors first read each other's states, and then update their local states.
+A rich line of research has established tight upper and lower bounds on the complexity of fundamental
+tasks, such as majority and leader election, in this model, when $G$ is a clique. Specifically, in
+the clique, these tasks can be solved fast, i.e., in $n \operatorname{polylog} n$ pairwise interactions,
+with high probability, using at most $\operatorname{polylog} n$ states per node. In this work,
+we consider the more general setting where $G$ is an arbitrary graph, and present a technique for
+simulating protocols designed for fully-connected networks in any connected regular graph. Our
+main result is a simulation that is efficient on many interesting graph families: roughly, the simulation
+overhead is polylogarithmic in the number of nodes, and quadratic in the conductance of the graph.
+As a sample application, we show that, in any regular graph with conductance $\phi$, both leader
+election and exact majority can be solved in $\phi^{-2} \cdot n \operatorname{polylog} n$ pairwise
+interactions, with high probability, using at most $\phi^{-2} \cdot \operatorname{polylog}
+n$ states per node. This shows that there are fast and space-efficient population protocols for
+leader election and exact majority on graphs with good expansion properties. We believe our results
+will prove generally useful, as they allow efficient technology transfer between the well-mixed
+(clique) case, and the under-explored spatial setting. 

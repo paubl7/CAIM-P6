@@ -1,0 +1,19 @@
+The current phase of quantum computing is in the Noisy Intermediate-Scale Quantum (NISQ) era. On
+NISQ devices, two-qubit gates such as CNOTs are much noisier than single-qubit gates, so it is essential
+to minimize their count. Quantum circuit synthesis is a process of decomposing an arbitrary unitary
+into a sequence of quantum gates, and can be used as an optimization tool to produce shorter circuits
+to improve overall circuit fidelity. However, the time-to-solution of synthesis grows exponentially
+with the number of qubits. As a result, synthesis is intractable for circuits on a large qubit scale.
+In this paper, we propose a hierarchical, block-by-block optimization framework, QGo, for quantum
+circuit optimization. Our approach allows an exponential cost optimization to scale to large circuits.
+QGo uses a combination of partitioning and synthesis: 1) partition the circuit into a sequence of
+independent circuit blocks; 2) re-generate and optimize each block using quantum synthesis; and
+3) re-compose the final circuit by stitching all the blocks together. We perform our analysis and
+show the fidelity improvements in three different regimes: small-size circuits on real devices,
+medium-size circuits on noise simulations, and large-size circuits on analytical models. Using
+a set of NISQ benchmarks, we show that QGo can reduce the number of CNOT gates by 29.9% on average and
+up to 50% when compared with industrial compilers such as t|ket>. When executed on the IBM Athens
+system, shorter depth leads to higher circuit fidelity. We also demonstrate the scalability of
+our QGo technique to optimize circuits of 60+ qubits. Our technique is the first demonstration of
+successfully employing and scaling synthesis in the compilation toolchain for large circuits.
+Overall, our approach is robust for direct incorporation in production compiler toolchains. 

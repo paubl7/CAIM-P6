@@ -1,0 +1,19 @@
+Quality-of-Service prediction of web service is an integral part of services computing due to its
+diverse applications in the various facets of a service life cycle, such as service composition,
+service selection, service recommendation. One of the primary objectives of designing a QoS prediction
+algorithm is to achieve satisfactory prediction accuracy. However, accuracy is not the only criteria
+to meet while developing a QoS prediction algorithm. The algorithm has to be faster in terms of prediction
+time so that it can be integrated into a real-time recommendation or composition system. The other
+important factor to consider while designing the prediction algorithm is scalability to ensure
+that the prediction algorithm can tackle large-scale datasets. The existing algorithms on QoS
+prediction often compromise on one goal while ensuring the others. In this paper, we propose a semi-offline
+QoS prediction model to achieve three important goals simultaneously: higher accuracy, faster
+prediction time, scalability. Here, we aim to predict the QoS value of service that varies across
+users. Our framework consists of multi-phase prediction algorithms: preprocessing-phase prediction,
+online prediction, and prediction using the pre-trained model. In the preprocessing phase, we
+first apply multi-level clustering on the dataset to obtain correlated users and services. We then
+preprocess the clusters using collaborative filtering to remove the sparsity of the given QoS invocation
+log matrix. Finally, we create a two-staged, semi-offline regression model using neural networks
+to predict the QoS value of service to be invoked by a user in real-time. Our experimental results
+on four publicly available WS-DREAM datasets show the efficiency in terms of accuracy, scalability,
+fast responsiveness of our framework as compared to the state-of-the-art methods. 

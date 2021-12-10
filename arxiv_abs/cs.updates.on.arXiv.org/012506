@@ -1,0 +1,18 @@
+In this paper, we study \emph{Federated Bandit}, a decentralized Multi-Armed Bandit problem with
+a set of $N$ agents, who can only communicate their local data with neighbors described by a connected
+graph $G$. Each agent makes a sequence of decisions on selecting an arm from $M$ candidates, yet they
+only have access to local and potentially biased feedback/evaluation of the true reward for each
+action taken. Learning only locally will lead agents to sub-optimal actions while converging to
+a no-regret strategy requires a collection of distributed data. Motivated by the proposal of federated
+learning, we aim for a solution with which agents will never share their local observations with
+a central entity, and will be allowed to only share a private copy of his/her own information with
+their neighbors. We first propose a decentralized bandit algorithm \texttt{Gossip\_UCB}, which
+is a coupling of variants of both the classical gossiping algorithm and the celebrated Upper Confidence
+Bound (UCB) bandit algorithm. We show that \texttt{Gossip\_UCB} successfully adapts local bandit
+learning into a global gossiping process for sharing information among connected agents, and achieves
+guaranteed regret at the order of $O(\max\{ \texttt{poly}(N,M) \log T, \texttt{poly}(N,M)\log_{\lambda_2^{-1}}
+N\})$ for all $N$ agents, where $\lambda_2\in(0,1)$ is the second largest eigenvalue of the expected
+gossip matrix, which is a function of $G$. We then propose \texttt{Fed\_UCB}, a differentially
+private version of \texttt{Gossip\_UCB}, in which the agents preserve $\epsilon$-differential
+privacy of their local data while achieving $O(\max \{\frac{\texttt{poly}(N,M)}{\epsilon}\log^{2.5}
+T, \texttt{poly}(N,M) (\log_{\lambda_2^{-1}} N + \log T) \})$ regret. 

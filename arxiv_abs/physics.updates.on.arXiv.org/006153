@@ -1,0 +1,19 @@
+A CFD-driven deterministic symbolic identification algorithm for learning explicit algebraic
+Reynolds-stress models (EARSM) from high-fidelity data is developed building on the CFD-free
+SpaRTA algorithm of [1]. Corrections for the Reynolds stress tensor and the production of transported
+turbulent quantities of a baseline linear eddy viscosity model (LEVM) are expressed as functions
+of tensor polynomials selected from a library of candidate functions. The CFD-driven training
+consists in solving a blackbox optimization problem in which the fitness of candidate EARSM models
+is evaluated by running RANS simulations. A preliminary sensitivity analysis is used to identify
+the most influential terms and to reduce the dimensionality of the search space and the Constrained
+Optimization using Response Surface (CORS) algorithm, which approximates the black-box cost
+function using a response surface constructed from a limited number of CFD solves, is used to find
+the optimal model parameters within a realizable search space. The resulting turbulence models
+are numerically robust and ensure conservation of mean kinetic energy. Furthermore, the CFD-driven
+procedure enables training of models against any target quantity of interest computable as an output
+of the CFD model. Model discovery and cross-validation is performed for three configurations of
+2D turbulent separated flows in channels of variable section using different sets of training data
+to show the flexibility of the method. The discovered models are then applied to the prediction of
+an unseen 2D separated flow with higher Reynolds number and different geometry. The predictions
+of the discovered models for the new case are shown to be not only more accurate of the baseline LEVM,
+but also of a multi-purpose EARSM model derived from purely physical arguments. 

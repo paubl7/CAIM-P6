@@ -1,0 +1,19 @@
+Conditional image generation (CIG) is a widely studied problem in computer vision and machine learning.
+Given a class, CIG takes the name of this class as input and generates a set of images that belong to
+this class. In existing CIG works, for different classes, their corresponding images are generated
+independently, without considering the relationship among classes. In real-world applications,
+the classes are organized into a hierarchy and their hierarchical relationships are informative
+for generating high-fidelity images. In this paper, we aim to leverage the class hierarchy for conditional
+image generation. We propose two ways of incorporating class hierarchy: prior control and post
+constraint. In prior control, we first encode the class hierarchy, then feed it as a prior into the
+conditional generator to generate images. In post constraint, after the images are generated,
+we measure their consistency with the class hierarchy and use the consistency score to guide the
+training of the generator. Based on these two ideas, we propose a TreeGAN model which consists of
+three modules: (1) a class hierarchy encoder (CHE) which takes the hierarchical structure of classes
+and their textual names as inputs and learns an embedding for each class; the embedding captures
+the hierarchical relationship among classes; (2) a conditional image generator (CIG) which takes
+the CHE-generated embedding of a class as input and generates a set of images belonging to this class;
+(3) a consistency checker which performs hierarchical classification on the generated images
+and checks whether the generated images are compatible with the class hierarchy; the consistency
+score is used to guide the CIG to generate hierarchy-compatible images. Experiments on various
+datasets demonstrate the effectiveness of our method. 

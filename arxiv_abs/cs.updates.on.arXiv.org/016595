@@ -1,0 +1,20 @@
+Communication-avoiding algorithms for Linear Algebra have become increasingly popular, in particular
+for distributed memory architectures. In practice, these algorithms assume that the data is already
+distributed in a specific way, thus making data reshuffling a key to use them. For performance reasons,
+a straightforward all-to-all exchange must be avoided. Here, we show that process relabeling (i.e.
+permuting processes in the final layout) can be used to obtain communication optimality for data
+reshuffling, and that it can be efficiently found by solving a Linear Assignment Problem (Maximum
+Weight Bipartite Perfect Matching). Based on this, we have developed a Communication-Optimal
+Shuffle and Transpose Algorithm (COSTA): this highly-optimised algorithm implements $A=\alpha\cdot
+\operatorname{op}(B) + \beta \cdot A,\ \operatorname{op} \in \{\operatorname{transpose},
+\operatorname{conjugate-transpose}, \operatorname{identity}\}$ on distributed systems,
+where $A, B$ are matrices with potentially different (distributed) layouts and $\alpha, \beta$
+are scalars. COSTA can take advantage of the communication-optimal process relabeling even for
+heterogeneous network topologies, where latency and bandwidth differ among nodes. The implementation
+not only outperforms the best available ScaLAPACK redistribute and transpose routines multiple
+times, but is also able to deal with more general matrix layouts, in particular it is not limited to
+block-cyclic layouts. Finally, we use COSTA to integrate a communication-optimal matrix multiplication
+algorithm into the CP2K quantum chemistry simulation package. This way, we show that COSTA can be
+used to unlock the full potential of recent Linear Algebra algorithms in applications by facilitating
+interoperability between algorithms with a wide range of data layouts, in addition to bringing
+significant redistribution speedups. 

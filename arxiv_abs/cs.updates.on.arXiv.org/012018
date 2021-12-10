@@ -1,0 +1,19 @@
+Using networks as a means of computing can reduce the communication flow or the total number of bits
+transmitted over the networks. In this paper, we propose to distribute the computation load in stationary
+networks, and formulate a flow-based delay minimization problem that jointly captures the aspects
+of communications and computation. We exploit the distributed compression scheme of Slepian-Wolf
+that is applicable under any protocol information where nodes can do compression independently
+using different codebooks. We introduce the notion of entropic surjectivity as a measure to determine
+how sparse the function is and to understand the limits of functional compression for computation.
+We leverage Little's Law for stationary systems to provide a connection between surjectivity and
+the computation processing factor that reflects the proportion of flow that requires communications.
+This connection gives us an understanding of how much a node (in isolation) should compute to communicate
+the desired function within the network without putting any assumptions on the topology. Our results
+suggest that to effectively compute different function classes that have different entropic surjectivities,
+the networks can be re-structured with the transition probabilities being tailored for functions,
+i.e., task-based link reservations, which can enable mixing versus separately processing of a
+diverse function classes. They also imply that most of the available resources are reserved for
+computing low complexity functions versus fewer resources for processing of high complexity ones.
+We numerically evaluate our technique for search, MapReduce, and classification functions, and
+infer how sensitive the processing factor for each computation task to the entropic surjectivity
+is. 

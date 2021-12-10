@@ -1,0 +1,19 @@
+Several works based on Generative Adversarial Networks (GAN) have been recently proposed to predict
+a set of medical images from a single modality (e.g, FLAIR MRI from T1 MRI). However, such frameworks
+are primarily designed to operate on images, limiting their generalizability to non-Euclidean
+geometric data such as brain graphs. While a growing number of connectomic studies has demonstrated
+the promise of including brain graphs for diagnosing neurological disorders, no geometric deep
+learning work was designed for multiple target brain graphs prediction from a source brain graph.
+Despite the momentum the field of graph generation has gained in the last two years, existing works
+have two critical drawbacks. First, the bulk of such works aims to learn one model for each target
+domain to generate from a source domain. Thus, they have a limited scalability in jointly predicting
+multiple target domains. Second, they merely consider the global topological scale of a graph (i.e.,
+graph connectivity structure) and overlook the local topology at the node scale of a graph (e.g.,
+how central a node is in the graph). To meet these challenges, we introduce MultiGraphGAN architecture,
+which not only predicts multiple brain graphs from a single brain graph but also preserves the topological
+structure of each target graph to predict. Its three core contributions lie in: (i) designing a graph
+adversarial auto-encoder for jointly predicting brain graphs from a single one, (ii) handling
+the mode collapse problem of GAN by clustering the encoded source graphs and proposing a cluster-specific
+decoder, (iii) introducing a topological loss to force the reconstruction of topologically sound
+target brain graphs. Our MultiGraphGAN significantly outperformed its variants thereby showing
+its great potential in multi-view brain graph generation from a single graph. 

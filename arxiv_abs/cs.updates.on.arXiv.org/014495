@@ -1,0 +1,19 @@
+This work aims to analyse the predictability of price movements of cryptocurrencies on both hourly
+and daily data observed from January 2017 to January 2021, using deep learning algorithms. For our
+experiments, we used three sets of features: technical, trading and social media indicators, considering
+a \textit{restricted model} of only technical indicators and an \textit{unrestricted model}
+with technical, trading and social media indicators. We verified whether the consideration of
+trading and social media indicators, along with the classic technical variables (such as price's
+returns), leads to a significative improvement in the prediction of cryptocurrencies price's
+changes. We conducted the study on the two highest cryptocurrencies in volume and value (at the time
+of the study): Bitcoin and Ethereum. We implemented four different machine learning algorithms
+typically used in time-series classification problems: \textit{Multi Layers Perceptron (MLP)},
+\textit{Convolutional Neural Network (CNN)}, \textit{Long Short Term Memory (LSTM) neural network}
+and \textit{Attention Long Short Term Memory (ALSTM)}. We devised the experiments using the advanced
+bootstrap technique to consider the variance problem on test samples, which allowed us to evaluate
+a more reliable estimate of the model's performance. Furthermore, the \textit{Grid Search} technique
+was used to find the best \textit{hyperparameters} values for each implemented algorithm. The
+study shows that, based on the hourly frequency results, the unrestricted model outperforms the
+restricted one. The addition of the trading indicators to the classic technical indicators improves
+the accuracy of Bitcoin and Ethereum price's changes prediction, with an increase of accuracy from
+a range of 51-55\% for the restricted model, to 67-84\% for the unrestricted model. 

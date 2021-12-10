@@ -1,0 +1,19 @@
+Graph spanners and emulators are sparse structures that approximately preserve distances of the
+original graph. While there has been an extensive amount of work on additive spanners, so far little
+attention was given to weighted graphs. Only very recently [ABSKS20] extended the classical +2
+(respectively, +4) spanners for unweighted graphs of size $O(n^{3/2})$ (resp., $O(n^{7/5})$)
+to the weighted setting, where the additive error is $+2W$ (resp., $+4W$). This means that for every
+pair $u,v$, the additive stretch is at most $+2W_{u,v}$, where $W_{u,v}$ is the maximal edge weight
+on the shortest $u-v$ path. In addition, [ABSKS20] showed an algorithm yielding a $+8W_{max}$ spanner
+of size $O(n^{4/3})$, here $W_{max}$ is the maximum edge weight in the entire graph. In this work
+we improve the latter result by devising a simple deterministic algorithm for a $+(6+\varepsilon)W$
+spanner for weighted graphs with size $O(n^{4/3})$ (for any constant $\varepsilon>0$), thus nearly
+matching the classical +6 spanner of size $O(n^{4/3})$ for unweighted graphs. Furthermore, we
+show a $+(2+\varepsilon)W$ subsetwise spanner of size $O(n\cdot\sqrt{|S|})$, improving the
+$+4W_{max}$ result of [ABSKS20] (that had the same size). We also show a simple randomized algorithm
+for a $+4W$ emulator of size $\tilde{O}(n^{4/3})$. In addition, we show that our technique is applicable
+for very sparse additive spanners, that have linear size. For weighted graphs, we use a variant of
+our simple deterministic algorithm that yields a linear size $+\tilde{O}(\sqrt{n}\cdot W)$ spanner,
+and we also obtain a tradeoff between size and stretch. Finally, generalizing the technique of [DHZ00]
+for unweighted graphs, we devise an efficient randomized algorithm producing a $+2W$ spanner for
+weighted graphs of size $\tilde{O}(n^{3/2})$ in $\tilde{O}(n^2)$ time. 

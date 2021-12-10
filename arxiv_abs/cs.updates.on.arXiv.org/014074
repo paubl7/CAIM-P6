@@ -1,0 +1,20 @@
+Research in automatic speaker recognition (SR) has been undertaken for several decades, reaching
+great performance. However, researchers discovered potential loopholes in these technologies
+like spoofing attacks. Quite recently, a new genre of attack, termed adversarial attacks, has been
+proved to be fatal in computer vision and it is vital to study their effects on SR systems. This paper
+examines how state-of-the-art speaker identification (SID) systems are vulnerable to adversarial
+attacks and how to defend against them. We investigated adversarial attacks common in the literature
+like fast gradient sign method (FGSM), iterative-FGSM / basic iterative method (BIM) and Carlini-Wagner
+(CW). Furthermore, we propose four pre-processing defenses against these attacks - randomized
+smoothing, DefenseGAN, variational autoencoder (VAE) and WaveGAN vocoder. We found that SID is
+extremely vulnerable under Iterative FGSM and CW attacks. Randomized smoothing defense robustified
+the system for imperceptible BIM and CW attacks recovering classification accuracies ~97%. Defenses
+based on generative models (DefenseGAN, VAE and WaveGAN) project adversarial examples (outside
+manifold) back into the clean manifold. In the case that attacker cannot adapt the attack to the defense
+(black-box defense), WaveGAN performed the best, being close to clean condition (Accuracy>97%).
+However, if the attack is adapted to the defense - assuming the attacker has access to the defense
+model (white-box defense), VAE and WaveGAN protection dropped significantly-50% and 37% accuracy
+for CW attack. To counteract this,we combined randomized smoothing with VAE or WaveGAN. We found
+that smoothing followed by WaveGAN vocoder was the most effective defense overall. As a black-box
+defense, it provides 93% average accuracy. As white-box defense, accuracy only degraded for iterative
+attacks with perceptible perturbations (L>=0.01). 

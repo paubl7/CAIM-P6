@@ -1,0 +1,20 @@
+Simulation of reasonable timescales for any long physical process using molecular dynamics (MD)
+is a major challenge in computational physics. In this study, we have implemented an approach based
+on multi-fidelity physics informed neural network (MPINN) to achieve long-range MD simulation
+results over a large sample space with significantly less computational cost. The fidelity of our
+present multi-fidelity study is based on the integration timestep size of MD simulations. While
+MD simulations with larger timestep produce results with lower level of accuracy, it can provide
+enough computationally cheap training data for MPINN to learn an accurate relationship between
+these low-fidelity results and high-fidelity MD results obtained using smaller simulation timestep.
+We have performed two benchmark studies, involving one and two component LJ systems, to determine
+the optimum percentage of high-fidelity training data required to achieve accurate results with
+high computational saving. The results show that important system properties such as system energy
+per atom, system pressure and diffusion coefficients can be determined with high accuracy while
+saving 68% computational costs. Finally, as a demonstration of the applicability of our present
+methodology in practical MD studies, we have studied the viscosity of argon-copper nanofluid and
+its variation with temperature and volume fraction by MD simulation using MPINN. Then we have compared
+them with numerous previous studies and theoretical models. Our results indicate that MPINN can
+predict accurate nanofluid viscosity at a wide range of sample space with significantly small number
+of MD simulations. Our present methodology is the first implementation of MPINN in conjunction
+with MD simulation for predicting nanoscale properties. This can pave pathways to investigate
+more complex engineering problems that demand long-range MD simulations. 

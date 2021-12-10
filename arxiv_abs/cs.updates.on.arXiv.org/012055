@@ -1,0 +1,19 @@
+Obtaining digital representations of multivariate continuous-time (CT) signals is a challenge
+encountered in many signal processing systems. In practice, these signals are often acquired in
+order to extract some underlying information, i.e., for a specific task. Employing conventional
+task-agnostic analog-to-digital converters (ADCs), typically designed to minimize the mean
+squared error (MSE) in reconstructing the CT input signal, can be costly and energy-inefficient
+in such cases. In this work, we study task-based ADCs, which are designed to obtain a digital representation
+of a multivariate CT input process with the goal of recovering an underlying statistically related
+parameter vector, referred to as the task. The proposed system employs analog filtering, uniform
+sampling, and scalar uniform quantization of the input process before subsequently recovering
+the task vector using a digital recovery filter. We optimize the analog and digital filters and derive
+closed-form expressions for the achievable MSE in recovering the task vector from a set of analog
+signals when utilizing ADCs with a fixed sampling rate and amplitude resolution. Based on our derivation,
+we provide guidelines for the design of practical acquisition systems subject to a constraint on
+the overall number of bits. Our analysis proves that the intuitive approaches of either recovering
+the task vector solely in digital or designing the analog filter to estimate the task vector are inferior
+to the proposed joint design. We then consider the recovery of a set of matched filter outputs under
+a rate budget. We numerically verify our theoretical observations and demonstrate that task-based
+ADCs substantially outperform analog matched filtering as well as applying the matched filter
+solely in the digital domain. 

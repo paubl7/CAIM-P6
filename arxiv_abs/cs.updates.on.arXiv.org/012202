@@ -1,0 +1,19 @@
+Current brain white matter fiber tracking techniques show a number of problems, including: generating
+large proportions of streamlines that do not accurately describe the underlying anatomy; extracting
+streamlines that are not supported by the underlying diffusion signal; and under-representing
+some fiber populations, among others. In this paper, we describe a novel unsupervised learning
+method to filter streamlines from diffusion MRI tractography, and hence, to obtain more reliable
+tractograms. We show that a convolutional neural network autoencoder provides a straightforward
+and elegant way to learn a robust representation of brain streamlines, which can be used to filter
+undesired samples with a nearest neighbor algorithm. Our method, dubbed FINTA (Filtering in Tractography
+using Autoencoders) comes with several key advantages: training does not need labeled data, as
+it uses raw tractograms, it is fast and easily reproducible, it does not rely on the input diffusion
+MRI data, and thus, does not suffer from domain adaptation issues. We demonstrate the ability of
+FINTA to discriminate between "plausible" and "implausible" streamlines as well as to recover
+individual streamline group instances from a raw tractogram, from both synthetic and real human
+brain diffusion MRI tractography data, including partial tractograms. Results reveal that FINTA
+has a superior filtering performance compared to state-of-the-art methods. Together, this work
+brings forward a new deep learning framework in tractography based on autoencoders, and shows how
+it can be applied for filtering purposes. It sets the foundations for opening up new prospects towards
+more accurate and robust tractometry and connectivity diffusion MRI analyses, which may ultimately
+lead to improve the imaging of the white matter anatomy. 

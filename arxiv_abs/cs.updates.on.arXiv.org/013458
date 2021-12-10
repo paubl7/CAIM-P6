@@ -1,0 +1,18 @@
+We propose a novel, canopy density estimation solution using a 3D ray cloud representation for perennial
+horticultural crops at the field scale. To attain high spatial and temporal fidelity in field conditions,
+we propose the application of continuous-time 3D SLAM (Simultaneous Localisation and Mapping)
+to a spinning lidar payload (AgScan3D) mounted on a moving farm vehicle. The AgScan3D data is processed
+through a Continuous-Time SLAM algorithm into a globally registered 3D ray cloud. The global ray
+cloud is a canonical data format (a digital twin) from which we can compare vineyard snapshots over
+multiple times within a season and across seasons. Then, the vineyard rows are automatically extracted
+from the ray cloud and a novel density calculation is performed to estimate the maximum likelihood
+canopy densities of the vineyard. This combination of digital twinning, together with the accurate
+extraction of canopy structure information, allows entire vineyards to be analysed and compared,
+across the growing season and from year to year. The proposed method is evaluated both in simulation
+and field experiments. Field experiments were performed at four sites, which varied in vineyard
+structure and vine management, over two growing seasons and 64 data collection campaigns, resulting
+in a total traversal of 160 kilometres, 42.4 scanned hectares of vines with a combined total of approximately
+93,000 scanned vines. Our experiments show canopy density repeatability of 3.8% (Relative RMSE)
+per vineyard panel, for acquisition speeds of 5-6 km/h, and under half the standard deviation in
+estimated densities when compared to an industry standard gap-fraction based solution. The code
+and field datasets are available at https://github.com/csiro-robotics/agscan3d. 

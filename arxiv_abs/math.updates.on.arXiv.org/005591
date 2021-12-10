@@ -1,0 +1,20 @@
+Our work is motivated by a common business constraint in online markets. While firms respect the
+advantages of dynamic pricing and price experimentation, they must limit the number of price changes
+(i.e., switches) to be within some budget due to various practical reasons. We study both the classical
+price-based network revenue management problem in the distributionally-unknown setup, and the
+bandits with knapsacks problem. In these problems, a decision-maker (without prior knowledge
+of the environment) has finite initial inventory of multiple resources to allocate over a finite
+time horizon. Beyond the classical resource constraints, we introduce an additional switching
+constraint to these problems, which restricts the total number of times that the decision-maker
+makes switches between actions to be within a fixed switching budget. For such problems, we show
+matching upper and lower bounds on the optimal regret, and propose computationally-efficient
+limited-switch algorithms that achieve the optimal regret. Our work reveals a surprising result:
+the optimal regret rate is completely characterized by a piecewise-constant function of the switching
+budget, which further depends on the number of resource constraints -- to the best of our knowledge,
+this is the first time the number of resources constraints is shown to play a fundamental role in determining
+the statistical complexity of online learning problems. We conduct computational experiments
+to examine the performance of our algorithms on a numerical setup that is widely used in the literature.
+Compared with benchmark algorithms from the literature, our proposed algorithms achieve promising
+performance with clear advantages on the number of incurred switches. Practically, firms can benefit
+from our study and improve their learning and decision-making performance when they simultaneously
+face resource and switching constraints. 

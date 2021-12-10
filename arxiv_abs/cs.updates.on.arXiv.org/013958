@@ -1,0 +1,19 @@
+For multilayer structures, interfacial failure is one of the most important elements related to
+device reliability. For cohesive zone modelling, traction-separation relations represent the
+adhesive interactions across interfaces. However, existing theoretical models do not currently
+capture traction-separation relations that have been extracted using direct methods, particularly
+under mixed-mode conditions. Given the complexity of the problem, models derived from the neural
+network approach are attractive. Although they can be trained to fit data along the loading paths
+taken in a particular set of mixed-mode fracture experiments, they may fail to obey physical laws
+for paths not covered by the training data sets. In this paper, a thermodynamically consistent neural
+network (TCNN) approach is established to model the constitutive behavior of interfaces when faced
+with sparse training data sets. Accordingly, three conditions are examined and implemented here:
+(i) thermodynamic consistency, (ii) maximum energy dissipation path control and (iii) J-integral
+conservation. These conditions are treated as constraints and are implemented as such in the loss
+function. The feasibility of this approach is demonstrated by comparing the modeling results with
+a range of physical constraints. Moreover, a Bayesian optimization algorithm is then adopted to
+optimize the weight factors associated with each of the constraints in order to overcome convergence
+issues that can arise when multiple constraints are present. The resultant numerical implementation
+of the ideas presented here produced well-behaved, mixed-mode traction separation surfaces that
+maintained the fidelity of the experimental data that was provided as input. The proposed approach
+heralds a new autonomous, point-to-point constitutive modeling concept for interface mechanics.

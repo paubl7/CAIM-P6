@@ -1,0 +1,19 @@
+We consider the optimization problem of minimizing a functional defined over a family of probability
+distributions, where the objective functional is assumed to possess a variational form. Such a
+distributional optimization problem arises widely in machine learning and statistics, with Monte-Carlo
+sampling, variational inference, policy optimization, and generative adversarial network as
+examples. For this problem, we propose a novel particle-based algorithm, dubbed as variational
+transport, which approximately performs Wasserstein gradient descent over the manifold of probability
+distributions via iteratively pushing a set of particles. Specifically, we prove that moving along
+the geodesic in the direction of functional gradient with respect to the second-order Wasserstein
+distance is equivalent to applying a pushforward mapping to a probability distribution, which
+can be approximated accurately by pushing a set of particles. Specifically, in each iteration of
+variational transport, we first solve the variational problem associated with the objective functional
+using the particles, whose solution yields the Wasserstein gradient direction. Then we update
+the current distribution by pushing each particle along the direction specified by such a solution.
+By characterizing both the statistical error incurred in estimating the Wasserstein gradient
+and the progress of the optimization algorithm, we prove that when the objective function satisfies
+a functional version of the Polyak-\L{}ojasiewicz (PL) (Polyak, 1963) and smoothness conditions,
+variational transport converges linearly to the global minimum of the objective functional up
+to a certain statistical error, which decays to zero sublinearly as the number of particles goes
+to infinity. 

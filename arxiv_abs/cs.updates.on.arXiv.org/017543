@@ -1,0 +1,20 @@
+Deep Generative Models (DGMs) allow users to synthesize data from complex, high-dimensional manifolds.
+Industry applications of DGMs include data augmentation to boost performance of (semi-)supervised
+machine learning, or to mitigate fairness or privacy concerns. Large-scale DGMs are notoriously
+hard to train, requiring expert skills, large amounts of data and extensive computational resources.
+Thus, it can be expected that many enterprises will resort to sourcing pre-trained DGMs from potentially
+unverified third parties, e.g.~open source model repositories. As we show in this paper, such a
+deployment scenario poses a new attack surface, which allows adversaries to potentially undermine
+the integrity of entire machine learning development pipelines in a victim organization. Specifically,
+we describe novel training-time attacks resulting in corrupted DGMs that synthesize regular data
+under normal operations and designated target outputs for inputs sampled from a trigger distribution.
+Depending on the control that the adversary has over the random number generation, this imposes
+various degrees of risk that harmful data may enter the machine learning development pipelines,
+potentially causing material or reputational damage to the victim organization. Our attacks are
+based on adversarial loss functions that combine the dual objectives of attack stealth and fidelity.
+We show its effectiveness for a variety of DGM architectures (Generative Adversarial Networks
+(GANs), Variational Autoencoders (VAEs)) and data domains (images, audio). Our experiments show
+that - even for large-scale industry-grade DGMs - our attack can be mounted with only modest computational
+efforts. We also investigate the effectiveness of different defensive approaches (based on static/dynamic
+model and output inspections) and prescribe a practical defense strategy that paves the way for
+safe usage of DGMs. 

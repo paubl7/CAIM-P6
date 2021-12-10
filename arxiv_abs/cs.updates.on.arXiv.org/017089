@@ -1,0 +1,19 @@
+This paper investigates the problem of model aggregation in federated learning systems aided by
+multiple reconfigurable intelligent surfaces (RISs). The effective integration of computation
+and communication is achieved by over-the-air computation (AirComp). Since all local parameters
+are transmitted over shared wireless channels, the undesirable propagation error inevitably
+deteriorates the performance of global aggregation. The objective of this work is to 1) reduce the
+signal distortion of AirComp; 2) enhance the convergence rate of federated learning. Thus, the
+mean-square-error and the device set are optimized by designing the transmit power, controlling
+the receive scalar, tuning the phase shifts, and selecting participants in the model uploading
+process. The formulated mixed-integer non-linear problem (P0) is decomposed into a non-convex
+problem (P1) with continuous variables and a combinatorial problem (P2) with integer variables.
+To solve subproblem (P1), the closed-form expressions for transceivers are first derived, then
+the multi-antenna cases are addressed by the semidefinite relaxation. Next, the problem of phase
+shifts design is tackled by invoking the penalty-based successive convex approximation method.
+In terms of subproblem (P2), the difference-of-convex programming is adopted to optimize the device
+set for convergence acceleration, while satisfying the aggregation error demand. After that,
+an alternating optimization algorithm is proposed to find a suboptimal solution for problem (P0).
+Finally, simulation results demonstrate that i) the designed algorithm can converge faster and
+aggregate model more accurately compared to baselines; ii) the training loss and prediction accuracy
+of federated learning can be improved significantly with the aid of multiple RISs. 

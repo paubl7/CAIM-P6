@@ -1,0 +1,18 @@
+Scientific and engineering problems often require the use of artificial intelligence to aid understanding
+and the search for promising designs. While Gaussian processes (GP) stand out as easy-to-use and
+interpretable learners, they have difficulties in accommodating big datasets, categorical inputs,
+and multiple responses, which has become a common challenge for a growing number of data-driven
+design applications. In this paper, we propose a GP model that utilizes latent variables and functions
+obtained through variational inference to address the aforementioned challenges simultaneously.
+The method is built upon the latent variable Gaussian process (LVGP) model where categorical factors
+are mapped into a continuous latent space to enable GP modeling of mixed-variable datasets. By extending
+variational inference to LVGP models, the large training dataset is replaced by a small set of inducing
+points to address the scalability issue. Output response vectors are represented by a linear combination
+of independent latent functions, forming a flexible kernel structure to handle multiple responses
+that might have distinct behaviors. Comparative studies demonstrate that the proposed method
+scales well for large datasets with over 10^4 data points, while outperforming state-of-the-art
+machine learning methods without requiring much hyperparameter tuning. In addition, an interpretable
+latent space is obtained to draw insights into the effect of categorical factors, such as those associated
+with building blocks of architectures and element choices in metamaterial and materials design.
+Our approach is demonstrated for machine learning of ternary oxide materials and topology optimization
+of a multiscale compliant mechanism with aperiodic microstructures and multiple materials. 

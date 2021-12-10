@@ -1,0 +1,18 @@
+Performance of fingerprint recognition algorithms substantially rely on fine features extracted
+from fingerprints. Apart from minutiae and ridge patterns, pore features have proven to be usable
+for fingerprint recognition. Although features from minutiae and ridge patterns are quite attainable
+from low-resolution images, using pore features is practical only if the fingerprint image is of
+high resolution which necessitates a model that enhances the image quality of the conventional
+500 ppi legacy fingerprints preserving the fine details. To find a solution for recovering pore
+information from low-resolution fingerprints, we adopt a joint learning-based approach that
+combines both super-resolution and pore detection networks. Our modified single image Super-Resolution
+Generative Adversarial Network (SRGAN) framework helps to reliably reconstruct high-resolution
+fingerprint samples from low-resolution ones assisting the pore detection network to identify
+pores with a high accuracy. The network jointly learns a distinctive feature representation from
+a real low-resolution fingerprint sample and successfully synthesizes a high-resolution sample
+from it. To add discriminative information and uniqueness for all the subjects, we have integrated
+features extracted from a deep fingerprint verifier with the SRGAN quality discriminator. We also
+add ridge reconstruction loss, utilizing ridge patterns to make the best use of extracted features.
+Our proposed method solves the recognition problem by improving the quality of fingerprint images.
+High recognition accuracy of the synthesized samples that is close to the accuracy achieved using
+the original high-resolution images validate the effectiveness of our proposed model. 

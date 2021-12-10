@@ -1,0 +1,18 @@
+In spite that Federated Learning (FL) is well known for its privacy protection when training machine
+learning models among distributed clients collaboratively, recent studies have pointed out that
+the naive FL is susceptible to gradient leakage attacks. In the meanwhile, Differential Privacy
+(DP) emerges as a promising countermeasure to defend against gradient leakage attacks. However,
+the adoption of DP by clients in FL may significantly jeopardize the model accuracy. It is still an
+open problem to understand the practicality of DP from a theoretic perspective. In this paper, we
+make the first attempt to understand the practicality of DP in FL through tuning the number of conducted
+iterations. Based on the FedAvg algorithm, we formally derive the convergence rate with DP noises
+in FL. Then, we theoretically derive: 1) the conditions for the DP based FedAvg to converge as the
+number of global iterations (GI) approaches infinity; 2) the method to set the number of local iterations
+(LI) to minimize the negative influence of DP noises. By further substituting the Laplace and Gaussian
+mechanisms into the derived convergence rate respectively, we show that: 3) The DP based FedAvg
+with the Laplace mechanism cannot converge, but the divergence rate can be effectively prohibited
+by setting the number of LIs with our method; 4) The learning error of the DP based FedAvg with the Gaussian
+mechanism can converge to a constant number finally if we use a fixed number of LIs per GI. To verify
+our theoretical findings, we conduct extensive experiments using two real-world datasets. The
+results not only validate our analysis results, but also provide useful guidelines on how to optimize
+model accuracy when incorporating DP into FL 

@@ -1,0 +1,20 @@
+Standard machine learning approaches require centralizing the users' data in one computer or a
+shared database, which raises data privacy and confidentiality concerns. Therefore, limiting
+central access is important, especially in healthcare settings, where data regulations are strict.
+A potential approach to tackling this is Federated Learning (FL), which enables multiple parties
+to collaboratively learn a shared prediction model by using parameters of locally trained models
+while keeping raw training data locally. In the context of AI-assisted pain-monitoring, we wish
+to enable confidentiality-preserving and unobtrusive pain estimation for long-term pain-monitoring
+and reduce the burden on the nursing staff who perform frequent routine check-ups. To this end, we
+propose a novel Personalized Federated Deep Learning (PFDL) approach for pain estimation from
+face images. PFDL performs collaborative training of a deep model, implemented using a lightweight
+CNN architecture, across different clients (i.e., subjects) without sharing their face images.
+Instead of sharing all parameters of the model, as in standard FL, PFDL retains the last layer locally
+(used to personalize the pain estimates). This (i) adds another layer of data confidentiality,
+making it difficult for an adversary to infer pain levels of the target subject, while (ii) personalizing
+the pain estimation to each subject through local parameter tuning. We show using a publicly available
+dataset of face videos of pain (UNBC-McMaster Shoulder Pain Database), that PFDL performs comparably
+or better than the standard centralized and FL algorithms, while further enhancing data privacy.
+This, has the potential to improve traditional pain monitoring by making it more secure, computationally
+efficient, and scalable to a large number of individuals (e.g., for in-home pain monitoring), providing
+timely and unobtrusive pain measurement. 

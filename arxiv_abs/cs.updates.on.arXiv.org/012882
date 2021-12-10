@@ -1,0 +1,19 @@
+A central goal of survey research is to collect robust and reliable data from respondents. However,
+despite researchers' best efforts in designing questionnaires, respondents may experience difficulty
+understanding questions' intent and therefore may struggle to respond appropriately. If it were
+possible to detect such difficulty, this knowledge could be used to inform real-time interventions
+through responsive questionnaire design, or to indicate and correct measurement error after the
+fact. Previous research in the context of web surveys has used paradata, specifically response
+times, to detect difficulties and to help improve user experience and data quality. However, richer
+data sources are now available, in the form of the movements respondents make with the mouse, as an
+additional and far more detailed indicator for the respondent-survey interaction. This paper
+uses machine learning techniques to explore the predictive value of mouse-tracking data with regard
+to respondents' difficulty. We use data from a survey on respondents' employment history and demographic
+information, in which we experimentally manipulate the difficulty of several questions. Using
+features derived from the cursor movements, we predict whether respondents answered the easy or
+difficult version of a question, using and comparing several state-of-the-art supervised learning
+methods. In addition, we develop a personalization method that adjusts for respondents' baseline
+mouse behavior and evaluate its performance. For all three manipulated survey questions, we find
+that including the full set of mouse movement features improved prediction performance over response-time-only
+models in nested cross-validation. Accounting for individual differences in mouse movements
+led to further improvements. 

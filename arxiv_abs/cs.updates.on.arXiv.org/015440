@@ -1,0 +1,19 @@
+Chest X-rays (CXRs) are the most commonly performed diagnostic examination to detect cardiopulmonary
+abnormalities. However, the presence of bony structures such as ribs and clavicles can obscure
+subtle abnormalities resulting in diagnostic errors. This study aims to build a deep learning (DL)-based
+bone suppression model that identifies and removes these occluding bony structures in frontal
+CXRs to assist in reducing errors in radiological interpretation, including DL workflows, related
+to detecting manifestations consistent with Tuberculosis (TB). Several bone suppression models
+with various deep architectures are trained and their performances are evaluated in a cross-institutional
+test setting. The best-performing model (ResNet-BS) is used to suppress bones in the Shenzhen and
+Montgomery TB CXR collections. A VGG-16 model is pretrained on a large collection of publicly available
+CXRs. The CXR-pretrained model is then fine-tuned individually on the non-bone-suppressed and
+bone-suppressed CXRs of Shenzhen and Montgomery TB CXR collections to classify them as showing
+normal lungs or TB manifestations. The performances of these models are compared using several
+performance metrics, analyzed for statistical significance, and their predictions are qualitatively
+interpreted through class-selective relevance maps (CRM). It is observed that the models trained
+on bone-suppressed CXRs significantly outperformed the models trained individually on the non-bone-suppressed
+CXRs (p<0.05) in the Shenzhen and Montgomery TB collections. Models trained on bone-suppressed
+CXRs improved detection of TB-consistent findings and resulted in compact clustering of the data
+points in the feature space signifying that bone suppression improved the model sensitivity toward
+TB classification. 

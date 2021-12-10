@@ -1,0 +1,20 @@
+In the synthesis of distributed systems, we automate the development of distributed programs and
+hardware by automatically deriving correct implementations from formal specifications. For
+synchronous distributed systems, the synthesis problem is well known to be undecidable. For asynchronous
+systems, the boundary between decidable and undecidable synthesis problems is a long-standing
+open question. We study the problem in the setting of Petri games, a framework for distributed systems
+where asynchronous processes are equipped with causal memory. Petri games extend Petri nets with
+a distinction between system places and environment places. The components of a distributed system
+are the players of the game, represented as tokens that exchange information during each synchronization.
+Previous decidability results for this model are limited to local winning conditions, i.e., conditions
+that only refer to individual components. In this paper, we consider global winning conditions
+such as mutual exclusion, i.e., conditions that refer to the state of all components. We provide
+decidability and undecidability results for global winning conditions. First, we prove for winning
+conditions given as bad markings that it is decidable whether a winning strategy for the system players
+exists in Petri games with a bounded number of system players and one environment player. Second,
+we prove for winning conditions that refer to both good and bad markings that it is undecidable whether
+a winning strategy for the system players exists in Petri games with at least two system players and
+one environment player. Our results thus show that, on the one hand, it is indeed possible to use global
+safety specifications like mutual exclusion in the synthesis of distributed systems. However,
+on the other hand, adding global liveness specifications results in an undecidable synthesis problem
+for almost all Petri games. 

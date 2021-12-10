@@ -1,0 +1,18 @@
+This paper presents the first classical Convolutional Neural Network (CNN) that can be applied
+directly to data from unstructured finite element meshes or control volume grids. CNNs have been
+hugely influential in the areas of image classification and image compression, both of which typically
+deal with data on structured grids. Unstructured meshes are frequently used to solve partial differential
+equations and are particularly suitable for problems that require the mesh to conform to complex
+geometries or for problems that require variable mesh resolution. Central to the approach are space-filling
+curves, which traverse the nodes or cells of a mesh tracing out a path that is as short as possible (in
+terms of numbers of edges) and that visits each node or cell exactly once. The space-filling curves
+(SFCs) are used to find an ordering of the nodes or cells that can transform multi-dimensional solutions
+on unstructured meshes into a one-dimensional (1D) representation, to which 1D convolutional
+layers can then be applied. Although developed in two dimensions, the approach is applicable to
+higher dimensional problems. To demonstrate the approach, the network we choose is a convolutional
+autoencoder (CAE) although other types of CNN could be used. The approach is tested by applying CAEs
+to data sets that have been reordered with an SFC. Sparse layers are used at the input and output of
+the autoencoder, and the use of multiple SFCs is explored. We compare the accuracy of the SFC-based
+CAE with that of a classical CAE applied to two idealised problems on structured meshes, and then
+apply the approach to solutions of flow past a cylinder obtained using the finite-element method
+and an unstructured mesh. 

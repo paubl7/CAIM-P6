@@ -1,0 +1,19 @@
+Sepsis is the leading cause of mortality in the the ICU, responsible for 6% of all hospitalizations
+and 35% of all in-hospital deaths in USA. However, there is no universally agreed upon strategy for
+vasopressor and fluid administration. It has also been observed that different patients respond
+differently to treatment, highlighting the need for individualized treatment. Vasopressors
+and fluids are administrated with specific effects to cardiovascular physiology in mind and medical
+research has suggested that physiologic, hemodynamically guided, approaches to treatment. Thus
+we propose a novel approach, exploiting and unifying complementary strengths of Mathematical
+Modelling, Deep Learning, Reinforcement Learning and Uncertainty Quantification, to learn individualized,
+safe, and uncertainty aware treatment strategies. We first infer patient-specific, dynamic cardiovascular
+states using a novel physiology-driven recurrent neural network trained in an unsupervised manner.
+This information, along with a learned low dimensional representation of the patient's lab history
+and observable data, is then used to derive value distributions using Batch Distributional Reinforcement
+Learning. Moreover in a safety critical domain it is essential to know what our agent does and does
+not know, for this we also quantity the model uncertainty associated with each patient state and
+action, and propose a general framework for uncertainty aware, interpretable treatment policies.
+This framework can be tweaked easily, to reflect a clinician's own confidence of of the framework,
+and can be easily modified to factor in human expert opinion, whenever it's accessible. Using representative
+patients and a validation cohort, we show that our method has learned physiologically interpretable
+generalizable policies. 

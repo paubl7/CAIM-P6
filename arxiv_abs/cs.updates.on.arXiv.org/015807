@@ -1,0 +1,18 @@
+Brain image analysis has advanced substantially in recent years with the proliferation of neuroimaging
+datasets acquired at different resolutions. While research on brain image super-resolution has
+undergone a rapid development in the recent years, brain graph super-resolution is still poorly
+investigated because of the complex nature of non-Euclidean graph data. In this paper, we propose
+the first-ever deep graph super-resolution (GSR) framework that attempts to automatically generate
+high-resolution (HR) brain graphs with N' nodes (i.e., anatomical regions of interest (ROIs))
+from low-resolution (LR) graphs with N nodes where N < N'. First, we formalize our GSR problem as a
+node feature embedding learning task. Once the HR nodes' embeddings are learned, the pairwise connectivity
+strength between brain ROIs can be derived through an aggregation rule based on a novel Graph U-Net
+architecture. While typically the Graph U-Net is a node-focused architecture where graph embedding
+depends mainly on node attributes, we propose a graph-focused architecture where the node feature
+embedding is based on the graph topology. Second, inspired by graph spectral theory, we break the
+symmetry of the U-Net architecture by super-resolving the low-resolution brain graph structure
+and node content with a GSR layer and two graph convolutional network layers to further learn the
+node embeddings in the HR graph. Third, to handle the domain shift between the ground-truth and the
+predicted HR brain graphs, we incorporate adversarial regularization to align their respective
+distributions. Our proposed AGSR-Net framework outperformed its variants for predicting high-resolution
+functional brain graphs from low-resolution ones. Our AGSR-Net code is available on GitHub at https://github.com/basiralab/AGSR-Net.

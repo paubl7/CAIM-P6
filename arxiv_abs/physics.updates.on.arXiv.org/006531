@@ -1,0 +1,18 @@
+Purpose: This study evaluates the effectiveness and impact of automated order-based protocol
+assignment for magnetic resonance imaging (MRI) exams using natural language processing (NLP)
+and deep learning (DL). Methods: NLP tools were applied to retrospectively process orders from
+over 116,000 MRI exams with 200 unique sub-specialized protocols ("Local" protocol class). Separate
+DL models were trained on 70\% of the processed data for "Local" protocols as well as 93 American College
+of Radiology ("ACR") protocols and 48 "General" protocols. The DL Models were assessed in an "auto-protocoling
+(AP)" inference mode which returns the top recommendation and in a "clinical decision support (CDS)"
+inference mode which returns up to 10 protocols for radiologist review. The accuracy of each protocol
+recommendation was computed and analyzed based on the difference between the normalized output
+score of the corresponding neural net for the top two recommendations. Results: The top predicted
+protocol in AP mode was correct for 82.8%, 73.8%, and 69.3% of the test cases for "General", "ACR",
+and "Local" protocol classes, respectively. Higher levels of accuracy over 96% were obtained for
+all protocol classes in CDS mode. However, at current validation performance levels, the proposed
+models offer modest, positive, financial impact on large-scale imaging networks. Conclusions:
+DL-based protocol automation is feasible and can be tuned to route substantial fractions of exams
+for auto-protocoling, with higher accuracy with more general protocols. Economic analyses of
+the tested algorithms indicate that improved algorithm performance is required to yield a practical
+exam auto-protocoling tool for sub-specialized imaging exams. 

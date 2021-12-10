@@ -1,0 +1,18 @@
+The HGR is a quite challenging task as its performance is influenced by various aspects such as illumination
+variations, cluttered backgrounds, spontaneous capture, etc. The conventional CNN networks
+for HGR are following two stage pipeline to deal with the various challenges: complex signs, illumination
+variations, complex and cluttered backgrounds. The existing approaches needs expert expertise
+as well as auxiliary computation at stage 1 to remove the complexities from the input images. Therefore,
+in this paper, we proposes an novel end-to-end compact CNN framework: fine grained feature attentive
+network for hand gesture recognition (Fit-Hand) to solve the challenges as discussed above. The
+pipeline of the proposed architecture consists of two main units: FineFeat module and dilated convolutional
+(Conv) layer. The FineFeat module extracts fine grained feature maps by employing attention mechanism
+over multiscale receptive fields. The attention mechanism is introduced to capture effective
+features by enlarging the average behaviour of multi-scale responses. Moreover, dilated convolution
+provides global features of hand gestures through a larger receptive field. In addition, integrated
+layer is also utilized to combine the features of FineFeat module and dilated layer which enhances
+the discriminability of the network by capturing complementary context information of hand postures.
+The effectiveness of Fit- Hand is evaluated by using subject dependent (SD) and subject independent
+(SI) validation setup over seven benchmark datasets: MUGD-I, MUGD-II, MUGD-III, MUGD-IV, MUGD-V,
+Finger Spelling and OUHANDS, respectively. Furthermore, to investigate the deep insights of the
+proposed Fit-Hand framework, we performed ten ablation study. 

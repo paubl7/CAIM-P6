@@ -1,0 +1,19 @@
+We present three problems modeled after animal learning experiments designed to test online state
+construction or representation learning algorithms. Our test problems require the learner to
+construct compact summaries of their past interaction with the world in order to predict the future,
+updating online and incrementally on each time step without an explicit training-testing split.
+The majority of recent work in Deep Reinforcement Learning focuses on either fully observable tasks,
+or games where stacking a handful of recent frames is sufficient for good performance. Current benchmarks
+used for evaluating memory and recurrent learning make use of 3D visual environments (e.g., DeepMind
+Lab) which require billions of training samples, complex agent architectures, and cloud-scale
+compute. These domains are thus not well suited for rapid prototyping, hyper-parameter study,
+or extensive replication study. In this paper, we contribute a set of test problems and benchmark
+results to fill this gap. Our test problems are designed to be the simplest instantiation and test
+of learning capabilities which animals readily exhibit, including (1) trace conditioning (remembering
+a cue in order to predict another far in the future), (2) positive/negative patterning (a combination
+of cues predict another), (3) and combinations of both with additional non-relevant distracting
+signals. We provide baselines for the first problem including heuristics from the early days of
+neural network learning and simple ideas inspired by computational models of animal learning.
+Our results highlight the difficulty of our test problems for online recurrent learning systems
+and how the agent's performance often exhibits substantial sensitivity to the choice of key problem
+and agent parameters. 

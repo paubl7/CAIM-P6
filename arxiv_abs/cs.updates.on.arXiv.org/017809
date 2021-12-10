@@ -1,0 +1,19 @@
+In their breakthrough ICALP'15 paper, Bernstein and Stein presented an algorithm for maintaining
+a $(3/2+\epsilon)$-approximate maximum matching in fully dynamic {\em bipartite} graphs with
+a {\em worst-case} update time of $O_\epsilon(m^{1/4})$; we use the $O_\epsilon$ notation to suppress
+the $\epsilon$-dependence. Their main technical contribution was in presenting a new type of bounded-degree
+subgraph, which they named an {\em edge degree constrained subgraph (EDCS)}, which contains a large
+matching -- of size that is smaller than the maximum matching size of the entire graph by at most a factor
+of $3/2+\epsilon$. They demonstrate that the EDCS can be maintained with a worst-case update time
+of $O_\epsilon(m^{1/4})$, and their main result follows as a direct corollary. In their followup
+SODA'16 paper, Bernstein and Stein generalized their result for general graphs, achieving the
+same update time of $O_\epsilon(m^{1/4})$, albeit with an amortized rather than worst-case bound.
+To date, the best {\em deterministic} worst-case update time bound for {\em any} better-than-2
+approximate matching is $O(\sqrt{m})$ [Neiman and Solomon, STOC'13], [Gupta and Peng, FOCS'13];
+allowing randomization (against an oblivious adversary) one can achieve a much better (still polynomial)
+update time for approximation slightly below 2 [Behnezhad, Lacki and Mirrokni, SODA'20]. In this
+work we\footnote{\em quasi nanos, gigantium humeris insidentes} simplify the approach of Bernstein
+and Stein for bipartite graphs, which allows us to generalize it for general graphs while maintaining
+the same bound of $O_\epsilon(m^{1/4})$ on the {\em worst-case} update time. Moreover, our approach
+is {\em density-sensitive}: If the {\em arboricity} of the dynamic graph is bounded by $\alpha$
+at all times, then the worst-case update time of the algorithm is $O_\epsilon(\sqrt{\alpha})$.

@@ -1,0 +1,19 @@
+We introduce a novel statistical measure for MCMC-mean estimation, the inter-trace variance ${\rm
+trv}^{(\tau_{rel})}({\cal M},f)$, which depends on a Markov chain ${\cal M}$ and a function $f:S\to
+[a,b]$. The inter-trace variance can be efficiently estimated from observed data and leads to a
+more efficient MCMC-mean estimator. Prior MCMC mean-estimators receive, as input, upper-bounds
+on $\tau_{mix}$ or $\tau_{rel}$, and often also the stationary variance, and their performance
+is highly dependent to the sharpness of these bounds. In contrast, we introduce DynaMITE, which
+dynamically adjusts the sample size, it is less sensitive to the looseness of input upper-bounds
+on $\tau_{rel}$, and requires no bound on $v_{\pi}$. Receiving only an upper-bound ${\cal T}_{rel}$
+on $\tau_{rel}$, DynaMITE estimates the mean of $f$ in $\tilde{\cal{O}}\bigl(\smash{\frac{{\cal
+T}_{rel} R}{\varepsilon}}+\frac{\tau_{rel}\cdot {\rm trv}^{(\tau{{rel}})}}{\varepsilon^{2}}\bigr)$
+steps, without a priori bounds on the stationary variance $v_{\pi}$ or the inter-trace variance
+${\rm trv}^{(\tau rel)}$. Thus we depend minimally on the tightness of ${\cal T}_{mix}$, as the
+complexity is dominated by $\tau_{rel}\rm{trv}^{(\tau{rel})}$ as $\varepsilon \to 0$. Note
+that bounding $\tau_{\rm rel}$ is known to be prohibitively difficult, however, DynaMITE is able
+to reduce its principal dependence on ${\cal T}_{rel}$ to $\tau_{rel}$, simply by exploiting properties
+of the inter-trace variance. To compare our method to known variance-aware bounds, we show ${\rm
+trv}^{(\tau{rel})}({\cal M},f) \leq v_{\pi}$. Furthermore, we show when $f$'s image is distributed
+(semi)symmetrically on ${\cal M}$'s traces, we have ${\rm trv}^{({\tau{rel}})}({\cal M},f)=o(v_{\pi}(f))$,
+thus DynaMITE outperforms prior methods in these cases. 

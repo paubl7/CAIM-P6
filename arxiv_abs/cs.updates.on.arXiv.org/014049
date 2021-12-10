@@ -1,0 +1,20 @@
+The trade-off between the noise-sensitivity and the performance of disturbance estimation is
+well-known in the Disturbance Observer- (DOb-) based motion control systems. As the bandwidth
+of the DOb increases, not only the performance but also the frequency range of disturbance estimation
+improves yet the motion controller becomes more sensitive to the noise of measurement system. This
+trade-off is generally explained by considering only the noise of sensors such as encoders. However,
+the digital implementation of the robust motion controller may significantly influence the noise
+sensitivity and performance of disturbance estimation in practice. This paper shows that the conventional
+DOb implemented by estimating velocity is subject to waterbed effect when the design parameters
+(i.e., sampling-time, nominal plant parameters and the bandwidth of the DOb) are not properly tuned
+in the digital motion controller synthesis. Therefore, the bandwidth of disturbance estimation
+is limited by waterbed effect in addition to the noise of velocity measurement system. To facilitate
+the digital motion controller synthesis, the design constraints of the conventional DOb are analytically
+derived in this paper. When the digital motion controller is implemented by estimating acceleration,
+waterbed effect does not occur, and good robust stability and performance can be achieved for all
+values of the design parameters of the acceleration measurement-based DOb. The bandwidth of disturbance
+estimation, however, cannot be freely increased due to the noise of acceleration sensors in practice.
+By employing Bode Integral Theorem in the discrete-time domain, the design constraints of the DOb-based
+digital motion control systems are clearly explained and it is shown that acceleration measurement
+can be used to enhance the bandwidth of the DOb, i.e., the performance and frequency range of disturbance
+estimation. 

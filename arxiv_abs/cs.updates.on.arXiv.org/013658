@@ -1,0 +1,19 @@
+Quantitative assessment of cardiac left ventricle (LV) morphology is essential to assess cardiac
+function and improve the diagnosis of different cardiovascular diseases. In current clinical
+practice, LV quantification depends on the measurement of myocardial shape indices, which is usually
+achieved by manual contouring of the endo- and epicardial. However, this process subjected to inter
+and intra-observer variability, and it is a time-consuming and tedious task. In this paper, we propose
+a spatio-temporal multi-task learning approach to obtain a complete set of measurements quantifying
+cardiac LV morphology, regional-wall thickness (RWT), and additionally detecting the cardiac
+phase cycle (systole and diastole) for a given 3D Cine-magnetic resonance (MR) image sequence.
+We first segment cardiac LVs using an encoder-decoder network and then introduce a multitask framework
+to regress 11 LV indices and classify the cardiac phase, as parallel tasks during model optimization.
+The proposed deep learning model is based on the 3D spatio-temporal convolutions, which extract
+spatial and temporal features from MR images. We demonstrate the efficacy of the proposed method
+using cine-MR sequences of 145 subjects and comparing the performance with other state-of-the-art
+quantification methods. The proposed method obtained high prediction accuracy, with an average
+mean absolute error (MAE) of 129 $mm^2$, 1.23 $mm$, 1.76 $mm$, Pearson correlation coefficient
+(PCC) of 96.4%, 87.2%, and 97.5% for LV and myocardium (Myo) cavity regions, 6 RWTs, 3 LV dimensions,
+and an error rate of 9.0\% for phase classification. The experimental results highlight the robustness
+of the proposed method, despite varying degrees of cardiac morphology, image appearance, and low
+contrast in the cardiac MR sequences. 

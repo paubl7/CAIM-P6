@@ -1,0 +1,20 @@
+In this paper we give fast distributed graph algorithms for detecting and listing small subgraphs,
+and for computing or approximating the girth. Our algorithms improve upon the state of the art by
+polynomial factors, and for girth, we obtain an constant-time algorithm for additive +1 approximation
+in the Congested Clique, and the first parametrized algorithm for exact computation in CONGEST.
+In the Congested Clique, we develop a technique for learning small neighborhoods, and apply it to
+obtain an $O(1)$-round algorithm that computes the girth with only an additive +1 error. Next, we
+introduce a new technique (the partition tree technique) allowing for efficiently and deterministically
+listing all copies of any subgraph, improving upon the state-of the-art for non-dense graphs. We
+give two applications of this technique: First we show that for constant $k$, $C_{2k}$-detection
+can be solved in $O(1)$ rounds in the Congested Clique, improving on prior work which used matrix
+multiplication and had polynomial round complexity. Second, we show that in triangle-free graphs,
+the girth can be exactly computed in time polynomially faster than the best known bounds for general
+graphs. In CONGEST, we describe a new approach for finding cycles, and apply it in two ways: first
+we show a fast parametrized algorithm for girth with round complexity $\tilde{O}(\min(g\cdot
+n^{1-1/\Theta(g)},n))$ for any girth $g$; and second, we show how to find small even-length cycles
+$C_{2k}$ for $k = 3,4,5$ in $O(n^{1-1/k})$ rounds, which is a polynomial improvement upon the previous
+running times. Finally, using our improved $C_6$-freeness algorithm and the barrier on proving
+lower bounds on triangle-freeness of Eden et al., we show that improving the current $\tilde\Omega(\sqrt{n})$
+lower bound for $C_6$-freeness of Korhonen et al. by any polynomial factor would imply strong circuit
+complexity lower bounds. 

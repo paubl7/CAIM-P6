@@ -1,0 +1,19 @@
+Clustering is a fundamental task in machine learning. One of the most successful and broadly used
+algorithms is DBSCAN, a density-based clustering algorithm. DBSCAN requires $\epsilon$-nearest
+neighbor graphs of the input dataset, which are computed with range-search algorithms and spatial
+data structures like KD-trees. Despite many efforts to design scalable implementations for DBSCAN,
+existing work is limited to low-dimensional datasets, as constructing $\epsilon$-nearest neighbor
+graphs is expensive in high-dimensions. In this paper, we modify DBSCAN to enable use of $\kappa$-nearest
+neighbor graphs of the input dataset. The $\kappa$-nearest neighbor graphs are constructed using
+approximate algorithms based on randomized projections. Although these algorithms can become
+inaccurate or expensive in high-dimensions, they possess a much lower memory overhead than constructing
+$\epsilon$-nearest neighbor graphs ($\mathcal{O}(nk)$ vs. $\mathcal{O}(n^2)$). We delineate
+the conditions under which $k$NN-DBSCAN produces the same clustering as DBSCAN. We also present
+an efficient parallel implementation of the overall algorithm using OpenMP for shared memory and
+MPI for distributed memory parallelism. We present results on up to 16 billion points in 20 dimensions,
+and perform weak and strong scaling studies using synthetic data. Our code is efficient in both low
+and high dimensions. We can cluster one billion points in 3D in less than one second on 28K cores on
+the Frontera system at the Texas Advanced Computing Center (TACC). In our largest run, we cluster
+65 billion points in 20 dimensions in less than 40 seconds using 114,688 x86 cores on TACC's Frontera
+system. Also, we compare with a state of the art parallel DBSCAN code; on 20d/4M point dataset, our
+code is up to 37$\times$ faster. 

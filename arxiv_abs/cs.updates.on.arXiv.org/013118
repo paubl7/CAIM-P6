@@ -1,0 +1,20 @@
+Discrete latent variables are considered important for real world data, which has motivated research
+on Variational Autoencoders (VAEs) with discrete latents. However, standard VAE-training is
+not possible in this case, which has motivated different strategies to manipulate discrete distributions
+in order to train discrete VAEs similarly to conventional ones. Here we ask if it is also possible
+to keep the discrete nature of the latents fully intact by applying a direct discrete optimization
+for the encoding model. The approach is consequently strongly diverting from standard VAE-training
+by sidestepping sampling approximation, reparameterization trick and amortization. Discrete
+optimization is realized in a variational setting using truncated posteriors in conjunction with
+evolutionary algorithms. For VAEs with binary latents, we (A) show how such a discrete variational
+method ties into gradient ascent for network weights, and (B) how the decoder is used to select latent
+states for training. Conventional amortized training is more efficient and applicable to large
+neural networks. However, using smaller networks, we here find direct discrete optimization to
+be efficiently scalable to hundreds of latents. More importantly, we find the effectiveness of
+direct optimization to be highly competitive in `zero-shot' learning. In contrast to large supervised
+networks, the here investigated VAEs can, e.g., denoise a single image without previous training
+on clean data and/or training on large image datasets. More generally, the studied approach shows
+that training of VAEs is indeed possible without sampling-based approximation and reparameterization,
+which may be interesting for the analysis of VAE-training in general. For `zero-shot' settings
+a direct optimization, furthermore, makes VAEs competitive where they have previously been outperformed
+by non-generative approaches. 

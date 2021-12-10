@@ -1,0 +1,20 @@
+This paper investigates the problem of assigning shipping requests to ad hoc couriers in the context
+of crowdsourced urban delivery. The shipping requests are spatially distributed each with a limited
+time window between the earliest time for pickup and latest time for delivery. The ad hoc couriers,
+termed crowdsourcees, also have limited time availability and carrying capacity. We propose a
+new deep reinforcement learning (DRL)-based approach to tackling this assignment problem. A deep
+Q network (DQN) algorithm is trained which entails two salient features of experience replay and
+target network that enhance the efficiency, convergence, and stability of DRL training. More importantly,
+this paper makes three methodological contributions: 1) presenting a comprehensive and novel
+characterization of crowdshipping system states that encompasses spatial-temporal and capacity
+information of crowdsourcees and requests; 2) embedding heuristics that leverage the information
+offered by the state representation and are based on intuitive reasoning to guide specific actions
+to take, to preserve tractability and enhance efficiency of training; and 3) integrating rule-interposing
+to prevent repeated visiting of the same routes and node sequences during routing improvement,
+thereby further enhancing the training efficiency by accelerating learning. The effectiveness
+of the proposed approach is demonstrated through extensive numerical analysis. The results show
+the benefits brought by the heuristics-guided action choice and rule-interposing in DRL training,
+and the superiority of the proposed approach over existing heuristics in both solution quality,
+time, and scalability. Besides the potential to improve the efficiency of crowdshipping operation
+planning, the proposed approach also provides a new avenue and generic framework for other problems
+in the vehicle routing context. 

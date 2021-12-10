@@ -1,0 +1,18 @@
+Beyond generating long and topic-coherent paragraphs in traditional captioning tasks, the medical
+image report composition task poses more task-oriented challenges by requiring both the highly-accurate
+medical term diagnosis and multiple heterogeneous forms of information including impression
+and findings. Current methods often generate the most common sentences due to dataset bias for individual
+case, regardless of whether the sentences properly capture key entities and relationships. Such
+limitations severely hinder their applicability and generalization capability in medical report
+composition where the most critical sentences lie in the descriptions of abnormal diseases that
+are relatively rare. Moreover, some medical terms appearing in one report are often entangled with
+each other and co-occurred, e.g. symptoms associated with a specific disease. To enforce the semantic
+consistency of medical terms to be incorporated into the final reports and encourage the sentence
+generation for rare abnormal descriptions, we propose a novel framework that unifies template
+retrieval and sentence generation to handle both common and rare abnormality while ensuring the
+semantic-coherency among the detected medical terms. Specifically, our approach exploits hybrid-knowledge
+co-reasoning: i) explicit relationships among all abnormal medical terms to induce the visual
+attention learning and topic representation encoding for better topic-oriented symptoms descriptions;
+ii) adaptive generation mode that changes between the template retrieval and sentence generation
+according to a contextual topic encoder. Experimental results on two medical report benchmarks
+demonstrate the superiority of the proposed framework in terms of both human and metrics evaluation.

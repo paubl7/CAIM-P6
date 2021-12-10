@@ -1,0 +1,19 @@
+In the current worldwide situation, pedestrian detection has reemerged as a pivotal tool for intelligent
+video-based systems aiming to solve tasks such as pedestrian tracking, social distancing monitoring
+or pedestrian mass counting. Pedestrian detection methods, even the top performing ones, are highly
+sensitive to occlusions among pedestrians, which dramatically degrades their performance in
+crowded scenarios. The generalization of multi-camera set-ups permits to better confront occlusions
+by combining information from different viewpoints. In this paper, we present a multi-camera approach
+to globally combine pedestrian detections leveraging automatically extracted scene context.
+Contrarily to the majority of the methods of the state-of-the-art, the proposed approach is scene-agnostic,
+not requiring a tailored adaptation to the target scenario\textemdash e.g., via fine-tunning.
+This noteworthy attribute does not require \textit{ad hoc} training with labelled data, expediting
+the deployment of the proposed method in real-world situations. Context information, obtained
+via semantic segmentation, is used 1) to automatically generate a common Area of Interest for the
+scene and all the cameras, avoiding the usual need of manually defining it; and 2) to obtain detections
+for each camera by solving a global optimization problem that maximizes coherence of detections
+both in each 2D image and in the 3D scene. This process yields tightly-fitted bounding boxes that
+circumvent occlusions or miss-detections. Experimental results on five publicly available datasets
+show that the proposed approach outperforms state-of-the-art multi-camera pedestrian detectors,
+even some specifically trained on the target scenario, signifying the versatility and robustness
+of the proposed method without requiring ad-hoc annotations nor human-guided configuration.

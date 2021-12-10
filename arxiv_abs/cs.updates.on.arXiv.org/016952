@@ -1,0 +1,20 @@
+End-to-end DNN architectures have pushed the state-of-the-art in speech technologies, as well
+as in other spheres of AI, leading researchers to train more complex and deeper models. These improvements
+came at the cost of transparency. DNNs are innately opaque and difficult to interpret. We no longer
+understand what features are learned, where they are preserved, and how they inter-operate. Such
+an analysis is important for better model understanding, debugging and to ensure fairness in ethical
+decision making. In this work, we analyze the representations trained within deep speech models,
+towards the task of speaker recognition, dialect identification and reconstruction of masked
+signals. We carry a layer- and neuron-level analysis on the utterance-level representations captured
+within pretrained speech models for speaker, language and channel properties. We study: is this
+information captured in the learned representations? where is it preserved? how is it distributed?
+and can we identify a minimal subset of network that posses this information. Using diagnostic classifiers,
+we answered these questions. Our results reveal: (i) channel and gender information is omnipresent
+and is redundantly distributed (ii) complex properties such as dialectal information is encoded
+only in the task-oriented pretrained network and is localised in the upper layers (iii) a minimal
+subset of neurons can be extracted to encode the predefined property (iv) salient neurons are sometimes
+shared between properties and can highlights presence of biases in the network. Our cross-architectural
+comparison indicates that (v) the pretrained models captures speaker-invariant information
+and (vi) the pretrained CNNs models are competitive to the Transformers for encoding information
+for the studied properties. To the best of our knowledge, this is the first study to investigate neuron
+analysis on the speech models. 

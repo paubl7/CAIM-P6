@@ -1,0 +1,20 @@
+Exponents and logarithms exist in many important applications such as logistic regression, maximum
+likelihood, relative entropy and so on. Since the exponential cone can be viewed as the epigraph
+of perspective of the natural exponential function or the hypograph of perspective of the natural
+logarithm function, many mixed-integer nonlinear convex programs involving exponential or logarithm
+functions can be recast as mixed-integer exponential conic programs (MIECPs). Recently, solver
+MOSEK is able to solve large-scale continuous exponential conic programs (ECPs). However, unlike
+mixed-integer linear programs (MILPs) and mixed-integer second-order conic programs (MISOCPs),
+MIECPs are far beyond development. To harvest the past efforts on MILPs and MISOCPs, this paper presents
+second-order conic (SOC) and poly-hedral approximation schemes for the exponential cone with
+application to MIECPs. To do so, we first extend and generalize existing SOC approximation approaches
+in the extended space, propose new scaling and shifting methods, prove approximation accuracies,
+and derive lower bounds of approximations. We then study the polyhedral outer approximation of
+the exponential cones in the original space using gradient inequalities, show its approximation
+accuracy, and derive a lower bound of the approximation. When implementing SOC approximations,
+we suggest testing smaller cases by learning the approximation pattern and then applying to the
+large-scale cases; and for the polyhedral approximation, we suggest using the cutting plane method
+when solving the continuous ECP and branch and cut method for MIECPs. Our numerical study shows that
+the proposed scaling, shifting, and polyhedral outer approximation methods outperform solver
+MOSEK for both continuous ECPs and MIECPs and can achieve up to 20 times speed-ups compared to solver
+MOSEK when solving MIECPs. 

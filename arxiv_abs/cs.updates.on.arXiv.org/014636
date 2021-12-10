@@ -1,0 +1,20 @@
+Traditionally Guideline(GL)based Decision Support Systems (DSSs) use a centralized infrastructure
+to generate recommendations to care providers. However, managing patients at home is preferable,
+reducing costs and empowering patients. We aimed to design, implement, and demonstrate the feasibility
+of a new architecture for a distributed DSS that provides patients with personalized, context-sensitive,
+evidence based guidance through their mobile device, and increases the robustness of the distributed
+application of the GL, while maintaining access to the patient longitudinal record and to an up to
+date evidence based GL repository. We have designed and implemented a novel projection and callback
+(PCB) model, in which small portions of the evidence based GL procedural knowledge, adapted to the
+patient preferences and to their current context, are projected from a central DSS server, to a local
+DSS on the patient mobile device that applies that knowledge. When appropriate, as defined by a temporal
+pattern within the projected plan, the local DSS calls back the central DSS, requesting further
+assistance, possibly another projection. Thus, the GL specification includes two levels: one
+for the central DSS, one for the local DSS. We successfully evaluated the PCB model within the MobiGuide
+EU project by managing Gestational Diabetes Mellitus patients in Spain, and Atrial Fibrillation
+patients in Italy. Significant differences exist between the two GL representations, suggesting
+additional ways to characterize GLs. Mean time between the central and local interactions was quite
+different for the two GLs: 3.95 days for gestational diabetes, 23.80 days for atrial fibrillation.
+Most interactions, 83%, were due to projections to the mDSS. Others were data notifications, mostly
+to change context. Robustness was demonstrated through successful recovery from multiple local
+DSS crashes. 

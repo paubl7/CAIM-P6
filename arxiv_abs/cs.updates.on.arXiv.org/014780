@@ -1,0 +1,19 @@
+The training of Deep Neural Networks (DNN) is costly, thus DNN can be considered as the intellectual
+properties (IP) of model owners. To date, most of the existing protection works focus on verifying
+the ownership after the DNN model is stolen, which cannot resist piracy in advance. To this end, we
+propose an active DNN IP protection method based on adversarial examples against DNN piracy, named
+ActiveGuard. ActiveGuard aims to achieve authorization control and users' fingerprints management
+through adversarial examples, and can provide ownership verification. Specifically, ActiveGuard
+exploits the elaborate adversarial examples as users' fingerprints to distinguish authorized
+users from unauthorized users. Legitimate users can enter fingerprints into DNN for identity authentication
+and authorized usage, while unauthorized users will obtain poor model performance due to an additional
+control layer. In addition, ActiveGuard enables the model owner to embed a watermark into the weights
+of DNN. When the DNN is illegally pirated, the model owner can extract the embedded watermark and
+perform ownership verification. Experimental results show that, for authorized users, the test
+accuracy of LeNet-5 and Wide Residual Network (WRN) models are 99.15% and 91.46%, respectively,
+while for unauthorized users, the test accuracy of the two DNNs are only 8.92% (LeNet-5) and 10% (WRN),
+respectively. Besides, each authorized user can pass the fingerprint authentication with a high
+success rate (up to 100%). For ownership verification, the embedded watermark can be successfully
+extracted, while the normal performance of the DNN model will not be affected. Further, ActiveGuard
+is demonstrated to be robust against fingerprint forgery attack, model fine-tuning attack and
+pruning attack. 

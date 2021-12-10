@@ -1,0 +1,19 @@
+Single-stage object detectors have been widely applied in computer vision applications due to
+their high efficiency. However, we find that the loss functions adopted by single-stage object
+detectors hurt the localization accuracy seriously. Firstly, the standard cross-entropy loss
+for classification is independent of the localization task and drives all the positive examples
+to learn as high classification scores as possible regardless of localization accuracy during
+training. As a result, there will be many detections that have high classification scores but low
+IoU or detections that have low classification scores but high IoU. Secondly, for the standard smooth
+L1 loss, the gradient is dominated by the outliers that have poor localization accuracy during training.
+The above two problems will decrease the localization accuracy of single-stage detectors. In this
+work, IoU-balanced loss functions that consist of IoU-balanced classification loss and IoU-balanced
+localization loss are proposed to solve the above problems. The IoU-balanced classification loss
+pays more attention to positive examples with high IoU and can enhance the correlation between classification
+and localization tasks. The IoU-balanced localization loss decreases the gradient of examples
+with low IoU and increases the gradient of examples with high IoU, which can improve the localization
+accuracy of models. Extensive experiments on challenging public datasets such as MS COCO, PASCAL
+VOC and Cityscapes demonstrate that both IoU-balanced losses can bring substantial improvement
+for the popular single-stage detectors, especially for the localization accuracy. On COCO test-dev,
+the proposed methods can substantially improve AP by $1.0\%\sim1.7\%$ and AP75 by $1.0\%\sim2.4\%$.
+On PASCAL VOC, it can also substantially improve AP by $1.3\%\sim1.5\%$ and AP80, AP90 by $1.6\%\sim3.9\%$.

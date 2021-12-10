@@ -1,0 +1,20 @@
+Early advancements in convolutional neural networks (CNNs) architectures are primarily driven
+by human expertise and by elaborate design processes. Recently, neural architecture search was
+proposed with the aim of automating the network design process and generating task-dependent architectures.
+While existing approaches have achieved competitive performance in image classification, they
+are not well suited to problems where the computational budget is limited for two reasons: (1) the
+obtained architectures are either solely optimized for classification performance, or only for
+one deployment scenario; (2) the search process requires vast computational resources in most
+approaches. To overcome these limitations, we propose an evolutionary algorithm for searching
+neural architectures under multiple objectives, such as classification performance and floating-point
+operations (FLOPs). The proposed method addresses the first shortcoming by populating a set of
+architectures to approximate the entire Pareto frontier through genetic operations that recombine
+and modify architectural components progressively. Our approach improves computational efficiency
+by carefully down-scaling the architectures during the search as well as reinforcing the patterns
+commonly shared among past successful architectures through Bayesian model learning. The integration
+of these two main contributions allows an efficient design of architectures that are competitive
+and in most cases outperform both manually and automatically designed architectures on benchmark
+image classification datasets: CIFAR, ImageNet, and human chest X-ray. The flexibility provided
+from simultaneously obtaining multiple architecture choices for different compute requirements
+further differentiates our approach from other methods in the literature. Code is available at
+https://github.com/mikelzc1990/nsganetv1 

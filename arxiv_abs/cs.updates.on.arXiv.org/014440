@@ -1,0 +1,19 @@
+Comparing competing mathematical models of complex natural processes is a shared goal among many
+branches of science. The Bayesian probabilistic framework offers a principled way to perform model
+comparison and extract useful metrics for guiding decisions. However, many interesting models
+are intractable with standard Bayesian methods, as they lack a closed-form likelihood function
+or the likelihood is computationally too expensive to evaluate. With this work, we propose a novel
+method for performing Bayesian model comparison using specialized deep learning architectures.
+Our method is purely simulation-based and circumvents the step of explicitly fitting all alternative
+models under consideration to each observed dataset. Moreover, it involves no hand-crafted summary
+statistics of the data and is designed to amortize the cost of simulation over multiple models and
+observable datasets. This makes the method applicable in scenarios where model fit needs to be assessed
+for a large number of datasets, so that per-dataset inference is practically infeasible.Finally,
+we propose a novel way to measure epistemic uncertainty in model comparison problems. We demonstrate
+the utility of our method on toy examples and simulated data from non-trivial models from cognitive
+science and single-cell neuroscience. We show that our method achieves excellent results in terms
+of accuracy, calibration, and efficiency across the examples considered in this work. We argue
+that our framework can enhance and enrich model-based analysis and inference in many fields dealing
+with computational models of natural processes. We further argue that the proposed measure of epistemic
+uncertainty provides a unique proxy to quantify absolute evidence even in a framework which assumes
+that the true data-generating model is within a finite set of candidate models. 

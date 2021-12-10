@@ -1,0 +1,19 @@
+Sign language is used by deaf or speech impaired people to communicate, and requires great efforts
+to master. Sign Language Recognition (SLR) aims to make a bridge between sign language users and
+the others by recognize the word from given videos. It is a important yet challenging task since sign
+language is performed with fast and complex movement of hand gestures, body posture and even facial
+expressions. Recently, skeleton based action recognition attracts increasing attention due
+to the independence on subjects and background variations. It is also a strong complement to RGB/D
+modalities to further boost the overall recognition rate. However, skeleton based on SLR is still
+under exploration due to the lack of annotations on hand keypoints. Some efforts have been made to
+use hand detectors with pose estimator to extract hand keypoints, and learn to recognize sign language
+via a Recurrent Neural Network, but none of them outperforms RGB based methods. To this end, we propose
+a novel skeleton based SLR approach using whole-body keypoints with a universal multi-modal SLR
+framework (Uni-SLR) to further improve the recognition rate. Specifically, we propose a Graph
+Convolution Network (GCN) to model the embedded spatial relations and dynamic motions, and propose
+a novel Separable Spatial-Temporal Convolution Network (SSTCN) to exploit skeleton features.
+Our skeleton based method achieves a higher recognition rate compared with all other single modalities.
+Moreover, our proposed Uni-SLR framework can further enhance the performance by assembling our
+skeleton based method with other RGB and depth modalities. As a result, our Uni-SLR framework achieves
+the highest performance in both RGB (98.42\%) and RGB-D (98.53\%) tracks in 2021 Looking at People
+Large Scale Signer Independent Isolated SLR Challenge. Our code will be provided in \url{https://github.com/jackyjsy/CVPR21Chal-SLR}.

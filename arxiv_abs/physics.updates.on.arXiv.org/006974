@@ -1,0 +1,20 @@
+A fully nonlinear potential Numerical Wave Tank (NWT) is developed in two dimensions, using a combination
+of the Harmonic Polynomial Cell (HPC) method for solving the Laplace problem on the wave potential
+and the Immersed Boundary Method (IBM) for capturing the free surface motion. This NWT can consider
+fixed, submerged or wall-sided surface piercing, bodies. To compute the flow around the body and
+associated pressure field, a novel multi overlapping grid method is implemented. Each grid having
+its own free surface, a two-way communication is ensured between the problem in the body vicinity
+and the larger scale wave propagation problem. Pressure field and nonlinear loads on the structure
+are computed by solving a boundary value problem on the time derivative of the potential. The stability
+and convergence properties of the solver are studied basing on extensive tests with standing waves
+of large to extreme wave steepness, up to $H/\lambda=0.2$ ($H$ is the crest-to-trough wave height
+and $\lambda$ the wavelength). Ranges of optimal time and spatial discretizations are determined
+and high-order convergence properties are verified, first without using any filter. For cases
+with either high level of nonlinearity or long simulation duration, the use of mild Savitzky-Golay
+filters is shown to extend the range of applicability of the model. Then, the NWT is tested against
+two wave flume experiments, analyzing forces on bodies in various wave conditions. First, nonlinear
+components of the vertical force acting on a small horizontal circular cylinder with low submergence
+below the mean water level are shown to be accurately simulated up to the third order in wave steepness.
+The second case is a dedicated experiment with a floating barge of rectangular cross-section. This
+very challenging case (body with sharp corners in large waves) allows to examine the behavior (...to
+continue...) 

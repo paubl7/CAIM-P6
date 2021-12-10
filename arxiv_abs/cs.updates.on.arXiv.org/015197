@@ -1,0 +1,19 @@
+Many modern IoT applications rely on the Constrained Application Protocol (CoAP) because of its
+efficiency and seamless integrability in the existing Internet infrastructure. One of the strategies
+that CoAP leverages to achieve these characteristics is the usage of proxies. Unfortunately, in
+order for a proxy to operate, it needs to terminate the (D)TLS channels between clients and servers.
+Therefore, end-to-end confidentiality, integrity and authenticity of the exchanged data cannot
+be achieved. In order to overcome this problem, an alternative to (D)TLS was recently proposed by
+the Internet Engineering Task Force (IETF). This alternative consists of two novel protocols:
+1) Object Security for Constrained RESTful Environments (OSCORE) providing authenticated encryption
+for the payload data and 2) Ephemeral Diffie-Hellman Over COSE (EDHOC) providing the symmetric
+session keys required for OSCORE. In this paper, we present the design of four firmware libraries
+for these protocols especially targeted for constrained microcontrollers and their detailed
+evaluation. More precisely, we present the design of uOSCORE and uEDHOC libraries for regular microcontrollers
+and uOSCORE-TEE and uEDHOC-TEE libraries for microcontrollers with a Trusted Execution Environment
+(TEE), such as microcontrollers featuring ARM TrustZone-M. Our firmware design for the later class
+of devices concerns the fact that attackers may exploit common software vulnerabilities, e.g.,
+buffer overflows in the protocol logic, OS or application to compromise the protocol security.
+uOSCORE-TEE and uEDHOC-TEE achieve separation of the cryptographic operations and keys from the
+remainder of the firmware, which could be vulnerable. We present an evaluation of our implementations
+in terms of RAM/FLASH requirements, execution speed and energy on a broad range of microcontrollers.

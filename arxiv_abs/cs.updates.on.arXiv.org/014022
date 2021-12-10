@@ -1,0 +1,18 @@
+In this work, we develop a novel data-driven model predictive controller using advanced techniques
+in the field of machine learning. The objective is to regulate control signals to adjust the desired
+internal room setpoint temperature, affected indirectly by the external weather states. The methodology
+involves developing a time-series machine learning model with either a Long Short Term Memory model
+(LSTM) or a Gradient Boosting Algorithm (XGboost), capable of forecasting this weather states
+for any desired time horizon and concurrently optimising the control signals to the desired set
+point. The supervised learning model for mapping the weather states together with the control signals
+to the room temperature is constructed using a previously developed methodology called Cluster
+Classify regress (CCR), which is similar in style but scales better to high dimensional dataset
+than the well-known Mixture-of-Experts. The overall method called CCR-MPC involves a combination
+of a time series model for weather states prediction, CCR for forwarding and any numerical optimisation
+method for solving the inverse problem. Forward uncertainty quantification (Forward-UQ) leans
+towards the regression model in the CCR and is attainable using a Bayesian deep neural network or
+a Gaussian process (GP). For this work, in the CCR modulation, we employ K-means clustering for Clustering,
+XGboost classifier for Classification and 5th order polynomial regression for Regression. Inverse
+UQ can also be obtained by using an I-ES approach for solving the inverse problem or even the well-known
+Markov chain Monte Carlo (MCMC) approach. The developed CCR-MPC is elegant, and as seen on the numerical
+experiments is able to optimise the controller to attain the desired setpoint temperature. 

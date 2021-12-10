@@ -1,0 +1,19 @@
+The permeability of a pore structure is typically described by stochastic representations of its
+geometrical attributes. Database-driven numerical solvers for large model domains can only accurately
+predict large-scale flow behaviour when they incorporate upscaled descriptions of that structure.
+The upscaling is particularly challenging for rocks with multimodal porosity structures such
+as carbonates, where several different types of structures are interacting. It is the connectivity
+both within and between these different structures that controls the porosity-permeability relationship
+at the larger length scales. Recent advances in machine learning combined with numerical modelling
+and structural analysis have allowed us to probe the relationship between structure and permeability
+more deeply. We have used this integrated approach to tackle the challenge of upscaling multimodal
+and multiscale porous media. We present a novel method for upscaling multimodal porosity-permeability
+relationships using machine learning based multivariate structural regression. A m-CT image
+of limestone was divided into sub-volumes and permeability was computed using the DBS model. The
+porosity-permeability relationship from Menke et al. was used to assign permeability values to
+the microporosity. Structural attributes of each sub-volume were extracted and then regressed
+against the solved permeability using an Extra-Trees regression model to derive an upscaled porosity-permeability
+relationship. Ten upscaled test cases were then modelled at the Darcy scale using the regression
+and benchmarked against full DBS simulations, a numerically upscaled Darcy model, and a K-C fit.
+We found good agreement between the full DBS simulations and both the numerical and machine learning
+upscaled models while the K-C model was a poor predictor in all cases. 

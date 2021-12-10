@@ -1,0 +1,20 @@
+In a temporal network with discrete time-labels on its edges, entities and information can only
+"flow" along sequences of edges whose time-labels are non-decreasing (resp. increasing), i.e.
+along temporal (resp. strict temporal) paths. Nevertheless, in the model for temporal networks
+of [Kempe et al., JCSS, 2002], the individual time-labeled edges remain undirected: an edge $e=\{u,v\}$
+with time-label $t$ specifies that "$u$ communicates with $v$ at time $t$". This is a symmetric relation
+between $u$ and $v$, and it can be interpreted that the information can flow in either direction.
+In this paper we make a first attempt to understand how the direction of information flow on one edge
+can impact the direction of information flow on other edges. More specifically, we introduce the
+notion of a temporal transitive orientation and we systematically investigate its algorithmic
+behavior in various situations. An orientation of a temporal graph is called temporally transitive
+if, whenever $u$ has a directed edge towards $v$ with time-label $t_1$ and $v$ has a directed edge
+towards $w$ with time-label $t_2\geq t_1$, then $u$ also has a directed edge towards $w$ with some
+time-label $t_3\geq t_2$. If we just demand that this implication holds whenever $t_2 > t_1$, the
+orientation is called strictly temporally transitive. Our main result is a conceptually simple,
+yet technically quite involved, polynomial-time algorithm for recognizing whether a given temporal
+graph $\mathcal{G}$ is transitively orientable. In wide contrast we prove that, surprisingly,
+it is NP-hard to recognize whether $\mathcal{G}$ is strictly transitively orientable. Additionally
+we introduce and investigate further related problems to temporal transitivity, notably among
+them the temporal transitive completion problem, for which we prove both algorithmic and hardness
+results. 

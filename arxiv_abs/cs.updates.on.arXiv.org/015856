@@ -1,0 +1,20 @@
+Consider a PPT two-party protocol $\pi=(A,B)$ in which the parties get no private inputs and obtain
+outputs $O^A,O^B\in \{0,1\}$, and let $V^A$ and $V^B$ denote the parties' individual views. Protocol
+$\pi$ has $\alpha$-agreement if $Pr[O^A=O^B]=1/2+\alpha$. The leakage of $\pi$ is the amount
+of information a party obtains about the event $\{O^A=O^B\}$; that is, the leakage $\epsilon$ is
+the maximum, over $P\in\{A,B\}$, of the distance between $V^P|OA=OB$ and $V^P|OA\neq OB$. Typically,
+this distance is measured in statistical distance, or, in the computational setting, in computational
+indistinguishability. For this choice, Wullschleger [TCC 09] showed that if $\alpha>>\epsilon$
+then the protocol can be transformed into an OT protocol. We consider measuring the protocol leakage
+by the log-ratio distance (which was popularized by its use in the differential privacy framework).
+The log-ratio distance between X,Y over domain \Omega is the minimal $\epsilon>0$ for which, for
+every $v\in\Omega$, $log(Pr[X=v]/Pr[Y=v])\in [-\epsilon,\epsilon]$. In the computational
+setting, we use computational indistinguishability from having log-ratio distance $\epsilon$.
+We show that a protocol with (noticeable) accuracy $\alpha\in\Omega(\epsilon^2)$ can be transformed
+into an OT protocol (note that this allows $\epsilon>>\alpha$). We complete the picture, in this
+respect, showing that a protocol with $\alpha\in o(\epsilon^2)$ does not necessarily imply OT.
+Our results hold for both the information theoretic and the computational settings, and can be viewed
+as a "fine grained" approach to "weak OT amplification". We then use the above result to fully characterize
+the complexity of differentially private two-party computation for the XOR function, answering
+the open question put by Goyal, Khurana, Mironov, Pandey, and Sahai [ICALP 16] and Haitner, Nissim,
+Omri, Shaltiel, and Silbak [FOCS 18]. 

@@ -1,0 +1,18 @@
+Green Security Games (GSGs) have been successfully used in the protection of valuable resources
+such as fisheries, forests and wildlife. While real-world deployment involves both resource allocation
+and subsequent coordinated patrolling with communication and real-time, uncertain information,
+previous game models do not fully address both of these stages simultaneously. Furthermore, adopting
+existing solution strategies is difficult since they do not scale well for larger, more complex
+variants of the game models. We therefore first propose a novel GSG model that combines defender
+allocation, patrolling, real-time drone notification to human patrollers, and drones sending
+warning signals to attackers. The model further incorporates uncertainty for real-time decision-making
+within a team of drones and human patrollers. Second, we present CombSGPO, a novel and scalable algorithm
+based on reinforcement learning, to compute a defender strategy for this game model. CombSGPO performs
+policy search over a multi-dimensional, discrete action space to compute an allocation strategy
+that is best suited to a best-response patrolling strategy for the defender, learnt by training
+a multi-agent Deep Q-Network. We show via experiments that CombSGPO converges to better strategies
+and is more scalable than comparable approaches. Third, we provide a detailed analysis of the coordination
+and signaling behavior learnt by CombSGPO, showing group formation between defender resources
+and patrolling formations based on signaling and notifications between resources. Importantly,
+we find that strategic signaling emerges in the final learnt strategy. Finally, we perform experiments
+to evaluate these strategies under different levels of uncertainty. 

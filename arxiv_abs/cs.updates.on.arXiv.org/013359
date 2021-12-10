@@ -1,0 +1,18 @@
+This dissertation proposes two solutions for urban traffic control in the presence of connected
+and automated vehicles. First a centralized platoon-based controller is proposed for the cooperative
+intersection management problem that takes advantage of the platooning systems and V2I communication
+to generate fast and smooth traffic flow at a single intersection. Second, a data-driven approach
+is proposed for adaptive signal control in the presence of connected vehicles. The proposed system
+relies on a data-driven method for optimal signal timing and a data-driven heuristic method for
+estimating routing decisions. It requires no additional sensors to be installed at the intersection,
+reducing the installation costs compared to typical settings of state-of-the-practice adaptive
+signal controllers. The proposed traffic controller contains an optimal signal timing module
+and a traffic state estimator. The signal timing module is a neural network model trained on microscopic
+simulation data to achieve optimal results according to a given performance metric such as vehicular
+delay or average queue length. The traffic state estimator relies on connected vehicles' information
+to estimate the traffic's routing decisions. A heuristic method is proposed to minimize the estimation
+error. With sufficient parameter tuning, the estimation error decreases as the market penetration
+rate (MPR) of connected vehicles grows. Estimation error is below 30% for an MPR of 10% and it shrinks
+below 20% when MPR grows larger than 30%. Simulations showed that the proposed traffic controller
+outperforms Highway Capacity Manual's methodology and given proper offline parameter tuning,
+it can decrease average vehicular delay by up to 25%. 

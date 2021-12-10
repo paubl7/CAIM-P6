@@ -1,0 +1,19 @@
+In this paper, we investigate the recommendation task in the most common scenario with implicit
+feedback (e.g., clicks, purchases). State-of-the-art methods in this direction usually cast
+the problem as to learn a personalized ranking on a set of items (e.g., webpages, products). The top-N
+results are then provided to users as recommendations, where the N is usually a fixed number pre-defined
+by the system according to some heuristic criteria (e.g., page size, screen size). There is one major
+assumption underlying this fixed-number recommendation scheme, i.e., there are always sufficient
+relevant items to users' preferences. Unfortunately, this assumption may not always hold in real-world
+scenarios. In some applications, there might be very limited candidate items to recommend, and
+some users may have very high relevance requirement in recommendation. In this way, even the top-1
+ranked item may not be relevant to a user's preference. Therefore, we argue that it is critical to
+provide a dynamic-K recommendation, where the K should be different with respect to the candidate
+item set and the target user. We formulate this dynamic-K recommendation task as a joint learning
+problem with both ranking and classification objectives. The ranking objective is the same as existing
+methods, i.e., to create a ranking list of items according to users' interests. The classification
+objective is unique in this work, which aims to learn a personalized decision boundary to differentiate
+the relevant items from irrelevant items. Based on these ideas, we extend two state-of-the-art
+ranking-based recommendation methods, i.e., BPRMF and HRM, to the corresponding dynamic-K versions,
+namely DK-BPRMF and DK-HRM. Our experimental results on two datasets show that the dynamic-K models
+are more effective than the original fixed-N recommendation methods. 

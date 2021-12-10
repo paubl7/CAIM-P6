@@ -1,0 +1,20 @@
+The right to be forgotten, also known as the right to erasure, is the right of individuals to have their
+data erased from an entity storing it. The status of this long held notion was legally solidified
+recently by the General Data Protection Regulation (GDPR) in the European Union. Consequently,
+there is a need for mechanisms whereby users can verify if service providers comply with their deletion
+requests. In this work, we take the first step in proposing a formal framework to study the design
+of such verification mechanisms for data deletion requests -- also known as machine unlearning
+-- in the context of systems that provide machine learning as a service (MLaaS). Our framework allows
+the rigorous quantification of any verification mechanism based on standard hypothesis testing.
+Furthermore, we propose a novel backdoor-based verification mechanism and demonstrate its effectiveness
+in certifying data deletion with high confidence, thus providing a basis for quantitatively inferring
+machine unlearning. We evaluate our approach over a range of network architectures such as multi-layer
+perceptrons (MLP), convolutional neural networks (CNN), residual networks (ResNet), and long
+short-term memory (LSTM), as well as over 5 different datasets. We demonstrate that our approach
+has minimal effect on the ML service's accuracy but provides high confidence verification of unlearning.
+Our proposed mechanism works even if only a handful of users employ our system to ascertain compliance
+with data deletion requests. In particular, with just 5% of users participating, modifying half
+their data with a backdoor, and with merely 30 test queries, our verification mechanism has both
+false positive and false negative ratios below $10^{-3}$. We also show the effectiveness of our
+approach by testing it against an adaptive adversary that uses a state-of-the-art backdoor defense
+method. 

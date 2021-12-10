@@ -1,0 +1,19 @@
+Creating accurate and low-noise covariance matrices represents a formidable challenge in modern-day
+cosmology. We present a formalism to compress arbitrary observables into a small number of bins
+by projecting into a subspace that minimizes the log-likelihood error. The lower dimensionality
+leads to a dramatic reduction in covariance matrix noise, significantly reducing the number of
+mocks that need to be computed. Given a theory model, a set of priors, and a simple model of the covariance,
+our method works by using singular value decompositions to construct a basis for the observable
+that is close to Euclidean; by restricting to the first few basis vectors, we can capture almost all
+the signal-to-noise in a lower-dimensional subspace. Unlike conventional approaches, the method
+can be tailored for specific analyses and captures non-linearities that are not present in the Fisher
+matrix, ensuring that the full likelihood can be reproduced. The procedure is validated with full-shape
+analyses of power spectra from BOSS DR12 mock catalogs, showing that the 96-bin power spectra can
+be replaced by 12 subspace coefficients without biasing the output cosmology; this allows for accurate
+parameter inference using only $\sim 100$ mocks. Such decompositions facilitate accurate testing
+of power spectrum covariances; for the largest BOSS data chunk, we find that: (a) analytic covariances
+provide accurate models (with or without trispectrum terms); and (b) using the sample covariance
+from the MultiDark-Patchy mocks incurs a $\sim 0.5\sigma$ bias in $\Omega_m$, unless the subspace
+projection is applied. The method is easily extended to higher order statistics; the $\sim 2000$
+bin bispectrum can be compressed into only $\sim 10$ coefficients, allowing for accurate analyses
+using few mocks and without having to increase the bin sizes. 

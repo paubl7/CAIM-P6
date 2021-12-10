@@ -1,0 +1,20 @@
+Edge computing enables Mobile Autonomous Systems (MASs) to execute continuous streams of heavy-duty
+mission-critical processing tasks, such as real-time obstacle detection and navigation. However,
+in practical applications, erratic patterns in channel quality, network load, and edge server
+load can interrupt the task flow execution, which necessarily leads to severe disruption of the
+system's key operations. Existing work has mostly tackled the problem with reactive approaches,
+which cannot guarantee task-level reliability. Conversely, in this paper we focus on learning-based
+predictive edge computing to achieve self-resilient task offloading. By conducting a preliminary
+experimental evaluation, we show that there is no dominant feature that can predict the edge-MAS
+system reliability, which calls for an ensemble and selection of weaker features. To tackle the
+complexity of the problem, we propose SeReMAS, a data-driven optimization framework. We first
+mathematically formulate a Redundant Task Offloading Problem (RTOP), where a MAS may connect to
+multiple edge servers for redundancy, and needs to select which server(s) to transmit its computing
+tasks in order to maximize the probability of task execution while minimizing channel and edge resource
+utilization. We then create a predictor based on Deep Reinforcement Learning (DRL), which produces
+the optimum task assignment based on application-, network- and telemetry-based features. We
+prototype SeReMAS on a testbed composed by a drone, mounting a PixHawk flight controller, a Jetson
+Nano board, and three 802.11n WiFi interfaces. We extensively evaluate SeReMAS by considering
+an application where one drone offloads high-resolution images for real-time analysis to three
+edge servers on the ground. Experimental results show that SeReMAS improves task execution probability
+by $17\%$ with respect to existing reactive-based approaches. 

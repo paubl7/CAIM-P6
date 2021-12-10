@@ -1,0 +1,19 @@
+We consider the problem of reconfiguring a set of physical objects into a desired target configuration,
+a typical (sub)task in robotics and automation, arising in product assembly, packaging, stocking
+store shelves, and more. In this paper we address a variant, which we call space-aware reconfiguration,
+where the goal is to minimize the physical space needed for the reconfiguration, while obeying constraints
+on the allowable collision-free motions of the objects. Since for given start and target configurations,
+reconfiguration may be impossible, we translate the entire target configuration rigidly into
+a location that admits a valid sequence of moves, where each object moves in turn just once, along
+a straight line, from its starting to its target location, so that the overall physical space required
+by the start, all intermediate, and target configurations for all the objects is minimized. We investigate
+two variants of space-aware reconfiguration for the often examined setting of $n$ unit discs in
+the plane, depending on whether the discs are distinguishable (labeled) or indistinguishable
+(unlabeled). For the labeled case, we propose a representation of size $O(n^4)$ of the space of all
+feasible initial rigid translations, and use it to find, in $O(n^6)$ time, a shortest valid translation,
+or one that minimizes the enclosing disc or axis-aligned rectangle of both the start and target configurations.
+For the significantly harder unlabeled case, we show that for almost every direction, there exists
+a translation in this direction that makes the problem feasible. We use this to devise heuristic
+solutions, where we optimize the translation under stricter notions of feasibility. We present
+an implementation of such a heuristic, which solves unlabeled instances with hundreds of discs
+in seconds. 

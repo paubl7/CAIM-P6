@@ -1,0 +1,19 @@
+In neural circuits, recurrent connectivity plays a crucial role in network function and stability.
+However, existing recurrent spiking neural networks (RSNNs) are often constructed by random connections
+without optimization. While RSNNs can produce rich dynamics that are critical for memory formation
+and learning, systemic architectural optimization of RSNNs is still an opening challenge. We aim
+to enable systemic design of large RSNNs via a new scalable RSNN architecture and automated architectural
+optimization. We compose RSNNs based on a layer architecture called Sparsely-Connected Recurrent
+Motif Layer (SC-ML) that consists of multiple small recurrent motifs wired together by sparse lateral
+connections. The small size of the motifs and sparse inter-motif connectivity leads to an RSNN architecture
+scalable to large network sizes. We further propose a method called Hybrid Risk-Mitigating Architectural
+Search (HRMAS) to systematically optimize the topology of the proposed recurrent motifs and SC-ML
+layer architecture. HRMAS is an alternating two-step optimization process by which we mitigate
+the risk of network instability and performance degradation caused by architectural change by
+introducing a novel biologically-inspired "self-repairing" mechanism through intrinsic plasticity.
+The intrinsic plasticity is introduced to the second step of each HRMAS iteration and acts as unsupervised
+fast self-adaption to structural and synaptic weight modifications introduced by the first step
+during the RSNN architectural "evolution". To the best of the authors' knowledge, this is the first
+work that performs systematic architectural optimization of RSNNs. Using one speech and three
+neuromorphic datasets, we demonstrate the significant performance improvement brought by the
+proposed automated architecture optimization over existing manually-designed RSNNs. 

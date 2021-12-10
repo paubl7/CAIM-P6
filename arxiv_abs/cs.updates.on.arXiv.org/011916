@@ -1,0 +1,19 @@
+Optimally mapping a parallel application to compute and communication resources is increasingly
+important as both system size and heterogeneity increase. A similar mapping problem exists in gate-based
+quantum computing where the objective is to map tasks to gates in a topology-aware fashion. This
+is an NP-complete graph isomorphism problem, and existing task assignment approaches are either
+heuristic or based on physical optimization algorithms, providing different speed and solution
+quality trade-offs. Ising machines such as quantum and digital annealers have recently become
+available and offer an alternative hardware solution to solve this type of optimization problems.
+In this paper, we propose an algorithm that allows solving the topology-aware assignment problem
+using Ising machines. We demonstrate the algorithm on two use cases, i.e. classical task scheduling
+and quantum circuit gate scheduling. TIGER---topology-aware task/gate assignment mapper tool---implements
+our proposed algorithms and automatically integrates them into the quantum software environment.
+To address the limitations of physical solver, we propose and implement a domain-specific partition
+strategy that allows solving larger-scale problems and a weight optimization algorithm that allows
+tuning Ising model parameters to achieve better restuls. We use D-Wave's quantum annealer to demonstrate
+our algorithm and evaluate the proposed tool flow in terms of performance, partition efficiency,
+and solution quality. Results show significant speed-up compared to classical solutions, better
+scalability, and higher solution quality when using TIGER together with the proposed partition
+method. It reduces the data movement cost by 68\% in average for quantum circuit assignment compared
+to the IBM QX optimizer. 

@@ -1,0 +1,19 @@
+Monte Carlo algorithms are frequently used in atomistic simulations, including for computation
+of magnetic parameter temperature dependences in multiscale simulations. Even though parallelization
+strategies for Monte Carlo simulations of lattice spin models are known, its application to computation
+of magnetic parameter temperature dependences is lacking in the literature. Here we show how, not
+only the unconstrained algorithm, but also the constrained atomistic Monte Carlo algorithm, can
+be parallelized. Compared to the serial algorithms, the parallel Monte Carlo algorithms are typically
+over 200 times faster, allowing computations in systems with over 10 million atomistic spins on
+a single GPU with relative ease. Implementation and testing of the algorithms was carried out in
+large-scale systems, where finite-size effects are reduced, by accurately computing temperature
+dependences of magnetization, uniaxial and cubic anisotropies, exchange stiffness, and susceptibilities.
+In particular for the exchange stiffness the Bloch domain wall method was used with a large crosssectional
+area, which allows accurate computation of the domain wall width up to the Curie temperature. The
+exchange stiffness for a simple cubic lattice closely follows an mk scaling at low temperatures,
+with k < 2 dependent on the anisotropy strength. However, close to the Curie temperature the scaling
+exponent tends to k = 2. Furthermore, the implemented algorithms are applied to the computation
+of magnetization temperature dependence in granular thin films with over 15 million spins, as a
+function of average grain size and film thickness. We show the average Curie temperature in such
+systems may be obtained from a weighted Bloch series fit, which is useful for analysis of experimental
+results in granular thin films. 

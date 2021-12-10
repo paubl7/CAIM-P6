@@ -1,0 +1,19 @@
+Electronic health record (EHR) coding is the task of assigning ICD codes to each EHR. Most previous
+studies either only focus on the frequent ICD codes or treat rare and frequent ICD codes in the same
+way. These methods perform well on frequent ICD codes but due to the extremely unbalanced distribution
+of ICD codes, the performance on rare ones is far from satisfactory. We seek to improve the performance
+for both frequent and rare ICD codes by using a contrastive graph-based EHR coding framework, CoGraph,
+which re-casts EHR coding as a few-shot learning task. First, we construct a heterogeneous EHR word-entity
+(HEWE) graph for each EHR, where the words and entities extracted from an EHR serve as nodes and the
+relations between them serve as edges. Then, CoGraph learns similarities and dissimilarities
+between HEWE graphs from different ICD codes so that information can be transferred among them.
+In a few-shot learning scenario, the model only has access to frequent ICD codes during training,
+which might force it to encode features that are useful for frequent ICD codes only. To mitigate this
+risk, CoGraph devises two graph contrastive learning schemes, GSCL and GECL, that exploit the HEWE
+graph structures so as to encode transferable features. GSCL utilizes the intra-correlation of
+different sub-graphs sampled from HEWE graphs while GECL exploits the inter-correlation among
+HEWE graphs at different clinical stages. Experiments on the MIMIC-III benchmark dataset show
+that CoGraph significantly outperforms state-of-the-art methods on EHR coding, not only on frequent
+ICD codes, but also on rare codes, in terms of several evaluation indicators. On frequent ICD codes,
+GSCL and GECL improve the classification accuracy and F1 by 1.31% and 0.61%, respectively, and on
+rare ICD codes CoGraph has more obvious improvements by 2.12% and 2.95%. 

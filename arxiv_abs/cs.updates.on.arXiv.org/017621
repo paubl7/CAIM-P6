@@ -1,0 +1,20 @@
+In this paper, a CNN-based structure for time-frequency localization of audio signal information
+in the ASR acoustic model is proposed for Persian speech recognition. Research has shown that the
+receptive fields' time-frequency flexibility in some mammals' auditory neurons system improves
+recognition performance. Biosystems have inspired many artificial systems because of their high
+efficiency and performance, so time-frequency localization has been used extensively to improve
+system performance. In the last few years, much work has been done to localize time-frequency information
+in ASR systems, which has used the spatial immutability properties of methods such as TDNN, CNN and
+LSTM-RNN. However, most of these models have large parameter volumes and are challenging to train.
+In the structure we have designed, called Time-Frequency Convolutional Maxout Neural Network
+(TFCMNN), two parallel blocks consisting of 1D-CMNN each have weight sharing in one dimension,
+are applied simultaneously but independently to the feature vectors. Then their output is concatenated
+and applied to a fully connected Maxout network for classification. To improve the performance
+of this structure, we have used newly developed methods and models such as the maxout, Dropout, and
+weight normalization. Two experimental sets were designed and implemented on the Persian FARSDAT
+speech data set to evaluate the performance of this model compared to conventional 1D-CMNN models.
+According to the experimental results, the average recognition score of TFCMNN models is about
+1.6% higher than the average of conventional models. In addition, the average training time of the
+TFCMNN models is about 17 hours lower than the average training time of traditional models. As a result,
+as mentioned in other references, time-frequency localization in ASR systems increases system
+accuracy and speeds up the model training process. 

@@ -1,0 +1,20 @@
+Semantic text matching is a critical problem in information retrieval. Recently, deep learning
+techniques have been widely used in this area and obtained significant performance improvements.
+However, most models are black boxes and it is hard to understand what happened in the matching process,
+due to the poor interpretability of deep learning. This paper aims at tackling this problem. The
+key idea is to test whether existing deep text matching methods satisfy some fundamental heuristics
+in information retrieval. Specifically, four heuristics are used in our study, i.e., term frequency
+constraint, term discrimination constraint, length normalization constraints, and TF-length
+constraint. Since deep matching models usually contain many parameters, it is difficult to conduct
+a theoretical study for these complicated functions. In this paper, We propose an empirical testing
+method. Specifically, We first construct some queries and documents to make them satisfy the assumption
+in a constraint, and then test to which extend a deep text matching model trained on the original dataset
+satisfies the corresponding constraint. Besides, a famous attribution based interpretation
+method, namely integrated gradient, is adopted to conduct detailed analysis and guide for feasible
+improvement. Experimental results on LETOR 4.0 and MS Marco show that all the investigated deep
+text matching methods, both representation and interaction based methods, satisfy the above constraints
+with high probabilities in statistics. We further extend these constraints to the semantic settings,
+which are shown to be better satisfied for all the deep text matching models. These empirical findings
+give clear understandings on why deep text matching models usually perform well in information
+retrieval. We believe the proposed evaluation methodology will be useful for testing future deep
+text matching models. 

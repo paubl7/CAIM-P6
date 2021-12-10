@@ -1,0 +1,19 @@
+There are a large number of optimization problems in physical models where the relationships between
+model parameters and outputs are unknown or hard to track. These models are named as black-box models
+in general because they can only be viewed in terms of inputs and outputs, without knowledge of the
+internal workings. Optimizing the black-box model parameters has become increasingly expensive
+and time consuming as they have become more complex. Hence, developing effective and efficient
+black-box model optimization algorithms has become an important task. One powerful algorithm
+to solve such problem is Bayesian optimization, which can effectively estimates the model parameters
+that lead to the best performance, and Gaussian Process (GP) has been one of the most widely used surrogate
+model in Bayesian optimization. However, the time complexity of GP scales cubically with respect
+to the number of observed model outputs, and GP does not scale well with large parameter dimension
+either. Consequently, it has been challenging for GP to optimize black-box models that need to query
+many observations and/or have many parameters. To overcome the drawbacks of GP, in this study, we
+propose a general Bayesian optimization algorithm that employs a Neural Process (NP) as the surrogate
+model to perform black-box model optimization, namely, Neural Process for Bayesian Optimization
+(NPBO). In order to validate the benefits of NPBO, we compare NPBO with four benchmark approaches
+on a power system parameter optimization problem and a series of seven benchmark Bayesian optimization
+problems. The results show that the proposed NPBO performs better than the other four benchmark
+approaches on the power system parameter optimization problem and competitively on the seven benchmark
+problems. 

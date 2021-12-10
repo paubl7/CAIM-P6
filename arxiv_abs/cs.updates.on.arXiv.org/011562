@@ -1,0 +1,20 @@
+Deep learning and knowledge transfer techniques have permeated the field of medical imaging and
+are considered as key approaches for revolutionizing diagnostic imaging practices. However,
+there are still challenges for the successful integration of deep learning into medical imaging
+tasks due to a lack of large annotated imaging data. To address this issue, we propose a teacher-student
+learning framework to transfer knowledge from a carefully pre-trained convolutional neural network
+(CNN) teacher to a student CNN as a way of improving the diagnostic tasks on a small data regime. In
+this study, we explore the performance of knowledge transfer in the medical imaging setting through
+a series of experiments. We investigate the proposed network's performance when the student network
+is trained on a small dataset (target dataset) as well as when teachers and student's domains are
+distinct. We also examine the proposed network's behavior on the convergence and regularization
+of the student network during training. The performances of the CNN models are evaluated on three
+medical imaging datasets including Diabetic Retinopathy, CheXpert, and ChestX-ray8. Our results
+indicate that the teacher-student learning framework outperforms transfer learning for small
+imaging datasets. Particularly, the teacher-student learning framework improves the area under
+the ROC Curve (AUC) of the CNN model on a small sample of CheXpert (n=5k) by 4% and on ChestX-ray8 (n=5.6k)
+by 9%. In addition to small training data size, we also demonstrate a clear advantage to favoring
+teacher-student learning framework for cross-domain knowledge transfer in the medical imaging
+setting compared to other knowledge transfer techniques such as transfer learning. We observe
+that the teacher-student network holds a great promise not only to improve the performance of diagnosis
+but also to reduce overfitting when the dataset is small. 

@@ -1,0 +1,20 @@
+Recent works have demonstrated great success in training high-capacity autoregressive language
+models (GPT, GPT-2, GPT-3) on a huge amount of unlabeled text corpus for text generation. Despite
+showing great results, this generates two training efficiency challenges. First, training large
+corpora can be extremely timing consuming, and how to present training samples to the model to improve
+the token-wise convergence speed remains a challenging and open question. Second, many of these
+large models have to be trained with hundreds or even thousands of processors using data-parallelism
+with a very large batch size. Despite of its better compute efficiency, it has been observed that
+large-batch training often runs into training instability issue or converges to solutions with
+bad generalization performance. To overcome these two challenges, we present a study of a curriculum
+learning based approach, which helps improves the pre-training convergence speed of autoregressive
+models. More importantly, we find that curriculum learning, as a regularization method, exerts
+a gradient variance reduction effect and enables to train autoregressive models with much larger
+batch sizes and learning rates without training instability, further improving the training speed.
+Our evaluations demonstrate that curriculum learning enables training GPT-2 models (with up to
+1.5B parameters) with 8x larger batch size and 4x larger learning rate, whereas the baseline approach
+struggles with training divergence. To achieve the same validation perplexity targets during
+pre-training, curriculum learning reduces the required number of tokens and wall clock time by
+up to 59% and 54%, respectively. To achieve the same or better zero-shot WikiText-103/LAMBADA evaluation
+results at the end of pre-training, curriculum learning reduces the required number of tokens and
+wall clock time by up to 13% and 61%, respectively. 

@@ -1,0 +1,19 @@
+Recent studies have shown the benefits of using additional elevation data (e.g., DSM) for enhancing
+the performance of the semantic segmentation of aerial images. However, previous methods mostly
+adopt 3D elevation information as additional inputs. While in many real-world applications, one
+does not have the corresponding DSM information at hand and the spatial resolution of acquired DSM
+images usually do not match the aerial images. To alleviate this data constraint and also take advantage
+of 3D elevation information, in this paper, we introduce a geometry-aware segmentation model that
+achieves accurate semantic labeling of aerial images via joint height estimation. Instead of using
+a single-stream encoder-decoder network for semantic labeling, we design a separate decoder branch
+to predict the height map and use the DSM images as side supervision to train this newly designed decoder
+branch. In this way, our model does not require DSM as model input and still benefits from the helpful
+3D geometric information during training. Moreover, we develop a new geometry-aware convolution
+module that fuses the 3D geometric features from the height decoder branch and the 2D contextual
+features from the semantic segmentation branch. The fused feature embeddings can produce geometry-aware
+segmentation maps with enhanced performance. Our model is trained with DSM images as side supervision,
+while in the inference stage, it does not require DSM data and directly predicts the semantic labels
+in an end-to-end fashion. Experiments on ISPRS Vaihingen and Potsdam datasets demonstrate the
+effectiveness of the proposed method for the semantic segmentation of aerial images. The proposed
+model achieves remarkable performance on both datasets without using any hand-crafted features
+or post-processing. 

@@ -1,0 +1,19 @@
+Higher-order accuracy (order of $k+1$ in the $L^2$ norm) is one of the well known beneficial properties
+of the discontinuous Galerkin (DG) method. Furthermore, many studies have demonstrated the superconvergence
+property (order of $2k+1$ in the negative norm) of the semi-discrete DG method. One can take advantage
+of this superconvergence property by post-processing techniques to enhance the accuracy of the
+DG solution. A popular class of post-processing techniques to raise the convergence rate from order
+$k+1$ to order $2k+1$ in the $L^2$ norm is the Smoothness-Increasing Accuracy-Conserving (SIAC)
+filtering. In addition to enhancing the accuracy, the SIAC filtering also increases the inter-element
+smoothness of the DG solution. The SIAC filtering was introduced for the DG method of the linear hyperbolic
+equation by Cockburn et al. in 2003. Since then, there are many generalizations of the SIAC filtering
+have been proposed. However, the development of SIAC filtering has never gone beyond the framework
+of using spline functions (mostly B-splines) to construct the filter function. In this paper, we
+first investigate the general basis function (beyond the spline functions) that can be used to construct
+the SIAC filter. The studies of the general basis function relax the SIAC filter structure and provide
+more specific properties, such as extra smoothness, etc. Secondly, we study the basis functions'
+distribution and propose a new SIAC filter called compact SIAC filter that significantly reduces
+the original SIAC filter's support size while preserving (or even improving) its ability to enhance
+the accuracy of the DG solution. We show that the proofs of the new SIAC filters' ability to extract
+the superconvergence and provide numerical results to confirm the theoretical results and demonstrate
+the new finding's good numerical performance. 

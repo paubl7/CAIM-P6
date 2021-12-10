@@ -1,0 +1,19 @@
+Segmentation and analysis of individual pores and grains of mudrocks from scanning electron microscope
+images is non-trivial because of noise, imaging artifacts, variation in pixel grayscale values
+across images, and overlaps in grayscale values among different physical features such as silt
+grains, clay grains, and pores in an image, which make their identification difficult. Moreover,
+because grains and pores often have overlapping grayscale values, direct application of threshold-based
+segmentation techniques is not sufficient. Recent advances in the field of computer vision have
+made it easier and faster to segment images and identify multiple occurrences of such features in
+an image, provided that ground-truth data for training the algorithm is available. Here, we propose
+a deep learning SEM image segmentation model, MudrockNet based on Google's DeepLab-v3+ architecture
+implemented with the TensorFlow library. The ground-truth data was obtained from an image-processing
+workflow applied to scanning electron microscope images of uncemented muds from the Kumano Basin
+offshore Japan at depths < 1.1 km. The trained deep learning model obtained a pixel-accuracy about
+90%, and predictions for the test data obtained a mean intersection over union (IoU) of 0.6591 for
+silt grains and 0.6642 for pores. We also compared our model with the random forest classifier using
+trainable Weka segmentation in ImageJ, and it was observed that MudrockNet gave better predictions
+for both silt grains and pores. The size, concentration, and spatial arrangement of the silt and
+clay grains can affect the petrophysical properties of a mudrock, and an automated method to accurately
+identify the different grains and pores in mudrocks can help improve reservoir and seal characterization
+for petroleum exploration and anthropogenic waste sequestration. 

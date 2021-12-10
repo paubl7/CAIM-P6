@@ -1,0 +1,19 @@
+Bipartite graphs are widely used to model relationships between two types of entities. Community
+search retrieves densely connected subgraphs containing a query vertex, which has been extensively
+studied on unipartite graphs. However, community search on bipartite graphs remains largely unexplored.
+Moreover, all existing cohesive subgraph models on bipartite graphs can only be applied to measure
+the structure cohesiveness between two sets of vertices while overlooking the edge weight in forming
+the community. In this paper, we study the significant (alpha, beta)-community search problem
+on weighted bipartite graphs. Given a query vertex q, we aim to find the significant (alpha, beta)-community
+R of q which adopts (alpha, beta)-core to characterize the engagement level of vertices, and maximizes
+the minimum edge weight (significance) within R. To support fast retrieval of R, we first retrieve
+the maximal connected subgraph of (alpha, beta)-core containing the query vertex (the (alpha,
+beta)-community), and the search space is limited to this subgraph with a much smaller size than
+the original graph. A novel index structure is presented which can be built in O(delta * m) time and
+takes O(delta * m) space where m is the number of edges in G, delta is bounded by the square root of m and
+is much smaller in practice. Utilizing the index, the (alpha, beta)-community can be retrieved
+in optimal time. To further obtain R, we develop peeling and expansion algorithms to conduct searches
+by shrinking from the (alpha, beta)-community and expanding from the query vertex, respectively.
+The experimental results on real graphs not only demonstrate the effectiveness of the significant
+(alpha, beta)-community model but also validate the efficiency of our query processing and indexing
+techniques. 

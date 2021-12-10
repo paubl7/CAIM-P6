@@ -1,0 +1,20 @@
+Prostate cancer is one of the main diseases affecting men worldwide. The Gleason scoring system
+is the primary diagnostic tool for prostate cancer. This is obtained via the visual analysis of cancerous
+patterns in prostate biopsies performed by expert pathologists, and the aggregation of the main
+Gleason grades in a combined score. Computer-aided diagnosis systems allow to reduce the workload
+of pathologists and increase the objectivity. Recently, efforts have been made in the literature
+to develop algorithms aiming the direct estimation of the global Gleason score at biopsy/core level
+with global labels. However, these algorithms do not cover the accurate localization of the Gleason
+patterns into the tissue. In this work, we propose a deep-learning-based system able to detect local
+cancerous patterns in the prostate tissue using only the global-level Gleason score during training.
+The methodological core of this work is the proposed weakly-supervised-trained convolutional
+neural network, WeGleNet, based on a multi-class segmentation layer after the feature extraction
+module, a global-aggregation, and the slicing of the background class for the model loss estimation
+during training. We obtained a Cohen's quadratic kappa (k) of 0.67 for the pixel-level prediction
+of cancerous patterns in the validation cohort. We compared the model performance for semantic
+segmentation of Gleason grades with supervised state-of-the-art architectures in the test cohort.
+We obtained a pixel-level k of 0.61 and a macro-averaged f1-score of 0.58, at the same level as fully-supervised
+methods. Regarding the estimation of the core-level Gleason score, we obtained a k of 0.76 and 0.67
+between the model and two different pathologists. WeGleNet is capable of performing the semantic
+segmentation of Gleason grades similarly to fully-supervised methods without requiring pixel-level
+annotations. 

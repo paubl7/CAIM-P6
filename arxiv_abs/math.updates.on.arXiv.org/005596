@@ -1,0 +1,19 @@
+Uncertainty quantification techniques such as the time-dependent generalized polynomial chaos
+(TD-gPC) use an adaptive orthogonal basis to better represent the stochastic part of the solution
+space (aka random function space) in time. However, because the random function space is constructed
+using tensor products, TD-gPC-based methods are known to suffer from the curse of dimensionality.
+In this paper, we introduce a new numerical method called the 'flow-driven spectral chaos' (FSC)
+which overcomes this curse of dimensionality at the random-function-space level. The proposed
+method is not only computationally more efficient than existing TD-gPC-based methods but is also
+far more accurate. The FSC method uses the concept of 'enriched stochastic flow maps' to track the
+evolution of a finite-dimensional random function space efficiently in time. To transfer the probability
+information from one random function space to another, two approaches are developed and studied
+herein. In the first approach, the probability information is transferred in the mean-square sense,
+whereas in the second approach the transfer is done exactly using a new theorem that was developed
+for this purpose. The FSC method can quantify uncertainties with high fidelity, especially for
+the long-time response of stochastic dynamical systems governed by ODEs of arbitrary order. Six
+representative numerical examples, including a nonlinear problem (the Van-der-Pol oscillator),
+are presented to demonstrate the performance of the FSC method and corroborate the claims of its
+superior numerical properties. Finally, a parametric, high-dimensional stochastic problem
+is used to demonstrate that when the FSC method is used in conjunction with Monte Carlo integration,
+the curse of dimensionality can be overcome altogether. 

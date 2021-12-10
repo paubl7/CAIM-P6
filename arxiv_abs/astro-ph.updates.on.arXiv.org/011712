@@ -1,0 +1,18 @@
+Point sources (PS) are one of the main contaminants to the recovery of the cosmic microwave background
+(CMB) signal at small scales, and their detection is important for the next generation of CMB experiments.
+We develop a method (PoSeIDoN) based on fully convolutional networks to detect PS in realistic simulations,
+and we compare its performance against one of the most used PS detection method, the Mexican hat wavelet
+2 (MHW2). We produce realistic simulations of PS taking into account contaminating signals as the
+CMB, the cosmic infrared background, the Galactic thermal emission, the thermal Sunyaev-Zel'dovich
+effect, and the instrumental and PS shot noises. We first produce a set of training simulations at
+217 GHz to train the network. Then we apply both PoSeIDoN and the MHW2 to recover the PS in the validating
+simulations at all 143, 217, and 353 GHz, comparing the results by estimating the reliability, completeness,
+and flux density accuracy and by computing the receiver operating characteristic curves. In the
+extra-galactic region with a 30{\deg} galactic cut, the network successfully recovers PS at 90%
+completeness corresponding to 253, 126, and 250 mJy for 143, 217, and 353 GHz respectively. The MHW2
+with a 3$\sigma$ flux density detection limit recovers PS up to 181, 102, and 153 mJy at 90% completeness.
+In all cases PoSeIDoN produces a much lower number of spurious sources with respect to MHW2. The results
+on spurious sources for both techniques worsen when reducing the galactic cut to 10{\deg}. Our results
+suggest that using neural networks is a very promising approach for detecting PS, providing overall
+better results in dealing with spurious sources with respect to usual filtering approaches. Moreover,
+PoSeIDoN gives competitive results even at nearby frequencies where the network was not trained.

@@ -1,0 +1,18 @@
+Both NASA's Solar Dynamics Observatory (SDO) and the JAXA/NASA Hinode mission include spectropolarimetric
+instruments designed to measure the photospheric magnetic field. SDO's Helioseismic and Magnetic
+Imager (HMI) emphasizes full-disk high-cadence and good spatial resolution data acquisition
+while Hinode's Solar Optical Telescope Spectro-Polarimeter (SOT-SP) focuses on high spatial
+resolution and spectral sampling at the cost of a limited field of view and slower temporal cadence.
+This work introduces a deep-learning system named SynthIA (Synthetic Inversion Approximation),
+that can enhance both missions by capturing the best of each instrument's characteristics. We use
+SynthIA to produce a new magnetogram data product, SynodeP (Synthetic Hinode Pipeline), that mimics
+magnetograms from the higher spectral resolution Hinode/SOT-SP pipeline, but is derived from
+full-disk, high-cadence, and lower spectral-resolution SDO/HMI Stokes observations. Results
+on held-out data show that SynodeP has good agreement with the Hinode/SOT-SP pipeline inversions,
+including magnetic fill fraction, which is not provided by the current SDO/HMI pipeline. SynodeP
+further shows a reduction in the magnitude of the 24-hour oscillations present in the SDO/HMI data.
+To demonstrate SynthIA's generality, we show the use of SDO/AIA data and subsets of the HMI data as
+inputs, which enables trade-offs between fidelity to the Hinode/SOT-SP inversions, number of
+observations used, and temporal artifacts. We discuss possible generalizations of SynthIA and
+its implications for space weather modeling. This work is part of the NASA Heliophysics DRIVE Science
+Center (SOLSTICE) at the University of Michigan under grant NASA 80NSSC20K0600E, and will be open-sourced.

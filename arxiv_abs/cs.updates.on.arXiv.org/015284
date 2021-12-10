@@ -1,0 +1,18 @@
+In the Disjoint Paths problem, the input is an undirected graph $G$ on $n$ vertices and a set of $k$
+vertex pairs, $\{s_i,t_i\}_{i=1}^k$, and the task is to find $k$ pairwise vertex-disjoint paths
+connecting $s_i$ to $t_i$. The problem was shown to have an $f(k)n^3$ algorithm by Robertson and
+Seymour. In modern terminology, this means that Disjoint Paths is fixed parameter tractable (FPT),
+parameterized by the number of vertex pairs. This algorithm is the cornerstone of the entire graph
+minor theory, and a vital ingredient in the $g(k)n^3$ algorithm for Minor Testing (given two undirected
+graphs, $G$ and $H$ on $n$ and $k$ vertices, respectively, the objective is to check whether $G$ contains
+$H$ as a minor). All we know about $f$ and $g$ is that these are computable functions. Thus, a challenging
+open problem in graph algorithms is to devise an algorithm for Disjoint Paths where $f$ is single
+exponential. That is, $f$ is of the form $2^{{\sf poly}(k)}$. The algorithm of Robertson and Seymour
+relies on topology and essentially reduces the problem to surface-embedded graphs. Thus, the first
+major obstacle that has to be overcome in order to get an algorithm with a single exponential running
+time for Disjoint Paths and {\sf Minor Testing} on general graphs is to solve Disjoint Paths in single
+exponential time on surface-embedded graphs and in particular on planar graphs. Even when the inputs
+to Disjoint Paths are restricted to planar graphs, a case called the Planar Disjoint Paths problem,
+the best known algorithm has running time $2^{2^{O(k)}}n^2$. In this paper, we make the first step
+towards our quest for designing a single exponential time algorithm for Disjoint Paths by giving
+a $2^{O(k^2)}n^{O(1)}$-time algorithm for Planar Disjoint Paths. 

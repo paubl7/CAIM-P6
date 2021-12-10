@@ -1,0 +1,19 @@
+Given a graph $G=(V,E)$ with a weight $w_v$ associated with each vertex $v\in V$, the maximum weighted
+induced forest problem consists of encountering a maximum weighted subset $V'\subseteq V$ of the
+vertices such that $V'$ induces a forest. This NP-hard problem is known to be equivalent to the minimum
+weighted feedback vertex set problem, which has applicability in a variety of domains. The closely
+related maximum weighted induced tree problem, on the other hand, requires that the subset $V'\subseteq
+V$ induces a tree. We propose two new integer programming formulations with an exponential number
+of constraints and branch-and-cut procedures for the maximum weighted induced forest problem.
+Furthermore, we show how formulations for the problem can be very easily adapted to obtain maximum
+weighted induced trees. Computational experiments using benchmark instances are performed comparing
+several formulations, including the newly proposed approaches and those available in the literature,
+when implemented in a standard commercial MIP (mixed integer programming) solver. More specifically,
+five formulations are compared, two compact (i.e., with a polynomial number of variables and constraints)
+ones and the three others with an exponential number of constraints. The results indicate that one
+of the newly proposed formulations, denoted tree with cycle elimination (TCYC), outperforms those
+available in the literature when it comes to the average times for proving optimality for the small
+instances, especially the more challenging ones. Additionally, this formulation can achieve
+much lower average times for solving the larger random instances that can be optimally solved. The
+results also illustrate the impact of offering high quality initial feasible solutions in the performance
+of the formulations. 

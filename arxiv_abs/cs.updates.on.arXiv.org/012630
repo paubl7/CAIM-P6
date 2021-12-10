@@ -1,0 +1,20 @@
+Active inference is a first principle account of how autonomous agents operate in dynamic, non-stationary
+environments. This problem is also considered in reinforcement learning (RL), but limited work
+exists on comparing the two approaches on the same discrete-state environments. In this paper,
+we provide: 1) an accessible overview of the discrete-state formulation of active inference, highlighting
+natural behaviors in active inference that are generally engineered in RL; 2) an explicit discrete-state
+comparison between active inference and RL on an OpenAI gym baseline. We begin by providing a condensed
+overview of the active inference literature, in particular viewing the various natural behaviors
+of active inference agents through the lens of RL. We show that by operating in a pure belief-based
+setting, active inference agents can carry out epistemic exploration, and account for uncertainty
+about their environment in a Bayes-optimal fashion. Furthermore, we show that the reliance on an
+explicit reward signal in RL is removed in active inference, where reward can simply be treated as
+another observation; even in the total absence of rewards, agent behaviors are learned through
+preference learning. We make these properties explicit by showing two scenarios in which active
+inference agents can infer behaviors in reward-free environments compared to both Q-learning
+and Bayesian model-based RL agents; by placing zero prior preferences over rewards and by learning
+the prior preferences over the observations corresponding to reward. We conclude by noting that
+this formalism can be applied to more complex settings if appropriate generative models can be formulated.
+In short, we aim to demystify the behavior of active inference agents by presenting an accessible
+discrete state-space and time formulation, and demonstrate these behaviors in a OpenAI gym environment,
+alongside RL agents. 

@@ -1,0 +1,19 @@
+Robotic visual systems operating in the wild must act in unconstrained scenarios, under different
+environmental conditions while facing a variety of semantic concepts, including unknown ones.
+To this end, recent works tried to empower visual object recognition methods with the capability
+to i) detect unseen concepts and ii) extended their knowledge over time, as images of new semantic
+classes arrive. This setting, called Open World Recognition (OWR), has the goal to produce systems
+capable of breaking the semantic limits present in the initial training set. However, this training
+set imposes to the system not only its own semantic limits, but also environmental ones, due to its
+bias toward certain acquisition conditions that do not necessarily reflect the high variability
+of the real-world. This discrepancy between training and test distribution is called domain-shift.
+This work investigates whether OWR algorithms are effective under domain-shift, presenting the
+first benchmark setup for assessing fairly the performances of OWR algorithms, with and without
+domain-shift. We then use this benchmark to conduct analyses in various scenarios, showing how
+existing OWR algorithms indeed suffer a severe performance degradation when train and test distributions
+differ. Our analysis shows that this degradation is only slightly mitigated by coupling OWR with
+domain generalization techniques, indicating that the mere plug-and-play of existing algorithms
+is not enough to recognize new and unknown categories in unseen domains. Our results clearly point
+toward open issues and future research directions, that need to be investigated for building robot
+visual systems able to function reliably under these challenging yet very real conditions. Code
+available at https://github.com/DarioFontanel/OWR-VisualDomains 

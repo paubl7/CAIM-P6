@@ -1,0 +1,20 @@
+Leading Cloud providers offer several types of Virtual Machines (VMs) in diverse contract models,
+with different guarantees in terms of availability and reliability. Among them, the most popular
+contract models are the on-demand and the spot models. In the former, on-demand VMs are allocated
+for a fixed cost per time unit, and their availability is ensured during the whole execution. On the
+other hand, in the spot market, VMs are offered with a huge discount when compared to the on-demand
+VMs, but their availability fluctuates according to the cloud's current demand that can terminate
+or hibernate a spot VM at any time. Furthermore, in order to cope with workload variations, cloud
+providers have also introduced the concept of burstable VMs which are able to burst up their respective
+baseline CPU performance during a limited period of time with an up to 20% discount when compared
+to an equivalent non-burstable on-demand VMs. In the current work, we present the Burst Hibernation-Aware
+Dynamic Scheduler (Burst-HADS), a framework that schedules and executes tasks of Bag-of-Tasks
+applications with deadline constraints by exploiting spot and on-demand burstable VMs, aiming
+at minimizing both the monetary cost and the execution time. Based on ILS metaheuristics, Burst-HADS
+defines an initial scheduling map of tasks to VMs which can then be dynamically altered by migrating
+tasks of a hibernated spot VM or by performing work-stealing when VMs become idle. Performance results
+on Amazon EC2 cloud with different applications show that, when compared to a solution that uses
+only regular on-demand instances, Burst-HADS reduces the monetary cost of the execution and meet
+the application deadline even in scenarios with high spot hibernation rates. It also reduces the
+total execution time when compared to a solution that uses only spot and non-burstable on-demand
+instances. 

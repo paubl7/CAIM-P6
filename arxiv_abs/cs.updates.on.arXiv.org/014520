@@ -1,0 +1,18 @@
+As we rapidly approach the frontiers of ultra large computing resources, software optimization
+is becoming of paramount interest to scientific application developers interested in efficiently
+leveraging all available on-Node computing capabilities and thereby improving a requisite science
+per watt metric. The scientific application of interest here is the Basic Math Library (BML) that
+provides a singular interface for linear algebra operation frequently used in the Quantum Molecular
+Dynamics (QMD) community. The provisioning of a singular interface indicates the presence of an
+abstraction layer which in-turn suggests commonalities in the code-base and therefore any optimization
+or tuning introduced in the core of code-base has the ability to positively affect the performance
+of the aforementioned library as a whole. With that in mind, we proceed with this investigation by
+performing a survey of the entirety of the BML code-base, and extract, in form of micro-kernels,
+common snippets of code. We introduce several optimization strategies into these micro-kernels
+including 1.) Strength Reduction 2.) Memory Alignment for large arrays 3.) Non Uniform Memory Access
+(NUMA) aware allocations to enforce data locality and 4.) appropriate thread affinity and bindings
+to enhance the overall multi-threaded performance. After introducing these optimizations, we
+benchmark the micro-kernels and compare the run-time before and after optimization for several
+target architectures. Finally we use the results as a guide to propagating the optimization strategies
+into the BML code-base. As a demonstration, herein, we test the efficacy of these optimization strategies
+by comparing the benchmark and optimized versions of the code. 

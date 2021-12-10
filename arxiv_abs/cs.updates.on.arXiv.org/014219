@@ -1,0 +1,19 @@
+Attention mechanisms, which enable a neural network to accurately focus on all the relevant elements
+of the input, have become an essential component to improve the performance of deep neural networks.
+There are mainly two attention mechanisms widely used in computer vision studies, \textit{spatial
+attention} and \textit{channel attention}, which aim to capture the pixel-level pairwise relationship
+and channel dependency, respectively. Although fusing them together may achieve better performance
+than their individual implementations, it will inevitably increase the computational overhead.
+In this paper, we propose an efficient Shuffle Attention (SA) module to address this issue, which
+adopts Shuffle Units to combine two types of attention mechanisms effectively. Specifically,
+SA first groups channel dimensions into multiple sub-features before processing them in parallel.
+Then, for each sub-feature, SA utilizes a Shuffle Unit to depict feature dependencies in both spatial
+and channel dimensions. After that, all sub-features are aggregated and a "channel shuffle" operator
+is adopted to enable information communication between different sub-features. The proposed
+SA module is efficient yet effective, e.g., the parameters and computations of SA against the backbone
+ResNet50 are 300 vs. 25.56M and 2.76e-3 GFLOPs vs. 4.12 GFLOPs, respectively, and the performance
+boost is more than 1.34% in terms of Top-1 accuracy. Extensive experimental results on common-used
+benchmarks, including ImageNet-1k for classification, MS COCO for object detection, and instance
+segmentation, demonstrate that the proposed SA outperforms the current SOTA methods significantly
+by achieving higher accuracy while having lower model complexity. The code and models are available
+at https://github.com/wofmanaf/SA-Net. 

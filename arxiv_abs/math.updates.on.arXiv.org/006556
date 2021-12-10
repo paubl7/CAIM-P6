@@ -1,0 +1,19 @@
+We study a general convex optimization problem, which covers various classic problems in different
+areas and particularly includes many optimal transport related problems arising in recent years.
+To solve this problem, we revisit the classic Bregman proximal point algorithm (BPPA) and introduce
+a new inexact stopping condition for solving the subproblems, which can circumvent the underlying
+feasibility difficulty often appearing in existing inexact conditions when the problem has a complex
+feasible set. Our inexact condition also covers several existing inexact conditions and hence,
+as a byproduct, we actually develop a certain unified inexact framework for BPPA. This makes our
+inexact BPPA (iBPPA) more flexible to fit different scenarios in practice. In particular, as an
+application to the standard optimal transport (OT) problem, our iBPPA with the entropic proximal
+term can bypass some numerical instability issues that usually plague the well-recognized entropic
+regularization approach in the OT community, since our iBPPA does not require the proximal parameter
+to be very small for obtaining an accurate approximate solution. The iteration complexity of $\mathcal{O}(1/k)$
+and the convergence of the sequence are also established for our iBPPA under some mild conditions.
+Moreover, inspired by Nesterov's acceleration technique, we develop a variant of our iBPPA, denoted
+by V-iBPPA, and establish the iteration complexity of $\mathcal{O}(1/k^{\lambda})$, where $\lambda\geq1$
+is a quadrangle scaling exponent of the kernel function. Some preliminary numerical experiments
+for solving the standard OT problem are conducted to show the convergence behaviors of our iBPPA
+and V-iBPPA under different inexactness settings. The experiments also empirically verify the
+potential of our V-iBPPA on improving the convergence speed. 

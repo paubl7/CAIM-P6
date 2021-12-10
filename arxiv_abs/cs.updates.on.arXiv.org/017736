@@ -1,0 +1,20 @@
+In this paper, we present a self-training method, named ST3D++, with a holistic pseudo label denoising
+pipeline for unsupervised domain adaptation on 3D object detection. ST3D++ aims at reducing noise
+in pseudo label generation as well as alleviating the negative impacts of noisy pseudo labels on
+model training. First, ST3D++ pre-trains the 3D object detector on the labeled source domain with
+random object scaling (ROS) which is designed to reduce target domain pseudo label noise arising
+from object scale bias of the source domain. Then, the detector is progressively improved through
+alternating between generating pseudo labels and training the object detector with pseudo-labeled
+target domain data. Here, we equip the pseudo label generation process with a hybrid quality-aware
+triplet memory to improve the quality and stability of generated pseudo labels. Meanwhile, in the
+model training stage, we propose a source data assisted training strategy and a curriculum data
+augmentation policy to effectively rectify noisy gradient directions and avoid model over-fitting
+to noisy pseudo labeled data. These specific designs enable the detector to be trained on meticulously
+refined pseudo labeled target data with denoised training signals, and thus effectively facilitate
+adapting an object detector to a target domain without requiring annotations. Finally, our method
+is assessed on four 3D benchmark datasets (i.e., Waymo, KITTI, Lyft, and nuScenes) for three common
+categories (i.e., car, pedestrian and bicycle). ST3D++ achieves state-of-the-art performance
+on all evaluated settings, outperforming the corresponding baseline by a large margin (e.g., 9.6%
+$\sim$ 38.16% on Waymo $\rightarrow$ KITTI in terms of AP$_{\text{3D}}$), and even surpasses the
+fully supervised oracle results on the KITTI 3D object detection benchmark with target prior. Code
+will be available. 

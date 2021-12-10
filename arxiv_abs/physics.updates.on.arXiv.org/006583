@@ -1,0 +1,19 @@
+A projection-based formulation is presented for non-linear model reduction of problems with extreme
+scale disparity. The approach allows for the selection of an arbitrary, but complete, set of solution
+variables while preserving the structure of the governing equations. Least-squares-based minimization
+is leveraged to guarantee symmetrization and discrete consistency with the full-order model (FOM)
+at the sub-iteration level. Two levels of scaling are used to achieve the conditioning required
+to effectively handle problems with extremely disparate physical phenomena, characterized by
+extreme stiffness in the system of equations. The formulation -- referred to as structure-preserving
+least-squares with variable transformation (SP-LSVT) -- provides global stabilization for both
+implicit and explicit time integration schemes. To achieve computational efficiency, a pivoted
+QR decomposition is used with oversampling, and adapted to the SP-LSVT method. The framework is
+demonstrated in representative two- and three-dimensional reacting flow problems, and the SP-LSVT
+is shown to exhibit improved stability and accuracy over standard projection-based ROM techniques.
+Physical realizability and local stability are promoted by enforcing limiters in both temperature
+and species mass fractions. These limiters are demonstrated to be important in eliminating regions
+of spurious burning, thus enabling the ROMs to provide accurate representations of the heat release
+rate and flame propagation speed. In the 3D application, it is shown that more than two orders of magnitude
+acceleration in computational efficiency can be achieved, while also providing reasonable future-state
+predictions. A key contribution of this work is the development and demonstration of a comprehensive
+ROM formulation that targets highly challenging multi-scale transport-dominated problems.

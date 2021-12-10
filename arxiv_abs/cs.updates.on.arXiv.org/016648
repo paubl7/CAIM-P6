@@ -1,0 +1,19 @@
+Many meta-learning methods are proposed for few-shot detection. However, previous most methods
+have two main problems, poor detection APs, and strong bias because of imbalance and insufficient
+datasets. Previous works mainly alleviate these issues by additional datasets, multi-relation
+attention mechanisms and sub-modules. However, they require more cost. In this work, for meta-learning,
+we find that the main challenges focus on related or irrelevant semantic features between categories.
+Therefore, based on semantic features, we propose a Top-C classification loss (i.e., TCL-C) for
+classification task and a category-based grouping mechanism for category-based meta-features
+obtained by the meta-model. The TCL-C exploits the true-label prediction and the most likely C-1
+false classification predictions to improve detection performance on few-shot classes. According
+to similar appearance (i.e., visual appearance, shape, and limbs etc.) and environment in which
+objects often appear, the category-based grouping mechanism splits categories into disjoint
+groups to make similar semantic features more compact between categories within a group and obtain
+more significant difference between groups, alleviating the strong bias problem and further improving
+detection APs. The whole training consists of the base model and the fine-tuning phases. According
+to grouping mechanism, we group the meta-features vectors obtained by meta-model, so that the distribution
+difference between groups is obvious, and the one within each group is less. Extensive experiments
+on Pascal VOC dataset demonstrate that ours which combines the TCL-C with category-based grouping
+significantly outperforms previous state-of-the-art methods for few-shot detection. Compared
+with previous competitive baseline, ours improves detection APs by almost 4% for few-shot detection.

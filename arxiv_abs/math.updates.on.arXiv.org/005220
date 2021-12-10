@@ -1,0 +1,19 @@
+There are two widely used models for the Grassmannian $\operatorname{Gr}(k,n)$, as the set of equivalence
+classes of orthogonal matrices $\operatorname{O}(n)/(\operatorname{O}(k) \times \operatorname{O}(n-k))$,
+and as the set of trace-$k$ projection matrices $\{P \in \mathbb{R}^{n \times n} : P^{\mathsf{T}}
+= P = P^2,\; \operatorname{tr}(P) = k\}$. The former, standard in manifold optimization, has the
+advantage of giving numerically stable algorithms but the disadvantage of having to work with equivalence
+classes of matrices. The latter, widely used in coding theory and probability, has the advantage
+of using actual matrices (as opposed to equivalence classes) but working with projection matrices
+is numerically unstable. We present an alternative that has both advantages and suffers from neither
+of the disadvantages; by representing $k$-dimensional subspaces as symmetric orthogonal matrices
+of trace $2k-n$, we obtain \[ \operatorname{Gr}(k,n) \cong \{Q \in \operatorname{O}(n) : Q^{\mathsf{T}}
+= Q, \; \operatorname{tr}(Q) = 2k -n\}. \] As with the other two models, we show that differential
+geometric objects and operations -- tangent vector, metric, normal vector, exponential map, geodesic,
+parallel transport, gradient, Hessian, etc -- have closed-form analytic expressions that are
+computable with standard numerical linear algebra. In the proposed model, these expressions are
+considerably simpler, a result of representing $\operatorname{Gr}(k,n)$ as a linear section
+of a compact matrix Lie group $\operatorname{O}(n)$, and can be computed with at most one QR decomposition
+and one exponential of a special skew-symmetric matrix that takes only $O(nk(n-k))$ time. In particular,
+we completely avoid eigen- and singular value decompositions in our steepest descent, conjugate
+gradient, quasi-Newton, and Newton methods for the Grassmannian. 

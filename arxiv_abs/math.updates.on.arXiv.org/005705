@@ -1,0 +1,19 @@
+Prony's method is a standard tool exploited for solving many imaging and data analysis problems
+that result in parameter identification in sparse exponential sums $$f(k)=\sum_{j=1}^{T}c_{j}e^{-2\pi
+i\langle t_{j},k\rangle},\quad k\in \mathbb{Z}^{d},$$ where the parameters are pairwise different
+$\{ t_{j}\}_{j=1}^{M}\subset [0,1)^{d}$, and $\{ c_{j}\}_{j=1}^{M}\subset \mathbb{C}\setminus
+\{ 0\}$ are nonzero. The focus of our investigation is on a Prony's method variant based on a multivariate
+matrix pencil approach. The method constructs matrices $S_{1}$, \ldots , $S_{d}$ from the sampling
+values, and their simultaneous diagonalization yields the parameters $\{ t_{j}\}_{j=1}^{M}$.
+The parameters $\{ c_{j}\}_{j=1}^{M}$ are computed as the solution of an linear least squares problem,
+where the matrix of the problem is determined by $\{ t_{j}\}_{j=1}^{M}$. Since the method involves
+independent generation and manipulation of certain number of matrices, there is intrinsic capacity
+for parallelization of the whole computation process on several levels. Hence, we propose parallel
+version of the Prony's method in order to increase its efficiency. The tasks concerning generation
+of matrices is divided among GPU's block of threads and CPU, where heavier load is put on the GPU. From
+the algorithmic point of view, the CPU is dedicated to the more complex tasks. With careful choice
+of algorithms solving the subtasks, the load between CPU and GPU is balanced. Besides the parallelization
+techniques, we are also concerned with some numerical issues, and we provide detailed numerical
+analysis of the method in case of noisy input data. Finally, we performed a set of numerical tests
+which confirm superior efficiency of the parallel algorithm and consistency of the forward error
+with the results of numerical analysis. 

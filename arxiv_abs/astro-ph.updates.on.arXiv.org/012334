@@ -1,0 +1,20 @@
+State-of-the-art planet formation models are now capable of accounting for the full spectrum of
+known planet types. This comes at the cost of increasing complexity of the models, which calls into
+question whether established links between their initial conditions and the calculated planetary
+observables are preserved. In this paper, we take a data-driven approach to investigate the relations
+between clusters of synthetic planets with similar properties and their formation history. We
+trained a Gaussian Mixture Model on typical exoplanet observables computed by a global model of
+planet formation to identify clusters of similar planets. We then traced back the formation histories
+of the planets associated with them. Using cluster affiliation as labels, we trained a Random Forest
+classifier to predict planet species from properties of the originating protoplanetary disk.
+Without presupposing any planet types, we identified four distinct classes in our synthetic population.
+They roughly correspond to the observed populations of (sub-)Neptunes, giant planets, and (super-)Earths,
+plus an additional unobserved class we denote as "icy cores". These groups emerge already within
+the first 0.1 Myr of the formation phase and are predicted from disk properties with an overall accuracy
+of >90%. The most reliable predictors are the initial orbital distance of planetary nuclei and the
+total planetesimal mass available. Giant planets form only in a particular region of this parameter
+space that is in agreement with purely analytical predictions. Including N-body interactions
+between the planets decreases the predictability, especially for sub-Neptunes that frequently
+undergo giant collisions and turn into super-Earths. The impact of gravitational interactions
+highlights the need for N-body integrators for realistic predictions of systems of low-mass planets.
+(abridged) 

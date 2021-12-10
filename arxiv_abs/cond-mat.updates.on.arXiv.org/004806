@@ -1,0 +1,19 @@
+Approximately $75 \%$ of the raw material and $50 \%$ of the products in the chemical industry are
+granular materials. The Discrete Element Method (DEM) provides detailed insights of phenomena
+at particle scale and it is therefore often used for modeling granular materials. However, because
+DEM tracks the motion and contact of individual particles separately, its computational cost increases
+non-linearly $O(n_p\log(n_p))$ -- $O(n_p^2)$ depending on the algorithm) with the number of particles
+($n_p$). In this article, we introduce a new open-source parallel DEM software with load balancing:
+Lethe-DEM. Lethe-DEM, a module of Lethe, consists of solvers for two-dimensional and three-dimensional
+DEM simulations. Load-balancing allows Lethe-DEM to significantly increase the parallel efficiency
+by $\approx 25 - 70 \%$ depending on the granular simulation. We explain the fundamental modules
+of Lethe-DEM, its software architecture, and the governing equations. Furthermore, we verify
+Lethe-DEM with several tests including analytical solutions and comparison with other software.
+Comparisons with experiments in a flat-bottomed silo, wedge-shaped silo, and rotating drum validate
+Lethe-DEM. We investigate the strong and weak scaling of Lethe-DEM with $1 \leq n_c \leq 192$ and
+$32 \leq n_c \leq 320$ processes, respectively, with and without load-balancing. The strong-scaling
+analysis is performed on the wedge-shaped silo and rotating drum simulations, while for the weak-scaling
+analysis, we use a dam break simulation. The best scalability of Lethe-DEM is obtained in the range
+of $5000 \leq n_p/n_c \leq 15000$. Finally, we demonstrate that large scale simulations can be carried
+out with Lethe-DEM using the simulation of a three-dimensional cylindrical silo with $n_p=4.3
+\times 10^6$ on 320 cores. 

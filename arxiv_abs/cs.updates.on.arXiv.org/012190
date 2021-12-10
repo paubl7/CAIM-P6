@@ -1,0 +1,20 @@
+Time series analysis is a key technique for extracting and predicting events in domains as diverse
+as epidemiology, genomics, neuroscience, environmental sciences, economics, and more. Matrix
+profile, the state-of-the-art algorithm to perform time series analysis, computes the most similar
+subsequence for a given query subsequence within a sliced time series. Matrix profile has low arithmetic
+intensity, but it typically operates on large amounts of time series data. In current computing
+systems, this data needs to be moved between the off-chip memory units and the on-chip computation
+units for performing matrix profile. This causes a major performance bottleneck as data movement
+is extremely costly in terms of both execution time and energy. In this work, we present NATSA, the
+first Near-Data Processing accelerator for time series analysis. The key idea is to exploit modern
+3D-stacked High Bandwidth Memory (HBM) to enable efficient and fast specialized matrix profile
+computation near memory, where time series data resides. NATSA provides three key benefits: 1)
+quickly computing the matrix profile for a wide range of applications by building specialized energy-efficient
+floating-point arithmetic processing units close to HBM, 2) improving the energy efficiency and
+execution time by reducing the need for data movement over slow and energy-hungry buses between
+the computation units and the memory units, and 3) analyzing time series data at scale by exploiting
+low-latency, high-bandwidth, and energy-efficient memory access provided by HBM. Our experimental
+evaluation shows that NATSA improves performance by up to 14.2x (9.9x on average) and reduces energy
+by up to 27.2x (19.4x on average), over the state-of-the-art multi-core implementation. NATSA
+also improves performance by 6.3x and reduces energy by 10.2x over a general-purpose NDP platform
+with 64 in-order cores. 

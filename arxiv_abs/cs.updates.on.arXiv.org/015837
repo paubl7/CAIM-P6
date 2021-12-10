@@ -1,0 +1,19 @@
+A constraint satisfaction problem (CSP), Max-CSP$({\cal F})$, is specified by a finite set of constraints
+${\cal F} \subseteq \{[q]^k \to \{0,1\}\}$ for positive integers $q$ and $k$. An instance of the
+problem on $n$ variables is given by $m$ applications of constraints from ${\cal F}$ to subsequences
+of the $n$ variables, and the goal is to find an assignment to the variables that satisfies the maximum
+number of constraints. In the $(\gamma,\beta)$-approximation version of the problem for parameters
+$0 \leq \beta < \gamma \leq 1$, the goal is to distinguish instances where at least $\gamma$ fraction
+of the constraints can be satisfied from instances where at most $\beta$ fraction of the constraints
+can be satisfied. In this work we consider the approximability of this problem in the context of streaming
+algorithms and give a dichotomy result in the dynamic setting, where constraints can be inserted
+or deleted. Specifically, for every family ${\cal F}$ and every $\beta < \gamma$, we show that either
+the approximation problem is solvable with polylogarithmic space in the dynamic setting, or not
+solvable with $o(\sqrt{n})$ space. We also establish tight inapproximability results for a broad
+subclass in the streaming insertion-only setting. Our work builds on, and significantly extends
+previous work by the authors who consider the special case of Boolean variables ($q=2$), singleton
+families ($|{\cal F}| = 1$) and where constraints may be placed on variables or their negations.
+Our framework extends non-trivially the previous work allowing us to appeal to richer norm estimation
+algorithms to get our algorithmic results. For our negative results we introduce new variants of
+the communication problems studied in the previous work, build new reductions for these problems,
+and extend the technical parts of previous works. 

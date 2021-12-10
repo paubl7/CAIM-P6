@@ -1,0 +1,19 @@
+Reinforcement learning (RL) provides a framework for learning goal-directed policies given user-specified
+rewards. However, since designing rewards often requires substantial engineering effort, we
+are interested in the problem of learning without rewards, where agents must discover useful behaviors
+in the absence of task-specific incentives. Intrinsic motivation is a family of unsupervised RL
+techniques which develop general objectives for an RL agent to optimize that lead to better exploration
+or the discovery of skills. In this paper, we propose a new unsupervised RL technique based on an adversarial
+game which pits two policies against each other to compete over the amount of surprise an RL agent
+experiences. The policies each take turns controlling the agent. The Explore policy maximizes
+entropy, putting the agent into surprising or unfamiliar situations. Then, the Control policy
+takes over and seeks to recover from those situations by minimizing entropy. The game harnesses
+the power of multi-agent competition to drive the agent to seek out increasingly surprising parts
+of the environment while learning to gain mastery over them. We show empirically that our method
+leads to the emergence of complex skills by exhibiting clear phase transitions. Furthermore, we
+show both theoretically (via a latent state space coverage argument) and empirically that our method
+has the potential to be applied to the exploration of stochastic, partially-observed environments.
+We show that Adversarial Surprise learns more complex behaviors, and explores more effectively
+than competitive baselines, outperforming intrinsic motivation methods based on active inference,
+novelty-seeking (Random Network Distillation (RND)), and multi-agent unsupervised RL (Asymmetric
+Self-Play (ASP)) in MiniGrid, Atari and VizDoom environments. 

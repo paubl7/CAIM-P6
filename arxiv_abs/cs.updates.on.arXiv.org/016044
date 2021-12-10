@@ -1,0 +1,20 @@
+Climate models encapsulate our best understanding of the Earth system, allowing research to be
+conducted on its future under alternative assumptions of how human-driven climate forces are going
+to evolve. An important application of climate models is to provide metrics of mean and extreme climate
+changes, particularly under these alternative future scenarios, as these quantities drive the
+impacts of climate on society and natural systems. Because of the need to explore a wide range of alternative
+scenarios and other sources of uncertainties in a computationally efficient manner, climate models
+can only take us so far, as they require significant computational resources, especially when attempting
+to characterize extreme events, which are rare and thus demand long and numerous simulations in
+order to accurately represent their changing statistics. Here we use deep learning in a proof of
+concept that lays the foundation for emulating global climate model output for different scenarios.
+We train two "loosely conditioned" Generative Adversarial Networks (GANs) that emulate daily
+precipitation output from a fully coupled Earth system model: one GAN modeling Fall-Winter behavior
+and the other Spring-Summer. Our GANs are trained to produce spatiotemporal samples: 32 days of
+precipitation over a 64x128 regular grid discretizing the globe. We evaluate the generator with
+a set of related performance metrics based upon KL divergence, and find the generated samples to
+be nearly as well matched to the test data as the validation data is to test. We also find the generated
+samples to accurately estimate the mean number of dry days and mean longest dry spell in the 32 day
+samples. Our trained GANs can rapidly generate numerous realizations at a vastly reduced computational
+expense, compared to large ensembles of climate models, which greatly aids in estimating the statistics
+of extreme events. 

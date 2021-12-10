@@ -1,0 +1,18 @@
+We consider the problem of estimating a low-dimensional parameter in high-dimensional linear
+regression. Constructing an approximately unbiased estimate of the parameter of interest is a
+crucial step towards performing statistical inference. Several authors suggest to orthogonalize
+both the variable of interest and the outcome with respect to the nuisance variables, and then regress
+the residual outcome with respect to the residual variable. This is possible if the covariance structure
+of the regressors is perfectly known, or is sufficiently structured that it can be estimated accurately
+from data (e.g., the precision matrix is sufficiently sparse). Here we consider a regime in which
+the covariate model can only be estimated inaccurately, and hence existing debiasing approaches
+are not guaranteed to work. When errors in estimating the covariate model are correlated with errors
+in estimating the linear model parameter, an incomplete elimination of the bias occurs. We propose
+the Correlation Adjusted Debiased Lasso (CAD), which nearly eliminates this bias in some cases,
+including cases in which the estimation errors are neither negligible nor orthogonal. We consider
+a setting in which some unlabeled samples might be available to the statistician alongside labeled
+ones (semi-supervised learning), and our guarantees hold under the assumption of jointly Gaussian
+covariates. The new debiased estimator is guaranteed to cancel the bias in two cases: (1) when the
+total number of samples (labeled and unlabeled) is larger than the number of parameters, or (2) when
+the covariance of the nuisance (but not the effect of the nuisance on the variable of interest) is
+known. Neither of these cases is treated by state-of-the-art methods. 

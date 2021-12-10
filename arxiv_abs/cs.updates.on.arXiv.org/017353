@@ -1,0 +1,18 @@
+Generating surgical reports aimed at surgical scene understanding in robot-assisted surgery
+can contribute to documenting entry tasks and post-operative analysis. Despite the impressive
+outcome, the deep learning model degrades the performance when applied to different domains encountering
+domain shifts. In addition, there are new instruments and variations in surgical tissues appeared
+in robotic surgery. In this work, we propose class-incremental domain adaptation (CIDA) with a
+multi-layer transformer-based model to tackle the new classes and domain shift in the target domain
+to generate surgical reports during robotic surgery. To adapt incremental classes and extract
+domain invariant features, a class-incremental (CI) learning method with supervised contrastive
+(SupCon) loss is incorporated with a feature extractor. To generate caption from the extracted
+feature, curriculum by one-dimensional gaussian smoothing (CBS) is integrated with a multi-layer
+transformer-based caption prediction model. CBS smoothes the features embedding using anti-aliasing
+and helps the model to learn domain invariant features. We also adopt label smoothing (LS) to calibrate
+prediction probability and obtain better feature representation with both feature extractor
+and captioning model. The proposed techniques are empirically evaluated by using the datasets
+of two surgical domains, such as nephrectomy operations and transoral robotic surgery. We observe
+that domain invariant feature learning and the well-calibrated network improves the surgical
+report generation performance in both source and target domain under domain shift and unseen classes
+in the manners of one-shot and few-shot learning. The code is publicly available at https://github.com/XuMengyaAmy/CIDACaptioning.

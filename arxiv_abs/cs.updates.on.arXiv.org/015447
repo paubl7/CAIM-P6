@@ -1,0 +1,19 @@
+Program repair is an integral part of every software system's life-cycle but can be extremely challenging.
+To date, researchers have proposed various automated program repair (APR) techniques to reduce
+efforts of manual debugging. However, given a real-world buggy program, a typical APR technique
+usually generates a large number of patches, each of which needs to be validated against the original
+test suite which incurs extremely high computation costs. Although existing APR techniques have
+already leveraged various static and/or dynamic information to find the desired patches faster,
+they are still rather costly. In a recent work, researchers proposed unified debugging to leverage
+the patch execution information during APR to help boost fault localization; in this way,the application
+scope of APR techniques can be extended to all possible bugs, e.g., the patch execution information
+during APR can help with manual repair of the bugs that cannot be automatically fixed. Inspired by
+unified debugging, this work proposes SeAPR (Self-Boosted Automated Program Repair), the first
+technique to leverage the earlier patch execution information during APR to help boost automated
+repair itself on-the-fly. Our basic intuition is that patches similar to earlier high-quality/low-quality
+patches should be promoted/degraded to speed up the detection of the desired patches. This experimental
+study on 12 state-of-the-art APR systems demonstrates that, overall, SeAPR can substantially
+reduce the number of patch executions with negligible overhead. Our study also investigates the
+impact of various configurations on SeAPR. Lastly, our study demonstrates that SeAPR can even leverage
+the patch execution information from other APR tools from the same buggy program to further boost
+APR. 

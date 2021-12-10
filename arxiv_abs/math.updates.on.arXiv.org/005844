@@ -1,0 +1,20 @@
+One fundamental problem in decentralized multi-agent optimization is the trade-off between gradient/sampling
+complexity and communication complexity. We propose new algorithms whose gradient and sampling
+complexities are graph topology invariant while their communication complexities remain optimal.
+For convex smooth deterministic problems, we propose a primal dual sliding (PDS) algorithm that
+computes an $\epsilon$-solution with $O((\tilde{L}/\epsilon)^{1/2})$ gradient and $O((\tilde{L}/\epsilon)^{1/2}+\|\mathcal{A}\|/\epsilon)$
+communication complexities, where $\tilde{L}$ is the smoothness parameter of the objective and
+$\mathcal{A}$ is related to either the graph Laplacian or the transpose of the oriented incidence
+matrix of the communication network. The results can be improved to $O((\tilde{L}/\mu)^{1/2}\log(1/\epsilon))$
+and $O((\tilde{L}/\mu)^{1/2}\log(1/\epsilon) + \|\mathcal{A}\|/\epsilon^{1/2})$ respectively
+with $\mu$-strong convexity. We also propose a stochastic variant, the primal dual sliding (SPDS)
+algorithm for problems with stochastic gradients. The SPDS algorithm utilizes the mini-batch
+technique and enables the agents to perform sampling and communication simultaneously. It computes
+a stochastic $\epsilon$-solution with $O((\tilde{L}/\epsilon)^{1/2} + (\sigma/\epsilon)^2)$
+sampling complexity, which can be improved to $O((\tilde{L}/\mu)^{1/2}\log(1/\epsilon) + \sigma^2/\epsilon)$
+with strong convexity. Here $\sigma^2$ is the variance. The communication complexities of SPDS
+remain the same as that of the deterministic case. All the aforementioned gradient and sampling
+complexities match the lower complexity bounds for centralized convex smooth optimization and
+are independent of the network structure. To the best of our knowledge, these gradient and sampling
+complexities have not been obtained before for decentralized optimization over a constraint feasible
+set. 

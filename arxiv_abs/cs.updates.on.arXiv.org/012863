@@ -1,0 +1,18 @@
+Two-photon excitation fluorescence (2PEF) allows imaging of tissue up to about one millimeter
+in thickness. Typically, reducing fluorescence excitation exposure reduces the quality of the
+image. However, using deep learning super resolution techniques, these low-resolution images
+can be converted to high-resolution images. This work explores improving human tissue imaging
+by applying deep learning to maximize image quality while reducing fluorescence excitation exposure.
+We analyze two methods: a method based on U-Net, and a patch-based regression method. Both methods
+are evaluated on a skin dataset and an eye dataset. The eye dataset includes 1200 paired high power
+and low power images of retinal organoids. The skin dataset contains multiple frames of each sample
+of human skin. High-resolution images were formed by averaging 70 frames for each sample and low-resolution
+images were formed by averaging the first 7 and 15 frames for each sample. The skin dataset includes
+550 images for each of the resolution levels. We track two measures of performance for the two methods:
+mean squared error (MSE) and structural similarity index measure (SSIM). For the eye dataset, the
+patches method achieves an average MSE of 27,611 compared to 146,855 for the U-Net method, and an
+average SSIM of 0.636 compared to 0.607 for the U-Net method. For the skin dataset, the patches method
+achieves an average MSE of 3.768 compared to 4.032 for the U-Net method, and an average SSIM of 0.824
+compared to 0.783 for the U-Net method. Despite better performance on image quality, the patches
+method is worse than the U-Net method when comparing the speed of prediction, taking 303 seconds
+to predict one image compared to less than one second for the U-Net method. 

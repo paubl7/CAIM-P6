@@ -1,0 +1,19 @@
+Passive radio frequency (RF) sensing and monitoring of human daily activities in elderly care homes
+has recently become an emerging topic due to the demand with ageing population. Micro-Doppler radars
+are an appealing solution considering their non-intrusiveness, deep penetration, and high-distance
+range. This study presents an unsupervised framework for human activity monitoring using Doppler
+streams. Two unsupervised feature extraction strategies based on convolutional filtering and
+texture analysis of Doppler images are considered. For the former, encoded features using Convolutional
+Variational Autoencoder (CVAE) are compared with Convolutional Autoencoder (CAE) features.
+For the latter, Grey-Level Co-occurrence Matrix (GLCM) is used. These methods are further compared
+with unsupervised linear feature extraction based on Principal Component Analysis (PCA) and Singular
+Value Decomposition (SVD). Using these features, unsupervised samples clustering is performed
+using K-Means and K-Medoids. Actual labels are solely used for evaluation and visualisation. The
+results showcase 82.5% and 84% average testing accuracies for CVAE features and 77.5% and 72.5%
+average testing accuracy using texture features based on GLCM using K-Means and K-Medoids respectively.
+The results show superiority of CVAE and GLCM features compared to PCA, SVD, and CAE with more than
+20% average accuracy. Furthermore, for high-dimensional data visualisation, three manifold
+learning techniques are considered including t-Distributed Stochastic Neighbour Embedding
+(t-SNE), Multidimensional Scaling (MDS), and Locally Linear Embedding (LLE). The visualisation
+methods are compared for projection of raw data as well as the encoded features using CVAE. All three
+methods show an improved visualisation ability when applied on the transformed CVAE data. 

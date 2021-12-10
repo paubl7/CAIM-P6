@@ -1,0 +1,19 @@
+The task for speaker verification (SV) is to decide an utterance is spoken by a target or imposter
+speaker. In most SV studies, a log-likelihood ratio (L_LLR) score is estimated based on a generative
+probability model on speaker features, and compared with a threshold for decision making. However,
+the generative model usually focuses on feature distributions and does not have the discriminative
+feature selection ability, which is easy to be distracted by nuisance features. The SV, as a hypothesis
+test, could be formulated as a binary classification task where a neural network (NN) based discriminative
+learning could be applied. Through discriminative learning, the nuisance features could be removed
+with the help of label supervision. However, the discriminative learning pays more attention to
+classification boundaries which is prone to overfitting to training data and yielding poor generalization
+on testing data. In this paper, we propose a hybrid learning framework, i.e., integrating a joint
+Bayesian (JB) generative model into a neural discriminative learning framework for SV. A Siamese
+NN is built with dense layers to approximate the mapping functions used in the SV pipeline with the
+JB model, and the L-LLR score estimated based on the JB model is connected to the distance metric in
+a pair-wised discriminative learning. By initializing the Siamese NN with the parameters learned
+from the JB model, we further train the model parameters with the pair-wised samples as a binary discrimination
+task. Moreover, direct evaluation metric in SV, i.e., minimum empirical Bayes risk, is designed
+and integrated as an objective function in the discriminative learning. We carried out SV experiments
+on speakers in the wild (SITW) and Voxceleb corpora. Experimental results showed that our proposed
+model improved the performance with a large margin compared with state-of-the-art models for SV.

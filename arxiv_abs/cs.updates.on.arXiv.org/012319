@@ -1,0 +1,18 @@
+No area of computing is hungrier for performance than High Performance Computing (HPC), the demands
+of which continue to be a major driver for processor performance and adoption of accelerators, and
+also advances in memory, storage, and networking technologies. A key feature of the Intel processor
+domination of the past decade has been the extensive adoption of GPUs as coprocessors, whilst more
+recent developments have seen the increased availability of a number of CPU processors, including
+the novel ARM-based chips. This paper analyses the performance and scalability of a state-of-the-art
+Computational Fluid Dynamics (CFD) code on three HPC cluster systems equipped with AMD EPYC-Rome
+(EPYC, 4096 cores), ARM-based Marvell ThunderX2 (TX2, 8192 cores) and Intel Skylake (SKL, 8000
+cores) processors. Three benchmark cases are designed with increasing computation-to-communication
+ratio and numerical complexity, namely lid-driven cavity flow, Taylor-Green vortex and a travelling
+solitary wave using the level-set method, adopted with $4^{th}$-order central-differences or
+a $5^{th}$-order WENO scheme. Our results show that the EPYC cluster delivers the best code performance
+for all the setups under consideration. In the first two benchmarks, the SKL cluster demonstrates
+faster computing times than the TX2 system, whilst in the solitary wave simulations, the TX2 cluster
+achieves good scalability and similar performance to the EPYC system, both improving on that obtained
+with the SKL cluster. These results suggest that while the Intel SKL cores deliver the best strong
+scalability, the associated cluster performance is lower compared to the EPYC system. The TX2 cluster
+performance is promising considering its recent addition to the HPC portfolio. 

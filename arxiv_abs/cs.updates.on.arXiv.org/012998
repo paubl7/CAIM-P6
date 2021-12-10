@@ -1,0 +1,18 @@
+Formal semantics provides rigorous, mathematically precise definitions of programming languages,
+with which we can argue about program behaviour and program equivalence by formal means; in particular,
+we can describe and verify our arguments with a proof assistant. There are various approaches to
+giving formal semantics to programming languages, at different abstraction levels and applying
+different mathematical machinery: the reason for using the semantics determines which approach
+to choose. In this paper we investigate some of the approaches that share their roots with traditional
+relational big-step semantics, such as (a) functional big-step semantics (or, equivalently,
+a definitional interpreter), (b) pretty-big-step semantics and (c) traditional natural semantics.
+We compare these approaches with respect to the following criteria: executability of the semantics
+definition, proof complexity for typical properties (e.g. determinism) and the conciseness of
+expression equivalence proofs in that approach. We also briefly discuss the complexity of these
+definitions and the coinductive big-step semantics, which enables reasoning about divergence.
+To enable the comparison in practice, we present an example language for comparing the semantics:
+a sequential subset of Core Erlang, a functional programming language, which is used in the intermediate
+steps of the Erlang/OTP compiler. We have already defined a relational big-step semantics for this
+language that includes treatment of exceptions and side effects. The aim of this current work is
+to compare our big-step definition for this language with a variety of other equivalent semantics
+in different styles from the point of view of testing and verifying code refactorings. 

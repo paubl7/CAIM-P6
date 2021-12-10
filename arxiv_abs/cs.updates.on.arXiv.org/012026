@@ -1,0 +1,20 @@
+Thermal comfort assessment for the built environment has become more available to analysts and
+researchers due to the proliferation of sensors and subjective feedback methods. These data can
+be used for modeling comfort behavior to support design and operations towards energy efficiency
+and well-being. By nature, occupant subjective feedback is imbalanced as indoor conditions are
+designed for comfort, and responses indicating otherwise are less common. This situation creates
+a scenario for the machine learning workflow where class balancing as a pre-processing step might
+be valuable for developing predictive thermal comfort classification models with high-performance.
+This paper investigates the various thermal comfort dataset class balancing techniques from the
+literature and proposes a modified conditional Generative Adversarial Network (GAN), $\texttt{comfortGAN}$,
+to address this imbalance scenario. These approaches are applied to three publicly available datasets,
+ranging from 30 and 67 participants to a global collection of thermal comfort datasets, with 1,474;
+2,067; and 66,397 data points, respectively. This work finds that a classification model trained
+on a balanced dataset, comprised of real and generated samples from $\texttt{comfortGAN}$, has
+higher performance (increase between 4% and 17% in classification accuracy) than other augmentation
+methods tested. However, when classes representing discomfort are merged and reduced to three,
+better imbalanced performance is expected, and the additional increase in performance by $\texttt{comfortGAN}$
+shrinks to 1-2%. These results illustrate that class balancing for thermal comfort modeling is
+beneficial using advanced techniques such as GANs, but its value is diminished in certain scenarios.
+A discussion is provided to assist potential users in determining which scenarios this process
+is useful and which method works best. 

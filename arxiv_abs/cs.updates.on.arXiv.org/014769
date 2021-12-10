@@ -1,0 +1,19 @@
+Entities are at the center of how we represent and aggregate knowledge. For instance, Encyclopedias
+such as Wikipedia are structured by entities (e.g., one per Wikipedia article). The ability to retrieve
+such entities given a query is fundamental for knowledge-intensive tasks such as entity linking
+and open-domain question answering. Current approaches can be understood as classifiers among
+atomic labels, one for each entity. Their weight vectors are dense entity representations produced
+by encoding entity meta information such as their descriptions. This approach has several shortcomings:
+(i) context and entity affinity is mainly captured through a vector dot product, potentially missing
+fine-grained interactions; (ii) a large memory footprint is needed to store dense representations
+when considering large entity sets; (iii) an appropriately hard set of negative data has to be subsampled
+at training time. In this work, we propose GENRE, the first system that retrieves entities by generating
+their unique names, left to right, token-by-token in an autoregressive fashion. This mitigates
+the aforementioned technical issues since: (i) the autoregressive formulation directly captures
+relations between context and entity name, effectively cross encoding both; (ii) the memory footprint
+is greatly reduced because the parameters of our encoder-decoder architecture scale with vocabulary
+size, not entity count; (iii) the softmax loss is computed without subsampling negative data. We
+experiment with more than 20 datasets on entity disambiguation, end-to-end entity linking and
+document retrieval tasks, achieving new state-of-the-art or very competitive results while using
+a tiny fraction of the memory footprint of competing systems. Finally, we demonstrate that new entities
+can be added by simply specifying their names. Code and pre-trained models at https://github.com/facebookresearch/GENRE.

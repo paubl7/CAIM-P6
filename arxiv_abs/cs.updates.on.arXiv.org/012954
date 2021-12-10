@@ -1,0 +1,20 @@
+Most image segmentation algorithms are trained on binary masks formulated as a classification
+task per pixel. However, in applications such as medical imaging, this "black-and-white" approach
+is too constraining because the contrast between two tissues is often ill-defined, i.e., the voxels
+located on objects' edges contain a mixture of tissues. Consequently, assigning a single "hard"
+label can result in a detrimental approximation. Instead, a soft prediction containing non-binary
+values would overcome that limitation. We introduce SoftSeg, a deep learning training approach
+that takes advantage of soft ground truth labels, and is not bound to binary predictions. SoftSeg
+aims at solving a regression instead of a classification problem. This is achieved by using (i) no
+binarization after preprocessing and data augmentation, (ii) a normalized ReLU final activation
+layer (instead of sigmoid), and (iii) a regression loss function (instead of the traditional Dice
+loss). We assess the impact of these three features on three open-source MRI segmentation datasets
+from the spinal cord gray matter, the multiple sclerosis brain lesion, and the multimodal brain
+tumor segmentation challenges. Across multiple cross-validation iterations, SoftSeg outperformed
+the conventional approach, leading to an increase in Dice score of 2.0% on the gray matter dataset
+(p=0.001), 3.3% for the MS lesions, and 6.5% for the brain tumors. SoftSeg produces consistent soft
+predictions at tissues' interfaces and shows an increased sensitivity for small objects. The richness
+of soft labels could represent the inter-expert variability, the partial volume effect, and complement
+the model uncertainty estimation. The developed training pipeline can easily be incorporated
+into most of the existing deep learning architectures. It is already implemented in the freely-available
+deep learning toolbox ivadomed (https://ivadomed.org). 

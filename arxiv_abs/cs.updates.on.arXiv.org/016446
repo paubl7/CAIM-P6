@@ -1,0 +1,18 @@
+Current works formulate facial action unit (AU) recognition as a supervised learning problem,
+requiring fully AU-labeled facial images during training. It is challenging if not impossible
+to provide AU annotations for large numbers of facial images. Fortunately, AUs appear on all facial
+images, whether manually labeled or not, satisfy the underlying anatomic mechanisms and human
+behavioral habits. In this paper, we propose a deep semi-supervised framework for facial action
+unit recognition from partially AU-labeled facial images. Specifically, the proposed deep semi-supervised
+AU recognition approach consists of a deep recognition network and a discriminator D. The deep recognition
+network R learns facial representations from large-scale facial images and AU classifiers from
+limited ground truth AU labels. The discriminator D is introduced to enforce statistical similarity
+between the AU distribution inherent in ground truth AU labels and the distribution of the predicted
+AU labels from labeled and unlabeled facial images. The deep recognition network aims to minimize
+recognition loss from the labeled facial images, to faithfully represent inherent AU distribution
+for both labeled and unlabeled facial images, and to confuse the discriminator. During training,
+the deep recognition network R and the discriminator D are optimized alternately. Thus, the inherent
+AU distributions caused by underlying anatomic mechanisms are leveraged to construct better feature
+representations and AU classifiers from partially AU-labeled data during training. Experiments
+on two benchmark databases demonstrate that the proposed approach successfully captures AU distributions
+through adversarial learning and outperforms state-of-the-art AU recognition work. 

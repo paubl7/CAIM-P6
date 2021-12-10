@@ -1,0 +1,20 @@
+This paper presents a modeling framework---mathematical model and computational framework---to
+study the response of a plastic material due to the presence and transport of a chemical species in
+the host material. Such a modeling framework is important to a wide variety of problems ranging from
+Li-ion batteries, moisture diffusion in cementitious materials, hydrogen diffusion in metals,
+to consolidation of soils under severe loading-unloading regimes. The mathematical model incorporates
+experimental observations reported in the literature on how (elastic and plastic) material properties
+change because of the presence and transport of a chemical species. Also, the model accounts for
+one-way (transport affects the deformation but not vice versa) and two-way couplings between deformation
+and transport subproblems. The resulting coupled equations are not amenable to analytical solutions;
+so, we present a robust computational framework for obtaining numerical solutions. Given that
+popular numerical formulations do not produce nonnegative solutions, the computational framework
+uses an optimized-based nonnegative formulation that respects physical constraints (e.g., nonnegative
+concentrations). For completeness, we will also show the effect and propagation of the negative
+concentrations, often produced by contemporary transport solvers, into the overall predictions
+of deformation and concentration fields. Notably, anisotropy of the diffusion process exacerbates
+these unphysical violations. Using representative numerical examples, we will discuss how the
+concentration field affects plastic deformations of a degrading solid. Based on these numerical
+examples, we also discuss how plastic zones spread because of material degradation. To illustrate
+how the proposed computational framework performs, we report various performance metrics such
+as optimization iterations and time-to-solution. 

@@ -1,0 +1,19 @@
+Spectral graph convolutional networks (SGCNs) have been attracting increasing attention in graph
+representation learning partly due to their interpretability through the prism of the established
+graph signal processing framework. However, existing SGCNs are limited in implementing graph
+convolutions with rigid transforms that could not adapt to signals residing on graphs and tasks
+at hand. In this paper, we propose a novel class of spectral graph convolutional networks that implement
+graph convolutions with adaptive graph wavelets. Specifically, the adaptive graph wavelets are
+learned with neural network-parameterized lifting structures, where structure-aware attention-based
+lifting operations are developed to jointly consider graph structures and node features. We propose
+to lift based on diffusion wavelets to alleviate the structural information loss induced by partitioning
+non-bipartite graphs. By design, the locality and sparsity of the resulting wavelet transform
+as well as the scalability of the lifting structure for large and varying-size graphs are guaranteed.
+We further derive a soft-thresholding filtering operation by learning sparse graph representations
+in terms of the learned wavelets, which improves the scalability and interpretablity, and yield
+a localized, efficient and scalable spectral graph convolution. To ensure that the learned graph
+representations are invariant to node permutations, a layer is employed at the input of the networks
+to reorder the nodes according to their local topology information. We evaluate the proposed networks
+in both node-level and graph-level representation learning tasks on benchmark citation and bioinformatics
+graph datasets. Extensive experiments demonstrate the superiority of the proposed networks over
+existing SGCNs in terms of accuracy, efficiency and scalability. 

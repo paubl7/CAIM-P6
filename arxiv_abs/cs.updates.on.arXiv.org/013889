@@ -1,0 +1,19 @@
+The pandemic of novel severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) also known
+as COVID-19 has been spreading worldwide, causing rampant loss of lives. Medical imaging such as
+computed tomography (CT), X-ray, etc., plays a significant role in diagnosing the patients by presenting
+the excellent details about the structure of the organs. However, for any radiologist analyzing
+such scans is a tedious and time-consuming task. The emerging deep learning technologies have displayed
+its strength in analyzing such scans to aid in the faster diagnosis of the diseases and viruses such
+as COVID-19. In the present article, an automated deep learning based model, COVID-19 hierarchical
+segmentation network (CHS-Net) is proposed that functions as a semantic hierarchical segmenter
+to identify the COVID-19 infected regions from lungs contour via CT medical imaging. The CHS-Net
+is developed with the two cascaded residual attention inception U-Net (RAIU-Net) models where
+first generates lungs contour maps and second generates COVID-19 infected regions. RAIU-Net comprises
+of a residual inception U-Net model with spectral spatial and depth attention network (SSD), consisting
+of contraction and expansion phases of depthwise separable convolutions and hybrid pooling (max
+and spectral pooling) to efficiently encode and decode the semantic and varying resolution information.
+The CHS-Net is trained with the segmentation loss function that is the weighted average of binary
+cross entropy loss and dice loss to penalize false negative and false positive predictions. The
+approach is compared with the recently proposed research works on the basis of standard metrics.
+With extensive trials, it is observed that the proposed approach outperformed the recently proposed
+approaches and effectively segments the COVID-19 infected regions in the lungs. 

@@ -1,0 +1,20 @@
+This work investigates the possibilities enabled by federated learning concerning IoT malware
+detection and studies security issues inherent to this new learning paradigm. In this context,
+a framework that uses federated learning to detect malware affecting IoT devices is presented.
+N-BaIoT, a dataset modeling network traffic of several real IoT devices while affected by malware,
+has been used to evaluate the proposed framework. Both supervised and unsupervised federated models
+(multi-layer perceptron and autoencoder) able to detect malware affecting seen and unseen IoT
+devices of N-BaIoT have been trained and evaluated. Furthermore, their performance has been compared
+to two traditional approaches. The first one lets each participant locally train a model using only
+its own data, while the second consists of making the participants share their data with a central
+entity in charge of training a global model. This comparison has shown that the use of more diverse
+and large data, as done in the federated and centralized methods, has a considerable positive impact
+on the model performance. Besides, the federated models, while preserving the participant's privacy,
+show similar results as the centralized ones. As an additional contribution and to measure the robustness
+of the federated approach, an adversarial setup with several malicious participants poisoning
+the federated model has been considered. The baseline model aggregation averaging step used in
+most federated learning algorithms appears highly vulnerable to different attacks, even with
+a single adversary. The performance of other model aggregation functions acting as countermeasures
+is thus evaluated under the same attack scenarios. These functions provide a significant improvement
+against malicious participants, but more efforts are still needed to make federated approaches
+robust. 

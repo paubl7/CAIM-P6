@@ -1,0 +1,20 @@
+In this paper, we look into the problem of estimating per-pixel depth maps from unconstrained RGB
+monocular night-time images which is a difficult task that has not been addressed adequately in
+the literature. The state-of-the-art day-time depth estimation methods fail miserably when tested
+with night-time images due to a large domain shift between them. The usual photo metric losses used
+for training these networks may not work for night-time images due to the absence of uniform lighting
+which is commonly present in day-time images, making it a difficult problem to solve. We propose
+to solve this problem by posing it as a domain adaptation problem where a network trained with day-time
+images is adapted to work for night-time images. Specifically, an encoder is trained to generate
+features from night-time images that are indistinguishable from those obtained from day-time
+images by using a PatchGAN-based adversarial discriminative learning method. Unlike the existing
+methods that directly adapt depth prediction (network output), we propose to adapt feature maps
+obtained from the encoder network so that a pre-trained day-time depth decoder can be directly used
+for predicting depth from these adapted features. Hence, the resulting method is termed as "Adversarial
+Domain Feature Adaptation (ADFA)" and its efficacy is demonstrated through experimentation on
+the challenging Oxford night driving dataset. Also, The modular encoder-decoder architecture
+for the proposed ADFA method allows us to use the encoder module as a feature extractor which can be
+used in many other applications. One such application is demonstrated where the features obtained
+from our adapted encoder network are shown to outperform other state-of-the-art methods in a visual
+place recognition problem, thereby, further establishing the usefulness and effectiveness of
+the proposed approach. 

@@ -1,0 +1,20 @@
+Meta-learning is a machine learning approach that utilizes prior learning experiences to expedite
+the learning process on unseen tasks. For example, after having chosen hyperparameters for dozens
+of different learning tasks, one would like to learn how to choose them for the next task at hand. As
+a data-driven approach, meta-learning requires meta-features that represent the primary learning
+tasks or datasets. Traditionally, a fixed set of dataset statistics is engineered by domain experts
+to represent such a learning task or dataset. More recently, autoencoders have been employed to
+learn meta-features. Both approaches are heavily limited: the set of engineered dataset meta-features
+is limited in expressivity, while the autoencoder based meta-feature extractors are limited to
+datasets sharing the same schema. In this paper we propose a meta-feature extractor called Dataset2Vec
+that combines the versatility of engineered dataset meta-features with the expressivity of meta-features
+learned by deep neural networks. Primary learning tasks or datasets are represented as hierarchical
+sets, i.e. as a set of predictor/target pairs, and then a DeepSet architecture is employed to regress
+meta-features on them. As most meta-learning tasks have only a limited number of meta-instances
+and thus learning such a meta-feature extractor from a limited data foundation would be difficult,
+we propose a novel auxiliary meta-learning task with abundant data called dataset similarity learning
+that aims to predict if two batches stem from the same dataset or different ones. In an experiment
+on a large-scale hyperparameter optimization task for 97 UCI datasets with varying schemas as a
+meta-learning task, we show that the meta-features of Dataset2Vec outperform the expert engineered
+meta-features and thus demonstrate the usefulness of learned meta-features for datasets with
+varying schemas for the first time. 

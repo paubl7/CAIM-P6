@@ -1,0 +1,18 @@
+Black-box optimization is a very active area of research, with many new algorithms being developed
+every year. This variety is needed, on the one hand, since different algorithms are most suitable
+for different types of optimization problems. But the variety also poses a meta-problem: which
+algorithm to choose for a given problem at hand? Past research has shown that per-instance algorithm
+selection based on exploratory landscape analysis (ELA) can be an efficient mean to tackle this
+meta-problem. Existing approaches, however, require the approximation of problem features based
+on a significant number of samples, which are typically selected through uniform sampling or Latin
+Hypercube Designs. The evaluation of these points is costly, and the benefit of an ELA-based algorithm
+selection over a default algorithm must therefore be significant in order to pay off. One could hope
+to by-pass the evaluations for the feature approximations by using the samples that a default algorithm
+would anyway perform, i.e., by using the points of the default algorithm's trajectory. We analyze
+in this paper how well such an approach can work. Concretely, we test how accurately trajectory-based
+ELA approaches can predict the final solution quality of the CMA-ES after a fixed budget of function
+evaluations. We observe that the loss of trajectory-based predictions can be surprisingly small
+compared to the classical global sampling approach, if the remaining budget for which solution
+quality shall be predicted is not too large. Feature selection, in contrast, did not show any advantage
+in our experiments and rather led to worsened prediction accuracy. The inclusion of state variables
+of CMA-ES only has a moderate effect on the prediction accuracy. 

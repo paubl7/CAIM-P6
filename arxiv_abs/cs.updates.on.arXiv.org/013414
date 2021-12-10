@@ -1,0 +1,19 @@
+Gross Target Volume (GTV) segmentation plays an irreplaceable role in radiotherapy planning for
+Nasopharyngeal Carcinoma (NPC). Despite that convolutional neural networks (CNN) have achieved
+good performance for this task, they rely on a large set of labeled images for training, which is expensive
+and time-consuming to acquire. Recently, semi-supervised methods that learn from a small set of
+labeled images with a large set of unlabeled images have shown potential for dealing with this problem,
+but it is still challenging to train a high-performance model with the limited number of labeled
+data. In this paper, we propose a novel framework with Uncertainty Rectified Pyramid Consistency
+(URPC) regularization for semi-supervised NPC GTV segmentation. Concretely, we extend a backbone
+segmentation network to produce pyramid predictions at different scales, the pyramid predictions
+network (PPNet) was supervised by the ground truth of labeled images and a multi-scale consistency
+loss for unlabeled images, motivated by the fact that prediction at different scales for the same
+input should be similar and consistent. However, due to the different resolution of these predictions,
+encouraging them to be consistent at each pixel directly is not robust and may bring much noise and
+lead to a performance drop. To deal with this dilemma, we further design a novel uncertainty rectifying
+module to enable the framework to gradually learn from meaningful and reliable consensual regions
+at different scales. Extensive experiments on our collected NPC dataset with 258 volumes show that
+our method can largely improve performance by incorporating the unlabeled data, and this framework
+achieves a promising result compared with existing semi-supervised methods, which achieves 81.22%
+of mean DSC and 1.88 voxels of mean ASD on the test set, where the only 20% of the training set were annotated.

@@ -1,0 +1,19 @@
+Thumbnail is the face of online videos. The explosive growth of videos both in number and variety
+underpins the importance of a good thumbnail because it saves potential viewers time to choose videos
+and even entice them to click on them. A good thumbnail should be a frame that best represents the content
+of a video while at the same time capturing viewers' attention. However, the techniques and models
+in the past only focus on frames within a video, and we believe such narrowed focus leave out much useful
+information that are part of a video. In this paper, we expand the definition of content to include
+title, description, and audio of a video and utilize information provided by these modalities in
+our selection model. Specifically, our model will first sample frames uniformly in time and return
+the top 1,000 frames in this subset with the highest aesthetic scores by a Double-column Convolutional
+Neural Network, to avoid the computational burden of processing all frames in downstream task.
+Then, the model incorporates frame features extracted from VGG16, text features from ELECTRA,
+and audio features from TRILL. These models were selected because of their results on popular datasets
+as well as their competitive performances. After feature extraction, the time-series features,
+frames and audio, will be fed into Transformer encoder layers to return a vector representing their
+corresponding modality. Each of the four features (frames, title, description, audios) will pass
+through a context gating layer before concatenation. Finally, our model will generate a vector
+in the latent space and select the frame that is most similar to this vector in the latent space. To
+the best of our knowledge, we are the first to propose a multi-modal deep learning model to select
+video thumbnail, which beats the result from the previous State-of-The-Art models. 

@@ -1,0 +1,18 @@
+We present an explicit and efficient algebraic construction of capacity-achieving list decodable
+codes with both constant alphabet and constant list sizes. More specifically, for any $R \in (0,1)$
+and $\epsilon>0$, we give an algebraic construction of an infinite family of error-correcting
+codes of rate $R$, over an alphabet of size $(1/\epsilon)^{O(1/\epsilon^2)}$, that can be list
+decoded from a $(1-R-\epsilon)$-fraction of errors with list size at most $\exp(\mathrm{poly}(1/\epsilon))$.
+Moreover, the codes can be encoded in time $\mathrm{poly}(1/\epsilon, n)$, the output list is contained
+in a linear subspace of dimension at most $\mathrm{poly}(1/\epsilon)$, and a basis for this subspace
+can be found in time $\mathrm{poly}(1/\epsilon, n)$. Thus, both encoding and list decoding can
+be performed in fully polynomial-time $\mathrm{poly}(1/\epsilon, n)$, except for pruning the
+subspace and outputting the final list which takes time $\exp(\mathrm{poly}(1/\epsilon))\cdot\mathrm{poly}(n)$.
+Our codes are quite natural and structured. Specifically, we use algebraic-geometric (AG) codes
+with evaluation points restricted to a subfield, and with the message space restricted to a (carefully
+chosen) linear subspace. Our main observation is that the output list of AG codes with subfield evaluation
+points is contained in an affine shift of the image of a block-triangular-Toeplitz (BTT) matrix,
+and that the list size can potentially be reduced to a constant by restricting the message space to
+a BTT evasive subspace, which is a large subspace that intersects the image of any BTT matrix in a constant
+number of points. We further show how to explicitly construct such BTT evasive subspaces, based
+on the explicit subspace designs of Guruswami and Kopparty (Combinatorica, 2016), and composition.

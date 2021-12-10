@@ -1,0 +1,18 @@
+The chest X-ray plays a key role in screening and diagnosis of many lung diseases including the COVID-19.
+More recently, many works construct deep neural networks (DNNs) for chest X-ray images to realize
+automated and efficient diagnosis of lung diseases. However, bias field caused by the improper
+medical image acquisition process widely exists in the chest X-ray images while the robustness
+of DNNs to the bias field is rarely explored, which definitely poses a threat to the X-ray-based automated
+diagnosis system. In this paper, we study this problem based on the recent adversarial attack and
+propose a brand new attack, i.e., the adversarial bias field attack where the bias field instead
+of the additive noise works as the adversarial perturbations for fooling the DNNs. This novel attack
+posts a key problem: how to locally tune the bias field to realize high attack success rate while maintaining
+its spatial smoothness to guarantee high realisticity. These two goals contradict each other and
+thus has made the attack significantly challenging. To overcome this challenge, we propose the
+adversarial-smooth bias field attack that can locally tune the bias field with joint smooth & adversarial
+constraints. As a result, the adversarial X-ray images can not only fool the DNNs effectively but
+also retain very high level of realisticity. We validate our method on real chest X-ray datasets
+with powerful DNNs, e.g., ResNet50, DenseNet121, and MobileNet, and show different properties
+to the state-of-the-art attacks in both image realisticity and attack transferability. Our method
+reveals the potential threat to the DNN-based X-ray automated diagnosis and can definitely benefit
+the development of bias-field-robust automated diagnosis system. 

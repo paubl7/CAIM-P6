@@ -1,0 +1,18 @@
+A novel numerical formulation for solving fluid-structure interaction (FSI) problems is proposed
+where the fluid field is spatially discretized using smoothed particle hydrodynamics (SPH) and
+the structural field using the finite element method (FEM). As compared to fully mesh- or grid-based
+FSI frameworks, due to the Lagrangian nature of SPH this framework can be easily extended to account
+for more complex fluids consisting of multiple phases and dynamic phase transitions. Moreover,
+this approach facilitates the handling of large deformations of the fluid domain respectively
+the fluid-structure interface without additional methodological and computational efforts.
+In particular, to achieve an accurate representation of interaction forces between fluid particles
+and structural elements also for strongly curved interface geometries, the novel sliding boundary
+particle approach is proposed to ensure full support of SPH particles close to the interface. The
+coupling of the fluid and the structural field is based on a Dirichlet-Neumann partitioned approach,
+where the fluid field is the Dirichlet partition with prescribed interface displacements and the
+structural field is the Neumann partition subject to interface forces. To overcome instabilities
+inherent to weakly coupled schemes an iterative fixed-point coupling scheme is employed. Several
+numerical examples in form of well-known benchmark tests are considered to validate the accuracy,
+stability, and robustness of the proposed formulation. Finally, the filling process of a highly
+flexible thin-walled balloon-like container is studied, representing a model problem close to
+potential application scenarios of the proposed scheme in the field of biomechanics. 

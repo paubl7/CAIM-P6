@@ -1,0 +1,19 @@
+This is the user manual for CosmoLattice, a modern package for lattice simulations of the dynamics
+of interacting scalar and gauge fields in an expanding universe. CosmoLattice incorporates a series
+of features that makes it very versatile and powerful: $i)$ it is written in C++ fully exploiting
+the object oriented programming paradigm, with a modular structure and a clear separation between
+the physics and the technical details, $ii)$ it is MPI-based and uses a discrete Fourier transform
+parallelized in multiple spatial dimensions, which makes it specially appropriate for probing
+scenarios with well-separated scales, running very high resolution simulations, or simply very
+long ones, $iii)$ it introduces its own symbolic language, defining field variables and operations
+over them, so that one can introduce differential equations and operators in a manner as close as
+possible to the continuum, $iv)$ it includes a library of numerical algorithms, ranging from $O(\delta
+t^2)$ to $O(\delta t^{10})$ methods, suitable for simulating global and gauge theories in an expanding
+grid, including the case of `self-consistent' expansion sourced by the fields themselves. Relevant
+observables are provided for each algorithm (e.g.~energy densities, field spectra, lattice snapshots)
+and we note that remarkably all our algorithms for gauge theories always respect the Gauss constraint
+to machine precision. In this manual we explain how to obtain and run CosmoLattice in a computer (let
+it be your laptop, desktop or a cluster). We introduce the general structure of the code and describe
+in detail the basic files that any user needs to handle. We explain how to implement any model characterized
+by a scalar potential and a set of scalar fields, either singlets or interacting with $U(1)$ and/or
+$SU(2)$ gauge fields. CosmoLattice is publicly available at www.cosmolattice.net. 

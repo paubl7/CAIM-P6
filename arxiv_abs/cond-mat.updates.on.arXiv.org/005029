@@ -1,0 +1,19 @@
+Interatomic potentials (IPs) are reduced-order models for calculating the potential energy of
+a system of atoms given their positions in space and species. IPs treat atoms as classical particles
+without explicitly modeling electrons and thus are computationally far less expensive than first-principles
+methods, enabling molecular simulations of significantly larger systems over longer times. Developing
+an IP is a complex iterative process involving multiple steps: assembling a training set, designing
+a functional form, optimizing the function parameters, testing model quality, and deployment
+to molecular simulation packages. This paper introduces the KIM-based learning-integrated fitting
+framework (KLIFF), a package that facilitates the entire IP development process. KLIFF supports
+both analytic and machine learning IPs. It adopts a modular approach whereby various components
+in the fitting process, such as atomic environment descriptors, functional forms, loss functions,
+optimizers, quality analyzers, and so on, work seamlessly with each other. This provides a flexible
+framework for the rapid design of new IP forms. Trained IPs are compatible with the Knowledgebase
+of Interatomic Models (KIM) application programming interface (API) and can be readily used in
+major materials simulation packages compatible with KIM, including ASE, DL_POLY, GULP, LAMMPS,
+and QC. KLIFF is written in Python with computationally intensive components implemented in C++.
+It is parallelized over data and supports both shared-memory multicore desktop machines and high-performance
+distributed memory computing clusters. We demonstrate the use of KLIFF by fitting an analytic Stillinger--Weber
+potential and a machine learning neural network potential for silicon. The KLIFF package, together
+with its documentation, is publicly available at: https://github.com/openkim/kliff. 

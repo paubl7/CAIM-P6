@@ -1,0 +1,19 @@
+Let K be a field equipped with a valuation. Tropical varieties over K can be defined with a theory of
+Gr{\"o}bner bases taking into account the valuation of K. Because of the use of the valuation, the
+theory of tropical Gr{\"o}bner bases has proved to provide settings for computations over polynomial
+rings over a p-adic field that are more stable than that of classical Gr{\"o}bner bases. In this article,
+we investigate how the FGLM change of ordering algorithm can be adapted to the tropical setting.
+As the valuations of the polynomial coefficients are taken into account, the classical FGLM algorithm's
+incremental way, monomo-mial by monomial, to compute the multiplication matrices and the change
+of basis matrix can not be transposed at all to the tropical setting. We mitigate this issue by developing
+new linear algebra algorithms and apply them to our new tropical FGLM algorithms. Motivations are
+twofold. Firstly, to compute tropical varieties, one usually goes through the computation of many
+tropical Gr{\"o}bner bases defined for varying weights (and then varying term orders). For an ideal
+of dimension 0, the tropical FGLM algorithm provides an efficient way to go from a tropical Gr{\"o}bner
+basis from one weight to one for another weight. Secondly, the FGLM strategy can be applied to go from
+a tropical Gr{\"o}bner basis to a classical Gr{\"o}bner basis. We provide tools to chain the stable
+computation of a tropical Gr{\"o}bner basis (for weight [0,. .. , 0]) with the p-adic stabilized
+variants of FGLM of [RV16] to compute a lexicographical or shape position basis. All our algorithms
+have been implemented into SageMath. We provide numerical examples to illustrate time-complexity.
+We then illustrate the superiority of our strategy regarding to the stability of p-adic numerical
+computations. 

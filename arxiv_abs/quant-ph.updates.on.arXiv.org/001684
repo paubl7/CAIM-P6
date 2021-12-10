@@ -1,0 +1,20 @@
+Ab initio electronic excited state calculations are necessary for the quantitative study of photochemical
+reactions, but their accurate computation on classical computers is plagued by prohibitive scaling.
+The Variational Quantum Deflation (VQD) is an extension of the Variational Quantum Eigensolver
+(VQE) for calculating electronic excited state energies, and has the potential to address some
+of these scaling challenges using quantum computers. However, quantum computers available in
+the near term can only support a limited number of circuit operations, so reducing the quantum computational
+cost in VQD methods is critical to their realisation. In this work, we investigate the use of adaptive
+quantum circuit growth (ADAPT-VQE) in excited state VQD calculations, a strategy that has been
+successful previously in reducing the resource for ground state energy VQE calculations. We also
+invoke spin restrictions to separate the recovery of eigenstates with different spin symmetry
+to reduce the number of calculations and accumulation of errors. We created a quantum eigensolver
+emulation package - Quantum Eigensolver Building on Achievements of Both quantum computing and
+quantum chemistry (QEBAB) - for testing the proposed adaptive procedure against two VQD methods
+that use fixed-length quantum circuits. For a lithium hydride test case we found that the spin-restricted
+adaptive growth variant of VQD uses the most compact circuits by far, consistently recovers adequate
+electron correlation energy for different nuclear geometries and eigenstates while isolating
+the singlet and triplet manifold. This work is a further step towards developing techniques which
+improve the efficiency of hybrid quantum algorithms for excited state quantum chemistry, opening
+up the possibility of exploiting real quantum computers for electronic excited state calculations
+sooner than previously anticipated. 

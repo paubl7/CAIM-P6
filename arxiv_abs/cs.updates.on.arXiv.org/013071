@@ -1,0 +1,19 @@
+In the recent years, researchers proposed a number of successful methods to perform out-of-distribution
+(OOD) detection in deep neural networks (DNNs). So far the scope of the highly accurate methods has
+been limited to classification tasks. Attempts for generally applicable methods beyond classification
+did not attain similar performance. In this paper, we propose a task-agnostic unsupervised OOD
+detection method using kernel density estimation (KDE) that addresses this limitation. We estimate
+the probability density functions (pdfs) of intermediate features of an already trained network,
+by performing KDE on the training dataset. As direct application of KDE to feature maps is hindered
+by their high dimensionality, we use a set of channel-wise marginalized KDE models instead of a single
+high-dimensional one. At test time, we evaluate the pdfs on a test sample and combine the resulting
+channel-wise scores with a logistic regression into a final confidence score that indicates the
+sample is OOD. Crucially, the proposed method is task agnostic as we only use intermediate features
+without requiring information on class labels nor the structure of the output, and attains high
+accuracy thanks to the flexibility of KDE. We performed experiments on DNNs trained for segmentation,
+detection and classification tasks, using benchmark datasets for OOD detection. The proposed
+method substantially outperformed existing works for non-classification networks while achieving
+on-par accuracy with the state-of-the-art for classification networks. The results demonstrate
+that the proposed method attains high OOD detection accuracy across different tasks, offering
+a larger scope of applications than existing task-specific methods and improving state-of-the-art
+for task-agnostic methods. The code will be made available. 

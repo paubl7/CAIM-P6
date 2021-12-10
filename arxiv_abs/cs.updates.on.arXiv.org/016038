@@ -1,0 +1,20 @@
+The text-to-pattern Hamming distances problem asks to compute the Hamming distances between a
+given pattern of length $m$ and all length-$m$ substrings of a given text of length $n\ge m$. We focus
+on the $k$-mismatch version of the problem, where a distance needs to be returned only if it does not
+exceed a threshold $k$. We assume $n\le 2m$ (in general, one can partition the text into overlapping
+blocks). In this work, we show data structures for the dynamic version of this problem supporting
+two operations: An update performs a single-letter substitution in the pattern or the text, and
+a query, given an index $i$, returns the Hamming distance between the pattern and the text substring
+starting at position $i$, or reports that it exceeds $k$. First, we show a data structure with $\tilde{O}(1)$
+update and $\tilde{O}(k)$ query time. Then we show that $\tilde{O}(k)$ update and $\tilde{O}(1)$
+query time is also possible. These two provide an optimal trade-off for the dynamic $k$-mismatch
+problem with $k \le \sqrt{n}$: we prove that, conditioned on the strong 3SUM conjecture, one cannot
+simultaneously achieve $k^{1-\Omega(1)}$ time for all operations. For $k\ge \sqrt{n}$, we give
+another lower bound, conditioned on the Online Matrix-Vector conjecture, that excludes algorithms
+taking $n^{1/2-\Omega(1)}$ time per operation. This is tight for constant-sized alphabets: Clifford
+et al. (STACS 2018) achieved $\tilde{O}(\sqrt{n})$ time per operation in that case, but with $\tilde{O}(n^{3/4})$
+time per operation for large alphabets. We improve and extend this result with an algorithm that,
+given $1\le x\le k$, achieves update time $\tilde{O}(\frac{n}{k} +\sqrt{\frac{nk}{x}})$ and
+query time $\tilde{O}(x)$. In particular, for $k\ge \sqrt{n}$, an appropriate choice of $x$ yields
+$\tilde{O}(\sqrt[3]{nk})$ time per operation, which is $\tilde{O}(n^{2/3})$ when no threshold
+$k$ is provided. 

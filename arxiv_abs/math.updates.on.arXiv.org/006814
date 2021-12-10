@@ -1,0 +1,27 @@
+Despite the widespread usage of discrete generation Ensemble Kalman particle filtering methodology
+to solve nonlinear and high dimensional filtering and inverse problems, little is known about their
+mathematical foundations. As genetic-type particle filters (a.k.a. sequential Monte Carlo),
+this ensemble-type methodology can also be interpreted as mean-field particle approximations
+of the Kalman-Bucy filtering equation. In contrast with conventional mean-field type interacting
+particle methods equipped with a globally Lipschitz interacting drift-type function, Ensemble
+Kalman filters depend on a nonlinear and quadratic-type interaction function defined in terms
+of the sample covariance of the particles. Most of the literature in applied mathematics and computer
+science on these sophisticated interacting particle methods amounts to designing different classes
+of useable observer-type particle methods. These methods are based on a variety of inconsistent
+but judicious ensemble auxiliary transformations or include additional inflation/localisationtype
+algorithmic innovations, in order to avoid the inherent time-degeneracy of an insufficient particle
+ensemble size when solving a filtering problem with an unstable signal. To the best of our knowledge,
+the first and the only rigorous mathematical analysis of these sophisticated discrete generation
+particle filters is developed in the pioneering articles by Le Gland-Monbet-Tran and by Mandel-Cobb-Beezley,
+which were published in the early 2010s. Nevertheless, besides the fact that these studies prove
+the asymptotic consistency of the Ensemble Kalman filter, they provide exceedingly pessimistic
+meanerror estimates that grow exponentially fast with respect to the time horizon, even for linear
+Gaussian filtering problems with stable one dimensional signals. In the present article we develop
+a novel self-contained and complete stochastic perturbation analysis of the fluctuations, the
+stability, and the long-time performance of these discrete generation ensemble Kalman particle
+filters, including time-uniform and non-asymptotic mean-error estimates that apply to possibly
+unstable signals. To the best of our knowledge, these are the first results of this type in the literature
+on discrete generation particle filters, including the class of genetic-type particle filters
+and discrete generation ensemble Kalman filters. The stochastic Riccati difference equations
+considered in this work are also of interest in their own right, as a prototype of a new class of stochastic
+rational difference equation. 

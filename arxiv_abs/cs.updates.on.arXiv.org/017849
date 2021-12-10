@@ -1,0 +1,18 @@
+The unmanned aerial vehicle (UAV) has emerged as a promising solution to provide delivery and other
+mobile services to customers rapidly, yet it drains its stored energy quickly when travelling on
+the way and (even if solar-powered) it takes time for charging power on the way before reaching the
+destination. To address this issue, existing works focus more on UAV's path planning with designated
+system vehicles providing charging service. However, in some emergency cases and rural areas where
+system vehicles are not available, public trucks can provide more feasible and cost-saving services
+and hence a silver lining. In this paper, we explore how a single UAV can save flying distance by exploiting
+public trucks, to minimize the travel time of the UAV. We give the first theoretical work studying
+online algorithms for the problem, which guarantees a worst-case performance. We first consider
+the offline problem knowing future truck trip information far ahead of time. By delicately transforming
+the problem into a graph satisfying both time and power constraints, we present a shortest-path
+algorithm that outputs the optimal solution of the problem. Then, we proceed to the online setting
+where trucks appear in real-time and only inform the UAV of their trip information some certain time
+$\Delta t$ beforehand. As a benchmark, we propose a well-constructed lower bound that an online
+algorithm could achieve. We propose an online algorithm MyopicHitching that greedily takes truck
+trips and an improved algorithm $\Delta t$-Adaptive that further tolerates a waiting time in taking
+a ride. Our theoretical analysis shows that $\Delta t$-Adaptive is asymptotically optimal in the
+sense that its ratio approaches the proposed lower bounds as $\Delta t$ increases. 

@@ -1,0 +1,19 @@
+Constitutive models are widely used for modelling complex systems in science and engineering,
+where first-principle-based, well-resolved simulations are often prohibitively expensive.
+For example, in fluid dynamics, constitutive models are required to describe nonlocal, unresolved
+physics such as turbulence and laminar-turbulent transition. In particular, Reynolds stress
+models for turbulence and intermittency transport equations for laminar-turbulent transition
+both utilize convection--diffusion partial differential equations (PDEs). However, traditional
+PDE-based constitutive models can lack robustness and are often too rigid to accommodate diverse
+calibration data. We propose a frame-independent, nonlocal constitutive model based on a vector-cloud
+neural network that can be trained with data. The learned constitutive model can predict the closure
+variable at a point based on the flow information in its neighborhood. Such nonlocal information
+is represented by a group of points, each having a feature vector attached to it, and thus the input
+is referred to as vector cloud. The cloud is mapped to the closure variable through a frame-independent
+neural network, which is invariant both to coordinate translation and rotation and to the ordering
+of points in the cloud. As such, the network takes any number of arbitrarily arranged grid points
+as input and thus is suitable for unstructured meshes commonly used in fluid flow simulations. The
+merits of the proposed network are demonstrated on scalar transport PDEs on a family of parameterized
+periodic hill geometries. Numerical results show that the vector-cloud neural network is a promising
+tool not only as nonlocal constitutive models and but also as general surrogate models for PDEs on
+irregular domains. 

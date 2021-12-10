@@ -1,0 +1,18 @@
+Ultrafast ultrasound (US) revolutionized biomedical imaging with its capability of acquiring
+full-view frames at over 1 kHz, unlocking breakthrough modalities such as shear-wave elastography
+and functional US neuroimaging. Yet, it suffers from strong diffraction artifacts, mainly caused
+by grating lobes, side lobes, or edge waves. Multiple acquisitions are typically required to obtain
+a sufficient image quality, at the cost of a reduced frame rate. To answer the increasing demand for
+high-quality imaging from single-shot acquisitions, we propose a two-step convolutional neural
+network (CNN)-based image reconstruction method, compatible with real-time imaging. A low-quality
+estimate is obtained by means of a backprojection-based operation, akin to conventional delay-and-sum
+beamforming, from which a high-quality image is restored using a residual CNN with multi-scale
+and multi-channel filtering properties, trained specifically to remove the diffraction artifacts
+inherent to ultrafast US imaging. To account for both the high dynamic range and the radio frequency
+property of US images, we introduce the mean signed logarithmic absolute error (MSLAE) as training
+loss function. Experiments were conducted with a linear transducer array, in single plane wave
+(PW) imaging. Trainings were performed on a simulated dataset, crafted to contain a wide diversity
+of structures and echogenicities. Extensive numerical evaluations demonstrate that the proposed
+approach can reconstruct images from single PWs with a quality similar to that of gold-standard
+synthetic aperture imaging, on a dynamic range in excess of 60 dB. In vitro and in vivo experiments
+show that trainings performed on simulated data translate well to experimental settings. 

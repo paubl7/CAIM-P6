@@ -1,0 +1,20 @@
+In list-decodable subspace recovery, the input is a collection of $n$ points $\alpha n$ (for some
+$\alpha \ll 1/2$) of which are drawn i.i.d. from a distribution $\mathcal{D}$ with a isotropic rank
+$r$ covariance $\Pi_*$ (the \emph{inliers}) and the rest are arbitrary, potential adversarial
+outliers. The goal is to recover a $O(1/\alpha)$ size list of candidate covariances that contains
+a $\hat{\Pi}$ close to $\Pi_*$. Two recent independent works (Raghavendra-Yau, Bakshi-Kothari
+(2020)) gave algorithms for this problem that work whenever $\mathcal{D}$ satisfies certifiable
+anti-concentration. The running time of both these algorithms, however, is $d^{\Omega(1/\alpha^4)}$
+and the error bounds on $\|\Pi-\Pi_*\|_F$ grow with $r$ (which can be $\Omega(d)$). In this work,
+we improve on these results on all three fronts: \emph{dimension-independent} error via a faster
+fixed-polynomial running time under less restrictive distributional assumptions. Specifically,
+we give a $poly(1/\alpha) d^{O(1)}$ time algorithm that outputs a list containing a $\hat{\Pi}$
+satisfying $\|\hat{\Pi} -\Pi_*\|_F \leq O(1/\alpha)$. Our result only needs $\mathcal{D}$ to
+have \emph{certifiably hypercontractive} degree 2 polynomials - a condition satisfied by a much
+broader family of distributions in contrast to certifiable anticoncentration. As a result, in
+addition to Gaussians, our algorithm applies to uniform distribution on the hypercube and $q$-ary
+cubes and arbitrary product distributions with subgaussian marginals. Prior work (Raghavendra
+and Yau, 2020) had identified such distributions as potential hard examples as such distributions
+do not exhibit strong enough anti-concentration. When $\mathcal{D}$ satisfies certifiable anti-concentration,
+we obtain a stronger error guarantee of $\|\hat{\Pi}-\Pi_*\|_F \leq \eta$ for any arbitrary $\eta
+> 0$ in $d^{O(poly(1/\alpha) + \log (1/\eta))}$ time. 

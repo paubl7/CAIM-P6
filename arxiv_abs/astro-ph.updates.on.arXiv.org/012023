@@ -1,0 +1,19 @@
+We present TransitFit, an open-source Python~3 package designed to fit exoplanetary transit light-curves
+for transmission spectroscopy studies (Available at https://github.com/joshjchayes/TransitFit
+and https://github.com/spearnet/TransitFit, with documentation at https://transitfit.readthedocs.io/).
+TransitFit employs nested sampling to offer efficient and robust multi-epoch, multi-wavelength
+fitting of transit data obtained from one or more telescopes. TransitFit allows per-telescope
+detrending to be performed simultaneously with parameter fitting, including the use of user-supplied
+detrending alogorithms. Host limb darkening can be fitted either independently ("uncoupled")
+for each filter or combined ("coupled") using prior conditioning from the PHOENIX stellar atmosphere
+models. For this TransitFit uses the Limb Darkening Toolkit (LDTk) together with filter profiles,
+including user-supplied filter profiles. We demonstrate the application of TransitFit in three
+different contexts. First, we model SPEARNET broadband optical data of the low-density hot-Neptune
+WASP-127~b. The data were obtained from a globally-distributed network of 0.5m--2.4m telescopes.
+We find clear improvement in our broadband results using the coupled mode over uncoupled mode, when
+compared against the higher spectral resolution GTC/OSIRIS transmission spectrum obtained by
+Chen et al. (2018). Using TransitFit, we fit 26 transit observations by TESS to recover improved
+ephemerides of the hot-Jupiter WASP-91~b and a transit depth determined to a precision of 170~ppm.
+Finally, we use TransitFit to conduct an investigation into the contested presence of TTV signatures
+in WASP-126~b using 126 transits observed by TESS, concluding that there is no statistically significant
+evidence for such signatures from observations spanning 31 TESS sectors. 

@@ -1,0 +1,19 @@
+Brief fragments of sleep shorter than 15 s are defined as microsleep episodes (MSEs), often subjectively
+perceived as sleepiness. Their main characteristic is a slowing in frequency in the electroencephalogram
+(EEG), similar to stage N1 sleep. The maintenance of wakefulness test (MWT) is often used to assess
+vigilance. Scoring of the MWT in most sleep-wake centers is limited to classical definition of sleep
+(30-s epochs), and MSEs are mostly not considered in the absence of established scoring criteria
+defining MSEs but also because of the laborious work. We aimed for automatic detection of MSEs with
+machine learning, i.e. with deep learning based on raw EEG and EOG data as input. We analyzed MWT data
+of 76 patients. Experts visually scored wakefulness, and according to recently developed scoring
+criteria MSEs, microsleep episode candidates (MSEc), and episodes of drowsiness (ED). We implemented
+segmentation algorithms based on convolutional neural networks (CNNs) and a combination of a CNN
+with a long-short term memory (LSTM) network. Data of 53 patients were used for training of the classifiers,
+12 for validation and 11 for testing. Our algorithms showed a good performance close to human experts.
+The detection was very good for wakefulness and MSEs and poor for MSEc and ED, similar to the low inter-expert
+reliability for these borderline segments. We performed a visualization of the internal representation
+of the data by the artificial neuronal network performing best using t-distributed stochastic
+neighbor embedding (t-SNE). Visualization revealed that MSEs and wakefulness were mostly separable,
+though not entirely, and MSEc and ED largely intersected with the two main classes. We provide a proof
+of principle that it is feasible to reliably detect MSEs with deep neuronal networks based on raw
+EEG and EOG data with a performance close to that of human experts. 

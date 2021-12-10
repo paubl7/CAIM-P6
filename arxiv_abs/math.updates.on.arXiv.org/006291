@@ -1,0 +1,20 @@
+This paper studies the Graph-Connected Clique-Partitioning Problem (GCCP), a clustering optimization
+model in which units are characterized by both individual and relational data. This problem, introduced
+by Benati et al. (2017) under the name of Connected Partitioning Problem, shows that the combination
+of the two data types improves the clustering quality in comparison with other methodologies. Nevertheless,
+the resulting optimization problem is difficult to solve; only small-sized instances can be solved
+exactly, large-sized instances require the application of heuristic algorithms. In this paper
+we improve the exact and the heuristic algorithms previously proposed. Here, we provide a new Integer
+Linear Programming (ILP) formulation, that solves larger instances, but at the cost of using an
+exponential number of variables. In order to limit the number of variables necessary to calculate
+the optimum, the new ILP formulation is solved implementing a branch-and-price algorithm. The
+resulting pricing problem is itself a new combinatorial model: the Maximum-weighted Graph-Connected
+Single-Clique problem (MGCSC), that we solve testing various Mixed Integer Linear Programming
+(MILP) formulations and proposing a new fast "random shrink" heuristic. In this way, we are able
+to improve the previous algorithms: The branch-and-price method outperforms the computational
+times of the previous MILP algorithms and the new random shrink heuristic, when applied to GCCP,
+is both faster and more accurate than the previous heuristic methods. Moreover, the combination
+of column generation and random shrink is itself a new MILP-relaxed matheuristic that can be applied
+to large instances too. Its main advantage is that all heuristic local optima are combined together
+in a restricted MILP, consisting in the application of the exact branch-and-price method but solving
+heuristically the pricing problem. 

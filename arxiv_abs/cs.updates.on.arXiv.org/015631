@@ -1,0 +1,19 @@
+The performance of data-driven prediction models depends on the availability of data samples for
+model training. A model that learns about dengue fever incidence in a population uses historical
+data from that corresponding location. Poor performance in prediction can result in places with
+inadequate data. This work aims to enhance temporally limited dengue case data by methodological
+addition of epidemically relevant data from nearby locations as predictors (features). A novel
+framework is presented for windowing incidence data and computing time-shifted correlation-based
+metrics to quantify feature relevance. The framework ranks incidence data of adjacent locations
+around a target location by combining the correlation metric with two other metrics: spatial distance
+and local prevalence. Recurrent neural network-based prediction models achieve up to 33.6% accuracy
+improvement on average using the proposed method compared to using training data from the target
+location only. These models achieved mean absolute error (MAE) values as low as 0.128 on [0,1] normalized
+incidence data for a municipality with the highest dengue prevalence in Brazil's Espirito Santo.
+When predicting cases aggregated over geographical ecoregions, the models achieved accuracy
+improvements up to 16.5%, using only 6.5% of incidence data from ranked feature sets. The paper also
+includes two techniques for windowing time series data: fixed-sized windows and outbreak detection
+windows. Both of these techniques perform comparably, while the window detection method uses less
+data for computations. The framework presented in this paper is application-independent, and
+it could improve the performances of prediction models where data from spatially adjacent locations
+are available. 

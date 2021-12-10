@@ -1,0 +1,20 @@
+The stochastic nature of photovoltaic (PV) power has led both academia and industry to a large amount
+of research work aiming at the development of accurate PV power forecasting models. However, most
+of those models are based on machine learning algorithms and are considered as black boxes which
+do not provide any insight or explanation about their predictions. Therefore, their direct implementation
+in environments, where transparency is required, and the trust associated with their predictions
+may be questioned. To this end, we propose a two stage probabilistic forecasting framework able
+to generate highly accurate, reliable, and sharp forecasts yet offering full transparency on both
+the point forecasts and the prediction intervals (PIs). In the first stage, we exploit natural gradient
+boosting (NGBoost) for yielding probabilistic forecasts while in the second stage, we calculate
+the Shapley additive explanation (SHAP) values in order to fully understand why a prediction was
+made. To highlight the performance and the applicability of the proposed framework, real data from
+two PV parks located in Southern Germany are employed. Initially, the natural gradient boosting
+is thoroughly compared with two state-of-the-art algorithms, namely Gaussian process and lower
+upper bound estimation, in a wide range of forecasting metrics. Secondly, a detailed analysis of
+the model's complex nonlinear relationships and interaction effects between the various features
+is presented. The latter allows us to interpret the model, identify some learned physical properties,
+explain individual predictions, reduce the computational requirements for the training without
+jeopardizing the model accuracy, detect possible bugs, and gain trust in the model. Finally, we
+conclude that the model was able to develop nonlinear relationships following human logic and intuition
+based on learned physical properties. 

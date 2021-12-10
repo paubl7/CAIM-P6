@@ -1,0 +1,19 @@
+In this paper, a comparison of the performance of two high-order finite volume methods based on the
+gas-kinetic scheme (GKS) and HLLC fluxes is carried out in structured rectangular mesh. For both
+schemes, the fifth-order WENO-AO reconstruction is adopted to achieve a high-order spatial accuracy.
+In terms of temporal discretization, a two-stage fourth-order (S2O4) time marching strategy is
+adopted for WENO5-AO-GKS scheme, and the fourth-order Runge-Kutta (RK4) method is employed for
+WENO5-AO-HLLC scheme. For the viscous flow computation, the GKS includes both inviscid and viscous
+fluxes in the evolution of a single cell interface gas distribution function. While for the WENO5-AO-HLLC
+scheme, the inviscid flux is provided by HLLC Riemann solver, and the viscous flux is discretized
+by a sixth-order central difference method. Based on the tests of forward Mach step and viscous shock
+tube, both schemes show outstanding shock capturing property. From the Titarev-Toro and double
+shear layer tests, WENO5-AO-GKS scheme seems to have a better resolution than WENO5-AO-HLLC scheme.
+Both schemes show excellent robustness in extreme cases, such as the Le Blanc problem. From the cases
+of the Noh problem and the compressible isotropic turbulence, WENO5-AO-GKS scheme shows favorite
+robustness. In the compressible isotropic turbulence and three-dimensional Taylor-Green vortex
+problems, WENO-AO-GKS can use a CFL number up to 0.5, instead of 0.3 for WENO5-AO-HLLC. In terms of
+computational efficiency, WENO5-AO-HLLC scheme is about 27% more expensive than WENO5-AO-GKS
+scheme in the two-dimensional viscous flow problems, but is about 15% faster in the three-dimensional
+case. Due to the multi-dimensionality, WENO5-AO-GKS scheme performs better than WENO5-AO-HLLC
+scheme in the laminar boundary layer and the double shear layer test. 

@@ -1,0 +1,19 @@
+We study the relationship between various one-way communication complexity measures of a composed
+function with the analogous decision tree complexity of the outer function. We consider two gadgets:
+the AND function on 2 inputs, and the Inner Product on a constant number of inputs. Let $IP$ denote
+Inner Product on $2b$ bits. 1) If $f$ is a total Boolean function that depends on all of its inputs,
+the bounded-error one-way quantum communication complexity of $f \circ IP$ equals $\Omega(n(b-1))$.
+2) If $f$ is a partial Boolean function, the deterministic one-way communication complexity of
+$f \circ IP$ is at least $\Omega(b \cdot D_{dt}^{\rightarrow}(f))$, where $D_{dt}^{\rightarrow}(f)$
+denotes the non-adaptive decision tree complexity of $f$. For our quantum lower bound, we show a
+lower bound on the VC-dimension of $f \circ IP$, and then appeal to a result of Klauck [STOC'00]. Our
+deterministic lower bound relies on a combinatorial result due to Frankl and Tokushige [Comb.'99].
+It is known due to a result of Montanaro and Osborne [arXiv'09] that the deterministic one-way communication
+complexity of $f \circ XOR_2$ equals the non-adaptive parity decision tree complexity of $f$. In
+contrast, we show the following with the gadget $AND_2$. 1) There exists a function for which even
+the randomized non-adaptive AND decision tree complexity of $f$ is exponentially large in the deterministic
+one-way communication complexity of $f \circ AND_2$. 2) For symmetric functions $f$, the non-adaptive
+AND decision tree complexity of $f$ is at most quadratic in the (even two-way) communication complexity
+of $f \circ AND_2$. In view of the first point, a lower bound on non-adaptive AND decision tree complexity
+of $f$ does not lift to a lower bound on one-way communication complexity of $f \circ AND_2$. The proof
+of the first point above uses the well-studied Odd-Max-Bit function. 

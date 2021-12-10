@@ -1,0 +1,19 @@
+Network Design problems typically ask for a minimum cost sub-network from a given host network.
+This classical point-of-view assumes a central authority enforcing the optimum solution. But
+how should networks be designed to cope with selfish agents that own parts of the network? In this
+setting, agents will deviate from a minimum cost network if this decreases their individual cost.
+Hence, designed networks should be both efficient in terms of total cost and stable in terms of the
+agents' willingness to accept the network. We study this novel type of Network Design problem by
+investigating the creation of $(\beta,\gamma)$-networks, that are in $\beta$-approximate Nash
+equilibrium and have a total cost of at most $\gamma$ times the optimal cost, for the recently proposed
+Euclidean Generalized Network Creation Game by Bil\`o et al. [SPAA 2019]. There, $n$ agents corresponding
+to points in Euclidean space create costly edges among themselves to optimize their centrality
+in the created network. Our main result is a simple $\mathcal{O}(n^2)$-time algorithm that computes
+a $(\beta,\beta)$-network with low $\beta$ for any given set of points. Moreover, on integer grid
+point sets or random point sets our algorithm achieves a low constant $\beta$. Besides these results,
+we discuss a generalization of our algorithm to instances with arbitrary, even non-metric, edge
+lengths. Moreover, we show that no such positive results are possible when focusing on either optimal
+networks or perfectly stable networks as in both cases NP-hard problems arise, there exist instances
+with very unstable optimal networks, and there are instances for perfectly stable networks with
+high total cost. Along the way, we significantly improve several results from Bil\`o et al. and we
+asymptotically resolve their conjecture about the Price of Anarchy by providing a tight bound.

@@ -1,0 +1,19 @@
+An $(n,r,h,a,q)$-Local Reconstruction Code is a linear code over $\mathbb{F}_q$ of length $n$,
+whose codeword symbols are partitioned into $n/r$ local groups each of size $r$. Each local group
+satisfies `$a$' local parity checks to recover from `$a$' erasures in that local group and there
+are further $h$ global parity checks to provide fault tolerance from more global erasure patterns.
+Such an LRC is Maximally Recoverable (MR), if it offers the best blend of locality and global erasure
+resilience -- namely it can correct all erasure patterns whose recovery is information-theoretically
+feasible given the locality structure (these are precisely patterns with up to `$a$' erasures in
+each local group and an additional $h$ erasures anywhere in the codeword). Random constructions
+can easily show the existence of MR LRCs over very large fields, but a major algebraic challenge is
+to construct MR LRCs, or even show their existence, over smaller fields, as well as understand inherent
+lower bounds on their field size. We give an explicit construction of $(n,r,h,a,q)$-MR LRCs with
+field size $q$ bounded by $\left(O\left(\max\{r,n/r\}\right)\right)^{\min\{h,r-a\}}$. This
+improves upon known constructions in many relevant parameter ranges. Moreover, it matches the
+lower bound from Gopi et al. (2020) in an interesting range of parameters where $r=\Theta(\sqrt{n})$,
+$r-a=\Theta(\sqrt{n})$ and $h$ is a fixed constant with $h\le a+2$, achieving the optimal field
+size of $\Theta_{h}(n^{h/2}).$ Our construction is based on the theory of skew polynomials. We
+believe skew polynomials should have further applications in coding and complexity theory; as
+a small illustration we show how to capture algebraic results underlying list decoding folded Reed-Solomon
+and multiplicity codes in a unified way within this theory. 

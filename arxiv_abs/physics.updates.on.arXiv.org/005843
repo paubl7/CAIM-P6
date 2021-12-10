@@ -1,0 +1,20 @@
+Purpose: To develop a knowledge-based voxel-wise dose prediction system using a convolution neural
+network for high-dose-rate brachytherapy cervical cancer treatments with a tandem-and-ovoid
+(T&O) applicator. Methods: A 3D U-NET was utilized to output dose predictions using organ-at-risk
+(OAR), high-risk clinical target volume (HRCTV), and possible source locations. A sample of previous
+T&O treatments comprising 397 cases (273 training:62 validation:62 test), HRCTV and OARs (bladder/rectum/sigmoid)
+was used. Structures and dose were interpolated to 1x1x2.5mm3 dose planes with two input channels
+(source positions, voxel identification) and one output channel for dose. We evaluated dose difference
+(\Delta D)(xyz)=D_(actual)(x,y,z)-D_(predicted)(x,y,z) and dice similarity coefficients
+in all cohorts across the clinically-relevant dose range (20-130% of prescription), mean and standard
+deviation. We also examined discrete DVH metrics used for T&O plan quality assessment: HRCTV D_90%(dose
+to hottest 90% volume) and OAR D_2cc, with \Delta D_x=D_(x,actual)-D_(x,predicted). Pearson
+correlation coefficient, standard deviation, and mean quantified model performance on the clinical
+metrics. Results: Voxel-wise dose difference accuracy for 20-130% dose range for training(test)
+ranges for mean (\Delta D) and standard deviation for all voxels was [-0.3%+/-2.0% to +1.0%+/-12.0%]
+([-0.1%+/-4% to +4.0%+/-26%]). Voxel-wise dice similarity coefficients for 20-130% dose ranged
+from [0.96, 0.91]([0.94, 0.87]). DVH metric prediction in the training (test) set were HRCTV(\Delta
+D_90)=-0.19+/-0.55 Gy (-0.09+/-0.67 Gy), bladder(\Delta D_2cc)=-0.06+/-0.54 Gy (-0.17+/-0.67
+Gy), rectum(\Delta D)_2cc=-0.03+/-0.36 Gy (-0.04+/-0.46 Gy), and sigmoid(\Delta D_2cc)=-0.01+/-0.34
+Gy (0.00+/-0.44 Gy). Conclusion: 3D knowledge-based dose predictions for T&O brachytherapy provide
+accurate voxel-level and DVH metric estimates. 

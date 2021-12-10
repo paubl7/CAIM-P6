@@ -1,0 +1,19 @@
+Purpose: To update and extend the Carleton Laboratory for Radiotherapy Physics (CLRP) Eye Plaque
+(EP) dosimetry database for low-energy photon-emitting brachytherapy sources using egs_brachy,
+an open-source EGSnrc application. The previous database, CLRP_EPv1, contained datasets for
+the Collaborative Ocular Melanoma Study (COMS) plaques (2008). The new database, CLRP EPv2, consists
+of newly-calculated 3D dose distributions for 17 plaques [8 COMS, 5 Eckert & Ziegler BEBIG, and 4
+other representative models] for Pd-103, I-125, and Cs-131 seeds. Methods: Plaque models are developed
+with egs_brachy, based on published/manufacturer dimensions and material data. The BEBIG plaques
+are identical in dimensions to COMS plaques but differ in elemental composition and/or density.
+Eye plaques and seeds are simulated at the centre of full-scatter water phantoms, scoring in (0.05
+cm)^3 voxels spanning the eye for scenarios: (i) HOMO: simulated TG43 conditions; (ii) HETERO:
+eye plaques and seeds fully modelled; (iii) HETsi (BEBIG only): one seed is active at a time with other
+seed geometries present but not emitting photons (inactive). For validation, doses are compared
+to those from CLRP_EPv1 and published data. Data Format and Access: Data are available at https://physics.carleton.ca/
+clrp/eye_plaque_v2, this http URL The data consist of 3D dose distributions (text-based EGSnrc
+3ddose file) and graphical presentations of the comparisons to previously published data. Potential
+Applications: The CLRP EPv2 database provides accurate reference 3D dose distributions to advance
+ocular brachytherapy dose evaluations. The fully-benchmarked eye plaque models will be freely-distributed
+with egs brachy, supporting adoption of model-based dose evaluations as recommended by TG-129,
+TG-186, and TG-221. 

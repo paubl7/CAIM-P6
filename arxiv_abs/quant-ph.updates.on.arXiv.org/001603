@@ -1,0 +1,20 @@
+We describe a quantum-assisted machine learning (QAML) method in which multivariate data is encoded
+into quantum states in a Hilbert space whose dimension is exponentially large in the length of the
+data vector. Learning in this space occurs through applying a low-depth quantum circuit with a tree
+tensor network (TTN) topology, which acts as an unsupervised feature extractor to identify the
+most relevant quantum states in a data-driven fashion. This unsupervised feature extractor then
+feeds a supervised linear classifier and encodes the output in a small-dimensional quantum register.
+In contrast to previous work on \emph{quantum-inspired} TTN classifiers, in which the embedding
+map and class decision weights did not map the data to well-defined quantum states, we present an
+approach that can be implemented on gate-based quantum computing devices. In particular, we identify
+an embedding map with accuracy similar to exponential machines (Novikov \emph{et al.}, arXiv:1605.03795),
+but which produces valid quantum states from classical data vectors, and utilize manifold-based
+gradient optimization schemes to produce isometric operations mapping quantum states to a register
+of qubits defining a class decision. We detail methods for efficiently obtaining one- and two-point
+correlation functions of the decision boundary vectors of the quantum model, which can be used for
+model interpretability, as well as methods for obtaining classifications from partial data vectors.
+Further, we show that the use of isometric tensors can significantly aid in the human interpretability
+of the correlation functions extracted from the decision weights, and may produce models that are
+less susceptible to adversarial perturbations. We demonstrate our methodologies in applications
+utilizing the MNIST handwritten digit dataset and a multivariate timeseries dataset of human activity
+recognition. 

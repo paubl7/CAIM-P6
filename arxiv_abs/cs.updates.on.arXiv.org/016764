@@ -1,0 +1,19 @@
+We aim to develop clustering models to obtain behavioral representations from continuous multimodal
+mobile sensing data towards relapse prediction tasks. The identified clusters could represent
+different routine behavioral trends related to daily living of patients as well as atypical behavioral
+trends associated with impending relapse. We used the mobile sensing data obtained in the CrossCheck
+project for our analysis. Continuous data from six different mobile sensing-based modalities
+(e.g. ambient light, sound/conversation, acceleration etc.) obtained from a total of 63 schizophrenia
+patients, each monitored for up to a year, were used for the clustering models and relapse prediction
+evaluation. Two clustering models, Gaussian Mixture Model (GMM) and Partition Around Medoids
+(PAM), were used to obtain behavioral representations from the mobile sensing data. The features
+obtained from the clustering models were used to train and evaluate a personalized relapse prediction
+model using Balanced Random Forest. The personalization was done by identifying optimal features
+for a given patient based on a personalization subset consisting of other patients who are of similar
+age. The clusters identified using the GMM and PAM models were found to represent different behavioral
+patterns (such as clusters representing sedentary days, active but with low communications days,
+etc.). Significant changes near the relapse periods were seen in the obtained behavioral representation
+features from the clustering models. The clustering model based features, together with other
+features characterizing the mobile sensing data, resulted in an F2 score of 0.24 for the relapse
+prediction task in a leave-one-patient-out evaluation setting. This obtained F2 score is significantly
+higher than a random classification baseline with an average F2 score of 0.042. 

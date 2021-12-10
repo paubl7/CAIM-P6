@@ -1,0 +1,19 @@
+Real-world time series data often present recurrent or repetitive patterns and it is often generated
+in real time, such as transportation passenger volume, network traffic, system resource consumption,
+energy usage, and human gait. Detecting anomalous events based on machine learning approaches
+in such time series data has been an active research topic in many different areas. However, most
+machine learning approaches require labeled datasets, offline training, and may suffer from high
+computation complexity, consequently hindering their applicability. Providing a lightweight
+self-adaptive approach that does not need offline training in advance and meanwhile is able to detect
+anomalies in real time could be highly beneficial. Such an approach could be immediately applied
+and deployed on any commodity machine to provide timely anomaly alerts. To facilitate such an approach,
+this paper introduces SALAD, which is a Self-Adaptive Lightweight Anomaly Detection approach
+based on a special type of recurrent neural networks called Long Short-Term Memory (LSTM). Instead
+of using offline training, SALAD converts a target time series into a series of average absolute
+relative error (AARE) values on the fly and predicts an AARE value for every upcoming data point based
+on short-term historical AARE values. If the difference between a calculated AARE value and its
+corresponding forecast AARE value is higher than a self-adaptive detection threshold, the corresponding
+data point is considered anomalous. Otherwise, the data point is considered normal. Experiments
+based on two real-world open-source time series datasets demonstrate that SALAD outperforms five
+other state-of-the-art anomaly detection approaches in terms of detection accuracy. In addition,
+the results also show that SALAD is lightweight and can be deployed on a commodity machine. 

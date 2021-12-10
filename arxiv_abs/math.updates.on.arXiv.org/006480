@@ -1,0 +1,19 @@
+Quantifying uncertainties in hyperbolic equations is a source of several challenges. First, the
+solution forms shocks leading to oscillatory behaviour in the numerical approximation of the solution.
+Second, the number of unknowns required for an effective discretization of the solution grows exponentially
+with the dimension of the uncertainties, yielding high computational costs and large memory requirements.
+An efficient representation of the solution via adequate basis functions permits to tackle these
+difficulties. The generalized polynomial chaos (gPC) polynomials allow such an efficient representation
+when the distribution of the uncertainties is known. These distributions are usually only available
+for input uncertainties such as initial conditions, therefore the efficiency of this ansatz can
+get lost during runtime. In this paper, we make use of the dynamical low-rank approximation (DLRA)
+to obtain a memory-wise efficient solution approximation on a lower dimensional manifold. We investigate
+the use of the matrix projector-splitting integrator and the unconventional integrator for dynamical
+low-rank approximation, deriving separate time evolution equations for the spatial and uncertain
+basis functions, respectively. This guarantees an efficient approximation of the solution even
+if the underlying probability distributions change over time. Furthermore, filters to mitigate
+the appearance of spurious oscillations are implemented, and a strategy to enforce boundary conditions
+is introduced. The proposed methodology is analyzed for Burgers' equation equipped with uncertain
+initial values represented by a two-dimensional random vector. The numerical results show a reduction
+of the memory requirements, and that the important characteristics of the original system are well
+captured. 

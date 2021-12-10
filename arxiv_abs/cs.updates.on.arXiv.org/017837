@@ -1,0 +1,18 @@
+Most deep-learning frameworks for understanding biological swarms are designed to fit perceptive
+models of group behavior to individual-level data (e.g., spatial coordinates of identified features
+of individuals) that have been separately gathered from video observations. Despite considerable
+advances in automated tracking, these methods are still very expensive or unreliable when tracking
+large numbers of animals simultaneously. Moreover, this approach assumes that the human-chosen
+features include sufficient features to explain important patterns in collective behavior. To
+address these issues, we propose training deep network models to predict system-level states directly
+from generic graphical features from the entire view, which can be relatively inexpensive to gather
+in a completely automated fashion. Because the resulting predictive models are not based on human-understood
+predictors, we use explanatory modules (e.g., Grad-CAM) that combine information hidden in the
+latent variables of the deep-network model with the video data itself to communicate to a human observer
+which aspects of observed individual behaviors are most informative in predicting group behavior.
+This represents an example of augmented intelligence in behavioral ecology -- knowledge co-creation
+in a human-AI team. As proof of concept, we utilize a 20-day video recording of a colony of over 50 Harpegnathos
+saltator ants to showcase that, without any individual annotations provided, a trained model can
+generate an "importance map" across the video frames to highlight regions of important behaviors,
+such as dueling (which the AI has no a priori knowledge of), that play a role in the resolution of reproductive-hierarchy
+re-formation. Based on the empirical results, we also discuss the potential use and current challenges.

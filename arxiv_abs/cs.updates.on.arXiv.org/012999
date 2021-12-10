@@ -1,0 +1,20 @@
+Logic locking is a prominent technique to protect the integrity of hardware designs throughout
+the integrated circuit design and fabrication flow. However, in recent years, the security of locking
+schemes has been thoroughly challenged by the introduction of various deobfuscation attacks.
+As in most research branches, deep learning is being introduced in the domain of logic locking as
+well. Therefore, in this paper we present SnapShot: a novel attack on logic locking that is the first
+of its kind to utilize artificial neural networks to directly predict a key bit value from a locked
+synthesized gate-level netlist without using a golden reference. Hereby, the attack uses a simpler
+yet more flexible learning model compared to existing work. Two different approaches are evaluated.
+The first approach is based on a simple feedforward fully connected neural network. The second approach
+utilizes genetic algorithms to evolve more complex convolutional neural network architectures
+specialized for the given task. The attack flow offers a generic and customizable framework for
+attacking locking schemes using machine learning techniques. We perform an extensive evaluation
+of SnapShot for two realistic attack scenarios, comprising both reference benchmark circuits
+as well as silicon-proven RISC-V core modules. The evaluation results show that SnapShot achieves
+an average key prediction accuracy of 82.60% for the selected attack scenario, with a significant
+performance increase of 10.49 percentage points compared to the state of the art. Moreover, SnapShot
+outperforms the existing technique on all evaluated benchmarks. The results indicate that the
+security foundation of common logic locking schemes is build on questionable assumptions. The
+conclusions of the evaluation offer insights into the challenges of designing future logic locking
+schemes that are resilient to machine learning attacks. 

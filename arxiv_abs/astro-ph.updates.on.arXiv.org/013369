@@ -1,0 +1,20 @@
+Traditionally, 1D models based on scaling laws have been used to parameterized convective heat
+transfer rocks in the interior of terrestrial planets like Earth, Mars, Mercury and Venus to tackle
+the computational bottleneck of high-fidelity forward runs in 2D or 3D. However, these are limited
+in the amount of physics they can model (e.g. depth dependent material properties) and predict only
+mean quantities such as the mean mantle temperature. We recently showed that feedforward neural
+networks (FNN) trained using a large number of 2D simulations can overcome this limitation and reliably
+predict the evolution of entire 1D laterally-averaged temperature profile in time for complex
+models [Agarwal et al. 2020]. We now extend that approach to predict the full 2D temperature field,
+which contains more information in the form of convection structures such as hot plumes and cold
+downwellings. Using a dataset of 10,525 two-dimensional simulations of the thermal evolution
+of the mantle of a Mars-like planet, we show that deep learning techniques can produce reliable parameterized
+surrogates (i.e. surrogates that predict state variables such as temperature based only on parameters)
+of the underlying partial differential equations. We first use convolutional autoencoders to
+compress the temperature fields by a factor of 142 and then use FNN and long-short term memory networks
+(LSTM) to predict the compressed fields. On average, the FNN predictions are 99.30% and the LSTM
+predictions are 99.22% accurate with respect to unseen simulations. Proper orthogonal decomposition
+(POD) of the LSTM and FNN predictions shows that despite a lower mean absolute relative accuracy,
+LSTMs capture the flow dynamics better than FNNs. When summed, the POD coefficients from FNN predictions
+and from LSTM predictions amount to 96.51% and 97.66% relative to the coefficients of the original
+simulations, respectively. 

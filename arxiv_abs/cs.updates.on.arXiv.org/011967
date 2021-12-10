@@ -1,0 +1,19 @@
+Imitation learning is an intuitive approach for teaching motion to robotic systems. Although previous
+studies have proposed various methods to model demonstrated movement primitives, one of the limitations
+of existing methods is that the shape of the trajectories are encoded in high dimensional space.
+The high dimensionality of the trajectory representation can be a bottleneck in the subsequent
+process such as planning a sequence of primitive motions. We address this problem by learning the
+latent space of the robot trajectory. If the latent variable of the trajectories can be learned,
+it can be used to tune the trajectory in an intuitive manner even when the user is not an expert. We propose
+a framework for modeling demonstrated trajectories with a neural network that learns the low-dimensional
+latent space. Our neural network structure is built on the variational autoencoder (VAE) with discrete
+and continuous latent variables. We extend the structure of the existing VAE to obtain the decoder
+that is conditioned on the goal position of the trajectory for generalization to different goal
+positions. Although the inference performed by VAE is not accurate, the positioning error at the
+generalized goal position can be reduced to less than 1~mm by incorporating the projection onto
+the solution space. To cope with requirement of the massive training data, we use a trajectory augmentation
+technique inspired by the data augmentation commonly used in the computer vision community. In
+the proposed framework, the latent variables that encodes the multiple types of trajectories are
+learned in an unsupervised manner, although existing methods usually require label information
+to model diverse behaviors. The learned decoder can be used as a motion planner in which the user can
+specify the goal position and the trajectory types by setting the latent variables. 

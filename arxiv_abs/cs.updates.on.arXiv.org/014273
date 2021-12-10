@@ -1,0 +1,20 @@
+A vehicle routing and crew scheduling problem (VRCSP) consists of simultaneously planning the
+routes of a fleet of vehicles and scheduling the crews, where the vehicle-crew correspondence is
+not fixed through time. This allows a greater planning flexibility and a more efficient use of the
+fleet, but in counterpart, a high synchronisation is demanded. In this work, we present a VRCSP where
+pickup-and-delivery requests with time windows have to be fulfilled over a given planning horizon
+by using trucks and drivers. Crews can be composed of 1 or 2 drivers and any of them can be relieved in
+a given set of locations. Moreover, they are allowed to travel among locations with non-company
+shuttles, at an additional cost that is minimised. As our problem considers distinct routes for
+trucks and drivers, we have an additional flexibility not contemplated in other previous VRCSP
+given in the literature where a crew is handled as an indivisible unit. We tackle this problem with
+a two-stage sequential approach: a set of truck routes is computed in the first stage and a set of driver
+routes consistent with the truck routes is obtained in the second one. We design and evaluate the
+performance of a metaheuristic based algorithm for the latter stage. Our algorithm is mainly a GRASP
+with a perturbation procedure that allows reusing solutions already found in case the search for
+new solutions becomes difficult. This procedure together with other to repair infeasible solutions
+allow us to find high-quality solutions on instances of 100 requests spread across 15 cities with
+a fleet of 12-32 trucks (depending on the planning horizon) in less than an hour. We also conclude
+that the possibility of carrying an additional driver leads to a decrease of the cost of external
+shuttles by about 60% on average with respect to individual crews and, in some cases, to remove this
+cost completely. 

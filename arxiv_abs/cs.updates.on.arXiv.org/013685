@@ -1,0 +1,19 @@
+Although Simultaneous Localization and Mapping (SLAM) has been an active research topic for decades,
+current state-of-the-art methods still suffer from instability or inaccuracy due to feature insufficiency
+or its inherent estimation drift, in many civilian environments. To resolve these issues, we propose
+a navigation system combing the SLAM and prior-map-based localization. Specifically, we consider
+additional integration of line and plane features, which are ubiquitous and more structurally
+salient in civilian environments, into the SLAM to ensure feature sufficiency and localization
+robustness. More importantly, we incorporate general prior map information into the SLAM to restrain
+its drift and improve the accuracy. To avoid rigorous association between prior information and
+local observations, we parameterize the prior knowledge as low dimensional structural priors
+defined as relative distances/angles between different geometric primitives. The localization
+is formulated as a graph-based optimization problem that contains sliding-window-based variables
+and factors, including IMU, heterogeneous features, and structure priors. We also derive the analytical
+expressions of Jacobians of different factors to avoid the automatic differentiation overhead.
+To further alleviate the computation burden of incorporating structural prior factors, a selection
+mechanism is adopted based on the so-called information gain to incorporate only the most effective
+structure priors in the graph optimization. Finally, the proposed framework is extensively tested
+on synthetic data, public datasets, and, more importantly, on the real UAV flight data obtained
+from a building inspection task. The results show that the proposed scheme can effectively improve
+the accuracy and robustness of localization for autonomous robots in civilian applications. 

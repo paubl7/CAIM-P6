@@ -1,0 +1,20 @@
+Accurate and timely estimation of precipitation is critical for issuing hazard warnings (e.g.,
+for flash floods or landslides). Current remotely sensed precipitation products have a few hours
+of latency, associated with the acquisition and processing of satellite data. By applying a robust
+nowcasting system to these products, it is (in principle) possible to reduce this latency and improve
+their applicability, value, and impact. However, the development of such a system is complicated
+by the chaotic nature of the atmosphere, and the consequent rapid changes that can occur in the structures
+of precipitation systems In this work, we develop two approaches (hereafter referred to as Nowcasting-Nets)
+that use Recurrent and Convolutional deep neural network structures to address the challenge of
+precipitation nowcasting. A total of five models are trained using Global Precipitation Measurement
+(GPM) Integrated Multi-satellitE Retrievals for GPM (IMERG) precipitation data over the Eastern
+Contiguous United States (CONUS) and then tested against independent data for the Eastern and Western
+CONUS. The models were designed to provide forecasts with a lead time of up to 1.5 hours and, by using
+a feedback loop approach, the ability of the models to extend the forecast time to 4.5 hours was also
+investigated. Model performance was compared against the Random Forest (RF) and Linear Regression
+(LR) machine learning methods, and also against a persistence benchmark (BM) that used the most
+recent observation as the forecast. Independent IMERG observations were used as a reference, and
+experiments were conducted to examine both overall statistics and case studies involving specific
+precipitation events. Overall, the forecasts provided by the Nowcasting-Net models are superior,
+with the Convolutional Nowcasting Network with Residual Head (CNC-R) achieving 25%, 28%, and 46%
+improvement in the test ... 

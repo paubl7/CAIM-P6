@@ -1,0 +1,18 @@
+In the framework of accurate and efficient segregated schemes for 3D cardiac electromechanics
+and 0D cardiovascular models, we propose here a novel numerical approach to address the coupled
+3D-0D problem introduced in Part I of this two-part series of papers. We combine implicit-explicit
+schemes to solve the different cardiac models in a multiphysics setting. We properly separate and
+manage the different time and space scales related to cardiac electromechanics and blood circulation.
+We employ a flexible and scalable intergrid transfer operator that enables to interpolate Finite
+Element functions among different meshes and, possibly, among different Finite Element spaces.
+We propose a numerical method to couple the 3D electromechanical model and the 0D circulation model
+in a numerically stable manner within a fully segregated fashion. No adaptations are required through
+the different phases of the heartbeat. We also propose a robust algorithm to reconstruct the stress-free
+reference configuration. Due to the computational cost associated with the numerical solution
+of this inverse problem, the reference configuration recovery algorithm comes along with a novel
+projection technique to precisely recover the unloaded geometry from a coarser representation
+of the computational domain. We show the convergence property of our numerical schemes by performing
+an accuracy study through grid refinement. To prove the biophysical accuracy of our computational
+model, we also address different scenarios of clinical interest in our numerical simulations by
+varying preload, afterload and contractility. Indeed, we simulate physiologically relevant
+behaviors and we reproduce meaningful results in the context of cardiac function. 

@@ -1,0 +1,19 @@
+In lattice quantum field theory studies, parameters defining the lattice theory must be tuned toward
+criticality to access continuum physics. Commonly used Markov chain Monte Carlo (MCMC) methods
+suffer from critical slowing down in this limit, restricting the precision of continuum extrapolations.
+Further difficulties arise when measuring correlation functions of operators widely separated
+in spacetime: for most correlation functions, an exponentially severe signal-to-noise problem
+is encountered as the operators are taken to be widely separated. This dissertation details two
+new techniques to address these issues. First, we define a novel MCMC algorithm based on generative
+flow-based models. Such models utilize machine learning methods to describe efficient approximate
+samplers for distributions of interest. Independently drawn flow-based samples are then used
+as proposals in an asymptotically exact Metropolis-Hastings Markov chain. We address incorporating
+symmetries of interest, including translational and gauge symmetries. We secondly introduce
+an approach to "deform" Monte Carlo estimators based on contour deformations applied to the domain
+of the path integral. The deformed estimators associated with an observable give equivalent unbiased
+measurements of that observable, but generically have different variances. We define families
+of deformed manifolds for lattice gauge theories and introduce methods to efficiently optimize
+the choice of manifold (the "observifold"), minimizing the deformed observable variance. Finally,
+we demonstrate that flow-based MCMC can mitigate critical slowing down and observifolds can exponentially
+reduce variance in proof-of-principle applications to scalar $\phi^4$ theory and $\mathrm{U}(1)$
+and $\mathrm{SU}(N)$ lattice gauge theories. 

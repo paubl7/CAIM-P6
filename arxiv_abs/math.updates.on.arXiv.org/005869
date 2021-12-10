@@ -1,0 +1,20 @@
+We investigate the performance of multi-user multiple-antenna downlink systems in which a BS serves
+multiple users via a shared wireless medium. In order to fully exploit the spatial diversity while
+minimizing the passive energy consumed by radio frequency (RF) components, the BS is equipped with
+M RF chains and N antennas, where M < N. Upon receiving pilot sequences to obtain the channel state
+information, the BS determines the best subset of M antennas for serving the users. We propose a joint
+antenna selection and precoding design (JASPD) algorithm to maximize the system sum rate subject
+to a transmit power constraint and QoS requirements. The JASPD overcomes the non-convexity of the
+formulated problem via a doubly iterative algorithm, in which an inner loop successively optimizes
+the precoding vectors, followed by an outer loop that tries all valid antenna subsets. Although
+approaching the (near) global optimality, the JASPD suffers from a combinatorial complexity,
+which may limit its application in real-time network operations. To overcome this limitation,
+we propose a learning-based antenna selection and precoding design algorithm (L-ASPA), which
+employs a DNN to establish underlaying relations between the key system parameters and the selected
+antennas. The proposed L-ASPD is robust against the number of users and their locations, BS's transmit
+power, as well as the small-scale channel fading. With a well-trained learning model, it is shown
+that the L-ASPD significantly outperforms baseline schemes based on the block diagonalization
+and a learning-assisted solution for broadcasting systems and achieves higher effective sum rate
+than that of the JASPA under limited processing time. In addition, we observed that the proposed
+L-ASPD can reduce the computation complexity by 95% while retaining more than 95% of the optimal
+performance. 

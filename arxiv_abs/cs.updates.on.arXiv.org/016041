@@ -1,0 +1,19 @@
+COVID-19 has caused an enormous burden on healthcare facilities around the world. Cohorting patients
+and healthcare professionals (HCPs) into "bubbles" has been proposed as an infection-control
+mechanism. In this paper, we present a novel and flexible model for clustering patient care in healthcare
+facilities into bubbles in order to minimize infection spread. Our model aims to control a variety
+of costs to patients/residents and HCPs so as to avoid hidden, downstream adverse effects of clustering
+patient care. This model leads to a discrete optimization problem that we call the BubbleClustering
+problem. This problem takes as input a temporal visit graph, representing HCP mobility, including
+visits by HCPs to patient/resident rooms. The output of the problem is a rewired visit graph, obtained
+by partitioning HCPs and patient rooms into bubbles and rewiring HCP visits to patient rooms so that
+patient-care is largely confined to the constructed bubbles. Even though the BubbleClustering
+problem is intractable in general, we present an integer linear programming (ILP) formulation
+of the problem that can be solved optimally for problem instances that arise from typical hospital
+units and long-term-care facilities. We call our overall solution approach Cost-aware Rewiring
+of Networks (CoRN). We evaluate CoRN using fine-grained-movement data from a hospital-medical-intensive-care
+unit as well as two long-term-care facilities. These data were obtained using sensor systems we
+built and deployed. The main takeaway from our experimental results is that it is possible to use
+CoRN to substantially reduce infection spread by cohorting patients and HCPs without sacrificing
+patient-care, and with minimal excess costs to HCPs in terms of time and distances traveled during
+a shift. 

@@ -1,0 +1,18 @@
+Angular path integration is the ability of a system to estimate its own heading direction from potentially
+noisy angular velocity (or increment) observations. Despite its importance for robot and animal
+navigation, current algorithms for angular path integration lack probabilistic descriptions
+that take into account the reliability of such observations, which is essential for appropriately
+weighing one's current heading direction estimate against incoming information. In a probabilistic
+setting, angular path integration can be formulated as a continuous-time nonlinear filtering
+problem (circular filtering) with increment observations. The circular symmetry of heading direction
+makes this inference task inherently nonlinear, thereby precluding the use of popular inference
+algorithms such as Kalman filters and rendering the problem analytically inaccessible. Here,
+we derive an approximate solution to circular continuous-time filtering, which integrates increment
+observations while maintaining a fixed representation through both state propagation and observational
+updates. Specifically, we extend the established projection-filtering method to account for
+increment observations and apply this framework to the circular filtering problem. We further
+propose a generative model for continuous-time angular-valued direct observations of the hidden
+state, which we integrate seamlessly into the projection filter. Applying the resulting scheme
+to a model of probabilistic angular path integration, we derive an algorithm for circular filtering,
+which we term the circular Kalman filter. Importantly, this algorithm is analytically accessible,
+interpretable, and outperforms an alternative filter based on a Gaussian approximation. 

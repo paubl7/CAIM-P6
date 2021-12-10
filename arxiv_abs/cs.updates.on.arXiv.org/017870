@@ -1,0 +1,19 @@
+While data sharing is crucial for knowledge development, privacy concerns and strict regulation
+(e.g., European General Data Protection Regulation (GDPR)) unfortunately limits its full effectiveness.
+Synthetic tabular data emerges as an alternative to enable data sharing while fulfilling regulatory
+and privacy constraints. The state-of-the-art tabular data synthesizers draw methodologies
+from Generative Adversarial Networks (GAN). In this thesis, we develop CTAB-GAN, a novel conditional
+table GAN architecture that can effectively model diverse data types with complex distributions.
+CTAB-GAN is extensively evaluated with the state of the art GANs that generate synthetic tables,
+in terms of data similarity and analysis utility. The results on five datasets show that the synthetic
+data of CTAB-GAN remarkably resembles the real data for all three types of variables and results
+in higher accuracy for five machine learning algorithms, by up to 17%. Additionally, to ensure greater
+security for training tabular GANs against malicious privacy attacks, differential privacy (DP)
+is studied and used to train CTAB-GAN with strict privacy guarantees. DP-CTAB-GAN is rigorously
+evaluated using state-of-the-art DP-tabular GANs in terms of data utility and privacy robustness
+against membership and attribute inference attacks. Our results on three datasets indicate that
+strict theoretical differential privacy guarantees come only after severely affecting data utility.
+However, it is shown empirically that these guarantees help provide a stronger defence against
+privacy attacks. Overall, it is found that DP-CTABGAN is capable of being robust to privacy attacks
+while maintaining the highest data utility as compared to prior work, by up to 18% in terms of the average
+precision score. 

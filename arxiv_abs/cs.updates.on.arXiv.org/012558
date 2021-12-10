@@ -1,0 +1,18 @@
+Powerful yet complex deep neural networks (DNNs) have fueled a booming demand for efficient DNN
+solutions to bring DNN-powered intelligence into numerous applications. Jointly optimizing
+the networks and their accelerators are promising in providing optimal performance. However,
+the great potential of such solutions have yet to be unleashed due to the challenge of simultaneously
+exploring the vast and entangled, yet different design spaces of the networks and their accelerators.
+To this end, we propose DNA, a Differentiable Network-Accelerator co-search framework for automatically
+searching for matched networks and accelerators to maximize both the task accuracy and acceleration
+efficiency. Specifically, DNA integrates two enablers: (1) a generic design space for DNN accelerators
+that is applicable to both FPGA- and ASIC-based DNN accelerators and compatible with DNN frameworks
+such as PyTorch to enable algorithmic exploration for more efficient DNNs and their accelerators;
+and (2) a joint DNN network and accelerator co-search algorithm that enables simultaneously searching
+for optimal DNN structures and their accelerators' micro-architectures and mapping methods to
+maximize both the task accuracy and acceleration efficiency. Experiments and ablation studies
+based on FPGA measurements and ASIC synthesis show that the matched networks and accelerators generated
+by DNA consistently outperform state-of-the-art (SOTA) DNNs and DNN accelerators (e.g., 3.04x
+better FPS with a 5.46% higher accuracy on ImageNet), while requiring notably reduced search time
+(up to 1234.3x) over SOTA co-exploration methods, when evaluated over ten SOTA baselines on three
+datasets. All codes will be released upon acceptance. 

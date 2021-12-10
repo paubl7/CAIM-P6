@@ -1,0 +1,18 @@
+We develop a quantum-inspired numerical procedure for searching low-energy states of a classical
+Hamiltonian composed of two-body fully-connected random Ising interactions and a random local
+longitudinal magnetic field. In this method, we introduce infinitesimal quantum interactions
+that do not commute with the original Ising Hamiltonian, and repeatedly generate and truncate direct
+product states, inspired by the Krylov subspace method, to obtain the low-energy states of the original
+classical Ising Hamiltonian. The computational cost is controlled by the form of infinitesimal
+quantum interactions (e.g., one-body or two-body interactions) and the numbers of infinitesimal
+interaction terms introduced, different initial states considered, and low-energy states kept
+during the iteration. For a demonstrate of the method, here we introduce as the infinitesimal quantum
+interactions pair products of Pauli $X$ operators acting on different sites and on-site Pauli $X$
+operators into the random Ising Hamiltonian, in which the numerical cost is $O(N^3)$ per iteration
+with the system size $N$. We consider 120 instances of the random coupling realizations for the random
+Ising Hamiltonian with $N$ up to 600 and search the 120 lowest-energy states for each instance. We
+find that the time-to-solution by the quantum-inspired method proposed here, with parallelization
+in terms of the different initial states, for searching the ground state of the random Ising Hamiltonian
+scales approximately as $N^5$ for $N$ up to 600. We also examine the basic physical properties such
+as the ensemble-averaged ground-state and first-excited energies and the ensemble-averaged
+number of states in the low-energy region of the random Ising Hamiltonian. 

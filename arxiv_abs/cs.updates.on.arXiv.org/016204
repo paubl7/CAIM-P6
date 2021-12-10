@@ -1,0 +1,19 @@
+We consider the fundamental problems of size discovery and topology recognition in radio networks
+modeled by simple undirected connected graphs. Size discovery calls for all nodes to output the
+number of nodes in the graph, called its size, and in the task of topology recognition each node has
+to learn the topology of the graph and its position in it. In radio networks, nodes communicate in
+synchronous rounds and start in the same round. In each round a node can either transmit the same message
+to all its neighbors, or stay silent and listen. At the receiving end, a node $v$ hears a message from
+a neighbor $w$ in a given round, if $v$ listens in this round, and if $w$ is its only neighbor that transmits
+in this round. If more than one neighbor of a node $v$ transmits in a given round, there is a collision
+at $v$. We do not assume collision detection: in case of a collision, node $v$ does not hear anything.
+The time of a deterministic algorithm for each of the above problems is the worst-case number of rounds
+it takes to solve it. Our goal is to construct short labeling schemes for size discovery and topology
+recognition in arbitrary radio networks, and to design efficient deterministic algorithms using
+these schemes. For size discovery, we construct a labeling scheme of length $O(\log\log\Delta)$
+and we design an algorithm for this problem using this scheme and working in time $O(\log^2 n)$, where
+$n$ is the size of the graph. We also show that time complexity $O(\log^2 n)$ is optimal for the problem
+of size discovery, whenever the labeling scheme is of optimal length. For topology recognition,
+we construct a labeling scheme of length $O(\log\Delta)$, and we design an algorithm for this problem
+using this scheme working in time $O\left(D\Delta+\min(\Delta^2,n)\right)$. We also show that
+the length of our labeling scheme is asymptotically optimal. 

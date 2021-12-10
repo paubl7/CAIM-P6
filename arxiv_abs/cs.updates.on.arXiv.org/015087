@@ -1,0 +1,18 @@
+Objective: We used deep convolutional neural networks (DCNNs) to classify electroencephalography
+(EEG) signals in a steady-state visually evoked potentials (SSVEP) based single-channel brain-computer
+interface (BCI), which does not require calibration on the user. Methods: EEG signals were converted
+to spectrograms and served as input to train DCNNs using the transfer learning technique. We also
+modified and applied a data augmentation method, SpecAugment, generally employed for speech recognition.
+Furthermore, for comparison purposes, we classified the SSVEP dataset using Support-vector machines
+(SVMs) and Filter Bank canonical correlation analysis (FBCCA). Results: Excluding the evaluated
+user's data from the fine-tuning process, we reached 82.2% mean test accuracy and 0.825 mean F1-Score
+on 35 subjects from an open dataset, using a small data length (0.5 s), only one electrode (Oz) and
+the DCNN with transfer learning, window slicing (WS) and SpecAugment's time masks. Conclusion:
+The DCNN results surpassed SVM and FBCCA performances, using a single electrode and a small data
+length. Transfer learning provided minimal accuracy change, but made training faster. SpecAugment
+created a small performance improvement and was successfully combined with WS, yielding higher
+accuracies. Significance: We present a new methodology to solve the problem of SSVEP classification
+using DCNNs. We also modified a speech recognition data augmentation technique and applied it to
+the context of BCIs. The presented methodology surpassed performances obtained with FBCCA and
+SVMs (more traditional SSVEP classification methods) in BCIs with small data lengths and one electrode.
+This type of BCI can be used to develop small and fast systems. 

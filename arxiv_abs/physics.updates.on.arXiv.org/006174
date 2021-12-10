@@ -1,0 +1,19 @@
+This paper presents deep unfolding neural networks to handle inverse problems in photothermal
+radiometry enabling super resolution (SR) imaging. Photothermal imaging is a well-known technique
+in active thermography for nondestructive inspection of defects in materials such as metals or
+composites. A grand challenge of active thermography is to overcome the spatial resolution limitation
+imposed by heat diffusion in order to accurately resolve each defect. The photothermal SR approach
+enables to extract high-frequency spatial components based on the deconvolution with the thermal
+point spread function. However, stable deconvolution can only be achieved by using the sparse structure
+of defect patterns, which often requires tedious, hand-crafted tuning of hyperparameters and
+results in computationally intensive algorithms. On this account, Photothermal-SR-Net is proposed
+in this paper, which performs deconvolution by deep unfolding considering the underlying physics.
+This enables to super resolve 2D thermal images for nondestructive testing with a substantially
+improved convergence rate. Since defects appear sparsely in materials, Photothermal-SR-Net
+applies trained block-sparsity thresholding to the acquired thermal images in each convolutional
+layer. The performance of the proposed approach is evaluated and discussed using various deep unfolding
+and thresholding approaches applied to 2D thermal images. Subsequently, studies are conducted
+on how to increase the reconstruction quality and the computational performance of Photothermal-SR-Net
+is evaluated. Thereby, it was found that the computing time for creating high-resolution images
+could be significantly reduced without decreasing the reconstruction quality by using pixel binning
+as a preprocessing step. 

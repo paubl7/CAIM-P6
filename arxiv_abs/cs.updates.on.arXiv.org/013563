@@ -1,0 +1,19 @@
+Purpose: To apply a convolutional neural network (CNN) to develop a system that segments intensity
+calibration phantom regions in computed tomography (CT) images, and to test the system in a large
+cohort to evaluate its robustness. Methods: A total of 1040 cases (520 cases each from two institutions),
+in which an intensity calibration phantom (B-MAS200, Kyoto Kagaku, Kyoto, Japan) was used, were
+included herein. A training dataset was created by manually segmenting the regions of the phantom
+for 40 cases (20 cases each). Segmentation accuracy of the CNN model was assessed with the Dice coefficient
+and the average symmetric surface distance (ASD) through the 4-fold cross validation. Further,
+absolute differences of radiodensity values (in Hounsfield units: HU) were compared between manually
+segmented regions and automatically segmented regions. The system was tested on the remaining
+1000 cases. For each institution, linear regression was applied to calculate coefficients for
+the correlation between radiodensity and the densities of the phantom. Results: After training,
+the median Dice coefficient was 0.977, and the median ASD was 0.116 mm. When segmented regions were
+compared between manual segmentation and automated segmentation, the median absolute difference
+was 0.114 HU. For the test cases, the median correlation coefficient was 0.9998 for one institution
+and was 0.9999 for the other, with a minimum value of 0.9863. Conclusions: The CNN model successfully
+segmented the calibration phantom's regions in the CT images with excellent accuracy, and the automated
+method was found to be at least equivalent to the conventional manual method. Future study should
+integrate the system by automatically segmenting the region of interest in bones such that the bone
+mineral density can be fully automatically quantified from CT images. 

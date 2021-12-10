@@ -1,0 +1,20 @@
+Abstraction is an important aspect of intelligence which enables agents to construct robust representations
+for effective decision making. In the last decade, deep networks are proven to be effective due to
+their ability to form increasingly complex abstractions. However, these abstractions are distributed
+over many neurons, making the re-use of a learned skill costly. Previous work either enforced formation
+of abstractions creating a designer bias, or used a large number of neural units without investigating
+how to obtain high-level features that may more effectively capture the source task. For avoiding
+designer bias and unsparing resource use, we propose to exploit neural response dynamics to form
+compact representations to use in skill transfer. For this, we consider two competing methods based
+on (1) maximum information compression principle and (2) the notion that abstract events tend to
+generate slowly changing signals, and apply them to the neural signals generated during task execution.
+To be concrete, in our simulation experiments, we either apply principal component analysis (PCA)
+or slow feature analysis (SFA) on the signals collected from the last hidden layer of a deep network
+while it performs a source task, and use these features for skill transfer in a new target task. We
+compare the generalization performance of these alternatives with the baselines of skill transfer
+with full layer output and no-transfer settings. Our results show that SFA units are the most successful
+for skill transfer. SFA as well as PCA, incur less resources compared to usual skill transfer, whereby
+many units formed show a localized response reflecting end-effector-obstacle-goal relations.
+Finally, SFA units with lowest eigenvalues resembles symbolic representations that highly correlate
+with high-level features such as joint angles which might be thought of precursors for fully symbolic
+systems. 

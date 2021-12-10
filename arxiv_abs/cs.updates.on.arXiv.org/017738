@@ -1,0 +1,19 @@
+Quantification of uncertainty in deep-neural-networks (DNN) based image registration algorithms
+plays an important role in the safe deployment of real-world medical applications and research-oriented
+processing pipelines, and in improving generalization capabilities. Currently available approaches
+for uncertainty estimation, including the variational encoder-decoder architecture and the
+inference-time dropout approach, require specific network architectures and assume parametric
+distribution of the latent space which may result in sub-optimal characterization of the posterior
+distribution for the predicted deformation-fields. We introduce the NPBDREG, a fully non-parametric
+Bayesian framework for unsupervised DNN-based deformable image registration by combining an
+\texttt{Adam} optimizer with stochastic gradient Langevin dynamics (SGLD) to characterize the
+true posterior distribution through posterior sampling. The NPBDREG provides a principled non-parametric
+way to characterize the true posterior distribution, thus providing improved uncertainty estimates
+and confidence measures in a theoretically well-founded and computationally efficient way. We
+demonstrated the added-value of NPBDREG, compared to the baseline probabilistic \texttt{VoxelMorph}
+unsupervised model (PrVXM), on brain MRI images registration using $390$ image pairs from four
+publicly available databases: MGH10, CMUC12, ISBR18 and LPBA40. The NPBDREG shows a slight improvement
+in the registration accuracy compared to PrVXM (Dice score of $0.73$ vs. $0.68$, $p \ll 0.01$), a
+better generalization capability for data corrupted by a mixed structure noise (e.g Dice score
+of $0.729$ vs. $0.686$ for $\alpha=0.2$) and last but foremost, a significantly better correlation
+of the predicted uncertainty with out-of-distribution data ($r>0.95$ vs. $r<0.5$). 

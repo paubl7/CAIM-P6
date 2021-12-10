@@ -1,0 +1,20 @@
+Understanding human driving behaviors quantitatively is critical even in the era when connected
+and autonomous vehicles and smart infrastructure are becoming ever more prevalent. This is particularly
+so as that mixed traffic settings, where autonomous vehicles and human driven vehicles co-exist,
+are expected to persist for quite some time. Towards this end it is necessary that we have a comprehensive
+modeling framework for decision-making within which human driving preferences can be inferred
+statistically from observed driving behaviors in realistic and naturalistic traffic settings.
+Leveraging a recently proposed computational framework for smart vehicles in a smart world using
+multi-agent based simulation and optimization, we first recapitulate how the forward problem
+of driving decision-making is modeled as a state space model. We then show how the model can be inverted
+to estimate driver preferences from naturalistic traffic data using the standard Kalman filter
+technique. We explicitly illustrate our approach using the vehicle trajectory data from Sugiyama
+experiment that was originally meant to demonstrate how stop-and-go shockwave can arise spontaneously
+without bottlenecks. Not only the estimated state filter can fit the observed data well for each
+individual vehicle, the inferred utility functions can also re-produce quantitatively similar
+pattern of the observed collective behaviors. One distinct advantage of our approach is the drastically
+reduced computational burden. This is possible because our forward model treats driving decision
+process, which is intrinsically dynamic with multi-agent interactions, as a sequence of independent
+static optimization problems contingent on the state with a finite look ahead anticipation. Consequently
+we can practically sidestep solving an interacting dynamic inversion problem that would have been
+much more computationally demanding. 

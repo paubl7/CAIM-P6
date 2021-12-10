@@ -1,0 +1,20 @@
+Recently, Vision Transformers (ViTs) have achieved impressive results on various vision tasks.
+Yet, their generalization ability under different distribution shifts is rarely understood.
+In this work, we provide a comprehensive study on the out-of-distribution generalization of ViTs.
+To support a systematic investigation, we first present a taxonomy of distribution shifts by categorizing
+them into five conceptual groups: corruption shift, background shift, texture shift, destruction
+shift, and style shift. Then we perform extensive evaluations of ViT variants under different groups
+of distribution shifts and compare their generalization ability with CNNs. Several important
+observations are obtained: 1) ViTs generalize better than CNNs under multiple distribution shifts.
+With the same or fewer parameters, ViTs are ahead of corresponding CNNs by more than 5% in top-1 accuracy
+under most distribution shifts. 2) Larger ViTs gradually narrow the in-distribution and out-of-distribution
+performance gap. To further improve the generalization of ViTs, we design the Generalization-Enhanced
+ViTs by integrating adversarial learning, information theory, and self-supervised learning.
+By investigating three types of generalization-enhanced ViTs, we observe their gradient-sensitivity
+and design a smoother learning strategy to achieve a stable training process. With modified training
+schemes, we achieve improvements on performance towards out-of-distribution data by 4% from vanilla
+ViTs. We comprehensively compare three generalization-enhanced ViTs with their corresponding
+CNNs, and observe that: 1) For the enhanced model, larger ViTs still benefit more for the out-of-distribution
+generalization. 2) generalization-enhanced ViTs are more sensitive to the hyper-parameters
+than corresponding CNNs. We hope our comprehensive study could shed light on the design of more generalizable
+learning architectures. 

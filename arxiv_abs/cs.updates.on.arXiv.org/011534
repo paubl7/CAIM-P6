@@ -1,0 +1,20 @@
+Mechanical metamaterials feature engineered microstructures designed to exhibit exotic, and
+often counter-intuitive, effective behaviour. Such a behaviour is often achieved through instability-induced
+transformations of the underlying periodic microstructure into one or multiple patterning modes.
+Due to a strong kinematic coupling of individual repeating microstructural cells, non-local behaviour
+and size effects emerge, which cannot easily be captured by classical homogenization schemes.
+In addition, the individual patterning modes can mutually interact in space as well as in time, while
+at the engineering scale the entire structure can buckle globally. For efficient numerical macroscale
+predictions, a micromorphic computational homogenization scheme has recently been developed.
+Although this framework is in principle capable of accounting for spatial and temporal interactions
+between individual patterning modes, its implementation relied on a gradient-based quasi-Newton
+solution technique. This solver is suboptimal because (i) it has sub-quadratic convergence, and
+(ii) the absence of Hessians does not allow for proper bifurcation analyses. Given that mechanical
+metamaterials often rely on controlled instabilities, these limitations are serious. To address
+them, a full Newton method is provided in detail in this paper. The construction of the macroscopic
+tangent operator is not straightforward due to specific model assumptions on the decomposition
+of the underlying displacement field pertinent to the micromorphic framework, involving orthogonality
+constraints. Analytical expressions for the first and second variation of the total potential
+energy are given, and the complete algorithm is listed. The developed methodology is demonstrated
+with two examples in which a competition between local and global buckling exists and where multiple
+patterning modes emerge. 

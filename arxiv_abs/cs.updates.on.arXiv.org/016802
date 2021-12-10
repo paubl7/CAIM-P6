@@ -1,0 +1,19 @@
+The goal of this work is to characterize the representational impact that foveation operations
+have for machine vision systems, inspired by the foveated human visual system, which has higher
+acuity at the center of gaze and texture-like encoding in the periphery. To do so, we introduce models
+consisting of a first-stage \textit{fixed} image transform followed by a second-stage \textit{learnable}
+convolutional neural network, and we varied the first stage component. The primary model has a foveated-textural
+input stage, which we compare to a model with foveated-blurred input and a model with spatially-uniform
+blurred input (both matched for perceptual compression), and a final reference model with minimal
+input-based compression. We find that: 1) the foveated-texture model shows similar scene classification
+accuracy as the reference model despite its compressed input, with greater i.i.d. generalization
+than the other models; 2) the foveated-texture model has greater sensitivity to high-spatial frequency
+information and greater robustness to occlusion, w.r.t the comparison models; 3) both the foveated
+systems, show a stronger center image-bias relative to the spatially-uniform systems even with
+a weight sharing constraint. Critically, these results are preserved over different classical
+CNN architectures throughout their learning dynamics. Altogether, this suggests that foveation
+with peripheral texture-based computations yields an efficient, distinct, and robust representational
+format of scene information, and provides symbiotic computational insight into the representational
+consequences that texture-based peripheral encoding may have for processing in the human visual
+system, while also potentially inspiring the next generation of computer vision models via spatially-adaptive
+computation. Code + Data available here: https://github.com/ArturoDeza/EmergentProperties

@@ -1,0 +1,19 @@
+The incredible effectiveness of adversarial attacks on fooling deep neural networks poses a tremendous
+hurdle in the widespread adoption of deep learning in safety and security-critical domains. While
+adversarial defense mechanisms have been proposed since the discovery of the adversarial vulnerability
+issue of deep neural networks, there is a long path to fully understand and address this issue. In
+this study, we hypothesize that part of the reason for the incredible effectiveness of adversarial
+attacks is their ability to implicitly tap into and exploit the gradient flow of a deep neural network.
+This innate ability to exploit gradient flow makes defending against such attacks quite challenging.
+Motivated by this hypothesis we argue that if a deep neural network architecture can explicitly
+tap into its own gradient flow during the training, it can boost its defense capability significantly.
+Inspired by this fact, we introduce the concept of self-gradient networks, a novel deep neural network
+architecture designed to be more robust against adversarial perturbations. Gradient flow information
+is leveraged within self-gradient networks to achieve greater perturbation stability beyond
+what can be achieved in the standard training process. We conduct a theoretical analysis to gain
+better insights into the behaviour of the proposed self-gradient networks to illustrate the efficacy
+of leverage this additional gradient flow information. The proposed self-gradient network architecture
+enables much more efficient and effective adversarial training, leading to faster convergence
+towards an adversarially robust solution by at least 10X. Experimental results demonstrate the
+effectiveness of self-gradient networks when compared with state-of-the-art adversarial learning
+strategies, with 10% improvement on the CIFAR10 dataset under PGD and CW adversarial perturbations.

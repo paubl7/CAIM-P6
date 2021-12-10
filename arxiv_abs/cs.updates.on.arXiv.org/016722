@@ -1,0 +1,20 @@
+The determination of precise skin lesion boundaries in dermoscopic images using automated methods
+faces many challenges, most importantly, the presence of hair, inconspicuous lesion edges and
+low contrast in dermoscopic images, and variability in the color, texture and shapes of skin lesions.
+Existing deep learning-based skin lesion segmentation algorithms are expensive in terms of computational
+time and memory. Consequently, running such segmentation algorithms requires a powerful GPU and
+high bandwidth memory, which are not available in dermoscopy devices. Thus, this article aims to
+achieve precise skin lesion segmentation with minimum resources: a lightweight, efficient generative
+adversarial network (GAN) model called SLSNet, which combines 1-D kernel factorized networks,
+position and channel attention, and multiscale aggregation mechanisms with a GAN model. The 1-D
+kernel factorized network reduces the computational cost of 2D filtering. The position and channel
+attention modules enhance the discriminative ability between the lesion and non-lesion feature
+representations in spatial and channel dimensions, respectively. A multiscale block is also used
+to aggregate the coarse-to-fine features of input skin images and reduce the effect of the artifacts.
+SLSNet is evaluated on two publicly available datasets: ISBI 2017 and the ISIC 2018. Although SLSNet
+has only 2.35 million parameters, the experimental results demonstrate that it achieves segmentation
+results on a par with the state-of-the-art skin lesion segmentation methods with an accuracy of
+97.61%, and Dice and Jaccard similarity coefficients of 90.63% and 81.98%, respectively. SLSNet
+can run at more than 110 frames per second (FPS) in a single GTX1080Ti GPU, which is faster than well-known
+deep learning-based image segmentation models, such as FCN. Therefore, SLSNet can be used for practical
+dermoscopic applications. 

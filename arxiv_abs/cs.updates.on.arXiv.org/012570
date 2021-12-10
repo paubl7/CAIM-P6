@@ -1,0 +1,20 @@
+The segmentation of prostate whole gland and transition zone in Diffusion Weighted MRI (DWI) are
+the first step in designing computer-aided detection algorithms for prostate cancer. However,
+variations in MRI acquisition parameters and scanner manufacturing result in different appearances
+of prostate tissue in the images. Convolutional neural networks (CNNs) which have shown to be successful
+in various medical image analysis tasks including segmentation are typically sensitive to the
+variations in imaging parameters. This sensitivity leads to poor segmentation performance of
+CNNs trained on a source cohort and tested on a target cohort from a different scanner and hence, it
+limits the applicability of CNNs for cross-cohort training and testing. Contouring prostate whole
+gland and transition zone in DWI images are time-consuming and expensive. Thus, it is important
+to enable CNNs pretrained on images of source domain, to segment images of target domain with minimum
+requirement for manual segmentation of images from the target domain. In this work, we propose a
+transfer learning method based on a modified U-net architecture and loss function, for segmentation
+of prostate whole gland and transition zone in DWIs using a CNN pretrained on a source dataset and
+tested on the target dataset. We explore the effect of the size of subset of target dataset used for
+fine-tuning the pre-trained CNN on the overall segmentation accuracy. Our results show that with
+a fine-tuning data as few as 30 patients from the target domain, the proposed transfer learning-based
+algorithm can reach dice score coefficient of 0.80 for both prostate whole gland and transition
+zone segmentation. Using a fine-tuning data of 115 patients from the target domain, dice score coefficient
+of 0.85 and 0.84 are achieved for segmentation of whole gland and transition zone, respectively,
+in the target domain. 

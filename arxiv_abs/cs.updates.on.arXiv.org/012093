@@ -1,0 +1,20 @@
+The British Geological Survey's global geomagnetic model, Model of the Earth's Magnetic Environment
+(MEME), is an important tool for calculating the earth's magnetic field, which is continually in
+flux. Whilst the ability to collect data from ground based observation sites and satellites has
+grown, the memory bound nature of the code has proved a limitation in modelling problem sizes required
+by modern science. In this paper we describe work replacing the bespoke, sequential, eigen-solver
+with that of the SLEPc package for solving the system of normal equations. This work had a dual purpose,
+to break through the memory limit of the code, and thus support the modelling of much larger systems,
+by supporting execution on distributed machines, and to improve performance. But when adopting
+SLEPc it was not just the solving of the normal equations, but also fundamentally how we build and
+distribute the data structures. We describe an approach for building symmetric matrices in a way
+that provides good load balance and avoids the need for close co-ordination between processes or
+replication of work. We also study the memory bound nature of the code and combine detailed profiling
+with software cache prefetching to significantly optimise. Performance and scaling are explored
+on ARCHER, a Cray XC30, where we achieve a speed up for the solver of 294 times by replacing the model's
+bespoke approach with SLEPc. This work also provided the ability to model much larger system sizes,
+up to 100,000 model coefficients. Some of the challenges of modelling systems of this large scale
+are explored, and mitigations including hybrid MPI+OpenMP along with the use of iterative solvers
+are also considered. The result of this work is a modern MEME model that is not only capable of simulating
+problem sizes demanded by state of the art geomagnetism but also acts as further evidence to the utility
+of the SLEPc libary. 

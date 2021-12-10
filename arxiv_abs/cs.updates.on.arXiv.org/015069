@@ -1,0 +1,18 @@
+Mobile health (mHealth) apps such as menstrual trackers provide a rich source of self-tracked health
+observations that can be leveraged for health-relevant research. However, such data streams have
+questionable reliability since they hinge on user adherence to the app. Therefore, it is crucial
+for researchers to separate true behavior from self-tracking artifacts. By taking a machine learning
+approach to modeling self-tracked cycle lengths, we can both make more informed predictions and
+learn the underlying structure of the observed data. In this work, we propose and evaluate a hierarchical,
+generative model for predicting next cycle length based on previously-tracked cycle lengths that
+accounts explicitly for the possibility of users skipping tracking their period. Our model offers
+several advantages: 1) accounting explicitly for self-tracking artifacts yields better prediction
+accuracy as likelihood of skipping increases; 2) because it is a generative model, predictions
+can be updated online as a given cycle evolves, and we can gain interpretable insight into how these
+predictions change over time; and 3) its hierarchical nature enables modeling of an individual's
+cycle length history while incorporating population-level information. Our experiments using
+mHealth cycle length data encompassing over 186,000 menstruators with over 2 million natural menstrual
+cycles show that our method yields state-of-the-art performance against neural network-based
+and summary statistic-based baselines, while providing insights on disentangling menstrual
+patterns from self-tracking artifacts. This work can benefit users, mHealth app developers, and
+researchers in better understanding cycle patterns and user adherence. 

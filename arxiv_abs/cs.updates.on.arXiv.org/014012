@@ -1,0 +1,19 @@
+In recent times, object detection and pose estimation have gained significant attention in the
+context of robotic vision applications. Both the identification of objects of interest as well
+as the estimation of their pose remain important capabilities in order for robots to provide effective
+assistance for numerous robotic applications ranging from household tasks to industrial manipulation.
+This problem is particularly challenging because of the heterogeneity of objects having different
+and potentially complex shapes, and the difficulties arising due to background clutter and partial
+occlusions between objects. As the main contribution of this work, we propose a system that performs
+real-time object detection and pose estimation, for the purpose of dynamic robot grasping. The
+robot has been pre-trained to perform a small set of canonical grasps from a few fixed poses for each
+object. When presented with an unknown object in an arbitrary pose, the proposed approach allows
+the robot to detect the object identity and its actual pose, and then adapt a canonical grasp in order
+to be used with the new pose. For training, the system defines a canonical grasp by capturing the relative
+pose of an object with respect to the gripper attached to the robot's wrist. During testing, once
+a new pose is detected, a canonical grasp for the object is identified and then dynamically adapted
+by adjusting the robot arm's joint angles, so that the gripper can grasp the object in its new pose.
+We conducted experiments using a humanoid PR2 robot and showed that the proposed framework can detect
+well-textured objects, and provide accurate pose estimation in the presence of tolerable amounts
+of out-of-plane rotation. The performance is also illustrated by the robot successfully grasping
+objects from a wide range of arbitrary poses. 

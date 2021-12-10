@@ -1,0 +1,19 @@
+While self-supervised learning has made rapid advances in natural language processing, it remains
+unclear when researchers should engage in resource-intensive domain-specific pretraining (domain
+pretraining). The law, puzzlingly, has yielded few documented instances of substantial gains
+to domain pretraining in spite of the fact that legal language is widely seen to be unique. We hypothesize
+that these existing results stem from the fact that existing legal NLP tasks are too easy and fail
+to meet conditions for when domain pretraining can help. To address this, we first present CaseHOLD
+(Case Holdings On Legal Decisions), a new dataset comprised of over 53,000+ multiple choice questions
+to identify the relevant holding of a cited case. This dataset presents a fundamental task to lawyers
+and is both legally meaningful and difficult from an NLP perspective (F1 of 0.4 with a BiLSTM baseline).
+Second, we assess performance gains on CaseHOLD and existing legal NLP datasets. While a Transformer
+architecture (BERT) pretrained on a general corpus (Google Books and Wikipedia) improves performance,
+domain pretraining (using corpus of approximately 3.5M decisions across all courts in the U.S.
+that is larger than BERT's) with a custom legal vocabulary exhibits the most substantial performance
+gains with CaseHOLD (gain of 7.2% on F1, representing a 12% improvement on BERT) and consistent performance
+gains across two other legal tasks. Third, we show that domain pretraining may be warranted when
+the task exhibits sufficient similarity to the pretraining corpus: the level of performance increase
+in three legal tasks was directly tied to the domain specificity of the task. Our findings inform
+when researchers should engage resource-intensive pretraining and show that Transformer-based
+architectures, too, learn embeddings suggestive of distinct legal language. 

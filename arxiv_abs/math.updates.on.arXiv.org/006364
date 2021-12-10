@@ -1,0 +1,19 @@
+We introduce a new paradigm for solving regularized variational problems. These are typically
+formulated to address ill-posed inverse problems encountered in signal and image processing.
+The objective function is traditionally defined by adding a regularization function to a data fit
+term, which is subsequently minimized by using iterative optimization algorithms. Recently,
+several works have proposed to replace the operator related to the regularization by a more sophisticated
+denoiser. These approaches, known as plug-and-play (PnP) methods, have shown excellent performance.
+Although it has been noticed that, under some Lipschitz properties on the denoisers, the convergence
+of the resulting algorithm is guaranteed, little is known about characterizing the asymptotically
+delivered solution. In the current article, we propose to address this limitation. More specifically,
+instead of employing a functional regularization, we perform an operator regularization, where
+a maximally monotone operator (MMO) is learned in a supervised manner. This formulation is flexible
+as it allows the solution to be characterized through a broad range of variational inequalities,
+and it includes convex regularizations as special cases. From an algorithmic standpoint, the proposed
+approach consists in replacing the resolvent of the MMO by a neural network (NN). We present a universal
+approximation theorem proving that nonexpansive NNs are suitable models for the resolvent of a
+wide class of MMOs. The proposed approach thus provides a sound theoretical framework for analyzing
+the asymptotic behavior of first-order PnP algorithms. In addition, we propose a numerical strategy
+to train NNs corresponding to resolvents of MMOs. We apply our approach to image restoration problems
+and demonstrate its validity in terms of both convergence and quality. 

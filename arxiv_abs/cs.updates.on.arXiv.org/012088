@@ -1,0 +1,19 @@
+An immediate snapshot object is a high level communication object, built on top of a read/write distributed
+system in which all except one processes may crash. It allows a process to write a value and obtain
+a set of values that represent a snapshot of the values written to the object, occurring immediately
+after the write step. Considering an $n$-process model in which up to $t$ processes may crash, this
+paper introduces first the $k$-resilient immediate snapshot object, which is a natural generalization
+of the basic immediate snapshot (which corresponds to the case $k=t=n-1$). In addition to the set
+containment properties of the basic immediate snapshot, a $k$-resilient immediate snapshot object
+requires that each set returned to a process contains at least $(n-k)$ pairs. The paper first shows
+that, for $k,t<n-1$, $k$-resilient immediate snapshot is impossible in asynchronous read/write
+systems. %Then the paper investigates the space of objects that %are impossible to solve in $n$-process
+$t$-crash read/write systems. Then the paper investigates a model of computation where the processes
+communicate with each other by accessing $k$-immediate snapshot objects, and shows that this model
+is stronger than the $t$-crash model. Considering the space of $x$-set agreement problems (which
+are impossible to solve in systems such that $x\leq t$), the paper shows then that $x$-set agreement
+can be solved in read/write systems enriched with $k$-immediate snapshot objects for $x=\max(1,t+k-(n-2))$.
+It also shows that, in these systems, $k$-resilient immediate snapshot and consensus are equivalent
+when $1\leq t<n/2$ and $t\leq k\leq (n-1)-t$. Hence, %thanks to the problem map it provides, the
+paper establishes strong relations linking fundamental distributed computing objects (one related
+to communication, the other to agreement), which are impossible to solve in pure read/write systems.

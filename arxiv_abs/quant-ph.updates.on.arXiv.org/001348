@@ -1,0 +1,19 @@
+We propose a quantum k-means algorithm based on quantum cloud computing that effectively solves
+the problem that the client can not afford to execute the same quantum subroutine repeatedly in the
+face of large training samples. In the quantum k-means algorithm, the core subroutine is the Quantum
+minimization algorithm (GroverOptim), the client needs to repeat several Grover searches to find
+the minimum value in each iteration to find a new clustering center, so we use quantum homomorphic
+encryption scheme (QHE) to encrypt the data and upload it to the cloud for computing. After calculation,
+the server returns the calculation result to the client. The client uses the key to decrypt to get
+the plaintext result. It reduces the computing pressure for the client to repeat the same operation.
+In addition, when executing in the cloud, the key update of T-gate in the server is inevitable and
+complex. Therefore, this paper also proposes a T-gate update scheme based on trusted server in quantum
+ciphertext environment. In this scheme, the server is divided into trusted server and semi-trusted
+server. The semi-trusted server completes the calculation operation, and when the T-gate is executed
+in the circuit, the trusted server assists the semi-trusted server to calculate the T-gate, and
+then randomly generates a key and uploads it to the semi-trusted server. The trusted server assists
+the client to complete the key update operation, which once again reduces the pressure on the client
+and improves the efficiency of the quantum homomorphic encryption scheme. And on the basis of this
+scheme, the experiment is given by using IBM Qiskit to give the subroutine of quantum k-means. The
+experimental results show that the scheme can realize the corresponding computing function on
+the premise of ensuring security. 

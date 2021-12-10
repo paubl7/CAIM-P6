@@ -1,0 +1,19 @@
+We propose a self-stabilizing algorithm to construct a minimal weakly $\mathcal{ST}$-reachable
+directed acyclic graph (DAG), which is suited for routing messages on wireless networks. Given
+an arbitrary, simple, connected, and undirected graph $G=(V, E)$ and two sets of nodes, senders
+$\mathcal{S} (\subset V)$ and targets $\mathcal{T} (\subset V)$, a directed subgraph $\vec{G}$
+of $G$ is a weakly $\mathcal{ST}$-reachable DAG on $G$, if $\vec{G}$ is a DAG and every sender can
+reach at least one target, and every target is reachable from at least one sender in $\vec{G}$. We
+say that a weakly $\mathcal{ST}$-reachable DAG $\vec{G}$ on $G$ is minimal if any proper subgraph
+of $\vec{G}$ is no longer a weakly $\mathcal{ST}$-reachable DAG. This DAG is a relaxed version of
+the original (or strongly) $\mathcal{ST}$-reachable DAG, where every target is reachable from
+every sender. This is because a strongly $\mathcal{ST}$-reachable DAG $G$ does not always exist;
+some graph has no strongly $\mathcal{ST}$-reachable DAG even in the case $|\mathcal{S}|=|\mathcal{T}|=2$.
+On the other hand, the proposed algorithm always constructs a weakly $\mathcal{ST}$-reachable
+DAG for any $|\mathcal{S}|$ and $|\mathcal{T}|$. Furthermore, the proposed algorithm is self-stabilizing;
+even if the constructed DAG deviates from the reachability requirement by a breakdown or exhausting
+the battery of a node having an arc in the DAG, this algorithm automatically reconstructs the DAG
+to satisfy the requirement again. The convergence time of the algorithm is $O(D)$ asynchronous
+rounds, where $D$ is the diameter of a given graph. We conduct small simulations to evaluate the performance
+of the proposed algorithm. The simulation result indicates that its execution time decreases when
+the number of sender nodes or target nodes is large. 

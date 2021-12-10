@@ -1,0 +1,19 @@
+Among interpretable machine learning methods, the class of Generalised Additive Neural Networks
+(GANNs) is referred to as Self-Explaining Neural Networks (SENN) because of the linear dependence
+on explicit functions of the inputs. In binary classification this shows the precise weight that
+each input contributes towards the logit. The nomogram is a graphical representation of these weights.
+We show that functions of individual and pairs of variables can be derived from a functional Analysis
+of Variance (ANOVA) representation, enabling an efficient feature selection to be carried by application
+of the logistic Lasso. This process infers the structure of GANNs which otherwise needs to be predefined.
+As this method is particularly suited for tabular data, it starts by fitting a generic flexible model,
+in this case a Multi-layer Perceptron (MLP) to which the ANOVA decomposition is applied. This has
+the further advantage that the resulting GANN can be replicated as a SENN, enabling further refinement
+of the univariate and bivariate component functions to take place. The component functions are
+partial responses hence the SENN is a partial response network. The Partial Response Network (PRN)
+is equally as transparent as a traditional logistic regression model, but capable of non-linear
+classification with comparable or superior performance to the original MLP. In other words, the
+PRN is a fully interpretable representation of the MLP, at the level of univariate and bivariate
+effects. The performance of the PRN is shown to be competitive for benchmark data, against state-of-the-art
+machine learning methods including GBM, SVM and Random Forests. It is also compared with spline-based
+Sparse Additive Models (SAM) showing that a semi-parametric representation of the GAM as a neural
+network can be as effective as the SAM though less constrained by the need to set spline nodes. 

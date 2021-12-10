@@ -1,0 +1,18 @@
+In recent years, locomotion mechanisms exhibited by vertebrate animals have been the inspiration
+for the improvement in the performance of robotic systems. These mechanisms include the adaptability
+of their locomotion to any change registered in the environment through their biological sensors.
+In this regard, we aim to replicate such kind of adaptability in legged robots through a Spiking Central
+Pattern Generator. This Spiking Central Pattern Generator generates different locomotion (rhythmic)
+patterns which are driven by an external stimulus, that is, the output of a Force Sensitive Resistor
+connected to the robot to provide feedback. The Spiking Central Pattern Generator consists of a
+network of five populations of Leaky Integrate-and-Fire neurons designed with a specific topology
+in such a way that the rhythmic patterns can be generated and driven by the aforementioned external
+stimulus. Therefore, the locomotion of the end robotic platform (any-legged robot) can be adapted
+to the terrain by using any sensor as input. The Spiking Central Pattern Generator with adaptive
+learning has been numerically validated at software and hardware level, using the Brian 2 simulator
+and the SpiNNaker neuromorphic platform for the latest. In particular, our experiments clearly
+show an adaptation in the oscillation frequencies between the spikes produced in the populations
+of the Spiking Central Pattern Generator while the input stimulus varies. To validate the robustness
+and adaptability of the Spiking Central Pattern Generator, we have performed several tests by variating
+the output of the sensor. These experiments were carried out in Brian 2 and SpiNNaker; both implementations
+showed a similar behavior with a Pearson correlation coefficient of 0.905. 

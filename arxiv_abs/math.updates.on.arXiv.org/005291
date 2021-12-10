@@ -1,0 +1,20 @@
+This paper introduces a sharp interface method to simulate fluid-structure interaction (FSI)
+involving rigid bodies immersed in viscous incompressible fluids. The capabilities of this methodology
+are demonstrated for a range of benchmark test cases along with large-scale models of biomedical
+FSI. The numerical approach developed herein, which we refer to as an immersed Lagrangian-Eulerian
+method, integrates aspects of partitioned and immersed FSI formulations by solving separate momentum
+equations for the fluid and solid subdomains, as in a partitioned formulation, while also using
+non-conforming discretizations of the dynamic fluid and structure regions, as in an immersed formulation.
+A Dirichlet-Neumann coupling scheme is used, in which the motion of the immersed solid is driven
+by fluid traction forces evaluated along the fluid-structure interface, and the motion of the fluid
+along that interface is constrained to match the solid velocity and thereby satisfy the no-slip
+condition. To develop a practical numerical method, we adopt a penalty approach that approximately
+imposes the no-slip condition along the fluid-structure interface. Our fluid-structure interaction
+scheme relies on an immersed interface method for discrete geometries, which enables the accurate
+determination of both velocities and stresses along complex fluid-structure interfaces. Unlike
+commonly used partitioned FSI methods, which can suffer from so-called added mass effect instabilities,
+our methodology retains stability for test cases involving extremely small, nearly equal, equal,
+and large solid-fluid density ratios without requiring subiterations or complex handling of the
+pressure. Biomedical FSI demonstration cases are also presented including the dynamics of a bileaflet
+mechanical heart valve in a pulse duplicator, and transport of blood clots in a patient-averaged
+anatomical model of the inferior vena cava. 

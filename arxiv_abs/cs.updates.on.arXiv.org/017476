@@ -1,0 +1,18 @@
+We study the problem of scheduling $n$ independent moldable tasks on $m$ processors that arises
+in large-scale parallel computations where $m$ is large. A classic assumption is that every task
+is monotonic: its execution time decreases but its workload increases with the number $p$ of assigned
+processors. With $m$ independent of $n$, the best known result is a $(\frac{3}{2}+\epsilon)$-approximation
+algorithm for makespan minimization with a complexity linear in $n$ and polynomial in $\log{m}$
+and $\frac{1}{\epsilon}$ where $\epsilon$ is arbitrarily small. Motivated by benchmark studies,
+we introduce the notion of $(\delta, k)$-monotonic tasks: the speedup is linear when $p$ is small
+(up to a threshold $\delta$) while it may begin to decline when $p$ ranges in $[\delta, k]$; typically,
+$\delta\geq 25$; the bound $k$ indicates an unacceptable overhead when parallelizing on too many
+processors. With $m$ independent of $n$, we propose a $\frac{1}{\theta(\delta)} (1+\epsilon)$-approximation
+algorithm for makespan minimization with a complexity $\mathcal{O}(n\log{\frac{n}{\epsilon}})$
+where $\theta(\delta) = r(\delta)-\mathcal{O}(\frac{1}{m})$ and $r(\delta)\geq \frac{6}{7}$
+when $\delta\geq 25$. The main result of this paper is an algorithm whose approximation ratio is
+close to $\frac{7}{6}$ when $\delta\geq 25$ and $\frac{1}{r(\delta)}$ for an arbitrary value
+of $\delta$. Moreover, $r(\delta)\in (0, 1)$ is non-decreasing in $\delta$ and its value can be
+obtained by a simple computation, e.g., when $\delta=150$, $\frac{1}{r(\delta)}$ equals $\frac{16}{15}\approx
+1.067$ and is close to 1. As a by-product, we also propose a $\theta(\delta)$-approximation algorithm
+for throughput maximization with a common deadline with a complexity $\mathcal{O}(n^{2})$. 

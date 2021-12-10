@@ -1,0 +1,20 @@
+Background & Purpose: Chest X-Ray (CXR) use in pre-MRI safety screening for Lead-Less Implanted
+Electronic Devices (LLIEDs), easily overlooked or misidentified on a frontal view (often only
+acquired), is common. Although most LLIED types are "MRI conditional": 1. Some are stringently
+conditional; 2. Different conditional types have specific patient- or device- management requirements;
+and 3. Particular types are "MRI unsafe". This work focused on developing CXR interpretation-assisting
+Artificial Intelligence (AI) methodology with: 1. 100% detection for LLIED presence/location;
+and 2. High classification in LLIED typing. Materials & Methods: Data-mining (03/1993-02/2021)
+produced an AI Model Development Population (1,100 patients/4,871 images) creating 4,924 LLIED
+Region-Of-Interests (ROIs) (with image-quality grading) used in Training, Validation, and Testing.
+For developing the cascading neural network (detection via Faster R-CNN and classification via
+Inception V3), "ground-truth" CXR annotation (ROI labeling per LLIED), as well as inference display
+(as Generated Bounding Boxes (GBBs)), relied on a GPU-based graphical user interface. Results:
+To achieve 100% LLIED detection, probability threshold reduction to 0.00002 was required by Model
+1, resulting in increasing GBBs per LLIED-related ROI. Targeting LLIED-type classification following
+detection of all LLIEDs, Model 2 multi-classified to reach high-performance while decreasing
+falsely positive GBBs. Despite 24% suboptimal ROI image quality, classification was correct in
+98.9% and AUCs for the 9 LLIED-types were 1.00 for 8 and 0.92 for 1. For all misclassification cases:
+1. None involved stringently conditional or unsafe LLIEDs; and 2. Most were attributable to suboptimal
+images. Conclusion: This project successfully developed a LLIED-related AI methodology supporting:
+1. 100% detection; and 2. Typically 100% type classification. 

@@ -1,0 +1,18 @@
+Consider the problem of designing secure and private codes for distributed matrix-matrix multiplication.
+A master server owns two private matrices $\mA$ and $\mB$ and hires worker nodes to help computing
+their multiplication. The matrices should remain information-theoretically private from the
+workers. Some of the workers are malicious and return corrupted results to the master. This work
+is motivated by the literature on myopic adversaries in network coding and distributed storage.
+Security beyond the Singleton bound is possible when the adversary has limited knowledge about
+the master's data and probabilistic decoding is acceptable. The key observation in this setting
+is that the master is the sender and the receiver. Therefore, the master enjoys a plethora of advantages
+that enable coding for security beyond the Singleton bound. We design a framework for security against
+malicious adversaries in private matrix-matrix multiplication. Our main goal is to apply this
+security framework to schemes with adaptive rates previously introduced by a subset of the authors.
+Adaptive schemes divide the workers into clusters and thus provide flexibility in trading decoding
+complexity for efficiency. Checking the integrity of the computation per cluster has low complexity
+but costs deleting the results of a whole cluster with at least one malicious worker. Checking the
+integrity of the results per worker is more complex but allows an efficient use of the non-malicious
+workers. Our scheme, called SRPM3, provides a computationally efficient security check that detects
+malicious workers with high probability and can tolerate the presence of an arbitrary number of
+malicious workers. We provide simulation results that validate our theoretical findings. 

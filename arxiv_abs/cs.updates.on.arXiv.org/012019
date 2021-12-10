@@ -1,0 +1,18 @@
+The prevalence of e-commerce has made detailed customers' personal information readily accessible
+to retailers, and this information has been widely used in pricing decisions. When involving personalized
+information, how to protect the privacy of such information becomes a critical issue in practice.
+In this paper, we consider a dynamic pricing problem over $T$ time periods with an \emph{unknown}
+demand function of posted price and personalized information. At each time $t$, the retailer observes
+an arriving customer's personal information and offers a price. The customer then makes the purchase
+decision, which will be utilized by the retailer to learn the underlying demand function. There
+is potentially a serious privacy concern during this process: a third party agent might infer the
+personalized information and purchase decisions from price changes from the pricing system. Using
+the fundamental framework of differential privacy from computer science, we develop a privacy-preserving
+dynamic pricing policy, which tries to maximize the retailer revenue while avoiding information
+leakage of individual customer's information and purchasing decisions. To this end, we first introduce
+a notion of \emph{anticipating} $(\varepsilon, \delta)$-differential privacy that is tailored
+to dynamic pricing problem. Our policy achieves both the privacy guarantee and the performance
+guarantee in terms of regret. Roughly speaking, for $d$-dimensional personalized information,
+our algorithm achieves the expected regret at the order of $\tilde{O}(\varepsilon^{-1} \sqrt{d^3
+T})$, when the customers' information is adversarially chosen. For stochastic personalized information,
+the regret bound can be further improved to $\tilde{O}(\sqrt{d^2T} + \varepsilon^{-2} d^2)$ 

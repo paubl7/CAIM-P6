@@ -1,0 +1,19 @@
+A homomorphism from a graph $G$ to a graph $H$ is an edge-preserving mapping from $V(G)$ to $V(H)$.
+Let $H$ be a fixed graph with possible loops. In the list homomorphism problem, denoted by LHom($H$),
+we are given a graph $G$, whose every vertex $v$ is assigned with a list $L(v)$ of vertices of $H$. We
+ask whether there exists a homomorphism $h$ from $G$ to $H$, which respects lists $L$, i.e., for every
+$v \in V(G)$ it holds that $h(v) \in L(v)$. The complexity dichotomy for LHom($H$) was proven by Feder,
+Hell, and Huang [JGT 2003]. We are interested in the complexity of the problem, parameterized by
+the treewidth of the input graph. This problem was investigated by Egri, Marx, and Rz\k{a}\.zewski
+[STACS 2018], who obtained tight complexity bounds for the special case of reflexive graphs $H$.
+In this paper we extend and generalize their results for \emph{all} relevant graphs $H$, i.e., those,
+for which the LHom{H} problem is NP-hard. For every such $H$ we find a constant $k = k(H)$, such that
+LHom($H$) on instances with $n$ vertices and treewidth $t$ * can be solved in time $k^{t} \cdot n^{\mathcal{O}(1)}$,
+provided that the input graph is given along with a tree decomposition of width $t$, * cannot be solved
+in time $(k-\varepsilon)^{t} \cdot n^{\mathcal{O}(1)}$, for any $\varepsilon >0$, unless the
+SETH fails. For some graphs $H$ the value of $k(H)$ is much smaller than the trivial upper bound, i.e.,
+$|V(H)|$. Obtaining matching upper and lower bounds shows that the set of algorithmic tools we have
+discovered cannot be extended in order to obtain faster algorithms for LHom($H$) in bounded-treewidth
+graphs. Furthermore, neither the algorithm, nor the proof of the lower bound, is very specific to
+treewidth. We believe that they can be used for other variants of LHom($H$), e.g. with different
+parameterizations. 

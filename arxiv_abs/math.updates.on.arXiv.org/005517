@@ -1,0 +1,18 @@
+This paper proposes a deep learning approach to channel sensing and downlink hybrid analog and digital
+beamforming for massive multiple-input multiple-output systems with a limited number of radio-frequency
+chains operating in the time-division duplex mode at millimeter frequency. The conventional downlink
+precoding design hinges on the two-step process of first estimating the high-dimensional channel
+based on the uplink pilots received through the channel sensing matrices, then designing the precoding
+matrices based on the estimated channel. This two-step process is, however, not necessarily optimal,
+especially when the pilot length is short. This paper shows that by designing the analog sensing
+and the downlink precoding matrices directly from the received pilots without the intermediate
+channel estimation step, the overall system performance can be significantly improved. Specifically,
+we propose a channel sensing and hybrid precoding methodology that divides the pilot phase into
+an analog and a digital training phase. A deep neural network is utilized in the first phase to design
+the uplink channel sensing and the downlink analog beamformer. Subsequently, we fix the analog
+beamformers and design the digital precoder based on the equivalent low-dimensional channel.
+A key feature of the proposed deep learning architecture is that it decomposes into parallel independent
+single-user DNNs so that the overall design is generalizable to systems with an arbitrary number
+of users. Numerical comparisons reveal that the proposed methodology requires significantly
+less training overhead than the channel recovery based counterparts, and can approach the performance
+of systems with full channel state information with relatively few pilots. 

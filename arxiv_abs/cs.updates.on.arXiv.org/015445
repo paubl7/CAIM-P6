@@ -1,0 +1,19 @@
+Seven million people suffer complications after surgery each year. With sufficient surgical training
+and feedback, half of these complications could be prevented. Automatic surgical video analysis,
+especially for minimally invasive surgery, plays a key role in training and review, with increasing
+interests from recent studies on tool and workflow detection. In this research, a novel machine
+learning architecture, RPM-CNN, is created to perform real-time surgical video analysis. This
+architecture, for the first time, integrates visual simultaneous localization and mapping (vSLAM)
+into Mask R-CNN. Spatio-temporal information, in addition to the visual features, is utilized
+to increase the accuracy to 96.8 mAP for tool detection and 97.5 mean Jaccard for workflow detection,
+surpassing all previous works via the same benchmark dataset. As a real-time prediction, the RPM-CNN
+model reaches a 50 FPS runtime performance speed, 10x faster than region based CNN, by modeling the
+spatio-temporal information directly from surgical videos during the vSLAM 3D mapping. Additionally,
+this novel Region Proposal Module (RPM) replaces the region proposal network (RPN) in Mask R-CNN,
+accurately placing bounding-boxes and lessening the annotation requirement. In principle, this
+architecture integrates the best of both worlds, inclusive of (1) vSLAM on object detection, through
+focusing on geometric information for region proposals and (2) CNN on object recognition, through
+focusing on semantic information for image classification; the integration of these two technologies
+into one joint training process opens a new door in computer vision. Furthermore, to apply RPM-CNN's
+real-time top performance to the real world, a Microsoft HoloLens 2 application is developed to
+provide an augmented reality (AR) based solution for both surgical training and assistance. 

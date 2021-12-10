@@ -1,0 +1,18 @@
+Adversarial patch attack against image classification deep neural networks (DNNs), in which the
+attacker can inject arbitrary distortions within a bounded region of an image, is able to generate
+adversarial perturbations that are robust (i.e., remain adversarial in physical world) and universal
+(i.e., remain adversarial on any input). It is thus important to detect and mitigate such attack
+to ensure the security of DNNs. This work proposes Jujutsu, a technique to detect and mitigate robust
+and universal adversarial patch attack. Jujutsu leverages the universal property of the patch
+attack for detection. It uses explainable AI technique to identify suspicious features that are
+potentially malicious, and verify their maliciousness by transplanting the suspicious features
+to new images. An adversarial patch continues to exhibit the malicious behavior on the new images
+and thus can be detected based on prediction consistency. Jujutsu leverages the localized nature
+of the patch attack for mitigation, by randomly masking the suspicious features to "remove" adversarial
+perturbations. However, the network might fail to classify the images as some of the contents are
+removed (masked). Therefore, Jujutsu uses image inpainting for synthesizing alternative contents
+from the pixels that are masked, which can reconstruct the "clean" image for correct prediction.
+We evaluate Jujutsu on five DNNs on two datasets, and show that Jujutsu achieves superior performance
+and significantly outperforms existing techniques. Jujutsu can further defend against various
+variants of the basic attack, including 1) physical-world attack; 2) attacks that target diverse
+classes; 3) attacks that use patches in different shapes and 4) adaptive attacks. 

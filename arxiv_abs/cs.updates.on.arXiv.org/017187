@@ -1,0 +1,19 @@
+In introductory programming courses, it is challenging for instructors to provide debugging feedback
+on students' incorrect programs. Some recent tools automatically offer program repair feedback
+by identifying any differences between incorrect and correct programs, but suffer from issues
+related to scalability, accuracy, and cross-language portability. This paper presents FAPR --
+our novel approach that suggests repairs based on program differences in a fast and accurate manner.
+FAPR is different from current tools in three aspects. First, it encodes syntactic information
+into token sequences to enable high-speed comparison between incorrect and correct programs.
+Second, to accurately extract program differences, FAPR adopts a novel matching algorithm that
+maximizes token-level matches and minimizes statement-level differences. Third, FAPR relies
+on testing instead of static/dynamic analysis to validate and refine candidate repairs, so it eliminates
+the language dependency or high runtime overhead incurred by complex program analysis. We implemented
+FAPR to suggest repairs for both C and C++ programs; our experience shows the great cross-language
+portability of FAPR. More importantly, we empirically compared FAPR with a state-of-the-art tool
+Clara. FAPR suggested repairs for over 95.5% of incorrect solutions. We sampled 250 repairs among
+FAPR's suggestions, and found 89.6% of the samples to be minimal and correct. FAPR outperformed
+Clara by suggesting repairs for more cases, creating smaller repairs, producing higher-quality
+fixes, and causing lower runtime overheads. Our results imply that FAPR can potentially help instructors
+or TAs to effectively locate bugs in incorrect code, and to provide debugging hints/guidelines
+based on those generated repairs. 

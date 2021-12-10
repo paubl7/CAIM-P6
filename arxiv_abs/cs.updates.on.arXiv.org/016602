@@ -1,0 +1,20 @@
+Retinex model has been applied to low-light image enhancement in many existing methods. More appropriate
+decomposition of a low-light image can help achieve better image enhancement. In this paper, we
+propose a new pixel-level non-local Haar transform based illumination and reflectance decomposition
+method (NLHD). The unique low-frequency coefficient of Haar transform on each similar pixel group
+is used to reconstruct the illumination component, and the rest of all high-frequency coefficients
+are employed to reconstruct the reflectance component. The complete similarity of pixels in a matched
+similar pixel group and the simple separable Haar transform help to obtain more appropriate image
+decomposition; thus, the image is hardly sharpened in the image brightness enhancement procedure.
+The exponential transform and logarithmic transform are respectively implemented on the illumination
+component. Then a minimum fusion strategy on the results of these two transforms is utilized to achieve
+more natural illumination component enhancement. It can alleviate the mosaic artifacts produced
+in the darker regions by the exponential transform with a gamma value less than 1 and reduce information
+loss caused by excessive enhancement of the brighter regions due to the logarithmic transform.
+Finally, the Retinex model is applied to the enhanced illumination and reflectance to achieve image
+enhancement. We also develop a local noise level estimation based noise suppression method and
+a non-local saturation reduction based color deviation correction method. These two methods can
+respectively attenuate noise or color deviation usually presented in the enhanced results of the
+extremely dark low-light images. Experiments on benchmark datasets show that the proposed method
+can achieve better low-light image enhancement results on subjective and objective evaluations
+than most existing methods. 

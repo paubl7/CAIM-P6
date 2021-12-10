@@ -1,0 +1,20 @@
+Context: Given a bug report and source code of the project, bug localization can help developers
+to focus on fixing probable buggy files rather than searching the entire source code repository.
+While existing research uses information retrieval (IR) and/or combination of machine learning
+(ML) or deep learning (DL) approaches, they focus primarily on benchmark Java projects, and also
+motivate the need for multi-language bug localization approach. Objective: To create a novel bug
+localization approach that leverages the syntactic structure of source code, bug report information
+and which can support multi-language projects along with a new dataset of C projects. Method: The
+proposed DRAST approach represents source code as code vectors by using its high-level AST and combines
+rVSM, an IR technique with ML/DL models such as Random Forest and Deep Neural Network regressor to
+rank the list of buggy files. We also use features such as textual similarity using IR techniques,
+lexical mismatch using DNNs, and history of the project using the metadata of BugC dataset. Results:
+We tested DRAST on seven projects from the BugC dataset, which consists of 2462 bug reports from 21
+open-source C projects. The results show that DRAST can locate correct buggy files 90% of the time
+from top 1, 5, and 10 suggested files with MAP and MRR scores of above 90% for the randomly selected
+seven projects. We also tested DRAST on Tomcat and AspectJ, projects from benchmark dataset with
+better results at accuracy@1, MAP and MRR when compared with state-of-the-art. Conclusions: This
+paper presents a novel bug localization approach that works on C and Java projects and a bug localization
+C dataset along with a novel source code representation. The results for C projects using DRAST are
+promising and could motivate researchers/practitioners to focus on developing and creating multi-language
+bug localization approaches. 

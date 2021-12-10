@@ -1,0 +1,19 @@
+Increasing the depth of Graph Convolutional Networks (GCN), which in principal can permit more
+expressivity, is shown to incur detriment to the performance especially on node classification.
+The main cause of this issue lies in \emph{over-smoothing}. As its name implies, over-smoothing
+drives the output of GCN with the increase in network depth towards a space that contains limited
+distinguished information among nodes, leading to poor trainability and expressivity. Several
+works on refining the architecture of deep GCN have been proposed, but the improvement in performance
+is still marginal and it is still unknown in theory whether or not these refinements are able to relieve
+over-smoothing. In this paper, we first theoretically analyze the over-smoothing issue for a general
+family of prevailing GCNs, including generic GCN, GCN with bias, ResGCN, and APPNP. We prove that
+the over-smoothing of all these models is characterized by an universal process, i.e. all nodes
+converging to a cuboid of specific structure. Upon this universal theorem, we further propose DropEdge,
+a novel and flexible technique to alleviate over-smoothing. At its core, DropEdge randomly removes
+a certain number of edges from the input graph at each training epoch, acting like a data augmenter
+and also a message passing reducer. Furthermore, we theoretically demonstrate that DropEdge either
+reduces the convergence speed of over-smoothing for general GCNs or relieves the information loss
+caused by it. One group of experimental evaluations on simulated dataset has visualized the difference
+of over-smoothing between different GCNs as well as verifying the validity of our proposed theorems.
+Moreover, extensive experiments on several real benchmarks support that DropEdge consistently
+improves the performance on a variety of both shallow and deep GCNs. 

@@ -1,0 +1,19 @@
+Despite the great success of High-Level Synthesis (HLS) tools, we observe several unresolved challenges:
+1) the high-level abstraction of programming styles in HLS sometimes conceals optimization opportunities;
+2) existing HLS tools do not provide flexible trade-off (Pareto) solutions among different objectives
+and constraints; 3) the actual quality of the resulting RTL designs is hard to predict. To address
+these challenges, we propose an end-to-end framework, namelyIronMan. The primary goal is to enable
+a flexible and automated design space exploration (DSE), to provide either optimal solutions under
+user-specified constraints, or various trade-offs among different objectives (such as different
+types of resources, area, and latency). Such DSE either requires tedious manual efforts or is not
+achievable to attain these goals through existing HLS tools. There are three components in IronMan:
+1) GPP, a highly accurate graph-neural-network-based performance and resource predictor; 2)
+RLMD, a reinforcement-learning-based multi-objective DSE engine that explores the optimal resource
+allocation strategy, to provide Pareto solutions between different objectives; 3) CT, a code transformer
+to assist RLMD and GPP, which extracts the data flow graph from original HLS C/C++ and automatically
+generates synthesizable code with HLS directives. The experimental results show that: 1) GPP achieves
+high prediction accuracy, reducing prediction errors of HLS tools by 10.9x in resource utilization
+and 5.7x in timing; 2) RLMD obtains optimal or Pareto solutions that outperform the genetic algorithm
+and simulated annealing by 12.7% and 12.9%, respectively; 3) IronMan is able to find optimized solutions
+perfectly matching various DSP constraints, with 2.54x fewer DSPs and up to 6x shorter latency than
+those of HLS tools while being up to 400x faster than the heuristic algorithms and HLS tools. 

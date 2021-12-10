@@ -1,0 +1,19 @@
+Current archives of the LAMOST telescope contain millions of pipeline-processed spectra that
+have probably never been seen by human eyes. Most of the rare objects with interesting physical properties,
+however, can only be identified by visual analysis of their characteristic spectral features.
+A proper combination of interactive visualisation with modern machine learning techniques opens
+new ways to discover such objects. We apply active learning classification supported by deep convolutional
+networks to automatically identify complex emission-line shapes in multi-million spectra archives.
+We used the pool-based uncertainty sampling active learning driven by a custom-designed deep convolutional
+neural network with 12 layers inspired by VGGNet, AlexNet, and ZFNet, but adapted for one-dimensional
+feature vectors. The unlabelled pool set is represented by 4.1 million spectra from the LAMOST DR2
+survey. The initial training of the network was performed on a labelled set of about 13000 spectra
+obtained in the region around H$\alpha$ by the 2m Perek telescope of the Ond\v{r}ejov observatory,
+which mostly contains spectra of Be and related early-type stars. The differences between the Ond\v{r}ejov
+intermediate-resolution and the LAMOST low-resolution spectrographs were compensated for by
+Gaussian blurring. After several iterations, the network was able to successfully identify emission-line
+stars with an error smaller than 6.5%. Using the technology of the Virtual Observatory to visualise
+the results, we discovered 1013 spectra of 948 new candidates of emission-line objects in addition
+to 664 spectra of 549 objects that are listed in SIMBAD and 2644 spectra of 2291 objects identified
+in an earlier paper of a Chinese group led by Wen Hou. The most interesting objects with unusual spectral
+properties are discussed in detail. 

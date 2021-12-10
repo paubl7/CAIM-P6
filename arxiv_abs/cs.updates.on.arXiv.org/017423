@@ -1,0 +1,19 @@
+Code comment generation techniques aim to generate natural language descriptions for source code.
+There are two orthogonal approaches for this task, i.e., information retrieval (IR) based and neural-based
+methods. Recent studies have focused on combining their strengths by feeding the input code and
+its similar code snippets retrieved by the IR-based approach to the neural-based approach, which
+can enhance the neural-based approach's ability to output low-frequency words and further improve
+the performance. However, despite the tremendous progress, our pilot study reveals that the current
+combination is not generalizable and can lead to performance degradation. In this paper, we propose
+a straightforward but effective approach to tackle the issue of existing combinations of these
+two comment generation approaches. Instead of binding IR- and neural-based approaches statically,
+we combine them in a dynamic manner. Specifically, given an input code snippet, we first use an IR-based
+technique to retrieve a similar code snippet from the corpus. Then we use a Cross-Encoder based classifier
+to decide the comment generation method to be used dynamically, i.e., if the retrieved similar code
+snippet is a true positive (i.e., is semantically similar to the input), we directly use the IR-based
+technique. Otherwise, we pass the input to the neural-based model to generate the comment. We evaluate
+our approach on a large-scale dataset of Java projects. Experiment results show that our approach
+can achieve 25.45 BLEU score, which improves the state-of-the-art IR-based approach, neural-based
+approach, and their combination by 41%, 26%, and 7%, respectively. We propose a straightforward
+but effective dynamic combination of IR-based and neural-based comment generation, which outperforms
+state-of-the-art approaches by a substantial margin. 

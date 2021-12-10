@@ -1,0 +1,18 @@
+In this article, we propose a novel scalar-transport model for the simulation of scalar quantities
+in two-phase flows with a phase-field method (diffuse-interface method). In a two-phase flow,
+the scalar quantities typically have disparate properties in two phases, which results in effective
+confinement of the scalar quantities in one of the phases, in the time scales of interest. This confinement
+of the scalars lead to the formation of sharp gradients of the scalar concentration values at the
+interface, presenting a serious challenge for its numerical simulations. To overcome this challenge,
+we propose a model for the transport of scalars. The model is discretized using a central-difference
+scheme, which leads to a non-dissipative implementation that is crucial for the simulation of turbulent
+flows. Furthermore, the provable strengths of the proposed model are: (a) the model maintains the
+positivity property of the scalar concentration field, a physical realizability requirement
+for the simulation of scalars, when the proposed criterion is satisfied, (b) the proposed model
+is such that the transport of the scalar concentration field is consistent with the transport of
+the volume fraction field, which results in the enforcement of the effective zero-flux boundary
+condition for the scalar at the interface; and therefore, prevents the artificial numerical diffusion
+of the scalar across the interface. Finally, we present numerical simulations using the proposed
+model in a wide range of two-phase flow regimes, spanning laminar to turbulent flows; and assess:
+the accuracy and robustness of the model, the validity of the positivity property of the scalar concentration
+field, and the enforcement of the zero-flux boundary condition for the scalar at the interface.

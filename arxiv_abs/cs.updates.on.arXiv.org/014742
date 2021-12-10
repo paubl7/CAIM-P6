@@ -1,0 +1,19 @@
+We introduce an algorithm to remesh meshes representing developable surfaces to planar quad dominant
+meshes. The output of our algorithm consists of planar quadrilateral (PQ) strips aligned to principal
+curvature directions and closely approximating the curved parts of the input developable, along
+with planar polygons representing the flat parts of the input. Such developable PQ-strip meshes
+are useful in many areas of shape modeling thanks to the simplicity of fabrication from flat sheet
+material. However, they are difficult to use in the modeling phase due to their restrictive combinatorics
+and locking issues. Other representations of developable surfaces, such as arbitrary triangle
+or quad meshes, are more suitable for interactive freeform modeling but generally have non-planar
+faces or are not aligned to principal curvature. Our method enables one to leverage the modeling
+flexibility of non-ruling based representations of developable surfaces but still obtain developable,
+curvature-aligned PQ-strip meshes. Our algorithm optimizes a scalar function on the input mesh,
+such that its level sets are straight and align well to the locally estimated ruling directions.
+The condition that guarantees straight level sets is nonlinear of high order and numerically difficult
+to enforce in a straightforward manner. We devise a dedicated optimization method that makes our
+problem tractable and practical to compute. Our method works automatically on any developable
+input, including multiple patches and curved folds, without explicit domain decomposition. We
+demonstrate the effectiveness of our approach on a variety of developable surfaces and show how
+our remeshing can be used alongside handle based interactive freeform modeling of developable
+shapes. 

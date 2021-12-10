@@ -1,0 +1,20 @@
+Large surveys using modern telescopes are producing images that are increasing exponentially
+in size and quality. Identifying objects in the generated images by visual recognition is time-consuming
+and labor-intensive, while classifying the extracted radio sources is even more challenging.
+To address these challenges, we develop a deep learning-based radio source detector, named \textsc{HeTu},
+which is capable of rapidly identifying and classifying radio sources in an automated manner for
+both compact and extended radio sources. \textsc{HeTu} is based on a combination of a residual network
+(ResNet) and feature pyramid network (FPN). We classify radio sources into four classes based on
+their morphology. The training images are manually labeled and data augmentation methods are applied
+to solve the data imbalance between the different classes. \textsc{HeTu} automatically locates
+the radio sources in the images and assigns them to one of the four classes. The experiment on the testing
+dataset shows an average operation time of 5.4 millisecond per image and a precision of 99.4\% for
+compact point-like sources and 98.1\% for double-lobe sources. We applied \textsc{HeTu} to the
+images obtained from the GaLactic and the Galactic Extragalactic All-Object Murchison Wide-field
+Array (GLEAM) survey project. More than 96.9\% of the \textsc{HeTu}-detected compact sources
+are matched compared to the source finding software used in the GLEAM. We also detected and classified
+2,298 extended sources (including Fanaroff-Riley type I and II sources, and core-jet sources)
+above $5\sigma$. The cross-matching rates of extended sources are higher than 97\%, showing excellent
+performance of \textsc{HeTu} in identifying extended radio sources. \textsc{HeTu} provides
+an efficient tool for radio source finding and classification and can be applied to other scientific
+fields. 

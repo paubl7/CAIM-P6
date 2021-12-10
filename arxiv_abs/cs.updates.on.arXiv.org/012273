@@ -1,0 +1,19 @@
+Deep Learning-based methods recently have achieved remarkable progress in medical image analysis,
+but heavily rely on massive amounts of labeled training data. Transfer learning from pre-trained
+models has been proposed as a standard pipeline on medical image analysis to address this bottleneck.
+Despite their success, the existing pre-trained models are mostly not tuned for multi-modal multi-task
+generalization in medical domains. Specifically, their training data are either from non-medical
+domain or in single modality, failing to attend to the problem of performance degradation with cross-modal
+transfer. Furthermore, there is no effort to explicitly extract multi-level features required
+by a variety of downstream tasks. To overcome these limitations, we propose Universal Model, a transferable
+and generalizable pre-trained model for 3D medical image analysis. A unified self-supervised
+learning scheme is leveraged to learn representations from multiple unlabeled source datasets
+with different modalities and distinctive scan regions. A modality invariant adversarial learning
+module is further introduced to improve the cross-modal generalization. To fit a wide range of tasks,
+a simple yet effective scale classifier is incorporated to capture multi-level visual representations.
+To validate the effectiveness of the Universal Model, we perform extensive experimental analysis
+on five target tasks, covering multiple imaging modalities, distinctive scan regions, and different
+analysis tasks. Compared with both public 3D pre-trained models and newly investigated 3D self-supervised
+learning methods, Universal Model demonstrates superior generalizability, manifested by its
+higher performance, stronger robustness and faster convergence. The pre-trained Universal Model
+is available at: \href{https://github.com/xm-cmic/Universal-Model}{https://github.com/xm-cmic/Universal-Model}.

@@ -1,0 +1,20 @@
+Brain-computer interfaces (BCIs) enable direct communication between humans and machines by
+translating brain activity into control commands. EEG is one of the most common sources of neural
+signals because of its inexpensive and non-invasive nature. However, interpretation of EEG signals
+is non-trivial because EEG signals have a low spatial resolution and are often distorted with noise
+and artifacts. Therefore, it is possible that meaningful patterns for classifying EEG signals
+are deeply hidden. Nowadays, state-of-the-art deep-learning algorithms have proven to be quite
+efficient in learning hidden, meaningful patterns. However, the performance of the deep learning
+algorithms depends upon the quality and the amount of the provided training data. Hence, a better
+input formation (feature extraction) technique and a generative model to produce high-quality
+data can enable the deep learning algorithms to adapt high generalization quality. In this study,
+we proposed a novel input formation (feature extraction) method in conjunction with a novel deep
+learning based generative model to harness new training examples. The feature vectors are extracted
+using a modified Short Time Fourier Transform (STFT) called anchored-STFT. Anchored-STFT, inspired
+by wavelet transform, tries to minimize the tradeoff between time and frequency resolution. As
+a result, it extracts the inputs (feature vectors) with better time and frequency resolution compared
+to the standard STFT. Secondly, we introduced a novel generative adversarial data augmentation
+technique called gradient norm adversarial augmentation (GNAA) for generating more training
+data. Thirdly, we investigated the existence and significance of adversarial inputs in EEG data.
+Our approach obtained the kappa value of 0.814 for BCI competition II dataset III and 0.755 for BCI
+competition IV dataset 2b for session-to-session transfer on test data. 

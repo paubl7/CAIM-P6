@@ -1,0 +1,18 @@
+Existing multi-camera solutions for automatic scorekeeping in steel-tip darts are very expensive
+and thus inaccessible to most players. Motivated to develop a more accessible low-cost solution,
+we present a new approach to keypoint detection and apply it to predict dart scores from a single image
+taken from any camera angle. This problem involves detecting multiple keypoints that may be of the
+same class and positioned in close proximity to one another. The widely adopted framework for regressing
+keypoints using heatmaps is not well-suited for this task. To address this issue, we instead propose
+to model keypoints as objects. We develop a deep convolutional neural network around this idea and
+use it to predict dart locations and dartboard calibration points within an overall pipeline for
+automatic dart scoring, which we call DeepDarts. Additionally, we propose several task-specific
+data augmentation strategies to improve the generalization of our method. As a proof of concept,
+two datasets comprising 16k images originating from two different dartboard setups were manually
+collected and annotated to evaluate the system. In the primary dataset containing 15k images captured
+from a face-on view of the dartboard using a smartphone, DeepDarts predicted the total score correctly
+in 94.7% of the test images. In a second more challenging dataset containing limited training data
+(830 images) and various camera angles, we utilize transfer learning and extensive data augmentation
+to achieve a test accuracy of 84.0%. Because DeepDarts relies only on single images, it has the potential
+to be deployed on edge devices, giving anyone with a smartphone access to an automatic dart scoring
+system for steel-tip darts. The code and datasets are available. 

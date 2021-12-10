@@ -1,0 +1,19 @@
+Deep reinforcement learning has achieved significant milestones, however, the computational
+demands of reinforcement learning training and inference remain substantial. Quantization is
+an effective method to reduce the computational overheads of neural networks, though in the context
+of reinforcement learning, it is unknown whether quantization's computational benefits outweigh
+the accuracy costs introduced by the corresponding quantization error. To quantify this tradeoff
+we perform a broad study applying quantization to reinforcement learning. We apply standard quantization
+techniques such as post-training quantization (PTQ) and quantization aware training (QAT) to
+a comprehensive set of reinforcement learning tasks (Atari, Gym), algorithms (A2C, DDPG, DQN,
+D4PG, PPO), and models (MLPs, CNNs) and show that policies may be quantized to 8-bits without degrading
+reward, enabling significant inference speedups on resource-constrained edge devices. Motivated
+by the effectiveness of standard quantization techniques on reinforcement learning policies,
+we introduce a novel quantization algorithm, \textit{ActorQ}, for quantized actor-learner distributed
+reinforcement learning training. By leveraging full precision optimization on the learner and
+quantized execution on the actors, \textit{ActorQ} enables 8-bit inference while maintaining
+convergence. We develop a system for quantized reinforcement learning training around \textit{ActorQ}
+and demonstrate end to end speedups of $>$ 1.5 $\times$ - 2.5 $\times$ over full precision training
+on a range of tasks (Deepmind Control Suite). Finally, we break down the various runtime costs of
+distributed reinforcement learning training (such as communication time, inference time, model
+load time, etc) and evaluate the effects of quantization on these system attributes. 

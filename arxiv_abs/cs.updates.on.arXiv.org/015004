@@ -1,0 +1,18 @@
+Linear kinetic transport equations play a critical role in optical tomography, radiative transfer
+and neutron transport. The fundamental difficulty hampering their efficient and accurate numerical
+resolution lies in the high dimensionality of the physical and velocity/angular variables and
+the fact that the problem is multiscale in nature. Leveraging the existence of a hidden low-rank
+structure hinted by the diffusive limit, in this work, we design and test the angular-space reduced
+order model for the linear radiative transfer equation, the first such effort based on the celebrated
+reduced basis method (RBM). Our method is built upon a high-fidelity solver employing the discrete
+ordinates method in the angular space, an asymptotic preserving upwind discontinuous Galerkin
+method for the physical space, and an efficient synthetic accelerated source iteration for the
+resulting linear system. Addressing the challenge of the parameter values (or angular directions)
+being coupled through an integration operator, the first novel ingredient of our method is an iterative
+procedure where the macroscopic density is constructed from the RBM snapshots, treated explicitly
+and allowing a transport sweep, and then updated afterwards. A greedy algorithm can then proceed
+to adaptively select the representative samples in the angular space and form a surrogate solution
+space. The second novelty is a least-squares density reconstruction strategy, at each of the relevant
+physical locations, enabling the robust and accurate integration over an arbitrarily unstructured
+set of angular samples toward the macroscopic density. Numerical experiments indicate that our
+method is highly effective for computational cost reduction in a variety of regimes. 

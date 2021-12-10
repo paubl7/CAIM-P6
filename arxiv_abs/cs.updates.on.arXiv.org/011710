@@ -1,0 +1,19 @@
+We show how to construct an overlay network of constant degree and diameter $O(\log n)$ in time $O(\log
+n)$ starting from an arbitrary weakly connected graph. We assume a synchronous communication network
+in which nodes can send messages to nodes they know the identifier of, and new connections can be established
+by sending node identifiers. If the initial network's graph is weakly connected and has constant
+degree, then our algorithm constructs the desired topology with each node sending and receiving
+only $O(\log n)$ messages in each round in time $O(\log n)$, w.h.p., which beats the currently best
+$O(\log^{3/2} n)$ time algorithm of [G\"otte et al., SIROCCO'19]. Since the problem cannot be solved
+faster than by using pointer jumping for $O(\log n)$ rounds (which would even require each node to
+communicate $\Omega(n)$ bits), our algorithm is asymptotically optimal. We achieve this speedup
+by using short random walks to repeatedly establish random connections between the nodes that quickly
+reduce the conductance of the graph using an observation of [Kwok and Lau, APPROX'14]. Additionally,
+we show how our algorithm can be used to efficiently solve graph problems in \emph{hybrid networks}
+[Augustine et al., SODA'20]. Motivated by the idea that nodes possess two different modes of communication,
+we assume that communication of the \emph{initial} edges is unrestricted, whereas only polylogarithmically
+many messages can be communicated over edges that have been established throughout an algorithm's
+execution. For an (undirected) graph $G$ with arbitrary degree, we show how to compute connected
+components, a spanning tree, and biconnected components in time $O(\log n)$, w.h.p. Furthermore,
+we show how to compute an MIS in time $O(\log d + \log \log n)$, w.h.p., where $d$ is the initial degree
+of $G$. 

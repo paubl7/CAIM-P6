@@ -1,0 +1,18 @@
+The hypothesis that image datasets gathered online "in the wild" can produce biased object recognizers,
+e.g. preferring professional photography or certain viewing angles, is studied. A new "in the lab"
+data collection infrastructure is proposed consisting of a drone which captures images as it circles
+around objects. Crucially, the control provided by this setup and the natural camera shake inherent
+to flight mitigate many biases. It's inexpensive and easily replicable nature may also potentially
+lead to a scalable data collection effort by the vision community. The procedure's usefulness is
+demonstrated by creating a dataset of Objects Obtained With fLight (OOWL). Denoted as OOWL500,
+it contains 120,000 images of 500 objects and is the largest "in the lab" image dataset available
+when both number of classes and objects per class are considered. Furthermore, it has enabled several
+of new insights on object recognition. First, a novel adversarial attack strategy is proposed,
+where image perturbations are defined in terms of semantic properties such as camera shake and pose.
+Indeed, experiments have shown that ImageNet has considerable amounts of pose and professional
+photography bias. Second, it is used to show that the augmentation of in the wild datasets, such as
+ImageNet, with in the lab data, such as OOWL500, can significantly decrease these biases, leading
+to object recognizers of improved generalization. Third, the dataset is used to study questions
+on "best procedures" for dataset collection. It is revealed that data augmentation with synthetic
+images does not suffice to eliminate in the wild datasets biases, and that camera shake and pose diversity
+play a more important role in object recognition robustness than previously thought. 

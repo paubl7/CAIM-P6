@@ -1,0 +1,19 @@
+Positron Emission Tomography (PET) is an imaging method that can assess physiological function
+rather than structural disturbances by measuring cerebral perfusion or glucose consumption.
+However, this imaging technique relies on injection of radioactive tracers and is expensive. On
+the contrary, Arterial Spin Labeling (ASL) MRI is a non-invasive, non-radioactive, and relatively
+cheap imaging technique for brain hemodynamic measurements, which allows quantification to some
+extent. In this paper we propose a convolutional neural network (CNN) based model for translating
+ASL to PET images, which could benefit patients as well as the healthcare system in terms of expenses
+and adverse side effects. However, acquiring a sufficient number of paired ASL-PET scans for training
+a CNN is prohibitive for many reasons. To tackle this problem, we present a new semi-supervised multitask
+CNN which is trained on both paired data, i.e. ASL and PET scans, and unpaired data, i.e. only ASL scans,
+which alleviates the problem of training a network on limited paired data. Moreover, we present
+a new residual-based-attention guided mechanism to improve the contextual features during the
+training process. Also, we show that incorporating T1-weighted scans as an input, due to its high
+resolution and availability of anatomical information, improves the results. We performed a two-stage
+evaluation based on quantitative image metrics by conducting a 7-fold cross validation followed
+by a double-blind observer study. The proposed network achieved structural similarity index measure
+(SSIM), mean squared error (MSE) and peak signal-to-noise ratio (PSNR) values of $0.85\pm0.08$,
+$0.01\pm0.01$, and $21.8\pm4.5$ respectively, for translating from 2D ASL and T1-weighted images
+to PET data. The proposed model is publicly available via https://github.com/yousefis/ASL2PET.

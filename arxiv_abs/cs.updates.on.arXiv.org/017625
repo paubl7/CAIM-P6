@@ -1,0 +1,19 @@
+Human Motion Prediction is a crucial task in computer vision and robotics. It has versatile application
+potentials such as in the area of human-robot interactions, human action tracking for airport security
+systems, autonomous car navigation, computer gaming to name a few. However, predicting human motion
+based on past actions is an extremely challenging task due to the difficulties in detecting spatial
+and temporal features correctly. To detect temporal features in human poses, we propose an Inception
+Residual Block(IRB), due to its inherent capability of processing multiple kernels to capture
+salient features. Here, we propose to use multiple 1-D Convolution Neural Network (CNN) with different
+kernel sizes and input sequence lengths and concatenate them to get proper embedding. As kernels
+strides over different receptive fields, they detect smaller and bigger salient features at multiple
+temporal scales. Our main contribution is to propose a residual connection between input and the
+output of the inception block to have a continuity between the previously observed pose and the next
+predicted pose. With this proposed architecture, it learns prior knowledge much better about human
+poses and we achieve much higher prediction accuracy as detailed in the paper. Subsequently, we
+further propose to feed the output of the inception residual block as an input to the Graph Convolution
+Neural Network (GCN) due to its better spatial feature learning capability. We perform a parametric
+analysis for better designing of our model and subsequently, we evaluate our approach on the Human
+3.6M dataset and compare our short-term as well as long-term predictions with the state of the art
+papers, where our model outperforms most of the pose results, the detailed reasons of which have
+been elaborated in the paper. 

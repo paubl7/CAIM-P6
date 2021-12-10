@@ -1,0 +1,18 @@
+Given a weighted undirected graph $G=(V,E,w)$, a hopset $H$ of hopbound $\beta$ and stretch $(1+\epsilon)$
+is a set of edges such that for any pair of nodes $u, v \in V$, there is a path in $G \cup H$ of at most $\beta$
+hops, whose length is within a $(1+\epsilon)$ factor from the distance between $u$ and $v$ in $G$.
+We provide a decremental algorithm for maintaining hopsets with a polylogarithmic hopbound, with
+a total update time that matches the best known static algorithm up to polylogarithmic factors.
+Previously, the best known decremental hopset algorithm had a hopbound of $2^{\tilde{O}(\log^{3/4}
+n)}$[HKN, FOCS'14]. Our decremental hopset algorithm allows us to obtain the following improved
+decremental algorithms for maintaining shortest paths. -$(1+\epsilon)$-approximate single
+source shortest paths in amortized update time of $2^{\tilde{O}(\sqrt{\log n})}$. This improves
+super-polynomially over the best known amortized update time of $2^{\tilde{O}(\log^{3/4} n)}$
+by [HKN, FOCS'14]. -$(1+\epsilon)$-approximate shortest paths from a set of $s$ sources in $\tilde{O}(s)$
+amortized update time, assuming that $s= n^{\Omega(1)}$, and $|E|= n^{1+\Omega(1)}$. In this
+regime, we give the first decremental algorithm, whose running time matches, up to polylogarithmic
+factors, the best known static algorithm. -$(2k-1)(1+\epsilon)$-approximate all-pairs shortest
+paths (for any constant $k \geq 2)$, in $\tilde{O}(n^{1/k})$ amortized update time and $O(k)$ query
+time. This improves over the best-known amortized update time of $\tilde{O}(n^{1/k})\cdot(1/\epsilon)^{O(\sqrt{\log
+n})}$ [Chechik, FOCS'18]. Moreover, we reduce the query time from $O(\log \log (nW))$ to a constant
+$O(k)$, and hence eliminate the dependence on $n$ and the aspect ratio $W$. 

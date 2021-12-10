@@ -1,0 +1,20 @@
+Online educational platforms organize academic questions based on a hierarchical learning taxonomy
+(subject-chapter-topic). Automatically tagging new questions with existing taxonomy will help
+organize these questions into different classes of hierarchical taxonomy so that they can be searched
+based on the facets like chapter. This task can be formulated as a flat multi-class classification
+problem. Usually, flat classification based methods ignore the semantic relatedness between
+the terms in the hierarchical taxonomy and the questions. Some traditional methods also suffer
+from the class imbalance issues as they consider only the leaf nodes ignoring the hierarchy. Hence,
+we formulate the problem as a similarity-based retrieval task where we optimize the semantic relatedness
+between the taxonomy and the questions. We demonstrate that our method helps to handle the unseen
+labels and hence can be used for taxonomy tagging in the wild. In this method, we augment the question
+with its corresponding answer to capture more semantic information and then align the question-answer
+pair's contextualized embedding with the corresponding label (taxonomy) vector representations.
+The representations are aligned by fine-tuning a transformer based model with a loss function that
+is a combination of the cosine similarity and hinge rank loss. The loss function maximizes the similarity
+between the question-answer pair and the correct label representations and minimizes the similarity
+to unrelated labels. Finally, we perform experiments on two real-world datasets. We show that the
+proposed learning method outperforms representations learned using the multi-class classification
+method and other state of the art methods by 6% as measured by Recall@k. We also demonstrate the performance
+of the proposed method on unseen but related learning content like the learning objectives without
+re-training the network. 

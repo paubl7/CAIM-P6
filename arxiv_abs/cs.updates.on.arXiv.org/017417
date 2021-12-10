@@ -1,0 +1,19 @@
+The recent advancements in machine learning have led to a wave of interest in adopting online learning-based
+approaches for long-standing attack mitigation issues. In particular, DDoS attacks remain a significant
+threat to network service availability even after more than two decades. These attacks have been
+well studied under the assumption that malicious traffic originates from a single attack profile.
+Based on this premise, malicious traffic characteristics are assumed to be considerably different
+from legitimate traffic. Consequently, online filtering methods are designed to learn network
+traffic distributions adaptively and rank requests according to their attack likelihood. During
+an attack, requests rated as malicious are precipitously dropped by the filters. In this paper,
+we conduct the first systematic study on the effects of data poisoning attacks on online DDoS filtering;
+introduce one such attack method, and propose practical protective countermeasures for these
+attacks. We investigate an adverse scenario where the attacker is "crafty", switching profiles
+during attacks and generating erratic attack traffic that is ever-shifting. This elusive attacker
+generates malicious requests by manipulating and shifting traffic distribution to poison the
+training data and corrupt the filters. To this end, we present a generative model MimicShift, capable
+of controlling traffic generation while retaining the originating regular traffic's intrinsic
+properties. Comprehensive experiments show that online learning filters are highly susceptible
+to poisoning attacks, sometimes performing much worse than a random filtering strategy in this
+attack scenario. At the same time, our proposed protective countermeasure effectively minimizes
+the attack impact. 

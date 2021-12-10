@@ -1,0 +1,20 @@
+Quantum computing offers the potential of exponential speedups for certain classical computations.
+Over the last decade, many quantum machine learning (QML) algorithms have been proposed as candidates
+for such exponential improvements. However, two issues unravel the hope of exponential speedup
+for some of these QML algorithms: the data-loading problem and, more recently, the stunning dequantization
+results of Tang et al. A third issue, namely the fault-tolerance requirements of most QML algorithms,
+has further hindered their practical realization. The quantum topological data analysis (QTDA)
+algorithm of Lloyd, Garnerone and Zanardi was one of the first QML algorithms that convincingly
+offered an expected exponential speedup. From the outset, it did not suffer from the data-loading
+problem. A recent result has also shown that the generalized problem solved by this algorithm is
+likely classically intractable, and would therefore be immune to any dequantization efforts.
+However, the QTDA algorithm of Lloyd et~al. has a time complexity of $O(n^4/(\epsilon^2 \delta))$
+(where $n$ is the number of data points, $\epsilon$ is the error tolerance, and $\delta$ is the smallest
+nonzero eigenvalue of the restricted Laplacian) and requires fault-tolerant quantum computing,
+which has not yet been achieved. In this paper, we completely overhaul the QTDA algorithm to achieve
+an improved exponential speedup and depth complexity of $O(n\log(1/(\delta\epsilon)))$. Our
+approach includes three key innovations: (a) an efficient realization of the combinatorial Laplacian
+as a sum of Pauli operators; (b) a quantum rejection sampling approach to restrict the superposition
+to the simplices in the complex; and (c) a stochastic rank estimation method to estimate the Betti
+numbers. We present a theoretical error analysis, and the circuit and computational time and depth
+complexities for Betti number estimation. 

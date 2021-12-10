@@ -1,0 +1,19 @@
+With the advance in user-friendly and powerful video editing tools, anyone can easily manipulate
+videos without leaving prominent visual traces. Frame-rate up-conversion (FRUC), a representative
+temporal-domain operation, increases the motion continuity of videos with a lower frame-rate
+and is used by malicious counterfeiters in video tampering such as generating fake frame-rate video
+without improving the quality or mixing temporally spliced videos. FRUC is based on frame interpolation
+schemes and subtle artifacts that remain in interpolated frames are often difficult to distinguish.
+Hence, detecting such forgery traces is a critical issue in video forensics. This paper proposes
+a frame-rate conversion detection network (FCDNet) that learns forensic features caused by FRUC
+in an end-to-end fashion. The proposed network uses a stack of consecutive frames as the input and
+effectively learns interpolation artifacts using network blocks to learn spatiotemporal features.
+This study is the first attempt to apply a neural network to the detection of FRUC. Moreover, it can
+cover the following three types of frame interpolation schemes: nearest neighbor interpolation,
+bilinear interpolation, and motion-compensated interpolation. In contrast to existing methods
+that exploit all frames to verify integrity, the proposed approach achieves a high detection speed
+because it observes only six frames to test its authenticity. Extensive experiments were conducted
+with conventional forensic methods and neural networks for video forensic tasks to validate our
+research. The proposed network achieved state-of-the-art performance in terms of detecting the
+interpolated artifacts of FRUC. The experimental results also demonstrate that our trained model
+is robust for an unseen dataset, unlearned frame-rate, and unlearned quality factor. 

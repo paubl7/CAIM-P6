@@ -1,0 +1,20 @@
+Let $H$ be a digraph possibly with loops and $D$ a loopless digraph whose arcs are colored with the
+vertices of $H$ ($D$ is said to be an $H-$colored digraph). If $W=(x_{0},\ldots,x_{n})$ is an open
+walk in $D$ and $i\in \{1,\ldots,n-1\}$, we say that there is an obstruction on $x_{i}$ whenever
+$(color(x_{i-1},x_{i}),color(x_{i},x_{i+1}))\notin A(H)$. A $(k,l,H)$-kernel by walks in
+an $H$-colored digraph $D$ ($k\geq 2$, $l\geq 1$), is a subset $S$ of vertices of $D$, such that, for
+every pair of different vertices in $S$, every walk between them has at least $k-1$ obstructions,
+and for every $x\in V(D)\setminus S$ there exists an $xS$-walk with at most $l-1$ obstructions.
+This concept generalize the concepts of kernel, $(k,l)$-kernel, kernel by monochromatic paths,
+and kernel by $H$-walks. If $D$ is an $H$-colored digraph, an $H$-class partition is a partition
+$\mathscr{F}$ of $A(D)$ such that, for every $\{(u,v),(v,w)\}\subseteq A(D)$, $(color(u,v),color(v,w))\in
+A(H)$ iff there exists $F\in \mathscr{F}$ such that $\{(u,v),(v,w)\}\subseteq F$. The $H$-class
+digraph relative to $\mathscr{F}$, denoted by $C_{\mathscr{F}}(D)$, is the digraph such that
+$V(C_{\mathscr{F}}(D))=\mathscr{F}$, and $(F,G)\in A(C_{\mathscr{F}}(D))$ iff there exist
+$(u,v)\in F$ and $(v,w)\in G$ with $\{u,v,w\}\subseteq V(D)$. We will show sufficient conditions
+on $\mathscr{F}$ and $C_{\mathscr{F}}(D)$ to guarantee the existence of $(k,l,H)$-kernels by
+walks in $H$-colored digraphs, and we will show that some conditions are tight. For instance, we
+will show that if an $H$-colored digraph $D$ has an $H$-class partition in which every class induces
+a strongly connected digraph, and has a obstruction-free vertex, then for every $k\geq 2$, $D$ has
+a $(k,k-1,H)$-kernel by walks. Despite finding $(k,l)$-kernels is a $NP$-complete problem, some
+hypothesis presented in this paper can be verified in polynomial time. 

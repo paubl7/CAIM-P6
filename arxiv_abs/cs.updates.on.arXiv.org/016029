@@ -1,0 +1,18 @@
+Magnetic resonance (MR) image acquisition is an inherently prolonged process, whose acceleration
+has long been the subject of research. This is commonly achieved by obtaining multiple undersampled
+images, simultaneously, through parallel imaging. In this paper, we propose the Dual-Octave Network
+(DONet), which is capable of learning multi-scale spatial-frequency features from both the real
+and imaginary components of MR data, for fast parallel MR image reconstruction. More specifically,
+our DONet consists of a series of Dual-Octave convolutions (Dual-OctConv), which are connected
+in a dense manner for better reuse of features. In each Dual-OctConv, the input feature maps and convolutional
+kernels are first split into two components (ie, real and imaginary), and then divided into four
+groups according to their spatial frequencies. Then, our Dual-OctConv conducts intra-group information
+updating and inter-group information exchange to aggregate the contextual information across
+different groups. Our framework provides three appealing benefits: (i) It encourages information
+interaction and fusion between the real and imaginary components at various spatial frequencies
+to achieve richer representational capacity. (ii) The dense connections between the real and imaginary
+groups in each Dual-OctConv make the propagation of features more efficient by feature reuse. (iii)
+DONet enlarges the receptive field by learning multiple spatial-frequency features of both the
+real and imaginary components. Extensive experiments on two popular datasets (ie, clinical knee
+and fastMRI), under different undersampling patterns and acceleration factors, demonstrate
+the superiority of our model in accelerated parallel MR image reconstruction. 

@@ -1,0 +1,19 @@
+Automatic detection of firearms is important for enhancing the security and safety of people, however,
+it is a challenging task owing to the wide variations in shape, size, and appearance of firearms.
+Also, most of the generic object detectors process axis-aligned rectangular areas though, a thin
+and long rifle may actually cover only a small percentage of that area and the rest may contain irrelevant
+details suppressing the required object signatures. To handle these challenges, we propose a weakly
+supervised Orientation Aware Object Detection (OAOD) algorithm which learns to detect oriented
+object bounding boxes (OBB) while using AxisAligned Bounding Boxes (AABB) for training. The proposed
+OAOD is different from the existing oriented object detectors which strictly require OBB during
+training which may not always be present. The goal of training on AABB and detection of OBB is achieved
+by employing a multistage scheme, with Stage-1 predicting the AABB and Stage-2 predicting OBB.
+In-between the two stages, the oriented proposal generation module along with the object aligned
+RoI pooling is designed to extract features based on the predicted orientation and to make these
+features orientation invariant. A diverse and challenging dataset consisting of eleven thousand
+images is also proposed for firearm detection which is manually annotated for firearm classification
+and localization. The proposed ITU Firearm dataset (ITUF) contains a wide range of guns and rifles.
+The OAOD algorithm is evaluated on the ITUF dataset and compared with current state-of-the-art
+object detectors, including fully supervised oriented object detectors. OAOD has outperformed
+both types of object detectors with a significant margin. The experimental results (mAP: 88.3 on
+AABB & mAP: 77.5 on OBB) demonstrate the effectiveness of the proposed algorithm for firearm detection.

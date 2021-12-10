@@ -1,0 +1,18 @@
+Bodlaender and Koster (Discrete Mathematics 2006) introduced the notion of almost-clique separators
+in the context of computing the treewidth $\tw(G)$ of a given graph $G$. A separator $S \subseteq
+V(G)$ of $G$ is an \emph{almost-clique separator} if $S \setminus \{v\}$ is a clique of $G$ for some
+$v \in S$. $S$ is a \emph{minimal separator} if $S$ has at least two full components, where a full component
+of $S$ is a connected component $C$ of $G \setminus S$ such that $N_G(C) = S$. They observed that if
+$S$ is an almost-clique minimal separator of $G$ then $\tw(G \cup K(S)) = \tw(G)$, where $K(S)$ is
+the complete graph on vertex set $S$: in words, filling an almost-clique minimal separator into
+a clique does not increase the treewidth. Based on this observation, they proposed a preprocessing
+method for treewidth computation, a fundamental step of which is to find a preferably maximal set
+of pairwise non-crossing almost-clique minimal separators of a graph. In this paper, we present
+a heuristic for this step, which is based on the following empirical observation. For graph $G$ and
+a minimal triangulation $H$ of $G$, let $\QQ(H, G)$ denote the set of all almost-clique minimal separators
+of $G$ that are minimal separators of $H$. Note that since the minimal separators of $H$ are pairwise
+non-crossing, so are those in $\QQ(H, G)$. We observe from experiments that $\QQ(H, G)$ is remarkably
+close to maximal, especially when the minimal triangulation $H$ is computed by an algorithm aiming
+for small treewidth. This observation leads to an efficient implementation of the preprocessing
+method proposed by Bodlaender and Koster. Experiments on instances from PACE 2017 and other sources
+show that this implementation is extremely fast and effective for graphs of practical interest.

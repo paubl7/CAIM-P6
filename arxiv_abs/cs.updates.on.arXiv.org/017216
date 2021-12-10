@@ -1,0 +1,20 @@
+Over 85 oversampling algorithms, mostly extensions of the SMOTE algorithm, have been built over
+the past two decades, to solve the problem of imbalanced datasets. However, it has been evident from
+previous studies that different oversampling algorithms have different degrees of efficiency
+with different classifiers. With numerous algorithms available, it is difficult to decide on an
+oversampling algorithm for a chosen classifier. Here, we overcome this problem with a multi-schematic
+and classifier-independent oversampling approach: ProWRAS(Proximity Weighted Random Affine
+Shadowsampling). ProWRAS integrates the Localized Random Affine Shadowsampling (LoRAS)algorithm
+and the Proximity Weighted Synthetic oversampling (ProWSyn) algorithm. By controlling the variance
+of the synthetic samples, as well as a proximity-weighted clustering system of the minority classdata,
+the ProWRAS algorithm improves performance, compared to algorithms that generate synthetic samples
+through modelling high dimensional convex spaces of the minority class. ProWRAS has four oversampling
+schemes, each of which has its unique way to model the variance of the generated data. Most importantly,
+the performance of ProWRAS with proper choice of oversampling schemes, is independent of the classifier
+used. We have benchmarked our newly developed ProWRAS algorithm against five sate-of-the-art
+oversampling models and four different classifiers on 20 publicly available datasets. ProWRAS
+outperforms other oversampling algorithms in a statistically significant way, in terms of both
+F1-score and Kappa-score. Moreover, we have introduced a novel measure for classifier independence
+I-score, and showed quantitatively that ProWRAS performs better, independent of the classifier
+used. In practice, ProWRAS customizes synthetic sample generation according to a classifier of
+choice and thereby reduces benchmarking efforts. 

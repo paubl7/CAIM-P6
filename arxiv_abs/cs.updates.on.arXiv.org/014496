@@ -1,0 +1,19 @@
+We propose a novel compute-in-memory (CIM)-based ultra-low-power framework for probabilistic
+localization of insect-scale drones. The conventional probabilistic localization approaches
+rely on the three-dimensional (3D) Gaussian Mixture Model (GMM)-based representation of a 3D map.
+A GMM model with hundreds of mixture functions is typically needed to adequately learn and represent
+the intricacies of the map. Meanwhile, localization using complex GMM map models is computationally
+intensive. Since insect-scale drones operate under extremely limited area/power budget, continuous
+localization using GMM models entails much higher operating energy -- thereby, limiting flying
+duration and/or size of the drone due to a larger battery. Addressing the computational challenges
+of localization in an insect-scale drone using a CIM approach, we propose a novel framework of 3D
+map representation using a harmonic mean of "Gaussian-like" mixture (HMGM) model. The likelihood
+function useful for drone localization can be efficiently implemented by connecting many multi-input
+inverters in parallel, each programmed with the parameters of the 3D map model represented as HMGM.
+When the depth measurements are projected to the input of the implementation, the summed current
+of the inverters emulates the likelihood of the measurement. We have characterized our approach
+on an RGB-D indoor localization dataset. The average localization error in our approach is $\sim$0.1125
+m which is only slightly degraded than software-based evaluation ($\sim$0.08 m). Meanwhile, our
+localization framework is ultra-low-power, consuming as little as $\sim$17 $\mu$W power while
+processing a depth frame in 1.33 ms over hundred pose hypotheses in the particle-filtering (PF)
+algorithm used to localize the drone. 

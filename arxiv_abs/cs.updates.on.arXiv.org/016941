@@ -1,0 +1,20 @@
+Ontological query answering is the problem of answering queries in the presence of schema constraints
+representing the domain of interest. Datalog+/- is a common family of languages for schema constraints,
+including tuple-generating dependencies (TGDs) and equality-generating dependencies (EGDs).
+The interplay of TGDs and EGDs leads to undecidability or intractability of query answering when
+adding EGDs to tractable Datalog+/- fragments, like Warded Datalog+/-, for which, in the sole presence
+of TGDs, query answering is PTIME in data complexity. There have been attempts to limit the interaction
+of TGDs and EGDs and guarantee tractability, in particular with the introduction of separable EGDs,
+to make EGDs irrelevant for query answering as long as the set of constraints is satisfied. While
+being tractable, separable EGDs have limited expressive power. We propose a more general class
+of EGDs, which we call "harmless", that subsume separable EGDs and allow to model a much broader class
+of problems. Unlike separable EGDs, harmless EGDs, besides enforcing ground equality constraints,
+specialize the query answer by grounding or renaming the labelled nulls introduced by existential
+quantification in the TGDs. Harmless EGDs capture the cases when the answer obtained in the presence
+of EGDs is less general than the one obtained with TGDs only. We conclude that the theoretical problem
+of deciding whether a set of constraints contains harmless EGDs is undecidable. We contribute a
+sufficient syntactic condition characterizing harmless EGDs, broad and useful in practice. We
+focus on Warded Datalog+/- with harmless EGDs and argue that, in such fragment, query answering
+is decidable and PTIME in data complexity. We study chase-based techniques for query answering
+in Warded Datalog+/- with harmless EGDs, conducive to an efficient algorithm to be implemented
+in state-of-the-art reasoners. 

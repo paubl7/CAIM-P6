@@ -1,0 +1,19 @@
+Although cross-silo federated learning improves privacy of training data by exchanging model
+updates rather than raw data, sharing updates (e.g., local gradients or parameters) may still involve
+risks. To ensure no updates are revealed to the server, industrial FL schemes allow clients (e.g.,
+financial or medical) to mask local gradients by homomorphic encryption (HE). In this case, the
+server cannot obtain the updates, but the curious clients can obtain this information to infer other
+clients' private data. To alleviate this situation, the most direct idea is to let clients train
+deep models on encrypted domain. Unfortunately, the resulting solution is of poor accuracy and
+high cost, since the existing advanced HE is incompatible with non-linear activation functions
+and inefficient in terms of computational cost. In this paper, we propose a \emph{computational-efficient
+deep model training scheme for ciphertext-based cross-silo federated learning} to comprehensively
+guarantee privacy. First, we customize \emph{a novel one-time-pad-style model encryption method}
+to directly supports non-linear activation functions and decimal arithmetic operations on the
+encrypted domain. Then, we design a hybrid privacy-preserving scheme by combining our model encryption
+method with secret sharing techniques to keep updates secret from the clients and prevent the server
+from obtaining local gradients of each client. Extensive experiments demonstrate that for both
+regression and classification tasks, our scheme achieves the same accuracy as non-private approaches
+and outperforms the state-of-the-art HE-based scheme. Besides, training time of our scheme is
+almost the same as non-private approaches and much more efficient than HE-based schemes. Our scheme
+trains a $9$-layer neural network on the MNIST dataset in less than one hour. 

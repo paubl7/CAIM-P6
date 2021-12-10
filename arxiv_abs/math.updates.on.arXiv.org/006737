@@ -1,0 +1,19 @@
+In this paper, we study the problem of distributed matrix multiplication under various scenarios.
+Specifically, we focus on a scenario where a user has two matrices A and B and wishes to compute their
+product with the assistance of several distributed colluding servers, which is referred to as secure
+distributed matrix multiplication (SDMM). Meanwhile, we also consider its generalization by
+assuming that the user has two matrix batches, which is referred to as secure distributed batch matrix
+multiplication (SDBMM) or distributed batch matrix multiplication (DBMM) if the distributed
+servers are incurious. In a variant of this problem, we consider the problem of private and secure
+distributed matrix multiplication (PSDMM), where a user having a private matrix A and N non-colluding
+servers sharing a library of L (L>1) matrices $B^{(0)}, B^{(1)},...,B^{(L-1)}$, for which the
+user wishes to compute $AB^{(\theta)}$ for some $\theta\in [0, L)$ without revealing any information
+of the matrix A to the servers, and keeping the index $\theta$ private to the servers. Distributed
+matrix multiplication under these scenarios is supposed to have wide application potentials,
+such as machine learning and cloud computing. However, studies of distributed matrix multiplication
+are still scarce in the literature and there is much room for improvement. In this paper, we propose
+several new coding schemes for the various distributed matrix multiplication models, including
+two classes of SDMM codes, a DBMM code, an SDBMM code, and finally a PSDMM code. The proposed codes
+have a better performance than state-of-the-art schemes in that they can achieve a smaller recovery
+threshold and download cost as well as providing a more flexible tradeoff between the upload and
+download costs. 

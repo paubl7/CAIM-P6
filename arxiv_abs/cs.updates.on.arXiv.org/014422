@@ -1,0 +1,19 @@
+Physical photographs now can be conveniently scanned by smartphones and stored forever as a digital
+version, but the scanned photos are not restored well. One solution is to train a supervised deep
+neural network on many digital photos and the corresponding scanned photos. However, human annotation
+costs a huge resource leading to limited training data. Previous works create training pairs by
+simulating degradation using image processing techniques. Their synthetic images are formed
+with perfectly scanned photos in latent space. Even so, the real-world degradation in smartphone
+photo scanning remains unsolved since it is more complicated due to real lens defocus, lighting
+conditions, losing details via printing, various photo materials, and more. To solve these problems,
+we propose a Deep Photo Scan (DPScan) based on semi-supervised learning. First, we present the way
+to produce real-world degradation and provide the DIV2K-SCAN dataset for smartphone-scanned
+photo restoration. Second, by using DIV2K-SCAN, we adopt the concept of Generative Adversarial
+Networks to learn how to degrade a high-quality image as if it were scanned by a real smartphone, then
+generate pseudo-scanned photos for unscanned photos. Finally, we propose to train on the scanned
+and pseudo-scanned photos representing a semi-supervised approach with a cycle process as: high-quality
+images --> real-/pseudo-scanned photos --> reconstructed images. The proposed semi-supervised
+scheme can balance between supervised and unsupervised errors while optimizing to limit imperfect
+pseudo inputs but still enhance restoration. As a result, the proposed DPScan quantitatively and
+qualitatively outperforms its baseline architecture, state-of-the-art academic research,
+and industrial products in smartphone photo scanning. 

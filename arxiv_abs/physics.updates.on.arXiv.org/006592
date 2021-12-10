@@ -1,0 +1,19 @@
+Modern magnetic sensor arrays conventionally utilize state of the art low power magnetometers
+such as parallel and orthogonal fluxgates. Low power fluxgates tend to have large Barkhausen jumps
+that appear as a dc jump in the fluxgate output. This phenomenon deteriorates the signal fidelity
+and effectively increases the internal sensor noise. Even if sensors that are more prone to dc jumps
+can be screened during production, the conventional noise measurement does not always catch the
+dc jump because of its sparsity. Moreover, dc jumps persist in almost all the sensor cores although
+at a slower but still intolerable rate. Even if dc jumps can be easily detected in a shielded environment,
+when deployed in presence of natural noise and clutter, it can be hard to positively detect them.
+This work fills this gap and presents algorithms that distinguish dc jumps embedded in natural magnetic
+field data. To improve robustness to noise, we developed two machine learning algorithms that employ
+temporal and statistical physical-based features of a pre-acquired and well-known experimental
+data set. The first algorithm employs a support vector machine classifier, while the second is based
+on a neural network architecture. We compare these new approaches to a more classical kernel-based
+method. To that purpose, the receiver operating characteristic curve is generated, which allows
+diagnosis ability of the different classifiers by comparing their performances across various
+operation points. The accuracy of the machine learning-based algorithms over the classic method
+is highly emphasized. In addition, high generalization and robustness of the neural network can
+be concluded, based on the rapid convergence of the corresponding receiver operating characteristic
+curves. 

@@ -1,0 +1,19 @@
+The lattice Boltzmann method (LBM) is a numerical approach to tackle problems described by a Boltzmann
+type-equation, where time, space, and velocities are discretized to describe scattering and advection.
+Even though the LBM executes advection along a lattice direction without numerical error, its usage
+in the high Knudsen number regime (ballistic) has been hindered by the ray effect problem (for dimensions
+greater than 1D). This problem has its origin in the low number of available propagation directions
+on standard LBM lattices. Here, to overcome this limitation, we propose the worm-lattice Boltzmann
+method (worm-LBM), which allows a high number of lattice directions by alternating in time the basic
+directions described within the next neighbor schemes. Additionally, to overcome the velocity
+anisotropy issue, which otherwise clearly manifests itself in the ballistic regime (e.g. the $\sqrt
+2$ higher grid velocity of the D2Q8 scheme along the diagonal direction compared to the axial one),
+the time-adaptive scheme (TAS) is proposed. The TAS method makes use of pausing advection on the
+grid, allowing to impose not only isotropic propagation but also arbitrary direction-dependent
+grid velocity. Last but not least, we propose a grid-mean free path (grid-MFP) correction to correctly
+handle the aforementioned velocity issue in the diffusive limit, without affecting the ballistic
+one. We provide a detailed description of the TAS method and the worm-LBM algorithm, and verify their
+numerical accuracy by using several transient diffusive-ballistic phonon transport cases, including
+different initial and boundary conditions. Overall, the new, very accurate, and efficient worm-LBM
+algorithm, free of numerical smearing and false scattering, has the potential to be at the forefront
+of the numerical solvers to tackle the advective part of different equations in a wide field of applications.

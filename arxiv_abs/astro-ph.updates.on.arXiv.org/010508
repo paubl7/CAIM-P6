@@ -1,0 +1,18 @@
+We present STARFORGE (STAR FORmation in Gaseous Environments): a new numerical framework for 3D
+radiation MHD simulations of star formation that simultaneously follow the formation, accretion,
+evolution, and dynamics of individual stars in massive giant molecular clouds (GMCs) while accounting
+for stellar feedback, including jets, radiative heating and momentum, stellar winds, and supernovae.
+We use the GIZMO code with the MFM mesh-free Lagrangian MHD method, augmented with new algorithms
+for gravity, timestepping, sink particle formation and accretion, stellar dynamics, and feedback
+coupling. We survey a wide range of numerical parameters/prescriptions for sink formation and
+accretion and find very small variations in star formation history and the IMF (except for intentionally-unphysical
+variations). Modules for mass-injecting feedback (winds, SNe, and jets) inject new gas elements
+on-the-fly, eliminating the lack of resolution in diffuse feedback cavities otherwise inherent
+in Lagrangian methods. The treatment of radiation uses GIZMO's radiative transfer solver to track
+5 frequency bands (IR, optical, NUV, FUV, ionizing), coupling direct stellar emission and dust
+emission with gas heating and radiation pressure terms. We demonstrate accurate solutions for
+SNe, winds, and radiation in problems with known similarity solutions, and show that our jet module
+is robust to resolution and numerical details, and agrees well with previous AMR simulations. STARFORGE
+can scale up to massive ($>10^5 M_\odot $) GMCs on current supercomputers while predicting the stellar
+($\gtrsim 0.1 M_\odot$) range of the IMF, permitting simulations of both high- and low-mass cluster
+formation in a wide range of conditions. 

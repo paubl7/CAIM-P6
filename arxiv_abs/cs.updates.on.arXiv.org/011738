@@ -1,0 +1,20 @@
+Unmanned Aircraft Systems (UAS) are being increasingly used in delivery, infrastructure surveillance,
+fire-fighting, and agriculture. According to the Federal Aviation Administration (FAA), the
+number of active small commercial unmanned aircraft is going to grow from 385K in 2019 to 828K by 2024.
+UAS traffic management (UTM) system for low-altitude airspace is therefore immediately necessary
+for its safe and high-density use. In this paper, we propose the first formalization of FAA's Concept
+of Operations for UTM for building and analyzing traffic management protocols and systems. We formalize
+FAA's notion of operation volumes (OVs) that express aircraft intent in terms of 4D blocks of airspace
+and associated real-time deadlines. We present a prototype coordination protocol using OVs, involving
+participating aircraft and an airspace manager. We formally analyze the safe separation and liveness
+properties of the protocol. Our analyses showcase how the de-conflicting and liveness of the system
+can be proven assuming each aircraft conforms to the deadlines specified by OVs. Through extensive
+simulations, we evaluate the performance of the protocol in terms of workload and response delays.
+Our experiments show that the workload on the airspace manager and the response time of each aircraft
+grow linearly with respect to the number of aircraft. The experiments also delineate the trade-off
+between performance, workload, and violation rate across different strategies for generating
+OVs. Lastly, we implement a UTM violation detection and resolution mechanism on top of our protocol.
+We include a simple fault injection technique that introduces failures with different probabilities.
+We demonstrate how to use it to empirically evaluate the impact of aircraft failure on the safety
+of surrounding aircraft, and how the performance of the airspace manager changes under different
+failure probabilities. 

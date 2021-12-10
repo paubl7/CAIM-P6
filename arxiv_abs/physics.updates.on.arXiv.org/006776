@@ -1,0 +1,20 @@
+This work presents a formalism to improve the predictive accuracy of physical models by learning
+generalizable augmentations from sparse data. Building on recent advances in data-driven turbulence
+modeling, the present approach, referred to as Learning and Inference assisted by Feature-space
+Engineering (LIFE), is based on the hypothesis that robustness and generalizability demand a meticulously-designed
+feature space that is informed by the underlying physics, and a carefully constructed features-to-augmentation
+map. The critical components of this approach are: (1) Maintaining consistency across the learning
+and prediction environments; (2) Tightly-coupled inference and learning by constraining the
+augmentation to be learnable throughout the inference process; (3) Identification of relevant
+physics-informed features in appropriate functional forms to enable significant overlap in feature
+space for a wide variety of cases to promote generalizability; (4) Maintaining explicit control
+over feature space to change the augmentation function behavior only in the vicinity of available
+datapoints. To demonstrate the viability of this approach, it is used in the modeling of bypass transition.
+The augmentation is developed on skin friction data from two flat plate cases from the ERCOFTAC dataset.
+Piecewise linear interpolation on a structured grid in feature-space is used as a sample functional
+form for the augmentation to demonstrate the capability of localized learning. The augmented model
+is then applied to a variety of flat plate cases which are characterized by different freestream
+turbulence intensities, pressure gradients, and Reynolds numbers. The predictive capability
+of the augmented model is also tested on single-stage high-pressure-turbine cascade cases, and
+the model performance is analyzed from the perspective of information contained in the feature
+space. 

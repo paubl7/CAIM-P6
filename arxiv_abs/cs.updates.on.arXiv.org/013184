@@ -1,0 +1,19 @@
+In the semialgebraic range searching problem, we are to preprocess $n$ points in $\mathbb{R}^d$
+s.t. for any query range from a family of constant complexity semialgebraic sets, all the points
+intersecting the range can be reported or counted efficiently. When the ranges are composed of simplices,
+the problem can be solved using $S(n)$ space and with $Q(n)$ query time with $S(n)Q^d(n) = \tilde{O}(n^d)$
+and this trade-off is almost tight. Consequently, there exists low space structures that use $\tilde{O}(n)$
+space with $O(n^{1-1/d})$ query time and fast query structures that use $O(n^d)$ space with $O(\log^{d}
+n)$ query time. However, for the general semialgebraic ranges, only low space solutions are known,
+but the best solutions match the same trade-off curve as the simplex queries. It has been conjectured
+that the same could be done for the fast query case but this open problem has stayed unresolved. Here,
+we disprove this conjecture. We give the first nontrivial lower bounds for semilagebraic range
+searching and related problems. We show that any data structure for reporting the points between
+two concentric circles with $Q(n)$ query time must use $S(n)=\Omega(n^{3-o(1)}/Q(n)^5)$ space,
+meaning, for $Q(n)=O(\log^{O(1)}n)$, $\Omega(n^{3-o(1)})$ space must be used. We also study
+the problem of reporting the points between two polynomials of form $Y=\sum_{i=0}^\Delta a_i X^i$
+where $a_0, \cdots, a_\Delta$ are given at the query time. We show $S(n)=\Omega(n^{\Delta+1-o(1)}/Q(n)^{\Delta^2+\Delta})$.
+So for $Q(n)=O(\log^{O(1)}n)$, we must use $\Omega(n^{\Delta+1-o(1)})$ space. For the dual semialgebraic
+stabbing problems, we show that in linear space, any data structure that solves 2D ring stabbing
+must use $\Omega(n^{2/3})$ query time. This almost matches the linearization upper bound. For
+general semialgebraic slab stabbing problems, again, we show an almost tight lower bounds. 

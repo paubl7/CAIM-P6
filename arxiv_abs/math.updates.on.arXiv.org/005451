@@ -1,0 +1,18 @@
+A transshipment problem (G, d, \lambda) is modeled by a directed graph G = (V, E) with weighted vertices
+d = (d_v | v \in V) and directed edges \lambda = (\lambda_e | e \in E) interpreted as follows: G is a communication
+or transportation network, e.g., a pipeline; each edge e \in E is a one-way communication line, road
+or pipe of capacity \lambda_e, while every vertex v \in V is a node of production d_v > 0, consumption
+d_v < 0, or transition d_v = 0. A non-negative flow x = (x_e \mid e \in E) is called weakly feasible if
+for each v \in V the algebraic sum of flows, over all directed edges incident to v, equals d_v; or shorter,
+if A_G x = d, where A_G is the vertex-edge incidence matrix of G. A weakly feasible flow x is called feasible
+if x_e \leq \lambda_e for all e \in E. We consider weakly feasible but not necessarily feasible flows,
+that is, inequalities x_e > \lambda_e are allowed. However, such an excess is viewed as unwanted
+(dangerous) and so we minimize the excess ratio vector r = (r_e = x_e / \lambda_e | e \in E) lexicographically.
+More precisely, first, we look for the weakly feasible flows minimizing the maximum of re over all
+e in E; among all such flows we look for those that minimize the second largest coordinate of r, etc.
+Clearly, |E| such steps define a unique balanced flow, which provides the lexmin solution for problem
+(G, d, \lambda). We construct it in polynomial time, provided vectors d and \lambda are integer.
+For symmetric digraphs the problem was solved by Gurvich and Gvishiani in 1984. Here we extend this
+result to directed graphs. Furthermore, we simplify the algorithm and proofs applying the classic
+criterion of existence of a feasible flow for (G, d, \lambda) obtained by Gale and Hoffman in late
+1950-s. 

@@ -1,0 +1,19 @@
+The success of Deep Artificial Neural Networks (DNNs) in many domains created a rich body of research
+concerned with hardwareaccelerators for compute-intensive DNN operators. However, implementing
+such operators efficiently with complex hardwareintrinsics such as matrix multiply is a task not
+yet automated gracefully. Solving this task often requires joint program and data layouttransformations.
+First solutions to this problem have been proposed, such as TVM, UNIT or ISAMIR, which work on a loop-levelrepresentation
+of operators and specify data layout and possible program transformations before the embedding
+into the operator isperformed. This top-down approach creates a tension between exploration range
+and search space complexity, especially when alsoexploring data layout transformations such
+as im2col, channel packing or padding.In this work, we propose a new approach to this problem. We
+created a bottom-up method that allows the joint transformation ofboth compuation and data layout
+based on the found embedding. By formulating the embedding as a constraint satisfaction problemover
+the scalar dataflow, every possible embedding solution is contained in the search space. Adding
+additional constraints andoptmization targets to the solver generates the subset of preferable
+solutions.An evaluation using the VTA hardware accelerator with the Baidu DeepBench inference
+benchmark shows that our approach canautomatically generate code competitive to reference implementations.
+Further, we show that dynamically determining the data layoutbased on intrinsic and workload is
+beneficial for hardware utilization and performance. In cases where the reference implementationhas
+low hardware utilization due to its fixed deployment strategy, we achieve a geomean speedup of up
+to x2.813, while individualoperators can improve as much as x170. 

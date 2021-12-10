@@ -1,0 +1,20 @@
+Person reidentification (ReID) is a very hot research topic in machine learning and computer vision,
+and many person ReID approaches have been proposed; however, most of these methods assume that the
+same person has the same clothes within a short time interval, and thus their visual appearance must
+be similar. However, in an actual surveillance environment, a given person has a great probability
+of changing clothes after a long time span, and they also often take different personal belongings
+with them. When the existing person ReID methods are applied in this type of case, almost all of them
+fail. To date, only a few works have focused on the cloth-changing person ReID task, but since it is
+very difficult to extract generalized and robust features for representing people with different
+clothes, their performances need to be improved. Moreover, visual-semantic information is often
+ignored. To solve these issues, in this work, a novel multigranular visual-semantic embedding
+algorithm (MVSE) is proposed for cloth-changing person ReID, where visual semantic information
+and human attributes are embedded into the network, and the generalized features of human appearance
+can be well learned to effectively solve the problem of clothing changes. Specifically, to fully
+represent a person with clothing changes, a multigranular feature representation scheme (MGR)
+is employed to focus on the unchanged part of the human, and then a cloth desensitization network
+(CDN) is designed to improve the feature robustness of the approach for the person with different
+clothing, where different high-level human attributes are fully utilized. Moreover, to further
+solve the issue of pose changes and occlusion under different camera perspectives, a partially
+semantically aligned network (PSA) is proposed to obtain the visual-semantic information that
+is used to align the human attributes. 

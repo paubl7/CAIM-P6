@@ -1,0 +1,20 @@
+We present online algorithms for directed spanners and Steiner forests. These problems fall under
+the unifying framework of online covering linear programming formulations, developed by Buchbinder
+and Naor (MOR, 34, 2009), based on primal-dual techniques. Our results include the following: For
+the pairwise spanner problem, in which the pairs of vertices to be spanned arrive online, we present
+an efficient randomized $\tilde{O}(n^{4/5})$-competitive algorithm for graphs with general
+lengths, where $n$ is the number of vertices. With uniform lengths, we give an efficient randomized
+$\tilde{O}(n^{2/3+\epsilon})$-competitive algorithm, and an efficient deterministic $\tilde{O}(k^{1/2+\epsilon})$-competitive
+algorithm, where $k$ is the number of terminal pairs. These are the first online algorithms for directed
+spanners. In the offline setting, the current best approximation ratio with uniform lengths is
+$\tilde{O}(n^{3/5 + \epsilon})$, due to Chlamtac, Dinitz, Kortsarz, and Laekhanukit (TALG 2020).
+For the directed Steiner forest problem with uniform costs, in which the pairs of vertices to be connected
+arrive online, we present an efficient randomized $\tilde{O}(n^{2/3 + \epsilon})$-competitive
+algorithm. The state-of-the-art online algorithm for general costs is due to Chakrabarty, Ene,
+Krishnaswamy, and Panigrahi (SICOMP 2018) and is $\tilde{O}(k^{1/2 + \epsilon})$-competitive.
+In the offline version, the current best approximation ratio with uniform costs is $\tilde{O}(n^{26/45
++ \epsilon})$, due to Abboud and Bodwin (SODA 2018). A small modification of the online covering
+framework by Buchbinder and Naor implies a polynomial-time primal-dual approach with separation
+oracles, which a priori might perform exponentially many calls. We convert the online spanner problem
+and the online Steiner forest problem into online covering problems and round in a problem-specific
+fashion. 

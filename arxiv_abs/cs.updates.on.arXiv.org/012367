@@ -1,0 +1,20 @@
+Recently, due to the strength of deep convolutional neural networks (CNN), many CNN-based image
+quality assessment (IQA) models have been studied. However, previous CNN-based IQA models likely
+have yet to utilize the characteristics of the human visual system (HVS) fully for IQA problems when
+they simply entrust everything to the CNN, expecting it to learn from a training dataset. However,
+in this paper, we propose a novel saliency-channel attention residual network based on the just-noticeable-difference
+(JND) concept for full-reference image quality assessments (FR-IQA). It is referred to as JND-SalCAR
+and shows significant improvements in large IQA datasets with various types of distortion. The
+proposed JND-SalCAR effectively learns how to incorporate human psychophysical characteristics,
+such as visual saliency and JND, into image quality predictions. In the proposed network, a SalCAR
+block is devised so that perceptually important features can be extracted with the help of saliency-based
+spatial attention and channel attention schemes. In addition, a saliency map serves as a guideline
+for predicting a patch weight map in order to afford stable training of end-to-end optimization
+for the JND-SalCAR. To the best of our knowledge, our work presents the first HVS-inspired trainable
+FR-IQA network that considers both visual saliency and the JND characteristics of the HVS. When
+the visual saliency map and the JND probability map are explicitly given as priors, they can be usefully
+combined to predict IQA scores rated by humans more precisely, eventually leading to performance
+improvements and faster convergence. The experimental results show that the proposed JND-SalCAR
+significantly outperforms all recent state-of-the-art FR-IQA methods on large IQA datasets in
+terms of the Spearman rank order coefficient (SRCC) and the Pearson linear correlation coefficient
+(PLCC). 

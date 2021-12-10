@@ -1,0 +1,20 @@
+Cardiovascular diseases (CVDs) are the main cause of deaths all over the world. Heart murmurs are
+the most common abnormalities detected during the auscultation process. The two widely used publicly
+available phonocardiogram (PCG) datasets are from the PhysioNet/CinC (2016) and PASCAL (2011)
+challenges. The datasets are significantly different in terms of the tools used for data acquisition,
+clinical protocols, digital storages and signal qualities, making it challenging to process and
+analyze. In this work, we have used short-time Fourier transform (STFT) based spectrograms to learn
+the representative patterns of the normal and abnormal PCG signals. Spectrograms generated from
+both the datasets are utilized to perform three different studies: (i) train, validate and test
+different variants of convolutional neural network (CNN) models with PhysioNet dataset, (ii)
+train, validate and test the best performing CNN structure on combined PhysioNet-PASCAL dataset
+and (iii) finally, transfer learning technique is employed to train the best performing pre-trained
+network from the first study with PASCAL dataset. We propose a novel, less complex and relatively
+light custom CNN model for the classification of PhysioNet, combined and PASCAL datasets. The first
+study achieves an accuracy, sensitivity, specificity, precision and F1 score of 95.4%, 96.3%,
+92.4%, 97.6% and 96.98% respectively while the second study shows accuracy, sensitivity, specificity,
+precision and F1 score of 94.2%, 95.5%, 90.3%, 96.8% and 96.1% respectively. Finally, the third
+study shows a precision of 98.29% on the noisy PASCAL dataset with transfer learning approach. All
+the three proposed approaches outperform most of the recent competing studies by achieving comparatively
+high classification accuracy and precision, which make them suitable for screening CVDs using
+PCG signals. 

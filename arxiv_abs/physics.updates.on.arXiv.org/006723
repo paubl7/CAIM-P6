@@ -1,0 +1,19 @@
+Enhanced sampling and free energy calculation algorithms of the Thermodynamic Integration family
+(such as the Adaptive Biasing Force method, ABF) are not based on the direct computation of a free
+energy surface, but rather of its gradient. Integrating the free energy surface is non-trivial
+in dimension higher than one. Here I introduce a flexible, portable implementation of a Poisson
+equation formalism to integrate free energy surfaces from estimated gradients in dimension 2 and
+3, using any combination of periodic and non-periodic (Neumann) boundary conditions. The algorithm
+is implemented in portable C++, and provided as a standalone tool that can be used to integrate multidimensional
+gradient fields estimated on a grid using any algorithm. It is also included in the implementation
+of ABF (and its extended-system variant eABF) in the Collective Variables Module, enabling the
+seamless computation of multidimensional free energy surfaces within ABF and eABF simulations.
+A Python-based analysis toolchain is provided to easily plot and analyze multidimensional ABF
+simulation results, including metrics to assess their convergence. The Poisson integration algorithm
+can also be used to perform Helmholtz decomposition of noisy gradients estimates on the fly, resulting
+in an efficient implementation of the projected ABF (pABF) method proposed by Leli\`evre and co-workers.
+In numerical tests, pABF is found to lead to faster convergence with respect to ABF in simple cases
+of low intrinsic dimension, but seems detrimental to convergence in a more realistic case involving
+degenerate coordinates and hidden barriers, due to slower exploration. This suggests that variance
+reduction schemes do not always yield convergence improvements when applied to enhanced sampling
+methods. 

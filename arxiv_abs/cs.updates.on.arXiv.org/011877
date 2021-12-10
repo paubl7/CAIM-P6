@@ -1,0 +1,18 @@
+In recent years, co-saliency object detection (CoSOD) has achieved significant progress and played
+a key role in the retrieval-related tasks, e.g., image retrieval and video foreground detection.
+Nevertheless, it also inevitably posts a totally new safety and security problem, i.e., how to prevent
+high-profile and personal-sensitive contents from being extracted by the powerful CoSOD methods.
+In this paper, we address this problem from the perspective of adversarial attack and identify a
+novel task, i.e., adversarial co-saliency attack: given an image selected from an image group containing
+some common and salient objects, how to generate an adversarial version that can mislead CoSOD methods
+to predict incorrect co-salient regions. Note that, compared with general adversarial attacks
+for classification, this new task introduces two extra challenges for existing whitebox adversarial
+noise attacks: (1) low success rate due to the diverse appearance of images in the image group; (2)
+low transferability across CoSOD methods due to the considerable difference between CoSOD pipelines.
+To address these challenges, we propose the very first blackbox joint adversarial exposure & noise
+attack (Jadena) where we jointly and locally tune the exposure and additive perturbations of the
+image according to a newly designed high-feature-level contrast-sensitive loss function. Our
+method, without any information of the state-of-the-art CoSOD methods, leads to significant performance
+degradation on various co-saliency detection datasets and make the co-salient objects undetectable,
+which can be strongly practical in nowadays where large-scale personal photos are shared on the
+internet and should be properly and securely preserved. 

@@ -1,0 +1,19 @@
+Human actions in video sequences are characterized by the complex interplay between spatial features
+and their temporal dynamics. In this paper, we propose novel tensor representations for compactly
+capturing such higher-order relationships between visual features for the task of action recognition.
+We propose two tensor-based feature representations, viz. (i) sequence compatibility kernel
+(SCK) and (ii) dynamics compatibility kernels (DCK); the former capitalizing on the spatio-temporal
+correlations between features, while the latter explicitly modeling the action dynamics of a sequence.
+We also explore generalization of SCK, coined SCK+, that operates on subsequences to capture the
+local-global interplay of correlations, as well as can incorporate multi-modal inputs e.g., skeleton
+3D body-joints and per-frame classifier scores obtained from deep learning models trained on videos.
+We introduce linearization of these kernels that lead to compact and fast descriptors. We provide
+experiments on (i) 3D skeleton action sequences, (ii) fine-grained video sequences, and (iii)
+standard non-fine-grained videos. As our final representations are tensors that capture higher-order
+relationships of features, they relate to co-occurrences for robust fine-grained recognition.
+We use higher-order tensors and so-called Eigenvalue Power Normalization (EPN) which have been
+long speculated to perform spectral detection of higher-order occurrences; thus detecting fine-grained
+relationships of features rather than merely count features in scenes. We prove that a tensor of
+order r, built from Z* dim. features, coupled with EPN indeed detects if at least one higher-order
+occurrence is `projected' into one of its binom(Z*,r) subspaces of dim. r represented by the tensor;
+thus forming a Tensor Power Normalization metric endowed with binom(Z*,r) such `detectors'. 

@@ -1,0 +1,20 @@
+This paper studies numerical solutions for parameterized partial differential equations (P-PDEs)
+with deep learning (DL). P-PDEs arise in many important application areas and the computational
+cost using traditional numerical schemes can be exorbitant, especially when the parameters fall
+into a particular range and the underlying PDE is required to be solved with high accuracy. Recently,
+solving PDEs with DL has become an emerging field. Existing works demonstrate great potentials
+of the DL based approach in speeding up numerical solutions of PDEs. However, there is still limited
+research on the DL approach for P-PDEs. If we directly apply existing supervised learning models
+to P-PDEs, the models need to be constantly fine-tuned or retrained when the parameters change.
+This drastically limits the applicability and utility of these models in practice. To resolve this
+issue, we propose a meta-learning-based method that can efficiently solve P-PDEs with a wide range
+of parameters without retraining. Our key observation is to regard training a solver for the P-PDE
+with a given set of parameters as a learning task. Then, training a solver for the P-PDEs with varied
+parameters can be viewed as a multi-task learning problem, to which meta-learning is one of the most
+effective approaches. This new perspective can be applied to many existing PDE solvers. As an example,
+we adopt the Multigrid Network (MgNet) as the base solver. To achieve multi-task learning, we introduce
+a new hypernetwork, called Meta-NN, in MgNet and refer to the entire network as the Meta-MgNet. Meta-NN
+takes the differential operators and the right-hand-side of the underlying P-PDEs as inputs and
+generates appropriate smoothers for MgNet which can significantly affect the convergent speed.
+Finally, extensive numerical experiments demonstrate that Meta-MgNet is more efficient in solving
+P-PDEs than the MG methods and MgNet. 

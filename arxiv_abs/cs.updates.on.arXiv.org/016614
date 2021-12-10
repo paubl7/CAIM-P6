@@ -1,0 +1,20 @@
+Secret sharing allows distributing a secret among several parties such that only authorized subsets,
+specified by an access structure, can reconstruct the secret. Sehrawat and Desmedt (COCOON 2020)
+introduced hidden access structures, that remain secret until some authorized subset of parties
+collaborate. However, their scheme assumes semi-honest parties and supports only restricted
+access structures. We address these shortcomings by constructing an access structure hiding verifiable
+secret sharing scheme that supports all monotone access structures. It is the first secret sharing
+scheme to support cheater identification and share verifiability in malicious-majority settings.
+The verification procedure of our scheme incurs no communication overhead. As the building blocks
+of our scheme, we introduce and construct: (i) a set-system with $> \exp\left(c\frac{2(\log h)^2}{(\log\log
+h)}\right)+2\exp\left(c\frac{(\log h)^2}{(\log\log h)}\right)$ subsets of a set of $h$ elements.
+Our set-system, $\mathcal{H}$, is defined over $\mathbb{Z}_m$, where $m$ is a non-prime-power.
+The size of each set in $\mathcal{H}$ is divisible by $m$ but the sizes of their pairwise intersections
+are not, unless one set is a subset of another, (ii) a new variant of the learning with errors (LWE)
+problem, called PRIM-LWE, wherein the secret matrix is sampled such that its determinant is a generator
+of $\mathbb{Z}_q^*$, where $q$ is the LWE modulus. The security of our scheme relies on the hardness
+of the LWE problem, and its share size is $$(1+ o(1)) \dfrac{2^{\ell}}{\sqrt{\pi \ell/2}}(2 q^{\varrho
++ 0.5} + \sqrt{q} + \mathrm{\Theta}(h)),$$ where $\varrho \leq 1$ is a constant and $\ell$ is the
+total number of parties. We also provide directions for future work to reduce the share size to \[\leq
+\dfrac{1}{3} \left( (1+ o(1)) \dfrac{2^{\ell}}{\sqrt{\pi \ell/2}}(2 q^{\varrho + 0.5} + 2\sqrt{q})
+\right).\] 

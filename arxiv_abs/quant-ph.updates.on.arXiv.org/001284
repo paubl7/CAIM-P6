@@ -1,0 +1,18 @@
+The solving of linear systems provides a rich area to investigate the use of nearer-term, noisy,
+intermediate-scale quantum computers. In this work, we discuss hybrid quantum-classical algorithms
+for skewed linear systems for over-determined and under-determined cases. Our input model is such
+that the columns or rows of the matrix defining the linear system are given via quantum circuits of
+poly-logarithmic depth and the number of circuits is much smaller than their Hilbert space dimension.
+Our algorithms have poly-logarithmic dependence on the dimension and polynomial dependence in
+other natural quantities. In addition, we present an algorithm for the special case of a factorized
+linear system with run time poly-logarithmic in the respective dimensions. At the core of these
+algorithms is the Hadamard test and in the second part of this paper we consider the optimization
+of the circuit depth of this test. Given an $n$-qubit and $d$-depth quantum circuit $\mathcal{C}$,
+we can approximate $\langle 0|\mathcal{C}|0\rangle$ using $(n + s)$ qubits and $O\left(\log s
++ d\log (n/s) + d\right)$-depth quantum circuits, where $s\leq n$. In comparison, the standard
+implementation requires $n+1$ qubits and $O(dn)$ depth. Lattice geometries underlie recent quantum
+supremacy experiments with superconducting devices. We also optimize the Hadamard test for an
+$(l_1\times l_2)$ lattice with $l_1 \times l_2 = n$, and can approximate $\langle 0|\mathcal{C}
+|0\rangle$ with $(n + 1)$ qubits and $O\left(d \left(l_1 + l_2\right)\right)$-depth circuits.
+In comparison, the standard depth is $O\left(d n^2\right)$ in this setting. Both of our optimization
+methods are asymptotically tight in the case of one-depth quantum circuits $\mathcal{C}$. 

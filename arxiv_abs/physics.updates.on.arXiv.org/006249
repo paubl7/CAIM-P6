@@ -1,0 +1,18 @@
+Within integrated tokamak plasma modelling, turbulent transport codes are typically the computational
+bottleneck limiting their routine use outside of post-discharge analysis. Neural network (NN)
+surrogates have been used to accelerate these calculations while retaining the desired accuracy
+of the physics-based models. This paper extends a previous NN model, known as QLKNN-hyper-10D,
+by incorporating the impact of impurities, plasma rotation and magnetic equilibrium effects.
+This is achieved by adding a light impurity fractional density ($n_{imp,light} / n_e$) and its normalized
+gradient, the normalized pressure gradient ($\alpha$), the toroidal Mach number ($M_{tor}$)
+and the normalized toroidal flow velocity gradient. The input space was sampled based on experimental
+data from the JET tokamak to avoid the curse of dimensionality. The resulting networks, named QLKNN-jetexp-15D,
+show good agreement with the original QuaLiKiz model, both by comparing individual transport quantity
+predictions as well as comparing its impact within the integrated model, JINTRAC. The profile-averaged
+RMS of the integrated modelling simulations is <10% for each of the 5 scenarios tested. This is non-trivial
+given the potential numerical instabilities present within the highly nonlinear system of equations
+governing plasma transport, especially considering the novel addition of momentum flux predictions
+to the model proposed here. An evaluation of all 25 NN output quantities at one radial location takes
+$\sim$0.1 ms, $10^4$ times faster than the original QuaLiKiz model. Within the JINTRAC integrated
+modelling tests performed in this study, using QLKNN-jetexp-15D resulted in a speed increase of
+only 60 - 100 as other physics modules outside of turbulent transport become the bottleneck. 

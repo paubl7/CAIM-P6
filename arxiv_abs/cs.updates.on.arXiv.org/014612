@@ -1,0 +1,18 @@
+This paper presents a sensor-level mapless collision avoidance algorithm for use in mobile robots
+that map raw sensor data to linear and angular velocities and navigate in an unknown environment
+without a map. An efficient training strategy is proposed to allow a robot to learn from both human
+experience data and self-exploratory data. A game format simulation framework is designed to allow
+the human player to tele-operate the mobile robot to a goal and human action is also scored using the
+reward function. Both human player data and self-playing data are sampled using prioritized experience
+replay algorithm. The proposed algorithm and training strategy have been evaluated in two different
+experimental configurations: \textit{Environment 1}, a simulated cluttered environment, and
+\textit{Environment 2}, a simulated corridor environment, to investigate the performance. It
+was demonstrated that the proposed method achieved the same level of reward using only 16\% of the
+training steps required by the standard Deep Deterministic Policy Gradient (DDPG) method in Environment
+1 and 20\% of that in Environment 2. In the evaluation of 20 random missions, the proposed method achieved
+no collision in less than 2~h and 2.5~h of training time in the two Gazebo environments respectively.
+The method also generated smoother trajectories than DDPG. The proposed method has also been implemented
+on a real robot in the real-world environment for performance evaluation. We can confirm that the
+trained model with the simulation software can be directly applied into the real-world scenario
+without further fine-tuning, further demonstrating its higher robustness than DDPG. The video
+and code are available: https://youtu.be/BmwxevgsdGc https://github.com/hanlinniu/turtlebot3_ddpg_collision_avoidance

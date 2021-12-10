@@ -1,0 +1,20 @@
+FPGAs are quickly becoming available in the cloud as a one more heterogeneous processing element
+complementing CPUs and GPUs. There are many reports in the literature showing the potential for
+FPGAs to accelerate a wide variety of algorithms, which combined with their growing availability,
+would seem to also indicate a widespread use in many applications. Unfortunately, there is not much
+published research exploring what it takes to integrate an FPGA into an existing application in
+a cost-effective way and keeping the algorithmic performance advantages. Building on recent results
+exploring how to employ FPGAs to improve the search engines used in the travel industry, this paper
+analyses the end-to-end performance of the search engine when using FPGAs, as well as the necessary
+changes to the software and the cost of such deployments. The results provide important insights
+on current FPGA deployments and what needs to be done to make FPGAs more widely used. For instance,
+the large potential performance gains provided by an FPGA are greatly diminished in practice if
+the application cannot submit request in the most optimal way, something that is not always possible
+and might require significant changes to the application. Similarly, some existing cloud deployments
+turn out to use a very imbalanced architecture: a powerful FPGA connected to a not so powerful CPU.
+The result is that the CPU cannot generate enough load for the FPGA, which potentially eliminates
+all performance gains and might even result in a more expensive system. In this paper, we report on
+an extensive study and development effort to incorporate FPGAs into a search engine and analyse
+the issues encountered and their practical impact. We expect that these results will inform the
+development and deployment of FPGAs in the future by providing important insights on the end-to-end
+integration of FPGAs within existing systems. 

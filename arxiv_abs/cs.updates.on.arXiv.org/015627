@@ -1,0 +1,18 @@
+Continual learning from data streams is among the most important topics in contemporary machine
+learning. One of the biggest challenges in this domain lies in creating algorithms that can continuously
+adapt to arriving data. However, previously learned knowledge may become outdated, as streams
+evolve over time. This phenomenon is known as concept drift and must be detected to facilitate efficient
+adaptation of the learning model. While there exists a plethora of drift detectors, all of them assume
+that we are dealing with roughly balanced classes. In the case of imbalanced data streams, those
+detectors will be biased towards the majority classes, ignoring changes happening in the minority
+ones. Furthermore, class imbalance may evolve over time and classes may change their roles (majority
+becoming minority and vice versa). This is especially challenging in the multi-class setting,
+where relationships among classes become complex. In this paper, we propose a detailed taxonomy
+of challenges posed by concept drift in multi-class imbalanced data streams, as well as a novel trainable
+concept drift detector based on Restricted Boltzmann Machine. It is capable of monitoring multiple
+classes at once and using reconstruction error to detect changes in each of them independently.
+Our detector utilizes a skew-insensitive loss function that allows it to handle multiple imbalanced
+distributions. Due to its trainable nature, it is capable of following changes in a stream and evolving
+class roles, as well as it can deal with local concept drift occurring in minority classes. Extensive
+experimental study on multi-class drifting data streams, enriched with a detailed analysis of
+the impact of local drifts and changing imbalance ratios, confirms the high efficacy of our approach.

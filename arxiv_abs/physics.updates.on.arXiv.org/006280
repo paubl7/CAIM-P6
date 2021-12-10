@@ -1,0 +1,20 @@
+By including a fraction of exact exchange (EXX), hybrid functionals reduce the self-interaction
+error in semi-local density functional theory (DFT), and thereby furnish a more accurate and reliable
+description of the electronic structure in systems throughout biology, chemistry, physics, and
+materials science. However, the high computational cost associated with the evaluation of all
+required EXX quantities has limited the applicability of hybrid DFT in the treatment of large molecules
+and complex condensed-phase materials. To overcome this limitation, we have devised a linear-scaling
+yet formally exact approach that utilizes a local representation of the occupied orbitals (e.g.,
+maximally localized Wannier functions, MLWFs) to exploit the sparsity in the real-space evaluation
+of the quantum mechanical exchange interaction in finite-gap systems. In this work, we present
+a detailed description of the theoretical and algorithmic advances required to perform MLWF-based
+ab initio molecular dynamics (AIMD) simulations of large-scale condensed-phase systems at the
+hybrid DFT level. We provide a comprehensive description of the exx algorithm, which is currently
+implemented in the Quantum ESPRESSO program and employs a hybrid MPI/OpenMP parallelization scheme
+to efficiently utilize high-performance computing (HPC) resources. This is followed by a critical
+assessment of the accuracy and parallel performance of this approach when performing AIMD simulations
+of liquid water in the canonical ensemble. With access to HPC resources, we demonstrate that exx
+enables hybrid DFT based AIMD simulations of condensed-phase systems containing 500-1000 atoms
+with a walltime cost that is comparable to semi-local DFT. In doing so, exx takes us closer to routinely
+performing AIMD simulations of large-scale condensed-phase systems for sufficiently long timescales
+at the hybrid DFT level of theory. 

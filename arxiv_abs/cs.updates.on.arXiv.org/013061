@@ -1,0 +1,20 @@
+Accurate, fast, and reliable parameter estimation is crucial for modeling, control, and optimization
+of solar photovoltaic (PV) systems. In this paper, we focus on the two most widely used benchmark
+datasets and try to answer (i) whether the global minimum in terms of root mean square error (RMSE)
+has already been reached; and (ii) whether a significantly simpler metaheuristic, in contrast
+to currently sophisticated ones, is capable of identifying PV parameters with comparable performance,
+e.g., attaining the same RMSE. We address the former using an interval analysis based branch and
+bound algorithm and certify the global minimum rigorously for the single diode model (SDM) as well
+as locating a fairly tight upper bound for the double diode model (DDM) on both datasets. These obtained
+values will serve as useful references for metaheuristic methods, since none of them can guarantee
+or recognize the global minimum even if they have literally discovered it. However, this algorithm
+is excessively slow and unsuitable for time-sensitive applications (despite the great insights
+on RMSE that it yields). Regarding the second question, extensive examination and comparison reveal
+that, perhaps surprisingly, a classic and remarkably simple differential evolution (DE) algorithm
+can consistently achieve the certified global minimum for the SDM and obtain the best known result
+for the DDM on both datasets. Thanks to its extreme simplicity, the DE algorithm takes only a fraction
+of the running time required by other contemporary metaheuristics and is thus preferable in real-time
+scenarios. This unusual (and certainly notable) finding also indicates that the employment of
+increasingly complicated metaheuristics might possibly be somewhat overkill for regular PV parameter
+estimation. Finally, we discuss the implications of these results and suggest promising directions
+for future development. 

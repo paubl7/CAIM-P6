@@ -1,0 +1,20 @@
+We consider local planning in fixed-horizon MDPs with a generative model under the assumption that
+the optimal value function lies close to the span of a feature map. The generative model provides
+a local access to the MDP: The planner can ask for random transitions from previously returned states
+and arbitrary actions, and features are only accessible for states that are encountered in this
+process. As opposed to previous work (e.g. Lattimore et al. (2020)) where linear realizability
+of all policies was assumed, we consider the significantly relaxed assumption of a single linearly
+realizable (deterministic) policy. A recent lower bound by Weisz et al. (2020) established that
+the related problem when the action-value function of the optimal policy is linearly realizable
+requires an exponential number of queries, either in $H$ (the horizon of the MDP) or $d$ (the dimension
+of the feature mapping). Their construction crucially relies on having an exponentially large
+action set. In contrast, in this work, we establish that poly$(H,d)$ planning is possible with state
+value function realizability whenever the action set has a constant size. In particular, we present
+the TensorPlan algorithm which uses poly$((dH/\delta)^A)$ simulator queries to find a $\delta$-optimal
+policy relative to any deterministic policy for which the value function is linearly realizable
+with some bounded parameter. This is the first algorithm to give a polynomial query complexity guarantee
+using only linear-realizability of a single competing value function. Whether the computation
+cost is similarly bounded remains an open question. We extend the upper bound to the near-realizable
+case and to the infinite-horizon discounted setup. We also present a lower bound in the infinite-horizon
+episodic setting: Planners that achieve constant suboptimality need exponentially many queries,
+either in $d$ or the number of actions. 

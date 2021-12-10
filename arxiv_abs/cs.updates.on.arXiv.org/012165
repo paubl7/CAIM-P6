@@ -1,0 +1,20 @@
+As of September 2020, the COVID-19 pandemic continues to devastate the health and well-being of
+the global population. With more than 33 million confirmed cases and over a million deaths, global
+health organizations are still a long way from fully containing the pandemic. This pandemic has
+raised serious questions about the emergency preparedness of health agencies, not only in terms
+of treatment of an unseen disease, but also in identifying its early symptoms. In the particular
+case of COVID-19, several studies have indicated that chest radiography images of the infected
+patients show characteristic abnormalities. However, at the onset of a given pandemic, such as
+COVID-19, there may not be sufficient data for the affected cases to train models for their robust
+detection. Hence, supervised classification is ill-posed for this problem because the time spent
+in collecting large amounts of infected peoples' data could lead to the loss of human lives and delays
+in preventive interventions. Therefore, we formulate this problem within a one-class classification
+framework, in which the data for healthy patients is abundantly available, whereas no training
+data is present for the class of interest (COVID-19 in our case). To solve this problem, we present
+COVIDomaly, a convolutional autoencoder framework to detect unseen COVID-19 cases from the chest
+radiographs. We tested two settings on a publicly available dataset (COVIDx) by training the model
+on chest X-rays from (i) only healthy adults, and (ii) healthy and other non-COVID-19 pneumonia,
+and detected COVID-19 as an anomaly. After performing 3-fold cross validation, we obtain a pooled
+ROC-AUC of 0.7652 and 0.6902 in the two settings respectively. These results are very encouraging
+and pave the way towards research for ensuring emergency preparedness in future pandemics, especially
+the ones that could be detected from chest X-rays. 

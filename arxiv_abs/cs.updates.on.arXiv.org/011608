@@ -1,0 +1,19 @@
+We introduce the transport-and-pack(TAP) problem, a frequently encountered instance of real-world
+packing, and develop a neural optimization solution based on reinforcement learning. Given an
+initial spatial configuration of boxes, we seek an efficient method to iteratively transport and
+pack the boxes compactly into a target container. Due to obstruction and accessibility constraints,
+our problem has to add a new search dimension, i.e., finding an optimal transport sequence, to the
+already immense search space for packing alone. Using a learning-based approach, a trained network
+can learn and encode solution patterns to guide the solution of new problem instances instead of
+executing an expensive online search. In our work, we represent the transport constraints using
+a precedence graph and train a neural network, coined TAP-Net, using reinforcement learning to
+reward efficient and stable packing. The network is built on an encoder-decoder architecture,
+where the encoder employs convolution layers to encode the box geometry and precedence graph and
+the decoder is a recurrent neural network (RNN) which inputs the current encoder output, as well
+as the current box packing state of the target container, and outputs the next box to pack, as well
+as its orientation. We train our network on randomly generated initial box configurations, without
+supervision, via policy gradients to learn optimal TAP policies to maximize packing efficiency
+and stability. We demonstrate the performance of TAP-Net on a variety of examples, evaluating the
+network through ablation studies and comparisons to baselines and alternative network designs.
+We also show that our network generalizes well to larger problem instances, when trained on small-sized
+inputs. 

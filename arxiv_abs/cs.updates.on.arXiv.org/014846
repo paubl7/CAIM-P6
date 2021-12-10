@@ -1,0 +1,19 @@
+Machine learning (ML) is an important part of modern data science applications. Data scientists
+today have to manage the end-to-end ML life cycle that includes both model training and model serving,
+the latter of which is essential, as it makes their works available to end-users. Systems for model
+serving require high performance, low cost, and ease of management. Cloud providers are already
+offering model serving options, including managed services and self-rented servers. Recently,
+serverless computing, whose advantages include high elasticity and fine-grained cost model,
+brings another possibility for model serving. In this paper, we study the viability of serverless
+as a mainstream model serving platform for data science applications. We conduct a comprehensive
+evaluation of the performance and cost of serverless against other model serving systems on two
+clouds: Amazon Web Service (AWS) and Google Cloud Platform (GCP). We find that serverless outperforms
+many cloud-based alternatives with respect to cost and performance. More interestingly, under
+some circumstances, it can even outperform GPU-based systems for both average latency and cost.
+These results are different from previous works' claim that serverless is not suitable for model
+serving, and are contrary to the conventional wisdom that GPU-based systems are better for ML workloads
+than CPU-based systems. Other findings include a large gap in cold start time between AWS and GCP
+serverless functions, and serverless' low sensitivity to changes in workloads or models. Our evaluation
+results indicate that serverless is a viable option for model serving. Finally, we present several
+practical recommendations for data scientists on how to use serverless for scalable and cost-effective
+model serving. 

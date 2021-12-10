@@ -1,0 +1,19 @@
+In this paper, we propose a simple global optimisation algorithm inspired by Pareto's principle.
+This algorithm samples most of its solutions within prominent search domains and is equipped with
+a self-adaptive mechanism to control the dynamic tightening of the prominent domains while the
+greediness of the algorithm increases over time (iterations). Unlike traditional metaheuristics,
+the proposed method has no direct mutation- or crossover-like operations. It depends solely on
+the sequential random sampling that can be used in diversification and intensification processes
+while keeping the information-flow between generations and the structural bias at a minimum. By
+using a simple topology, the algorithm avoids premature convergence by sampling new solutions
+every generation. A simple theoretical derivation revealed that the exploration of this approach
+is unbiased and the rate of the diversification is constant during the runtime. The trade-off balance
+between the diversification and the intensification is explained theoretically and experimentally.
+This proposed approach has been benchmarked against standard optimisation problems as well as
+a selected set of simple and complex engineering applications. We used 26 standard benchmarks with
+different properties that cover most of the optimisation problems' nature, three traditional
+engineering problems, and one real complex engineering problem from the state-of-the-art literature.
+The algorithm performs well in finding global minima for nonconvex and multimodal functions, especially
+with high dimensional problems and it was found very competitive in comparison with the recent algorithmic
+proposals. Moreover, the algorithm outperforms and scales better than recent algorithms when
+it is benchmarked under a limited number of iterations for the composite CEC2017 problems. 

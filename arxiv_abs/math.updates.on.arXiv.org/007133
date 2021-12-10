@@ -1,0 +1,18 @@
+Best subset selection (BSS) is widely known as the holy grail for high-dimensional variable selection.
+Nevertheless, the notorious NP-hardness of BSS substantially restricts its practical application
+and also discourages its theoretical development to some extent, particularly in the current era
+of big data. In this paper, we investigate the variable selection properties of BSS when its target
+sparsity is greater than or equal to the true sparsity. Our main message is that BSS is robust against
+design dependence in terms of achieving model consistency and sure screening, and more importantly,
+that such robustness can be propagated to the near best subsets that are computationally tangible.
+Specifically, we introduce an identifiability margin condition that is free of restricted eigenvalues
+and show that it is sufficient and nearly necessary for BSS to exactly recover the true model. A relaxed
+version of this condition is also sufficient for BSS to achieve the sure screening property. Moreover,
+taking optimization error into account, we find that all the established statistical properties
+for the exact best subset carry over to any near best subset whose residual sum of squares is close
+enough to that of the best one. In particular, a two-stage fully corrective iterative hard thresholding
+(IHT) algorithm can provably find a sparse sure screening subset within logarithmic steps; another
+round of exact BSS within this set can recover the true model. The simulation studies and real data
+examples show that IHT yields lower false discovery rates and higher true positive rates than the
+competing approaches including LASSO, SCAD and Sure Independence Screening (SIS), especially
+under highly correlated design. 

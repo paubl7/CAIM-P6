@@ -1,0 +1,19 @@
+Recent development of Deep Reinforcement Learning has demonstrated superior performance of neural
+networks in solving challenging problems with large or even continuous state spaces. One specific
+approach is to deploy neural networks to approximate value functions by minimising the Mean Squared
+Bellman Error function. Despite great successes of Deep Reinforcement Learning, development
+of reliable and efficient numerical algorithms to minimise the Bellman Error is still of great scientific
+interest and practical demand. Such a challenge is partially due to the underlying optimisation
+problem being highly non-convex or using incorrect gradient information as done in Semi-Gradient
+algorithms. In this work, we analyse the Mean Squared Bellman Error from a smooth optimisation perspective
+combined with a Residual Gradient formulation. Our contribution is two-fold. First, we analyse
+critical points of the error function and provide technical insights on the optimisation procure
+and design choices for neural networks. When the existence of global minima is assumed and the objective
+fulfils certain conditions we can eliminate suboptimal local minima when using over-parametrised
+neural networks. We can construct an efficient Approximate Newton's algorithm based on our analysis
+and confirm theoretical properties of this algorithm such as being locally quadratically convergent
+to a global minimum numerically. Second, we demonstrate feasibility and generalisation capabilities
+of the proposed algorithm empirically using continuous control problems and provide a numerical
+verification of our critical point analysis. We outline the short coming of Semi-Gradients. To
+benefit from an approximate Newton's algorithm complete derivatives of the Mean Squared Bellman
+error must be considered during training. 

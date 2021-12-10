@@ -1,0 +1,19 @@
+Federated learning provides a communication-efficient and privacy-preserving training process
+by enabling learning statistical models with massive participants while keeping their data in
+local clients. However, standard federated learning techniques that naively minimize an average
+loss function are vulnerable to data corruptions from outliers, systematic mislabeling, or even
+adversaries. In addition, it is often prohibited for service providers to verify the quality of
+data samples due to the increasing concern of user data privacy. In this paper, we address this challenge
+by proposing Auto-weighted Robust Federated Learning (arfl), a novel approach that jointly learns
+the global model and the weights of local updates to provide robustness against corrupted data sources.
+We prove a learning bound on the expected risk with respect to the predictor and the weights of clients,
+which guides the definition of the objective for robust federated learning. The weights are allocated
+by comparing the empirical loss of a client with the average loss of the best p clients (p-average),
+thus we can downweight the clients with significantly high losses, thereby lower their contributions
+to the global model. We show that this approach achieves robustness when the data of corrupted clients
+is distributed differently from benign ones. To optimize the objective function, we propose a communication-efficient
+algorithm based on the blockwise minimization paradigm. We conduct experiments on multiple benchmark
+datasets, including CIFAR-10, FEMNIST and Shakespeare, considering different deep neural network
+models. The results show that our solution is robust against different scenarios including label
+shuffling, label flipping and noisy features, and outperforms the state-of-the-art methods in
+most scenarios. 

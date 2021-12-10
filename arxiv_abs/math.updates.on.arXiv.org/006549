@@ -1,0 +1,19 @@
+This paper introduces the \emph{Simultaneous Assignment Problem}. Here, we are given an assignment
+problem on some of the subgraphs of a given graph, and we are looking for a heaviest assignment which
+is feasible when restricted to any of the assignment problems. More precisely, we are given a graph
+with a weight- and a capacity function on its edges and a set of its subgraphs $H_1,\dots,H_k$ along
+with a degree upper bound function for each of them. In addition, we are also given a laminar system
+on the node set with an upper bound on the degree-sum of the nodes in each set in the system. We want to
+assign each edge a non-negative integer below its capacity such that the total weight is maximized,
+the degrees in each subgraph are below the degree upper bound associated with the subgraph, and the
+degree-sum bound is respected in each set of the laminar system. The problem is shown to be APX-hard
+in the unweighted case even if the graph is a forest and $k=2$. This also implies that the Distance
+matching problem is APX-hard in the weighted case and that the Cyclic distance matching problem
+is APX-hard in the unweighted case. We identify multiple special cases when the problem can be solved
+in strongly polynomial time. One of these cases, the so-called locally laminar case, is a common
+generalization of the Hierarchical b-matching problem and the Laminar matchoid problem, and it
+implies that both of these problems can be solved efficiently in the weighted, capacitated case
+-- improving upon the most general polynomial-time algorithms for these problems. The problem
+can be constant approximated when $k$ is a constant, and we show that the approximation factor matches
+the integrality gap of a strengthened LP-relaxation for small $k$. We give improved approximation
+algorithms for special cases, for example, when the degree bounds are uniform or the graph is sparse.

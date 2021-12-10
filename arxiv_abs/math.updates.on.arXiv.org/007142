@@ -1,0 +1,20 @@
+In the framework of risk assessment in nuclear accident analysis, best-estimatecomputer codes,
+associated to a probabilistic modeling of the uncertain input variables,are used to estimate safety
+margins. A first step in such uncertainty quantificationstudies is often to identify the critical
+configurations (or penalizing, in thesense of a prescribed safety margin) of several input parameters
+(called ``scenarioinputs''), under the uncertainty on the other input parameters. However, the
+largeCPU-time cost of most of the computer codes used in nuclear engineering, as theones related
+to thermal-hydraulic accident scenario simulations, involve to develophighly efficient strategies.
+This work focuses on machine learning algorithms bythe way of the metamodel-based approach (i.e.,
+a mathematical model which is fittedon a small-size sample of simulations). To achieve it with a
+very large numberof inputs, a specific and original methodology, called ICSCREAM (Identificationof
+penalizing Configurations using SCREening And Metamodel), is proposed. Thescreening of influential
+inputs is based on an advanced global sensitivity analysistool (HSIC importance measures). A Gaussian
+process metamodel is then sequentiallybuilt and used to estimate, within a Bayesian framework,
+the conditionalprobabilities of exceeding a high-level threshold, according to the scenario
+inputs.The efficiency of this methodology is illustrated on two high-dimensional (arounda hundred
+inputs) thermal-hydraulic industrial cases simulating an accident of primarycoolant loss in
+a pressurized water reactor. For both use cases, the studyfocuses on the peak cladding temperature
+(PCT) and critical configurations aredefined by exceeding the 90%-quantile of PCT. In both cases,
+the ICSCREAMmethodology allows to estimate, by using only around one thousand of code simulations,the
+impact of the scenario inputs and their critical areas of values. 

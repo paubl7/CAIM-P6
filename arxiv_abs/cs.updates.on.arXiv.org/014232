@@ -1,0 +1,19 @@
+It is always a challenging problem to deliver a huge volume of videos over the Internet. To meet the
+high bandwidth and stringent playback demand, one feasible solution is to cache video contents
+on edge servers based on predicted video popularity. Traditional caching algorithms (e.g., LRU,
+LFU) are too simple to capture the dynamics of video popularity, especially long-tailed videos.
+Recent learning-driven caching algorithms (e.g., DeepCache) show promising performance, however,
+such black-box approaches are lack of explainability and interpretability. Moreover, the parameter
+tuning requires a large number of historical records, which are difficult to obtain for videos with
+low popularity. In this paper, we optimize video caching at the edge using a white-box approach,
+which is highly efficient and also completely explainable. To accurately capture the evolution
+of video popularity, we develop a mathematical model called \emph{HRS} model, which is the combination
+of multiple point processes, including Hawkes' self-exciting, reactive and self-correcting
+processes. The key advantage of the HRS model is its explainability, and much less number of model
+parameters. In addition, all its model parameters can be learned automatically through maximizing
+the Log-likelihood function constructed by past video request events. Next, we further design
+an online HRS-based video caching algorithm. To verify its effectiveness, we conduct a series of
+experiments using real video traces collected from Tencent Video, one of the largest online video
+providers in China. Experiment results demonstrate that our proposed algorithm outperforms the
+state-of-the-art algorithms, with 12.3\% improvement on average in terms of cache hit rate under
+realistic settings. 

@@ -1,0 +1,20 @@
+Finding efficient, easily implementable differentially private (DP) algorithms that offer strong
+excess risk bounds is an important problem in modern machine learning. To date, most work has focused
+on private empirical risk minimization (ERM) or private population loss minimization. However,
+there are often other objectives--such as fairness, adversarial robustness, or sensitivity to
+outliers--besides average performance that are not captured in the classical ERM setup. To this
+end, we study a completely general family of convex, Lipschitz loss functions and establish the
+first known DP excess risk and runtime bounds for optimizing this broad class. We provide similar
+bounds under additional assumptions of smoothness and/or strong convexity. We also address private
+stochastic convex optimization (SCO). While $(\epsilon, \delta)$-DP ($\delta > 0$) has been the
+focus of much recent work in private SCO, proving tight population loss bounds and runtime bounds
+for $(\epsilon, 0)$-DP remains a challenging open problem. We provide the tightest known $(\epsilon,
+0)$-DP population loss bounds and fastest runtimes under the presence of (or lack of) smoothness
+and strong convexity. Our methods extend to the $\delta > 0$ setting, where we offer the unique benefit
+of ensuring differential privacy for arbitrary $\epsilon > 0$ by incorporating a new form of Gaussian
+noise. Finally, we apply our theory to two learning frameworks: tilted ERM and adversarial learning.
+In particular, our theory quantifies tradeoffs between adversarial robustness, privacy, and
+runtime. Our results are achieved using perhaps the simplest DP algorithm: output perturbation.
+Although this method is not novel conceptually, our novel implementation scheme and analysis show
+that the power of this method to achieve strong privacy, utility, and runtime guarantees has not
+been fully appreciated in prior works. 

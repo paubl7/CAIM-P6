@@ -1,0 +1,20 @@
+Class-Incremental Learning (CIL) aims to train a reliable model with the streaming data, which
+emerges unknown classes sequentially. Different from traditional closed set learning, CIL has
+two main challenges: 1) Novel class detection. The initial training data only contains incomplete
+classes, and streaming test data will accept unknown classes. Therefore, the model needs to not
+only accurately classify known classes, but also effectively detect unknown classes; 2) Model
+expansion. After the novel classes are detected, the model needs to be updated without re-training
+using entire previous data. However, traditional CIL methods have not fully considered these two
+challenges, first, they are always restricted to single novel class detection each phase and embedding
+confusion caused by unknown classes. Besides, they also ignore the catastrophic forgetting of
+known categories in model update. To this end, we propose a Class-Incremental Learning without
+Forgetting (CILF) framework, which aims to learn adaptive embedding for processing novel class
+detection and model update in a unified framework. In detail, CILF designs to regularize classification
+with decoupled prototype based loss, which can improve the intra-class and inter-class structure
+significantly, and acquire a compact embedding representation for novel class detection in result.
+Then, CILF employs a learnable curriculum clustering operator to estimate the number of semantic
+clusters via fine-tuning the learned network, in which curriculum operator can adaptively learn
+the embedding in self-taught form. Therefore, CILF can detect multiple novel classes and mitigate
+the embedding confusion problem. Last, with the labeled streaming test data, CILF can update the
+network with robust regularization to mitigate the catastrophic forgetting. Consequently, CILF
+is able to iteratively perform novel class detection and model update. 

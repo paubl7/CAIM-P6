@@ -1,0 +1,20 @@
+This study focuses on the task of supervised prediction of aging-related genes from -omics data.
+Unlike gene expression methods for this task that capture aging-specific information but ignore
+interactions between genes (i.e., their protein products), or protein-protein interaction (PPI)
+network methods for this task that account for PPIs but the PPIs are context-unspecific, we recently
+integrated the two data types into an aging-specific PPI subnetwork, which yielded more accurate
+aging-related gene predictions. However, a dynamic aging-specific subnetwork did not improve
+prediction performance compared to a static aging-specific subnetwork, despite the aging process
+being dynamic. This could be because the dynamic subnetwork was inferred using a naive Induced subgraph
+approach. Instead, we recently inferred a dynamic aging-specific subnetwork using a methodologically
+more advanced notion of network propagation (NP), which improved upon Induced dynamic aging-specific
+subnetwork in a different task, that of unsupervised analyses of the aging process. Here, we evaluate
+whether our existing NP-based dynamic subnetwork will improve upon the dynamic as well as static
+subnetwork constructed by the Induced approach in the considered task of supervised prediction
+of aging-related genes. The existing NP-based subnetwork is unweighted, i.e., it gives equal importance
+to each of the aging-specific PPIs. Because accounting for aging-specific edge weights might be
+important, we additionally propose a weighted NP-based dynamic aging-specific subnetwork. We
+demonstrate that a predictive machine learning model trained and tested on the weighted subnetwork
+yields higher accuracy when predicting aging-related genes than predictive models run on the existing
+unweighted dynamic or static subnetworks, regardless of whether the existing subnetworks were
+inferred using NP or the Induced approach. 

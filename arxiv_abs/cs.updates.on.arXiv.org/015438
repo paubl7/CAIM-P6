@@ -1,0 +1,18 @@
+Large language models have led to state-of-the-art accuracies across a range of tasks. However,
+training these large models efficiently is challenging for two reasons: a) GPU memory capacity
+is limited, making it impossible to fit large models on a single GPU or even on a multi-GPU server;
+and b) the number of compute operations required to train these models can result in unrealistically
+long training times. New methods of model parallelism such as tensor and pipeline parallelism have
+been proposed to address these challenges; unfortunately, naive usage leads to fundamental scaling
+issues at thousands of GPUs due to various reasons, e.g., expensive cross-node communication or
+idle periods waiting on other devices. In this work, we show how to compose different types of parallelism
+methods (tensor, pipeline, and data paralleism) to scale to thousands of GPUs, achieving a two-order-of-magnitude
+increase in the sizes of models we can efficiently train compared to existing systems. We discuss
+various implementations of pipeline parallelism and propose a novel schedule that can improve
+throughput by more than 10% with comparable memory footprint compared to previously-proposed
+approaches. We quantitatively study the trade-offs between tensor, pipeline, and data parallelism,
+and provide intuition as to how to configure distributed training of a large model. The composition
+of these techniques allows us to perform training iterations on a model with 1 trillion parameters
+at 502 petaFLOP/s on 3072 GPUs with achieved per-GPU throughput of 52% of peak; previous efforts
+to train similar-sized models achieve much lower throughput (36% of theoretical peak). Our code
+has been open-sourced at https://github.com/nvidia/megatron-lm. 

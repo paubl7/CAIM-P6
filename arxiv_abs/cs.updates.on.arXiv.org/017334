@@ -1,0 +1,20 @@
+In recent years, light field (LF) capture and processing has become an integral part of media production.
+The richness of information available in LFs has enabled novel applications like post-capture
+depth-of-field editing, 3D reconstruction, segmentation and matting, saliency detection, object
+detection and recognition, and mixed reality. The efficacy of such applications depends on certain
+underlying requirements, which are often ignored. For example, some operations such as noise-reduction,
+or hyperfan-filtering are only possible if a scene point Lambertian radiator. Some other operations
+such as the removal of obstacles or looking behind objects are only possible if there is at least one
+ray capturing the required scene point. Consequently, the ray distribution representing a certain
+scene point is an important characteristic for evaluating processing possibilities. The primary
+idea in this paper is to establish a relation between the capturing setup and the rays of the LF. To
+this end, we discretize the view frustum. Traditionally, a uniform discretization of the view frustum
+results in voxels that represents a single sample on a regularly spaced, 3-D grid. Instead, we use
+frustum-shaped voxels (froxels), by using depth and capturing-setup dependent discretization
+of the view frustum. Based on such discretization, we count the number of rays mapping to the same
+pixel on the capturing device(s). By means of this count, we propose histograms of ray-counts over
+the froxels (fristograms). Fristograms can be used as a tool to analyze and reveal interesting aspects
+of the underlying LF, like the number of rays originating from a scene point and the color distribution
+of these rays. As an example, we show its ability by significantly reducing the number of rays which
+enables noise reduction while maintaining the realistic rendering of non-Lambertian or partially
+occluded regions. 

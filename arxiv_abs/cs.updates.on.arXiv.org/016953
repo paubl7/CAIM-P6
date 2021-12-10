@@ -1,0 +1,19 @@
+In grammar-based compression a string is represented by a context-free grammar, also called a straight-line
+program (SLP), that generates only that string. We refine a recent balancing result stating that
+one can transform an SLP of size $g$ in linear time into an equivalent SLP of size $O(g)$ so that the
+height of the unique derivation tree is $O(\log N)$ where $N$ is the length of the represented string
+(FOCS 2019). We introduce a new class of balanced SLPs, called contracting SLPs, where for every
+rule $A \to \beta_1 \dots \beta_k$ the string length of every variable $\beta_i$ on the right-hand
+side is smaller by a constant factor than the string length of $A$. In particular, the derivation
+tree of a contracting SLP has the property that every subtree has logarithmic height in its leaf size.
+We show that a given SLP of size $g$ can be transformed in linear time into an equivalent contracting
+SLP of size $O(g)$ with rules of constant length. We present an application to the navigation problem
+in compressed unranked trees, represented by forest straight-line programs (FSLPs). We extend
+a linear space data structure by Reh and Sieber (2020) by the operation of moving to the $i$-th child
+in time $O(\log d)$ where $d$ is the degree of the current node. Contracting SLPs are also applied
+to the finger search problem over SLP-compressed strings where one wants to access positions near
+to a pre-specified finger position, ideally in $O(\log d)$ time where $d$ is the distance between
+the accessed position and the finger. We give a linear space solution where one can access symbols
+or move the finger in time $O(\log d + \log^{(t)} N)$ for any constant $t$ where $\log^{(t)} N$ is the
+$t$-fold logarithm of $N$. This improves a previous solution by Bille, Christiansen, Cording,
+and G{\o}rtz (2018) with access/move time $O(\log d + \log \log N)$. 

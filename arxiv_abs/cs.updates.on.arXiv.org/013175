@@ -1,0 +1,19 @@
+Due to the massively increasing amount of available geospatial data and the need to present it in
+an understandable way, clustering this data is more important than ever. As clusters might contain
+a large number of objects, having a representative for each cluster significantly facilitates
+understanding a clustering. Clustering methods relying on such representatives are called center-based.
+In this work we consider the problem of center-based clustering of trajectories. In this setting,
+the representative of a cluster is again a trajectory. To obtain a compact representation of the
+clusters and to avoid overfitting, we restrict the complexity of the representative trajectories
+by a parameter l. This restriction, however, makes discrete distance measures like dynamic time
+warping (DTW) less suited. There is recent work on center-based clustering of trajectories with
+a continuous distance measure, namely, the Fr\'echet distance. While the Fr\'echet distance allows
+for restriction of the center complexity, it can also be sensitive to outliers, whereas averaging-type
+distance measures, like DTW, are less so. To obtain a trajectory clustering algorithm that allows
+restricting center complexity and is more robust to outliers, we propose the usage of a continuous
+version of DTW as distance measure, which we call continuous dynamic time warping (CDTW). Our contribution
+is twofold: 1. To combat the lack of practical algorithms for CDTW, we develop an approximation algorithm
+that computes it. 2. We develop the first clustering algorithm under this distance measure and show
+a practical way to compute a center from a set of trajectories and subsequently iteratively improve
+it. To obtain insights into the results of clustering under CDTW on practical data, we conduct extensive
+experiments. 

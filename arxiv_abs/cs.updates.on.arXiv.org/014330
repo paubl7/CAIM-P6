@@ -1,0 +1,20 @@
+Deep learning models have become increasingly useful in many different industries. On the domain
+of image classification, convolutional neural networks proved the ability to learn robust features
+for the closed set problem, as shown in many different datasets, such as MNIST FASHIONMNIST, CIFAR10,
+CIFAR100, and IMAGENET. These approaches use deep neural networks with dense layers with softmax
+activation functions in order to learn features that can separate classes in a latent space. However,
+this traditional approach is not useful for identifying classes unseen on the training set, known
+as the open set problem. A similar problem occurs in scenarios involving learning on small data.
+To tackle both problems, few-shot learning has been proposed. In particular, metric learning learns
+features that obey constraints of a metric distance in the latent space in order to perform classification.
+However, while this approach proves to be useful for the open set problem, current implementation
+requires pair-wise training, where both positive and negative examples of similar images are presented
+during the training phase, which limits the applicability of these approaches in large data or large
+class scenarios given the combinatorial nature of the possible inputs.In this paper, we present
+a constraint-based approach applied to the representations in the latent space under the normalized
+softmax loss, proposed by[18]. We experimentally validate the proposed approach for the classification
+of unseen classes on different datasets using both metric learning and the normalized softmax loss,
+on disjoint and joint scenarios. Our results show that not only our proposed strategy can be efficiently
+trained on larger set of classes, as it does not require pairwise learning, but also present better
+classification results than the metric learning strategies surpassing its accuracy by a significant
+margin. 

@@ -1,0 +1,19 @@
+The hot intra-cluster medium (ICM) surrounding the heart of galaxy clusters is a complex medium
+comprised of various emitting components. Although previous studies of nearby galaxy clusters,
+such as the Perseus, the Coma, or the Virgo cluster, have demonstrated the need for multiple thermal
+components when spectroscopically fitting the ICM's X-ray emission, no systematic methodology
+for calculating the number of underlying components currently exists. In turn, underestimating
+or overestimating the number of components can cause systematic errors in the emission parameter
+estimations. In this paper, we present a novel approach to determining the number of components
+using an amalgam of machine learning techniques. Synthetic spectra containing a various number
+of underlying thermal components were created using well-established tools available from the
+\textit{Chandra} X-ray Observatory. The dimensions of the training set was initially reduced
+using the Principal Component Analysis and then categorized based on the number of underlying components
+using a Random Forest Classifier. Our trained and tested algorithm was subsequently applied to
+\textit{Chandra} X-ray observations of the Perseus cluster. Our results demonstrate that machine
+learning techniques can efficiently and reliably estimate the number of underlying thermal components
+in the spectra of galaxy clusters, regardless of the thermal model (MEKAL versus APEC). %and signal-to-noise
+ratio used. We also confirm that the core of the Perseus cluster contains a mix of differing underlying
+thermal components. We emphasize that although this methodology was trained and applied on \textit{Chandra}
+X-ray observations, it is readily portable to other current (e.g. XMM-Newton, eROSITA) and upcoming
+(e.g. Athena, Lynx, XRISM) X-ray telescopes. The code is publicly available at \url{https://github.com/XtraAstronomy/Pumpkin}.

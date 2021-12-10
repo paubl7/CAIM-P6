@@ -1,0 +1,19 @@
+In the field of nuclear reactor physics, transient phenomena are usually studied using deterministic
+or hybrids methods. These methods require many approximations, such as: geometry, time and energy
+discretizations, material homogenization and assumption of diffusion conditions, among others.
+In this context, Monte Carlo simulations are specially adequate to study these problems. Challenges
+presented when using Monte Carlo simulations in space-time kinetics in fissile systems are the
+different time-scales involved in prompt and delayed neutron emission, which implies that results
+obtained have a large variance associated if an analog Monte Carlo simulation is utilized. Furthermore,
+in both deterministic and Monte Carlo simulations delayed neutron precursors are grouped in a $6$-
+or $8$- group structure, but nowadays there is not a solid reason to keep this aggregation. In this
+work, and for the first time, individual precursor data is implemented in a Monte Carlo simulation,
+explicitly including the time dependence related to the $\beta$-delayed neutron emission. This
+was accomplished by modifying the open source Monte Carlo code OpenMC. In the modified code -- Time
+Dependent OpenMC or OpenMC(TD) -- time dependency related to delayed neutron emission originated
+from $\beta$-decay was addressed. Continuous energy neutron cross-sections data used comes from
+JEFF-$3$.$1$.$1$ library. Individual precursor data was taken from JEFF-$3$.$1$.$1$ (cumulative
+yields) and ENDF-B/VIII.$0$ (delayed neutron emission probabilities and delayed neutron energy
+spectra). OpenMC(TD) was tested in: i) a monoenergetic system; ii) an energy dependent unmoderated
+system where the precursors were taken individually or in a group structure; and finally iii) a light-water
+moderated energy dependent system, using $6$-groups, $50$ and $40$ individual precursors. 

@@ -1,0 +1,20 @@
+High-fidelity singing voices usually require higher sampling rate (e.g., 48kHz) to convey expression
+and emotion. However, higher sampling rate causes the wider frequency band and longer waveform
+sequences and throws challenges for singing voice synthesis (SVS) in both frequency and time domains.
+Conventional SVS systems that adopt small sampling rate cannot well address the above challenges.
+In this paper, we develop HiFiSinger, an SVS system towards high-fidelity singing voice. HiFiSinger
+consists of a FastSpeech based acoustic model and a Parallel WaveGAN based vocoder to ensure fast
+training and inference and also high voice quality. To tackle the difficulty of singing modeling
+caused by high sampling rate (wider frequency band and longer waveform), we introduce multi-scale
+adversarial training in both the acoustic model and vocoder to improve singing modeling. Specifically,
+1) To handle the larger range of frequencies caused by higher sampling rate, we propose a novel sub-frequency
+GAN (SF-GAN) on mel-spectrogram generation, which splits the full 80-dimensional mel-frequency
+into multiple sub-bands and models each sub-band with a separate discriminator. 2) To model longer
+waveform sequences caused by higher sampling rate, we propose a multi-length GAN (ML-GAN) for waveform
+generation to model different lengths of waveform sequences with separate discriminators. 3)
+We also introduce several additional designs and findings in HiFiSinger that are crucial for high-fidelity
+voices, such as adding F0 (pitch) and V/UV (voiced/unvoiced flag) as acoustic features, choosing
+an appropriate window/hop size for mel-spectrogram, and increasing the receptive field in vocoder
+for long vowel modeling. Experiment results show that HiFiSinger synthesizes high-fidelity singing
+voices with much higher quality: 0.32/0.44 MOS gain over 48kHz/24kHz baseline and 0.83 MOS gain
+over previous SVS systems. 

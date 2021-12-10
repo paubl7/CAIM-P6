@@ -1,0 +1,20 @@
+Transformer encoding networks have been proved to be a powerful tool of understanding natural languages.
+They are playing a critical role in native ads service, which facilitates the recommendation of
+appropriate ads based on user's web browsing history. For the sake of efficient recommendation,
+conventional methods would generate user and advertisement embeddings independently with a siamese
+transformer encoder, such that approximate nearest neighbour search (ANN) can be leveraged. Given
+that the underlying semantic about user and ad can be complicated, such independently generated
+embeddings are prone to information loss, which leads to inferior recommendation quality. Although
+another encoding strategy, the cross encoder, can be much more accurate, it will lead to huge running
+cost and become infeasible for realtime services, like native ads recommendation. In this work,
+we propose hybrid encoder, which makes efficient and precise native ads recommendation through
+two consecutive steps: retrieval and ranking. In the retrieval step, user and ad are encoded with
+a siamese component, which enables relevant candidates to be retrieved via ANN search. In the ranking
+step, it further represents each ad with disentangled embeddings and each user with ad-related
+embeddings, which contributes to the fine-grained selection of high-quality ads from the candidate
+set. Both steps are light-weighted, thanks to the pre-computed and cached intermedia results.
+To optimize the hybrid encoder's performance in this two-stage workflow, a progressive training
+pipeline is developed, which builds up the model's capability in the retrieval and ranking task
+step-by-step. The hybrid encoder's effectiveness is experimentally verified: with very little
+additional cost, it outperforms the siamese encoder significantly and achieves comparable recommendation
+quality as the cross encoder. 

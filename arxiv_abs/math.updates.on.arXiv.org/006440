@@ -1,0 +1,19 @@
+The problem of selecting optimal valid backdoor adjustment sets to estimate causal effects in graphical
+models with hidden and conditioned variables is addressed. Previous work has defined optimality
+as achieving the smallest asymptotic variance compared to other adjustment sets and identified
+a graphical criterion for an optimal set for the case without hidden variables. For the case with
+hidden variables currently a sufficient graphical criterion and a corresponding construction
+algorithm exists. Here optimality is characterized by an information-theoretic approach based
+on the conditional mutual informations among cause, effect, adjustment set, and conditioned variables.
+This characterization allows to derive the main contributions of this paper: A necessary and sufficient
+graphical criterion for the existence of an optimal adjustment set and a definition and algorithm
+to construct it. Further, the optimal set is valid if and only if a valid adjustment set exists and
+has smaller (or equal) asymptotic variance compared to the Adjust-set proposed in Perkovic et al.
+(2018) (arXiv:1606.06903) for any graph, whether graphical optimality holds or not. The results
+are valid for a class of estimators whose asymptotic variance follows a certain information-theoretic
+relation. Numerical experiments indicate that the asymptotic results also hold for relatively
+small sample sizes. For estimators outside of the class studied here none of the considered adjustment
+sets outperforms all others, but a minimized variant of the optimal set proposed here tends to have
+lower variance. Surprisingly, among the randomly created setups more than 80\% fulfill the optimality
+conditions indicating that also in many real-world scenarios graphical optimality may hold. Code
+is available as part of the python package \url{https://github.com/jakobrunge/tigramite}.

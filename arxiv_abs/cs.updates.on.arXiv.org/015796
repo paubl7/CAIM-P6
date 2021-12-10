@@ -1,0 +1,18 @@
+Face parsing aims to predict pixel-wise labels for facial components of a target face in an image.
+Existing approaches usually crop the target face from the input image with respect to a bounding
+box calculated during pre-processing, and thus can only parse inner facial Regions of Interest~(RoIs).
+Peripheral regions like hair are ignored and nearby faces that are partially included in the bounding
+box can cause distractions. Moreover, these methods are only trained and evaluated on near-frontal
+portrait images and thus their performance for in-the-wild cases has been unexplored. To address
+these issues, this paper makes three contributions. First, we introduce iBugMask dataset for face
+parsing in the wild, which consists of 21,866 training images and 1,000 testing images. The training
+images are obtained by augmenting an existing dataset with large face poses. The testing images
+are manually annotated with $11$ facial regions and there are large variations in sizes, poses,
+expressions and background. Second, we propose RoI Tanh-polar transform that warps the whole image
+to a Tanh-polar representation with a fixed ratio between the face area and the context, guided by
+the target bounding box. The new representation contains all information in the original image,
+and allows for rotation equivariance in the convolutional neural networks~(CNNs). Third, we propose
+a hybrid residual representation learning block, coined HybridBlock, that contains convolutional
+layers in both the Tanh-polar space and the Tanh-Cartesian space, allowing for receptive fields
+of different shapes in CNNs. Through extensive experiments, we show that the proposed method improves
+the state-of-the-art for face parsing in the wild and does not require facial landmarks for alignment.

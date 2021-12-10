@@ -1,0 +1,19 @@
+In the last decade, deep learning has become a major component of artificial intelligence. The workhorse
+of deep learning is the optimization of loss functions by stochastic gradient descent (SGD). Traditionally
+in deep learning, neural networks are differentiable mathematical functions, and the loss gradients
+required for SGD are computed with the backpropagation algorithm. However, the computer architectures
+on which these neural networks are implemented and trained suffer from speed and energy inefficiency
+issues, due to the separation of memory and processing in these architectures. To solve these problems,
+the field of neuromorphic computing aims at implementing neural networks on hardware architectures
+that merge memory and processing, just like brains do. In this thesis, we argue that building large,
+fast and efficient neural networks on neuromorphic architectures also requires rethinking the
+algorithms to implement and train them. We present an alternative mathematical framework, also
+compatible with SGD, which offers the possibility to design neural networks in substrates that
+directly exploit the laws of physics. Our framework applies to a very broad class of models, namely
+those whose state or dynamics are described by variational equations. This includes physical systems
+whose equilibrium state minimizes an energy function, and physical systems whose trajectory minimizes
+an action functional. We present a simple procedure to compute the loss gradients in such systems,
+called equilibrium propagation (EqProp), which requires solely locally available information
+for each trainable parameter. Since many models in physics and engineering can be described by variational
+principles, our framework has the potential to be applied to a broad variety of physical systems
+whose applications extend to various fields of engineering, beyond neuromorphic computing. 

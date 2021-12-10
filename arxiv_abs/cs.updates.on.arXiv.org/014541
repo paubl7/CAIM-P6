@@ -1,0 +1,19 @@
+Autonomous unmanned aerial vehicle (UAV) inertial navigation exhibits an extreme dependency
+on the availability of global navigation satellite systems (GNSS) signals, without which it incurs
+in a slow but unavoidable position drift that may ultimately lead to the loss of the platform if the
+GNSS signals are not restored or the aircraft does not reach a location from which it can be recovered
+by remote control. This article describes an stochastic high fidelity simulation of the flight
+of a fixed wing low SWaP (size, weight, and power) autonomous UAV in turbulent and varying weather
+intended to test and validate the GNSS-Denied performance of different navigation algorithms.
+Its open-source \nm{\CC} implementation has been released and is publicly available. Onboard
+sensors include accelerometers, gyroscopes, magnetometers, a Pitot tube, an air data system,
+a GNSS receiver, and a digital camera, so the simulation is valid for inertial, visual, and visual
+inertial navigation systems. Two scenarios involving the loss of GNSS signals are considered:
+the first represents the challenges involved in aborting the mission and heading towards a remote
+recovery location while experiencing varying weather, and the second models the continuation
+of the mission based on a series of closely spaced bearing changes. All simulation modules have been
+modeled with as few simplifications as possible to increase the realism of the results. While the
+implementation of the aircraft performances and its control system is deterministic, that of all
+other modules, including the mission, sensors, weather, wind, turbulence, and initial estimations,
+is fully stochastic. This enables a robust evaluation of each proposed navigation system by means
+of Monte-Carlo simulations that rely on a high number of executions of both scenarios. 

@@ -1,0 +1,19 @@
+Recently, we have witnessed the bloom of neural ranking models in the information retrieval (IR)
+field. So far, much effort has been devoted to developing effective neural ranking models that can
+generalize well on new data. There has been less attention paid to the robustness perspective. Unlike
+the effectiveness which is about the average performance of a system under normal purpose, robustness
+cares more about the system performance in the worst case or under malicious operations instead.
+When a new technique enters into the real-world application, it is critical to know not only how it
+works in average, but also how would it behave in abnormal situations. So we raise the question in
+this work: Are neural ranking models robust? To answer this question, firstly, we need to clarify
+what we refer to when we talk about the robustness of ranking models in IR. We show that robustness
+is actually a multi-dimensional concept and there are three ways to define it in IR: 1) The performance
+variance under the independent and identically distributed (I.I.D.) setting; 2) The out-of-distribution
+(OOD) generalizability; and 3) The defensive ability against adversarial operations. The latter
+two definitions can be further specified into two different perspectives respectively, leading
+to 5 robustness tasks in total. Based on this taxonomy, we build corresponding benchmark datasets,
+design empirical experiments, and systematically analyze the robustness of several representative
+neural ranking models against traditional probabilistic ranking models and learning-to-rank
+(LTR) models. The empirical results show that there is no simple answer to our question. While neural
+ranking models are less robust against other IR models in most cases, some of them can still win 1 out
+of 5 tasks. This is the first comprehensive study on the robustness of neural ranking models. 

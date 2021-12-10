@@ -1,0 +1,19 @@
+Multivariate time-series data are used in many classification and regression predictive tasks,
+and recurrent models have been widely used for such tasks. Most common recurrent models assume that
+time-series data elements are of equal length and the ordered observations are recorded at regular
+intervals. However, real-world time-series data have neither a similar length nor a same number
+of observations. They also have missing entries, which hinders the performance of predictive tasks.
+In this paper, we approach these issues by presenting a model for the combined task of imputing and
+predicting values for the irregularly observed and varying length time-series data with missing
+entries. Our proposed model (Bi-GAN) uses a bidirectional recurrent network in a generative adversarial
+setting. The generator is a bidirectional recurrent network that receives actual incomplete data
+and imputes the missing values. The discriminator attempts to discriminate between the actual
+and the imputed values in the output of the generator. Our model learns how to impute missing elements
+in-between (imputation) or outside of the input time steps (prediction), hence working as an effective
+any-time prediction tool for time-series data. Our method has three advantages to the state-of-the-art
+methods in the field: (a) single model can be used for both imputation and prediction tasks; (b) it
+can perform prediction task for time-series of varying length with missing data; (c) it does not
+require to know the observation and prediction time window during training which provides a flexible
+length of prediction window for both long-term and short-term predictions. We evaluate our model
+on two public datasets and on another large real-world electronic health records dataset to impute
+and predict body mass index (BMI) values in children and show its superior performance in both settings.

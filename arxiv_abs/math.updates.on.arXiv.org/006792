@@ -1,0 +1,19 @@
+Internal interfaces in a domain could exist as a material defect or they can appear due to propagations
+of cracks. Discretization of such geometries and solution of the contact problem on the internal
+interfaces can be computationally challenging. We employ an unfitted Finite Element (FE) framework
+for the discretization of the domains and develop a tailored, globally convergent, and efficient
+multigrid method for solving contact problems on the internal interfaces. In the unfitted FE methods,
+structured background meshes are used and only the underlying finite element space has to be modified
+to incorporate the discontinuities. The non-penetration conditions on the embedded interfaces
+of the domains are discretized using the method of Lagrange multipliers. We reformulate the arising
+variational inequality problem as a quadratic minimization problem with linear inequality constraints.
+Our multigrid method can solve such problems by employing a tailored multilevel hierarchy of the
+FE spaces and a novel approach for tackling the discretized non-penetration conditions. We employ
+pseudo-$L^2$ projection-based transfer operators to construct a hierarchy of nested FE spaces
+from the hierarchy of non-nested meshes. The essential component of our multigrid method is a technique
+that decouples the linear constraints using an orthogonal transformation of the basis. The decoupled
+constraints are handled by a modified variant of the projected Gauss-Seidel method, which we employ
+as a smoother in the multigrid method. These components of the multigrid method allow us to enforce
+linear constraints locally and ensure the global convergence of our method. We will demonstrate
+the robustness, efficiency, and level independent convergence property of the proposed method
+for Signorini's problem and two-body contact problems. 

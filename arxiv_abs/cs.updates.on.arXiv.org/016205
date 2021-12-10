@@ -1,0 +1,20 @@
+Filters (such as Bloom Filters) are data structures that speed up network routing and measurement
+operations by storing a compressed representation of a set. Filters are space efficient, but can
+make bounded one-sided errors: with tunable probability epsilon, they may report that a query element
+is stored in the filter when it is not. This is called a false positive. Recent research has focused
+on designing methods for dynamically adapting filters to false positives, reducing the number
+of false positives when some elements are queried repeatedly. Ideally, an adaptive filter would
+incur a false positive with bounded probability epsilon for each new query element, and would incur
+o(epsilon) total false positives over all repeated queries to that element. We call such a filter
+support optimal. In this paper we design a new Adaptive Cuckoo Filter and show that it is support optimal
+(up to additive logarithmic terms) over any n queries when storing a set of size n. Our filter is simple:
+fixing previous false positives requires a simple cuckoo operation, and the filter does not need
+to store any additional metadata. This data structure is the first practical data structure that
+is support optimal, and the first filter that does not require additional space to fix false positives.
+We complement these bounds with experiments showing that our data structure is effective at fixing
+false positives on network traces, outperforming previous Adaptive Cuckoo Filters. Finally,
+we investigate adversarial adaptivity, a stronger notion of adaptivity in which an adaptive adversary
+repeatedly queries the filter, using the result of previous queries to drive the false positive
+rate as high as possible. We prove a lower bound showing that a broad family of filters, including
+all known Adaptive Cuckoo Filters, can be forced by such an adversary to incur a large number of false
+positives. 

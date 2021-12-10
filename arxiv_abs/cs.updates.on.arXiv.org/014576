@@ -1,0 +1,19 @@
+In this paper, we consider contention resolution on a multiple-access communication channel.
+In this problem, a set of nodes arrive over time, each with a message it intends to send. In each time
+slot, each node may attempt to broadcast its message or remain idle. If a single node broadcasts in
+a slot, the message is received by all nodes; otherwise, if multiple nodes broadcast simultaneously,
+a collision occurs and none succeeds. If collision detection is available, nodes can differentiate
+collision and silence (i.e., no nodes broadcast). Performance of contention resolution algorithms
+is often measured by throughput -- the number of successful transmissions within a period of time;
+whereas robustness is often measured by jamming resistance -- a jammed slot always generates a collision.
+Previous work has shown, with collision detection, optimal constant throughput can be attained,
+even if a constant fraction of all slots are jammed. The situation when collision detection is not
+available, however, remains unclear. In a recent breakthrough paper [Bender et al., STOC '20],
+a crucial case is resolved: constant throughput is possible without collision detection, but only
+if there is no jamming. Nonetheless, the exact trade-off between the best possible throughput and
+the severity of jamming remains unknown. In this paper, we address this open question. Specifically,
+for any level of jamming ranging from none to constant fraction, we prove an upper bound on the best
+possible throughput, along with an algorithm attaining that bound. An immediate and interesting
+implication of our result is, when a constant fraction of all slots are jammed, which is the worst-case
+scenario, there still exists an algorithm achieving a decent throughput: $\Theta(t/\log{t})$
+messages could be successfully transmitted within $t$ slots. 

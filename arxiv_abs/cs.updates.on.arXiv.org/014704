@@ -1,0 +1,18 @@
+Accurate simulations of flows in stellar interiors are crucial to improving our understanding
+of stellar structure and evolution. Because the typically slow flows are but tiny perturbations
+on top of a close balance between gravity and pressure gradient, such simulations place heavy demands
+on numerical hydrodynamics schemes. We demonstrate how discretization errors on grids of reasonable
+size can lead to spurious flows orders of magnitude faster than the physical flow. Well-balanced
+numerical schemes can deal with this problem. Three such schemes are applied in the implicit, finite-volume
+code SLH in combination with a low-Mach-number numerical flux function. We compare how the schemes
+perform in four numerical experiments addressing some of the challenges imposed by typical problems
+in stellar hydrodynamics. We find that the $\alpha$-$\beta$ and Deviation well-balancing methods
+can accurately maintain hydrostatic solutions provided that gravitational potential energy
+is included in the total energy balance. They accurately conserve minuscule entropy fluctuations
+advected in an isentropic stratification, which enables the methods to reproduce the expected
+scaling of convective flow speed with the heating rate. The Deviation method also substantially
+increases accuracy of maintaining stationary orbital motions in a Keplerian disk on long time scales.
+The Cargo-LeRoux method fares substantially worse in our tests, although its simplicity may still
+offer some merits in certain situations. Overall, we find the well-balanced treatment of gravity
+in combination with low Mach number flux functions essential to reproducing correct physical solutions
+to challenging stellar slow-flow problems on affordable collocated grids. 

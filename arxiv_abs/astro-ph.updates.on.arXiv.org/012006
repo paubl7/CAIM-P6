@@ -1,0 +1,19 @@
+At GeV energies, the sky is dominated by the interstellar emission from the Galaxy. With limited
+statistics and spatial resolution, accurate separation of point sources is therefore challenging.
+Here we present the first application of deep learning based algorithms to automatically detect
+and classify point sources from gamma-ray data. To detect point sources we utilise U-shaped convolutional
+networks for image segmentation and k-means for source clustering and localisation. We also explore
+the Centroid-Net algorithm, which is designed to find and count objects. Using two algorithms allows
+for a cross check of the results, while combination of their results can be used to improve performance.
+The training data is based on 9.5 years of Fermi-LAT exposure and we use source properties of active
+galactic nuclei (AGNs) and pulsars (PSRs) from the fourth Fermi-LAT source catalog (4FGL) in addition
+to several models of background interstellar emission. We compare our algorithms qualitatively
+with traditional methods and find them to have similar detection thresholds. We also demonstrate
+the robustness of our source localization algorithms to modifications in the interstellar emission
+models, which presents a clear advantage over traditional methods. The results of the localization
+algorithm are fed into a classification neural network that is trained to separate the three general
+source classes (AGNs, PSRs, and FAKE sources). The network is able to discriminate between these
+three classes with global accuracy of $\sim$ 70%, as long as balanced data sets are used in classification
+training. In https://github.com/bapanes/Gamma-Ray-Point-Source-Detector.git we publish
+our training data sets and analysis scripts and invite the community to the data challenge: How can
+we best locate and classify gamma-ray point sources? 

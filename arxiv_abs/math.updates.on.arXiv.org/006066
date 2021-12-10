@@ -1,0 +1,19 @@
+Millimeter wave (mmWave) massive multiple-input multiple-output (MIMO) systems typically employ
+hybrid mixed signal processing to avoid expensive hardware and high training overheads. {However,
+the lack of fully digital beamforming at mmWave bands imposes additional challenges in channel
+estimation. Prior art on hybrid architectures has mainly focused on greedy optimization algorithms
+to estimate frequency-flat narrowband mmWave channels, despite the fact that in practice, the
+large bandwidth associated with mmWave channels results in frequency-selective channels. In
+this paper, we consider a frequency-selective wideband mmWave system and propose two deep learning
+(DL) compressive sensing (CS) based algorithms for channel estimation.} The proposed algorithms
+learn critical apriori information from training data to provide highly accurate channel estimates
+with low training overhead. In the first approach, a DL-CS based algorithm simultaneously estimates
+the channel supports in the frequency domain, which are then used for channel reconstruction. The
+second approach exploits the estimated supports to apply a low-complexity multi-resolution fine-tuning
+method to further enhance the estimation performance. Simulation results demonstrate that the
+proposed DL-based schemes significantly outperform conventional orthogonal matching pursuit
+(OMP) techniques in terms of the normalized mean-squared error (NMSE), computational complexity,
+and spectral efficiency, particularly in the low signal-to-noise ratio regime. When compared
+to OMP approaches that achieve an NMSE gap of \$\unit[\{4-10\}]{dB}\$ with respect to the Cramer
+Rao Lower Bound (CRLB), the proposed algorithms reduce the CRLB gap to only \$\unit[\{1-1.5\}]{dB}\$,
+while significantly reducing complexity by two orders of magnitude. 

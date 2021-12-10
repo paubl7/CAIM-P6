@@ -1,0 +1,18 @@
+Intrinsic bugs are bugs for which a bug introducing change can be identified in the version control
+system of a software. In contrast, extrinsic bugs are caused by external changes to a software, such
+as errors in external APIs; thereby they do not have an explicit bug introducing change in the version
+control system. Although most previous research literature has assumed that all bugs are of intrinsic
+nature, in a previous study, we show that not all bugs are intrinsic. This paper shows an example of
+how considering extrinsic bugs can affect software engineering research. Specifically, we study
+the impact of extrinsic bugs in Just In Time bug prediction by partially replicating a recent study
+by McIntosh and Kamei on JIT models. These models are trained using properties of earlier bug-introducing
+changes. Since extrinsic bugs do not have bug introducing changes in the version control system,
+we manually curate McIntosh and Kamei's dataset to distinguish between intrinsic and extrinsic
+bugs. Then, we address their original research questions, this time removing extrinsic bugs, to
+study whether bug-introducing changes are a moving target in Just-In-Time bug prediction. Finally,
+we study whether characteristics of intrinsic and extrinsic bugs are different. Our results show
+that intrinsic and extrinsic bugs are of different nature. When removing extrinsic bugs the performance
+is different up to 16 % Area Under the Curve points. This indicates that our JIT models obtain a more
+accurate representation of the real world. We conclude that extrinsic bugs negatively impact Just-In-Time
+models. Furthermore, we offer evidence that extrinsic bugs should be further investigated, as
+they can significantly impact how software engineers understand bugs. 

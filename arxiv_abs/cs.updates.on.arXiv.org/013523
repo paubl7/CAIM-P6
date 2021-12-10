@@ -1,0 +1,19 @@
+Computation Tree Logic of Knowledge (CTLK) can specify many design requirements of privacy and
+security of multi-agent systems (MAS). In our conference paper, we defined Knowledge-oriented
+Petri Nets (KPN) to model MAS and proposed Reachability Graphs with Equivalence Relations (RGER)
+to verify CTLK. In this paper, we use the technique of Ordered Binary Decision Diagrams (OBDD) to
+encode RGER in order to alleviate the state explosion problem and enhance the verification efficiency.
+We propose a heuristic method to order those variables in OBDD, which can well improve the time and
+space performance of producing, encoding and exploring a huge state space. More importantly, our
+method does not produce and encode any transition or equivalence relation of states when producing
+and encoding an RGER, and in fact it dynamically produces those transition or equivalence relations
+that are required in the verification process of CTLK formulas. This policy can save a lot of time
+and space since the number of transition or equivalence relations of states is much greater than
+the number of states themselves. We design symbolic model checking algorithms, develop a tool and
+apply them to two famous examples: Alice-Bob Protocol and Dining Cryptographers Protocol. We compare
+our tool with MCMAS which is the state-of-the-art model checker of verifying CTLK. The experimental
+results illustrate the advantages of our model and method. Our tool running in a general PC can totally
+spend less than 14 hours to verify Dining Cryptographers Protocol with 1200 concurrent cryptographers
+where there are about $10^{1080}$ states and the two verified CTLK formulas have more than 6000 atomic
+propositions and more than 3600 operators. These good performances are owed to a combination of
+the OBDD technique and the structure characteristics of KPN. 

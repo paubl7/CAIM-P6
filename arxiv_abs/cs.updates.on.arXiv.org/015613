@@ -1,0 +1,20 @@
+Modeling human mobility has a wide range of applications from urban planning to simulations of disease
+spread. It is well known that humans spend 80% of their time indoors but modeling indoor human mobility
+is challenging due to three main reasons: (i) the absence of easily acquirable, reliable, low-cost
+indoor mobility datasets, (ii) high prediction space in modeling the frequent indoor mobility,
+and (iii) multi-scalar periodicity and correlations in mobility. To deal with all these challenges,
+we propose WiFiMod, a Transformer-based, data-driven approach that models indoor human mobility
+at multiple spatial scales using WiFi system logs. WiFiMod takes as input enterprise WiFi system
+logs to extract human mobility trajectories from smartphone digital traces. Next, for each extracted
+trajectory, we identify the mobility features at multiple spatial scales, macro, and micro, to
+design a multi-modal embedding Transformer that predicts user mobility for several hours to an
+entire day across multiple spatial granularities. Multi-modal embedding captures the mobility
+periodicity and correlations across various scales while Transformers capture long-term mobility
+dependencies boosting model prediction performance. This approach significantly reduces the
+prediction space by first predicting macro mobility, then modeling indoor scale mobility, micro-mobility,
+conditioned on the estimated macro mobility distribution, thereby using the topological constraint
+of the macro-scale. Experimental results show that WiFiMod achieves a prediction accuracy of at
+least 10% points higher than the current state-of-art models. Additionally, we present 3 real-world
+applications of WiFiMod - (i) predict high-density hot pockets for policy-making decisions for
+COVID19 or ILI, (ii) generate a realistic simulation of indoor mobility, (iii) design personal
+assistants. 

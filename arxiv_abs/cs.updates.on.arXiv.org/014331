@@ -1,0 +1,18 @@
+Gait is a unique biometric feature that can be recognized at a distance; thus, it has broad applications
+in crime prevention, forensic identification, and social security. To portray a gait, existing
+gait recognition methods utilize either a gait template which makes it difficult to preserve temporal
+information, or a gait sequence that maintains unnecessary sequential constraints and thus loses
+the flexibility of gait recognition. In this paper, we present a novel perspective that utilizes
+gait as a deep set, which means that a set of gait frames are integrated by a global-local fused deep
+network inspired by the way our left- and right-hemisphere processes information to learn information
+that can be used in identification. Based on this deep set perspective, our method is immune to frame
+permutations, and can naturally integrate frames from different videos that have been acquired
+under different scenarios, such as diverse viewing angles, different clothes, or different item-carrying
+conditions. Experiments show that under normal walking conditions, our single-model method achieves
+an average rank-1 accuracy of 96.1% on the CASIA-B gait dataset and an accuracy of 87.9% on the OU-MVLP
+gait dataset. Under various complex scenarios, our model also exhibits a high level of robustness.
+It achieves accuracies of 90.8% and 70.3% on CASIA-B under bag-carrying and coat-wearing walking
+conditions respectively, significantly outperforming the best existing methods. Moreover,
+the proposed method maintains a satisfactory accuracy even when only small numbers of frames are
+available in the test samples; for example, it achieves 85.0% on CASIA-B even when using only 7 frames.
+The source code has been released at https://github.com/AbnerHqC/GaitSet. 

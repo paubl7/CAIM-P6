@@ -1,0 +1,19 @@
+Purpose: Recent developments in robotics and artificial intelligence (AI) have led to significant
+advances in healthcare technologies enhancing robot-assisted minimally invasive surgery (RAMIS)
+in some surgical specialties. However, current human-robot interfaces lack intuitive teleoperation
+and cannot mimic surgeon's hand/finger sensing and fine motion. These limitations make tele-operated
+robotic surgery not suitable for micro-surgery and difficult to learn for established surgeons.
+We report a pilot study showing an intuitive way of recording and mapping surgeon's gross hand motion
+and the fine synergic motion during cardiac micro-surgery as a way to enhance future intuitive teleoperation.
+Methods: We set to develop a prototype system able to train a Deep Neural Net-work (DNN) by mapping
+wrist, hand and surgical tool real-time data acquisition(RTDA) inputs during mock-up heart micro-surgery
+procedures. The trained network was used to estimate the tools poses from refined hand joint angles.
+Results: Based on surgeon's feedback during mock micro-surgery, the developed wearable system
+with light-weight sensors for motion tracking did not interfere with the surgery and instrument
+handling. The wearable motion tracking system used 15 finger-thumb-wrist joint angle sensors
+to generate meaningful data-sets representing inputs of the DNN network with new hand joint angles
+added as necessary based on comparing the estimated tool poses against measured tool pose. The DNN
+architecture was optimized for the highest estimation accuracy and the ability to determine the
+tool pose with the least mean squared error. This novel approach showed that the surgical instrument's
+pose, an essential requirement for teleoperation, can be accurately estimated from recorded surgeon's
+hand/finger movements with a mean squared error (MSE) less than 0.3% 

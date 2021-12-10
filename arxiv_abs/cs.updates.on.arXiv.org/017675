@@ -1,0 +1,19 @@
+Existing efforts on Just noticeable difference (JND) estimation mainly dedicate to modeling the
+visibility masking effects of different factors in spatial and frequency domains, and then fusing
+them into an overall JND estimate. However, the overall visibility masking effect can be related
+with more contributing factors beyond those have been considered in the literature and it is also
+insufficiently accurate to formulate the masking effect even for an individual factor. Moreover,
+the potential interactions among different masking effects are also difficult to be characterized
+with a simple fusion model. In this work, we turn to a dramatically different way to address these
+problems with a top-down design philosophy. Instead of formulating and fusing multiple masking
+effects in a bottom-up way, the proposed JND estimation model directly generates a critical perceptual
+lossless (CPL) image from a top-down perspective and calculates the difference map between the
+original image and the CPL image as the final JND map. Given an input image, an adaptively critical
+point (perceptual lossless threshold), defined as the minimum number of spectral components in
+Karhunen-Lo\'{e}ve Transform (KLT) used for perceptual lossless image reconstruction, is derived
+by exploiting the convergence characteristics of KLT coefficient energy. Then, the CPL image can
+be reconstructed via inverse KLT according to the derived critical point. Finally, the difference
+map between the original image and the CPL image is calculated as the JND map. The performance of the
+proposed JND model is evaluated with two applications including JND-guided noise injection and
+JND-guided image compression. Experimental results have demonstrated that our proposed JND model
+can achieve better performance than several latest JND models. 

@@ -1,0 +1,20 @@
+Secure two-party computation considers the problem of two parties computing a joint function of
+their private inputs without revealing anything beyond the output of the computation. In this work,
+we take the first steps towards understanding the setting in which the two parties want to evaluate
+a joint quantum functionality while using only a classical channel between them. Our first result
+indicates that it is in general impossible to realize a two-party quantum functionality against
+malicious adversaries with black-box simulation, relying only on classical channels. The negative
+result stems from reducing the existence of a black-box simulator to an extractor for classical
+proof of quantum knowledge, which in turn leads to violation of the quantum no-cloning. Next, we
+introduce the notion of oblivious quantum function evaluation (OQFE). An OQFE is a two-party quantum
+cryptographic primitive with one fully classical party (Alice) whose input is (a classical description
+of a) quantum unitary, $U$, and a quantum party (Bob) whose input is a quantum state, $\psi$. In particular,
+Alice receives a classical output corresponding to the measurement of $U(\psi)$ while Bob receives
+no output. In OQFE, Bob remains oblivious to Alice's input, while Alice learns nothing about $\psi$
+more than what can be learned from the output. We present two constructions, one secure against semi-honest
+parties and the other against malicious parties. Due to the no-go result mentioned above, we consider
+what is arguably the best possible notion obtainable in our model concerning malicious adversaries:
+one-sided simulation security. Our protocol relies on the assumption of injective homomorphic
+trapdoor OWFs, which in turn rely on the LWE problem. As a result, we put forward a first, simple and
+modular, construction of one-sided quantum two-party computation and quantum oblivious transfer
+over classical networks. 

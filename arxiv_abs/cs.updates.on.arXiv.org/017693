@@ -1,0 +1,20 @@
+In clinical practice, magnetic resonance imaging (MRI) with multiple contrasts is usually acquired
+in a single study to assess different properties of the same region of interest in human body. The
+whole acquisition process can be accelerated by having one or more modalities under-sampled in
+the k-space. Recent researches demonstrate that, considering the redundancy between different
+contrasts or modalities, a target MRI modality under-sampled in the k-space can be better reconstructed
+with the helps from a fully-sampled sequence (i.e., the reference modality). It implies that, in
+the same study of the same subject, multiple sequences can be utilized together toward the purpose
+of highly efficient multi-modal reconstruction. However, we find that multi-modal reconstruction
+can be negatively affected by subtle spatial misalignment between different sequences, which
+is actually common in clinical practice. In this paper, we integrate the spatial alignment network
+with reconstruction, to improve the quality of the reconstructed target modality. Specifically,
+the spatial alignment network estimates the spatial misalignment between the fully-sampled reference
+and the under-sampled target images, and warps the reference image accordingly. Then, the aligned
+fully-sampled reference image joins the under-sampled target image in the reconstruction network,
+to produce the high-quality target image. Considering the contrast difference between the target
+and the reference, we particularly design the cross-modality-synthesis-based registration
+loss, in combination with the reconstruction loss, to jointly train the spatial alignment network
+and the reconstruction network. Our experiments on both clinical MRI and multi-coil k-space raw
+data demonstrate the superiority and robustness of our spatial alignment network. Code is publicly
+available at https://github.com/woxuankai/SpatialAlignmentNetwork. 

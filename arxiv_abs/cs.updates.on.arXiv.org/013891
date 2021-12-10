@@ -1,0 +1,20 @@
+Developing deep learning models to analyze histology images has been computationally challenging,
+as the massive size of the images causes excessive strain on all parts of the computing pipeline.
+This paper proposes a novel deep learning-based methodology for improving the computational efficiency
+of histology image classification. The proposed approach is robust when used with images that have
+reduced input resolution and can be trained effectively with limited labeled data. Pre-trained
+on the original high-resolution (HR) images, our method uses knowledge distillation (KD) to transfer
+learned knowledge from a teacher model to a student model trained on the same images at a much lower
+resolution. To address the lack of large-scale labeled histology image datasets, we perform KD
+in a self-supervised manner. We evaluate our approach on two histology image datasets associated
+with celiac disease (CD) and lung adenocarcinoma (LUAD). Our results show that a combination of
+KD and self-supervision allows the student model to approach, and in some cases, surpass the classification
+accuracy of the teacher, while being much more efficient. Additionally, we observe an increase
+in student classification performance as the size of the unlabeled dataset increases, indicating
+that there is potential to scale further. For the CD data, our model outperforms the HR teacher model,
+while needing 4 times fewer computations. For the LUAD data, our student model results at 1.25x magnification
+are within 3% of the teacher model at 10x magnification, with a 64 times computational cost reduction.
+Moreover, our CD outcomes benefit from performance scaling with the use of more unlabeled data.
+For 0.625x magnification, using unlabeled data improves accuracy by 4% over the baseline. Thus,
+our method can improve the feasibility of deep learning solutions for digital pathology with standard
+computational hardware. 

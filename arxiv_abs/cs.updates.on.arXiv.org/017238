@@ -1,0 +1,19 @@
+Parts fabricated by additive manufacturing (AM) are often fabricated first as a near-net shape,
+a combination of intended nominal geometry and sacrificial support structures, which need to be
+removed in a subsequent post-processing stage using subtractive manufacturing (SM). In this paper,
+we present a framework for optimizing the build orientation with respect to removability of support
+structures. In particular, given a general multi-axis machining setup and sampled build orientations,
+we define a Pareto-optimality criterion based on the total support volume and the "secluded" support
+volume defined as the support volume that is not accessible by a given set of machining tools. Since
+total support volume mainly depends on the build orientation and the secluded volume is dictated
+by the machining setup, in many cases the two objectives are competing and their trade-off needs
+to be taken into account. The accessibility analysis relies on the inaccessibility measure field
+(IMF), which is a continuous field in the Euclidean space that quantifies the inaccessibility of
+each point given a collection of tools and fixturing devices. The value of IMF at each point indicates
+the minimum possible volumetric collision between objects in relative motion including the part,
+fixtures, and the tools, over all possible tool orientations and sharp points on the tool. We also
+propose an automated support removal planning algorithm based on IMF, where a sequence of actions
+are provided in terms of the fixturing devices, cutting tools, and tool orientation at each step.
+In our approach, each step is chosen based on the maximal removable volume to iteratively remove
+accessible supports. The effectiveness of the proposed approach is demonstrated through benchmark
+examples in 2D and realistic examples in 3D. 

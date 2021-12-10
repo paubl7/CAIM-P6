@@ -1,0 +1,18 @@
+In this paper we address game theory problems arising in the context of network security. In traditional
+game theory problems, given a defender and an attacker, one searches for mixed strategies which
+minimize a linear payoff functional. In the problems addressed in this paper an additional quadratic
+term is added to the minimization problem. Such term represents switching costs, i.e., the costs
+for the defender of switching from a given strategy to another one at successive rounds of a Nash game.
+The resulting problems are nonconvex QP ones with linear constraints and turn out to be very challenging.
+We will show that the most recent approaches for the minimization of nonconvex QP functions over
+polytopes, including commercial solvers such as CPLEX and GUROBI, are unable to solve to optimality
+even test instances with n = 50 variables. For this reason, we propose to extend with them the current
+benchmark set of test instances for QP problems. We also present a spatial branch-and-bound approach
+for the solution of these problems, where a predominant role is played by an optimality-based domain
+reduction, with multiple solutions of LP problems at each node of the branch-and-bound tree. Of
+course, domain reductions are standard tools in spatial branch-and-bound approaches. However,
+our contribution lies in the observation that, from the computational point of view, a rather aggressive
+application of these tools appears to be the best way to tackle the proposed instances. Indeed, according
+to our experiments, while they make the computational cost per node high, this is largely compensated
+by the rather slow growth of the number of nodes in the branch-and-bound tree, so that the proposed
+approach strongly outperforms the existing solvers for QP problems. 

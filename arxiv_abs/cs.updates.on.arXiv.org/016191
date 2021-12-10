@@ -1,0 +1,20 @@
+Contemporary approaches to perception, planning, estimation, and control have allowed robots
+to operate robustly as our remote surrogates in uncertain, unstructured environments. There is
+now an opportunity for robots to operate not only in isolation, but also with and alongside humans
+in our complex environments. Natural language provides an efficient and flexible medium through
+which humans can communicate with collaborative robots. Through significant progress in statistical
+methods for natural language understanding, robots are now able to interpret a diverse array of
+free-form navigation, manipulation, and mobile manipulation commands. However, most contemporary
+approaches require a detailed prior spatial-semantic map of the robot's environment that models
+the space of possible referents of the utterance. Consequently, these methods fail when robots
+are deployed in new, previously unknown, or partially observed environments, particularly when
+mental models of the environment differ between the human operator and the robot. This paper provides
+a comprehensive description of a novel learning framework that allows field and service robots
+to interpret and correctly execute natural language instructions in a priori unknown, unstructured
+environments. Integral to our approach is its use of language as a "sensor" -- inferring spatial,
+topological, and semantic information implicit in natural language utterances and then exploiting
+this information to learn a distribution over a latent environment model. We incorporate this distribution
+in a probabilistic language grounding model and infer a distribution over a symbolic representation
+of the robot's action space. We use imitation learning to identify a belief space policy that reasons
+over the environment and behavior distributions. We evaluate our framework through a variety of
+different navigation and mobile manipulation experiments. 

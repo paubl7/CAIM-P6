@@ -1,0 +1,19 @@
+Two non-intrusive uncertainty propagation approaches are proposed for the performance analysis
+of engineering systems described by expensive-to-evaluate deterministic computer models with
+parameters defined as interval variables. These approaches employ a machine learning based optimization
+strategy, the so-called Bayesian optimization, for evaluating the upper and lower bounds of a generic
+response variable over the set of possible responses obtained when each interval variable varies
+independently over its range. The lack of knowledge caused by not evaluating the response function
+for all the possible combinations of the interval variables is accounted for by developing a probabilistic
+description of the response variable itself by using a Gaussian Process regression model. An iterative
+procedure is developed for selecting a small number of simulations to be evaluated for updating
+this statistical model by using well-established acquisition functions and to assess the response
+bounds. In both approaches, an initial training dataset is defined. While one approach builds iteratively
+two distinct training datasets for evaluating separately the upper and lower bounds of the response
+variable, the other builds iteratively a single training dataset. Consequently, the two approaches
+will produce different bound estimates at each iteration. The upper and lower bound responses are
+expressed as point estimates obtained from the mean function of the posterior distribution. Moreover,
+a confidence interval on each estimate is provided for effectively communicating to engineers
+when these estimates are obtained for a combination of the interval variables for which no deterministic
+simulation has been run. Finally, two metrics are proposed to define conditions for assessing if
+the predicted bound estimates can be considered satisfactory. 

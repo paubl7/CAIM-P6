@@ -1,0 +1,20 @@
+Understanding driver activity is vital for in-vehicle systems that aim to reduce the incidence
+of car accidents rooted in cognitive distraction. Automating real-time behavior recognition
+while ensuring actions classification with high accuracy is however challenging, given the multitude
+of circumstances surrounding drivers, the unique traits of individuals, and the computational
+constraints imposed by in-vehicle embedded platforms. Prior work fails to jointly meet these runtime/accuracy
+requirements and mostly rely on a single sensing modality, which in turn can be a single point of failure.
+In this paper, we harness the exceptional feature extraction abilities of deep learning and propose
+a dedicated Interwoven Deep Convolutional Neural Network (InterCNN) architecture to tackle the
+problem of accurate classification of driver behaviors in real-time. The proposed solution exploits
+information from multi-stream inputs, i.e., in-vehicle cameras with different fields of view
+and optical flows computed based on recorded images, and merges through multiple fusion layers
+abstract features that it extracts. This builds a tight ensembling system, which significantly
+improves the robustness of the model. In addition, we introduce a temporal voting scheme based on
+historical inference instances, to enhance the classification accuracy. Experiments conducted
+with a dataset that we collect in a mock-up car environment demonstrate that the proposed InterCNN
+with MobileNet convolutional blocks can classify 9 different behaviors with 73.97% accuracy,
+and 5 'aggregated' behaviors with 81.66% accuracy. We further show that our architecture is highly
+computationally efficient, as it performs inferences within 15ms, which satisfies the real-time
+constraints of intelligent cars. Nevertheless, our InterCNN is robust to lossy input, as the classification
+remains accurate when two input streams are occluded. 

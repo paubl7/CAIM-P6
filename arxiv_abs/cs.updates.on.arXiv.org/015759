@@ -1,0 +1,18 @@
+Graph representation learning has become a ubiquitous component in many scenarios, ranging from
+social network analysis to energy forecasting in smart grids. In several applications, ensuring
+the fairness of the node (or graph) representations with respect to some protected attributes is
+crucial for their correct deployment. Yet, fairness in graph deep learning remains under-explored,
+with few solutions available. In particular, the tendency of similar nodes to cluster on several
+real-world graphs (i.e., homophily) can dramatically worsen the fairness of these procedures.
+In this paper, we propose a biased edge dropout algorithm (FairDrop) to counter-act homophily and
+improve fairness in graph representation learning. FairDrop can be plugged in easily on many existing
+algorithms, is efficient, adaptable, and can be combined with other fairness-inducing solutions.
+After describing the general algorithm, we demonstrate its application on two benchmark tasks,
+specifically, as a random walk model for producing node embeddings, and to a graph convolutional
+network for link prediction. We prove that the proposed algorithm can successfully improve the
+fairness of all models up to a small or negligible drop in accuracy, and compares favourably with
+existing state-of-the-art solutions. In an ablation study, we demonstrate that our algorithm
+can flexibly interpolate between biasing towards fairness and an unbiased edge dropout. Furthermore,
+to better evaluate the gains, we propose a new dyadic group definition to measure the bias of a link
+prediction task when paired with group-based fairness metrics. In particular, we extend the metric
+used to measure the bias in the node embeddings to take into account the graph structure. 

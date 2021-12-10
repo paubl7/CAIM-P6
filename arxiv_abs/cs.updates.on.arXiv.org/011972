@@ -1,0 +1,20 @@
+We study fairness in supervised few-shot meta-learning models that are sensitive to discrimination
+(or bias) in historical data. A machine learning model trained based on biased data tends to make
+unfair predictions for users from minority groups. Although this problem has been studied before,
+existing methods mainly aim to detect and control the dependency effect of the protected variables
+(e.g. race, gender) on target prediction based on a large amount of training data. These approaches
+carry two major drawbacks that (1) lacking showing a global cause-effect visualization for all
+variables; (2) lacking generalization of both accuracy and fairness to unseen tasks. In this work,
+we first discover discrimination from data using a causal Bayesian knowledge graph which not only
+demonstrates the dependency of the protected variable on target but also indicates causal effects
+between all variables. Next, we develop a novel algorithm based on risk difference in order to quantify
+the discriminatory influence for each protected variable in the graph. Furthermore, to protect
+prediction from unfairness, a fast-adapted bias-control approach in meta-learning is proposed,
+which efficiently mitigates statistical disparity for each task and it thus ensures independence
+of protected attributes on predictions based on biased and few-shot data samples. Distinct from
+existing meta-learning models, group unfairness of tasks are efficiently reduced by leveraging
+the mean difference between (un)protected groups for regression problems. Through extensive
+experiments on both synthetic and real-world data sets, we demonstrate that our proposed unfairness
+discovery and prevention approaches efficiently detect discrimination and mitigate biases on
+model output as well as generalize both accuracy and fairness to unseen tasks with a limited amount
+of training samples. 

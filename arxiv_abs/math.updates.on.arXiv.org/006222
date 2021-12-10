@@ -1,0 +1,20 @@
+We consider the problem of recovering a $k$-sparse signal ${\mbox{$\beta$}}_0\in\mathbb{R}^p$
+from noisy observations $\bf y={\bf X}\mbox{$\beta$}_0+{\bf w}\in\mathbb{R}^n$. One of the
+most popular approaches is the $l_1$-regularized least squares, also known as LASSO. We analyze
+the mean square error of LASSO in the case of random designs in which each row of ${\bf X}$ is drawn from
+distribution $N(0,{\mbox{$\Sigma$}})$ with general ${\mbox{$\Sigma$}}$. We first derive the
+asymptotic risk of LASSO in the limit of $n,p\rightarrow\infty$ with $n/p\rightarrow\delta$.
+We then examine conditions on $n$, $p$, and $k$ for LASSO to exactly reconstruct ${\mbox{$\beta$}}_0$
+in the noiseless case ${\bf w}=0$. A phase boundary $\delta_c=\delta(\epsilon)$ is precisely
+established in the phase space defined by $0\le\delta,\epsilon\le 1$, where $\epsilon=k/p$.
+Above this boundary, LASSO perfectly recovers ${\mbox{$\beta$}}_0$ with high probability. Below
+this boundary, LASSO fails to recover $\mbox{$\beta$}_0$ with high probability. While the values
+of the non-zero elements of ${\mbox{$\beta$}}_0$ do not have any effect on the phase transition
+curve, our analysis shows that $\delta_c$ does depend on the signed pattern of the nonzero values
+of $\mbox{$\beta$}_0$ for general ${\mbox{$\Sigma$}}\ne{\bf I}_p$. This is in sharp contrast
+to the previous phase transition results derived in i.i.d. case with $\mbox{$\Sigma$}={\bf I}_p$
+where $\delta_c$ is completely determined by $\epsilon$ regardless of the distribution of $\mbox{$\beta$}_0$.
+Underlying our formalism is a recently developed efficient algorithm called approximate message
+passing (AMP) algorithm. We generalize the state evolution of AMP from i.i.d. case to general case
+with ${\mbox{$\Sigma$}}\ne{\bf I}_p$. Extensive computational experiments confirm that our
+theoretical predictions are consistent with simulation results on moderate size system. 

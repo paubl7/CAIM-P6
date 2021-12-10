@@ -1,0 +1,19 @@
+We consider the problem of information retrieval from a dataset of files stored on a single server
+under both a user distortion and a user privacy constraint. Specifically, a user requesting a file
+from the dataset should be able to reconstruct the requested file with a prescribed distortion,
+and in addition, the identity of the requested file should be kept private from the server with a prescribed
+privacy level. The proposed model can be seen as an extension of the well-known concept of private
+information retrieval by allowing for distortion in the retrieval process and relaxing the perfect
+privacy requirement. We initiate the study of the tradeoff between download rate, distortion,
+and user privacy leakage, and show that the optimal rate-distortion-leakage tradeoff is convex
+and that in the limit of large file sizes this allows for a concise information-theoretical formulation
+in terms of mutual information. Moreover, we propose a new data-driven framework by leveraging
+recent advancements in generative adversarial models which allows a user to learn efficient schemes
+in terms of download rate from the data itself. Learning the scheme is formulated as a constrained
+minimax game between a user which desires to keep the identity of the requested file private and an
+adversary that tries to infer which file the user is interested in under a distortion constraint.
+In general, guaranteeing a certain privacy level leads to a higher rate-distortion tradeoff curve,
+and hence a sacrifice in either download rate or distortion. We evaluate the performance of the scheme
+on a synthetic Gaussian dataset as well as on the MNIST and CIFAR-$10$ datasets. For the MNIST dataset,
+the data-driven approach significantly outperforms a proposed general achievable scheme combining
+source coding with the download of multiple files, while for CIFAR-$10$ the performances are comparable.

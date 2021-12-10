@@ -1,0 +1,18 @@
+This paper presents a novel spatio-temporal LSTM (SPATIAL) architecture for time series forecasting
+applied to environmental datasets. The framework was evaluated across multiple sensors and for
+three different oceanic variables: current speed, temperature, and dissolved oxygen. Network
+implementation proceeded in two directions that are nominally separated but connected as part
+of a natural environmental system -- across the spatial (between individual sensors) and temporal
+components of the sensor data. Data from four sensors sampling current speed, and eight measuring
+both temperature and dissolved oxygen evaluated the framework. Results were compared against
+RF and XGB baseline models that learned on the temporal signal of each sensor independently by extracting
+the date-time features together with the past history of data using sliding window matrix. Results
+demonstrated ability to accurately replicate complex signals and provide comparable performance
+to state-of-the-art benchmarks. Notably, the novel framework provided a simpler pre-processing
+and training pipeline that handles missing values via a simple masking layer. Enabling learning
+across the spatial and temporal directions, this paper addresses two fundamental challenges of
+ML applications to environmental science: 1) data sparsity and the challenges and costs of collecting
+measurements of environmental conditions such as ocean dynamics, and 2) environmental datasets
+are inherently connected in the spatial and temporal directions while classical ML approaches
+only consider one of these directions. Furthermore, sharing of parameters across all input steps
+makes SPATIAL a fast, scalable, and easily-parameterized forecasting framework. 

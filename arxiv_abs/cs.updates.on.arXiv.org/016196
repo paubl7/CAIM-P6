@@ -1,0 +1,19 @@
+The Gleason scoring system is the primary diagnostic and prognostic tool for prostate cancer. In
+recent years, with the development of digitisation devices, the use of computer vision techniques
+for the analysis of biopsies has increased. However, to the best of the authors' knowledge, the development
+of algorithms to automatically detect individual cribriform patterns belonging to Gleason grade
+4 has not yet been studied in the literature. The objective of the work presented in this paper is to
+develop a deep-learning-based system able to support pathologists in the daily analysis of prostate
+biopsies. The methodological core of this work is a patch-wise predictive model based on convolutional
+neural networks able to determine the presence of cancerous patterns. In particular, we train from
+scratch a simple self-design architecture. The cribriform pattern is detected by retraining the
+set of filters of the last convolutional layer in the network. From the reconstructed prediction
+map, we compute the percentage of each Gleason grade in the tissue to feed a multi-layer perceptron
+which provides a biopsy-level score.mIn our SICAPv2 database, composed of 182 annotated whole
+slide images, we obtained a Cohen's quadratic kappa of 0.77 in the test set for the patch-level Gleason
+grading with the proposed architecture trained from scratch. Our results outperform previous
+ones reported in the literature. Furthermore, this model reaches the level of fine-tuned state-of-the-art
+architectures in a patient-based four groups cross validation. In the cribriform pattern detection
+task, we obtained an area under ROC curve of 0.82. Regarding the biopsy Gleason scoring, we achieved
+a quadratic Cohen's Kappa of 0.81 in the test subset. Shallow CNN architectures trained from scratch
+outperform current state-of-the-art methods for Gleason grades classification. 

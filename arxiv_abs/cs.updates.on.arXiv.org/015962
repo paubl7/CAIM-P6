@@ -1,0 +1,19 @@
+Recommendation systems have been extensively studied by many literature in the past and are ubiquitous
+in online advertisement, shopping industry/e-commerce, query suggestions in search engines,
+and friend recommendation in social networks. Moreover, restaurant/music/product/movie/news/app
+recommendations are only a few of the applications of a recommender system. A small percent improvement
+on the CTR prediction accuracy has been mentioned to add millions of dollars of revenue to the advertisement
+industry. Click-Through-Rate (CTR) prediction is a special version of recommender system in which
+the goal is predicting whether or not a user is going to click on a recommended item. A content-based
+recommendation approach takes into account the past history of the user's behavior, i.e. the recommended
+products and the users reaction to them. So, a personalized model that recommends the right item
+to the right user at the right time is the key to building such a model. On the other hand, the so-called
+collaborative filtering approach incorporates the click history of the users who are very similar
+to a particular user, thereby helping the recommender to come up with a more confident prediction
+for that particular user by leveraging the wider knowledge of users who share their taste in a connected
+network of users. In this project, we are interested in building a CTR predictor using Graph Neural
+Networks complemented by an online learning algorithm that models such dynamic interactions.
+By framing the problem as a binary classification task, we have evaluated this system both on the
+offline models (GNN, Deep Factorization Machines) with test-AUC of 0.7417 and on the online learning
+model with test-AUC of 0.7585 using a sub-sampled version of Criteo public dataset consisting of
+10,000 data points. 

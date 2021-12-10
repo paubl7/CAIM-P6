@@ -1,0 +1,20 @@
+Most parallel applications suffer from load imbalance, a crucial performance degradation factor.
+In particle simulations, this is mainly due to the migration of particles between processing elements,
+which eventually gather unevenly and create workload imbalance. Dynamic load balancing is used
+at various iterations to mitigate load imbalance, employing a partitioning method to divide the
+computational space evenly while minimizing communications. In this paper, we propose a novel
+partitioning methodology called ``informed partitioning''. It uses information based on the
+evolution of the computation to reduce the load balancing growth and the number of load balancing
+calls. We illustrate informed partitioning by proposing a new geometric partitioning technique
+for particles simulations. This technique is derived from the well-known recursive coordinate
+bisection and employs the velocity of the particles to guide the bisection axis. To properly compare
+the performance of our new method with existing partitioning techniques during application execution,
+we introduce an effort metric based on a theoretical model of load balanced parallel application
+time. We propose a proof-of-concept of informed partitioning, through a numerical study, on three
+N-Body simulations with various particle dynamics, and we discuss its performance against popular
+geometric partitioning techniques. Moreover, we show that our effort metric can be used to rank
+partitioning techniques by their efficiency at any time point during the simulation. Eventually,
+this could be used to choose the best partitioning on the fly. In the numerical study, we report that
+our novel concept increases the performance of two experiments out of three by up to 76% and 15%, while
+being marginally slower by only $3\%$ in one experiment. Also, we discuss the limitations of our
+implementation of informed partitioning and our effort metric. 

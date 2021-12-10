@@ -1,0 +1,18 @@
+Pulsar searches are computationally demanding efforts to discover dispersed periodic signals
+in time- and frequency-resolved data from radio telescopes. The complexity and computational
+expense of simultaneously determining the frequency-dependent delay (dispersion) and the periodicity
+of the signal is further exacerbated by the presence of various types of radio-frequency interference
+(RFI) and observing-system effects. New observing systems with wider bandwidths, higher bit rates
+and greater overall sensitivity (also to RFI) further enhance these challenges. We present a novel
+approach to the analysis of pulsar search data. Specifically, we present a neural-network-based
+pipeline that efficiently suppresses a wide range of RFI signals and instrumental instabilities
+and furthermore corrects for (a priori unknown) interstellar dispersion. After initial training
+of the network, our analysis can be run in real time on a standard desktop computer with a commonly
+available, consumer-grade GPU. We complement our neural network with standard algorithms for
+periodicity searches. In particular with the Fast Fourier Transform (FFT) and the Fast Folding
+Algorithm (FFA) and demonstrate that with these straightforward extensions, our method is capable
+of identifying even faint pulsars, while maintaining an extremely low number of false positives.
+We furthermore apply our analysis to a subset of the PALFA survey and demonstrate that in most cases
+the automated dispersion removal of our network produces a time series of similar quality as dedispersing
+using the actual dispersion measure of the pulsar in question. On our test data we are able to make
+predictions whether a pulsar is present in the data or not 200 times faster than real time. 

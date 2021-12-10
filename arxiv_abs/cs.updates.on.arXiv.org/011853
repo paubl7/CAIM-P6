@@ -1,0 +1,18 @@
+The Learning with Errors (LWE) problem is an $\mathcal{NP}$-hard problem that lies the foundation
+of several cryptographic algorithms. Generalizing this principle, several cryptosystems based
+on the closely related Ring Learning with Errors (RLWE) problem have been proposed within the NIST
+PQC standardization process, e.g., the systems LAC and NewHope. The combination of encryption
+and decryption for these kinds of algorithms can be interpreted as data transmission over noisy
+channels. To the best of our knowledge this paper is the first work that analyzes the capacity of this
+channel. In particular, we present lower bounds on the capacity, which show that the transmission
+rate can be significantly increased compared to standard proposals in the literature. Furthermore,
+under the assumption of stochastically independent coefficient failures we give achievability
+bounds as well as concrete code constructions achieving a decryption failure rate (DFR) less than
+$2^{-112}$ for LAC and less than $2^{-216}$ for NewHope for their highest proposed security levels.
+Our results show that the data rate of the encryption scheme is significantly increased for NewHope,
+namely by factor of $7$ and for LAC by a factor of $2$. This is partly based on choosing larger alphabet
+sizes. Furthermore we show how to significantly decrease the decryption failure rate compared
+to the original proposals while achieving the same bit rate. We also show that the measures we take
+to achieve these results have no negative impact on the security level. Thus, by means of our constructions,
+we can either increase the total bit rate while guaranteeing the same DFR or for the same bit rate,
+we can significantly reduce the DFR (e.g., for NewHope from $2^{-216}$ to $2^{-12764}$). 

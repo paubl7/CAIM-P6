@@ -1,0 +1,19 @@
+Permissioned ledger technologies have gained significant traction over the last few years. For
+practical reasons, their applications have focused on transforming narrowly scoped use-cases
+in isolation. This has led to a proliferation of niche, isolated networks that are quickly becoming
+data and value silos. To increase value across the broader ecosystem, these networks must seamlessly
+integrate with existing systems and interoperate with one another. A fundamental requirement
+for enabling crosschain communication is the ability to prove the validity of the internal state
+of a ledger to an external party. However, due to the closed nature of permissioned ledgers, their
+internal state is opaque to an external observer. This makes consuming and verifying states from
+these networks a non-trivial problem. This paper addresses this fundamental requirement for state
+sharing across permissioned ledgers. In particular, we address two key problems for external clients:
+(i) assurances on the validity of state in a permissioned ledger and (ii) the ability to reason about
+the currency of state. We assume an adversarial model where the members of the committee managing
+the permissioned ledger can be malicious in the absence of detectability and accountability. We
+present a formalization of the problem for state sharing and examine its security properties under
+different adversarial conditions. We propose the design of a protocol that uses a secure public
+ledger for providing guarantees on safety and the ability to reason about time, with at least one
+honest member in the committee. We then provide a formal security analysis of our design and a proof
+of concept implementation based on Hyperledger Fabric demonstrating the effectiveness of the
+proposed protocol. 

@@ -1,0 +1,19 @@
+Collaborative inference has recently emerged as an intriguing framework for applying deep learning
+to Internet of Things (IoT) applications, which works by splitting a DNN model into two subpart models
+respectively on resource-constrained IoT devices and the cloud. Even though IoT applications'
+raw input data is not directly exposed to the cloud in such framework, revealing the local-part model's
+intermediate output still entails privacy risks. For mitigation of privacy risks, differential
+privacy could be adopted in principle. However, the practicality of differential privacy for collaborative
+inference under various conditions remains unclear. For example, it is unclear how the calibration
+of the privacy budget epsilon will affect the protection strength and model accuracy in presence
+of the state-of-the-art reconstruction attack targeting collaborative inference, and whether
+a good privacy-utility balance exists. In this paper, we provide the first systematic study to assess
+the effectiveness of differential privacy for protecting collaborative inference in presence
+of the reconstruction attack, through extensive empirical evaluations on various datasets. Our
+results show differential privacy can be used for collaborative inference when confronted with
+the reconstruction attack, with insights provided about privacyutility trade-offs. Specifically,
+across the evaluated datasets, we observe there exists a suitable privacy budget range (particularly
+100<=epsilon<=200 in our evaluation) providing a good tradeoff between utility and privacy protection.
+Our key observation drawn from our study is that differential privacy tends to perform better in
+collaborative inference for datasets with smaller intraclass variations, which, to our knowledge,
+is the first easy-toadopt practical guideline. 

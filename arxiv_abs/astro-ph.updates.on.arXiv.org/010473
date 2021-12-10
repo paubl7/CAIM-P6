@@ -1,0 +1,19 @@
+The Earth Observation planning community has access to tools that can propagate orbits and compute
+coverage of Earth observing imagers with customizable shapes and orientation, model the expected
+Earth Reflectance at various bands, epochs and directions, generate simplified instrument performance
+metrics for imagers and radars, and schedule single and multiple spacecraft payload operations.
+We are working toward integrating existing tools to design a planner that allows commercial small
+spacecraft to assess the opportunities for cross-calibration of their sensors against current
+satellite to be calibrated, specifications of the reference instruments, sensor stability, allowable
+latency between calibration measurements, differences in viewing and solar geometry between
+calibration measurements, etc. The planner would output cross-calibration opportunities for
+every reference target pair as a function of flexible user-defined parameters. We use a preliminary
+version of this planner to inform the design of a constellation of transfer radiometers that can
+serve as stable, radiometric references for commercial sensors to cross-calibrate with. We propose
+such a constellation for either vicarious cross-calibration using pre-selected sites, or top
+of the atmosphere (TOA) cross-calibration globally. Results from the calibration planner applied
+to a subset of informed architecture designs show that a 4 sat constellation provides multiple calibration
+opportunities within half a day planning horizon, for Cubesat sensors deployed into a typical rideshare
+orbits. While such opportunities are available for cross calibration image pairs within 5 deg of
+solar or view directions, and with-in an hour (for TOA) and less than a day (vicariously), the planner
+allows us to identify many more by relaxing user-defined restrictions. 

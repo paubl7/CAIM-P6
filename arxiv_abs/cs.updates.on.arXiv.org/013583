@@ -1,0 +1,19 @@
+Time-sensitive wireless networks are an important enabling building block for many emerging industrial
+Internet of Things (IoT) applications. Quick prototyping and evaluation of time-sensitive wireless
+technologies are desirable for R&D efforts. Software-defined radio (SDR), by allowing wireless
+signal processing on a personal computer (PC), has been widely used for such quick prototyping efforts.
+Unfortunately, because of the \textit{uncontrollable delay} between the PC and the radio board,
+SDR is generally deemed not suitable for time-sensitive wireless applications that demand communication
+with low and deterministic latency. For a rigorous evaluation of its suitability for industrial
+IoT applications, this paper conducts a quantitative investigation of the synchronization accuracy
+and end-to-end latency achievable by an SDR wireless system. To this end, we designed and implemented
+a time-slotted wireless system on the Universal Software Radio Peripheral (USRP) SDR platform.
+We developed a time synchronization mechanism to maintain synchrony among nodes in the system.
+To reduce the delays and delay jitters between the USRP board and its PC, we devised a {\textit{Just-in-time}}
+algorithm to ensure that packets sent by the PC to the USRP can reach the USRP just before the time slots
+they are to be transmitted. Our experiments demonstrate that $90\%$ ($100\%$) of the time slots
+of different nodes can be synchronized and aligned to within $ \pm 0.5$ samples or $ \pm 0.05\mu s$
+($ \pm 1.5$ samples or $ \pm 0.15\mu s$), and that the end-to-end packet delivery latency can be down
+to $3.75ms$. This means that SDR-based solutions can be applied in a range of IIoT applications that
+require tight synchrony and moderately low latency, e.g., sensor data collection, automated guided
+vehicle (AGV) control, and Human-Machine-Interaction (HMI). 

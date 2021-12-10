@@ -1,0 +1,18 @@
+Modern, complex software systems are being continuously extended and adjusted. The developers
+responsible for this may come from different teams or organizations, and may be distributed over
+the world. This may make it difficult to keep track of what other developers are doing, which may result
+in multiple developers concurrently editing the same code areas. This, in turn, may lead to hard-to-merge
+changes or even merge conflicts, logical bugs that are difficult to detect, duplication of work,
+and wasted developer productivity. To address this, we explore the extent of this problem in the
+pull request based software development model. We study half a year of changes made to six large repositories
+in Microsoft in which at least 1,000 pull requests are created each month. We find that files concurrently
+edited in different pull requests are more likely to introduce bugs. Motivated by these findings,
+we design, implement, and deploy a service named ConE (Concurrent Edit Detector) that proactively
+detects pull requests containing concurrent edits, to help mitigate the problems caused by them.
+ConE has been designed to scale, and to minimize false alarms while still flagging relevant concurrently
+edited files. Key concepts of ConE include the detection of the Extent of Overlap between pull requests,
+and the identification of Rarely Concurrently Edited Files. To evaluate ConE, we report on its operational
+deployment on 234 repositories inside Microsoft. ConE assessed 26,000 pull requests and made 775
+recommendations about conflicting changes, which were rated as useful in over 70% (554) of the cases.
+From interviews with 48 users we learned that they believed ConE would save time in conflict resolution
+and avoiding duplicate work, and that over 90% intend to keep using the service on a daily basis. 

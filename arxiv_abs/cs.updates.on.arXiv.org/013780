@@ -1,0 +1,18 @@
+In order to perform network analysis tasks, representations that capture the most relevant information
+in the graph structure are needed. However, existing methods do not learn representations that
+can be interpreted in a straightforward way and that are robust to perturbations to the graph structure.
+In this work, we address these two limitations by proposing node2coords, a representation learning
+algorithm for graphs, which learns simultaneously a low-dimensional space and coordinates for
+the nodes in that space. The patterns that span the low dimensional space reveal the graph's most
+important structural information. The coordinates of the nodes reveal the proximity of their local
+structure to the graph structural patterns. In order to measure this proximity by taking into account
+the underlying graph, we propose to use Wasserstein distances. We introduce an autoencoder that
+employs a linear layer in the encoder and a novel Wasserstein barycentric layer at the decoder. Node
+connectivity descriptors, that capture the local structure of the nodes, are passed through the
+encoder to learn the small set of graph structural patterns. In the decoder, the node connectivity
+descriptors are reconstructed as Wasserstein barycenters of the graph structural patterns. The
+optimal weights for the barycenter representation of a node's connectivity descriptor correspond
+to the coordinates of that node in the low-dimensional space. Experimental results demonstrate
+that the representations learned with node2coords are interpretable, lead to node embeddings
+that are stable to perturbations of the graph structure and achieve competitive or superior results
+compared to state-of-the-art methods in node classification. 

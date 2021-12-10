@@ -1,0 +1,20 @@
+Given two $n \times n$ Hermitian matrices $Y$ and $\Lambda$, the Harish-Chandra-Itzykson-Zuber
+(HCIZ) distribution on the unitary group $\text{U}(n)$ is $e^{\text{tr}(U\Lambda U^*Y)}d\mu(U)$,
+where $\mu$ is the Haar measure on $\text{U}(n)$. The density $e^{\text{tr}(U\Lambda U^*Y)}$
+is known as the HCIZ density. Random unitary matrices distributed according to the HCIZ density
+are important in various settings in physics and random matrix theory. However, the basic question
+of efficient sampling from the HCIZ distribution has remained open. We present two efficient algorithms
+to sample matrices from distributions that are close to the HCIZ distribution. The first algorithm
+outputs samples that are $\xi$-close in total variation distance and requires polynomially many
+arithmetic operations in $\log 1/\xi$ and the number of bits needed to encode $Y$ and $\Lambda$.
+The second algorithm comes with a stronger guarantee that the samples are $\xi$-close in infinity
+divergence, but the number of arithmetic operations depends polynomially on $1/\xi$, the number
+of bits needed to encode $Y$ and $\Lambda$, and the differences of the largest and the smallest eigenvalues
+of $Y$ and $\Lambda$. HCIZ densities can also be viewed as exponential densities on $\text{U}(n)$-orbits,
+and these densities have been studied in statistics, machine learning, and theoretical computer
+science. Thus our results have the following applications: 1) an efficient algorithm to sample
+from complex versions of matrix Langevin distributions studied in statistics, 2) an efficient
+algorithm to sample from continuous max-entropy distributions on unitary orbits, which implies
+an efficient algorithm to sample a pure quantum state from the entropy-maximizing ensemble representing
+a given density matrix, and 3) an efficient algorithm for differentially private rank-$k$ approximation,
+with improved utility bounds for $k>1$. 

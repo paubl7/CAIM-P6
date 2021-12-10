@@ -1,0 +1,18 @@
+Let $G=(V,E)$ be a simple graph with maximum degree $d$. For an integer $k\in\mathbb{N}$, the $k$-disc
+of a vertex $v\in V$ is defined as the rooted subgraph of $G$ that is induced by all vertices whose distance
+to $v$ is at most $k$. The $k$-disc frequency distribution vector of $G$, denoted by $\text{freq}_{k}(G)$,
+is a vector indexed by all isomorphism types of rooted $k$-discs. For each such isomorphism type
+$\Gamma$, the corresponding entry in $\text{freq}_{k}(G)$ counts the fraction of vertices in
+$V$ that have a $k$-disc isomorphic to $\Gamma$. In a sense, $\text{freq}_{k}(G)$ is one way to represent
+the "local structure" of $G$. The graph $G$ can be arbitrarily large, and so a natural question is
+whether given $\text{freq}_{k}(G)$ it is possible to construct a small graph $H$, whose size is
+independent of $|V|$, such that $H$ has a similar local structure. N. Alon proved that for any $\epsilon>0$
+there always exists a graph $H$ whose size is independent of $|V|$ and whose frequency vector satisfies
+$||\text{freq}_{k}(G)-\text{freq}_{k}(H)||_{1}\le\epsilon$. However, his proof is only
+existential and does not imply that there is a deterministic algorithm to construct such a graph
+$H$. He gave the open problem of finding an explicit deterministic algorithm that finds $H$, or proving
+that no such algorithm exists. Our main result is that Alon's problem is undecidable if and only if
+a much more general problem (involving directed edges and edge colors) is undecidable. We also prove
+that both problems are decidable for the special case when $G$ is a path. We show that the local structure
+of any directed edge-colored path $G$ can be approximated by a suitable fixed-size directed edge-colored
+path $H$ and we give explicit bound on the size of $H$. 

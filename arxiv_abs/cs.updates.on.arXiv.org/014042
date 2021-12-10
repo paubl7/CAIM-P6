@@ -1,0 +1,20 @@
+Time-of-Flight Magnetic Resonance Angiographs (TOF-MRAs) enable visualization and analysis
+of cerebral arteries. This analysis may indicate normal variation of the configuration of the cerebrovascular
+system or vessel abnormalities, such as aneurysms. A model would be useful to represent normal cerebrovascular
+structure and variabilities in a healthy population and to differentiate from abnormalities.
+Current anomaly detection using autoencoding convolutional neural networks usually use a voxelwise
+mean-error for optimization. We propose optimizing a variational-autoencoder (VAE) with structural
+similarity loss (SSIM) for TOF-MRA reconstruction. A patch-trained 2D fully-convolutional VAE
+was optimized for TOF-MRA reconstruction by comparing vessel segmentations of original and reconstructed
+MRAs. The method was trained and tested on two datasets: the IXI dataset, and a subset from the ADAM
+challenge. Both trained networks were tested on a dataset including subjects with aneurysms. We
+compared VAE optimization with L2-loss and SSIM-loss. Performance was evaluated between original
+and reconstructed MRAs using mean square error, mean-SSIM, peak-signal-to-noise-ratio and dice
+similarity index (DSI) of segmented vessels. The L2-optimized VAE outperforms SSIM, with improved
+reconstruction metrics and DSIs for both datasets. Optimization using SSIM performed best for
+visual image quality, but with discrepancy in quantitative reconstruction and vascular segmentation.
+The larger, more diverse IXI dataset had overall better performance. Reconstruction metrics,
+including SSIM, were lower for MRAs including aneurysms. A SSIM-optimized VAE improved the visual
+perceptive image quality of TOF-MRA reconstructions. A L2-optimized VAE performed best for TOF-MRA
+reconstruction, where the vascular segmentation is important. SSIM is a potential metric for anomaly
+detection of MRAs. 

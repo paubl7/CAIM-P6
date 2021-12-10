@@ -1,0 +1,18 @@
+Face representation learning using datasets with massive number of identities requires appropriate
+training methods. Softmax-based approach, currently the state-of-the-art in face recognition,
+in its usual "full softmax" form is not suitable for datasets with millions of persons. Several methods,
+based on the "sampled softmax" approach, were proposed to remove this limitation. These methods,
+however, have a set of disadvantages. One of them is a problem of "prototype obsolescence": classifier
+weights (prototypes) of the rarely sampled classes, receive too scarce gradients and become outdated
+and detached from the current encoder state, resulting in an incorrect training signals. This problem
+is especially serious in ultra-large-scale datasets. In this paper, we propose a novel face representation
+learning model called Prototype Memory, which alleviates this problem and allows training on a
+dataset of any size. Prototype Memory consists of the limited-size memory module for storing recent
+class prototypes and employs a set of algorithms to update it in appropriate way. New class prototypes
+are generated on the fly using exemplar embeddings in the current mini-batch. These prototypes
+are enqueued to the memory and used in a role of classifier weights for usual softmax classification-based
+training. To prevent obsolescence and keep the memory in close connection with encoder, prototypes
+are regularly refreshed, and oldest ones are dequeued and disposed. Prototype Memory is computationally
+efficient and independent of dataset size. It can be used with various loss functions, hard example
+mining algorithms and encoder architectures. We prove the effectiveness of the proposed model
+by extensive experiments on popular face recognition benchmarks. 

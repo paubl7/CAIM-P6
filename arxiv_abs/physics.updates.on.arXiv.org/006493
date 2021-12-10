@@ -1,0 +1,20 @@
+Effective molecular representation learning is of great importance to facilitate molecular property
+prediction, which is a fundamental task for the drug and material industry. Recent advances in graph
+neural networks (GNNs) have shown great promise in applying GNNs for molecular representation
+learning. Moreover, a few recent studies have also demonstrated successful applications of self-supervised
+learning methods to pre-train the GNNs to overcome the problem of insufficient labeled molecules.
+However, existing GNNs and pre-training strategies usually treat molecules as topological graph
+data without fully utilizing the molecular geometry information. Whereas, the three-dimensional
+(3D) spatial structure of a molecule, a.k.a molecular geometry, is one of the most critical factors
+for determining molecular physical, chemical, and biological properties. To this end, we propose
+a novel Geometry Enhanced Molecular representation learning method (GEM) for Chemical Representation
+Learning (ChemRL). At first, we design a geometry-based GNN architecture that simultaneously
+models atoms, bonds, and bond angles in a molecule. To be specific, we devised double graphs for a
+molecule: The first one encodes the atom-bond relations; The second one encodes bond-angle relations.
+Moreover, on top of the devised GNN architecture, we propose several novel geometry-level self-supervised
+learning strategies to learn spatial knowledge by utilizing the local and global molecular 3D structures.
+We compare ChemRL-GEM with various state-of-the-art (SOTA) baselines on different molecular
+benchmarks and exhibit that ChemRL-GEM can significantly outperform all baselines in both regression
+and classification tasks. For example, the experimental results show an overall improvement of
+$8.8\%$ on average compared to SOTA baselines on the regression tasks, demonstrating the superiority
+of the proposed method. 

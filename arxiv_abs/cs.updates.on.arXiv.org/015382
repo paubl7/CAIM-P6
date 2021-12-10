@@ -1,0 +1,18 @@
+Point cloud analysis is still a challenging task due to the disorder and sparsity of samplings of
+their geometric structures from 3D sensors. In this paper, we introduce the homotopy equivalence
+relation (HER) to make the neural networks learn the data distribution from a high-dimension manifold.
+A shuffle operation is adopted to construct HER for its randomness and zero-parameter. In addition,
+inspired by prior works, we propose a local mutual information regularizer (LMIR) to cut off the
+trivial path that leads to a classification error from HER. LMIR utilizes mutual information to
+measure the distance between the original feature and HER transformed feature and learns common
+features in a contrastive learning scheme. Thus, we combine HER and LMIR to give our model the ability
+to learn non-Euclidean features from a high-dimension manifold. This is named the non-Euclidean
+feature learner. Furthermore, we propose a new heuristics and efficiency point sampling algorithm
+named ClusterFPS to obtain approximate uniform sampling but at faster speed. ClusterFPS uses a
+cluster algorithm to divide a point cloud into several clusters and deploy the farthest point sampling
+algorithm on each cluster in parallel. By combining the above methods, we propose a novel point cloud
+analysis neural network called PointShuffleNet (PSN), which shows great promise in point cloud
+classification and segmentation. Extensive experiments show that our PSN achieves state-of-the-art
+results on ModelNet40, ShapeNet and S3DIS with high efficiency. Theoretically, we provide mathematical
+analysis toward understanding of what the data distribution HER has developed and why LMIR can drop
+the trivial path by maximizing mutual information implicitly. 

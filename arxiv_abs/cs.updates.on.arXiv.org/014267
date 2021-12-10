@@ -1,0 +1,18 @@
+We propose an algorithm for the blind separation of single-channel audio signals. It is based on
+a parametric model that describes the spectral properties of the sounds of musical instruments
+independently of pitch. We develop a novel sparse pursuit algorithm that can match the discrete
+frequency spectra from the recorded signal with the continuous spectra delivered by the model.
+We first use this algorithm to convert an STFT spectrogram from the recording into a novel form of
+log-frequency spectrogram whose resolution exceeds that of the mel spectrogram. We then make use
+of the pitch-invariant properties of that representation in order to identify the sounds of the
+instruments via the same sparse pursuit method. As the model parameters which characterize the
+musical instruments are not known beforehand, we train a dictionary that contains them, using a
+modified version of Adam. Applying the algorithm on various audio samples, we find that it is capable
+of producing high-quality separation results when the model assumptions are satisfied and the
+instruments are clearly distinguishable, but combinations of instruments with similar spectral
+characteristics pose a conceptual difficulty. While a key feature of the model is that it explicitly
+models inharmonicity, its presence can also still impede performance of the sparse pursuit algorithm.
+In general, due to its pitch-invariance, our method is especially suitable for dealing with spectra
+from acoustic instruments, requiring only a minimal number of hyperparameters to be preset. Additionally,
+we demonstrate that the dictionary that is constructed for one recording can be applied to a different
+recording with similar instruments without additional training. 

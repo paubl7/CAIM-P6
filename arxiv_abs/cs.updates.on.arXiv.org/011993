@@ -1,0 +1,20 @@
+Retinal vessels are important biomarkers for many ophthalmological and cardiovascular diseases.
+It is of great significance to develop an accurate and fast vessel segmentation model for computer-aided
+diagnosis. Existing methods, such as U-Net follows the encoder-decoder pipeline, where detailed
+information is lost in the encoder in order to achieve a large field of view. Although detailed information
+could be recovered in the decoder via multi-scale fusion, it still contains noise. In this paper,
+we propose a deep segmentation model, called detail-preserving network (DPN) for efficient vessel
+segmentation. To preserve detailed spatial information and learn structural information at the
+same time, we designed the detail-preserving block (DP-Block). Further, we stacked eight DP-Blocks
+together to form the DPN. More importantly, there are no down-sampling operations among these blocks.
+As a result, the DPN could maintain a high resolution during the processing, which is helpful to locate
+the boundaries of thin vessels. To illustrate the effectiveness of our method, we conducted experiments
+over three public datasets. Experimental results show, compared to state-of-the-art methods,
+our method shows competitive/better performance in terms of segmentation accuracy, segmentation
+speed, extensibility and the number of parameters. Specifically, 1) the AUC of our method ranks
+first/second/third on the STARE/CHASE_DB1/DRIVE datasets, respectively. 2) Only one forward
+pass is required of our method to generate a vessel segmentation map, and the segmentation speed
+of our method is over 20-160x faster than other methods on the DRIVE dataset. 3) We conducted cross-training
+experiments to demonstrate the extensibility of our method, and results revealed that our method
+shows superior performance. 4) The number of parameters of our method is only around 96k, less then
+all comparison methods. 

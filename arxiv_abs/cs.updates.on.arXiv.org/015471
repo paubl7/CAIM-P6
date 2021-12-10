@@ -1,0 +1,20 @@
+A conventional brain-computer interface (BCI) requires a complete data gathering, training,
+and calibration phase for each user before it can be used. This preliminary phase is time-consuming
+and should be done under the supervision of technical experts commonly in laboratories for the BCI
+to function properly. In recent years, a number of subject-independent (SI) BCIs have been developed.
+However, there are many problems preventing them from being used in real-world BCI applications.
+A weaker performance compared to the subject-dependent (SD) approach and a relatively large number
+of model parameters are the most important ones. Therefore, a real-world BCI application would
+greatly benefit from a compact subject-independent BCI framework, ready to be used immediately
+after the user puts it on, and suitable for low-power edge-computing and applications in the emerging
+area of internet of things (IoT). In this work, we propose a novel subject-independent BCI framework
+named CCSPNet (Convolutional Common Spatial Pattern Network) that is trained on the motor imagery
+(MI) paradigm of a large-scale EEG signals database consisting of 400 trials for every 54 subjects
+performing two-class hand-movement MI tasks. The proposed framework applies a wavelet kernel
+convolutional neural network (WKCNN) and a temporal convolutional neural network (TCNN) in order
+to represent and extract the diverse spectral features of EEG signals. The outputs of the convolutional
+layers go through a common spatial pattern (CSP) algorithm for spatial feature extraction. The
+number of CSP features is reduced by a dense neural network, and the final class label is determined
+by a linear discriminative analysis (LDA). The CCSPNet framework evaluation results show that
+it is possible to have a low-power compact BCI that achieves both SD and SI performance comparable
+to complex and computationally expensive models. 

@@ -1,0 +1,19 @@
+We address a challenge of active flow control: the optimization of many actuation parameters guaranteeing
+fast convergence and avoiding suboptimal local minima. This challenge is addressed by a new optimizer,
+called explorative gradient method (EGM). EGM alternatively performs one exploitive downhill
+simplex step and an explorative Latin hypercube sampling iteration. Thus, the convergence rate
+of a gradient based method is guaranteed while, at the same time, better minima are explored. For
+an analytical multi-modal test function, EGM is shown to significantly outperform the downhill
+simplex method, the random restart variant, Latin hypercube sampling, Monte Carlo iterations
+and the genetic algorithm. EGM is applied to minimize the net drag power of the two-dimensional fluidic
+pinball benchmark with three cylinder rotations as actuation parameters. The net drag power is
+reduced by $40\%$ employing direct numerical simulations at a Reynolds number of $100$ based on
+the cylinder diameter. This optimal actuation leads to $98\%$ drag reduction employing Coanda
+forcing for boat tailing and partial stabilization of vortex shedding. The price is an actuation
+energy corresponding to $58\%$ of the unforced parasitic drag power. EGM is also used to minimize
+drag of the $35^\circ$ slanted Ahmed body employing distributed steady blowing with 10 inputs.
+$17\%$ drag reduction are achieved using Reynolds-Averaged Navier-Stokes simulations (RANS)
+at the Reynolds number $Re_H=1.9 \times 10^5$ based on the height of the Ahmed body. The optimal actuation
+emulates boat tailing by inward-directed blowing with velocities which are comparable to the oncoming
+velocity. We expect that EGM will be employed as efficient optimizer in many future active flow control
+plants. 

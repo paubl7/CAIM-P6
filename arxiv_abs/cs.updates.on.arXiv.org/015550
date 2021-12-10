@@ -1,0 +1,19 @@
+In Machine Learning, the $\mathsf{SHAP}$-score is a version of the Shapley value that is used to
+explain the result of a learned model on a specific entity by assigning a score to every feature. While
+in general computing Shapley values is an intractable problem, we prove a strong positive result
+stating that the $\mathsf{SHAP}$-score can be computed in polynomial time over deterministic
+and decomposable Boolean circuits. Such circuits are studied in the field of Knowledge Compilation
+and generalize a wide range of Boolean circuits and binary decision diagrams classes, including
+binary decision trees and Ordered Binary Decision Diagrams (OBDDs). We also establish the computational
+limits of the SHAP-score by observing that computing it over a class of Boolean models is always polynomially
+as hard as the model counting problem for that class. This implies that both determinism and decomposability
+are essential properties for the circuits that we consider. It also implies that computing $\mathsf{SHAP}$-scores
+is intractable as well over the class of propositional formulas in DNF. Based on this negative result,
+we look for the existence of fully-polynomial randomized approximation schemes (FPRAS) for computing
+$\mathsf{SHAP}$-scores over such class. In contrast to the model counting problem for DNF formulas,
+which admits an FPRAS, we prove that no such FPRAS exists for the computation of $\mathsf{SHAP}$-scores.
+Surprisingly, this negative result holds even for the class of monotone formulas in DNF. These techniques
+can be further extended to prove another strong negative result: Under widely believed complexity
+assumptions, there is no polynomial-time algorithm that checks, given a monotone DNF formula $\varphi$
+and features $x,y$, whether the $\mathsf{SHAP}$-score of $x$ in $\varphi$ is smaller than the $\mathsf{SHAP}$-score
+of $y$ in $\varphi$. 

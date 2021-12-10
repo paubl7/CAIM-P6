@@ -1,0 +1,19 @@
+We provide a queueing-theoretic framework for job replication schemes based on the principle "\emph{replicate
+a job as soon as the system detects it as a \emph{straggler}}". This is called job \emph{speculation}.
+Recent works have analyzed {replication} on arrival, which we refer to as \emph{replication}.
+Replication is motivated by its implementation in Google's BigTable. However, systems such as
+Apache Spark and Hadoop MapReduce implement speculative job execution. The performance and optimization
+of speculative job execution is not well understood. To this end, we propose a queueing network model
+for load balancing where each server can speculate on the execution time of a job. Specifically,
+each job is initially assigned to a single server by a frontend dispatcher. Then, when its execution
+begins, the server sets a timeout. If the job completes before the timeout, it leaves the network,
+otherwise the job is terminated and relaunched or resumed at another server where it will complete.
+We provide a necessary and sufficient condition for the stability of speculative queueing networks
+with heterogeneous servers, general job sizes and scheduling disciplines. We find that speculation
+can increase the stability region of the network when compared with standard load balancing models
+and replication schemes. We provide general conditions under which timeouts increase the size
+of the stability region and derive a formula for the optimal speculation time, i.e., the timeout
+that minimizes the load induced through speculation. We compare speculation with redundant-$d$
+and redundant-to-idle-queue-$d$ rules under an $S\& X$ model. For light loaded systems, redundancy
+schemes provide better response times. However, for moderate to heavy loadings, redundancy schemes
+can lose capacity and have markedly worse response times when compared with a speculative scheme.

@@ -1,0 +1,19 @@
+Previous work suggests that RNNs trained on natural language corpora can capture number agreement
+well for simple sentences but perform less well when sentences contain agreement attractors: intervening
+nouns between the verb and the main subject with grammatical number opposite to the latter. This
+suggests these models may not learn the actual syntax of agreement, but rather infer shallower heuristics
+such as `agree with the recent noun'. In this work, we investigate RNN models with varying inductive
+biases trained on selectively chosen `hard' agreement instances, i.e., sentences with at least
+one agreement attractor. For these the verb number cannot be predicted using a simple linear heuristic,
+and hence they might help provide the model additional cues for hierarchical syntax. If RNNs can
+learn the underlying agreement rules when trained on such hard instances, then they should generalize
+well to other sentences, including simpler ones. However, we observe that several RNN types, including
+the ONLSTM which has a soft structural inductive bias, surprisingly fail to perform well on sentences
+without attractors when trained solely on sentences with attractors. We analyze how these selectively
+trained RNNs compare to the baseline (training on a natural distribution of agreement attractors)
+along the dimensions of number agreement accuracy, representational similarity, and performance
+across different syntactic constructions. Our findings suggest that RNNs trained on our hard agreement
+instances still do not capture the underlying syntax of agreement, but rather tend to overfit the
+training distribution in a way which leads them to perform poorly on `easy' out-of-distribution
+instances. Thus, while RNNs are powerful models which can pick up non-trivial dependency patterns,
+inducing them to do so at the level of syntax rather than surface remains a challenge. 

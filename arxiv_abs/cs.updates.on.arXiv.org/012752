@@ -1,0 +1,19 @@
+The proliferation of IoT sensors and edge devices makes it possible to use deep learning models to
+recognise daily activities locally using in-home monitoring technologies. Recently, federated
+learning systems that use edge devices as clients to collect and utilise IoT sensory data for human
+activity recognition have been commonly used as a new way to combine local (individual-level) and
+global (group-level) models. This approach provides better scalability and generalisability
+and also offers higher privacy compared with the traditional centralised analysis and learning
+models. The assumption behind federated learning, however, relies on supervised learning on clients.
+This requires a large volume of labelled data, which is difficult to collect in uncontrolled IoT
+environments such as remote in-home monitoring. In this paper, we propose an activity recognition
+system that uses semi-supervised federated learning, wherein clients conduct unsupervised learning
+on autoencoders with unlabelled local data to learn general representations, and a cloud server
+conducts supervised learning on an activity classifier with labelled data. Our experimental results
+show that using autoencoders and a long short-term memory (LSTM) classifier, the accuracy of our
+proposed system is comparable to that of a supervised federated learning system. Meanwhile, we
+demonstrate that our system is not affected by the Non-IID distribution of local data, and can even
+achieve better accuracy than supervised federated learning on some datasets. Additionally, we
+show that our proposed system can reduce the number of needed labels in the system and the size of local
+models without losing much accuracy, and has shorter local activity recognition time than supervised
+federated learning. 

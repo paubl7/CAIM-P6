@@ -1,0 +1,18 @@
+We develop a reliable, fully automatic method for the detection of coronal holes, that provides
+consistent full-disk segmentation maps over the full solar cycle and can perform in real-time.
+We use a convolutional neural network to identify the boundaries of coronal holes from the seven
+EUV channels of the Atmospheric Imaging Assembly (AIA) as well as from line-of-sight magnetograms
+from the Helioseismic and Magnetic Imager (HMI) onboard the Solar Dynamics Observatory (SDO).
+For our primary model (Coronal Hole RecOgnition Neural Network Over multi-Spectral-data; CHRONNOS)
+we use a progressively growing network approach that allows for efficient training, provides detailed
+segmentation maps and takes relations across the full solar-disk into account. We provide a thorough
+evaluation for performance, reliability and consistency by comparing the model results to an independent
+manually curated test set. Our model shows good agreement to the manual labels with an intersection-over-union
+(IoU) of 0.63. From the total of 261 coronal holes with an area $>1.5\cdot10^{10}$ km$^2$ identified
+during the time range 11/2010 - 12/2016, 98.1% were correctly detected by our model. The evaluation
+over almost the full solar cycle no. 24 shows that our model provides reliable coronal hole detections,
+independent of the level of solar activity. From the direct comparison over short time scales of
+days to weeks, we find that our model exceeds human performance in terms of consistency and reliability.
+In addition, we train our model to identify coronal holes from each channel separately and show that
+the neural network provides the best performance with the combined channel information, but that
+coronal hole segmentation maps can be also obtained solely from line-of-sight magnetograms. 

@@ -1,0 +1,19 @@
+Optimizing expensive black-box systems with limited data is an extremely challenging problem.
+As a resolution, we present a new surrogate optimization approach by addressing two gaps in prior
+research -- unimportant input variables and inefficient treatment of uncertainty associated
+with the black-box output. We first design a new flexible non-interpolating parsimonious surrogate
+model using a partitioning-based multivariate adaptive regression splines approach, Tree Knot
+MARS (TK-MARS). The proposed model is specifically designed for optimization by capturing the
+structure of the function, bending at near-optimal locations, and is capable of screening unimportant
+input variables. Furthermore, we develop a novel replication approach called Smart-Replication,
+to overcome the uncertainty associated with the black-box output. The Smart-Replication approach
+identifies promising input points to replicate and avoids unnecessary evaluations of other data
+points. Smart-Replication is agnostic to the choice of a surrogate and can adapt itself to an unknown
+noise level. Finally to demonstrate the effectiveness of our proposed approaches we consider different
+complex global optimization test functions from the surrogate optimization literature. The results
+indicate that TK-MARS outperforms original MARS within a surrogate optimization algorithm and
+successfully detects important variables. The results also show that although non-interpolating
+surrogates can mitigate uncertainty, replication is still beneficial for optimizing highly complex
+black-box functions. The robustness and the quality of the final optimum solution found through
+Smart-Replication are competitive with that using no replications in environments with low levels
+of noise and using a fixed number of replications in highly noisy environments. 

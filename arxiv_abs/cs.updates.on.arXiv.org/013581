@@ -1,0 +1,19 @@
+Topic Detection and Tracking (TDT) is a very active research question within the area of text mining,
+generally applied to news feeds and Twitter datasets, where topics and events are detected. The
+notion of "event" is broad, but typically it applies to occurrences that can be detected from a single
+post or a message. Little attention has been drawn to what we call "micro-events", which, due to their
+nature, cannot be detected from a single piece of textual information. The study investigates the
+feasibility of micro-event detection on textual data using a sample of messages from the Stack Overflow
+Q&A platform and Free/Libre Open Source Software (FLOSS) version releases from Libraries.io dataset.
+We build pipelines for detection of micro-events using three different estimators whose parameters
+are optimized using a grid search approach. We consider two feature spaces: LDA topic modeling with
+sentiment analysis, and hSBM topics with sentiment analysis. The feature spaces are optimized
+using the recursive feature elimination with cross validation (RFECV) strategy. In our experiments
+we investigate whether there is a characteristic change in the topics distribution or sentiment
+features before or after micro-events take place and we thoroughly evaluate the capacity of each
+variant of our analysis pipeline to detect micro-events. Additionally, we perform a detailed statistical
+analysis of the models, including influential cases, variance inflation factors, validation
+of the linearity assumption, pseudo R squared measures and no-information rate. Finally, in order
+to study limits of micro-event detection, we design a method for generating micro-event synthetic
+datasets with similar properties to the real-world data, and use them to identify the micro-event
+detectability threshold for each of the evaluated classifiers. 

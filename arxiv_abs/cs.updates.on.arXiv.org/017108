@@ -1,0 +1,19 @@
+Predicting drug-target interactions (DTI) via reliable computational methods is an effective
+and efficient way to mitigate the enormous costs and time of the drug discovery process. Structure-based
+drug similarities and sequence-based target protein similarities are the commonly used information
+for DTI prediction. Among numerous computational methods, neighborhood-based chemogenomic
+approaches that leverage drug and target similarities to perform predictions directly are simple
+but promising ones. However, existing similarity-based methods need to be re-trained to predict
+interactions for any new drugs or targets and cannot directly perform predictions for both new drugs,
+new targets, and new drug-target pairs. Furthermore, a large amount of missing (undetected) interactions
+in current DTI datasets hinders most DTI prediction methods. To address these issues, we propose
+a new method denoted as Weighted k-Nearest Neighbor with Interaction Recovery (WkNNIR). Not only
+can WkNNIR estimate interactions of any new drugs and/or new targets without any need of re-training,
+but it can also recover missing interactions (false negatives). In addition, WkNNIR exploits local
+imbalance to promote the influence of more reliable similarities on the interaction recovery and
+prediction processes. We also propose a series of ensemble methods that employ diverse sampling
+strategies and could be coupled with WkNNIR as well as any other DTI prediction method to improve
+performance. Experimental results over five benchmark datasets demonstrate the effectiveness
+of our approaches in predicting drug-target interactions. Lastly, we confirm the practical prediction
+ability of proposed methods to discover reliable interactions that were not reported in the original
+benchmark datasets. 

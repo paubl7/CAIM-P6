@@ -1,0 +1,19 @@
+The heavy traffic and related issues have always been concerns for modern cities. With the help of
+deep learning and reinforcement learning, people have proposed various policies to solve these
+traffic-related problems, such as smart traffic signal control systems and taxi dispatching systems.
+People usually validate these policies in a city simulator, since directly applying them in the
+real city introduces real cost. However, these policies validated in the city simulator may fail
+in the real city if the simulator is significantly different from the real world. To tackle this problem,
+we need to build a real-like traffic simulation system. Therefore, in this paper, we propose to learn
+the human routing model, which is one of the most essential part in the traffic simulator. This problem
+has two major challenges. First, human routing decisions are determined by multiple factors, besides
+the common time and distance factor. Second, current historical routes data usually covers just
+a small portion of vehicles, due to privacy and device availability issues. To address these problems,
+we propose a theory-guided residual network model, where the theoretical part can emphasize the
+general principles for human routing decisions (e.g., fastest route), and the residual part can
+capture drivable condition preferences (e.g., local road or highway). Since the theoretical part
+is composed of traditional shortest path algorithms that do not need data to train, our residual
+network can learn human routing models from limited data. We have conducted extensive experiments
+on multiple real-world datasets to show the superior performance of our model, especially with
+small data. Besides, we have also illustrated why our model is better at recovering real routes through
+case studies. 

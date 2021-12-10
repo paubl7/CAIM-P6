@@ -1,0 +1,19 @@
+As one of the representative blockchain platforms, Ethereum has attracted lots of attacks. Due
+to the existed financial loss, there is a pressing need to perform timely investigation and detect
+more attack instances. Though multiple systems have been proposed, they suffer from the scalability
+issue due to the following reasons. First, the tight coupling between malicious contract detection
+and blockchain data importing makes them infeasible to repeatedly detect different attacks. Second,
+the coarse-grained archive data makes them inefficient to replay transactions. Third, the separation
+between malicious contract detection and runtime state recovery consumes lots of storage. In this
+paper, we present the design of a scalable attack detection framework on Ethereum. It overcomes
+the scalability issue by saving the Ethereum state into a database and providing an efficient way
+to locate suspicious transactions. The saved state is fine-grained to support the replay of arbitrary
+transactions. The state is well-designed to avoid saving unnecessary state to optimize the storage
+consumption. We implement a prototype named EthScope and solve three technical challenges, i.e.,
+incomplete Ethereum state, scalability, and extensibility. The performance evaluation shows
+that our system can solve the scalability issue, i.e., efficiently performing a large-scale analysis
+on billions of transactions, and a speedup of around 2,300x when replaying transactions. It also
+has lower storage consumption compared with existing systems. The result with three different
+types of information as inputs shows that our system can help an analyst understand attack behaviors
+and further detect more attacks. To engage the community, we will release our system and the dataset
+of detected attacks. 

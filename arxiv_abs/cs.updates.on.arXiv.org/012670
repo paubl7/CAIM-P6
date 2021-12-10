@@ -1,0 +1,18 @@
+Nowadays, modern applications are developed using components written in different programming
+languages. These systems introduce several advantages. However, as the number of languages increases,
+so does the challenges related to the development and maintenance of these systems. In such situations,
+developers may introduce design smells (i.e., anti-patterns and code smells) which are symptoms
+of poor design and implementation choices. Design smells are defined as poor design and coding choices
+that can negatively impact the quality of a software program despite satisfying functional requirements.
+Studies on mono-language systems suggest that the presence of design smells affects code comprehension,
+thus making systems harder to maintain. However, these studies target only mono-language systems
+and do not consider the interaction between different programming languages. In this paper, we
+present an approach to detect multi-language design smells in the context of JNI systems. We then
+investigate the prevalence of those design smells. Specifically, we detect 15 design smells in
+98 releases of nine open-source JNI projects. Our results show that the design smells are prevalent
+in the selected projects and persist throughout the releases of the systems. We observe that in the
+analyzed systems, 33.95% of the files involving communications between Java and C/C++ contains
+occurrences of multi-language design smells. Some kinds of smells are more prevalent than others,
+e.g., Unused Parameters, Too Much Scattering, Unused Method Declaration. Our results suggest
+that files with multi-language design smells can often be more associated with bugs than files without
+these smells, and that specific smells are more correlated to fault-proneness than others. 

@@ -1,0 +1,20 @@
+We discuss the evolutionary enhancement of mutational robustness for a model of the gene regulatory
+network (GRN). For exploring the particularity of evolution, we need a reference system. Such a
+reference system that we consider appropriate is a set of randomly sampled GRNs. Recently, Nagata
+and Kikuchi (PLoS Comput Biol 16 (2020) e1007969) proposed an efficient procedure for randomly
+sampling GRNs in a wide range of fitness based on the multicanonical Monte Carlo method. We employ
+that method to construct the reference set and compare it with the lineages obtained by evolutionary
+simulations. We consider a neural-network-like model of GRN, which has one input gene and one output
+gene. The fitness is defined so that it is large when the difference in the expressions of the output
+gene between two input values ("on" and "off") becomes large. By comparing the evolution of fitness
+and the fitness distribution of the reference set, we find that evolution slows down significantly
+near the value of fitness that the number of GRNs becomes extremely rare. It implies that the evolutionary
+speed is determined mainly by the number of available GRNs, or in other words, "entropy". Random
+sampling reveals that the highly-fit GRNs in this model inevitably exhibit bistability. Accordingly,
+the evolutionary simulations produce bistable GRNs as fitness becomes high. But the increase in
+the fraction of bistable GRNs occurs at higher fitness than the reference set. Thus, the emergence
+of a new phenotype, bistability, is delayed in evolution. We also study an indicator of mutational
+robustness. While in the early stage of evolution, it coincides with that of the reference set, in
+the late stage, it becomes significantly higher than that of the reference set. In short, evolution
+enhances mutational robustness. The reason is that GRNs with fewer lethal edges are selected by
+evolution. 

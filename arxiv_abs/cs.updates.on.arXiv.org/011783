@@ -1,0 +1,19 @@
+In the recent past, there has been a growing interest in Neural-Symbolic Integration frameworks,
+i.e., hybrid systems that integrate connectionist and symbolic approaches: on the one hand, neural
+networks show remarkable abilities to learn from a large amount of data in presence of noise, on the
+other, pure symbolic methods can perform reasoning as well as learning from few samples. By combining
+the two paradigms, it should be possible to obtain a system that can both learn from data and apply
+inference over some background knowledge. Here we propose KENN (Knowledge Enhanced Neural Networks),
+a Neural-Symbolic architecture that injects prior knowledge, codified in a set of universally
+quantified FOL clauses, into a neural network model. In KENN, clauses are used to generate a new final
+layer of the neural network which modifies the initial predictions based on the knowledge. Among
+the advantages of this strategy, there is the possibility to include additional learnable parameters,
+the clause weights, each of which represents the strength of a specific clause. We evaluated KENN
+on two standard datasets for multi-label classification, showing that the injection of clauses,
+automatically extracted from the training data, sensibly improves the performances. In a further
+experiment with manually curated knowledge, KENN outperformed state-of-the-art methods on the
+VRD Dataset, where the task is to classify relationships between detected objects in images. Finally,
+to evaluate how KENN deals with relational data, we tested it with different learning configurations
+on Citeseer, a standard dataset for Collective Classification. The obtained results show that
+KENN is capable of increasing the performances of the underlying neural network even in the presence
+of relational data obtaining results in line with other methods that combine learning with logic.

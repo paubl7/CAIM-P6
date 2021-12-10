@@ -1,0 +1,18 @@
+White balance (WB) is one of the first photo-finishing steps used to render a captured image to its
+final output. WB is applied to remove the color cast caused by the scene's illumination. Interactive
+photo-editing software allows users to manually select different regions in a photo as examples
+of the illumination for WB correction (e.g., clicking on achromatic objects). Such interactive
+editing is possible only with images saved in a RAW image format. This is because RAW images have no
+photo-rendering operations applied and photo-editing software is able to apply WB and other photo-finishing
+procedures to render the final image. Interactively editing WB in camera-rendered images is significantly
+more challenging. This is because the camera hardware has already applied WB to the image and subsequent
+nonlinear photo-processing routines. These nonlinear rendering operations make it difficult
+to change the WB post-capture. The goal of this paper is to allow interactive WB manipulation of camera-rendered
+images. The proposed method is an extension of our recent work \cite{afifi2019color} that proposed
+a post-capture method for WB correction based on nonlinear color-mapping functions. Here, we introduce
+a new framework that links the nonlinear color-mapping functions directly to user-selected colors
+to enable {\it interactive} WB manipulation. This new framework is also more efficient in terms
+of memory and run-time (99\% reduction in memory and 3$\times$ speed-up). Lastly, we describe how
+our framework can leverage a simple illumination estimation method (i.e., gray-world) to perform
+auto-WB correction that is on a par with the WB correction results in \cite{afifi2019color}. The
+source code is publicly available at https://github.com/mahmoudnafifi/Interactive_WB_correction.

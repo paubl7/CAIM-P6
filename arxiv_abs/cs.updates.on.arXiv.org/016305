@@ -1,0 +1,18 @@
+Recent advances in unsupervised domain adaptation have seen considerable progress in semantic
+segmentation. Existing methods either align different domains with adversarial training or involve
+the self-learning that utilizes pseudo labels to conduct supervised training. The former always
+suffers from the unstable training caused by adversarial training and only focuses on the inter-domain
+gap that ignores intra-domain knowledge. The latter tends to put overconfident label prediction
+on wrong categories, which propagates errors to more samples. To solve these problems, we propose
+a two-stage adaptive semantic segmentation method based on the local Lipschitz constraint that
+satisfies both domain alignment and domain-specific exploration under a unified principle. In
+the first stage, we propose the local Lipschitzness regularization as the objective function to
+align different domains by exploiting intra-domain knowledge, which explores a promising direction
+for non-adversarial adaptive semantic segmentation. In the second stage, we use the local Lipschitzness
+regularization to estimate the probability of satisfying Lipschitzness for each pixel, and then
+dynamically sets the threshold of pseudo labels to conduct self-learning. Such dynamical self-learning
+effectively avoids the error propagation caused by noisy labels. Optimization in both stages is
+based on the same principle, i.e., the local Lipschitz constraint, so that the knowledge learned
+in the first stage can be maintained in the second stage. Further, due to the model-agnostic property,
+our method can easily adapt to any CNN-based semantic segmentation networks. Experimental results
+demonstrate the excellent performance of our method on standard benchmarks. 

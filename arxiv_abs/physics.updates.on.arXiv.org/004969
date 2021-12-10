@@ -1,0 +1,19 @@
+Adaptive lattice Boltzmann methods (LBMs) are based on velocity discretizations that self-adjust
+to local macroscopic conditions such as velocity and temperature. While this feature improves
+the accuracy and the stability of LBMs for large velocity and temperature fluctuations, it also
+strongly impacts the efficiency of the algorithm due to space interpolations that are required
+to get populations at grid nodes. To avoid this defect, the present work proposes new formulations
+of adaptive LBMs for the simulation of compressible flows which do not rely anymore on space interpolations,
+hence, drastically improving their parallel efficiency for the simulation of high-speed compressible
+flows. To reach this goal, the adaptive phase discretization is restricted to particular states
+that are compliant with the efficient "collide and stream" algorithm, and as a consequence it does
+not require additional interpolation steps. The development of proper state-adaptive solvers
+with on-grid propagation imposes new restrictions and challenges on the discrete stencils, namely
+the need for an extended operability range allowing for the transition between two phase discretizations.
+Achieving the minimum operability range for discrete polynomial equilibria requires rather large
+stencils (e.g. D2Q81, D2Q121) and is therefore not competitive for compressible flow simulations.
+However, as shown in the article, the use of numerical equilibria can provide for overlaps in the
+operability ranges of neighboring discrete shifts at acceptable cost using the D2Q21 lattice.
+Through several numerical validations, the present approach is shown to allow for an efficient
+realization of discrete state-adaptive LBMs for high Mach number flows even in the low viscosity
+regime. 

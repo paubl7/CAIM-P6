@@ -1,0 +1,18 @@
+The LHC will undergo a major upgrade starting in 2025 towards the High Luminosity LHC (HL-LHC) to
+increase the instantaneous luminosity by a factor of 5 to 7 compared to the nominal value. The Phase-II
+Upgrade (2025-2027) will require the trigger and readout electronics of the ATLAS experiment to
+operate with the stringent conditions imposed by the HL-LHC. During this upgrade, both on- and off-detector
+readout electronics of TileCal will be completely replaced with a new data acquisition which will
+provide full-granularity information to the ATLAS trigger system. The Compact Processing Modules
+are responsible for the LHC bunch-crossing clock distribution towards the detector, configuration
+of the on-detector electronics, data acquisition, cell energy reconstruction, and data transmission
+to the TDAQ interface (TDAQi). The CPM has been designed as an AMC form-factor board equipped with
+8 Samtec FireFly modules for communication with the detector, a Xilinx Kintex UltraScale FPGA for
+data acquisition and processing, a Xilinx Artix 7 FPGA for slow control and monitoring, and other
+subsystems to generate high-quality clocks for the FPGAs and communications. The high-speed communication
+with the on-detector electronics is implemented via 32 GigaBit Transceiver links receiving detector
+data at 9.6 Gbps and transmitting commands and the LHC clock at 4.8 Gbps, while the reconstructed
+cell energies are transmitted to TDAQi via 4 FULL-mode links. Triggered data is transmitted through
+a FULL-mode link to the ATLAS TDAQ system via the FELIX network. This paper introduces the design
+of the Compact Processing Modules for the ATLAS Tile Calorimeter Phase-II Upgrade and the results
+and experiences with the first prototypes. 

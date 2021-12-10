@@ -1,0 +1,20 @@
+Convolutional neural networks (CNNs) are emerging as powerful tools for image processing in important
+commercial applications. We focus on the important problem of improving the latency of image recognition.
+CNNs' large data at each layer's input, filters, and output poses a memory bandwidth problem. While
+previous work captures only some of the enormous data reuse, full reuse implies that the initial
+input image and filters are read once from off chip and the final output is written once off chip without
+spilling the intermediate layers' data to off-chip. We propose Occam to capture full reuse via four
+contributions. (1) We identify the necessary condition for full reuse. (2) We identify the dependence
+closure as the sufficient condition to capture full reuse using the least on-chip memory. (3) Because
+the dependence closure is often too large to fit in on-chip memory, we propose a dynamic programming
+algorithm that optimally partitions a given CNN to guarantee the least off-chip traffic at the partition
+boundaries for a given on-chip capacity. Occam's partitions reside on different chips forming
+a pipeline so that a partition's filters and dependence closure remain on-chip as different images
+pass through (i.e., each partition incurs off-chip traffic only for its inputs and outputs). (4)
+because the optimal partitions may result in an unbalanced pipeline, we propose staggered asynchronous
+pipelines (STAP) which replicates the bottleneck stages to improve throughput by staggering the
+mini-batches across the replicas. Importantly, STAP achieves balanced pipelines without changing
+Occam's optimal partitioning. Our simulations show that Occam cuts off-chip transfers by 21x and
+achieves 2.06x and 1.36x better performance, and 33\% and 24\% better energy than the base case and
+Layer Fusion, respectively. On an FPGA implementation, Occam performs 5.1x better than the base
+case. 

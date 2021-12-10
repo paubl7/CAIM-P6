@@ -1,0 +1,20 @@
+The latest threat to global health is the COVID-19 outbreak. Although there exist large datasets
+of chest X-rays (CXR) and computed tomography (CT) scans, few COVID-19 image collections are currently
+available due to patient privacy. At the same time, there is a rapid growth of COVID-19-relevant
+articles in the biomedical literature. Here, we present COVID-19-CT-CXR, a public database of
+COVID-19 CXR and CT images, which are automatically extracted from COVID-19-relevant articles
+from the PubMed Central Open Access (PMC-OA) Subset. We extracted figures, associated captions,
+and relevant figure descriptions in the article and separated compound figures into subfigures.
+We also designed a deep-learning model to distinguish them from other figure types and to classify
+them accordingly. The final database includes 1,327 CT and 263 CXR images (as of May 9, 2020) with
+their relevant text. To demonstrate the utility of COVID-19-CT-CXR, we conducted four case studies.
+(1) We show that COVID-19-CT-CXR, when used as additional training data, is able to contribute to
+improved DL performance for the classification of COVID-19 and non-COVID-19 CT. (2) We collected
+CT images of influenza and trained a DL baseline to distinguish a diagnosis of COVID-19, influenza,
+or normal or other types of diseases on CT. (3) We trained an unsupervised one-class classifier from
+non-COVID-19 CXR and performed anomaly detection to detect COVID-19 CXR. (4) From text-mined captions
+and figure descriptions, we compared clinical symptoms and clinical findings of COVID-19 vs. those
+of influenza to demonstrate the disease differences in the scientific publications. We believe
+that our work is complementary to existing resources and hope that it will contribute to medical
+image analysis of the COVID-19 pandemic. The dataset, code, and DL models are publicly available
+at https://github.com/ncbi-nlp/COVID-19-CT-CXR. 

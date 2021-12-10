@@ -1,0 +1,18 @@
+This paper presents a "two-dimensional Fourier Continuation" method (2D-FC) for construction
+of bi-periodic extensions of smooth non-periodic functions defined over general two-dimensional
+smooth domains. The approach can be directly generalized to domains of any given dimensionality,
+and even to non-smooth domains, but such generalizations are not considered here. The 2D-FC extensions
+are produced in a two-step procedure. In the first step the one-dimensional Fourier Continuation
+method is applied along a discrete set of outward boundary-normal directions to produce, along
+such directions, continuations that vanish outside a narrow interval beyond the boundary. Thus,
+the first step of the algorithm produces "blending-to-zero along normals" for the given function
+values. In the second step, the extended function values are evaluated on an underlying Cartesian
+grid by means of an efficient, high-order boundary-normal interpolation scheme. A Fourier Continuation
+expansion of the given function can then be obtained by a direct application of the two-dimensional
+FFT algorithm. Algorithms of arbitrarily high order of accuracy can be obtained by this method.
+The usefulness and performance of the proposed two-dimensional Fourier Continuation method are
+illustrated with applications to the Poisson equation and the time-domain wave equation within
+a bounded domain. As part of these examples the novel "Fourier Forwarding" solver is introduced
+which, propagating plane waves as they would in free space and relying on certain boundary corrections,
+can solve the time-domain wave equation and other hyperbolic partial differential equations within
+general domains at computing costs that grow sublinearly with the size of the spatial discretization.

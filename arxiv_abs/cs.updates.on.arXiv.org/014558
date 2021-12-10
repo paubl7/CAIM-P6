@@ -1,0 +1,20 @@
+Partitioning graphs into blocks of roughly equal size is a widely used tool when processing large
+graphs. Currently there is a gap in the space of available partitioning algorithms. On the one hand,
+there are streaming algorithms that have been adopted to partition massive graph data on small machines.
+In the streaming model, vertices arrive one at a time including their neighborhood and then have
+to be assigned directly to a block. These algorithms can partition huge graphs quickly with little
+memory, but they produce partitions with low quality. On the other hand, there are offline (shared-memory)
+multilevel algorithms that produce partitions with high quality but also need a machine with enough
+memory to partition a network. In this work, we make a first step to close this gap by presenting an
+algorithm that computes high-quality partitions of huge graphs using a single machine with little
+memory. First, we extend the streaming model to a more reasonable approach in practice: the buffered
+streaming model. In this model, a PE can store a batch of nodes (including their neighborhood) before
+making assignment decisions. When our algorithm receives a batch of nodes, we build a model graph
+that represents the nodes of the batch and the already present partition structure. This model enables
+us to apply multilevel algorithms and in turn compute high-quality solutions of huge graphs on cheap
+machines. To partition the model, we develop a multilevel algorithm that optimizes an objective
+function that has previously shown to be effective for the streaming setting. Surprisingly, this
+also removes the dependency on the number of blocks from the running time. Overall, our algorithm
+computes on average 55% better solutions than Fennel using a very small batch size. In addition,
+our algorithm is significantly faster than one of the main one-pass partitioning algorithms for
+larger amounts of blocks. 

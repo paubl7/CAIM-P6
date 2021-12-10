@@ -1,0 +1,19 @@
+We introduce a method for egocentric videoconferencing that enables hands-free video calls, for
+instance by people wearing smart glasses or other mixed-reality devices. Videoconferencing portrays
+valuable non-verbal communication and face expression cues, but usually requires a front-facing
+camera. Using a frontal camera in a hands-free setting when a person is on the move is impractical.
+Even holding a mobile phone camera in the front of the face while sitting for a long duration is not
+convenient. To overcome these issues, we propose a low-cost wearable egocentric camera setup that
+can be integrated into smart glasses. Our goal is to mimic a classical video call, and therefore,
+we transform the egocentric perspective of this camera into a front facing video. To this end, we
+employ a conditional generative adversarial neural network that learns a transition from the highly
+distorted egocentric views to frontal views common in videoconferencing. Our approach learns
+to transfer expression details directly from the egocentric view without using a complex intermediate
+parametric expressions model, as it is used by related face reenactment methods. We successfully
+handle subtle expressions, not easily captured by parametric blendshape-based solutions, e.g.,
+tongue movement, eye movements, eye blinking, strong expressions and depth varying movements.
+To get control over the rigid head movements in the target view, we condition the generator on synthetic
+renderings of a moving neutral face. This allows us to synthesis results at different head poses.
+Our technique produces temporally smooth video-realistic renderings in real-time using a video-to-video
+translation network in conjunction with a temporal discriminator. We demonstrate the improved
+capabilities of our technique by comparing against related state-of-the art approaches. 

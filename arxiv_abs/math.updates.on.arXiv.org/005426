@@ -1,0 +1,20 @@
+Given a random sample from a multivariate population, estimating the number of large eigenvalues
+of the population covariance matrix is an important problem in Statistics with wide applications
+in many areas. In the context of Principal Component Analysis (PCA), the linear combinations of
+the original variables having the largest amounts of variation are determined by this number. In
+this paper, we study the high dimensional asymptotic regime where the number of variables grows
+at the same rate as the number of observations, and use the spiked covariance model proposed in Johnstone
+(2001), under which the problem reduces to model selection. Our focus is on the Akaike Information
+Criterion (AIC) which is known to be strongly consistent from the work of Bai et al. (2018). However,
+Bai et al. (2018) requires a certain "gap condition" ensuring the dominant eigenvalues to be above
+a threshold strictly larger than the BBP threshold (Baik et al. (2005), both quantities depending
+on the limiting ratio of the number of variables and observations. It is well-known that, below the
+BBP threshold, a spiked covariance structure becomes indistinguishable from one with no spikes.
+Thus the strong consistency of AIC requires some extra signal strength. In this paper, we investigate
+whether consistency continues to hold even if the "gap" is made smaller. We show that strong consistency
+under arbitrarily small gap is achievable if we alter the penalty term of AIC suitably depending
+on the target gap. Furthermore, another intuitive alteration of the penalty can indeed make the
+gap exactly zero, although we can only achieve weak consistency in this case. We compare the two newly-proposed
+estimators with other existing estimators in the literature via extensive simulation studies,
+and show, by suitably calibrating our proposals, that a significant improvement in terms of mean-squared
+error is achievable. 

@@ -1,0 +1,19 @@
+We propose HERMES, a scalable, secure, and privacy-enhancing system for users to share and access
+vehicles. HERMES securely outsources operations of vehicle access token generation to a set of
+untrusted servers. It builds on an earlier proposal, namely SePCAR [1], and extends the system design
+for improved efficiency and scalability. To cater to system and user needs for secure and private
+computations, HERMES utilizes and combines several cryptographic primitives with secure multiparty
+computation efficiently. It conceals secret keys of vehicles and transaction details from the
+servers, including vehicle booking details, access token information, and user and vehicle identities.
+It also provides user accountability in case of disputes. Besides, we provide semantic security
+analysis and prove that HERMES meets its security and privacy requirements. Last but not least,
+we demonstrate that HERMES is efficient and, in contrast to SePCAR, scales to a large number of users
+and vehicles, making it practical for real-world deployments. We build our evaluations with two
+different multiparty computation protocols: HtMAC-MiMC and CBC-MAC-AES. Our results demonstrate
+that HERMES with HtMAC-MiMC requires only approx 1,83 ms for generating an access token for a single-vehicle
+owner and approx 11,9 ms for a large branch of rental companies with over a thousand vehicles. It handles
+546 and 84 access token generations per second, respectively. This results in HERMES being 696 (with
+HtMAC-MiMC) and 42 (with CBC-MAC-AES) times faster compared to in SePCAR for a single-vehicle owner
+access token generation. Furthermore, we show that HERMES is practical on the vehicle side, too,
+as access token operations performed on a prototype vehicle on-board unit take only approx 62,087
+ms. 

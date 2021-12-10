@@ -1,0 +1,19 @@
+We develop data-driven algorithms for reachability analysis and control of systems with a priori
+unknown nonlinear dynamics. The resulting algorithms not only are suitable for settings with real-time
+requirements but also provide provable performance guarantees. To this end, they merge data from
+only a single finite-horizon trajectory and, if available, various forms of side information.
+Such side information may include knowledge of the regularity of the dynamics, algebraic constraints
+on the states, monotonicity, or decoupling in the dynamics between the states. Specifically, we
+develop two algorithms, $\texttt{DaTaReach}$ and $\texttt{DaTaControl}$, to over-approximate
+the reachable set and design control signals for the system on the fly. $\texttt{DaTaReach}$ constructs
+a differential inclusion that contains the unknown dynamics. Then, in a discrete-time setting,
+it over-approximates the reachable set through interval Taylor-based methods applied to systems
+with dynamics described as differential inclusions. We provide a bound on the time step size that
+ensures the correctness and termination of $\texttt{DaTaReach}$. $\texttt{DaTaControl}$ enables
+convex-optimization-based control using the computed over-approximation and the receding-horizon
+control framework. Besides, $\texttt{DaTaControl}$ achieves near-optimal control and is suitable
+for real-time control of such systems. We establish a bound on its suboptimality and the number of
+primitive operations it requires to compute control values. Then, we theoretically show that $\texttt{DaTaControl}$
+achieves tighter suboptimality bounds with an increasing amount of data and richer side information.
+Finally, experiments on a unicycle, quadrotor, and aircraft systems demonstrate the efficacy
+of both algorithms over existing approaches. 

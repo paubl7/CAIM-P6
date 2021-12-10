@@ -1,0 +1,19 @@
+Numerical modeling simulations and the use of high-performance computing are fundamental for
+detailed safety analysis, control and operation of a nuclear reactor, allowing the study and analysis
+of problems related to thermal-hydraulics, neutronic, and the dynamic of fluids that are involved
+in these systems. In this work, we introduce the basis for the implementation of the smoothed particle
+hydrodynamics (SPH) approach to analyze heat transfer in a nuclear reactor core. Heat transfer
+by means of convection is of great importance in many engineering applications and especially in
+the analysis of heat transfer in nuclear reactors. As a first approach, the natural convection in
+the gap (space that exists between the fuel rod and the cladding) can be analyzed helping to reduce
+uncertainty in such calculations that usually relies on empirical correlations while using other
+numerical tools. The numerical method developed in this work was validated while comparing the
+results obtained in previous numerical simulations and experimental data reported in the literature
+showing that our implementation is suitable for the study of heat transfer in nuclear reactors.
+Numerical simulations were done with the DualSPHysics open source code that allows performing
+parallel calculations using different numbers of cores. The current implementation is a version
+written in CUDA (Compute Unified Device Architecture) that allows also the use of GPU processors
+(Graphics Processor Unit) to accelerate the calculations in parallel using a large number of cores
+contained in the GPU. This makes it possible to analyze large systems using a reasonable computer
+time. The obtained results verified and validated our method and allowed us to have a strong solver
+for future applications of heat transfer in nuclear reactors fuel inside the reactor cores. 

@@ -1,0 +1,20 @@
+Derivatives of differential equation solutions are commonly for parameter estimation, fitting
+neural differential equations, and as model diagnostics. However, with a litany of choices and
+a Cartesian product of potential methods, it can be difficult for practitioners to understand which
+method is likely to be the most effective on their particular application. In this manuscript we
+investigate the performance characteristics of Discrete Local Sensitivity Analysis implemented
+via Automatic Differentiation (DSAAD) against continuous adjoint sensitivity analysis. Non-stiff
+and stiff biological and pharmacometric models, including a PDE discretization, are used to quantify
+the performance of sensitivity analysis methods. Our benchmarks show that on small systems of ODEs
+(approximately $<100$ parameters+ODEs), forward-mode DSAAD is more efficient than both reverse-mode
+and continuous forward/adjoint sensitivity analysis. The scalability of continuous adjoint
+methods is shown to be more efficient than discrete adjoints and forward methods after crossing
+this size range. These comparative studies demonstrate a trade-off between memory usage and performance
+in the continuous adjoint methods that should be considered when choosing the technique, while
+numerically unstable backsolve techniques from the machine learning literature are demonstrated
+as unsuitable for most scientific models. The performance of adjoint methods is shown to be heavily
+tied to the reverse-mode AD method, with tape-based AD methods shown to be 2 orders of magnitude slower
+on nonlinear partial differential equations than static AD techniques. These results also demonstrate
+the applicability of DSAAD to differential-algebraic equations, delay differential equations,
+and hybrid differential equation systems, showcasing an ease of implementation advantage for
+DSAAD approaches. 

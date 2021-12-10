@@ -1,0 +1,19 @@
+In recent years, edge computing (EC) has attracted great attention for its high-speed computing
+and low-latency characteristics. However, there are many challenges in the implementation of
+EC. Firstly, user's privacy has been raised as a major concern because the edge devices may be untrustworthy.
+In the case of Private Edge Computing (PEC), a user wants to compute a matrix multiplication between
+its local matrix and one of the matrices in a library, which has been redundantly stored in edge devices.
+When utilizing resources of edge devices, the privacy requires that each edge device cannot know
+which matrix stored on it is desired by the user for the multiplication. Secondly, edge devices usually
+have limited communication and storage resources, which makes it impossible for them to store all
+matrices in the library. In this paper, we consider the limited resources of edge devices and propose
+an unified framework for PEC. Within the framework, we study two highly-coupled problems, (1) storage
+allocation, that determines which matrices are stored on each edge device, and (2) computation
+design, that determines which matrices (or linear combinations of them) in each edge device are
+selected to participate in the computing process with the privacy consideration. Specifically,
+we give a general storage allocation scheme and then design two feasible private computation schemes,
+i.e., General Private Computation (GPC) scheme and Private Coded Computation (PCC) scheme. In
+particular, GPC can be applied in general case and PCC can only be applied in special cases, while
+PCC achieves less communication load. We theoretically analyze the proposed computing schemes
+and compare them with other schemes. Finally, we conduct extensive simulations to show the effectiveness
+of the proposed schemes. 

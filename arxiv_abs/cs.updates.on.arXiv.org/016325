@@ -1,0 +1,20 @@
+In this paper we consider the following problem: given $N$ independent samples from an unknown distribution
+$\mathcal{P}$ over passwords $pwd_1,pwd_2, \ldots$ can we generate high confidence upper/lower
+bounds on the guessing curve $\lambda_G \doteq \sum_{i=1}^G p_i$ where $p_i=\Pr[pwd_i]$ and the
+passwords are ordered such that $p_i \geq p_{i+1}$. Intuitively, $\lambda_G$ represents the probability
+that an attacker who knows the distribution $\mathcal{P}$ can guess a random password $pwd \leftarrow
+\mathcal{P}$ within $G$ guesses. Understanding how $\lambda_G$ increases with the number of guesses
+$G$ can help quantify the damage of a password cracking attack and inform password policies. Despite
+an abundance of large (breached) password datasets upper/lower bounding $\lambda_G$ remains
+a challenging problem. We introduce several statistical techniques to derive tighter upper/lower
+bounds on the guessing curve $\lambda_G$ which hold with high confidence. We apply our techniques
+to analyze $9$ large password datasets finding that our new lower bounds dramatically improve upon
+prior work. Our empirical analysis shows that even state-of-the-art password cracking models
+are significantly less guess efficient than an attacker who knows the distribution. When $G$ is
+not too large we find that our upper/lower bounds on $\lambda_G$ are both very close to the empirical
+distribution which justifies the use of the empirical distribution in settings where $G$ is not
+too large i.e., $G \ll N$ closely approximates $\lambda_G$. The analysis also highlights regions
+of the curve where we can, with high confidence, conclude that the empirical distribution significantly
+overestimates $\lambda_G$. Our new statistical techniques yield substantially tighter upper/lower
+bounds on $\lambda_G$ though there are still regions of the curve where the best upper/lower bounds
+diverge significantly. 

@@ -1,0 +1,20 @@
+RGB-Infrared (IR) person re-identification aims to retrieve person-of-interest from heterogeneous
+cameras, easily suffering from large image modality discrepancy caused by different sensing wavelength
+ranges. Existing work usually minimizes such discrepancy by aligning domain distribution of global
+features, while neglecting the intra-modality structural relations between semantic parts.
+This could result in the network overly focusing on local cues, without considering long-range
+body part dependencies, leading to meaningless region representations. In this paper, we propose
+a graph-enabled distribution matching solution, dubbed Geometry-Guided Dual-Alignment (G2DA)
+learning, for RGB-IR ReID. It can jointly encourage the cross-modal consistency between part semantics
+and structural relations for fine-grained modality alignment by solving a graph matching task
+within a multi-scale skeleton graph that embeds human topology information. Specifically, we
+propose to build a semantic-aligned complete graph into which all cross-modality images can be
+mapped via a pose-adaptive graph construction mechanism. This graph represents extracted whole-part
+features by nodes and expresses the node-wise similarities with associated edges. To achieve the
+graph-based dual-alignment learning, an Optimal Transport (OT) based structured metric is further
+introduced to simultaneously measure point-wise relations and group-wise structural similarities
+across modalities. By minimizing the cost of an inter-modality transport plan, G2DA can learn a
+consistent and discriminative feature subspace for cross-modality image retrieval. Furthermore,
+we advance a Message Fusion Attention (MFA) mechanism to adaptively reweight the information flow
+of semantic propagation, effectively strengthening the discriminability of extracted semantic
+features. 

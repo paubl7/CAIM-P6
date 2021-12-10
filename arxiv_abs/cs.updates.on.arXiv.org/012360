@@ -1,0 +1,19 @@
+This paper presents a formal verification guided approach for a principled design and implementation
+of robust and resilient learning-enabled systems. We focus on learning-enabled state estimation
+systems (LE-SESs), which have been widely used in robotics applications to determine the current
+state (e.g., location, speed, direction, etc.) of a complex system. The LE-SESs are networked systems
+composed of a set of connected components including Bayes filters for localisation, and neural
+networks for processing sensory input. We study LE-SESs from the perspective of formal verification,
+which determines the satisfiability of a system model against the specified properties. Over LE-SESs,
+we investigate two key properties - robustness and resilience - and provide their formal definitions.
+To enable formal verification, we reduce the LE-SESs to a novel class of labelled transition systems,
+named {PO}2-LTS in the paper, and formally express the properties as constrained optimisation
+objectives. We prove that the robustness verification is NP-complete. Based on {PO}2-LTS and the
+optimisation objectives, practical verification algorithms are developed to check the satisfiability
+of the properties on the LE-SESs. As a major case study, we interrogate a real-world dynamic tracking
+system which uses a single Kalman Filter (KF) - a special case of Bayes filter - to localise and track
+a ground vehicle. Its perception system, based on convolutional neural networks, processes a high-resolution
+Wide Area Motion Imagery (WAMI) data stream. Experimental results show that our algorithms can
+not only verify the properties of the WAMI tracking system but also provide representative examples,
+the latter of which inspired us to take an enhanced LE-SESs design where runtime monitors or joint-KFs
+are required. Experimental results confirm the improvement of the robustness of the enhanced design.

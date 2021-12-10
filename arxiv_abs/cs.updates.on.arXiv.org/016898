@@ -1,0 +1,19 @@
+Automatic image colourisation is the computer vision research path that studies how to colourise
+greyscale images (for restoration). Deep learning techniques improved image colourisation yielding
+astonishing results. These differ by various factors, such as structural differences, input types,
+user assistance, etc. Most of them, base the architectural structure on convolutional layers with
+no emphasis on layers specialised in object features extraction. We introduce a novel downsampling
+upsampling architecture named TUCaN (Tiny UCapsNet) that exploits the collaboration of convolutional
+layers and capsule layers to obtain a neat colourisation of entities present in every single image.
+This is obtained by enforcing collaboration among such layers by skip and residual connections.
+We pose the problem as a per pixel colour classification task that identifies colours as a bin in a
+quantized space. To train the network, in contrast with the standard end to end learning method,
+we propose the progressive learning scheme to extract the context of objects by only manipulating
+the learning process without changing the model. In this scheme, the upsampling starts from the
+reconstruction of low resolution images and progressively grows to high resolution images throughout
+the training phase. Experimental results on three benchmark datasets show that our approach with
+ImageNet10k dataset outperforms existing methods on standard quality metrics and achieves state
+of the art performances on image colourisation. We performed a user study to quantify the perceptual
+realism of the colourisation results demonstrating: that progressive learning let the TUCaN achieve
+better colours than the end to end scheme; and pointing out the limitations of the existing evaluation
+metrics. 

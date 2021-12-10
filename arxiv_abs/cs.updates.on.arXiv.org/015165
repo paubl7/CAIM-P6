@@ -1,0 +1,19 @@
+Generative modelling has been a topic at the forefront of machine learning research for a substantial
+amount of time. With the recent success in the field of machine learning, especially in deep learning,
+there has been an increased interest in explainable and interpretable machine learning. The ability
+to model distributions and provide insight in the density estimation and exact data likelihood
+is an example of such a feature. Normalizing Flows (NFs), a relatively new research field of generative
+modelling, has received substantial attention since it is able to do exactly this at a relatively
+low cost whilst enabling competitive generative results. While the generative abilities of NFs
+are typically explored, we focus on exploring the data distribution modelling for Out-of-Distribution
+(OOD) detection. Using one of the state-of-the-art NF models, GLOW, we attempt to detect OOD examples
+in the ISIC dataset. We notice that this model under performs in conform related research. To improve
+the OOD detection, we explore the masking methods to inhibit co-adaptation of the coupling layers
+however find no substantial improvement. Furthermore, we utilize Wavelet Flow which uses wavelets
+that can filter particular frequency components, thus simplifying the modeling process to data-driven
+conditional wavelet coefficients instead of complete images. This enables us to efficiently model
+larger resolution images in the hopes that it would capture more relevant features for OOD. The paper
+that introduced Wavelet Flow mainly focuses on its ability of sampling high resolution images and
+did not treat OOD detection. We present the results and propose several ideas for improvement such
+as controlling frequency components, using different wavelets and using other state-of-the-art
+NF architectures. 

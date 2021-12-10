@@ -1,0 +1,20 @@
+It is well-known that machine learning models are vulnerable to small but cleverly-designed adversarial
+perturbations that can cause misclassification. While there has been major progress in designing
+attacks and defenses for various adversarial settings, many fundamental and theoretical problems
+are yet to be resolved. In this paper, we consider classification in the presence of $\ell_0$-bounded
+adversarial perturbations, a.k.a. sparse attacks. This setting is significantly different from
+other $\ell_p$-adversarial settings, with $p\geq 1$, as the $\ell_0$-ball is non-convex and highly
+non-smooth. Under the assumption that data is distributed according to the Gaussian mixture model,
+our goal is to characterize the optimal robust classifier and the corresponding robust classification
+error as well as a variety of trade-offs between robustness, accuracy, and the adversary's budget.
+To this end, we develop a novel classification algorithm called FilTrun that has two main modules:
+Filtration and Truncation. The key idea of our method is to first filter out the non-robust coordinates
+of the input and then apply a carefully-designed truncated inner product for classification. By
+analyzing the performance of FilTrun, we derive an upper bound on the optimal robust classification
+error. We also find a lower bound by designing a specific adversarial strategy that enables us to
+derive the corresponding robust classifier and its achieved error. For the case that the covariance
+matrix of the Gaussian mixtures is diagonal, we show that as the input's dimension gets large, the
+upper and lower bounds converge; i.e. we characterize the asymptotically-optimal robust classifier.
+Throughout, we discuss several examples that illustrate interesting behaviors such as the existence
+of a phase transition for adversary's budget determining whether the effect of adversarial perturbation
+can be fully neutralized. 

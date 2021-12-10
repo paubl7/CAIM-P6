@@ -1,0 +1,20 @@
+Given two $n \times n$ Hermitian matrices $Y$ and $\Lambda$, the Harish-Chandra--Itzykson--Zuber
+(HCIZ) density on the unitary group $\mathrm{U}(n)$ is $e^{\mathrm{Tr}(U \Lambda U^*Y)}d\mu(U)$
+where $\mu$ is the Haar measure on $\mathrm{U}(n)$. Random unitary matrices distributed according
+to the HCIZ density are important in various settings in physics and random matrix theory. However,
+the basic question of how to sample efficiently from the HCIZ density has remained open. The main
+contribution of this paper is an algorithm to sample a matrix from a distribution that is $\varepsilon$-close
+to the given HCIZ density and whose running time depends polylogarithmically on $1/\varepsilon$.
+Interestingly, HCIZ densities can also be viewed as exponential densities on $\mathrm{U}(n)$-orbits,
+and in this setting, they have been widely studied. Thus, our result has several direct applications,
+including polynomial-time algorithms 1) to sample from matrix Langevin distributions studied
+in statistics, 2) to sample from continuous maximum entropy distributions with applications to
+quantum inference, and 3) for differentially private low-rank approximation. The key obstacle
+in sampling from an HCIZ density is that the domain is an algebraic manifold and the entries of the
+sample matrix are highly correlated. To overcome this, we consider a mapping that sends each Hermitian
+matrix $X$ to a natural ordering of the eigenvalues of all leading principal minors of $X$. The image
+of each $\mathrm{U}(n)$-orbit under this map is a convex polytope, and the mapping reveals a recursive
+structure of $\mathrm{U}(n)$-orbits. Subsequently, we develop efficiently computable determinantal
+expressions for densities that arise in the intermediate steps of sampling from the polytope. Our
+proof-technique applies to other compact Lie groups and can be viewed as extending the widely studied
+notion of self-reducibility. 

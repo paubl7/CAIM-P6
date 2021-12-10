@@ -1,0 +1,18 @@
+Locally resonant elastic metamaterials (LREM) can be designed, by optimizing the geometry of the
+constituent self-repeating unit cells, to potentially damp out vibration in selected frequency
+ranges, thus yielding desired bandgaps. However, it remains challenging to quickly arrive at unit
+cell designs that satisfy any requested bandgap specifications within a given global frequency
+range. This paper develops a computationally efficient framework for (fast) inverse design of
+LREM, by integrating a new type of machine learning models called invertible neural networks or
+INN. An INN can be trained to predict the bandgap bounds as a function of the unit cell design, and interestingly
+at the same time it learns to predict the unit cell design given a bandgap, when executed in reverse.
+In our case the unit cells are represented in terms of the width's of the outer matrix and middle soft
+filler layer of the unit cell. Training data on the frequency response of the unit cell is provided
+by Bloch dispersion analyses. The trained INN is used to instantaneously retrieve feasible (or
+near feasible) inverse designs given a specified bandgap constraint, which is then used to initialize
+a forward constrained optimization (based on sequential quadratic programming) to find the bandgap
+satisfying unit cell with minimum mass. Case studies show favorable performance of this approach,
+in terms of the bandgap characteristics and minimized mass, when compared to the median scenario
+over ten randomly initialized optimizations for the same specified bandgaps. Further analysis
+using FEA verify the bandgap performance of a finite structure comprised of $8\times 8$ arrangement
+of the unit cells obtained with INN-accelerated inverse design. 

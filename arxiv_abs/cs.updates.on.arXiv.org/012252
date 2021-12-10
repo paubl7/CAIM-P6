@@ -1,0 +1,19 @@
+In this paper, we focus on motion estimation dedicated for non-holonomic ground robots, by probabilistically
+fusing measurements from the wheel odometer and exteroceptive sensors. For ground robots, the
+wheel odometer is widely used in pose estimation tasks, especially in applications under planar-scene
+based environments. However, since the wheel odometer only provides 2D motion estimates, it is
+extremely challenging to use that for performing accurate full 6D pose (3D position and 3D orientation)
+estimation. Traditional methods on 6D pose estimation either approximate sensor or motion models,
+at the cost of accuracy reduction, or rely on other sensors, e.g., inertial measurement unit (IMU),
+to provide complementary measurements. By contrast, in this paper, we propose a novel method to
+utilize the wheel odometer for 6D pose estimation, by modeling and utilizing motion manifold for
+ground robots. Our approach is probabilistically formulated and only requires the wheel odometer
+and an exteroceptive sensor (e.g., a camera). Specifically, our method i) formulates the motion
+manifold of ground robots by parametric representation, ii) performs manifold based 6D integration
+with the wheel odometer measurements only, and iii) re-parameterizes manifold equations periodically
+for error reduction. To demonstrate the effectiveness and applicability of the proposed algorithmic
+modules, we integrate that into a sliding-window pose estimator by using measurements from the
+wheel odometer and a monocular camera. By conducting extensive simulated and real-world experiments,
+we show that the proposed algorithm outperforms competing state-of-the-art algorithms by a significant
+margin in pose estimation accuracy, especially when deployed in complex large-scale real-world
+environments. 

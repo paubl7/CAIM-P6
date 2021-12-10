@@ -1,0 +1,20 @@
+Agents trained with deep reinforcement learning algorithms are capable of performing highly complex
+tasks including locomotion in continuous environments. We investigate transferring the learning
+acquired in one task to a set of previously unseen tasks. Generalization and overfitting in deep
+reinforcement learning are not commonly addressed in current transfer learning research. Conducting
+a comparative analysis without an intermediate regularization step results in underperforming
+benchmarks and inaccurate algorithm comparisons due to rudimentary assessments. In this study,
+we propose regularization techniques in deep reinforcement learning for continuous control through
+the application of sample elimination, early stopping and maximum entropy regularized adversarial
+learning. First, the importance of the inclusion of training iteration number to the hyperparameters
+in deep transfer reinforcement learning will be discussed. Because source task performance is
+not indicative of the generalization capacity of the algorithm, we start by acknowledging the training
+iteration number as a hyperparameter. In line with this, we introduce an additional step of resorting
+to earlier snapshots of policy parameters to prevent overfitting to the source task. Then, to generate
+robust policies, we discard the samples that lead to overfitting via a method we call strict clipping.
+Furthermore, we increase the generalization capacity in widely used transfer learning benchmarks
+by using maximum entropy regularization, different critic methods, and curriculum learning in
+an adversarial setup. Subsequently, we propose maximum entropy adversarial reinforcement learning
+to increase the domain randomization. Finally, we evaluate the robustness of these methods on simulated
+robots in target environments where the morphology of the robot, gravity, and tangential friction
+coefficient of the environment are altered. 

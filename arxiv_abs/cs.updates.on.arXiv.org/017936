@@ -1,0 +1,19 @@
+Determining brain hemodynamics plays a critical role in the diagnosis and treatment of various
+cerebrovascular diseases. In this work, we put forth a physics-informed deep learning framework
+that augments sparse clinical measurements with fast computational fluid dynamics (CFD) simulations
+to generate physically consistent and high spatiotemporal resolution of brain hemodynamic parameters.
+Transcranial Doppler (TCD) ultrasound is one of the most common techniques in the current clinical
+workflow that enables noninvasive and instantaneous evaluation of blood flow velocity within
+the cerebral arteries. However, it is spatially limited to only a handful of locations across the
+cerebrovasculature due to the constrained accessibility through the skull's acoustic windows.
+Our deep learning framework employs in-vivo real-time TCD velocity measurements at several locations
+in the brain and the baseline vessel cross-sectional areas acquired from 3D angiography images,
+and provides high-resolution maps of velocity, area, and pressure in the entire vasculature. We
+validated the predictions of our model against in-vivo velocity measurements obtained via 4D flow
+MRI scans. We then showcased the clinical significance of this technique in diagnosing the cerebral
+vasospasm (CVS) by successfully predicting the changes in vasospastic local vessel diameters
+based on corresponding sparse velocities measurements. The key finding here is that the combined
+effects of uncertainties in outlet boundary condition subscription and modeling physics deficiencies
+render the conventional purely physics-based computational models unsuccessful in recovering
+accurate brain hemodynamics. Nonetheless, fusing these models with clinical measurements through
+a data-driven approach ameliorates predictions of brain hemodynamic variables. 

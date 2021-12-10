@@ -1,0 +1,19 @@
+High-contrast imaging surveys for exoplanet detection have shown giant planets at large separations
+to be rare. It is important to push towards detections at smaller separations, the part of the parameter
+space containing most planets. The performance of traditional methods for post-processing of
+pupil-stabilized observations decreases at smaller separations, due to the larger field-rotation
+required to displace a source on the detector in addition to the intrinsic difficulty of higher stellar
+contamination. We developed a method of extracting exoplanet signals that improves performance
+at small angular separations. A data-driven model of the temporal behavior of the systematics for
+each pixel can be created using reference pixels at a different position, assuming the underlying
+causes of the systematics are shared across multiple pixels. This is mostly true for the speckle
+pattern in high-contrast imaging. In our causal regression model, we simultaneously fit the model
+of a planet signal "transiting" over detector pixels and non-local reference lightcurves describing
+a basis of shared temporal trends of the speckle pattern to find the best fitting temporal model describing
+the signal. With our implementation of a spatially non-local, temporal systematics model, called
+TRAP, we show that it is possible to gain up to a factor of 6 in contrast at close separations ($<3\lambda/D$)
+compared to a model based on spatial correlations between images displaced in time. We show that
+better temporal sampling resulting in significantly better contrasts. At short integration times
+for $\beta$ Pic data, we increase the SNR of the planet by a factor of 4 compared to the spatial systematics
+model. Finally, we show that the temporal model can be used on unaligned data which has only been dark
+and flat corrected, without the need for further pre-processing. 

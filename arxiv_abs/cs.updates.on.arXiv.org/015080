@@ -1,0 +1,20 @@
+Decision and control are two of the core functionalities of high-level automated vehicles. Current
+mainstream methods, such as functionality decomposition or end-to-end reinforcement learning
+(RL), either suffer high time complexity or poor interpretability and limited safety performance
+in real-world complex autonomous driving tasks. In this paper, we present an interpretable and
+efficient decision and control framework for automated vehicles, which decomposes the driving
+task into multi-path planning and optimal tracking that are structured hierarchically. First,
+the multi-path planning is to generate several paths only considering static constraints. Then,
+the optimal tracking is designed to track the optimal path while considering the dynamic obstacles.
+To that end, in theory, we formulate a constrained optimal control problem (OCP) for each candidate
+path, optimize them separately and choose the one with the best tracking performance to follow.
+More importantly, we propose a model-based reinforcement learning (RL) algorithm, which is served
+as an approximate constrained OCP solver, to unload the heavy computation by the paradigm of offline
+training and online application. Specifically, the OCPs for all paths are considered together
+to construct a multi-task RL problem and then solved offline by our algorithm into value and policy
+networks, for real-time online path selecting and tracking respectively. We verify our framework
+in both simulation and the real world. Results show that our method has better online computing efficiency
+and driving performance including traffic efficiency and safety compared with baseline methods.
+In addition, it yields great interpretability and adaptability among different driving tasks.
+The real road test also suggests that it is applicable in complicated traffic scenarios without
+even tuning. 

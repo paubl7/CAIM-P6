@@ -1,0 +1,20 @@
+Graph Neural Networks (GNNs) have proved to be an effective representation learning framework
+for graph-structured data, and have achieved state-of-the-art performance on many practical
+predictive tasks, such as node classification, link prediction and graph classification. Among
+the variants of GNNs, Graph Attention Networks (GATs) learn to assign dense attention coefficients
+over all neighbors of a node for feature aggregation, and improve the performance of many graph learning
+tasks. However, real-world graphs are often very large and noisy, and GATs are prone to overfitting
+if not regularized properly. Even worse, the local aggregation mechanism of GATs may fail on disassortative
+graphs, where nodes within local neighborhood provide more noise than useful information for feature
+aggregation. In this paper, we propose Sparse Graph Attention Networks (SGATs) that learn sparse
+attention coefficients under an $L_0$-norm regularization, and the learned sparse attentions
+are then used for all GNN layers, resulting in an edge-sparsified graph. By doing so, we can identify
+noisy/task-irrelevant edges, and thus perform feature aggregation on most informative neighbors.
+Extensive experiments on synthetic and real-world graph learning benchmarks demonstrate the
+superior performance of SGATs. In particular, SGATs can remove about 50\%-80\% edges from large
+assortative graphs, while retaining similar classification accuracies. On disassortative graphs,
+SGATs prune majority of noisy edges and outperform GATs in classification accuracies by significant
+margins. Furthermore, the removed edges can be interpreted intuitively and quantitatively. To
+the best of our knowledge, this is the first graph learning algorithm that shows significant redundancies
+in graphs and edge-sparsified graphs can achieve similar or sometimes higher predictive performances
+than original graphs. 

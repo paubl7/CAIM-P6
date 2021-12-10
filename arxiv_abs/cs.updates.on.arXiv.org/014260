@@ -1,0 +1,25 @@
+The individual data collected throughout patient follow-up constitute crucial information for
+assessing the risk of a clinical event, and eventually for adapting a therapeutic strategy. Joint
+models and landmark models have been proposed to compute individual dynamic predictions from repeated
+measures to one or two markers. However, they hardly extend to the case where the complete patient
+history includes much more repeated markers possibly. Our objective was thus to propose a solution
+for the dynamic prediction of a health event that may exploit repeated measures of a possibly large
+number of markers. We combined a landmark approach extended to endogenous markers history with
+machine learning methods adapted to survival data. Each marker trajectory is modeled using the
+information collected up to landmark time, and summary variables that best capture the individual
+trajectories are derived. These summaries and additional covariates are then included in different
+prediction methods. To handle a possibly large dimensional history, we rely on machine learning
+methods adapted to survival data, namely regularized regressions and random survival forests,
+to predict the event from the landmark time, and we show how they can be combined into a superlearner.
+Then, the performances are evaluated by cross-validation using estimators of Brier Score and the
+area under the Receiver Operating Characteristic curve adapted to censored data. We demonstrate
+in a simulation study the benefits of machine learning survival methods over standard survival
+models, especially in the case of numerous and/or nonlinear relationships between the predictors
+and the event. We then applied the methodology in two prediction contexts: a clinical context with
+the prediction of death for patients with primary biliary cholangitis, and a public health context
+with the prediction of death in the general elderly population at different ages. Our methodology,
+implemented in R, enables the prediction of an event using the entire longitudinal patient history,
+even when the number of repeated markers is large. Although introduced with mixed models for the
+repeated markers and methods for a single right censored time-to-event, our method can be used with
+any other appropriate modeling technique for the markers and can be easily extended to competing
+risks setting. 

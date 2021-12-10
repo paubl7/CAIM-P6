@@ -1,0 +1,18 @@
+We present \verb|piXedfit|, pixelized spectral energy distribution (SED) fitting, a Python package
+that provides tools for analyzing spatially resolved properties of galaxies using multiband imaging
+data alone or in combination with integral field spectroscopy (IFS) data. \verb|piXedfit| has
+six modules that can handle all tasks in the spatially resolved SED fitting. The SED fitting module
+uses the Bayesian inference technique with two kinds of posteriors sampling methods: Markov Chain
+Monte Carlo (MCMC) and random densely-sampling of parameter space (RDSPS). We test the performance
+of the SED fitting module using mock SEDs of simulated galaxies from IllustrisTNG. The SED fitting
+with both posteriors sampling methods can recover physical properties and star formation histories
+of the IllustrisTNG galaxies well. We further test the performance of \verb|piXedfit| modules
+by analyzing 20 galaxies observed by the CALIFA and MaNGA surveys. The data comprises of 12-band
+imaging data from GALEX, SDSS, 2MASS, and WISE, and the IFS data from CALIFA or MaNGA. \verb|piXedfit|
+can spatially match (in resolution and sampling) of the imaging and IFS data. By fitting only the
+photometric SEDs, \verb|piXedfit| can predict the spectral continuum, $\text{D}_{\rm n}4000$,
+$H_{\alpha}$, and $H_{\beta}$ well. The star formation rate (SFR) derived by \verb|piXedfit|
+is consistent with that derived from $H_{\alpha}$ emission. The RDSPS method gives equally good
+fitting results as the MCMC and it is much faster than the MCMC. \verb|piXedfit| is a versatile tool
+equipped with a parallel computing module for efficient analysis of large datasets, and will be
+made publicly available (https://github.com/aabdurrouf/piXedfit). 

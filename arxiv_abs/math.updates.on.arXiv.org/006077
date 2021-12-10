@@ -1,0 +1,20 @@
+We propose a statistically optimal approach to construct data-driven decisions for stochastic
+optimization problems. Fundamentally, a data-driven decision is simply a function that maps the
+available training data to a feasible action. It can always be expressed as the minimizer of a surrogate
+optimization model constructed from the data. The quality of a data-driven decision is measured
+by its out-of-sample risk. An additional quality measure is its out-of-sample disappointment,
+which we define as the probability that the out-of-sample risk exceeds the optimal value of the surrogate
+optimization model. An ideal data-driven decision should minimize the out-of-sample risk simultaneously
+with respect to every conceivable probability measure as the true measure is unkown. Unfortunately,
+such ideal data-driven decisions are generally unavailable. This prompts us to seek data-driven
+decisions that minimize the out-of-sample risk subject to an upper bound on the out-of-sample disappointment.
+We prove that such Pareto-dominant data-driven decisions exist under conditions that allow for
+interesting applications: the unknown data-generating probability measure must belong to a parametric
+ambiguity set, and the corresponding parameters must admit a sufficient statistic that satisfies
+a large deviation principle. We can further prove that the surrogate optimization model must be
+a distributionally robust optimization problem constructed from the sufficient statistic and
+the rate function of its large deviation principle. Hence the optimal method for mapping data to
+decisions is to solve a distributionally robust optimization model. Maybe surprisingly, this
+result holds even when the training data is non-i.i.d. Our analysis reveals how the structural properties
+of the data-generating stochastic process impact the shape of the ambiguity set underlying the
+optimal distributionally robust model. 

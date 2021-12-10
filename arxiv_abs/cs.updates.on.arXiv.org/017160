@@ -1,0 +1,19 @@
+We address the problem of model selection for the finite horizon episodic Reinforcement Learning
+(RL) problem where the transition kernel $P^*$ belongs to a family of models $\mathcal{P}^*$ with
+finite metric entropy. In the model selection framework, instead of $\mathcal{P}^*$, we are given
+$M$ nested families of transition kernels $\cP_1 \subset \cP_2 \subset \ldots \subset \cP_M$.
+We propose and analyze a novel algorithm, namely \emph{Adaptive Reinforcement Learning (General)}
+(\texttt{ARL-GEN}) that adapts to the smallest such family where the true transition kernel $P^*$
+lies. \texttt{ARL-GEN} uses the Upper Confidence Reinforcement Learning (\texttt{UCRL}) algorithm
+with value targeted regression as a blackbox and puts a model selection module at the beginning of
+each epoch. Under a mild separability assumption on the model classes, we show that \texttt{ARL-GEN}
+obtains a regret of $\Tilde{\mathcal{O}}(d_{\mathcal{E}}^*H^2+\sqrt{d_{\mathcal{E}}^*
+\mathbb{M}^* H^2 T})$, with high probability, where $H$ is the horizon length, $T$ is the total number
+of steps, $d_{\mathcal{E}}^*$ is the Eluder dimension and $\mathbb{M}^*$ is the metric entropy
+corresponding to $\mathcal{P}^*$. Note that this regret scaling matches that of an oracle that
+knows $\mathcal{P}^*$ in advance. We show that the cost of model selection for \texttt{ARL-GEN}
+is an additive term in the regret having a weak dependence on $T$. Subsequently, we remove the separability
+assumption and consider the setup of linear mixture MDPs, where the transition kernel $P^*$ has
+a linear function approximation. With this low rank structure, we propose novel adaptive algorithms
+for model selection, and obtain (order-wise) regret identical to that of an oracle with knowledge
+of the true model class. 

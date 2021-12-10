@@ -1,0 +1,20 @@
+Learning to generate a task-aware base learner proves a promising direction to deal with few-shot
+learning (FSL) problem. Existing methods mainly focus on generating an embedding model utilized
+with a fixed metric (eg, cosine distance) for nearest neighbour classification or directly generating
+a linear classier. However, due to the limited discriminative capacity of such a simple metric or
+classifier, these methods fail to generalize to challenging cases appropriately. To mitigate
+this problem, we present a novel deep metric meta-generation method that turns to an orthogonal
+direction, ie, learning to adaptively generate a specific metric for a new FSL task based on the task
+description (eg, a few labelled samples). In this study, we structure the metric using a three-layer
+deep attentive network that is flexible enough to produce a discriminative metric for each task.
+Moreover, different from existing methods that utilize an uni-modal weight distribution conditioned
+on labelled samples for network generation, the proposed meta-learner establishes a multi-modal
+weight distribution conditioned on cross-class sample pairs using a tailored variational autoencoder,
+which can separately capture the specific inter-class discrepancy statistics for each class and
+jointly embed the statistics for all classes into metric generation. By doing this, the generated
+metric can be appropriately adapted to a new FSL task with pleasing generalization performance.
+To demonstrate this, we test the proposed method on four benchmark FSL datasets and gain surprisingly
+obvious performance improvement over state-of-the-art competitors, especially in the challenging
+cases, eg, improve the accuracy from 26.14% to 46.69% in the 20-way 1-shot task on miniImageNet,
+while improve the accuracy from 45.2% to 68.72% in the 5-way 1-shot task on FC100. Code is available:
+https://github.com/NWPUZhoufei/DAM. 

@@ -1,0 +1,18 @@
+Fiber tractography is an important tool of computational neuroscience that enables reconstructing
+the spatial connectivity and organization of white matter of the brain. Fiber tractography takes
+advantage of diffusion Magnetic Resonance Imaging (dMRI) which allows measuring the apparent
+diffusivity of cerebral water along different spatial directions. Unfortunately, collecting
+such data comes at the price of reduced spatial resolution and substantially elevated acquisition
+times, which limits the clinical applicability of dMRI. This problem has been thus far addressed
+using two principal strategies. Most of the efforts have been extended towards improving the quality
+of signal estimation for any, yet fixed sampling scheme (defined through the choice of diffusion-encoding
+gradients). On the other hand, optimization over the sampling scheme has also proven to be effective.
+Inspired by the previous results, the present work consolidates the above strategies into a unified
+estimation framework, in which the optimization is carried out with respect to both estimation
+model and sampling design {\it concurrently}. The proposed solution offers substantial improvements
+in the quality of signal estimation as well as the accuracy of ensuing analysis by means of fiber tractography.
+While proving the optimality of the learned estimation models would probably need more extensive
+evaluation, we nevertheless claim that the learned sampling schemes can be of immediate use, offering
+a way to improve the dMRI analysis without the necessity of deploying the neural network used for
+their estimation. We present a comprehensive comparative analysis based on the Human Connectome
+Project data. Code and learned sampling designs aviliable at https://github.com/tomer196/Learned_dMRI.

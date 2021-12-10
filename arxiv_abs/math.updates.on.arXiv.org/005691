@@ -1,0 +1,19 @@
+In this paper, we revisit the concentration inequalities for the supremum of the cumulative distribution
+function (CDF) of a real-valued continuous distribution as established by Dvoretzky, Kiefer,
+Wolfowitz and revisited later by Massart in in two seminal papers. We focus on the concentration
+of the \textit{local} supremum over a sub-interval, rather than on the full domain. That is, denoting
+$U$ the CDF of the uniform distribution over $[0,1]$ and $U_n$ its empirical version built from $n$
+samples, we study $\Pr\Big(\sup_{u\in [\uu,\ou]} U_n(u)-U(u) > \epsilon\Big)$ for different
+values of $\uu,\ou\in[0,1]$. Such local controls naturally appear for instance when studying
+estimation error of spectral risk-measures (such as the conditional value at risk), where $[\uu,\ou]$
+is typically $[0,\alpha]$ or $[1-\alpha,1]$ for a risk level $\alpha$, after reshaping the CDF
+$F$ of the considered distribution into $U$ by the general inverse transform $F^{-1}$. Extending
+a proof technique from Smirnov, we provide exact expressions of the local quantities $\Pr\Big(\sup_{u\in
+[\uu,\ou]} U_n(u)-U(u) > \epsilon\Big)$ and $\Pr\Big(\sup_{u\in [\uu,\ou]} U(u)-U_n(u) > \epsilon\Big)$
+for each $n,\epsilon,\uu,\ou$. Interestingly these quantities, seen as a function of $\epsilon$,
+can be easily inverted numerically into functions of the probability level $\delta$. Although
+not explicit, they can be computed and tabulated. We plot such expressions and compare them to the
+classical bound $\sqrt{\frac{\ln(1/\delta)}{2n}}$ provided by Massart inequality. Last, we
+extend the local concentration results holding individually for each $n$ to time-uniform concentration
+inequalities holding simultaneously for all $n$, revisiting a reflection inequality by James,
+which is of independent interest for the study of sequential decision making strategies. 

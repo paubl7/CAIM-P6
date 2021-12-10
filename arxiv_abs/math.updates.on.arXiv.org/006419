@@ -1,0 +1,18 @@
+Private information retrieval (PIR) protocols ensure that a user can download a file from a database
+without revealing any information on the identity of the requested file to the servers storing the
+database. While existing protocols strictly impose that no information is leaked on the file's
+identity, this work initiates the study of the tradeoffs that can be achieved by relaxing the perfect
+privacy requirement. We refer to such protocols as weakly-private information retrieval (WPIR)
+protocols. In particular, for the case of multiple noncolluding replicated servers, we study how
+the download rate, the upload cost, and the access complexity can be improved when relaxing the full
+privacy constraint. To quantify the information leakage on the requested file's identity we consider
+mutual information (MI), worst-case information leakage, and maximal leakage (MaxL). We present
+two WPIR schemes, denoted by Scheme A and Scheme B, based on two recent PIR protocols and show that
+the download rate of the former can be optimized by solving a convex optimization problem. We also
+show that Scheme A achieves an improved download rate compared to the recently proposed scheme by
+Samy et al. under the so-called $\epsilon$-privacy metric. Additionally, a family of schemes based
+on partitioning is presented. Moreover, we provide an information-theoretic converse bound for
+the maximum possible download rate for the MI and MaxL privacy metrics under a practical restriction
+on the alphabet size of queries and answers. For two servers and two files, the bound is tight under
+the MaxL metric, which settles the WPIR capacity in this particular case. Finally, we compare the
+performance of the proposed schemes and their gap to the converse bound. 

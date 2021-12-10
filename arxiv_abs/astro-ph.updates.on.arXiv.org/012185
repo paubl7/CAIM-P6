@@ -1,0 +1,19 @@
+Radiation controls the dynamics and energetics of many astrophysical environments. To capture
+the coupling between the radiation and matter, however, is often a physically complex and computationally
+expensive endeavour. We develop a numerical tool to perform radiation-hydrodynamics simulations
+in various configurations at an affordable cost. We build upon the finite volume code MPI-AMRVAC
+to solve the equations of hydrodynamics on multi-dimensional adaptive meshes and introduce a new
+module to handle the coupling with radiation. A non-equilibrium, flux-limiting diffusion approximation
+is used to close the radiation momentum and energy equations. The time-dependent radiation energy
+equation is then solved within a flexible framework, accounting fully for radiation forces and
+work terms and further allowing the user to adopt a variety of descriptions for the radiation-matter
+interaction terms (the 'opacities'). We validate the radiation module on a set of standard testcases
+for which different terms of the radiative energy equation predominate. As a preliminary application
+to a scientific case, we calculate spherically symmetric models of the radiation-driven and optically
+thick supersonic outflows from massive Wolf-Rayet stars. This also demonstrates our code's flexibility,
+as the illustrated simulation combines opacities typically used in static stellar structure models
+with a parametrised form for the enhanced line-opacity expected in supersonic flows. This new module
+provides a convenient and versatile tool to perform multi-dimensional and high resolution radiative-hydrodynamics
+simulations in optically thick environments with the MPI-AMRVAC code. The code is ready to be used
+for a variety of astrophysical applications, where a first target for us will be multi-dimensional
+simulations of stellar outflows from Wolf-Rayet stars. 

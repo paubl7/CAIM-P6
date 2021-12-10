@@ -1,0 +1,19 @@
+Machine learning has recently enabled large advances in artificial intelligence, but these results
+can be highly centralized. The large datasets required are generally proprietary; predictions
+are often sold on a per-query basis; and published models can quickly become out of date without effort
+to acquire more data and maintain them. Published proposals to provide models and data for free for
+certain tasks include Microsoft Research's Decentralized and Collaborative AI on Blockchain.
+The framework allows participants to collaboratively build a dataset and use smart contracts to
+share a continuously updated model on a public blockchain. The initial proposal gave an overview
+of the framework omitting many details of the models used and the incentive mechanisms in real world
+scenarios. In this work, we evaluate the use of several models and configurations in order to propose
+best practices when using the Self-Assessment incentive mechanism so that models can remain accurate
+and well-intended participants that submit correct data have the chance to profit. We have analyzed
+simulations for each of three models: Perceptron, Na\"ive Bayes, and a Nearest Centroid Classifier,
+with three different datasets: predicting a sport with user activity from Endomondo, sentiment
+analysis on movie reviews from IMDB, and determining if a news article is fake. We compare several
+factors for each dataset when models are hosted in smart contracts on a public blockchain: their
+accuracy over time, balances of a good and bad user, and transaction costs (or gas) for deploying,
+updating, collecting refunds, and collecting rewards. A free and open source implementation for
+the Ethereum blockchain and simulations written in Python is provided at https://github.com/microsoft/0xDeCA10B.
+This version has updated gas costs using newer optimizations written after the original publication.

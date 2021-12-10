@@ -1,0 +1,19 @@
+Active screening is a common approach in controlling the spread of recurring infectious diseases
+such as tuberculosis and influenza. In this approach, health workers periodically select a subset
+of population for screening. However, given the limited number of health workers, only a small subset
+of the population can be visited in any given time period. Given the recurrent nature of the disease
+and rapid spreading, the goal is to minimize the number of infections over a long time horizon. Active
+screening can be formalized as a sequential combinatorial optimization over the network of people
+and their connections. The main computational challenges in this formalization arise from i) the
+combinatorial nature of the problem, ii) the need of sequential planning and iii) the uncertainties
+in the infectiousness states of the population. Previous works on active screening fail to scale
+to large time horizon while fully considering the future effect of current interventions. In this
+paper, we propose a novel reinforcement learning (RL) approach based on Deep Q-Networks (DQN),
+with several innovative adaptations that are designed to address the above challenges. First,
+we use graph convolutional networks (GCNs) to represent the Q-function that exploit the node correlations
+of the underlying contact network. Second, to avoid solving a combinatorial optimization problem
+in each time period, we decompose the node set selection as a sub-sequence of decisions, and further
+design a two-level RL framework that solves the problem in a hierarchical way. Finally, to speed-up
+the slow convergence of RL which arises from reward sparseness, we incorporate ideas from curriculum
+learning into our hierarchical RL approach. We evaluate our RL algorithm on several real-world
+networks. 

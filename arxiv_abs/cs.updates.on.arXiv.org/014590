@@ -1,0 +1,19 @@
+We study a stylized dynamic assortment planning problem during a selling season of finite length
+$T$. At each time period, the seller offers an arriving customer an assortment of substitutable
+products and the customer makes the purchase among offered products according to a discrete choice
+model. The goal of the seller is to maximize the expected revenue, or equivalently, to minimize the
+worst-case expected regret. One key challenge is that utilities of products are unknown to the seller
+and need to be learned. Although the dynamic assortment planning problem has received increasing
+attention in revenue management, most existing work is based on the multinomial logit choice models
+(MNL). In this paper, we study the problem of dynamic assortment planning under a more general choice
+model -- the nested logit model, which models hierarchical choice behavior and is ``the most widely
+used member of the GEV (generalized extreme value) family''. By leveraging the revenue-ordered
+structure of the optimal assortment within each nest, we develop a novel upper confidence bound
+(UCB) policy with an aggregated estimation scheme. Our policy simultaneously learns customers'
+choice behavior and makes dynamic decisions on assortments based on the current knowledge. It achieves
+the accumulated regret at the order of $\tilde{O}(\sqrt{MNT})$, where $M$ is the number of nests
+and $N$ is the number of products in each nest. We further provide a lower bound result of $\Omega(\sqrt{MT})$,
+which shows the near optimality of the upper bound when $T$ is much larger than $M$ and $N$. When the
+number of items per nest $N$ is large, we further provide a discretization heuristic for better performance
+of our algorithm. Numerical results are presented to demonstrate the empirical performance of
+our proposed algorithms. 

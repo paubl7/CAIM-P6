@@ -1,0 +1,19 @@
+Fault localization is to identify faulty source code. It could be done on various granularities,
+e.g., classes, methods, and statements. Most of the automated fault localization (AFL) approaches
+are coarse-grained because it is challenging to accurately locate fine-grained faulty software
+elements, e.g., statements. SBFL, based on dynamic execution of test cases only, is simple, intuitive,
+and generic (working on various granularities). However, its accuracy deserves significant improvement.
+To this end, in this paper, we propose a hybrid fine-grained AFL approach based on both dynamic spectrums
+and static statement types. The rationale of the approach is that some types of statements are significantly
+more/less error-prone than others, and thus statement types could be exploited for fault localization.
+On a crop of faulty programs, we compute the error-proneness for each type of statements, and assign
+priorities to special statement types that are steadily more/less error-prone than others. For
+a given faulty program under test, we first leverage traditional spectrum-based fault localization
+algorithm to identify all suspicious statements and to compute their suspicious scores. For each
+of the resulting suspicious statements, we retrieve its statement type as well as the special priority
+associated with the type. The final suspicious score is the product of the SBFL suspicious score
+and the priority assigned to the statement type. A significant advantage of the approach is that
+it is simple and intuitive, making it efficient and easy to interpret/implement. We evaluate the
+proposed approach on widely used benchmark Defects4J. The evaluation results suggest that the
+proposed approach outperforms widely used SBFL, reducing the absolute waste effort (AWE) by 9.3%
+on average. 

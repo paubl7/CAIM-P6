@@ -1,0 +1,19 @@
+Modularity is a central principle throughout the design process for cyber-physical systems. Modularity
+reduces complexity and increases reuse of behavior. In this paper we pose and answer the following
+question: how can we identify independent `modules' within the structure of reactive control architectures?
+To this end, we propose a graph-structured control architecture we call a decision structure, and
+show how it generalises some reactive control architectures which are popular in Artificial Intelligence
+(AI) and robotics, specifically Teleo-Reactive programs (TRs), Decision Trees (DTs), Behavior
+Trees (BTs) and Generalised Behavior Trees ($k$-BTs). Inspired by the definition of a module in
+graph theory, we define modules in decision structures and show how each decision structure possesses
+a canonical decomposition into its modules. We can naturally characterise each of the BTs, $k$-BTs,
+DTs and TRs by properties of their module decomposition. This allows us to recognise which decision
+structures are equivalent to each of these architectures in quadratic time. Our proposed concept
+of modules extends to formal verification, under any verification scheme capable of verifying
+a decision structure. Namely, we prove that a modification to a module within a decision structure
+has no greater flow-on effects than a modification to an individual action within that structure.
+This enables verification on modules to be done locally and hierarchically, where structures can
+be verified and then repeatedly locally modified, with modules replaced by modules while preserving
+correctness. To illustrate the findings, we present an example of a solar-powered drone controlled
+by a decision structure. We use a Linear Temporal Logic-based verification scheme to verify the
+correctness of this structure, and then show how one can modify modules while preserving its correctness.

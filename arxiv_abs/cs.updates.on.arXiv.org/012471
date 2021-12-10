@@ -1,0 +1,19 @@
+Hyperspectral imaging is a rich source of data, allowing for multitude of effective applications.
+However, such imaging remains challenging because of large data dimension and, typically, small
+pool of available training examples. While deep learning approaches have been shown to be successful
+in providing effective classification solutions, especially for high dimensional problems,
+unfortunately they work best with a lot of labelled examples available. To alleviate the second
+requirement for a particular dataset the transfer learning approach can be used: first the network
+is pre-trained on some dataset with large amount of training labels available, then the actual dataset
+is used to fine-tune the network. This strategy is not straightforward to apply with hyperspectral
+images, as it is often the case that only one particular image of some type or characteristic is available.
+In this paper, we propose and investigate a simple and effective strategy of transfer learning that
+uses unsupervised pre-training step without label information. This approach can be applied to
+many of the hyperspectral classification problems. Performed experiments show that it is very
+effective at improving the classification accuracy without being restricted to a particular image
+type or neural network architecture. The experiments were carried out on several deep neural network
+architectures and various sizes of labeled training sets. The greatest improvement in overall
+accuracy on the Indian Pines and Pavia University datasets is over 21 and 13 percentage points, respectively.
+An additional advantage of the proposed approach is the unsupervised nature of the pre-training
+step, which can be done immediately after image acquisition, without the need of the potentially
+costly expert's time. 

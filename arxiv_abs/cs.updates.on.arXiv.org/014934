@@ -1,0 +1,18 @@
+Collaborative Filtering (CF) has become the standard approach to solve recommendation systems
+(RS) problems. Collaborative Filtering algorithms try to make predictions about interests of
+a user by collecting the personal interests from multiple users. There are multiple CF algorithms,
+each one of them with its own biases. It is the Machine Learning practitioner that has to choose the
+best algorithm for each task beforehand. In Recommender Systems, different algorithms have different
+performance for different users within the same dataset. Meta Learning (MtL) has been used to choose
+the best algorithm for a given problem. Meta Learning is usually applied to select algorithms for
+a whole dataset. Adapting it to select the to the algorithm for a single user in a RS involves several
+challenges. The most important is the design of the metafeatures which, in typical meta learning,
+characterize datasets while here, they must characterize a single user. This work presents a new
+meta-learning based framework named $\mu$-cf2vec to select the best algorithm for each user. We
+propose using Representation Learning techniques to extract the metafeatures. Representation
+Learning tries to extract representations that can be reused in other learning tasks. In this work
+we also implement the framework using different RL techniques to evaluate which one can be more useful
+to solve this task. In the meta level, the meta learning model will use the metafeatures to extract
+knowledge that will be used to predict the best algorithm for each user. We evaluated an implementation
+of this framework using MovieLens 20M dataset. Our implementation achieved consistent gains in
+the meta level, however, in the base level we only achieved marginal gains. 

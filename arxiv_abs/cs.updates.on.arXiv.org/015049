@@ -1,0 +1,19 @@
+MRI is an inherently slow process, which leads to long scan time for high-resolution imaging. The
+speed of acquisition can be increased by ignoring parts of the data (undersampling). Consequently,
+this leads to the degradation of image quality, such as loss of resolution or introduction of image
+artefacts. This work aims to reconstruct highly undersampled Cartesian or radial MR acquisitions,
+with better resolution and with less to no artefact compared to conventional techniques like compressed
+sensing. In recent times, deep learning has emerged as a very important area of research and has shown
+immense potential in solving inverse problems, e.g. MR image reconstruction. In this paper, a deep
+learning based MR image reconstruction framework is proposed, which includes a modified regularised
+version of ResNet as the network backbone to remove artefacts from the undersampled image, followed
+by data consistency steps that fusions the network output with the data already available from undersampled
+k-space in order to further improve reconstruction quality. The performance of this framework
+for various undersampling patterns has also been tested, and it has been observed that the framework
+is robust to deal with various sampling patterns, even when mixed together while training, and results
+in very high quality reconstruction, in terms of high SSIM (highest being 0.990$\pm$0.006 for acceleration
+factor of 3.5), while being compared with the fully sampled reconstruction. It has been shown that
+the proposed framework can successfully reconstruct even for an acceleration factor of 20 for Cartesian
+(0.968$\pm$0.005) and 17 for radially (0.962$\pm$0.012) sampled data. Furthermore, it has been
+shown that the framework preserves brain pathology during reconstruction while being trained
+on healthy subjects. 

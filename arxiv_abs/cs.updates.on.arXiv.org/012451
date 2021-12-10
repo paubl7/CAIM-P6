@@ -1,0 +1,18 @@
+During the onset of a disaster event, filtering relevant information from the social web data is
+challenging due to its sparse availability and practical limitations in labeling datasets of an
+ongoing crisis. In this paper, we hypothesize that unsupervised domain adaptation through multi-task
+learning can be a useful framework to leverage data from past crisis events for training efficient
+information filtering models during the sudden onset of a new crisis. We present a novel method to
+classify relevant tweets during an ongoing crisis without seeing any new examples, using the publicly
+available dataset of TREC incident streams. Specifically, we construct a customized multi-task
+architecture with a multi-domain discriminator for crisis analytics: multi-task domain adversarial
+attention network. This model consists of dedicated attention layers for each task to provide model
+interpretability; critical for real-word applications. As deep networks struggle with sparse
+datasets, we show that this can be improved by sharing a base layer for multi-task learning and domain
+adversarial training. Evaluation of domain adaptation for crisis events is performed by choosing
+a target event as the test set and training on the rest. Our results show that the multi-task model
+outperformed its single task counterpart. For the qualitative evaluation of interpretability,
+we show that the attention layer can be used as a guide to explain the model predictions and empower
+emergency services for exploring accountability of the model, by showcasing the words in a tweet
+that are deemed important in the classification process. Finally, we show a practical implication
+of our work by providing a use-case for the COVID-19 pandemic. 

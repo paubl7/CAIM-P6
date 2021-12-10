@@ -1,0 +1,19 @@
+Cloud computing provides a powerful yet low-cost environment for distributed deep learning workloads.
+However, training complex deep learning models often requires accessing large amounts of data,
+which can easily exceed the capacity of local disks. Prior research often overlooks this training
+data problem by implicitly assuming that data is available locally or via low latency network-based
+data storage. Such implicit assumptions often do not hold in a cloud-based training environment,
+where deep learning practitioners create and tear down dedicated GPU clusters on demand, or do not
+have the luxury of local storage, such as in serverless workloads. In this work, we investigate the
+performance of distributed training that leverages training data residing entirely inside cloud
+storage buckets. These buckets promise low storage costs, but come with inherent bandwidth limitations
+that make them seem unsuitable for an efficient training solution. To account for these bandwidth
+limitations, we propose the use of two classical techniques, namely caching and pre-fetching,
+to mitigate the training performance degradation. We implement a prototype, DELI, based on the
+popular deep learning framework PyTorch by building on its data loading abstractions. We then evaluate
+the training performance of two deep learning workloads using Google Cloud's NVIDIA K80 GPU servers
+and show that we can reduce the time that the training loop is waiting for data by 85.6%-93.5% compared
+to loading directly from a storage bucket - thus achieving comparable performance to loading data
+directly from disk - while only storing a fraction of the data locally at a time. In addition, DELI
+has the potential of lowering the cost of running a training workload, especially on models with
+long per-epoch training times. 

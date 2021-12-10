@@ -1,0 +1,18 @@
+Deep neural networks achieve remarkable performance in many computer vision tasks. Most state-of-the-art
+(SOTA) semantic segmentation and object detection approaches reuse neural network architectures
+designed for image classification as the backbone, commonly pre-trained on ImageNet. However,
+performance gains can be achieved by designing network architectures specifically for detection
+and segmentation, as shown by recent neural architecture search (NAS) research for detection and
+segmentation. One major challenge though is that ImageNet pre-training of the search space representation
+(a.k.a. super network) or the searched networks incurs huge computational cost. In this paper,
+we propose a Fast Network Adaptation (FNA++) method, which can adapt both the architecture and parameters
+of a seed network (e.g. an ImageNet pre-trained network) to become a network with different depths,
+widths, or kernel sizes via a parameter remapping technique, making it possible to use NAS for segmentation
+and detection tasks a lot more efficiently. In our experiments, we apply FNA++ on MobileNetV2 to
+obtain new networks for semantic segmentation, object detection, and human pose estimation that
+clearly outperform existing networks designed both manually and by NAS. We also implement FNA++
+on ResNets and NAS networks, which demonstrates a great generalization ability. The total computation
+cost of FNA++ is significantly less than SOTA segmentation and detection NAS approaches: 1737x
+less than DPC, 6.8x less than Auto-DeepLab, and 8.0x less than DetNAS. A series of ablation studies
+are performed to demonstrate the effectiveness, and detailed analysis is provided for more insights
+into the working mechanism. Codes are available at https://github.com/JaminFong/FNA. 

@@ -1,0 +1,20 @@
+The next generation HPC and data centers are likely to be reconfigurable and data-centric due to
+the trend of hardware specialization and the emergence of data-driven applications. In this paper,
+we propose ARENA -- an asynchronous reconfigurable accelerator ring architecture as a potential
+scenario on how the future HPC and data centers will be like. Despite using the coarse-grained reconfigurable
+arrays (CGRAs) as the substrate platform, our key contribution is not only the CGRA-cluster design
+itself, but also the ensemble of a new architecture and programming model that enables asynchronous
+tasking across a cluster of reconfigurable nodes, so as to bring specialized computation to the
+data rather than the reverse. We presume distributed data storage without asserting any prior knowledge
+on the data distribution. Hardware specialization occurs at runtime when a task finds the majority
+of data it requires are available at the present node. In other words, we dynamically generate specialized
+CGRA accelerators where the data reside. The asynchronous tasking for bringing computation to
+data is achieved by circulating the task token, which describes the data-flow graphs to be executed
+for a task, among the CGRA cluster connected by a fast ring network. Evaluations on a set of HPC and
+data-driven applications across different domains show that ARENA can provide better parallel
+scalability with reduced data movement (53.9%). Compared with contemporary compute-centric
+parallel models, ARENA can bring on average 4.37x speedup. The synthesized CGRAs and their task-dispatchers
+only occupy 2.93mm^2 chip area under 45nm process technology and can run at 800MHz with on average
+759.8mW power consumption. ARENA also supports the concurrent execution of multi-applications,
+offering ideal architectural support for future high-performance parallel computing and data
+analytics systems. 

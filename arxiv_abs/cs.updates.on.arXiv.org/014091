@@ -1,0 +1,18 @@
+We introduce large-scale Augmented Granger Causality (lsAGC) as a method for connectivity analysis
+in complex systems. The lsAGC algorithm combines dimension reduction with source time-series
+augmentation and uses predictive time-series modeling for estimating directed causal relationships
+among time-series. This method is a multivariate approach, since it is capable of identifying the
+influence of each time-series on any other time-series in the presence of all other time-series
+of the underlying dynamic system. We quantitatively evaluate the performance of lsAGC on synthetic
+directional time-series networks with known ground truth. As a reference method, we compare our
+results with cross-correlation, which is typically used as a standard measure of connectivity
+in the functional MRI (fMRI) literature. Using extensive simulations for a wide range of time-series
+lengths and two different signal-to-noise ratios of 5 and 15 dB, lsAGC consistently outperforms
+cross-correlation at accurately detecting network connections, using Receiver Operator Characteristic
+Curve (ROC) analysis, across all tested time-series lengths and noise levels. In addition, as an
+outlook to possible clinical application, we perform a preliminary qualitative analysis of connectivity
+matrices for fMRI data of Autism Spectrum Disorder (ASD) patients and typical controls, using a
+subset of 59 subjects of the Autism Brain Imaging Data Exchange II (ABIDE II) data repository. Our
+results suggest that lsAGC, by extracting sparse connectivity matrices, may be useful for network
+analysis in complex systems, and may be applicable to clinical fMRI analysis in future research,
+such as targeting disease-related classification or regression tasks on clinical data. 

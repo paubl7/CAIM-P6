@@ -1,0 +1,18 @@
+Accurate segmentation of brain resection cavities (RCs) aids in postoperative analysis and determining
+follow-up treatment. Convolutional neural networks (CNNs) are the state-of-the-art image segmentation
+technique, but require large annotated datasets for training. Annotation of 3D medical images
+is time-consuming, requires highly-trained raters, and may suffer from high inter-rater variability.
+Self-supervised learning strategies can leverage unlabeled data for training. We developed an
+algorithm to simulate resections from preoperative magnetic resonance images (MRIs). We performed
+self-supervised training of a 3D CNN for RC segmentation using our simulation method. We curated
+EPISURG, a dataset comprising 430 postoperative and 268 preoperative MRIs from 430 refractory
+epilepsy patients who underwent resective neurosurgery. We fine-tuned our model on three small
+annotated datasets from different institutions and on the annotated images in EPISURG, comprising
+20, 33, 19 and 133 subjects. The model trained on data with simulated resections obtained median
+(interquartile range) Dice score coefficients (DSCs) of 81.7 (16.4), 82.4 (36.4), 74.9 (24.2)
+and 80.5 (18.7) for each of the four datasets. After fine-tuning, DSCs were 89.2 (13.3), 84.1 (19.8),
+80.2 (20.1) and 85.2 (10.8). For comparison, inter-rater agreement between human annotators from
+our previous study was 84.0 (9.9). We present a self-supervised learning strategy for 3D CNNs using
+simulated RCs to accurately segment real RCs on postoperative MRI. Our method generalizes well
+to data from different institutions, pathologies and modalities. Source code, segmentation models
+and the EPISURG dataset are available at https://github.com/fepegar/ressegijcars . 

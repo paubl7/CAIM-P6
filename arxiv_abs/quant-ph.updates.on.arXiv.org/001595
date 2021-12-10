@@ -1,0 +1,20 @@
+The qubit-mapping problem aims to assign qubits from a quantum circuit to a realistic NISQ device
+in order to maximize limited resources. Many algorithmic solutions for the qubit-mapping problem
+have been introduced, but much work remains in order to evaluate the effectiveness of a qubit-mapping
+algorithm with respect to mapping a circuit to devices while taking into account the noise characteristics
+of the device. In this work, we make progress on this question. Firstly, we introduce a noise-aware
+heuristic mapping algorithm which fares well when compared to brute-force and trivial mapping
+solutions for several benchmarks. This comparison serves to provide effective upper and lower
+bounds for our heuristic mapper in terms of an algorithm's success rate. Subsequently, we analyze
+how the performance of the mapping algorithm is affected by the characteristics of the interaction
+graph, which represents the interactions of qubits in a quantum circuit. We observe that as interaction-graph
+edges are added to benchmarks in either depth-first or breadth-first fashion, our heuristic algorithm's
+calculated success rate varies significantly, implying that both the amount of interaction-graph
+vertex degree and the distribution of edges in a quantum circuit's interaction graph play a significant
+role in the calculated success rate when our greedy heuristic maps to a quantum device's coupling
+graph. Lastly, we discovered that our heuristic algorithm provides substantial benefits over
+the trivial solution when mapping quantum circuits to QPUs, provided that less than approximately
+75\% of the QPU is occupied. Lastly, as the size of the quantum processor in our simulation grows,
+so do the purported benefits from utilizing our heuristic mapper. This work takes the first steps
+towards the characterization of quantum algorithms with respect to efficient qubit-mapping solutions
+in NISQ-era devices. 

@@ -1,0 +1,19 @@
+In this paper we provide new randomized algorithms with improved runtimes for solving linear programs
+with two-sided constraints. In the special case of the minimum cost flow problem on $n$-vertex $m$-edge
+graphs with integer polynomially-bounded costs and capacities we obtain a randomized method which
+solves the problem in $\tilde{O}(m+n^{1.5})$ time. This improves upon the previous best runtime
+of $\tilde{O}(m\sqrt{n})$ (Lee-Sidford 2014) and, in the special case of unit-capacity maximum
+flow, improves upon the previous best runtimes of $m^{4/3+o(1)}$ (Liu-Sidford 2020, Kathuria
+2020) and $\tilde{O}(m\sqrt{n})$ (Lee-Sidford 2014) for sufficiently dense graphs. For $\ell_1$-regression
+in a matrix with $n$-columns and $m$-rows we obtain a randomized method which computes an $\epsilon$-approximate
+solution in $\tilde{O}(mn+n^{2.5})$ time. This yields a randomized method which computes an $\epsilon$-optimal
+policy of a discounted Markov Decision Process with $S$ states and $A$ actions per state in time $\tilde{O}(S^2A+S^{2.5})$.
+These methods improve upon the previous best runtimes of methods which depend polylogarithmically
+on problem parameters, which were $\tilde{O}(mn^{1.5})$ (Lee-Sidford 2015) and $\tilde{O}(S^{2.5}A)$
+(Lee-Sidford 2014, Sidford-Wang-Wu-Ye 2018). To obtain this result we introduce two new algorithmic
+tools of independent interest. First, we design a new general interior point method for solving
+linear programs with two sided constraints which combines techniques from (Lee-Song-Zhang 2019,
+Brand et al. 2020) to obtain a robust stochastic method with iteration count nearly the square root
+of the smaller dimension. Second, to implement this method we provide dynamic data structures for
+efficiently maintaining approximations to variants of Lewis-weights, a fundamental importance
+measure for matrices which generalize leverage scores and effective resistances. 

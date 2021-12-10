@@ -1,0 +1,19 @@
+We consider the problem of maintaining an approximate maximum independent set of geometric objects
+under insertions and deletions. We present data structures that maintain a constant-factor approximate
+maximum independent set for broad classes of fat objects in $d$ dimensions, where $d$ is assumed
+to be a constant, in sublinear \textit{worst-case} update time. This gives the first results for
+dynamic independent set in a wide variety of geometric settings, such as disks, fat polygons, and
+their high-dimensional equivalents. For axis-aligned squares and hypercubes, our result improves
+upon all (recently announced) previous works. We obtain, in particular, a dynamic $(4+\epsilon)$-approximation
+for squares, with $O(\log^4 n)$ worst-case update time. Our result is obtained via a two-level approach.
+First, we develop a dynamic data structure which stores all objects and provides an approximate
+independent set when queried, with output-sensitive running time. We show that via standard methods
+such a structure can be used to obtain a dynamic algorithm with \textit{amortized} update time bounds.
+Then, to obtain worst-case update time algorithms, we develop a generic deamortization scheme
+that with each insertion/deletion keeps (i) the update time bounded and (ii) the number of changes
+in the independent set constant. We show that such a scheme is applicable to fat objects by showing
+an appropriate generalization of a separator theorem. Interestingly, we show that our deamortization
+scheme is also necessary in order to obtain worst-case update bounds: If for a class of objects our
+scheme is not applicable, then no constant-factor approximation with sublinear worst-case update
+time is possible. We show that such a lower bound applies even for seemingly simple classes of geometric
+objects including axis-aligned rectangles in the plane. 

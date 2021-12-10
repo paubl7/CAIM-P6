@@ -1,0 +1,19 @@
+We consider the classic problem of computing the Longest Common Subsequence (LCS) of two strings
+of length $n$. While a simple quadratic algorithm has been known for the problem for more than 40 years,
+no faster algorithm has been found despite an extensive effort. The lack of progress on the problem
+has recently been explained by Abboud, Backurs, and Vassilevska Williams [FOCS'15] and Bringmann
+and K\"unnemann [FOCS'15] who proved that there is no subquadratic algorithm unless the Strong
+Exponential Time Hypothesis fails. This has led the community to look for subquadratic approximation
+algorithms for the problem. Yet, unlike the edit distance problem for which a constant-factor approximation
+in almost-linear time is known, very little progress has been made on LCS, making it a notoriously
+difficult problem also in the realm of approximation. For the general setting, only a naive $O(n^{\varepsilon/2})$-approximation
+algorithm with running time $\tilde{O}(n^{2-\varepsilon})$ has been known, for any constant
+$0 < \varepsilon \le 1$. Recently, a breakthrough result by Hajiaghayi, Seddighin, Seddighin,
+and Sun [SODA'19] provided a linear-time algorithm that yields a $O(n^{0.497956})$-approximation
+in expectation; improving upon the naive $O(\sqrt{n})$-approximation for the first time. In this
+paper, we provide an algorithm that in time $O(n^{2-\varepsilon})$ computes an $\tilde{O}(n^{2\varepsilon/5})$-approximation
+with high probability, for any $0 < \varepsilon \le 1$. Our result (1) gives an $\tilde{O}(n^{0.4})$-approximation
+in linear time, improving upon the bound of Hajiaghayi, Seddighin, Seddighin, and Sun, (2) provides
+an algorithm whose approximation scales with any subquadratic running time $O(n^{2-\varepsilon})$,
+improving upon the naive bound of $O(n^{\varepsilon/2})$ for any $\varepsilon$, and (3) instead
+of only in expectation, succeeds with high probability. 

@@ -1,0 +1,20 @@
+In order to service an ever-growing base of legacy electronics, both government and industry customers
+must turn to third-party brokers for components in short supply or discontinued by the original
+manufacturer. Sourcing equipment from a third party creates an opportunity for unscrupulous gray
+market suppliers to insert counterfeit devices: failed, knock-off, or otherwise inferior to the
+original product. This increases the supplier's profits at the expense of reduced performance/reliability
+of the customer's system. The most challenging class of counterfeit devices to detect is recycled
+counterfeits: recovered genuine devices which are re-sold as new. Such devices are difficult to
+detect because they typically pass performance and parametric tests but fail prematurely due to
+age-related wear. To address the challenge of detecting recycled devices pre-deployment, we develop
+Silicon Dating: a low-overhead classifier for detecting recycled integrated circuits using Static
+Random-Access Memory (SRAM) power-on states. Silicon Dating targets devices with no known-new
+record or purpose-built anti-recycling hardware. We observe that over time, software running
+on a device imprints its unique data patterns into SRAM through analog-domain changes; we measure
+the level and direction of this change through SRAM power-on state statistics. In contrast to highly
+symmetric power-on states produced by variation during SRAM fabrication, we show that embedded
+software data is generally highly asymmetric and that the degree of power-on state asymmetry imprinted
+by software reveals device use. Using empirical results from embedded benchmarks running on several
+microcontrollers, we show that Silicon Dating identifies recycled devices with 84.1% accuracy
+with no software-specific knowledge and with 92.0% accuracy by incorporating software knowledge---without
+prior device enrollment or modification. 

@@ -1,0 +1,19 @@
+Various studies have shown that immune system inspired hypermutation operators can allow artificial
+immune systems (AIS) to be very efficient at escaping local optima of multimodal optimisation problems.
+However, this efficiency comes at the expense of considerably slower runtimes during the exploitation
+phase compared to standard evolutionary algorithms. We propose modifications to the traditional
+`hypermutations with mutation potential' (HMP) that allow them to be efficient at exploitation
+as well as maintaining their effective explorative characteristics. Rather than deterministically
+evaluating fitness after each bit-flip of a hypermutation, we sample the fitness function stochastically
+with a `parabolic' distribution which allows the `stop at first constructive mutation' (FCM) variant
+of HMP to reduce the linear amount of wasted function evaluations when no improvement is found to
+a constant. The stochastic distribution also allows the removal of the FCM mechanism altogether
+as originally desired in the design of the HMP operators. We rigorously prove the effectiveness
+of the proposed operators for all the benchmark functions where the performance of HMP is rigorously
+understood in the literature and validating the gained insights to show linear speed-ups for the
+identification of high quality approximate solutions to classical NP-Hard problems from combinatorial
+optimisation. We then show the superiority of the HMP operators to the traditional ones in an analysis
+of the complete standard Opt-IA AIS, where the stochastic evaluation scheme allows HMP and ageing
+operators to work in harmony. Through a comparative performance study of other `fast mutation'
+operators from the literature, we conclude that a power-law distribution for the parabolic evaluation
+scheme is the best compromise in black box scenarios where little problem knowledge is available.

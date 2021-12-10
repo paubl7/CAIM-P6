@@ -1,0 +1,20 @@
+We address the problem of approximating the moments of the solution, $\boldsymbol{X}(t)$, of an
+It\^o stochastic differential equation (SDE) with drift and a diffusion terms over a time-grid
+$t_0, t_1, \ldots, t_n$. In particular, we assume an explicit numerical scheme for the generation
+of sample paths $\hat{\boldsymbol{X}}(t_0), \ldots, \hat{\boldsymbol{X}}(t_n), \ldots$ and
+then obtain recursive equations that yield any desired non-central moment of $\hat{\boldsymbol{X}}(t_n)$
+as a function of the initial condition $\boldsymbol{X}_0$. The core of the methodology is the decomposition
+of the numerical solution into a "central part" and an "effective noise" term. The central term is
+computed deterministically from the ordinary differential equation (ODE) that results from eliminating
+the diffusion term in the SDE, while the effective noise accounts for the stochastic deviation from
+the numerical solution of the ODE. For simplicity, we describe algorithms based on an Euler-Maruyama
+integrator, but other explicit numerical schemes can be exploited in the same way. We also apply
+the moment approximations to construct estimates of the 1-dimensional marginal probability density
+functions of $\hat{\boldsymbol{X}}(t_n)$ based on a Gram-Charlier expansion. Both for the approximation
+of moments and 1-dimensional densities, we describe how to handle the cases in which the initial
+condition is fixed (i.e., $\boldsymbol{X}_0 = \boldsymbol{x}_0$ for some known $\boldsymbol{x_0}$)
+or random. In the latter case, we resort to polynomial chaos expansion (PCE) schemes to approximate
+the target moments. The methodology has been inspired by the PCE and differential algebra (DA) methods
+used for uncertainty propagation in astrodynamics problems. Hence, we illustrate its application
+for the quantification of uncertainty in a 2-dimensional Keplerian orbit perturbed by a Wiener
+noise process. 

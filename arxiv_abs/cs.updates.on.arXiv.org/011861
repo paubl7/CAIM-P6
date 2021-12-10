@@ -1,0 +1,20 @@
+In general coding theory, we often assume that error is observed in transferring or storing encoded
+symbols, while the process of encoding itself is error-free. Motivated by recent applications
+of coding theory, in this paper, we consider the case where the process of encoding is distributed
+and prone to error. We introduce the problem of distributed encoding, comprising of $K\in\mathbb{N}$
+isolated source nodes and $N\in\mathbb{N}$ encoding nodes. Each source node has one symbol from
+a finite field and sends it to all encoding nodes. Each encoding node stores an encoded symbol, as
+a function of the received symbols. However, some of the source nodes are controlled by the adversary
+and may send different symbols to different encoding nodes. Depending on the number of adversarial
+nodes, denoted by $\beta\in\mathbb{N}$, and the number of symbols that each one generates, denoted
+by $v\in\mathbb{N}$, the process of decoding from the encoded symbols could be impossible. Assume
+that a decoder connects to an arbitrary subset of $t \in\mathbb{N}$ encoding nodes and wants to decode
+the symbols of the honest nodes correctly, without necessarily identifying the sets of honest and
+adversarial nodes. In this paper, we study $t^*\in\mathbb{N}$, the minimum of $t$, which is a function
+of $K$, $N$, $\beta$, and $v$. We show that when the encoding nodes use linear coding, $t^*_{\textrm{linear}}=K+2\beta(v-1)$,
+if $N\ge K+2\beta(v-1)$, and $t^*_{\textrm{linear}}=N$, if $N\le K+2\beta(v-1)$. In order to
+achieve $t^*_{\textrm{linear}}$, we use random linear coding and show that in any feasible solution
+that the decoder finds, the messages of the honest nodes are decoded correctly. For the converse
+of the fundamental limit, we show that when the adversary behaves in a particular way, it can always
+confuse the decoder between two feasible solutions that differ in the message of at least one honest
+node. 

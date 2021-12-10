@@ -1,0 +1,18 @@
+We present a general -- i.e., independent of the underlying equation -- registration procedure
+for parameterized model order reduction. Given the spatial domain $\Omega \subset \mathbb{R}^2$
+and the manifold $\mathcal{M}= \{ u_{\mu} : \mu \in \mathcal{P} \}$ associated with the parameter
+domain $\mathcal{P} \subset \mathbb{R}^P$ and the parametric field $\mu \mapsto u_{\mu} \in L^2(\Omega)$,
+our approach takes as input a set of snapshots $\{ u^k \}_{k=1}^{n_{\rm train}} \subset \mathcal{M}$
+and returns a parameter-dependent bijective mapping ${\Phi}: \Omega \times \mathcal{P} \to \mathbb{R}^2$:
+the mapping is designed to make the mapped manifold $\{ u_{\mu} \circ {\Phi}_{\mu}: \, \mu \in \mathcal{P}
+\}$ more amenable for linear compression methods. In this work, we extend and further analyze the
+registration approach proposed in [Taddei, SISC, 2020]. The contributions of the present work
+are twofold. First, we extend the approach to deal with annular domains by introducing a suitable
+transformation of the coordinate system. Second, we discuss the extension to general two-dimensional
+geometries: towards this end, we introduce a spectral element approximation, which relies on a
+partition $\{ \Omega_{q} \}_{q=1} ^{N_{\rm dd}}$ of the domain $\Omega$ such that $\Omega_1,\ldots,\Omega_{N_{\rm
+dd}}$ are isomorphic to the unit square. We further show that our spectral element approximation
+can cope with parameterized geometries. We present rigorous mathematical analysis to justify
+our proposal; furthermore, we present numerical results for a heat-transfer problem in an annular
+domain, a potential flow past a rotating symmetric airfoil, and an inviscid transonic compressible
+flow past a non-symmetric airfoil, to demonstrate the effectiveness of our method. 

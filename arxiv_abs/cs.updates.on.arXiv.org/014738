@@ -1,0 +1,19 @@
+Change detection, which aims to distinguish surface changes based on bi-temporal images, plays
+a vital role in ecological protection and urban planning. Since high resolution (HR) images cannot
+be typically acquired continuously over time, bi-temporal images with different resolutions
+are often adopted for change detection in practical applications. Traditional subpixel-based
+methods for change detection using images with different resolutions may lead to substantial error
+accumulation when HR images are employed; this is because of intraclass heterogeneity and interclass
+similarity. Therefore, it is necessary to develop a novel method for change detection using images
+with different resolutions, that is more suitable for HR images. To this end, we propose a super-resolution-based
+change detection network (SRCDNet) with a stacked attention module. The SRCDNet employs a super
+resolution (SR) module containing a generator and a discriminator to directly learn SR images through
+adversarial learning and overcome the resolution difference between bi-temporal images. To enhance
+the useful information in multi-scale features, a stacked attention module consisting of five
+convolutional block attention modules (CBAMs) is integrated to the feature extractor. The final
+change map is obtained through a metric learning-based change decision module, wherein a distance
+map between bi-temporal features is calculated. The experimental results demonstrate the superiority
+of the proposed method, which not only outperforms all baselines -with the highest F1 scores of 87.40%
+on the building change detection dataset and 92.94% on the change detection dataset -but also obtains
+the best accuracies on experiments performed with images having a 4x and 8x resolution difference.
+The source code of SRCDNet will be available at https://github.com/liumency/SRCDNet. 

@@ -1,0 +1,18 @@
+Onion routing is the most widely used approach to anonymous communication online. The idea is that
+Alice wraps her message to Bob in layers of encryption to form an "onion," and routes it through a series
+of intermediaries. Each intermediary's job is to decrypt ("peel") the onion it receives to obtain
+instructions for where to send it next, and what to send. The intuition is that, by the time it gets
+to Bob, the onion will have mixed with so many other onions, that its origin will be hard to trace even
+for an adversary that observes the entire network and controls a fraction of the participants, possibly
+including Bob. In spite of its widespread use in practice, until now no onion routing protocol was
+known that simultaneously achieved, in the presence of an active adversary that observes all network
+traffic and controls a constant fraction of the participants, (a) fault-tolerance, where even
+if a few of the onions are dropped, the protocol still delivers the rest; (b) reasonable communication
+and computational complexity as a function of the security parameter and the number of participants;
+and (c) anonymity. In this paper, we give the first onion routing protocol that meets these goals:
+our protocol (a) tolerates a polylogarithmic (in the security parameter) number of dropped onions
+and still delivers the rest; (b) requires a polylogarithmic number of rounds and a polylogarithmic
+number of onions sent per participant per round; and (c) achieves anonymity. We also show that to
+achieve anonymity in a fault-tolerant fashion via onion routing, this number of onions and rounds
+is necessary. Of independent interest, our analysis introduces two new security properties of
+onion routing -- mixing and equalizing -- and we show that together they imply anonymity. 

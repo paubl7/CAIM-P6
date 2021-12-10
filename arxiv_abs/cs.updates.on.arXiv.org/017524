@@ -1,0 +1,18 @@
+We present several new complexity results for the algorithms that approximately solve the optimal
+transport (OT) problem between two discrete probability measures with at most $n$ atoms. First,
+we improve the complexity bound of a greedy variant of the Sinkhorn algorithm, known as \textit{Greenkhorn}
+algorithm, from $\widetilde{O}(n^2\varepsilon^{-3})$ to $\widetilde{O}(n^2\varepsilon^{-2})$.
+Notably, this matches the best known complexity bound of the Sinkhorn algorithm and sheds the light
+to superior practical performance of the Greenkhorn algorithm. Second, we generalize an adaptive
+primal-dual accelerated gradient descent (APDAGD) algorithm~\citep{Dvurechensky-2018-Computational}
+with mirror mapping $\phi$ and prove that the resulting APDAMD algorithm achieves the complexity
+bound of $\widetilde{O}(n^2\sqrt{\delta}\varepsilon^{-1})$ where $\delta>0$ refers to the
+regularity of $\phi$. We demonstrate that the complexity bound of $\widetilde{O}(\min\{n^{9/4}\varepsilon^{-1},
+n^2\varepsilon^{-2}\})$ is invalid for the APDAGD algorithm and establish a new complexity bound
+of $\widetilde{O}(n^{5/2}\varepsilon^{-1})$. Moreover, we propose a \textit{deterministic}
+accelerated Sinkhorn algorithm and prove that it achieves the complexity bound of $\widetilde{O}(n^{7/3}\varepsilon^{-4/3})$
+by incorporating an estimate sequence. Therefore, the accelerated Sinkhorn algorithm outperforms
+the Sinkhorn and Greenkhorn algorithms in terms of $1/\varepsilon$ and the APDAGD and accelerated
+alternating minimization~\citep{Guminov-2021-Combination} algorithms in terms of $n$. Finally,
+we conduct experiments on synthetic data and real images with the proposed algorithms in the paper
+and demonstrate their efficiency via numerical results. 

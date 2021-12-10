@@ -1,0 +1,18 @@
+Predicting the effect of mutations in proteins is one of the most critical challenges in protein
+engineering; by knowing the effect a substitution of one (or several) residues in the protein's
+sequence has on its overall properties, could design a variant with a desirable function. New strategies
+and methodologies to create predictive models are continually being developed. However, those
+that claim to be general often do not reach adequate performance, and those that aim to a particular
+task improve their predictive performance at the cost of the method's generality. Moreover, these
+approaches typically require a particular decision to encode the amino acidic sequence, without
+an explicit methodological agreement in such endeavor. To address these issues, in this work, we
+applied clustering, embedding, and dimensionality reduction techniques to the AAIndex database
+to select meaningful combinations of physicochemical properties for the encoding stage. We then
+used the chosen set of properties to obtain several encodings of the same sequence, to subsequently
+apply the Fast Fourier Transform (FFT) on them. We perform an exploratory stage of Machine-Learning
+models in the frequency space, using different algorithms and hyperparameters. Finally, we select
+the best performing predictive models in each set of properties and create an assembled model. We
+extensively tested the proposed methodology on different datasets and demonstrated that the generated
+assembled model achieved notably better performance metrics than those models based on a single
+encoding and, in most cases, better than those previously reported. The proposed method is available
+as a Python library for non-commercial use under the GNU General Public License (GPLv3) license.

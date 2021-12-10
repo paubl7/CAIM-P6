@@ -1,0 +1,19 @@
+Convolutional neural networks (CNNs) have been applied to learn spatial features for high-resolution
+(HR) synthetic aperture radar (SAR) image classification. However, there has been little work
+on integrating the unique statistical distributions of SAR images which can reveal physical properties
+of terrain objects, into CNNs in a supervised feature learning framework. To address this problem,
+a novel end-to-end supervised classification method is proposed for HR SAR images by considering
+both spatial context and statistical features. First, to extract more effective spatial features
+from SAR images, a new deep spatial context encoder network (DSCEN) is proposed, which is a lightweight
+structure and can be effectively trained with a small number of samples. Meanwhile, to enhance the
+diversity of statistics, the nonstationary joint statistical model (NS-JSM) is adopted to form
+the global statistical features. Specifically, SAR images are transformed into the Gabor wavelet
+domain and the produced multi-subbands magnitudes and phases are modeled by the log-normal and
+uniform distribution. The covariance matrix is further utilized to capture the inter-scale and
+intra-scale nonstationary correlation between the statistical subbands and make the joint statistical
+features more compact and distinguishable. Considering complementary advantages, a feature
+fusion network (Fusion-Net) base on group compression and smooth normalization is constructed
+to embed the statistical features into the spatial features and optimize the fusion feature representation.
+As a result, our model can learn the discriminative features and improve the final classification
+performance. Experiments on four HR SAR images validate the superiority of the proposed method
+over other related algorithms. 

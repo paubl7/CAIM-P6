@@ -1,0 +1,18 @@
+The Steiner Team Orienteering Problem (STOP) is defined on a digraph in which arcs are associated
+with traverse times, and whose vertices are labeled as either mandatory or profitable, being the
+latter provided with rewards (profits). Given a homogeneous fleet of vehicles M, the goal is to find
+up to m = |M| disjoint routes (from an origin vertex to a destination one) that maximize the total sum
+of rewards collected while satisfying a given limit on the route's duration. Naturally, all mandatory
+vertices must be visited. In this work, we show that solely finding a feasible solution for STOP is
+NP-hard and propose a Large Neighborhood Search (LNS) heuristic for the problem. The algorithm
+is provided with initial solutions obtained by means of the matheuristic framework known as Feasibility
+Pump (FP). In our implementation, FP uses as backbone a commodity-based formulation reinforced
+by three classes of valid inequalities. To our knowledge, two of them are also introduced in this
+work. The LNS heuristic itself combines classical local searches from the literature of routing
+problems with a long-term memory component based on Path Relinking. We use the primal bounds provided
+by a state-of-the-art cutting-plane algorithm from the literature to evaluate the quality of the
+solutions obtained by the heuristic. Computational experiments show the efficiency and effectiveness
+of the proposed heuristic in solving a benchmark of 387 instances. Overall, the heuristic solutions
+imply an average percentage gap of only 0.54% when compared to the bounds of the cutting-plane baseline.
+In particular, the heuristic reaches the best previously known bounds on 382 of the 387 instances.
+Additionally, in 21 of these cases, our heuristic is even able to improve over the best known bounds.

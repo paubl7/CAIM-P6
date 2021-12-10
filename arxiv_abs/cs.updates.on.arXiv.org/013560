@@ -1,0 +1,19 @@
+Federated learning (FL) is a new paradigm for large-scale learning tasks across mobile devices.
+However, practical FL deployment over resource constrained mobile devices confronts multiple
+challenges. For example, it is not clear how to establish an effective wireless network architecture
+to support FL over mobile devices. Besides, as modern machine learning models are more and more complex,
+the local on-device training/intermediate model update in FL is becoming too power hungry/radio
+resource intensive for mobile devices to afford. To address those challenges, in this paper, we
+try to bridge another recent surging technology, 5G, with FL, and develop a wireless transmission
+and weight quantization co-design for energy efficient FL over heterogeneous 5G mobile devices.
+Briefly, the 5G featured high data rate helps to relieve the severe communication concern, and the
+multi-access edge computing (MEC) in 5G provides a perfect network architecture to support FL.
+Under MEC architecture, we develop flexible weight quantization schemes to facilitate the on-device
+local training over heterogeneous 5G mobile devices. Observed the fact that the energy consumption
+of local computing is comparable to that of the model updates via 5G transmissions, we formulate
+the energy efficient FL problem into a mixed-integer programming problem to elaborately determine
+the quantization strategies and allocate the wireless bandwidth for heterogeneous 5G mobile devices.
+The goal is to minimize the overall FL energy consumption (computing + 5G transmissions) over 5G
+mobile devices while guaranteeing learning performance and training latency. Generalized Benders'
+Decomposition is applied to develop feasible solutions and extensive simulations are conducted
+to verify the effectiveness of the proposed scheme. 

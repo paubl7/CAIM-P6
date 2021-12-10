@@ -1,0 +1,20 @@
+Real-time ridesharing systems such as UberPool, Lyft Line, GrabShare have become hugely popular
+as they reduce the costs for customers, improve per trip revenue for drivers and reduce traffic on
+the roads by grouping customers with similar itineraries. The key challenge in these systems is
+to group the "right" requests to travel together in the "right" available vehicles in real-time,
+so that the objective (e.g., requests served, revenue or delay) is optimized. This challenge has
+been addressed in existing work by: (i) generating as many relevant feasible (with respect to the
+available delay for customers) combinations of requests as possible in real-time; and then (ii)
+optimizing assignment of the feasible request combinations to vehicles. Since the number of request
+combinations increases exponentially with the increase in vehicle capacity and number of requests,
+unfortunately, such approaches have to employ ad hoc heuristics to identify a subset of request
+combinations for assignment. Our key contribution is in developing approaches that employ zone
+(abstraction of individual locations) paths instead of request combinations. Zone paths allow
+for generation of significantly more "relevant" combinations (in comparison to ad hoc heuristics)
+in real-time than competing approaches due to two reasons: (i) Each zone path can typically represent
+multiple request combinations; (ii) Zone paths are generated using a combination of offline and
+online methods. Specifically, we contribute both myopic (ridesharing assignment focussed on
+current requests only) and non-myopic (ridesharing assignment considers impact on expected future
+requests) approaches that employ zone paths. In our experimental results, we demonstrate that
+our myopic approach outperforms (with respect to both objective and runtime) the current best myopic
+approach for ridesharing on both real-world and synthetic datasets. 

@@ -1,0 +1,20 @@
+Real-world problems often involve the optimization of several objectives under multiple constraints.
+An example is the hyper-parameter tuning problem of machine learning algorithms. In particular,
+the minimization of the estimation of the generalization error of a deep neural network and at the
+same time the minimization of its prediction time. We may also consider as a constraint that the deep
+neural network must be implemented in a chip with an area below some size. Here, both the objectives
+and the constraint are black boxes, i.e., functions whose analytical expressions are unknown and
+are expensive to evaluate. Bayesian optimization (BO) methodologies have given state-of-the-art
+results for the optimization of black-boxes. Nevertheless, most BO methods are sequential and
+evaluate the objectives and the constraints at just one input location, iteratively. Sometimes,
+however, we may have resources to evaluate several configurations in parallel. Notwithstanding,
+no parallel BO method has been proposed to deal with the optimization of multiple objectives under
+several constraints. If the expensive evaluations can be carried out in parallel (as when a cluster
+of computers is available), sequential evaluations result in a waste of resources. This article
+introduces PPESMOC, Parallel Predictive Entropy Search for Multi-objective Bayesian Optimization
+with Constraints, an information-based batch method for the simultaneous optimization of multiple
+expensive-to-evaluate black-box functions under the presence of several constraints. Iteratively,
+PPESMOC selects a batch of input locations at which to evaluate the black-boxes so as to maximally
+reduce the entropy of the Pareto set of the optimization problem. We present empirical evidence
+in the form of synthetic, benchmark and real-world experiments that illustrate the effectiveness
+of PPESMOC. 

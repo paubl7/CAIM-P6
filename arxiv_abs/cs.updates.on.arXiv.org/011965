@@ -1,0 +1,18 @@
+Retinal vessel segmentation is a crucial step in diagnosing and screening various diseases, including
+diabetes, ophthalmologic diseases, and cardiovascular diseases. In this paper, we propose an
+effective and efficient method for vessel segmentation in color fundus images using encoder-decoder
+based octave convolution networks. Compared with other convolution networks utilizing standard
+convolution for feature extraction, the proposed method utilizes octave convolutions and octave
+transposed convolutions for learning multiple-spatial-frequency features, thus can better
+capture retinal vasculatures with varying sizes and shapes. To provide the network the capability
+of learning how to decode multifrequency features, we extend octave convolution and propose a new
+operation named octave transposed convolution. A novel architecture of convolutional neural
+network, named as Octave UNet integrating both octave convolutions and octave transposed convolutions
+is proposed based on the encoder-decoder architecture of UNet, which can generate high resolution
+vessel segmentation in one single forward feeding without post-processing steps. Comprehensive
+experimental results demonstrate that the proposed Octave UNet outperforms the baseline UNet
+achieving better or comparable performance to the state-of-the-art methods with fast processing
+speed. Specifically, the proposed method achieves 0.9664 / 0.9713 / 0.9759 / 0.9698 accuracy, 0.8374
+/ 0.8664 / 0.8670 / 0.8076 sensitivity, 0.9790 / 0.9798 / 0.9840 / 0.9831 specificity, 0.8127 / 0.8191
+/ 0.8313 / 0.7963 F1 score, and 0.9835 / 0.9875 / 0.9905 / 0.9845 Area Under Receiver Operating Characteristic
+curve, on DRIVE, STARE, CHASE_DB1, and HRF datasets, respectively. 

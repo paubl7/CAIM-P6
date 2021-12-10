@@ -1,0 +1,20 @@
+Spiculations are important predictors of lung cancer malignancy, which are spikes on the surface
+of the pulmonary nodules. In this study, we proposed an interpretable and parameter-free technique
+to quantify the spiculation using area distortion metric obtained by the conformal (angle-preserving)
+spherical parameterization. We exploit the insight that for an angle-preserved spherical mapping
+of a given nodule, the corresponding negative area distortion precisely characterizes the spiculations
+on that nodule. We introduced novel spiculation scores based on the area distortion metric and spiculation
+measures. We also semi-automatically segment lung nodule (for reproducibility) as well as vessel
+and wall attachment to differentiate the real spiculations from lobulation and attachment. A simple
+pathological malignancy prediction model is also introduced. We used the publicly-available
+LIDC-IDRI dataset pathologists (strong-label) and radiologists (weak-label) ratings to train
+and test radiomics models containing this feature, and then externally validate the models. We
+achieved AUC$=$0.80 and 0.76, respectively, with the models trained on the 811 weakly-labeled
+LIDC datasets and tested on the 72 strongly-labeled LIDC and 73 LUNGx datasets; the previous best
+model for LUNGx had AUC$=$0.68. The number-of-spiculations feature was found to be highly correlated
+(Spearman's rank correlation coefficient $\rho = 0.44$) with the radiologists' spiculation score.
+We developed a reproducible and interpretable, parameter-free technique for quantifying spiculations
+on nodules. The spiculation quantification measures was then applied to the radiomics framework
+for pathological malignancy prediction with reproducible semi-automatic segmentation of nodule.
+Using our interpretable features (size, attachment, spiculation, lobulation), we were able to
+achieve higher performance than previous models. 

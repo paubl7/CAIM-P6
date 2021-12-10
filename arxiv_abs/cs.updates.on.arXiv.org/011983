@@ -1,0 +1,20 @@
+For graphs $G,H$, a homomorphism from $G$ to $H$ is an edge-preserving mapping from $V(G)$ to $V(H)$.
+In the list homomorphism problem, denoted by \textsc{LHom}($H$), we are given a graph $G$ and lists
+$L: V(G) \to 2^{V(H)}$, and we ask for a homomorphism from $G$ to $H$ which additionally respects
+the lists $L$. Very recently Okrasa, Piecyk, and Rz\k{a}\.zewski [ESA 2020] defined an invariant
+$i^*(H)$ and proved that under the SETH $\mathcal{O}^*\left (i^*(H)^{\textrm{tw}(G)}\right)$
+is the tight complexity bound for \textsc{LHom}($H$), parameterized by the treewidth $\textrm{tw}(G)$
+of the instance graph $G$. We study the complexity of the problem under dirretent parameterizations.
+As the first result, we show that $i^*(H)$ is also the right complexity base if the parameter is the
+size of a minimum feedback vertex set of $G$. Then we turn our attention to a parameterization by the
+cutwidth $\textrm{ctw}(G)$ of $G$. Jansen and Nederlof~[ESA 2018] showed that \textsc{List $k$-Coloring}
+(i.e., \textsc{LHom}($K_k$)) can be solved in time $\mathcal{O}^*\left (c^{\textrm{ctw}(G)}\right)$
+where $c$ does not depend on $k$. Jansen asked if this behavior extends to graph homomorphisms. As
+the main result of the paper, we answer the question in the negative. We define a new graph invariant
+$mim^*(H)$ and prove that \textsc{LHom}($H$) problem cannot be solved in time $\mathcal{O}^*\left
+((mim^*(H)-\varepsilon)^{\textrm{ctw}(G)}\right)$ for any $\varepsilon >0$, unless the SETH
+fails. This implies that there is no $c$, such that for every odd cycle the non-list version of the
+problem can be solved in time $\mathcal{O}^*\left (c^{\textrm{ctw}(G)} \right)$. Finally, we
+generalize the algorithm of Jansen and Nederlof, so that it can be used to solve \textsc{LHom}($H$)
+for every graph $H$; its complexity depends on $\textrm{ctw}(G)$ and another invariant of $H$,
+which is constant for cliques. 

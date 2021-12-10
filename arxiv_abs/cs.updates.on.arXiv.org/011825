@@ -1,0 +1,18 @@
+We present a new meta-learning approach for supervised anomaly classification / one-class classification
+using set equivariant networks. We focus our experiments on an astronomy application. Our problem
+setting is composed of a set of classification tasks. Each task has a (small) set of positive, labeled
+examples and a larger set of unlabeled examples. We expect the positive instances to be much more
+uncommon (i.e. 'anomalies') than the negative ones ('normal' class). We propose a novel use of equivariant
+networks for this setting. Specifically we use Deep Sets, which was developed for point-clouds
+and unordered sets and is equivariant to permutation. We propose to consider the set of positive
+examples of a given task as a 'point-cloud'. The key idea is that the network directly takes as input
+the set of positive examples in addition to the current example to classify. This allows the model
+to predict at test-time on new tasks using only positive labeled examples (i.e 'One-Class classification'
+setting) by design, potentially without retraining. However, the model is trained in a meta-learning
+regime on a dataset of several tasks with full-supervision (positive and negative labels). This
+setup is motivated by our target application on stellar streams. Streams are groups of stars sharing
+specific properties in various features. For a detected stream, we can determine a set of stars that
+likely belong to the stream. We aim to characterize the membership of all other nearby stars. We build
+a meta-dataset of simulated streams injected onto real data and evaluate on unseen synthetic streams
+and one known stream. Our experiments show encouraging results to explore furthermore equivariant
+networks for anomaly or 'one-class' classification in a meta-learning regime. 

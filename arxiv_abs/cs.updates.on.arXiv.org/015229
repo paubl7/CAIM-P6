@@ -1,0 +1,18 @@
+Modern CDCL SAT solvers easily solve industrial instances containing tens of millions of variables
+and clauses, despite the theoretical intractability of the SAT problem. This gap between practice
+and theory is a central problem in solver research. It is believed that SAT solvers exploit structure
+inherent in industrial instances, and hence there have been numerous attempts over the last 25 years
+at characterizing this structure via parameters. These can be classified as rigorous, i.e., they
+serve as a basis for complexity-theoretic upper bounds (e.g., backdoors), or correlative, i.e.,
+they correlate well with solver run time and are observed in industrial instances (e.g., community
+structure). Unfortunately, no parameter proposed to date has been shown to be both strongly correlative
+and rigorous over a large fraction of industrial instances. Given the sheer difficulty of the problem,
+we aim for an intermediate goal of proposing a set of parameters that is strongly correlative and
+has good theoretical properties. Specifically, we propose parameters based on a graph partitioning
+called Hierarchical Community Structure (HCS), which captures the recursive community structure
+of a graph of a Boolean formula. We show that HCS parameters are strongly correlative with solver
+run time using an Empirical Hardness Model, and further build a classifier based on HCS parameters
+that distinguishes between easy industrial and hard random/crafted instances with very high accuracy.
+We further strengthen our hypotheses via scaling studies. On the theoretical side, we show that
+counterexamples which plagued community structure do not apply to HCS, and that there is a subset
+of HCS parameters such that restricting them limits the size of embeddable expanders. 

@@ -1,0 +1,19 @@
+We propose a novel hybrid universal network-coding cryptosystem (HUNCC) to obtain secure post-quantum
+cryptography at high communication rates. The secure network-coding scheme we offer is hybrid
+in the sense that it combines information-theory security with public-key cryptography. In addition,
+the scheme is general and can be applied to any communication network, and to any public-key cryptosystem.
+Our hybrid scheme is based on the information theoretic notion of individual secrecy, which traditionally
+relies on the assumption that an eavesdropper can only observe a subset of the communication links
+between the trusted parties - an assumption that is often challenging to enforce. For this setting,
+several code constructions have been developed, where the messages are linearly mixed before transmission
+over each of the paths in a way that guarantees that an adversary which observes only a subset has sufficient
+uncertainty about each individual message. Instead, in this paper, we take a computational viewpoint,
+and construct a coding scheme in which an arbitrary secure cryptosystem is utilized on a subset of
+the links, while a pre-processing similar to the one in individual security is utilized. Under this
+scheme, we demonstrate 1) a computational security guarantee for an adversary which observes the
+entirety of the links 2) an information theoretic security guarantee for an adversary which observes
+a subset of the links, and 3) information rates which approach the capacity of the network and greatly
+improve upon the current solutions. A perhaps surprising consequence of our scheme is that, to guarantee
+a computational security level b, it is sufficient to encrypt a single link using a computational
+post-quantum scheme. In addition, the information rate approaches 1 as the number of communication
+links increases. 

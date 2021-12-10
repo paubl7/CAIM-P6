@@ -1,0 +1,20 @@
+Neural networks (NNs) lack measures of "reliability" estimation that would enable reasoning over
+their predictions. Despite the vital importance, especially in areas of human well-being and health,
+state-of-the-art uncertainty estimation techniques are computationally expensive when applied
+to resource-constrained devices. We propose an efficient framework for predictive uncertainty
+estimation in NNs deployed on embedded edge systems with no need for fine-tuning or re-training
+strategies. To meet the energy and latency requirements of these embedded platforms the framework
+is built from the ground up to provide predictive uncertainty based only on one forward pass and a
+negligible amount of additional matrix multiplications with theoretically proven correctness.
+Our aim is to enable already trained deep learning models to generate uncertainty estimates on resource-limited
+devices at inference time focusing on classification tasks. This framework is founded on theoretical
+developments casting dropout training as approximate inference in Bayesian NNs. Our layerwise
+distribution approximation to the convolution layer cascades through the network, providing
+uncertainty estimates in one single run which ensures minimal overhead, especially compared with
+uncertainty techniques that require multiple forwards passes and an equal linear rise in energy
+and latency requirements making them unsuitable in practice. We demonstrate that it yields better
+performance and flexibility over previous work based on multilayer perceptrons to obtain uncertainty
+estimates. Our evaluation with mobile applications datasets shows that our approach not only obtains
+robust and accurate uncertainty estimations but also outperforms state-of-the-art methods in
+terms of systems performance, reducing energy consumption (up to 28x), keeping the memory overhead
+at a minimum while still improving accuracy (up to 16%). 

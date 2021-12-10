@@ -1,0 +1,19 @@
+Generative adversarial networks (GANs) have emerged as a powerful unsupervised method to model
+the statistical patterns of real-world data sets, such as natural images. These networks are trained
+to map random inputs in their latent space to new samples representative of the learned data. However,
+the structure of the latent space is hard to intuit due to its high dimensionality and the non-linearity
+of the generator, which limits the usefulness of the models. Understanding the latent space requires
+a way to identify input codes for existing real-world images (inversion), and a way to identify directions
+with known image transformations (interpretability). Here, we use a geometric framework to address
+both issues simultaneously. We develop an architecture-agnostic method to compute the Riemannian
+metric of the image manifold created by GANs. The eigen-decomposition of the metric isolates axes
+that account for different levels of image variability. An empirical analysis of several pretrained
+GANs shows that image variation around each position is concentrated along surprisingly few major
+axes (the space is highly anisotropic) and the directions that create this large variation are similar
+at different positions in the space (the space is homogeneous). We show that many of the top eigenvectors
+correspond to interpretable transforms in the image space, with a substantial part of eigenspace
+corresponding to minor transforms which could be compressed out. This geometric understanding
+unifies key previous results related to GAN interpretability. We show that the use of this metric
+allows for more efficient optimization in the latent space (e.g. GAN inversion) and facilitates
+unsupervised discovery of interpretable axes. Our results illustrate that defining the geometry
+of the GAN image manifold can serve as a general framework for understanding GANs. 

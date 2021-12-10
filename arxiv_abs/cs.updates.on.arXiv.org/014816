@@ -1,0 +1,19 @@
+The Cahn-Hilliard-Navier-Stokes (CHNS) equations represent the fundamental building blocks
+of hydrodynamic phase-field models for multiphase fluid flow dynamics. Due to the coupling between
+the Navier-Stokes equation and the Cahn-Hilliard equation, the CHNS system is non-trivial to solve
+numerically. Traditionally, a numerical extrapolation for the coupling terms is used. However,
+such brute-force extrapolation usually destroys the intrinsic thermodynamic structures of this
+CHNS system. This paper proposes a new strategy to reformulate the CHNS system into a constraint
+gradient flow formation. Under the new formulation, the reversible and irreversible structures
+are clearly revealed. This guides us to propose operator splitting schemes. The operator splitting
+schemes have several advantageous properties. First of all, the proposed schemes lead to several
+decoupled systems in smaller sizes to be solved at each time marching step. This significantly reduces
+computational costs. Secondly, the proposed schemes still guarantee the thermodynamic laws of
+the CHNS system at the discrete level. It ensures the thermodynamic laws, accuracy, and stability
+for the numerical solutions. In addition, unlike the recently populated IEQ or SAV approach using
+auxiliary variables, our resulting energy laws are formulated in the original variables. Our proposed
+framework lays out a foundation to design decoupled and energy stable numerical algorithms for
+hydrodynamic phase-field models. Furthermore, given different splitting steps, various numerical
+algorithms can be obtained, making this framework rather general. The proposed numerical algorithms
+are implemented. Their second-order accuracy in time is verified numerically. Some numerical
+examples and benchmark problems are calculated to verify the effectiveness of the proposed schemes.

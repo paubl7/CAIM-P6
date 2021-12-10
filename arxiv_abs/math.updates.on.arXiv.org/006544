@@ -1,0 +1,18 @@
+The numerical solution of spectral fractional diffusion problems in the form ${\mathcal A}^\alpha
+u = f$ is studied, where $\mathcal A$ is a selfadjoint elliptic operator in a bounded domain $\Omega\subset
+{\mathbb R}^d$, and $\alpha \in (0,1]$. The finite difference approximation of the problem leads
+to the system ${\mathbb A}^\alpha {\mathbf u} = {\mathbf f}$, where ${\mathbb A}$ is a sparse, symmetric
+and positive definite (SPD) matrix, and ${\mathbb A}^\alpha$ is defined by its spectral decomposition.
+In the case of finite element approximation, ${\mathbb A}$ is SPD with respect to the dot product
+associated with the mass matrix. The BURA method is introduced by the best uniform rational approximation
+of degree $k$ of $t^{\alpha}$ in $[0,1]$, denoted by $r_{\alpha,k}$. Then the approximation ${\bf
+u}_k\approx {\bf u}$ has the form ${\bf u}_k = c_0 {\mathbf f} +\sum_{i=1}^k c_i({\mathbb A} - {\widetilde{d}}_i
+{\mathbb I})^{-1}{\mathbf f}$, ${\widetilde{d}}_i<0$, thus requiring the solving of $k$ auxiliary
+linear systems with sparse SPD matrices. The BURA method has almost optimal computational complexity,
+assuming that an optimal PCG iterative solution method is applied to the involved auxiliary linear
+systems. The presented analysis shows that the absolute values of first %${\widetilde{d}}_i$
+$\left\{{\widetilde{d}}_i\right\}_{i=1}^{k'}$ can be extremely large. In such a case the condition
+number of ${\mathbb A} - {\widetilde{d}}_i {\mathbb I}$ is practically equal to one. Obviously,
+such systems do not need preconditioning. The next question is if we can replace their solution by
+directly multiplying ${\mathbf f}$ with $-c_i/{\widetilde{d}}_i$. Comparative analysis of
+numerical results is presented as a proof-of-concept for the proposed RS-BURA method. 

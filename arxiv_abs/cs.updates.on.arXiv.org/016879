@@ -1,0 +1,19 @@
+Advanced Persistent Threats (APTs) are stealthy attacks that threaten the security and privacy
+of sensitive information. Interactions of APTs with victim system introduce information flows
+that are recorded in the system logs. Dynamic Information Flow Tracking (DIFT) is a promising detection
+mechanism for detecting APTs. DIFT taints information flows originating at system entities that
+are susceptible to an attack, tracks the propagation of the tainted flows, and authenticates the
+tainted flows at certain system components according to a pre-defined security policy. Deployment
+of DIFT to defend against APTs in cyber systems is limited by the heavy resource and performance overhead
+associated with DIFT. In this paper, we propose a resource-efficient model for DIFT by incorporating
+the security costs, false-positives, and false-negatives associated with DIFT. Specifically,
+we develop a game-theoretic framework and provide an analytical model of DIFT that enables the study
+of trade-off between resource efficiency and the effectiveness of detection. Our game model is
+a nonzero-sum, infinite-horizon, average reward stochastic game. Our model incorporates the
+information asymmetry between players that arises from DIFT's inability to distinguish malicious
+flows from benign flows and APT's inability to know the locations where DIFT performs a security
+analysis. Additionally, the game has incomplete information as the transition probabilities
+(false-positive and false-negative rates) are unknown. We propose a multiple-time scale stochastic
+approximation algorithm to learn an equilibrium solution of the game. We prove that our algorithm
+converges to an average reward Nash equilibrium. We evaluate our proposed model and algorithm on
+a real-world ransomware dataset and validate the effectiveness of the proposed approach. 

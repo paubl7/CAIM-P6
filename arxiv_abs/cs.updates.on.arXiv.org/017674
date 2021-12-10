@@ -1,0 +1,19 @@
+Existing person re-identification (re-id) methods are stuck when deployed to a new unseen scenario
+despite the success in cross-camera person matching. Recent efforts have been substantially devoted
+to domain adaptive person re-id where extensive unlabeled data in the new scenario are utilized
+in a transductive learning manner. However, for each scenario, it is required to first collect enough
+data and then train such a domain adaptive re-id model, thus restricting their practical application.
+Instead, we aim to explore multiple labeled datasets to learn generalized domain-invariant representations
+for person re-id, which is expected universally effective for each new-coming re-id scenario.
+To pursue practicability in real-world systems, we collect all the person re-id datasets (20 datasets)
+in this field and select the three most frequently used datasets (i.e., Market1501, DukeMTMC, and
+MSMT17) as unseen target domains. In addition, we develop DataHunter that collects over 300K+ weak
+annotated images named YouTube-Human from YouTube street-view videos, which joins 17 remaining
+full labeled datasets to form multiple source domains. On such a large and challenging benchmark
+called FastHuman (~440K+ labeled images), we further propose a simple yet effective Semi-Supervised
+Knowledge Distillation (SSKD) framework. SSKD effectively exploits the weakly annotated data
+by assigning soft pseudo labels to YouTube-Human to improve models' generalization ability. Experiments
+on several protocols verify the effectiveness of the proposed SSKD framework on domain generalizable
+person re-id, which is even comparable to supervised learning on the target domains. Lastly, but
+most importantly, we hope the proposed benchmark FastHuman could bring the next development of
+domain generalizable person re-id algorithms. 

@@ -1,0 +1,18 @@
+Image registration is the basis for many applications in the fields of medical image computing and
+computer assisted interventions. One example is the registration of 2D X-ray images with preoperative
+three-dimensional computed tomography (CT) images in intraoperative surgical guidance systems.
+Due to the high safety requirements in medical applications, estimating registration uncertainty
+is of a crucial importance in such a scenario. However, previously proposed methods, including
+classical iterative registration methods and deep learning-based methods have one characteristic
+in common: They lack the capacity to represent the fact that a registration problem may be inherently
+ambiguous, meaning that multiple (substantially different) plausible solutions exist. To tackle
+this limitation, we explore the application of invertible neural networks (INN) as core component
+of a registration methodology. In the proposed framework, INNs enable going beyond point estimates
+as network output by representing the possible solutions to a registration problem by a probability
+distribution that encodes different plausible solutions via multiple modes. In a first feasibility
+study, we test the approach for a 2D 3D registration setting by registering spinal CT volumes to X-ray
+images. To this end, we simulate the X-ray images taken by a C-Arm with multiple orientations using
+the principle of digitially reconstructed radiographs (DRRs). Due to the symmetry of human spine,
+there are potentially multiple substantially different poses of the C-Arm that can lead to similar
+projections. The hypothesis of this work is that the proposed approach is able to identify multiple
+solutions in such ambiguous registration problems. 

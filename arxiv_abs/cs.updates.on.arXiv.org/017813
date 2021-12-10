@@ -1,0 +1,19 @@
+Convolutional neural networks (CNNs) have developed to become powerful models for various computer
+vision tasks ranging from object detection to semantic segmentation. However, most of the state-of-the-art
+CNNs cannot be deployed directly on edge devices such as smartphones and drones, which need low latency
+under limited power and memory bandwidth. One popular, straightforward approach to compressing
+CNNs is network slimming, which imposes $\ell_1$ regularization on the channel-associated scaling
+factors via the batch normalization layers during training. Network slimming thereby identifies
+insignificant channels that can be pruned for inference. In this paper, we propose replacing the
+$\ell_1$ penalty with an alternative nonconvex, sparsity-inducing penalty in order to yield a
+more compressed and/or accurate CNN architecture. We investigate $\ell_p (0 < p < 1)$, transformed
+$\ell_1$ (T$\ell_1$), minimax concave penalty (MCP), and smoothly clipped absolute deviation
+(SCAD) due to their recent successes and popularity in solving sparse optimization problems, such
+as compressed sensing and variable selection. We demonstrate the effectiveness of network slimming
+with nonconvex penalties on three neural network architectures -- VGG-19, DenseNet-40, and ResNet-164
+-- on standard image classification datasets. Based on the numerical experiments, T$\ell_1$ preserves
+model accuracy against channel pruning, $\ell_{1/2, 3/4}$ yield better compressed models with
+similar accuracies after retraining as $\ell_1$, and MCP and SCAD provide more accurate models
+after retraining with similar compression as $\ell_1$. Network slimming with T$\ell_1$ regularization
+also outperforms the latest Bayesian modification of network slimming in compressing a CNN architecture
+in terms of memory storage while preserving its model accuracy after channel pruning. 

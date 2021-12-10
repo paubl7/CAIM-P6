@@ -1,0 +1,20 @@
+Deep Neural Network (DNN) inference is emerging as the fundamental bedrock for a multitude of utilities
+and services. CPUs continue to scale up their raw compute capabilities for DNN inference along with
+mature high performance libraries to extract optimal performance. While general purpose CPUs
+offer unique attractive advantages for DNN inference at both datacenter and edge, they have primarily
+evolved to optimize single thread performance. For highly parallel, throughput-oriented DNN
+inference, this results in inefficiencies in both power and performance, impacting both raw performance
+scaling and overall performance/watt. We present Proximu$\$$, where we systematically tackle
+the root inefficiencies in power and performance scaling for CPU DNN inference. Performance scales
+efficiently by distributing light-weight tensor compute near all caches in a multi-level cache
+hierarchy. This maximizes the cumulative utilization of the existing bandwidth resources in the
+system and minimizes movement of data. Power is drastically reduced through simple ISA extensions
+that encode the structured, loop-y workload behavior. This enables a bulk offload of pre-decoded
+work, with loop unrolling in the light-weight near-cache units, effectively bypassing the power-hungry
+stages of the wide Out-of-Order (OOO) CPU pipeline. Across a number of DNN models, Proximu$\$$ achieves
+a 2.3x increase in convolution performance/watt with a 2x to 3.94x scaling in raw performance. Similarly,
+Proximu$\$$ achieves a 1.8x increase in inner-product performance/watt with 2.8x scaling in performance.
+With no changes to the programming model, no increase in cache capacity or bandwidth and minimal
+additional hardware, Proximu$\$$ enables unprecedented CPU efficiency gains while achieving
+similar performance to state-of-the-art Domain Specific Accelerators (DSA) for DNN inference
+in this AI era. 

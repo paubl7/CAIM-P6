@@ -1,0 +1,20 @@
+Unmanned Aerial Vehicle (UAV) technology is a promising solution for providing high-quality mobile
+services to ground users, where a UAV with limited service coverage travels among multiple geographical
+user locations (e.g., hotspots) for servicing their demands locally. How to dynamically determine
+a UAV swarm's cooperative path planning to best meet many users' spatio-temporally distributed
+demands is an important question but is unaddressed in the literature. To our best knowledge, this
+paper is the first to design and analyze cooperative path planning algorithms of a large UAV swarm
+for optimally servicing many spatial locations, where ground users' demands are released dynamically
+in the long time horizon. Regarding a single UAV's path planning design, we manage to substantially
+simplify the traditional dynamic program and propose an optimal algorithm of low computation complexity,
+which is only polynomial with respect to both the numbers of spatial locations and user demands.
+After coordinating a large number $K$ of UAVs, this simplified dynamic optimization problem becomes
+intractable and we alternatively present a fast iterative cooperation algorithm with provable
+approximation ratio $1-(1-\frac{1}{K})^{K}$ in the worst case, which is proved to obviously outperform
+the traditional approach of partitioning UAVs to serve different location clusters separately.
+To relax UAVs' battery capacity limit for sustainable service provisioning, we further allow UAVs
+to travel to charging stations in the mean time and thus jointly design UAVs' path planning over users'
+locations and charging stations. Despite of the problem difficulty, for the optimal solution,
+we successfully transform the problem to an integer linear program by creating novel directed acyclic
+graph of the UAV-state transition diagram, and propose an iterative algorithm with constant approximation
+ratio. 

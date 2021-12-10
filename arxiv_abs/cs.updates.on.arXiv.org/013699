@@ -1,0 +1,18 @@
+Memory security and reliability are two of the major design concerns in cloud computing systems.
+State-of-the-art memory security-reliability co-designs (e.g. Synergy) have achieved a good
+balance on performance, confidentiality, integrity, and reliability. However, these works merely
+rely on encryption to ensure data confidentiality, which has been proven unable to prevent information
+leakage from memory access patterns. Ring ORAM is an attractive confidential protection protocol
+to hide memory access patterns to the untrusted storage system. Unfortunately, it does not compatible
+with the security-reliability co-designs. A forced combination would result in more severe performance
+loss. In this paper, we propose IRO, an Integrity and Reliability enhanced Ring ORAM design. To reduce
+the overhead of integrity verification, we propose a low overhead integrity tree RIT and use a Minimum
+Update Subtree Tree (MUST) to reduce metadata update overhead. To improve memory reliability,
+we present Secure Replication to provide channel-level error resilience for the ORAM tree and use
+the mirrored channel technique to guarantee the reliability of the MUST. Last, we use the error correction
+pointer (ECP) to repair permanent memory cell fault to further improve device reliability and lifetime.
+A compact metadata design is used to reduce the storage and consulting overhead of the ECP. IRO provides
+strong security and reliability guarantees, while the resulting storage and performance overhead
+is very small. Our evaluation shows that IRO only increases 7.54% execution time on average over
+the Baseline under two channels four AES-GCM units setting. With enough AES-GCM units to perform
+concurrent MAC computing, IRO can reduce 2.14% execution time of the Baseline. 

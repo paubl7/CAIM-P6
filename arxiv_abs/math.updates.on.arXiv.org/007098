@@ -1,0 +1,19 @@
+In a recent joint work, the author has developed a modification of Newton's method, named New Q-Newton's
+method, which can avoid saddle points and has quadratic rate of convergence. While good theoretical
+convergence guarantee has not been established for this method, experiments on small scale problems
+show that the method works very competitively against other well known modifications of Newton's
+method such as Adaptive Cubic Regularization and BFGS, as well as first order methods such as Unbounded
+Two-way Backtracking Gradient Descent. In this paper, we resolve the convergence guarantee issue
+by proposing a modification of New Q-Newton's method, named New Q-Newton's method Backtracking,
+which incorporates a more sophisticated use of hyperparameters and a Backtracking line search.
+This new method has very good theoretical guarantees, which for a {\bf Morse function} yields the
+following (which is unknown for New Q-Newton's method): {\bf Theorem.} Let $f:\mathbb{R}^m\rightarrow
+\mathbb{R}$ be a Morse function, that is all its critical points have invertible Hessian. Then for
+a sequence $\{x_n\}$ constructed by New Q-Newton's method Backtracking from a random initial point
+$x_0$, we have the following two alternatives: i) $\lim _{n\rightarrow\infty}||x_n||=\infty$,
+or ii) $\{x_n\}$ converges to a point $x_{\infty}$ which is a {\bf local minimum} of $f$, and the rate
+of convergence is {\bf quadratic}. Moreover, if $f$ has compact sublevels, then only case ii) happens.
+As far as we know, for Morse functions, this is the best theoretical guarantee for iterative optimization
+algorithms so far in the literature. We have tested in experiments on small scale, with some further
+simplified versions of New Q-Newton's method Backtracking, and found that the new method significantly
+improve New Q-Newton's method. 

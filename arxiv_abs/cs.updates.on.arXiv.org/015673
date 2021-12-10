@@ -1,0 +1,18 @@
+Many robotics domains use some form of nonconvex model predictive control (MPC) for planning, which
+sets a reduced time horizon, performs trajectory optimization, and replans at every step. The actual
+task typically requires a much longer horizon than is computationally tractable, and is specified
+via a cost function that cumulates over that full horizon. For instance, an autonomous car may have
+a cost function that makes a desired trade-off between efficiency, safety, and obeying traffic
+laws. In this work, we challenge the common assumption that the cost we optimize using MPC should
+be the same as the ground truth cost for the task (plus a terminal cost). MPC solvers can suffer from
+short planning horizons, local optima, incorrect dynamics models, and, importantly, fail to account
+for future replanning ability. Thus, we propose that in many tasks it could be beneficial to purposefully
+choose a different cost function for MPC to optimize: one that results in the MPC rollout having low
+ground truth cost, rather than the MPC planned trajectory. We formalize this as an optimal cost design
+problem, and propose a zeroth-order optimization-based approach that enables us to design optimal
+costs for an MPC planning robot in continuous MDPs. We test our approach in an autonomous driving
+domain where we find costs different from the ground truth that implicitly compensate for replanning,
+short horizon, incorrect dynamics models, and local minima issues. As an example, the learned cost
+incentivizes MPC to delay its decision until later, implicitly accounting for the fact that it will
+get more information in the future and be able to make a better decision. Code and videos available
+at https://sites.google.com/berkeley.edu/ocd-mpc/. 

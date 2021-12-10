@@ -1,0 +1,19 @@
+Thanks to the fast learning capability of a new task with small datasets, online meta-learning has
+become an appealing technique for enabling edge computing in the IoT ecosystems. Nevertheless,
+to learn a good meta-model for within-task fast adaptation, a single agent alone has to learn over
+many tasks, inevitably leading to the cold-start problem. Seeing that in a multi-agent network
+the learning tasks across different agents often share some model similarity, a fundamental question
+to ask is "Is it possible to accelerate the online meta-learning at each agent via limited communication
+and if yes how much benefit can be achieved?" To answer this, we propose a multi-agent online meta-learning
+framework and treat it as an equivalent two-level nested online convex optimization (OCO) problem.
+By characterizing the upper bound of the agent-task-averaged regret, we show that the performance
+ceiling of the multi-agent online meta-learning heavily depends on how much an agent can benefit
+from distributed network-level OCO via limited communication, which however remains unclear.
+To tackle this challenge, we further study a distributed online gradient descent algorithm with
+gradient tracking where agents collaboratively track the global gradient through only one communication
+step per iteration, and it results in $O(\sqrt{T/N})$ for the average regret per agent, i.e., a factor
+of $\sqrt{1/N}$ speedup compared with the optimal single-agent regret $O(\sqrt{T})$ after $T$
+iterations, where $N$ is the number of agents. Building on this sharp performance speedup, we next
+develop a multi-agent online meta-learning algorithm and show that it can achieve the optimal task-average
+regret at a faster rate of $O(1/\sqrt{NT})$ via limited communication, compared to single-agent
+online meta-learning. Extensive experiments corroborate the theoretic results. 

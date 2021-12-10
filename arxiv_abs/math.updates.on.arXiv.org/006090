@@ -1,0 +1,19 @@
+Causal effects are often characterized with averages, which can give an incomplete picture of the
+underlying counterfactual distributions. Here we consider estimating the entire counterfactual
+density and generic functionals thereof. We focus on two kinds of target parameters. The first is
+a density approximation, defined by a projection onto a finite-dimensional model using a generalized
+distance metric, which includes f-divergences as well as $L_p$ norms. The second is the distance
+between counterfactual densities, which can be used as a more nuanced effect measure than the mean
+difference, and as a tool for model selection. We study nonparametric efficiency bounds for these
+targets, giving results for smooth but otherwise generic models and distances. Importantly, we
+show how these bounds connect to means of particular non-trivial functions of counterfactuals,
+linking the problems of density and mean estimation. We go on to propose doubly robust-style estimators
+for the density approximations and distances, and study their rates of convergence, showing they
+can be optimally efficient in large nonparametric models. We also give analogous methods for model
+selection and aggregation, when many models may be available and of interest. Our results all hold
+for generic models and distances, but throughout we highlight what happens for particular choices,
+such as $L_2$ projections on linear models, and KL projections on exponential families. Finally
+we illustrate by estimating the density of CD4 count among patients with HIV, had all been treated
+with combination therapy versus zidovudine alone, as well as a density effect. Our results suggest
+combination therapy may have increased CD4 count most for high-risk patients. Our methods are implemented
+in the freely available R package npcausal on GitHub. 

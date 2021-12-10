@@ -1,0 +1,19 @@
+Deep learning-based fluence map prediction(DL-FMP) method has been reported in the literature,
+which generated fluence maps for desired dose by deep neural network(DNN)-based inverse mapping.
+We hypothesized that DL-FMP is similar to general fluence map optimization(FMO) because it's theoretically
+based on a general inverse mapping. We designed four experiments to validate the generalizability
+of DL-FMP to other types of plans apart from the training data, which contained only clinical head
+and neck(HN) full-arc VMAT plans. The first three experiments quantified the generalizability
+of DL-FMP to multiple anatomical sites, different delivery modalities, and various degree of modulation(DOM),
+respectively. The fourth experiment explored the generalizability and stability to infeasible
+dose inputs. Results of the first experiment manifested that DL-FMP can generalize to lung, liver,
+esophagus and prostate, with gamma passing rates (GPR) higher than 95%(2%/2mm). The second experiment
+showed that DL-FMP can generalize to partial-arc plans and predict partial-arc fluences. GPR(3mm/3%)
+ranged from 96% to 99%. DL-FMP cannot generate fluence maps in discrete beam angles for IMRT input.
+But the predicted dose still agreed with ground truth dose with 93% GPR(5%/5mm). The third experiment
+demonstrated that DL-FMP can generalize to various DOMs, with GPRs(3%/3mm) ranged in 94%-98%.
+Moreover, the DOM of predicted fluence maps correlated to the optimality of the input dose accordingly.
+The fourth experiment exemplified that DL-FMP can make stable predictions for infeasible dose
+input. In conclusion, we validated that DL-FMP can generalize to plans for multiple anatomical
+sites, plans of different delivery modalities and plans with various DOM. It can also make stable
+prediction for infeasible input. 

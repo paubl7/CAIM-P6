@@ -1,0 +1,20 @@
+We study the communication complexity of computing functions $F:\{0,1\}^n\times \{0,1\}^n \rightarrow
+\{0,1\}$ in the memoryless communication model. Here, Alice is given $x\in \{0,1\}^n$, Bob is given
+$y\in \{0,1\}^n$ and their goal is to compute F(x,y) subject to the following constraint: at every
+round, Alice receives a message from Bob and her reply to Bob solely depends on the message received
+and her input x; the same applies to Bob. The cost of computing F in this model is the maximum number
+of bits exchanged in any round between Alice and Bob (on the worst case input x,y). In this paper, we
+also consider variants of our memoryless model wherein one party is allowed to have memory, the parties
+are allowed to communicate quantum bits, only one player is allowed to send messages. We show that
+our memoryless communication model capture the garden-hose model of computation by Buhrman et
+al. (ITCS'13), space bounded communication complexity by Brody et al. (ITCS'13) and the overlay
+communication complexity by Papakonstantinou et al. (CCC'14). Thus the memoryless communication
+complexity model provides a unified framework to study space-bounded communication models. We
+establish the following: (1) We show that the memoryless communication complexity of F equals the
+logarithm of the size of the smallest bipartite branching program computing F (up to a factor 2);
+(2) We show that memoryless communication complexity equals garden-hose complexity; (3) We exhibit
+various exponential separations between these memoryless communication models. We end with an
+intriguing open question: can we find an explicit function F and universal constant c>1 for which
+the memoryless communication complexity is at least $c \log n$? Note that $c\geq 2+\varepsilon$
+would imply a $\Omega(n^{2+\varepsilon})$ lower bound for general formula size, improving upon
+the best lower bound by Ne\v{c}iporuk in 1966. 

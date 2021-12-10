@@ -1,0 +1,18 @@
+Semantic segmentation, which refers to pixel-wise classification of an image, is a fundamental
+topic in computer vision owing to its growing importance in robot vision and autonomous driving
+industries. It provides rich information about objects in the scene such as object boundary, category,
+and location. Recent methods for semantic segmentation often employ an encoder-decoder structure
+using deep convolutional neural networks. The encoder part extracts feature of the image using
+several filters and pooling operations, whereas the decoder part gradually recovers the low-resolution
+feature maps of the encoder into a full input resolution feature map for pixel-wise prediction.
+However, the encoder-decoder variants for semantic segmentation suffer from severe spatial information
+loss, caused by pooling operations or convolutions with stride, and does not consider the context
+in the scene. In this paper, we propose a dense upsampling convolution method based on guided filtering
+to effectively preserve the spatial information of the image in the network. We further propose
+a novel local context convolution method that not only covers larger-scale objects in the scene
+but covers them densely for precise object boundary delineation. Theoretical analyses and experimental
+results on several benchmark datasets verify the effectiveness of our method. Qualitatively,
+our approach delineates object boundaries at a level of accuracy that is beyond the current excellent
+methods. Quantitatively, we report a new record of 82.86% and 81.62% of pixel accuracy on ADE20K
+and Pascal-Context benchmark datasets, respectively. In comparison with the state-of-the-art
+methods, the proposed method offers promising improvements. 

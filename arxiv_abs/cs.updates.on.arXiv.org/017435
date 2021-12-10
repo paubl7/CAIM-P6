@@ -1,0 +1,20 @@
+As we found previously, when critical points occur within grid intervals, the accuracy relations
+of smoothness indicators of WENO-JS would differ from that assuming critical points occurring
+on grid nodes, and accordingly the global smoothness indicator in WENO-Z scheme will differ from
+the original one. Based on above understandings, we first discuss several issues regarding current
+third-order WENO-Z improvements (e.g. WENO-NP3, -F3, -NN3, -PZ3 and -P+3), i.e. the numerical
+results with scale dependency, the validity of analysis assuming critical points occurring on
+nodes, and the sensitivity regarding computational time step and initial condition in order convergence
+studies. By analyses and numerical validations, the defections of present improvements are demonstrated,
+either scale-dependency of results or failure to recover optimal order when critical points occurring
+at half nodes, then a generic analysis is provided which considers the first-order critical point
+occurring within grid intervals. Based on achieved theoretical outcomes, two scale-independent,
+third-order WENO-Z schemes are proposed which could truly recover the optimal order at critical
+points: the first one is acquired by limited expansion of grid stencil, deriving new global smoothness
+indicator and incorporating with the mapping function; the second one is achieved by further expanding
+grid stencil and employing a different global smoothness indicator. For validating, typical 1-D
+scalar advection problems, 1-D and 2-D problems by Euler equations are chosen and tested. The consequences
+verify the optimal order recovery at critical points by proposed schemes and show that: the first
+scheme outperforms aforementioned third-order WENO-Z improvements in terms of numerical resolution,
+while the second scheme indicates weak numerical robustness in spite of improved resolution and
+is mainly of theoretical significance 

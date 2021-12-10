@@ -1,0 +1,20 @@
+Background. 3-D Secure 2.0 (3DS 2.0) is an identity federation protocol authenticating the payment
+initiator for credit card transactions on the Web. Aim. We aim to quantify the impact of factors used
+by 3DS 2.0 in its fraud-detection decision making process. Method. We ran credit card transactions
+with two Web sites systematically manipulating the nominal IVs \textsf{machine\_data}, \textsf{value},
+\textsf{region}, and \textsf{website}. We measured whether the user was \textsf{challenged}
+with an authentication, whether the transaction was \textsf{declined}, and whether the card was
+\textsf{blocked} as nominal DVs. Results. While \textsf{website} and \textsf{card} largely
+did not show a significant impact on any outcome, \textsf{machine\_data}, \textsf{value} and
+\textsf{region} did. A change in \textsf{machine\_data}, \textsf{region} or \textsf{value}
+made it 5-7 times as likely to be challenged with password authentication. However, even in a foreign
+region with another factor being changed, the overall likelihood of being challenged only reached
+$60\%$. When in the card's home region, a transaction will be rarely declined ($< 5\%$ in control,
+$40\%$ with one factor changed). However, in a region foreign to the card the system will more likely
+decline transactions anyway (about $60\%$) and any change in \textsf{machine\_data} or \textsf{value}
+will lead to a near-certain declined transaction. The \textsf{region} was the only significant
+predictor for a card being blocked ($\mathsf{OR}=3$). Conclusions. We found that the decisions
+to challenge the user with a password authentication, to decline a transaction and to block a card
+are governed by different weightings. 3DS 2.0 is most likely to decline transactions, especially
+in a foreign region. It is less likely to challenge users with password authentication, even if \textsf{machine\_data}
+or \textsf{value} are changed. 

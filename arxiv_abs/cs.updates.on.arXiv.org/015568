@@ -1,0 +1,20 @@
+Stochastic Gradient Descent (SGD) has become the de facto way to train deep neural networks in distributed
+clusters. A critical factor in determining the training throughput and model accuracy is the choice
+of the parameter synchronization protocol. For example, while Bulk Synchronous Parallel (BSP)
+often achieves better converged accuracy, the corresponding training throughput can be negatively
+impacted by stragglers. In contrast, Asynchronous Parallel (ASP) can have higher throughput,
+but its convergence and accuracy can be impacted by stale gradients. To improve the performance
+of synchronization protocol, recent work often focuses on designing new protocols with a heavy
+reliance on hard-to-tune hyper-parameters. In this paper, we design a hybrid synchronization
+approach that exploits the benefits of both BSP and ASP, i.e., reducing training time while simultaneously
+maintaining the converged accuracy. Based on extensive empirical profiling, we devise a collection
+of adaptive policies that determine how and when to switch between synchronization protocols.
+Our policies include both offline ones that target recurring jobs and online ones for handling transient
+stragglers. We implement the proposed policies in a prototype system, called Sync-Switch, on top
+of TensorFlow, and evaluate the training performance with popular deep learning models and datasets.
+Our experiments show that Sync-Switch achieves up to 5.13X throughput speedup and similar converged
+accuracy when comparing to BSP. Further, we observe that Sync-Switch achieves 3.8% higher converged
+accuracy with just 1.23X the training time compared to training with ASP. Moreover, Sync-Switch
+can be used in settings when training with ASP leads to divergence errors. Sync-Switch achieves
+all of these benefits with very low overhead, e.g., the framework overhead can be as low as 1.7% of
+the total training time. 

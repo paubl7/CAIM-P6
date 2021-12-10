@@ -1,0 +1,18 @@
+Software comes in releases. An implausible change to software is something that has never been changed
+in prior releases. When planning how to reduce defects, it is better to use plausible changes, i.e.,
+changes with some precedence in the prior releases. To demonstrate these points, this paper compares
+several defect reduction planning tools. LIME is a local sensitivity analysis tool that can report
+the fewest changes needed to alter the classification of some code module (e.g., from "defective"
+to "non-defective"). TimeLIME is a new tool, introduced in this paper, that improves LIME by restricting
+its plans to just those attributes which change the most within a project. In this study, we compared
+the performance of LIME and TimeLIME and several other defect reduction planning algorithms. The
+generated plans were assessed via (a) the similarity scores between the proposed code changes and
+the real code changes made by developers; and (b) the improvement scores seen within projects that
+followed the plans. For nine project trails, we found that TimeLIME outperformed all other algorithms
+(in 8 out of 9 trials). Hence, we strongly recommend using past releases as a source of knowledge for
+computing fixes for new releases (using TimeLIME). Apart from these specific results about planning
+defect reductions and TimeLIME, the more general point of this paper is that our community should
+be more careful about using off-the-shelf AI tools, without first applying SE knowledge. In this
+case study, it was not difficult to augment a standard AI algorithm with SE knowledge (that past releases
+are a good source of knowledge for planning defect reductions). As shown here, once that SE knowledge
+is applied, this can result in dramatically better systems. 

@@ -1,0 +1,20 @@
+Objective: In this work, we set out to investigate the accuracy of direct attenuation correction
+(AC) in the image domain for the myocardial perfusion SPECT imaging (MPI-SPECT) using two residual
+(ResNet) and UNet deep convolutional neural networks. Methods: The MPI-SPECT 99mTc-sestamibi
+images of 99 participants were retrospectively examined. UNet and ResNet networks were trained
+using SPECT non-attenuation corrected images as input and CT-based attenuation corrected SPECT
+images (CT-AC) as reference. The Chang AC approach, considering a uniform attenuation coefficient
+within the body contour, was also implemented. Quantitative and clinical evaluation of the proposed
+methods were performed considering SPECT CT-AC images of 19 subjects as reference using the mean
+absolute error (MAE), structural similarity index (SSIM) metrics, as well as relevant clinical
+indices such as perfusion deficit (TPD). Results: Overall, the deep learning solution exhibited
+good agreement with the CT-based AC, noticeably outperforming the Chang method. The ResNet and
+UNet models resulted in the ME (count) of ${-6.99\pm16.72}$ and ${-4.41\pm11.8}$ and SSIM of ${0.99\pm0.04}$
+and ${0.98\pm0.05}$, respectively. While the Change approach led to ME and SSIM of ${25.52\pm33.98}$
+and ${0.93\pm0.09}$, respectively. Similarly, the clinical evaluation revealed a mean TPD of
+${12.78\pm9.22}$ and ${12.57\pm8.93}$ for the ResNet and UNet models, respectively, compared
+to ${12.84\pm8.63}$ obtained from the reference SPECT CT-AC images. On the other hand, the Chang
+approach led to a mean TPD of ${16.68\pm11.24}$. Conclusion: We evaluated two deep convolutional
+neural networks to estimate SPECT-AC images directly from the non-attenuation corrected images.
+The deep learning solutions exhibited the promising potential to generate reliable attenuation
+corrected SPECT images without the use of transmission scanning. 

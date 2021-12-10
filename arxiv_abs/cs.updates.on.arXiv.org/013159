@@ -1,0 +1,19 @@
+In this paper, we propose an enhanced 3D myocardial strain estimation procedure, which combines
+complementary displacement information from multiple orientations of a single imaging modality
+(untagged CMR SSFP images). To estimate myocardial strain across the left ventricle, we register
+the sets of short-axis, four-chamber and two-chamber views via a 2D non-rigid registration algorithm
+implemented in a commercial software (Segment, Medviso). We then create a series of interpolating
+functions for the three orthogonal directions of motion and use them to deform a tetrahedral mesh
+representation of a patient-specific left ventricle. Additionally, we correct for overestimation
+of displacement by introducing a weighting scheme that is based on displacement along the long axis.
+The procedure was evaluated on the STACOM 2011 dataset containing CMR SSFP images for 16 healthy
+volunteers. We show increased accuracy in estimating the three strain components (radial, circumferential,
+longitudinal) compared to reported results in the challenge, for the imaging modality of interest
+(SSFP). Our peak strain estimates are also significantly closer to reported measurements from
+studies of a larger cohort in the literature and our own ground truth measurements using Segment
+Strain Analysis Module. Our proposed procedure provides a relatively fast and simple method to
+improve 2D tracking results, with the added flexibility in either deforming a reconstructed mesh
+model from other image modalities or using the built-in CMR mesh reconstruction procedure. Our,
+proposed scheme presents a deforming patient-specific model of the left ventricle, using the commonest
+imaging modality , routinely administered in clinical settings, without requiring additional
+or specialized imaging protocols. 

@@ -1,0 +1,20 @@
+Distributed Constraint Optimization Problems (DCOPs) are a widely studied framework for coordinating
+interactions in cooperative multi-agent systems. In classical DCOPs, variables owned by agents
+are assumed to be discrete. However, in many applications, such as target tracking or sleep scheduling
+in sensor networks, continuous-valued variables are more suitable than discrete ones. To better
+model such applications, researchers have proposed Continuous DCOPs (C-DCOPs), an extension
+of DCOPs, that can explicitly model problems with continuous variables. The state-of-the-art
+approaches for solving C-DCOPs experience either onerous memory or computation overhead and unsuitable
+for non-differentiable optimization problems. To address this issue, we propose a new C-DCOP algorithm,
+namely Particle Swarm Optimization Based C-DCOP (PCD), which is inspired by Particle Swarm Optimization
+(PSO), a well-known centralized population-based approach for solving continuous optimization
+problems. In recent years, population-based algorithms have gained significant attention in
+classical DCOPs due to their ability in producing high-quality solutions. Nonetheless, to the
+best of our knowledge, this class of algorithms has not been utilized to solve C-DCOPs and there has
+been no work evaluating the potential of PSO in solving classical DCOPs or C-DCOPs. In light of this
+observation, we adapted PSO, a centralized algorithm, to solve C-DCOPs in a decentralized manner.
+The resulting PCD algorithm not only produces good-quality solutions but also finds solutions
+without any requirement for derivative calculations. Moreover, we design a crossover operator
+that can be used by PCD to further improve the quality of solutions found. Finally, we theoretically
+prove that PCD is an anytime algorithm and empirically evaluate PCD against the state-of-the-art
+C-DCOP algorithms in a wide variety of benchmarks. 

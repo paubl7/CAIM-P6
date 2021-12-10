@@ -1,0 +1,20 @@
+This study develops a neural network-based approach for emulating high-resolution modeled precipitation
+data with comparable statistical properties but at greatly reduced computational cost. The key
+idea is to use combination of low- and high- resolution simulations to train a neural network to map
+from the former to the latter. Specifically, we define two types of CNNs, one that stacks variables
+directly and one that encodes each variable before stacking, and we train each CNN type both with
+a conventional loss function, such as mean square error (MSE), and with a conditional generative
+adversarial network (CGAN), for a total of four CNN variants. We compare the four new CNN-derived
+high-resolution precipitation results with precipitation generated from original high resolution
+simulations, a bilinear interpolater and the state-of-the-art CNN-based super-resolution (SR)
+technique. Results show that the SR technique produces results similar to those of the bilinear
+interpolator with smoother spatial and temporal distributions and smaller data variabilities
+and extremes than the original high resolution simulations. While the new CNNs trained by MSE generate
+better results over some regions than the interpolator and SR technique do, their predictions are
+still not as close as the original high resolution simulations. The CNNs trained by CGAN generate
+more realistic and physically reasonable results, better capturing not only data variability
+in time and space but also extremes such as intense and long-lasting storms. The new proposed CNN-based
+downscaling approach can downscale precipitation from 50~km to 12~km in 14~min for 30~years once
+the network is trained (training takes 4~hours using 1~GPU), while the conventional dynamical
+downscaling would take 1~month using 600 CPU cores to generate simulations at the resolution of
+12~km over contiguous United States. 

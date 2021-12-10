@@ -1,0 +1,19 @@
+As real-world images come in varying sizes, the machine learning model is part of a larger system
+that includes an upstream image scaling algorithm. In this system, the model and the scaling algorithm
+have become attractive targets for numerous attacks, such as adversarial examples and the recent
+image-scaling attack. In response to these attacks, researchers have developed defense approaches
+that are tailored to attacks at each processing stage. As these defenses are developed in isolation,
+their underlying assumptions become questionable when viewing them from the perspective of an
+end-to-end machine learning system. In this paper, we investigate whether defenses against scaling
+attacks and adversarial examples are still robust when an adversary targets the entire machine
+learning system. In particular, we propose Scale-Adv, a novel attack framework that jointly targets
+the image-scaling and classification stages. This framework packs several novel techniques,
+including novel representations of the scaling defenses. It also defines two integrations that
+allow for attacking the machine learning system pipeline in the white-box and black-box settings.
+Based on this framework, we evaluate cutting-edge defenses at each processing stage. For scaling
+attacks, we show that Scale-Adv can evade four out of five state-of-the-art defenses by incorporating
+adversarial examples. For classification, we show that Scale-Adv can significantly improve the
+performance of machine learning attacks by leveraging weaknesses in the scaling algorithm. We
+empirically observe that Scale-Adv can produce adversarial examples with less perturbation and
+higher confidence than vanilla black-box and white-box attacks. We further demonstrate the transferability
+of Scale-Adv on a commercial online API. 

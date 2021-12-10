@@ -1,0 +1,18 @@
+Small target motion detection within complex natural environments is an extremely challenging
+task for autonomous robots. Surprisingly, the visual systems of insects have evolved to be highly
+efficient in detecting mates and tracking prey, even though targets are as small as a few pixels in
+their visual fields. The excellent sensitivity to small target motion relies on a class of specialized
+neurons called small target motion detectors (STMDs). However, existing STMD-based models are
+heavily dependent on visual contrast and perform poorly in complex natural environments where
+small targets generally exhibit extremely low contrast against neighbouring backgrounds. In
+this paper, we develop an attention and prediction guided visual system to overcome this limitation.
+The developed visual system comprises three main subsystems, namely, an attention module, an STMD-based
+neural network, and a prediction module. The attention module searches for potential small targets
+in the predicted areas of the input image and enhances their contrast against complex background.
+The STMD-based neural network receives the contrast-enhanced image and discriminates small moving
+targets from background false positives. The prediction module foresees future positions of the
+detected targets and generates a prediction map for the attention module. The three subsystems
+are connected in a recurrent architecture allowing information to be processed sequentially to
+activate specific areas for small target detection. Extensive experiments on synthetic and real-world
+datasets demonstrate the effectiveness and superiority of the proposed visual system for detecting
+small, low-contrast moving targets against complex natural environments. 

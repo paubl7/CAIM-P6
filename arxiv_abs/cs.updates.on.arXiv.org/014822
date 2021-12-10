@@ -1,0 +1,19 @@
+This paper outlines a rigorous variational-based multilevel Global-Local formulation for ductile
+fracture. Here, a phase-field formulation is used to resolve failure mechanisms by regularizing
+the sharp crack topology on the local state. The coupling of plasticity to the crack phase-field
+is realized by a constitutive work density function, which is characterized through a degraded
+stored elastic energy and the accumulated dissipated energy due to plasticity and damage. Two different
+Global-Local approaches based on the idea of multiplicative Schwarz' alternating method are proposed:
+(i) A global constitutive model with an elastic-plastic behavior is first proposed, while it is
+enhanced with a single local domain, which, in turn, describes an elastic-plastic fracturing response.
+(ii) The main objective of the second model is to introduce an adoption of the Global-Local approach
+toward the multilevel local setting. To this end, an elastic-plastic global constitutive model
+is augmented with two distinct local domains; in which, the first local domain behaves as an elastic-plastic
+material and the next local domain is modeled due to the fracture state. To further reduce the computational
+cost, predictor-corrector adaptivity within Global-Local concept is introduced. An adaptive
+scheme is devised through the evolution of the effective global plastic flow (for only elastic-plastic
+adaptivity), and through the evolution of the local crack phase-field state (for only fracture
+adaptivity). Thus, two local domains are dynamically updated during the computation, resulting
+with two-way adaptivity procedure. The overall response of the Global-Local approach in terms
+of accuracy/robustness and efficiency is verified using single-scale problems. The resulting
+framework is algorithmically described in detail and substantiated with numerical examples.

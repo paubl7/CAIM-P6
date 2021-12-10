@@ -1,0 +1,20 @@
+Using simulation to predict the mechanical behavior of heterogeneous materials has applications
+ranging from topology optimization to multi-scale structural analysis. However, full-fidelity
+simulation techniques such as Finite Element Analysis can be prohibitively computationally expensive
+when they are used to explore the massive input parameter space of heterogeneous materials. Therefore,
+there has been significant recent interest in machine learning-based models that, once trained,
+can predict mechanical behavior at a fraction of the computational cost. Over the past several years,
+research in this area has been focused mainly on predicting single Quantities of Interest (QoIs).
+However, there has recently been an increased interest in a more challenging problem: predicting
+full-field QoI (e.g., displacement/strain fields, damage fields) for mechanical problems. Due
+to the added complexity of full-field information, network architectures that perform well on
+single QoI problems may perform poorly in the full-field QoI problem setting. The work presented
+in this paper is twofold. First, we made a significant extension to the Mechanical MNIST dataset
+designed to enable the investigation of full field QoI prediction. Specifically, we added Finite
+Element simulation results of quasi-static brittle fracture in a heterogeneous material captured
+with the phase-field method. Second, we established strong baseline performance for predicting
+full-field QoI with MultiRes-WNet architecture. In addition to presenting the results in this
+paper, we have released our model implementation and the Mechanical MNIST Crack Path dataset under
+open-source licenses. We anticipate that future researchers will directly use our model architecture
+on related datasets and potentially design models that exceed the baseline performance for predicting
+full-field QoI established in this paper. 

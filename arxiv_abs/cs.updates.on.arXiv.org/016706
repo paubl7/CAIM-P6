@@ -1,0 +1,20 @@
+Neural networks are increasingly used in environmental science applications. Furthermore, neural
+network models are trained by minimizing a loss function, and it is crucial to choose the loss function
+very carefully for environmental science applications, as it determines what exactly is being
+optimized. Standard loss functions do not cover all the needs of the environmental sciences, which
+makes it important for scientists to be able to develop their own custom loss functions so that they
+can implement many of the classic performance measures already developed in environmental science,
+including measures developed for spatial model verification. However, there are very few resources
+available that cover the basics of custom loss function development comprehensively, and to the
+best of our knowledge none that focus on the needs of environmental scientists. This document seeks
+to fill this gap by providing a guide on how to write custom loss functions targeted toward environmental
+science applications. Topics include the basics of writing custom loss functions, common pitfalls,
+functions to use in loss functions, examples such as fractions skill score as loss function, how
+to incorporate physical constraints, discrete and soft discretization, and concepts such as focal,
+robust, and adaptive loss. While examples are currently provided in this guide for Python with Keras
+and the TensorFlow backend, the basic concepts also apply to other environments, such as Python
+with PyTorch. Similarly, while the sample loss functions provided here are from meteorology, these
+are just examples of how to create custom loss functions. Other fields in the environmental sciences
+have very similar needs for custom loss functions, e.g., for evaluating spatial forecasts effectively,
+and the concepts discussed here can be applied there as well. All code samples are provided in a GitHub
+repository. 

@@ -1,0 +1,19 @@
+The problem of dispersion of mobile robots on a graph asks that $n$ robots initially placed arbitrarily
+on the nodes of an $n$-node anonymous graph, autonomously move to reach a final configuration where
+exactly each node has at most one robot on it. This problem is of significant interest due to its relationship
+to other fundamental robot coordination problems, such as exploration, scattering, load balancing,
+relocation of self-driving electric cars to recharge stations, etc. The robots have unique IDs,
+typically in the range $[1,poly(n)]$ and limited memory, whereas the graph is anonymous, i.e.,
+the nodes do not have identifiers. The objective is to simultaneously minimize two performance
+metrics: (i) time to achieve dispersion and (ii) memory requirement at each robot. This problem
+has been relatively well-studied when robots are non-faulty. In this paper, we introduce the notion
+of Byzantine faults to this problem, i.e., we formalize the problem of dispersion in the presence
+of up to $f$ Byzantine robots. We then study the problem on a ring while simultaneously optimizing
+the time complexity of algorithms and the memory requirement per robot. Specifically, we design
+deterministic algorithms that attempt to match the time lower bound ($\Omega(n)$ rounds) and memory
+lower bound ($\Omega(\log n)$ bits per robot). Our main result is a deterministic algorithm that
+is both time and memory optimal, i.e., $O(n)$ rounds and $O(\log n)$ bits of memory required per robot,
+subject to certain constraints. We subsequently provide results that require less assumptions
+but are either only time or memory optimal but not both. We also provide a primitive, utilized often,
+that takes robots initially gathered at a node of the ring and disperses them in a time and memory optimal
+manner without additional assumptions required. 

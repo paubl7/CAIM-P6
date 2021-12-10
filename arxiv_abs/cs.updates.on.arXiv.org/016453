@@ -1,0 +1,18 @@
+Data centres (DCs) underline many prominent future technological trends such as distributed training
+of large scale machine learning models and internet-of-things based platforms. DCs will soon account
+for over 3\% of global energy demand, so efficient use of DC resources is essential. Robust DC networks
+(DCNs) are essential to form the large scale systems needed to handle this demand, but can bottleneck
+how efficiently DC-server resources can be used when servers with insufficient connectivity between
+them cannot be jointly allocated to a job. However, allocating servers' resources whilst accounting
+for their inter-connectivity maps to an NP-hard combinatorial optimisation problem, and so is
+often ignored in DC resource management schemes. We present Nara, a framework based on reinforcement
+learning (RL) and graph neural networks (GNN) to learn network-aware allocation policies that
+increase the number of requests allocated over time compared to previous methods. Unique to our
+solution is the use of a GNN to generate representations of server-nodes in the DCN, which are then
+interpreted as actions by a RL policy-network which chooses from which servers resources will be
+allocated to incoming requests. Nara is agnostic to the topology size and shape and is trained end-to-end.
+The method can accept up to 33\% more requests than the best baseline when deployed on DCNs with up
+to the order of $10\times$ more compute nodes than the DCN seen during training and is able to maintain
+its policy's performance on DCNs with the order of $100\times$ more servers than seen during training.
+It also generalises to unseen DCN topologies with varied network structure and unseen request distributions
+without re-training. 

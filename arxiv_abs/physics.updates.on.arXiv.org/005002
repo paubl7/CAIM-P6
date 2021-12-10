@@ -1,0 +1,19 @@
+Purpose: Many useful image quality metrics for evaluating linear image reconstruction techniques
+do not apply to or are difficult to interpret for non-linear image reconstruction. The vast majority
+of metrics employed for evaluating non-linear image reconstruction are based on some form of global
+image fidelity, such as image root mean square error (RMSE). Use of such metrics can lead to over-regularization
+in the sense that they can favor removal of subtle details in the image. To address this shortcoming,
+we develop an image quality metric based on signal detection that serves as a surrogate to the qualitative
+loss of fine image details. Methods: The metric is demonstrated in the context of a breast CT simulation,
+where different equal-dose configurations are considered. The configurations differ in the number
+of projections acquired. Image reconstruction is performed with a non-linear algorithm based
+on total variation constrained least-squares (TV-LSQ). The images are evaluated visually, with
+image RMSE, and with the proposed signal-detection based metric. The latter uses a small signal,
+and computes detectability in the sinogram and in the reconstructed image. Loss of signal detectability
+through the image reconstruction process is taken as a quantitative measure of loss of fine details
+in the image. Results: Loss of signal detectability is seen to correlate well with the blocky or patchy
+appearance due to over-regularization with TV-LSQ, and this trend runs counter to the image RMSE
+metric, which tends to favor the over-regularized images. Conclusions: The proposed signal detection
+based metric provides an image quality assessment that is complimentary to that of image RMSE. Using
+the two metrics in concert may yield a useful prescription for determining CT algorithm and configuration
+parameters when non-linear image reconstruction is used. 

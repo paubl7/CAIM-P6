@@ -1,0 +1,19 @@
+This paper aims at providing extremely efficient algorithms for approximate query enumeration
+on sparse databases, that come with performance and accuracy guarantees. We introduce a new model
+for approximate query enumeration on classes of relational databases of bounded degree. We first
+prove that on databases of bounded degree any local first-order definable query can be enumerated
+approximately with constant delay after a constant time preprocessing phase. We extend this, showing
+that on databases of bounded tree-width and bounded degree, every query that is expressible in first-order
+logic can be enumerated approximately with constant delay after a sublinear (more precisely, polylogarithmic)
+time preprocessing phase. Durand and Grandjean (ACM Transactions on Computational Logic 2007)
+proved that exact enumeration of first-order queries on databases of bounded degree can be done
+with constant delay after a linear time preprocessing phase. Hence we achieve a significant speed-up
+in the preprocessing phase. Since sublinear running time does not allow reading the whole input
+database even once, sacrificing some accuracy is inevitable for our speed-up. Nevertheless, our
+enumeration algorithms come with guarantees: With high probability, (1) only tuples are enumerated
+that are answers to the query or `close' to being answers to the query, and (2) if the proportion of
+tuples that are answers to the query is sufficiently large, then all answers will be enumerated.
+Here the notion of `closeness' is a tuple edit distance in the input database. For local first-order
+queries, only actual answers are enumerated, strengthening (1). Moreover, both the `closeness'
+and the proportion required in (2) are controllable. We combine methods from property testing of
+bounded degree graphs with logic and query enumeration, which we believe can inspire further research.

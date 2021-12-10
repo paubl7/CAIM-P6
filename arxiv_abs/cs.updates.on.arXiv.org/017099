@@ -1,0 +1,18 @@
+Neural Normalized MinSum (N-NMS) decoding delivers better frame error rate (FER) performance
+on linear block codes than conventional normalized MinSum (NMS) by assigning dynamic multiplicative
+weights to each check-to-variable message in each iteration. Previous N-NMS efforts have primarily
+investigated short-length block codes (N < 1000), because the number of N-NMS parameters to be trained
+is proportional to the number of edges in the parity check matrix and the number of iterations, which
+imposes am impractical memory requirement when Pytorch or Tensorflow is used for training. This
+paper provides efficient approaches to training parameters of N-NMS that support N-NMS for longer
+block lengths. Specifically, this paper introduces a family of neural 2-dimensional normalized
+(N-2D-NMS) decoders with with various reduced parameter sets and shows how performance varies
+with the parameter set selected. The N-2D-NMS decoders share weights with respect to check node
+and/or variable node degree. Simulation results justify this approach, showing that the trained
+weights of N-NMS have a strong correlation to the check node degree, variable node degree, and iteration
+number. Further simulation results on the (3096,1032) protograph-based raptor-like (PBRL) code
+show that N-2D-NMS decoder can achieve the same FER as N-NMS with significantly fewer parameters
+required. The N-2D-NMS decoder for a (16200,7200) DVBS-2 standard LDPC code shows a lower error
+floor than belief propagation. Finally, a hybrid decoding structure combining a feedforward structure
+with a recurrent structure is proposed in this paper. The hybrid structure shows similar decoding
+performance to full feedforward structure, but requires significantly fewer parameters. 

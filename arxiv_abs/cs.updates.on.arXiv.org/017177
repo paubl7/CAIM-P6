@@ -1,0 +1,20 @@
+Brain graph synthesis marked a new era for predicting a target brain graph from a source one without
+incurring the high acquisition cost and processing time of neuroimaging data. However, existing
+multi-modal graph synthesis frameworks have several limitations. First, they mainly focus on
+generating graphs from the same domain (intra-modality), overlooking the rich multimodal representations
+of brain connectivity (inter-modality). Second, they can only handle isomorphic graph generation
+tasks, limiting their generalizability to synthesizing target graphs with a different node size
+and topological structure from those of the source one. More importantly, both target and source
+domains might have different distributions, which causes a domain fracture between them (i.e.,
+distribution misalignment). To address such challenges, we propose an inter-modality aligner
+of non-isomorphic graphs (IMANGraphNet) framework to infer a target graph modality based on a given
+modality. Our three core contributions lie in (i) predicting a target graph (e.g., functional)
+from a source graph (e.g., morphological) based on a novel graph generative adversarial network
+(gGAN); (ii) using non-isomorphic graphs for both source and target domains with a different number
+of nodes, edges and structure; and (iii) enforcing the predicted target distribution to match that
+of the ground truth graphs using a graph autoencoder to relax the designed loss oprimization. To
+handle the unstable behavior of gGAN, we design a new Ground Truth-Preserving (GT-P) loss function
+to guide the generator in learning the topological structure of ground truth brain graphs. Our comprehensive
+experiments on predicting functional from morphological graphs demonstrate the outperformance
+of IMANGraphNet in comparison with its variants. This can be further leveraged for integrative
+and holistic brain mapping in health and disease. 

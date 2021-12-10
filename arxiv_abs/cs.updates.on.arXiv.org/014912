@@ -1,0 +1,20 @@
+We consider a novel formulation of the dynamic pricing and demand learning problem, where the evolution
+of demand in response to posted prices is governed by a stochastic variant of the popular Bass model
+with parameters $\alpha, \beta$ that are linked to the so-called "innovation" and "imitation"
+effects. Unlike the more commonly used i.i.d. and contextual demand models, in this model the posted
+price not only affects the demand and the revenue in the current round but also the future evolution
+of demand, and hence the fraction of potential market size $m$ that can be ultimately captured. In
+this paper, we consider the more challenging incomplete information problem where dynamic pricing
+is applied in conjunction with learning the unknown parameters, with the objective of optimizing
+the cumulative revenues over a given selling horizon of length $T$. Equivalently, the goal is to
+minimize the regret which measures the revenue loss of the algorithm relative to the optimal expected
+revenue achievable under the stochastic Bass model with market size $m$ and time horizon $T$. Our
+main contribution is the development of an algorithm that satisfies a high probability regret guarantee
+of order $\tilde O(m^{2/3})$; where the market size $m$ is known a priori. Moreover, we show that
+no algorithm can incur smaller order of loss by deriving a matching lower bound. Unlike most regret
+analysis results, in the present problem the market size $m$ is the fundamental driver of the complexity;
+our lower bound in fact, indicates that for any fixed $\alpha, \beta$, most non-trivial instances
+of the problem have constant $T$ and large $m$. We believe that this insight sets the problem of dynamic
+pricing under the Bass model apart from the typical i.i.d. setting and multi-armed bandit based
+models for dynamic pricing, which typically focus only on the asymptotics with respect to time horizon
+$T$. 

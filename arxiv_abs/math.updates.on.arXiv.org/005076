@@ -1,0 +1,19 @@
+In this paper, we consider flow and transport problems in thin domains. The mathematical model considered
+in the paper is described by a system of equations for velocity, pressure, and concentration, where
+the flow is described by the Stokes equations and the transport is described by an unsteady convection-diffusion
+equation with non-homogeneous boundary conditions on walls (reactive boundaries). We start with
+the finite element approximation of the problem on unstructured grids and use it as a reference solution
+for two and three-dimensional model problems. Fine grid approximation resolves complex geometries
+on the grid level and leads to a large discrete system of equations that is computationally expensive
+to solve. To reduce the size of the discrete systems, we develop a multiscale model reduction technique,
+where we construct local multiscale basis functions to generate a lower-dimensional model on a
+coarse grid. The proposed multiscale model reduction is based on the Discontinuous Galerkin Generalized
+Multiscale Finite Element Method (DG-GMsGEM). In DG-GMsFEM for flow problems, we start with constructing
+the snapshot space for each interface between coarse grid cells to capture possible flows. For the
+reduction of the snapshot space size, we perform a dimension reduction via a solution of the local
+spectral problem and use eigenvectors corresponding to the smallest eigenvalues as multiscale
+basis functions for the approximation on the coarse grid. For the transport problem, we construct
+multiscale basis functions for each interface between coarse grid cells and present additional
+basis functions to capture non-homogeneous boundary conditions on walls. Finally, we will present
+some numerical simulations for three test geometries for two and three-dimensional problems to
+demonstrate the method's performance. 

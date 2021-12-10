@@ -1,0 +1,20 @@
+The direct detection of exoplanets with high-contrast instruments can be boosted with high spectral
+resolution. For integral field spectrographs yielding hyperspectral data, this means that the
+field of view consists of diffracted starlight spectra and a spatially localized planet. Analysis
+usually relies on cross-correlation with theoretical spectra. In a purely blind-search context,
+this supervised strategy can be biased with model mismatch and/or be computationally inefficient.
+Using an approach that is inspired by the remote-sensing community, we aim to propose an alternative
+to cross-correlation that is fully data-driven, which decomposes the data into a set of individual
+spectra and their corresponding spatial distributions. This strategy is called spectral unmixing.
+We used an orthogonal subspace projection to identify the most distinct spectra in the field of view.
+Their spatial distribution maps were then obtained by inverting the data. These spectra were then
+used to break the original hyperspectral images into their corresponding spatial distribution
+maps via non-negative least squares. The performance of our method was evaluated and compared with
+a cross-correlation using simulated hyperspectral data with medium resolution from the ELT/HARMONI
+integral field spectrograph. We show that spectral unmixing effectively leads to a planet detection
+solely based on spectral dissimilarities at significantly reduced computational cost. The extracted
+spectrum holds significant signatures of the planet while being not perfectly separated from residual
+starlight. The sensitivity of the supervised cross-correlation is three to four times higher than
+with unsupervised spectral unmixing, the gap is biased toward the former because the injected and
+correlated spectrum match perfectly. The algorithm was furthermore vetted on real data obtained
+with VLT/SINFONI of the beta Pictoris system. 

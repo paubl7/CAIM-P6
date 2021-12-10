@@ -1,0 +1,19 @@
+In order to understand stellar evolution, it is crucial to efficiently determine stellar surface
+rotation periods. An efficient tool to automatically determine reliable rotation periods is needed
+when dealing with large samples of stellar photometric datasets. The objective of this work is to
+develop such a tool. Random forest learning abilities are exploited to automate the extraction
+of rotation periods in Kepler light curves. Rotation periods and complementary parameters are
+obtained from three different methods: a wavelet analysis, the autocorrelation function of the
+light curve, and the composite spectrum. We train three different classifiers: one to detect if
+rotational modulations are present in the light curve, one to flag close binary or classical pulsators
+candidates that can bias our rotation period determination, and finally one classifier to provide
+the final rotation period. We test our machine learning pipeline on 23,431 stars of the Kepler K and
+M dwarf reference rotation catalog of Santos et al. (2019) for which 60% of the stars have been visually
+inspected. For the sample of 21,707 stars where all the input parameters are provided to the algorithm,
+94.2% of them are correctly classified (as rotating or not). Among the stars that have a rotation
+period in the reference catalog, the machine learning provides a period that agrees within 10% of
+the reference value for 95.3% of the stars. Moreover, the yield of correct rotation periods is raised
+to 99.5% after visually inspecting 25.2% of the stars. Over the two main analysis steps, rotation
+classification and period selection, the pipeline yields a global agreement with the reference
+values of 92.1% and 96.9% before and after visual inspection. Random forest classifiers are efficient
+tools to determine reliable rotation periods in large samples of stars. [abridged] 

@@ -1,0 +1,18 @@
+Given a separation oracle $\mathsf{SO}$ for a convex function $f$ that has an integral minimizer
+inside a box with radius $R$, we show how to find an exact minimizer of $f$ using at most (a) $O(n (n +
+\log(R)))$ calls to $\mathsf{SO}$ and $\mathsf{poly}(n, \log(R))$ arithmetic operations, or
+(b) $O(n \log(nR))$ calls to $\mathsf{SO}$ and $\exp(n) \cdot \mathsf{poly}(\log(R))$ arithmetic
+operations. When the set of minimizers of $f$ has integral extreme points, our algorithm outputs
+an integral minimizer of $f$. This improves upon the previously best oracle complexity of $O(n^2
+(n + \log(R)))$ for polynomial time algorithms obtained by [Gr\"otschel, Lov\'asz and Schrijver,
+Prog. Comb. Opt. 1984, Springer 1988] over thirty years ago. For the Submodular Function Minimization
+problem, our result immediately implies a strongly polynomial algorithm that makes at most $O(n^3)$
+calls to an evaluation oracle, and an exponential time algorithm that makes at most $O(n^2 \log(n))$
+calls to an evaluation oracle. These improve upon the previously best $O(n^3 \log^2(n))$ oracle
+complexity for strongly polynomial algorithms given in [Lee, Sidford and Wong, FOCS 2015] and [Dadush,
+V\'egh and Zambelli, SODA 2018], and an exponential time algorithm with oracle complexity $O(n^3
+\log(n))$ given in the former work. Our result is achieved via a reduction to the Shortest Vector
+Problem in lattices. We show how an approximately shortest vector of certain lattice can be used
+to effectively reduce the dimension of the problem. Our analysis of the oracle complexity is based
+on a potential function that captures simultaneously the size of the search set and the density of
+the lattice, which we analyze via technical tools from convex geometry. 

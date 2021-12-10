@@ -1,0 +1,18 @@
+In this paper, we consider the Minimum-Load $k$-Clustering/Facility Location (MLkC) problem
+where we are given a set $P$ of $n$ points in a metric space that we have to cluster and an integer $k$
+that denotes the number of clusters. Additionally, we are given a set $F$ of cluster centers in the
+same metric space. The goal is to select a set $C\subseteq F$ of $k$ centers and assign each point in
+$P$ to a center in $C$, such that the maximum load over all centers is minimized. Here the load of a center
+is the sum of the distances between it and the points assigned to it. Although clustering/facility
+location problems have a rich literature, the minimum-load objective is not studied substantially,
+and hence MLkC has remained a poorly understood problem. More interestingly, the problem is notoriously
+hard even in some special cases including the one in line metrics as shown by Ahmadian et al. [ACM Trans.
+Algo. 2018]. They also show APX-hardness of the problem in the plane. On the other hand, the best-known
+approximation factor for MLkC is $O(k)$, even in the plane. In this work, we study a fair version of
+MLkC inspired by the work of Chierichetti et al. [NeurIPS, 2017], which generalizes MLkC. Here the
+input points are colored by one of the $\ell$ colors denoting the group they belong to. MLkC is the
+special case with $\ell=1$. Considering this problem, we are able to obtain a $3$-approximation
+in $f(k,\ell)\cdot n^{O(1)}$ time. Also, our scheme leads to an improved $(1 + \epsilon)$-approximation
+in case of Euclidean norm, and in this case, the running time depends only polynomially on the dimension
+$d$. Our results imply the same approximations for MLkC with running time $f(k)\cdot n^{O(1)}$,
+achieving the first constant approximations for this problem in general and Euclidean metric spaces.

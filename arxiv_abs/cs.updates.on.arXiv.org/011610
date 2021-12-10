@@ -1,0 +1,19 @@
+Let $V$ be a set of $n$ vertices, ${\cal M}$ a set of $m$ labels, and let $\mathbf{R}$ be an $m \times
+n$ matrix of independent Bernoulli random variables with success probability $p$. A random instance
+$G(V,E,\mathbf{R}^T\mathbf{R})$ of the weighted random intersection graph model is constructed
+by drawing an edge with weight $[\mathbf{R}^T\mathbf{R}]_{v,u}$ between any two vertices $u,v$
+for which this weight is larger than 0. In this paper we study the average case analysis of Weighted
+Max Cut, assuming the input is a weighted random intersection graph, i.e. given $G(V,E,\mathbf{R}^T\mathbf{R})$
+we wish to find a partition of $V$ into two sets so that the total weight of the edges having one endpoint
+in each set is maximized. We initially prove concentration of the weight of a maximum cut of $G(V,E,\mathbf{R}^T\mathbf{R})$
+around its expected value, and then show that, when the number of labels is much smaller than the number
+of vertices, a random partition of the vertices achieves asymptotically optimal cut weight with
+high probability (whp). Furthermore, in the case $n=m$ and constant average degree, we show that
+whp, a majority type algorithm outputs a cut with weight that is larger than the weight of a random
+cut by a multiplicative constant strictly larger than 1. Then, we highlight a connection between
+the computational problem of finding a weighted maximum cut in $G(V,E,\mathbf{R}^T\mathbf{R})$
+and the problem of finding a 2-coloring with minimum discrepancy for a set system $\Sigma$ with incidence
+matrix $\mathbf{R}$. We exploit this connection by proposing a (weak) bipartization algorithm
+for the case $m=n, p=\frac{\Theta(1)}{n}$ that, when it terminates, its output can be used to find
+a 2-coloring with minimum discrepancy in $\Sigma$. Finally, we prove that, whp this 2-coloring
+corresponds to a bipartition with maximum cut-weight in $G(V,E,\mathbf{R}^T\mathbf{R})$. 

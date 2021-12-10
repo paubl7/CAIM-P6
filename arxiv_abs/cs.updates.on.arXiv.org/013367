@@ -1,0 +1,20 @@
+Being a crucial task of autonomous driving, Stereo matching has made great progress in recent years.
+Existing stereo matching methods estimate disparity instead of depth. They treat the disparity
+errors as the evaluation metric of the depth estimation errors, since the depth can be calculated
+from the disparity according to the triangulation principle. However, we find that the error of
+the depth depends not only on the error of the disparity but also on the depth range of the points. Therefore,
+even if the disparity error is low, the depth error is still large, especially for the distant points.
+In this paper, a novel Direct Depth Learning Network (DDL-Net) is designed for stereo matching.
+DDL-Net consists of two stages: the Coarse Depth Estimation stage and the Adaptive-Grained Depth
+Refinement stage, which are all supervised by depth instead of disparity. Specifically, Coarse
+Depth Estimation stage uniformly samples the matching candidates according to depth range to construct
+cost volume and output coarse depth. Adaptive-Grained Depth Refinement stage performs further
+matching near the coarse depth to correct the imprecise matching and wrong matching. To make the
+Adaptive-Grained Depth Refinement stage robust to the coarse depth and adaptive to the depth range
+of the points, the Granularity Uncertainty is introduced to Adaptive-Grained Depth Refinement
+stage. Granularity Uncertainty adjusts the matching range and selects the candidates' features
+according to coarse prediction confidence and depth range. We verify the performance of DDL-Net
+on SceneFlow dataset and DrivingStereo dataset by different depth metrics. Results show that DDL-Net
+achieves an average improvement of 25% on the SceneFlow dataset and $12\%$ on the DrivingStereo
+dataset comparing the classical methods. More importantly, we achieve state-of-the-art accuracy
+at a large distance. 

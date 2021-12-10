@@ -1,0 +1,19 @@
+Predicting chemical properties from the structure of a molecule is of great importance in many applications
+including drug discovery and material design. Machine learning based molecular property prediction
+holds the promise of enabling accurate predictions at much less complexity, when compared to, for
+example Density Functional Theory (DFT) calculations. Features extracted from molecular graphs,
+using graph neural nets in a supervised manner, have emerged as strong baselines for such tasks.
+However, the vast chemical space together with the limited availability of labels makes supervised
+learning challenging, calling for learning a general-purpose molecular representation. Recently,
+pre-trained transformer-based language models (PTLMs) on large unlabeled corpus have produced
+state-of-the-art results in many downstream natural language processing tasks. Inspired by this
+development, here we present molecular embeddings obtained by training an efficient transformer
+encoder model, referred to as MoLFormer. This model was employed with a linear attention mechanism
+and highly paralleized training on 1D SMILES sequences of 1.1 billion unlabeled molecules from
+the PubChem and ZINC datasets. Experiments show that the learned molecular representation performs
+competitively, when compared to existing graph-based and fingerprint-based supervised learning
+baselines, on the challenging tasks of predicting properties of QM8 and QM9 molecules. Further
+task-specific fine-tuning of the MoLFormerr representation improves performance on several
+of those property prediction benchmarks. These results provide encouraging evidence that large-scale
+molecular language models can capture sufficient structural information to be able to accurately
+predict quantum chemical properties and beyond. 

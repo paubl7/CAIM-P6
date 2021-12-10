@@ -1,0 +1,19 @@
+Artificial intelligence-powered pocket-sized air robots have the potential to revolutionize
+the Internet-of-Things ecosystem, acting as autonomous, unobtrusive, and ubiquitous smart sensors.
+With a few cm$^{2}$ form-factor, nano-sized unmanned aerial vehicles (UAVs) are the natural befit
+for indoor human-drone interaction missions, as the pose estimation task we address in this work.
+However, this scenario is challenged by the nano-UAVs' limited payload and computational power
+that severely relegates the onboard brain to the sub-100 mW microcontroller unit-class. Our work
+stands at the intersection of the novel parallel ultra-low-power (PULP) architectural paradigm
+and our general development methodology for deep neural network (DNN) visual pipelines, i.e.,
+covering from perception to control. Addressing the DNN model design, from training and dataset
+augmentation to 8-bit quantization and deployment, we demonstrate how a PULP-based processor,
+aboard a nano-UAV, is sufficient for the real-time execution (up to 135 frame/s) of our novel DNN,
+called PULP-Frontnet. We showcase how, scaling our model's memory and computational requirement,
+we can significantly improve the onboard inference (top energy efficiency of 0.43 mJ/frame) with
+no compromise in the quality-of-result vs. a resource-unconstrained baseline (i.e., full-precision
+DNN). Field experiments demonstrate a closed-loop top-notch autonomous navigation capability,
+with a heavily resource-constrained 27-gram Crazyflie 2.1 nano-quadrotor. Compared against
+the control performance achieved using an ideal sensing setup, onboard relative pose inference
+yields excellent drone behavior in terms of median absolute errors, such as positional (onboard:
+41 cm, ideal: 26 cm) and angular (onboard: 3.7$^{\circ}$, ideal: 4.1$^{\circ}$). 

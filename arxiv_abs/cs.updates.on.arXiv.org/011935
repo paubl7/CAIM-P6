@@ -1,0 +1,20 @@
+A number of methods based on the deep learning have been applied to medical image segmentation and
+have achieved state-of-the-art performance. Due to the importance of chest x-ray data in studying
+COVID-19, there is a demand for state-of-the-art models capable of precisely segmenting chest
+x-rays before obtaining mask annotations about this sort of dataset. The dataset for exploring
+best pre-trained model is from Montgomery and Shenzhen hospital which had opened in 2014. The most
+famous technique is U-Net which has been used to many medical datasets including the Chest X-ray.
+However, most of variant U-Net mainly focus on extraction of contextual information and dense skip
+connection. There is still a large space for improving extraction of spatial feature. In this paper,
+we propose a dual encoder fusion U-Net framework for Chest X-rays based on Inception Convolutional
+Neural Network with dilation, Densely Connected Recurrent Convolutional Neural Network, which
+is named DEFU-Net. The densely connected recurrent path extends the network deeper for facilitating
+context feature extraction. In order to increase the width of network and enrich representation
+of features, the inception blocks with dilation have been used. The inception blocks can capture
+globally and locally spatial information by various receptive fields. Meanwhile, the features
+fusion of two path by summation preserve the context and the spatial information for decoding part.
+This multi-learning-scale model are benefiting in Chest X-ray dataset from two different manufacturers
+(Montgomery and Shenzhen hospital). The DEFU-Net achieves the better performance than basic U-Net,
+residual U-Net, BCDU-Net, modified R2U-Net and modified attention R2U-Net. This model is proved
+the feasibility for mixed dataset. The open source code for this proposed framework will be public
+soon. 

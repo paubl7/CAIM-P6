@@ -1,0 +1,19 @@
+Given a directed graph $G = (V,E)$, undergoing an online sequence of edge deletions with $m$ edges
+in the initial version of $G$ and $n = |V|$, we consider the problem of maintaining all-pairs shortest
+paths (APSP) in $G$. Whilst this problem has been studied in a long line of research [ACM'81, FOCS'99,
+FOCS'01, STOC'02, STOC'03, SWAT'04, STOC'13] and the problem of $(1+\epsilon)$-approximate,
+weighted APSP was solved to near-optimal update time $\tilde{O}(mn)$ by Bernstein [STOC'13],
+the problem has mainly been studied in the context of oblivious adversaries, which assumes that
+the adversary fixes the update sequence before the algorithm is started. In this paper, we make significant
+progress on the problem in the setting where the adversary is adaptive, i.e. can base the update sequence
+on the output of the data structure queries. We present three new data structures that fit different
+settings: We first present a deterministic data structure that maintains exact distances with
+total update time $\tilde{O}(n^3)$. We also present a deterministic data structure that maintains
+$(1+\epsilon)$-approximate distance estimates with total update time $\tilde O(\sqrt{m} n^2/\epsilon)$
+which for sparse graphs is $\tilde O(n^{2+1/2}/\epsilon)$. Finally, we present a randomized $(1+\epsilon)$-approximate
+data structure which works against an adaptive adversary; its total update time is $\tilde O(m^{2/3}n^{5/3}
++ n^{8/3}/(m^{1/3}\epsilon^2))$ which for sparse graphs is $\tilde O(n^{2+1/3})$. Our exact
+data structure matches the total update time of the best randomized data structure by Baswana et
+al. [STOC'02] and maintains the distance matrix in near-optimal time. Our approximate data structures
+improve upon the best data structures against an adaptive adversary which have $\tilde{O}(mn^2)$
+total update time [JACM'81, STOC'03]. 

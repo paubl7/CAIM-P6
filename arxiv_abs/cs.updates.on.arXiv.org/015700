@@ -1,0 +1,20 @@
+Hyperbolicity is a graph parameter which indicates how much the shortest-path distance metric
+of a graph deviates from a tree metric. It is used in various fields such as networking, security,
+and bioinformatics for the classification of complex networks, the design of routing schemes,
+and the analysis of graph algorithms. Despite recent progress, computing the hyperbolicity of
+a graph remains challenging. Indeed, the best known algorithm has time complexity $O(n^{3.69})$,
+which is prohibitive for large graphs, and the most efficient algorithms in practice have space
+complexity $O(n^2)$. Thus, time as well as space are bottlenecks for computing hyperbolicity.
+In this paper, we design a tool for enumerating all far-apart pairs of a graph by decreasing distances.
+A node pair $(u, v)$ of a graph is far-apart if both $v$ is a leaf of all shortest-path trees rooted at
+$u$ and $u$ is a leaf of all shortest-path trees rooted at $v$. This notion was previously used to drastically
+reduce the computation time for hyperbolicity in practice. However, it required the computation
+of the distance matrix to sort all pairs of nodes by decreasing distance, which requires an infeasible
+amount of memory already for medium-sized graphs. We present a new data structure that avoids this
+memory bottleneck in practice and for the first time enables computing the hyperbolicity of several
+large graphs that were far out-of-reach using previous algorithms. For some instances, we reduce
+the memory consumption by at least two orders of magnitude. Furthermore, we show that for many graphs,
+only a very small fraction of far-apart pairs have to be considered for the hyperbolicity computation,
+explaining this drastic reduction of memory. As iterating over far-apart pairs in decreasing order
+without storing them explicitly is a very general tool, we believe that our approach might also be
+relevant to other problems. 

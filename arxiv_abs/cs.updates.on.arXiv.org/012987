@@ -1,0 +1,18 @@
+For general complex or real 1-parameter matrix flows $A(t)_{n,n}$ and for time-invariant static
+matrices $A \in \CC_{n,n}$ alike, this paper considers ways to decompose matrix flows and single
+matrices globally via one constant matrix similarity $C_{n,n}$ as $A(t) = C ^{-1} \cdot \text{ diag}(A_1(t),
+..., A_\ell(t)) \cdot C$ or $A = C^{-1}\cdot \text{diag}(A_1,...,A_\ell)\cdot C$ with each diagonal
+block $A_k(t)$ or $A_k$ square and their number $\ell > 1$ if this is possible. The theory behind our
+proposed algorithm is elementary and uses the concept of invariant subspaces for the Matlab {\tt
+eig} computed 'eigenvectors' of one associated flow matrix $B(t_a)$ to find the coarsest simultaneous
+block structure for all flow matrices $B(t_b)$. The method works very efficiently for all time-varying
+matrix flows, be they differentiable, continuous or discontinuous in $t$, and for all fixed entry
+matrices $A$; as well as for all types of square matrix flows or fixed entry matrices such as hermitean,
+real symmetric, normal or general complex and real flows $A(t)$ or static matrices $A$, with or without
+Jordan block structures and with or without repeated eigenvalues. Our intended aim is to discover
+diagonal-block decomposable flows as they originate in sensor driven outputs for time-varying
+matrix problems and thereby help to reduce the complexities of their numerical treatments through
+adapting 'divide and conquer' methods for their diagonal sub-blocks. Our method is also applicable
+to standard fixed entry matrices of all structures and types. In the process we discover and study
+k-normal fixed entry matrix classes that can be decomposed under unitary similarities into various
+$k$-dimensional block-diagonal forms. 

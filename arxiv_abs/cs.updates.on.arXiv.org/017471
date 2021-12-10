@@ -1,0 +1,19 @@
+Motivated by biological processes, we introduce here the model of growing graphs, a new model of
+highly dynamic networks. Such networks have as nodes entities that can self-replicate and thus
+can expand the size of the network. This gives rise to the problem of creating a target network $G$
+starting from a single entity (node). To properly model this, we assume that every node $u$ can generate
+at most one node $v$ at every round (or time slot), and every generated node $v$ can activate edges
+with other nodes only at the time of its birth, provided that these nodes are up to a small distance
+$d$ away from $v$. We show that the most interesting case is when the distance is $d=2$. Edge deletions
+are allowed at any time slot. This creates a natural balance between how fast (time) and how efficiently
+(number of deleted edges) a target network can be generated. A central question here is, given a target
+network $G$ of $n$ nodes, can $G$ be constructed in the model of growing graphs in at most $k$ time slots
+and with at most $\ell$ excess edges (i.e., auxiliary edges $\notin E(G)$ that are activated and
+later deleted)? We consider here both centralized and distributed algorithms for such questions
+(and also their computational complexity). Our results include lower bounds based on properties
+of the target network and algorithms for general graph classes that try to balance speed and efficiency.
+We then show that the optimal number of time slots to construct an input target graph with zero-waste
+(i.e., no edge deletions allowed), is hard even to approximate within $n^{1-\varepsilon}$, for
+any $\varepsilon>0$, unless P=NP. On the contrary, the question of the feasibility of constructing
+a given target graph in $\log n$ time slots and zero-waste, can be answered in polynomial time. Finally,
+we initiate a discussion on possible extensions for this model for a distributed setting. 

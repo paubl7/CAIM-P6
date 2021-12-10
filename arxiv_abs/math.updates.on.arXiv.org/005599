@@ -1,0 +1,18 @@
+In this paper, we are interested in systems with multiple agents that wish to collaborate in order
+to accomplish a common task while a) agents have different information (decentralized information)
+and b) agents do not know the model of the system completely i.e., they may know the model partially
+or may not know it at all. The agents must learn the optimal strategies by interacting with their environment
+i.e., by decentralized Reinforcement Learning (RL). The presence of multiple agents with different
+information makes decentralized reinforcement learning conceptually more difficult than centralized
+reinforcement learning. In this paper, we develop a decentralized reinforcement learning algorithm
+that learns $\epsilon$-team-optimal solution for partial history sharing information structure,
+which encompasses a large class of decentralized control systems including delayed sharing, control
+sharing, mean field sharing, etc. Our approach consists of two main steps. In the first step, we convert
+the decentralized control system to an equivalent centralized POMDP (Partially Observable Markov
+Decision Process) using an existing approach called common information approach. However, the
+resultant POMDP requires the complete knowledge of system model. To circumvent this requirement,
+in the second step, we introduce a new concept called "Incrementally Expanding Representation"
+using which we construct a finite-state RL algorithm whose approximation error converges to zero
+exponentially fast. We illustrate the proposed approach and verify it numerically by obtaining
+a decentralized Q-learning algorithm for two-user Multi Access Broadcast Channel (MABC) which
+is a benchmark example for decentralized control systems. 

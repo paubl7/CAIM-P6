@@ -1,0 +1,18 @@
+Buhrman, Cleve and Wigderson (STOC'98) showed that for every Boolean function f : {-1,1}^n to {-1,1}
+and G in {AND_2, XOR_2}, the bounded-error quantum communication complexity of the composed function
+f o G equals O(Q(f) log n), where Q(f) denotes the bounded-error quantum query complexity of f. This
+is in contrast with the classical setting, where it is easy to show that R^{cc}(f o G) < 2 R(f), where
+R^{cc} and R denote bounded-error communication and query complexity, respectively. Chakraborty
+et al. (CCC'20) exhibited a total function for which the log n overhead in the BCW simulation is required.
+We improve upon their result in several ways. We show that the log n overhead is not required when f
+is symmetric, generalizing a result of Aaronson and Ambainis for the Set-Disjointness function
+(Theory of Computing'05). This upper bound assumes a shared entangled state, though for most symmetric
+functions the assumed number of entangled qubits is less than the communication and hence could
+be part of the communication. To prove this, we design an efficient distributed version of noisy
+amplitude amplification that allows us to prove the result when f is the OR function. In view of our
+first result, one may ask whether the log n overhead in the BCW simulation can be avoided even when
+f is transitive. We give a strong negative answer by showing that the log n overhead is still necessary
+for some transitive functions even when we allow the quantum communication protocol an error probability
+that can be arbitrarily close to 1/2. We also give, among other things, a general recipe to construct
+functions for which the log n overhead is required in the BCW simulation in the bounded-error communication
+model, even if the parties are allowed to share an arbitrary prior entangled state for free. 

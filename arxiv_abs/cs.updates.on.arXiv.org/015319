@@ -1,0 +1,23 @@
+Let $\mathbf{f} = \left(f_1, \dots, f_p\right) $ be a polynomial tuple in $\mathbb{Q}[z_1, \dots,
+z_n]$ and let $d = \max_{1 \leq i \leq p} \deg f_i$. We consider the problem of computing the set of asymptotic
+critical values of the polynomial mapping, with the assumption that this mapping is dominant, $\mathbf{f}:
+z \in \mathbb{K}^n \to (f\_1(z), \dots, f\_p(z)) \in \mathbb{K}^p$ where $\mathbb{K}$ is either
+$\mathbb{R}$ or $\mathbb{C}$. This is the set of values $c$ in the target space of $\mathbf{f}$ such
+that there exists a sequence of points $(\mathbf{x}_i)_{i\in \mathbb{N}}$ for which $\mathbf{f}(\mathbf{x}_i)$
+tends to $c$ and $\|\mathbf{x}_i\| \kappa {\rm d} \mathbf{f}(\mathbf{x}_i))$ tends to $0$ when
+$i$ tends to infinity where ${\rm d} \mathbf{f}$ is the differential of $\mathbf{f}$ and $\kappa$
+is a function measuring the distance of a linear operator to the set of singular linear operators
+from $\mathbb{K}^n$ to $\mathbb{K}^p$. Computing the union of the classical and asymptotic critical
+values allows one to put into practice generalisations of Ehresmann's fibration theorem. This
+leads to natural and efficient applications in polynomial optimisation and computational real
+algebraic geometry. Going back to previous works by Kurdyka, Orro and Simon, we design new algorithms
+to compute asymptotic critical values. Through randomisation, we introduce new geometric characterisations
+of asymptotic critical values. This allows us to dramatically reduce the complexity of computing
+such values to a cost that is essentially $O(d^{2n(p+1)})$ arithmetic operations in $\mathbb{Q}$.
+We also obtain tighter degree bounds on a hypersurface containing the asymptotic critical values,
+showing that the degree is at most $p^{n-p+1}(d-1)^{n-p}(d+1)^{p}$. Next, we show how to apply
+these algorithms to unconstrained polynomial optimisation problems and the problem of computing
+sample points per connected component of a semi-algebraic set defined by a single inequality/inequation.
+We report on the practical capabilities of our implementation of this algorithm. It shows how the
+practical efficiency surpasses the current state-of-the-art algorithms for computing asymptotic
+critical values by tackling examples that were previously out of reach. 

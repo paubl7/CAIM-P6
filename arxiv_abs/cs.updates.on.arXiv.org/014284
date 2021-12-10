@@ -1,0 +1,18 @@
+Automatic CT segmentation of proximal femur is crucial for the diagnosis and risk stratification
+of orthopedic diseases; however, current methods for the femur CT segmentation mainly rely on manual
+interactive segmentation, which is time-consuming and has limitations in both accuracy and reproducibility.
+In this study, we proposed an approach based on deep learning for the automatic extraction of the
+periosteal and endosteal contours of proximal femur in order to differentiate cortical and trabecular
+bone compartments. A three-dimensional (3D) end-to-end fully convolutional neural network,
+which can better combine the information between neighbor slices and get more accurate segmentation
+results, was developed for our segmentation task. 100 subjects aged from 50 to 87 years with 24,399
+slices of proximal femur CT images were enrolled in this study. The separation of cortical and trabecular
+bone derived from the QCT software MIAF-Femur was used as the segmentation reference. We randomly
+divided the whole dataset into a training set with 85 subjects for 10-fold cross-validation and
+a test set with 15 subjects for evaluating the performance of models. Two models with the same network
+structures were trained and they achieved a dice similarity coefficient (DSC) of 97.87% and 96.49%
+for the periosteal and endosteal contours, respectively. To verify the excellent performance
+of our model for femoral segmentation, we measured the volume of different parts of the femur and
+compared it with the ground truth and the relative errors between predicted result and ground truth
+are all less than 5%. It demonstrated a strong potential for clinical use, including the hip fracture
+risk prediction and finite element analysis. 

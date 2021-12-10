@@ -1,0 +1,19 @@
+The Subgraph Isomorphism problem is of considerable importance in computer science. We examine
+the problem when the pattern graph H is of bounded treewidth, as occurs in a variety of applications.
+This problem has a well-known algorithm via color-coding that runs in time $O(n^{tw(H)+1})$ [Alon,
+Yuster, Zwick'95], where $n$ is the number of vertices of the host graph $G$. While there are pattern
+graphs known for which Subgraph Isomorphism can be solved in an improved running time of $O(n^{tw(H)+1-\varepsilon})$
+or even faster (e.g. for $k$-cliques), it is not known whether such improvements are possible for
+all patterns. The only known lower bound rules out time $n^{o(tw(H) / \log(tw(H)))}$ for any class
+of patterns of unbounded treewidth assuming the Exponential Time Hypothesis [Marx'07]. In this
+paper, we demonstrate the existence of maximally hard pattern graphs $H$ that require time $n^{tw(H)+1-o(1)}$.
+Specifically, under the Strong Exponential Time Hypothesis (SETH), a standard assumption from
+fine-grained complexity theory, we prove the following asymptotic statement for large treewidth
+$t$: For any $\varepsilon > 0$ there exists $t \ge 3$ and a pattern graph $H$ of treewidth $t$ such that
+Subgraph Isomorphism on pattern $H$ has no algorithm running in time $O(n^{t+1-\varepsilon})$.
+Under the more recent 3-uniform Hyperclique hypothesis, we even obtain tight lower bounds for each
+specific treewidth $t \ge 3$: For any $t \ge 3$ there exists a pattern graph $H$ of treewidth $t$ such
+that for any $\varepsilon>0$ Subgraph Isomorphism on pattern $H$ has no algorithm running in time
+$O(n^{t+1-\varepsilon})$. In addition to these main results, we explore (1) colored and uncolored
+problem variants (and why they are equivalent for most cases), (2) Subgraph Isomorphism for $tw
+< 3$, (3) Subgraph Isomorphism parameterized by pathwidth, and (4) a weighted problem variant.

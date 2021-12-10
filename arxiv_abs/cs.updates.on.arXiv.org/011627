@@ -1,0 +1,20 @@
+Reconstructions of sea level prior to the satellite altimeter era are usually derived from tide
+gauge records; however most algorithms for this assume that modes of sea level variability are stationary
+which is not true over several decades. Here we suggest a method that is based on optimized data-dependent
+triangulations of the network of gauge stations. Data-dependent triangulations are triangulations
+of point sets that rely not only on 2D point positions but also on additional data (e.g. elevation,
+anomalies). In this article, we show how data-dependent triangulations with min-error criteria
+can be used to reconstruct 2D maps of the sea surface anomaly over a longer time period, assuming that
+height anomalies are continuously monitored at a sparse set of stations and, in addition, observations
+of a reference surface is provided over a shorter time period. At the heart of our method is the idea
+to learn a min-error triangulation based on the available reference data, and to use the learned
+triangulation subsequently to compute piece-wise linear surface models for epochs in which only
+observations from monitoring stations are given. We combine our approach of min-error triangulation
+with $k$-order Delaunay triangulation to stabilize the triangles geometrically. We show that
+this approach is advantageous for the reconstruction of the sea surface by combining tide gauge
+measurements with data of modern satellite altimetry. We show how to learn a min-error triangulation
+and a min-error $k$-order Delaunay triangulation using integer linear programming. We confront
+our reconstructions against the Delaunay triangulation. With real data for the North Sea we show
+that the min-error triangulation outperforms the Delaunay method significantly for reconstructions
+back in time up to 18 years, and the $k$-order Delaunay min-error triangulation even up to 21 years
+for $k=2$. 

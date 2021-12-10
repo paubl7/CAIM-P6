@@ -1,0 +1,19 @@
+Melanoma is an aggressive neoplasm responsible for the majority of deaths from skin cancer. Specifically,
+spitzoid melanocytic tumors are one of the most challenging melanocytic lesions due to their ambiguous
+morphological features. The gold standard for its diagnosis and prognosis is the analysis of skin
+biopsies. In this process, dermatopathologists visualize skin histology slides under a microscope,
+in a high time-consuming and subjective task. In the last years, computer-aided diagnosis (CAD)
+systems have emerged as a promising tool that could support pathologists in daily clinical practice.
+Nevertheless, no automatic CAD systems have yet been proposed for the analysis of spitzoid lesions.
+Regarding common melanoma, no proposed system allows both the selection of the tumoral region and
+the prediction of the diagnosis as benign or malignant. Motivated by this, we propose a novel end-to-end
+weakly-supervised deep learning model, based on inductive transfer learning with an improved
+convolutional neural network (CNN) to refine the embedding features of the latent space. The framework
+is composed of a source model in charge of finding the tumor patch-level patterns, and a target model
+focuses on the specific diagnosis of a biopsy. The latter retrains the backbone of the source model
+through a multiple instance learning workflow to obtain the biopsy-level scoring. To evaluate
+the performance of the proposed methods, we perform extensive experiments on a private skin database
+with spitzoid lesions. Test results reach an accuracy of 0.9231 and 0.80 for the source and the target
+models, respectively. Besides, the heat map findings are directly in line with the clinicians'
+medical decision and even highlight, in some cases, patterns of interest that were overlooked by
+the pathologist due to the huge workload. 

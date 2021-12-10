@@ -1,0 +1,18 @@
+In recent years, the use of machine learning techniques as surrogate models for computational fluid
+dynamics (CFD) simulations has emerged as a promising method for reducing the computational cost
+associated with engine design optimization. However, such methods still suffer from drawbacks.
+One main disadvantage of such methods is that the default machine learning hyperparameters are
+often severely suboptimal for a given problem. This has often been addressed by manually trying
+out different hyperparameter settings, but this solution is ineffective in a high-dimensional
+hyperparameter space. Besides this problem, the amount of data needed for training is also not known
+a priori. In response to these issues which need to be addressed, this work describes and validates
+an automated active learning approach for surrogate-based optimization of internal combustion
+engines, AutoML-GA. In this approach, a Bayesian optimization technique is used to find the best
+machine learning hyperparameters based on an initial dataset obtained from a small number of CFD
+simulations. Subsequently, a genetic algorithm is employed to locate the design optimum on the
+surrogate surface trained with the optimal hyperparameters. In the vicinity of the design optimum,
+the solution is refined by repeatedly running CFD simulations at the projected optimum and adding
+the newly obtained data to the training dataset. It is shown that this approach leads to a better optimum
+with a lower number of CFD simulations, compared to the use of default hyperparameters. The developed
+approach offers the advantage of being a more hands-off approach that can be easily applied by researchers
+and engineers in industry who do not have a machine learning background. 

@@ -1,0 +1,20 @@
+Face masks have long been used in many areas of everyday life to protect against the inhalation of
+hazardous fumes and particles. They also offer an effective solution in healthcare for bi-directional
+protection against air-borne diseases. Wearing and positioning the mask correctly is essential
+for its function. Convolutional neural networks (CNNs) offer an excellent solution for face recognition
+and classification of correct mask wearing and positioning. In the context of the ongoing COVID-19
+pandemic, such algorithms can be used at entrances to corporate buildings, airports, shopping
+areas, and other indoor locations, to mitigate the spread of the virus. These application scenarios
+impose major challenges to the underlying compute platform. The inference hardware must be cheap,
+small and energy efficient, while providing sufficient memory and compute power to execute accurate
+CNNs at a reasonably low latency. To maintain data privacy of the public, all processing must remain
+on the edge-device, without any communication with cloud servers. To address these challenges,
+we present a low-power binary neural network classifier for correct facial-mask wear and positioning.
+The classification task is implemented on an embedded FPGA, performing high-throughput binary
+operations. Classification can take place at up to ~6400 frames-per-second, easily enabling multi-camera,
+speed-gate settings or statistics collection in crowd settings. When deployed on a single entrance
+or gate, the idle power consumption is reduced to 1.6W, improving the battery-life of the device.
+We achieve an accuracy of up to 98% for four wearing positions of the MaskedFace-Net dataset. To maintain
+equivalent classification accuracy for all face structures, skin-tones, hair types, and mask
+types, the algorithms are tested for their ability to generalize the relevant features over all
+subjects using the Grad-CAM approach. 

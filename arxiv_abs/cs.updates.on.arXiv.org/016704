@@ -1,0 +1,20 @@
+Adversarial attacks are considered a potentially serious security threat for machine learning
+systems. Medical image analysis (MedIA) systems have recently been argued to be vulnerable to adversarial
+attacks due to strong financial incentives and the associated technological infrastructure.
+In this paper, we study previously unexplored factors affecting adversarial attack vulnerability
+of deep learning MedIA systems in three medical domains: ophthalmology, radiology, and pathology.
+We focus on adversarial black-box settings, in which the attacker does not have full access to the
+target model and usually uses another model, commonly referred to as surrogate model, to craft adversarial
+examples. We consider this to be the most realistic scenario for MedIA systems. Firstly, we study
+the effect of weight initialization (ImageNet vs. random) on the transferability of adversarial
+attacks from the surrogate model to the target model. Secondly, we study the influence of differences
+in development data between target and surrogate models. We further study the interaction of weight
+initialization and data differences with differences in model architecture. All experiments
+were done with a perturbation degree tuned to ensure maximal transferability at minimal visual
+perceptibility of the attacks. Our experiments show that pre-training may dramatically increase
+the transferability of adversarial examples, even when the target and surrogate's architectures
+are different: the larger the performance gain using pre-training, the larger the transferability.
+Differences in the development data between target and surrogate models considerably decrease
+the performance of the attack; this decrease is further amplified by difference in the model architecture.
+We believe these factors should be considered when developing security-critical MedIA systems
+planned to be deployed in clinical practice. 

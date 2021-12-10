@@ -1,0 +1,20 @@
+Motion sensors embedded in wearable and mobile devices allow for dynamic selection of sensor streams
+and sampling rates, enabling several applications, such as power management and data-sharing
+control. While deep neural networks (DNNs) achieve competitive accuracy in sensor data classification,
+DNNs generally process incoming data from a fixed set of sensors with a fixed sampling rate, and changes
+in the dimensions of their inputs cause considerable accuracy loss, unnecessary computations,
+or failure in operation. We introduce a dimension-adaptive pooling (DAP) layer that makes DNNs
+flexible and more robust to changes in sensor availability and in sampling rate. DAP operates on
+convolutional filter maps of variable dimensions and produces an input of fixed dimensions suitable
+for feedforward and recurrent layers. We also propose a dimension-adaptive training (DAT) procedure
+for enabling DNNs that use DAP to better generalize over the set of feasible data dimensions at inference
+time. DAT comprises the random selection of dimensions during the forward passes and optimization
+with accumulated gradients of several backward passes. Combining DAP and DAT, we show how to transform
+non-adaptive DNNs into a Dimension-Adaptive Neural Architecture (DANA), while keeping the same
+number of parameters. Compared to existing approaches, our solution provides better classification
+accuracy over the range of possible data dimensions at inference time and does not require up-sampling
+or imputation, thus reducing unnecessary computations. Experiments on seven datasets (four benchmark
+real-world datasets for human activity recognition and three synthetic datasets) show that DANA
+prevents significant losses in classification accuracy of the state-of-the-art DNNs and, compared
+to baselines, it better captures correlated patterns in sensor data under dynamic sensor availability
+and varying sampling rates. 

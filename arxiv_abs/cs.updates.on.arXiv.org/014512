@@ -1,0 +1,20 @@
+While the requirements for reliability increasing rapidly in distributed systems, byzantine
+fault tolerance protocols have attracted more and more attention for the ability to tolerate arbitrary
+failures. Although traditional BFT protocols have achieved significant performance improvements
+after decades of research, they still cannot meet the increasing scalability requirements. Thanks
+to the recent development of trusted execution environment, researchers have opportunities to
+improve BFT protocols with hardware assistance, including increasing the ratio of byzantine nodes
+that the system can tolerate and improving the scalability of the system. However, existing TEE-based
+BFT protocols are mostly designed via improving traditional BFT protocols and using complex operations
+to overcome security issues introduced by TEE, which makes the protocols difficult to understand
+and implement. In fact, after introducing TEE, many byzantine failures can be eliminated naturally
+so that the adversary assumption of TEE-based BFT is more similar to CFT rather than traditional
+BFT. Therefore, it would be better to design a TEE-based BFT protocol on the basis of CFT protocols
+to inherit the advantages of CFT, i.e., understandable and efficient. In this paper, we summarize
+the key differences between TEE-based BFT and CFT protocols and propose four principles to help
+bridge the gap between TEE-based BFT and CFT. Based on these principles, we present TBFT, a novel
+TEE-based BFT protocol with inspirations from CFT protocols, which is simple and understandable
+enough to be applied in practice. Besides, we make comprehensive improvements to TBFT for both performance
+and security, including pipeline mechanisms, TEE-assisted secret sharing, and trusted leader
+election. Our evaluation shows that TBFT has better performance and scalability compared to previous
+protocols. 

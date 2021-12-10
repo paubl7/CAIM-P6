@@ -1,0 +1,19 @@
+Automatic estimation of pain intensity from facial expressions in videos has an immense potential
+in health care applications. However, domain adaptation (DA) is needed to alleviate the problem
+of domain shifts that typically occurs between video data captured in source and target do-mains.
+Given the laborious task of collecting and annotating videos, and the subjective bias due to ambiguity
+among adjacent intensity levels, weakly-supervised learning (WSL)is gaining attention in such
+applications. Yet, most state-of-the-art WSL models are typically formulated as regression problems,
+and do not leverage the ordinal relation between intensity levels, nor the temporal coherence of
+multiple consecutive frames. This paper introduces a new deep learn-ing model for weakly-supervised
+DA with ordinal regression(WSDA-OR), where videos in target domain have coarse la-bels provided
+on a periodic basis. The WSDA-OR model enforces ordinal relationships among the intensity levels
+as-signed to the target sequences, and associates multiple relevant frames to sequence-level
+labels (instead of a single frame). In particular, it learns discriminant and domain-invariant
+feature representations by integrating multiple in-stance learning with deep adversarial DA,
+where soft Gaussian labels are used to efficiently represent the weak ordinal sequence-level labels
+from the target domain. The proposed approach was validated on the RECOLA video dataset as fully-labeled
+source domain, and UNBC-McMaster video data as weakly-labeled target domain. We have also validated
+WSDA-OR on BIOVID and Fatigue (private) datasets for sequence level estimation. Experimental
+results indicate that our approach can provide a significant improvement over the state-of-the-art
+models, allowing to achieve a greater localization accuracy. 

@@ -1,0 +1,18 @@
+In this paper we consider the problem of testing whether a graph has bounded arboricity. The family
+of graphs with bounded arboricity includes, among others, bounded-degree graphs, all minor-closed
+graph classes (e.g. planar graphs, graphs with bounded treewidth) and randomly generated preferential
+attachment graphs. Graphs with bounded arboricity have been studied extensively in the past, in
+particular since for many problems they allow for much more efficient algorithms and/or better
+approximation ratios. We present a tolerant tester in the sparse-graphs model. The sparse-graphs
+model allows access to degree queries and neighbor queries, and the distance is defined with respect
+to the actual number of edges. More specifically, our algorithm distinguishes between graphs that
+are $\epsilon$-close to having arboricity $\alpha$ and graphs that $c \cdot \epsilon$-far from
+having arboricity $3\alpha$, where $c$ is an absolute small constant. The query complexity and
+running time of the algorithm are $\tilde{O}\left(\frac{n}{\sqrt{m}}\cdot \frac{\log(1/\epsilon)}{\epsilon}
++ \frac{n\cdot \alpha}{m} \cdot \left(\frac{1}{\epsilon}\right)^{O(\log(1/\epsilon))}\right)$
+where $n$ denotes the number of vertices and $m$ denotes the number of edges. In terms of the dependence
+on $n$ and $m$ this bound is optimal up to poly-logarithmic factors since $\Omega(n/\sqrt{m})$
+queries are necessary (and $\alpha = O(\sqrt{m}))$. We leave it as an open question whether the dependence
+on $1/\epsilon$ can be improved from quasi-polynomial to polynomial. Our techniques include an
+efficient local simulation for approximating the outcome of a global (almost) forest-decomposition
+algorithm as well as a tailored procedure of edge sampling. 

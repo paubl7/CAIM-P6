@@ -1,0 +1,19 @@
+Many practical combustion systems such as those in rockets, gas turbines, and internal combustion
+engines operate under high pressures that surpass the thermodynamic critical limit of fuel-oxidizer
+mixtures. These conditions require the consideration of complex fluid behaviors that pose challenges
+for numerical simulations, casting doubts on the validity of existing subgrid-scale (SGS) models
+in large-eddy simulations of these systems. While data-driven methods have shown high accuracy
+as closure models in simulations of turbulent flames, these models are often criticized for lack
+of physical interpretability, wherein they provide answers but no insight into their underlying
+rationale. The objective of this study is to assess SGS stress models from conventional physics-driven
+approaches and an interpretable machine learning algorithm, i.e., the random forest regressor,
+in a turbulent transcritical non-premixed flame. To this end, direct numerical simulations (DNS)
+of transcritical liquid-oxygen/gaseous-methane (LOX/GCH4) inert and reacting flows are performed.
+Using this data, a priori analysis is performed on the Favre-filtered DNS data to examine the accuracy
+of physics-based and random forest SGS-models under these conditions. SGS stresses calculated
+with the gradient model show good agreement with the exact terms extracted from filtered DNS. The
+accuracy of the random-forest regressor decreased when physics-based constraints are applied
+to the feature set. Results demonstrate that random forests can perform as effectively as algebraic
+models when modeling subgrid stresses, only when trained on a sufficiently representative database.
+The employment of random forest feature importance score is shown to provide insight into discovering
+subgrid-scale stresses through sparse regression. 

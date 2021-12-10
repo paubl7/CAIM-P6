@@ -1,0 +1,18 @@
+Low precision arithmetic, in particular half precision (16-bit) floating point arithmetic, is
+now available in commercial hardware. Using lower precision can offer significant savings in computation
+and communication costs with proportional savings in energy. Motivated by this, there have recently
+emerged a number of new iterative refinement schemes for solving linear systems $Ax=b$, both based
+on standard LU factorization and GMRES solvers, that exploit multiple different precisions. Each
+particular algorithm and each combination of precisions leads to different condition number-based
+constraints for convergence of the backward and forward errors, and each has different performance
+costs. Given that the user may not necessarily know the condition number of their matrix a priori,
+it may be difficult to select the optimal variant for their problem. In this work, we develop a three-stage
+mixed precision iterative refinement solver which aims to combine existing mixed precision approaches
+to balance performance and accuracy and improve usability. For a given combination of precisions,
+the algorithm begins with the least expensive approach and convergence is monitored via inexpensive
+computations with quantities produced during the iteration. If slow convergence or divergence
+is detected using particular stopping criteria, the algorithm switches to use more expensive,
+but more reliable GMRES-based refinement approaches. After presenting the algorithm and its details,
+we perform extensive numerical experiments on a variety of random dense problems and problems from
+real applications. Our experiments demonstrate that the theoretical constraints derived in the
+literature are often overly strict in practice, further motivating the need for a multistage approach.

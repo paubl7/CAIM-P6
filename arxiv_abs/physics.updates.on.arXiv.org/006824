@@ -1,0 +1,20 @@
+Purpose: To develop a model to generate volumetric dose distribution from two isodose surfaces
+(iso-surfaces), and to interactively tune dose distribution by iso-surface dragging. Methods:
+We model volumetric dose distribution as analytical extension of two iso-surfaces with the extension
+variables as distances to iso-surfaces. We built a 3D lookup table (LUT) which are generated based
+on clinical dose distributions. Two LUT tables store the mean and standard deviation of voxel dose
+values of clinical doses and binned as distance to 100% iso-surface, reference iso-surface and
+reference dose level. The process of interactive tuning starts from a given base plan. A user drags
+iso-surface for a desired carving. Our method responds with tuned dose. The derivation of tuned
+dose follows two steps. Dose is extended from the two user-desired iso-surfaces (eg.100% and 50%)
+to the whole patient volume by table lookup, using distances to two iso-surfaces and reference dose
+level as keys. Then we fine tune the extended dose by a correction strategy utilizing the information
+of base plan. Results: We validated this method on coplanar VMAT doses of post-operative prostate
+plans. The LUT was populated by dose distributions of 27 clinical plans. We optimized two plans with
+different rectum sparing for an independent case to mimic the process of dose tuning. The plan with
+less rectum sparing is set as base plan. The 50% iso-surface of the more-sparing plan is defined as
+the desired iso-surface input. The dose output by our method (expansion and correction) agrees
+with the more-sparing plan obtained by optimization, in terms of gamma (97.2%), DVH and profiles.
+The overall dose reconstruction time is within two seconds. Conclusion: We developed a distance-to-isosurface
+based volumetric dose reconstruction method, and applied it to interactive tuning with iso-surface
+dragging. 

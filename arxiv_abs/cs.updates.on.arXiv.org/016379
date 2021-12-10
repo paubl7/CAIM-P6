@@ -1,0 +1,20 @@
+Node classification based on graph convolutional networks (GCNs) is vulnerable to adversarial
+attacks by maliciously perturbing graph structures, such as inserting or deleting graph edges.
+The existing research works do not seem to be able to unify the formulation of such edge-perturbing
+attacks, so it is unable to design a more essential defense scheme. Thus, in this paper, considering
+that most researchers find the attack scheme by ergodically perturbing edge in a diverse and manual
+way, we unify such edge-perturbing attacks as an automatic general attack model, named edge-reading
+attack (ERA). ERA can find the concealed and high success rate attack scheme by automatically traverse
+and perturb edges repeatedly. ERA is also the unified description form of edge-perturbing attacks
+in the form of the mathematical formula. Relying on ERA, we further demonstrate the vulnerability
+of GCNs, i.e., the edge-reading permission can easily create opportunities for adversarial attacks.
+To address this problem, we propose an anonymous graph convolutional network (AN-GCN), which allows
+classifying nodes without reading the edge information of GCNs. Specifically, we propose the node
+localization theorem for the first time to demonstrate how GCN locates nodes during training. Then,
+AN-GCN is designed to make the nodes participate in the prediction anonymously, thus withdrawing
+the edge-reading permission of the model. Since AN-GCN can predict node categories without edge
+information, the administrator can withdraw the read permission of edge information to all roles
+(including attackers), so attackers will lose the basic condition of injecting edge perturbations.
+Extensive evaluations show that, our proposed general attack model can accurately manipulate
+the classification results of the target nodes, thus maintaining high-level security in defending
+against edge-perturbing adversarial attacks on graph 

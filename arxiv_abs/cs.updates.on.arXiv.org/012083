@@ -1,0 +1,19 @@
+Data-driven fault diagnostics of safety-critical systems often faces the challenge of a complete
+lack of labeled data associated with faulty system conditions (i.e., fault types) at training time.
+Since an unknown number and nature of fault types can arise during deployment, data-driven fault
+diagnostics in this scenario is an open-set learning problem. Most of the algorithms for open-set
+diagnostics are one-class classification and unsupervised algorithms that do not leverage all
+the available labeled and unlabeled data in the learning algorithm. As a result, their fault detection
+and segmentation performance (i.e., identifying and separating faults of different types) are
+sub-optimal. With this work, we propose training a variational autoencoder (VAE) with labeled
+and unlabeled samples while inducing implicit supervision on the latent representation of the
+healthy conditions. This, together with a modified sampling process of VAE, creates a compact and
+informative latent representation that allows good detection and segmentation of unseen fault
+types using existing one-class and clustering algorithms. We refer to the proposed methodology
+as "knowledge induced variational autoencoder with adaptive sampling" (KIL-AdaVAE). The fault
+detection and segmentation capabilities of the proposed methodology are demonstrated in a new
+simulated case study using the Advanced Geared Turbofan 30000 (AGTF30) dynamical model under real
+flight conditions. In an extensive comparison, we demonstrate that the proposed method outperforms
+other learning strategies (supervised learning, supervised learning with embedding and semi-supervised
+learning) and deep learning algorithms, yielding significant performance improvements on fault
+detection and fault segmentation. 

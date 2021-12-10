@@ -1,0 +1,20 @@
+Purpose: Body composition is known to be associated with many diseases including diabetes, cancers
+and cardiovascular diseases. In this paper, we developed a fully automatic body tissue decomposition
+procedure to segment three major compartments that are related to body composition analysis - subcutaneous
+adipose tissue (SAT), visceral adipose tissue (VAT) and muscle. Three additional compartments
+- the ventral cavity, lung and bones were also segmented during the segmentation process to assist
+segmentation of the major compartments. Methods: A convolutional neural network (CNN) model with
+densely connected layers was developed to perform ventral cavity segmentation. An image processing
+workflow was developed to segment the ventral cavity in any patient's CT using the CNN model, then
+further segment the body tissue into multiple compartments using hysteresis thresholding followed
+by morphological operations. It is important to segment ventral cavity firstly to allow accurate
+separation of compartments with similar Hounsfield unit (HU) inside and outside the ventral cavity.
+Results: The ventral cavity segmentation CNN model was trained and tested with manually labelled
+ventral cavities in 60 CTs. Dice scores (mean +/- standard deviation) for ventral cavity segmentation
+were 0.966+/-0.012. Tested on CT datasets with intravenous (IV) and oral contrast, the Dice scores
+were 0.96+/-0.02, 0.94+/-0.06, 0.96+/-0.04, 0.95+/-0.04 and 0.99+/-0.01 for bone, VAT, SAT,
+muscle and lung, respectively. The respective Dice scores were 0.97+/-0.02, 0.94+/-0.07, 0.93+/-0.06,
+0.91+/-0.04 and 0.99+/-0.01 for non-contrast CT datasets. Conclusion: A body tissue decomposition
+procedure was developed to automatically segment multiple compartments of the ventral body. The
+proposed method enables fully automated quantification of 3D ventral body composition metrics
+from CT images. 

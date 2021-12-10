@@ -1,0 +1,19 @@
+Recent works have explored the potential of machine learning as data-driven turbulence closures
+for RANS and LES techniques. Beyond these advances, the high expressivity and agility of physics-informed
+neural networks (PINNs) make them promising candidates for full fluid flow PDE modeling. An important
+question is whether this new paradigm, exempt from the traditional notion of discretization of
+the underlying operators very much connected to the flow scales resolution, is capable of sustaining
+high levels of turbulence characterized by multi-scale features? We investigate the use of PINNs
+surrogate modeling for turbulent Rayleigh-B{\'e}nard (RB) convection flows in rough and smooth
+rectangular cavities, mainly relying on DNS temperature data from the fluid bulk. We carefully
+quantify the computational requirements under which the formulation is capable of accurately
+recovering the flow hidden quantities. We then propose a new padding technique to distribute some
+of the scattered coordinates-at which PDE residuals are minimized-around the region of labeled
+data acquisition. We show how it comes to play as a regularization close to the training boundaries
+which are zones of poor accuracy for standard PINNs and results in a noticeable global accuracy improvement
+at iso-budget. Finally, we propose for the first time to relax the incompressibility condition
+in such a way that it drastically benefits the optimization search and results in a much improved
+convergence of the composite loss function. The RB results obtained at high Rayleigh number Ra =
+2 $\bullet$ 10 9 are particularly impressive: the predictive accuracy of the surrogate over the
+entire half a billion DNS coordinates yields errors for all flow variables ranging between [0.3%
+-- 4%] in the relative L 2 norm, with a training relying only on 1.6% of the DNS data points. 

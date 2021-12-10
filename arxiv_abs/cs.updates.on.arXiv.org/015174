@@ -1,0 +1,19 @@
+We introduce a simple, rigorous, and unified framework for solving nonlinear partial differential
+equations (PDEs), and for solving inverse problems (IPs) involving the identification of parameters
+in PDEs, using the framework of Gaussian processes. The proposed approach (1) provides a natural
+generalization of collocation kernel methods to nonlinear PDEs and IPs, (2) has guaranteed convergence
+with a path to compute error bounds in the PDE setting, and (3) inherits the state-of-the-art computational
+complexity of linear solvers for dense kernel matrices. The main idea of our method is to approximate
+the solution of a given PDE with a MAP estimator of a Gaussian process given the observation of the
+PDE at a finite number of collocation points. Although this optimization problem is infinite-dimensional,
+it can be reduced to a finite-dimensional one by introducing additional variables corresponding
+to the values of the derivatives of the solution at collocation points; this generalizes the representer
+theorem arising in Gaussian process regression. The reduced optimization problem has a quadratic
+loss and nonlinear constraints, and it is in turn solved with a variant of the Gauss-Newton method.
+The resulting algorithm (a) can be interpreted as solving successive linearizations of the nonlinear
+PDE, and (b) is found in practice to converge in a small number (two to ten) of iterations in experiments
+conducted on a range of PDEs. For IPs, while the traditional approach has been to iterate between
+the identifications of parameters in the PDE and the numerical approximation of its solution, our
+algorithm tackles both simultaneously. Experiments on nonlinear elliptic PDEs, Burgers' equation,
+a regularized Eikonal equation, and an IP for permeability identification in Darcy flow illustrate
+the efficacy and scope of our framework. 

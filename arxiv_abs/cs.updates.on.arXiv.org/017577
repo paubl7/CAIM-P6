@@ -1,0 +1,19 @@
+We describe three independent implementations of a new agent-based model (ABM) that simulates
+a contemporary sports-betting exchange, such as those offered commercially by companies including
+Betfair, Smarkets, and Betdaq. The motivation for constructing this ABM, which is known as the Bristol
+Betting Exchange (BBE), is so that it can serve as a synthetic data generator, producing large volumes
+of data that can be used to develop and test new betting strategies via advanced data analytics and
+machine learning techniques. Betting exchanges act as online platforms on which bettors can find
+willing counterparties to a bet, and they do this in a way that is directly comparable to the manner
+in which electronic financial exchanges, such as major stock markets, act as platforms that allow
+traders to find willing counterparties to buy from or sell to: the platform aggregates and anonymises
+orders from multiple participants, showing a summary of the market that is updated in real-time.
+In the first instance, BBE is aimed primarily at producing synthetic data for in-play betting (also
+known as in-race or in-game betting) where bettors can place bets on the outcome of a track-race event,
+such as a horse race, after the race has started and for as long as the race is underway, with betting
+only ceasing when the race ends. The rationale for, and design of, BBE has been described in detail
+in a previous paper that we summarise here, before discussing our comparative results which contrast
+a single-threaded implementation in Python, a multi-threaded implementation in Python, and an
+implementation where Python header-code calls simulations of the track-racing events written
+in OpenCL that execute on a 640-core GPU -- this runs approximately 1000 times faster than the single-threaded
+Python. Our source-code for BBE is freely available on GitHub. 

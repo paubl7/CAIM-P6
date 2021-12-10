@@ -1,0 +1,18 @@
+Ride-hailing platforms generally provide various service options to customers, such as solo ride
+services, shared ride services, etc. It is generally expected that demands for different service
+modes are correlated, and the prediction of demand for one service mode can benefit from historical
+observations of demands for other service modes. Moreover, an accurate joint prediction of demands
+for multiple service modes can help the platforms better allocate and dispatch vehicle resources.
+Although there is a large stream of literature on ride-hailing demand predictions for one specific
+service mode, little efforts have been paid towards joint predictions of ride-hailing demands
+for multiple service modes. To address this issue, we propose a deep multi-task multi-graph learning
+approach, which combines two components: (1) multiple multi-graph convolutional (MGC) networks
+for predicting demands for different service modes, and (2) multi-task learning modules that enable
+knowledge sharing across multiple MGC networks. More specifically, two multi-task learning structures
+are established. The first one is the regularized cross-task learning, which builds cross-task
+connections among the inputs and outputs of multiple MGC networks. The second one is the multi-linear
+relationship learning, which imposes a prior tensor normal distribution on the weights of various
+MGC networks. Although there are no concrete bridges between different MGC networks, the weights
+of these networks are constrained by each other and subject to a common prior distribution. Evaluated
+with the for-hire-vehicle datasets in Manhattan, we show that our propose approach outperforms
+the benchmark algorithms in prediction accuracy for different ride-hailing modes. 

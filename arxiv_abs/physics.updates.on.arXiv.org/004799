@@ -1,0 +1,19 @@
+In this paper, a third-order compact gas-kinetic scheme is firstly proposed for three-dimensional
+computation for the compressible Euler and Navier-Stokes solutions. The scheme achieves its compactness
+due to the time-dependent gas distribution function in GKS, which provides not only the fluxes but
+also the time accurate flow variables in the next time level at a cell interface. As a result, the cell
+averaged first-order spatial derivatives of flow variables can be obtained naturally through
+the Gauss's theorem. Then, a third-order compact reconstruction involving the cell averaged values
+and their first-order spatial derivatives can be achieved. The trilinear interpolation is used
+to treat possible non-coplanar elements on general hexahedral mesh. The constrained least-square
+technique is applied to improve the accuracy in the smooth case. To deal with both smooth and discontinuous
+flows, a new HWENO reconstruction is designed in the current scheme by following the ideas in Zhu,
+2018. No identification of troubled cells is needed in the current scheme. In contrast to the Riemann
+solver-based method, the compact scheme can achieve a third-order temporal accuracy with the two-stage
+two-derivative temporal discretization, instead of the three-stage Runge-Kutta method. Overall,
+the proposed scheme inherits the high accuracy and efficiency of the previous ones in two-dimensional
+case. The desired third-order accuracy can be obtained with curved boundary. The robustness of
+the scheme has been validated through many cases, including strong shocks in both inviscid and viscous
+flow computations. Quantitative comparisons for both smooth and discontinuous cases show that
+the current third-order scheme can give competitive results against the fifth-order non-compact
+GKS under the same mesh. A large CFL number around 0.5 can be used in the present scheme. 

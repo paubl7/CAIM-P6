@@ -1,0 +1,19 @@
+Promise Constraint Satisfaction Problems (PCSPs) are a generalization of Constraint Satisfaction
+Problems (CSPs) where each predicate has a strong and a weak form and given a CSP instance, the objective
+is to distinguish if the strong form can be satisfied vs. even the weak form cannot be satisfied. Since
+their formal introduction by Austrin, Guruswami, and H\aa stad, there has been a flurry of works
+on PCSPs [BBKO19,KO19,WZ20]. The key tool in studying PCSPs is the algebraic framework developed
+in the context of CSPs where the closure properties of the satisfying solutions known as the polymorphisms
+are analyzed. The polymorphisms of PCSPs are much richer than CSPs. In the Boolean case, we still
+do not know if dichotomy for PCSPs exists analogous to Schaefer's dichotomy result for CSPs. In this
+paper, we study a special case of Boolean PCSPs, namely Boolean Ordered PCSPs where the Boolean PCSPs
+have the predicate $x \leq y$. In the algebraic framework, this is the special case of Boolean PCSPs
+when the polymorphisms are monotone functions. We prove that Boolean Ordered PCSPs exhibit a computational
+dichotomy assuming the Rich 2-to-1 Conjecture [BKM21] which is a perfect completeness surrogate
+of the Unique Games Conjecture. Assuming the Rich 2-to-1 Conjecture, we prove that a Boolean Ordered
+PCSP can be solved in polynomial time if for every $\epsilon>0$, it has polymorphisms where each
+coordinate has Shapley value at most $\epsilon$, else it is NP-hard. The algorithmic part of our
+dichotomy is based on a structural lemma that Boolean monotone functions with each coordinate having
+low Shapley value have arbitrarily large threshold functions as minors. The hardness part proceeds
+by showing that the Shapley value is consistent under a uniformly random 2-to-1 minor. Of independent
+interest, we show that the Shapley value can be inconsistent under an adversarial 2-to-1 minor.

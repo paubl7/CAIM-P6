@@ -1,0 +1,20 @@
+Matrix scaling and matrix balancing are two basic linear-algebraic problems with a wide variety
+of applications, such as approximating the permanent, and pre-conditioning linear systems to
+make them more numerically stable. We study the power and limitations of quantum algorithms for
+these problems. We provide quantum implementations of two classical (in both senses of the word)
+methods: Sinkhorn's algorithm for matrix scaling and Osborne's algorithm for matrix balancing.
+Using amplitude estimation as our main tool, our quantum implementations both run in time $\tilde
+O(\sqrt{mn}/\varepsilon^4)$ for scaling or balancing an $n \times n$ matrix (given by an oracle)
+with $m$ non-zero entries to within $\ell_1$-error $\varepsilon$. Their classical analogs use
+time $\tilde O(m/\varepsilon^2)$, and every classical algorithm for scaling or balancing with
+small constant $\varepsilon$ requires $\Omega(m)$ queries to the entries of the input matrix.
+We thus achieve a polynomial speed-up in terms of $n$, at the expense of a worse polynomial dependence
+on the obtained $\ell_1$-error $\varepsilon$. We emphasize that even for constant $\varepsilon$
+these problems are already non-trivial (and relevant in applications). Along the way, we extend
+the classical analysis of Sinkhorn's and Osborne's algorithm to allow for errors in the computation
+of marginals. We also adapt an improved analysis of Sinkhorn's algorithm for entrywise-positive
+matrices to the $\ell_1$-setting, leading to an $\tilde O(n^{1.5}/\varepsilon^3)$-time quantum
+algorithm for $\varepsilon$-$\ell_1$-scaling in this case. We also prove a lower bound, showing
+that our quantum algorithm for matrix scaling is essentially optimal for constant $\varepsilon$:
+every quantum algorithm for matrix scaling that achieves a constant $\ell_1$-error with respect
+to uniform marginals needs to make at least $\Omega(\sqrt{mn})$ queries. 

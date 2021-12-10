@@ -1,0 +1,19 @@
+Annotating a large-scale in-the-wild person re-identification dataset especially of marathon
+runners is a challenging task. The variations in the scenarios such as camera viewpoints, resolution,
+occlusion, and illumination make the problem non-trivial. Manually annotating bounding boxes
+in such large-scale datasets is cost-inefficient. Additionally, due to crowdedness and occlusion
+in the videos, aligning the identity of runners across multiple disjoint cameras is a challenge.
+We collected a novel large-scale in-the-wild video dataset of marathon runners. The dataset consists
+of hours of recording of thousands of runners captured using 42 hand-held smartphone cameras and
+covering real-world scenarios. Due to the presence of crowdedness and occlusion in the videos,
+the annotation of runners becomes a challenging task. We propose a new scheme for tackling the challenges
+in the annotation of such large dataset. Our technique reduces the overall cost of annotation in
+terms of time as well as budget. We demonstrate performing fps analysis to reduce the effort and time
+of annotation. We investigate several annotation methods for efficiently generating tight bounding
+boxes. Our results prove that interpolating bounding boxes between keyframes is the most efficient
+method of bounding box generation amongst several other methods and is 3x times faster than the naive
+baseline method. We introduce a novel way of aligning the identity of runners in disjoint cameras.
+Our inter-camera alignment tool integrated with the state-of-the-art person re-id system proves
+to be sufficient and effective in the alignment of the runners across multiple cameras with non-overlapping
+views. Our proposed framework of annotation reduces the annotation cost of the dataset by a factor
+of 16x, also effectively aligning 93.64% of the runners in the cross-camera setting. 

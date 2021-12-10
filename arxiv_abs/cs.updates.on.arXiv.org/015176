@@ -1,0 +1,20 @@
+Increasing data volumes in scientific experiments necessitate the use of high-performance computing
+(HPC) resources for data analysis. In many scientific fields, the data generated from scientific
+instruments and supercomputer simulations must be analyzed rapidly. In fact, the requirement
+for quasi-instant feedback is growing. Scientists want to use results from one experiment to guide
+the selection of the next or even to improve the course of a single experiment. Current HPC systems
+are typically batch-scheduled under policies in which an arriving job is run immediately only if
+enough resources are available; otherwise, it is queued. It is hard for these systems to support
+real-time jobs. Real-time jobs, in order to meet their requirements, should sometimes have to preempt
+batch jobs and/or be scheduled ahead of batch jobs that were submitted earlier. Accommodating real-time
+jobs may negatively impact system utilization also, especially when preemption/restart of batch
+jobs is involved. We first explore several existing scheduling strategies to make real-time jobs
+more likely to be scheduled in due time. We then rigorously formulate the problem as a mixed-integer
+linear programming for offline scheduling and develop novel scheduling heuristics for online
+scheduling. We perform simulation studies using trace logs of Mira, the IBM BG/Q system at Argonne
+National Laboratory, to quantify the impact of real-time jobs on batch job performance for various
+percentages of real-time jobs in the workload. We present new insights gained from grouping jobs
+into different categories based on runtime and the number of nodes used and studying the performance
+of each category. Our results show that with 10% real-time job percentages, just-in-time checkpointing
+combined with our heuristic can improve the slowdowns of real-time jobs by 35% while limiting the
+increase of the slowdowns of batch jobs to 10%. 

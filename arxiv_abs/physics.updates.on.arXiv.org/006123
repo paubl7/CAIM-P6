@@ -1,0 +1,19 @@
+Previously we presented a numerical model that predicts trajectories of lunar dust, soil, and gravel
+blown by the engine exhaust of a lunar lander. The model uses the gas density, velocity vector field,
+and temperature predicted by computational fluid dynamics (CFD) or Direct Simulation Monte Carlo
+(DSMC) simulations to compute the forces and accelerations acting on the regolith particles, one
+particle at a time (ignoring particle collisions until more advanced models are developed). Here
+we present significant improvements to the model, including the implementation of particle drag
+and lift formulas to account for the rarefaction and compressibility of the flow. It turns out that
+the drag force is reduced due to the rarefaction, but the lift is increased due to several effects
+such as particle rotation. A data matrix of particle sizes, engine thrusts (descent and ascent values
+for Altair), horizontal and vertical starting distances, and lander height above ground, have
+been tested using the latest version of the software. These results suggest that the previously
+reported 3 degree trajectory angle limit can be exceeded in several cases by as much as a factor of
+five. Particles that originate at a height of 1 cm above the surface from an outer crater rim can be
+propelled to angles of 5 degrees or more. Particles that start at 10 cm above the surface can be ejected
+with angles of up to 15 degrees. Mechanisms responsible for placing particles at starting heights
+above the surface may include the kinetics of horizontal collisions, as suggested by Discrete Element
+Method (DEM) simulations. We also present results showing the distance particles travel and their
+impact velocities. We then use the model to evaluate the effectiveness of berms or other methods
+to block the spray of soil at a lunar landing site. 

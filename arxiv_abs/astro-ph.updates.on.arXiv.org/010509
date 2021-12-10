@@ -1,0 +1,20 @@
+We present a new, updated version of the EuclidEmulator (called EuclidEmulator2), a fast and accurate
+predictor for the nonlinear correction of the matter power spectrum. Percent-level accurate emulation
+is now supported in the eight-dimensional parameter space of $w_0w_a$CDM$+\sum m_\nu$models
+between redshift $z=0$ and $z=3$ for spatial scales within the range 0.01 $h$/Mpc $\leq k \leq$ 10
+$h$/Mpc. In order to achieve this level of accuracy, we have had to improve the quality of the underlying
+N-body simulations used as training data: (1) we use self-consistent linear evolution of non-dark
+matter species such as massive neutrinos, photons, dark energy and the metric field, (2) we perform
+the simulations in the so-called N-body gauge, which allows one to interpret the results in the framework
+of general relativity, (3) we run over 250 high-resolution simulations with $3000^3$ particles
+in boxes of 1 (Gpc/$h$)${}^3$ volumes based on paired-and-fixed initial conditions and (4) we provide
+a resolution correction that can be applied to emulated results as a post-processing step in order
+to drastically reduce systematic biases on small scales due to residual resolution effects in the
+simulations. We find that the inclusion of the dynamical dark energy parameter $w_a$ significantly
+increases the complexity and expense of creating the emulator. The high fidelity of EuclidEmulator2
+is tested in various comparisons against N-body simulations as well as alternative fast predictors
+like Halofit, HMCode and CosmicEmu. A blind test is successfully performed against the Euclid Flagship
+v2.0 simulation. Nonlinear correction factors emulated with EuclidEmulator2 are accurate at
+the level of 1% or better for 0.01 $h$/Mpc $\leq k \leq$ 10 $h$/Mpc and $z\leq3$ compared to high-resolution
+dark matter only simulations. EuclidEmulator2 is publicly available at https://github.com/miknab/EuclidEmulator2
+. 

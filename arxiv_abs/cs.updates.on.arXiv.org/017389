@@ -1,0 +1,18 @@
+Click-through rate (CTR) prediction plays important role in personalized advertising and recommender
+systems. Though many models have been proposed such as FM, FFM and DeepFM in recent years, feature
+engineering is still a very important way to improve the model performance in many applications
+because using raw features can rarely lead to optimal results. For example, the continuous features
+are usually transformed to the power forms by adding a new feature to allow it to easily form non-linear
+functions of the feature. However, this kind of feature engineering heavily relies on peoples experience
+and it is both time consuming and labor consuming. On the other side, concise CTR model with both fast
+online serving speed and good model performance is critical for many real life applications. In
+this paper, we propose LeafFM model based on FM to generate new features from the original feature
+embedding by learning the transformation functions automatically. We also design three concrete
+Leaf-FM models according to the different strategies of combing the original and the generated
+features. Extensive experiments are conducted on three real-world datasets and the results show
+Leaf-FM model outperforms standard FMs by a large margin. Compared with FFMs, Leaf-FM can achieve
+significantly better performance with much less parameters. In Avazu and Malware dataset, add
+version Leaf-FM achieves comparable performance with some deep learning based models such as DNN
+and AutoInt. As an improved FM model, Leaf-FM has the same computation complexity with FM in online
+serving phase and it means Leaf-FM is applicable in many industry applications because of its better
+performance and high computation efficiency. 

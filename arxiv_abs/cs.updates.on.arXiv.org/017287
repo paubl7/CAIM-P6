@@ -1,0 +1,20 @@
+Near infrared (NIR) imaging has been widely applied in low-light imaging scenarios; however, it
+is difficult for human and algorithms to perceive the real scene in the colorless NIR domain. While
+Generative Adversarial Network (GAN) has been widely employed in various image colorization tasks,
+it is challenging for a direct mapping mechanism, such as a conventional GAN, to transform an image
+from the NIR to the RGB domain with correct semantic reasoning, well-preserved textures, and vivid
+color combinations concurrently. In this work, we propose a novel Attention-based NIR image colorization
+framework via Adaptive Fusion of Semantic and Texture clues, aiming at achieving these goals within
+the same framework. The tasks of texture transfer and semantic reasoning are carried out in two separate
+network blocks. Specifically, the Texture Transfer Block (TTB) aims at extracting texture features
+from the NIR image's Laplacian component and transferring them for subsequent color fusion. The
+Semantic Reasoning Block (SRB) extracts semantic clues and maps the NIR pixel values to the RGB domain.
+Finally, a Fusion Attention Block (FAB) is proposed to adaptively fuse the features from the two
+branches and generate an optimized colorization result. In order to enhance the network's learning
+capacity in semantic reasoning as well as mapping precision in texture transfer, we have proposed
+the Residual Coordinate Attention Block (RCAB), which incorporates coordinate attention into
+a residual learning framework, enabling the network to capture long-range dependencies along
+the channel direction and meanwhile precise positional information can be preserved along spatial
+directions. RCAB is also incorporated into FAB to facilitate accurate texture alignment during
+fusion. Both quantitative and qualitative evaluations show that the proposed method outperforms
+state-of-the-art NIR image colorization methods. 

@@ -1,0 +1,20 @@
+Learning informative representations (aka. embeddings) of users and items is the core of modern
+recommender systems. Previous works exploit user-item relationships of one-hop neighbors in
+the user-item interaction graph to improve the quality of representation. Recently, the research
+of Graph Neural Network (GNN) for recommendation considers the implicit collaborative information
+of multi-hop neighbors to enrich the representation. However, most works of GNN for recommendation
+systems do not consider the relational information which implies the expression differences of
+different neighbors in the neighborhood explicitly. The influence of each neighboring item to
+the representation of the user's preference can be represented by the correlation between the item
+and neighboring items of the user. Symmetrically, for a given item, the correlation between one
+neighboring user and neighboring users can reflect the strength of signal about the item's characteristic.
+To modeling the implicit correlations of neighbors in graph embedding aggregating, we propose
+a Neighbor-Aware Graph Attention Network for recommendation task, termed NGAT4Rec. It employs
+a novel neighbor-aware graph attention layer that assigns different neighbor-aware attention
+coefficients to different neighbors of a given node by computing the attention among these neighbors
+pairwisely. Then NGAT4Rec aggregates the embeddings of neighbors according to the corresponding
+neighbor-aware attention coefficients to generate next layer embedding for every node. Furthermore,
+we combine more neighbor-aware graph attention layer to gather the influential signals from multi-hop
+neighbors. We remove feature transformation and nonlinear activation that proved to be useless
+on collaborative filtering. Extensive experiments on three benchmark datasets show that our model
+outperforms various state-of-the-art models consistently. 

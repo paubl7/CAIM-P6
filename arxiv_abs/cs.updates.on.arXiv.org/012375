@@ -1,0 +1,19 @@
+This paper studies the indoor localisation of WiFi devices based on a commodity chipset and standard
+channel sounding. First, we present a novel shallow neural network (SNN) in which features are extracted
+from the channel state information (CSI) corresponding to WiFi subcarriers received on different
+antennas and used to train the model. The single-layer architecture of this localisation neural
+network makes it lightweight and easy-to-deploy on devices with stringent constraints on computational
+resources. We further investigate for localisation the use of deep learning models and design novel
+architectures for convolutional neural network (CNN) and long-short term memory (LSTM). We extensively
+evaluate these localisation algorithms for continuous tracking in indoor environments. Experimental
+results prove that even an SNN model, after a careful handcrafted feature extraction, can achieve
+accurate localisation. Meanwhile, using a well-organised architecture, the neural network models
+can be trained directly with raw data from the CSI and localisation features can be automatically
+extracted to achieve accurate position estimates. We also found that the performance of neural
+network-based methods are directly affected by the number of anchor access points (APs) regardless
+of their structure. With three APs, all neural network models proposed in this paper can obtain localisation
+accuracy of around 0.5 metres. In addition the proposed deep NN architecture reduces the data pre-processing
+time by 6.5 hours compared with a shallow NN using the data collected in our testbed. In the deployment
+phase, the inference time is also significantly reduced to 0.1 ms per sample. We also demonstrate
+the generalisation capability of the proposed method by evaluating models using different target
+movement characteristics to the ones in which they were trained. 

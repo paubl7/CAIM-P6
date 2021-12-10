@@ -1,0 +1,20 @@
+In attempts to produce ML models less reliant on spurious patterns in NLP datasets, researchers
+have recently proposed curating counterfactually augmented data (CAD) via a human-in-the-loop
+process in which given some documents and their (initial) labels, humans must revise the text to
+make a counterfactual label applicable. Importantly, edits that are not necessary to flip the applicable
+label are prohibited. Models trained on the augmented data appear, empirically, to rely less on
+semantically irrelevant words and to generalize better out of domain. While this work draws loosely
+on causal thinking, the underlying causal model (even at an abstract level) and the principles underlying
+the observed out-of-domain improvements remain unclear. In this paper, we introduce a toy analog
+based on linear Gaussian models, observing interesting relationships between causal models,
+measurement noise, out-of-domain generalization, and reliance on spurious signals. Our analysis
+provides some insights that help to explain the efficacy of CAD. Moreover, we develop the hypothesis
+that while adding noise to causal features should degrade both in-domain and out-of-domain performance,
+adding noise to non-causal features should lead to relative improvements in out-of-domain performance.
+This idea inspires a speculative test for determining whether a feature attribution technique
+has identified the causal spans. If adding noise (e.g., by random word flips) to the highlighted
+spans degrades both in-domain and out-of-domain performance on a battery of challenge datasets,
+but adding noise to the complement gives improvements out-of-domain, it suggests we have identified
+causal spans. We present a large-scale empirical study comparing spans edited to create CAD to those
+selected by attention and saliency maps. Across numerous domains and models, we find that the hypothesized
+phenomenon is pronounced for CAD. 

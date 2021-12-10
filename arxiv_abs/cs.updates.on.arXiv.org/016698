@@ -1,0 +1,18 @@
+Graph-level representations are critical in various real-world applications, such as predicting
+the properties of molecules. But in practice, precise graph annotations are generally very expensive
+and time-consuming. To address this issue, graph contrastive learning constructs instance discrimination
+task which pulls together positive pairs (augmentation pairs of the same graph) and pushes away
+negative pairs (augmentation pairs of different graphs) for unsupervised representation learning.
+However, since for a query, its negatives are uniformly sampled from all graphs, existing methods
+suffer from the critical sampling bias issue, i.e., the negatives likely having the same semantic
+structure with the query, leading to performance degradation. To mitigate this sampling bias issue,
+in this paper, we propose a Prototypical Graph Contrastive Learning (PGCL) approach. Specifically,
+PGCL models the underlying semantic structure of the graph data via clustering semantically similar
+graphs into the same group, and simultaneously encourages the clustering consistency for different
+augmentations of the same graph. Then given a query, it performs negative sampling via drawing the
+graphs from those clusters that differ from the cluster of query, which ensures the semantic difference
+between query and its negative samples. Moreover, for a query, PGCL further reweights its negative
+samples based on the distance between their prototypes (cluster centroids) and the query prototype
+such that those negatives having moderate prototype distance enjoy relatively large weights.
+This reweighting strategy is proved to be more effective than uniform sampling. Experimental results
+on various graph benchmarks testify the advantages of our PGCL over state-of-the-art methods.

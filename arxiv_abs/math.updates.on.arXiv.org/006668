@@ -1,0 +1,18 @@
+The routing and wavelength assignment with protection is an important problem in telecommunications.
+Given an optical network and incoming connection requests, a commonly studied variant of the problem
+aims to grant maximum number of requests by assigning lightpaths at minimum network resource usage
+level, while ensuring the provided services remain functional in case of a single-link failure
+through dedicated path protection. We consider a practically relevant version where alternative
+lightpaths for requests are assumed to be given as a precomputed set, and show that it is NP-hard.
+We formulate the problem as an integer programming (IP) model, and also use it as a foundation to develop
+a novel quadratic unconstrained binary optimization (QUBO) model, which can be both directly solved
+by a state-of-the-art solver like GUROBI. We present necessary and sufficient conditions on objective
+function parameters to prioritize request granting objective over wavelength-link usage for
+both models, and a sufficient condition to ensure the exactness of the QUBO model. Moreover, we implement
+a problem-specific branch-and-cut algorithm for the IP model, and employ a new quantum-inspired
+technology, Digital Annealer (DA), for the QUBO model. We conduct computational experiments on
+a large suite of instances that are hard to optimally solve in order to assess the efficiency and efficacy
+of all of these approaches as well as a problem-specific heuristic. The results show that the emerging
+technology DA outperforms the considered established techniques coupled with GUROBI, in finding
+mostly significantly better or as good solutions in only two minutes compared to two hours of run
+time, whereas the problem-specific heuristic fails to be competitive. 

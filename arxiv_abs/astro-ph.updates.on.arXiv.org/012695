@@ -1,0 +1,20 @@
+Time-delay interferometry (TDI) is a processing step essential for the scientific exploitation
+of LISA, as it reduces the otherwise overwhelming laser noise in the interferometric measurements.
+The fundamental idea is to define new laser-noise-free observables by combining appropriately
+time-shifted measurements. First- and second-generation TDI combinations cancel laser noise
+under the assumption that the LISA armlengths are constant or evolve linearly with time, respectively.
+We recently extended TDI by solving for the laser-noise-free combinations implicitly, writing
+the likelihood of the data directly in terms of the basic measurements, and using a discretized representation
+of the delays that can accommodate any time dependence of the armlengths. We named the resulting
+formalism "TDI-infinity'' [PRD 103, 082001 (2021)]. According to Tinto, Dhurandhar, and Joshi
+[arXiv/2105.02054], our matrix-based approach is invalidated by the simplified start-up conditions
+assumed for the design matrix that connects the time series of laser-noise fluctuations to the time
+series of interferometric measurements along the LISA arms. Here we respond that, if those boundary
+conditions are indeed unrealistic, they do not invalidate the algorithm, since one can simply truncate
+the design matrix to exclude "incomplete'' measurements, or set them to zero. Our formalism then
+proceeds unmodified, except that the length of the laser-noise canceling time series is reduced
+by the number of excluded measurements. Tinto and colleagues further claim that the matrix formulation
+is merely a finite representation of the polynomial ring of delay operators introduced by Dhurandar,
+Nayak, and Vinet to formalize TDI. We show that this is only true if all interferometric delays are
+exact multiples of the sampling interval, which will not be possible in practical contexts such
+as LISA. 

@@ -1,0 +1,20 @@
+Count-sketch is a popular matrix sketching algorithm that can produce a sketch of an input data matrix
+X in O(nnz(X))time where nnz(X) denotes the number of non-zero entries in X. The sketched matrix
+will be much smaller than X while preserving most of its properties. Therefore, count-sketch is
+widely used for addressing high-dimensionality challenge in machine learning. However, there
+are two main limitations of count-sketch: (1) The sketching matrix used count-sketch is generated
+randomly which does not consider any intrinsic data properties of X. This data-oblivious matrix
+sketching method could produce a bad sketched matrix which will result in low accuracy for subsequent
+machine learning tasks (e.g.classification); (2) For highly sparse input data, count-sketch
+could produce a dense sketched data matrix. This dense sketch matrix could make the subsequent machine
+learning tasks more computationally expensive than on the original sparse data X. To address these
+two limitations, we first show an interesting connection between count-sketch and k-means clustering
+by analyzing the reconstruction error of the count-sketch method. Based on our analysis, we propose
+to reduce the reconstruction error of count-sketch by using k-means clustering algorithm to obtain
+the low-dimensional sketched matrix. In addition, we propose to solve k-mean clustering using
+gradient descent with -L1 ball projection to produce a sparse sketched matrix. Our experimental
+results based on six real-life classification datasets have demonstrated that our proposed method
+achieves higher accuracy than the original count-sketch and other popular matrix sketching algorithms.
+Our results also demonstrate that our method produces a sparser sketched data matrix than other
+methods and therefore the prediction cost of our method will be smaller than other matrix sketching
+methods. 

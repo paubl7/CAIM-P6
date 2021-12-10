@@ -1,0 +1,20 @@
+LDCT has drawn major attention in the medical imaging field due to the potential health risks of CT-associated
+X-ray radiation to patients. Reducing the radiation dose, however, decreases the quality of the
+reconstructed images, which consequently compromises the diagnostic performance. Various deep
+learning techniques have been introduced to improve the image quality of LDCT images through denoising.
+GANs-based denoising methods usually leverage an additional classification network, i.e. discriminator,
+to learn the most discriminate difference between the denoised and normal-dose images and, hence,
+regularize the denoising model accordingly; it often focuses either on the global structure or
+local details. To better regularize the LDCT denoising model, this paper proposes a novel method,
+termed DU-GAN, which leverages U-Net based discriminators in the GANs framework to learn both global
+and local difference between the denoised and normal-dose images in both image and gradient domains.
+The merit of such a U-Net based discriminator is that it can not only provide the per-pixel feedback
+to the denoising network through the outputs of the U-Net but also focus on the global structure in
+a semantic level through the middle layer of the U-Net. In addition to the adversarial training in
+the image domain, we also apply another U-Net based discriminator in the image gradient domain to
+alleviate the artifacts caused by photon starvation and enhance the edge of the denoised CT images.
+Furthermore, the CutMix technique enables the per-pixel outputs of the U-Net based discriminator
+to provide radiologists with a confidence map to visualize the uncertainty of the denoised results,
+facilitating the LDCT-based screening and diagnosis. Extensive experiments on the simulated
+and real-world datasets demonstrate superior performance over recently published methods both
+qualitatively and quantitatively. 

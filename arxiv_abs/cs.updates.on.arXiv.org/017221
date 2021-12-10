@@ -1,0 +1,20 @@
+The changing preferences of users towards items trigger the emergence of session-based recommender
+systems (SBRSs), which aim to model the dynamic preferences of users for next-item recommendations.
+However, most of the existing studies on SBRSs are based on long sessions only for recommendations,
+ignoring short sessions, though short sessions, in fact, account for a large proportion in most
+of the real-world datasets. As a result, the applicability of existing SBRSs solutions is greatly
+reduced. In a short session, quite limited contextual information is available, making the next-item
+recommendation very challenging. To this end, in this paper, inspired by the success of few-shot
+learning (FSL) in effectively learning a model with limited instances, we formulate the next-item
+recommendation as an FSL problem. Accordingly, following the basic idea of a representative approach
+for FSL, i.e., meta-learning, we devise an effective SBRS called INter-SEssion collaborative
+Recommender netTwork (INSERT) for next-item recommendations in short sessions. With the carefully
+devised local module and global module, INSERT is able to learn an optimal preference representation
+of the current user in a given short session. In particular, in the global module, a similar session
+retrieval network (SSRN) is designed to find out the sessions similar to the current short session
+from the historical sessions of both the current user and other users, respectively. The obtained
+similar sessions are then utilized to complement and optimize the preference representation learned
+from the current short session by the local module for more accurate next-item recommendations
+in this short session. Extensive experiments conducted on two real-world datasets demonstrate
+the superiority of our proposed INSERT over the state-of-the-art SBRSs when making next-item recommendations
+in short sessions. 

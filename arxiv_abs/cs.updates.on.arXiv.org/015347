@@ -1,0 +1,19 @@
+With the ubiquitous graph-structured data in various applications, models that can learn compact
+but expressive vector representations of nodes have become highly desirable. Recently, bearing
+the message passing paradigm, graph neural networks (GNNs) have greatly advanced the performance
+of node representation learning on graphs. However, a majority class of GNNs are only designed for
+homogeneous graphs, leading to inferior adaptivity to the more informative heterogeneous graphs
+with various types of nodes and edges. Also, despite the necessity of inductively producing representations
+for completely new nodes (e.g., in streaming scenarios), few heterogeneous GNNs can bypass the
+transductive learning scheme where all nodes must be known during training. Furthermore, the training
+efficiency of most heterogeneous GNNs has been hindered by their sophisticated designs for extracting
+the semantics associated with each meta path or relation. In this paper, we propose WIde and DEep
+message passing Network (WIDEN) to cope with the aforementioned problems about heterogeneity,
+inductiveness, and efficiency that are rarely investigated together in graph representation
+learning. In WIDEN, we propose a novel inductive, meta path-free message passing scheme that packs
+up heterogeneous node features with their associated edges from both low- and high-order neighbor
+nodes. To further improve the training efficiency, we innovatively present an active downsampling
+strategy that drops unimportant neighbor nodes to facilitate faster information propagation.
+Experiments on three real-world heterogeneous graphs have further validated the efficacy of WIDEN
+on both transductive and inductive node representation learning, as well as the superior training
+efficiency against state-of-the-art baselines. 

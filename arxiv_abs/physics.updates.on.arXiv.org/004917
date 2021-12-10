@@ -1,0 +1,19 @@
+In the Noisy Intermediate-Scale Quantum (NISQ) era, solving the electronic structure problem
+from chemistry is considered as the "killer application" for near-term quantum devices. In spite
+of the success of variational hybrid quantum/classical algorithms in providing accurate energy
+profiles for small molecules, careful considerations are still required for the description of
+complicated features of potential energy surfaces. Because the current quantum resources are
+very limited, it is common to focus on a restricted part of the Hilbert space (determined by the set
+of active orbitals). While physically motivated, this approximation can severely impact the description
+of these complicated features. A perfect example is that of conical intersections (i.e. a singular
+point of degeneracy between electronic states), which are of primary importance to understand
+many prominent reactions. Designing active spaces so that the improved accuracy from a quantum
+computer is not rendered useless is key to finding useful applications of these promising devices
+within the field of chemistry. To answer this issue, we introduce a NISQ-friendly method called
+"State-Averaged Orbital-Optimized Variational Quantum Eigensolver" (SA-OO-VQE) which combines
+two algorithms: (1) a state-averaged orbital-optimizer, and (2) a state-averaged VQE. To demonstrate
+the success of the method, we classically simulate it on a minimal Schiff base model (namely the formaldimine
+molecule CH2NH) relevant also for the photoisomerization in rhodopsin -- a crucial step in the process
+of vision mediated by the presence of a conical intersection. We show that merging both algorithms
+fulfil the necessary condition to describe the molecule's conical intersection, i.e. the ability
+to treat degenerate (or quasi-degenerate) states on the same footing. 

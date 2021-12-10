@@ -1,0 +1,19 @@
+Clustering and visualizing high-dimensional (HD) data are important tasks in a variety of fields.
+For example, in bioinformatics, they are crucial for analyses of single-cell data such as mass cytometry
+(CyTOF) data. Some of the most effective algorithms for clustering HD data are based on representing
+the data by nodes in a graph, with edges connecting neighbouring nodes according to some measure
+of similarity or distance. However, users of graph-based algorithms are typically faced with the
+critical but challenging task of choosing the value of an input parameter that sets the size of neighbourhoods
+in the graph, e.g. the number of nearest neighbours to which to connect each node or a threshold distance
+for connecting nodes. The burden on the user could be alleviated by a measure of inter-node similarity
+that can have value 0 for dissimilar nodes without requiring any user-defined parameters or thresholds.
+This would determine the neighbourhoods automatically while still yielding a sparse graph. To
+this end, I propose a new method called ASTRICS to measure similarity between clusters of HD data
+points based on local dimensionality reduction and triangulation of critical alpha shapes. I show
+that my ASTRICS similarity measure can facilitate both clustering and visualization of HD data
+by using it in Stage 2 of a three-stage pipeline: Stage 1 = perform an initial clustering of the data
+by any method; Stage 2 = let graph nodes represent initial clusters instead of individual data points
+and use ASTRICS to automatically define edges between nodes; Stage 3 = use the graph for further clustering
+and visualization. This trades the critical task of choosing a graph neighbourhood size for the
+easier task of essentially choosing a resolution at which to view the data. The graph and consequently
+downstream clustering and visualization are then automatically adapted to the chosen resolution.

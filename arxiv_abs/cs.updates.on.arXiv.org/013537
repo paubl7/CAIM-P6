@@ -1,0 +1,18 @@
+We study the coarse-grained selection module in retrieval-based chatbot. Coarse-grained selection
+is a basic module in a retrieval-based chatbot, which constructs a rough candidate set from the whole
+database to speed up the interaction with customers. So far, there are two kinds of approaches for
+coarse-grained selection module: (1) sparse representation; (2) dense representation. To the
+best of our knowledge, there is no systematic comparison between these two approaches in retrieval-based
+chatbots, and which kind of method is better in real scenarios is still an open question. In this paper,
+we first systematically compare these two methods from four aspects: (1) effectiveness; (2) index
+stoarge; (3) search time cost; (4) human evaluation. Extensive experiment results demonstrate
+that dense representation method significantly outperforms the sparse representation, but costs
+more time and storage occupation. In order to overcome these fatal weaknesses of dense representation
+method, we propose an ultra-fast, low-storage, and highly effective Deep Semantic Hashing Coarse-grained
+selection method, called DSHC model. Specifically, in our proposed DSHC model, a hashing optimizing
+module that consists of two autoencoder models is stacked on a trained dense representation model,
+and three loss functions are designed to optimize it. The hash codes provided by hashing optimizing
+module effectively preserve the rich semantic and similarity information in dense vectors. Extensive
+experiment results prove that, our proposed DSHC model can achieve much faster speed and lower storage
+than sparse representation, with limited performance loss compared with dense representation.
+Besides, our source codes have been publicly released for future research. 

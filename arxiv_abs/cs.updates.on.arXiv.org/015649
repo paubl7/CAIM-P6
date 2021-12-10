@@ -1,0 +1,19 @@
+Simulating the spread of infectious diseases in human communities is critical for predicting the
+trajectory of an epidemic and verifying various policies to control the devastating impacts of
+the outbreak. Many existing simulators are based on compartment models that divide people into
+a few subsets and simulate the dynamics among those subsets using hypothesized differential equations.
+However, these models lack the requisite granularity to study the effect of intelligent policies
+that influence every individual in a particular way. In this work, we introduce a simulator software
+capable of modeling a population structure and controlling the disease's propagation at an individualistic
+level. In order to estimate the confidence of the conclusions drawn from the simulator, we employ
+a comprehensive probabilistic approach where the entire population is constructed as a hierarchical
+random variable. This approach makes the inferred conclusions more robust against sampling artifacts
+and gives confidence bounds for decisions based on the simulation results. To showcase potential
+applications, the simulator parameters are set based on the formal statistics of the COVID-19 pandemic,
+and the outcome of a wide range of control measures is investigated. Furthermore, the simulator
+is used as the environment of a reinforcement learning problem to find the optimal policies to control
+the pandemic. The obtained experimental results indicate the simulator's adaptability and capacity
+in making sound predictions and a successful policy derivation example based on real-world data.
+As an exemplary application, our results show that the proposed policy discovery method can lead
+to control measures that produce significantly fewer infected individuals in the population and
+protect the health system against saturation. 

@@ -1,0 +1,19 @@
+Modern computing platforms tend to deploy multiple GPUs (2, 4, or more) on a single node to boost system
+performance, with each GPU having a large capacity of global memory and streaming multiprocessors
+(SMs). GPUs are an expensive resource, and boosting utilization of GPUs without causing performance
+degradation of individual workloads is an important and challenging problem. Although services
+like MPS support simultaneous execution of multiple co-operative kernels on a single device, they
+do not solve the above problem for uncooperative kernels, MPS being oblivious to the resource needs
+of each kernel. We propose a fully automated compiler-assisted scheduling framework. The compiler
+constructs GPU tasks by identifying kernel launches and their related GPU operations (e.g. memory
+allocations). For each GPU task, a probe is instrumented in the host-side code right before its launch
+point. At runtime, the probe conveys the information about the task's resource requirements (e.g.
+memory and compute cores) to a scheduler, such that the scheduler can place the task on an appropriate
+device based on the task's resource requirements and devices' load in a memory-safe, resource-aware
+manner. To demonstrate its advantages, we prototyped a throughput-oriented scheduler based on
+the framework, and evaluated it with the Rodinia benchmark suite and the Darknet neural network
+framework on NVIDIA GPUs. The results show that the proposed solution outperforms existing state-of-the-art
+solutions by leveraging its knowledge about applications' multiple resource requirements, which
+include memory as well as SMs. It improves throughput by up to 2.5x for Rodinia benchmarks, and up
+to 2.7x for Darknet neural networks. In addition, it improves job turnaround time by up to 4.9x, and
+limits individual kernel performance degradation to at most 2.5%. 

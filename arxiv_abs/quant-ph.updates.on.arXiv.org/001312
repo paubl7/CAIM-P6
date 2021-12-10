@@ -1,0 +1,19 @@
+Quantum error mitigation techniques are at the heart of quantum computation. Conventional quantum
+error correction codes are promising solutions, while they become infeasible in the noisy intermediate
+scale quantum (NISQ) era, hurdled by the required expensive resources. The variational quantum
+learning scheme (VQLS), which is composed of trainable quantum circuits and a gradient-based classical
+optimizer, could partially adapt the noise affect by tuning the trainable parameters. However,
+both empirical and theoretical results have shown that for most variational quantum algorithms,
+noise can deteriorate their performances evidently when the problem size scales. Furthermore,
+VQLS suffers from the barren plateau phenomenon. Here we devise a resource and runtime efficient
+scheme, i.e., quantum architecture search scheme (QAS), to better improve the robustness and trainability
+of VQLS. Particularly, given a learning task, QAS actively seeks an optimal architecture among
+all possible circuit architectures to balance benefits and side-effects brought by adding quantum
+gates, where more quantum operations enable a stronger expressive power of the quantum model but
+introduce a larger amount of noise and more serious barren plateau scenario. To this end, QAS implicitly
+learns a rule that can well suppress the influence of quantum noise and the barren plateau. We implement
+QAS on both the numerical simulator and real quantum hardware via the IBM cloud to accomplish the
+data classification and the quantum ground state approximation tasks. Numerical and experimental
+results exhibit that QAS outperforms conventional variational quantum algorithms with heuristic
+circuit architectures. Our work provides guidance for developing advanced learning based quantum
+error mitigation techniques on near-term quantum devices. 

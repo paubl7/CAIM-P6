@@ -1,0 +1,18 @@
+With the growing awareness to fairness in machine learning and the realization of the central role
+that data representation has in data processing tasks, there is an obvious interest in notions of
+fair data representations. The goal of such representations is that a model trained on data under
+the representation (e.g., a classifier) will be guaranteed to respect some fairness constraints.
+Such representations are useful when they can be fixed for training models on various different
+tasks and also when they serve as data filtering between the raw data (known to the representation
+designer) and potentially malicious agents that use the data under the representation to learn
+predictive models and make decisions. A long list of recent research papers strive to provide tools
+for achieving these goals. However, we prove that this is basically a futile effort. Roughly stated,
+we prove that no representation can guarantee the fairness of classifiers for different tasks trained
+using it; even the basic goal of achieving label-independent Demographic Parity fairness fails
+once the marginal data distribution shifts. More refined notions of fairness, like Odds Equality,
+cannot be guaranteed by a representation that does not take into account the task specific labeling
+rule with respect to which such fairness will be evaluated (even if the marginal data distribution
+is known a priory). Furthermore, except for trivial cases, no representation can guarantee Odds
+Equality fairness for any two different tasks, while allowing accurate label predictions for both.
+While some of our conclusions are intuitive, we formulate (and prove) crisp statements of such impossibilities,
+often contrasting impressions conveyed by many recent works on fair representations. 

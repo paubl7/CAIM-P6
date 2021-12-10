@@ -1,0 +1,18 @@
+Recurrent deep learning language models like the LSTM are often used to provide advanced cyber-defense
+for high-value assets. The underlying assumption for using LSTM networks for malware-detection
+is that the op-code sequence of malware could be treated as a (spoken) language representation.
+There are differences between any spoken-language (sequence of words/sentences) and the machine-language
+(sequence of op-codes). In this paper, we demonstrate that due to these inherent differences, an
+LSTM model with its default configuration as tuned for a spoken-language, may not work well to detect
+malware (using its op-code sequence) unless the network's essential hyper-parameters are tuned
+appropriately. In the process, we also determine the relative importance of all the different hyper-parameters
+of an LSTM network as applied to malware detection using their op-code sequence representations.
+We experimented with different configurations of LSTM networks, and altered hyper-parameters
+like the embedding-size, number of hidden layers, number of LSTM-units in a hidden layer, pruning/padding-length
+of the input-vector, activation-function, and batch-size. We discovered that owing to the enhanced
+complexity of the malware/machine-language, the performance of an LSTM network configured for
+an Intrusion Detection System, is very sensitive towards the number-of-hidden-layers, input
+sequence-length, and the choice of the activation-function. Also, for (spoken) language-modeling,
+the recurrent architectures by-far outperform their non-recurrent counterparts. Therefore,
+we also assess how sequential DL architectures like the LSTM compare against their non-sequential
+counterparts like the MLP-DNN for the purpose of malware-detection. 

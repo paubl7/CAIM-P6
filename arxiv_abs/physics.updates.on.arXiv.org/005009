@@ -1,0 +1,19 @@
+This paper present a simulation strategy for DNS of turbulent co-current Taylor bubble flow. This
+is a continuation of the work presented in [2] in which Large Eddy Simulation (LES) of co-current
+turbulent Taylor bubble flow was presented. It was observed that one of the main challenges is the
+physically accurate prediction of the behavior of the Taylor bubble skirt, and the related bubble
+shedding. An underestimation of the turbulent fluctuations in the wake of the Taylor bubble was
+observed in the LES results. It was suggested that this is related to over-prediction of the loss
+of void of the Taylor bubble due to bubble shedding induced by an LES mesh resolution which is not sufficient
+to capture the break-up and bubble formation accurately. To counter this, in the current work we
+present a DNS approach of co-current turbulent Taylor bubble flow called RK-Basilisk, based on
+the Basilisk code with local adaptive grid refinement. This strategy allows for very high mesh resolution
+near the bubble's interface while elsewhere the grid is allowed to be coarser. Each time step, the
+mesh is adapted based on a void fraction criterion. Basilisk's underlying data structure which
+is based on an 'octree' allows for much faster solution procedures and, therefore, a much greater
+number of grid points as compared to the LES simulations which were performed using the more general
+OpenFOAM code. We compare the results against experimental data of the same setting, as well as the
+co-current LES OpenFOAM results. The setting of turbulent Taylor bubble flow in co-current conditions
+allows for both lower order turbulence model development and the validation of more general two-phase
+modeling strategies. Taylor bubble flow in itself also bears relevance to specific two-phase flow
+situations. The current work contributes to an advancement in simulation capability for such situations.

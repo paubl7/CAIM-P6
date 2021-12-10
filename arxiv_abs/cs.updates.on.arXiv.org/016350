@@ -1,0 +1,19 @@
+In this thesis, we focus on the proposal of distributed workflow systems dedicated to the automation
+of administrative business processes. We propose an approach to build such systems by relying on
+the concepts of multiagent systems, Peer to Peer (P2P) architecture, Service-Oriented Architecture
+(SOA) and structured documents (artifacts) cooperative edition. Indeed, we develop mathematical
+tools that allow any workflow systems designer, to express each administrative process in the form
+of an attributed grammar whose symbols represent tasks to be executed, productions specify a scheduling
+of these tasks, and instances (the derivation trees that conform to it) represent the different
+execution scenarios leading to business goal states. The obtained grammatical model is then introduced
+into a proposed P2P system which is in charge of carrying out the completely decentralised execution
+of the underlying process's instances. The said system orchestrates a process's instance execution
+as a choreography during which, various software agents driven by human agents (actors), coordinate
+themselves through artifacts that they collectively edit. The exchanged artifacts represent
+the system's memory: they provide information on already executed tasks, on those ready to be executed
+and on their executors. The software agents are autonomous and identical: they execute the same
+unique protocol each time they receive an artifact. This protocol allows them to identify the tasks
+they must immediately execute, to execute them, to update the artifact and to disseminate it if necessary,
+for the continuation of the execution. Moreover, actors potentially have only a partial perception
+of processes in which they are involved. In practice, this means that certain tasks can be carried
+out confidentially. 

@@ -1,0 +1,18 @@
+In the past decade, we have witnessed a dramatically increasing volume of data collected from varied
+sources. The explosion of data has transformed the world as more information is available for collection
+and analysis than ever before. To maximize the utilization, various machine and deep learning models
+have been developed, e.g. CNN [1] and RNN [2], to study data and extract valuable information from
+different perspectives. While data-driven applications improve countless products, training
+models for hyperparameter tuning is still a time-consuming and resource-intensive process. Cloud
+computing provides infrastructure support for the training of deep learning applications. The
+cloud service providers, such as Amazon Web Services [3], create an isolated virtual environment
+(virtual machines and containers) for clients, who share physical resources, e.g., CPU and memory.
+On the cloud, resource management schemes are implemented to enable better sharing among users
+and boost the system-wide performance. However, general scheduling approaches, such as spread
+priority and balanced resource schedulers, do not work well with deep learning workloads. In this
+project, we propose SpeCon, a novel container scheduler that is optimized for shortlived deep learning
+applications. Based on virtualized containers, such as Kubernetes [4] and Docker [5], SpeCon analyzes
+the common characteristics of training processes. We design a suite of algorithms to monitor the
+progress of the training and speculatively migrate the slow-growing models to release resources
+for fast-growing ones. Specifically, the extensive experiments demonstrate that SpeCon improves
+the completion time of an individual job by up to 41.5%, 14.8% system-wide and 24.7% in terms of makespan.

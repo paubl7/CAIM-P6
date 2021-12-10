@@ -1,0 +1,18 @@
+Autoencoders are among the earliest introduced nonlinear models for unsupervised learning. Although
+they are widely adopted beyond research, it has been a longstanding open problem to understand mathematically
+the feature extraction mechanism that trained nonlinear autoencoders provide. In this work, we
+make progress in this problem by analyzing a class of two-layer weight-tied nonlinear autoencoders
+in the mean field framework. Upon a suitable scaling, in the regime of a large number of neurons, the
+models trained with stochastic gradient descent are shown to admit a mean field limiting dynamics.
+This limiting description reveals an asymptotically precise picture of feature learning by these
+models: their training dynamics exhibit different phases that correspond to the learning of different
+principal subspaces of the data, with varying degrees of nonlinear shrinkage dependent on the $\ell_{2}$-regularization
+and stopping time. While we prove these results under an idealized assumption of (correlated) Gaussian
+data, experiments on real-life data demonstrate an interesting match with the theory. The autoencoder
+setup of interests poses a nontrivial mathematical challenge to proving these results. In this
+setup, the "Lipschitz" constants of the models grow with the data dimension $d$. Consequently an
+adaptation of previous analyses requires a number of neurons $N$ that is at least exponential in
+$d$. Our main technical contribution is a new argument which proves that the required $N$ is only
+polynomial in $d$. We conjecture that $N\gg d$ is sufficient and that $N$ is necessarily larger than
+a data-dependent intrinsic dimension, a behavior that is fundamentally different from previously
+studied setups. 

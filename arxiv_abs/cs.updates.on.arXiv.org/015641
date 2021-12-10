@@ -1,0 +1,19 @@
+Deep learning has demonstrated radiograph screening performances that are comparable or superior
+to radiologists. However, recent studies show that deep models for thoracic disease classification
+usually show degraded performance when applied to external data. Such phenomena can be categorized
+into shortcut learning, where the deep models learn unintended decision rules that can fit the identically
+distributed training and test set but fail to generalize to other distributions. A natural way to
+alleviate this defect is explicitly indicating the lesions and focusing the model on learning the
+intended features. In this paper, we conduct extensive retrospective experiments to compare a
+popular thoracic disease classification model, CheXNet, and a thoracic lesion detection model,
+CheXDet. We first showed that the two models achieved similar image-level classification performance
+on the internal test set with no significant differences under many scenarios. Meanwhile, we found
+incorporating external training data even led to performance degradation for CheXNet. Then, we
+compared the models' internal performance on the lesion localization task and showed that CheXDet
+achieved significantly better performance than CheXNet even when given 80% less training data.
+By further visualizing the models' decision-making regions, we revealed that CheXNet learned
+patterns other than the target lesions, demonstrating its shortcut learning defect. Moreover,
+CheXDet achieved significantly better external performance than CheXNet on both the image-level
+classification task and the lesion localization task. Our findings suggest improving annotation
+granularity for training deep learning systems as a promising way to elevate future deep learning-based
+diagnosis systems for clinical usage. 

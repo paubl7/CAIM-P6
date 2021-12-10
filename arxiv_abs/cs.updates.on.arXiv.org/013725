@@ -1,0 +1,19 @@
+Logic locking aims to protect the intellectual property (IP) of integrated circuit (IC) designs
+throughout the globalized supply chain. The SAIL attack, based on tailored machine learning (ML)
+models, circumvents combinational logic locking with high accuracy and is amongst the most potent
+attacks as it does not require a functional IC acting as an oracle. In this work, we propose UNSAIL,
+a logic locking technique that inserts key-gate structures with the specific aim to confuse ML models
+like those used in SAIL. More specifically, UNSAIL serves to prevent attacks seeking to resolve
+the structural transformations of synthesis-induced obfuscation, which is an essential step
+for logic locking. Our approach is generic; it can protect any local structure of key-gates against
+such ML-based attacks in an oracle-less setting. We develop a reference implementation for the
+SAIL attack and launch it on both traditionally locked and UNSAIL-locked designs. In SAIL, a change-prediction
+model is used to determine which key-gate structures to restore using a reconstruction model. Our
+study on benchmarks ranging from the ISCAS-85 and ITC-99 suites to the OpenRISC Reference Platform
+System-on-Chip (ORPSoC) confirms that UNSAIL degrades the accuracy of the change-prediction
+model and the reconstruction model by an average of 20.13 and 17 percentage points (pp) respectively.
+When the aforementioned models are combined, which is the most powerful scenario for SAIL, UNSAIL
+reduces the attack accuracy of SAIL by an average of 11pp. We further demonstrate that UNSAIL thwarts
+other oracle-less attacks, i.e., SWEEP and the redundancy attack, indicating the generic nature
+and strength of our approach. Detailed layout-level evaluations illustrate that UNSAIL incurs
+minimal area and power overheads of 0.26% and 0.61%, respectively, on the million-gate ORPSoC design.

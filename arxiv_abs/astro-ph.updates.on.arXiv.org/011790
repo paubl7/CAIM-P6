@@ -1,0 +1,19 @@
+Dust grains play a major role in many astrophysical contexts. They influence the chemical, magnetic,
+dynamical and optical properties of their environment, from galaxies down to the interstellar
+medium, star-forming regions, and protoplanetary disks. Their coagulation leads to shifts in
+their size distribution and ultimately to the formation of planets. However, although the coagulation
+process is reasonably uncomplicated to implement numerically by itself, it is difficult to couple
+it with multi-dimensional hydrodynamics numerical simulations because of its high computational
+cost. We propose here a simple method to track the coagulation of grains at far lower cost. Given an
+initial grain size distribution, the state of the distribution at time t is solely determined by
+the value of a single variable integrated along the trajectory, independently of the specific path
+taken by the grains. Although this method cannot account for other processes than coagulation,
+it is mathematically exact, fast, inexpensive, and can be used to evaluate the impact of grain coagulation
+in most astrophysical contexts. Although other processes modifying the size-distribution, as
+fragmentation cannot be coupled to this method, it is applicable to all coagulation kernels in which
+local physical conditions and grain properties can be separated. We also describe another method
+to calculate the average electric charge of grains and the density of ions and electrons in environments
+shielded from radiation fields, given the density and temperature of the gas, the cosmic-ray ionization
+rate and the average mass of the ions. The equations we provide are fast to integrate numerically,
+and can be used in multidimensional numerical simulations to self-consistently calculate, on-the-fly,
+the local resistivities needed to model non-ideal magnetohydrodynamics. 

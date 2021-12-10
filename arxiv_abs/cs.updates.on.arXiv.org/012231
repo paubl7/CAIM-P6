@@ -1,0 +1,20 @@
+Hardware implementation of neuromorphic computing can significantly improve performance and
+energy efficiency of machine learning tasks implemented with spiking neural networks (SNNs),
+making these hardware platforms particularly suitable for embedded systems and other energy-constrained
+environments. We observe that the long bitlines and wordlines in a crossbar of the hardware create
+significant current variations when propagating spikes through its synaptic elements, which
+are typically designed with non-volatile memory (NVM). Such current variations create a thermal
+gradient within each crossbar of the hardware, depending on the machine learning workload and the
+mapping of neurons and synapses of the workload to these crossbars. \mr{This thermal gradient becomes
+significant at scaled technology nodes and it increases the leakage power in the hardware leading
+to an increase in the energy consumption.} We propose a novel technique to map neurons and synapses
+of SNN-based machine learning workloads to neuromorphic hardware. We make two novel contributions.
+First, we formulate a detailed thermal model for a crossbar in a neuromorphic hardware incorporating
+workload dependency, where the temperature of each NVM-based synaptic cell is computed considering
+the thermal contributions from its neighboring cells. Second, we incorporate this thermal model
+in the mapping of neurons and synapses of SNN-based workloads using a hill-climbing heuristic.
+The objective is to reduce the thermal gradient in crossbars. We evaluate our neuron and synapse
+mapping technique using 10 machine learning workloads for a state-of-the-art neuromorphic hardware.
+We demonstrate an average 11.4K reduction in the average temperature of each crossbar in the hardware,
+leading to a 52% reduction in the leakage power consumption (11% lower total energy consumption)
+compared to a performance-oriented SNN mapping technique. 

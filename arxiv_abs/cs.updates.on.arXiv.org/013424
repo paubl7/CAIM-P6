@@ -1,0 +1,20 @@
+Pseudo-Boolean monotone functions are unimodal functions which are trivial to optimize for some
+hillclimbers, but are challenging for a surprising number of evolutionary algorithms (EAs). A
+general trend is that EAs are efficient if parameters like the mutation rate are set conservatively,
+but may need exponential time otherwise. In particular, it was known that the $(1+1)$-EA and the
+$(1+\lambda)$-EA can optimize every monotone function in pseudolinear time if the mutation rate
+is $c/n$ for some $c<1$, but they need exponential time for some monotone functions for $c>2.2$.
+The second part of the statement was also known for the $(\mu+1)$-EA. In this paper we show that the
+first statement does not apply to the $(\mu+1)$-EA. More precisely, we prove that for every constant
+$c>0$ there is a constant integer $\mu_0$ such that the $(\mu+1)$-EA with mutation rate $c/n$ and
+population size $\mu_0\le\mu\le n$ needs superpolynomial time to optimize some monotone functions.
+Thus, increasing the population size by just a constant has devastating effects on the performance.
+This is in stark contrast to many other benchmark functions on which increasing the population size
+either increases the performance significantly, or affects performance mildly. The reason why
+larger populations are harmful lies in the fact that larger populations may temporarily decrease
+selective pressure on parts of the population. This allows unfavorable mutations to accumulate
+in single individuals and their descendants. If the population moves sufficiently fast through
+the search space, such unfavorable descendants can become ancestors of future generations, and
+the bad mutations are preserved. Remarkably, this effect only occurs if the population renews itself
+sufficiently fast, which can only happen far away from the optimum. This is counter-intuitive since
+usually optimization gets harder as we approach the optimum. 

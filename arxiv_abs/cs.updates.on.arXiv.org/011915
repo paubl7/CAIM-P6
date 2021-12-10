@@ -1,0 +1,18 @@
+While deep learning has shown promise in improving the automated diagnosis of disease based on chest
+X-rays, deep networks may exhibit undesirable behavior related to shortcuts. This paper studies
+the case of spurious class skew in which patients with a particular attribute are spuriously more
+likely to have the outcome of interest. For instance, clinical protocols might lead to a dataset
+in which patients with pacemakers are disproportionately likely to have congestive heart failure.
+This skew can lead to models that take shortcuts by heavily relying on the biased attribute. We explore
+this problem across a number of attributes in the context of diagnosing the cause of acute hypoxemic
+respiratory failure. Applied to chest X-rays, we show that i) deep nets can accurately identify
+many patient attributes including sex (AUROC = 0.96) and age (AUROC >= 0.90), ii) they tend to exploit
+correlations between such attributes and the outcome label when learning to predict a diagnosis,
+leading to poor performance when such correlations do not hold in the test population (e.g., everyone
+in the test set is male), and iii) a simple transfer learning approach is surprisingly effective
+at preventing the shortcut and promoting good generalization performance. On the task of diagnosing
+congestive heart failure based on a set of chest X-rays skewed towards older patients (age >= 63),
+the proposed approach improves generalization over standard training from 0.66 (95% CI: 0.54-0.77)
+to 0.84 (95% CI: 0.73-0.92) AUROC. While simple, the proposed approach has the potential to improve
+the performance of models across populations by encouraging reliance on clinically relevant manifestations
+of disease, i.e., those that a clinician would use to make a diagnosis. 

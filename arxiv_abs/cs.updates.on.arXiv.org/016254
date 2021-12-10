@@ -1,0 +1,18 @@
+Automatic segmentation methods are an important advancement in medical image analysis. Machine
+learning techniques, and deep neural networks in particular, are the state-of-the-art for most
+medical image segmentation tasks. Issues with class imbalance pose a significant challenge in
+medical datasets, with lesions often occupying a considerably smaller volume relative to the background.
+Loss functions used in the training of deep learning algorithms differ in their robustness to class
+imbalance, with direct consequences for model convergence. The most commonly used loss functions
+for segmentation are based on either the cross entropy loss, Dice loss or a combination of the two.
+We propose a Unified Focal loss, a new framework that generalises Dice and cross entropy-based losses
+for handling class imbalance. We evaluate our proposed loss function on three highly class imbalanced,
+publicly available medical imaging datasets: Breast Ultrasound 2017 (BUS2017), Brain Tumour
+Segmentation 2020 (BraTS20) and Kidney Tumour Segmentation 2019 (KiTS19). We compare our loss
+function performance against six Dice or cross entropy-based loss functions, and demonstrate
+that our proposed loss function is robust to class imbalance, outperforming the other loss functions
+across datasets. Finally, we use the Unified Focal loss together with deep supervision to achieve
+state-of-the-art results without modification of the original U-Net architecture, with a mean
+Dice similarity coefficient (DSC)=0.948 on BUS2017, enhancing tumour region DSC=0.800 on BraTS20
+and kidney tumour DSC=0.758 on KiTS19. This highlights the importance of carefully selecting a
+suitable loss function prior to the use of more complex architectures. 

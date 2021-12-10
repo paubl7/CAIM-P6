@@ -1,0 +1,19 @@
+APSP with small integer weights in undirected graphs [Seidel'95, Galil and Margalit'97] has an
+$\tilde{O}(n^\omega)$ time algorithm, where $\omega<2.373$ is the matrix multiplication exponent.
+APSP in directed graphs with small weights however, has a much slower running time that would be $\Omega(n^{2.5})$
+even if $\omega=2$ [Zwick'02]. To understand this $n^{2.5}$ bottleneck, we build a web of reductions
+around directed unweighted APSP. We show that it is fine-grained equivalent to computing a rectangular
+Min-Plus product for matrices with integer entries; the dimensions and entry size of the matrices
+depend on the value of $\omega$. As a consequence, we establish an equivalence between APSP in directed
+unweighted graphs, APSP in directed graphs with small $(\tilde{O}(1))$ integer weights, All-Pairs
+Longest Paths in DAGs with small weights, approximate APSP with additive error $c$ in directed graphs
+with small weights, for $c\le \tilde{O}(1)$ and several other graph problems. We also provide fine-grained
+reductions from directed unweighted APSP to All-Pairs Shortest Lightest Paths (APSLP) in undirected
+graphs with $\{0,1\}$ weights and $\#_{\text{mod}\ c}$APSP in directed unweighted graphs (computing
+counts mod $c$). We complement our hardness results with new algorithms. We improve the known algorithms
+for APSLP in directed graphs with small integer weights and for approximate APSP with sublinear
+additive error in directed unweighted graphs. Our algorithm for approximate APSP with sublinear
+additive error is optimal, when viewed as a reduction to Min-Plus product. We also give new algorithms
+for variants of #APSP in unweighted graphs, as well as a near-optimal $\tilde{O}(n^3)$-time algorithm
+for the original #APSP problem in unweighted graphs. Our techniques also lead to a simpler alternative
+for the original APSP problem in undirected graphs with small integer weights. 

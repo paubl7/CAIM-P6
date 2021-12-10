@@ -1,0 +1,20 @@
+The subgraph-centric programming model is a promising approach and has been applied in many state-of-the-art
+distributed graph computing frameworks. The graph partition algorithm plays an important role
+in the overall performance of subgraph-centric frameworks. However, traditional graph partition
+algorithms have significant difficulties in processing large-scale power-law graphs. The major
+problem is the communication bottleneck found in many subgraph-centric frameworks. Detailed
+analysis indicates that the communication bottleneck is caused by the huge communication volume
+or the extreme message imbalance among partitioned subgraphs. The traditional partition algorithms
+do not consider both factors at the same time, especially on power-law graphs. In this paper, we propose
+a novel efficient and balanced greedy graph partition algorithm (EBG) which grants appropriate
+weights to the overall communication cost reduction and communication balance. We observe that
+the number of replicated vertices and the balance of edge and vertex assignment have a great influence
+on communication patterns of distributed subgraph-centric frameworks, which further affect
+the overall performance. Based on this insight, we design an evaluation function that quantifies
+the proportion of replicated vertices and the balance of edges and vertices assignments as important
+parameters. Experiments show that EBG reduces replication factor and communication by 32.3% and
+24.3% respectively than other balanced partition algorithms. When deployed in the subgraph-centric
+framework, it reduces the running time on power-law graphs by an average of 25.4% compared with the
+state-of-the-art partition algorithm. Our results indicate that EBG has a great potential in improving
+the performance of subgraph-centric frameworks for the parallel large-scale power-law graph
+processing. 

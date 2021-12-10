@@ -1,0 +1,20 @@
+For any suitable Optimal Control Problem (OCP) which satisfies the Principle of Optimality, there
+exists a value function, defined as the unique viscosity solution to a HJB PDE, and which can be used
+to design an optimal feedback controller for the given OCP. Solving the HJB analytically is rarely
+possible, and existing numerical approximation schemes largely rely on discretization - implying
+that the resulting approximate value functions may not have the useful property of being uniformly
+less than or equal to the true value function (ie be sub-value functions). Furthermore, controllers
+obtained from such schemes currently have no associated bound on performance. To address these
+issues, for a given OCP, we propose a sequence of Sum-Of-Squares (SOS) problems, each of which yields
+a polynomial sub-solution to the HJB PDE, and show that the resulting sequence of polynomial sub-solutions
+converges to the value function of the OCP in the $L^1$ norm. Furthermore, for each polynomial sub-solution
+in this sequence we define an associated sublevel set, and show that the resulting sequence of sublevel
+sets converges to the sub-level set of the value function of the OCP in the volume metric. Next, for
+any approximate value function, obtained from an SOS program or any other method (e.g. discretization),
+we construct an associated feedback controller, and show that sub-optimality of this controller
+as applied to the OCP is bounded by the distance between the approximate and true value function of
+the OCP in the $W^{1,\infty}$ (Sobolev) norm. This result implies approximation of value functions
+in the $W^{1,\infty}$ norm results in feedback controllers with performance that can be made arbitrarily
+close to optimality. Finally, we demonstrate numerically that by solving our proposed SOS problem
+we are able to accurately approximate value functions, design controllers and estimate reachable
+sets. 

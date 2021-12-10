@@ -1,0 +1,20 @@
+We study a distributed sampling problem where a set of processors want to output (approximately)
+independent and identically distributed samples from a joint distribution with the help of a common
+message from a coordinator. Each processor has access to a subset of sources from a set of independent
+sources of "shared" randomness. We consider two cases -- in the "omniscient coordinator setting",
+the coordinator has access to all these sources of shared randomness, while in the "oblivious coordinator
+setting", it has access to none. All processors and the coordinator may privately randomize. In
+the omniscient coordinator setting, when the subsets at the processors are disjoint (individually
+shared randomness model), we characterize the rate of communication required from the coordinator
+to the processors over a multicast link. For the two-processor case, the optimal rate matches a special
+case of relaxed Wyner's common information proposed by Gastpar and Sula [IEEE Information Theory
+Workshop, 2019] thereby providing an operational meaning to the latter. We also give an upper bound
+on the communication rate for the "randomness-on-the-forehead" model where each processor observes
+all but one source of randomness and we give an achievable strategy in the omniscient coordinator
+setting for the general case where the processors have access to arbitrary subsets of sources of
+randomness. Also, we consider a more general model where the processors observe components of correlated
+sources (with the coordinator observing all the components), where we characterize the communication
+rate when all the processors wish to output the same random sequence. In the oblivious coordinator
+setting, we completely characterize the trade-off region between the communication and shared
+randomness rates for the general case where the processors have access to arbitrary subsets of sources
+of randomness. 

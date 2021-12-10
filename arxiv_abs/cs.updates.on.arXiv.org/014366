@@ -1,0 +1,18 @@
+Quantile regression is a technique to analyse the effects of a set of independent variables on the
+entire distribution of a continuous response variable. Quantile regression presents a complete
+picture of the effects on the location, scale, and shape of the dependent variable at all points,
+not just at the mean. This research focuses on two challenges for the analysis of citation counts
+by quantile regression: discontinuity and substantial mass points at lower counts, such as zero,
+one, two, and three. A Bayesian two-part hurdle quantile regression model was proposed by King and
+Song (2019) as a suitable candidate for modeling count data with a substantial mass point at zero.
+Their model allows the zeros and non-zeros to be modeled independently but simultaneously. It uses
+quantile regression for modeling the nonzero data and logistic regression for modeling the probability
+of zeros versus nonzeros. Nevertheless, the current paper shows that substantial mass points also
+at one, two, and three for citation counts will nearly certainly affect the estimation of parameters
+in the quantile regression part of the model in a similar manner to the mass point at zero. We update
+the King and Song model by shifting the hurdle point from zero to three, past the main mass points.
+The new model delivers more accurate quantile regression for moderately to highly cited articles,
+and enables estimates of the extent to which factors influence the chances that an article will be
+low cited. To illustrate the advantage and potential of this method, it is applied separately to
+both simulated citation counts and also seven Scopus fields with collaboration, title length,
+and journal internationality as independent variables. 

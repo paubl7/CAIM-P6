@@ -1,0 +1,19 @@
+We devise an algorithm for maintaining the visibility polygon of any query point in a dynamic polygonal
+domain, i.e., as the polygonal domain is modified with vertex insertions and deletions to its obstacles,
+we update the data structures that store the visibility polygon of the query point. After preprocessing
+the initial input polygonal domain to build a few data structures, our algorithm takes O(k(\lg{|VP_{\cal
+P'}(q)|})+(\lg{n'})^{2}+h) (resp. O(k(\lg n')^2+(\lg|VP_{\cal P'}(q)|)+h)) worst-case time
+to update data structures that store visibility polygon VP_{\cal P'}(q) of a query point q when any
+vertex v is inserted to (resp. deleted from) any obstacle of the current polygonal domain \cal P'.
+Here, n' is the number of vertices in \cal P', h is the number of obstacles in \cal P', VP_{\cal P'}(q)
+is the visibility polygon of q in \cal P' (|VP_{\cal P'}(q)| is the number of vertices of VP_{\cal
+P'}(q)), and k is the number of combinatorial changes in VP_{\cal P'}(q) due to the insertion (resp.
+deletion) of v. As an application of the above algorithm, we also devise an algorithm for maintaining
+the visibility graph of a dynamic polygonal domain, i.e., as the polygonal domain is modified with
+vertex insertions and deletions to its obstacles, we update data structures that store the visibility
+graph of the polygonal domain. After preprocessing the initial input polygonal domain, our dynamic
+algorithm takes O(k(\lg{n'})^{2}+h) (resp. O(k(\lg{n'})^{2}+h)) worst-case time to update
+data structures that store the visibility graph when any vertex v is inserted to (resp. deleted from)
+any obstacle of the current polygonal domain \cal P'. Here, n' is the number of vertices in \cal P',
+h is the number of obstacles in \cal P', and k is the number of combinatorial changes in the visibility
+graph of \cal P' due to the insertion (resp. deletion) of v. 

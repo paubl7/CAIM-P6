@@ -1,0 +1,18 @@
+Decentralized multi-agent control has broad applications, ranging from multi-robot cooperation
+to distributed sensor networks. In decentralized multi-agent control, systems are complex with
+unknown or highly uncertain dynamics, where traditional model-based control methods can hardly
+be applied. Compared with model-based control in control theory, deep reinforcement learning
+(DRL) is promising to learn the controller/policy from data without the knowing system dynamics.
+However, to directly apply DRL to decentralized multi-agent control is challenging, as interactions
+among agents make the learning environment non-stationary. More importantly, the existing multi-agent
+reinforcement learning (MARL) algorithms cannot ensure the closed-loop stability of a multi-agent
+system from a control-theoretic perspective, so the learned control polices are highly possible
+to generate abnormal or dangerous behaviors in real applications. Hence, without stability guarantee,
+the application of the existing MARL algorithms to real multi-agent systems is of great concern,
+e.g., UAVs, robots, and power systems, etc. In this paper, we aim to propose a new MARL algorithm for
+decentralized multi-agent control with a stability guarantee. The new MARL algorithm, termed
+as a multi-agent soft-actor critic (MASAC), is proposed under the well-known framework of "centralized-training-with-decentralized-execution".
+The closed-loop stability is guaranteed by the introduction of a stability constraint during the
+policy improvement in our MASAC algorithm. The stability constraint is designed based on Lyapunov's
+method in control theory. To demonstrate the effectiveness, we present a multi-agent navigation
+example to show the efficiency of the proposed MASAC algorithm. 

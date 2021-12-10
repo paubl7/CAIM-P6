@@ -1,0 +1,19 @@
+Most existing lightweight RGB-D salient object detection (SOD) models are based on two-stream
+structure or single-stream structure. The former one first uses two sub-networks to extract unimodal
+features from RGB and depth images, respectively, and then fuses them for SOD. While, the latter
+one directly extracts multi-modal features from the input RGB-D images and then focuses on exploiting
+cross-level complementary information. However, two-stream structure based models inevitably
+require more parameters and single-stream structure based ones cannot well exploit the cross-modal
+complementary information since they ignore the modality difference. To address these issues,
+we propose to employ the middle-level fusion structure for designing lightweight RGB-D SOD model
+in this paper, which first employs two sub-networks to extract low- and middle-level unimodal features,
+respectively, and then fuses those extracted middle-level unimodal features for extracting corresponding
+high-level multi-modal features in the subsequent sub-network. Different from existing models,
+this structure can effectively exploit the cross-modal complementary information and significantly
+reduce the network's parameters, simultaneously. Therefore, a novel lightweight SOD model is
+designed, which contains a information-aware multi-modal feature fusion (IMFF) module for effectively
+capturing the cross-modal complementary information and a lightweight feature-level and decision-level
+feature fusion (LFDF) module for aggregating the feature-level and the decision-level saliency
+information in different stages with less parameters. Our proposed model has only 3.9M parameters
+and runs at 33 FPS. The experimental results on several benchmark datasets verify the effectiveness
+and superiority of the proposed method over some state-of-the-art methods. 

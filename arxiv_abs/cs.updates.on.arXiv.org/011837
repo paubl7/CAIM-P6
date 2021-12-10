@@ -1,0 +1,18 @@
+In this paper, we develop a knowledge-assisted deep reinforcement learning (DRL) algorithm to
+design wireless schedulers in the fifth-generation (5G) cellular networks with time-sensitive
+traffic. Since the scheduling policy is a deterministic mapping from channel and queue states to
+scheduling actions, it can be optimized by using deep deterministic policy gradient (DDPG). We
+show that a straightforward implementation of DDPG converges slowly, has a poor quality-of-service
+(QoS) performance, and cannot be implemented in real-world 5G systems, which are non-stationary
+in general. To address these issues, we propose a theoretical DRL framework, where theoretical
+models from wireless communications are used to formulate a Markov decision process in DRL. To reduce
+the convergence time and improve the QoS of each user, we design a knowledge-assisted DDPG (K-DDPG)
+that exploits expert knowledge of the scheduler deign problem, such as the knowledge of the QoS,
+the target scheduling policy, and the importance of each training sample, determined by the approximation
+error of the value function and the number of packet losses. Furthermore, we develop an architecture
+for online training and inference, where K-DDPG initializes the scheduler off-line and then fine-tunes
+the scheduler online to handle the mismatch between off-line simulations and non-stationary real-world
+systems. Simulation results show that our approach reduces the convergence time of DDPG significantly
+and achieves better QoS than existing schedulers (reducing 30% ~ 50% packet losses). Experimental
+results show that with off-line initialization, our approach achieves better initial QoS than
+random initialization and the online fine-tuning converges in few minutes. 

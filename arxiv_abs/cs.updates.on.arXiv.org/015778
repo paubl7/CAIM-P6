@@ -1,0 +1,19 @@
+Generating free-viewpoint videos is critical for immersive VR/AR experience but recent neural
+advances still lack the editing ability to manipulate the visual perception for large dynamic scenes.
+To fill this gap, in this paper we propose the first approach for editable photo-realistic free-viewpoint
+video generation for large-scale dynamic scenes using only sparse 16 cameras. The core of our approach
+is a new layered neural representation, where each dynamic entity including the environment itself
+is formulated into a space-time coherent neural layered radiance representation called ST-NeRF.
+Such layered representation supports fully perception and realistic manipulation of the dynamic
+scene whilst still supporting a free viewing experience in a wide range. In our ST-NeRF, the dynamic
+entity/layer is represented as continuous functions, which achieves the disentanglement of location,
+deformation as well as the appearance of the dynamic entity in a continuous and self-supervised
+manner. We propose a scene parsing 4D label map tracking to disentangle the spatial information
+explicitly, and a continuous deform module to disentangle the temporal motion implicitly. An object-aware
+volume rendering scheme is further introduced for the re-assembling of all the neural layers. We
+adopt a novel layered loss and motion-aware ray sampling strategy to enable efficient training
+for a large dynamic scene with multiple performers, Our framework further enables a variety of editing
+functions, i.e., manipulating the scale and location, duplicating or retiming individual neural
+layers to create numerous visual effects while preserving high realism. Extensive experiments
+demonstrate the effectiveness of our approach to achieve high-quality, photo-realistic, and
+editable free-viewpoint video generation for dynamic scenes. 

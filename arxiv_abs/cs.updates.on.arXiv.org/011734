@@ -1,0 +1,19 @@
+We consider the sensitivity of algorithms for the maximum matching problem against edge and vertex
+modifications. Algorithms with low sensitivity are desirable because they are robust to edge failure
+or attack. In this work, we show a randomized $(1-\epsilon)$-approximation algorithm with worst-case
+sensitivity $O_{\epsilon}(1)$, which substantially improves upon the $(1-\epsilon)$-approximation
+algorithm of Varma and Yoshida (arXiv 2020) that obtains average sensitivity $n^{O(1/(1+\epsilon^2))}$
+sensitivity algorithm, and show a deterministic $1/2$-approximation algorithm with sensitivity
+$\exp(O(\log^*n))$ for bounded-degree graphs. We show that any deterministic constant-factor
+approximation algorithm must have sensitivity $\Omega(\log^* n)$. Our results imply that randomized
+algorithms are strictly more powerful than deterministic ones in that the former can achieve sensitivity
+independent of $n$ whereas the latter cannot. We also show analogous results for vertex sensitivity,
+where we remove a vertex instead of an edge. As an application of our results, we give an algorithm
+for the online maximum matching with $O_{\epsilon}(n)$ total replacements in the vertex-arrival
+model. By comparison, Bernstein et al. (J. ACM 2019) gave an online algorithm that always outputs
+the maximum matching, but only for bipartite graphs and with $O(n\log n)$ total replacements. Finally,
+we introduce the notion of normalized weighted sensitivity, a natural generalization of sensitivity
+that accounts for the weights of deleted edges. We show that if all edges in a graph have polynomially
+bounded weight, then given a trade-off parameter $\alpha>2$, there exists an algorithm that outputs
+a $\frac{1}{4\alpha}$-approximation to the maximum weighted matching in $O(m\log_{\alpha}
+n)$ time, with normalized weighted sensitivity $O(1)$. See paper for full abstract. 

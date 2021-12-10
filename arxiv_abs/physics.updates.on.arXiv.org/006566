@@ -1,0 +1,20 @@
+While the treatment of chemically relevant systems containing hundreds or even thousands of electrons
+remains beyond the reach of quantum devices, the development of quantum-classical hybrid algorithms
+to resolve electronic correlation presents a promising pathway toward a quantum advantage in the
+computation of molecular electronic structure. Such hybrid algorithms treat the exponentially
+scaling part of the calculation -- the static (multireference) correlation -- on the quantum computer
+and the non-exponentially scaling part -- the dynamic correlation -- on the classical computer.
+While a variety of such algorithms have been proposed, due to the dependence on the wave function
+of most classical methods for dynamic correlation, the development of easy-to-use classical post-processing
+implementations has been limited. Here we present a novel hybrid-classical algorithm that computes
+a molecule's all-electron energy and properties on the classical computer from a critically important
+simulation of the static correlation on the quantum computer. Significantly, for the all-electron
+calculations we circumvent the wave function by using density-matrix methods that only require
+input of the statically correlated two-electron reduced density matrix (2-RDM), which can be efficiently
+measured in the quantum simulation. Although the algorithm is completely general, we test it with
+two classical 2-RDM methods, the anti-Hermitian contracted Schr\"odinger equation (ACSE) theory
+and multiconfiguration pair-density functional theory (MC-PDFT), using the recently developed
+quantum ACSE method for the simulation of the statically correlated 2-RDM. We obtain experimental
+accuracy for the relative energies of all three benzyne isomers and thereby, demonstrate the ability
+of the quantum-classical hybrid algorithms to achieve chemically relevant results and accuracy
+on currently available quantum computers. 

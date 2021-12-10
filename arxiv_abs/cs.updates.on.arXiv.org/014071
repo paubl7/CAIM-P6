@@ -1,0 +1,20 @@
+This thesis is a proof of concept for the potential of Variational Auto-Encoder (VAE) on representation
+learning of real-world Knowledge Graphs (KG). Inspired by successful approaches to the generation
+of molecular graphs, we evaluate the capabilities of our model, the Relational Graph Variational
+Auto-Encoder (RGVAE). The impact of the modular hyperparameter choices, encoding through graph
+convolutions, graph matching and latent space prior, is compared. The RGVAE is first evaluated
+on link prediction. The mean reciprocal rank (MRR) scores on the two datasets FB15K-237 and WN18RR
+are compared to the embedding-based model DistMult. A variational DistMult and a RGVAE without
+latent space prior constraint are implemented as control models. The results show that between
+different settings, the RGVAE with relaxed latent space, scores highest on both datasets, yet does
+not outperform the DistMult. Further, we investigate the latent space in a twofold experiment:
+first, linear interpolation between the latent representation of two triples, then the exploration
+of each latent dimension in a $95\%$ confidence interval. Both interpolations show that the RGVAE
+learns to reconstruct the adjacency matrix but fails to disentangle. For the last experiment we
+introduce a new validation method for the FB15K-237 data set. The relation type-constrains of generated
+triples are filtered and matched with entity types. The observed rate of valid generated triples
+is insignificantly higher than the random threshold. All generated and valid triples are unseen.
+A comparison between different latent space priors, using the $\delta$-VAE method, reveals a decoder
+collapse. Finally we analyze the limiting factors of our approach compared to molecule generation
+and propose solutions for the decoder collapse and successful representation learning of multi-relational
+KGs. 

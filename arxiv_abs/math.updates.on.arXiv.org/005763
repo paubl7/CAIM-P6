@@ -1,0 +1,19 @@
+We propose a goodness-of-fit test for degree-corrected stochastic block models (DCSBM). The test
+is based on an adjusted chi-square statistic for measuring equality of means among groups of $n$
+multinomial distributions with $d_1,\dots,d_n$ observations. In the context of network models,
+the number of multinomials, $n$, grows much faster than the number of observations, $d_i$, hence
+the setting deviates from classical asymptotics. We show that a simple adjustment allows the statistic
+to converge in distribution, under null, as long as the harmonic mean of $\{d_i\}$ grows to infinity.
+This result applies to large sparse networks where the role of $d_i$ is played by the degree of node
+$i$. Our distributional results are nonasymptotic, with explicit constants, providing finite-sample
+bounds on the Kolmogorov-Smirnov distance to the target distribution. When applied sequentially,
+the test can also be used to determine the number of communities. The test operates on a (row) compressed
+version of the adjacency matrix, conditional on the degrees, and as a result is highly scalable to
+large sparse networks. We incorporate a novel idea of compressing the columns based on a $(K+1)$-community
+assignment when testing for $K$ communities. This approach increases the power in sequential applications
+without sacrificing computational efficiency, and we prove its consistency in recovering the
+number of communities. Since the test statistic does not rely on a specific alternative, its utility
+goes beyond sequential testing and can be used to simultaneously test against a wide range of alternatives
+outside the DCSBM family. We show the effectiveness of the approach by extensive numerical experiments
+with simulated and real data. In particular, applying the test to the Facebook-100 dataset, we find
+that a DCSBM with a small number of communities is far from a good fit in almost all cases. 

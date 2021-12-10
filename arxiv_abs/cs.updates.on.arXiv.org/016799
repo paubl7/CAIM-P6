@@ -1,0 +1,19 @@
+This paper considers quantized distributed optimization algorithms in the parameter server framework
+of distributed training. We introduce the principle we call Differential Quantization (DQ) that
+prescribes that the past quantization errors should be compensated in such a way as to direct the
+descent trajectory of a quantized algorithm towards that of its unquantized counterpart. Assuming
+that the objective function is smooth and strongly convex, we prove that in the limit of large problem
+dimension, Differentially Quantized Gradient Descent (DQ-GD) attains a linear contraction factor
+of $\max\{\sigma_{\mathrm{GD}}, 2^{-R}\}$, where $\sigma_{\mathrm{GD}}$ is the contraction
+factor of unquantized gradient descent (GD). Thus at any $R\geq\log_2 1 /\sigma_{\mathrm{GD}}$
+bits, the contraction factor of DQ-GD is the same as that of unquantized GD, i.e., there is no loss
+due to quantization. We show a converse demonstrating that no quantized gradient descent algorithm
+can converge faster than $\max\{\sigma_{\mathrm{GD}}, 2^{-R}\}$. In contrast, naively quantized
+GD where the worker directly quantizes the gradient barely attains $\sigma_{\mathrm{GD}} + 2^{-R}$.
+The principle of differential quantization continues to apply to gradient methods with momentum
+such as Nesterov's accelerated gradient descent, and Polyak's heavy ball method. For these algorithms
+as well, if the rate is above a certain threshold, there is no loss in contraction factor obtained
+by the differentially quantized algorithm compared to its unquantized counterpart, and furthermore,
+the differentially quantized heavy ball method attains the optimal contraction achievable among
+all (even unquantized) gradient methods. Experimental results on both simulated and real-world
+least-squares problems validate our theoretical analysis. 

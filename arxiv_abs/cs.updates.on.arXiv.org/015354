@@ -1,0 +1,20 @@
+This work concerns the numerical approximation of a multicomponent compressible Euler system
+for a fluid mixture in multiple space dimensions on unstructured meshes with a high-order discontinuous
+Galerkin spectral element method (DGSEM). We first derive an entropy stable (ES) and robust (i.e.,
+that preserves the positivity of the partial densities and internal energy) three-point finite
+volume scheme using relaxation-based approximate Riemann solvers from Bouchut [Nonlinear stability
+of finite volume methods for hyperbolic conservation laws and well-balanced schemes for sources,
+Birkhauser] and Coquel and Perthame [SINUM, 35, 1998]. Then, we consider the DGSEM based on collocation
+of quadrature and interpolation points which relies on the framework introduced by Fisher and Carpenter
+[JCP, 252, 2013] and Gassner [SISC, 35, 2013]. We replace the physical fluxes in the integrals over
+discretization elements by entropy conservative numerical fluxes [Tadmor, MCOM, 49, 1987], while
+ES numerical fluxes are used at element interfaces. We thus derive a two-point numerical flux satisfying
+the Tadmor's entropy conservation condition and use the numerical flux from the three-point scheme
+as ES flux. Time discretization is performed with a strong-stability preserving Runge-Kutta scheme.
+We then derive conditions on the numerical parameters to guaranty a semi-discrete entropy inequality
+as well as positivity of the cell average of the partial densities and internal energy of the fully
+discrete DGSEM at any approximation order. The later results allow to use existing limiters in order
+to restore positivity of nodal values within elements. The scheme also resolves exactly stationary
+material interfaces. Numerical experiments in one and two space dimensions on flows with discontinuous
+solutions support the conclusions of our analysis and highlight stability, robustness and high
+resolution of the scheme. 

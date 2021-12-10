@@ -1,0 +1,20 @@
+The abundant sequential documents such as online archival, social media and news feeds are streamingly
+updated, where each chunk of documents is incorporated with smoothly evolving yet dependent topics.
+Such digital texts have attracted extensive research on dynamic topic modeling to infer hidden
+evolving topics and their temporal dependencies. However, most of the existing approaches focus
+on single-topic-thread evolution and ignore the fact that a current topic may be coupled with multiple
+relevant prior topics. In addition, these approaches also incur the intractable inference problem
+when inferring latent parameters, resulting in a high computational cost and performance degradation.
+In this work, we assume that a current topic evolves from all prior topics with corresponding coupling
+weights, forming the multi-topic-thread evolution. Our method models the dependencies between
+evolving topics and thoroughly encodes their complex multi-couplings across time steps. To conquer
+the intractable inference challenge, a new solution with a set of novel data augmentation techniques
+is proposed, which successfully discomposes the multi-couplings between evolving topics. A fully
+conjugate model is thus obtained to guarantee the effectiveness and efficiency of the inference
+technique. A novel Gibbs sampler with a backward-forward filter algorithm efficiently learns
+latent timeevolving parameters in a closed-form. In addition, the latent Indian Buffet Process
+(IBP) compound distribution is exploited to automatically infer the overall topic number and customize
+the sparse topic proportions for each sequential document without bias. The proposed method is
+evaluated on both synthetic and real-world datasets against the competitive baselines, demonstrating
+its superiority over the baselines in terms of the low per-word perplexity, high coherent topics,
+and better document time prediction. 

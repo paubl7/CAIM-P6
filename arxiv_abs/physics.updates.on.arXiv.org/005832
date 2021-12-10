@@ -1,0 +1,20 @@
+This study creates a physiologically realistic virtual patient database (VPD), representing
+the human arterial system, for the primary purpose of studying the affects of arterial disease on
+haemodynamics. A low dimensional representation of an anatomically detailed arterial network
+is outlined, and a physiologically realistic posterior distribution for its parameters is constructed
+through a Bayesian approach. This approach combines both physiological/geometrical constraints
+and the available measurements reported in the literature. A key contribution of this work is to
+present a framework for including all such available information for the creation of virtual patients
+(VPs). The Markov Chain Monte Carlo (MCMC) method is used to sample random VPs from this posterior
+distribution, and the pressure and flow-rate profiles associated with the VPs are computed through
+a model of pulse wave propagation. This combination of the arterial network parameters (representing
+the VPs) and the haemodynamics waveforms of pressure and flow-rates at various locations (representing
+functional response of the VPs) makes up the VPD. While 75,000 VPs are sampled from the posterior
+distribution, 10,000 are discarded as the initial burn-in period. A further 12,857 VPs are subsequently
+removed due to the presence of negative average flow-rate. Due to an undesirable behaviour observed
+in some VPs -- asymmetric under- and over-damped pressure and flow-rate profiles in the left and
+right sides of the arterial system -- a filter is proposed for their removal. The final VPD has 28,868
+subjects. It is shown that the methodology is appropriate by comparing the VPD statistics to those
+reported in literature across real populations. A good agreement between the two is found while
+respecting physiological/geometrical constraints. The pre-filter database is made available
+at https://doi.org/10.5281/zenodo.4549764. 

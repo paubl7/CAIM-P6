@@ -1,0 +1,19 @@
+Taking the deep learning-based algorithms into account has become a crucial way to boost object
+detection performance in aerial images. While various neural network representations have been
+developed, previous works are still inefficient to investigate the noise-resilient performance,
+especially on aerial images with noise taken by the cameras with telephoto lenses, and most of the
+research is concentrated in the field of denoising. Of course, denoising usually requires an additional
+computational burden to obtain higher quality images, while noise-resilient is more of a description
+of the robustness of the network itself to different noises, which is an attribute of the algorithm
+itself. For this reason, the work will be started by analyzing the noise-resilient performance
+of the neural network, and then propose two hypotheses to build a noise-resilient structure. Based
+on these hypotheses, we compare the noise-resilient ability of the Oct-ResNet with frequency division
+processing and the commonly used ResNet. In addition, previous feature pyramid networks used for
+aerial object detection tasks are not specifically designed for the frequency division feature
+maps of the Oct-ResNet, and they usually lack attention to bridging the semantic gap between diverse
+feature maps from different depths. On the basis of this, a novel octave convolution-based semantic
+attention feature pyramid network (OcSaFPN) is proposed to get higher accuracy in object detection
+with noise. The proposed algorithm tested on three datasets demonstrates that the proposed OcSaFPN
+achieves a state-of-the-art detection performance with Gaussian noise or multiplicative noise.
+In addition, more experiments have proved that the OcSaFPN structure can be easily added to existing
+algorithms, and the noise-resilient ability can be effectively improved. 

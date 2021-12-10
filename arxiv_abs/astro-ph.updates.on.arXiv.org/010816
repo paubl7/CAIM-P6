@@ -1,0 +1,19 @@
+[Abridged] An increasing number of astronomical instruments (on Earth and space-based) provide
+hyperspectral images, that is three-dimensional data cubes with two spatial dimensions and one
+spectral dimension. The intrinsic limitation in spatial resolution of these instruments implies
+that the spectra associated with pixels of such images are most often mixtures of the spectra of the
+"pure" components that exist in the considered region. In order to estimate the spectra and spatial
+abundances of these pure components, we here propose an original blind signal separation (BSS),
+that is to say an unsupervised unmixing method. Our approach is based on extensions and combinations
+of linear BSS methods that belong to two major classes of methods, namely nonnegative matrix factorization
+(NMF) and Sparse Component Analysis (SCA). The former performs the decomposition of hyperspectral
+images, as a set of pure spectra and abundance maps, by using nonnegativity constraints, but the
+estimated solution is not unique: It highly depends on the initialization of the algorithm. The
+considered SCA methods are based on the assumption of the existence of points or tiny spatial zones
+where only one source is active (i.e., one pure component is present). In real conditions, the assumption
+of perfect single-source points or zones is not always realistic. In such conditions, SCA yields
+approximate versions of the unknown sources and mixing coefficients. We propose to use part of these
+preliminary estimates from the SCA to initialize several runs of the NMF to constrain the convergence
+of the NMF algorithm. Detailed tests with synthetic data show that the decomposition achieved with
+such hybrid methods is nearly unique and provides good performance, illustrating the potential
+of applications to real data. 

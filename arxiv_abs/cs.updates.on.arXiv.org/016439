@@ -1,0 +1,19 @@
+The min-distance between two nodes $u, v$ is defined as the minimum of the distance from $v$ to $u$
+or from $u$ to $v$, and is a natural distance metric in DAGs. As with the standard distance problems,
+the Strong Exponential Time Hypothesis [Impagliazzo-Paturi-Zane 2001, Calabro-Impagliazzo-Paturi
+2009] leaves little hope for computing min-distance problems faster than computing All Pairs Shortest
+Paths, which can be solved in $\tilde{O}(mn)$ time. So it is natural to resort to approximation algorithms
+in $\tilde{O}(mn^{1-\epsilon})$ time for some positive $\epsilon$. Abboud, Vassilevska W.,
+and Wang [SODA 2016] first studied min-distance problems achieving constant factor approximation
+algorithms on DAGs, obtaining a $3$-approximation algorithm for min-radius on DAGs which works
+in $\tilde{O}(m\sqrt{n})$ time, and showing that any $(2-\delta)$-approximation requires $n^{2-o(1)}$
+time for any $\delta>0$, under the Hitting Set Conjecture. We close the gap, obtaining a $2$-approximation
+algorithm which runs in $\tilde{O}(m\sqrt{n})$ time. As the lower bound of Abboud et al only works
+for sparse DAGs, we further show that our algorithm is conditionally tight for dense DAGs using a
+reduction from Boolean matrix multiplication. Moreover, Abboud et al obtained a linear time $2$-approximation
+algorithm for min-diameter along with a lower bound stating that any $(3/2-\delta)$-approximation
+algorithm for sparse DAGs requires $n^{2-o(1)}$ time under SETH. We close this gap for dense DAGs
+by obtaining a $3/2$-approximation algorithm which works in $O(n^{2.350})$ time and showing that
+the approximation factor is unlikely to be improved within $O(n^{\omega - o(1)})$ time under the
+high dimensional Orthogonal Vectors Conjecture, where $\omega$ is the matrix multiplication
+exponent. 

@@ -1,0 +1,19 @@
+Data Parallelism (DP) and Model Parallelism (MP) are two common paradigms to enable large-scale
+distributed training of neural networks. Recent trends, such as the improved model performance
+of deeper and wider neural networks when trained with billions of data points, have prompted the
+use of hybrid parallelism---a paradigm that employs both DP and MP to scale further parallelization
+for machine learning. Hybrid training allows compute power to increase, but it runs up against the
+key bottleneck of communication overhead that hinders scalability. In this paper, we propose a
+compression framework called Dynamic Communication Thresholding (DCT) for communication-efficient
+hybrid training. DCT filters the entities to be communicated across the network through a simple
+hard-thresholding function, allowing only the most relevant information to pass through. For
+communication efficient DP, DCT compresses the parameter gradients sent to the parameter server
+during model synchronization, while compensating for the introduced errors with known techniques.
+For communication efficient MP, DCT incorporates a novel technique to compress the activations
+and gradients sent across the network during the forward and backward propagation, respectively.
+This is done by identifying and updating only the most relevant neurons of the neural network for
+each training sample in the data. Under modest assumptions, we show that the convergence of training
+is maintained with DCT. We evaluate DCT on natural language processing and recommender system models.
+DCT reduces overall communication by 20x, improving end-to-end training time on industry scale
+models by 37%. Moreover, we observe an improvement in the trained model performance, as the induced
+sparsity is possibly acting as an implicit sparsity based regularization. 

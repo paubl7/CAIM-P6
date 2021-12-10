@@ -1,0 +1,18 @@
+As the scale of object detection dataset is smaller than that of image recognition dataset ImageNet,
+transfer learning has become a basic training method for deep learning object detection models,
+which will pretrain the backbone network of object detection model on ImageNet dataset to extract
+features for classification and localization subtasks. However, the classification task focuses
+on the salient region features of object, while the location task focuses on the edge features of
+object, so there is certain deviation between the features extracted by pretrained backbone network
+and the features used for localization task. In order to solve this problem, a decoupled self attention(DSA)
+module is proposed for one stage object detection models in this paper. DSA includes two decoupled
+self-attention branches, so it can extract appropriate features for different tasks. It is located
+between FPN and head networks of subtasks, so it is used to extract global features based on FPN fused
+features for different tasks independently. Although the network of DSA module is simple, but it
+can effectively improve the performance of object detection, also it can be easily embedded in many
+detection models. Our experiments are based on the representative one-stage detection model RetinaNet.
+In COCO dataset, when ResNet50 and ResNet101 are used as backbone networks, the detection performances
+can be increased by 0.4% AP and 0.5% AP respectively. When DSA module and object confidence task are
+applied in RetinaNet together, the detection performances based on ResNet50 and ResNet101 can
+be increased by 1.0% AP and 1.4% AP respectively. The experiment results show the effectiveness
+of DSA module. Code is at: https://github.com/chenzuge1/DSANet.git. 

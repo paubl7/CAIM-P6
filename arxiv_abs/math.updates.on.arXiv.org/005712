@@ -1,0 +1,19 @@
+Sparse Identification of Nonlinear Dynamics (SINDy) is a method of system discovery that has been
+shown to successfully recover governing dynamical systems from data (Brunton et al., PNAS, '16;
+Rudy et al., Sci. Adv. '17). Recently, several groups have independently discovered that the weak
+formulation provides orders of magnitude better robustness to noise. Here we extend our Weak SINDy
+(WSINDy) framework introduced in (arXiv:2005.04339) to the setting of partial differential equations
+(PDEs). The elimination of pointwise derivative approximations via the weak form enables effective
+machine-precision recovery of model coefficients from noise-free data (i.e. below the tolerance
+of the simulation scheme) as well as robust identification of PDEs in the large noise regime (with
+signal-to-noise ratio approaching one in many well-known cases). This is accomplished by discretizing
+a convolutional weak form of the PDE and exploiting separability of test functions for efficient
+model identification using the Fast Fourier Transform. The resulting WSINDy algorithm for PDEs
+has a worst-case computational complexity of $\mathcal{O}(N^{D+1}\log(N))$ for datasets with
+$N$ points in each of $D+1$ dimensions (i.e. $\mathcal{O}(\log(N))$ operations per datapoint).
+Furthermore, our Fourier-based implementation reveals a connection between robustness to noise
+and the spectra of test functions, which we utilize in an \textit{a priori} selection algorithm
+for test functions. Finally, we introduce a learning algorithm for the threshold in sequential-thresholding
+least-squares (STLS) that enables model identification from large libraries, and we utilize scale-invariance
+at the continuum level to identify PDEs from poorly-scaled datasets. We demonstrate WSINDy's robustness,
+speed and accuracy on several challenging PDEs. 

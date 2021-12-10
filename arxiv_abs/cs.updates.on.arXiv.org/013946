@@ -1,0 +1,20 @@
+Deep learning has become the gold standard for image processing over the past decade. Simultaneously,
+we have seen growing interest in orbital activities such as satellite servicing and debris removal
+that depend on proximity operations between spacecraft. However, two key challenges currently
+pose a major barrier to the use of deep learning for vision-based on-orbit proximity operations.
+Firstly, efficient implementation of these techniques relies on an effective system for model
+development that streamlines data curation, training, and evaluation. Secondly, a scarcity of
+labeled training data (images of a target spacecraft) hinders creation of robust deep learning
+models. This paper presents an open-source deep learning pipeline, developed specifically for
+on-orbit visual navigation applications, that addresses these challenges. The core of our work
+consists of two custom software tools built on top of a cloud architecture that interconnects all
+stages of the model development process. The first tool leverages Blender, an open-source 3D graphics
+toolset, to generate labeled synthetic training data with configurable model poses (positions
+and orientations), lighting conditions, backgrounds, and commonly observed in-space image aberrations.
+The second tool is a plugin-based framework for effective dataset curation and model training;
+it provides common functionality like metadata generation and remote storage access to all projects
+while giving complete independence to project-specific code. Time-consuming, graphics-intensive
+processes such as synthetic image generation and model training run on cloud-based computational
+resources which scale to any scope and budget and allow development of even the largest datasets
+and models from any machine. The presented system has been used in the Texas Spacecraft Laboratory
+with marked benefits in development speed and quality. 

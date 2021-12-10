@@ -1,0 +1,19 @@
+We introduce ppsim, a software package for efficiently simulating population protocols, a widely-studied
+subclass of chemical reaction networks (CRNs) in which all reactions have two reactants and two
+products. Each step in the dynamics involves picking a uniform random pair from a population of $n$
+molecules to collide and have a (potentially null) reaction. In a recent breakthrough, Berenbrink,
+Hammer, Kaaser, Meyer, Penschuck, and Tran [ESA 2020] discovered a population protocol simulation
+algorithm quadratically faster than the naive algorithm, simulating $\Theta(\sqrt{n})$ reactions
+in *constant* time, while preserving the *exact* stochastic dynamics. ppsim implements this algorithm,
+with a tightly optimized Cython implementation that can exactly simulate hundreds of billions
+of reactions in seconds. It dynamically switches to the CRN Gillespie algorithm for efficiency
+gains when the number of applicable reactions in a configuration becomes small. As a Python library,
+ppsim also includes many useful tools for data visualization in Jupyter notebooks, allowing robust
+visualization of time dynamics such as histogram plots at time snapshots and averaging repeated
+trials. Finally, we give a framework that takes any CRN with only bimolecular (2 reactant, 2 product)
+or unimolecular (1 reactant, 1 product) reactions, with arbitrary rate constants, and compiles
+it into a continuous-time population protocol. This lets ppsim exactly sample from the chemical
+master equation (unlike approximate heuristics such as tau-leaping or LNA), while achieving asymptotic
+gains in running time. In linked Jupyter notebooks, we demonstrate the efficacy of the tool on some
+protocols of interest in molecular programming, including the approximate majority CRN and CRN
+models of DNA strand displacement reactions. 

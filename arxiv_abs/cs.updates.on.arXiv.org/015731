@@ -1,0 +1,19 @@
+We present a new synthesis algorithm to solve program synthesis over noisy datasets, i.e., data
+that may contain incorrect/corrupted input-output examples. Our algorithm uses an abstraction
+refinement based optimization process to synthesize programs which optimize the tradeoff between
+the loss over the noisy dataset and the complexity of the synthesized program. The algorithm uses
+abstractions to divide the search space of programs into subspaces by computing an abstract value
+that represents outputs for all programs in a subspace. The abstract value allows our algorithm
+to compute, for each subspace, a sound approximate lower bound of the loss over all programs in the
+subspace. It iteratively refines these abstractions to further subdivide the space into smaller
+subspaces, prune subspaces that do not contain an optimal program, and eventually synthesize an
+optimal program. We implemented this algorithm in a tool called Rose. We compare Rose to a current
+state-of-the-art noisy program synthesis system using the SyGuS 2018 benchmark suite. Our evaluation
+demonstrates that Rose significantly outperforms this previous system: on two noisy benchmark
+program synthesis problems sets drawn from the SyGus 2018 benchmark suite, Rose delivers speedups
+of up to 1587 and 81.7, with median speedups of 20.5 and 81.7. Rose also terminates on 20 (out of 54)
+and 4 (out of 11) more benchmark problems than the previous system. Both Rose and the previous system
+synthesize programs that are optimal over the provided noisy data sets. For the majority of the problems
+in the benchmark sets ($272$ out of $286$), the synthesized programs also produce correct outputs
+for all inputs in the original (unseen) noise-free data set. These results highlight the benefits
+that Rose can deliver for effective noisy program synthesis. 

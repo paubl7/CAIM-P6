@@ -1,0 +1,20 @@
+Packing problems constitute an important class of optimization problems, both because of their
+high practical relevance and theoretical appeal. However, despite the large number of variants
+that have been studied in the literature, most packing problems encompass a single tier of capacity
+restrictions only. For example, in the Multiple Knapsack Problem, we assign items to multiple knapsacks
+such that their capacities are not exceeded. But what if these knapsacks are partitioned into clusters,
+each imposing an additional capacity restriction on the knapsacks contained in that cluster? In
+this paper, we study the Maximum Coverage Problem with Cluster Constraints (MCPC), which generalizes
+the Maximum Coverage Problem with Knapsack Constraints (MCPK) by incorporating cluster constraints.
+Our main contribution is a general LP-based technique to derive approximation algorithms for cluster
+capacitated problems. Our technique allows us to reduce the cluster capacitated problem to the
+respective original packing problem. By using an LP-based approximation algorithm for the original
+problem, we can then obtain an effective rounding scheme for the problem, which only loses a small
+fraction in the approximation guarantee. We apply our technique to derive approximation algorithms
+for MCPC. To this aim, we develop an LP-based $\frac12(1-\frac1e)$-approximation algorithm for
+MCPK by adapting the pipage rounding technique. Combined with our reduction technique, we obtain
+a $\frac13(1-\frac1e)$-approximation algorithm for MCPC. We also derive improved results for
+a special case of MCPC, the Multiple Knapsack Problem with Cluster Constraints (MKPC). Based on
+a simple greedy algorithm, our approach yields a $\frac13$-approximation algorithm. By combining
+our technique with a more sophisticated iterative rounding approach, we obtain a $\frac12$-approximation
+algorithm for certain special cases of MKPC. 

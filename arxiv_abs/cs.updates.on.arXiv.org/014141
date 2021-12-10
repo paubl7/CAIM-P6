@@ -1,0 +1,20 @@
+Prior highly-tuned image parsing models are usually studied in a certain domain with a specific
+set of semantic labels and can hardly be adapted into other scenarios (e.g., sharing discrepant
+label granularity) without extensive re-training. Learning a single universal parsing model
+by unifying label annotations from different domains or at various levels of granularity is a crucial
+but rarely addressed topic. This poses many fundamental learning challenges, e.g., discovering
+underlying semantic structures among different label granularity or mining label correlation
+across relevant tasks. To address these challenges, we propose a graph reasoning and transfer learning
+framework, named "Graphonomy", which incorporates human knowledge and label taxonomy into the
+intermediate graph representation learning beyond local convolutions. In particular, Graphonomy
+learns the global and structured semantic coherency in multiple domains via semantic-aware graph
+reasoning and transfer, enforcing the mutual benefits of the parsing across domains (e.g., different
+datasets or co-related tasks). The Graphonomy includes two iterated modules: Intra-Graph Reasoning
+and Inter-Graph Transfer modules. The former extracts the semantic graph in each domain to improve
+the feature representation learning by propagating information with the graph; the latter exploits
+the dependencies among the graphs from different domains for bidirectional knowledge transfer.
+We apply Graphonomy to two relevant but different image understanding research topics: human parsing
+and panoptic segmentation, and show Graphonomy can handle both of them well via a standard pipeline
+against current state-of-the-art approaches. Moreover, some extra benefit of our framework is
+demonstrated, e.g., generating the human parsing at various levels of granularity by unifying
+annotations across different datasets. 

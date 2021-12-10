@@ -1,0 +1,18 @@
+The Poisson-Boltzmann equation (PBE) is a fundamental implicit solvent continuum model for calculating
+the electrostatic potential of large ionic solvated biomolecules. However, its numerical solution
+encounters severe challenges arising from its strong singularity and nonlinearity. In [1,2],
+the effect of strong singularities was eliminated by applying the range-separated (RS) canonical
+tensor format [3,4] to construct a solution decomposition scheme for the PBE. The RS tensor format
+allows to derive a smooth approximation to the Dirac delta distribution in order to obtain a regularized
+PBE (RPBE) model. However, solving the RPBE is still computationally demanding due to its high dimension
+$\mathcal{N}$, where $\mathcal{N}$ is always in the millions. In this study, we propose to apply
+the reduced basis method (RBM) and the (discrete) empirical interpolation method ((D)EIM) to the
+RPBE in order to construct a reduced order model (ROM) of low dimension $N \ll \mathcal{N}$, whose
+solution accurately approximates the nonlinear RPBE. The long-range potential can be obtained
+by lifting the ROM solution back to the $\mathcal{N}$-space while the short-range potential is
+directly precomputed analytically, thanks to the RS tensor format. The sum of both provides the
+total electrostatic potential. The main computational benefit is the avoidance of computing the
+numerical approximation of the singular electrostatic potential. We demonstrate in the numerical
+experiments, the accuracy and efficacy of the reduced basis (RB) approximation to the nonlinear
+RPBE (NRPBE) solution and the corresponding computational savings over the classical nonlinear
+PBE (NPBE) as well as over the RBM being applied to the classical NPBE. 

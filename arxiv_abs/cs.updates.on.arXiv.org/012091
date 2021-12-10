@@ -1,0 +1,18 @@
+Polyphonic sound event localization and detection is not only detecting what sound events are happening
+but localizing corresponding sound sources. This series of tasks was first introduced in DCASE
+2019 Task 3. In 2020, the sound event localization and detection task introduces additional challenges
+in moving sound sources and overlapping-event cases, which include two events of the same type with
+two different direction-of-arrival (DoA) angles. In this paper, a novel event-independent network
+for polyphonic sound event localization and detection is proposed. Unlike the two-stage method
+we proposed in DCASE 2019 Task 3, this new network is fully end-to-end. Inputs to the network are first-order
+Ambisonics (FOA) time-domain signals, which are then fed into a 1-D convolutional layer to extract
+acoustic features. The network is then split into two parallel branches. The first branch is for
+sound event detection (SED), and the second branch is for DoA estimation. There are three types of
+predictions from the network, SED predictions, DoA predictions, and event activity detection
+(EAD) predictions that are used to combine the SED and DoA features for on-set and off-set estimation.
+All of these predictions have the format of two tracks indicating that there are at most two overlapping
+events. Within each track, there could be at most one event happening. This architecture introduces
+a problem of track permutation. To address this problem, a frame-level permutation invariant training
+method is used. Experimental results show that the proposed method can detect polyphonic sound
+events and their corresponding DoAs. Its performance on the Task 3 dataset is greatly increased
+as compared with that of the baseline method. 

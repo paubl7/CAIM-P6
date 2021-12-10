@@ -1,0 +1,18 @@
+It is time-consuming and expensive to take high-quality or high-resolution electron microscopy
+(EM) and fluorescence microscopy (FM) images. Taking these images could be even invasive to samples
+and may damage certain subtleties in the samples after long or intense exposures, often necessary
+for achieving high-quality or high resolution in the first place. Advances in deep learning enable
+us to perform image-to-image transformation tasks for various types of microscopy image reconstruction,
+computationally producing high-quality images from the physically acquired low-quality ones.
+When training image-to-image transformation models on pairs of experimentally acquired microscopy
+images, prior models suffer from performance loss due to their inability to capture inter-image
+dependencies and common features shared among images. Existing methods that take advantage of
+shared features in image classification tasks cannot be properly applied to image reconstruction
+tasks because they fail to preserve the equivariance property under spatial permutations, something
+essential in image-to-image transformation. To address these limitations, we propose the augmented
+equivariant attention networks (AEANets) with better capability to capture inter-image dependencies,
+while preserving the equivariance property. The proposed AEANets captures inter-image dependencies
+and shared features via two augmentations on the attention mechanism, which are the shared references
+and the batch-aware attention during training. We theoretically derive the equivariance property
+of the proposed augmented attention model and experimentally demonstrate its consistent superiority
+in both quantitative and visual results over the baseline methods. 

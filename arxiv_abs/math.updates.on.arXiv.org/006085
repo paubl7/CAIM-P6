@@ -1,0 +1,19 @@
+We introduce a variant of the three-sided stable matching problem for a PhD market with students,
+advisors, and co-advisors. In our formalization, students have consistent (lexicographic) preferences
+over advisors and co-advisors, and the latter have preferences over students only (hence advisors
+and co-advisors are cooperative). A student must be matched to one advisor and one co-advisor, or
+not at all. In contrast to previous work, advisor-student and student-co-advisor pairs may not
+be mutually acceptable, e.g., a student may not want to work with an advisor or co-advisor and vice
+versa. We show that stable three-sided matchings always exist, and present the PhD algorithm, a
+three-sided matching algorithm with polynomial running time which uses any two-sided stable matching
+algorithm as matching engine. Borrowing from results on two-sided markets, we provide some approximate
+optimality results. We also present an extension to three-sided markets with quotas, where each
+student conducts several projects, and each project is supervised by one advisor and one co-advisor.
+As it is often the case in practice that the same student should not do more than one project with the
+same advisor or co-advisor, we modify our PhD algorithm for this setting by adapting the two-sided
+Gale--Shapley algorithm to many-to-many two-sided markets, in which the same pair can match at
+most once. We also generalize the three-sided market to an $n$-sided market consisting of $n-1$
+two-sided markets. We extend the PhD algorithm to this multi-sided setting to compute a stable matching
+in polynomial time, and we discuss its extension to arbitrary quotas. Finally, we illustrate the
+challenges that arise when not all advisor-co-advisor pairs are compatible, and critically review
+the statements from [30, 29]. 

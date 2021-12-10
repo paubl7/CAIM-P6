@@ -1,0 +1,19 @@
+Byzantine agreement (BA) is a distributed consensus problem where $n$ processors want to reach
+agreement on an $\ell$-bit message or value, but up to $t$ of the processors are dishonest or faulty.
+The challenge of this BA problem lies in achieving agreement despite the presence of dishonest processors
+who may arbitrarily deviate from the designed protocol. The quality of a BA protocol is measured
+primarily by using the following three parameters: the number of processors $n$ as a function of
+$t$ allowed (resilience); the number of rounds (round complexity); and the total number of communication
+bits (communication complexity). For any error-free BA protocol, the known lower bounds on those
+three parameters are $3t + 1$, $t + 1$ and $\Omega(\max\{n\ell, nt\})$, respectively, where a protocol
+that is guaranteed to be correct in all executions is said to be error free. In this work, by using coding
+theory we design a coded BA protocol (termed as COOL) that achieves consensus on an $\ell$-bit message
+with optimal resilience, asymptotically optimal round complexity, and asymptotically optimal
+communication complexity when $\ell \geq t\log n$, simultaneously. The proposed COOL is an error-free
+and deterministic BA protocol that does not rely on cryptographic technique such as signatures,
+hashing, authentication and secret sharing (signature free). It is secure against computationally
+unbounded adversary who takes full control over the dishonest processors (information-theoretic
+secure). We show that our results can also be extended to the setting of Byzantine broadcast, aka
+Byzantine generals problem, where the honest processors want to agree on the message sent by a leader
+who is potentially dishonest. This work reveals that coding is an effective approach for achieving
+the fundamental limits of Byzantine agreement and its variants. 

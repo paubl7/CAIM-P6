@@ -1,0 +1,19 @@
+Given a graph $G=(V,E)$ with a weight $w_v$ associated with each vertex $v\in V$, the maximum weighted
+induced forest problem (MWIF) consists of encountering a maximum weighted subset $V'\subseteq
+V$ of the vertices such that $V'$ induces a forest. This NP-hard problem is known to be equivalent
+to the minimum weighted feedback vertex set problem, which has applicability in a variety of domains.
+The closely related maximum weighted induced tree problem (MWIT), on the other hand, requires that
+the subset $V'\subseteq V$ induces a tree. We propose two new integer programming formulations
+with an exponential number of constraints and branch-and-cut procedures for MWIF. Computational
+experiments using benchmark instances are performed comparing several formulations, including
+the newly proposed approaches and those available in the literature, when solved by a standard commercial
+mixed integer programming solver. More specifically, five formulations are compared, two compact
+(i.e., with a polynomial number of variables and constraints) ones and the three others with an exponential
+number of constraints. The experiments show that a new formulation for the problem based on directed
+cutset inequalities for eliminating cycles (DCUT) offers stronger linear relaxation bounds earlier
+in the search process. The results also indicate that the other new formulation, denoted tree with
+cycle elimination (TCYC), outperforms those available in the literature when it comes to the average
+times for proving optimality for the small instances, especially the more challenging ones. Additionally,
+this formulation can achieve much lower average times for solving the larger random instances that
+can be optimally solved. Furthermore, we show how the formulations for MWIF can be easily extended
+for MWIT. Such extension allowed us to compare the optimal solution values of the two problems. 

@@ -1,0 +1,20 @@
+Automated unit test case generation tools facilitate test-driven development and support developers
+by suggesting tests intended to identify flaws in their code. Existing approaches are usually guided
+by the test coverage criteria, generating synthetic test cases that are often difficult for developers
+to read or understand. In this paper we propose AthenaTest, an approach that aims to generate unit
+test cases by learning from real-world focal methods and developer-written testcases. We formulate
+unit test case generation as a sequence-to-sequence learning task, adopting a two-step training
+procedure consisting of denoising pretraining on a large unsupervised Java corpus, and supervised
+finetuning for a downstream translation task of generating unit tests. We investigate the impact
+of natural language and source code pretraining, as well as the focal context information surrounding
+the focal method. Both techniques provide improvements in terms of validation loss, with pretraining
+yielding 25% relative improvement and focal context providing additional 11.1% improvement.
+We also introduce Methods2Test, the largest publicly available supervised parallel corpus of
+unit test case methods and corresponding focal methods in Java, which comprises 780K test cases
+mined from 91K open-source repositories from GitHub. We evaluate AthenaTest on five defects4j
+projects, generating 25K passing test cases covering 43.7% of the focal methods with only 30 attempts.
+We execute the test cases, collect test coverage information, and compare them with test cases generated
+by EvoSuite and GPT-3, finding that our approach outperforms GPT-3 and has comparable coverage
+w.r.t. EvoSuite. Finally, we survey professional developers on their preference in terms of readability,
+understandability, and testing effectiveness of the generated tests, showing overwhelmingly
+preference towards AthenaTest. 

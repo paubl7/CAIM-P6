@@ -1,0 +1,18 @@
+Search-based test generation is guided by feedback from one or more fitness functions - scoring
+functions that judge solution optimality. Choosing informative fitness functions is crucial
+to meeting the goals of a tester. Unfortunately, many goals - such as forcing the class-under-test
+to throw exceptions, increasing test suite diversity, and attaining Strong Mutation Coverage
+- do not have effective fitness function formulations. We propose that meeting such goals requires
+treating fitness function identification as a secondary optimization step. An adaptive algorithm
+that can vary the selection of fitness functions could adjust its selection throughout the generation
+process to maximize goal attainment, based on the current population of test suites. To test this
+hypothesis, we have implemented two reinforcement learning algorithms in the EvoSuite unit test
+generation framework, and used these algorithms to dynamically set the fitness functions used
+during generation for the three goals identified above. We have evaluated our framework, EvoSuiteFIT,
+on a set of real Java case examples. EvoSuiteFIT techniques attain significant improvements for
+two of the three goals, and show small improvements on the third when the number of generations of
+evolution is fixed. Additionally, for all goals, EvoSuiteFIT detects faults missed by the other
+techniques. The ability to adjust fitness functions allows EvoSuiteFIT to make strategic choices
+that efficiently produce more effective test suites, and examining its choices offers insight
+into how to attain our testing goals. We find that AFFS is a powerful technique to apply when an effective
+fitness function does not already exist for generating tests to achieve a testing goal. 

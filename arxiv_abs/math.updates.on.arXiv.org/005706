@@ -1,0 +1,20 @@
+Linear homogeneous recurrence equations with polynomial coefficients are said to be holonomic.
+Such equations have been introduced in the last century for proving and discovering combinatorial
+and hypergeometric identities. Given a field K of characteristic zero, a term a(n) is called hypergeometric
+with respect to K, if the ratio a(n+1)/a(n) is a rational function over K. The solutions space of holonomic
+recurrence equations gained more interest in the 1990s from the well known Zeilberger's algorithm.
+In particular, algorithms computing the subspace of hypergeometric term solutions which covers
+polynomial, rational, and some algebraic solutions of these equations were investigated by Marko
+Petkov\v{s}ek (1993) and Mark van Hoeij (1999). The algorithm proposed by the latter is characterized
+by a much better efficiency than that of the other; it computes, in Gamma representations, a basis
+of the subspace of hypergeometric term solutions of any given holonomic recurrence equation, and
+is considered as the current state of the art in this area. Mark van Hoeij implemented his algorithm
+in the Computer Algebra System (CAS) Maple through the command $LREtools[hypergeomsols]$. We
+propose a variant of van Hoeij's algorithm that performs the same efficiency and gives outputs in
+terms of factorials and shifted factorials, without considering certain recommendations of the
+original version. We have implementations of our algorithm for the CASs Maxima and Maple. Such an
+implementation is new for Maxima which is therefore used for general-purpose examples. Our Maxima
+code is currently available as a third-party package for Maxima. A comparison between van Hoeij's
+implementation and ours is presented for Maple 2020. It appears that both have the same efficiency,
+and moreover, for some particular cases, our code finds results where $LREtools[hypergeomsols]$
+fails. 

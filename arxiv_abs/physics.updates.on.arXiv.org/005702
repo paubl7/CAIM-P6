@@ -1,0 +1,19 @@
+In this paper, a third-order compact gas-kinetic scheme (GKS) on unstructured tetrahedral mesh
+is constructed for the compressible Euler and Navier-Stokes solutions. The time-dependent gas
+distribution function at a cell interface is used to calculate the fluxes for the updating the cell-averaged
+flow variables and to evaluate the time accurate cell-averaged flow variables as well for evolving
+the cell-averaged gradients of flow variables. With the accurate evolution model for both flow
+variables and their slopes, the quality of the scheme depends closely on the accuracy and reliability
+of the initial reconstruction of flow variables. The reconstruction scheme becomes more challenge
+on tetrahedral mesh, where the conventional second-order unlimited least-square reconstruction
+can make the scheme be linearly unstable when using cell-averaged conservative variables alone
+with von Neumann neighbors. Benefiting from the evolved cell-averaged slopes, on tetrahedral
+mesh the GKS is linearly stable from a compact third-order smooth reconstruction with a large CFL
+number. In order to further increase the robustness of the high-order compact GKS for capturing
+discontinuous solution, a new two-step multi-resolution weighted essentially non-oscillatory
+(WENO) reconstruction will be proposed. The novelty of the reconstruction includes the following.
+Firstly, it releases the stability issue from a second-order compact reconstruction through the
+introduction of a pre-reconstruction step. Secondly, in the third-order non-linear reconstruction,
+only one more large stencil is added beside those in the second-order one, which significantly simplifies
+the high-order reconstruction. The proposed third-order scheme shows good robustness in high
+speed flow computation and favorable mesh adaptability in cases with complex geometry. 

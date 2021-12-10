@@ -1,0 +1,20 @@
+Adversarial attacks consist in maliciously changing the input data to mislead the predictions
+of automated decision systems and are potentially a serious threat for automated medical image
+analysis. Previous studies have shown that it is possible to adversarially manipulate automated
+segmentations produced by neural networks in a targeted manner in the white-box attack setting.
+In this article, we studied the effectiveness of adversarial attacks in targeted modification
+of segmentations of anatomical structures in chest X-rays. Firstly, we experimented with using
+anatomically implausible shapes as targets for adversarial manipulation. We showed that, by adding
+almost imperceptible noise to the image, we can reliably force state-of-the-art neural networks
+to segment the heart as a heart symbol instead of its real anatomical shape. Moreover, such heart-shaping
+attack did not appear to require higher adversarial noise level than an untargeted attack based
+the same attack method. Secondly, we attempted to explore the limits of adversarial manipulation
+of segmentations. For that, we assessed the effectiveness of shrinking and enlarging segmentation
+contours for the three anatomical structures. We observed that adversarially extending segmentations
+of structures into regions with intensity and texture uncharacteristic for them presented a challenge
+to our attacks, as well as, in some cases, changing segmentations in ways that conflict with class
+adjacency priors learned by the target network. Additionally, we evaluated performances of the
+untargeted attacks and targeted heart attacks in the black-box attack scenario, using a surrogate
+network trained on a different subset of images. In both cases, the attacks were substantially less
+effective. We believe these findings bring novel insights into the current capabilities and limits
+of adversarial attacks for semantic segmentation. 

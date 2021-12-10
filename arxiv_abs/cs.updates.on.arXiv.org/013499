@@ -1,0 +1,19 @@
+Background and Objective: Early detection of lung cancer is crucial as it has high mortality rate
+with patients commonly present with the disease at stage 3 and above. There are only relatively few
+methods that simultaneously detect and classify nodules from computed tomography (CT) scans.
+Furthermore, very few studies have used semi-supervised learning for lung cancer prediction.
+This study presents a complete end-to-end scheme to detect and classify lung nodules using the state-of-the-art
+Self-training with Noisy Student method on a comprehensive CT lung screening dataset of around
+4,000 CT scans. Methods: We used three datasets, namely LUNA16, LIDC and NLST, for this study. We
+first utilise a three-dimensional deep convolutional neural network model to detect lung nodules
+in the detection stage. The classification model known as Maxout Local-Global Network uses non-local
+networks to detect global features including shape features, residual blocks to detect local features
+including nodule texture, and a Maxout layer to detect nodule variations. We trained the first Self-training
+with Noisy Student model to predict lung cancer on the unlabelled NLST datasets. Then, we performed
+Mixup regularization to enhance our scheme and provide robustness to erroneous labels. Results
+and Conclusions: Our new Mixup Maxout Local-Global network achieves an AUC of 0.87 on 2,005 completely
+independent testing scans from the NLST dataset. Our new scheme significantly outperformed the
+next highest performing method at the 5% significance level using DeLong's test (p = 0.0001). This
+study presents a new complete end-to-end scheme to predict lung cancer using Self-training with
+Noisy Student combined with Mixup regularization. On a completely independent dataset of 2,005
+scans, we achieved state-of-the-art performance even with more images as compared to other methods.

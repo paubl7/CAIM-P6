@@ -1,0 +1,20 @@
+A long line of work in social psychology has studied variations in people's susceptibility to persuasion
+-- the extent to which they are willing to modify their opinions on a topic. This body of literature
+suggests an interesting perspective on theoretical models of opinion formation by interacting
+parties in a network: in addition to considering interventions that directly modify people's intrinsic
+opinions, it is also natural to consider interventions that modify people's susceptibility to
+persuasion. In this work, motivated by this fact we propose a new framework for social influence.
+Specifically, we adopt a popular model for social opinion dynamics, where each agent has some fixed
+innate opinion, and a resistance that measures the importance it places on its innate opinion; agents
+influence one another's opinions through an iterative process. Under non-trivial conditions,
+this iterative process converges to some equilibrium opinion vector. For the unbudgeted variant
+of the problem, the goal is to select the resistance of each agent (from some given range) such that
+the sum of the equilibrium opinions is minimized. We prove that the objective function is in general
+non-convex. Hence, formulating the problem as a convex program as in an early version of this work
+(Abebe et al., KDD'18) might have potential correctness issues. We instead analyze the structure
+of the objective function, and show that any local optimum is also a global optimum, which is somehow
+surprising as the objective function might not be convex. Furthermore, we combine the iterative
+process and the local search paradigm to design very efficient algorithms that can solve the unbudgeted
+variant of the problem optimally on large-scale graphs containing millions of nodes. Finally,
+we propose and evaluate experimentally a family of heuristics for the budgeted variation of the
+problem. 

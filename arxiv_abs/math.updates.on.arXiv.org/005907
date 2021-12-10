@@ -1,0 +1,19 @@
+Consider the classical supervised learning problem: we are given data $(y_i,{\boldsymbol x}_i)$,
+$i\le n$, with $y_i$ a response and ${\boldsymbol x}_i\in {\mathcal X}$ a covariates vector, and
+try to learn a model $f:{\mathcal X}\to{\mathbb R}$ to predict future responses. Random features
+methods map the covariates vector ${\boldsymbol x}_i$ to a point ${\boldsymbol \phi}({\boldsymbol
+x}_i)$ in a higher dimensional space ${\mathbb R}^N$, via a random featurization map ${\boldsymbol
+\phi}$. We study the use of random features methods in conjunction with ridge regression in the feature
+space ${\mathbb R}^N$. This can be viewed as a finite-dimensional approximation of kernel ridge
+regression (KRR), or as a stylized model for neural networks in the so called lazy training regime.
+We define a class of problems satisfying certain spectral conditions on the underlying kernels,
+and a hypercontractivity assumption on the associated eigenfunctions. These conditions are verified
+by classical high-dimensional examples. Under these conditions, we prove a sharp characterization
+of the error of random features ridge regression. In particular, we address two fundamental questions:
+$(1)$~What is the generalization error of KRR? $(2)$~How big $N$ should be for the random features
+approximation to achieve the same error as KRR? In this setting, we prove that KRR is well approximated
+by a projection onto the top $\ell$ eigenfunctions of the kernel, where $\ell$ depends on the sample
+size $n$. We show that the test error of random features ridge regression is dominated by its approximation
+error and is larger than the error of KRR as long as $N\le n^{1-\delta}$ for some $\delta>0$. We characterize
+this gap. For $N\ge n^{1+\delta}$, random features achieve the same error as the corresponding
+KRR, and further increasing $N$ does not lead to a significant change in test error. 

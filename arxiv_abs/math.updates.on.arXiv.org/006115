@@ -1,0 +1,19 @@
+The data-aware method of distributions (DA-MD) is a low-dimension data assimilation procedure
+to forecast the behavior of dynamical systems described by differential equations. It combines
+sequential Bayesian update with the MD, such that the former utilizes available observations while
+the latter propagates the (joint) probability distribution of the uncertain system state(s).
+The core of DA-MD is the minimization of a distance between an observation and a prediction in distributional
+terms, with prior and posterior distributions constrained on a statistical manifold defined by
+the MD. We leverage the information-geometric properties of the statistical manifold to reduce
+predictive uncertainty via data assimilation. Specifically, we exploit the information geometric
+structures induced by two discrepancy metrics, the Kullback-Leibler divergence and the Wasserstein
+distance, which explicitly yield natural gradient descent. To further accelerate optimization,
+we build a deep neural network as a surrogate model for the MD that enables automatic differentiation.
+The manifold's geometry is quantified without sampling, yielding an accurate approximation of
+the gradient descent direction. Our numerical experiments demonstrate that accounting for the
+information-geometry of the manifold significantly reduces the computational cost of data assimilation
+by facilitating the calculation of gradients and by reducing the number of required iterations.
+Both storage needs and computational cost depend on the dimensionality of a statistical manifold,
+which is typically small by MD construction. When convergence is achieved, the Kullback-Leibler
+and $L_2$ Wasserstein metrics have similar performances, with the former being more sensitive
+to poor choices of the prior. 

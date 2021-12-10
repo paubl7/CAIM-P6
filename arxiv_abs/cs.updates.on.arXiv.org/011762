@@ -1,0 +1,19 @@
+We study the problem of finding "fair" stable matchings in the Stable Marriage problem with Incomplete
+lists (SMI). In particular, we seek stable matchings that are optimal with respect to profile, which
+is a vector that indicates the number of agents who have their first-, second-, third-choice partner,
+etc. In a rank maximal stable matching, the maximum number of agents have their first-choice partner,
+and subject to this, the maximum number of agents have their second-choice partner, etc., whilst
+in a generous stable matching $M$, the minimum number of agents have their $d$th-choice partner,
+and subject to this, the minimum number of agents have their $(d-1)$th-choice partner, etc., where
+$d$ is the maximum rank of an agent's partner in $M$. Irving et al. [18] presented an $O(nm^2\log n)$
+algorithm for finding a rank-maximal stable matching, which can be adapted easily to the generous
+stable matching case, where $n$ is the number of men / women and $m$ is the number of acceptable man-woman
+pairs. An $O(n^{0.5}m^{1.5})$ algorithm for the rank-maximal stable matching problem was later
+given by Feder [7]. However these approaches involve the use of weights that are in general exponential
+in $n$. In this paper we present an $O(nm^2\log n)$ algorithm for finding a rank-maximal stable matching
+using a vector-based approach that involves weights that are polynomially-bounded in $n$. We conduct
+an empirical evaluation, and show how this approach has a far reduced memory requirement (an estimated
+$100$-fold improvement for instances with $100, 000$ men or women) when compared to Irving et al.'s
+algorithm above. Additionally, we show how to adapt our algorithm for the generous case. Finally,
+we examine the complexity of the problem of finding profile-based optimal stable matchings in the
+Stable Roommates problem (SR). 

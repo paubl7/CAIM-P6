@@ -1,0 +1,20 @@
+This paper investigates the information freshness of two-way relay networks (TWRN) operated with
+physical-layer network coding (PNC). Information freshness is quantified by age of information
+(AoI), defined as the time elapsed since the generation time of the latest received information
+update. PNC reduces communication latency of TWRNs by turning superimposed electromagnetic waves
+into network-coded messages so that end users can send update packets to each other via the relay
+more frequently. Although sending update packets more frequently is potential to reduce AoI, how
+to deal with packet corruption has not been well investigated. Specifically, if old packets are
+corrupted in any hop of a TWRN, one needs to decide the old packets to be dropped or to be retransmitted,
+e.g., new packets have recent information, but may require more time to be delivered. We study the
+average AoI with and without ARQ in PNC-enabled TWRNs. We first consider a non-ARQ scheme where old
+packets are always dropped when corrupted, referred to once-lost-then-drop (OLTD), and a classical
+ARQ scheme with no packet lost, referred to as reliable packet transmission (RPT). Interestingly,
+our analysis shows that neither the non-ARQ scheme nor the pure ARQ scheme achieves good average
+AoI. We then put forth an uplink-lost-then-drop (ULTD) protocol that combines packet drop and ARQ.
+Experiments on software-defined radio indicate that ULTD significantly outperforms OLTD and
+RPT in terms of average AoI. Although this paper focuses on TWRNs, we believe the insight of ULTD applies
+generally to other two-hop networks. Our insight is that to achieve high information freshness,
+when packets are corrupted in the first hop, new packets should be generated and sent (i.e., old packets
+are discarded); when packets are corrupted in the second hop, old packets should be retransmitted
+until successful reception. 

@@ -1,0 +1,20 @@
+Tumor segmentation in oncological PET is challenging, a major reason being the partial-volume
+effects due to the low system resolution and finite voxel size. The latter results in tissue-fraction
+effects, i.e. voxels contain a mixture of tissue classes. Most conventional methods perform segmentation
+by exclusively assigning each voxel in the image as belonging to either the tumor or normal tissue
+classes. Thus, these methods are inherently limited in modeling the tissue-fraction effects.
+To address this inherent limitation, we propose an estimation-based approach to segmentation.
+Specifically, we develop a Bayesian method that estimates the posterior mean of fractional volume
+that the tumor occupies within each image voxel. The proposed method, implemented using an encoder-decoder
+network, was first evaluated using clinically realistic 2-D simulation studies with known ground
+truth, in the context of segmenting the primary tumor in PET images of patients with lung cancer.
+The evaluation studies demonstrated that the method accurately estimated the tumor-fraction
+areas and significantly outperformed widely used conventional methods, including a U-net-based
+method, on the task of segmenting the tumor. In addition, the proposed method was relatively insensitive
+to partial-volume effects and yielded reliable tumor segmentation for different clinical-scanner
+configurations. The method was then evaluated using clinical images of patients with stage II and
+III non-small cell lung cancer from ACRIN 6668/RTOG 0235 multi-center clinical trial. Here, the
+results showed that the proposed method significantly outperformed all other considered methods
+and yielded accurate tumor segmentation on patient images with dice similarity coefficient of
+0.82 (95% CI: 0.78, 0.86). Overall, this study demonstrates the efficacy of the proposed method
+to accurately segment tumors in PET images. 

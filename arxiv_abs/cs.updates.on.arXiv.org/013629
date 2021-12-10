@@ -1,0 +1,19 @@
+BACKGROUND AND OBJECTIVES: The multiple chest x-ray datasets released in the last years have ground-truth
+labels intended for different computer vision tasks, suggesting that performance in automated
+chest-xray interpretation might improve by using a method that can exploit diverse types of annotations.
+This work presents a Deep Learning method based on the late fusion of different convolutional architectures,
+that allows training with heterogeneous data with a simple implementation, and evaluates its performance
+on independent test data. We focused on obtaining a clinically useful tool that could be successfully
+integrated into a hospital workflow. MATERIALS AND METHODS: Based on expert opinion, we selected
+four target chest x-ray findings, namely lung opacities, fractures, pneumothorax and pleural
+effusion. For each finding we defined the most adequate type of ground-truth label, and built four
+training datasets combining images from public chest x-ray datasets and our institutional archive.
+We trained four different Deep Learning architectures and combined their outputs with a late fusion
+strategy, obtaining a unified tool. Performance was measured on two test datasets: an external
+openly-available dataset, and a retrospective institutional dataset, to estimate performance
+on local population. RESULTS: The external and local test sets had 4376 and 1064 images, respectively,
+for which the model showed an area under the Receiver Operating Characteristics curve of 0.75 (95%CI:
+0.74-0.76) and 0.87 (95%CI: 0.86-0.89) in the detection of abnormal chest x-rays. For the local
+population, a sensitivity of 86% (95%CI: 84-90), and a specificity of 88% (95%CI: 86-90) were obtained,
+with no significant differences between demographic subgroups. We present examples of heatmaps
+to show the accomplished level of interpretability, examining true and false positives. 

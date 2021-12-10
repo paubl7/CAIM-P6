@@ -1,0 +1,19 @@
+We propose and analyze computationally a new fictitious domain method, based on higher order space-time
+finite element discretizations, for the simulation of the nonstationary, incompressible Navier-Stokes
+equations on evolving domains. The physical domain is embedded into a fixed computational mesh
+such that arbitrary intersections of the moving domain's boundaries with the background mesh occur.
+The potential of such cut finite element techniques for higher order space-time finite element
+methods has rarely been studied in the literature so far and deserves further elucidation. The key
+ingredients of the approach are the weak formulation of Dirichlet boundary conditions by Nitsche's
+method, the flexible and efficient integration over all types of intersections of cells by moving
+boundaries and the spatial extension of the discrete physical quantities to the entire computational
+background mesh including fictitious (ghost) subdomains of fluid flow. Thereby, an expensive
+remeshing and adaptation of the sparse matrix data structure are avoided and the computations are
+accelerated. To prevent spurious oscillations caused by irregular intersections of mesh cells,
+a penalization, defining also implicitly the extension to ghost domains, is added. These techniques
+are embedded in an arbitrary order, discontinuous Galerkin discretization of the time variable
+and an inf-sup stable discretization of the spatial variables. The parallel implementation of
+the matrix assembly is described. The optimal order convergence properties of the algorithm are
+illustrated in a numerical experiment for an evolving domain. The well-known 2d benchmark of flow
+around a cylinder as well as flow around moving obstacles with arising cut cells and fictitious domains
+are considered further. 

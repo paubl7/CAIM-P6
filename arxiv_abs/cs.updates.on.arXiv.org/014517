@@ -1,0 +1,18 @@
+We present algorithms for the Max-Cover and Max-Unique-Cover problems in the data stream model.
+The input to both problems are $m$ subsets of a universe of size $n$ and a value $k\in [m]$. In Max-Cover,
+the problem is to find a collection of at most $k$ sets such that the number of elements covered by at
+least one set is maximized. In Max-Unique-Cover, the problem is to find a collection of at most $k$
+sets such that the number of elements covered by exactly one set is maximized. Our goal is to design
+single-pass algorithms that use space that is sublinear in the input size. Our main algorithmic
+results are: If the sets have size at most $d$, there exist single-pass algorithms using $\tilde{O}(d^{d+1}
+k^d)$ space that solve both problems exactly. This is optimal up to polylogarithmic factors for
+constant $d$. If each element appears in at most $r$ sets, we present single pass algorithms using
+$\tilde{O}(k^2 r/\epsilon^3)$ space that return a $1+\epsilon$ approximation in the case of Max-Cover.
+We also present a single-pass algorithm using slightly more memory, i.e., $\tilde{O}(k^3 r/\epsilon^{4})$
+space, that $1+\epsilon$ approximates Max-Unique-Cover. In contrast to the above results, when
+$d$ and $r$ are arbitrary, any constant pass $1+\epsilon$ approximation algorithm for either problem
+requires $\Omega(\epsilon^{-2}m)$ space but a single pass $O(\epsilon^{-2}mk)$ space algorithm
+exists. In fact any constant-pass algorithm with an approximation better than $e/(e-1)$ and $e^{1-1/k}$
+for Max-Cover and Max-Unique-Cover respectively requires $\Omega(m/k^2)$ space when $d$ and
+$r$ are unrestricted. En route, we also obtain an algorithm for a parameterized version of the streaming
+Set-Cover problem. 

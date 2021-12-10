@@ -1,0 +1,19 @@
+Image denoising is of great importance for medical imaging system, since it can improve image quality
+for disease diagnosis and downstream image analyses. In a variety of applications, dynamic imaging
+techniques are utilized to capture the time-varying features of the subject, where multiple images
+are acquired for the same subject at different time points. Although signal-to-noise ratio of each
+time frame is usually limited by the short acquisition time, the correlation among different time
+frames can be exploited to improve denoising results with shared information across time frames.
+With the success of neural networks in computer vision, supervised deep learning methods show prominent
+performance in single-image denoising, which rely on large datasets with clean-vs-noisy image
+pairs. Recently, several self-supervised deep denoising models have been proposed, achieving
+promising results without needing the pairwise ground truth of clean images. In the field of multi-image
+denoising, however, very few works have been done on extracting correlated information from multiple
+slices for denoising using self-supervised deep learning methods. In this work, we propose Deformed2Self,
+an end-to-end self-supervised deep learning framework for dynamic imaging denoising. It combines
+single-image and multi-image denoising to improve image quality and use a spatial transformer
+network to model motion between different slices. Further, it only requires a single noisy image
+with a few auxiliary observations at different time frames for training and inference. Evaluations
+on phantom and in vivo data with different noise statistics show that our method has comparable performance
+to other state-of-the-art unsupervised or self-supervised denoising methods and outperforms
+under high noise levels. 

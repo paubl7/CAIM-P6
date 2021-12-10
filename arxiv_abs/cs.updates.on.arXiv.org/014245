@@ -1,0 +1,19 @@
+Although CNNs are widely considered as the state-of-the-art models in various applications of
+image analysis, one of the main challenges still open is the training of a CNN on high resolution images.
+Different strategies have been proposed involving either a rescaling of the image or an individual
+processing of parts of the image. Such strategies cannot be applied to images, such as gigapixel
+histopathological images, for which a high reduction in resolution inherently effects a loss of
+discriminative information, and in respect of which the analysis of single parts of the image suffers
+from a lack of global information or implies a high workload in terms of annotating the training images
+in such a way as to select significant parts. We propose a method for the analysis of gigapixel histopathological
+images solely by using weak image-level labels. In particular, two analysis tasks are taken into
+account: a binary classification and a prediction of the tumor proliferation score. Our method
+is based on a CNN structure consisting of a compressing path and a learning path. In the compressing
+path, the gigapixel image is packed into a grid-based feature map by using a residual network devoted
+to the feature extraction of each patch into which the image has been divided. In the learning path,
+attention modules are applied to the grid-based feature map, taking into account spatial correlations
+of neighboring patch features to find regions of interest, which are then used for the final whole
+slide analysis. Our method integrates both global and local information, is flexible with regard
+to the size of the input images and only requires weak image-level labels. Comparisons with different
+methods of the state-of-the-art on two well known datasets, Camelyon16 and TUPAC16, have been made
+to confirm the validity of the proposed model. 

@@ -1,0 +1,20 @@
+Dropout Regularization, serving to reduce variance, is nearly ubiquitous in Deep Learning models.
+We explore the relationship between the dropout rate and model complexity by training 2,000 neural
+networks configured with random combinations of the dropout rate and the number of hidden units
+in each dense layer, on each of the three data sets we selected. The generated figures, with binary
+cross entropy loss and binary accuracy on the z-axis, question the common assumption that adding
+depth to a dense layer while increasing the dropout rate will certainly enhance performance. We
+also discover a complex correlation between the two hyperparameters that we proceed to quantify
+by building additional machine learning and Deep Learning models which predict the optimal dropout
+rate given some hidden units in each dense layer. Linear regression and polynomial logistic regression
+require the use of arbitrary thresholds to select the cost data points included in the regression
+and to assign the cost data points a binary classification, respectively. These machine learning
+models have mediocre performance because their naive nature prevented the modeling of complex
+decision boundaries. Turning to Deep Learning models, we build neural networks that predict the
+optimal dropout rate given the number of hidden units in each dense layer, the desired cost, and the
+desired accuracy of the model. Though, this attempt encounters a mathematical error that can be
+attributed to the failure of the vertical line test. The ultimate Deep Learning model is a neural
+network whose decision boundary represents the 2,000 previously generated data points. This final
+model leads us to devise a promising method for tuning hyperparameters to minimize computational
+expense yet maximize performance. The strategy can be applied to any model hyperparameters, with
+the prospect of more efficient tuning in industrial models. 

@@ -1,0 +1,18 @@
+Ordering the collection of states of a given automaton starting from an order of the underlying alphabet
+is a natural move towards a computational treatment of the language accepted by the automaton. Along
+this path, Wheeler \emph{graphs} have been recently introduced as an extension/adaptation of
+the Burrows-Wheeler Transform (the now famous BWT, originally defined on strings) to graphs. These
+graphs constitute an important data-structure for languages, since they allow a very efficient
+storage mechanism for the transition function of an automaton, while providing a fast support to
+all sorts of substring queries. This is possible as a consequence of a property -- the so-called \emph{path
+coherence} -- valid on Wheeler graphs and consisting in an ordering on nodes that "propagates" to
+(collections of) strings. By looking at a Wheeler graph as an automaton, the ordering on strings
+corresponds to the co-lexicographic order of the words entering each state. This leads naturally
+to consider the class of regular languages accepted by Wheeler automata, i.e. the Wheeler languages.
+It has been shown that, as opposed to the general case, the classic determinization by powerset construction
+is polynomial on Wheeler languages. As a consequence, most of the classical problems turn out to
+be "easy" -- that is, solvable in polynomial time -- on Wheeler languages. Moreover, deciding whether
+a DFA is Wheeler and deciding whether a DFA accepts a Wheeler language is polynomial. Our contribution
+here is to put an upper bound to easy problems. For instance, whenever we generalize by switching
+to general NFAs or by not fixing an order of the underlying alphabet, the above mentioned problems
+become "hard" -- that is NP-complete or even PSPACE-complete. 

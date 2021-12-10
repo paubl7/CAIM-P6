@@ -1,0 +1,20 @@
+Current models of galaxy evolution are constrained by the analysis of catalogs containing the flux
+and size of galaxies extracted from multiband deep fields carrying inevitable observational and
+extraction-related biases which can be highly correlated. In practice, taking all of these effects
+simultaneously into account is difficult, and derived models are inevitably biased. To address
+this issue, we use robust likelihood-free methods for the inference of luminosity function parameters,
+made possible via massive compression of multiband images using artificial neural networks. This
+technique makes the use of catalogs unnecessary when comparing observed and simulated multiband
+deep fields and constraining model parameters. A forward modeling approach generates galaxies
+of multiple types depending on luminosity function parameters and paints them on photometric multiband
+deep fields including both the instrumental and observational characteristics. The simulated
+and the observed images present the same selection effects and can therefore be properly compared.
+We train a fully-convolutional neural network to extract the most model-parameter-sensitive
+summary statistics out of these realistic simulations, shrinking down the dimensionality of the
+summary space. Finally, using the trained network to compress both observed and simulated deep
+fields, the model parameter values are constrained through Population Monte Carlo likelihood-free
+inference. Using synthetic photometric multiband deep fields similar to the CFHTLS and D1/D2 deep
+fields and massively compressing them through the convolutional neural network, we demonstrate
+the robustness, accuracy and consistency of this new catalog-free inference method. We are able
+to constrain the parameters of luminosity functions of different types of galaxies and our results
+are fully compatible with the classic catalog extraction approaches. 

@@ -1,0 +1,19 @@
+In Recurrent Neural Networks (RNNs), encoding information in a suboptimal or erroneous way can
+impact the quality of representations based on later elements in the sequence and subsequently
+lead to wrong predictions and a worse model performance. In humans, challenging cases like garden
+path sentences (an instance of this being the infamous "The horse raced past the barn fell") can lead
+their language understanding astray. However, they are still able to correct their representation
+accordingly and recover when new information is encountered. Inspired by this, I propose an augmentation
+to standard RNNs in form of a gradient-based correction mechanism: This way I hope to enable such
+models to dynamically adapt their inner representation of a sentence, adding a way to correct deviations
+as soon as they occur. This could therefore lead to more robust models using more flexible representations,
+even during inference time. I conduct different experiments in the context of language modeling,
+where the impact of using such a mechanism is examined in detail. To this end, I look at modifications
+based on different kinds of time-dependent error signals and how they influence the model performance.
+Furthermore, this work contains a study of the model's confidence in its predictions during training
+and for challenging test samples and the effect of the manipulation thereof. Lastly, I also study
+the difference in behavior of these novel models compared to a standard LSTM baseline and investigate
+error cases in detail to identify points of future research. I show that while the proposed approach
+comes with promising theoretical guarantees and an appealing intuition, it is only able to produce
+minor improvements over the baseline due to challenges in its practical application and the efficacy
+of the tested model variants. 

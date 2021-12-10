@@ -1,0 +1,18 @@
+Adding to the literature on the data-driven detection of bid-rigging cartels, we propose a novel
+approach based on deep learning (a subfield of artificial intelligence) that flags cartel participants
+based on their pairwise bidding interactions with other firms. More concisely, we combine a so-called
+convolutional neural network for image recognition with graphs that in a pairwise manner plot the
+normalized bid values of some reference firm against the normalized bids of any other firms participating
+in the same tenders as the reference firm. Based on Japanese and Swiss procurement data, we construct
+such graphs for both collusive and competitive episodes (i.e when a bid-rigging cartel is or is not
+active) and use a subset of graphs to train the neural network such that it learns distinguishing
+collusive from competitive bidding patterns. We use the remaining graphs to test the neural network's
+out-of-sample performance in correctly classifying collusive and competitive bidding interactions.
+We obtain a very decent average accuracy of around 90% or slightly higher when either applying the
+method within Japanese, Swiss, or mixed data (in which Swiss and Japanese graphs are pooled). When
+using data from one country for training to test the trained model's performance in the other country
+(i.e. transnationally), predictive performance decreases (likely due to institutional differences
+in procurement procedures across countries), but often remains satisfactorily high. All in all,
+the generally quite high accuracy of the convolutional neural network despite being trained in
+a rather small sample of a few 100 graphs points to a large potential of deep learning approaches for
+flagging and fighting bid-rigging cartels. 

@@ -1,0 +1,20 @@
+Though beneficial for encouraging the Visual Question Answering (VQA) models to discover the underlying
+knowledge by exploiting the input-output correlation beyond image and text contexts, the existing
+knowledge VQA datasets are mostly annotated in a crowdsource way, e.g., collecting questions and
+external reasons from different users via the internet. In addition to the challenge of knowledge
+reasoning, how to deal with the annotator bias also remains unsolved, which often leads to superficial
+over-fitted correlations between questions and answers. To address this issue, we propose a novel
+dataset named Knowledge-Routed Visual Question Reasoning for VQA model evaluation. Considering
+that a desirable VQA model should correctly perceive the image context, understand the question,
+and incorporate its learned knowledge, our proposed dataset aims to cutoff the shortcut learning
+exploited by the current deep embedding models and push the research boundary of the knowledge-based
+visual question reasoning. Specifically, we generate the question-answer pair based on both the
+Visual Genome scene graph and an external knowledge base with controlled programs to disentangle
+the knowledge from other biases. The programs can select one or two triplets from the scene graph
+or knowledge base to push multi-step reasoning, avoid answer ambiguity, and balanced the answer
+distribution. In contrast to the existing VQA datasets, we further imply the following two major
+constraints on the programs to incorporate knowledge reasoning: i) multiple knowledge triplets
+can be related to the question, but only one knowledge relates to the image object. This can enforce
+the VQA model to correctly perceive the image instead of guessing the knowledge based on the given
+question solely; ii) all questions are based on different knowledge, but the candidate answers
+are the same for both the training and test sets. 

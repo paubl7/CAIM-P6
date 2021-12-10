@@ -1,0 +1,19 @@
+Since computing most variants of the subgraph counting problem in general graphs is conjectured
+to be hard, it is natural to try and design fast algorithms for restricted families of graphs. One
+such family that has been extensively studied is that of graphs of bounded degeneracy (e.g., planar
+graphs). This line of work, which started in the early 80's, culminated in a recent work of Gishboliner
+et al., which highlighted the importance of the task of counting homomorphic copies of cycles in
+graphs of bounded degeneracy. Our main result in this paper is a surprisingly tight relation between
+the above task and the well-studied problem of detecting (standard) copies of directed cycles in
+general directed graphs. More precisely, we prove the following: 1. One can compute the number of
+homomorphic copies of $C_{2k}$ and $C_{2k+1}$ in $n$-vertex graphs of bounded degeneracy in time
+$O(n^{d_{k}})$, where $d_k$ is the exponent of the fastest known algorithm for detecting directed
+copies of $C_k$ in general $m$-edge digraphs. 2. Conversely, one can transform any $n^{b_{k}}$
+algorithm for computing the number of homomorphic copies of $C_{2k}$ or of $C_{2k+1}$ in $n$-vertex
+graphs of bounded degeneracy, into an $\tilde{O}(m^{b_{k}})$ time algorithm for detecting directed
+copies of $C_k$ in general $m$-edge digraphs. We emphasize that our first result does not use a black-box
+reduction (as opposed to the second result which does). Instead, we design an algorithm for computing
+the number of $C_{2k}$-homomorphisms (or $C_{2k+1}$-homomorphisms) in degenerate graphs and
+show that one part of its analysis can be reduced to the analysis of the fastest known algorithm for
+detecting directed $k$-cycles in general digraphs, which was carried out in a recent breakthrough
+of Dalirrooyfard, Vuong and Vassilevska Williams. 

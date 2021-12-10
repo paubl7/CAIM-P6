@@ -1,0 +1,18 @@
+Selfie-based biometrics has great potential for a wide range of applications from marketing to
+higher security environments like online banking. This is now especially relevant since e.g. periocular
+verification is contactless, and thereby safe to use in pandemics such as COVID-19. However, selfie-based
+biometrics faces some challenges since there is limited control over the data acquisition conditions.
+Therefore, super-resolution has to be used to increase the quality of the captured images. Most
+of the state of the art super-resolution methods use deep networks with large filters, thereby needing
+to train and store a correspondingly large number of parameters, and making their use difficult
+for mobile devices commonly used for selfie-based. In order to achieve an efficient super-resolution
+method, we propose an Efficient Single Image Super-Resolution (ESISR) algorithm, which takes
+into account a trade-off between the efficiency of the deep neural network and the size of its filters.
+To that end, the method implements a novel loss function based on the Sharpness metric. This metric
+turns out to be more suitable for increasing the quality of the eye images. Our method drastically
+reduces the number of parameters when compared with Deep CNNs with Skip Connection and Network (DCSCN):
+from 2,170,142 to 28,654 parameters when the image size is increased by a factor of x3. Furthermore,
+the proposed method keeps the sharp quality of the images, which is highly relevant for biometric
+recognition purposes. The results on remote verification systems with raw images reached an Equal
+Error Rate (EER) of 8.7% for FaceNet and 10.05% for VGGFace. Where embedding vectors were used from
+periocular images the best results reached an EER of 8.9% (x3) for FaceNet and 9.90% (x4) for VGGFace.

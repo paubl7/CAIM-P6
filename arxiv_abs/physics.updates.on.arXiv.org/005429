@@ -1,0 +1,20 @@
+The prediction of aircraft aerodynamic quantities of interest remains among the most pressing
+challenges for computational fluid dynamics. The aircraft aerodynamics are inherently turbulent
+with mean-flow three-dimensionality, often accompanied by laminar-to-turbulent transition,
+flow separation, secondary flow motions at corners, and shock wave formation, to name a few. However,
+the most widespread wall models are built upon the assumption of statistically-in-equilibrium
+wall-bounded turbulence and do not faithfully account for the wide variety of flow conditions described
+above. This raises the question of how to devise models capable of accounting for such a vast and rich
+collection of flow physics in a feasible manner. In this work, we propose tackling the wall-modeling
+challenge by devising the flow as a collection of building blocks, whose information enables the
+prediction of the stress as the wall. The model relies on the assumption that simple canonical flows
+contain the essential flow physics to devise accurate models. Three types of building block units
+were used to train the model: turbulent channel flows, turbulent ducts and turbulent boundary layers
+with separation. This limited training set will be extended in future versions of the model. The
+approach is implemented using two interconnected artificial neural networks: a classifier, which
+identifies the contribution of each building block in the flow; and a predictor, which estimates
+the wall stress via non-linear combinations of building-block units. The output of the model is
+accompanied by the confidence in the prediction. The latter value aids the detection of areas where
+the model underperforms, such as flow regions that are not representative of the building blocks
+used to train the model. The model is validated in a unseen case representative of external aerodynamic
+applications: the NASA Juncture Flow Experiment. 

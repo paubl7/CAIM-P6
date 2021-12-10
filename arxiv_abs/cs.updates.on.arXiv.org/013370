@@ -1,0 +1,20 @@
+Lifted (family-based) static analysis by abstract interpretation is capable of analyzing all
+variants of a program family simultaneously, in a single run without generating any of the variants
+explicitly. The elements of the underlying lifted analysis domain are tuples, which maintain one
+property per variant. Still, explicit property enumeration in tuples, one by one for all variants,
+immediately yields combinatorial explosion. This is particularly apparent in the case of program
+families that, apart from Boolean features, contain also numerical features with big domains,
+thus admitting astronomic configuration spaces. The key for an efficient lifted analysis is proper
+handling of variability-specific constructs of the language (e.g., feature-based runtime tests
+and #if directives). In this work, we introduce a new symbolic representation of the lifted abstract
+domain that can efficiently analyze program families with numerical features. This makes sharing
+between property elements corresponding to different variants explicitly possible. The elements
+of the new lifted domain are constraint-based decision trees, where decision nodes are labeled
+with linear constraints defined over numerical features and the leaf nodes belong to an existing
+single-program analysis domain. To illustrate the potential of this representation, we have implemented
+an experimental lifted static analyzer, called SPLNUM^2Analyzer, for inferring invariants of
+C programs. It uses existing numerical domains (e.g., intervals, octagons, polyhedra) from the
+APRON library as parameters. An empirical evaluation on benchmarks from SV-COMP and BusyBox yields
+promising preliminary results indicating that our decision trees-based approach is effective
+and outperforms the tuple-based approach, which is used as a baseline lifted analysis based on abstract
+interpretation. 

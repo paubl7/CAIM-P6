@@ -1,0 +1,20 @@
+In the analysis of binary disease classification, single biomarkers might not have significant
+discriminating power and multiple biomarkers from a large set of biomarkers should be selected.
+Numerous approaches exist, but they merely work well for mean differences in biomarkers between
+cases and controls. Biological processes are however much more heterogeneous, and differences
+could also occur in other distributional characteristics (e.g. variances, skewness). Many machine
+learning techniques are better capable of utilizing these higher order distributional differences,
+sometimes at cost of explainability. In this study we propose quantile based prediction (QBP),
+a binary classification method that is based on the selection of multiple continuous biomarkers.
+QBP generates a single score using the tails of the biomarker distributions for cases and controls.
+This single score can then be evaluated by ROC analysis to investigate its predictive power. The
+performance of QBP is compared to supervised learning methods using extensive simulation studies,
+and two case studies: major depression disorder and trisomy. Simultaneously, the classification
+performance of the existing techniques in relation to each other is assessed. The key strengths
+of QBP are the opportunity to select relevant biomarkers and the outstanding classification performance
+in the case biomarkers predominantly show variance differences between cases and controls. When
+only shifts in means were present in the biomarkers, QBP obtained an inferior performance. Lastly,
+QBP proved to be unbiased in case of absence of disease relevant biomarkers and outperformed the
+other methods on the MDD case study. More research is needed to further optimize QBP, since it has
+several opportunities to improve its performance. Here we wanted to introduce the principle of
+QBP and show its potential. 

@@ -1,0 +1,20 @@
+Understanding human mobility is an important aspect of traffic analysis and urban planning. Trajectories
+provide detailed views on specific routes, but typically do not capture all traffic. Loop detectors
+capture all traffic flow at specific locations instead, but provide no information on individual
+routes. Given a set of loop-detector measurements and a set of representative trajectories, our
+goal is to investigate how one can effectively combine these two partial data sources to create a
+more complete picture of the underlying mobility. Specifically, we want to reconstruct a realistic
+set of routes from the loop-detector data, using the given trajectories as representatives of typical
+behavior. We model loop-detector data as a network flow that needs to be covered by the reconstructed
+routes and we capture realism of the routes via the Fr\'echet distance to the representatives. We
+prove that several forms of the resulting problem are NP-hard. Hence we explore heuristics that
+decompose the flow well while following the representatives to varying degrees. First we propose
+the Fr\'echet Routes (FR) heuristic which generates candidates routes with bounded Fr\'echet
+distance. Second we describe a variant of multi-commodity min-cost flow (MCMCF) which is loosely
+coupled to the trajectories. Lastly we consider global min-cost flow (GMCF) which is essentially
+agnostic to the representatives. We evaluate these approaches on synthetic and real-world trajectory
+data with a map-matched ground truth. We find that GMCF explains the flow best, but produces a large
+number of routes (significantly more than the ground truth); these routes are often nonsensical.
+MCMCF produces a large number of mostly realistic routes which explain the flow reasonably well.
+In contrast, FR produces significantly smaller sets of realistic routes that still explain the
+flow well, albeit with a higher running time. 

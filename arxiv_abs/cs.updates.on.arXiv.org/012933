@@ -1,0 +1,19 @@
+Most existing knowledge graphs suffer from incompleteness. Embedding knowledge graphs into continuous
+vector spaces has recently attracted increasing interest in knowledge base completion. However,
+in most existing embedding methods, only fact triplets are utilized, and logical rules have not
+been thoroughly studied for the knowledge base completion task. To overcome the problem, we propose
+an association rules enhanced knowledge graph attention network (AR-KGAT). The AR-KGAT captures
+both entity and relation features for high-order neighborhoods of any given entity in an end-to-end
+manner under the graph attention network framework. The major component of AR-KGAT is an encoder
+of an effective neighborhood aggregator, which addresses the problems by aggregating neighbors
+with both association-rules-based and graph-based attention weights. Additionally, the proposed
+model also encapsulates the representations from multi-hop neighbors of nodes to refine their
+embeddings. The decoder enables AR-KGAT to be translational between entities and relations while
+keeping the superior link prediction performance. A logic-like inference pattern is utilized
+as constraints for knowledge graph embedding. Then, the global loss is minimized over both atomic
+and complex formulas to achieve the embedding task. In this manner, we learn embeddings compatible
+with triplets and rules, which are certainly more predictive for knowledge acquisition and inference.
+We conduct extensive experiments on two benchmark datasets: WN18RR and FB15k-237, for two knowledge
+graph completion tasks: the link prediction and triplet classification to evaluate the proposed
+AR-KGAT model. The results show that the proposed AR-KGAT model achieves significant and consistent
+improvements over state-of-the-art methods. 

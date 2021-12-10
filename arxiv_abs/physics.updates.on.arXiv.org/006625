@@ -1,0 +1,18 @@
+Deep learning has been broadly applied to imaging in scattering applications. A common framework
+is to train a "descattering" neural network for image recovery by removing scattering artifacts.
+To achieve the best results on a broad spectrum of scattering conditions, individual "expert" networks
+have to be trained for each condition. However, the performance of the expert sharply degrades when
+the scattering level at the testing time differs from the training. An alternative approach is to
+train a "generalist" network using data from a variety of scattering conditions. However, the generalist
+generally suffers from worse performance as compared to the expert trained for each scattering
+condition. Here, we develop a drastically different approach, termed dynamic synthesis network
+(DSN), that can dynamically adjust the model weights and adapt to different scattering conditions.
+The adaptability is achieved by a novel architecture that enables dynamically synthesizing a network
+by blending multiple experts using a gating network. Notably, our DSN adaptively removes scattering
+artifacts across a continuum of scattering conditions regardless of whether the condition has
+been used for the training, and consistently outperforms the generalist. By training the DSN entirely
+on a multiple-scattering simulator, we experimentally demonstrate the network's adaptability
+and robustness for 3D descattering in holographic 3D particle imaging. We expect the same concept
+can be adapted to many other imaging applications, such as denoising, and imaging through scattering
+media. Broadly, our dynamic synthesis framework opens up a new paradigm for designing highly adaptive
+deep learning and computational imaging techniques. 

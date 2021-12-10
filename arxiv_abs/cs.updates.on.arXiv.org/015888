@@ -1,0 +1,20 @@
+Cross-modal retrieval aims to retrieve data in one modality by a query in another modality, which
+has been a very interesting research issue in the field of multimedia, information retrieval, and
+computer vision, and database. Most existing works focus on cross-modal retrieval between text-image,
+text-video, and lyrics-audio.Little research addresses cross-modal retrieval between audio
+and video due to limited audio-video paired datasets and semantic information. The main challenge
+of audio-visual cross-modal retrieval task focuses on learning joint embeddings from a shared
+subspace for computing the similarity across different modalities, where generating new representations
+is to maximize the correlation between audio and visual modalities space. In this work, we propose
+a novel deep triplet neural network with cluster canonical correlation analysis(TNN-C-CCA),
+which is an end-to-end supervised learning architecture with audio branch and video branch.We
+not only consider the matching pairs in the common space but also compute the mismatching pairs when
+maximizing the correlation. In particular, two significant contributions are made: i) a better
+representation by constructing deep triplet neural network with triplet loss for optimal projections
+can be generated to maximize correlation in the shared subspace. ii) positive examples and negative
+examples are used in the learning stage to improve the capability of embedding learning between
+audio and video. Our experiment is run over 5-fold cross-validation, where average performance
+is applied to demonstrate the performance of audio-video cross-modal retrieval. The experimental
+results achieved on two different audio-visual datasets show the proposed learning architecture
+with two branches outperforms existing six CCA-based methods and four state-of-the-art based
+cross-modal retrieval methods. 

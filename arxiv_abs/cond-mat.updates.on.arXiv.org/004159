@@ -1,0 +1,18 @@
+Exploration of new superconductors still relies on the experience and intuition of experts and
+is largely a process of experimental trial and error. In one study, only 3% of the candidate materials
+showed superconductivity. Here, we report the first deep learning model for finding new superconductors.
+We introduced the method named "reading periodic table" which represented the periodic table in
+a way that allows deep learning to learn to read the periodic table and to learn the law of elements
+for the purpose of discovering novel superconductors that are outside the training data. It is recognized
+that it is difficult for deep learning to predict something outside the training data. Although
+we used only the chemical composition of materials as information, we obtained an $R^{2}$ value
+of 0.92 for predicting $T_\text{c}$ for materials in a database of superconductors. We also introduced
+the method named "garbage-in" to create synthetic data of non-superconductors that do not exist.
+Non-superconductors are not reported, but the data must be required for deep learning to distinguish
+between superconductors and non-superconductors. We obtained three remarkable results. The
+deep learning can predict superconductivity for a material with a precision of 62%, which shows
+the usefulness of the model; it found the recently discovered superconductor CaBi2 and another
+one Hf0.5Nb0.2V2Zr0.3, neither of which is in the superconductor database; and it found Fe-based
+high-temperature superconductors (discovered in 2008) from the training data before 2008. These
+results open the way for the discovery of new high-temperature superconductor families. The candidate
+materials list, data, and method are openly available from the link https://github.com/tomo835g/Deep-Learning-to-find-Superconductors.

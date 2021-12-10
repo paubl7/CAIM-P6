@@ -1,0 +1,19 @@
+High-order implicit shock tracking is a new class of numerical methods to approximate solutions
+of conservation laws with non-smooth features. These methods align elements of the computational
+mesh with non-smooth features to represent them perfectly, allowing high-order basis functions
+to approximate smooth regions of the solution without the need for nonlinear stabilization, which
+leads to accurate approximations on traditionally coarse meshes. The hallmark of these methods
+is the underlying optimization formulation whose solution is a feature-aligned mesh and the corresponding
+high-order approximation to the flow; the key challenge is robustly solving the central optimization
+problem. In this work, we develop a robust optimization solver for high-order implicit shock tracking
+methods so they can be reliably used to simulate complex, high-speed, compressible flows in multiple
+dimensions. The proposed method integrates practical robustness measures into a sequential quadratic
+programming method, including dimension- and order-independent simplex element collapses,
+mesh smoothing, and element-wise solution re-initialization, which prove to be necessary to reliably
+track complex discontinuity surfaces, such as curved and reflecting shocks, shock formation,
+and shock-shock interaction. A series of nine numerical experiments -- including two- and three-dimensional
+compressible flows with complex discontinuity surfaces -- are used to demonstrate: 1) the robustness
+of the solver, 2) the meshes produced are high-quality and track continuous, non-smooth features
+in addition to discontinuities, 3) the method achieves the optimal convergence rate of the underlying
+discretization even for flows containing discontinuities, and 4) the method produces highly accurate
+solutions on extremely coarse meshes relative to approaches based on shock capturing. 

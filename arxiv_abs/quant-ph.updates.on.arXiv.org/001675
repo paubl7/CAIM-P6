@@ -1,0 +1,20 @@
+The private simultaneous messages model is a non-interactive version of the multiparty secure
+computation, which has been intensively studied to examine the communication cost of the secure
+computation. We consider its quantum counterpart, the private simultaneous quantum messages
+(PSQM) model, and examine the advantages of quantum communication and prior entanglement of this
+model. In the PSQM model, $k$ parties $P_1,\ldots,P_k$ initially share a common random string (or
+entangled states in a stronger setting), and they have private classical inputs $x_1,\ldots, x_k$.
+Every $P_i$ generates a quantum message from the private input $x_i$ and the shared random string
+(entangled states), and then sends it to the referee $R$. Receiving the messages, $R$ computes $F(x_1,\ldots,x_k)$.
+Then, $R$ learns nothing except for $F(x_1,\ldots,x_k)$ as the privacy condition. We obtain the
+following results for this PSQM model. (1) We demonstrate that the privacy condition inevitably
+increases the communication cost in the two-party PSQM model as well as in the classical case presented
+by Applebaum, Holenstein, Mishra, and Shayevitz. In particular, we prove a lower bound $(3-o(1))n$
+of the communication complexity in PSQM protocols with a shared random string for random Boolean
+functions of $2n$-bit input, which is larger than the trivial upper bound $2n$ of the communication
+complexity without the privacy condition. (2) We demonstrate a factor two gap between the communication
+complexity of PSQM protocols with shared entangled states and with shared random strings by designing
+a multiparty PSQM protocol with shared entangled states for a total function that extends the two-party
+equality function. (3) We demonstrate an exponential gap between the communication complexity
+of PSQM protocols with shared entangled states and with shared random strings for a two-party partial
+function. 

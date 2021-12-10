@@ -1,0 +1,19 @@
+This paper considers joint learning of multiple sparse Granger graphical models to discover underlying
+common and differential Granger causality (GC) structures across multiple time series. This can
+be applied to drawing group-level brain connectivity inferences from a homogeneous group of subjects
+or discovering network differences among groups of signals collected under heterogeneous conditions.
+By recognizing that the GC of a single multivariate time series can be characterized by common zeros
+of vector autoregressive (VAR) lag coefficients, a group sparse prior is included in joint regularized
+least-squares estimations of multiple VAR models. Group-norm regularizations based on group-
+and fused-lasso penalties encourage a decomposition of multiple networks into a common GC structure,
+with other remaining parts defined in individual-specific networks. Prior information about
+sparseness and sparsity patterns of desired GC networks are incorporated as relative weights,
+while a non-convex group norm in the penalty is proposed to enhance the accuracy of network estimation
+in low-sample settings. Extensive numerical results on simulations illustrated our method's
+improvements over existing sparse estimation approaches on GC network sparsity recovery. Our
+methods were also applied to available resting-state fMRI time series from the ADHD-200 data sets
+to learn the differences of causality mechanisms, called effective brain connectivity, between
+adolescents with ADHD and typically developing children. Our analysis revealed that parts of the
+causality differences between the two groups often resided in the orbitofrontal region and areas
+associated with the limbic system, which agreed with clinical findings and data-driven results
+in previous studies. 

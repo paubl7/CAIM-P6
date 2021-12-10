@@ -1,0 +1,19 @@
+Echo States Networks (ESN) and Long-Short Term Memory networks (LSTM) are two popular architectures
+of Recurrent Neural Networks (RNN) to solve machine learning task involving sequential data. However,
+little have been done to compare their performances and their internal mechanisms on a common task.
+In this work, we trained ESNs and LSTMs on a Cross-Situationnal Learning (CSL) task. This task aims
+at modelling how infants learn language: they create associations between words and visual stimuli
+in order to extract meaning from words and sentences. The results are of three kinds: performance
+comparison, internal dynamics analyses and visualization of latent space. (1) We found that both
+models were able to successfully learn the task: the LSTM reached the lowest error for the basic corpus,
+but the ESN was quicker to train. Furthermore, the ESN was able to outperform LSTMs on datasets more
+challenging without any further tuning needed. (2) We also conducted an analysis of the internal
+units activations of LSTMs and ESNs. Despite the deep differences between both models (trained
+or fixed internal weights), we were able to uncover similar inner mechanisms: both put emphasis
+on the units encoding aspects of the sentence structure. (3) Moreover, we present Recurrent States
+Space Visualisations (RSSviz), a method to visualize the structure of latent state space of RNNs,
+based on dimension reduction (using UMAP). This technique enables us to observe a fractal embedding
+of sequences in the LSTM. RSSviz is also useful for the analysis of ESNs (i) to spot difficult examples
+and (ii) to generate animated plots showing the evolution of activations across learning stages.
+Finally, we explore qualitatively how the RSSviz could provide an intuitive visualisation to understand
+the influence of hyperparameters on the reservoir dynamics prior to ESN training. 

@@ -1,0 +1,19 @@
+Many practical applications, e.g., content based image retrieval and object recognition, heavily
+rely on the local features extracted from the query image. As these local features are usually exposed
+to untrustworthy parties, the privacy leakage problem of image local features has received increasing
+attention in recent years. In this work, we thoroughly evaluate the privacy leakage of Scale Invariant
+Feature Transform (SIFT), which is one of the most widely-used image local features. We first consider
+the case that the adversary can fully access the SIFT features, i.e., both the SIFT descriptors and
+the coordinates are available. We propose a novel end-to-end, coarse-to-fine deep generative
+model for reconstructing the latent image from its SIFT features. The designed deep generative
+model consists of two networks, where the first one attempts to learn the structural information
+of the latent image by transforming from SIFT features to Local Binary Pattern (LBP) features, while
+the second one aims to reconstruct the pixel values guided by the learned LBP. Compared with the state-of-the-art
+algorithms, the proposed deep generative model produces much improved reconstructed results
+over three public datasets. Furthermore, we address more challenging cases that only partial SIFT
+features (either SIFT descriptors or coordinates) are accessible to the adversary. It is shown
+that, if the adversary can only have access to the SIFT descriptors while not their coordinates,
+then the modest success of reconstructing the latent image can be achieved for highly-structured
+images (e.g., faces) and would fail in general settings. In addition, the latent image can be reconstructed
+with reasonably good quality solely from the SIFT coordinates. Our results would suggest that the
+privacy leakage problem can be largely avoided if the SIFT coordinates can be well protected. 

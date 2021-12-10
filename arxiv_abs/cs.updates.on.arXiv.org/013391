@@ -1,0 +1,20 @@
+Given a directed acyclic graph (DAG) $G = (V,E)$, we say that $G$ is $(e,d)$-depth-robust (resp.
+$(e,d)$-edge-depth-robust) if for any set $S \subset V$ (resp. $S \subseteq E$) of at most $|S| \leq
+e$ nodes (resp. edges) the graph $G-S$ contains a directed path of length $d$. While edge-depth-robust
+graphs are potentially easier to construct many applications in cryptography require node depth-robust
+graphs with small indegree. We create a graph reduction that transforms an $(e, d)$-edge-depth-robust
+graph with $m$ edges into a $(e/2,d)$-depth-robust graph with $O(m)$ nodes and constant indegree.
+One immediate consequence of this result is the first construction of a provably $(\frac{n \log
+\log n}{\log n}, \frac{n}{(\log n)^{1 + \log \log n}})$-depth-robust graph with constant indegree,
+where previous constructions for $e =\frac{n \log \log n}{\log n}$ had $d = O(n^{1-\epsilon})$.
+Our reduction crucially relies on ST-Robust graphs, a new graph property we introduce which may
+be of independent interest. We say that a directed, acyclic graph with $n$ inputs and $n$ outputs
+is $(k_1, k_2)$-ST-Robust if we can remove any $k_1$ nodes and there exists a subgraph containing
+at least $k_2$ inputs and $k_2$ outputs such that each of the $k_2$ inputs is connected to all of the
+$k_2$ outputs. If the graph if $(k_1,n-k_1)$-ST-Robust for all $k_1 \leq n$ we say that the graph
+is maximally ST-robust. We show how to construct maximally ST-robust graphs with constant indegree
+and $O(n)$ nodes. Given a family $ \mathbb{M}$ of ST-robust graphs and an arbitrary $(e, d)$-edge-depth-robust
+graph $G$ we construct a new constant-indegree graph $ \mathrm{Reduce}(G, \mathbb{M})$ by replacing
+each node in $G$ with an ST-robust graph from $ \mathbb{M}$. We also show that ST-robust graphs can
+be used to construct (tight) proofs-of-space and (asymptotically) improved wide-block labeling
+functions. 

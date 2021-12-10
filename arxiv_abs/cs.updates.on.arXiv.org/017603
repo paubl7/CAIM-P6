@@ -1,0 +1,20 @@
+In CS literature, the efforts can be divided into two groups: finding a measurement matrix that preserves
+the compressed information at the maximum level, and finding a reconstruction algorithm for the
+compressed information. In the traditional CS setup, the measurement matrices are selected as
+random matrices, and optimization-based iterative solutions are used to recover the signals.
+However, when we handle large signals, using random matrices become cumbersome especially when
+it comes to iterative optimization-based solutions. Even though recent deep learning-based solutions
+boost the reconstruction accuracy performance while speeding up the recovery, still jointly learning
+the whole measurement matrix is a difficult process. In this work, we introduce a separable multi-linear
+learning of the CS matrix by representing it as the summation of arbitrary number of tensors. For
+a special case where the CS operation is set as a single tensor multiplication, the model is reduced
+to the learning-based separable CS; while a dense CS matrix can be approximated and learned as the
+summation of multiple tensors. Both cases can be used in CS of two or multi-dimensional signals e.g.,
+images, multi-spectral images, videos, etc. Structural CS matrices can also be easily approximated
+and learned in our multi-linear separable learning setup with structural tensor sum representation.
+Hence, our learnable generalized tensor summation CS operation encapsulates most CS setups including
+separable CS, non-separable CS (traditional vector-matrix multiplication), structural CS,
+and CS of the multi-dimensional signals. For both gray-scale and RGB images, the proposed scheme
+surpasses most state-of-the-art solutions, especially in lower measurement rates. Although
+the performance gain remains limited from tensor to the sum of tensor representation for gray-scale
+images, it becomes significant in the RGB case. 

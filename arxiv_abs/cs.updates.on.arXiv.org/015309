@@ -1,0 +1,20 @@
+Adversarial Transferability is an intriguing property of adversarial examples -- a perturbation
+that is crafted against one model is also effective against another model, which may arise from a
+different model family or training process. To better protect ML systems against adversarial attacks,
+several questions are raised: what are the sufficient conditions for adversarial transferability?
+Is it possible to bound such transferability? Is there a way to reduce the transferability in order
+to improve the robustness of an ensemble ML model? To answer these questions, we first theoretically
+analyze sufficient conditions for transferability between models and propose a practical algorithm
+to reduce transferability within an ensemble to improve its robustness. Our theoretical analysis
+shows only the orthogonality between gradients of different models is not enough to ensure low adversarial
+transferability: the model smoothness is also an important factor. In particular, we provide a
+lower/upper bound of adversarial transferability based on model gradient similarity for low risk
+classifiers based on gradient orthogonality and model smoothness. We demonstrate that under the
+condition of gradient orthogonality, smoother classifiers will guarantee lower adversarial
+transferability. Furthermore, we propose an effective Transferability Reduced Smooth-ensemble(TRS)
+training strategy to train a robust ensemble with low transferability by enforcing model smoothness
+and gradient orthogonality between base models. We conduct extensive experiments on TRS by comparing
+with other state-of-the-art baselines on different datasets, showing that the proposed TRS outperforms
+all baselines significantly. We believe our analysis on adversarial transferability will inspire
+future research towards developing robust ML models taking these adversarial transferability
+properties into account. 

@@ -1,0 +1,21 @@
+The classical asymptotic theory for parametric $M$-estimators guarantees that, in the limit of
+infinite sample size, the excess risk has a chi-square type distribution, even in the misspecified
+case. We demonstrate how self-concordance of the loss allows to characterize the critical sample
+size sufficient to guarantee a chi-square type in-probability bound for the excess risk. Specifically,
+we consider two classes of losses: (i) self-concordant losses in the classical sense of Nesterov
+and Nemirovski, i.e., whose third derivative is uniformly bounded with the $3/2$ power of the second
+derivative; (ii) pseudo self-concordant losses, for which the power is removed. These classes
+contain losses corresponding to several generalized linear models, including the logistic loss
+and pseudo-Huber losses. Our basic result under minimal assumptions bounds the critical sample
+size by $O(d \cdot d_{\text{eff}}),$ where $d$ the parameter dimension and $d_{\text{eff}}$ the
+effective dimension that accounts for model misspecification. In contrast to the existing results,
+we only impose local assumptions that concern the population risk minimizer $\theta_*$. Namely,
+we assume that the calibrated design, i.e., design scaled by the square root of the second derivative
+of the loss, is subgaussian at $\theta_*$. Besides, for type-ii losses we require boundedness of
+a certain measure of curvature of the population risk at $\theta_*$.Our improved result bounds
+the critical sample size from above as $O(\max\{d_{\text{eff}}, d \log d\})$ under slightly stronger
+assumptions. Namely, the local assumptions must hold in the neighborhood of $\theta_*$ given by
+the Dikin ellipsoid of the population risk. Interestingly, we find that, for logistic regression
+with Gaussian design, there is no actual restriction of conditions: the subgaussian parameter
+and curvature measure remain near-constant over the Dikin ellipsoid. Finally, we extend some of
+these results to $\ell_1$-penalized estimators in high dimensions. 

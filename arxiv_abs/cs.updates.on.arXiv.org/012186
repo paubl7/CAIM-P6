@@ -1,0 +1,19 @@
+Computational fluid dynamics (CFD) model has been widely used for prototyping data centers. Evolving
+it to high-fidelity {\em digital twin} is desirable for the management and operations of large-scale
+data centers. Manually calibrating CFD model parameters to achieve twin-class fidelity by specially
+trained domain expert is tedious and labor-intensive. To reduce manual efforts, existing automatic
+calibration approaches developed for various computational models apply heuristics to search
+model configurations within an empirically defined parameter bound. However, in the context of
+CFD, each search step requires long-lasting CFD model's iterated solving, rendering these approaches
+impractical with increased model complexity. This paper presents Kalibre, a knowledge-based
+neural surrogate approach that performs CFD model calibration by iterating four key steps of i)
+training a neural surrogate model based on CFD-generated data, ii) finding the optimal parameters
+at the moment through neural surrogate retraining based on sensor-measured data, iii) configuring
+the found parameters back to the CFD model, and iv) validating the CFD model using sensor-measured
+data as the ground truth. Thus, the parameter search is offloaded to the neural surrogate which is
+ultra-faster than CFD model's iterated solving. To speed up the convergence of Kalibre, we integrate
+prior knowledge of the twinned data center's thermophysics into the neural surrogate design to
+improve its learning efficiency. With about five hours computation on a 32-core processor, Kalibre
+achieves mean absolute errors (MAEs) of $0.81^o$C and $0.75^o$C in calibrating two CFD models for
+two production data halls hosting thousands of servers each while requires fewer CFD solving processes
+than existing baseline approaches. 

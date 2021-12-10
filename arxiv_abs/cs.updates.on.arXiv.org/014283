@@ -1,0 +1,19 @@
+After decades of research, traditional BFT protocols have achieved nearly optimal performance
+improvements. However, they still cannot meet the rapidly increasing performance and scalability
+requirements of distributed systems, especially blockchain. Fortunately, the development of
+trusted execution environments brings new opportunities. Utilizing TEE, BFT protocols can achieve
+significant improvements, e.g., reduce the minimum number of replicas from 3f+1 to 2f+1. There
+have been several TEE-based BFT protocols. They generally share a common BFT-driven design pattern,
+i.e., to limit byzantine behaviors of replicas using TEE. However, while TEE solves some security
+issues, it also introduces new security issues. With this confusing design pattern, a protocol
+need not only tolerate arbitrary byzantine faults(which is already hard enough) but also handle
+those new security issues. Consequently, those protocols are complex and difficult to understand.
+With this drawback, those protocols have hardly been applied to real distributed systems. We start
+from a different question, i.e., what are the key differences between TEE-based BFT and Crash Fault
+Tolerance(CFT). We revisit CFT and propose four principles to help bridge the gap between TEE-based
+BFT and CFT. Based on these principles, we propose a novel TEE-based BFT protocol called TBFT. With
+inspirations from CFT, TBFT is more understandable and simpler compared to previous protocols.
+With a solid foundation provided by existing CFT protocols, TBFT has more opportunities to be applied
+to a practical system. Besides, We make comprehensive improvements to TBFT for both performance
+and security. Our evaluation shows that TBFT has better performance and scalability compared to
+previous protocols. 

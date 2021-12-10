@@ -1,0 +1,19 @@
+Over-the-Air (OTA) computation is the problem of computing functions of distributed data without
+transmitting the entirety of the data to a central point. By avoiding such costly transmissions,
+OTA computation schemes can achieve a better-than-linear (depending on the function, often logarithmic
+or even constant) scaling of the communication cost as the number of transmitters grows. Among the
+most common functions computed OTA are linear functions such as weighted sums. In this work, we propose
+and analyze an analog OTA computation scheme for a class of functions that contains linear functions
+as well as some nonlinear functions such as $p$-norms of vectors. We prove error bound guarantees
+that are valid for fast-fading channels and all distributions of fading and noise contained in the
+class of sub-Gaussian distributions. This class includes Gaussian distributions, but also many
+other practically relevant cases such as Class A Middleton noise and fading with dominant line-of-sight
+components. In addition, there can be correlations in the fading and noise so that the presented
+results also apply to, for example, block fading channels and channels with bursty interference.
+We do not rely on any stochastic characterization of the distributed arguments of the OTA computed
+function; in particular, there is no assumption that these arguments are drawn from identical or
+independent probability distributions. Our analysis is nonasymptotic and therefore provides
+error bounds that are valid for a finite number of channel uses. OTA computation has a huge potential
+for reducing communication cost in applications such as Machine Learning (ML)-based distributed
+anomaly detection in large wireless sensor networks. We illustrate this potential through extensive
+numerical simulations. 

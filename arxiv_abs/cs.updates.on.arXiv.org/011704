@@ -1,0 +1,18 @@
+In the current work, a number of algorithms are developed and compared for the numerical solution
+of periodic (quasi-static) linear elastic mechanical boundary-value problems (BVPs) based on
+two different discretizations of Fourier series. The first is standard and based on the trapezoidal
+approximation of the Fourier mode integral, resulting in trapezoidal discretization (TD) of the
+truncated Fourier series. Less standard is the second discretization based on piecewise-constant
+approximation of the Fourier mode integrand, yielding a piecewise-constant discretization (PCD)
+of this series. Employing these, fixed-point algorithms are formulated via Green-function preconditioning
+(GFP) and finite-difference discretization (of differential operators; FDD). In particular,
+in the context of PCD, this includes an algorithm based on the so-called "discrete Green operator"
+(DGO) recently introduced by Eloh et al. (2019), which employs GFP, but not FDD. For computational
+comparisons, the (classic) benchmark case of a cubic inclusion embedded in a matrix (e.g., Suquet,
+1997; Willot, 2015) is employed. Both discontinuous and smooth transitions in elastic stiffness
+at the matrix-inclusion (MI) interface are considered. In the context of both TD and PCD, a number
+of GFP- and FDD-based algorithms are developed. Among these, one based on so-called averaged-forward-backward-differencing
+(AFB) is shown to result in the greatest improvement in convergence rate. As it turns out, AFB is equivalent
+to the "rotated scheme" (R) of Willot (2015) in the context of TD. In the context of PCD, comparison
+of the performance and convergence behavior of AFB/R- and DGO-based algorithms shows that the former
+is more efficient than the latter for larger phase contrasts. 

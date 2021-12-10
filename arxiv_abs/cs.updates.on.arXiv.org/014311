@@ -1,0 +1,18 @@
+The heating, ventilation and air-conditioning (HVAC) system accounts for substantial energy
+use in buildings, whereas a large group of occupants are still not actually feeling comfortable
+staying inside. This poses the issue of developing energy-efficient HVAC control, i.e., reduce
+energy use (cost) while simultaneously enhancing human comfort. This paper pursues the objective
+and studies the stochastic optimal HVAC control subject to uncertain thermal demand (i.e., the
+weather and occupancy etc). Particularly, we involve the elaborate predicted mean vote (PMV) thermal
+comfort model in the optimization. The problem is computationally challenging due to the non-linear
+and non-analytical constraints imposed by the system dynamics and PMV model. We make the following
+contributions to address it. First, we formulate the problem as a Markov decision process (MDP)
+which is a desirable modeling technique capable of handling the complexities. Second, we propose
+a gradient-based learning (GB-L) method for progressively learning a stochastic control policy
+off-line and store it for on-line execution. Third, we prove the learning method converge to the
+optimal policies theoretically, and its performance (i.e., energy cost, thermal comfort and on-line
+computation) for HVAC control via simulations. The comparisons with the existing model predictive
+control based relaxation (MPC-R) method which is assumed with accurate future information and
+supposed to provide the near-optimal bounds, show that though there exists some performance loss
+in energy cost reduction (i.e., 6.5%), the proposed method can enable efficient on-line implementation
+(less than 1 second) and provide high probability of thermal comfort under uncertainties. 

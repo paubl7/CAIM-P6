@@ -1,0 +1,18 @@
+Federated learning is a paradigm that enables local devices to jointly train a server model while
+keeping the data decentralized and private. In federated learning, since local data are collected
+by clients, it is hardly guaranteed that the data are correctly annotated. Although a lot of studies
+have been conducted to train the networks robust to these noisy data in a centralized setting, these
+algorithms still suffer from noisy labels in federated learning. Compared to the centralized setting,
+clients' data can have different noise distributions due to variations in their labeling systems
+or background knowledge of users. As a result, local models form inconsistent decision boundaries
+and their weights severely diverge from each other, which are serious problems in federated learning.
+To solve these problems, we introduce a novel federated learning scheme that the server cooperates
+with local models to maintain consistent decision boundaries by interchanging class-wise centroids.
+These centroids are central features of local data on each device, which are aligned by the server
+every communication round. Updating local models with the aligned centroids helps to form consistent
+decision boundaries among local models, although the noise distributions in clients' data are
+different from each other. To improve local model performance, we introduce a novel approach to
+select confident samples that are used for updating the model with given labels. Furthermore, we
+propose a global-guided pseudo-labeling method to update labels of unconfident samples by exploiting
+the global model. Our experimental results on the noisy CIFAR-10 dataset and the Clothing1M dataset
+show that our approach is noticeably effective in federated learning with noisy labels. 

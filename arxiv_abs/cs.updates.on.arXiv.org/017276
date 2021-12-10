@@ -1,0 +1,20 @@
+Meningioma is one of the most prevalent brain tumors in adults. To determine its malignancy, it is
+graded by a pathologist into three grades according to WHO standards. This grade plays a decisive
+role in treatment, and yet may be subject to inter-rater discordance. In this work, we present and
+compare three approaches towards fully automatic meningioma grading from histology whole slide
+images. All approaches are following a two-stage paradigm, where we first identify a region of interest
+based on the detection of mitotic figures in the slide using a state-of-the-art object detection
+deep learning network. This region of highest mitotic rate is considered characteristic for biological
+tumor behavior. In the second stage, we calculate a score corresponding to tumor malignancy based
+on information contained in this region using three different settings. In a first approach, image
+patches are sampled from this region and regression is based on morphological features encoded
+by a ResNet-based network. We compare this to learning a logistic regression from the determined
+mitotic count, an approach which is easily traceable and explainable. Lastly, we combine both approaches
+in a single network. We trained the pipeline on 951 slides from 341 patients and evaluated them on
+a separate set of 141 slides from 43 patients. All approaches yield a high correlation to the WHO grade.
+The logistic regression and the combined approach had the best results in our experiments, yielding
+correct predictions in 32 and 33 of all cases, respectively, with the image-based approach only
+predicting 25 cases correctly. Spearman's correlation was 0.716, 0.792 and 0.790 respectively.
+It may seem counterintuitive at first that morphological features provided by image patches do
+not improve model performance. Yet, this mirrors the criteria of the grading scheme, where mitotic
+count is the only unequivocal parameter. 

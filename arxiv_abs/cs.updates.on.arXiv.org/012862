@@ -1,0 +1,19 @@
+Some real-world domains, such as Agriculture and Healthcare, comprise early-stage disease indications
+whose recording constitutes a rare event, and yet, whose precise detection at that stage is critical.
+In this type of highly imbalanced classification problems, which encompass complex features,
+deep learning (DL) is much needed because of its strong detection capabilities. At the same time,
+DL is observed in practice to favor majority over minority classes and consequently suffer from
+inaccurate detection of the targeted early-stage indications. To simulate such scenarios, we
+artificially generate skewness (99% vs. 1%) for certain plant types out of the PlantVillage dataset
+as a basis for classification of scarce visual cues through transfer learning. By randomly and unevenly
+picking healthy and unhealthy samples from certain plant types to form a training set, we consider
+a base experiment as fine-tuning ResNet34 and VGG19 architectures and then testing the model performance
+on a balanced dataset of healthy and unhealthy images. We empirically observe that the initial F1
+test score jumps from 0.29 to 0.95 for the minority class upon adding a final Batch Normalization
+(BN) layer just before the output layer in VGG19. We demonstrate that utilizing an additional BN
+layer before the output layer in modern CNN architectures has a considerable impact in terms of minimizing
+the training time and testing error for minority classes in highly imbalanced data sets. Moreover,
+when the final BN is employed, minimizing the loss function may not be the best way to assure a high
+F1 test score for minority classes in such problems. That is, the network might perform better even
+if it is not confident enough while making a prediction; leading to another discussion about why
+softmax output is not a good uncertainty measure for DL models. 

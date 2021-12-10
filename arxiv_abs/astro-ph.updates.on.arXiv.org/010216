@@ -1,0 +1,18 @@
+Astrophysical fluid flow studies often encompass a wide range of physical processes to account
+for the complexity of the system under consideration. In addition to gravity, a proper treatment
+of thermodynamic processes via continuum radiation transport and/or photoionization is becoming
+the state of the art. We present a major update of our continuum radiation transport module, MAKEMAKE,
+and a newly developed module for photoionization, SEDNA, coupled to the magnetohydrodynamics
+code PLUTO. These extensions are currently not publicly available; access can be granted on a case-by-case
+basis. We explain the theoretical background of the equations solved, elaborate on the numerical
+layout, and present a comprehensive test suite for radiation-ionization hydrodynamics. The grid-based
+radiation and ionization modules support static one-dimensional, two-dimensional, and three-dimensional
+grids in Cartesian, cylindrical, and spherical coordinates. Each module splits the radiation
+field into two components, one originating directly from a point source - solved using a ray-tracing
+scheme - and a diffuse component - solved with a three-dimensional flux-limited diffusion (FLD)
+solver. The FLD solver for the continuum radiation transport makes use of either the equilibrium
+one-temperature approach or the linearization two-temperature approach. The FLD solver for the
+photoionization module enables accounting for the temporal evolution of the radiation field from
+direct recombination of free electrons into hydrogen's ground state as an alternative to the on-the-spot
+approximation. A brief overview of completed and ongoing scientific studies is given to explicitly
+illustrate the multipurpose nature of the numerical framework presented. 

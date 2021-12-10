@@ -1,0 +1,20 @@
+The graph of a BN can be machine learned, determined by causal knowledge, or a combination of both.
+In disciplines like bioinformatics, applying BN structure learning algorithms can reveal new
+insights that would otherwise remain unknown. However, these algorithms are less effective when
+the input data are limited in terms of sample size, which is often the case when working with real data.
+This paper focuses on purely machine learned and purely knowledge-based BNs and investigates their
+differences in terms of graphical structure and how well the implied statistical models explain
+the data. The tests are based on four previous case studies that had their BN structure determined
+by domain knowledge. Using various metrics, we compare the knowledge-based graphs to the machine
+learned graphs generated from various algorithms implemented in TETRAD spanning all three classes
+of learning. The results show that while the algorithms are much better at arriving at a graph with
+a high model selection score, the parameterised models obtained from those graphs tend to be poor
+predictors of variables of interest, relative to the corresponding inferences obtained from the
+knowledge-based graphs. Amongst our conclusions is that structure learning is ineffective in
+the presence of limited sample size relative to model dimensionality, which can be explained by
+model fitting becoming increasingly distorted under these conditions; essentially rendering
+ground truth graphs inaccurate by guiding algorithms towards graphical patterns that may share
+higher evaluation scores and yet deviate further from the ground truth graph. This highlights the
+value of causal knowledge in these cases, as well as the need for more appropriate model selection
+scores. Lastly, the experiments also provide new evidence that support the notion that results
+from simulated data tell us little about actual real-world performance. 

@@ -1,0 +1,19 @@
+We developed two machine learning frameworks that could assist in automated litho-stratigraphic
+interpretation of seismic volumes without any manual hand labeling from an experienced seismic
+interpreter. The first framework is an unsupervised hierarchical clustering model to divide seismic
+images from a volume into certain number of clusters determined by the algorithm. The clustering
+framework uses a combination of density and hierarchical techniques to determine the size and homogeneity
+of the clusters. The second framework consists of a self-supervised deep learning framework to
+label regions of geological interest in seismic images. It projects the latent-space of an encoder-decoder
+architecture unto two orthogonal subspaces, from which it learns to delineate regions of interest
+in the seismic images. To demonstrate an application of both frameworks, a seismic volume was clustered
+into various contiguous clusters, from which four clusters were selected based on distinct seismic
+patterns: horizons, faults, salt domes and chaotic structures. Images from the selected clusters
+are used to train the encoder-decoder network. The output of the encoder-decoder network is a probability
+map of the possibility an amplitude reflection event belongs to an interesting geological structure.
+The structures are delineated using the probability map. The delineated images are further used
+to post-train a segmentation model to extend our results to full-vertical sections. The results
+on vertical sections show that we can factorize a seismic volume into its corresponding structural
+components. Lastly, we showed that our deep learning framework could be modeled as an attribute
+extractor and we compared our attribute result with various existing attributes in literature
+and demonstrate competitive performance with them. 

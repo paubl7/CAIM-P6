@@ -1,0 +1,19 @@
+A continuous constraint satisfaction problem (CCSP) is a constraint satisfaction problem (CSP)
+with a domain $U \subset \mathbb{R}$. We engage in a systematic study to classify CCSPs that are complete
+of the Existential Theory of the Reals, i.e., ER-complete. To define this class, we first consider
+the problem ETR, which also stands for Existential Theory of the Reals. In an instance of this problem
+we are given some sentence of the form $\exists x_1, \ldots, x_n \in \mathbb{R} : \Phi(x_1, \ldots,
+x_n)$, where $\Phi$ is a well-formed quantifier-free formula consisting of the symbols $\{0, 1,
++, \cdot, \geq, >, \wedge, \vee, \neg\}$, the goal is to check whether this sentence is true. Now the
+class ER is the family of all problems that admit a polynomial-time reduction to ETR. It is known that
+NP $\subseteq$ ER $\subseteq$ PSPACE. We restrict our attention on CCSPs with addition constraints
+($x + y = z$) and some other mild technical condition. Previously, it was shown that multiplication
+constraints ($x \cdot y = z$), squaring constraints ($x^2 = y$), or inversion constraints ($x\cdot
+y = 1$) are sufficient to establish ER-completeness. We extend this in the strongest possible sense
+for equality constraints as follows. We show that CCSPs (with addition constraints and some other
+mild technical condition) that have any one well-behaved curved equality constraint ($f(x,y)
+= 0$) are ER-complete. We further extend our results to inequality constraints. We show that any
+well-behaved convexly curved and any well-behaved concavely curved inequality constraint ($f(x,y)
+\geq 0$ and $g(x,y) \geq 0$) imply ER-completeness on the class of such CCSPs. We apply our findings
+to geometric packing and answer an open question by Abrahamsen et al. [FOCS 2020]. Namely, we establish
+ER-completeness of packing convex pieces into a square container under rotations and translations.

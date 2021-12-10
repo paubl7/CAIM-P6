@@ -1,0 +1,18 @@
+This paper proposes a voice conversion (VC) method using sequence-to-sequence (seq2seq or S2S)
+learning, which flexibly converts not only the voice characteristics but also the pitch contour
+and duration of input speech. The proposed method, called ConvS2S-VC, has three key features. First,
+it uses a model with a fully convolutional architecture. This is particularly advantageous in that
+it is suitable for parallel computations using GPUs. It is also beneficial since it enables effective
+normalization techniques such as batch normalization to be used for all the hidden layers in the
+networks. Second, it achieves many-to-many conversion by simultaneously learning mappings among
+multiple speakers using only a single model instead of separately learning mappings between each
+speaker pair using a different model. This enables the model to fully utilize available training
+data collected from multiple speakers by capturing common latent features that can be shared across
+different speakers. Owing to this structure, our model works reasonably well even without source
+speaker information, thus making it able to handle any-to-many conversion tasks. Third, we introduce
+a mechanism, called the conditional batch normalization that switches batch normalization layers
+in accordance with the target speaker. This particular mechanism has been found to be extremely
+effective for our many-to-many conversion model. We conducted speaker identity conversion experiments
+and found that ConvS2S-VC obtained higher sound quality and speaker similarity than baseline methods.
+We also found from audio examples that it could perform well in various tasks including emotional
+expression conversion, electrolaryngeal speech enhancement, and English accent conversion.

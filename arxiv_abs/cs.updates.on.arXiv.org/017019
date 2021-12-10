@@ -1,0 +1,19 @@
+In this work, we show, for the well-studied problem of learning parity under noise, where a learner
+tries to learn $x=(x_1,\ldots,x_n) \in \{0,1\}^n$ from a stream of random linear equations over
+$\mathrm{F}_2$ that are correct with probability $\frac{1}{2}+\varepsilon$ and flipped with
+probability $\frac{1}{2}-\varepsilon$, that any learning algorithm requires either a memory
+of size $\Omega(n^2/\varepsilon)$ or an exponential number of samples. In fact, we study memory-sample
+lower bounds for a large class of learning problems, as characterized by [GRT'18], when the samples
+are noisy. A matrix $M: A \times X \rightarrow \{-1,1\}$ corresponds to the following learning problem
+with error parameter $\varepsilon$: an unknown element $x \in X$ is chosen uniformly at random.
+A learner tries to learn $x$ from a stream of samples, $(a_1, b_1), (a_2, b_2) \ldots$, where for every
+$i$, $a_i \in A$ is chosen uniformly at random and $b_i = M(a_i,x)$ with probability $1/2+\varepsilon$
+and $b_i = -M(a_i,x)$ with probability $1/2-\varepsilon$ ($0<\varepsilon< \frac{1}{2}$). Assume
+that $k,\ell, r$ are such that any submatrix of $M$ of at least $2^{-k} \cdot |A|$ rows and at least
+$2^{-\ell} \cdot |X|$ columns, has a bias of at most $2^{-r}$. We show that any learning algorithm
+for the learning problem corresponding to $M$, with error, requires either a memory of size at least
+$\Omega\left(\frac{k \cdot \ell}{\varepsilon} \right)$, or at least $2^{\Omega(r)}$ samples.
+In particular, this shows that for a large class of learning problems, same as those in [GRT'18],
+any learning algorithm requires either a memory of size at least $\Omega\left(\frac{(\log |X|)
+\cdot (\log |A|)}{\varepsilon}\right)$ or an exponential number of noisy samples. Our proof is
+based on adapting the arguments in [Raz'17,GRT'18] to the noisy case. 

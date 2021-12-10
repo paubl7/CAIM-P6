@@ -1,0 +1,20 @@
+Numerical simulations of flow and transport in porous media usually rely on hybrid-dimensional
+models, i.e., the fracture is considered as objects of a lower dimension compared to the embedding
+matrix. Such models are usually combined with non-conforming discretizations as they avoid the
+inherent difficulties associated with the generation of meshes that explicitly resolve fractures-matrix
+interfaces. However, non-conforming discretizations demand a more complicated coupling of different
+sub-models and may require special care to ensure conservative fluxes. We propose a novel approach
+for the simulation of flow and transport problems in fractured porous media based on an equi-dimensional
+representation of the fractures. The major challenge for these types of representation is the creation
+of meshes which resolve the several complex interfaces between the fractures and the embedding
+matrix. To overcome this difficulty, we employ a strategy based on adaptive mesh refinement (AMR).
+The idea at the base of the proposed AMR is to start from an initially uniform coarse mesh and refine
+the elements which have non-empty overlaps with at least one of the fractures. Iterating this process
+allows to create non-uniform non-conforming meshes, which do not resolve the interfaces but can
+approximate them with arbitrary accuracy. We demonstrate that low-order finite element (FE) discretizations
+on adapted meshes are globally and locally conservative and we suitably adapt an algebraic flux
+correction technique to ensure the discrete maximum principle. In particular, we show that the
+notorious conditions on M-matrices have to be adapted to the basis functions defined on non-conforming
+meshes. Although the proposed applications come from geophysical applications, the obtained
+results could be applied to any diffusion and transport problems, on both conforming and non-conforming
+meshes. 

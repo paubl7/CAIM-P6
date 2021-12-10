@@ -1,0 +1,19 @@
+Contrastive representation learning is an effective unsupervised method to alleviate the demand
+for expensive annotated data in medical image processing. Recent work mainly based on instance-wise
+discrimination to learn global features, while neglect local details, which limit their application
+in processing tiny anatomical structures, tissues and lesions. Therefore, we aim to propose a universal
+local discrmination framework to learn local discriminative features to effectively initialize
+medical models, meanwhile, we systematacially investigate its practical medical applications.
+Specifically, based on the common property of intra-modality structure similarity, i.e. similar
+structures are shared among the same modality images, a systematic local feature learning framework
+is proposed. Instead of making instance-wise comparisons based on global embedding, our method
+makes pixel-wise embedding and focuses on measuring similarity among patches and regions. The
+finer contrastive rule makes the learnt representation more generalized for segmentation tasks
+and outperform extensive state-of-the-art methods by wining 11 out of all 12 downstream tasks in
+color fundus and chest X-ray. Furthermore, based on the property of inter-modality shape similarity,
+i.e. structures may share similar shape although in different medical modalities, we joint across-modality
+shape prior into region discrimination to realize unsupervised segmentation. It shows the feaibility
+of segmenting target only based on shape description from other modalities and inner pattern similarity
+provided by region discrimination. Finally, we enhance the center-sensitive ability of patch
+discrimination by introducing center-sensitive averaging to realize one-shot landmark localization,
+this is an effective application for patch discrimination. 

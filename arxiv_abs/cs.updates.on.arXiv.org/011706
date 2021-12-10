@@ -1,0 +1,20 @@
+The brain performs many nonlinear computations through intricate spiking neural networks (SNNs).
+How neural network dynamics relate to arbitrary computations under these constraints is still
+an open question. As a strong constraint, these networks are hypothesized to be robust to perturbations
+and use minimal energy. The theory of Spike Coding Networks (SCNs) derives the required connectivity
+and dynamics for both information representation and linear dynamical systems from first principles,
+and achieves robustness and efficiency. Nonlinear dynamical systems have thus far only been implemented
+in SCNs by filtering neural inputs through sets of nonlinear dendritic basis functions. While this
+approach works well, it relies on providing a rich enough basis set as well as supervised training
+of the connectivity weights. Another way to implement nonlinear computations is through multiplicatively
+interacting synapses. However, there is currently no principled way to implement such synapses
+in SCNs. Here, we extend the core SCN derivations to implement polynomial dynamical systems, from
+which also the need for such multiplicatively interacting synapses arises. We demonstrate our
+approach with a highly accurate Lorenz attractor implementation, as well as a second-order approximation
+of a double pendulum. We additionally demonstrate how to implement higher-order polynomials using
+sequential networks with only pair-wise synapses. Finally, we derive upper bounds and expected
+numbers of connections based on the sparsity of the underlying representation. Overall, our work
+provides an alternative way to directly implement nonlinear computations in spike coding networks,
+and expands our understanding about the potential functions of multiplicative synapses. Furthermore,
+due to the high accuracy and low energy usage of our approach, this work may be of interest for neuromorphic
+computing. 

@@ -1,0 +1,18 @@
+Order-independent (OI) queues, introduced by Berezner, Kriel, and Krzesinski in 1995, expanded
+the family of multi-class queues that are known to have a product-form stationary distribution
+by allowing for intricate class-dependent service rates. This paper further broadens this family
+by introducing pass-and-swap (P&S) queues, an extension of OI queues where, upon a service completion,
+the customer that completes service is not necessarily the one that leaves the system. More precisely,
+we supplement the OI queue model with an undirected graph on the customer classes, which we call a
+swapping graph, such that there is an edge between two classes if customers of these classes can be
+swapped with one another. When a customer completes service, it passes over customers in the remainder
+of the queue until it finds a customer it can swap positions with, that is, a customer whose class is
+a neighbor in the graph. In its turn, the customer that is ejected from its position takes the position
+of the next customer it can be swapped with, and so on. This is repeated until a customer can no longer
+find another customer to be swapped with; this customer is the one that leaves the queue. After proving
+that P&S queues have a product-form stationary distribution, we derive a necessary and sufficient
+stability condition for (open networks of) P&S queues that also applies to OI queues. We then study
+irreducibility properties of closed networks of P&S queues and derive the corresponding product-form
+stationary distribution. Lastly, we demonstrate that closed networks of P&S queues can be applied
+to describe the dynamics of new and existing load-distribution and scheduling protocols in clusters
+of machines in which jobs have assignment constraints. 

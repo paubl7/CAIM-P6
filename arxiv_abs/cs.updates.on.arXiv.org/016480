@@ -1,0 +1,19 @@
+Towards developing effective and efficient brain-computer interface (BCI) systems, precise
+decoding of brain activity measured by electroencephalogram (EEG), is highly demanded. Traditional
+works classify EEG signals without considering the topological relationship among electrodes.
+However, neuroscience research has increasingly emphasized network patterns of brain dynamics.
+Thus, the Euclidean structure of electrodes might not adequately reflect the interaction between
+signals. To fill the gap, a novel deep learning framework based on the graph convolutional neural
+networks (GCNs) was presented to enhance the decoding performance of raw EEG signals during different
+types of motor imagery (MI) tasks while cooperating with the functional topological relationship
+of electrodes. Based on the absolute Pearson's matrix of overall signals, the graph Laplacian of
+EEG electrodes was built up. The GCNs-Net constructed by graph convolutional layers learns the
+generalized features. The followed pooling layers reduce dimensionality, and the fully-connected
+softmax layer derives the final prediction. The introduced approach has been shown to converge
+for both personalized and group-wise predictions. It has achieved the highest averaged accuracy,
+93.056% and 88.57% (PhysioNet Dataset), 96.24% and 80.89% (High Gamma Dataset), at the subject
+and group level, respectively, compared with existing studies, which suggests adaptability and
+robustness to individual variability. Moreover, the performance was stably reproducible among
+repetitive experiments for cross-validation. To conclude, the GCNs-Net filters EEG signals based
+on the functional topological relationship, which manages to decode relevant features for brain
+motor imagery. 

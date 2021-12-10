@@ -1,0 +1,20 @@
+Exponential families are widely used in machine learning; they include many distributions in continuous
+and discrete domains (e.g., Gaussian, Dirichlet, Poisson, and categorical distributions via
+the softmax transformation). Distributions in each of these families have fixed support. In contrast,
+for finite domains, there has been recent works on sparse alternatives to softmax (e.g. sparsemax,
+$\alpha$-entmax, and fusedmax) and corresponding losses, which have varying support. This paper
+expands that line of work in several directions: first, it extends $\Omega$-regularized prediction
+maps and Fenchel-Young losses to arbitrary domains (possibly countably infinite or continuous).
+For linearly parametrized families, we show that minimization of Fenchel-Young losses is equivalent
+to moment matching of the statistics, generalizing a fundamental property of exponential families.
+When $\Omega$ is a Tsallis negentropy with parameter $\alpha$, we obtain "deformed exponential
+families," which include $\alpha$-entmax and sparsemax ($\alpha$ = 2) as particular cases. For
+quadratic energy functions in continuous domains, the resulting densities are $\beta$-Gaussians,
+an instance of elliptical distributions that contain as particular cases the Gaussian, biweight,
+triweight and Epanechnikov densities, and for which we derive closed-form expressions for the
+variance, Tsallis entropy, and Fenchel-Young loss. When $\Omega$ is a total variation or Sobolev
+regularizer, we obtain a continuous version of the fusedmax. Finally, we introduce continuous-domain
+attention mechanisms, deriving efficient gradient backpropagation algorithms for $\alpha \in
+\{1, 4/3, 3/2, 2\}$. Using them, we demonstrate our sparse continuous distributions for attention-based
+audio classification and visual question answering, showing that they allow attending to time
+intervals and compact regions. 

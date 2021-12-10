@@ -1,0 +1,20 @@
+In the last decade, the growing influence of open source software has necessitated the need to reduce
+the abstraction levels in hardware design. Open source hardware significantly reduces the development
+time, increasing the probability of first-pass success and enable developers to optimize software
+solutions based on hardware features, thereby reducing the design costs. The recent introduction
+of open source Process Development Kit (OpenPDK) by Skywater technologies in June 2020 has eliminated
+the barriers to Application-Specific Integrated Circuit (ASIC) design, which is otherwise considered
+expensive and not easily accessible. The OpenPDK is the first concrete step towards achieving the
+goal of open source circuit blocks that can be imported to reuse and modify in ASIC design. With process
+technologies scaling down for better performance, the need for entirely digital designs, which
+can be synthesized in any standard Automatic Place-and-Route (APR) tool, has increased considerably,
+for mapping physical design to the new process technology. This work presents the first open source
+all-digital Serializer/Deserializer (SerDes) for multi-GHz serial links designed using Skywater
+OpenPDK 130nm process node. To ensure that the design is fully synthesizable, the SerDes uses CMOS
+inverter-based drivers at the Tx, while the Rx front end comprises a resistive feedback inverter
+as a sensing element, followed by sampling elements. A fully digital oversampling CDR at the Rx recovers
+the Tx clock for proper decoding of data bits. The physical design flow utilizes OpenLANE, which
+is an end-to-end tool for generating GDS from RTL. Virtuoso has been used for extracting parasitics
+for post-layout simulations, which exhibit the SerDes functionality at 2 Gbps for 34 dB channel
+loss while consuming 438 mW power. The GDS and netlist files of the SerDes are uploaded in a GitHub
+repository for public access. 

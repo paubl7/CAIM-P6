@@ -1,0 +1,20 @@
+In this paper, we present a framework to design approximation algorithms for capacitated facility
+location problems with penalties/outliers using LP-rounding. Primal-dual technique, which
+has been particularly successful in dealing with outliers and penalties, has not been very successful
+in dealing with capacities. On the other hand, no primal-dual solution has been able to break the
+hardness of capacitated facility location problem(CFLP). LP-rounding techniques had also not
+been very successful in dealing with capacities until a recent work by Grover et al. \cite{GroverGKP18}.
+Their constant factor approximation violating the capacities by a small factor ($1 + \epsilon$)
+is promising while dealing with capacities.Though LP-rounding has not been very promising while
+dealing with penalties and outliers, we successfully apply it to deal with them along with capacities.
+That is, our results are obtained by rounding the solution to the natural LP once again exhibiting
+the power of LP-rounding technique. Solutions obtained by LP-rounding are easy to integrate with
+other LP-based algorithms.In this paper, we apply our framework to obtain first constant factor
+approximations for capacitated facility location problem with outlier (CFLPO) and capacitated
+$k$-facility location problem with penalty(C$k$FLPP) for hard uniform capacities using LP-rounding.
+Our solutions incur slight violations in capacities, ($1 + \epsilon$) for the problems without
+cardinality($k$) constraint and ($2 + \epsilon$) for the problems with the cardinality constraint.
+For the outlier variant, we also incur a small loss ($1 + \epsilon$) in outliers. Due to the hardness
+of the underlying problems, the violations are inevitable. Thus we achieve the best possible by
+rounding the solution of natural LP for these problems. To the best of our knowledge, no results are
+known for CFLPO and C$k$FLPP. 

@@ -1,0 +1,18 @@
+Many emerging cyber-physical systems, such as autonomous vehicles and robots, rely heavily on
+artificial intelligence and machine learning algorithms to perform important system operations.
+Since these highly parallel applications are computationally intensive, they need to be accelerated
+by graphics processing units (GPUs) to meet stringent timing constraints. However, despite the
+wide adoption of GPUs, efficiently scheduling multiple GPU applications while providing rigorous
+real-time guarantees remains a challenge. In this paper, we propose RTGPU, which can schedule the
+execution of multiple GPU applications in real-time to meet hard deadlines. Each GPU application
+can have multiple CPU execution and memory copy segments, as well as GPU kernels. We start with a model
+to explicitly account for the CPU and memory copy segments of these applications. We then consider
+the GPU architecture in the development of a precise timing model for the GPU kernels and leverage
+a technique known as persistent threads to implement fine-grained kernel scheduling with improved
+performance through interleaved execution. Next, we propose a general method for scheduling parallel
+GPU applications in real time. Finally, to schedule multiple parallel GPU applications, we propose
+a practical real-time scheduling algorithm based on federated scheduling and grid search (for
+GPU kernel segments) with uniprocessor fixed priority scheduling (for multiple CPU and memory
+copy segments). Our approach provides superior schedulability compared with previous work, and
+gives real-time guarantees to meet hard deadlines for multiple GPU applications according to comprehensive
+validation and evaluation on a real NVIDIA GTX1080Ti GPU system. 

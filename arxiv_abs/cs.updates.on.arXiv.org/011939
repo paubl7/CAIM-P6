@@ -1,0 +1,19 @@
+Influence maximization, adaptive routing, and dynamic spectrum allocation all require choosing
+the right action from a large set of alternatives. Thanks to the advances in combinatorial optimization,
+these and many similar problems can be efficiently solved given an environment with known stochasticity.
+In this paper, we take this one step further and focus on combinatorial optimization in unknown environments.
+We consider a very general learning framework called combinatorial multi-armed bandit with probabilistically
+triggered arms and a very powerful Bayesian algorithm called Combinatorial Thompson Sampling
+(CTS). Under the semi-bandit feedback model and assuming access to an oracle without knowing the
+expected base arm outcomes beforehand, we show that when the expected reward is Lipschitz continuous
+in the expected base arm outcomes CTS achieves $O(\sum_{i =1}^m\log T/(p_i\Delta_i))$ regret
+and $O(\max\{\mathbb{E}[m\sqrt{T\log T/p^*}],\mathbb{E}[m^2/p^*]\})$ Bayesian regret,
+where $m$ denotes the number of base arms, $p_i$ and $\Delta_i$ denote the minimum non-zero triggering
+probability and the minimum suboptimality gap of base arm $i$ respectively, $T$ denotes the time
+horizon, and $p^*$ denotes the overall minimum non-zero triggering probability. We also show that
+when the expected reward satisfies the triggering probability modulated Lipschitz continuity,
+CTS achieves $O(\max\{m\sqrt{T\log T},m^2\})$ Bayesian regret, and when triggering probabilities
+are non-zero for all base arms, CTS achieves $O(1/p^*\log(1/p^*))$ regret independent of the time
+horizon. Finally, we numerically compare CTS with algorithms based on upper confidence bounds
+in several networking problems and show that CTS outperforms these algorithms by at least an order
+of magnitude in majority of the cases. 

@@ -1,0 +1,19 @@
+Recent work suggests that changing Convolutional Neural Network (CNN) architecture by introducing
+a bottleneck in the second layer can yield changes in learned function. To understand this relationship
+fully requires a way of quantitatively comparing trained networks. The fields of electrophysiology
+and psychophysics have developed a wealth of methods for characterising visual systems which permit
+such comparisons. Inspired by these methods, we propose an approach to obtaining spatial and colour
+tuning curves for convolutional neurons, which can be used to classify cells in terms of their spatial
+and colour opponency. We perform these classifications for a range of CNNs with different depths
+and bottleneck widths. Our key finding is that networks with a bottleneck show a strong functional
+organisation: almost all cells in the bottleneck layer become both spatially and colour opponent,
+cells in the layer following the bottleneck become non-opponent. The colour tuning data can further
+be used to form a rich understanding of how colour is encoded by a network. As a concrete demonstration,
+we show that shallower networks without a bottleneck learn a complex non-linear colour system,
+whereas deeper networks with tight bottlenecks learn a simple channel opponent code in the bottleneck
+layer. We further develop a method of obtaining a hue sensitivity curve for a trained CNN which enables
+high level insights that complement the low level findings from the colour tuning data. We go on to
+train a series of networks under different conditions to ascertain the robustness of the discussed
+results. Ultimately, our methods and findings coalesce with prior art, strengthening our ability
+to interpret trained CNNs and furthering our understanding of the connection between architecture
+and learned representation. Code for all experiments is available at https://github.com/ecs-vlc/opponency.

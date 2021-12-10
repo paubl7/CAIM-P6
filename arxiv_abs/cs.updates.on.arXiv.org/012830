@@ -1,0 +1,19 @@
+The explosive rise of the use of Computer tomography (CT) imaging in medical practice has heightened
+public concern over the patient's associated radiation dose. However, reducing the radiation
+dose leads to increased noise and artifacts, which adversely degrades the scan's interpretability.
+Consequently, an advanced image reconstruction algorithm to improve the diagnostic performance
+of low dose ct arose as the primary concern among the researchers, which is challenging due to the
+ill-posedness of the problem. In recent times, the deep learning-based technique has emerged as
+a dominant method for low dose CT(LDCT) denoising. However, some common bottleneck still exists,
+which hinders deep learning-based techniques from furnishing the best performance. In this study,
+we attempted to mitigate these problems with three novel accretions. First, we propose a novel convolutional
+module as the first attempt to utilize neighborhood similarity of CT images for denoising tasks.
+Our proposed module assisted in boosting the denoising by a significant margin. Next, we moved towards
+the problem of non-stationarity of CT noise and introduced a new noise aware mean square error loss
+for LDCT denoising. Moreover, the loss mentioned above also assisted to alleviate the laborious
+effort required while training CT denoising network using image patches. Lastly, we propose a novel
+discriminator function for CT denoising tasks. The conventional vanilla discriminator tends
+to overlook the fine structural details and focus on the global agreement. Our proposed discriminator
+leverage self-attention and pixel-wise GANs for restoring the diagnostic quality of LDCT images.
+Our method validated on a publicly available dataset of the 2016 NIH-AAPM-Mayo Clinic Low Dose CT
+Grand Challenge performed remarkably better than the existing state of the art method. 

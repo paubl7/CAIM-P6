@@ -1,0 +1,19 @@
+Memory disaggregation has attracted great attention recently because of its benefits in efficient
+memory utilization and ease of management. So far, memory disaggregation research has all taken
+one of two approaches, building/emulating memory nodes with either regular servers or raw memory
+devices with no processing power. The former incurs higher monetary cost and face tail latency and
+scalability limitations, while the latter introduce performance, security, and management problems.
+Server-based memory nodes and memory nodes with no processing power are two extreme approaches.
+We seek a sweet spot in the middle by proposing a hardware-based memory disaggregation solution
+that has the right amount of processing power at memory nodes. Furthermore, we take a clean-slate
+approach by starting from the requirements of memory disaggregation and designing a memory-disaggregation-native
+system. We propose a hardware-based disaggregated memory system, Clio, that virtualizes and manages
+disaggregated memory at the memory node. Clio includes a new hardware-based virtual memory system,
+a customized network system, and a framework for computation offloading. In building Clio, we not
+only co-design OS functionalities, hardware architecture, and the network system, but also co-design
+the compute node and memory node. We prototyped Clio's memory node with FPGA and implemented its
+client-node functionalities in a user-space library. Clio achieves 100 Gbps throughput and an
+end-to-end latency of 2.5 us at median and 3.2 us at the 99th percentile. Clio scales much better and
+has orders of magnitude lower tail latency than RDMA, and it has 1.1x to 3.4x energy saving compared
+to CPU-based and SmartNIC-based disaggregated memory systems and is 2.7x faster than software-based
+SmartNIC solutions. 

@@ -1,0 +1,19 @@
+Unmanned aerial vehicles (UAVs) have emerged as a promising candidate solution for data collection
+of large-scale wireless sensor networks (WSNs). In this paper, we investigate a UAV-aided WSN,
+where cluster heads (CHs) receive data from their member nodes, and a UAV is dispatched to collect
+data from CHs along the planned trajectory. We aim to minimize the total energy consumption of the
+UAV-WSN system in a complete round of data collection. Toward this end, we formulate the energy consumption
+minimization problem as a constrained combinatorial optimization problem by jointly selecting
+CHs from nodes within clusters and planning the UAV's visiting order to the selected CHs. The formulated
+energy consumption minimization problem is NP-hard, and hence, hard to solve optimally. In order
+to tackle this challenge, we propose a novel deep reinforcement learning (DRL) technique, pointer
+network-A* (Ptr-A*), which can efficiently learn from experiences the UAV trajectory policy for
+minimizing the energy consumption. The UAV's start point and the WSN with a set of pre-determined
+clusters are fed into the Ptr-A*, and the Ptr-A* outputs a group of CHs and the visiting order to these
+CHs, i.e., the UAV's trajectory. The parameters of the Ptr-A* are trained on small-scale clusters
+problem instances for faster training by using the actor-critic algorithm in an unsupervised manner.
+At inference, three search strategies are also proposed to improve the quality of solutions. Simulation
+results show that the trained models based on 20-clusters and 40-clusters have a good generalization
+ability to solve the UAV's trajectory planning problem in WSNs with different numbers of clusters,
+without the need to retrain the models. Furthermore, the results show that our proposed DRL algorithm
+outperforms two baseline techniques. 

@@ -1,0 +1,20 @@
+The estimation of extreme loads from waves is an essential part of the design of an offshore wind turbine.
+Standard design codes suggest to either use simplified methods based on regular waves, or to perform
+fully nonlinear computations. The former might not provide an accurate representation of the extreme
+waves, while the latter is computationally too intensive for design iterations. We address these
+limitations by using the fully nonlinear solver OceanWave3D to establish the DeRisk database,
+a large dataset of extreme waves kinematics in a two-dimensional domain. From the database, which
+is open and freely available, a designer can extract fully-nonlinear wave kinematics for a wave
+condition and water depth of interest by identifying a suitable computation in the database and,
+if needed, by Froude-scaling the kinematics. The nonlinear solver is validated against the DeRisk
+model experiments at two different water depths, $33.0 [m]$ and $20.0 [m]$, and an excellent agreement
+is found for the analyzed cases. The experiments are used to calibrate OceanWave3D's numerical
+breaking filter constant, and the best agreement is found for $\beta=0.5$. We compare the experimental
+static force with predictions by the DeRisk database and the Rainey force model, and with state-of-the-art
+industrial practices. For milder storms, we find a good agreement in the predicted extreme force
+between the present methodology and the standard methodologies. At the deep location and for stronger
+storms, the largest loads are given by slamming loads due to breaking waves. In this condition, the
+database methodology is less accurate than the embedded stream function method and more accurate
+than the WiFi JIP methodology, providing generally nonconservative estimates. For strong storms
+at the shallower location, where wave breaking is less dominating, the database methodology is
+the most accurate overall. 

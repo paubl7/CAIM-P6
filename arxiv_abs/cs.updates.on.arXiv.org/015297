@@ -1,0 +1,20 @@
+Advanced building control methods such as model predictive control (MPC) offer significant potential
+benefits to both consumers and grid operators, but the high computational requirements have acted
+as barriers to more widespread adoption. Local control computation requires installation of expensive
+computational hardware, while cloud computing introduces data security and privacy concerns.
+In this paper, we drastically reduce the local computational requirements of advanced building
+control through a reinforcement learning (RL)-based approach called Behavioral Cloning, which
+represents the MPC policy as a neural network that can be locally implemented and quickly computed
+on a low-cost programmable logic controller. While previous RL and approximate MPC methods must
+be specifically trained for each building, our key improvement is that our controller can generalize
+to many buildings, electricity rates, and thermostat setpoint schedules without additional,
+effort-intensive retraining. To provide this versatility, we have adapted the traditional Behavioral
+Cloning approach through (1) a constraint-informed parameter grouping (CIPG) method that provides
+a more efficient representation of the training data; (2) an MPC-Guided training data generation
+method using the DAgger algorithm that improves stability and constraint satisfaction; and (3)
+a new deep learning model-structure called reverse-time recurrent neural networks (RT-RNN) that
+allows future information to flow backward in time to more effectively interpret the temporal information
+in disturbance predictions. The result is an easy-to-deploy, generalized behavioral clone of
+MPC that can be implemented on a programmable logic controller and requires little building-specific
+controller tuning, reducing the effort and costs associated with implementing smart residential
+heat pump control. 

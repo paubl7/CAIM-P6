@@ -1,0 +1,19 @@
+We provide a primer to numerical methods based on Taylor series expansions such as generalized finite
+difference methods and collocation methods. We provide a detailed benchmarking strategy for these
+methods as well as all data files including input files, boundary conditions, point distribution
+and solution fields, so as to facilitate future benchmarking of new methods. We review traditional
+methods and recent ones which appeared in the last decade. We aim to help newcomers to the field understand
+the main characteristics of these methods and to provide sufficient information to both simplify
+implementation and benchmarking of new methods. Some of the examples are chosen within a subset
+of problems where collocation is traditionally known to perform sub-par, namely when the solution
+sought is non-smooth, i.e. contains discontinuities, singularities or sharp gradients. For such
+problems and other simpler ones with smooth solutions, we study in depth the influence of the weight
+function, correction function, and the number of nodes in a given support. We also propose new stabilization
+approaches to improve the accuracy of the numerical methods. In particular, we experiment with
+the use of a Voronoi diagram for weight computation, collocation method stabilization approaches,
+and support node selection for problems with singular solutions. With an appropriate selection
+of the above-mentioned parameters, the resulting collocation methods are compared to the moving
+least-squares method (and variations thereof), the radial basis function finite difference method
+and the finite element method. Extensive tests involving two and three dimensional problems indicate
+that the methods perform well in terms of efficiency (accuracy versus computational time), even
+for non-smooth solutions. 

@@ -1,0 +1,19 @@
+The multiplayer promise set disjointness is one of the most widely used problems from communication
+complexity in applications. In this problem there are $k$ players with subsets $S^1, \ldots, S^k$,
+each drawn from $\{1, 2, \ldots, n\}$, and we are promised that either the sets are (1) pairwise disjoint,
+or (2) there is a unique element $j$ occurring in all the sets, which are otherwise pairwise disjoint.
+The total communication of solving this problem with constant probability in the blackboard model
+is $\Omega(n/k)$. We observe for most applications, it instead suffices to look at what we call the
+``mostly'' set disjointness problem, which changes case (2) to say there is a unique element $j$
+occurring in at least half of the sets, and the sets are otherwise disjoint. This change gives us a
+much simpler proof of an $\Omega(n/k)$ randomized total communication lower bound, avoiding Hellinger
+distance and Poincare inequalities. Using this we show several new results for data streams: \begin{itemize}
+\item for $\ell_2$-Heavy Hitters, any $O(1)$-pass streaming algorithm in the insertion-only
+model for detecting if an $\eps$-$\ell_2$-heavy hitter exists requires $\min(\frac{1}{\eps^2}\log
+\frac{\eps^2n}{\delta}, \frac{1}{\eps}n^{1/2})$ bits of memory, which is optimal up to a $\log
+n$ factor. For deterministic algorithms and constant $\eps$, this gives an $\Omega(n^{1/2})$
+lower bound, improving the prior $\Omega(\log n)$ lower bound. We also obtain lower bounds for Zipfian
+distributions. \item for $\ell_p$-Estimation, $p > 2$, we show an $O(1)$-pass $\Omega(n^{1-2/p}
+\log(1/\delta))$ bit lower bound for outputting an $O(1)$-approximation with probability $1-\delta$,
+in the insertion-only model. This is optimal, and the best previous lower bound was $\Omega(n^{1-2/p}
++ \log(1/\delta))$. \end{itemize} 

@@ -1,0 +1,19 @@
+Concurrency and probability are both much studied extensions of sequential computation. Within
+concurrency theory, there is a broad divide between interleaving models and logics, which model
+concurrency by non-determinism, and `truly concurrent' models, in which concurrency (and/or
+causality) are directly represented. True concurrency gives much richer models and logics, but
+is also harder to work with, as the interactions of causality and concurrency can become complex.
+In probabilistic computation, we have by now many well understood probabilistic models and logics
+on interleaving models, developed over the last thirty years or so. However, for true concurrency,
+adding probability has been much harder, owing to the interactions between probabilistic independence
+and causal/concurrent independence, piling both conceptual and technical difficulties upon
+an already complex model. Various notions of, e.g., probabilistic Petri net have been introduced,
+but for simpler cases such as free-choice nets. A significant contribution in the last decade was
+Abbes and Benveniste 2006, which gave a rigorous foundation for probabilistic concurrency in terms
+of Winskel's event structures, which can be seen as the lowest level of concurrent/causal modelling.
+However, event structures are themselves not ideal for representing richer high-level models
+such as (arbitrary) Petri nets, as the concurrency is derived from a binary conflict relation. Here
+we develop an extension of the theory of Abbes and Benveniste to a more general class of models, a certain
+subclass of `stable event structures'. This class is sufficient to give a semantics to probabilistic
+Petri nets (including the notoriously awkward notion of confusion, which is forbidden by free-choice
+nets), and thereby allows the definition of general probabilistic logics for Petri nets. 

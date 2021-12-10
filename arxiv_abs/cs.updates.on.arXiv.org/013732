@@ -1,0 +1,19 @@
+Automated input generators are widely used for large-scale dynamic analysis of mobile apps. Such
+input generators must constantly choose which UI element to interact with and how to interact with
+it, in order to achieve high coverage with a limited time budget. Currently, most input generators
+adopt pseudo-random or brute-force searching strategies, which may take very long to find the correct
+combination of inputs that can drive the app into new and important states. In this paper, we propose
+Humanoid, a deep learning-based approach to GUI test input generation by learning from human interactions.
+Our insight is that if we can learn from human-generated interaction traces, it is possible to automatically
+prioritize test inputs based on their importance as perceived by users. We design and implement
+a deep neural network model to learn how end-users would interact with an app (specifically, which
+UI elements to interact with and how). Our experiments showed that the interaction model can successfully
+prioritize user-preferred inputs for any new UI (with a top-1 accuracy of 51.2% and a top-10 accuracy
+of 85.2%). We implemented an input generator for Android apps based on the learned model and evaluated
+it on both open-source apps and market apps. The results indicated that Humanoid was able to achieve
+higher coverage than six state-of-the-art test generators. However, further analysis showed
+that the learned model was not the main reason of coverage improvement. Although the learned interaction
+pattern could drive the app into some important GUI states with higher probabilities, it had limited
+effect on the width and depth of GUI state search, which is the key to improve test coverage in the long
+term. Whether and how human interaction patterns can be used to improve coverage is still an unknown
+and challenging problem. 

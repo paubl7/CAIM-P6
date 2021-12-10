@@ -1,0 +1,19 @@
+Genome assembly is a fundamental problem in Bioinformatics, requiring to reconstruct a source
+genome from an assembly graph built from a set of reads (short strings sequenced from the genome).
+A notion of genome assembly solution is that of an arc-covering walk of the graph. Since assembly
+graphs admit many solutions, the goal is to find what is definitely present in all solutions, or what
+is safe. Most practical assemblers are based on heuristics having at their core unitigs, namely
+paths whose internal nodes have unit in-degree and out-degree, and which are clearly safe. The long-standing
+open problem of finding all the safe parts of the solutions was recently solved by a major theoretical
+result [RECOMB'16]. This safe and complete genome assembly algorithm was followed by other works
+improving the time bounds, as well as extending the results for different notions of assembly solution.
+But it remained open whether one can be complete also for models of genome assembly of practical applicability.
+In this paper we present a universal framework for obtaining safe and complete algorithms which
+unify the previous results, while also allowing for easy generalizations to assembly problems
+including many practical aspects. This is based on a novel graph structure, called the hydrostructure
+of a walk, which highlights the reachability properties of the graph from the perspective of the
+walk. The hydrostructure allows for simple characterizations of the existing safe walks, and of
+their new practical versions. Almost all of our characterizations are directly adaptable to optimal
+verification algorithms, and simple enumeration algorithms. Most of these algorithms are also
+improved to optimality using an incremental computation procedure and a previous optimal algorithm
+of a specific model. 

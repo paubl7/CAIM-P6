@@ -1,0 +1,19 @@
+We propose a new class of Bayesian neural networks (BNNs) that can be trained using noisy data of variable
+fidelity, and we apply them to learn function approximations as well as to solve inverse problems
+based on partial differential equations (PDEs). These multi-fidelity BNNs consist of three neural
+networks: The first is a fully connected neural network, which is trained following the maximum
+a posteriori probability (MAP) method to fit the low-fidelity data; the second is a Bayesian neural
+network employed to capture the cross-correlation with uncertainty quantification between the
+low- and high-fidelity data; and the last one is the physics-informed neural network, which encodes
+the physical laws described by PDEs. For the training of the last two neural networks, we use the Hamiltonian
+Monte Carlo method to estimate accurately the posterior distributions for the corresponding hyperparameters.
+We demonstrate the accuracy of the present method using synthetic data as well as real measurements.
+Specifically, we first approximate a one- and four-dimensional function, and then infer the reaction
+rates in one- and two-dimensional diffusion-reaction systems. Moreover, we infer the sea surface
+temperature (SST) in the Massachusetts and Cape Cod Bays using satellite images and in-situ measurements.
+Taken together, our results demonstrate that the present method can capture both linear and nonlinear
+correlation between the low- and high-fideilty data adaptively, identify unknown parameters
+in PDEs, and quantify uncertainties in predictions, given a few scattered noisy high-fidelity
+data. Finally, we demonstrate that we can effectively and efficiently reduce the uncertainties
+and hence enhance the prediction accuracy with an active learning approach, using as examples a
+specific one-dimensional function approximation and an inverse PDE problem. 

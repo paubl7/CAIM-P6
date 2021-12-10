@@ -1,0 +1,20 @@
+This paper presents a model-free reinforcement learning (RL) algorithm to solve the risk-averse
+optimal control (RAOC) problem for discrete-time nonlinear systems. While successful RL algorithms
+have been presented to learn optimal control solutions under epistemic uncertainties (i.e., lack
+of knowledge of system dynamics), they do so by optimizing the expected utility of outcomes, which
+ignores the variance of cost under aleatory uncertainties (i.e., randomness). Performance-critical
+systems, however, must not only optimize the expected performance, but also reduce its variance
+to avoid performance fluctuation during RL's course of operation. To solve the RAOC problem, this
+paper presents the following three variants of RL algorithms and analyze their advantages and preferences
+for different situations/systems: 1) a one-shot static convex program -based RL, 2) an iterative
+value iteration (VI) algorithm that solves a linear programming (LP) optimization at each iteration,
+and 3) an iterative policy iteration (PI) algorithm that solves a convex optimization at each iteration
+and guarantees the stability of the consecutive control policies. Convergence of the exact optimization
+problems, which are infinite-dimensional in all three cases, to the optimal risk-averse value
+function is shown. To turn these optimization problems into standard optimization problems with
+finite decision variables and constraints, function approximation for value estimations as well
+as constraint sampling are leveraged. Data-driven implementations of these algorithms are provided
+based on Q-function which enables learning the optimal value without any knowledge of the system
+dynamics. The performance of the approximated solutions is also verified through a weighted sup-norm
+bound and the Lyapunov bound. A simulation example is provided to verify the effectiveness of the
+presented approach. 

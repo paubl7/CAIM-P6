@@ -1,0 +1,19 @@
+We present a series of new open source deep learning algorithms to accelerate Bayesian full waveform
+point source inversion of microseismic events. Inferring the joint posterior probability distribution
+of moment tensor components and source location is key for rigorous uncertainty quantification.
+However, the inference process requires forward modelling of microseismic traces for each set
+of parameters explored by the sampling algorithm, which makes the inference very computationally
+intensive. In this paper we focus on accelerating this process by training deep learning models
+to learn the mapping between source location and seismic traces, for a given 3D heterogeneous velocity
+model, and a fixed isotropic moment tensor for the sources. These trained emulators replace the
+expensive solution of the elastic wave equation in the inference process. We compare our results
+with a previous study that used emulators based on Gaussian Processes to invert microseismic events.
+We show that all of our models provide more accurate predictions and $\sim 100$ times faster predictions
+than the method based on Gaussian Processes, and a $\mathcal{O}(10^5)$ speed-up factor over a pseudo-spectral
+method for waveform generation. For example, a 2-s long synthetic trace can be generated in $\sim
+10$ ms on a common laptop processor, instead of $\sim$ 1 hr using a pseudo-spectral method on a high-profile
+Graphics Processing Units card. We also show that our inference results are in excellent agreement
+with those obtained from traditional location methods based on travel time estimates. The speed,
+accuracy and scalability of our open source deep learning models pave the way for extensions of these
+emulators to generic source mechanisms and application to joint Bayesian inversion of moment tensor
+components and source location using full waveforms. 

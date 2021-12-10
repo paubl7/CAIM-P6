@@ -1,0 +1,20 @@
+The aerodynamic optimization process of cars requires multiple iterations between aerodynamicists
+and stylists. Response Surface Modeling and Reduced-Order Modeling are commonly used to eliminate
+the overhead due to Computational Fluid Dynamics, leading to faster iterations. However, a primary
+drawback of these models is that they can work only on the parametrized geometric features they were
+trained with. This study evaluates if deep learning models can predict the drag coefficient for
+an arbitrary input geometry without explicit parameterization. We use two similar data sets based
+on the publicly available DrivAer geometry for training. We use a modified U-Net architecture that
+uses Signed Distance Fields to represent the input geometries. Our models outperform the existing
+models by at least 11% in prediction accuracy for the drag coefficient. We achieved this improvement
+by combining multiple data sets that were created using different parameterizations, which is
+not possible with the methods currently used. We have also shown that it is possible to predict velocity
+fields and drag coefficient concurrently and that simple data augmentation methods can improve
+the results. In addition, we have performed an occlusion sensitivity study on our models to understand
+what information is used to make predictions. From the occlusion sensitivity study, we showed that
+the models were able to identify the geometric features and have discovered that the model has learned
+to exploit the global information present in the SDF. In contrast to the currently operational method,
+where design changes are restricted to the initially defined parameters, this study brings surrogate
+models one step closer to the long-term goal of having a model that can be used for approximate aerodynamic
+evaluation of unseen, arbitrary vehicle shapes, thereby providing complete design freedom to
+the vehicle stylists. 

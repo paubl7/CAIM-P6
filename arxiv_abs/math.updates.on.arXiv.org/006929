@@ -1,0 +1,20 @@
+Deterministic solutions of the Boltzmann equation represent a real challenge due to the enormous
+computational effort which is required to produce such simulations and often stochastic methods
+such as Direct Simulation Monte Carlo (DSMC) are used instead due to their lower computational cost.
+In this work, we show that combining different technologies for the discretization of the velocity
+space and of the physical space coupled with suitable time integration techniques, it is possible
+to compute very precise deterministic approximate solutions of the Boltzmann model in different
+regimes, from extremely rarefied to dense fluids, with CFL conditions only driven by the hyperbolic
+transport term. To that aim, we develop modal Discontinuous Galerkin (DG) Implicit-Explicit Runge
+Kutta schemes (DG-IMEX-RK) and Implicit-Explicit Linear Multistep Methods based on Backward-Finite-Differences
+(DG-IMEX-BDF) for solving the Boltzmann model on multidimensional unstructured meshes. The solution
+of the Boltzmann collision operator is obtained through fast spectral methods, while the transport
+term in the governing equations is discretized relying on an explicit shock-capturing DG method
+on polygonal tessellations in the physical space. A novel class of WENO-type limiters, based on
+a shifting of the moments of inertia for each zone of the mesh, is used to control spurious oscillations
+of the DG solution across discontinuities. The order of convergence is numerically measured for
+different regimes and found to agree with the theoretical findings. The new methods are validated
+considering two-dimensional benchmark test cases typically used in the fluid dynamics community.
+A prototype engineering problem consisting of a supersonic flow around a NACA 0012 airfoil with
+space-time-dependent boundary conditions is also presented for which the pressure coefficients
+are measured. 

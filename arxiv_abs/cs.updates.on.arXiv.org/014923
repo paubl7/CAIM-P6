@@ -1,0 +1,19 @@
+Spinal surgery planning necessitates automatic segmentation of vertebrae in cone-beam computed
+tomography (CBCT), an intraoperative imaging modality that is widely used in intervention. However,
+CBCT images are of low-quality and artifact-laden due to noise, poor tissue contrast, and the presence
+of metallic objects, causing vertebra segmentation, even manually, a demanding task. In contrast,
+there exists a wealth of artifact-free, high quality CT images with vertebra annotations. This
+motivates us to build a CBCT vertebra segmentation model using unpaired CT images with annotations.
+To overcome the domain and artifact gaps between CBCT and CT, it is a must to address the three heterogeneous
+tasks of vertebra segmentation, artifact reduction and modality translation all together. To
+this, we propose a novel anatomy-aware artifact disentanglement and segmentation network (A$^3$DSegNet)
+that intensively leverages knowledge sharing of these three tasks to promote learning. Specifically,
+it takes a random pair of CBCT and CT images as the input and manipulates the synthesis and segmentation
+via different decoding combinations from the disentangled latent layers. Then, by proposing various
+forms of consistency among the synthesized images and among segmented vertebrae, the learning
+is achieved without paired (i.e., anatomically identical) data. Finally, we stack 2D slices together
+and build 3D networks on top to obtain final 3D segmentation result. Extensive experiments on a large
+number of clinical CBCT (21,364) and CT (17,089) images show that the proposed A$^3$DSegNet performs
+significantly better than state-of-the-art competing methods trained independently for each
+task and, remarkably, it achieves an average Dice coefficient of 0.926 for unpaired 3D CBCT vertebra
+segmentation. 

@@ -1,0 +1,20 @@
+In this paper, we propose a convex formulation for learning logistic regression model (logit) with
+latent heterogeneous effect on sub-population. In transportation, logistic regression and its
+variants are often interpreted as discrete choice models under utility theory (McFadden, 2001).
+Two prominent applications of logit models in the transportation domain are traffic accident analysis
+and choice modeling. In these applications, researchers often want to understand and capture the
+individual variation under the same accident or choice scenario. The mixed effect logistic regression
+(mixed logit) is a popular model employed by transportation researchers. To estimate the distribution
+of mixed logit parameters, a non-convex optimization problem with nested high-dimensional integrals
+needs to be solved. Simulation-based optimization is typically applied to solve the mixed logit
+parameter estimation problem. Despite its popularity, the mixed logit approach for learning individual
+heterogeneity has several downsides. First, the parametric form of the distribution requires
+domain knowledge and assumptions imposed by users, although this issue can be addressed to some
+extent by using a non-parametric approach. Second, the optimization problems arise from parameter
+estimation for mixed logit and the non-parametric extensions are non-convex, which leads to unstable
+model interpretation. Third, the simulation size in simulation-assisted estimation lacks finite-sample
+theoretical guarantees and is chosen somewhat arbitrarily in practice. To address these issues,
+we are motivated to develop a formulation that models the latent individual heterogeneity while
+preserving convexity, and avoids the need for simulation-based approximation. Our setup is based
+on decomposing the parameters into a sparse homogeneous component in the population and low-rank
+heterogeneous parts for each individual. 

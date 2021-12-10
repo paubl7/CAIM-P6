@@ -1,0 +1,19 @@
+We consider online packing problems where we get a stream of axis-parallel rectangles. The rectangles
+have to be placed in the plane without overlapping, and each rectangle must be placed without knowing
+the subsequent rectangles. The goal is to minimize the perimeter or the area of the axis-parallel
+bounding box of the rectangles. We either allow rotations by 90 degrees or translations only. For
+the perimeter version we give algorithms with an absolute competitive ratio slightly less than
+4 when only translations are allowed and when rotations are also allowed. We then turn our attention
+to minimizing the area and show that the asymptotic competitive ratio of any algorithm is at least
+$\Omega(\sqrt{n})$, where $n$ is the number of rectangles in the stream, and this holds with and
+without rotations. We then present algorithms that match this bound in both cases. We also show that
+the competitive ratio cannot be bounded as a function of OPT. We then consider two special cases.
+The first is when all the given rectangles have aspect ratios bounded by some constant. The particular
+variant where all the rectangles are squares and we want to minimize the area of the bounding square
+has been studied before and an algorithm with a competitive ratio of 8 has been given~[Fekete and
+Hoffmann, Algorithmica, 2017]. We improve the analysis of the algorithm and show that the ratio
+is at most 6, which is tight. The second special case is when all edges have length at least 1. Here,
+the $\Omega(\sqrt n)$ lower bound still holds, and we turn our attention to lower bounds depending
+on OPT. We show that any algorithm has an asymptotic competitive ratio of at least $\Omega(\sqrt{OPT})$
+for the translational case and $\Omega(\sqrt[4]{OPT})$ when rotations are allowed. For both versions,
+we give algorithms that match the respective lower bounds. 

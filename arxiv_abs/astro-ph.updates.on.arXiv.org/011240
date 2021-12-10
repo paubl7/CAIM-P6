@@ -1,0 +1,18 @@
+I present a method for the fast convolution of a model galaxy profile by a point-spread function (PSF)
+model represented as a pixel grid. The method relies upon three observations: First, most simple
+radial galaxy profiles of common interest (deVaucouleurs, exponential, Sersic) can be approximated
+as mixtures of Gaussians. Second, the Fourier transform of a Gaussian is a Gaussian, thus the Fourier
+transform of a mixture-of-Gausssian approximation of a galaxy can be directly evaluated as a mixture
+of Gaussians in Fourier space. Third, if a mixture component would result in Fourier-space aliasing,
+that component can be evaluated in real space. For mixture components to be evaluated in Fourier
+space, we use the FFT for the PSF model, direct evaluation of the Fourier transform for the galaxy,
+and the inverse-FFT to return the result to pixel space. For mixture components to be evaluated in
+real space---which only happens when the mixture components is much larger than the PSF---we use
+a simple Gaussian approximation of the PSF, perform the convolution analytically, and evaluate
+in real pixel space. The method is fast and exact (to the extent that the mixture-of-Gaussians approximation
+of the galaxy profile is exact) as long as the pixelized PSF model is well sampled. This Fourier method
+can be seen as a way of applying a perfect low-pass filter to the (typically strongly undersampled)
+galaxy profile before convolution by the PSF, at exactly the Nyquist frequency of the PSF pixel model
+grid. In this way, it avoids the computational expense of a traditional super-resolution approach.
+This method allows the efficient use of pixelized PSF models (ie, a PSF represented as a grid of pixel
+values) in galaxy forward model-fitting approaches such as the Tractor. 

@@ -1,0 +1,19 @@
+In this paper, we propose distributed algorithms that solve a system of Boolean equations over a
+network, where each node in the network possesses only one Boolean equation from the system. The
+Boolean equation assigned at any particular node is a {\em private} equation known to this node only,
+and the nodes aim to compute the exact set of solutions to the system without exchanging their local
+equations. We show that each private Boolean equation can be locally lifted to a linear algebraic
+equation under a basis of Boolean vectors, leading to a network linear equation that is distributedly
+solvable using existing distributed linear equation algorithms as a subroutine. A number of exact
+or approximate solutions to the induced linear equation are then computed at each node from different
+initial values. The solutions to the original Boolean equations are eventually computed locally
+via a Boolean vector search algorithm. We prove that given solvable Boolean equations, when the
+initial values of the nodes for the distributed linear equation solving step are i.i.d selected
+according to a uniform distribution in a high-dimensional cube, our algorithms return the exact
+solution set of the Boolean equations at each node with high probability. Furthermore, we present
+an algorithm for distributed verification of the satisfiability of Boolean equations, and prove
+its correctness. Finally, we show that by utilizing linear equation solvers with differential
+privacy to replace the in-network computing routines, the overall distributed Boolean equation
+algorithms can be made differentially private. Under the standard Laplace mechanism, we prove
+an explicit level of noises that can be injected in the linear equation steps for ensuring a prescribed
+level of differential privacy. 

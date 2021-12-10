@@ -1,0 +1,19 @@
+Learning how to predict the brain connectome (i.e. graph) development and aging is of paramount
+importance for charting the future of within-disorder and cross-disorder landscape of brain dysconnectivity
+evolution. Indeed, predicting the longitudinal (i.e., time-dependent ) brain dysconnectivity
+as it emerges and evolves over time from a single timepoint can help design personalized treatments
+for disordered patients in a very early stage. Despite its significance, evolution models of the
+brain graph are largely overlooked in the literature. Here, we propose EvoGraphNet, the first end-to-end
+geometric deep learning-powered graph-generative adversarial network (gGAN) for predicting
+time-dependent brain graph evolution from a single timepoint. Our EvoGraphNet architecture cascades
+a set of time-dependent gGANs, where each gGAN communicates its predicted brain graphs at a particular
+timepoint to train the next gGAN in the cascade at follow-up timepoint. Therefore, we obtain each
+next predicted timepoint by setting the output of each generator as the input of its successor which
+enables us to predict a given number of timepoints using only one single timepoint in an end- to-end
+fashion. At each timepoint, to better align the distribution of the predicted brain graphs with
+that of the ground-truth graphs, we further integrate an auxiliary Kullback-Leibler divergence
+loss function. To capture time-dependency between two consecutive observations, we impose an
+l1 loss to minimize the sparse distance between two serialized brain graphs. A series of benchmarks
+against variants and ablated versions of our EvoGraphNet showed that we can achieve the lowest brain
+graph evolution prediction error using a single baseline timepoint. Our EvoGraphNet code is available
+at this http URL 

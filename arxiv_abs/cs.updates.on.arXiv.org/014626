@@ -1,0 +1,19 @@
+The main risk-limiting ballot polling audit in use today, BRAVO, is designed for use when single
+ballots are drawn at random and a decision regarding whether to stop the audit or draw another ballot
+is taken after each ballot draw (ballot-by-ballot (B2) audits). On the other hand, real ballot polling
+audits draw many ballots in a single round before determining whether to stop (round-by-round (R2)
+audits). We show that BRAVO results in significant inefficiency when directly applied to real R2
+audits. We present the ATHENA class of R2 stopping rules, which we show are risk-limiting if the round
+schedule is pre-determined (before the audit begins). We prove that each rule is at least as efficient
+as the corresponding BRAVO stopping rule applied at the end of the round. We have open-source software
+libraries implementing most of our results. We show that ATHENA halves the number of ballots required,
+for all state margins in the 2016 US Presidential election and a first round with $90\%$ stopping
+probability, when compared to BRAVO (stopping rule applied at the end of the round). We present simulation
+results supporting the 90% stopping probability claims and our claims for the risk accrued in the
+first round. Further, ATHENA reduces the number of ballots by more than a quarter for low margins,
+when compared to the BRAVO stopping rule applied on ballots in selection order. This implies that
+keeping track of the order when drawing ballots R2 is not beneficial, because ATHENA is more efficient
+even without information on selection order. These results are significant because current approaches
+to real ballot polling election audits use the B2 BRAVO rules, requiring about twice as much work
+on the part of election officials. Applying the rules in selection order requires fewer ballots,
+but keeping track of the order, and entering it into audit software, adds to the effort. 

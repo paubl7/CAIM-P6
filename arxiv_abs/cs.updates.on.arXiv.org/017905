@@ -1,0 +1,20 @@
+Image denoising can remove natural noise that widely exists in images captured by multimedia devices
+due to low-quality imaging sensors, unstable image transmission processes, or low light conditions.
+Recent works also find that image denoising benefits the high-level vision tasks, e.g., image classification.
+In this work, we try to challenge this common sense and explore a totally new problem, i.e., whether
+the image denoising can be given the capability of fooling the state-of-the-art deep neural networks
+(DNNs) while enhancing the image quality. To this end, we initiate the very first attempt to study
+this problem from the perspective of adversarial attack and propose the adversarial denoise attack.
+More specifically, our main contributions are three-fold: First, we identify a new task that stealthily
+embeds attacks inside the image denoising module widely deployed in multimedia devices as an image
+post-processing operation to simultaneously enhance the visual image quality and fool DNNs. Second,
+we formulate this new task as a kernel prediction problem for image filtering and propose the adversarial-denoising
+kernel prediction that can produce adversarial-noiseless kernels for effective denoising and
+adversarial attacking simultaneously. Third, we implement an adaptive perceptual region localization
+to identify semantic-related vulnerability regions with which the attack can be more effective
+while not doing too much harm to the denoising. We name the proposed method as Pasadena (Perceptually
+Aware and Stealthy Adversarial DENoise Attack) and validate our method on the NeurIPS'17 adversarial
+competition dataset, CVPR2021-AIC-VI: unrestricted adversarial attacks on ImageNet,etc. The
+comprehensive evaluation and analysis demonstrate that our method not only realizes denoising
+but also achieves a significantly higher success rate and transferability over state-of-the-art
+attacks. 

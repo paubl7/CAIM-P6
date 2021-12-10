@@ -1,0 +1,19 @@
+In this work we study the metric distortion problem in voting theory under a limited amount of ordinal
+information. Our primary contribution is threefold. First, we consider mechanisms which perform
+a sequence of pairwise comparisons between candidates. We show that a widely-popular deterministic
+mechanism employed in most knockout phases yields distortion $\mathcal{O}(\log m)$ while eliciting
+only $m-1$ out of $\Theta(m^2)$ possible pairwise comparisons, where $m$ represents the number
+of candidates. Our analysis for this mechanism leverages a powerful technical lemma recently developed
+by Kempe \cite{DBLP:conf/aaai/000120a}. We also provide a matching lower bound on its distortion.
+In contrast, we prove that any mechanism which performs fewer than $m-1$ pairwise comparisons is
+destined to have unbounded distortion. Moreover, we study the power of deterministic mechanisms
+under incomplete rankings. Most notably, when every agent provides her $k$-top preferences we
+show an upper bound of $6 m/k + 1$ on the distortion, for any $k \in \{1, 2, \dots, m\}$. Thus, we substantially
+improve over the previous bound of $12 m/k$ recently established by Kempe \cite{DBLP:conf/aaai/000120a,DBLP:conf/aaai/000120b},
+and we come closer to matching the best-known lower bound. Finally, we are concerned with the sample
+complexity required to ensure near-optimal distortion with high probability. Our main contribution
+is to show that a random sample of $\Theta(m/\epsilon^2)$ voters suffices to guarantee distortion
+$3 + \epsilon$ with high probability, for any sufficiently small $\epsilon > 0$. This result is based
+on analyzing the sensitivity of the deterministic mechanism introduced by Gkatzelis, Halpern,
+and Shah \cite{DBLP:conf/focs/Gkatzelis0020}. Importantly, all of our sample-complexity bounds
+are distribution-independent. 

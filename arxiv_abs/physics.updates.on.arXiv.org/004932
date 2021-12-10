@@ -1,0 +1,20 @@
+Purpose: To develop an Artificial Intelligence (AI) agent for fully-automated rapid head and neck
+(H&N) IMRT plan generation without time-consuming inverse planning.$$$$ Methods: This AI agent
+was trained using a conditional Generative Adversarial Network architecture. The generator,
+PyraNet, is a novel Deep Learning network that implements 28 classic ResNet blocks in pyramid-like
+concatenations. The discriminator is a customized 4-layer DenseNet. The AI agent first generates
+customized 2D projections at 9 template beam angles from 3D CT volume and structures of a patient.
+These projections are then stacked as 4D inputs of PyraNet, from which 9 radiation fluence maps are
+generated simultaneously. Finally, the predicted fluence maps are imported into a commercial
+treatment planning system (TPS) for plan integrity checks. The AI agent was built and tested upon
+231 oropharyngeal plans from a TPS plan library. Only the primary plans in the sequential boost regime
+were studied. A customized Harr wavelet loss was adopted for fluence map comparison. Isodose distributions
+in test AI plans and TPS plans were qualitatively evaluated. Key dosimetric metrics were statistically
+compared.$$$$ Results: All test AI plans were successfully generated. Isodose gradients outside
+of PTV in AI plans were comparable with TPS plans. After PTV coverage normalization, $D_{mean}$
+of parotids and oral cavity in AI plans and TPS plans were comparable without statistical significance.
+AI plans achieved comparable $D_{max}$ at 0.01cc of brainstem and cord+5mm without clinically
+relevant differences, but body $D_{max}$ was higher than the TPS plan results. The AI agent needs
+~3s per case to predict fluence maps.$$$$ Conclusions: The developed AI agent can generate H&N IMRT
+plans with satisfying dosimetry quality. With rapid and fully automated implementation, it holds
+great potential for clinical applications. 

@@ -1,0 +1,19 @@
+In the $(k,h)$-SetCover problem, we are given a collection $\mathcal{S}$ of sets over a universe
+$U$, and the goal is to distinguish between the case that $\mathcal{S}$ contains $k$ sets which cover
+$U$, from the case that at least $h$ sets in $\mathcal{S}$ are needed to cover $U$. Lin (ICALP'19)
+recently showed a gap creating reduction from the $(k,k+1)$-SetCover problem on universe of size
+$O_k(\log |\mathcal{S}|)$ to the $\left(k,\sqrt[k]{\frac{\log|\mathcal{S}|}{\log\log |\mathcal{S}|}}\cdot
+k\right)$-SetCover problem on universe of size $|\mathcal{S}|$. In this paper, we prove a more
+scalable version of his result: given any error correcting code $C$ over alphabet $[q]$, rate $\rho$,
+and relative distance $\delta$, we use $C$ to create a reduction from the $(k,k+1)$-SetCover problem
+on universe $U$ to the $\left(k,\sqrt[2k]{\frac{2}{1-\delta}}\right)$-SetCover problem on
+universe of size $\frac{\log|\mathcal{S}|}{\rho}\cdot|U|^{q^k}$. Lin established his result
+by composing the input SetCover instance (that has no gap) with a special threshold graph constructed
+from extremal combinatorial object called universal sets, resulting in a final SetCover instance
+with gap. Our reduction follows along the exact same lines, except that we generate the threshold
+graphs specified by Lin simply using the basic properties of the error correcting code $C$. We use
+the same threshold graphs mentioned above to prove inapproximability results, under W[1]$\neq$FPT
+and ETH, for the $k$-MaxCover problem introduced by Chalermsook et al. (SICOMP'20). Our inapproximaiblity
+results match the bounds obtained by Karthik et al. (JACM'19), although their proof framework is
+very different, and involves generalization of the distributed PCP framework. Prior to this work,
+it was not clear how to adopt the proof strategy of Lin to prove inapproximability results for $k$-MaxCover.

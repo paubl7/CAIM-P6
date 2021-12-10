@@ -1,0 +1,20 @@
+For artificial learning systems, continual learning over time from a stream of data is essential.
+The burgeoning studies on supervised continual learning have achieved great progress, while the
+study of catastrophic forgetting in unsupervised learning is still blank. Among unsupervised
+learning methods, self-supervise learning method shows tremendous potential on visual representation
+without any labeled data at scale. To improve the visual representation of self-supervised learning,
+larger and more varied data is needed. In the real world, unlabeled data is generated at all times.
+This circumstance provides a huge advantage for the learning of the self-supervised method. However,
+in the current paradigm, packing previous data and current data together and training it again is
+a waste of time and resources. Thus, a continual self-supervised learning method is badly needed.
+In this paper, we make the first attempt to implement the continual contrastive self-supervised
+learning by proposing a rehearsal method, which keeps a few exemplars from the previous data. Instead
+of directly combining saved exemplars with the current data set for training, we leverage self-supervised
+knowledge distillation to transfer contrastive information among previous data to the current
+network by mimicking similarity score distribution inferred by the old network over a set of saved
+exemplars. Moreover, we build an extra sample queue to assist the network to distinguish between
+previous and current data and prevent mutual interference while learning their own feature representation.
+Experimental results show that our method performs well on CIFAR100 and ImageNet-Sub. Compared
+with the baselines, which learning tasks without taking any technique, we improve the image classification
+top-1 accuracy by 1.60% on CIFAR100, 2.86% on ImageNet-Sub and 1.29% on ImageNet-Full under 10 incremental
+steps setting. 

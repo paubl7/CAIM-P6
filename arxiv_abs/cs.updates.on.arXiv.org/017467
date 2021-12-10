@@ -1,0 +1,19 @@
+Reinforcement learning (RL) has shown a promising performance in learning optimal policies for
+a variety of sequential decision-making tasks. However, in many real-world RL problems, besides
+optimizing the main objectives, the agent is expected to satisfy a certain level of safety (e.g.,
+avoiding collisions in autonomous driving). While RL problems are commonly formalized as Markov
+decision processes (MDPs), safety constraints are incorporated via constrained Markov decision
+processes (CMDPs). Although recent advances in safe RL have enabled learning safe policies in CMDPs,
+these safety requirements should be satisfied during both training and in the deployment process.
+Furthermore, it is shown that in memory-based and partially observable environments, these methods
+fail to maintain safety over unseen out-of-distribution observations. To address these limitations,
+we propose a Lyapunov-based uncertainty-aware safe RL model. The introduced model adopts a Lyapunov
+function that converts trajectory-based constraints to a set of local linear constraints. Furthermore,
+to ensure the safety of the agent in highly uncertain environments, an uncertainty quantification
+method is developed that enables identifying risk-averse actions through estimating the probability
+of constraint violations. Moreover, a Transformers model is integrated to provide the agent with
+memory to process long time horizons of information via the self-attention mechanism. The proposed
+model is evaluated in grid-world navigation tasks where safety is defined as avoiding static and
+dynamic obstacles in fully and partially observable environments. The results of these experiments
+show a significant improvement in the performance of the agent both in achieving optimality and
+satisfying safety constraints. 

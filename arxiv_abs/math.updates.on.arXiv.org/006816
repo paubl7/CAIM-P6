@@ -1,0 +1,19 @@
+This position paper summarizes a recently developed research program focused on inference in the
+context of data centric science and engineering applications, and forecasts its trajectory forward
+over the next decade. Often one endeavours in this context to learn complex systems in order to make
+more informed predictions and high stakes decisions under uncertainty. Some key challenges which
+must be met in this context are robustness, generalizability, and interpretability. The Bayesian
+framework addresses these three challenges, while bringing with it a fourth, undesirable feature:
+it is typically far more expensive than its deterministic counterparts. In the 21st century, and
+increasingly over the past decade, a growing number of methods have emerged which allow one to leverage
+cheap low-fidelity models in order to precondition algorithms for performing inference with more
+expensive models and make Bayesian inference tractable in the context of high-dimensional and
+expensive models. Notable examples are multilevel Monte Carlo (MLMC), multi-index Monte Carlo
+(MIMC), and their randomized counterparts (rMLMC), which are able to provably achieve a dimension-independent
+(including $\infty-$dimension) canonical complexity rate with respect to mean squared error
+(MSE) of $1/$MSE. Some parallelizability is typically lost in an inference context, but recently
+this has been largely recovered via novel double randomization approaches. Such an approach delivers
+i.i.d. samples of quantities of interest which are unbiased with respect to the infinite resolution
+target distribution. Over the coming decade, this family of algorithms has the potential to transform
+data centric science and engineering, as well as classical machine learning applications such
+as deep learning, by scaling up and scaling out fully Bayesian inference. 

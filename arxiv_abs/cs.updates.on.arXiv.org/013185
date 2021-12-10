@@ -1,0 +1,19 @@
+We study sorting and searching in rounds, motivated by a cake cutting problem. The search problem
+we consider is: we are given an array $x = (x_1, \ldots, x_n)$ and an element $z$ promised to be in the
+array. We have access to an oracle that answers comparison queries: "How is $x_i$ compared to $x_j$?",
+where the answer can be "$<$", "$=$", or "$>$". The goal is to find the location of $z$ with success
+probability at least $p \in [0,1]$ in at most $k$ rounds of interaction with the oracle. The problem
+is called ordered or unordered search, depending on whether the array $x$ is sorted or unsorted,
+respectively. For ordered search, we show the expected query complexity of randomized algorithms
+is $\Theta\bigl(k\cdot p \cdot n^{1/k}\bigr)$ in the worst case. In contrast, the expected query
+complexity of deterministic algorithms searching for a uniformly random element is $\Theta\bigl(k\cdot
+p^{1/k} \cdot n^{1/k}\bigr)$. The uniform distribution is the worst case for deterministic algorithms.
+For unordered search, the expected query complexity of randomized algorithms is $np\bigl(\frac{k+1}{2k}\bigr)
+\pm 1$ in the worst case, while the expected query complexity of deterministic algorithms searching
+for a uniformly random element is $np \bigl(1 - \frac{k-1}{2k}p \bigr) \pm 1$. We also discuss the
+connections of these search problems to the rank query model, where the array $x$ can be accessed
+via queries of the form "Is rank$(x_i) \leq k$?". Unordered search is equivalent to Select with rank
+queries (given $q$, find $x_i$ with rank $q$) and ordered search to Locate with rank queries (given
+$x_i$, find its rank). We show an equivalence between sorting with rank queries and proportional
+cake cutting with contiguous pieces for any number of rounds, as well as an improved lower bound for
+deterministic sorting in rounds with rank queries. 

@@ -1,0 +1,19 @@
+Noise and low quality of ECG signals acquired from Holter or wearable devices deteriorate the accuracy
+and robustness of R-peak detection algorithms. This paper presents a generic and robust system
+for R-peak detection in Holter ECG signals. While many proposed algorithms have successfully addressed
+the problem of ECG R-peak detection, there is still a notable gap in the performance of these detectors
+on such low-quality ECG records. Therefore, in this study, a novel implementation of the 1D Convolutional
+Neural Network (CNN) is used integrated with a verification model to reduce the number of false alarms.
+This CNN architecture consists of an encoder block and a corresponding decoder block followed by
+a sample-wise classification layer to construct the 1D segmentation map of R- peaks from the input
+ECG signal. Once the proposed model has been trained, it can solely be used to detect R-peaks possibly
+in a single channel ECG data stream quickly and accurately, or alternatively, such a solution can
+be conveniently employed for real-time monitoring on a lightweight portable device. The model
+is tested on two open-access ECG databases: The China Physiological Signal Challenge (2020) database
+(CPSC-DB) with more than one million beats, and the commonly used MIT-BIH Arrhythmia Database (MIT-DB).
+Experimental results demonstrate that the proposed systematic approach achieves 99.30% F1-score,
+99.69% recall, and 98.91% precision in CPSC-DB, which is the best R-peak detection performance
+ever achieved. Compared to all competing methods, the proposed approach can reduce the false-positives
+and false-negatives in Holter ECG signals by more than 54% and 82%, respectively. Results also demonstrate
+similar or better performance than most competing algorithms on MIT-DB with 99.83% F1-score, 99.85%
+recall, and 99.82% precision. 

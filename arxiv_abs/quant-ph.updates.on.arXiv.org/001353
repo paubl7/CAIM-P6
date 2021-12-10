@@ -1,0 +1,20 @@
+As quantum computers mature, quantum error correcting codes (QECs) will be adopted in order to suppress
+errors to any desired level $\mathcal{E}$ at a cost in qubit-count $n$ that is merely poly-logarithmic
+in $\mathcal{E}^{-1}$. However in the NISQ era, the complexity and scale required to adopt even
+the smallest QEC is prohibitive. Instead, error mitigation techniques have been employed; typically
+these do not require a significant increase in qubit-count but cannot provide exponential error
+suppression. Here we show that, for the crucial case of estimating expectation values of observables
+(key to almost all NISQ algorithms) one can indeed achieve an effective exponential suppression.
+At the cost of a qubit count increase by a factor of $n\geq 2$ the error becomes $Q^n$ where $Q<1$ is
+a suppression factor that depends on the entropy of the error probabilities. The approach takes
+$n$ independently-prepared circuit outputs and applies a controlled derangement operator to
+create a state whose symmetries prevent error-burdened states from contributing bias to the expected
+value. The approach is therefore `NISQ-friendly' as it is modular in the main computation and requires
+only a shallow circuit that bridges the $n$ copies immediately prior to measurement. Imperfections
+in our derangement circuit do degrade performance and therefore we propose an approach to efficiently
+mitigate this effect to arbitrary precision due to the remarkable properties of derangements.
+a) they decompose into a linear number of elementary gates -- limiting the impact of noise b) they
+are highly resilient to noise and the effect of imperfections on them is (almost) trivial. In numerical
+simulations validating our approach we confirm error suppression below $10^{-6}$ for circuits
+consisting of several hundred noisy gates (two-qubit gate error $0.5\%$) using no more than $n=4$
+circuit copies. 

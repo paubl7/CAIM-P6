@@ -1,0 +1,18 @@
+Finite temperature auxiliary field-based Quantum Monte Carlo methods, including Determinant
+Quantum Monte Carlo (DQMC) and Auxiliary Field Quantum Monte Carlo (AFQMC), have historically
+assumed pivotal roles in the investigation of the finite temperature phase diagrams of a wide variety
+of multidimensional lattice models and materials. Despite their utility, however, these techniques
+are typically formulated in the grand canonical ensemble, which makes them difficult to apply to
+condensates like superfluids and difficult to benchmark against alternative methods that are
+formulated in the canonical ensemble. Working in the grand canonical ensemble is furthermore accompanied
+by the increased overhead associated with having to determine the chemical potentials that produce
+desired fillings. Given this backdrop, in this work, we present a new recursive approach for performing
+AFQMC simulations in the canonical ensemble that does not require knowledge of chemical potentials.
+To derive this approach, we exploit the convenient fact that AFQMC solves the many-body problem
+by decoupling many-body propagators into integrals over one-body problems to which non-interacting
+theories can be applied. We benchmark the accuracy of our technique on illustrative Bose and Fermi
+Hubbard models and demonstrate that it can converge more quickly to the ground state than grand canonical
+AFQMC simulations. We believe that our novel use of HS-transformed operators to implement algorithms
+originally derived for non-interacting systems will motivate the development of a variety of other
+methods and anticipate that our technique will enable direct performance comparisons against
+other many-body approaches formulated in the canonical ensemble. 

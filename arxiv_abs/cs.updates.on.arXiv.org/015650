@@ -1,0 +1,19 @@
+This paper presents a technique to interpret and visualize intermediate layers in CNNs trained
+on raw speech data in an unsupervised manner. We show that averaging over feature maps after ReLU
+activation in each convolutional layer yields interpretable time-series data. The proposed technique
+enables acoustic analysis of intermediate convolutional layers. To uncover how meaningful representation
+in speech gets encoded in intermediate layers of CNNs, we manipulate individual latent variables
+to marginal levels outside of the training range. We train and probe internal representations on
+two models -- a bare WaveGAN architecture and a ciwGAN extension which forces the Generator to output
+informative data and results in emergence of linguistically meaningful representations. Interpretation
+and visualization is performed for three basic acoustic properties of speech: periodic vibration
+(corresponding to vowels), aperiodic noise vibration (corresponding to fricatives), and silence
+(corresponding to stops). We also argue that the proposed technique allows acoustic analysis of
+intermediate layers that parallels the acoustic analysis of human speech data: we can extract F0,
+intensity, duration, formants, and other acoustic properties from intermediate layers in order
+to test where and how CNNs encode various types of information. The models are trained on two speech
+processes with different degrees of complexity: a simple presence of [s] and a computationally
+complex presence of reduplication (copied material). Observing the causal effect between interpolation
+and the resulting changes in intermediate layers can reveal how individual variables get transformed
+into spikes in activation in intermediate layers. Using the proposed technique, we can analyze
+how linguistically meaningful units in speech get encoded in different convolutional layers.

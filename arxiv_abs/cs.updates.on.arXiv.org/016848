@@ -1,0 +1,20 @@
+WiFi fingerprinting is one of the mainstream technologies for indoor localization. However, it
+requires an initial calibration phase during which the fingerprint database is built manually.
+This process is labour intensive and needs to be repeated with any change in the environment. While
+a number of systems have been introduced to reduce the calibration effort through RF propagation
+models or crowdsourcing, these still have some limitations. Other approaches use the recently
+developed iBeacon technology as an alternative to WiFi for indoor localization. However, these
+beacon-based solutions are limited to a small subset of high-end phones. In this paper, we present
+HybridLoc: an accurate low-overhead indoor localization system. The basic idea HybridLoc builds
+on is to leverage the sensors of high-end phones to enable localization of lower-end phones. Specifically,
+the WiFi fingerprint is crowdsourced by opportunistically collecting WiFi-scans labeled with
+location data obtained from BLE-enabled high-end smart phones. These scans are used to automatically
+construct the WiFi-fingerprint, that is used later to localize any lower-end cell phone with the
+ubiquitous WiFi technology. HybridLoc also has provisions for handling the inherent error in the
+estimated BLE locations used in constructing the fingerprint as well as to handle practical deployment
+issues including the noisy wireless environment, heterogeneous devices, among others. Evaluation
+of HybridLoc using Android phones shows that it can provide accurate localization in the same range
+as manual fingerprinting techniques under the same conditions. Moreover, the localization accuracy
+on low-end phones supporting only WiFi is comparable to that achieved with high-end phones supporting
+BLE. This accuracy is achieved with no training overhead, is robust to the different user devices,
+and is consistent under environment changes. 

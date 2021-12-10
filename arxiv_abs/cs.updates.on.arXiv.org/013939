@@ -1,0 +1,19 @@
+Modern blockchains support a variety of distributed applications beyond cryptocurrencies, including
+smart contracts -- which let users execute arbitrary code in a distributed and decentralized fashion.
+Regardless of their intended application, blockchain platforms implicitly assume consensus
+for the correct execution of a smart contract, thus requiring that all transactions are totally
+ordered. It was only recently recognized that consensus is not necessary to prevent double-spending
+in a cryptocurrency (Guerraoui et al., PODC'19), contrary to common belief. This result suggests
+that current implementations may be sacrificing efficiency and scalability because they synchronize
+transactions much more tightly than actually needed. In this work, we study the synchronization
+requirements of Ethereum's ERC20 token contract, one of the most widely adopted smart contacts.
+Namely, we model a smart-contract token as a concurrent object and analyze its consensus number
+as a measure of synchronization power. We show that the richer set of methods supported by ERC20 tokens,
+compared to standard cryptocurrencies, results in strictly stronger synchronization requirements.
+More surprisingly, the synchronization power of ERC20 tokens depends on the object's state and
+can thus be modified by method invocations. To prove this result, we develop a dedicated framework
+to express how the object's state affects the needed synchronization level. Our findings indicate
+that ERC20 tokens, as well as other token standards, are more powerful and versatile than plain cryptocurrencies,
+and are subject to dynamic requirements. Developing specific synchronization protocols that
+exploit these dynamic requirements will pave the way towards more robust and scalable blockchain
+platforms. 

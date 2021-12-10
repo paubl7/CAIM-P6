@@ -1,0 +1,19 @@
+We explore the potential of feed-forward deep neural networks (DNNs) for emulating cloud superparameterization
+in realistic geography, using offline fits to data from the Super Parameterized Community Atmospheric
+Model. To identify the network architecture of greatest skill, we formally optimize hyperparameters
+using ~250 trials. Our DNN explains over 70 percent of the temporal variance at the 15-minute sampling
+scale throughout the mid-to-upper troposphere. Autocorrelation timescale analysis compared
+against DNN skill suggests the less good fit in the tropical, marine boundary layer is driven by neural
+network difficulty emulating fast, stochastic signals in convection. However, spectral analysis
+in the temporal domain indicates skillful emulation of signals on diurnal to synoptic scales. A
+close look at the diurnal cycle reveals correct emulation of land-sea contrasts and vertical structure
+in the heating and moistening fields, but some distortion of precipitation. Sensitivity tests
+targeting precipitation skill reveal complementary effects of adding positive constraints vs.
+hyperparameter tuning, motivating the use of both in the future. A first attempt to force an offline
+land model with DNN emulated atmospheric fields produces reassuring results further supporting
+neural network emulation viability in real-geography settings. Overall, the fit skill is competitive
+with recent attempts by sophisticated Residual and Convolutional Neural Network architectures
+trained on added information, including memory of past states. Our results confirm the parameterizability
+of superparameterized convection with continents through machine learning and we highlight advantages
+of casting this problem locally in space and time for accurate emulation and hopefully quick implementation
+of hybrid climate models. 

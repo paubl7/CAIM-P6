@@ -1,0 +1,19 @@
+Real-world deployments of WiFi-based indoor localization in large public venues are few and far
+between as most state-of-the-art solutions require either client or infrastructure-side changes.
+Hence, even though high location accuracy is possible with these solutions, they are not practical
+due to cost and/or client adoption reasons. Majority of the public venues use commercial controller-managed
+WLAN solutions, %provided by Aruba, Cisco, etc., that neither allow client changes nor infrastructure
+changes. In fact, for such venues we have observed highly heterogeneous devices with very low adoption
+rates for client-side apps. In this paper, we present our experiences in deploying a scalable location
+system for such venues. We show that server-side localization is not trivial and present two unique
+challenges associated with this approach, namely Cardinality Mismatch and High Client Scan Latency.
+The "Mismatch" challenge results in a significant mismatch between the set of access points (APs)
+reporting a client in the offline and online phases, while the "Latency" challenge results in a low
+number of APs reporting data for any particular client. We collect three weeks of detailed ground
+truth data (~200 landmarks), from a WiFi setup that has been deployed for more than four years, to
+provide evidences for the extent and understanding the impact of these problems. Our analysis of
+real-world client devices reveal that the current trend for the clients is to reduce scans, thereby
+adversely impacting their localization accuracy. We analyze how localization is impacted when
+scans are minimal. We propose heuristics to alleviate reduction in the accuracy despite lesser
+scans. Besides the number of scans, we summarize the other challenges and pitfalls of real deployments
+which hamper the localization accuracy. 

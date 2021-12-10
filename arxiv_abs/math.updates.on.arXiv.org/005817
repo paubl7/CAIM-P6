@@ -1,0 +1,19 @@
+We prove local convergence of several notable gradient descent algorithms used in machine learning,
+for which standard stochastic gradient descent theory does not apply directly. This includes,
+first, online algorithms for recurrent models and dynamical systems, such as \emph{Real-time
+recurrent learning} (RTRL) and its computationally lighter approximations NoBackTrack and UORO;
+second, several adaptive algorithms such as RMSProp, online natural gradient, and Adam with $\beta^2\to
+1$.Despite local convergence being a relatively weak requirement for a new optimization algorithm,
+no local analysis was available for these algorithms, as far as we knew. Analysis of these algorithms
+does not immediately follow from standard stochastic gradient (SGD) theory. In fact, Adam has been
+proved to lack local convergence in some simple situations \citep{j.2018on}. For recurrent models,
+online algorithms modify the parameter while the model is running, which further complicates the
+analysis with respect to simple SGD.Local convergence for these various algorithms results from
+a single, more general set of assumptions, in the setup of learning dynamical systems online. Thus,
+these results can cover other variants of the algorithms considered.We adopt an "ergodic" rather
+than probabilistic viewpoint, working with empirical time averages instead of probability distributions.
+This is more data-agnostic and creates differences with respect to standard SGD theory, especially
+for the range of possible learning rates. For instance, with cycling or per-epoch reshuffling over
+a finite dataset instead of pure i.i.d.\ sampling with replacement, empirical averages of gradients
+converge at rate $1/T$ instead of $1/\sqrt{T}$ (cycling acts as a variance reduction method), theoretically
+allowing for larger learning rates than in SGD. 

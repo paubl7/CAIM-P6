@@ -1,0 +1,19 @@
+We introduce a model for ant trail formation, building upon previous work on biologically feasible
+local algorithms that plausibly describe how ants maintain trail networks. The model is a variant
+of a reinforced random walk on a directed graph, where ants lay pheromone on edges as they traverse
+them and the next edge to traverse is chosen based on the pheromone level; this pheromone decays with
+time. There is a bidirectional flow of ants: the forward flow proceeds along forward edges from source
+(e.g. the nest) to sink (e.g. a food source), and the backward flow in the opposite direction. Some
+fraction of ants are lost as they pass through each node (modeling the loss of ants due to exploration).
+We initiate a theoretical study of this model. We first consider the linear decision rule, where
+the flow divides itself among the next set of edges in proportion to their pheromone level. Here,
+we show that the process converges to the path with minimum leakage when the forward and backward
+flows do not change over time. When the forward and backward flows increase over time (caused by positive
+reinforcement from the discovery of a food source, for example), we show that the process converges
+to the shortest path. These results are for graphs consisting of two parallel paths (a case that has
+been investigated before in experiments). Through simulations, we show that these results hold
+for more general graphs drawn from various random graph models. Further, we consider a general family
+of decision rules, and show that there is no advantage of using a non-linear rule from this family,
+if the goal is to find the shortest or the minimum leakage path. We also show that bidirectional flow
+is necessary for convergence to such paths. Our results provide a plausible explanation for field
+observations, and open up new avenues for further theoretical and experimental investigation.

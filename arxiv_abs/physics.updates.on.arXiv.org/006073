@@ -1,0 +1,19 @@
+Neurite orientation dispersion and density imaging (NODDI) enables the assessment of intracellular,
+extracellular and free water signals from multi-shell diffusion MRI data. It is an insightful approach
+to characterize brain tissue microstructure. Single-shell reconstruction for NODDI parameters
+has been discouraged in previous studies caused by failure when fitting, especially for the neurite
+density index (NDI). Here, we investigated the possibility of creating robust NODDI parameter
+maps with single-shell data, using the isotropic volume fraction (fISO) as prior. Prior estimation
+was made independent of the NODDI model constraint using a dictionary learning approach. First,
+we used a stochastic sparse dictionary-based network (DictNet) in predicting fISO which is trained
+with data obtained from in vivo and simulated diffusion MRI data. In single-shell cases, the mean
+diffusivity (MD) and raw T2 signal with no diffusion weighting (S0) was incorporated in the dictionary
+for the fISO estimation. Then, the NODDI framework was used with the known fISO to estimate the NDI
+and orientation dispersion index (ODI). The fISO estimated by our model was compared with other
+fISO estimators in the simulation. Further, using both synthetic data simulation and human data
+collected on a 3T scanner, we compared the performance of our dictionary-based learning prior NODDI
+(DLpN) with the original NODDI for both single-shell and multi-shell data. Our results suggest
+that DLpN derived NDI and ODI parameters for single-shell protocols are comparable with original
+multi-shell NODDI, and protocol with b=2000 s/mm2 performs the best (error ~5% in white and grey
+matter). This may allow NODDI evaluation of studies on single-shell data by multi-shell scanning
+of two subjects for DictNet fISO training. 

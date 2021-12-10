@@ -1,0 +1,20 @@
+A growing body of recent evidence has highlighted the limitations of natural language processing
+(NLP) datasets and classifiers. These include the presence of annotation artifacts in datasets,
+classifiers relying on shallow features like a single word (e.g., if a movie review has the word "romantic",
+the review tends to be positive), or unnecessary words (e.g., learning a proper noun to classify
+a movie as positive or negative). The presence of such artifacts has subsequently led to the development
+of challenging datasets to force the model to generalize better. While a variety of heuristic strategies,
+such as counterfactual examples and contrast sets, have been proposed, the theoretical justification
+about what makes these examples difficult for the classifier is often lacking or unclear. In this
+paper, using tools from information geometry, we propose a theoretical way to quantify the difficulty
+of an example in NLP. Using our approach, we explore difficult examples for several deep learning
+architectures. We discover that both BERT, CNN and fasttext are susceptible to word substitutions
+in high difficulty examples. These classifiers tend to perform poorly on the FIM test set. (generated
+by sampling and perturbing difficult examples, with accuracy dropping below 50%). We replicate
+our experiments on 5 NLP datasets (YelpReviewPolarity, AGNEWS, SogouNews, YelpReviewFull and
+Yahoo Answers). On YelpReviewPolarity we observe a correlation coefficient of -0.4 between resilience
+to perturbations and the difficulty score. Similarly we observe a correlation of 0.35 between the
+difficulty score and the empirical success probability of random substitutions. Our approach
+is simple, architecture agnostic and can be used to study the fragilities of text classification
+models. All the code used will be made publicly available, including a tool to explore the difficult
+examples for other datasets. 

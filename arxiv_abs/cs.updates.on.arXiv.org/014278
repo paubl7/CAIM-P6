@@ -1,0 +1,19 @@
+The proliferation of camera-enabled devices and large video repositories has given rise to a diverse
+set of video analytics applications. The video pipelines for these applications are DAGs of operations
+that transform videos, process extracted metadata, and answer questions such as, "Is this intersection
+congested?" The latency and resource efficiency of pipelines can be optimized using configurable
+knobs for each operation such as the sampling rate, batch size, or type of hardware used. However,
+determining efficient configurations is challenging because (a) the configuration search space
+is exponentially large, and (b) the optimal configuration depends on the desired latency target
+and the input video contents that may exercise different paths in the DAG and produce different volumes
+of intermediate results. Existing video analytics and processing systems leave it to the users
+to manually configure operations and select hardware resources. Hence, we observe that they often
+execute inefficiently and fail to meet latency and cost targets. We present Llama: a heterogeneous
+and serverless framework for auto-tuning video pipelines. Llama optimizes the overall video pipeline
+latency by (a) dynamically calculating latency targets per-operation invocation, and (b) dynamically
+running a cost-based optimizer to determine efficient configurations that meet the target latency
+for each invocation. This makes the problem of auto-tuning large video pipelines tractable and
+allows us to handle input dependent behavior, conditional branches in the DAG, and execution variability.
+We describe the algorithms in Llama and evaluate it on a cloud platform using serverless CPU and GPU
+resources. We show that compared to state-of-the-art cluster and serverless video analytics and
+processing systems, Llama achieves 7.9x lower latency and 17.2x cost reduction on average. 

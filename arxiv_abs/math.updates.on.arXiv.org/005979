@@ -1,0 +1,20 @@
+Full waveform inversion (FWI) requires an accurate estimation of source signatures. Due to the
+coupling between the source signatures and the subsurface model, small errors in the former can
+translate into large errors in the latter. When direct methods are used to solve the forward problem,
+classical frequency-domain FWI efficiently processes multiple sources for source signature
+and wavefield estimations once a single Lower-Upper (LU) decomposition of the wave-equation operator
+has been performed. However, this efficient FWI formulation is based on the exact solution of the
+wave equation and hence is highly sensitive to the inaccuracy of the velocity model due to the cycle
+skipping pathology. Recent extended-space FWI variants tackle this sensitivity issue through
+a relaxation of the wave equation combined with data assimilation, allowing the wavefields to closely
+match the data from the first inversion iteration. Then, the subsurface parameters are updated
+by minimizing the wave-equation violations. When the wavefields and the source signatures are
+jointly estimated with this approach, the extended wave equation operator becomes source dependent,
+hence making direct methods ineffective. In this paper, we propose a simple method to bypass this
+issue and estimate source signatures efficiently during extended FWI. The proposed method replaces
+each source with a blended source during each data-assimilated wavefield reconstruction to make
+the extended wave equation operator source independent. Besides computational efficiency, the
+additional degrees of freedom introduced by spatially distributing the sources allows for a better
+signature estimation at the physical location when the velocity model is rough. Numerical tests
+on the Marmousi II and 2004 BP salt synthetic models confirm the efficiency and the robustness of
+the proposed method. 

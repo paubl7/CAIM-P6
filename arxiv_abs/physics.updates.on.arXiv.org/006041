@@ -1,0 +1,20 @@
+Purpose: To develop and evaluate MyoMapNet, a rapid myocardial T1 mapping approach that uses neural
+networks (NN) to estimate voxel-wise myocardial T1 and extracellular (ECV) from T1-weighted images
+collected after a single inversion pulse over 4-5 heartbeats. Method: MyoMapNet utilizes a simple
+fully-connected NN to estimate T1 values from 5 (native) or 4 (post-contrast) T1-weighted images.
+Native MOLLI-5(3)3 T1 was collected in 717 subjects (386 males, 55$\pm$16.5 years) and post-contrast
+MOLLI-4(1)3(1)2 in 535 subjects (232 male, 56.5$\pm$15 years). The dataset was divided into training
+(80%) and testing (20%), where 20% of the training set was used to optimize MyoMapNet architecture
+(size and loss functions). We used MyoMapNet to estimate T1 and ECV maps with the first 5 (native)
+or 4 (post-contrast) T1-weighted images from the corresponding MOLLI sequence compared to the
+conventional and an abbreviated MOLLI using similar number of T1-weighted images with 3-parameter
+curve-fitting. Results: In our preliminary optimizaiton step, we determined that a 5-layers NN
+trained using mean-absolute-error loss yields lower estimation errors and was used subsequently
+in independent testing study. The myocardial T1 by MyoMapNet was similar to MOLLI (1200$\pm$45ms
+vs. 1199$\pm$46ms; P=0.3 for native T1, and 27.3$\pm$3.5% vs. 27.1$\pm$4%; P=0.4 for ECV). MyoMapNet
+had significantly smaller errors in T1 estimations compared to abbreviated-MOLLI (1$\pm$17ms
+vs. 31$\pm$34ms, P<0.01 for in native T1, and 0.1$\pm$1.3% vs. 1.9$\pm$2.5%, P<0.01 for ECV). The
+duration of T1 estimation was approximately 2 ms per slice using MyoMapNet. Conclusion: MyoMapNet
+T1 mapping enables myocardial T1 quantification in 4-5 heartbeats with near-instantaneous map
+estimation time with similar accuracy and precision as MOLLI. Keywords: Myocardial T1 mapping,
+MOLLI, T1 reconstruction, Neural network, Deep Learning. 

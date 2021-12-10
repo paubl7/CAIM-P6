@@ -1,0 +1,19 @@
+The problem of basket recommendation~(BR) is to recommend a ranking list of items to the current
+basket. Existing methods solve this problem by assuming the items within the same basket are correlated
+by one semantic relation, thus optimizing the item embeddings. However, this assumption breaks
+when there exist multiple intents within a basket. For example, assuming a basket contains \{\textit{bread,
+cereal, yogurt, soap, detergent}\} where \{\textit{bread, cereal, yogurt}\} are correlated
+through the "breakfast" intent, while \{\textit{soap, detergent}\} are of "cleaning" intent,
+ignoring multiple relations among the items spoils the ability of the model to learn the embeddings.
+To resolve this issue, it is required to discover the intents within the basket. However, retrieving
+a multi-intent pattern is rather challenging, as intents are latent within the basket. Additionally,
+intents within the basket may also be correlated. Moreover, discovering a multi-intent pattern
+requires modeling high-order interactions, as the intents across different baskets are also correlated.
+To this end, we propose a new framework named as \textbf{M}ulti-\textbf{I}ntent \textbf{T}ranslation
+\textbf{G}raph \textbf{N}eural \textbf{N}etwork~({\textbf{MITGNN}}). MITGNN models $T$
+intents as tail entities translated from one corresponding basket embedding via $T$ relation vectors.
+The relation vectors are learned through multi-head aggregators to handle user and item information.
+Additionally, MITGNN propagates multiple intents across our defined basket graph to learn the
+embeddings of users and items by aggregating neighbors. Extensive experiments on two real-world
+datasets prove the effectiveness of our proposed model on both transductive and inductive BR. The
+code is available online at https://github.com/JimLiu96/MITGNN. 

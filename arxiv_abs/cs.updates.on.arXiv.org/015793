@@ -1,0 +1,18 @@
+The classical persistence algorithm virtually computes the unique decomposition of a persistence
+module implicitly given by an input simplicial filtration. Based on matrix reduction, this algorithm
+is a cornerstone of the emergent area of topological data analysis. Its input is a simplicial filtration
+defined over the integers $\mathbb{Z}$ giving rise to a $1$-parameter persistence module. It has
+been recognized that multi-parameter version of persistence modules given by simplicial filtrations
+over $d$-dimensional integer grids $\mathbb{Z}^d$ is equally or perhaps more important in data
+science applications. However, in the multi-parameter setting, one of the main challenges is that
+topological summaries based on algebraic structure such as decompositions and bottleneck distances
+cannot be as efficiently computed as in the $1$-parameter case because there is no known extension
+of the persistence algorithm to multi-parameter persistence modules. We present an efficient
+algorithm to compute the unique decomposition of a finitely presented persistence module $M$ defined
+over the multiparameter $\mathbb{Z}^d$.The algorithm first assumes that the module is presented
+with a set of $N$ generators and relations that are \emph{distinctly graded}. Based on a generalized
+matrix reduction technique it runs in $O(N^{2\omega+1})$ time where $\omega<2.373$ is the exponent
+for matrix multiplication. This is much better than the well known algorithm called Meataxe which
+runs in $\tilde{O}(N^{6(d+1)})$ time on such an input. In practice, persistence modules are usually
+induced by simplicial filtrations. With such an input consisting of $n$ simplices, our algorithm
+runs in $O(n^{2\omega+1})$ time for $d=2$ and in $O(n^{d(2\omega + 1)})$ time for $d>2$. 

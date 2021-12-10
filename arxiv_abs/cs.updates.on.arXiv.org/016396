@@ -1,0 +1,19 @@
+Near-additive (aka $(1+\epsilon,\beta)$-) emulators and spanners are a fundamental graph-algorithmic
+construct, with numerous applications for computing approximate shortest paths and related problems
+in distributed, streaming and dynamic settings. Known constructions of near-additive emulators
+enable one to trade between their sparsity (i.e., number of edges) and the additive stretch $\beta$.
+Specifically, for any pair of parameters $\epsilon >0$, $ \kappa=1,2,\dots$, one can have a $(1+\epsilon,\beta)$-emulator
+with $O(n^{1+1/\kappa})$ edges, with $\beta = \left(\frac{\log \kappa}{\epsilon}\right)^{\log
+\kappa}$. At their sparsest, these emulators employ $c\cdot n$ edges, for some constant $c\geq
+2$. We tighten this bound, and show that in fact precisely $n^{1+1/\kappa}$ edges suffice. In particular,
+our emulators can be \emph{ultra-sparse}, i.e., we can have an emulator with $n+o(n)$ edges and
+$\beta = \left(\frac{\log {\log n}}{\epsilon }\right)^{{\log {\log n}}(1+o(1))}$. We also devise
+a distributed deterministic algorithm in the CONGEST model that builds these emulators in low polynomial
+time (i.e., in $O(n^\rho)$ time, for an arbitrarily small constant parameter $\rho >0$). Finally,
+we also improve the state-of-the-art distributed deterministic \congest-model construction
+of $(1+\epsilon,\beta)$-spanners devised in the PODC'19 paper [ElkinM19]. Specifically, the
+spanners of [ElkinM19] have $O(\beta\cdot n^{1+1/\kappa})$ edges, i.e., at their sparsest they
+employ $ O\left(\frac{\log {\log n}}{\epsilon }\right)^{{\log {\log n}}}\cdot n$ edges. In this
+paper, we devise an efficient distributed deterministic CONGEST-model algorithm that builds
+such spanners with $O(n^{1+1/\kappa})$ edges for $\kappa = O\left(\frac{\log n}{\log ^{(3)}n}\right)$.
+At their sparsest, these spanners employ only $O(n\cdot {\log {\log n}})$ edges. 

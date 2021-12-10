@@ -1,0 +1,17 @@
+Over the past decade, Deep Convolutional Neural Networks have been widely adopted for medical image
+segmentation and shown to achieve adequate performance. However, due to the inherent inductive
+biases present in the convolutional architectures, they lack understanding of long-range dependencies
+in the image. Recently proposed Transformer-based architectures that leverage self-attention
+mechanism encode long-range dependencies and learn representations that are highly expressive.
+This motivates us to explore Transformer-based solutions and study the feasibility of using Transformer-based
+network architectures for medical image segmentation tasks. Majority of existing Transformer-based
+network architectures proposed for vision applications require large-scale datasets to train
+properly. However, compared to the datasets for vision applications, for medical imaging the number
+of data samples is relatively low, making it difficult to efficiently train transformers for medical
+applications. To this end, we propose a Gated Axial-Attention model which extends the existing
+architectures by introducing an additional control mechanism in the self-attention module. Furthermore,
+to train the model effectively on medical images, we propose a Local-Global training strategy (LoGo)
+which further improves the performance. Specifically, we operate on the whole image and patches
+to learn global and local features, respectively. The proposed Medical Transformer (MedT) is evaluated
+on three different medical image segmentation datasets and it is shown that it achieves better performance
+than the convolutional and other related transformer-based architectures. Code: https://github.com/jeya-maria-jose/Medical-Transformer

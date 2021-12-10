@@ -1,0 +1,19 @@
+We consider adaptive designs for a trial involving N individuals that we follow along T time steps.
+We allow for the variables of one individual to depend on its past and on the past of other individuals.
+Our goal is to learn a mean outcome, averaged across the N individuals, that we would observe, if we
+started from some given initial state, and we carried out a given sequence of counterfactual interventions
+for $\tau$ time steps. We show how to identify a statistical parameter that equals this mean counterfactual
+outcome, and how to perform inference for this parameter, while adaptively learning an oracle design
+defined as a parameter of the true data generating distribution. Oracle designs of interest include
+the design that maximizes the efficiency for a statistical parameter of interest, or designs that
+mix the optimal treatment rule with a certain exploration distribution. We also show how to design
+adaptive stopping rules for sequential hypothesis testing. This setting presents unique technical
+challenges. Unlike in usual statistical settings where the data consists of several independent
+observations, here, due to network and temporal dependence, the data reduces to one single observation
+with dependent components. In particular, this precludes the use of sample splitting techniques.
+We therefore had to develop a new equicontinuity result and guarantees for estimators fitted on
+dependent data. We were motivated to work on this problem by the following two questions. (1) In the
+context of a sequential adaptive trial with K treatment arms, how to design a procedure to identify
+in as few rounds as possible the treatment arm with best final outcome? (2) In the context of sequential
+randomized disease testing at the scale of a city, how to estimate and infer the value of an optimal
+testing and isolation strategy? 

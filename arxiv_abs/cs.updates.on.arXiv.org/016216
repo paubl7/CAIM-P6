@@ -1,0 +1,19 @@
+Many industries with convolutional neural network models offer privacy-preserving machine learning
+(PPML) classification service, that is, a service that performs classification of private data
+for clients while guaranteeing privacy. This work aims to study deep learning on the encrypted data
+using fully homomorphic encryption (FHE). To implement deep learning on FHE, ReLU and max-pooling
+functions should be approximated by some polynomials for homomorphic operations. Since the approximate
+polynomials studied up to now have large errors in ReLU and max-pooling functions, using these polynomials
+requires many epochs retraining for the classification of small datasets such as MNIST and CIFAR-10.
+In addition, large datasets such as ImageNet cannot be classified with high accuracy even with many
+epoch retraining using these polynomials. To overcome these disadvantages, we propose a precise
+polynomial approximation technique for ReLU and max-pooling functions. Since precise approximation
+requires a very high-degree polynomial, which may cause large numerical errors in FHE, we propose
+a method to approximate ReLU and max-pooling functions accurately using a composition of minimax
+approximate polynomials of small degrees. If we replace the ReLU and max-pooling functions with
+the proposed approximate polynomials, deep learning models such as ResNet and VGGNet, which have
+already been studied a lot, can still be used without further modification for PPML on FHE, and even
+pretrained parameters can be used without retraining. When we approximate ReLU function in the
+ResNet-152 using the composition of minimax approximate polynomials of degrees 15, 27, and 29,
+we succeed in classifying the plaintext ImageNet dataset for the first time with 77.52% accuracy,
+which is very close to the original model accuracy of 78.31%. 

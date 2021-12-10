@@ -1,0 +1,18 @@
+Developers create software branches for tentative feature addition and bug fixing, and periodically
+merge branches to release software with new features or repairing patches. When the program edits
+from different branches textually overlap (i.e., textual conflicts), or the co-application of
+those edits lead to compilation or runtime errors (i.e., compiling or dynamic conflicts), it is
+challenging and time-consuming for developers to eliminate merge conflicts. Prior studies examined
+%the popularity of merge conflicts and how conflicts were related to code smells or software development
+process; tools were built to find and solve conflicts. However, some fundamental research questions
+are still not comprehensively explored, including (1) how conflicts were introduced, (2) how developers
+manually resolved conflicts, and (3) what conflicts cannot be handled by current tools. For this
+paper, we took a hybrid approach that combines automatic detection with manual inspection to reveal
+204 merge conflicts and their resolutions in 15 open-source repositories. %in the version history
+of 15 open-source projects. Our data analysis reveals three phenomena. First, compiling and dynamic
+conflicts are harder to detect, although current tools mainly focus on textual conflicts. Second,
+in the same merging context, developers usually resolved similar textual conflicts with similar
+strategies. Third, developers manually fixed most of the inspected compiling and dynamic conflicts
+by similarly editing the merged version as what they did for one of the branches. Our research reveals
+the challenges and opportunities for automatic detection and resolution of merge conflicts; it
+also sheds light on related areas like systematic program editing and change recommendation. 

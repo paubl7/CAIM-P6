@@ -1,0 +1,19 @@
+The purpose of this study was to develop a fully-automated segmentation algorithm, robust to various
+density enhancing lung abnormalities, to facilitate rapid quantitative analysis of computed
+tomography images. A polymorphic training approach is proposed, in which both specifically labeled
+left and right lungs of humans with COPD, and nonspecifically labeled lungs of animals with acute
+lung injury, were incorporated into training a single neural network. The resulting network is
+intended for predicting left and right lung regions in humans with or without diffuse opacification
+and consolidation. Performance of the proposed lung segmentation algorithm was extensively evaluated
+on CT scans of subjects with COPD, confirmed COVID-19, lung cancer, and IPF, despite no labeled training
+data of the latter three diseases. Lobar segmentations were obtained using the left and right lung
+segmentation as input to the LobeNet algorithm. Regional lobar analysis was performed using hierarchical
+clustering to identify radiographic subtypes of COVID-19. The proposed lung segmentation algorithm
+was quantitatively evaluated using semi-automated and manually-corrected segmentations in
+87 COVID-19 CT images, achieving an average symmetric surface distance of $0.495 \pm 0.309$ mm and
+Dice coefficient of $0.985 \pm 0.011$. Hierarchical clustering identified four radiographical
+phenotypes of COVID-19 based on lobar fractions of consolidated and poorly aerated tissue. Lower
+left and lower right lobes were consistently more afflicted with poor aeration and consolidation.
+However, the most severe cases demonstrated involvement of all lobes. The polymorphic training
+approach was able to accurately segment COVID-19 cases with diffuse consolidation without requiring
+COVID-19 cases for training. 

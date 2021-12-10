@@ -1,0 +1,19 @@
+Land cover mapping is essential to monitoring the environment and understanding the effects of
+human activities on it. The automatic approaches to land cover mapping (i.e., image segmentation)
+mostly used traditional machine learning that requires heuristic feature design. On natural images,
+deep learning has outperformed traditional machine learning approaches for image segmentation.
+On remote sensing images, recent studies demonstrate successful applications of specific deep
+learning models to small-scale land cover mapping tasks (e.g., to classify wetland complexes).
+However, it is not readily clear which of the existing models are the best candidates for which remote
+sensing task. In this study, we answer that question for mapping the fundamental land cover classes
+using satellite radar data. We took Sentinel-1 C-band SAR images available at no cost to users as
+representative data. CORINE land cover map was used as a reference, and the models were trained to
+distinguish between the 5 major CORINE classes. We selected seven among the state-of-the-art semantic
+segmentation models so that they cover a diverse set of approaches: U-Net, DeepLabV3+, PSPNet,
+BiSeNet, SegNet, FC-DenseNet, and FRRN-B. The models were pre-trained on the ImageNet dataset
+and further fine-tuned in this study. All the models demonstrated solid performance with overall
+accuracy between 87.9% and 93.1%, and with good to a very good agreement (kappa statistic between
+0.75 and 0.86). The two best models were FC-DenseNet and SegNet, with the latter having a much smaller
+inference time. Overall, our results indicate that the semantic segmentation models are suitable
+for efficient wide-area mapping using satellite SAR imagery and also provide baseline accuracy
+against which the newly proposed models should be evaluated. 

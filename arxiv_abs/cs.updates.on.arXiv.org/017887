@@ -1,0 +1,19 @@
+Self-supervised Learning (SSL) aims at learning representations of objects without relying on
+manual labeling. Recently, a number of SSL methods for graph representation learning have achieved
+performance comparable to SOTA semi-supervised GNNs. A Siamese network, which relies on data augmentation,
+is the popular architecture used in these methods. However, these methods rely on heuristically
+crafted data augmentation techniques. Furthermore, they use either contrastive terms or other
+tricks (e.g., asymmetry) to avoid trivial solutions that can occur in Siamese networks. In this
+study, we propose, GraphSurgeon, a novel SSL method for GNNs with the following features. First,
+instead of heuristics we propose a learnable data augmentation method that is jointly learned with
+the embeddings by leveraging the inherent signal encoded in the graph. In addition, we take advantage
+of the flexibility of the learnable data augmentation and introduce a new strategy that augments
+in the embedding space, called post augmentation. This strategy has a significantly lower memory
+overhead and run-time cost. Second, as it is difficult to sample truly contrastive terms, we avoid
+explicit negative sampling. Third, instead of relying on engineering tricks, we use a scalable
+constrained optimization objective motivated by Laplacian Eigenmaps to avoid trivial solutions.
+To validate the practical use of GraphSurgeon, we perform empirical evaluation using 14 public
+datasets across a number of domains and ranging from small to large scale graphs with hundreds of
+millions of edges. Our finding shows that GraphSurgeon is comparable to six SOTA semi-supervised
+and on par with five SOTA self-supervised baselines in node classification tasks. The source code
+is available at https://github.com/zekarias-tilahun/graph-surgeon. 

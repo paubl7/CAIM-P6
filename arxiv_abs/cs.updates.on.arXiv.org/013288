@@ -1,0 +1,19 @@
+Computationally solving the equations of elasticity is a key component in many materials science
+and mechanics simulations. Phenomena such as deformation-induced microstructure evolution,
+microfracture, and microvoid nucleation are examples of applications for which accurate stress
+and strain fields are required. A characteristic feature of these simulations is that the problem
+domain is simple (typically a rectilinear representative volume element (RVE)), but the evolution
+of internal topological features is extremely complex. Traditionally, the finite element method
+(FEM) is used for elasticity calculations; FEM is nearly ubiquituous due to (1) its ability to handle
+meshes of complex geometry using isoparametric elements, and (2) the weak formulation which eschews
+the need for computation of second derivatives. However, variable topology problems (e.g. microstructure
+evolution) require either remeshing, or adaptive mesh refinement (AMR) - both of which can cause
+extensive overhead and limited scaling. Block-structured AMR (BSAMR) is a method for adaptive
+mesh refinement that exhibits good scaling and is well-suited for many problems in materials science.
+Here, it is shown that the equations of elasticity can be efficiently solved using BSAMR using the
+finite difference method. The boundary operator method is used to treat different types of boundary
+conditions, and the "reflux-free" method is introduced to efficiently and easily treat the coarse-fine
+boundaries that arise in BSAMR. Examples are presented that demonstrate the use of this method in
+a variety of cases relevant to materials science: Eshelby inclusions, fracture, and microstructure
+evolution. Reasonable scaling is demonstrated up to $\sim$4000 processors with tens of millions
+of grid points, and good AMR efficiency is observed. 

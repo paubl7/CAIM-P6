@@ -1,0 +1,19 @@
+Node classification is an important research topic in graph learning. Graph neural networks (GNNs)
+have achieved state-of-the-art performance of node classification. However, existing GNNs address
+the problem where node samples for different classes are balanced; while for many real-world scenarios,
+some classes may have much fewer instances than others. Directly training a GNN classifier in this
+case would under-represent samples from those minority classes and result in sub-optimal performance.
+Therefore, it is very important to develop GNNs for imbalanced node classification. However, the
+work on this is rather limited. Hence, we seek to extend previous imbalanced learning techniques
+for i.i.d data to the imbalanced node classification task to facilitate GNN classifiers. In particular,
+we choose to adopt synthetic minority over-sampling algorithms, as they are found to be the most
+effective and stable. This task is non-trivial, as previous synthetic minority over-sampling
+algorithms fail to provide relation information for newly synthesized samples, which is vital
+for learning on graphs. Moreover, node attributes are high-dimensional. Directly over-sampling
+in the original input domain could generates out-of-domain samples, which may impair the accuracy
+of the classifier. We propose a novel framework, GraphSMOTE, in which an embedding space is constructed
+to encode the similarity among the nodes. New samples are synthesize in this space to assure genuineness.
+In addition, an edge generator is trained simultaneously to model the relation information, and
+provide it for those new samples. This framework is general and can be easily extended into different
+variations. The proposed framework is evaluated using three different datasets, and it outperforms
+all baselines with a large margin. 

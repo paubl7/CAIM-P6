@@ -1,0 +1,19 @@
+In this paper we focus on the dynamic state estimation which harnesses a vast amount of sensing data
+harvested by multiple parties and recognize that in many applications, to improve collaborations
+between parties, the estimation procedure must be designed with the awareness of protecting participants'
+data and model privacy, where the latter refers to the privacy of key parameters of observation models.
+We develop a state estimation paradigm for the scenario where multiple parties with data and model
+privacy concerns are involved. Multiple parties monitor a physical dynamic process by deploying
+their own sensor networks and update the state estimate according to the average state estimate
+of all the parties calculated by a cloud server and security module. The paradigm taps additively
+homomorphic encryption which enables the cloud server and security module to jointly fuse parties'
+data while preserving the data privacy. Meanwhile, all the parties collaboratively develop a stable
+(or optimal) fusion rule without divulging sensitive model information. For the proposed filtering
+paradigm, we analyze the stabilization and the optimality. First, to stabilize the multi-party
+state estimator while preserving observation model privacy, two stabilization design methods
+are proposed. For special scenarios, the parties directly design their estimator gains by the matrix
+norm relaxation. For general scenarios, after transforming the original design problem into a
+convex semi-definite programming problem, the parties collaboratively derive suitable estimator
+gains based on the ADMM. Second, an optimal collaborative gain design method with model privacy
+guarantees is provided, which results in the asymptotic MMSE state estimation. Finally, numerical
+examples are presented to illustrate our design and theoretical findings. 

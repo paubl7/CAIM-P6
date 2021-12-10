@@ -1,0 +1,19 @@
+We present a non-intrusive model reduction framework for linear poroelasticity problems in heterogeneous
+porous media using proper orthogonal decomposition (POD) and neural networks, based on the usual
+offline-online paradigm. As the conductivity of porous media can be highly heterogeneous and span
+several orders of magnitude, we utilize the interior penalty discontinuous Galerkin (DG) method
+as a full order solver to handle discontinuity and ensure local mass conservation during the offline
+stage. We then use POD as a data compression tool and compare the nested POD technique, in which time
+and uncertain parameter domains are compressed consecutively, to the classical POD method in which
+all domains are compressed simultaneously. The neural networks are finally trained to map the set
+of uncertain parameters, which could correspond to material properties, boundary conditions,
+or geometric characteristics, to the collection of coefficients calculated from an $L^2$ projection
+over the reduced basis. We then perform a non-intrusive evaluation of the neural networks to obtain
+coefficients corresponding to new values of the uncertain parameters during the online stage.
+We show that our framework provides reasonable approximations of the DG solution, but it is significantly
+faster. Moreover, the reduced order framework can capture sharp discontinuities of both displacement
+and pressure fields resulting from the heterogeneity in the media conductivity, which is generally
+challenging for intrusive reduced order methods. The sources of error are presented, showing that
+the nested POD technique is computationally advantageous and still provides comparable accuracy
+to the classical POD method. We also explore the effect of different choices of the hyperparameters
+of the neural network on the framework performance. 

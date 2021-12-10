@@ -1,0 +1,19 @@
+An ongoing challenge in neural information processing is: how do neurons adjust their connectivity
+to improve task performance over time (i.e., actualize learning)? It is widely believed that there
+is a consistent, synaptic-level learning mechanism in specific brain regions that actualizes
+learning. However, the exact nature of this mechanism remains unclear. Here we propose an algorithm
+based on reinforcement learning (RL) to generate and apply a simple synaptic-level learning policy
+for multi-layer perceptron (MLP) models. In this algorithm, the action space for each MLP synapse
+consists of a small increase, decrease, or null action on the synapse weight, and the state for each
+synapse consists of the last two actions and reward signals. A binary reward signal indicates improvement
+or deterioration in task performance. The static policy produces superior training relative to
+the adaptive policy and is agnostic to activation function, network shape, and task. Trained MLPs
+yield character recognition performance comparable to identically shaped networks trained with
+gradient descent. 0 hidden unit character recognition tests yielded an average validation accuracy
+of 88.28%, 1.86$\pm$0.47% higher than the same MLP trained with gradient descent. 32 hidden unit
+character recognition tests yielded an average validation accuracy of 88.45%, 1.11$\pm$0.79%
+lower than the same MLP trained with gradient descent. The robustness and lack of reliance on gradient
+computations opens the door for new techniques for training difficult-to-differentiate artificial
+neural networks such as spiking neural networks (SNNs) and recurrent neural networks (RNNs). Further,
+the method's simplicity provides a unique opportunity for further development of local rule-driven
+multi-agent connectionist models for machine intelligence analogous to cellular automata. 

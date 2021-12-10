@@ -1,0 +1,19 @@
+In a subjective experiment to evaluate the perceptual audiovisual quality of multimedia and television
+services, raw opinion scores collected from test subjects are often noisy and unreliable. To produce
+the final mean opinion scores (MOS), recommendations such as ITU-R BT.500, ITU-T P.910 and ITU-T
+P.913 standardize post-test screening procedures to clean up the raw opinion scores, using techniques
+such as subject outlier rejection and bias removal. In this paper, we analyze the prior standardized
+techniques to demonstrate their weaknesses. As an alternative, we propose a simple model to account
+for two of the most dominant behaviors of subject inaccuracy: bias and inconsistency. We further
+show that this model can also effectively deal with inattentive subjects that give random scores.
+We propose to use maximum likelihood estimation to jointly solve the model parameters, and present
+two numeric solvers: the first based on the Newton-Raphson method, and the second based on an alternating
+projection (AP). We show that the AP solver generalizes the ITU-T P.913 post-test screening procedure
+by weighing a subject's contribution to the true quality score by her consistency (thus, the quality
+scores estimated can be interpreted as bias-subtracted consistency-weighted MOS). We compare
+the proposed methods with the standardized techniques using real datasets and synthetic simulations,
+and demonstrate that the proposed methods are the most valuable when the test conditions are challenging
+(for example, crowdsourcing and cross-lab studies), offering advantages such as better model-data
+fit, tighter confidence intervals, better robustness against subject outliers, the absence of
+hard coded parameters and thresholds, and auxiliary information on test subjects. The code for
+this work is open-sourced at https://github.com/Netflix/sureal. 

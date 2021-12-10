@@ -1,0 +1,19 @@
+Agile attitude maneuvering maximizes the utility of remote sensing satellite constellations.
+By taking into account a satellite's physical properties and its actuator specifications, we may
+leverage the full performance potential of the attitude control system to conduct agile remote
+sensing beyond conventional slew-and-stabilize maneuvers. Employing a constellation of agile
+satellites, coordinated by an autonomous and responsive scheduler, can significantly increase
+overall response rate, revisit time and global coverage for the mission. In this paper, we use recent
+advances in sequential convex programming based trajectory optimization to enable rapid-target
+acquisition, pointing and tracking capabilities for a scheduler-based constellation. We present
+two problem formulations. The Minimum-Time Slew Optimal Control Problem determines the minimum
+time, required energy, and optimal trajectory to slew between any two orientations given nonlinear
+quaternion kinematics, gyrostat and actuator dynamics, and state/input constraints. By gridding
+the space of 3D rotations and efficiently solving this problem on the grid, we produce lookup tables
+or parametric fits off-line that can then be used on-line by a scheduler to compute accurate estimates
+of minimum-time and maneuver energy for real-time constellation scheduling. The Minimum-Effort
+Multi-Target Pointing Optimal Control Problem is used on-line by each satellite to produce continuous
+attitude-state and control-input trajectories that realize a given schedule while minimizing
+attitude error and control effort. The optimal trajectory may then be achieved by a low-level tracking
+controller. We demonstrate our approach with an example of a reference satellite in Sun-synchronous
+orbit passing over globally-distributed, Earth-observation targets. 

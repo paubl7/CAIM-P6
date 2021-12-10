@@ -1,0 +1,19 @@
+We propose a recurrent neural network for a "model-free" simulation of a dynamical system with unknown
+parameters without prior knowledge. The deep learning model aims to jointly learn the nonlinear
+time marching operator and the effects of the unknown parameters from a time series dataset. We assume
+that the time series data set consists of an ensemble of trajectories for a range of the parameters.
+The learning task is formulated as a statistical inference problem by considering the unknown parameters
+as random variables. A latent variable is introduced to model the effects of the unknown parameters,
+and a variational inference method is employed to simultaneously train probabilistic models for
+the time marching operator and an approximate posterior distribution for the latent variable.
+Unlike the classical variational inference, where a factorized distribution is used to approximate
+the posterior, we employ a feedforward neural network supplemented by an encoder recurrent neural
+network to develop a more flexible probabilistic model. The approximate posterior distribution
+makes an inference on a trajectory to identify the effects of the unknown parameters. The time marching
+operator is approximated by a recurrent neural network, which takes a latent state sampled from
+the approximate posterior distribution as one of the input variables, to compute the time evolution
+of the probability distribution conditioned on the latent variable. In the numerical experiments,
+it is shown that the proposed variational inference model makes a more accurate simulation compared
+to the standard recurrent neural networks. It is found that the proposed deep learning model is capable
+of correctly identifying the dimensions of the random parameters and learning a representation
+of complex time series data. 

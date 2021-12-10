@@ -1,0 +1,18 @@
+This paper examines a class of PDEs where some part of the PDE system evolves a vector field whose curl
+remains zero or grows in proportion to specified source terms. Such PDEs are referred to as curl-free
+or curl-preserving respectively. In this paper we catalogue a class of DG-like schemes for such
+PDEs. To retain the globally curl-free or curl-preserving constraints, the components of the vector
+field, as well as their higher moments, have to be collocated at the edges of the mesh. They are updated
+by using potentials that are collocated at the vertices of the mesh. The resulting schemes : 1) do
+not blow up even after very long integration times, 2) do not need any special cleaning treatment,
+3) can operate with large explicit timesteps, 4) do not require the solution of an elliptic system
+and 5) can be extended to higher orders using DG-like methods. The methods rely on a special curl-preserving
+reconstruction and they also rely on multidimensional upwinding. The Galerkin projection, so
+crucial to the design of a DG method, is now carried out in the edges of the mesh and yields a weak form
+update that uses potentials that are obtained at the vertices of the mesh with the help of a multidimensional
+Riemann solver. A von Neumann stability analysis of the curl-preserving methods is carried out
+and the limiting CFL numbers of this entire family of methods is catalogued in this work. The stability
+analysis confirms that with increasing order of accuracy, our novel curl-free methods have superlative
+phase accuracy while substantially reducing dissipation. We also show that PNPM-like methods
+retain much of the excellent wave propagation characteristics of the DG-like methods while offering
+a much larger CFL number and lower computational complexity. 

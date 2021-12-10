@@ -1,0 +1,18 @@
+In order to objectively assess new medical imaging technologies via computer-simulations, it
+is important to account for all sources of variability that contribute to image data. One important
+source of variability that can significantly limit observer performance is associated with the
+variability in the ensemble of objects to-be-imaged. This source of variability can be described
+by stochastic object models (SOMs), which are generative models that can be employed to sample from
+a distribution of to-be-virtually-imaged objects. It is generally desirable to establish SOMs
+from experimental imaging measurements acquired by use of a well-characterized imaging system,
+but this task has remained challenging. Deep generative neural networks, such as generative adversarial
+networks (GANs) hold potential for such tasks. To establish SOMs from imaging measurements, an
+AmbientGAN has been proposed that augments a GAN with a measurement operator. However, the original
+AmbientGAN could not immediately benefit from modern training procedures and GAN architectures,
+which limited its ability to be applied to realistically sized medical image data. To circumvent
+this, in this work, a modified AmbientGAN training strategy is proposed that is suitable for modern
+progressive or multi-resolution training approaches such as employed in the Progressive Growing
+of GANs and Style-based GANs. AmbientGANs established by use of the proposed training procedure
+are systematically validated in a controlled way by use of computer-simulated measurement data
+corresponding to a stylized imaging system. Finally, emulated single-coil experimental magnetic
+resonance imaging data are employed to demonstrate the methods under less stylized conditions.

@@ -1,0 +1,18 @@
+We present the system that we have developed for the identification and verification of pills using
+images that are taken by the VeriMedi device. The VeriMedi device is an Internet of Things device
+that takes pictures of a filled pill vial from the bottom of the vial and uses the solution that is presented
+in this research to identify the pills in the vials. The solution has two serially connected deep
+learning solutions which do segmentation and identification. The segmentation solution creates
+the masks for each pill in the vial image by using the Mask R-CNN model, then segments and crops the
+pills and blurs the background. After that, the segmented pill images are sent to the identification
+solution where a Deep Metric Learning model that is trained with Proxy Anchor Loss (PAL) function
+generates embedding vectors for each pill image. The generated embedding vectors are fed into a
+one-layer fully connected network that is trained with the exact solution to predict each single
+pill image. Then, the aggregation/verification function aggregates the multiple predictions
+coming from multiple single pill images and verifies the correctness of the final prediction with
+respect to predefined rules. Besides, we enhanced the PAL with a better proxy initialization that
+increased the performance of the models and let the model learn the new classes of images continually
+without retraining the model with the whole dataset. When the model that is trained with initial
+classes is retrained only with new classes, the accuracy of the model increases for both old and new
+classes. The identification solution that we have presented in this research can also be reused
+for other problem domains which require continual learning and/or Fine-Grained Visual Categorization.

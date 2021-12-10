@@ -1,0 +1,20 @@
+We present "Pix2Prof", a deep learning model that eliminates manual steps in the measurement of
+galaxy surface brightness (SB) profiles. We argue that a galaxy "profile" of any sort is conceptually
+similar to an image caption. This idea allows us to leverage image captioning methods from the field
+of natural language processing, and so we design Pix2Prof as a float sequence "captioning" model
+suitable for SB profile inferral. We demonstrate the technique by approximating the galaxy SB fitting
+method described by Courteau (1996), an algorithm with several manual steps. We use g, r, and i-band
+images from the Sloan Digital Sky Survey (SDSS) Data Release 10 (DR10) to train Pix2Prof on 5367 image--SB
+profile pairs. We test Pix2Prof on 300 SDSS DR10 galaxy image--SB profile pairs in each of the g, r,
+and i bands to calibrate the mean SB deviation between interactive manual measurements and automated
+extractions, and demonstrate the effectiveness of Pix2Prof in mirroring the manual method. Pix2Prof
+processes $\sim1$ image per second on an Intel Xeon E5-2650 v3 and $\sim2$ images per second on a NVIDIA
+TESLA V100, improving on the speed of the manual interactive method by more than two orders of magnitude.
+Crucially, Pix2Prof requires no manual interaction, and since galaxy profile estimation is an
+embarrassingly parallel problem, we can further increase the throughput by running many Pix2Prof
+instances simultaneously. In perspective, Pix2Prof would take under an hour to infer profiles
+for $10^5$ galaxies on a single NVIDIA DGX-2 system. A single human expert would take approximately
+two years to complete the same task. Automated methodology such as this will accelerate the analysis
+of the next generation of large area sky surveys expected to yield hundreds of millions of targets.
+In such instances, all manual approaches -- even those involving a large number of experts -- would
+be impractical. 

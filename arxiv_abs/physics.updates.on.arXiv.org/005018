@@ -1,0 +1,19 @@
+Purpose: Organ-at-risk (OAR) delineation is a key step for cone-beam CT (CBCT) based adaptive radiotherapy
+planning that can be a time-consuming, labor-intensive, and subject-to-variability process.
+We aim to develop a fully automated approach aided by synthetic MRI for rapid and accurate CBCT multi-organ
+contouring in head-and-neck (HN) cancer patients. MRI has superb soft-tissue contrasts, while
+CBCT offers bony-structure contrasts. Using the complementary information provided by MRI and
+CBCT is expected to enable accurate multi-organ segmentation in HN cancer patients. In our proposed
+method, MR images are firstly synthesized using a pre-trained cycle-consistent generative adversarial
+network given CBCT. The features of CBCT and synthetic MRI are then extracted using dual pyramid
+networks for final delineation of organs. CBCT images and their corresponding manual contours
+were used as pairs to train and test the proposed model. Quantitative metrics including Dice similarity
+coefficient (DSC) were used to evaluate the proposed method. The proposed method was evaluated
+on a cohort of 65 HN cancer patients. CBCT images were collected from those patients who received
+proton therapy. Overall, DSC values of 0.87, 0.79/0.79, 0.89/0.89, 0.90, 0.75/0.77, 0.86, 0.66,
+0.78/0.77, 0.96, 0.89/0.89, 0.832, and 0.84 for commonly used OARs for treatment planning including
+brain stem, left/right cochlea, left/right eye, larynx, left/right lens, mandible, optic chiasm,
+left/right optic nerve, oral cavity, left/right parotid, pharynx, and spinal cord, respectively,
+were achieved. In this study, we developed a synthetic MRI-aided HN CBCT auto-segmentation method
+based on deep learning. It provides a rapid and accurate OAR auto-delineation approach, which can
+be used for adaptive radiation therapy. 

@@ -1,0 +1,20 @@
+In this paper, we introduce a new approach based on distance fields to exactly impose boundary conditions
+in physics-informed deep neural networks. The challenges in satisfying Dirichlet boundary conditions
+in meshfree and particle methods are well-known. This issue is also pertinent in the development
+of physics informed neural networks (PINN) for the solution of partial differential equations.
+We introduce geometry-aware trial functions in artifical neural networks to improve the training
+in deep learning for partial differential equations. To this end, we use concepts from constructive
+solid geometry (R-functions) and generalized barycentric coordinates (mean value potential
+fields) to construct $\phi$, an approximate distance function to the boundary of a domain. To exactly
+impose homogeneous Dirichlet boundary conditions, the trial function is taken as $\phi$ multiplied
+by the PINN approximation, and its generalization via transfinite interpolation is used to a priori
+satisfy inhomogeneous Dirichlet (essential), Neumann (natural), and Robin boundary conditions
+on complex geometries. In doing so, we eliminate modeling error associated with the satisfaction
+of boundary conditions in a collocation method and ensure that kinematic admissibility is met pointwise
+in a Ritz method. We present numerical solutions for linear and nonlinear boundary-value problems
+over domains with affine and curved boundaries. Benchmark problems in 1D for linear elasticity,
+advection-diffusion, and beam bending; and in 2D for the Poisson equation, biharmonic equation,
+and the nonlinear Eikonal equation are considered. The approach extends to higher dimensions,
+and we showcase its use by solving a Poisson problem with homogeneneous Dirichlet boundary conditions
+over the 4D hypercube. This study provides a pathway for meshfree analysis to be conducted on the
+exact geometry without domain discretization. 

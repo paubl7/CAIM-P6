@@ -1,0 +1,20 @@
+The Fisher market is one of the most fundamental models for resource allocation problems in economic
+theory, wherein agents spend a budget of currency to buy goods that maximize their utilities, while
+producers sell capacity constrained goods in exchange for currency. However, the consideration
+of only two types of constraints, i.e., budgets of individual buyers and capacities of goods, makes
+Fisher markets less amenable for resource allocation settings when agents have additional linear
+constraints, e.g., knapsack and proportionality constraints. In this work, we introduce a modified
+Fisher market, where each agent may have additional linear constraints and show that this modification
+to classical Fisher markets fundamentally alters the properties of the market equilibrium as well
+as the optimal allocations. These properties of the modified Fisher market prompt us to introduce
+a budget perturbed social optimization problem (BP-SOP) and set prices based on the dual variables
+of BP-SOP's capacity constraints. To compute the budget perturbations, we develop a fixed point
+iterative scheme and validate its convergence through numerical experiments. Since this fixed
+point iterative scheme involves solving a centralized problem at each step, we propose a new class
+of distributed algorithms to compute equilibrium prices. In particular, we develop an Alternating
+Direction Method of Multipliers (ADMM) algorithm with strong convergence guarantees for Fisher
+markets with homogeneous linear constraints as well as for classical Fisher markets. In this algorithm,
+the prices are updated based on the tatonnement process, with a step size that is completely independent
+of the utilities of individual agents. Thus, our mechanism, both theoretically and computationally,
+overcomes a fundamental limitation of classical Fisher markets, which only consider capacity
+and budget constraints. 

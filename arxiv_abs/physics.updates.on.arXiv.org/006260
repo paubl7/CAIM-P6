@@ -1,0 +1,18 @@
+With the aim of efficiently simulating three-dimensional multiphase turbulent flows with a phase-field
+method, we propose a new discretization scheme for the biharmonic term (the 4th-order derivative
+term) of the Cahn-Hilliard equation. This novel scheme can significantly reduce the computational
+cost while retaining the same accuracy as the original procedure. Our phase-field method is built
+on top of a direct numerical simulation solver, named AFiD (www.afid.eu) and open-sourced by our
+research group. It relies on a pencil distributed parallel strategy and a FFT-based Poisson solver.
+To deal with large density ratios between the two phases, a pressure split method [1] has been applied
+to the Poisson solver. To further reduce computational costs, we implement a multiple-resolution
+algorithm which decouples the discretizations for the Navier-Stokes equations and the scalar
+equation: while a stretched wall-resolving grid is used for the Navier-Stokes equations, for the
+Cahn-Hilliard equation we use a fine uniform mesh. The present method shows excellent computational
+performance for large-scale computation: on meshes up to 8 billion nodes and 3072 CPU cores, a multiphase
+flow needs only slightly less than 1.5 times the CPU time of the single-phase flow solver on the same
+grid. The present method is validated by comparing the results to previous studies for the cases
+of drop deformation in shear flow, including the convergence test with mesh refinement, and breakup
+of a rising buoyant bubble with density ratio up to 1000. Finally, we simulate the breakup of a big
+drop and the coalescence of O(10^3) drops in turbulent Rayleigh-B\'enard convection at a Rayleigh
+number of $10^8$, observing good agreement with theoretical results. 

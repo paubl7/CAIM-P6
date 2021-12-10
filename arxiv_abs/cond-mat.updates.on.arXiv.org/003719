@@ -1,0 +1,18 @@
+Efficient, accurate, and adaptable implicit solvent models remain a significant challenge in
+the field of molecular simulation. A recent implicit solvent model, IS-SPA, based on approximating
+the mean solvent force using the superposition approximation, provides a platform to achieve these
+goals. IS-SPA was originally developed to handle non-polar solutes in the TIP3P water model but
+can be extended to accurately treat polar solutes in other polar solvents. In this manuscript, we
+demonstrate how to adapt IS-SPA to include the treatment of solvent orientation and long ranged
+electrostatics in a solvent of chloroform. The orientation of chloroform is approximated as that
+of an ideal dipole aligned in a mean electrostatic field. The solvent--solute force is then considered
+as an averaged radially symmetric Lennard-Jones component and a multipole expansion of the electrostatic
+component through the octupole term. Parameters for the model include atom-based solvent density
+and mean electric field functions that are fit from explicit solvent simulations of independent
+atoms or molecules. Using these parameters, IS-SPA accounts for asymmetry of charge solvation
+and reproduces the explicit solvent potential of mean force of dimerization of two oppositely charged
+Lennard-Jones spheres with high fidelity. Additionally, the model more accurately captures the
+effect of explicit solvent on the monomer and dimer configurations of alanine dipeptide in chloroform
+than a generalized Born or constant density dielectric model. The current version of the algorithm
+is expected to outperform explicit solvent simulations for aggregation of small peptides at concentrations
+below 150 mM, well above the typical experimental concentrations for these materials. 

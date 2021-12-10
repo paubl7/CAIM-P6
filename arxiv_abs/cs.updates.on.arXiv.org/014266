@@ -1,0 +1,19 @@
+Which classes can be learned properly in the online model? -- that is, by an algorithm that at each
+round uses a predictor from the concept class. While there are simple and natural cases where improper
+learning is necessary, it is natural to ask how complex must the improper predictors be in such cases.
+Can one always achieve nearly optimal mistake/regret bounds using "simple" predictors? In this
+work, we give a complete characterization of when this is possible, thus settling an open problem
+which has been studied since the pioneering works of Angluin (1987) and Littlestone (1988). More
+precisely, given any concept class C and any hypothesis class H, we provide nearly tight bounds (up
+to a log factor) on the optimal mistake bounds for online learning C using predictors from H. Our bound
+yields an exponential improvement over the previously best known bound by Chase and Freitag (2020).
+As applications, we give constructive proofs showing that (i) in the realizable setting, a near-optimal
+mistake bound (up to a constant factor) can be attained by a sparse majority-vote of proper predictors,
+and (ii) in the agnostic setting, a near-optimal regret bound (up to a log factor) can be attained
+by a randomized proper algorithm. A technical ingredient of our proof which may be of independent
+interest is a generalization of the celebrated Minimax Theorem (von Neumann, 1928) for binary zero-sum
+games. A simple game which fails to satisfy Minimax is "Guess the Larger Number", where each player
+picks a number and the larger number wins. The payoff matrix is infinite triangular. We show this
+is the only obstruction: if a game does not contain triangular submatrices of unbounded sizes then
+the Minimax Theorem holds. This generalizes von Neumann's Minimax Theorem by removing requirements
+of finiteness (or compactness), and captures precisely the games of interest in online learning.

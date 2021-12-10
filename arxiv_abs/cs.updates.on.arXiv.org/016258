@@ -1,0 +1,20 @@
+The abundance of training data is not guaranteed in various supervised learning applications.
+One of these situations is the post-earthquake regional damage assessment of buildings. Querying
+the damage label of each building requires a thorough inspection by experts, and thus, is an expensive
+task. A practical approach is to sample the most informative buildings in a sequential learning
+scheme. Active learning methods recommend the most informative cases that are able to maximally
+reduce the generalization error. The information theoretic measure of mutual information (MI)
+is one of the most effective criteria to evaluate the effectiveness of the samples in a pool-based
+sample selection scenario. However, the computational complexity of the standard MI algorithm
+prevents the utilization of this method on large datasets. A local kernels strategy was proposed
+to reduce the computational costs, but the adaptability of the kernels to the observed labels was
+not considered in the original formulation of this strategy. In this article, an adaptive local
+kernels methodology is developed that allows for the conformability of the kernels to the observed
+output data while enhancing the computational complexity of the standard MI algorithm. The proposed
+algorithm is developed to work on a Gaussian process regression (GPR) framework, where the kernel
+hyperparameters are updated after each label query using the maximum likelihood estimation. In
+the sequential learning procedure, the updated hyperparameters can be used in the MI kernel matrices
+to improve the sample suggestion performance. The advantages are demonstrated on a simulation
+of the 2018 Anchorage, AK, earthquake. It is shown that while the proposed algorithm enables GPR
+to reach acceptable performance with fewer training data, the computational demands remain lower
+than the standard local kernels strategy. 

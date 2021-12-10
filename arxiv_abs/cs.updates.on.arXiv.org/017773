@@ -1,0 +1,20 @@
+This paper addresses domain adaptation for the pixel-wise classification of remotely sensed data
+using deep neural networks (DNN) as a strategy to reduce the requirements of DNN with respect to the
+availability of training data. We focus on the setting in which labelled data are only available
+in a source domain DS, but not in a target domain DT. Our method is based on adversarial training of
+an appearance adaptation network (AAN) that transforms images from DS such that they look like images
+from DT. Together with the original label maps from DS, the transformed images are used to adapt a
+DNN to DT. We propose a joint training strategy of the AAN and the classifier, which constrains the
+AAN to transform the images such that they are correctly classified. In this way, objects of a certain
+class are changed such that they resemble objects of the same class in DT. To further improve the adaptation
+performance, we propose a new regularization loss for the discriminator network used in domain
+adversarial training. We also address the problem of finding the optimal values of the trained network
+parameters, proposing an unsupervised entropy based parameter selection criterion which compensates
+for the fact that there is no validation set in DT that could be monitored. As a minor contribution,
+we present a new weighting strategy for the cross-entropy loss, addressing the problem of imbalanced
+class distributions. Our method is evaluated in 42 adaptation scenarios using datasets from 7 cities,
+all consisting of high-resolution digital orthophotos and height data. It achieves a positive
+transfer in all cases, and on average it improves the performance in the target domain by 4.3% in overall
+accuracy. In adaptation scenarios between datasets from the ISPRS semantic labelling benchmark
+our method outperforms those from recent publications by 10-20% with respect to the mean intersection
+over union. 

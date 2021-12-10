@@ -1,0 +1,20 @@
+We describe an experimental effort designing and deploying error-robust single-qubit operations
+using a cloud-based quantum computer and analog-layer programming access. We design numerically-optimized
+pulses that implement target operations and exhibit robustness to various error processes including
+dephasing noise, instabilities in control amplitudes, and crosstalk. Pulse optimization is performed
+using a flexible optimization package incorporating a device model and physically-relevant constraints
+(e.g. bandwidth limits on the transmission lines of the dilution refrigerator housing IBM Quantum
+hardware). We present techniques for conversion and calibration of physical Hamiltonian definitions
+to pulse waveforms programmed via Qiskit Pulse and compare performance against hardware default
+DRAG pulses on a five-qubit device. Experimental measurements reveal default DRAG pulses exhibit
+coherent errors an order of magnitude larger than tabulated randomized-benchmarking measurements;
+solutions designed to be robust against these errors outperform hardware-default pulses for all
+qubits across multiple metrics. Experimental measurements demonstrate performance enhancements
+up to: $\sim10\times$ single-qubit gate coherent-error reduction; $\sim5\times$ average coherent-error
+reduction across a five qubit system; $\sim10\times$ increase in calibration window to one week
+of valid pulse calibration; $\sim12\times$ reduction gate-error variability across qubits and
+over time; and up to $\sim9\times$ reduction in single-qubit gate error (including crosstalk)
+in the presence of fully parallelized operations. Randomized benchmarking reveals error rates
+for Clifford gates constructed from optimized pulses consistent with tabulated $T_{1}$ limits,
+and demonstrates a narrowing of the distribution of outcomes over randomizations associated with
+suppression of coherent-errors. 

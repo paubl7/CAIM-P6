@@ -1,0 +1,20 @@
+We study the problem of testing whether a matrix $\mathbf{A} \in \mathbb{R}^{n \times n}$ with bounded
+entries ($\|\mathbf{A}\|_\infty \leq 1$) is positive semi-definite (PSD), or $\epsilon$-far
+in Euclidean distance from the PSD cone, meaning that $\min_{\mathbf{B} \succeq 0} \|\mathbf{A}
+- \mathbf{B}\|_F^2 > \epsilon n^2$, where $\mathbf{B} \succeq 0$ denotes that $\mathbf{B}$ is
+PSD. Our main algorithmic contribution is a non-adaptive tester which distinguishes between these
+cases using only $\tilde{O}(1/\epsilon^4)$ queries to the entries of $\mathbf{A}$. If instead
+of the Euclidean norm we considered the distance in spectral norm, we obtain the "$\ell_\infty$-gap
+problem", where $\mathbf{A}$ is either PSD or satisfies $\min_{\mathbf{B}\succeq 0} \|\mathbf{A}-
+\mathbf{B}\|_2 > \epsilon n$. For this related problem, we give a $\tilde{O}(1/\epsilon^2)$ query
+tester, which we show is optimal up to $\log(1/\epsilon)$ factors. Our testers randomly sample
+a collection of principal submatrices and check whether these submatrices are PSD. Consequentially,
+our algorithms achieve one-sided error: whenever they output that $\mathbf{A}$ is not PSD, they
+return a certificate that $\mathbf{A}$ has negative eigenvalues. We complement our upper bound
+for PSD testing with Euclidean norm distance by giving a $\tilde{\Omega}(1/\epsilon^2)$ lower
+bound for any non-adaptive algorithm. Our lower bound construction is general, and can be used to
+derive lower bounds for a number of spectral testing problems. As an example of the applicability
+of our construction, we obtain a new $\tilde{\Omega}(1/\epsilon^4)$ sampling lower bound for
+testing the Schatten-$1$ norm with a $\epsilon n^{1.5}$ gap, extending a result of Balcan, Li, Woodruff,
+and Zhang [SODA'19]. In addition, it yields new sampling lower bounds for estimating the Ky-Fan
+Norm, and the cost of the best rank-$k$ approximation. 

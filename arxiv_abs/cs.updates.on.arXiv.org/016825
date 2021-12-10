@@ -1,0 +1,19 @@
+This paper proposes a novel approach to improve the performance of a heterogeneous network (HetNet)
+supported by dual connectivity (DC) by adopting multiple unmanned aerial vehicles (UAVs) as passive
+relays that carry reconfigurable intelligent surfaces (RISs). More specifically, RISs are deployed
+under the UAVs termed as UAVs-RISs that operate over the micro-wave ($\mu$W) channel in the sky to
+sustain a strong line-of-sight (LoS) connection with the ground users. The macro-cell operates
+over the $\mu$W channel based on orthogonal multiple access (OMA), while small base stations (SBSs)
+operate over the millimeter-wave (mmW) channel based on non-orthogonal multiple access (NOMA).
+We study the problem of total transmit power minimization by jointly optimizing the trajectory/velocity
+of each UAV, RISs' phase shifts, subcarrier allocations, and active beamformers at each BS. The
+underlying problem is highly non-convex and the global optimal solution is intractable. To handle
+it, we decompose the original problem into two subproblems, i.e., a subproblem which deals with
+the UAVs' trajectories/velocities, RISs' phase shifts, and subcarrier allocations for $\mu$W;
+and a subproblem for active beamforming design and subcarrier allocation for mmW. In particular,
+we solve the first subproblem via the dueling deep Q-Network (DQN) learning approach by developing
+a distributed algorithm which leads to a better policy evaluation. Then, we solve the active beamforming
+design and subcarrier allocation for the mmW via the successive convex approximation (SCA) method.
+Simulation results exhibit the effectiveness of the proposed resource allocation scheme compared
+to other baseline schemes. In particular, it is revealed that by deploying UAVs-RISs, the transmit
+power can be reduced by 6 dBm while maintaining similar guaranteed QoS. 

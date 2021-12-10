@@ -1,0 +1,19 @@
+We discuss the notion of "discrete function bases" with a particular focus on the discrete basis
+derived from the Legendre Delay Network (LDN). We characterize the performance of these bases in
+a delay computation task, and as fixed temporal convolutions in neural networks. Networks using
+fixed temporal convolutions are conceptually simple and yield state-of-the-art results in tasks
+such as psMNIST. Main Results (1) We present a numerically stable algorithm for constructing a matrix
+of DLOPs L in O(qN) (2) The Legendre Delay Network (LDN) can be used to form a discrete function basis
+with a basis transformation matrix H in O(qN). (3) If q < 300, convolving with the LDN basis online
+has a lower run-time complexity than convolving with arbitrary FIR filters. (4) Sliding window
+transformations exist for some bases (Haar, cosine, Fourier) and require O(q) operations per sample
+and O(N) memory. (5) LTI systems similar to the LDN can be constructed for many discrete function
+bases; the LDN system is superior in terms of having a finite impulse response. (6) We compare discrete
+function bases by linearly decoding delays from signals represented with respect to these bases.
+Results are depicted in Figure 20. Overall, decoding errors are similar. The LDN basis has the highest
+and the Fourier and cosine bases have the smallest errors. (7) The Fourier and cosine bases feature
+a uniform decoding error for all delays. These bases should be used if the signal can be represented
+well in the Fourier domain. (8) Neural network experiments suggest that fixed temporal convolutions
+can outperform learned convolutions. The basis choice is not critical; we roughly observe the same
+performance trends as in the delay task. (9) The LDN is the right choice for small q, if the O(q) Euler
+update is feasible, and if the low O(q) memory requirement is of importance. 

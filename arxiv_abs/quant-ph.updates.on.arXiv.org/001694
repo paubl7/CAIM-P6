@@ -1,0 +1,18 @@
+We consider (Enc, Dec) schemes which are used to encode a classical/quantum message $m$ and derive
+an $n$-qubit quantum codeword $\psi_m$. The quantum codeword $\psi_m$ can adversarially tamper
+via a unitary $U \in \mathcal{U}$ from some known tampering unitary family $\mathcal{U}$, resulting
+in $U \psi_m U^\dagger$. Firstly, we initiate the general study of quantum tamper detection codes,
+which must detect that tampering occurred with high probability. In case there was no tampering,
+we would like to output the message $m$ with a probability of $1$. We show that quantum tamper detection
+codes exist for both classical messages and quantum messages for any family of unitaries $\mathcal{U}$,
+such that $|\mathcal{U}| < 2^{2^{\alpha n}}$ for some known constant $\alpha \in (0,1)$ and all
+the unitaries satisfy one additional condition : \begin{itemize} \item Far from Identity : For
+each $U \in \mathcal{U}$, we require that its modulus of trace value isn't too much i.e. $ |Trace(U)|
+\leq \phi N$, where $N=2^n.$ \end{itemize} Quantum tamper-detection codes are quantum generalizations
+of classical tamper detection codes studied by Jafargholi et al. \cite{JW15}. Additionally for
+classical message $m$, if we must either output message $m$ or detect that tampering occurred and
+output $\perp$ with high probability, we show that it is possible without the restriction of Far
+from Identity condition for any family of unitaries $\mathcal{U}$, such that $|\mathcal{U} | <
+2^{2^{\alpha n}}$. We also provide efficient (Enc, Dec) schemes when the family of tampering unitaries
+are from Pauli group $\mathcal{P}_n$, which can be thought of as a quantum version of the algebraic
+manipulation detection (AMD) codes of Cramer et al. \cite{CDFPW08}. 

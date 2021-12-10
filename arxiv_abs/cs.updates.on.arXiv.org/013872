@@ -1,0 +1,20 @@
+Relation classification (RC) task is one of fundamental tasks of information extraction, aiming
+to detect the relation information between entity pairs in unstructured natural language text
+and generate structured data in the form of entity-relation triple. Although distant supervision
+methods can effectively alleviate the problem of lack of training data in supervised learning,
+they also introduce noise into the data, and still cannot fundamentally solve the long-tail distribution
+problem of the training instances. In order to enable the neural network to learn new knowledge through
+few instances like humans, this work focuses on few-shot relation classification (FSRC), where
+a classifier should generalize to new classes that have not been seen in the training set, given only
+a number of samples for each class. To make full use of the existing information and get a better feature
+representation for each instance, we propose to encode each class prototype in an adaptive way from
+two aspects. First, based on the prototypical networks, we propose an adaptive mixture mechanism
+to add label words to the representation of the class prototype, which, to the best of our knowledge,
+is the first attempt to integrate the label information into features of the support samples of each
+class so as to get more interactive class prototypes. Second, to more reasonably measure the distances
+between samples of each category, we introduce a loss function for joint representation learning
+to encode each support instance in an adaptive manner. Extensive experiments have been conducted
+on FewRel under different few-shot (FS) settings, and the results show that the proposed adaptive
+prototypical networks with label words and joint representation learning has not only achieved
+significant improvements in accuracy, but also increased the generalization ability of few-shot
+RC models. 

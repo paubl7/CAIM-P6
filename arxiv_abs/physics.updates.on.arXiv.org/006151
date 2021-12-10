@@ -1,0 +1,18 @@
+Here we propose a local earthquake tomography method that applies a structured regularization
+technique to determine sharp changes in the Earth's seismic velocity structure with travel time
+data of direct waves. Our approach focuses on the ability to better image two common features that
+are observed the Earth's seismic velocity structure: velocity jumps that correspond to material
+boundaries, such as the Conrad and Moho discontinuities, and gradual velocity changes that are
+associated with the pressure and temperature distributions in the crust and mantle. We employ different
+penalty terms in the vertical and horizontal directions to refine the imaging process. We utilize
+a vertical-direction (depth) penalty term that takes the form of the l1-sum of the l2-norm of the
+second-order differences of the horizontal units in the vertical direction. This penalty is intended
+to represent sharp velocity jumps due to discontinuities by creating a piecewise linear depth profile
+of the average velocity structure. We set a horizontal-direction penalty term on the basis of the
+l2-norm to express gradual velocity tendencies in the horizontal direction. We use a synthetic
+dataset to demonstrate that our method provides significant improvements over the estimated velocity
+structures from conventional methods by obtaining stable estimates of both the velocity jumps
+and gradual velocity changes. We also demonstrate that our proposed method is relatively robust
+against variations in the amplitude of the velocity jump, initial velocity model, and the number
+of observed travel times. Furthermore, we present a considerable potential for detecting a velocity
+discontinuity using the observed travel times from only a small number of direct-wave observations.

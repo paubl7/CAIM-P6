@@ -1,0 +1,18 @@
+We propose a unified Generative Adversarial Network (GAN) for controllable image-to-image translation,
+i.e., transferring an image from a source to a target domain guided by controllable structures.
+In addition to conditioning on a reference image, we show how the model can generate images conditioned
+on controllable structures, e.g., class labels, object keypoints, human skeletons, and scene
+semantic maps. The proposed model consists of a single generator and a discriminator taking a conditional
+image and the target controllable structure as input. In this way, the conditional image can provide
+appearance information and the controllable structure can provide the structure information
+for generating the target result. Moreover, our model learns the image-to-image mapping through
+three novel losses, i.e., color loss, controllable structure guided cycle-consistency loss,
+and controllable structure guided self-content preserving loss. Also, we present the Fr\'echet
+ResNet Distance (FRD) to evaluate the quality of the generated images. Experiments on two challenging
+image translation tasks, i.e., hand gesture-to-gesture translation and cross-view image translation,
+show that our model generates convincing results, and significantly outperforms other state-of-the-art
+methods on both tasks. Meanwhile, the proposed framework is a unified solution, thus it can be applied
+to solving other controllable structure guided image translation tasks such as landmark guided
+facial expression translation and keypoint guided person image generation. To the best of our knowledge,
+we are the first to make one GAN framework work on all such controllable structure guided image translation
+tasks. Code is available at https://github.com/Ha0Tang/GestureGAN. 

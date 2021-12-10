@@ -1,0 +1,19 @@
+We study two-pass streaming algorithms for \textsf{Maximum Bipartite Matching} (\textsf{MBM}).
+All known two-pass streaming algorithms for \textsf{MBM} operate in a similar fashion: They compute
+a maximal matching in the first pass and find 3-augmenting paths in the second in order to augment
+the matching found in the first pass. Our aim is to explore the limitations of this approach and to
+determine whether current techniques can be used to further improve the state-of-the-art algorithms.
+We give the following results: We show that every two-pass streaming algorithm that solely computes
+a maximal matching in the first pass and outputs a $(2/3+\epsilon)$-approximation requires $n^{1+\Omega(\frac{1}{\log
+\log n})}$ space, for every $\epsilon > 0$, where $n$ is the number of vertices of the input graph.
+This result is obtained by extending the Ruzsa-Szemer\'{e}di graph construction of [GKK, SODA'12]
+so as to ensure that the resulting graph has a close to perfect matching, the key property needed in
+our construction. This result may be of independent interest. Furthermore, we combine the two main
+techniques, i.e., subsampling followed by the \textsc{Greedy} matching algorithm [Konrad, MFCS'18]
+which gives a $2-\sqrt{2} \approx 0.5857$-approximation, and the computation of \emph{degree-bounded
+semi-matchings} [EHM, ICDMW'16][KT, APPROX'17] which gives a $\frac{1}{2} + \frac{1}{12} \approx
+0.5833$-approximation, and obtain a meta-algorithm that yields Konrad's and Esfandiari et al.'s
+algorithms as special cases. This unifies two strands of research. By optimizing parameters, we
+discover that Konrad's algorithm is optimal for the implied class of algorithms and, perhaps surprisingly,
+that there is a second optimal algorithm. We show that the analysis of our meta-algorithm is best
+possible. Our results imply that further improvements, if possible, require new techniques. 

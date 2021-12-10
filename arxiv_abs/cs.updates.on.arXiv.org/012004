@@ -1,0 +1,19 @@
+Light field (LF) images acquired by hand-held devices usually suffer from low spatial resolution
+as the limited detector resolution has to be shared with the angular dimension. LF spatial super-resolution
+(SR) thus becomes an indispensable part of the LF camera processing pipeline. The high-dimensionality
+characteristic and complex geometrical structure of LF images make the problem more challenging
+than traditional single-image SR. The performance of existing methods is still limited as they
+fail to thoroughly explore the coherence among LF sub-aperture images (SAIs) and are insufficient
+in accurately preserving the scene's parallax structure. To tackle this challenge, we propose
+a novel learning-based LF spatial SR framework. Specifically, each SAI of an LF image is first coarsely
+and individually super-resolved by exploring the complementary information among SAIs with selective
+combinatorial geometry embedding. To achieve efficient and effective selection of the complementary
+information, we propose two novel sub-modules conducted hierarchically: the patch selector provides
+an option of retrieving similar image patches based on offline disparity estimation to handle large-disparity
+correlations; and the SAI selector adaptively and flexibly selects the most informative SAIs to
+improve the embedding efficiency. To preserve the parallax structure among the reconstructed
+SAIs, we subsequently append a consistency regularization network trained over a structure-aware
+loss function to refine the parallax relationships over the coarse estimation. In addition, we
+extend the proposed method to irregular LF data. To the best of our knowledge, this is the first learning-based
+SR method for irregular LF data. Experimental results over both synthetic and real-world LF datasets
+demonstrate the significant advantage of our approach over state-of-the-art methods. 

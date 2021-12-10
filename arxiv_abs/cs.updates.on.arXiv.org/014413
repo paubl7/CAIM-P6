@@ -1,0 +1,19 @@
+The performance of a binary classifier ("predictor") depends heavily upon the context ("workflow")
+in which it operates. Classic measures of predictor performance do not reflect the realized utility
+of predictors unless certain implied workflow assumptions are met. Failure to meet these implied
+assumptions results in suboptimal classifier implementations and a mismatch between predicted
+or assessed performance and the actual performance obtained in real-world deployments. The mismatch
+commonly arises when multiple predictions can be made for the same event, the event is relatively
+rare, and redundant true positive predictions for the same event add little value, e.g., a system
+that makes a prediction each minute, repeatedly issuing interruptive alarms for a predicted event
+that may never occur. We explain why classic metrics do not correctly represent the performance
+of predictors in such contexts, and introduce an improved performance assessment technique ("u-metrics")
+using utility functions to score each prediction. U-metrics explicitly account for variability
+in prediction utility arising from temporal relationships. Compared to traditional performance
+measures, u-metrics more accurately reflect the real-world benefits and costs of a predictor operating
+in a workflow context. The difference can be significant. We also describe the use of "snoozing,"
+a method whereby predictions are suppressed for a period of time, commonly improving predictor
+performance by reducing false positives while retaining the capture of events. Snoozing is especially
+useful when predictors generate interruptive alerts, as so often happens in clinical practice.
+Utility-based performance metrics correctly predict and track the performance benefits of snoozing,
+whereas traditional performance metrics do not. 

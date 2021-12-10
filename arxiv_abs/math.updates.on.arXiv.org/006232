@@ -1,0 +1,19 @@
+Adaptive cubic regularization (ARC) methods for unconstrained optimization compute steps from
+linear systems involving a shifted Hessian in the spirit of the Levenberg-Marquardt and trust-region
+methods. The standard approach consists in performing an iterative search for the shift akin to
+solving the secular equation in trust-region methods. Such search requires computing the Cholesky
+factorization of a tentative shifted Hessian at each iteration, which limits the size of problems
+that can be reasonably considered. We propose a scalable implementation of ARC named ARCqK in which
+we solve a set of shifted systems concurrently by way of an appropriate modification of the Lanczos
+formulation of the conjugate gradient (CG) method. At each iteration of ARCqK to solve a problem
+with n variables, a range of m << n shift parameters is selected. The computational overhead in CG
+beyond the Lanczos process is thirteen scalar operations to update five vectors of length m and two
+n-vector updates for each value of the shift. The CG variant only requires one Hessian-vector product
+and one dot product per iteration, independently of the number of shift parameters. Solves corresponding
+to inadequate shift parameters are interrupted early. All shifted systems are solved inexactly.
+Such modest cost makes our implementation scalable and appropriate for large-scale problems.
+We provide a new analysis of the inexact ARC method including its worst case evaluation complexity,
+global and asymptotic convergence. We describe our implementation and provide preliminary numerical
+observations that confirm that for problems of size at least 100, our implementation of ARCqK is
+more efficient than a classic Steihaug-Toint trust region method. Finally, we generalize our convergence
+results to inexact Hessians and nonlinear least-squares problems. 

@@ -1,0 +1,20 @@
+For Bitcoin and similar cryptocurrencies, their mining processes are currently incentivized
+with fixed block rewards and voluntary transaction fees. However, the block rewards are supposed
+to vanish gradually and the remaining incentive of transaction fees is optional and arbitrary.
+Under those circumstances, Carlsten et al.[CCS~2016] find that an interesting undercutting attack,
+where the attacker deliberately forks an existing chain by leaving wealthy transactions unclaimed
+to attract petty complaint miners to its fork, can become the equilibrium strategy for miners. Motivated
+by similar phenomenons in economics, we take a closer look at the undercutting analysis and find
+the result to be questionable: In [CCS~2016], fees are accumulated at a fixed rate and miners can
+collect all unclaimed fees regardless of block size limit, which is often not feasible in practice.
+Besides, ignoring a potentially large amount of fees unclaimable in a single block can inaccurately
+inflate the profitability of undercutting. In this work, we define a model that considers claimable
+fees based on available transactions that can be assembled into the block size limit and upgrades
+petty compliant miners to be rational where they decide whether to move to other chains subject to
+expected returns from different choices. In this new model, we first identify the conditions that
+are necessary to make undercutting profitable. Second, we propose a defense against undercutting
+by manipulating transactions selected into the new block to invalidate the above-identified conditions.
+Finally, we complement the above analytical results with an experimental analysis over Bitcoin
+and Monero. We demonstrate that our conditions for undercutting to be profitable are effective
+(an increase of 0.5-4.5% in Bitcoin and 8% in Monero) and the avoidance technique fulfills its purpose
+of allowing miners to earn around fair shares. 

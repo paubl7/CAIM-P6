@@ -1,0 +1,18 @@
+Large scale recommender models find most relevant items from huge catalogs, and they play a critical
+role in modern search and recommendation systems. To model the input space with large-vocab categorical
+features, a typical recommender model learns a joint embedding space through neural networks for
+both queries and items from user feedback data. However, with millions to billions of items, the
+power-law user feedback makes labels very sparse for a large amount of long-tail items. Inspired
+by the recent success in self-supervised representation learning research in both computer vision
+and natural language understanding, we propose a multi-task self-supervised learning (SSL) framework
+for large-scale item recommendations. The framework is designed to tackle the label sparsity problem
+by learning more robust item representations. Furthermore, we propose two self-supervised tasks
+applicable to models with categorical features within the proposed framework: (i) Feature Masking
+(FM) and (ii) Feature Dropout (FD). We evaluate our framework using two large-scale datasets with
+500M and 1B training examples respectively. Our results demonstrate that the proposed framework
+outperforms traditional supervised learning only models and state-of-the-art regularization
+techniques in the context of item recommendations. The SSL framework shows larger improvement
+with less supervision compared to the counterparts. We also apply the proposed techniques to a web-scale
+commercial app-to-app recommendation system, and significantly improve top-tier business metrics
+via A/B experiments on live traffic. Our online results also verify our hypothesis that our framework
+indeed improves model performance on slices that lack supervision. 

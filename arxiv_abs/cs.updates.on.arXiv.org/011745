@@ -1,0 +1,19 @@
+Few-shot learning is a challenging task, which aims to learn a classifier for novel classes with
+few labeled samples. Previous studies mainly focus on two-phase meta-learning methods. Recently,
+researchers find that introducing an extra pre-training phase can significantly improve the performance.
+The key idea is to learn a feature extractor with pre-training and then fine-tune it through the nearest
+centroid based meta-learning. However, results show that the fine-tuning step makes very marginal
+improvements. We thus argue that the current meta-learning scheme does not fully explore the power
+of the pre-training. The reason roots in the fact that in the pre-trained feature space, the base
+classes already form compact clusters while novel classes spread as groups with large variances.
+In this case, fine-tuning the feature extractor is less meaningful than estimating more representative
+prototypes. However, making such an estimation from few labeled samples is challenging because
+they may miss representative attribute features. In this paper, we propose a novel prototype completion
+based meta-learning framework. The framework first introduces primitive knowledge (i.e., class-level
+attribute or part annotations) and extracts representative attribute features as priors. A prototype
+completion network is then designed to learn to complement the missing attribute features with
+the priors. Finally, we develop a Gaussian based prototype fusion strategy to combine the mean-based
+and the complemented prototypes, which can effectively exploit the unlabeled samples. Extensive
+experimental results on three real-world data sets demonstrate that our method: (i) can obtain
+more accurate prototypes; (ii) outperforms state-of-the-art techniques by 2% - 9% on classification
+accuracy. 

@@ -1,0 +1,18 @@
+Context based API recommendation is an important way to help developers find the needed APIs effectively
+and efficiently. For effective API recommendation, we need not only a joint view of both structural
+and textual code information, but also a holistic view of correlated API usage in control and data
+flow graph as a whole. Unfortunately, existing API recommendation methods exploit structural
+or textual code information separately. In this work, we propose a novel API recommendation approach
+called APIRec-CST (API Recommendation by Combining Structural and Textual code information).
+APIRec-CST is a deep learning model that combines the API usage with the text information in the source
+code based on an API Context Graph Network and a Code Token Network that simultaneously learn structural
+and textual features for API recommendation. We apply APIRec-CST to train a model for JDK library
+based on 1,914 open-source Java projects and evaluate the accuracy and MRR (Mean Reciprocal Rank)
+of API recommendation with another 6 open-source projects. The results show that our approach achieves
+respectively a top-1, top-5, top-10 accuracy and MRR of 60.3%, 81.5%, 87.7% and 69.4%, and significantly
+outperforms an existing graph-based statistical approach and a tree-based deep learning approach
+for API recommendation. A further analysis shows that textual code information makes sense and
+improves the accuracy and MRR. We also conduct a user study in which two groups of students are asked
+to finish 6 programming tasks with or without our APIRec-CST plugin. The results show that APIRec-CST
+can help the students to finish the tasks faster and more accurately and the feedback on the usability
+is overwhelmingly positive. 

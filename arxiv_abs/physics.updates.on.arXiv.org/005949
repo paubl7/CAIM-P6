@@ -1,0 +1,19 @@
+The calculation of the anharmonic modes of small to medium sized molecules for assigning experimentally
+measured frequencies to the corresponding type of molecular motions is computationally challenging
+at sufficiently high levels of quantum chemical theory. Here, a practical and affordable way to
+calculate coupled-cluster quality anharmonic frequencies using second order vibrational perturbation
+theory (VPT2) from machine-learned models is presented. The approach, referred to as "NN + VPT2",
+uses a high-dimensional neural network (PhysNet) to learn potential energy surfaces (PESs) at
+different levels of theory from which harmonic and VPT2 frequencies can be efficiently determined.
+The NN + VPT2 approach is applied to eight small to medium sized molecules (H$_2$CO, trans-HONO,
+HCOOH, CH$_3$OH, CH$_3$CHO, CH$_3$NO$_2$, CH$_3$COOH and CH$_3$CONH$_2$) and frequencies are
+reported from NN-learned models at the MP2/aug-cc-pVTZ, CCSD(T)/aug-cc-pVTZ and CCSD(T)-F12/aug-cc-pVTZ-F12
+levels of theory. For the largest molecules and at the highest levels of theory, transfer learning
+(TL) is used to determine the necessary full-dimensional, near-equilibrium PESs. Overall, NN
++ VPT2 yields anharmonic frequencies to within 20 cm$^{-1}$ of experimentally determined frequencies
+for close to 90 % of the modes for the highest quality PES available and to within 10 cm$^{-1}$ for more
+than 60 % of the modes. For the MP2 PESs only around 60 % of the NN + VPT2 frequencies were within 20~cm$^{-1}$
+of the experiment, with outliers up to 150 cm$^{-1}$ compared with experiment. It is also demonstrated
+that the approach allows to provide correct assignments for strongly interacting modes such as
+the OH bending and the OH torsional modes in formic acid monomer and the CO-stretch and OH-bend mode
+in acetic acid. 

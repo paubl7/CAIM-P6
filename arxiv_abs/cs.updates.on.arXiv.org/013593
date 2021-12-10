@@ -1,0 +1,18 @@
+In this paper, two finite difference numerical schemes are proposed and analyzed for the droplet
+liquid film model, with a singular Leonard-Jones energy potential involved. Both first and second
+order accurate temporal algorithms are considered. In the first order scheme, the convex potential
+and the surface diffusion terms are implicitly, while the concave potential term is updated explicitly.
+Furthermore, we provide a theoretical justification that this numerical algorithm has a unique
+solution, such that the positivity is always preserved for the phase variable at a point-wise level,
+so that a singularity is avoided in the scheme. In fact, the singular nature of the Leonard-Jones
+potential term around the value of 0 prevents the numerical solution reaching such singular value,
+so that the positivity structure is always preserved. Moreover, an unconditional energy stability
+of the numerical scheme is derived, without any restriction for the time step size. In the second
+order numerical scheme, the BDF temporal stencil is applied, and an alternate convex-concave decomposition
+is derived, so that the concave part corresponds to a quadratic energy. In turn, the combined Leonard-Jones
+potential term is treated implicitly, and the concave part the is approximated by a second order
+Adams-Bashforth explicit extrapolation, and an artificial Douglas-Dupont regularization term
+is added to ensure the energy stability. The unique solvability and the positivity-preserving
+property for the second order scheme could be similarly established. In addition, optimal rate
+convergence analysis is provided for both the first and second order accurate schemes. A few numerical
+simulation results are also presented, which demonstrate the robustness of the numerical schemes.

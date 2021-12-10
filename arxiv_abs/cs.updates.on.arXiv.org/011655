@@ -1,0 +1,19 @@
+Let $G = (V,E,w)$ be a weighted, digraph subject to a sequence of adversarial edge deletions. In the
+decremental single-source reachability problem (SSR), we are given a fixed source $s$ and the goal
+is to maintain a data structure that can answer path-queries $s \rightarrowtail v$ for any $v \in
+V$. In the more general single-source shortest paths (SSSP) problem the goal is to return an approximate
+shortest path to $v$, and in the SCC problem the goal is to maintain strongly connected components
+of $G$ and to answer path queries within each component. All of these problems have been very actively
+studied over the past two decades, but all the fast algorithms are randomized and, more significantly,
+they can only answer path queries if they assume a weaker model: they assume an oblivious adversary
+which is not adaptive and must fix the update sequence in advance. This assumption significantly
+limits the use of these data structures, most notably preventing them from being used as subroutines
+in static algorithms. All the above problems are notoriously difficult in the adaptive setting.
+In fact, the state-of-the-art is still the Even and Shiloach tree, which dates back all the way to
+1981 and achieves total update time $O(mn)$. We present the first algorithms to break through this
+barrier: 1) deterministic decremental SSR/SCC with total update time $mn^{2/3 + o(1)}$ 2) deterministic
+decremental SSSP with total update time $n^{2+2/3+o(1)}$. To achieve these results, we develop
+two general techniques of broader interest for working with dynamic graphs: 1) a generalization
+of expander-based tools to dynamic directed graphs, and 2) a technique that we call congestion balancing
+and which provides a new method for maintaining flow under adversarial deletions. Using the second
+technique, we provide the first near-optimal algorithm for decremental bipartite matching. 

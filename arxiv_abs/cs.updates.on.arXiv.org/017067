@@ -1,0 +1,19 @@
+Data races are among the most common bugs in concurrency. The standard approach to data-race detection
+is via dynamic analyses, which work over executions of concurrent programs, instead of the program
+source code. The rich literature on the topic has created various notions of dynamic data races,
+which are known to be detected efficiently when certain parameters (e.g., number of threads) are
+small. However, the \emph{fine-grained} complexity of all these notions of races has remained
+elusive, making it impossible to characterize their trade-offs between precision and efficiency.
+In this work we establish several fine-grained separations between many popular notions of dynamic
+data races. The input is an execution trace with $N$ events, $T$ threads and $L$ locks. Our main results
+are as follows. First, we show that happens-before (HB) races can be detected in $O(N\cdot \min(T,
+L))$ time, improving over the standard $O(N\cdot T)$ bound when $L=o(T)$. Moreover, we show that
+even reporting an HB race that involves a read access is hard for 2-orthogonal vectors (2-OV). This
+is the first rigorous proof of the conjectured quadratic lower-bound in detecting HB races. Second,
+we show that the recently introduced synchronization-preserving races are hard to detect for OV-3
+and thus have a cubic lower bound, when $T=\Omega(N)$. This establishes a complexity separation
+from HB races which are known to be less expressive. Third, we show that lock-cover races are hard
+for 2-OV, and thus have a quadratic lower-bound, even when $T=2$ and $L = \omega(\log N)$. The similar
+notion of lock-set races is known to be detectable in $O(N\cdot L)$ time, and thus we achieve a complexity
+separation between the two. Moreover, we show that lock-set races become hitting-set (HS)-hard
+when $L=\Theta(N)$, and thus also have a quadratic lower bound, when the input is sufficiently complex.

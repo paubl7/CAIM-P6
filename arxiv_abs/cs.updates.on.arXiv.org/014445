@@ -1,0 +1,20 @@
+We study algorithms in the distributed message-passing model that produce secured output, for
+an input graph $G$. Specifically, each vertex computes its part in the output, the entire output
+is correct, but each vertex cannot discover the output of other vertices, with a certain probability.
+This is motivated by high-performance processors that are embedded nowadays in a large variety
+of devices. In such situations, it no longer makes sense, and in many cases it is not feasible, to leave
+the whole processing task to a single computer or even a group of central computers. As the extensive
+research in the distributed algorithms field yielded efficient decentralized algorithms for
+many classic problems, the discussion about the security of distributed algorithms was somewhat
+neglected. Nevertheless, many protocols and algorithms were devised in the research area of secure
+multi-party computation problem (MPC or SMC). However, the notions and terminology of these protocols
+are quite different than in classic distributed algorithms. As a consequence, the focus in those
+protocols was to work for every function $f$ at the expense of increasing the round complexity, or
+the necessity of several computational assumptions. In this work, we present a novel approach,
+which rather than turning existing algorithms into secure ones, identifies and develops those
+algorithms that are inherently secure (which means they do not require any further constructions).
+This approach yields efficient secure algorithms for various locality problems, such as coloring,
+network decomposition, forest decomposition, and a variety of additional labeling problems.
+Remarkably, our approach does not require any hardness assumption, but only a private randomness
+generator in each vertex. This is in contrast to previously known techniques in this setting that
+are based on public-key encryption schemes. 

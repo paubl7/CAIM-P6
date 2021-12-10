@@ -1,0 +1,20 @@
+Contrast resolution beyond the limits of conventional cone-beam CT (CBCT) systems is essential
+to high-quality imaging of the brain. We present a deep learning reconstruction method (dubbed
+DL-Recon) that integrates physically principled reconstruction models with DL-based image synthesis
+based on the statistical uncertainty in the synthesis image. A synthesis network was developed
+to generate a synthesized CBCT image (DL-Synthesis) from an uncorrected filtered back-projection
+(FBP) image. To improve generalizability (including accurate representation of lesions not seen
+in training), voxel-wise epistemic uncertainty of DL-Synthesis was computed using a Bayesian
+inference technique (Monte-Carlo dropout). In regions of high uncertainty, the DL-Recon method
+incorporates information from a physics-based reconstruction model and artifact-corrected
+projection data. Two forms of the DL-Recon method are proposed: (i) image-domain fusion of DL-Synthesis
+and FBP (DL-FBP) weighted by DL uncertainty; and (ii) a model-based iterative image reconstruction
+(MBIR) optimization using DL-Synthesis to compute a spatially varying regularization term based
+on DL uncertainty (DL-MBIR). The error in DL-Synthesis images was correlated with the uncertainty
+in the synthesis estimate. Compared to FBP and PWLS, the DL-Recon methods (both DL-FBP and DL-MBIR)
+showed ~50% reduction in noise (at matched spatial resolution) and ~40-70% improvement in image
+uniformity. Conventional DL-Synthesis alone exhibited ~10-60% under-estimation of lesion contrast
+and ~5-40% reduction in lesion segmentation accuracy (Dice coefficient) in simulated and real
+brain lesions, suggesting a lack of reliability / generalizability for structures unseen in the
+training data. DL-FBP and DL-MBIR improved the accuracy of reconstruction by directly incorporating
+information from the measurements in regions of high uncertainty. 

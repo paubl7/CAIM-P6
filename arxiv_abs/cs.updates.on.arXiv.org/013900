@@ -1,0 +1,20 @@
+As neural networks gain widespread adoption in embedded devices, there is a need for model compression
+techniques to facilitate deployment in resource-constrained environments. Quantization is
+one of the go-to methods yielding state-of-the-art model compression. Most approaches take a fully
+trained model, apply different heuristics to determine the optimal bit-precision for different
+layers of the network, and retrain the network to regain any drop in accuracy. Based on Activation
+Density (AD)-the proportion of non-zero activations in a layer-we propose an in-training quantization
+method. Our method calculates bit-width for each layer during training yielding a mixed precision
+model with competitive accuracy. Since we train lower precision models during training, our approach
+yields the final quantized model at lower training complexity and also eliminates the need for re-training.
+We run experiments on benchmark datasets like CIFAR-10, CIFAR-100, TinyImagenet on VGG19/ResNet18
+architectures and report the accuracy and energy estimates for the same. We achieve ~4.5x benefit
+in terms of estimated multiply-and-accumulate (MAC) reduction while reducing the training complexity
+by 50% in our experiments. To further evaluate the energy benefits of our proposed method, we develop
+a mixed-precision scalable Process In Memory (PIM) hardware accelerator platform. The hardware
+platform incorporates shift-add functionality for handling multi-bit precision neural network
+models. Evaluating the quantized models obtained with our proposed method on the PIM platform yields
+~5x energy reduction compared to 16-bit models. Additionally, we find that integrating AD based
+quantization with AD based pruning (both conducted during training) yields up to ~198x and ~44x
+energy reductions for VGG19 and ResNet18 architectures respectively on PIM platform compared
+to baseline 16-bit precision, unpruned models. 

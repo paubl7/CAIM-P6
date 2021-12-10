@@ -1,0 +1,19 @@
+Software development often involves systematic edits, similar but nonidentical changes to many
+code locations, that are error-prone and laborious for developers. Mining and learning such systematic
+edit patterns (SEPs) from past code changes enable us to detect and repair overlooked buggy code
+that requires systematic edits. A recent study presented a promising SEP mining technique that
+is based on program dependence graphs (PDGs), while traditional approaches leverage syntax-based
+representations. PDG-based SEPs are highly expressive and can capture more meaningful changes
+than syntax-based ones. The next challenge to tackle is to apply the same code changes as in PDG-based
+SEPs to other code locations; detection and repair of overlooked locations that require systematic
+edits. Existing program transformation techniques cannot well address this challenge because
+(1) they expect many structural code similarities that are not guaranteed in PDG-based SEPs or (2)
+they work on the basis of PDGs but are limited to specific domains (e.g., API migrations). We present
+in this paper a general-purpose program transformation algorithm for applying PDG-based SEPs.
+Our algorithm identifies a small transplantable structural subtree for each PDG node, thereby
+adapting code changes from PDG-based SEPs to other locations. We construct a program repair pipeline
+Sirius that incorporates the algorithm and automates the processes of mining SEPs, detecting overlooked
+code locations (bugs) that require systematic edits, and repairing them by applying SEPs. We evaluated
+the repair performance of Sirius with a corpus of open source software consisting of over 80 repositories.
+Sirius achieved a precision of 0.710, recall of 0.565, and F1-score of 0.630, while those of the state-of-the-art
+technique were 0.470, 0.141, and 0.216, respectively. 

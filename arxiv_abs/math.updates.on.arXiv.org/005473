@@ -1,0 +1,20 @@
+Brownian simulations can be used to generate statistics relevant for studying molecular interactions
+or trafficking. However, the concurrent simulation of many Brownian trajectories at can become
+computationally intractable. Replacing detailed Brownian simulations by a rate model was the
+basis of Gillespie's algorithm, but requires one to disregard spatial information. However, this
+information is crucial in molecular and cellular biology. Alternatively one can use a hybrid approach,
+generating Brownian paths only in a small region where the spatial organization is relevant and
+avoiding it in the remainder of the domain. Here we review the recent progress of hybrid methods and
+simulations in the context of cell sensing and guidance via external chemical gradients. Specifically,
+we highlight the reconstruction of the location of a point source in 2D and 3D from diffusion fluxes
+arriving at narrow windows located on the cell. We discuss cases in which these windows are located
+on the boundary of the 2D or 3D half-space, on a disk in free space, inside a 2D corridor, or a 3D ball.
+The hybrid method in question performs Brownian simulations only inside a region of interest. It
+uses the Neumann-Green's function for the mentioned geometries to generate exact mappings exit
+and entry points when the trajectory leaves the region, thus avoiding the explicit computation
+of Brownian paths in an infinite domain. Matched asymptotics is used to compute the probability
+fluxes to small windows and we review how such an approach can be used to reconstruct the location
+of a point source and estimating the uncertainty in the source reconstruction due to an additive
+perturbation present in the fluxes. We also review the influence of various window configurations
+on the source position recovery. Finally, we discuss potential applications in developmental
+cell biology and possible computational principles. 

@@ -1,0 +1,19 @@
+In this work we consider active local learning: given a query point $x$, and active access to an unlabeled
+training set $S$, output the prediction $h(x)$ of a near-optimal $h \in H$ using significantly fewer
+labels than would be needed to actually learn $h$ fully. In particular, the number of label queries
+should be independent of the complexity of $H$, and the function $h$ should be well-defined, independent
+of $x$. This immediately also implies an algorithm for distance estimation: estimating the value
+$opt(H)$ from many fewer labels than needed to actually learn a near-optimal $h \in H$, by running
+local learning on a few random query points and computing the average error. For the hypothesis class
+consisting of functions supported on the interval $[0,1]$ with Lipschitz constant bounded by $L$,
+we present an algorithm that makes $O(({1 / \epsilon^6}) \log(1/\epsilon))$ label queries from
+an unlabeled pool of $O(({L / \epsilon^4})\log(1/\epsilon))$ samples. It estimates the distance
+to the best hypothesis in the class to an additive error of $\epsilon$ for an arbitrary underlying
+distribution. We further generalize our algorithm to more than one dimensions. We emphasize that
+the number of labels used is independent of the complexity of the hypothesis class which depends
+on $L$. Furthermore, we give an algorithm to locally estimate the values of a near-optimal function
+at a few query points of interest with number of labels independent of $L$. We also consider the related
+problem of approximating the minimum error that can be achieved by the Nadaraya-Watson estimator
+under a linear diagonal transformation with eigenvalues coming from a small range. For a $d$-dimensional
+pointset of size $N$, our algorithm achieves an additive approximation of $\epsilon$, makes $\tilde{O}({d}/{\epsilon^2})$
+queries and runs in $\tilde{O}({d^2}/{\epsilon^{d+4}}+{dN}/{\epsilon^2})$ time. 

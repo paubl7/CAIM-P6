@@ -1,0 +1,19 @@
+Volume Rendering is an important technique for visualizing three-dimensional scalar data grids
+and is commonly employed for scientific and medical image data. Direct Volume Rendering (DVR) is
+a well established and efficient rendering algorithm for volumetric data. Neural rendering uses
+deep neural networks to solve inverse rendering tasks and applies techniques similar to DVR. However,
+it has not been demonstrated successfully for the rendering of scientific volume data. In this work,
+we introduce Deep Direct Volume Rendering (DeepDVR), a generalization of DVR that allows for the
+integration of deep neural networks into the DVR algorithm. We conceptualize the rendering in a
+latent color space, thus enabling the use of deep architectures to learn implicit mappings for feature
+extraction and classification, replacing explicit feature design and hand-crafted transfer
+functions. Our generalization serves to derive novel volume rendering architectures that can
+be trained end-to-end directly from examples in image space, obviating the need to manually define
+and fine-tune multidimensional transfer functions while providing superior classification
+strength. We further introduce a novel stepsize annealing scheme to accelerate the training of
+DeepDVR models and validate its effectiveness in a set of experiments. We validate our architectures
+on two example use cases: (1) learning an optimized rendering from manually adjusted reference
+images for a single volume and (2) learning advanced visualization concepts like shading and semantic
+colorization that generalize to unseen volume data. We find that deep volume rendering architectures
+with explicit modeling of the DVR pipeline effectively enable end-to-end learning of scientific
+volume rendering tasks from target images. 

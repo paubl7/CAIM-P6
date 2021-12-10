@@ -1,0 +1,20 @@
+Image relighting has emerged as a problem of significant research interest inspired by augmented
+reality applications. Physics-based traditional methods, as well as black box deep learning models,
+have been developed. The existing deep networks have exploited training to achieve a new state of
+the art; however, they may perform poorly when training is limited or does not represent problem
+phenomenology, such as the addition or removal of dense shadows. We propose a model which enriches
+neural networks with physical insight. More precisely, our method generates the relighted image
+with new illumination settings via two different strategies and subsequently fuses them using
+a weight map (w). In the first strategy, our model predicts the material reflectance parameters
+(albedo) and illumination/geometry parameters of the scene (shading) for the relit image (we refer
+to this strategy as intrinsic image decomposition (IID)). The second strategy is solely based on
+the black box approach, where the model optimizes its weights based on the ground-truth images and
+the loss terms in the training stage and generates the relit output directly (we refer to this strategy
+as direct). While our proposed method applies to both one-to-one and any-to-any relighting problems,
+for each case we introduce problem-specific components that enrich the model performance: 1) For
+one-to-one relighting we incorporate normal vectors of the surfaces in the scene to adjust gloss
+and shadows accordingly in the image. 2) For any-to-any relighting, we propose an additional multiscale
+block to the architecture to enhance feature extraction. Experimental results on the VIDIT 2020
+and the VIDIT 2021 dataset (used in the NTIRE 2021 relighting challenge) reveals that our proposal
+can outperform many state-of-the-art methods in terms of well-known fidelity metrics and perceptual
+loss. 

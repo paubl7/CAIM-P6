@@ -1,0 +1,20 @@
+Sharing sensitive data is vital in enabling many modern data analysis and machine learning tasks.
+However, current methods for data release are insufficiently accurate or granular to provide meaningful
+utility, and they carry a high risk of deanonymization or membership inference attacks. In this
+paper, we propose a differentially private synthetic data generation solution with a focus on the
+compelling domain of location data. We present two methods with high practical utility for generating
+synthetic location data from real locations, both of which protect the existence and true location
+of each individual in the original dataset. Our first, partitioning-based approach introduces
+a novel method for privately generating point data using kernel density estimation, in addition
+to employing private adaptations of classic statistical techniques, such as clustering, for private
+partitioning. Our second, network-based approach incorporates public geographic information,
+such as the road network of a city, to constrain the bounds of synthetic data points and hence improve
+the accuracy of the synthetic data. Both methods satisfy the requirements of differential privacy,
+while also enabling accurate generation of synthetic data that aims to preserve the distribution
+of the real locations. We conduct experiments using three large-scale location datasets to show
+that the proposed solutions generate synthetic location data with high utility and strong similarity
+to the real datasets. We highlight some practical applications for our work by applying our synthetic
+data to a range of location analytics queries, and we demonstrate that our synthetic data produces
+near-identical answers to the same queries compared to when real data is used. Our results show that
+the proposed approaches are practical solutions for sharing and analyzing sensitive location
+data privately. 

@@ -1,0 +1,18 @@
+We study the power and limitations of component-stable algorithms in the low-space model of Massively
+Parallel Computation (MPC). Recently Ghaffari, Kuhn and Uitto (FOCS 2019) introduced the class
+of component-stable low-space MPC algorithms, which are, informally, defined as algorithms for
+which the outputs reported by the nodes in different connected components are required to be independent.
+This very natural notion was introduced to capture most (if not all) of the known efficient MPC algorithms
+to date, and it was the first general class of MPC algorithms for which one can show non-trivial conditional
+lower bounds. In this paper we enhance the framework of component-stable algorithms and investigate
+its effect on the complexity of randomized and deterministic low-space MPC. Our key contributions
+include: 1) We revise and formalize the lifting approach of Ghaffari, Kuhn and Uitto. This requires
+a very delicate amendment of the notion of component stability, which allows us to fill in gaps in
+the earlier arguments. 2) We also extend the framework to obtain conditional lower bounds for deterministic
+algorithms and fine-grained lower bounds that depend on the maximum degree $\Delta$. 3) We demonstrate
+a collection of natural graph problems for which non-component-stable algorithms break the conditional
+lower bound obtained for component-stable algorithms. This implies that, for both deterministic
+and randomized algorithms, component-stable algorithms are conditionally weaker than the non-component-stable
+ones. Altogether our results imply that component-stability might limit the computational power
+of the low-space MPC model, at least in certain contexts, paving the way for improved upper bounds
+that escape the conditional lower bound setting of Ghaffari, Kuhn, and Uitto. 

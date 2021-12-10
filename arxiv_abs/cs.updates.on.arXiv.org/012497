@@ -1,0 +1,19 @@
+Anomaly Detection (AD) in images is a fundamental computer vision problem and refers to identifying
+images and image substructures that deviate significantly from the norm. Popular AD algorithms
+commonly try to learn a model of normality from scratch using task specific datasets, but are limited
+to semi-supervised approaches employing mostly normal data due to the inaccessibility of anomalies
+on a large scale combined with the ambiguous nature of anomaly appearance. We follow an alternative
+approach and demonstrate that deep feature representations learned by discriminative models
+on large natural image datasets are well suited to describe normality and detect even subtle anomalies
+in a transfer learning setting. Our model of normality is established by fitting a multivariate
+Gaussian (MVG) to deep feature representations of classification networks trained on ImageNet
+using normal data only. By subsequently applying the Mahalanobis distance as the anomaly score
+we outperform the current state of the art on the public MVTec AD dataset, achieving an AUROC value
+of $95.8 \pm 1.2$ (mean $\pm$ SEM) over all 15 classes. We further investigate why the learned representations
+are discriminative to the AD task using Principal Component Analysis. We find that the principal
+components containing little variance in normal data are the ones crucial for discriminating between
+normal and anomalous instances. This gives a possible explanation to the often sub-par performance
+of AD approaches trained from scratch using normal data only. By selectively fitting a MVG to these
+most relevant components only, we are able to further reduce model complexity while retaining AD
+performance. We also investigate setting the working point by selecting acceptable False Positive
+Rate thresholds based on the MVG assumption. Code available at https://github.com/ORippler/gaussian-ad-mvtec

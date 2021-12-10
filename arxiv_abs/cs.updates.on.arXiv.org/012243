@@ -1,0 +1,19 @@
+Motivated by the need for, and growing interest in, modeling uncertainty in data, we introduce and
+study {\em stochastic minimum-norm optimization}. We have an underlying combinatorial optimization
+problem where the costs involved are {\em random variables} with given distributions; each feasible
+solution induces a random multidimensional cost vector, and given a certain objective function,
+the goal is to find a solution (that does not depend on the realizations of the costs) that minimizes
+the expected objective value. For instance, in stochastic load balancing, jobs with random processing
+times need to be assigned to machines, and the induced cost vector is the machine-load vector. Recently,
+in the deterministic setting, Chakrabarty and Swamy \cite{ChakrabartyS19a} considered a fairly
+broad suite of objectives, wherein we seek to minimize the $f$-norm of the cost vector under a given
+{\em arbitrary monotone, symmetric norm} $f$. In stochastic minimum-norm optimization, we work
+with this broad class of objectives, and seek a solution that minimizes the {\em expected $f$-norm}
+of the induced cost vector. We give a general framework for devising algorithms for stochastic minimum-norm
+combinatorial optimization, using which we obtain approximation algorithms for the stochastic
+minimum-norm versions of the load balancing and spanning tree problems. Two key technical contributions
+of this work are: (1) a structural result of independent interest connecting stochastic minimum-norm
+optimization to the simultaneous optimization of a (\emph{small}) collection of expected $\mathsf{Top}$-$\ell$-norms;
+and (2) showing how to tackle expected $\mathsf{Top}$-$\ell$-norm minimization by leveraging
+techniques used to deal with minimizing the expected maximum, circumventing the difficulties
+posed by the non-separable nature of $\mathsf{Top}$-$\ell$ norms. 

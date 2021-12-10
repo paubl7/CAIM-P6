@@ -1,0 +1,19 @@
+Deep learning techniques hold promise to develop dense topography reconstruction and pose estimation
+methods for endoscopic videos. However, currently available datasets do not support effective
+quantitative benchmarking. In this paper, we introduce a comprehensive endoscopic SLAM dataset
+consisting of 3D point cloud data for six porcine organs, capsule and standard endoscopy recordings
+as well as synthetically generated data. A Panda robotic arm, two commercially available capsule
+endoscopes, two conventional endoscopes with different camera properties, and two high precision
+3D scanners were employed to collect data from 8 ex-vivo porcine gastrointestinal (GI)-tract organs.
+In total, 35 sub-datasets are provided with 6D pose ground truth for the ex-vivo part: 18 sub-dataset
+for colon, 12 sub-datasets for stomach and 5 sub-datasets for small intestine, while four of these
+contain polyp-mimicking elevations carried out by an expert gastroenterologist. Synthetic capsule
+endoscopy frames from GI-tract with both depth and pose annotations are included to facilitate
+the study of simulation-to-real transfer learning algorithms. Additionally, we propound Endo-SfMLearner,
+an unsupervised monocular depth and pose estimation method that combines residual networks with
+spatial attention module in order to dictate the network to focus on distinguishable and highly
+textured tissue regions. The proposed approach makes use of a brightness-aware photometric loss
+to improve the robustness under fast frame-to-frame illumination changes. To exemplify the use-case
+of the EndoSLAM dataset, the performance of Endo-SfMLearner is extensively compared with the state-of-the-art.
+The codes and the link for the dataset are publicly available at https://github.com/CapsuleEndoscope/EndoSLAM.
+A video demonstrating the experimental setup and procedure is accessible through https://www.youtube.com/watch?v=G_LCe0aWWdQ.

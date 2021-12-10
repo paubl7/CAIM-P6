@@ -1,0 +1,20 @@
+Fibrin is a structural protein key for processes such as wound healing and thrombus formation. At
+the macroscale, fibrin forms a gel and has a mechanical response that is dictated by the mechanics
+of a microscale fiber network. Hence, accurate description of fibrin gels can be achieved using
+representative volume elements (RVE) that explicitly model the discrete fiber networks of the
+microscale. These RVE models, however, cannot be efficiently used to model the macroscale due to
+the challenges and computational demands of multiscale coupling. Here, we propose the use of an
+artificial, fully connected neural network (FCNN) to efficiently capture the behavior of the RVE
+models. The FCNN was trained on 1100 fiber networks subjected to 121 biaxial deformations. The stress
+data from the RVE, together with the total energy on the fibers and the condition of incompressibility
+of the surrounding matrix, were used to determine the derivatives of an unknown strain energy function
+with respect to the deformation invariants. During training, the loss function was modified to
+ensure convexity of the strain energy function and symmetry of its Hessian. A general FCNN model
+was coded into a user material subroutine (UMAT) in the software Abaqus. The UMAT implementation
+takes in the structure and parameters of an arbitrary FCNN as material parameters from the input
+file. The inputs to the FCNN include the first two isochoric invariants of the deformation. The FCNN
+outputs the derivatives of the strain energy with respect to the isochoric invariants. In this work,
+the FCNN trained on the discrete fiber network data was used in finite element simulations of fibrin
+gels using our UMAT. We anticipate that this work will enable further integration of machine learning
+tools with computational mechanics. It will also improve computational modeling of biological
+materials characterized by a multiscale structure. 

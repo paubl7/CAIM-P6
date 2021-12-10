@@ -1,0 +1,20 @@
+Sparse matrices, more specifically SpGEMM kernels, are commonly found in a wide range of applications,
+spanning graph-based path-finding to machine learning algorithms (e.g., neural networks). A
+particular challenge in implementing SpGEMM kernels has been the pressure placed on DRAM memory.
+One approach to tackle this problem is to use an inner product method for the SpGEMM kernel implementation.
+While the inner product produces fewer intermediate results, it can end up saturating the memory
+bandwidth, given the high number of redundant fetches of the input matrix elements. Using an outer
+product-based SpGEMM kernel can reduce redundant fetches, but at the cost of increased overhead
+due to extra computation and memory accesses for producing/managing partial products. In this
+thesis, we introduce a novel SpGEMM kernel implementation based on the row-wise product approach.
+We leverage atomic instructions to merge intermediate partial products as they are generated.
+The use of atomic instructions eliminates the need to create partial product matrices. To evaluate
+our row-wise product approach, we map an optimized SpGEMM kernel to a custom accelerator designed
+to accelerate graph-based applications. The targeted accelerator is an experimental system named
+PIUMA, being developed by Intel. PIUMA provides several attractive features, including fast context
+switching, user-configurable caches, globally addressable memory, non-coherent caches, and
+asynchronous pipelines. We tailor our SpGEMM kernel to exploit many of the features of the PIUMA
+fabric. This thesis compares our SpGEMM implementation against prior solutions, all mapped to
+the PIUMA framework. We briefly describe some of the PIUMA architecture features and then delve
+into the details of our optimized SpGEMM kernel. Our SpGEMM kernel can achieve 9.4x speedup as compared
+to competing approaches. 

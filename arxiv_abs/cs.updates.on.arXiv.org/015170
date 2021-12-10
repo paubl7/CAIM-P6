@@ -1,0 +1,20 @@
+${\bf Purpose}$: Earlier work showed that IVIM-NET$_{orig}$, an unsupervised physics-informed
+deep neural network, was more accurate than other state-of-the-art intravoxel-incoherent motion
+(IVIM) fitting approaches to DWI. This study presents an improved version: IVIM-NET$_{optim}$,
+and characterizes its superior performance in pancreatic ductal adenocarcinoma (PDAC) patients.
+${\bf Method}$: In simulations (SNR=20), the accuracy, independence and consistency of IVIM-NET
+were evaluated for combinations of hyperparameters (fit S0, constraints, network architecture,
+# hidden layers, dropout, batch normalization, learning rate), by calculating the NRMSE, Spearman's
+$\rho$, and the coefficient of variation (CV$_{NET}$), respectively. The best performing network,
+IVIM-NET$_{optim}$ was compared to least squares (LS) and a Bayesian approach at different SNRs.
+IVIM-NET$_{optim}$'s performance was evaluated in 23 PDAC patients. 14 of the patients received
+no treatment between scan sessions and 9 received chemoradiotherapy between sessions. Intersession
+within-subject standard deviations (wSD) and treatment-induced changes were assessed. ${\bf
+Results}$: In simulations, IVIM-NET$_{optim}$ outperformed IVIM-NET$_{orig}$ in accuracy
+(NRMSE(D)=0.18 vs 0.20; NMRSE(f)=0.22 vs 0.27; NMRSE(D*)=0.39 vs 0.39), independence ($\rho$(D*,f)=0.22
+vs 0.74) and consistency (CV$_{NET}$ (D)=0.01 vs 0.10; CV$_{NET}$ (f)=0.02 vs 0.05; CV$_{NET}$
+(D*)=0.04 vs 0.11). IVIM-NET$_{optim}$ showed superior performance to the LS and Bayesian approaches
+at SNRs<50. In vivo, IVIM-NET$_{optim}$ sshowed significantly less noisy parameter maps with
+lower wSD for D and f than the alternatives. In the treated cohort, IVIM-NET$_{optim}$ detected
+the most individual patients with significant parameter changes compared to day-to-day variations.
+${\bf Conclusion}$: IVIM-NET$_{optim}$ is recommended for IVIM fitting to DWI data. 

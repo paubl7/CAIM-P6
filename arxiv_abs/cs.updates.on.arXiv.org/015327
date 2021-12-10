@@ -1,0 +1,19 @@
+Topic models are popular models for analyzing a collection of text documents. The models assert
+that documents are distributions over latent topics and latent topics are distributions over words.
+A nested document collection is where documents are nested inside a higher order structure such
+as stories in a book, articles in a journal, or web pages in a web site. In a single collection of documents,
+topics are global, or shared across all documents. For web pages nested in web sites, topic frequencies
+likely vary between web sites. Within a web site, topic frequencies almost certainly vary between
+web pages. A hierarchical prior for topic frequencies models this hierarchical structure and specifies
+a global topic distribution. Web site topic distributions vary around the global topic distribution
+and web page topic distributions vary around the web site topic distribution. In a nested collection
+of web pages, some topics are likely unique to a single web site. Local topics in a nested collection
+of web pages are topics unique to one web site. For US local health department web sites, brief inspection
+of the text shows local geographic and news topics specific to each department that are not present
+in others. Topic models that ignore the nesting may identify local topics, but do not label topics
+as local nor do they explicitly identify the web site owner of the local topic. For web pages nested
+inside web sites, local topic models explicitly label local topics and identifies the owning web
+site. This identification can be used to adjust inferences about global topics. In the US public
+health web site data, topic coverage is defined at the web site level after removing local topic words
+from pages. Hierarchical local topic models can be used to identify local topics, adjust inferences
+about if web sites cover particular health topics, and study how well health topics are covered.

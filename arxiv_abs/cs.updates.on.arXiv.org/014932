@@ -1,0 +1,19 @@
+Multiple-input multiple-output (MIMO) detection is a fundamental problem in wireless communications
+and it is strongly NP-hard in general. Massive MIMO has been recognized as a key technology in the
+fifth generation (5G) and beyond communication networks, which on one hand can significantly improve
+the communication performance, and on the other hand poses new challenges of solving the corresponding
+optimization problems due to the large problem size. While various efficient algorithms such as
+semidefinite relaxation (SDR) based approaches have been proposed for solving the small-scale
+MIMO detection problem, they are not suitable to solve the large-scale MIMO detection problem due
+to their high computational complexities. In this paper, we propose an efficient sparse quadratic
+programming (SQP) relaxation based algorithm for solving the large-scale MIMO detection problem.
+In particular, we first reformulate the MIMO detection problem as an SQP problem. By dropping the
+sparse constraint, the resulting relaxation problem shares the same global minimizer with the
+SQP problem. In sharp contrast to the SDRs for the MIMO detection problem, our relaxation does not
+contain any (positive semidefinite) matrix variable and the numbers of variables and constraints
+in our relaxation are significantly less than those in the SDRs, which makes it particularly suitable
+for the large-scale problem. Then we propose a projected Newton based quadratic penalty method
+to solve the relaxation problem, which is guaranteed to converge to the vector of transmitted signals
+under reasonable conditions. By extensive numerical experiments, when applied to solve large-scale
+problems, the proposed algorithm achieves better detection performance than a recently proposed
+generalized power method. 

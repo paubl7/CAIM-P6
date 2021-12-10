@@ -1,0 +1,18 @@
+A straightforward dynamic programming method for the single-source shortest paths problem (SSSP)
+in an edge-weighted directed acyclic graph (DAG) processes the vertices in a topologically sorted
+order. First, we similarly iterate this method alternatively in a breadth-first search sorted
+order and the reverse order on an input directed graph with both positive and negative real edge weights,
+$n$ vertices and $m$ edges. For a positive integer $t,$ after $O(t)$ iterations in $O(tm)$ time,
+we obtain for each vertex $v$ a path distance from the source to $v$ not exceeding that yielded by the
+shortest path from the source to $v$ among the so called {\em$ t+$light paths}. A directed path between
+two vertices is $t+$light if it contains at most $t$ more edges than the minimum edge-cardinality
+directed path between these vertices. After $O(n)$ iterations, we obtain an $O(nm)$-time solution
+to SSSP in directed graphs with real edge weights matching that of Bellman and Ford. Our main result
+is an output-sensitive algorithm for the all-pairs shortest paths problem (APSP) in DAGs with positive
+and negative real edge weights. It runs in time $O(\min \{n^{\omega}, nm+n^2\log n\}+\sum_{v\in
+V}\text{indeg}(v)|\text{leaf}(T_v)|),$ where $n$ is the number of vertices, $m$ is the number
+of edges, $\omega$ is the exponent of fast matrix multiplication, $\text{indeg}(v)$ stands for
+the indegree of $v,$ $T_v$ is a tree of lexicographically-first shortest directed paths from all
+ancestors of $v$ to $v$, and $\text{leaf}(T_v)$ is the set of leaves in $T_v.$ Finally, we discuss
+an extension of hypothetical improved upper time-bounds for APSP in non-negatively edge-weighted
+DAGs to include directed graphs with a polynomial number of large directed cycles. 

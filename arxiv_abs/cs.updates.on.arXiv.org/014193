@@ -1,0 +1,18 @@
+We consider the problem of Byzantine fault-tolerance in the peer-to-peer (P2P) distributed gradient-descent
+method -- a prominent algorithm for distributed optimization in a P2P system. In this problem, the
+system comprises of multiple agents, and each agent has a local cost function. In the fault-free
+case, when all the agents are honest, the P2P distributed gradient-descent method allows all the
+agents to reach a consensus on a solution that minimizes their aggregate cost. However, we consider
+a scenario where a certain number of agents may be Byzantine faulty. Such faulty agents may not follow
+an algorithm correctly, and may share arbitrary incorrect information to prevent other non-faulty
+agents from solving the optimization problem. In the presence of Byzantine faulty agents, a more
+reasonable goal is to allow all the non-faulty agents to reach a consensus on a solution that minimizes
+the aggregate cost of all the non-faulty agents. We refer to this fault-tolerance goal as $f$-resilience
+where $f$ is the maximum number of Byzantine faulty agents in a system of $n$ agents, with $f < n$. Most
+prior work on fault-tolerance in P2P distributed optimization only consider approximate fault-tolerance
+wherein, unlike $f$-resilience, all the non-faulty agents' compute a minimum point of a non-uniformly
+weighted aggregate of their cost functions. We propose a fault-tolerance mechanism that confers
+provable $f$-resilience to the P2P distributed gradient-descent method, provided the non-faulty
+agents satisfy the necessary condition of $2f$-redundancy, defined later in the paper. Moreover,
+compared to prior work, our algorithm is applicable to a larger class of high-dimensional convex
+distributed optimization problems. 

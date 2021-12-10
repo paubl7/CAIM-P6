@@ -1,0 +1,18 @@
+The performance of a QKD implementation is determined by the tightness of the underlying security
+analysis. In particular, the security analyses determines the key-rate, i.e., the amount of cryptographic
+key material that can be distributed per time unit. Nowadays, the security analyses of various QKD
+protocols are well understood. It is known that optimal protocol parameters, such as the number
+of decoy states and their intensities, can be found by solving a nonlinear optimization problem.
+The complexity of this optimization problem is typically handled by making an number of heuristic
+assumptions. For instance, the number of decoy states is restricted to only one or two, with one of
+the decoy intensities set to a fixed value, and vacuum states are ignored as they are assumed to contribute
+only marginally to the secure key-rate. These assumptions simplify the optimization problem and
+reduce the size of search space significantly. However, they also cause the security analysis to
+be non-tight, and thereby result in sub-optimal performance. In this work, we follow a more rigorous
+approach using both linear and non-linear programs describing the optimization problem. Our approach,
+focusing on the Decoy-State BB84 protocol, allows heuristic assumptions to be omitted, and therefore
+results in a tighter security analysis with better protocol parameters. We show an improved performance
+for the Decoy-State BB84 QKD protocol, demonstrating that the heuristic assumptions typically
+made are too restrictive. Moreover, our improved optimization frameworks shows that the complexity
+of the performance optimization problem can also be handled without making heuristic assumptions,
+even with limited computational resources available. 

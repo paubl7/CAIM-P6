@@ -1,0 +1,20 @@
+When studying the expressive power of neural networks, a main challenge is to understand how the
+size and depth of the network affect its ability to approximate real functions. However, not all
+functions are interesting from a practical viewpoint: functions of interest usually have a polynomially-bounded
+Lipschitz constant, and can be computed efficiently. We call functions that satisfy these conditions
+"natural", and explore the benefits of size and depth for approximation of natural functions with
+ReLU networks. As we show, this problem is more challenging than the corresponding problem for non-natural
+functions. We give barriers to showing depth-lower-bounds: Proving existence of a natural function
+that cannot be approximated by polynomial-size networks of depth $4$ would settle longstanding
+open problems in computational complexity. It implies that beyond depth $4$ there is a barrier to
+showing depth-separation for natural functions, even between networks of constant depth and networks
+of nonconstant depth. We also study size-separation, namely, whether there are natural functions
+that can be approximated with networks of size $O(s(d))$, but not with networks of size $O(s'(d))$.
+We show a complexity-theoretic barrier to proving such results beyond size $O(d\log^2(d))$, but
+also show an explicit natural function, that can be approximated with networks of size $O(d)$ and
+not with networks of size $o(d/\log d)$. For approximation in $L_\infty$ we achieve such separation
+already between size $O(d)$ and size $o(d)$. Moreover, we show superpolynomial size lower bounds
+and barriers to such lower bounds, depending on the assumptions on the function. Our size-separation
+results rely on an analysis of size lower bounds for Boolean functions, which is of independent interest:
+We show linear size lower bounds for computing explicit Boolean functions with neural networks
+and threshold circuits. 

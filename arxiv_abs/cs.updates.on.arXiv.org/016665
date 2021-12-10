@@ -1,0 +1,19 @@
+In \cite{butman1976} the linear coding scheme is applied, $X_t =g_t\Big(\Theta - {\bf E}\Big\{\Theta\Big|Y^{t-1},
+V_0=v_0\Big\}\Big)$, $t=2,\ldots,n$, $X_1=g_1\Theta$, with $\Theta: \Omega \to {\mathbb R}$,
+a Gaussian random variable, to derive a lower bound on the feedback rate, for additive Gaussian noise
+(AGN) channels, $Y_t=X_t+V_t, t=1, \ldots, n$, where $V_t$ is a Gaussian autoregressive (AR) noise,
+and $\kappa \in [0,\infty)$ is the total transmitter power. For the unit memory AR noise, with parameters
+$(c, K_W)$, where $c\in [-1,1]$ is the pole and $K_W$ is the variance of the Gaussian noise, the lower
+bound is $C^{L,B} =\frac{1}{2} \log \chi^2$, where $\chi =\lim_{n\longrightarrow \infty} \chi_n$
+is the positive root of $\chi^2=1+\Big(1+ \frac{|c|}{\chi}\Big)^2 \frac{\kappa}{K_W}$, and
+the sequence $\chi_n \triangleq \Big|\frac{g_n}{g_{n-1}}\Big|, n=2, 3, \ldots,$ satisfies
+a certain recursion, and conjectured that $C^{L,B}$ is the feedback capacity. In this correspondence,
+it is observed that the nontrivial lower bound $C^{L,B}=\frac{1}{2} \log \chi^2$ such that $\chi
+>1$, necessarily implies the scaling coefficients of the feedback code, $g_n$, $n=1,2, \ldots$,
+grow unbounded, in the sense that, $\lim_{n\longrightarrow\infty}|g_n| =+\infty$. The unbounded
+behaviour of $g_n$ follows from the ratio limit theorem of a sequence of real numbers, and it is verified
+by simulations. It is then concluded that such linear codes are not practical, and fragile with respect
+to a mismatch between the statistics of the mathematical model of the channel and the real statistics
+of the channel. In particular, if the error is perturbed by $\epsilon_n>0$ no matter how small, then
+$X_n =g_t\Big(\Theta - {\bf E}\Big\{\Theta\Big|Y^{t-1}, V_0=v_0\Big\}\Big)+g_n \epsilon_n$,
+and $|g_n|\epsilon_n \longrightarrow \infty$, as $n \longrightarrow \infty$. 

@@ -1,0 +1,18 @@
+Over the past decade, the advent of cybercrime has accelarated the research on cybersecurity. However,
+the deployment of intrusion detection methods falls short. One of the reasons for this is the lack
+of realistic evaluation datasets, which makes it a challenge to develop techniques and compare
+them. This is caused by the large amounts of effort it takes for a cyber analyst to classify network
+connections. This has raised the need for methods (i) that can learn from small sets of labeled data,
+(ii) that can make predictions on large sets of unlabeled data, and (iii) that request the label of
+only specially selected unlabeled data instances. Hence, Active Learning (AL) methods are of interest.
+These approaches choose speci?fic unlabeled instances by a query function that are expected to
+improve overall classi?cation performance. The resulting query observations are labeled by a
+human expert and added to the labeled set. In this paper, we propose a new hybrid AL method called Jasmine.
+Firstly, it determines how suitable each observation is for querying, i.e., how likely it is to enhance
+classi?cation. These properties are the uncertainty score and anomaly score. Secondly, Jasmine
+introduces dynamic updating. This allows the model to adjust the balance between querying uncertain,
+anomalous and randomly selected observations. To this end, Jasmine is able to learn the best query
+strategy during the labeling process. This is in contrast to the other AL methods in cybersecurity
+that all have static, predetermined query functions. We show that dynamic updating, and therefore
+Jasmine, is able to consistently obtain good and more robust results than querying only uncertainties,
+only anomalies or a ?fixed combination of the two. 

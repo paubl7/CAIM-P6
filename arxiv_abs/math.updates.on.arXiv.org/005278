@@ -1,0 +1,20 @@
+This work deals with the inference of catalytic recombination parameters from plasma wind tunnel
+experiments for reusable thermal protection materials. One of the critical factors affecting
+the performance of such materials is the contribution to the heat flux of the exothermic recombination
+reactions at the vehicle surface. The main objective of this work is to develop a dedicated Bayesian
+framework that allows us to compare uncertain measurements with model predictions which depend
+on the catalytic parameter values. Our framework accounts for uncertainties involved in the model
+definition and incorporates all measured variables with their respective uncertainties. The
+physical model used for the estimation consists of a 1D boundary layer solver along the stagnation
+line. The chemical production term included in the surface mass balance depends on the catalytic
+recombination efficiency. As not all the different quantities needed to simulate a reacting boundary
+layer can be measured or known (such as the flow enthalpy at the inlet boundary), we propose an optimization
+procedure built on the construction of the likelihood function to determine their most likely values
+based on the available experimental data. This procedure avoids the need to introduce any a priori
+estimates on the nuisance quantities, namely, the boundary layer edge enthalpy, wall temperatures,
+static and dynamic pressures, which would entail the use of very wide priors. We substitute the optimal
+likelihood of the experimental data with a surrogate model to make the inference procedure both
+faster and more robust. We show that the resulting Bayesian formulation yields meaningful and accurate
+posterior distributions of the catalytic parameters with a reduction of more than 20% of the standard
+deviation with respect to previous works. We also study the implications of an extension of the experimental
+procedure. 

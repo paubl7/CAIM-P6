@@ -1,0 +1,18 @@
+Healthcare representation learning on the Electronic Health Record (EHR) is seen as crucial for
+predictive analytics in the medical field. Many natural language processing techniques, such
+as word2vec, RNN and self-attention, have been adapted for use in hierarchical and time stamped
+EHR data, but fail when they lack either general or task-specific data. Hence, some recent works
+train healthcare representations by incorporating medical ontology (a.k.a. knowledge graph),
+by self-supervised tasks like diagnosis prediction, but (1) the small-scale, monotonous ontology
+is insufficient for robust learning, and (2) critical contexts or dependencies underlying patient
+journeys are never exploited to enhance ontology learning. To address this, we propose an end-to-end
+robust Transformer-based solution, Mutual Integration of patient journey and Medical Ontology
+(MIMO) for healthcare representation learning and predictive analytics. Specifically, it consists
+of task-specific representation learning and graph-embedding modules to learn both patient journey
+and medical ontology interactively. Consequently, this creates a mutual integration to benefit
+both healthcare representation learning and medical ontology embedding. Moreover, such integration
+is achieved by a joint training of both task-specific predictive and ontology-based disease typing
+tasks based on fused embeddings of the two modules. Experiments conducted on two real-world diagnosis
+prediction datasets show that, our healthcare representation model MIMO not only achieves better
+predictive results than previous state-of-the-art approaches regardless of sufficient or insufficient
+training data, but also derives more interpretable embeddings of diagnoses. 

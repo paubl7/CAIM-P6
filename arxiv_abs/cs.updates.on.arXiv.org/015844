@@ -1,0 +1,19 @@
+The Isolation Lemma of Mulmuley, Vazirani and Vazirani [Combinatorica'87] provides a self-reduction
+scheme that allows one to assume that a given instance of a problem has a unique solution, provided
+a solution exists at all. Since its introduction, much effort has been dedicated towards derandomization
+of the Isolation Lemma for specific classes of problems. So far, the focus was mainly on problems
+solvable in polynomial time. In this paper, we study a setting that is more typical for $\mathsf{NP}$-complete
+problems, and obtain partial derandomizations in the form of significantly decreasing the number
+of required random bits. In particular, motivated by the advances in parameterized algorithms,
+we focus on problems on decomposable graphs. For example, for the problem of detecting a Hamiltonian
+cycle, we build upon the rank-based approach from [Bodlaender et al., Inf. Comput.'15] and design
+isolation schemes that use - $O(t\log n + \log^2{n})$ random bits on graphs of treewidth at most $t$;
+- $O(\sqrt{n})$ random bits on planar or $H$-minor free graphs; and - $O(n)$-random bits on general
+graphs. In all these schemes, the weights are bounded exponentially in the number of random bits
+used. As a corollary, for every fixed $H$ we obtain an algorithm for detecting a Hamiltonian cycle
+in an $H$-minor-free graph that runs in deterministic time $2^{O(\sqrt{n})}$ and uses polynomial
+space; this is the first algorithm to achieve such complexity guarantees. For problems of more local
+nature, such as finding an independent set of maximum size, we obtain isolation schemes on graphs
+of treedepth at most $d$ that use $O(d)$ random bits and assign polynomially-bounded weights. We
+also complement our findings with several unconditional and conditional lower bounds, which show
+that many of the results cannot be significantly improved. 

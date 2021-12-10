@@ -1,0 +1,20 @@
+News recommendation is critical for personalized news access. Existing news recommendation methods
+usually infer users' personal interest based on their historical clicked news, and train the news
+recommendation models by predicting future news clicks. A core assumption behind these methods
+is that news click behaviors can indicate user interest. However, in practical scenarios, beyond
+the relevance between user interest and news content, the news click behaviors may also be affected
+by other factors, such as the bias of news presentation in the online platform. For example, news
+with higher positions and larger sizes are usually more likely to be clicked. The bias of clicked
+news may bring noises to user interest modeling and model training, which may hurt the performance
+of the news recommendation model. In this paper, we propose a bias-aware personalized news recommendation
+method named DebiasRec, which can handle the bias information for more accurate user interest inference
+and model training. The core of our method includes a bias representation module, a bias-aware user
+modeling module, and a bias-aware click prediction module. The bias representation module is used
+to model different kinds of news bias and their interactions to capture their joint effect on click
+behaviors. The bias-aware user modeling module aims to infer users' debiased interest from the
+clicked news articles by using their bias information to calibrate the interest model. The bias-aware
+click prediction module is used to train a debiased news recommendation model from the biased click
+behaviors, where the click score is decomposed into a preference score indicating user's interest
+in the news content and a news bias score inferred from its different bias features. Experiments
+on two real-world datasets show that our method can effectively improve the performance of news
+recommendation. 

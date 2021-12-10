@@ -1,0 +1,20 @@
+Although large volumes of solar data are available for study, the vast majority of these data remain
+unlabeled and are therefore not amenable to supervised machine learning methods. Having a way to
+accurately and automatically classify spectra into categories related to solar activity is highly
+desirable and will assist and speed up future research efforts in solar physics. At the same time,
+the large volume of raw observational data is a serious bottleneck for machine learning, requiring
+powerful computational means that are not at the disposal of many laboratories. Besides, the raw
+data communication imposes restrictions on real time data observations and requires considerable
+bandwidth and energy for the onboard solar observation systems. To solve these issues, we propose
+a framework to classify solar activity on compressed data. For this, we used a labeling scheme from
+a pre-existing vector quantization technique in conjunction with different machine learning
+algorithms to categorize spectra of singly-ionized magnesium Mg II measured by NASA's Interface
+Region Imaging Spectrograph satellite (IRIS) into five types of solar activity. Our training dataset
+is a human annotated list of 85 IRIS observations containing 29097 frames. The annotated types of
+Solar activities are active region, pre-flare activity, Solar flare, Sunspot, and quiet Sun. We
+compress these data and reduce its complexity before training classifiers. We found that the XGBoost
+classifier produces the most accurate results on the compressed data, yielding over a 95\% prediction
+rate, and outperforming other ML methods like convolution neural networks, K-nearest neighbors,
+naive Bayes classifiers, and SVM. We find that the classification performance on compressed and
+uncompressed data is comparable, implying the possibility of large compression rates for relatively
+low degrees of information loss. 

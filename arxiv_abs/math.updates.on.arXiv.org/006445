@@ -1,0 +1,18 @@
+In this thesis, we consider the Wasserstein barycenter problem of discrete probability measures
+from computational and statistical sides in two scenarios: (I) the measures are given and we need
+to compute their Wasserstein barycenter, and (ii) the measures are generated from a probability
+distribution and we need to calculate the population barycenter of the distribution defined by
+the notion of Fr\'echet mean. The statistical focus is estimating the sample size of measures necessary
+to calculate an approximation for Fr\'echet mean (barycenter) of a probability distribution with
+a given precision. For empirical risk minimization approaches, the question of the regularization
+is also studied together with proposing a new regularization which contributes to the better complexity
+bounds in comparison with quadratic regularization. The computational focus is developing algorithms
+for calculating Wasserstein barycenters: both primal and dual algorithms which can be executed
+in a decentralized manner. The motivation for dual approaches is closed-forms for the dual formulation
+of entropy-regularized Wasserstein distances and their derivatives, whereas the primal formulation
+has closed-form expression only in some cases, e.g., for Gaussian measures. Moreover, the dual
+oracle returning the gradient of the dual representation for entropy-regularized Wasserstein
+distance can be computed for a cheaper price in comparison with the primal oracle returning the gradient
+of the entropy-regularized Wasserstein distance. The number of dual oracle calls, in this case,
+will also be less, i.e., the square root of the number of primal oracle calls. This explains the successful
+application of the first-order dual approaches for the Wasserstein barycenter problem. 

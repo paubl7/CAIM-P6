@@ -1,0 +1,20 @@
+Semantic representations are central in many NLP tasks that require human-interpretable data.
+The conjunctivist framework - primarily developed by Pietroski (2005, 2018) - obtains expressive
+representations with only a few basic semantic types and relations systematically linked to syntactic
+positions. While representational simplicity is crucial for computational applications, such
+findings have not yet had major influence on NLP. We present the first generic semantic representation
+format for NLP directly based on these insights. We name the format EAT due to its basis in the Event-,
+Agent-, and Theme arguments in Neo-Davidsonian logical forms. It builds on the idea that similar
+tripartite argument relations are ubiquitous across categories, and can be constructed from grammatical
+structure without additional lexical information. We present a detailed exposition of EAT and
+how it relates to other prevalent formats used in prior work, such as Abstract Meaning Representation
+(AMR) and Minimal Recursion Semantics (MRS). EAT stands out in two respects: simplicity and versatility.
+Uniquely, EAT discards semantic metapredicates, and instead represents semantic roles entirely
+via positional encoding. This is made possible by limiting the number of roles to only three; a major
+decrease from the many dozens recognized in e.g. AMR and MRS. EAT's simplicity makes it exceptionally
+versatile in application. First, we show that drastically reducing semantic roles based on EAT
+benefits text generation from MRS in the test settings of Hajdik et al. (2019). Second, we implement
+the derivation of EAT from a syntactic parse, and apply this for parallel corpus generation between
+grammatical classes. Third, we train an encoder-decoder LSTM network to map EAT to English. Finally,
+we use both the encoder-decoder network and a rule-based alternative to conduct grammatical transformation
+from EAT-input. 

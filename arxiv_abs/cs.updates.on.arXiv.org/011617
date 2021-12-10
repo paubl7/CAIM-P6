@@ -1,0 +1,18 @@
+Limited view tomographic reconstruction aims to reconstruct a tomographic image from a limited
+number of sinogram or projection views arising from sparse view or limited angle acquisitions that
+reduce radiation dose or shorten scanning time. However, such a reconstruction suffers from high
+noise and severe artifacts due to the incompleteness of sinogram. To derive quality reconstruction,
+previous state-of-the-art methods use UNet-like neural architectures to directly predict the
+full view reconstruction from limited view data; but these methods leave the deep network architecture
+issue largely intact and cannot guarantee the consistency between the sinogram of the reconstructed
+image and the acquired sinogram, leading to a non-ideal reconstruction. In this work, we propose
+a novel recurrent reconstruction framework that stacks the same block multiple times. The recurrent
+block consists of a custom-designed residual dense spatial-channel attention network. Further,
+we develop a sinogram consistency layer interleaved in our recurrent framework in order to ensure
+that the sampled sinogram is consistent with the sinogram of the intermediate outputs of the recurrent
+blocks. We evaluate our methods on two datasets. Our experimental results on AAPM Low Dose CT Grand
+Challenge datasets demonstrate that our algorithm achieves a consistent and significant improvement
+over the existing state-of-the-art neural methods on both limited angle reconstruction (over
+5dB better in terms of PSNR) and sparse view reconstruction (about 4dB better in term of PSNR). In
+addition, our experimental results on Deep Lesion datasets demonstrate that our method is able
+to generate high-quality reconstruction for 8 major lesion types. 

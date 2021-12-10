@@ -1,0 +1,19 @@
+While much current web privacy research focuses on browser fingerprinting, the boring fact is that
+the majority of current third-party web tracking is conducted using traditional, persistent-state
+identifiers. One possible explanation for the privacy community's focus on fingerprinting is
+that to date browsers have faced a lose-lose dilemma when dealing with third-party stateful identifiers:
+block state in third-party frames and break a significant number of webpages, or allow state in third-party
+frames and enable pervasive tracking. The alternative, middle-ground solutions that have been
+deployed all trade privacy for compatibility, rely on manually curated lists, or depend on the user
+to manage state and state-access themselves. This work furthers privacy on the web by presenting
+a novel system for managing the lifetime of third-party storage, "page-length storage". We compare
+page-length storage to existing approaches for managing third-party state and find that page-length
+storage has the privacy protections of the most restrictive current option (i.e., blocking third-party
+storage) but web-compatibility properties mostly similar to the least restrictive option (i.e.,
+allowing all third-party storage). This work further compares page-length storage to an alternative
+third-party storage partitioning scheme and finds that page-length storage provides superior
+privacy protections with comparable web-compatibility. We provide a dataset of the privacy and
+compatibility behaviors observed when applying the compared third-party storage strategies
+on a crawl of the Tranco 1k and the quantitative metrics used to demonstrate that page-length storage
+matches or surpasses existing approaches. Finally, we provide an open-source implementation
+of our page-length storage approach, implemented as patches against Chromium. 

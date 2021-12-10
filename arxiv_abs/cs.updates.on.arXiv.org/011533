@@ -1,0 +1,20 @@
+LPWAN is an enabling technology for long-range, low-power, and low-cost IoT/CPS applications.
+Recently, multiple LPWAN technologies have been developed that operate in the licensed (e.g.,
+5G) and ISM (e.g., LoRa) bands. To avoid the crowd in the ISM band and the cost of the licensed band,
+we propose a novel LPWAN called Sensor Network Over White Spaces (SNOW) by utilizing the TV white
+spaces. Specifically, we design, develop, and experiment SNOW, which is highly scalable, energy-efficient,
+and has a long communication range. SNOW achieves scalability and energy efficiency by enabling
+concurrent packets reception at a BS using a single radio from numerous sensors and concurrent packets
+transmission to numerous sensors from the BS using a single radio, simultaneously, which we achieve
+by proposing a distributed implementation of OFDM. To enable the low-cost and scalable SNOW deployment
+in practical applications, we implement SNOW using the low-cost and small form-factored COTS devices,
+where we address multiple practical challenges including the high peak-to-average power ratio,
+channel state estimation, and carrier offset estimation. Also, we propose an adaptive transmission
+power protocol to handle the near-far power problem. To enable connecting tens of thousands of nodes
+over hundreds of kilometers, we further propose a network architecture called SNOW-tree through
+a seamless integration of multiple SNOWs where they form a tree structure and are under the same management/control.
+We address the intra- and inter-SNOW interferences by formulating a constrained optimization
+problem called the scalability optimization problem (SOP) whose objective is to maximize scalability
+by managing the spectrum sharing across the SNOWs. By proving the NP-hardness of SOP, we then propose
+two polynomial-time methods to solve it: a greedy heuristic algorithm and a 1/2-approximation
+algorithm. 

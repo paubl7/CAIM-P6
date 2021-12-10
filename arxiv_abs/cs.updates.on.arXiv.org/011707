@@ -1,0 +1,19 @@
+Massive multiple-input multiple-output (MIMO) systems require downlink channel state information
+(CSI) at the base station (BS) to achieve spatial diversity and multiplexing gains. In a frequency
+division duplex (FDD) multiuser massive MIMO network, each user needs to compress and feedback
+its downlink CSI to the BS. The CSI overhead scales with the number of antennas, users and subcarriers,
+and becomes a major bottleneck for the overall spectral efficiency. In this paper, we propose a deep
+learning (DL)-based CSI compression scheme, called DeepCMC, composed of convolutional layers
+followed by quantization and entropy coding blocks. In comparison with previous DL-based CSI reduction
+structures, DeepCMC proposes a novel fully-convolutional neural network (NN) architecture,
+with residual layers at the decoder, and incorporates quantization and entropy coding blocks into
+its design. DeepCMC is trained to minimize a weighted rate-distortion cost, which enables a trade-off
+between the CSI quality and its feedback overhead. Simulation results demonstrate that DeepCMC
+outperforms the state of the art CSI compression schemes in terms of the reconstruction quality
+of CSI for the same compression rate. We also propose a distributed version of DeepCMC for a multi-user
+MIMO scenario to encode and reconstruct the CSI from multiple users in a distributed manner. Distributed
+DeepCMC not only utilizes the inherent CSI structures of a single MIMO user for compression, but
+also benefits from the correlations among the channel matrices of nearby users to further improve
+the performance in comparison with DeepCMC. We also propose a reduced-complexity training method
+for distributed DeepCMC, allowing to scale it to multiple users, and suggest a cluster-based distributed
+DeepCMC approach for practical implementation. 

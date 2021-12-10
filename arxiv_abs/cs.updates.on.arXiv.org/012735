@@ -1,0 +1,18 @@
+Predictive clustering trees (PCTs) are a well established generalization of standard decision
+trees, which can be used to solve a variety of predictive modeling tasks, including structured output
+prediction. Combining them into ensembles yields state-of-the-art performance. Furthermore,
+the ensembles of PCTs can be interpreted by calculating feature importance scores from the learned
+models. However, their learning time scales poorly with the dimensionality of the output space.
+This is often problematic, especially in (hierarchical) multi-label classification, where the
+output can consist of hundreds of potential labels. Also, learning of PCTs can not exploit the sparsity
+of data to improve the computational efficiency, which is common in both input (molecular fingerprints,
+bag of words representations) and output spaces (in multi-label classification, examples are
+often labeled with only a fraction of possible labels). In this paper, we propose oblique predictive
+clustering trees, capable of addressing these limitations. We design and implement two methods
+for learning oblique splits that contain linear combinations of features in the tests, hence a split
+corresponds to an arbitrary hyperplane in the input space. The methods are efficient for high dimensional
+data and capable of exploiting sparse data. We experimentally evaluate the proposed methods on
+60 benchmark datasets for 6 predictive modeling tasks. The results of the experiments show that
+oblique predictive clustering trees achieve performance on-par with state-of-the-art methods
+and are orders of magnitude faster than standard PCTs. We also show that meaningful feature importance
+scores can be extracted from the models learned with the proposed methods. 

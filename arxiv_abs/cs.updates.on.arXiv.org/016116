@@ -1,0 +1,19 @@
+Assignment of one of the two possible directions to every edge of an undirected graph $G=(V,E)$ is
+called an orientation of $G$. The resulting directed graph is denoted by $\overrightarrow{G}$.
+A strong orientation is one in which every vertex is reachable from every other vertex via a directed
+path. The diameter of $\overrightarrow{G}$, i.e., the maximum distance from one vertex to another,
+depends on the particular orientation. The minimum diameter among all possible orientations is
+called the oriented diameter $\overrightarrow{\text{diam}}(G)$ of $G$. Let $n,k$ be two integers
+with $1 \leq k < n$. In the realm of interconnection networks of processing elements, an $(n,k)$-star
+graph $S_{n,k}$ offers a topology that circumvents the lack of scalability of $n$-star graphs $S_n$.
+In this paper, we present a strong orientation for $S_{n,k}$ that combines approaches suggested
+by Cheng and Lipman [Journal of Interconnection Networks (2002)] for $S_{n,k}$ with the one proposed
+by Fujita [The First International Symposium on Computing and Networking (CANDAR 2013)] for $S_n$.
+Next, we propose a distributed routing algorithm for $\overrightarrow{S_{n,k}}$ inspired by
+an algorithm proposed by Kumar, Rajendraprasad and Sudeep [Discrete Applied Mathematics (2021)]
+for $\overrightarrow{S_n}$. With the aid of both the orientation scheme and the routing algorithm,
+we show that $\overrightarrow{\text{diam}}(S_{n,k}) \leq \lfloor \frac{n+k}{2} \rfloor + 2k
++ 6 - \delta(n,k)$ where $\delta(n,k)$ is a non-negative function. The function $\delta(n,k)$
+takes on values $2k-n$, $0$, and $\left\lfloor \frac{n-3k}{2} \right\rfloor$ respectively for
+three disjoint intervals $k>\frac{n}{2}$, $\frac{n}{3} < k \leq \frac{n}{2}$ and $k\leq \frac{n}{3}$.
+For every value of $n$, $k$, our upper bound performs better than all known bounds in literature.

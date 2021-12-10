@@ -1,0 +1,20 @@
+We study the NP-hard Fair Connected Districting problem: Partition a vertex-colored graph into
+k connected components (subsequently referred to as districts) so that in each district the most
+frequent color occurs at most a given number of times more often than the second most frequent color.
+Fair Connected Districting is motivated by various real-world scenarios where agents of different
+types, which are one-to-one represented by nodes in a network, have to be partitioned into disjoint
+districts. Herein, one strives for "fair districts" without any type being in a dominating majority
+in any of the districts. This is to e.g. prevent segregation or political domination of some political
+party. Our work builds on a model recently proposed by Stoica et al. [AAMAS 2020], thereby also strengthening
+and extending computational hardness results from there. More specifically, with Fair Connected
+Districting we identify a natural, already hard special case of their Fair Connected Regrouping
+problem. We conduct a fine-grained analysis of the (parameterized) computational complexity
+of Fair Connected Districting, proving that it is polynomial-time solvable on paths, cycles, stars,
+caterpillars, and cliques, but already becomes NP-hard on trees. Motivated by the latter negative
+result, we perform a parameterized complexity analysis with respect to various graph parameters,
+including treewidth, and problem-specific parameters, including the numbers of colors and districts.
+We obtain a rich and diverse, close to complete picture of the corresponding parameterized complexity
+landscape (that is, a classification along the complexity classes FPT, XP, W[1]-hardness, and
+para-NP-hardness). Doing so, we draw a fine line between tractability and intractability and identify
+structural properties of the underlying graph that make Fair Connected Districting computationally
+hard. 

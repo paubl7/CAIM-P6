@@ -1,0 +1,19 @@
+A temporal graph is a graph in which the edge set can change from one time step to the next. The temporal
+graph exploration problem TEXP is the problem of computing a foremost exploration schedule for
+a temporal graph, i.e., a temporal walk that starts at a given start node, visits all nodes of the graph,
+and has the smallest arrival time. In the first part of the paper, we consider only undirected temporal
+graphs that are connected at each time step. For such temporal graphs with $n$ nodes, we show that
+it is \NP-hard to approximate TEXP with ratio $O(n^{1-\varepsilon})$ for every $\varepsilon>0$.
+We also provide an explicit construction of temporal graphs that require $\Theta(n^2)$ time steps
+to be explored. In the second part of the paper, we still consider temporal graphs that are connected
+in each time step, but we assume that the underlying graph (i.e. the graph that contains all edges
+that are present in the temporal graph in at least one time step) belongs to a specific class of graphs.
+Among other results, we show that temporal graphs can be explored in $O(n^{1.5}k^{1.5}\log n)$
+time steps if the underlying graph has treewidth $k$, in $O(n^{1.8}\log n)$ time steps if the underlying
+graph is planar, and in $O(n\log^3 n)$ time steps if the underlying graph is a $2\times n$ grid. In
+the third part of the paper, we consider settings where the graphs in future time steps are not known
+and the exploration schedule is constructed online. We replace the connectedness assumption by
+a weaker assumption and show that $m$-edge temporal graphs with regularly present edges and with
+probabilistically present edges can be explored online in $O(m)$ time steps and $O(m \log n)$ time
+steps with high probability, respectively. We finally show that the latter result can be used to
+obtain a distributed algorithm for the gossiping problem in random temporal graphs. 

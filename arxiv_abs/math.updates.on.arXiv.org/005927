@@ -1,0 +1,19 @@
+Modern data centers suffer from immense power consumption. The erratic behavior of internet traffic
+forces data centers to maintain excess capacity in the form of idle servers in case the workload suddenly
+increases. As an idle server still consumes a significant fraction of the peak energy, data center
+operators have heavily invested in capacity scaling solutions. In simple terms, these aim to deactivate
+servers if the demand is low and to activate them again when the workload increases. To do so, an algorithm
+needs to strike a delicate balance between power consumption, flow-time, and switching costs.
+Over the last decade, the research community has developed competitive online algorithms with
+worst-case guarantees. In the presence of historic data patterns, prescription from Machine Learning
+(ML) predictions typically outperform such competitive algorithms. This, however, comes at the
+cost of sacrificing the robustness of performance, since unpredictable surges in the workload
+are not uncommon. The current work builds on the emerging paradigm of augmenting unreliable ML predictions
+with online algorithms to develop novel robust algorithms that enjoy the benefits of both worlds.
+We analyze a continuous-time model for capacity scaling, where the goal is to minimize the weighted
+sum of flow-time, switching cost, and power consumption in an online fashion. We propose a novel
+algorithm, called Adaptive Balanced Capacity Scaling (ABCS), that has access to black-box ML predictions,
+but is completely oblivious to the accuracy of these predictions. In particular, if the predictions
+turn out to be accurate in hindsight, we prove that ABCS is $(1+\varepsilon)$-competitive. Moreover,
+even when the predictions are inaccurate, ABCS guarantees a bounded competitive ratio. The performance
+of the ABCS algorithm on a real-world dataset positively support the theoretical results. 

@@ -1,0 +1,19 @@
+While sophisticated numerical methods for studying equilibrium states have well advanced, quantitative
+predictions of kinetic behaviour remain challenging. We introduce a reactant-to-barrier (R2B)
+machine learning model that rapidly and accurately infers activation energies and transition
+state geometries throughout chemical compound space. R2B enjoys improving accuracy as training
+sets grow, and requires as input solely molecular graph information of the reactant. We provide
+numerical evidence for the applicability of R2B for two competing text-book reactions relevant
+to organic synthesis, E2 and SN2, trained and tested on chemically diverse quantum data from literature.
+After training on 1k to 1.8k examples, R2B predicts activation energies on average within less than
+2.5 kcal/mol with respect to Coupled-Cluster Singles Doubles (CCSD) reference within milliseconds.
+Principal component analysis of kernel matrices reveals the hierarchy of the multiple scales underpinning
+reactivity in chemical space: Nucleophiles and leaving groups, substituents, and pairwise substituent
+combinations correspond to systematic lowering of eigenvalues. Analysis of R2B based predictions
+of ~11.5k E2 and SN2 barriers in gas-phase for previously undocumented reactants indicates that
+on average E2 is favored in 75% of all cases and that SN2 becomes likely for nucleophile/leaving group
+corresponding to chlorine, and for substituents consisting of hydrogen or electron-withdrawing
+groups. Experimental reaction design from first principles is enabled thanks to R2B, which is demonstrated
+by the construction of decision trees. Numerical R2B based results for interatomic distances and
+angles of reactant and transition state geometries suggest that Hammond's postulate is applicable
+to SN2, but not to E2. 

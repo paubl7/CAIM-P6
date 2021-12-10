@@ -1,0 +1,20 @@
+Pelvic ring disruptions result from blunt injury mechanisms and are often found in patients with
+multi-system trauma. To grade pelvic fracture severity in trauma victims based on whole-body CT,
+the Tile AO/OTA classification is frequently used. Due to the high volume of whole-body trauma CTs
+generated in busy trauma centers, an automated approach to Tile classification would provide substantial
+value, e.,g., to prioritize the reading queue of the attending trauma radiologist. In such scenario,
+an automated method should perform grading based on a transparent process and based on interpretable
+features to enable interaction with human readers and lower their workload by offering insights
+from a first automated read of the scan. This paper introduces an automated yet interpretable pelvic
+trauma decision support system to assist radiologists in fracture detection and Tile grade classification.
+The method operates similarly to human interpretation of CT scans and first detects distinct pelvic
+fractures on CT with high specificity using a Faster-RCNN model that are then interpreted using
+a structural causal model based on clinical best practices to infer an initial Tile grade. The Bayesian
+causal model and finally, the object detector are then queried for likely co-occurring fractures
+that may have been rejected initially due to the highly specific operating point of the detector,
+resulting in an updated list of detected fractures and corresponding final Tile grade. Our method
+is transparent in that it provides finding location and type using the object detector, as well as
+information on important counterfactuals that would invalidate the system's recommendation
+and achieves an AUC of 83.3%/85.1% for translational/rotational instability. Despite being designed
+for human-machine teaming, our approach does not compromise on performance compared to previous
+black-box approaches. 

@@ -1,0 +1,19 @@
+We present $\it{CosmoPower}$, a suite of neural cosmological power spectrum emulators providing
+orders-of-magnitude acceleration for parameter estimation from two-point statistics analyses
+of Large-Scale Structure (LSS) and Cosmic Microwave Background (CMB) surveys. The emulators replace
+the computation of matter and CMB power spectra from Boltzmann codes; thus, they do not need to be
+re-trained for different choices of astrophysical nuisance parameters or redshift distributions.
+The matter power spectrum emulation error is less than $0.4\%$ in the wavenumber range $k \in [10^{-5},
+10] \, \mathrm{Mpc}^{-1}$, for redshift $z \in [0, 5]$. $\it{CosmoPower}$ emulates CMB temperature,
+polarisation and lensing potential power spectra in the $5\sigma$ region of parameter space around
+the $\it{Planck}$ best fit values with an error $\lesssim 20\%$ of the expected shot noise for the
+forthcoming Simons Observatory. $\it{CosmoPower}$ is showcased on a joint cosmic shear and galaxy
+clustering analysis from the Kilo-Degree Survey, as well as on a Stage IV $\it{Euclid}$-like simulated
+cosmic shear analysis. For the CMB case, $\it{CosmoPower}$ is tested on a $\it{Planck}$ 2018 CMB
+temperature and polarisation analysis. The emulators always recover the fiducial cosmological
+constraints with differences in the posteriors smaller than sampling noise, while providing a
+speed-up factor up to $O(10^4)$ to the complete inference pipeline. This acceleration allows posterior
+distributions to be recovered in just a few seconds, as we demonstrate in the $\it{Planck}$ likelihood
+case. $\it{CosmoPower}$ is written entirely in Python, can be interfaced with all commonly used
+cosmological samplers and is publicly available https://github.com/alessiospuriomancini/cosmopower
+. 

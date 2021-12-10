@@ -1,0 +1,19 @@
+We investigate traffic routing both from the perspective of real world data as well as theory. First,
+we reveal through data analytics a natural but previously uncaptured regularity of real world routing
+behavior. Agents only consider, in their strategy sets, paths whose free-flow costs (informally
+their lengths) are within a small multiplicative $(1+\theta)$ constant of the optimal free-flow
+cost path connecting their source and destination where $\theta\geq0$. In the case of Singapore,
+$\theta=1$ is a good estimate of agents' route (pre)selection mechanism. In contrast, in Pigou
+networks the ratio of the free-flow costs of the routes and thus $\theta$ is infinite, so although
+such worst case networks are mathematically simple they correspond to artificial routing scenarios
+with little resemblance to real world conditions, opening the possibility of proving much stronger
+Price of Anarchy guarantees by explicitly studying their dependency on $\theta$. We provide an
+exhaustive analysis of this question by providing provably tight bounds on PoA($\theta$) for arbitrary
+classes of cost functions both in the case of general congestion/routing games as well as in the special
+case of path-disjoint networks. For example, in the case of the standard Bureau of Public Roads (BPR)
+cost model, $c_e(x)= a_e x^4+b_e$ and more generally quartic cost functions, the standard PoA bound
+for $\theta=\infty$ is $2.1505$ (Roughgarden, 2003) and it is tight both for general networks as
+well as path-disjoint and even parallel-edge networks. In comparison, in the case of $\theta=1$,
+the PoA in the case of general networks is only $1.6994$, whereas for path-disjoint/parallel-edge
+networks is even smaller ($1.3652$), showing that both the route geometries as captured by the parameter
+$\theta$ as well as the network topology have significant effects on PoA (Figure 1). 

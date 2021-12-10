@@ -1,0 +1,34 @@
+In essence, a neural network is an arbitrary differentiable, parametrized function. Choosing
+a neural network architecture for any task is as complex as searching the space of those functions.
+For the last few years, 'neural architecture design' has been largely synonymous with 'neural architecture
+search' (NAS), i.e. brute-force, large-scale search. NAS has yielded significant gains on practical
+tasks. However, NAS methods end up searching for a local optimum in architecture space in a small
+neighborhood around architectures that often go back decades, based on CNN or LSTM. In this work,
+we present a different and complementary approach to architecture design, which we term 'zero-shot
+architecture design' (ZSAD). We develop methods that can predict, without any training, whether
+an architecture will achieve a relatively high test or training error on a task after training. We
+then go on to explain the error in terms of the architecture definition itself and develop tools for
+modifying the architecture based on this explanation. This confers an unprecedented level of control
+on the deep learning practitioner. They can make informed design decisions before the first line
+of code is written, even for tasks for which no prior art exists. Our first major contribution is to
+show that the 'degree of nonlinearity' of a neural architecture is a key causal driver behind its
+performance, and a primary aspect of the architecture's model complexity. We introduce the 'nonlinearity
+coefficient' (NLC), a scalar metric for measuring nonlinearity. Via extensive empirical study,
+we show that the value of the NLC in the architecture's randomly initialized state before training
+is a powerful predictor of test error after training and that attaining a right-sized NLC is essential
+for attaining an optimal test error. The NLC is also conceptually simple, well-defined for any feedforward
+network, easy and cheap to compute, has extensive theoretical, empirical and conceptual grounding,
+follows instructively from the architecture definition, and can be easily controlled via our 'nonlinearity
+normalization' algorithm. We argue that the NLC is the most powerful scalar statistic for architecture
+design specifically and neural network analysis in general. Our analysis is fueled by mean field
+theory, which we use to uncover the 'meta-distribution' of layers. Beyond the NLC, we uncover and
+flesh out a range of metrics and properties that have a significant explanatory influence on test
+and training error. We go on to explain the majority of the error variation across a wide range of randomly
+generated architectures with these metrics and properties. We compile our insights into a practical
+guide for architecture designers, which we argue can significantly shorten the trial-and-error
+phase of deep learning deployment. Our results are grounded in an experimental protocol that exceeds
+that of the vast majority of other deep learning studies in terms of carefulness and rigor. We study
+the impact of e.g. dataset, learning rate, floating-point precision, loss function, statistical
+estimation error and batch inter-dependency on performance and other key properties. We promote
+research practices that we believe can significantly accelerate progress in architecture design
+research. 

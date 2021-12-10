@@ -1,0 +1,20 @@
+We provide the first polynomial-sample and polynomial-time algorithm for learning tree-structured
+Ising models. In particular, we show that $n$-variable tree-structured Ising models can be learned
+computationally-efficiently to within total variation distance~$\epsilon$ from an optimal
+$O(n \log n/\epsilon^2)$ samples, where $O(.)$ hides an absolute constant which does not depend
+on the model being learned -- neither its tree nor the magnitude of its edge strengths, on which we
+place no assumptions. Our guarantees hold, in fact, for the celebrated Chow-Liu [1968] algorithm,
+using the plug-in estimator for mutual information. While this (or any other) algorithm may fail
+to identify the structure of the underlying model correctly from a finite sample, we show that it
+will still learn a tree-structured model that is close to the true one in TV distance, a guarantee
+called "proper learning." Prior to our work there were no known sample- and time-efficient algorithms
+for learning (properly or non-properly) arbitrary tree-structured graphical models. In particular,
+our guarantees cannot be derived from known results for the Chow-Liu algorithm and the ensuing literature
+on learning graphical models, including a recent renaissance of algorithms on this learning challenge,
+which only yield asymptotic consistency results, or sample-inefficient and/or time-inefficient
+algorithms, unless further assumptions are placed on the graphical model, such as bounds on the
+"strengths" of the model's edges. While we establish guarantees for a widely known and simple algorithm,
+the analysis that this algorithm succeeds is quite complex, requiring a hierarchical classification
+of the edges into layers with different reconstruction guarantees, depending on their strength,
+combined with delicate uses of the subadditivity of the squared Hellinger distance over graphical
+models to control the error accumulation. 

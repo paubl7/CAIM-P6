@@ -1,0 +1,19 @@
+Markov decision processes (MDPs) are used to model stochastic systems in many applications. Several
+efficient algorithms to compute optimal policies have been studied in the literature, including
+value iteration (VI) and policy iteration. However, these do not scale well especially when the
+discount factor for the infinite horizon discounted reward, $\lambda$, gets close to $1$. In particular,
+the running time scales as $O \left( 1/(1-\lambda) \right)$ for these algorithms. In this paper,
+our goal is to design new algorithms that scale better than previous approaches when $\lambda$ approaches
+$1$. Our main contribution is to present a connection between VI and gradient descent and adapt the
+ideas of acceleration and momentum in convex optimization to design faster algorithms for MDPs.
+We prove theoretical guarantees of a faster convergence of our algorithms for the computation of
+the value function of a policy, where the running times of our algorithms scale as $O \left( 1/\sqrt{1-\lambda}
+\right)$ for reversible MDP instances. The improvement is quite analogous to Nesterov's acceleration
+and momentum in convex optimization. We also provide a lower bound on the convergence properties
+of any first-order algorithm for solving MDPs, presenting a family of MDPs instances for which no
+algorithm can converge faster than VI when the number of iterations is smaller than the number of
+states. We introduce a Safe Accelerated Value Iteration (S-AVI), which alternates between accelerated
+updates and value iteration updates. Our algorithm S-AVI is worst-case optimal and retains the
+theoretical convergence properties of VI while exhibiting strong empirical performances, providing
+significant speedups compared to classical approaches (up to one order of magnitude in many cases)
+for a large test bed of MDP instances. 

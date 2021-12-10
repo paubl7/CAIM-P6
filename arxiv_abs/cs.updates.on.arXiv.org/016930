@@ -1,0 +1,18 @@
+Sparse matrix-vector and matrix-matrix multiplication (SpMV and SpMM) are fundamental in both
+conventional (graph analytics, scientific computing) and emerging (sparse DNN, GNN) domains.
+Workload-balancing and parallel-reduction are widely-used design principles for efficient
+SpMV. However, prior work fails to resolve how to implement and adaptively use the two principles
+for SpMV/MM. To overcome this obstacle, we first complete the implementation space with optimizations
+by filling three missing pieces in prior work, including: (1) We show that workload-balancing and
+parallel-reduction can be combined through a segment-reduction algorithm implemented with SIMD-shuffle
+primitives. (2) We show that parallel-reduction can be implemented in SpMM through loading the
+dense-matrix rows with vector memory operations. (3) We show that vectorized loading of sparse
+rows, being a part of the benefit of parallel-reduction, can co-exist with sequential-reduction
+in SpMM through temporally caching sparse-matrix elements in the shared memory. In terms of adaptive
+use, we analyze how the benefit of two principles change with two characteristics from the input
+data space: the diverse sparsity pattern and dense-matrix width. We find the benefit of the two principles
+fades along with the increased total workload, i.e. the increased dense-matrix width. We also identify,
+for SpMV and SpMM, different sparse-matrix features that impact workload-balancing effectiveness.
+Our design consistently exceeds cuSPARSE by 1.07-1.57x on different GPUs and dense matrix width,
+and the kernel selection rules involve 5-12% performance loss compared with optimal choices. Our
+kernel is being integrated into popular graph learning frameworks to accelerate GNN training.

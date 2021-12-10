@@ -1,0 +1,18 @@
+In this paper, we target on advancing the performance in facial expression recognition (FER) by
+exploiting omni-supervised learning. The current state of the art FER approaches usually aim to
+recognize facial expressions in a controlled environment by training models with a limited number
+of samples. To enhance the robustness of the learned models for various scenarios, we propose to
+perform omni-supervised learning by exploiting the labeled samples together with a large number
+of unlabeled data. Particularly, we first employ MS-Celeb-1M as the facial-pool where around 5,822K
+unlabeled facial images are included. Then, a primitive model learned on a small number of labeled
+samples is adopted to select samples with high confidence from the facial-pool by conducting feature-based
+similarity comparison. We find the new dataset constructed in such an omni-supervised manner can
+significantly improve the generalization ability of the learned FER model and boost the performance
+consequently. However, as more training samples are used, more computation resources and training
+time are required, which is usually not affordable in many circumstances. To relieve the requirement
+of computational resources, we further adopt a dataset distillation strategy to distill the target
+task-related knowledge from the new mined samples and compressed them into a very small set of images.
+This distilled dataset is capable of boosting the performance of FER with few additional computational
+cost introduced. We perform extensive experiments on five popular benchmarks and a newly constructed
+dataset, where consistent gains can be achieved under various settings using the proposed framework.
+We hope this work will serve as a solid baseline and help ease future research in FER. 

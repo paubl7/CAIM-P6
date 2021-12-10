@@ -1,0 +1,18 @@
+Linear discriminant analysis (LDA) based classifiers tend to falter in many practical settings
+where the training data size is smaller than, or comparable to, the number of features. As a remedy,
+different regularized LDA (RLDA) methods have been proposed. These methods may still perform poorly
+depending on the size and quality of the available training data. In particular, the test data deviation
+from the training data model, for example, due to noise contamination, can cause severe performance
+degradation. Moreover, these methods commit further to the Gaussian assumption (upon which LDA
+is established) to tune their regularization parameters, which may compromise accuracy when dealing
+with real data. To address these issues, we propose a doubly regularized LDA classifier that we denote
+as R2LDA. In the proposed R2LDA approach, the RLDA score function is converted into an inner product
+of two vectors. By substituting the expressions of the regularized estimators of these vectors,
+we obtain the R2LDA score function that involves two regularization parameters. To set the values
+of these parameters, we adopt three existing regularization techniques; the constrained perturbation
+regularization approach (COPRA), the bounded perturbation regularization (BPR) algorithm,
+and the generalized cross-validation (GCV) method. These methods are used to tune the regularization
+parameters based on linear estimation models, with the sample covariance matrix's square root
+being the linear operator. Results obtained from both synthetic and real data demonstrate the consistency
+and effectiveness of the proposed R2LDA approach, especially in scenarios involving test data
+contaminated with noise that is not observed during the training phase. 

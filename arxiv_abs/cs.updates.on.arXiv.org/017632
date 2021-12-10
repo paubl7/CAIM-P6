@@ -1,0 +1,19 @@
+With the growing use of ML in highly consequential domains, quantifying disparity with respect
+to protected attributes, e.g., gender, race, etc., is important. While quantifying disparity
+is essential, sometimes the needs of an occupation may require the use of certain features that are
+critical in a way that any disparity that can be explained by them might need to be exempted. E.g.,
+in hiring a software engineer for a safety-critical application, coding-skills may be weighed
+strongly, whereas name, zip code, or reference letters may be used only to the extent that they do
+not add disparity. In this work, we propose an information-theoretic decomposition of the total
+disparity (a quantification inspired from counterfactual fairness) into two components: a non-exempt
+component which quantifies the part that cannot be accounted for by the critical features, and an
+exempt component that quantifies the remaining disparity. This decomposition allows one to check
+if the disparity arose purely due to the critical features (inspired from the business necessity
+defense of disparate impact law) and also enables selective removal of the non-exempt component
+if desired. We arrive at this decomposition through canonical examples that lead to a set of desirable
+properties (axioms) that a measure of non-exempt disparity should satisfy. Our proposed measure
+satisfies all of them. Our quantification bridges ideas of causality, Simpson's paradox, and a
+body of work from information theory called Partial Information Decomposition. We also obtain
+an impossibility result showing that no observational measure can satisfy all the desirable properties,
+leading us to relax our goals and examine observational measures that satisfy only some of them.
+We perform case studies to show how one can audit/train models while reducing non-exempt disparity.

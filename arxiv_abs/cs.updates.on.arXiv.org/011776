@@ -1,0 +1,20 @@
+Dynamically typed languages such as JavaScript and Python have emerged as the most popular programming
+languages in use. Important benefits can accrue from including type annotations in dynamically
+typed programs. This approach to gradual typing is exemplified by the TypeScript programming system
+which allows programmers to specify partially typed programs, and then uses static analysis to
+infer the remaining types. However, in general, the effectiveness of static type inference is limited
+and depends on the complexity of the program's structure and the initial type annotations. As a result,
+there is a strong motivation for new approaches that can advance the state of the art in statically
+predicting types in dynamically typed programs, and that do so with acceptable performance for
+use in interactive programming environments. Previous work has demonstrated the promise of probabilistic
+type inference using deep learning. In this paper, we advance past work by introducing a range of
+graph neural network (GNN) models that operate on a novel type flow graph (TFG) representation.
+The TFG represents an input program's elements as graph nodes connected with syntax edges and data
+flow edges, and our GNN models are trained to predict the type labels in the TFG for a given input program.
+We study different design choices for our GNN models for the 100 most common types in our evaluation
+dataset, and show that our best two GNN configurations for accuracy achieve a top-1 accuracy of 87.76%
+and 86.89% respectively, outperforming the two most closely related deep learning type inference
+approaches from past work -- DeepTyper with a top-1 accuracy of 84.62% and LambdaNet with a top-1
+accuracy of 79.45%. Further, the average inference throughputs of those two configurations are
+353.8 and 1,303.9 files/second, compared to 186.7 files/second for DeepTyper and 1,050.3 files/second
+for LambdaNet. 

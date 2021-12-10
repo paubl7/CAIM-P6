@@ -1,0 +1,19 @@
+Galaxy clusters identified from the Sunyaev Zel'dovich (SZ) effect are a key ingredient in multi-wavelength
+cluster-based cosmology. We present a comparison between two methods of cluster identification:
+the standard Matched Filter (MF) method in SZ cluster finding and a method using Convolutional Neural
+Networks (CNN). We further implement and show results for a `combined' identifier. We apply the
+methods to simulated millimeter maps for several observing frequencies for an SPT-3G-like survey.
+There are some key differences between the methods. The MF method requires image pre-processing
+to remove point sources and a model for the noise, while the CNN method requires very little pre-processing
+of images. Additionally, the CNN requires tuning of hyperparameters in the model and takes as input,
+cutout images of the sky. Specifically, we use the CNN to classify whether or not an 8 arcmin $\times$
+8 arcmin cutout of the sky contains a cluster. We compare differences in purity and completeness.
+The MF signal-to-noise ratio depends on both mass and redshift. Our CNN, trained for a given mass
+threshold, captures a different set of clusters than the MF, some of which have SNR below the MF detection
+threshold. However, the CNN tends to mis-classify cutouts whose clusters are located near the edge
+of the cutout, which can be mitigated with staggered cutouts. We leverage the complementarity of
+the two methods, combining the scores from each method for identification. The purity and completeness
+of the MF alone are both 0.61, assuming a standard detection threshold. The purity and completeness
+of the CNN alone are 0.59 and 0.61. The combined classification method yields 0.60 and 0.77, a significant
+increase for completeness with a modest decrease in purity. We advocate for combined methods that
+increase the confidence of many lower signal-to-noise clusters. 

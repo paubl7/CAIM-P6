@@ -1,0 +1,18 @@
+This paper presents a meta-learning framework for few-shots One-Class Classification (OCC) at
+test-time, a setting where labeled examples are only available for the positive class, and no supervision
+is given for the negative example. We consider that we have a set of `one-class classification' objective-tasks
+with only a small set of positive examples available for each task, and a set of training tasks with
+full supervision (i.e. highly imbalanced classification). We propose an approach using order-equivariant
+networks to learn a 'meta' binary-classifier. The model will take as input an example to classify
+from a given task, as well as the corresponding supervised set of positive examples for this OCC task.
+Thus, the output of the model will be 'conditioned' on the available positive example of a given task,
+allowing to predict on new tasks and new examples without labeled negative examples. In this paper,
+we are motivated by an astronomy application. Our goal is to identify if stars belong to a specific
+stellar group (the 'one-class' for a given task), called \textit{stellar streams}, where each
+stellar stream is a different OCC-task. We show that our method transfers well on unseen (test) synthetic
+streams, and outperforms the baselines even though it is not retrained and accesses a much smaller
+part of the data per task to predict (only positive supervision). We see however that it doesn't transfer
+as well on the real stream GD-1. This could come from intrinsic differences from the synthetic and
+real stream, highlighting the need for consistency in the 'nature' of the task for this method. However,
+light fine-tuning improve performances and outperform our baselines. Our experiments show encouraging
+results to further explore meta-learning methods for OCC tasks. 

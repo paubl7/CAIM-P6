@@ -1,0 +1,20 @@
+Chest radiograph (CXR) interpretation in pediatric patients is error-prone and requires a high
+level of understanding of radiologic expertise. Recently, deep convolutional neural networks
+(D-CNNs) have shown remarkable performance in interpreting CXR in adults. However, there is a lack
+of evidence indicating that D-CNNs can recognize accurately multiple lung pathologies from pediatric
+CXR scans. In particular, the development of diagnostic models for the detection of pediatric chest
+diseases faces significant challenges such as (i) lack of physician-annotated datasets and (ii)
+class imbalance problems. In this paper, we retrospectively collect a large dataset of 5,017 pediatric
+CXR scans, for which each is manually labeled by an experienced radiologist for the presence of 10
+common pathologies. A D-CNN model is then trained on 3,550 annotated scans to classify multiple
+pediatric lung pathologies automatically. To address the high-class imbalance issue, we propose
+to modify and apply "Distribution-Balanced loss" for training D-CNNs which reshapes the standard
+Binary-Cross Entropy loss (BCE) to efficiently learn harder samples by down-weighting the loss
+assigned to the majority classes. On an independent test set of 777 studies, the proposed approach
+yields an area under the receiver operating characteristic (AUC) of 0.709 (95% CI, 0.690-0.729).
+The sensitivity, specificity, and F1-score at the cutoff value are 0.722 (0.694-0.750), 0.579
+(0.563-0.595), and 0.389 (0.373-0.405), respectively. These results significantly outperform
+previous state-of-the-art methods on most of the target diseases. Moreover, our ablation studies
+validate the effectiveness of the proposed loss function compared to other standard losses, e.g.,
+BCE and Focal Loss, for this learning task. Overall, we demonstrate the potential of D-CNNs in interpreting
+pediatric CXRs. 

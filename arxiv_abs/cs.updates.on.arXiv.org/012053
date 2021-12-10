@@ -1,0 +1,19 @@
+Autonomous vehicles need to estimate the relative poses, i.e., position and orientation, of the
+surrounding vehicles on the road with at least 50 Hz rate and cm-level accuracy for platooning and
+collision avoidance applications. The LIDAR/camera solutions currently used for vehicle pose
+estimation do not satisfy these rate and accuracy requirements, necessitating complementary
+technologies. Vehicular visible light positioning (VLP) is a highly suitable complementary technology
+due to its high rate and high accuracy, exploiting the line-of-sight propagation feature of the
+visible light communication (VLC) signals from LED head/tail lights. However, existing vehicular
+VLP solutions impose restrictive requirements, e.g., high-bandwidth circuit, base station and
+VLC waveform constraints, and work for limited relative vehicle orientations, thus, cannot be
+extended for pose estimation. This paper proposes a VLP-based vehicle pose estimation (VLP-VPE)
+solution that eliminates these restrictive requirements by a novel VLC receiver design and a novel
+pose estimation algorithm. The VLC receiver, named QRX, is low-cost/size, and enables high-rate
+VLC and high-accuracy angle-of-arrival sensing, simultaneously, via the usage of a quadrant photodiode.
+The estimation algorithm first uses two of the designed QRXs to determine the positions of two head/tail
+light VLC transmitters on a neighbouring vehicle via triangulation, and then determines the 2D
+pose of the vehicle based on these two positions. Sensitivity analyses and simulations using traffic
+data from the Simulation of Urban Mobility (SUMO) demonstrate that the proposed solution performs
+pose estimation at cm-level accuracy and kHz rate under realistic road and channel conditions,
+demonstrating its eligibility for platooning and collision avoidance applications. 

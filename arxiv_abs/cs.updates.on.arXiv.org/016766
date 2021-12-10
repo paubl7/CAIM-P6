@@ -1,0 +1,19 @@
+Kernel segmentation aims at partitioning a data sequence into several non-overlapping segments
+that may have nonlinear and complex structures. In general, it is formulated as a discrete optimization
+problem with combinatorial constraints. A popular algorithm for optimally solving this problem
+is dynamic programming (DP), which has quadratic computation and memory requirements. Given that
+sequences in practice are too long, this algorithm is not a practical approach. Although many heuristic
+algorithms have been proposed to approximate the optimal segmentation, they have no guarantee
+on the quality of their solutions. In this paper, we take a differentiable approach to alleviate
+the aforementioned issues. First, we introduce a novel sigmoid-based regularization to smoothly
+approximate the combinatorial constraints. Combining it with objective of the balanced kernel
+clustering, we formulate a differentiable model termed Kernel clustering with sigmoid-based
+regularization (KCSR), where the gradient-based algorithm can be exploited to obtain the optimal
+segmentation. Second, we develop a stochastic variant of the proposed model. By using the stochastic
+gradient descent algorithm, which has much lower time and space complexities, for optimization,
+the second model can perform segmentation on overlong data sequences. Finally, for simultaneously
+segmenting multiple data sequences, we slightly modify the sigmoid-based regularization to further
+introduce an extended variant of the proposed model. Through extensive experiments on various
+types of data sequences performances of our models are evaluated and compared with those of the existing
+methods. The experimental results validate advantages of the proposed models. Our Matlab source
+code is available on github. 

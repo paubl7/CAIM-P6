@@ -1,0 +1,18 @@
+Spectral clustering techniques are valuable tools in signal processing and machine learning for
+partitioning complex data sets. The effectiveness of spectral clustering stems from constructing
+a non-linear embedding based on creating a similarity graph and computing the spectral decomposition
+of the Laplacian matrix. However, spectral clustering methods fail to scale to large data sets because
+of high computational cost and memory usage. A popular approach for addressing these problems utilizes
+the Nystrom method, an efficient sampling-based algorithm for computing low-rank approximations
+to large positive semi-definite matrices. This paper demonstrates how the previously popular
+approach of Nystrom-based spectral clustering has severe limitations. Existing time-efficient
+methods ignore critical information by prematurely reducing the rank of the similarity matrix
+associated with sampled points. Also, current understanding is limited regarding how utilizing
+the Nystrom approximation will affect the quality of spectral embedding approximations. To address
+the limitations, this work presents a principled spectral clustering algorithm that exploits
+spectral properties of the similarity matrix associated with sampled points to regulate accuracy-efficiency
+trade-offs. We provide theoretical results to reduce the current gap and present numerical experiments
+with real and synthetic data. Empirical results demonstrate the efficacy and efficiency of the
+proposed method compared to existing spectral clustering techniques based on the Nystrom method
+and other efficient methods. The overarching goal of this work is to provide an improved baseline
+for future research directions to accelerate spectral clustering. 

@@ -1,0 +1,19 @@
+Neural backdoors represent one primary threat to the security of deep learning systems. The intensive
+research on this subject has produced a plethora of attacks/defenses, resulting in a constant arms
+race. However, due to the lack of evaluation benchmarks, many critical questions remain largely
+unexplored: (i) How effective, evasive, or transferable are different attacks? (ii) How robust,
+utility-preserving, or generic are different defenses? (iii) How do various factors (e.g., model
+architectures) impact their performance? (iv) What are the best practices (e.g., optimization
+strategies) to operate such attacks/defenses? (v) How can the existing attacks/defenses be further
+improved? To bridge the gap, we design and implement TROJANZOO, the first open-source platform
+for evaluating neural backdoor attacks/defenses in a unified, holistic, and practical manner.
+Thus, it has incorporated 12 representative attacks, 15 state-of-the-art defenses, 6 attack performance
+metrics, 10 defense utility metrics, as well as rich tools for in-depth analysis of attack-defense
+interactions. Leveraging TROJANZOO, we conduct a systematic study of existing attacks/defenses,
+leading to a number of interesting findings: (i) different attacks manifest various trade-offs
+among multiple desiderata (e.g., effectiveness, evasiveness, and transferability); (ii) one-pixel
+triggers often suffice; (iii) optimizing trigger patterns and trojan models jointly improves
+both attack effectiveness and evasiveness; (iv) sanitizing trojan models often introduces new
+vulnerabilities; (v) most defenses are ineffective against adaptive attacks, but integrating
+complementary ones significantly enhances defense robustness. We envision that such findings
+will help users select the right defense solutions and facilitate future research on neural backdoors.

@@ -1,0 +1,18 @@
+Purpose: Colorectal cancer (CRC) is the second most common cause of cancer mortality worldwide.
+Colonoscopy is a widely used technique for colon screening and polyp lesions diagnosis. Nevertheless,
+manual screening using colonoscopy suffers from a substantial miss rate of polyps and is an overwhelming
+burden for endoscopists. Computer-aided diagnosis (CAD) for polyp detection has the potential
+to reduce human error and human burden. However, current polyp detection methods based on object
+detection framework need many handcrafted pre-processing and post-processing operations or
+user guidance that require domain-specific knowledge. Methods: In this paper, we propose a convolution
+in transformer (COTR) network for end-to-end polyp detection. Motivated by the detection transformer
+(DETR), COTR is constituted by a CNN for feature extraction, transformer encoder layers interleaved
+with convolutional layers for feature encoding and recalibration, transformer decoder layers
+for object querying, and a feed-forward network for detection prediction. Considering the slow
+convergence of DETR, COTR embeds convolution layers into transformer encoder for feature reconstruction
+and convergence acceleration. Results: Experimental results on two public polyp datasets show
+that COTR achieved 91.49\% precision, 82.69% sensitivity, and 86.87% F1-score on the ETIS-LARIB,
+and 91.67% precision, 93.54% sensitivity, and 92.60% F1-score on the CVC-ColonDB. Conclusion:
+This study proposed an end to end detection method based on detection transformer for colorectal
+polyp detection. Experimental results on ETIS-LARIB and CVC-ColonDB dataset demonstrated that
+the proposed model achieved comparable performance against state-of-the-art methods. 

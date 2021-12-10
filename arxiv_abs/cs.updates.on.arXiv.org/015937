@@ -1,0 +1,18 @@
+A common task in scientific computing is the derivation of data. This workflow extracts the most
+important information from large input data and stores it in smaller derived data objects. The derived
+data objects can then be used for further analysis tasks. Typically, those workflows use distributed
+storage and computing resources. A straightforward configuration of storage media would be low
+cost tape storage and higher cost disk storage. The large, infrequently accessed input data is stored
+on tape storage. The smaller, frequently accessed derived data is stored on disk storage. In a best
+case scenario, the large input data is only accessed very infrequently and in a well planned pattern.
+However, practice shows that often the data has to be processed continuously and unpredictably.
+This can significantly reduce tape storage performance. A common approach to counter this is storing
+copies of the large input data on disk storage. This contribution evaluates an approach that uses
+cloud storage resources to serve as a flexible cache or buffer depending on the computational workflow.
+The proposed model is elaborated for the case of continuously processed data. For the evaluation,
+a simulation was developed, which can be used to evaluate models related to storage and network resources.
+We show that using commercial cloud storage can reduce the on-premises disk storage requirements,
+while maintaining an equal throughput of jobs. Moreover, the key metrics of the model are discussed
+and an approach is described that uses the simulation to assist with the decision process of using
+commercial cloud storage. The goal is to investigate approaches and propose new evaluation methods
+to overcome the future data challenges. 

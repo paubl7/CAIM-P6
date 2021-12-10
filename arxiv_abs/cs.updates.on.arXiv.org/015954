@@ -1,0 +1,18 @@
+End-to-end text-spotting, which aims to integrate detection and recognition in a unified framework,
+has attracted increasing attention due to its simplicity of the two complimentary tasks. It remains
+an open problem especially when processing arbitrarily-shaped text instances. Previous methods
+can be roughly categorized into two groups: character-based and segmentation-based, which often
+require character-level annotations and/or complex post-processing due to the unstructured
+output. Here, we tackle end-to-end text spotting by presenting Adaptive Bezier Curve Network v2
+(ABCNet v2). Our main contributions are four-fold: 1) For the first time, we adaptively fit arbitrarily-shaped
+text by a parameterized Bezier curve, which, compared with segmentation-based methods, can not
+only provide structured output but also controllable representation. 2) We design a novel BezierAlign
+layer for extracting accurate convolution features of a text instance of arbitrary shapes, significantly
+improving the precision of recognition over previous methods. 3) Different from previous methods,
+which often suffer from complex post-processing and sensitive hyper-parameters, our ABCNet v2
+maintains a simple pipeline with the only post-processing non-maximum suppression (NMS). 4) As
+the performance of text recognition closely depends on feature alignment, ABCNet v2 further adopts
+a simple yet effective coordinate convolution to encode the position of the convolutional filters,
+which leads to a considerable improvement with negligible computation overhead. Comprehensive
+experiments conducted on various bilingual (English and Chinese) benchmark datasets demonstrate
+that ABCNet v2 can achieve state-of-the-art performance while maintaining very high efficiency.

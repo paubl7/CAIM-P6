@@ -1,0 +1,19 @@
+This paper provides three nearly-optimal algorithms for scheduling $t$ jobs in the $\mathsf{CLIQUE}$
+model. First, we present a deterministic scheduling algorithm that runs in $O(\mathsf{GlobalCongestion}
++ \mathsf{dilation})$ rounds for jobs that are sufficiently efficient in terms of their memory.
+The $\mathsf{dilation}$ is the maximum round complexity of any of the given jobs, and the $\mathsf{GlobalCongestion}$
+is the total number of messages in all jobs divided by the per-round bandwidth of $n^2$ of the $\mathsf{CLIQUE}$
+model. Both are inherent lower bounds for any scheduling algorithm. Then, we present a randomized
+scheduling algorithm which runs $t$ jobs in $O(\mathsf{GlobalCongestion} + \mathsf{dilation}\cdot\log{n}+t)$
+rounds and only requires that inputs and outputs do not exceed $O(n\log n)$ bits per node, which is
+met by, e.g., almost all graph problems. Lastly, we adjust the \emph{random-delay-based} scheduling
+algorithm [Ghaffari, PODC'15] from the $\mathsf{CLIQUE}$ model and obtain an algorithm that schedules
+any $t$ jobs in $O(t / n + \mathsf{LocalCongestion} + \mathsf{dilation}\cdot\log{n})$ rounds,
+where the $\mathsf{LocalCongestion}$ relates to the congestion at a single node of the $\mathsf{CLIQUE}$.
+We compare this algorithm to the previous approaches and show their benefit. We schedule the set
+of jobs on-the-fly, without a priori knowledge of its parameters or the communication patterns
+of the jobs. In light of the inherent lower bounds, all of our algorithms are nearly-optimal. We exemplify
+the power of our algorithms by analyzing the message complexity of the state-of-the-art MIS protocol
+[Ghaffari, Gouleakis, Konrad, Mitrovic and Rubinfeld, PODC'18], and we show that we can solve $t$
+instances of MIS in $O(t + \log\log\Delta\log{n})$ rounds, that is, in $O(1)$ amortized time, for
+$t\geq \log\log\Delta\log{n}$. 

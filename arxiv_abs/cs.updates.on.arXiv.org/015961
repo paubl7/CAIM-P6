@@ -1,0 +1,20 @@
+Multi-Task Learning has emerged as a methodology in which multiple tasks are jointly learned by
+a shared learning algorithm, such as a DNN. MTL is based on the assumption that the tasks under consideration
+are related; therefore it exploits shared knowledge for improving performance on each individual
+task. Tasks are generally considered to be homogeneous, i.e., to refer to the same type of problem.
+Moreover, MTL is usually based on ground truth annotations with full, or partial overlap across
+tasks. In this work, we deal with heterogeneous MTL, simultaneously addressing detection, classification
+& regression problems. We explore task-relatedness as a means for co-training, in a weakly-supervised
+way, tasks that contain little, or even non-overlapping annotations. Task-relatedness is introduced
+in MTL, either explicitly through prior expert knowledge, or through data-driven studies. We propose
+a novel distribution matching approach, in which knowledge exchange is enabled between tasks,
+via matching of their predictions' distributions. Based on this approach, we build FaceBehaviorNet,
+the first framework for large-scale face analysis, by jointly learning all facial behavior tasks.
+We develop case studies for: i) continuous affect estimation, action unit detection, basic emotion
+recognition; ii) attribute detection, face identification. We illustrate that co-training via
+task relatedness alleviates negative transfer. Since FaceBehaviorNet learns features that encapsulate
+all aspects of facial behavior, we conduct zero-/few-shot learning to perform tasks beyond the
+ones that it has been trained for, such as compound emotion recognition. By conducting a very large
+experimental study, utilizing 10 databases, we illustrate that our approach outperforms, by large
+margins, the state-of-the-art in all tasks and in all databases, even in these which have not been
+used in its training. 

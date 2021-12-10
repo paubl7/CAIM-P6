@@ -1,0 +1,19 @@
+An optical circuit-switched network core has the potential to overcome the inherent challenges
+of a conventional electrical packet-switched core of today's compute clusters. As optical circuit
+switches (OCS) directly handle the photon beams without any optical-electrical-optical (O/E/O)
+conversion and packet processing, OCS-based network cores have the following desirable properties:
+a) agnostic to data-rate, b) negligible/zero power consumption, c) no need of transceivers, d)
+negligible forwarding latency, and e) no need for frequent upgrade. Unfortunately, OCS can only
+provide point-to-point (unicast) circuits. They do not have built-in support for one-to-many
+(multicast) communication, yet multicast is fundamental to a plethora of data-intensive applications
+running on compute clusters nowadays. In this paper, we propose Shufflecast, a novel optical network
+architecture for next-generation compute clusters that can support high-performance multicast
+satisfying all the properties of an OCS-based network core. Shufflecast leverages small fanout,
+inexpensive, passive optical splitters to connect the Top-of-rack (ToR) switch ports, ensuring
+data-rate agnostic, low-power, physical-layer multicast. We thoroughly analyze Shufflecast's
+highly scalable data plane, light-weight control plane, and graceful failure handling. Further,
+we implement a complete prototype of Shufflecast in our testbed and extensively evaluate the network.
+Shufflecast is more power-efficient than the state-of-the-art multicast mechanisms. Also, Shufflecast
+is more cost-efficient than a conventional packet-switched network. By adding Shufflecast alongside
+an OCS-based unicast network, an all-optical network core with the aforementioned desirable properties
+supporting both unicast and multicast can be realized. 

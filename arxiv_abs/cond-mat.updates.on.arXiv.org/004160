@@ -1,0 +1,19 @@
+We present a two-step method and the implemented code specifically tailored for band structure
+calculation of the small-angle moir\'{e}-pattern materials. These materials contain tens of
+thousands of atoms in a unit cell and the existing $ab~initio$ codes usually fail to do this within
+a finite amount of time without simplifying approximations. Our method can dramatically reduce
+the computational cost. Firstly, the self-consistent field calculation for ground state is performed
+with $O(N)$ Krylov subspace method implemented in OpenMX, which is an $ab~initio$ package based
+on localized pseudo-atomic orbitals (PAOs) and pseudo-potential method. Secondly, the crystal
+momentum dependent Bloch Hamiltonian is constructed from the Hamiltonian matrix elements in PAO
+basis set obtained in the first step and only selected eigenvalues of it is solved with Lanczos and
+shift-invert techniques. The computational cost increases linearly with the number of atoms per
+unit cell instead of cubically ($O(N^3)$) in other generally used $ab~initio$ packages. We obtained
+the band structures for both rigid and corrugated twisted bilayer graphene structures at $\theta=2.00^\circ$,
+$\theta=1.61^\circ$, $\theta=1.41^\circ$ and $\theta=1.08 ^\circ$ with improved accuracy
+in affordable costs both in time and computer resources. They are in good agreement with those from
+tight binding models, continuum models, and plane-wave pseudo-potential based $ab~initio$ calculations,
+as well as the experimental observations. Our method has taken the advantages of $O(N)$ method,
+local atomic orbital basis method, and Lanczos technique. This will play a crucial role in other
+twisted two-dimensional materials with much more complex band structures than graphene, when
+the continuum model or effective tight-binding model is hard to construct. 

@@ -1,0 +1,20 @@
+We combine two popular optimization approaches to derive learning algorithms for generative models:
+variational optimization and evolutionary algorithms. The combination is realized for generative
+models with discrete latents by using truncated posteriors as the family of variational distributions.
+The variational parameters of truncated posteriors are sets of latent states. By interpreting
+these states as genomes of individuals and by using the variational lower bound to define a fitness,
+we can apply evolutionary algorithms to realize the variational loop. The used variational distributions
+are very flexible and we show that evolutionary algorithms can effectively and efficiently optimize
+the variational bound. Furthermore, the variational loop is generally applicable ("black box")
+with no analytical derivations required. To show general applicability, we apply the approach
+to three generative models (we use noisy-OR Bayes Nets, Binary Sparse Coding, and Spike-and-Slab
+Sparse Coding). To demonstrate effectiveness and efficiency of the novel variational approach,
+we use the standard competitive benchmarks of image denoising and inpainting. The benchmarks allow
+quantitative comparisons to a wide range of methods including probabilistic approaches, deep
+deterministic and generative networks, and non-local image processing methods. In the category
+of "zero-shot" learning (when only the corrupted image is used for training), we observed the evolutionary
+variational algorithm to significantly improve the state-of-the-art in many benchmark settings.
+For one well-known inpainting benchmark, we also observed state-of-the-art performance across
+all categories of algorithms although we only train on the corrupted image. In general, our investigations
+highlight the importance of research on optimization methods for generative models to achieve
+performance improvements. 

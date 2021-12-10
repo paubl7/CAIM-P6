@@ -1,0 +1,19 @@
+In this work, we present a new iterative exact solution algorithm for the weighted fair sequences
+problem, which is a recently introduced NP-hard sequencing problem with applications in diverse
+areas such as TV advertisement scheduling, periodic machine maintenance and real-time scheduling.
+In the problem we are given an upper bound on the allowed solution sequence length and a list of symbols.
+For each symbols, there is a positive weight and a number, which gives the minimum times the symbol
+has to occur in a feasible solution sequence. The goal is to find a feasible sequence, which minimizes
+the maximum weight-distance product, which is calculated for each consecutive appearance of each
+symbol in the sequence, including the last and first appearance in the sequence, i.e., the sequence
+is considered to be circular for the calculation of the objective function. Our proposed solution
+algorithm is based on a new mixed-integer programming model for the problem for a fixed sequence
+length. The model is enhanced with valid inequalities and variable fixings. We also develop an extended
+model, which allows the definition of an additional set of valid inequalities and present additional
+results which can allow us to skip the solution of the mixed-integer program for some sequence lengths.
+We conduct a computational study on the instances from literature to assess the efficiency of our
+newly proposed solution approach. Our approach manages to solve 404 of 440 instances to optimality
+within the given timelimit, most of them within five minutes. The previous best existing solution
+approach for the problem only managed to solve 229 of these instances, and its exactness depends
+on an unproven conjecture. Moreover, our approach is up to two magnitudes faster compared to this
+best existing solution approach. 

@@ -1,0 +1,20 @@
+Recent studies have shown that deep neural networks (DNNs) are highly vulnerable to adversarial
+attacks, including evasion and backdoor (poisoning) attacks. On the defense side, there have been
+intensive interests in both empirical and provable robustness against evasion attacks; however,
+provable robustness against backdoor attacks remains largely unexplored. In this paper, we focus
+on certifying robustness against backdoor attacks. To this end, we first provide a unified framework
+for robustness certification and show that it leads to a tight robustness condition for backdoor
+attacks. We then propose the first robust training process, RAB, to smooth the trained model and
+certify its robustness against backdoor attacks. Moreover, we evaluate the certified robustness
+of a family of "smoothed" models which are trained in a differentially private fashion, and show
+that they achieve better certified robustness bounds. In addition, we theoretically show that
+it is possible to train the robust smoothed models efficiently for simple models such as K-nearest
+neighbor classifiers, and we propose an exact smooth-training algorithm which eliminates the
+need to sample from a noise distribution. Empirically, we conduct comprehensive experiments for
+different machine learning (ML) models such as DNNs, differentially private DNNs, and K-NN models
+on MNIST, CIFAR-10 and ImageNet datasets (focusing on binary classifiers), and provide the first
+benchmark for certified robustness against backdoor attacks. In addition, we evaluate K-NN models
+on a spambase tabular dataset to demonstrate the advantages of the proposed exact algorithm. Both
+the theoretical analysis and the comprehensive benchmark on diverse ML models and datasets shed
+lights on further robust learning strategies against training time attacks or other general adversarial
+attacks. 

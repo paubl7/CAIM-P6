@@ -1,0 +1,20 @@
+Erasure codes have become an integral part of distributed storage systems as a tool for providing
+data reliability and durability under the constant threat of device failures. In such systems,
+an $[n, k]$ code over a finite field $\mathbb{F}_q$ encodes $k$ message symbols into $n$ codeword
+symbols from $\mathbb{F}_q$ which are then stored on $n$ different nodes in the system. Recent work
+has shown that significant savings in storage space can be obtained by tuning $n$ and $k$ to variations
+in device failure rates. Such a tuning necessitates code conversion: the process of converting
+already encoded data under an initial $[n^I, k^I]$ code to its equivalent under a final $[n^F, k^F]$
+code. The default approach to conversion is to reencode data, which places significant burden on
+system resources. Convertible codes are a recently proposed class of codes for enabling resource-efficient
+conversions. Existing work on convertible codes has focused on minimizing access cost, i.e., the
+number of code symbols accessed during conversion. Bandwidth, which corresponds to the amount
+of data read and transferred, is another important resource to optimize. In this paper, we initiate
+the study on the fundamental limits on bandwidth used during code conversion and present constructions
+for bandwidth-optimal convertible codes. First, we model the code conversion problem using network
+information flow graphs with variable capacity edges. Second, focusing on MDS codes and an important
+parameter regime called the merge regime, we derive tight lower bounds on the bandwidth cost of conversion.
+The derived bounds show that bandwidth cost can be significantly reduced even in regimes where access
+cost cannot be reduced as compared to the default approach. Third, we present a new construction
+for MDS convertible codes which matches the proposed lower bound and is thus bandwidth-optimal
+during conversion. 

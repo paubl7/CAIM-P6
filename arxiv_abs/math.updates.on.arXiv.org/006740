@@ -1,0 +1,19 @@
+This paper develops an efficient procedure for designing low-complexity codebooks for precoding
+in a full-dimension (FD) multiple-input multiple-output (MIMO) system with a uniform planar array
+(UPA) antenna at the transmitter (Tx) using tensor learning. In particular, instead of using statistical
+channel models, we utilize a model-free data-driven approach with foundations in machine learning
+to generate codebooks that adapt to the surrounding propagation conditions. We use a tensor representation
+of the FD-MIMO channel and exploit its properties to design quantized version of the channel precoders.
+We find the best representation of the optimal precoder as a function of Kronecker Product (KP) of
+two low-dimensional precoders, respectively corresponding to the horizontal and vertical dimensions
+of the UPA, obtained from the tensor decomposition of the channel. We then quantize this precoder
+to design product codebooks such that an average loss in mutual information due to quantization
+of channel state information (CSI) is minimized. The key technical contribution lies in exploiting
+the constraints on the precoders to reduce the product codebook design problem to an unsupervised
+clustering problem on a Cartesian Product Grassmann manifold (CPM), where the cluster centroids
+form a finite-sized precoder codebook. This codebook can be found efficiently by running a $K$-means
+clustering on the CPM. With a suitable induced distance metric on the CPM, we show that the construction
+of product codebooks is equivalent to finding the optimal set of centroids on the factor manifolds
+corresponding to the horizontal and vertical dimensions. Simulation results are presented to
+demonstrate the capability of the proposed design criterion in learning the codebooks and the attractive
+performance of the designed codebooks. 

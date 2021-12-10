@@ -1,0 +1,18 @@
+Data integrity is important for non-volatile memory (NVM) systems that maintain data even without
+power. The data integrity in NVM is possibly compromised by integrity attacks, which can be defended
+against by integrity verification via integrity trees. After NVM system failures and reboots,
+the integrity tree root is responsible for providing a trusted execution environment. However,
+the root often becomes a performance bottleneck, since updating the root requires high latency
+on the write critical path to propagate the modifications from leaf nodes to the root. The root and
+leaf nodes have to ensure the crash consistency between each other to avoid any update failures that
+potentially result in misreporting the attacks after system reboots. In this paper, we propose
+an efficient and low-latency scheme, called SCUE, to directly update the root on the SGX integrity
+tree (SIT) by overlooking the updates upon the intermediate tree nodes. The idea behind SCUE explores
+and exploits the observation that only the persistent leaf nodes and root are useful to ensure the
+integrity after system failures and reboots, due to the loss of the cached intermediate tree nodes.
+To achieve the crash consistency between root and leaf nodes, we accurately predict the updates
+upon the root and pre-update the root before the leaf nodes are modified. Moreover, the SIT root is
+difficult to be reconstructed from the leaf nodes since updating one tree node needs its parent node
+as input. We use a counter-summing approach to reconstructing the SIT from leaf nodes. Our evaluation
+results show that compared with the state-of-the-art integrity tree update schemes, our SCUE scheme
+delivers high performance while ensuring the system integrity. 

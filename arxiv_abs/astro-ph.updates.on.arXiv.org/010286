@@ -1,0 +1,20 @@
+Modelling the mass distributions of strong gravitational lenses is often necessary to use them
+as astrophysical and cosmological probes. With the high number of lens systems ($>10^5$) expected
+from upcoming surveys, it is timely to explore efficient modeling approaches beyond traditional
+MCMC techniques that are time consuming. We train a CNN on images of galaxy-scale lenses to predict
+the parameters of the SIE mass model ($x,y,e_x,e_y$, and $\theta_E$). To train the network, we simulate
+images based on real observations from the HSC Survey for the lens galaxies and from the HUDF as lensed
+galaxies. We tested different network architectures, the effect of different data sets, and using
+different input distributions of $\theta_E$. We find that the CNN performs well and obtain with
+the network trained with a uniform distribution of $\theta_E$ $>0.5"$ the following median values
+with $1\sigma$ scatter: $\Delta x=(0.00^{+0.30}_{-0.30})"$, $\Delta y=(0.00^{+0.30}_{-0.29})"
+$, $\Delta \theta_E=(0.07^{+0.29}_{-0.12})"$, $\Delta e_x = -0.01^{+0.08}_{-0.09}$ and $\Delta
+e_y = 0.00^{+0.08}_{-0.09}$. The bias in $\theta_E$ is driven by systems with small $\theta_E$.
+Therefore, when we further predict the multiple lensed image positions and time delays based on
+the network output, we apply the network to the sample limited to $\theta_E>0.8"$. In this case,
+the offset between the predicted and input lensed image positions is $(0.00_{-0.29}^{+0.29})"$
+and $(0.00_{-0.31}^{+0.32})"$ for $x$ and $y$, respectively. For the fractional difference between
+the predicted and true time delay, we obtain $0.04_{-0.05}^{+0.27}$. Our CNN is able to predict
+the SIE parameters in fractions of a second on a single CPU and with the output we can predict the image
+positions and time delays in an automated way, such that we are able to process efficiently the huge
+amount of expected lens detections in the near future. 

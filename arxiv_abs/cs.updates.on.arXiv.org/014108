@@ -1,0 +1,19 @@
+Visual surveillance aims to stably detect a foreground object using a continuous image acquired
+from a fixed camera. Recent deep learning methods based on supervised learning show superior performance
+compared to classical background subtraction algorithms. However, there is still a room for improvement
+in static foreground, dynamic background, hard shadow, illumination changes, camouflage, etc.
+In addition, most of the deep learning-based methods operates well on environments similar to training.
+If the testing environments are different from training ones, their performance degrades. As a
+result, additional training on those operating environments is required to ensure a good performance.
+Our previous work which uses spatio-temporal input data consisted of a number of past images, background
+images and current image showed promising results in different environments from training, although
+it uses a simple U-NET structure. In this paper, we propose a data augmentation technique suitable
+for visual surveillance for additional performance improvement using the same network used in
+our previous work. In deep learning, most data augmentation techniques deal with spatial-level
+data augmentation techniques for use in image classification and object detection. In this paper,
+we propose a new method of data augmentation in the spatio-temporal dimension suitable for our previous
+work. Two data augmentation methods of adjusting background model images and past images are proposed.
+Through this, it is shown that performance can be improved in difficult areas such as static foreground
+and ghost objects, compared to previous studies. Through quantitative and qualitative evaluation
+using SBI, LASIESTA, and our own dataset, we show that it gives superior performance compared to
+deep learning-based algorithms and background subtraction algorithms. 

@@ -1,0 +1,19 @@
+Motivation: Molecular interaction networks summarize complex biological processes as graphs,
+whose structure is informative of biological function at multiple scales. Simultaneously, omics
+technologies measure the variation or activity of genes, proteins, or metabolites across individuals
+or experimental conditions. Integrating the complementary viewpoints of biological networks
+and omics data is an important task in bioinformatics, but existing methods treat networks as discrete
+structures, which are intrinsically difficult to integrate with continuous node features or activity
+measures. Graph neural networks map graph nodes into a low-dimensional vector space representation,
+and can be trained to preserve both the local graph structure and the similarity between node features.
+Results: We studied the representation of transcriptional, protein-protein and genetic interaction
+networks in E. Coli and mouse using graph neural networks. We found that such representations explain
+a large proportion of variation in gene expression data, and that using gene expression data as node
+features improves the reconstruction of the graph from the embedding. We further proposed a new
+end-to-end graph feature auto-encoder which is trained on the feature reconstruction task, and
+showed that it performs better at predicting unobserved node features than auto-encoders that
+are trained on the graph reconstruction task before learning to predict node features. When applied
+to the problem of imputing missing data in single-cell RNAseq data, our graph feature auto-encoder
+outperformed a state-of-the-art imputation method that does not use protein interaction information,
+showing the benefit of integrating biological networks and omics data using graph representation
+learning. 

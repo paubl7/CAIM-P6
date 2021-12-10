@@ -1,0 +1,19 @@
+We propose a robust in-time predictor for in-hospital COVID-19 patient's probability of requiring
+mechanical ventilation. A challenge in the risk prediction for COVID-19 patients lies in the great
+variability and irregular sampling of patient's vitals and labs observed in the clinical setting.
+Existing methods have strong limitations in handling time-dependent features' complex dynamics,
+either oversimplifying temporal data with summary statistics that lose information or over-engineering
+features that lead to less robust outcomes. We propose a novel in-time risk trajectory predictive
+model to handle the irregular sampling rate in the data, which follows the dynamics of risk of performing
+mechanical ventilation for individual patients. The model incorporates the Multi-task Gaussian
+Process using observed values to learn the posterior joint multi-variant conditional probability
+and infer the missing values on a unified time grid. The temporal imputed data is fed into a multi-objective
+self-attention network for the prediction task. A novel positional encoding layer is proposed
+and added to the network for producing in-time predictions. The positional layer outputs a risk
+score at each user-defined time point during the entire hospital stay of an inpatient. We frame the
+prediction task into a multi-objective learning framework, and the risk scores at all time points
+are optimized altogether, which adds robustness and consistency to the risk score trajectory prediction.
+Our experimental evaluation on a large database with nationwide in-hospital patients with COVID-19
+also demonstrates that it improved the state-of-the-art performance in terms of AUC (Area Under
+the receiver operating characteristic Curve) and AUPRC (Area Under the Precision-Recall Curve)
+performance metrics, especially at early times after hospital admission. 

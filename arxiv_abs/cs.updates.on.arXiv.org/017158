@@ -1,0 +1,20 @@
+Machine Learning algorithms often prompt individuals to strategically modify their observable
+attributes to receive more favorable predictions. As a result, the distribution the predictive
+model is trained on may differ from the one it operates on in deployment. While such distribution
+shifts, in general, hinder accurate predictions, our work identifies a unique opportunity associated
+with shifts due to strategic responses: We show that we can use strategic responses effectively
+to recover causal relationships between the observable features and outcomes we wish to predict.
+More specifically, we study a game-theoretic model in which a principal deploys a sequence of models
+to predict an outcome of interest (e.g., college GPA) for a sequence of strategic agents (e.g., college
+applicants). In response, strategic agents invest efforts and modify their features for better
+predictions. In such settings, unobserved confounding variables can influence both an agent's
+observable features (e.g., high school records) and outcomes. Therefore, standard regression
+methods generally produce biased estimators. In order to address this issue, our work establishes
+a novel connection between strategic responses to machine learning models and instrumental variable
+(IV) regression, by observing that the sequence of deployed models can be viewed as an instrument
+that affects agents' observable features but does not directly influence their outcomes. Therefore,
+two-stage least squares (2SLS) regression can recover the causal relationships between observable
+features and outcomes. Beyond causal recovery, we can build on our 2SLS method to address two additional
+relevant optimization objectives: agent outcome maximization and predictive risk minimization.
+Finally, our numerical simulations on semi-synthetic data show that our methods significantly
+outperform OLS regression in causal relationship estimation. 

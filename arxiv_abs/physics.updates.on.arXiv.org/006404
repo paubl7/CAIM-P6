@@ -1,0 +1,19 @@
+Deep neural networks offer numerous potential applications across geoscience, for example, one
+could argue that they are the state-of-the-art method for predicting faults in seismic datasets.
+In quantitative reservoir characterization workflows, it is common to incorporate the uncertainty
+of predictions thus such subsurface models should provide calibrated probabilities and the associated
+uncertainties in their predictions. It has been shown that popular Deep Learning-based models
+are often miscalibrated, and due to their deterministic nature, provide no means to interpret the
+uncertainty of their predictions. We compare three different approaches to obtaining probabilistic
+models based on convolutional neural networks in a Bayesian formalism, namely Deep Ensembles,
+Concrete Dropout, and Stochastic Weight Averaging-Gaussian (SWAG). These methods are consistently
+applied to fault detection case studies where Deep Ensembles use independently trained models
+to provide fault probabilities, Concrete Dropout represents an extension to the popular Dropout
+technique to approximate Bayesian neural networks, and finally, we apply SWAG, a recent method
+that is based on the Bayesian inference equivalence of mini-batch Stochastic Gradient Descent.
+We provide quantitative results in terms of model calibration and uncertainty representation,
+as well as qualitative results on synthetic and real seismic datasets. Our results show that the
+approximate Bayesian methods, Concrete Dropout and SWAG, both provide well-calibrated predictions
+and uncertainty attributes at a lower computational cost when compared to the baseline Deep Ensemble
+approach. The resulting uncertainties also offer a possibility to further improve the model performance
+as well as enhancing the interpretability of the models. 

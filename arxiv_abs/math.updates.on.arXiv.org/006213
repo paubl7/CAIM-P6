@@ -1,0 +1,19 @@
+Inter-carrier interference (ICI) poses a significant challenge for OFDM joint radar-communications
+(JRC) systems in high-mobility scenarios. In this paper, we propose a novel ICI-aware sensing algorithm
+for MIMO-OFDM JRC systems to detect the presence of multiple targets and estimate their delay-Doppler-angle
+parameters. First, leveraging the observation that spatial covariance matrix is independent
+of target delays and Dopplers, we perform angle estimation via the MUSIC algorithm. For each estimated
+angle, we next formulate the radar delay-Doppler estimation as a joint carrier frequency offset
+(CFO) and channel estimation problem via an APES (amplitude and phase estimation) spatial filtering
+approach by transforming the delay-Doppler parameterized radar channel into an unstructured
+form. To account for the presence of multiple targets at a given angle, we devise an iterative interference
+cancellation based orthogonal matching pursuit (OMP) procedure, where at each iteration the generalized
+likelihood ratio test (GLRT) detector is employed to form decision statistics, providing as by-products
+the maximum likelihood estimates (MLEs) of radar channels and CFOs. In the final step, target detection
+is performed in delay-Doppler domain using target-specific, ICI-decontaminated channel estimates
+over time and frequency, where CFO estimates are utilized to resolve Doppler ambiguities, thereby
+turning ICI from foe to friend. The proposed algorithm can further exploit the ICI effect to introduce
+an additional dimension (namely, CFO) for target resolvability, which enables resolving targets
+located at the same delay-Doppler-angle cell. Simulation results illustrate the ICI exploitation
+capability of the proposed approach and showcase its superior detection and estimation performance
+in high-mobility scenarios over conventional methods. 

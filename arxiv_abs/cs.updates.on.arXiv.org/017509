@@ -1,0 +1,18 @@
+Proportional-integral-derivative (PID) control, the most common control strategy in the industry,
+always suffers from health problems resulting from external disturbances, improper tuning, etc.
+Therefore, there have been many studies on control performance assessment (CPA) and optimal tuning.
+Minimum output variance (MOV) is used as a benchmark for CPA of PID, but it is difficult to be found
+due to the associated non-convex optimization problem. For the optimal tuning, many different
+objective functions have been proposed, but few consider the stochastic disturbance rejection.
+In this paper, a multi-objective function simultaneously considering integral of absolute error
+(IAE) and MOV is proposed to optimize PID for better disturbance rejection. The non-convex problem
+and multi-objective problem are solved by teaching-learning-based optimization (TLBO). This
+stochastic optimization algorithm can guarantee a tighter lower bound for MOV due to the excellent
+capability of local optima avoidance and needs less calculation time due to the low complexity.
+Furthermore, CPA and the tuning method are extended to the PI/P cascade case. The results of several
+numerical examples of CPA problems show that TLBO can generate better MOV than existing methods
+within one second on most examples. The simulation results of the tuning method applied to two temperature
+control systems reveal that the weight of the multi-objective function can compromise other performance
+criteria such as overshoot and settling time to improve the disturbance rejection. It also indicates
+that the tuning method can be utilized to multi-stage PID control strategy to resolve the contradiction
+between disturbance rejection and other performance criteria. 

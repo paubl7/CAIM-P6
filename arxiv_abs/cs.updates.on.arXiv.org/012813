@@ -1,0 +1,19 @@
+The issue tracking system (ITS) is a rich data source for data-driven decision making. Different
+characteristics of bugs, such as severity, priority, and time to fix may be misleading. Similarly,
+these values may be subjective, e.g., severity and priority values are assigned based on the intuition
+of a user or a developer rather than a structured and well-defined procedure. Hence, we explore the
+dependency graph of the bugs and its complexity as an alternative to show the actual project evolution.
+In this work, we aim to overcome uncertainty in decision making by tracking the complexity of the
+bug dependency graph (BDG) to come up with a bug resolution policy that balances different considerations
+such as bug dependency, severity, and fixing time for the bug triaging. We model the evolution of
+BDG by mining issue tracking systems of three open-source projects for the past ten years. We first
+design a Wayback machine to examine the current bug fixing strategies, and then we define eight rule-based
+bug prioritization policies and compare their performances using ten distinct internal and external
+indices. We simulate the behavior of the ITS and trace back the effect of each policy across the history
+of the ITS. Considering the strategies related to the topology of the BDG, we are able to address bug
+prioritization problems under different scenarios. Our findings show that the network-related
+approaches are superior to the actual prioritization task in most cases. Among the selected open-source
+projects, LibreOffice triagers are the only ones who disregard the importance of the BDG, and that
+project is faced with a very dense BDG. Although we found that there is no single remedy that satisfies
+all the expectations of developers, the graph-related policies are found to be robust and deemed
+to be more suitable for bug triaging. 

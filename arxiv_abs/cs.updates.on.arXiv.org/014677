@@ -1,0 +1,20 @@
+This thesis proposes techniques aiming to make blockchain technologies and smart contract platforms
+practical by improving their scalability, latency, and privacy. This thesis starts by presenting
+the design and implementation of Chainspace, a distributed ledger that supports user defined smart
+contracts and execute user-supplied transactions on their objects. The correct execution of smart
+contract transactions is publicly verifiable. Chainspace is scalable by sharding state; it is
+secure against subsets of nodes trying to compromise its integrity or availability properties
+through Byzantine Fault Tolerance (BFT). This thesis also introduces a family of replay attacks
+against sharded distributed ledgers targeting cross-shard consensus protocols; they allow an
+attacker, with network access only, to double-spend resources with minimal efforts. We then build
+Byzcuit, a new cross-shard consensus protocol that is immune to those attacks and that is tailored
+to run at the heart of Chainspace. Next, we propose FastPay, a high-integrity settlement system
+for pre-funded payments that can be used as a financial side-infrastructure for Chainspace to support
+low-latency retail payments. This settlement system is based on Byzantine Consistent Broadcast
+as its core primitive, foregoing the expenses of full atomic commit channels (consensus). The resulting
+system has extremely low-latency for both confirmation and payment finality. Finally, this thesis
+proposes Coconut, a selective disclosure credential scheme supporting distributed threshold
+issuance, public and private attributes, re-randomization, and multiple unlinkable selective
+attribute revelations. It ensures authenticity and availability even when a subset of credential
+issuing authorities are malicious or offline, and natively integrates with Chainspace to enable
+a number of scalable privacy-preserving applications. 

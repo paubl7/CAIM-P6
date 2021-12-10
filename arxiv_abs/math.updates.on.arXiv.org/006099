@@ -1,0 +1,20 @@
+The thermal radiative transfer (TRT) equations form a system that describes the propagation and
+collisional interactions of photons. Computing accurate and efficient numerical solutions to
+TRT is challenging for several reasons, the first of which is that TRT is defined on a high-dimensional
+phase space. In order to reduce the dimensionality, classical approaches such as the P$_N$ (spherical
+harmonics) or the S$_N$ (discrete ordinates) ansatz are often used in the literature. In this work,
+we introduce a novel approach: the hybrid discrete (H$^T_N$) approximation. This approach acquires
+desirable properties of both P$_N$ and S$_N$, and indeed reduces to each of these approximations
+in various limits. We prove that H$^T_N$ results in a system of hyperbolic equations. Another challenge
+in solving the TRT system is the inherent stiffness due to the large timescale separation between
+propagation and collisions. This can be partially overcome via implicit time integration, although
+fully implicit methods may become expensive due to the strong nonlinearity and system size. On the
+other hand, explicit time-stepping schemes that are not also asymptotic-preserving in the highly
+collisional limit require resolving the mean-free path between collisions. We develop a method
+that is based on a discontinuous Galerkin scheme in space, coupled with a semi-implicit scheme in
+time. In particular, we make use of an explicit Runge-Kutta scheme for the streaming term and an implicit
+Euler scheme for the material coupling term. Furthermore, in order to solve the material energy
+equation implicitly after each step, we linearize the temperature term; this avoids the need for
+an iterative procedure. In order to reduce unphysical oscillation, we apply a slope limiter after
+each time step. Finally, we conduct several numerical experiments to verify the accuracy, efficiency,
+and robustness of the method. 

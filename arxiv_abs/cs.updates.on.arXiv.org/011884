@@ -1,0 +1,20 @@
+Recognizing multiple labels of an image is a practical yet challenging task, and remarkable progress
+has been achieved by searching for semantic regions and exploiting label dependencies. However,
+current works utilize RNN/LSTM to implicitly capture sequential region/label dependencies,
+which cannot fully explore mutual interactions among the semantic regions/labels and do not explicitly
+integrate label co-occurrences. In addition, these works require large amounts of training samples
+for each category, and they are unable to generalize to novel categories with limited samples. To
+address these issues, we propose a knowledge-guided graph routing (KGGR) framework, which unifies
+prior knowledge of statistical label correlations with deep neural networks. The framework exploits
+prior knowledge to guide adaptive information propagation among different categories to facilitate
+multi-label analysis and reduce the dependency of training samples. Specifically, it first builds
+a structured knowledge graph to correlate different labels based on statistical label co-occurrence.
+Then, it introduces the label semantics to guide learning semantic-specific features to initialize
+the graph, and it exploits a graph propagation network to explore graph node interactions, enabling
+learning contextualized image feature representations. Moreover, we initialize each graph node
+with the classifier weights for the corresponding label and apply another propagation network
+to transfer node messages through the graph. In this way, it can facilitate exploiting the information
+of correlated labels to help train better classifiers. We conduct extensive experiments on the
+traditional multi-label image recognition (MLR) and multi-label few-shot learning (ML-FSL)
+tasks and show that our KGGR framework outperforms the current state-of-the-art methods by sizable
+margins on the public benchmarks. 

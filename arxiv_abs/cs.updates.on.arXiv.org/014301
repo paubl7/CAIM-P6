@@ -1,0 +1,20 @@
+Inspired by the progress of the End-to-End approach [1], this paper systematically studies the
+effects of Number of Filters of convolutional layers on the model prediction accuracy of CNN+RNN
+(Convolutional Neural Networks adding to Recurrent Neural Networks) for ASR Models (Automatic
+Speech Recognition). Experimental results show that only when the CNN Number of Filters exceeds
+a certain threshold value is adding CNN to RNN able to improve the performance of the CNN+RNN speech
+recognition model, otherwise some parameter ranges of CNN can render it useless to add the CNN to
+the RNN model. Our results show a strong dependency of word accuracy on the Number of Filters of convolutional
+layers. Based on the experimental results, the paper suggests a possible hypothesis of Sound-2-Vector
+Embedding (Convolutional Embedding) to explain the above observations. Based on this Embedding
+hypothesis and the optimization of parameters, the paper develops an End-to-End speech recognition
+system which has a high word accuracy but also has a light model-weight. The developed LVCSR (Large
+Vocabulary Continuous Speech Recognition) model has achieved quite a high word accuracy of 90.2%
+only by its Acoustic Model alone, without any assistance from intermediate phonetic representation
+and any Language Model. Its acoustic model contains only 4.4 million weight parameters, compared
+to the 35~68 million acoustic-model weight parameters in DeepSpeech2 [2] (one of the top state-of-the-art
+LVCSR models) which can achieve a word accuracy of 91.5%. The light-weighted model is good for improving
+the transcribing computing efficiency and also useful for mobile devices, Driverless Vehicles,
+etc. Our model weight is reduced to ~10% the size of DeepSpeech2, but our model accuracy remains close
+to that of DeepSpeech2. If combined with a Language Model, our LVCSR system is able to achieve 91.5%
+word accuracy. 

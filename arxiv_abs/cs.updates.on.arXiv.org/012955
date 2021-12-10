@@ -1,0 +1,19 @@
+We tackle human image synthesis, including human motion imitation, appearance transfer, and novel
+view synthesis, within a unified framework. It means that the model, once being trained, can be used
+to handle all these tasks. The existing task-specific methods mainly use 2D keypoints to estimate
+the human body structure. However, they only express the position information with no abilities
+to characterize the personalized shape of the person and model the limb rotations. In this paper,
+we propose to use a 3D body mesh recovery module to disentangle the pose and shape. It can not only model
+the joint location and rotation but also characterize the personalized body shape. To preserve
+the source information, such as texture, style, color, and face identity, we propose an Attentional
+Liquid Warping GAN with Attentional Liquid Warping Block (AttLWB) that propagates the source information
+in both image and feature spaces to the synthesized reference. Specifically, the source features
+are extracted by a denoising convolutional auto-encoder for characterizing the source identity
+well. Furthermore, our proposed method can support a more flexible warping from multiple sources.
+To further improve the generalization ability of the unseen source images, a one/few-shot adversarial
+learning is applied. In detail, it firstly trains a model in an extensive training set. Then, it finetunes
+the model by one/few-shot unseen image(s) in a self-supervised way to generate high-resolution
+(512 x 512 and 1024 x 1024) results. Also, we build a new dataset, namely iPER dataset, for the evaluation
+of human motion imitation, appearance transfer, and novel view synthesis. Extensive experiments
+demonstrate the effectiveness of our methods in terms of preserving face identity, shape consistency,
+and clothes details. All codes and dataset are available on https://impersonator.org/work/impersonator-plus-plus.html.

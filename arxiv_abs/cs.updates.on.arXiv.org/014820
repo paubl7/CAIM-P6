@@ -1,0 +1,18 @@
+The hatching process also influences the success of hatching eggs beside the initial egg factor.
+So that the results have a large percentage of hatching, it is necessary to check the development
+of the embryo at the beginning of the hatching. This process aims to sort eggs that have embryos to
+remain hatched until the end. Maximum checking is done the first week in the hatching period. This
+study aims to detect the presence of embryos in eggs. Detection of the existence of embryos is processed
+using segmentation. Egg images are segmented using the K-means algorithm based on Lab color images.
+The results of the images acquisition are converted into Lab color space images. The results of Lab
+color space images are processed using K-means for each color. The K-means process uses cluster
+k=3, where this cluster divided the image into three parts, namely background, eggs, and yolk eggs.
+Yolk eggs are part of eggs that have embryonic characteristics. This study applies the concept of
+color in the initial segmentation and grayscale in the final stages. The results of the initial phase
+show that the image segmentation results using k-means clustering based on Lab color space provide
+a grouping of three parts. At the grayscale image processing stage, the results of color image segmentation
+are processed with grayscaling, image enhancement, and morphology. Thus, it seems clear that the
+yolk segmented shows the presence of egg embryos. Based on this process and results, K-means segmentation
+based on Lab color space can be used for the initial stages of the embryo detection process. The evaluation
+uses MSE and MSSIM, with values of 0.0486 and 0.9979; this can be used as a reference that the results
+obtained can indicate the detection of embryos in egg yolk. 

@@ -1,0 +1,19 @@
+The counting of pairs of galaxies or stars according to their distance is at the core of all real-space
+correlation analyzes performed in astrophysics and cosmology. The next stage upcoming ground
+(LSST) and space (Euclid) surveys will measure properties of billions of galaxies and tomographic
+shells will contain hundreds of millions of objects. The combinatorics of the pair count challenges
+our ability to perform such counting in a minute-scale time which is the order of magnitude useful
+for optimizing analyses through the intensive use of simulations. The problem is not CPU intensive
+and is only limited by an efficient access to the data, hence it belongs to the "big data" category.
+We use the popular Apache Spark framework to address it and design an efficient high-throughput
+algorithm to deal with hundreds of millions to billions of input data. To optimize it, we revisit
+the question of nonhierarchical sphere pixelization based on cube symmetries and develop a new
+one that we call the "Similar Radius Sphere Pixelization" (SARSPix) with square-like pixels. It
+provides the most adapted sphere packing for all distance-related computations. Using LSST-like
+fast simulations, we compute autocorrelation functions on tomographic bins containing between
+a hundred million to one billion data points. In all cases we achieve the full construction of a classical
+pair-distance histogram in about 2 minutes, using a moderate number of worker nodes (16 to 64). This
+is typically two orders of magnitude higher than what is achieved today and shows the potential of
+using these new techniques in the field of astronomy on ever-growing datasets. The method presented
+here is flexible enough to be adapted to any medium size cluster and the software is publicly available
+from https://github.com/LSSTDESC/SparkCorr. 

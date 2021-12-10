@@ -1,0 +1,19 @@
+In order to provide a high resilience and to react quickly to link failures, modern computer networks
+support fully decentralized flow rerouting, also known as local fast failover. In a nutshell, the
+task of a local fast failover algorithm is to pre-define fast failover rules for each node using locally
+available information only. These rules determine for each incoming link from which a packet may
+arrive and the set of local link failures (i.e., the failed links incident to a node), on which outgoing
+link a packet should be forwarded. Ideally, such a local fast failover algorithm provides a perfect
+resilience deterministically: a packet emitted from any source can reach any target, as long as
+the underlying network remains connected. Feigenbaum et al. (ACM PODC 2012) and also Chiesa et al.
+(IEEE/ACM Trans. Netw. 2017) showed that it is not always possible to provide perfect resilience.
+Interestingly, not much more is known currently about the feasibility of perfect resilience. This
+paper revisits perfect resilience with local fast failover, both in a model where the source can
+and cannot be used for forwarding decisions. We first derive several fairly general impossibility
+results: By establishing a connection between graph minors and resilience, we prove that it is impossible
+to achieve perfect resilience on any non-planar graph; furthermore, while planarity is necessary,
+it is also not sufficient for perfect resilience. On the positive side, we show that graph families
+closed under link subdivision allow for simple and efficient failover algorithms which simply
+skip failed links. We demonstrate this technique by deriving perfect resilience for outerplanar
+graphs and related scenarios, as well as for scenarios where the source and target are topologically
+close after failures. 

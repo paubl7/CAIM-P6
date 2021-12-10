@@ -1,0 +1,20 @@
+One of the main problems with biomedical signals is the limited amount of patient-specific data
+and the significant amount of time needed to record a sufficient number of samples for diagnostic
+and treatment purposes. We explore the use of Variational Autoencoder (VAE) and Adversarial Autoencoder
+(AAE) algorithms based on one-dimensional convolutional neural networks in order to build generative
+models able to capture and represent the variability of a set of unlabeled quasi-periodic signals
+using as few as 10 parameters. Furthermore, we introduce a modified AAE architecture that allows
+simultaneous semi-supervised classification and generation of different types of signals. Our
+study is based on physical breathing signals, i.e. time series describing the position of chest
+markers, generally used to describe respiratory motion. The time series are discretized into a
+vector of periods, with each period containing 6 time and position values. These vectors can be transformed
+back into time series through an additional reconstruction neural network and allow to generate
+extended signals while simplifying the modeling task. The obtained models can be used to generate
+realistic breathing realizations from patient or population data and to classify new recordings.
+We show that by incorporating the labels from around 10-15\% of the dataset during training, the
+model can be guided to group data according to the patient it belongs to, or based on the presence of
+different types of breathing irregularities such as baseline shifts. Our specific motivation
+is to model breathing motion during radiotherapy lung cancer treatments, for which the developed
+model serves as an efficient tool to robustify plans against breathing uncertainties. However,
+the same methodology can in principle be applied to any other kind of quasi-periodic biomedical
+signal, representing a generically applicable tool. 

@@ -1,0 +1,19 @@
+In the fields of co-simulation and component-based modelling, designers import models as building
+blocks to create a composite model that provides more complex functionalities. Modelling tools
+perform instantaneous cycle detection (ICD) on the composite models having feedback loops to reject
+the models if the loops are mathematically unsound and to improve simulation performance. In this
+case, the analysis relies heavily on the availability of dependency information from the imported
+models. However, the cycle detection problem becomes harder when the model's input to output dependencies
+are mode-dependent, i.e. changes for certain events generated internally or externally as inputs.
+The number of possible modes created by composing such models increases significantly and unknown
+factors such as environmental inputs make the offline (statical) ICD a difficult task. In this paper,
+an online ICD method is introduced to address this issue for the models used in cyber-physical systems.
+The method utilises an oracle as a central source of information that can answer whether the individual
+models can make mode transition without creating instantaneous cycles. The oracle utilises three
+types of data-structures created offline that are adaptively chosen during online (runtime) depending
+on the frequency as well as the number of models that make mode transitions. During the analysis,
+the models used online are stalled from running, resulting in the discrepancy with the physical
+system. The objective is to detect an absence of the instantaneous cycle while minimising the stall
+time of the model simulation that is induced from the analysis. The benchmark results show that our
+method is an adequate alternative to the offline analysis methods and significantly reduces the
+analysis time. 

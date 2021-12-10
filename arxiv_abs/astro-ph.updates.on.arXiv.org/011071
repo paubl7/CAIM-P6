@@ -1,0 +1,18 @@
+Because of bright starlight leakage in coronagraphic raw images, faint astrophysical objects
+such as exoplanets can only be detected using powerful point spread function (PSF) subtraction
+algorithms. However, these algorithms have strong effects on faint objects of interest, and often
+prevent precise spectroscopic analysis and scattering property measurements of circumstellar
+disks. For this reason, PSF-subtraction effects is currently the main limitations to the precise
+characterization of exoplanetary dust with scattered-light imaging. Forward-modeling techniques
+have long been developed for point source objects. However, forward-modeling with disks is complicated
+by the fact that the disk cannot be simplified using a simple point source convolved by the PSF as the
+astrophysical model; all hypothetical disk morphologies must be explored to understand the subtle
+and non-linear effects of the PSF subtraction algorithm on the shape and local geometry of these
+systems. Because of their complex geometries, the forward-modeling process has to be repeated
+tens or hundred of thousands of times on disks with slightly different physical properties. All
+of these geometries are then compared to the PSF-subtracted image of the data, within an MCMC or a
+Chi-square wrapper. In this paper, we present here DiskFM, a new open-source algorithm included
+in the PSF subtraction algorithms package pyKLIP. This code allows to produce fast forward-modeling
+for a variety of observation strategies (ADI, SDI, ADI+SDI, RDI). pyKLIP has already been used for
+SPHERE/IRDIS and GPI data. It is readily available on all instruments supported by pyKLIP (SPHERE/IFS,
+SCExAO/CHARIS), and can be quickly adapted for other coronagraphic instruments. 

@@ -1,0 +1,19 @@
+Background/introduction: Cross-Validation (CV) is still uncommon in time series modeling. Echo
+State Networks (ESNs), as a prime example of Reservoir Computing (RC) models, are known for their
+fast and precise one-shot learning, that often benefit from good hyper-parameter tuning. This
+makes them ideal to change the status quo. Methods: We discuss CV of time series for predicting a concrete
+time interval of interest, suggest several schemes for cross-validating ESNs and introduce an
+efficient algorithm for implementing them. This algorithm is presented as two levels of optimizations
+of doing $k$-fold CV. Training an RC model typically consists of two stages: (i) running the reservoir
+with the data and (ii) computing the optimal readouts. The first level of our optimization addresses
+the most computationally expensive part (i) and makes it remain constant irrespective of $k$. It
+dramatically reduces reservoir computations in any type of RC system and is enough if $k$ is small.
+The second level of optimization also makes the (ii) part remain constant irrespective of large
+$k$, as long as the dimension of the output is low. We discuss when the proposed validation schemes
+for ESNs could be beneficial, three options for producing the final model and empirically investigate
+them on six different real-world datasets, as well as do empirical computation time experiments.
+We provide the code in an online repository. Results: Proposed CV schemes give better and more stable
+test performance in all the six different real-world datasets, three task types. Empirical run
+times confirm our complexity analysis. Conclusions: In most situations $k$-fold CV of ESNs and
+many other RC models can be done for virtually the same time and space complexity as a simple single-split
+validation. This enables CV to become a standard practice in RC. 

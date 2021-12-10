@@ -1,0 +1,20 @@
+Sentiment analysis of social media comments is very important for review analysis. Many online
+reviews are sarcastic, humorous, or hateful. This sarcastic nature of these short texts change
+the actual sentiments of the review as predicted by a machine learning model that attempts to detect
+sentiment alone. Thus, having a model that is explicitly aware of these features should help it perform
+better on reviews that are characterized by them. Several research has already been done in this
+field. This paper deals with sarcasm detection on reddit comments. Several machine learning and
+deep learning algorithms have been applied for the same but each of these models only take into account
+the initial text instead of the conversation which serves as a better measure to determine sarcasm.
+The other shortcoming these papers have is they rely on word embedding for representing comments
+and thus do not take into account the problem of polysemy(A word can have multiple meanings based
+on the context in which it appears). These existing modules were able to solve the problem of capturing
+inter sentence contextual information but not the intra sentence contextual information. So we
+propose a novel architecture which solves the problem of sarcasm detection by capturing intra sentence
+contextual information using a novel contextual attention mechanism. The proposed model solves
+the problem of polysemy also by using context enriched language modules like ELMO and BERT in its
+first component. This model comprises a total of three major components which takes into account
+inter sentence, intra sentence contextual information and at last use a convolutional neural network
+for capturing global contextual information for sarcasm detection. The proposed model was able
+to generate decent results and cleared showed potential to perform state of the art if trained on
+a larger dataset. 

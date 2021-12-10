@@ -1,0 +1,20 @@
+We present a computational framework for solving the equations of inviscid gas dynamics using structured
+grids with embedded geometries. The novelty of the proposed approach is the use of high-order discontinuous
+Galerkin (dG) schemes and a shock-capturing Finite Volume (FV) scheme coupled via an $hp$ adaptive
+mesh refinement ($hp$-AMR) strategy that offers high-order accurate resolution of the embedded
+geometries. The $hp$-AMR strategy is based on a multi-level block-structured domain partition
+in which each level is represented by block-structured Cartesian grids and the embedded geometry
+is represented implicitly by a level set function. The intersection of the embedded geometry with
+the grids produces the implicitly-defined mesh that consists of a collection of regular rectangular
+cells plus a relatively small number of irregular curved elements in the vicinity of the embedded
+boundaries. High-order quadrature rules for implicitly-defined domains enable high-order accuracy
+resolution of the curved elements with a cell-merging strategy to address the small-cell problem.
+The $hp$-AMR algorithm treats the system with a second-order finite volume scheme at the finest
+level to dynamically track the evolution of solution discontinuities while using dG schemes at
+coarser levels to provide high-order accuracy in smooth regions of the flow. On the dG levels, the
+methodology supports different orders of basis functions on different levels. The space-discretized
+governing equations are then advanced explicitly in time using high-order Runge-Kutta algorithms.
+Numerical tests are presented for two-dimensional and three-dimensional problems involving
+an ideal gas. The results are compared with both analytical solutions and experimental observations
+and demonstrate that the framework provides high-order accuracy for smooth flows and accurately
+captures solution discontinuities. 

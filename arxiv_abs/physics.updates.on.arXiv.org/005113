@@ -1,0 +1,19 @@
+Recently, artificial intelligence technologies and algorithms have become a major focus for advancements
+in treatment planning for radiation therapy. As these are starting to become incorporated into
+the clinical workflow, a major concern from clinicians is not whether the model is accurate, but
+whether the model can express to a human operator when it does not know if its answer is correct. We
+propose to use Monte Carlo dropout (MCDO) and the bootstrap aggregation (bagging) technique on
+deep learning models to produce uncertainty estimations for radiation therapy dose prediction.
+We show that both models are capable of generating a reasonable uncertainty map, and, with our proposed
+scaling technique, creating interpretable uncertainties and bounds on the prediction and any
+relevant metrics. Performance-wise, bagging provides statistically significant reduced loss
+value and errors in most of the metrics investigated in this study. The addition of bagging was able
+to further reduce errors by another 0.34% for Dmean and 0.19% for Dmax, on average, when compared
+to the baseline framework. Overall, the bagging framework provided significantly lower MAE of
+2.62, as opposed to the baseline framework's MAE of 2.87. The usefulness of bagging, from solely
+a performance standpoint, does highly depend on the problem and the acceptable predictive error,
+and its high upfront computational cost during training should be factored in to deciding whether
+it is advantageous to use it. In terms of deployment with uncertainty estimations turned on, both
+frameworks offer the same performance time of about 12 seconds. As an ensemble-based metaheuristic,
+bagging can be used with existing machine learning architectures to improve stability and performance,
+and MCDO can be applied to any deep learning models that have dropout as part of their architecture.

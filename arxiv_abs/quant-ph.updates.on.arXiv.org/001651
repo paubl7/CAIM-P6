@@ -1,0 +1,19 @@
+Current quantum devices suffer from the rapid accumulation of error that prevents the storage of
+quantum information over extended periods. The unintentional coupling of qubits to their environment
+and each other adds significant noise to computation, and improved methods to combat decoherence
+are required to boost the performance of quantum algorithms on real machines. While many existing
+techniques for mitigating error rely on adding extra gates to the circuit or calibrating new gates,
+our technique leverages the gates already present in a quantum program and does not extend circuit
+runtime duration. In this paper, we exploit scheduling time for single-qubit gates that occur in
+idle windows, scheduling the gates such that their timing can counteract some errors. Spin-echo
+corrections act as inspiration for this technique, which can mitigate dephasing, or phase accumulation,
+that appears as a result of qubit inactivity. Theoretical models, however, fail to capture all sources
+of noise in near-term quantum devices, making practical solutions necessary that better minimize
+the impact of unpredictable errors in quantum machines. This paper presents TimeStitch: a novel
+framework that pinpoints the optimum execution schedules for single-qubit gates within quantum
+circuits. TimeStitch, implemented as a compilation pass, leverages the reversible nature of quantum
+computation to improve the success of quantum circuits on real quantum machines. Unlike past approaches
+that apply reversibility properties to improve quantum circuit execution, TimeStitch boosts
+fidelity without violating critical path frontiers in either the slack tuning procedures or the
+final rescheduled circuit. On average, TimeStitch is able to achieve 24% improvement in success
+rates, with a maximum of 75%, while observing depth criteria. 

@@ -1,0 +1,18 @@
+Mobile crowdsensing (MCS) leverages distributed and non-dedicated sensing concepts by utilizing
+sensors imbedded in a large number of mobile smart devices. However, the openness and distributed
+nature of MCS leads to various vulnerabilities and consequent challenges to address. A malicious
+user submitting fake sensing tasks to an MCS platform may be attempting to consume resources from
+any number of participants' devices; as well as attempting to clog the MCS server. In this paper,
+a novel approach that is based on horizontal federated learning is proposed to identify fake tasks
+that contain a number of independent detection devices and an aggregation entity. Detection devices
+are deployed to operate in parallel with each device equipped with a machine learning (ML) module,
+and an associated training dataset. Furthermore, the aggregation module collects the prediction
+results from individual devices and determines the final decision with the objective of minimizing
+the prediction loss. Loss measurement considers the lost task values with respect to misclassification,
+where the final decision utilizes a risk-aware approach where the risk is formulated as a function
+of the utility loss. Experimental results demonstrate that using federated learning-driven illegitimate
+task detection with a risk aware aggregation function improves the detection performance of the
+traditional centralized framework. Furthermore, the higher performance of detection and lower
+loss of utility can be achieved by the proposed framework. This scheme can even achieve 100%detection
+accuracy using small training datasets distributed across devices, while achieving slightly
+over an 8% increase in detection improvement over traditional approaches. 

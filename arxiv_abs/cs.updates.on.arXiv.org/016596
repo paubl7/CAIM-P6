@@ -1,0 +1,18 @@
+Labelled data often comes at a high cost as it may require recruiting human labelers or running costly
+experiments. At the same time, in many practical scenarios, one already has access to a partially
+labelled, potentially biased dataset that can help with the learning task at hand. Motivated by
+such settings, we formally initiate a study of $semi-supervised$ $active$ $learning$ through
+the frame of linear regression. In this setting, the learner has access to a dataset $X \in \mathbb{R}^{(n_1+n_2)
+\times d}$ which is composed of $n_1$ unlabelled examples that an algorithm can actively query,
+and $n_2$ examples labelled a-priori. Concretely, denoting the true labels by $Y \in \mathbb{R}^{n_1
++ n_2}$, the learner's objective is to find $\widehat{\beta} \in \mathbb{R}^d$ such that, \begin{equation}
+\| X \widehat{\beta} - Y \|_2^2 \le (1 + \epsilon) \min_{\beta \in \mathbb{R}^d} \| X \beta - Y \|_2^2
+\end{equation} while making as few additional label queries as possible. In order to bound the label
+queries, we introduce an instance dependent parameter called the reduced rank, denoted by $R_X$,
+and propose an efficient algorithm with query complexity $O(R_X/\epsilon)$. This result directly
+implies improved upper bounds for two important special cases: (i) active ridge regression, and
+(ii) active kernel ridge regression, where the reduced-rank equates to the statistical dimension,
+$sd_\lambda$ and effective dimension, $d_\lambda$ of the problem respectively, where $\lambda
+\ge 0$ denotes the regularization parameter. For active ridge regression we also prove a matching
+lower bound of $O(sd_\lambda / \epsilon)$ on the query complexity of any algorithm. This subsumes
+prior work that only considered the unregularized case, i.e., $\lambda = 0$. 

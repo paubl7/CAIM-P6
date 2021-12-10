@@ -1,0 +1,19 @@
+We study the problem of sampling an approximately uniformly random satisfying assignment for atomic
+constraint satisfaction problems i.e. where each constraint is violated by only one assignment
+to its variables. Let $p$ denote the maximum probability of violation of any constraint and let $\Delta$
+denote the maximum degree of the line graph of the constraints. Our main result is a nearly-linear
+(in the number of variables) time algorithm for this problem, which is valid in a Lov\'asz local lemma
+type regime that is considerably less restrictive compared to previous works. In particular, we
+provide sampling algorithms for the uniform distribution on: (1) $q$-colorings of $k$-uniform
+hypergraphs with $\Delta \lesssim q^{(k-4)/3 + o_{q}(1)}.$ The exponent $1/3$ improves the previously
+best-known $1/7$ in the case $q, \Delta = O(1)$ [Jain, Pham, Vuong; arXiv, 2020] and $1/9$ in the general
+case [Feng, He, Yin; STOC 2021]. (2) Satisfying assignments of Boolean $k$-CNF formulas with $\Delta
+\lesssim 2^{k/5.741}.$ The constant $5.741$ in the exponent improves the previously best-known
+$7$ in the case $k = O(1)$ [Jain, Pham, Vuong; arXiv, 2020] and $13$ in the general case [Feng, He, Yin;
+STOC 2021]. (3) Satisfying assignments of general atomic constraint satisfaction problems with
+$p\cdot \Delta^{7.043} \lesssim 1.$ The constant $7.043$ improves upon the previously best-known
+constant of $350$ [Feng, He, Yin; STOC 2021]. At the heart of our analysis is a novel information-percolation
+type argument for showing the rapid mixing of the Glauber dynamics for a carefully constructed projection
+of the uniform distribution on satisfying assignments. Notably, there is no natural partial order
+on the space, and we believe that the techniques developed for the analysis may be of independent
+interest. 

@@ -1,0 +1,18 @@
+Through the lens of information-theoretic reductions, we examine a reductions approach to fair
+optimization and learning where a black-box optimizer is used to learn a fair model for classification
+or regression. Quantifying the complexity, both statistically and computationally, of making
+such models satisfy the rigorous definition of differential privacy is our end goal. We resolve
+a few open questions and show applicability to fair machine learning, hypothesis testing, and to
+optimizing non-standard measures of classification loss. Furthermore, our sample complexity
+bounds are tight amongst all strategies that jointly minimize a composition of functions. The reductions
+approach to fair optimization can be abstracted as the constrained group-objective optimization
+problem where we aim to optimize an objective that is a function of losses of individual groups, subject
+to some constraints. We give the first polynomial-time algorithms to solve the problem with $(\epsilon,
+0)$ or $(\epsilon, \delta)$ differential privacy guarantees when defined on a convex decision
+set (for example, the $\ell_P$ unit ball) with convex constraints and losses. Accompanying information-theoretic
+lower bounds for the problem are presented. In addition, compared to a previous method for ensuring
+differential privacy subject to a relaxed form of the equalized odds fairness constraint, the $(\epsilon,
+\delta)$-differentially private algorithm we present provides asymptotically better sample
+complexity guarantees, resulting in an exponential improvement in certain parameter regimes.
+We introduce a class of bounded divergence linear optimizers, which could be of independent interest,
+and specialize to pure and approximate differential privacy. 

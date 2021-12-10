@@ -1,0 +1,19 @@
+Machine learning (ML) has demonstrated promising results in the identification of clinical markers
+for Acute Coronary Syndrome (ACS) from electronic health records (EHR). In the past, the ACS was
+perceived as a health problem mainly for men and women were under-represented in clinical trials,
+which led to both sexes receiving the same clinical attention. Although some approaches have emphasized
+the importance of distinguishing markers, these distinctions remain unclear. This study aims
+at exploiting ML methods for identifying in-hospital mortality markers by sex and age-group for
+patients with ST-elevation myocardial infarction (STEMI) and the Non-ST-elevation myocardial
+infarction (NSTEMI) from EHR. From the MIMIC-III database, we extracted 1,299 patients with STEMI
+and 2,820 patients with NSTEMI. We trained and validated mortality prediction models with different
+hyperparameters, clinical sets, and ML methods. Using the best performing model and a game-theoretic
+approach to interpret predictions, we identified risk markers for patients with STEMI and NSTEMI
+separately. The models based on Extreme Gradient Boosting achieved the highest performance: AUC=0.92
+(95\% CI:0.87-0.98) for STEMI and AUC=0.87 (95\% CI:0.80-0.93) for NSTEMI. For STEMI, the top markers
+for both sexes are the presence of hyponatremia, and metabolic acidosis. More specific markers
+for women are acute kidney failure, and age>75 years, while for men are chronic kidney failure, and
+age>70 years. In contrast, for NSTEMI, the top markers for both sexes are advanced age, and intubation
+procedures. The specific markers for women are low creatinine levels and age>60 years, whilst,
+for men are damage to the left atrium and age>70 years. We consider that distinguishing markers for
+sexes could lead to more appropriate treatment strategies, thus improving clinical outcomes.

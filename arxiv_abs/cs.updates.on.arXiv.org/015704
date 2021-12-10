@@ -1,0 +1,20 @@
+Query languages in general and SQL in particular are arguably one of the most successful programming
+interfaces. Yet, in the domain of high-energy physics (HEP), they have found limited acceptance.
+This is surprising since data analysis in HEP matches the SQL model well: it is fully structured data
+queried using combinations of selections, projections, joins, and reductions. To gain insights
+on why this is the case, in this paper we perform an exhaustive performance and functionality analysis
+of several data processing platforms (Amazon Athena, Google Big Query, Presto, Rumble) and compare
+them to the new RDataFrame interface of the ROOT framework, the most commonly used system by particle
+physicists today. The goal of the analysis is to identify the potential advantages and shortcomings
+of each system considering not only performance but also cost for cloud deployments, suitability
+of the query dialect, and resulting query complexity. The analysis is done using a HEP workload:
+the Analysis Description Languages (ADL) benchmark, created by physicists to capture representative
+aspects of their data processing tasks. The evaluation of these systems results in an interesting
+and rather complex picture of existing solutions: those offering the best possibilities in terms
+of expressiveness, conciseness, and usability turn out to be the slowest and most expensive; the
+fastest ones are not the most cost-efficient and involve complex queries; RDataFrame, the baseline
+we use as a reference, is often faster and cheaper but is currently facing scalability issues with
+large multi-core machines. In the paper, we analyze all the aspects that lead to such results and
+discuss how systems should evolve to better support HEP workloads. In the process, we identify several
+weaknesses of existing systems that should be relevant to a wide range of use cases beyond particle
+physics. 

@@ -1,0 +1,19 @@
+Meta-reinforcement learning (RL) can be used to train policies that quickly adapt to new tasks with
+orders of magnitude less data than standard RL, but this fast adaptation often comes at the cost of
+greatly increasing the amount of reward supervision during meta-training time. Offline meta-RL
+removes the need to continuously provide reward supervision because rewards must only be provided
+once when the offline dataset is generated. In addition to the challenges of offline RL, a unique
+distribution shift is present in meta RL: agents learn exploration strategies that can gather the
+experience needed to learn a new task, and also learn adaptation strategies that work well when presented
+with the trajectories in the dataset, but the adaptation strategies are not adapted to the data distribution
+that the learned exploration strategies collect. Unlike the online setting, the adaptation and
+exploration strategies cannot effectively adapt to each other, resulting in poor performance.
+In this paper, we propose a hybrid offline meta-RL algorithm, which uses offline data with rewards
+to meta-train an adaptive policy, and then collects additional unsupervised online data, without
+any ground truth reward labels, to bridge this distribution shift problem. Our method uses the offline
+data to learn the distribution of reward functions, which is then sampled to self-supervise reward
+labels for the additional online data. By removing the need to provide reward labels for the online
+experience, our approach can be more practical to use in settings where reward supervision would
+otherwise be provided manually. We compare our method to prior work on offline meta-RL on simulated
+robot locomotion and manipulation tasks and find that using additional data and self-generated
+rewards significantly improves an agent's ability to generalize. 

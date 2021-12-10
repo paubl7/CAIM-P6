@@ -1,0 +1,20 @@
+Prediction of seizure before they occur is vital for bringing normalcy to the lives of patients.
+Researchers employed machine learning methods using hand-crafted features for seizure prediction.
+However, ML methods are too complicated to select the best ML model or best features. Deep Learning
+methods are beneficial in the sense of automatic feature extraction. One of the roadblocks for accurate
+seizure prediction is scarcity of epileptic seizure data. This paper addresses this problem by
+proposing a deep convolutional generative adversarial network to generate synthetic EEG samples.
+We use two methods to validate synthesized data namely, one-class SVM and a new proposal which we
+refer to as convolutional epileptic seizure predictor (CESP). Another objective of our study is
+to evaluate performance of well-known deep learning models (e.g., VGG16, VGG19, ResNet50, and
+Inceptionv3) by training models on augmented data using transfer learning with average time of
+10 min between true prediction and seizure onset. Our results show that CESP model achieves sensitivity
+of 78.11% and 88.21%, and FPR of 0.27/h and 0.14/h for training on synthesized and testing on real
+Epilepsyecosystem and CHB-MIT datasets, respectively. Effective results of CESP trained on synthesized
+data shows that synthetic data acquired the correlation between features and labels very well.
+We also show that employment of idea of transfer learning and data augmentation in patient-specific
+manner provides highest accuracy with sensitivity of 90.03% and 0.03 FPR/h which was achieved using
+Inceptionv3, and that augmenting data with samples generated from DCGAN increased prediction
+results of our CESP model and Inceptionv3 by 4-5% as compared to state-of-the-art traditional augmentation
+techniques. Finally, we note that prediction results of CESP achieved by using augmented data are
+better than chance level for both datasets. 

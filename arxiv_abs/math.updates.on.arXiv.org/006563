@@ -1,0 +1,20 @@
+Addressing the world's climate emergency is an uphill battle and requires a multifaceted approach
+including optimal deployment of green-energy alternatives. This often involve time-consuming
+optimisation of black-box models in a continuous parameter space. Despite recent advances in quantum
+computing, real-world applications have thus far been mostly confined to problems such as graph
+partitioning, traffic routing and task scheduling, where parameter space is discrete and graph
+connectivity is sparse. Here we propose the quantum nonlinear programming (QNLP) framework for
+casting an NLP problem - in continuous space - as quadratic unconstrained binary optimisation (QUBO),
+which can be subsequently solved using special-purpose solvers such as quantum annealers (QA)
+and coherent Ising machines (CIMs). QNLP consists of four steps: quadratic approximation of cost
+function, discretisation of parameter space, binarisation of discrete space, and solving the
+resulting QUBO. Linear and nonlinear constraints are incorporated into the resulting QUBO using
+slack variables and quadratic penalty terms. We apply our QNLP framework to optimisation of the
+daily feed rate of various biomass types at Nature Energy, the largest biogas producer in Europe.
+Optimising biomass selection improves the profitability of biomethane production, thus contributing
+to sustainable carbon-neutral energy production. For solving the QUBO, we use D-Wave's quantum
+annealers. We observe good performance on the DW-2000Q QPU, and higher sensitivity of performance
+to number of samples and annealing time for the Advantage QPU. We hope that our proposed QNLP framework
+provides a meaningful step towards overcoming the computational challenges posed by high-dimensional
+continuous-optimisation problems, especially those encountered in our battle against man-made
+climate change. 

@@ -1,0 +1,18 @@
+Cooperative communication is an effective approach to improve spectrum utilization. In order
+to reduce outage probability of communication system, most studies propose various schemes for
+relay selection and power allocation, which are based on the assumption of channel state information
+(CSI). However, it is difficult to get an accurate CSI in practice. In this paper, we study the outage
+probability minimizing problem subjected to a total transmission power constraint in a two-hop
+cooperative relay network. We use reinforcement learning (RL) methods to learn strategies for
+relay selection and power allocation, which do not need any prior knowledge of CSI but simply rely
+on the interaction with communication environment. It is noted that conventional RL methods, including
+most deep reinforcement learning (DRL) methods, cannot perform well when the search space is too
+large. Therefore, we first propose a DRL framework with an outage-based reward function, which
+is then used as a baseline. Then, we further propose a hierarchical reinforcement learning (HRL)
+framework and training algorithm. A key difference from other RL-based methods in existing literatures
+is that, our proposed HRL approach decomposes relay selection and power allocation into two hierarchical
+optimization objectives, which are trained in different levels. With the simplification of search
+space, the HRL approach can solve the problem of sparse reward, while the conventional RL method
+fails. Simulation results reveal that compared with traditional DRL method, the HRL training algorithm
+can reach convergence 30 training iterations earlier and reduce the outage probability by 5% in
+two-hop relay network with the same outage threshold. 

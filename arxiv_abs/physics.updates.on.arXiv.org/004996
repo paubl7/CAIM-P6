@@ -1,0 +1,19 @@
+Excessive loads near wounds produce pathological scarring and other complications. Presently,
+stress cannot easily be measured by surgeons in the operating room. Instead, surgeons rely on intuition
+and experience. Predictive computational tools are ideal candidates for surgery planning. Finite
+element (FE) simulations have shown promise in predicting stress fields on large skin patches and
+complex cases, helping to identify potential regions of complication. Unfortunately, these simulations
+are computationally expensive and deterministic. However, running a few, well-selected FE simulations
+allows us to create Gaussian process (GP) surrogate models of local cutaneous flaps that are computationally
+efficient and able to predict stress and strain for arbitrary material parameters. Here, we create
+GP surrogates for the advancement, rotation, and transposition flaps. We then use the predictive
+capability of these surrogates to perform a global sensitivity analysis, ultimately showing that
+fiber direction has the most significant impact on strain field variations. We then perform an optimization
+to determine the optimal fiber direction for each flap for three different objectives driven by
+clinical guidelines. While material properties are not controlled by the surgeon and are actually
+a source of uncertainty, the surgeon can in fact control the orientation of the flap. Therefore,
+fiber direction is the only material parameter that can be optimized clinically. The optimization
+task relies on the efficiency of the GP surrogates to calculate the expected cost of different strategies
+when the uncertainty of other material parameters is included. We propose optimal flap orientations
+for the three cost functions and that can help in reducing stress resulting from the surgery and ultimately
+reduce complications associated with excessive mechanical loading near wounds. 

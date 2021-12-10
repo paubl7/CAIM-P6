@@ -1,0 +1,18 @@
+In this work, we propose a new methodology for jointly sizing a dynamical system and designing its
+control law. First, the problem is formalized by considering parametrized reinforcement learning
+environments and parametrized policies. The objective of the optimization problem is to jointly
+find a control policy and an environment over the joint hypothesis space of parameters such that
+the sum of rewards gathered by the policy in this environment is maximal. The optimization problem
+is then addressed by generalizing the direct policy search algorithms to an algorithm we call Direct
+Environment Search with (projected stochastic) Gradient Ascent (DESGA). We illustrate the performance
+of DESGA on two benchmarks. First, we consider a parametrized space of Mass-Spring-Damper (MSD)
+environments and control policies. Then, we use our algorithm for optimizing the size of the components
+and the operation of a small-scale autonomous energy system, i.e. a solar off-grid microgrid, composed
+of photovoltaic panels, batteries, etc. On both benchmarks, we compare the results of the execution
+of DESGA with a theoretical upper-bound on the expected return. Furthermore, the performance of
+DESGA is compared to an alternative algorithm. The latter performs a grid discretization of the
+environment's hypothesis space and applies the REINFORCE algorithm to identify pairs of environments
+and policies resulting in a high expected return. The choice of this algorithm is also discussed
+and motivated. On both benchmarks, we show that DESGA and the alternative algorithm result in a set
+of parameters for which the expected return is nearly equal to its theoretical upper-bound. Nevertheless,
+the execution of DESGA is much less computationally costly. 

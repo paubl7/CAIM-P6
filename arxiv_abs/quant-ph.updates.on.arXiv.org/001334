@@ -1,0 +1,18 @@
+Quantum annealers have been designed to propose near-optimal solutions to NP-hard optimization
+problems. However, the accuracy of current annealers such as the ones of D-Wave Systems, Inc., is
+limited by environmental noise and hardware biases. One way to deal with these imperfections and
+to improve the quality of the annealing results is to apply a variety of pre-processing techniques
+such as spin reversal (SR), anneal offsets (AO), or chain weights (CW). Maximizing the effectiveness
+of these techniques involves performing optimizations over a large number of parameters, which
+would be too costly if needed to be done for each new problem instance. In this work, we show that the
+aforementioned parameter optimization can be done for an entire class of problems, given each instance
+uses a previously chosen fixed embedding. Specifically, in the training phase, we fix an embedding
+E of a complete graph onto the hardware of the annealer, and then run an optimization algorithm to
+tune the following set of parameter values: the set of bits to be flipped for SR, the specific qubit
+offsets for AO, and the distribution of chain weights, optimized over a set of training graphs randomly
+chosen from that class, where the graphs are embedded onto the hardware using E. In the testing phase,
+we estimate how well the parameters computed during the training phase work on a random selection
+of other graphs from that class. We investigate graph instances of varying densities for the Maximum
+Clique, Maximum Cut, and Graph Partitioning problems. Our results indicate that, compared to their
+default behavior, substantial improvements of the annealing results can be achieved by using the
+optimized parameters for SR, AO, and CW. 

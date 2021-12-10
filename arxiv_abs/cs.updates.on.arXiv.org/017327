@@ -1,0 +1,20 @@
+In this paper we presented mmPose-NLP, a novel Natural Language Processing (NLP) inspired Sequence-to-Sequence
+(Seq2Seq) skeletal key-point estimator using millimeter-wave (mmWave) radar data. To the best
+of the author's knowledge, this is the first method to precisely estimate upto 25 skeletal key-points
+using mmWave radar data alone. Skeletal pose estimation is critical in several applications ranging
+from autonomous vehicles, traffic monitoring, patient monitoring, gait analysis, to defense
+security forensics, and aid both preventative and actionable decision making. The use of mmWave
+radars for this task, over traditionally employed optical sensors, provide several advantages,
+primarily its operational robustness to scene lighting and adverse weather conditions, where
+optical sensor performance degrade significantly. The mmWave radar point-cloud (PCL) data is
+first voxelized (analogous to tokenization in NLP) and $N$ frames of the voxelized radar data (analogous
+to a text paragraph in NLP) is subjected to the proposed mmPose-NLP architecture, where the voxel
+indices of the 25 skeletal key-points (analogous to keyword extraction in NLP) are predicted. The
+voxel indices are converted back to real world 3-D coordinates using the voxel dictionary used during
+the tokenization process. Mean Absolute Error (MAE) metrics were used to measure the accuracy of
+the proposed system against the ground truth, with the proposed mmPose-NLP offering <3 cm localization
+errors in the depth, horizontal and vertical axes. The effect of the number of input frames vs performance/accuracy
+was also studied for N = {1,2,..,10}. A comprehensive methodology, results, discussions and limitations
+are presented in this paper. All the source codes and results are made available on GitHub for furthering
+research and development in this critical yet emerging domain of skeletal key-point estimation
+using mmWave radars. 

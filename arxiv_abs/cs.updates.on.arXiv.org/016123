@@ -1,0 +1,19 @@
+Our planet is viewed by satellites through multiple sensors (e.g., multi-spectral, Lidar and SAR)
+and at different times. Multi-view observations bring us complementary information than the single
+one. Alternatively, there are common features shared between different views, such as geometry
+and semantics. Recently, contrastive learning methods have been proposed for the alignment of
+multi-view remote sensing images and improving the feature representation of single sensor images
+by modeling view-invariant factors. However, these methods are based on the pretraining of the
+predefined tasks or just focus on image-level classification. Moreover, these methods lack research
+on uncertainty estimation. In this work, a pixel-wise contrastive approach based on an unlabeled
+multi-view setting is proposed to overcome this limitation. This is achieved by the use of contrastive
+loss in the feature alignment and uniformity between multi-view images. In this approach, a pseudo-Siamese
+ResUnet is trained to learn a representation that aims to align features from the shifted positive
+pairs and uniform the induced distribution of the features on the hypersphere. The learned features
+of multi-view remote sensing images are evaluated on a liner protocol evaluation and an unsupervised
+change detection task. We analyze key properties of the approach that make it work, finding that
+the requirement of shift equivariance ensured the success of the proposed approach and the uncertainty
+estimation of representations leads to performance improvements. Moreover, the performance
+of multi-view contrastive learning is affected by the choice of different sensors. Results demonstrate
+both improvements in efficiency and accuracy over the state-of-the-art multi-view contrastive
+methods. 

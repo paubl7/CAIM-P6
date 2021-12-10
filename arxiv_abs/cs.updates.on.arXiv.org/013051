@@ -1,0 +1,20 @@
+Early risk diagnosis and driving anomaly detection from vehicle stream are of great benefits in
+a range of advanced solutions towards Smart Road and crash prevention, although there are intrinsic
+challenges, especially lack of ground truth, definition of multiple risk exposures. This study
+proposes a domain-specific automatic clustering (termed Autocluster) to self-learn the optimal
+models for unsupervised risk assessment, which integrates key steps of risk clustering into an
+auto-optimisable pipeline, including feature and algorithm selection, hyperparameter auto-tuning.
+Firstly, based on surrogate conflict measures, indicator-guided feature extraction is conducted
+to construct temporal-spatial and kinematical risk features. Then we develop an elimination-based
+model reliance importance (EMRI) method to unsupervised-select the useful features. Secondly,
+we propose balanced Silhouette Index (bSI) to evaluate the internal quality of imbalanced clustering.
+A loss function is designed that considers the clustering performance in terms of internal quality,
+inter-cluster variation, and model stability. Thirdly, based on Bayesian optimisation, the algorithm
+selection and hyperparameter auto-tuning are self-learned to generate the best clustering partitions.
+Various algorithms are comprehensively investigated. Herein, NGSIM vehicle trajectory data
+is used for test-bedding. Findings show that Autocluster is reliable and promising to diagnose
+multiple distinct risk exposures inherent to generalised driving behaviour. Besides, we also
+delve into risk clustering, such as, algorithms heterogeneity, Silhouette analysis, hierarchical
+clustering flows, etc. Meanwhile, the Autocluster is also a method for unsupervised multi-risk
+data labelling and indicator threshold calibration. Furthermore, Autocluster is useful to tackle
+the challenges in imbalanced clustering without ground truth or priori knowledge 

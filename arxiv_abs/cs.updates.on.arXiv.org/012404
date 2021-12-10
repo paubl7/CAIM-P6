@@ -1,0 +1,18 @@
+Recent works on visible light communication (VLC) based vehicle localization methods using VLC
+signals from head/tail LED lights for positioning report cm-level accuracy and near-kHz rates,
+which can enable collision avoidance and platooning for safer autonomous driving. However, existing
+analyses of these methods are not comparable and are inconclusive since they assume different system
+models and consider limited simulations. In this paper, we analyze the theoretical performances
+of four state-of-the-art (SoA) methods which measure physical VLC system parameters (e.g., propagation
+distance) using phase-difference-of-arrival (PDoA), roundtrip-time-of-flight (RToF), and
+single/dual receiver angle-of-arrival (AoA1/AoA2) characteristics of received signals respectively,
+and estimate position based on these parameters and geometric relations (e.g., triangulation).
+Specifically, we derive the Cramer-Rao lower bound (CRLB) on positioning accuracy for each method
+with respect to measured parameters, simulate their parameter measurement procedures under realistic
+driving scenarios, and evaluate their CRLBs using these simulated measurements. Results show
+that the current SoA PDoA based method fails to provide cm-level accuracy under any realistic scenario
+considering the <1 MHz bandwidth of current head/tail LED lights. The AoA1 method provides cm-level
+accuracy for close range platooning, but its high-sensitivity geometry causes accuracy degradation
+at high distances. RToF and AoA2 methods provide cm-level accuracy under low to moderate VLC channel
+noise for all scenarios within 10 m distance, theoretically proving the feasibility of VLC based
+vehicle localization for collision avoidance and platooning. 

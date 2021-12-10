@@ -1,0 +1,20 @@
+Real-world imaging systems acquire measurements that are degraded by noise, optical aberrations,
+and other imperfections that make image processing for human viewing and higher-level perception
+tasks challenging. Conventional cameras address this problem by compartmentalizing imaging
+from high-level task processing. As such, conventional imaging involves processing the RAW sensor
+measurements in a sequential pipeline of steps, such as demosaicking, denoising, deblurring,
+tone-mapping and compression. This pipeline is optimized to obtain a visually pleasing image.
+High-level processing, on the other hand, involves steps such as feature extraction, classification,
+tracking, and fusion. While this siloed design approach allows for efficient development, it also
+dictates compartmentalized performance metrics, without knowledge of the higher-level task
+of the camera system. For example, today's demosaicking and denoising algorithms are designed
+using perceptual image quality metrics but not with domain-specific tasks such as object detection
+in mind. We propose an end-to-end differentiable architecture that jointly performs demosaicking,
+denoising, deblurring, tone-mapping, and classification. The architecture learns processing
+pipelines whose outputs differ from those of existing ISPs optimized for perceptual quality, preserving
+fine detail at the cost of increased noise and artifacts. We demonstrate on captured and simulated
+data that our model substantially improves perception in low light and other challenging conditions,
+which is imperative for real-world applications. Finally, we found that the proposed model also
+achieves state-of-the-art accuracy when optimized for image reconstruction in low-light conditions,
+validating the architecture itself as a potentially useful drop-in network for reconstruction
+and analysis tasks beyond the applications demonstrated in this work. 

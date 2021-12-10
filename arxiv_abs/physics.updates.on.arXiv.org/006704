@@ -1,0 +1,20 @@
+The human neuromuscular system consisting of skeletal muscles and neural circuits is a complex
+system that is not yet fully understood. Surface electromyography (EMG) can be used to study muscle
+behavior from the outside. Computer simulations with detailed biophysical models provide a non-invasive
+tool to interpret EMG signals and gain new insights into the system. The numerical solution of such
+multi-scale models imposes high computational work loads, which restricts their application
+to short simulation time spans or coarse resolutions. We tackled this challenge by providing scalable
+software employing instruction-level and task-level parallelism, suitable numerical methods
+and efficient data handling. We implemented a comprehensive, state-of-the-art, multi-scale
+multi-physics model framework that can simulate surface EMG signals and muscle contraction as
+a result of neuromuscular stimulation. This work describes the model framework and its numerical
+discretization, develops new algorithms for mesh generation and parallelization, covers the
+use and implementation of our software OpenDiHu, and evaluates its computational performance
+in numerous use cases. We obtain a speedup of several hundred compared to a baseline solver from the
+literature and demonstrate, that our distributed-memory parallelization and the use of High Performance
+Computing resources enables us to simulate muscular surface EMG of the biceps brachii muscle with
+realistic muscle fiber counts of several hundred thousands. We find that certain model effects
+are only visible with such high resolution. In conclusion, our software contributes to more realistic
+simulations of the neuromuscular system and provides a tool for applied researchers to complement
+in vivo experiments with in-silico studies. It can serve as a building block to set up comprehensive
+models for more organs in the musculoskeletal system. 

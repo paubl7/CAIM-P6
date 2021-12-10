@@ -1,0 +1,19 @@
+Purpose: Conventional automated segmentation of the head anatomy in MRI distinguishes different
+brain and non-brain tissues based on image intensities and prior tissue probability maps (TPM).
+This works well for normal head anatomies, but fails in the presence of unexpected lesions. Deep
+convolutional neural networks leverage instead spatial patterns and can learn to segment lesions,
+but often ignore prior probabilities. Approach: We add three sources of prior information to a three-dimensional
+convolutional network, namely, spatial priors with a TPM, morphological priors with conditional
+random fields, and spatial context with a wider field-of-view at lower resolution. We train and
+test these networks on 3D images of 43 stroke patients and 4 healthy individuals which have been manually
+segmented. Results: We demonstrate the benefits of each sources of prior information, and we show
+that the new architecture, which we call Multiprior network, improves the performance of existing
+segmentation software, such as SPM, FSL, and DeepMedic for abnormal anatomies. The relevance of
+the different priors was compared and the TPM was found to be most beneficial. The benefit of adding
+a TPM is generic in that it can boost the performance of established segmentation networks such as
+the DeepMedic and a UNet. We also provide an out-of-sample validation and clinical application
+of the approach on an additional 47 patients with disorders of consciousness. We make the code and
+trained networks freely available. Conclusions: Biomedical images follow imaging protocols
+that can be leveraged as prior information into deep convolutional neural networks to improve performance.
+The network segmentations match human manual corrections performed in 3D, and are comparable in
+performance to human segmentations obtained from scratch in 2D for abnormal brain anatomies. 

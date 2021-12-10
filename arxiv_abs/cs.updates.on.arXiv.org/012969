@@ -1,0 +1,20 @@
+A chest radiograph, commonly called chest x-ray (CxR), plays a vital role in the diagnosis of various
+lung diseases, such as lung cancer, tuberculosis, pneumonia, and many more. Automated segmentation
+of the lungs is an important step to design a computer-aided diagnostic tool for examination of a
+CxR. Precise lung segmentation is considered extremely challenging because of variance in the
+shape of the lung caused by health issues, age, and gender. The proposed work investigates the use
+of an efficient deep convolutional neural network for accurate segmentation of lungs from CxR.
+We attempt an end to end DeepLabv3+ network which integrates DeepLab architecture, encoder-decoder,
+and dilated convolution for semantic lung segmentation with fast training and high accuracy. We
+experimented with the different pre-trained base networks: Resnet18 and Mobilenetv2, associated
+with the Deeplabv3+ model for performance analysis. The proposed approach does not require any
+pre-processing technique on chest x-ray images before being fed to a neural network. Morphological
+operations were used to remove false positives that occurred during semantic segmentation. We
+construct a CxR dataset of the Indian population that contain healthy and unhealthy CxRs of clinically
+confirmed patients of tuberculosis, chronic obstructive pulmonary disease, interstitial lung
+disease, pleural effusion, and lung cancer. The proposed method is tested on 688 images of our Indian
+CxR dataset including images with severe abnormal findings to validate its robustness. We also
+experimented on commonly used benchmark datasets such as Japanese Society of Radiological Technology;
+Montgomery County, USA; and Shenzhen, China for state-of-the-art comparison. The performance
+of our method is tested against techniques described in the literature and achieved the highest
+accuracy for lung segmentation on Indian and public datasets. 

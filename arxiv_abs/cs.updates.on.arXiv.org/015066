@@ -1,0 +1,18 @@
+We present a real-world application that uses a quantum computer. Specifically, we train a restricted
+Boltzmann machine (RBM) using quantum annealing (QA) for cybersecurity applications. The D-Wave
+2000Q has been used to implement QA. RBMs are trained on the ISCX data, which is a benchmark dataset
+for cybersecurity. For comparison, RBMs are also trained using contrastive divergence (CD). CD
+is a commonly used method for RBM training. Our analysis of the ISCX data shows that the dataset is
+imbalanced. We present two different schemes to balance the training dataset before feeding it
+to a classifier. The first scheme is based on the undersampling of benign instances. The imbalanced
+training dataset is divided into five sub-datasets that are trained separately. A majority voting
+is then performed to get the result. Our results show the majority vote increases the classification
+accuracy up from 90.24% to 95.68%, in the case of CD. For the case of QA, the classification accuracy
+increases from 74.14% to 80.04%. In the second scheme, a RBM is used to generate synthetic data to
+balance the training dataset. We show that both QA and CD-trained RBM can be used to generate useful
+synthetic data. Balanced training data is used to evaluate several classifiers. Among the classifiers
+investigated, K-Nearest Neighbor (KNN) and Neural Network (NN) perform better than other classifiers.
+They both show an accuracy of 93%. Our results show a proof-of-concept that a QA-based RBM can be trained
+on a 64-bit binary dataset. The illustrative example suggests the possibility to migrate many practical
+classification problems to QA-based techniques. Further, we show that synthetic data generated
+from a RBM can be used to balance the original dataset. 

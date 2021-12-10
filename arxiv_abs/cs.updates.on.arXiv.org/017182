@@ -1,0 +1,20 @@
+High-level representation-guided pixel denoising and adversarial training are independent
+solutions to enhance the robustness of CNNs against adversarial attacks by pre-processing input
+data and re-training models, respectively. Most recently, adversarial training techniques have
+been widely studied and improved while the pixel denoising-based method is getting less attractive.
+However, it is still questionable whether there exists a more advanced pixel denoising-based method
+and whether the combination of the two solutions benefits each other. To this end, we first comprehensively
+investigate two kinds of pixel denoising methods for adversarial robustness enhancement (i.e.,
+existing additive-based and unexplored filtering-based methods) under the loss functions of
+image-level and semantic-level restorations, respectively, showing that pixel-wise filtering
+can obtain much higher image quality (e.g., higher PSNR) as well as higher robustness (e.g., higher
+accuracy on adversarial examples) than existing pixel-wise additive-based method. However,
+we also observe that the robustness results of the filtering-based method rely on the perturbation
+amplitude of adversarial examples used for training. To address this problem, we propose predictive
+perturbation-aware pixel-wise filtering, where dual-perturbation filtering and an uncertainty-aware
+fusion module are designed and employed to automatically perceive the perturbation amplitude
+during the training and testing process. The proposed method is termed as AdvFilter. Moreover,
+we combine adversarial pixel denoising methods with three adversarial training-based methods,
+hinting that considering data and models jointly is able to achieve more robust CNNs. The experiments
+conduct on NeurIPS-2017DEV, SVHN, and CIFAR10 datasets and show the advantages over enhancing
+CNNs' robustness, high generalization to different models, and noise levels. 

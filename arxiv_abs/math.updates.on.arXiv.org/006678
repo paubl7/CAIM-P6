@@ -1,0 +1,19 @@
+We analyse parallel overlapping Schwarz domain decomposition methods for the Helmholtz equation,
+where the subdomain problems satisfy first-order absorbing (impedance) transmission conditions,
+and exchange of information between subdomains is achieved using a partition of unity. We provide
+a novel analysis of this method at the PDE level (without discretization). First, we formulate the
+method as a fixed point iteration, and show (in dimensions 1,2,3) that it is well-defined in a tensor
+product of appropriate local function spaces, each with $L^2$ impedance boundary data. Given this,
+we then obtain a bound on the norm of the fixed point operator in terms of the local norms of certain
+impedance-to-impedance maps arising from local interactions between subdomains. These bounds
+provide conditions under which (some power of) the fixed point operator is a contraction. In 2-d,
+for rectangular domains and strip-wise domain decompositions (with each subdomain only overlapping
+its immediate neighbours), we present two techniques for verifying the assumptions on the impedance-to-impedance
+maps which ensure power contractivity of the fixed point operator. The first is through semiclassical
+analysis, which gives rigorous estimates valid as the frequency tends to infinity. These results
+verify the required assumptions for sufficiently large overlap. For more realistic domain decompositions,
+we directly compute the norms of the impedance-to-impedance maps by solving certain canonical
+(local) eigenvalue problems. We give numerical experiments that illustrate the theory. These
+also show that the iterative method remains convergent and/or provides a good preconditioner in
+cases not covered by the theory, including for general domain decompositions, such as those obtained
+via automatic graph-partitioning software. 

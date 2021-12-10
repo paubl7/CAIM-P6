@@ -1,0 +1,19 @@
+Malaria, a life-threatening disease, infects millions of people every year throughout the world
+demanding faster diagnosis for proper treatment before any damages occur. In this paper, an end-to-end
+deep learning-based approach is proposed for faster diagnosis of malaria from thin blood smear
+images by making efficient optimizations of features extracted from diversified receptive fields.
+Firstly, an efficient, highly scalable deep neural network, named as DilationNet, is proposed
+that incorporates features from a large spectrum by varying dilation rates of convolutions to extract
+features from different receptive areas. Next, the raw images are resampled to various resolutions
+to introduce variations in the receptive fields that are used for independently optimizing different
+forms of DilationNet scaled for different resolutions of images. Afterward, a feature fusion scheme
+is introduced with the proposed DeepFusionNet architecture for jointly optimizing the feature
+space of these individually trained networks operating on different levels of observations. All
+the convolutional layers of various forms of DilationNets that are optimized to extract spatial
+features from different resolutions of images are directly transferred to provide a variegated
+feature space from any image. Later, joint optimization of these spatial features is carried out
+in the DeepFusionNet to extract the most relevant representation of the sample image. This scheme
+offers the opportunity to explore the feature space extensively by varying the observation level
+to accurately diagnose the abnormality. Intense experimentations on a publicly available dataset
+show outstanding performance with accuracy over 99.5% outperforming other state-of-the-art
+approaches. 

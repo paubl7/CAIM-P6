@@ -1,0 +1,18 @@
+Many studies on machine learning (ML) for computer-aided diagnosis have so far been mostly restricted
+to high-quality research data. Clinical data warehouses, gathering routine examinations from
+hospitals, offer great promises for training and validation of ML models in a realistic setting.
+However, the use of such clinical data warehouses requires quality control (QC) tools. Visual QC
+by experts is time-consuming and does not scale to large datasets. In this paper, we propose a convolutional
+neural network (CNN) for the automatic QC of 3D T1-weighted brain MRI for a large heterogeneous clinical
+data warehouse. To that purpose, we used the data warehouse of the hospitals of the Greater Paris
+area (Assistance Publique-H\^opitaux de Paris [AP-HP]). Specifically, the objectives were:
+1) to identify images which are not proper T1-weighted brain MRIs; 2) to identify acquisitions for
+which gadolinium was injected; 3) to rate the overall image quality. We used 5000 images for training
+and validation and a separate set of 500 images for testing. In order to train/validate the CNN, the
+data were annotated by two trained raters according to a visual QC protocol that we specifically
+designed for application in the setting of a data warehouse. For objectives 1 and 2, our approach
+achieved excellent accuracy (balanced accuracy and F1-score \textgreater 90\%), similar to the
+human raters. For objective 3, the performance was good but substantially lower than that of human
+raters. Nevertheless, the automatic approach accurately identified (balanced accuracy and F1-score
+\textgreater 80\%) low quality images, which would typically need to be excluded. Overall, our
+approach shall be useful for exploiting hospital data warehouses in medical image computing. 

@@ -1,0 +1,19 @@
+We study the recent emerging personalized federated learning (PFL) that aims at dealing with the
+challenging problem of Non-I.I.D. data in the federated learning (FL) setting. The key difference
+between PFL and conventional FL lies in the training target, of which the personalized models in
+PFL usually pursue a trade-off between personalization (i.e., usually from local models) and generalization
+(i.e., usually from the global model) on trained models. Conventional FL methods can hardly meet
+this target because of their both well-developed global and local models. The prevalent PFL approaches
+usually maintain a global model to guide the training process of local models and transfer a proper
+degree of generalization to them. However, the sole global model can only provide one direction
+of generalization and may even transfer negative effects to some local models when rich statistical
+diversity exists across multiple local datasets. Based on our observation, most real or synthetic
+data distributions usually tend to be clustered to some degree, of which we argue different directions
+of generalization can facilitate the PFL. In this paper, we propose a novel concept called clustered
+generalization to handle the challenge of statistical heterogeneity in FL. Specifically, we maintain
+multiple global (generalized) models in the server to associate with the corresponding amount
+of local model clusters in clients, and further formulate the PFL as a bi-level optimization problem
+that can be solved efficiently and robustly. We also conduct detailed theoretical analysis and
+provide the convergence guarantee for the smooth non-convex objectives. Experimental results
+on both synthetic and real datasets show that our approach surpasses the state-of-the-art by a significant
+margin. 

@@ -1,0 +1,18 @@
+Machine Learning (ML) models typically require large-scale, balanced training data to be robust,
+generalizable, and effective in the context of healthcare. This has been a major issue for developing
+ML models for the coronavirus-disease 2019 (COVID-19) pandemic where data is highly imbalanced,
+particularly within electronic health records (EHR) research. Conventional approaches in ML
+use cross-entropy loss (CEL) that often suffers from poor margin classification. For the first
+time, we show that contrastive loss (CL) improves the performance of CEL especially for imbalanced
+EHR data and the related COVID-19 analyses. This study has been approved by the Institutional Review
+Board at the Icahn School of Medicine at Mount Sinai. We use EHR data from five hospitals within the
+Mount Sinai Health System (MSHS) to predict mortality, intubation, and intensive care unit (ICU)
+transfer in hospitalized COVID-19 patients over 24 and 48 hour time windows. We train two sequential
+architectures (RNN and RETAIN) using two loss functions (CEL and CL). Models are tested on full sample
+data set which contain all available data and restricted data set to emulate higher class imbalance.CL
+models consistently outperform CEL models with the restricted data set on these tasks with differences
+ranging from 0.04 to 0.15 for AUPRC and 0.05 to 0.1 for AUROC. For the restricted sample, only the CL
+model maintains proper clustering and is able to identify important features, such as pulse oximetry.
+CL outperforms CEL in instances of severe class imbalance, on three EHR outcomes with respect to
+three performance metrics: predictive power, clustering, and feature importance. We believe
+that the developed CL framework can be expanded and used for EHR ML work in general. 

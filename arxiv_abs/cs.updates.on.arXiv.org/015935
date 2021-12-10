@@ -1,0 +1,20 @@
+Recent high-profile attacks on the Internet of Things (IoT) have brought to the forefront the vulnerability
+of "smart" devices, and have resulted in numerous IoT-focused security analyses. Many of the attacks
+had weak device configuration as the root cause. One potential source of rich and definitive information
+about the configuration of an IoT device is the device's firmware. However, firmware analysis is
+complex and automated firmware analyses have thus far been confined to devices with more traditional
+operating systems such as Linux or VxWorks. Most IoT peripherals, due to lacking traditional operating
+systems and implementing a wide variety of communication technologies, have only been the subject
+of smaller-scale analyses. Peripheral firmware analysis is further complicated by the fact that
+such firmware files are predominantly available as stripped binaries, without the ELF headers
+and symbol tables that would simplify reverse engineering. In this paper, we present argXtract,
+an open-source automated static analysis tool, which extracts security-relevant configuration
+information from stripped IoT peripheral firmware. Specifically, we focus on binaries that target
+the ARM Cortex-M architecture, due to its growing popularity among IoT peripherals. argXtract
+overcomes the challenges associated with stripped Cortex-M analysis and is able to retrieve arguments
+to security-relevant supervisor and function calls, enabling automated bulk analysis of firmware
+files. We demonstrate this via three real-world case studies. The largest case study covers a dataset
+of 243 Bluetooth Low Energy binaries targeting Nordic Semiconductor chipsets, while the other
+two focus on Nordic ANT and STMicroelectronics BlueNRG binaries. The results reveal widespread
+lack of security and privacy controls in IoT, such as minimal or no protection for data, fixed passkeys
+and trackable device addresses. 

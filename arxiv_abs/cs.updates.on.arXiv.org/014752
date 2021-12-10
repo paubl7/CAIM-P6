@@ -1,0 +1,19 @@
+This article describes an efficient training method for online streaming attention-based encoder-decoder
+(AED) automatic speech recognition (ASR) systems. AED models have achieved competitive performance
+in offline scenarios by jointly optimizing all components. They have recently been extended to
+an online streaming framework via models such as monotonic chunkwise attention (MoChA). However,
+the elaborate attention calculation process is not robust for long-form speech utterances. Moreover,
+the sequence-level training objective and time-restricted streaming encoder cause a nonnegligible
+delay in token emission during inference. To address these problems, we propose CTC synchronous
+training (CTC-ST), in which CTC alignments are leveraged as a reference for token boundaries to
+enable a MoChA model to learn optimal monotonic input-output alignments. We formulate a purely
+end-to-end training objective to synchronize the boundaries of MoChA to those of CTC. The CTC model
+shares an encoder with the MoChA model to enhance the encoder representation. Moreover, the proposed
+method provides alignment information learned in the CTC branch to the attention-based decoder.
+Therefore, CTC-ST can be regarded as self-distillation of alignment knowledge from CTC to MoChA.
+Experimental evaluations on a variety of benchmark datasets show that the proposed method significantly
+reduces recognition errors and emission latency simultaneously, especially for long-form and
+noisy speech. We also compare CTC-ST with several methods that distill alignment knowledge from
+a hybrid ASR system and show that the CTC-ST can achieve a comparable tradeoff of accuracy and latency
+without relying on external alignment information. The best MoChA system shows performance comparable
+to that of RNN-transducer (RNN-T). 

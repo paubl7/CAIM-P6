@@ -1,0 +1,19 @@
+Bitcoin is built on a blockchain, an immutable decentralised ledger that allows entities (users)
+to exchange Bitcoins in a pseudonymous manner. Bitcoins are associated with alpha-numeric addresses
+and are transferred via transactions. Each transaction is composed of a set of input addresses (associated
+with unspent outputs received from previous transactions) and a set of output addresses (to which
+Bitcoins are transferred). Despite Bitcoin was designed with anonymity in mind, different heuristic
+approaches exist to detect which addresses in a specific transaction belong to the same entity.
+By applying these heuristics, we build an Address Correspondence Network: in this representation,
+addresses are nodes are connected with edges if at least one heuristic detects them as belonging
+to the same entity. %addresses are nodes and edges are drawn between addresses detected as belonging
+to the same entity by at least one heuristic. %nodes represent addresses and edges model the likelihood
+that two nodes belong to the same entity %In this network, connected components represent sets of
+addresses controlled by the same entity. In this paper, we analyse for the first time the Address
+Correspondence Network and show it is characterised by a complex topology, signalled by a broad,
+skewed degree distribution and a power-law component size distribution. Using a large-scale dataset
+of addresses for which the controlling entities are known, we show that a combination of external
+data coupled with standard community detection algorithms can reliably identify entities. The
+complex nature of the Address Correspondence Network reveals that usage patterns of individual
+entities create statistical regularities; and that these regularities can be leveraged to more
+accurately identify entities and gain a deeper understanding of the Bitcoin economy as a whole.

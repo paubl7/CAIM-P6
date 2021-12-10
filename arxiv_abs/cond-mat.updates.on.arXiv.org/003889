@@ -1,0 +1,18 @@
+The electronic density of states (DOS) quantifies the distribution of the energy levels that can
+be occupied by electrons in a quasiparticle picture, and is central to modern electronic structure
+theory. It also underpins the computation and interpretation of experimentally observable material
+properties such as optical absorption and electrical conductivity. We discuss the challenges
+inherent in the construction of a machine-learning (ML) framework aimed at predicting the DOS as
+a combination of local contributions that depend in turn on the geometric configuration of neighbours
+around each atom, using quasiparticle energy levels from density functional theory as training
+data. We present a challenging case study that includes configurations of silicon spanning a broad
+set of thermodynamic conditions, ranging from bulk structures to clusters, and from semiconducting
+to metallic behavior. We compare different approaches to represent the DOS, and the accuracy of
+predicting quantities such as the Fermi level, the DOS at the Fermi level, or the band energy, either
+directly or as a side-product of the evaluation of the DOS. The performance of the model depends crucially
+on the smoothening of the DOS, and there is a tradeoff to be made between the systematic error associated
+with the smoothening and the error in the ML model for a specific structure. We demonstrate the usefulness
+of this approach by computing the density of states of a large amorphous silicon sample, for which
+it would be prohibitively expensive to compute the DOS by direct electronic structure calculations,
+and show how the atom-centred decomposition of the DOS that is obtained through our model can be used
+to extract physical insights into the connections between structural and electronic features.

@@ -1,0 +1,19 @@
+A new model for the numerical simulation of a rigid body moving in a viscous fluid flow using FEM is
+presented. One of the most interesting features of this approach is the small computational effort
+required to solve the motion of the rigid body, comparable to a pure fluid solver. The model is based
+on the idea of extending the fluid velocity inside the rigid body and solving the flow equations with
+a penalization term to enforce rigid motion inside the solid. In order to get the velocity field in
+the fluid domain the Navier-Stokes equations for an incompressible viscous flow are solved using
+a fractional-step procedure combined with the two-step Taylor-Galerkin for the fractional linear
+momentum. Once the velocity field in the fluid domain is computed, calculation of the rigid motion
+is obtained by averaging translation and angular velocities over the solid. One of the main challenges
+when dealing with the fluid-solid interaction is the proper modelling of the interface which separates
+the solid moving mass from the viscous fluid. In this work the combination of the level set technique
+and the two-step Taylor-Galerkin algorithm for tracking the fluid-solid interface is proposed.
+The good properties exhibited by the two-step Taylor-Galerkin, minimizing oscillations and numerical
+diffusion, make this method suitable to accurately advect the solid domain avoiding distortions
+at its boundaries, and thus preserving the initial size and shape of the rigid body. The proposed
+model has been validated against empirical solutions, experimental data and numerical simulations
+found in the literature. In all tested cases, the numerical results have shown to be accurate, proving
+the potential of the proposed model as a valuable tool for the numerical analysis of the fluid-solid
+interaction. 

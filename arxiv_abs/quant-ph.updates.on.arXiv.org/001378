@@ -1,0 +1,19 @@
+We present two different methods for modelling non-Markovian quantum light-matter interactions
+in waveguide QED systems, using matrix product states (MPSs) and a space-discretized waveguide
+(SDW) model. After describing the general theory and implementation of both approaches, we compare
+and contrast these methods directly on three topical problems of interest in waveguide-QED, including
+(i) a two-level system (TLS) coupled to an infinite (one-dimensional) waveguide, (ii) a TLS coupled
+to a terminated waveguide with a time-delayed coherent feedback, and (iii) two spatially separated
+TLSs coupled within an infinite waveguide. Both approaches are shown to efficiently model multi-photon
+nonlinear dynamics in highly non-Markovian regimes, and we highlight the advantages and disadvantages
+of these methods for modelling waveguide QED interactions, including their implementation in
+Python, computational run times, and ease of conceptual understanding. We explore both vacuum
+dynamics as well as regimes of strong optical pumping, where a weak excitation approximation cannot
+be applied. The MPS approach scales better when modelling multi-photon dynamics and long delay
+times, and explicitly includes non-Markovian memory effects. In contrast, the SDW model accounts
+for non-Markovian effects through space discretization, and solves Markovian equations of motion,
+yet rigorously includes the effects of retardation. The SDW model, based on an extension of recent
+collisional pictures in quantum optics, is solved through quantum trajectory techniques, and
+can more easily add in additional dissipation processes, including off-chip decay and TLS pure
+dephasing. The impact of these processes is shown directly on feedback-induced population trapping
+and TLS entanglement between spatially separated TLSs. 

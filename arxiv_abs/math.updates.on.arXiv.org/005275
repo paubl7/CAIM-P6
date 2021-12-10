@@ -1,0 +1,19 @@
+A main edge learning paradigm, called partitioned edge learning (PARTEL), is considered. It supports
+the distributed training of a large-scale AI model by dynamically partitioning the model and allocating
+the resultant parametric blocks to different devices for updating. Then devices upload the updates
+to a server where they are assembled and applied to updating the model. The two steps are iterated
+till the model converges. In this work, we consider the efficient joint management of parameter
+allocation and radio resources to reduce the learning latency of PARTEL, when deployed in a broadband
+system using orthogonal frequency-division multiplexing (OFDM). Specifically, the policies
+for joint subcarrier, parameter, and power allocation (SUPPORT) are optimized under the criterion
+of minimum latency. Two cases are considered. First, for the case of decomposable models (e.g.,
+logistic regression or support vector machine), the latency-minimization problem is a mixed-integer
+program and non-convex. Due to its intractability, we develop a practical solution by 1) relaxing
+the binary subcarrier-assignment decisions and 2) transforming the relaxed problem into a convex
+problem of model size maximization under a latency constraint nested in a simple search for the target
+model size. By deriving the properties of the convex problem, a low-complexity algorithm is designed
+to compute the SUPPORT policy. Second, consider the case of convolutional neural network (CNN)
+models which can be trained using PARTEL by introducing some auxiliary variables. This, however,
+introduces constraints on model partitioning reducing the granularity of parameter allocation.
+The preceding policy is extended to CNN models by applying the proposed techniques of load rounding
+and proportional adjustment to rein in latency expansion caused by the load granularity constraints.

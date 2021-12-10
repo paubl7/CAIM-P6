@@ -1,0 +1,19 @@
+We introduce difference estimators for data stream computation, which provide approximations
+to $F(v)-F(u)$ for frequency vectors $v\succeq u$ and a given function $F$. We show how to use such
+estimators to carefully trade error for memory in an iterative manner. The function $F$ is generally
+non-linear, and we give the first difference estimators for the frequency moments $F_p$ for $p\in[0,2]$,
+as well as for integers $p>2$. Using these, we resolve a number of central open questions in adversarial
+robust streaming and sliding window models. For adversarially robust streams, we obtain a $(1+\epsilon)$-approximation
+to $F_p$ using $\tilde{\mathcal{O}}\left(\frac{\log n}{\epsilon^2}\right)$ bits of space
+for $p\in[0,2]$, and using $\tilde{\mathcal{O}}\left(\frac{1}{\epsilon^2}n^{1-2/p}\right)$
+bits of space for integers $p>2$. We also obtain an adversarially robust algorithm for the $L_2$-heavy
+hitters problem using $\mathcal{O}\left(\frac{\log n}{\epsilon^2}\right)$ bits of space.
+Our bounds are optimal up to $\text{poly}(\log\log n + \log(1/\epsilon))$ factors, and improve
+the $\frac{1}{\epsilon^3}$ dependence of Ben-Eliezer, et al. (PODS 2020, best paper award) and
+the $\frac{1}{\epsilon^{2.5}}$ dependence of Hassidim, et al. (NeurIPS 2020, oral presentation).
+For sliding windows, we obtain a $(1+\epsilon)$-approximation to $F_p$ using $\tilde{\mathcal{O}}\left(\frac{\log^2
+n}{\epsilon^2}\right)$ bits of space for $p\in(0,2]$, resolving a longstanding question of Braverman
+and Ostrovsky (FOCS 2007). For example, for $p = 2$ we improve the dependence on $\epsilon$ from $\frac{1}{\epsilon^4}$
+to an optimal $\frac{1}{\epsilon^2}$. For both models, our dependence on $\epsilon$ shows, up
+to $\log\frac{1}{\epsilon}$ factors, that there is no overhead over the standard insertion-only
+data stream model for any of these problems. 

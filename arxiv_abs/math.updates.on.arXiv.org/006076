@@ -1,0 +1,18 @@
+We propose a computational approach to estimate the stability domain of quadratic-bilinear reduced-order
+models (ROMs), which are low-dimensional approximations of large-scale dynamical systems. For
+nonlinear ROMs, it is not only important to show that the origin is locally asymptotically stable,
+but also to quantify if the operative range of the ROM is included in the region of convergence. While
+accuracy and structure preservation remain the main focus of development for nonlinear ROMs, computational
+methods that go beyond the existing highly conservative analytical results have been lacking thus
+far. In this work, for a given quadratic Lyapunov function, we first derive an analytical estimate
+of the stability domain, which is rather conservative but can be evaluated efficiently. With the
+goal to enlarge this estimate, we provide an optimal ellipsoidal estimate of the stability domain
+by solving a convex optimization problem. This provides us with valuable information about stability
+properties of the ROM, an important aspect of predictive simulation. We do not assume a specific
+ROM method, so a particular appeal is that the approach is applicable to quadratic-bilinear models
+obtained via data-driven approaches, where ROM stability properties cannot - per definition -
+be derived from the full-order model. Numerical results for a LQG-balanced ROM of Burgers' equation,
+a proper orthogonal decomposition ROM of FitzHugh-Nagumo, and a non-intrusive ROM of Burgers'
+equation demonstrate the scalability and quantitative advantages of the proposed approach. The
+optimization-based estimates of the stability domain are found to be up to four orders of magnitude
+less conservative than analytical estimates. 

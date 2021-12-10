@@ -1,0 +1,19 @@
+Image denoising is often empowered by accurate prior information. In recent years, data-driven
+neural network priors have shown promising performance for RGB natural image denoising. Compared
+to classic handcrafted priors (e.g., sparsity and total variation), the "deep priors" are learned
+using a large number of training samples -- which can accurately model the complex image generating
+process. However, data-driven priors are hard to acquire for hyperspectral images (HSIs) due to
+the lack of training data. A remedy is to use the so-called unsupervised deep image prior (DIP). Under
+the unsupervised DIP framework, it is hypothesized and empirically demonstrated that proper neural
+network structures are reasonable priors of certain types of images, and the network weights can
+be learned without training data. Nonetheless, the most effective unsupervised DIP structures
+were proposed for natural images instead of HSIs. The performance of unsupervised DIP-based HSI
+denoising is limited by a couple of serious challenges, namely, network structure design and network
+complexity. This work puts forth an unsupervised DIP framework that is based on the classic spatio-spectral
+decomposition of HSIs. Utilizing the so-called linear mixture model of HSIs, two types of unsupervised
+DIPs, i.e., U-Net-like network and fully-connected networks, are employed to model the abundance
+maps and endmembers contained in the HSIs, respectively. This way, empirically validated unsupervised
+DIP structures for natural images can be easily incorporated for HSI denoising. Besides, the decomposition
+also substantially reduces network complexity. An efficient alternating optimization algorithm
+is proposed to handle the formulated denoising problem. Semi-real and real data experiments are
+employed to showcase the effectiveness of the proposed approach. 

@@ -1,0 +1,20 @@
+The priority model was introduced by Borodin, Rackoff, and Nielsen (2003) to capture greedy-like
+algorithms. Motivated by the success of advice complexity in the area of online algorithms, Borodin
+et al. (2020) extended the fixed priority model to include an advice tape oracle. They also developed
+a reduction-based framework for proving lower bounds on the amount of advice required to achieve
+certain approximation ratios in this rather powerful model. In order to capture most of the algorithms
+that are considered greedy-like, the even stronger model of adaptive priority algorithms is needed.
+We extend the adaptive priority model to include an advice tape oracle. We show how to modify the reduction-based
+framework from the fixed priority case, making it applicable to the more powerful adaptive priority
+algorithms. The framework provides a template, where one can obtain a lower bound relatively easily
+by exhibiting "gadget patterns" fulfilling given criteria. In the process, we simplify the proof
+that the framework works, and we strengthen all the earlier lower bounds by a factor two. As a motivating
+example, we present a purely combinatorial adaptive priority algorithm with advice for Minimum
+Vertex Cover on triangle-free graphs of maximum degree three. Our algorithm achieves optimality
+and uses at most 7n/22 bits of advice. Known results imply that no adaptive priority algorithm without
+advice can achieve optimality without advice, and we prove that 7n/22 is fewer bits than an online
+algorithm with advice needs to reach optimality. Furthermore, we show connections between exact
+algorithms and priority algorithms with advice. Priority algorithms with advice that achieve
+optimality can be used to define corresponding exact algorithms, priority exact algorithms. The
+lower bound templates for advice-based adaptive algorithms imply lower bounds on exact algorithms
+designed in this way. 

@@ -1,0 +1,19 @@
+Most applications of Bayesian Inference for parameter estimation and model selection in astrophysics
+involve the use of Monte Carlo techniques such as Markov Chain Monte Carlo (MCMC) and nested sampling.
+However, they are time consuming and their convergence to posterior is difficult to determine.
+In this work, we introduce variational inference (VI) as an alternative to solve astrophysics problems,
+and demonstrate its usefullness for parameter estimation and model selection. Variational inference
+converts the inference problem into an optimization problem by approximating the posterior from
+a known family of distributions and using Kullback-Leibler divergence to characterize the difference.
+It takes advantage of fast optimization techniques, which make it ideal to deal with large datasets
+and makes it trivial to parallelize. We derive a new approximate evidence estimation based on variational
+posterior and importance sampling technique called posterior weighted importance sampling for
+evidence (PWISE), which is useful to perform Bayesian model selection. As a proof of principle,
+we apply variational inference to five different problems in astrophysics, where Monte Carlo techniques
+were previously used. These include assessment of significance of annual modulation in the COSINE-100
+dark matter experiment, measuring exoplanet orbital parameters from radial velocity data, tests
+of periodicities in measurements of Newton's constant $G$, assessing the significance of a turnover
+in the spectral lag data of GRB 160625B and estimating the mass of a galaxy cluster using weak gravitational
+lensing. We find that variational inference is much faster than MCMC and nested sampling techniques
+for most of these problems while providing competitive results. All our analysis codes have been
+made publicly available. 

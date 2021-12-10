@@ -1,0 +1,19 @@
+While multitask representation learning has become a popular approach in reinforcement learning
+(RL), theoretical understanding of why and when it works remains limited. This paper presents analyses
+for the statistical benefit of multitask representation learning in linear Markov Decision Process
+(MDP) under a generative model. In this paper, we consider an agent to learn a representation function
+$\phi$ out of a function class $\Phi$ from $T$ source tasks with $N$ data per task, and then use the
+learned $\hat{\phi}$ to reduce the required number of sample for a new task. We first discover a \emph{Least-Activated-Feature-Abundance}
+(LAFA) criterion, denoted as $\kappa$, with which we prove that a straightforward least-square
+algorithm learns a policy which is $\tilde{O}(H^2\sqrt{\frac{\mathcal{C}(\Phi)^2 \kappa d}{NT}+\frac{\kappa
+d}{n}})$ sub-optimal. Here $H$ is the planning horizon, $\mathcal{C}(\Phi)$ is $\Phi$'s complexity
+measure, $d$ is the dimension of the representation (usually $d\ll \mathcal{C}(\Phi)$) and $n$
+is the number of samples for the new task. Thus the required $n$ is $O(\kappa d H^4)$ for the sub-optimality
+to be close to zero, which is much smaller than $O(\mathcal{C}(\Phi)^2\kappa d H^4)$ in the setting
+without multitask representation learning, whose sub-optimality gap is $\tilde{O}(H^2\sqrt{\frac{\kappa
+\mathcal{C}(\Phi)^2d}{n}})$. This theoretically explains the power of multitask representation
+learning in reducing sample complexity. Further, we note that to ensure high sample efficiency,
+the LAFA criterion $\kappa$ should be small. In fact, $\kappa$ varies widely in magnitude depending
+on the different sampling distribution for new task. This indicates adaptive sampling technique
+is important to make $\kappa$ solely depend on $d$. Finally, we provide empirical results of a noisy
+grid-world environment to corroborate our theoretical findings. 

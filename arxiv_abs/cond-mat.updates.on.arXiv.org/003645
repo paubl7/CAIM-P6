@@ -1,0 +1,20 @@
+The 4D scanning transmission electron microscopy (STEM) method has enabled mapping of the structure
+and functionality of solids on the atomic scale, yielding information-rich data sets containing
+information on the interatomic electric and magnetic fields, structural and electronic order
+parameters, and other symmetry breaking distortions. A critical bottleneck on the pathway toward
+harnessing 4D-STEM for materials exploration is the dearth of analytical tools that can reduce
+complex 4D-STEM data sets to physically relevant descriptors. Classical machine learning (ML)
+methods such as principal component analysis and other linear unmixing techniques are limited
+by the presence of multiple point-group symmetric variants, where diffractograms from each rotationally
+equivalent position will form its own component. This limitation even holds for more complex ML
+methods, such as convolutional neural networks. Here, we propose and implement an approach for
+the systematic exploration of symmetry breaking phenomena from 4D-STEM data sets using rotationally
+invariant variational autoencoders (rrVAE), which is designed to disentangle the general rotation
+of the object from other latent representations. The implementation of purely rotational rrVAE
+is discussed as are applications to simulated data for graphene and zincblende structures that
+illustrate the effect of site symmetry breaking. Finally, the rrVAE analysis of 4D-STEM data of
+vacancies in graphene is illustrated and compared to the classical center-of-mass (COM) analysis.
+This approach is universal for probing of symmetry breaking phenomena in complex systems and can
+be implemented for a broad range of diffraction methods exploring the 2D diffraction space of the
+system, including X-ray ptychography, electron backscatter diffraction (EBSD), and more complex
+methods. 

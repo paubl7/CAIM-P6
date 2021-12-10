@@ -1,0 +1,20 @@
+Machine learning models of accelerator systems (`surrogate models') are able to provide fast,
+accurate predictions of accelerator physics phenomena. However, approaches to date typically
+do not include measured input diagnostics, such as the initial beam distributions, which are critical
+for accurately representing the beam evolution through the system. In addition, these inputs often
+vary over time, and models that can account for these changing conditions are needed. Simulations
+are in some cases needed to provide sufficient training data. These typically represent the designed
+machine before construction; however, the behavior of the installed components may be quite different
+due to changes over time or static differences that were not modeled. Therefore, surrogate models
+that can leverage both simulation and measured data successfully are needed. We introduce an approach
+based on convolutional neural networks that uses the drive laser distribution and scalar settings
+as inputs for the Linac Coherent Light Source II injector frontend. The model is able to predict scalar
+beam parameters and the transverse beam distribution downstream, taking into account the impact
+of time-varying non-uniformities in the initial transverse laser distribution. We also introduce
+and evaluate a transfer learning procedure for adapting the surrogate model from the simulation
+domain to the measurement domain, to account for differences between the two. Applying this approach
+to our test case results in a model that can predict test sample outputs within a mean absolute percent
+error of 7.6%. This is a substantial improvement over the model trained only on simulations, which
+has an error of 112.7% when applied to measured data. While we focus on the LCLS-II Injector frontend,
+these approaches for improving ML-based online modeling of injector systems could be easily adapted
+to other accelerator facilities. 

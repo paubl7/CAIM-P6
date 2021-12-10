@@ -1,0 +1,20 @@
+Volume change measures derived from longitudinal MRI (e.g. hippocampal atrophy) are a well-studied
+biomarker of disease progression in Alzheimer's Disease (AD) and are used in clinical trials to
+track the therapeutic efficacy of disease-modifying treatments. However, longitudinal MRI change
+measures can be confounded by non-biological factors, such as different degrees of head motion
+and susceptibility artifact between pairs of MRI scans. We hypothesize that deep learning methods
+applied directly to pairs of longitudinal MRI scans can be trained to differentiate between biological
+changes and non-biological factors better than conventional approaches based on deformable image
+registration. To achieve this, we make a simplifying assumption that biological factors are associated
+with time (i.e. the hippocampus shrinks overtime in the aging population) whereas non-biological
+factors are independent of time. We then formulate deep learning networks to infer the temporal
+order of same-subject MRI scans input to the network in arbitrary order; as well as to infer ratios
+between interscan intervals for two pairs of same-subject MRI scans. In the test dataset, these
+networks perform better in tasks of temporal ordering (89.3%) and interscan interval inference
+(86.1%) than a state-of-the-art deformation-based morphometry method ALOHA (76.6% and 76.1%
+respectively) (Das et al., 2012). Furthermore, we derive a disease progression score from the network
+that is able to detect a group difference between 58 preclinical AD and 75 beta-amyloid-negative
+cognitively normal individuals within one year, compared to two years for ALOHA. This suggests
+that deep learning can be trained to differentiate MRI changes due to biological factors (tissue
+loss) from changes due to non-biological factors, leading to novel biomarkers that are more sensitive
+to longitudinal changes at the earliest stages of AD. 

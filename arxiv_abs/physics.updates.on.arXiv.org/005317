@@ -1,0 +1,19 @@
+With the major increase in the volume of the spectroscopic line lists needed to perform accurate
+radiative transfer calculations, disseminating accurate radiative data has become almost as
+much a challenge as computing it. Considering that many planetary science applications are only
+looking for heating rates or mid-to-low resolution spectra, any approach enabling such computations
+in an accurate and flexible way at a fraction of the computing and storage costs is highly valuable.
+For many of these reasons, the correlated-k approach has become very popular. Its major weakness
+has been the lack of ways to adapt the spectral grid/resolution of precomputed k-coefficients,
+making it difficult to distribute a generic database suited for many different applications. Currently,
+most users still need to have access to a line-by-line transfer code with the relevant line lists
+or high-resolution cross sections to compute k-coefficient tables at the desired resolution.
+In this work, we demonstrate that precomputed k-coefficients can be binned to a lower spectral resolution
+without any additional assumptions, and show how this can be done in practice. We then show that this
+binning procedure does not introduce any significant loss in accuracy. Along the way, we quantify
+how such an approach compares very favorably with the sampled cross section approach. This opens
+up a new avenue to deliver accurate radiative transfer data by providing mid-resolution k-coefficient
+tables to users who can later tailor those tables to their needs on the fly. To help with this final
+step, we briefly present Exo_k, an open-access, open-source Python library designed to handle,
+tailor, and use many different formats of k-coefficient and cross-section tables in an easy and
+computationally efficient way. 

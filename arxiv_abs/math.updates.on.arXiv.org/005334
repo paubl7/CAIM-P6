@@ -1,0 +1,20 @@
+Privacy-preserving data release mechanisms aiming to minimize the privacy leakage under utility
+constraints of nonspecific tasks are studied through the lens of information theory. An information
+theoretic framework extending Sankar et al. [1] is proposed. While the private feature to be protected
+is typically determined and known by the users who release their data, the specific task where the
+release data is utilized is usually unknown. To address the lack of information of the specific task,
+utility constraints laid on a set of multiple possible tasks are considered. The mechanism protects
+the privacy of a given feature of the to-be-released data while satisfying utility constraints
+of all possible tasks in the set. First, the single-letter characterization of the privacy-utility
+tradeoff region is derived. Characterization of the minimum privacy under log-loss utility constraints
+turns out to be a non-convex optimization problem involving mutual information in the objective
+function and the constraints. Second, focusing on the case where the raw data consists of multiple
+independent components, we show that the above optimization problem can be decomposed into multiple
+parallel privacy funnel (PF) problems [2] with different weightings, each of which includes only
+a single utility constraint. We explicitly derive the optimal solution to each PF problem when the
+private feature is a deterministic function of a data component. The solution is characterized
+by the leakage-free threshold, and the minimum leakage is zero while the utility constraint is below
+the threshold. Once the utility requirement is above the threshold, the privacy leakage increases
+linearly. Finally, we show that the optimal weighting of each privacy funnel problem can be found
+by solving a linear program (LP). Numerical results are shown to illustrate the robustness of our
+approach. 

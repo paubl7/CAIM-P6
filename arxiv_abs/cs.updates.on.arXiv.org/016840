@@ -1,0 +1,18 @@
+Many modern time-series datasets contain large numbers of output response variables sampled for
+prolonged periods of time. For example, in neuroscience, the activities of 100s-1000's of neurons
+are recorded during behaviors and in response to sensory stimuli. Multi-output Gaussian process
+models leverage the nonparametric nature of Gaussian processes to capture structure across multiple
+outputs. However, this class of models typically assumes that the correlations between the output
+response variables are invariant in the input space. Stochastic linear mixing models (SLMM) assume
+the mixture coefficients depend on input, making them more flexible and effective to capture complex
+output dependence. However, currently, the inference for SLMMs is intractable for large datasets,
+making them inapplicable to several modern time-series problems. In this paper, we propose a new
+regression framework, the orthogonal stochastic linear mixing model (OSLMM) that introduces
+an orthogonal constraint amongst the mixing coefficients. This constraint reduces the computational
+burden of inference while retaining the capability to handle complex output dependence. We provide
+Markov chain Monte Carlo inference procedures for both SLMM and OSLMM and demonstrate superior
+model scalability and reduced prediction error of OSLMM compared with state-of-the-art methods
+on several real-world applications. In neurophysiology recordings, we use the inferred latent
+functions for compact visualization of population responses to auditory stimuli, and demonstrate
+superior results compared to a competing method (GPFA). Together, these results demonstrate that
+OSLMM will be useful for the analysis of diverse, large-scale time-series datasets. 

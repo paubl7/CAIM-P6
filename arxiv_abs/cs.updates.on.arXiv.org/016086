@@ -1,0 +1,19 @@
+We consider the energy complexity of the leader election problem in the single-hop radio network
+model, where each device has a unique identifier in $\{1, 2, \ldots, N\}$. Energy is a scarce resource
+for small battery-powered devices. For such devices, most of the energy is often spent on communication,
+not on computation. To approximate the actual energy cost, the energy complexity of an algorithm
+is defined as the maximum over all devices of the number of time slots where the device transmits or
+listens. Much progress has been made in understanding the energy complexity of leader election
+in radio networks, but very little is known about the trade-off between time and energy. $\textbf{Time-energy
+trade-off:}$ For any $k \geq \log \log N$, we show that a leader among at most $n$ devices can be elected
+deterministically in $O(n^{1+\epsilon}) + O(k \cdot N^{1/k})$ time and $O(k)$ energy if each device
+can simultaneously transmit and listen, where $\epsilon > 0$ is any small constant. This improves
+upon the previous $O(N)$-time $O(\log \log N)$-energy algorithm by Chang et al. [STOC 2017]. We
+provide lower bounds to show that the time-energy trade-off of our algorithm is near-optimal. $\textbf{Dense
+instances:}$ For the dense instances where the number of devices is $n = \Theta(N)$, we design a deterministic
+leader election algorithm using only $O(1)$ energy. This improves upon the $O(\log^* N)$-energy
+algorithm by Jurdzi\'{n}ski et al. [PODC 2002] and the $O(\alpha(N))$-energy algorithm by Chang
+et al. [STOC 2017]. More specifically, we show that the optimal deterministic energy complexity
+of leader election is $\Theta\left(\max\left\{1, \log \frac{N}{n}\right\}\right)$ if the devices
+cannot simultaneously transmit and listen, and it is $\Theta\left(\max\left\{1, \log \log \frac{N}{n}\right\}\right)$
+if they can. 

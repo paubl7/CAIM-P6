@@ -1,0 +1,18 @@
+We consider the following class of submodular k-multiway partitioning problems: (Sub-$k$-MP)
+$\min \sum_{i=1}^k f(S_i): S_1 \uplus S_2 \uplus \cdots \uplus S_k = V \mbox{ and } S_i \neq \emptyset
+\mbox{ for all }i\in [k]$. Here $f$ is a non-negative submodular function, and $\uplus$ denotes
+the union of disjoint sets. Hence the goal is to partition $V$ into $k$ non-empty sets $S_1,S_2,\ldots,S_k$
+such that $\sum_{i=1}^k f(S_i)$ is minimized. These problems were introduced by Zhao et al. partly
+motivated by applications to network reliability analysis, VLSI design, hypergraph cut, and other
+partitioning problems. In this work we revisit this class of problems and shed some light onto their
+hardness of approximation in the value oracle model. We provide new unconditional hardness results
+for Sub-$k$-MP in the special settings where the function $f$ is either monotone or symmetric. For
+symmetric functions we show that given any $\epsilon > 0$, any algorithm achieving a $(2 - \epsilon)$-approximation
+requires exponentially many queries in the value oracle model. For monotone objectives we show
+that given any $\epsilon > 0$, any algorithm achieving a $(4/3 - \epsilon)$-approximation requires
+exponentially many queries in the value oracle model. We then extend Sub-$k$-MP to a larger class
+of partitioning problems, where the functions $f_i(S_i)$ can now be all different, and there is
+a more general partitioning constraint $ S_1 \uplus S_2 \uplus \cdots \uplus S_k \in \mathcal{F}$
+for some family $\mathcal{F} \subseteq 2^V$ of feasible sets. We provide a black box reduction that
+allows us to leverage several existing results from the literature; leading to new approximations
+for this class of problems. 

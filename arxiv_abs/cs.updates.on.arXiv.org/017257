@@ -1,0 +1,20 @@
+Vehicle re-identification (Re-ID) is to retrieve images of the same vehicle across different cameras.
+Two key challenges lie in the subtle inter-instance discrepancy caused by near-duplicate identities
+and the large intra-instance variance caused by different views. Since the holistic appearance
+suffers from viewpoint variation and distortion, part-level feature learning has been introduced
+to enhance vehicle description. However, existing approaches to localize and amplify significant
+parts often fail to handle spatial misalignment as well as occlusion and require expensive annotations.
+In this paper, we propose a weakly supervised Part-Mentored Attention Network (PMANet) composed
+of a Part Attention Network (PANet) for vehicle part localization with self-attention and a Part-Mentored
+Network (PMNet) for mentoring the global and local feature aggregation. Firstly, PANet is introduced
+to predict a foreground mask and pinpoint $K$ prominent vehicle parts only with weak identity supervision.
+Secondly, we propose a PMNet to learn global and part-level features with multi-scale attention
+and aggregate them in $K$ main-partial tasks via part transfer. Like humans who first differentiate
+objects with general information and then observe salient parts for more detailed clues, PANet
+and PMNet construct a two-stage attention structure to perform a coarse-to-fine search among identities.
+Finally, we address this Re-ID issue as a multi-task problem, including global feature learning,
+identity classification, and part transfer. We adopt Homoscedastic Uncertainty to learn the optimal
+weighing of different losses. Comprehensive experiments are conducted on two benchmark datasets.
+Our approach outperforms recent state-of-the-art methods by averagely 2.63% in CMC@1 on VehicleID
+and 2.2% in mAP on VeRi776. Results on occluded test sets also demonstrate the generalization ability
+of PMANet. 

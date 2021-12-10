@@ -1,0 +1,20 @@
+Teamwork is a set of interrelated reasoning, actions and behaviors of team members that facilitate
+common objectives. Teamwork theory and experiments have resulted in a set of states and processes
+for team effectiveness in both human-human and agent-agent teams. However, human-agent teaming
+is less well studied because it is so new and involves asymmetry in policy and intent not present in
+human teams. To optimize team performance in human-agent teaming, it is critical that agents infer
+human intent and adapt their polices for smooth coordination. Most literature in human-agent teaming
+builds agents referencing a learned human model. Though these agents are guaranteed to perform
+well with the learned model, they lay heavy assumptions on human policy such as optimality and consistency,
+which is unlikely in many real-world scenarios. In this paper, we propose a novel adaptive agent
+architecture in human-model-free setting on a two-player cooperative game, namely Team Space
+Fortress (TSF). Previous human-human team research have shown complementary policies in TSF game
+and diversity in human players' skill, which encourages us to relax the assumptions on human policy.
+Therefore, we discard learning human models from human data, and instead use an adaptation strategy
+on a pre-trained library of exemplar policies composed of RL algorithms or rule-based methods with
+minimal assumptions of human behavior. The adaptation strategy relies on a novel similarity metric
+to infer human policy and then selects the most complementary policy in our library to maximize the
+team performance. The adaptive agent architecture can be deployed in real-time and generalize
+to any off-the-shelf static agents. We conducted human-agent experiments to evaluate the proposed
+adaptive agent framework, and demonstrated the suboptimality, diversity, and adaptability of
+human policies in human-agent teams. 

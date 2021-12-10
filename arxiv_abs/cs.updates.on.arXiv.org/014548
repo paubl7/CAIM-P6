@@ -1,0 +1,18 @@
+Clustering is a fundamental task in machine learning. Given a dataset $X = \{x_1, \ldots x_n\}$,
+the goal of $k$-means clustering is to pick $k$ "centers" from $X$ in a way that minimizes the sum of
+squared distances from each point to its nearest center. We consider $k$-means clustering in the
+online, no substitution setting, where one must decide whether to take $x_t$ as a center immediately
+upon streaming it and cannot remove centers once taken. The online, no substitution setting is challenging
+for clustering--one can show that there exist datasets $X$ for which any $O(1)$-approximation
+$k$-means algorithm must have center complexity $\Omega(n)$, meaning that it takes $\Omega(n)$
+centers in expectation. Bhattacharjee and Moshkovitz (2020) refined this bound by defining a complexity
+measure called $Lower_{\alpha, k}(X)$, and proving that any $\alpha$-approximation algorithm
+must have center complexity $\Omega(Lower_{\alpha, k}(X))$. They then complemented their lower
+bound by giving a $O(k^3)$-approximation algorithm with center complexity $\tilde{O}(k^2Lower_{k^3,
+k}(X))$, thus showing that their parameter is a tight measure of required center complexity. However,
+a major drawback of their algorithm is its memory requirement, which is $O(n)$. This makes the algorithm
+impractical for very large datasets. In this work, we strictly improve upon their algorithm on all
+three fronts; we develop a $36$-approximation algorithm with center complexity $\tilde{O}(kLower_{36,
+k}(X))$ that uses only $O(k)$ additional memory. In addition to having nearly optimal memory, this
+algorithm is the first known algorithm with center complexity bounded by $Lower_{36, k}(X)$ that
+is a true $O(1)$-approximation with its approximation factor being independent of $k$ or $n$. 

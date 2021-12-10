@@ -1,0 +1,20 @@
+Emerging application scenarios, such as cyber-physical systems (CPSs), the Internet of Things
+(IoT), and edge computing, call for coordination approaches addressing openness, self-adaptation,
+heterogeneity, and deployment agnosticism. Field-based coordination is one such approach, promoting
+the idea of programming system coordination declaratively from a global perspective, in terms
+of functional manipulation and evolution in "space and time" of distributed data structures called
+fields. More specifically regarding time, in field-based coordination (as in many other distributed
+approaches to coordination) it is assumed that local activities in each device are regulated by
+a fair and unsynchronised fixed clock working at the platform level. In this work, we challenge this
+assumption, and propose an alternative approach where scheduling is programmed in a natural way
+(along with usual field-based coordination) in terms of causality fields, each enacting a programmable
+distributed notion of a computation "cause" (why and when a field computation has to be locally computed)
+and how it should change across time and space. Starting from low-level platform triggers, such
+causality fields can be organised into multiple layers, up to high-level, collectively-computed
+time abstractions, to be used at the application level. This reinterpretation of time in terms of
+articulated causality relations allows us to express what we call "time-fluid" coordination,
+where scheduling can be finely tuned so as to select the triggers to react to, generally allowing
+to adaptively balance performance (system reactivity) and cost (resource usage) of computations.
+We formalise the proposed scheduling framework for field-based coordination in the context of
+the field calculus, discuss an implementation in the aggregate computing framework, and finally
+evaluate the approach via simulation on several case studies. 

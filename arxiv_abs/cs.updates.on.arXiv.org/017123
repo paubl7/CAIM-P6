@@ -1,0 +1,19 @@
+Data representation techniques have made a substantial contribution to advancing data processing
+and machine learning (ML). Improving predictive power was the focus of previous representation
+techniques, which unfortunately perform rather poorly on the interpretability in terms of extracting
+underlying insights of the data. Recently, Kolmogorov model (KM) was studied, which is an interpretable
+and predictable representation approach to learning the underlying probabilistic structure
+of a set of random variables. The existing KM learning algorithms using semi-definite relaxation
+with randomization (SDRwR) or discrete monotonic optimization (DMO) have, however, limited utility
+to big data applications because they do not scale well computationally. In this paper, we propose
+a computationally scalable KM learning algorithm, based on the regularized dual optimization
+combined with enhanced gradient descent (GD) method. To make our method more scalable to large-dimensional
+problems, we propose two acceleration schemes, namely, eigenvalue decomposition (EVD) elimination
+strategy and proximal EVD algorithm. Furthermore, a thresholding technique by exploiting the
+approximation error analysis and leveraging the normalized Minkowski $\ell_1$-norm and its bounds,
+is provided for the selection of the number of iterations of the proximal EVD algorithm. When applied
+to big data applications, it is demonstrated that the proposed method can achieve compatible training/prediction
+performance with significantly reduced computational complexity; roughly two orders of magnitude
+improvement in terms of the time overhead, compared to the existing KM learning algorithms. Furthermore,
+it is shown that the accuracy of logical relation mining for interpretability by using the proposed
+KM learning algorithm exceeds $80\%$. 

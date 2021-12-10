@@ -1,0 +1,19 @@
+Recently, physics-informed neural networks (PINNs) have offered a powerful new paradigm for solving
+problems relating to differential equations. Compared to classical numerical methods PINNs have
+several advantages, for example their ability to provide mesh-free solutions of differential
+equations and their ability to carry out forward and inverse modelling within the same optimisation
+problem. Whilst promising, a key limitation to date is that PINNs have struggled to accurately and
+efficiently solve problems with large domains and/or multi-scale solutions, which is crucial
+for their real-world application. Multiple significant and related factors contribute to this
+issue, including the increasing complexity of the underlying PINN optimisation problem as the
+problem size grows and the spectral bias of neural networks. In this work we propose a new, scalable
+approach for solving large problems relating to differential equations called Finite Basis PINNs
+(FBPINNs). FBPINNs are inspired by classical finite element methods, where the solution of the
+differential equation is expressed as the sum of a finite set of basis functions with compact support.
+In FBPINNs neural networks are used to learn these basis functions, which are defined over small,
+overlapping subdomains. FBINNs are designed to address the spectral bias of neural networks by
+using separate input normalisation over each subdomain, and reduce the complexity of the underlying
+optimisation problem by using many smaller neural networks in a parallel divide-and-conquer approach.
+Our numerical experiments show that FBPINNs are effective in solving both small and larger, multi-scale
+problems, outperforming standard PINNs in both accuracy and computational resources required,
+potentially paving the way to the application of PINNs on large, real-world problems. 

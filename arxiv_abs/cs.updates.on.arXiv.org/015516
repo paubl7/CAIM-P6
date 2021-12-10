@@ -1,0 +1,18 @@
+A Boolean constraint satisfaction problem (CSP), Max-CSP$(f)$, is a maximization problem specified
+by a constraint $f:\{-1,1\}^k\to\{0,1\}$. An instance of the problem consists of $m$ constraint
+applications on $n$ Boolean variables, where each constraint application applies the constraint
+to $k$ literals chosen from the $n$ variables and their negations. The goal is to compute the maximum
+number of constraints that can be satisfied by a Boolean assignment to the $n$~variables. In the
+$(\gamma,\beta)$-approximation version of the problem for parameters $\gamma \geq \beta \in
+[0,1]$, the goal is to distinguish instances where at least $\gamma$ fraction of the constraints
+can be satisfied from instances where at most $\beta$ fraction of the constraints can be satisfied.
+In this work we consider the approximability of Max-CSP$(f)$ in the (dynamic) streaming setting,
+where constraints are inserted (and may also be deleted in the dynamic setting) one at a time. We completely
+characterize the approximability of all Boolean CSPs in the dynamic streaming setting. Specifically,
+given $f$, $\gamma$ and $\beta$ we show that either (1) the $(\gamma,\beta)$-approximation version
+of Max-CSP$(f)$ has a probabilistic dynamic streaming algorithm using $O(\log n)$ space, or (2)
+for every $\varepsilon > 0$ the $(\gamma-\varepsilon,\beta+\varepsilon)$-approximation version
+of Max-CSP$(f)$ requires $\Omega(\sqrt{n})$ space for probabilistic dynamic streaming algorithms.
+We also extend previously known results in the insertion-only setting to a wide variety of cases,
+and in particular the case of $k=2$ where we get a dichotomy and the case when the satisfying assignments
+of $f$ support a distribution on $\{-1,1\}^k$ with uniform marginals. 

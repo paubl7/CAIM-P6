@@ -1,0 +1,19 @@
+We study distributed estimation of a high-dimensional static parameter vector through a group
+of sensors whose communication network is modeled by a fixed directed graph. Different from existing
+time-triggered communication schemes, an event-triggered asynchronous scheme is investigated
+in order to reduce communication while preserving estimation convergence. A distributed estimation
+algorithm with a single step size is first proposed based on an event-triggered communication scheme
+with a time-dependent decaying threshold. With the event-triggered scheme, each sensor sends
+its estimate to neighbor sensors only when the difference between the current estimate and the last
+sent-out estimate is larger than the triggering threshold. Different sensors can have different
+step sizes and triggering thresholds, enabling the parameter estimation process to be conducted
+in a fully distributed way. We prove that the proposed algorithm has mean-square and almost-sure
+convergence respectively, under proper conditions of network connectivity and system collective
+observability. The collective observability is the possibly mildest condition, since it is a spatially
+and temporally collective condition of all sensors and allows sensor observation matrices to be
+time-varying, stochastic, and non-stationary. Moreover, we provide estimates for the convergence
+rates, which are related to the step sizes as well as the triggering thresholds. Furthermore, we
+prove that the communication rate is decaying to zero with a certain rate almost surely as time goes
+to infinity. We show that it is feasible to tune the thresholds and the step sizes such that requirements
+of algorithm convergence and communication rate decay are satisfied simultaneously.Numerical
+simulations are provided to illustrate the developed results. 

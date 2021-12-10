@@ -1,0 +1,19 @@
+We present a neural network-based method for solving linear and nonlinear partial differential
+equations, by combining the ideas of extreme learning machines (ELM), domain decomposition and
+local neural networks. The field solution on each sub-domain is represented by a local feed-forward
+neural network, and $C^k$ continuity is imposed on the sub-domain boundaries. Each local neural
+network consists of a small number of hidden layers, while its last hidden layer can be wide. The weight/bias
+coefficients in all hidden layers of the local neural networks are pre-set to random values and are
+fixed, and only the weight coefficients in the output layers are training parameters. The overall
+neural network is trained by a linear or nonlinear least squares computation, not by the back-propagation
+type algorithms. We introduce a block time-marching scheme together with the presented method
+for long-time dynamic simulations. The current method exhibits a clear sense of convergence with
+respect to the degrees of freedom in the neural network. Its numerical errors typically decrease
+exponentially or nearly exponentially as the number of degrees of freedom increases. Extensive
+numerical experiments have been performed to demonstrate the computational performance of the
+presented method. We compare the current method with the deep Galerkin method (DGM) and the physics-informed
+neural network (PINN) in terms of the accuracy and computational cost. The current method exhibits
+a clear superiority, with its numerical errors and network training time considerably smaller
+(typically by orders of magnitude) than those of DGM and PINN. We also compare the current method
+with the classical finite element method (FEM). The computational performance of the current method
+is on par with, and oftentimes exceeds, the FEM performance. 

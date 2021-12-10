@@ -1,0 +1,18 @@
+Quantum chemistry applications on quantum computers currently rely heavily on the variational
+quantum eigensolver (VQE) algorithm. This hybrid quantum-classical algorithm aims at finding
+ground state solutions of molecular systems based on the variational principle. VQE calculations
+can be systematically implemented for perturbations to each molecular degree of freedom, generating
+a Born-Oppenheimer potential energy surface (PES) for the molecule. The PES can then be used to derive
+thermodynamic properties, which are often desirable for applications in chemical engineering
+and materials design. It is clear from this process that quantum chemistry applications contain
+a substantial classical computing component in addition to steps that can be performed using a quantum
+computer. In order to design efficient work-flows that take full advantage of each hardware-type,
+it is critical to consider the entire process so that the high-accuracy electronic energies possible
+from quantum computing are not squandered in the process of calculating thermodynamic properties.
+We present a summary of the hybrid quantum-classical work-flow to compute thermodynamic properties.
+This work-flow contains many options that can significantly affect the efficiency and the accuracy
+of the results, including classical optimizer attributes, number of ansatz repetitions, and how
+the vibrational Schroedinger equation is solved to determine vibrational modes. We also analyze
+the effects of these options by employing robust statistics along with simulations and experiments
+on actual quantum hardware. We show that through careful selection of work-flow options, nearly
+order-of-magnitude increases in accuracy are possible at equivalent computing time. 

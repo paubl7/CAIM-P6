@@ -1,0 +1,18 @@
+Zero-shot learning is a new paradigm to classify objects from classes that are not available at training
+time. Zero-shot learning (ZSL) methods have attracted considerable attention in recent years
+because of their ability to classify unseen/novel class examples. Most of the existing approaches
+on ZSL works when all the samples from seen classes are available to train the model, which does not
+suit real life. In this paper, we tackle this hindrance by developing a generative replay-based
+continual ZSL (GRCZSL). The proposed method endows traditional ZSL to learn from streaming data
+and acquire new knowledge without forgetting the previous tasks' gained experience. We handle
+catastrophic forgetting in GRCZSL by replaying the synthetic samples of seen classes, which have
+appeared in the earlier tasks. These synthetic samples are synthesized using the trained conditional
+variational autoencoder (VAE) over the immediate past task. Moreover, we only require the current
+and immediate previous VAE at any time for training and testing. The proposed GRZSL method is developed
+for a single-head setting of continual learning, simulating a real-world problem setting. In this
+setting, task identity is given during training but unavailable during testing. GRCZSL performance
+is evaluated on five benchmark datasets for the generalized setup of ZSL with fixed and dynamic (incremental
+class) settings of continual learning. The existing class setting presented recently in the literature
+is not suitable for a class-incremental setting. Therefore, this paper proposes a new setting to
+address this issue. Experimental results show that the proposed method significantly outperforms
+the baseline and the state-of-the-art method and makes it more suitable for real-world applications.

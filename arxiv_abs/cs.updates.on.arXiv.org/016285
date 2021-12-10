@@ -1,0 +1,20 @@
+In this paper, we address the makeup transfer and removal tasks simultaneously, which aim to transfer
+the makeup from a reference image to a source image and remove the makeup from the with-makeup image
+respectively. Existing methods have achieved much advancement in constrained scenarios, but
+it is still very challenging for them to transfer makeup between images with large pose and expression
+differences, or handle makeup details like blush on cheeks or highlight on the nose. In addition,
+they are hardly able to control the degree of makeup during transferring or to transfer a specified
+part in the input face. In this work, we propose the PSGAN++, which is capable of performing both detail-preserving
+makeup transfer and effective makeup removal. For makeup transfer, PSGAN++ uses a Makeup Distill
+Network to extract makeup information, which is embedded into spatial-aware makeup matrices.
+We also devise an Attentive Makeup Morphing module that specifies how the makeup in the source image
+is morphed from the reference image, and a makeup detail loss to supervise the model within the selected
+makeup detail area. On the other hand, for makeup removal, PSGAN++ applies an Identity Distill Network
+to embed the identity information from with-makeup images into identity matrices. Finally, the
+obtained makeup/identity matrices are fed to a Style Transfer Network that is able to edit the feature
+maps to achieve makeup transfer or removal. To evaluate the effectiveness of our PSGAN++, we collect
+a Makeup Transfer In the Wild dataset that contains images with diverse poses and expressions and
+a Makeup Transfer High-Resolution dataset that contains high-resolution images. Experiments
+demonstrate that PSGAN++ not only achieves state-of-the-art results with fine makeup details
+even in cases of large pose/expression differences but also can perform partial or degree-controllable
+makeup transfer. 

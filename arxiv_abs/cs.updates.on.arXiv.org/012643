@@ -1,0 +1,19 @@
+Weakly supervised disease classification of CT imaging suffers from poor localization owing to
+case-level annotations, where even a positive scan can hold hundreds to thousands of negative slices
+along multiple planes. Furthermore, although deep learning segmentation and classification
+models extract distinctly unique combinations of anatomical features from the same target class(es),
+they are typically seen as two independent processes in a computer-aided diagnosis (CAD) pipeline,
+with little to no feature reuse. In this research, we propose a medical classifier that leverages
+the semantic structural concepts learned via multi-resolution segmentation feature maps, to
+guide weakly supervised 3D classification of chest CT volumes. Additionally, a comparative analysis
+is drawn across two different types of feature aggregation to explore the vast possibilities surrounding
+feature fusion. Using a dataset of 1593 scans labeled on a case-level basis via rule-based model,
+we train a dual-stage convolutional neural network (CNN) to perform organ segmentation and binary
+classification of four representative diseases (emphysema, pneumonia/atelectasis, mass and
+nodules) in lungs. The baseline model, with separate stages for segmentation and classification,
+results in AUC of 0.791. Using identical hyperparameters, the connected architecture using static
+and dynamic feature aggregation improves performance to AUC of 0.832 and 0.851, respectively.
+This study advances the field in two key ways. First, case-level report data is used to weakly supervise
+a 3D CT classifier of multiple, simultaneous diseases for an organ. Second, segmentation and classification
+models are connected with two different feature aggregation strategies to enhance the classification
+performance. 

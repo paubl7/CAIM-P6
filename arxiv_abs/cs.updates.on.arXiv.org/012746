@@ -1,0 +1,19 @@
+Stickers with vivid and engaging expressions are becoming increasingly popular in online messaging
+apps, and some works are dedicated to automatically select sticker response by matching the stickers
+image with previous utterances. However, existing methods usually focus on measuring the matching
+degree between the dialog context and sticker image, which ignores the user preference of using
+stickers. Hence, in this paper, we propose to recommend an appropriate sticker to user based on multi-turn
+dialog context and sticker using history of user. Two main challenges are confronted in this task.
+One is to model the sticker preference of user based on the previous sticker selection history. Another
+challenge is to jointly fuse the user preference and the matching between dialog context and candidate
+sticker into final prediction making. To tackle these challenges, we propose a \emph{Preference
+Enhanced Sticker Response Selector} (PESRS) model. Specifically, PESRS first employs a convolutional
+based sticker image encoder and a self-attention based multi-turn dialog encoder to obtain the
+representation of stickers and utterances. Next, deep interaction network is proposed to conduct
+deep matching between the sticker and each utterance. Then, we model the user preference by using
+the recently selected stickers as input, and use a key-value memory network to store the preference
+representation. PESRS then learns the short-term and long-term dependency between all interaction
+results by a fusion network, and dynamically fuse the user preference representation into the final
+sticker selection prediction. Extensive experiments conducted on a large-scale real-world dialog
+dataset show that our model achieves the state-of-the-art performance for all commonly-used metrics.
+Experiments also verify the effectiveness of each component of PESRS. 

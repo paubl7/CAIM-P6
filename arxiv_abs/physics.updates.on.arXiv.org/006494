@@ -1,0 +1,20 @@
+We present a many-body expansion (MBE) formulation and implementation for efficient computation
+of analytical energy gradients from OSV-MP2 theory based on our earlier work (Zhou et al. J. Chem.
+Theory Comput. 2020, 16, 196-210). The third-order MBE(3) expansion of OSV-MP2 wavefunction was
+developed to adopt the orbital-specific clustering and long-range termination schemes, which
+avoids term-by-term differentiations of the MBE energy bodies. We achieve better efficiency by
+exploiting the algorithmic sparsity that allows to prune out insignificant fitting integrals
+and OSV relaxations. With these approximations, the present implementation is benchmarked on
+a range of molecules that show an economic scaling in the linear and quadratic regimes for computing
+MBE(3)-OSV-MP2 amplitude and gradient equations, respectively, and yields normal accuracy comparable
+to the original OSV-MP2 results. The MPI-3-based parallelism through shared memory one-sided
+communication is further developed for improving parallel scalability and memory accessibility
+by sorting the MBE(3) orbital clusters into independent tasks that are distributed on multiple
+processes across many nodes, supporting both global and local data locations in which selected
+MBE(3)-OSV-MP2 intermediates of different sizes are distinguished and accordingly placed. The
+accuracy and efficiency level of our MBE(3)-OSV-MP2 analytical gradient implementation is finally
+illustrated in two applications: we show that the subtle coordination structure differences of
+mechanically interlocked Cu-catenane complexes can be distinguished when tuning ligand lengths;
+and the porphycene molecular dynamics reveals the emergence of the vibrational signature arising
+from softened N-H stretching associated with hydrogen transfer, using an MP2 level of electron
+correlation and classical nuclei for the first time. 

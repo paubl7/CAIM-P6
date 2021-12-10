@@ -1,0 +1,19 @@
+This review article revisits and outlines the perfectly matched layer (PML) method and its various
+formulations developed over the past 25 years for the numerical modeling and simulation of wave
+propagation in unbounded media. Based on the concept of complex coordinate stretching, an efficient
+mixed displacement-strain unsplit-field PML formulation for second-order (displacementbased)
+linear elastodynamic equations is then proposed for simulating the propagation and absorption
+of elastic waves in unbounded (infinite or semi-infinite) domains. Both time-harmonic (frequency-domain)
+and time-dependent (timedomain) PML formulations are derived for two-and three-dimensional
+linear elastodynamic problems. Through the introduction of only a few additional variables governed
+by low-order auxiliary differential equations, the resulting mixed timedomain PML formulation
+is second-order in time, thereby allowing the use of standard time integration schemes commonly
+employed in computational structural dynamics and thus facilitating the incorporation into existing
+displacementbased finite element codes. For computational efficiency, the proposed timedomain
+PML formulation is implemented using a hybrid approach that couples a mixed (displacement-strain)
+formulation for the PML region with a classical (displacement-based) formulation for the physical
+domain of interest, using a standard Galerkin finite element method (FEM) for spatial discretization
+and a Newmark time scheme coupled with a finite difference (Crank-Nicolson) time scheme for time
+sampling. Numerical experiments show the performances of the PML method in terms of accuracy, efficiency
+and stability for two-dimensional linear elastodynamic problems in single-and multi-layer isotropic
+homogeneous elastic media. 

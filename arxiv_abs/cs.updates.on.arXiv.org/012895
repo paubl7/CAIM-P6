@@ -1,0 +1,19 @@
+Comparison-based algorithms are algorithms for which the execution of each operation is solely
+based on the outcome of a series of comparisons between elements. Comparison-based computations
+can be naturally represented via the following computational model: (a) model data structures
+as partially-ordered finite sets; (b) model data on these by topological sorts; (c) considering
+computation states as finite multisets of such data; (d) represent computations by their induced
+transformations on states. In this view, an abstract specification of a sorting algorithm has input
+state given by any possible permutation of a finite set of elements (represented, according to (a)
+and (b), by a discrete partially-ordered set together with its topological sorts given by all permutations)
+and output state a sorted list of elements (represented, again according to (a) and (b), by a linearly-ordered
+finite set with its unique topological sort). Entropy is a measure of "randomness" or "disorder."
+Based on the computational model, we introduce an entropy conservation result for comparison-based
+algorithms: "quantitative order gained is proportional to positional order lost." Intuitively,
+the result bears some relation to the messy office argument advocating a chaotic office where nothing
+is in the right place yet each item's place is known to the owner, over the case where each item is stored
+in the right order and yet the owner can no longer locate the items. Formally, we generalize the result
+to the class of data structures representable via series-parallel partial orders--a well-known
+computationally tractable class. The resulting "denotational" version of entropy conservation
+will be extended in follow-up work to an "operational" version for a core part of our computational
+model. 

@@ -1,0 +1,18 @@
+Explaining to users why some items are recommended is critical, as it helps users to make better decisions,
+increase their satisfaction, and gain their trust in recommender systems (RS). However, existing
+explainable RS usually consider explanations as side outputs of the recommendation model, which
+has two problems: (1) it is difficult to evaluate the produced explanations because they are usually
+model-dependent, and (2) as a result, the possible impacts of those explanations are less investigated.
+To address the evaluation problem, we propose learning to explain for explainable recommendation.
+The basic idea is to train a model that selects explanations from a collection as a ranking-oriented
+task. A great challenge, however, is that the sparsity issue in the user-item-explanation data
+would be severer than that in traditional user-item relation data, since not every user-item pair
+can associate with multiple explanations. To mitigate this issue, we propose to perform two sets
+of matrix factorization by considering the ternary relationship as two groups of binary relationships.
+To further investigate the impacts of explanations, we extend the traditional item ranking of recommendation
+to an item-explanation joint-ranking formalization. We study if purposely selecting explanations
+could achieve certain learning goals, e.g., in this paper, improving the recommendation performance.
+Experiments on three large datasets verify our solution's effectiveness on both item recommendation
+and explanation ranking. In addition, our user-item-explanation datasets open up new ways of modeling
+and evaluating recommendation explanations. To facilitate the development of explainable RS,
+we will make our datasets and code publicly available. 

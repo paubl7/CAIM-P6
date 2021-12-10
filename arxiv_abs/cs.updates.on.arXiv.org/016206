@@ -1,0 +1,19 @@
+This paper develops a method of biologically guided deep learning for post-radiation FDG-PET image
+outcome prediction based on pre-radiation images and radiotherapy dose information. Based on
+the classic reaction-diffusion mechanism, a novel biological model was proposed using a partial
+differential equation that incorporates spatial radiation dose distribution as a patient-specific
+treatment information variable. A 7-layer encoder-decoder-based convolutional neural network
+(CNN) was designed and trained to learn the proposed biological model. As such, the model could generate
+post-radiation FDG-PET image outcome predictions with possible time-series transition from
+pre-radiotherapy image states to post-radiotherapy states. The proposed method was developed
+using 64 oropharyngeal patients with paired FDG-PET studies before and after 20Gy delivery (2Gy/daily
+fraction) by IMRT. In a two-branch deep learning execution, the proposed CNN learns specific terms
+in the biological model from paired FDG-PET images and spatial dose distribution as in one branch,
+and the biological model generates post-20Gy FDG-PET image prediction in the other branch. The
+proposed method successfully generated post-20Gy FDG-PET image outcome prediction with breakdown
+illustrations of biological model components. Time-series FDG-PET image predictions were generated
+to demonstrate the feasibility of disease response rendering. The developed biologically guided
+deep learning method achieved post-20Gy FDG-PET image outcome predictions in good agreement with
+ground-truth results. With break-down biological modeling components, the outcome image predictions
+could be used in adaptive radiotherapy decision-making to optimize personalized plans for the
+best outcome in the future. 

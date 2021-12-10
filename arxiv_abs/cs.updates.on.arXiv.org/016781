@@ -1,0 +1,20 @@
+Background: Colonoscopy remains the gold-standard screening for colorectal cancer. However,
+significant miss rates for polyps have been reported, particularly when there are multiple small
+adenomas. This presents an opportunity to leverage computer-aided systems to support clinicians
+and reduce the number of polyps missed. Method: In this work we introduce the Focus U-Net, a novel
+dual attention-gated deep neural network, which combines efficient spatial and channel-based
+attention into a single Focus Gate module to encourage selective learning of polyp features. The
+Focus U-Net further incorporates short-range skip connections and deep supervision. Furthermore,
+we introduce the Hybrid Focal loss, a new compound loss function based on the Focal loss and Focal
+Tversky loss, to handle class-imbalanced image segmentation. For our experiments, we selected
+five public datasets containing images of polyps obtained during optical colonoscopy: CVC-ClinicDB,
+Kvasir-SEG, CVC-ColonDB, ETIS-Larib PolypDB and EndoScene test set. To evaluate model performance,
+we use the Dice similarity coefficient (DSC) and Intersection over Union (IoU) metrics. Results:
+Our model achieves state-of-the-art results for both CVC-ClinicDB and Kvasir-SEG, with a mean
+DSC of 0.941 and 0.910, respectively. When evaluated on a combination of five public polyp datasets,
+our model similarly achieves state-of-the-art results with a mean DSC of 0.878 and mean IoU of 0.809,
+a 14% and 15% improvement over the previous state-of-the-art results of 0.768 and 0.702, respectively.
+Conclusions: This study shows the potential for deep learning to provide fast and accurate polyp
+segmentation results for use during colonoscopy. The Focus U-Net may be adapted for future use in
+newer non-invasive screening and more broadly to other biomedical image segmentation tasks involving
+class imbalance and requiring efficiency. 

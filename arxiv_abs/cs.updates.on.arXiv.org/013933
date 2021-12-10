@@ -1,0 +1,18 @@
+We introduce the novel concept of anti-transfer learning for speech processing with convolutional
+neural networks. While transfer learning assumes that the learning process for a target task will
+benefit from re-using representations learned for another task, anti-transfer avoids the learning
+of representations that have been learned for an orthogonal task, i.e., one that is not relevant
+and potentially misleading for the target task, such as speaker identity for speech recognition
+or speech content for emotion recognition. In anti-transfer learning, we penalize similarity
+between activations of a network being trained and another one previously trained on an orthogonal
+task, which yields more suitable representations. This leads to better generalization and provides
+a degree of control over correlations that are spurious or undesirable, e.g. to avoid social bias.
+We have implemented anti-transfer for convolutional neural networks in different configurations
+with several similarity metrics and aggregation functions, which we evaluate and analyze with
+several speech and audio tasks and settings, using six datasets. We show that anti-transfer actually
+leads to the intended invariance to the orthogonal task and to more appropriate features for the
+target task at hand. Anti-transfer learning consistently improves classification accuracy in
+all test cases. While anti-transfer creates computation and memory cost at training time, there
+is relatively little computation cost when using pre-trained models for orthogonal tasks. Anti-transfer
+is widely applicable and particularly useful where a specific invariance is desirable or where
+trained models are available and labeled data for orthogonal tasks are difficult to obtain. 

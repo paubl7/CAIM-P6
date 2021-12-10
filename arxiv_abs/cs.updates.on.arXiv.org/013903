@@ -1,0 +1,18 @@
+A large fraction of major waterways have dams influencing streamflow, which must be accounted for
+in large-scale hydrologic modeling. However, daily streamflow prediction for basins with dams
+is challenging for various modeling approaches, especially at large scales. Here we took a divide-and-conquer
+approach to examine which types of basins could be well represented by a long short-term memory (LSTM)
+deep learning model using only readily-available information. We analyzed data from 3557 basins
+(83% dammed) over the contiguous United States and noted strong impacts of reservoir purposes,
+capacity-to-runoff ratio (dor), and diversion on streamflow on streamflow modeling. Surprisingly,
+while the LSTM model trained on a widely-used reference-basin dataset performed poorly for more
+non-reference basins, the model trained on the whole dataset presented a median test Nash-Sutcliffe
+efficiency coefficient (NSE) of 0.74, reaching benchmark-level performance. The zero-dor, small-dor,
+and large-dor basins were found to have distinct behaviors, so migrating models between categories
+yielded catastrophic results. However, training with pooled data from different sets yielded
+optimal median NSEs of 0.73, 0.78, and 0.71 for these groups, respectively, showing noticeable
+advantages over existing models. These results support a coherent, mixed modeling strategy where
+smaller dams are modeled as part of rainfall-runoff processes, but dammed basins must not be treated
+as reference ones and must be included in the training set; then, large-dor reservoirs can be represented
+explicitly and future work should examine modeling reservoirs for fire protection and irrigation,
+followed by those for hydroelectric power generation, and flood control, etc. 

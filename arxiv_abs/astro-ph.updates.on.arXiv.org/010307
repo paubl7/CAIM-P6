@@ -1,0 +1,20 @@
+Observed Young Stellar Objects (YSOs) are used to study star formation and characterize star forming
+regions. For this purpose, YSO candidate catalogs are compiled from various surveys, especially
+in the infrared (IR), and simple selection schemes in colour-magnitude diagrams (CMDs) are often
+used to identify and classify YSOs. We propose a methodology for YSO classification through Machine
+Learning (ML) using Spitzer IR data. We detail our approach in order to ensure reproducibility and
+provide an in-depth example on how to efficiently apply ML to an astrophysical classification.
+We used feedforward Artificial Neural Networks (ANNs) that use the four IRAC bands ($3.6, 4.5, 5.8$
+and $8 \mu m$) and the $24\ \mu m$ MIPS band from Spitzer to classify point source objects into CI and
+CII YSO candidates or as contaminants. We found that ANNs can efficiently be applied to YSO classification
+with a contained number of neurons ($\sim$ 25). Knowledge gathered on one star-forming region has
+shown to be partly efficient for prediction in new regions. Best generalization capacity was achieved
+using a combination of several star-forming regions to train the network. Carefully rebalancing
+the training proportions was necessary to achieve good results. We achieved above 90\% and 97\%
+recovery rate for CI and CII YSOs, respectively, with precision above 80\% and 90\% for our most general
+result. We took advantage of the ANN great flexibility to define, for each object, an effective membership
+probability to each output class. Using a threshold in this probability was found to efficiently
+improve the classification results at a reasonable cost of object exclusion. With this selection,
+we reached 90\% precision on CI YSOs, for more than half of them. Our catalog of YSO candidates in Orion
+(365 CI, 2381 CII) and NGC 2264 (101 CI, 469 CII) predicted by our final ANN is publicly available at
+CDS. 

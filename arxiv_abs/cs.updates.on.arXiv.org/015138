@@ -1,0 +1,18 @@
+Recently, there has been an increased interest in the development of kernel methods for learning
+with sequential data. The signature kernel is a learning tool with potential to handle irregularly
+sampled, multivariate time series. In "Kernels for sequentially ordered data" the authors introduced
+a kernel trick for the truncated version of this kernel avoiding the exponential complexity that
+would have been involved in a direct computation. Here we show that for continuously differentiable
+paths, the signature kernel solves a hyperbolic PDE and recognize the connection with a well known
+class of differential equations known in the literature as Goursat problems. This Goursat PDE only
+depends on the increments of the input sequences, does not require the explicit computation of signatures
+and can be solved efficiently using state-of-the-arthyperbolic PDE numerical solvers, giving
+a kernel trick for the untruncated signature kernel, with the same raw complexity as the method from
+"Kernels for sequentially ordered data", but with the advantage that the PDE numerical scheme is
+well suited for GPU parallelization, which effectively reduces the complexity by a full order of
+magnitude in the length of the input sequences. In addition, we extend the previous analysis to the
+space of geometric rough paths and establish, using classical results from rough path theory, that
+the rough version of the signature kernel solves a rough integral equation analogous to the aforementioned
+Goursat PDE. Finally, we empirically demonstrate the effectiveness of our PDE kernel as a machine
+learning tool in various machine learning applications dealing with sequential data. We release
+the library sigkernel publicly available at https://github.com/crispitagorico/sigkernel.

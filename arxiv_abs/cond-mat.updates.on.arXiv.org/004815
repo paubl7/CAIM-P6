@@ -1,0 +1,19 @@
+We develop a novel data-driven approach to the inverse problem of classical statistical mechanics:
+given experimental data on the collective motion of a classical many-body system, how does one characterise
+the free energy landscape of that system? By combining non-parametric Bayesian inference with
+physically-motivated constraints, we develop an efficient learning algorithm which automates
+the construction of approximate free energy functionals. In contrast to optimisation-based machine
+learning approaches, which seek to minimise a cost function, the central idea of the proposed Bayesian
+inference is to propagate a set of prior assumptions through the model, derived from physical principles.
+The experimental data is used to probabilistically weigh the possible model predictions. This
+naturally leads to humanly interpretable algorithms with full uncertainty quantification of
+predictions. In our case, the output of the learning algorithm is a probability distribution over
+a family of free energy functionals, consistent with the observed particle data. We find that surprisingly
+small data samples contain sufficient information for inferring highly accurate analytic expressions
+of the underlying free energy functionals, making our algorithm highly data efficient. We consider
+excluded volume particle interactions, which are ubiquitous in nature, whilst being highly challenging
+for modelling in terms of free energy. To validate our approach we consider the paradigmatic case
+of one-dimensional fluid and develop inference algorithms for the canonical and grand-canonical
+statistical-mechanical ensembles. Extensions to higher-dimensional systems are conceptually
+straightforward, whilst standard coarse-graining techniques allow one to easily incorporate
+attractive interactions. 

@@ -1,0 +1,20 @@
+We investigate iterative methods with randomized preconditioners for solving overdetermined
+least-squares problems, where the preconditioners are based on a random embedding of the data matrix.
+We consider two distinct approaches: the sketch is either computed once (fixed preconditioner),
+or, the random projection is refreshed at each iteration, i.e., sampled independently of previous
+ones (varying preconditioners). Although fixed sketching-based preconditioners have received
+considerable attention in the recent literature, little is known about the performance of refreshed
+sketches. For a fixed sketch, we characterize the optimal iterative method, that is, the preconditioned
+conjugate gradient as well as its rate of convergence in terms of the subspace embedding properties
+of the random embedding. For refreshed sketches, we provide a closed-form formula for the expected
+error of the iterative Hessian sketch (IHS), a.k.a. preconditioned steepest descent. In contrast
+to the guarantees and analysis for fixed preconditioners based on subspace embedding properties,
+our formula is exact and it involves the expected inverse moments of the random projection. Our main
+technical contribution is to show that this convergence rate is, surprisingly, unimprovable with
+heavy-ball momentum. Additionally, we construct the locally optimal first-order method whose
+convergence rate is bounded by that of the IHS. Based on these theoretical and numerical investigations,
+we do not observe that the additional randomness of refreshed sketches provides a clear advantage
+over a fixed preconditioner. Therefore, we prescribe PCG as the method of choice along with an optimized
+sketch size according to our analysis. Our prescribed sketch size yields state-of-the-art computational
+complexity for solving highly overdetermined linear systems. Lastly, we illustrate the numerical
+benefits of our algorithms. 

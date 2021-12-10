@@ -1,0 +1,19 @@
+We propose a semi-supervised approach to acoustic source localization in reverberant environments
+based on deep generative modeling. Localization in reverberant environments remains an open challenge.
+Even with large data volumes, the number of labels available for supervised learning in reverberant
+environments is usually small. We address this issue by performing semi-supervised learning (SSL)
+with convolutional variational autoencoders (VAEs) on reverberant speech signals recorded with
+microphone arrays. The VAE is trained to generate the phase of relative transfer functions (RTFs)
+between microphones, in parallel with a direction of arrival (DOA) classifier based on RTF-phase.
+These models are trained using both labeled and unlabeled RTF-phase sequences. In learning to perform
+these tasks, the VAE-SSL explicitly learns to separate the physical causes of the RTF-phase (i.e.,
+source location) from distracting signal characteristics such as noise and speech activity. Relative
+to existing semi-supervised localization methods in acoustics, VAE-SSL is effectively an end-to-end
+processing approach which relies on minimal preprocessing of RTF-phase features. As far as we are
+aware, our paper presents the first approach to modeling the physics of acoustic propagation using
+deep generative modeling. The VAE-SSL approach is compared with two signal processing-based approaches,
+steered response power with phase transform (SRP-PHAT) and MUltiple SIgnal Classification (MUSIC),
+as well as fully supervised CNNs. We find that VAE-SSL can outperform the conventional approaches
+and the CNN in label-limited scenarios. Further, the trained VAE-SSL system can generate new RTF-phase
+samples, which shows the VAE-SSL approach learns the physics of the acoustic environment. The generative
+modeling in VAE-SSL thus provides a means of interpreting the learned representations. 

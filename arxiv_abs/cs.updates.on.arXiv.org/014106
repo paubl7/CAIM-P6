@@ -1,0 +1,18 @@
+In stable coronary artery disease (CAD), reduction in mortality and/or myocardial infarction
+with revascularization over medical therapy has not been reliably achieved. Coronary arteries
+are usually extracted to perform stenosis detection. We aim to develop an automatic algorithm by
+deep learning to extract coronary arteries from ICAs.In this study, a multi-input and multi-scale
+(MIMS) U-Net with a two-stage recurrent training strategy was proposed for the automatic vessel
+segmentation. Incorporating features such as the Inception residual module with depth-wise separable
+convolutional layers, the proposed model generated a refined prediction map with the following
+two training stages: (i) Stage I coarsely segmented the major coronary arteries from pre-processed
+single-channel ICAs and generated the probability map of vessels; (ii) during the Stage II, a three-channel
+image consisting of the original preprocessed image, a generated probability map, and an edge-enhanced
+image generated from the preprocessed image was fed to the proposed MIMS U-Net to produce the final
+segmentation probability map. During the training stage, the probability maps were iteratively
+and recurrently updated by feeding into the neural network. After segmentation, an arterial stenosis
+detection algorithm was developed to extract vascular centerlines and calculate arterial diameters
+to evaluate stenotic level. Experimental results demonstrated that the proposed method achieved
+an average Dice score of 0.8329, an average sensitivity of 0.8281, and an average specificity of
+0.9979 in our dataset with 294 ICAs obtained from 73 patient. Moreover, our stenosis detection algorithm
+achieved a true positive rate of 0.6668 and a positive predictive value of 0.7043. 

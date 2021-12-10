@@ -1,0 +1,19 @@
+In the last few decades, building regression models for non-scalar variables, including time series,
+text, image, and video, has attracted increasing interests of researchers from the data analytic
+community. In this paper, we focus on a multivariate time series regression problem. Specifically,
+we aim to learn mathematical mappings from multiple chronologically measured numerical variables
+within a certain time interval S to multiple numerical variables of interest over time interval
+T. Prior arts, including the multivariate regression model, the Seq2Seq model, and the functional
+linear models, suffer from several limitations. The first two types of models can only handle regularly
+observed time series. Besides, the conventional multivariate regression models tend to be biased
+and inefficient, as they are incapable of encoding the temporal dependencies among observations
+from the same time series. The sequential learning models explicitly use the same set of parameters
+along time, which has negative impacts on accuracy. The function-on-function linear model in functional
+data analysis (a branch of statistics) is insufficient to capture complex correlations among the
+considered time series and suffer from underfitting easily. In this paper, we propose a general
+functional mapping that embraces the function-on-function linear model as a special case. We then
+propose a non-linear function-on-function model using the fully connected neural network to learn
+the mapping from data, which addresses the aforementioned concerns in the existing approaches.
+For the proposed model, we describe in detail the corresponding numerical implementation procedures.
+The effectiveness of the proposed model is demonstrated through the application to two real-world
+problems. 

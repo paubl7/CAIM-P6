@@ -1,0 +1,19 @@
+Transforming into an exact penalty function model with convex compact constraints yields efficient
+infeasible approaches for optimization problems with orthogonality constraints. For smooth
+and $\ell_{2,1}$-norm regularized cases, these infeasible approaches adopt simple and orthonormalization-free
+updating scheme and show their high efficiency in the test examples. However, to avoid orthonormalization
+while enforcing the feasibility of the final solution, these infeasible approaches introduce
+a quadratic penalty term, where an inappropriate penalty parameter can lead to numerical inefficiency.
+Inspired by penalty-free approaches for smooth optimization problems, we proposed a proximal
+first-order algorithm for a class of optimization problems with orthogonality constraints and
+nonsmooth regularization term. The consequent algorithm, named sequential linearized proximal
+gradient method (SLPG), alternatively takes tangential steps and normal steps to improve the optimality
+and feasibility respectively. In SLPG, the orthonormalization process is invoked only once at
+the last step if high precision in feasibility is needed, showing that main iterations in SLPG are
+orthonormalization-free. Besides, both the tangential steps and normal steps do not involve the
+penalty parameter, and thus SLPG is penalty-free and avoids the inefficiency by inappropriate
+penalty parameter. We analyze the global convergence properties of SLPG where the tangential steps
+are inexactly computed. By inexactly computing tangential steps, for smooth cases and $\ell_{2,1}$-norm
+regularized cases, SLPG has a closed-form updating scheme, which leads to its cheap tangential
+steps. Numerical experiments illustrate the numerical advantages of SLPG when compared with existing
+first-order methods. 

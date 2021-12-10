@@ -1,0 +1,19 @@
+Activity recognition computer vision algorithms can be used to detect the presence of autism-related
+behaviors, including what are termed "restricted and repetitive behaviors", or stimming, by diagnostic
+instruments. The limited data that exist in this domain are usually recorded with a handheld camera
+which can be shaky or even moving, posing a challenge for traditional feature representation approaches
+for activity detection which mistakenly capture the camera's motion as a feature. To address these
+issues, we first document the advantages and limitations of current feature representation techniques
+for activity recognition when applied to head banging detection. We then propose a feature representation
+consisting exclusively of head pose keypoints. We create a computer vision classifier for detecting
+head banging in home videos using a time-distributed convolutional neural network (CNN) in which
+a single CNN extracts features from each frame in the input sequence, and these extracted features
+are fed as input to a long short-term memory (LSTM) network. On the binary task of predicting head
+banging and no head banging within videos from the Self Stimulatory Behaviour Dataset (SSBD), we
+reach a mean F1-score of 90.77% using 3-fold cross validation (with individual fold F1-scores of
+83.3%, 89.0%, and 100.0%) when ensuring that no child who appeared in the train set was in the test
+set for all folds. This work documents a successful technique for training a computer vision classifier
+which can detect human motion with few training examples and even when the camera recording the source
+clips is unstable. The general methods described here can be applied by designers and developers
+of interactive systems towards other human motion and pose classification problems used in mobile
+and ubiquitous interactive systems. 

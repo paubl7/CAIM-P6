@@ -1,0 +1,20 @@
+Proactive tile-based virtual reality (VR) video streaming employs the current tracking data of
+a user to predict future requested tiles, then renders and delivers the predicted tiles to be requested
+before playback. The quality of experience (QoE) depends on the overall performance of prediction,
+computing (i.e., rendering) and communication. All prior works neglect that users may have privacy
+requirement, i.e., not all the current tracking data are allowed to be uploaded. In this paper, we
+investigate the privacy-aware VR streaming. We first establish a dataset that collects the privacy
+requirement of 66 users among 18 panoramic videos. The dataset shows that the privacy requirements
+of 360$^{\circ}$ videos are heterogeneous. Only 41\% of the total watched videos have no privacy
+requirement. Based on these findings, we formulate the privacy requirement as the \textit{degree
+of privacy} (DoP), and investigate the impact of DoP on the proactive VR streaming. First, we find
+that with DoP, the length of the observation window and prediction window of a tile predictor should
+be variable. Then, we jointly optimize the durations for computing and transmitting the selected
+tiles as well as the computing and communication capability, aimed at maximizing the QoE given arbitrary
+predictor and configured resources. From the obtained optimal closed-form solution, we find a
+resource-saturated region where DoP has no impact on the QoE and a resource-unsaturated region
+where the two-fold impacts of DoP are contradictory. On the one hand, the increase of DoP will degrade
+the prediction performance and thus degrade the QoE. On the other hand, the increase of DoP will improve
+the capability of computing and communication and thus improve the QoE. Simulation results using
+two predictors and a real dataset validate the analysis and demonstrate the overall impact of DoP
+on the QoE. 

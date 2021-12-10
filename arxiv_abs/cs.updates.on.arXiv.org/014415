@@ -1,0 +1,20 @@
+Early prediction of patients at risk of clinical deterioration can help physicians intervene and
+alter their clinical course towards better outcomes. In addition to the accuracy requirement,
+early warning systems must make the predictions early enough to give physicians enough time to intervene.
+Interpretability is also one of the challenges when building such systems since being able to justify
+the reasoning behind model decisions is desirable in clinical practice. In this work, we built an
+interpretable model for the early prediction of various adverse clinical events indicative of
+clinical deterioration. The model is evaluated on two datasets and four clinical events. The first
+dataset is collected in a predominantly COVID-19 positive population at Stony Brook Hospital.
+The second dataset is the MIMIC III dataset. The model was trained to provide early warning scores
+for ventilation, ICU transfer, and mortality prediction tasks on the Stony Brook Hospital dataset
+and to predict mortality and the need for vasopressors on the MIMIC III dataset. Our model first separates
+each feature into multiple ranges and then uses logistic regression with lasso penalization to
+select the subset of ranges for each feature. The model training is completely automated and doesn't
+require expert knowledge like other early warning scores. We compare our model to the Modified Early
+Warning Score (MEWS) and quick SOFA (qSOFA), commonly used in hospitals. We show that our model outperforms
+these models in the area under the receiver operating characteristic curve (AUROC) while having
+a similar or better median detection time on all clinical events, even when using fewer features.
+Unlike MEWS and qSOFA, our model can be entirely automated without requiring any manually recorded
+features. We also show that discretization improves model performance by comparing our model to
+a baseline logistic regression model. 

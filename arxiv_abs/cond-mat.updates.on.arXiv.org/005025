@@ -1,0 +1,20 @@
+The elastic properties of materials derive from their electronic and atomic nature. However, simulating
+bulk materials fully at these scales is not feasible, so that typically homogenized continuum descriptions
+are used instead. A seamless and lossless transition of the constitutive description of the elastic
+response of materials between these two scales has been so far elusive. Here we show how this problem
+can be overcome by using Artificial Intelligence (AI). A Convolutional Neural Network (CNN) model
+is trained, by taking the structure image of a nanoporous material as input and the corresponding
+elasticity tensor, calculated from Molecular Statics (MS), as output. Trained with the atomistic
+data, the CNN model captures the size- and pore-dependency of the material's elastic properties
+which, on the physics side, can stem from surfaces and non-local effects. Such effects are often
+ignored in upscaling from atomistic to classical continuum theory. To demonstrate the accuracy
+and the efficiency of the trained CNN model, a Finite Element Method (FEM) based result of an elastically
+deformed nanoporous beam equipped with the CNN as constitutive law is compared with that by a full
+atomistic simulation. The good agreement between the atomistic simulations and the FEM-AI combination
+for a system with size and surface effects establishes a new lossless scale bridging approach to
+such problems. The trained CNN model deviates from the atomistic result by 9.6\% for porosity scenarios
+of up to 90\% but it is about 230 times faster than the MS calculation and does not require to change
+simulation methods between different scales. The efficiency of the CNN evaluation together with
+the preservation of important atomistic effects makes the trained model an effective atomistically-informed
+constitutive model for macroscopic simulations of nanoporous materials and solving of inverse
+problems. 

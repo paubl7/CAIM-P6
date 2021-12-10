@@ -1,0 +1,20 @@
+Training convolutional neural networks (CNNs) with a strict Lipschitz constraint under the l_{2}
+norm is useful for provable adversarial robustness, interpretable gradients and stable training.
+While 1-Lipschitz CNNs can be designed by enforcing a 1-Lipschitz constraint on each layer, training
+such networks requires each layer to have an orthogonal Jacobian matrix (for all inputs) to prevent
+gradients from vanishing during backpropagation. A layer with this property is said to be Gradient
+Norm Preserving (GNP). To construct expressive GNP activation functions, we first prove that the
+Jacobian of any GNP piecewise linear function is only allowed to change via Householder transformations
+for the function to be continuous. Building on this result, we introduce a class of nonlinear GNP
+activations with learnable Householder transformations called Householder activations. A householder
+activation parameterized by the vector $\mathbf{v}$ outputs $(\mathbf{I} - 2\mathbf{v}\mathbf{v}^{T})\mathbf{z}$
+for its input $\mathbf{z}$ if $\mathbf{v}^{T}\mathbf{z} \leq 0$; otherwise it outputs $\mathbf{z}$.
+Existing GNP activations such as $\mathrm{MaxMin}$ can be viewed as special cases of $\mathrm{HH}$
+activations for certain settings of these transformations. Thus, networks with $\mathrm{HH}$
+activations have higher expressive power than those with $\mathrm{MaxMin}$ activations. Although
+networks with $\mathrm{HH}$ activations have nontrivial provable robustness against adversarial
+attacks, we further boost their robustness by (i) introducing a certificate regularization and
+(ii) relaxing orthogonalization of the last layer of the network. Our experiments on CIFAR-10 and
+CIFAR-100 show that our regularized networks with $\mathrm{HH}$ activations lead to significant
+improvements in both the standard and provable robust accuracy over the prior works (gain of 3.65\%
+and 4.46\% on CIFAR-100 respectively). 

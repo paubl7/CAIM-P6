@@ -1,0 +1,19 @@
+We present a Bayesian calibration algorithm for CMB observations as implemented within the global
+end-to-end BeyondPlanck (BP) framework, and apply this to the Planck Low Frequency Instrument
+(LFI) data. Following the most recent Planck analysis, we decompose the full time-dependent gain
+into a sum of three orthogonal components: One absolute calibration term, common to all detectors;
+one time-independent term that can vary between detectors; and one time-dependent component that
+is allowed to vary between one-hour pointing periods. Each term is then sampled conditionally on
+all other parameters in the global signal model through Gibbs sampling. The absolute calibration
+is sampled using only the orbital dipole as a reference source, while the two relative gain components
+are sampled using the full sky signal, including the orbital and Solar CMB dipoles, CMB fluctuations,
+and foreground contributions. We discuss various aspects of the data that influence gain estimation,
+including the dipole/polarization quadrupole degeneracy and anomalous jumps in the instrumental
+gain. Comparing our solution to previous pipelines, we find good agreement in general, with relative
+deviations of -0.84% (-0.67%) for 30 GHz, -0.14% (0.02%) for 44 GHz and -0.69% (-0.08%) for 70 GHz,
+compared to Planck 2018 (NPIPE). The deviations we find are within expected error bounds, and we
+attribute them to differences in data usage and general approach between the pipelines. In particular,
+the BP calibration is performed globally, resulting in better inter-frequency consistency. Additionally,
+WMAP observations are used actively in the BP analysis, which breaks degeneracies in the Planck
+data set and results in better agreement with WMAP. Although our presentation and algorithm are
+currently oriented toward LFI processing, the procedure is fully generalizable to other experiments.

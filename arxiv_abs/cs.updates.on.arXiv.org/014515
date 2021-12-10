@@ -1,0 +1,19 @@
+We prove novel algorithmic guarantees for several online problems in the smoothed analysis model.
+In this model, at each time an adversary chooses an input distribution with density function bounded
+above by $\tfrac{1}{\sigma}$ times that of the uniform distribution; nature then samples an input
+from this distribution. Crucially, our results hold for {\em adaptive} adversaries that can choose
+an input distribution based on the decisions of the algorithm and the realizations of the inputs
+in the previous time steps. This paper presents a general technique for proving smoothed algorithmic
+guarantees against adaptive adversaries, in effect reducing the setting of adaptive adversaries
+to the simpler case of oblivious adversaries. We apply this technique to prove strong smoothed guarantees
+for three problems: -Online learning: We consider the online prediction problem, where instances
+are generated from an adaptive sequence of $\sigma$-smooth distributions and the hypothesis class
+has VC dimension $d$. We bound the regret by $\tilde{O}\big(\sqrt{T d\ln(1/\sigma)} + d\sqrt{\ln(T/\sigma)}\big)$.
+This answers open questions of [RST11,Hag18]. -Online discrepancy minimization: We consider
+the online Koml\'os problem, where the input is generated from an adaptive sequence of $\sigma$-smooth
+and isotropic distributions on the $\ell_2$ unit ball. We bound the $\ell_\infty$ norm of the discrepancy
+vector by $\tilde{O}\big(\ln^2\!\big( \frac{nT}{\sigma}\big) \big)$. -Dispersion in online
+optimization: We consider online optimization of piecewise Lipschitz functions where functions
+with $\ell$ discontinuities are chosen by a smoothed adaptive adversary and show that the resulting
+sequence is $\big( {\sigma}/{\sqrt{T\ell}}, \tilde O\big(\sqrt{T\ell} \big)\big)$-dispersed.
+This matches the parameters of [BDV18] for oblivious adversaries, up to log factors. 

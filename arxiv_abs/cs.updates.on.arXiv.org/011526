@@ -1,0 +1,20 @@
+To address the problem of data inconsistencies among different facial expression recognition
+(FER) datasets, many cross-domain FER methods (CD-FERs) have been extensively devised in recent
+years. Although each declares to achieve superior performance, fair comparisons are lacking due
+to the inconsistent choices of the source/target datasets and feature extractors. In this work,
+we first analyze the performance effect caused by these inconsistent choices, and then re-implement
+some well-performing CD-FER and recently published domain adaptation algorithms. We ensure that
+all these algorithms adopt the same source datasets and feature extractors for fair CD-FER evaluations.
+We find that most of the current leading algorithms use adversarial learning to learn holistic domain-invariant
+features to mitigate domain shifts. However, these algorithms ignore local features, which are
+more transferable across different datasets and carry more detailed content for fine-grained
+adaptation. To address these issues, we integrate graph representation propagation with adversarial
+learning for cross-domain holistic-local feature co-adaptation by developing a novel adversarial
+graph representation adaptation (AGRA) framework. Specifically, it first builds two graphs to
+correlate holistic and local regions within each domain and across different domains, respectively.
+Then, it extracts holistic-local features from the input image and uses learnable per-class statistical
+distributions to initialize the corresponding graph nodes. Finally, two stacked graph convolution
+networks (GCNs) are adopted to propagate holistic-local features within each domain to explore
+their interaction and across different domains for holistic-local feature co-adaptation. We
+conduct extensive and fair evaluations on several popular benchmarks and show that the proposed
+AGRA framework outperforms previous state-of-the-art methods. 

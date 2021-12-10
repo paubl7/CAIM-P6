@@ -1,0 +1,18 @@
+In [Van Beeumen, et. al, HPC Asia 2020, https://www.doi.org/10.1145/3368474.3368497] a scalable
+and matrix-free eigensolver was proposed for studying the many-body localization (MBL) transition
+of two-level quantum spin chain models with nearest-neighbor $XX+YY$ interactions plus $Z$ terms.
+This type of problem is computationally challenging because the vector space dimension grows exponentially
+with the physical system size, and averaging over different configurations of the random disorder
+is needed to obtain relevant statistical behavior. For each eigenvalue problem, eigenvalues from
+different regions of the spectrum and their corresponding eigenvectors need to be computed. Traditionally,
+the interior eigenstates for a single eigenvalue problem are computed via the shift-and-invert
+Lanczos algorithm. Due to the extremely high memory footprint of the LU factorizations, this technique
+is not well suited for large number of spins $L$, e.g., one needs thousands of compute nodes on modern
+high performance computing infrastructures to go beyond $L = 24$. The matrix-free approach does
+not suffer from this memory bottleneck, however, its scalability is limited by a computation and
+communication imbalance. We present a few strategies to reduce this imbalance and to significantly
+enhance the scalability of the matrix-free eigensolver. To optimize the communication performance,
+we leverage the consistent space runtime, CSPACER, and show its efficiency in accelerating the
+MBL irregular communication patterns at scale compared to optimized MPI non-blocking two-sided
+and one-sided RMA implementation variants. The efficiency and effectiveness of the proposed algorithm
+is demonstrated by computing eigenstates on a massively parallel many-core high performance computer.

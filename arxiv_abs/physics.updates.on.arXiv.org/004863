@@ -1,0 +1,20 @@
+The explicit semi-Lagrangian method method for solution of Lagrangian transport equations as
+developed in [Natarajan and Jacobs, Computer and Fluids, 2020] is adopted for the solution of stochastic
+differential equations that is consistent with Discontinuous Spectral Element Method (DSEM)
+approximations of Eulerian conservation laws. The method extends the favorable properties of
+DSEM that include its high-order accuracy, its local and boundary fitted properties and its high
+performance on parallel platforms for the concurrent Monte-Carlo, semi-Lagrangian and Eulerian
+solution of a class of time-dependent problems that can be described by coupled Eulerian-Lagrangian
+formulations. The semi-Lagrangian method seeds particles at Gauss quadrature collocation nodes
+within a spectral element. The particles are integrated explicitly in time according to a drift
+velocity and a Wiener increment forcing and form the nodal basis for an advected interpolant. This
+interpolant is mapped back in a semi-Lagrangian fashion to the Gauss quadrature points through
+a least squares fit using constraints for element boundary values. Stochastic Monte-Carlo samples
+are averaged element-wise on the quadrature nodes. The stable explicit time step Wiener increment
+is sufficiently small to prevent particles from leaving the element's bounds. The semi-Lagrangian
+method is hence local and parallel and does not have the grid complexity, and parallelization challenges
+of the commonly used Lagrangian particle solvers in particle-mesh methods for solution of Eulerian-Lagrangian
+formulations. Formal proof is presented that the semi-Lagrangian algorithm evolves the solution
+according to the Eulerian Fokker-Planck equation. Numerical tests in one and two dimensions for
+drift-diffusion problems show that the method converges exponentially for constant and non-constant
+advection and diffusion velocities. 

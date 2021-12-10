@@ -1,0 +1,20 @@
+As we all know, users and item-providers are two main groups of participants in recommender systems.
+The main task of this paper is to significantly improve the coverage fairness (item-provider oriented
+objective), and simultaneously keep the recommendation accuracy in a high level (user oriented
+objective). First, an effective and totally robust approach of improving the coverage fairness
+is proposed, that is to constrain the allowed recommendation times of an item to be proportional
+to the frequency of its being purchased in the past. Second, in this constrained recommendation
+scenario, a serial of heuristic strategies of user-item matching priority are proposed to minimize
+the loss of recommendation accuracy. The parameterized strategy among them is validated to achieve
+better recommendation accuracy than the baseline algorithm in regular recommendation scenario,
+and it has an overwhelming superiority in coverage fairness over the regular algorithm. Third,
+to get the optimal solution of this user-item matching problem, we design a Minimum Cost Maximum
+Flow model, which achieves almost the same value of coverage fairness and even better accuracy performance
+than the parameterized heuristic strategy. Finally, we empirically demonstrate that, even compared
+with several state-of-the-art enhanced versions of the baseline algorithm, our framework of the
+constrained recommendation scenario coupled with the MCMF user-item matching priority strategy
+still has a several-to-one advantage in the coverage fairness, while its recommendation precision
+is more than 90% of the best value of all the enhanced algorithms. What is more, our proposed framework
+is parameter-free and thus achieves this superior performance without the time cost of parameter
+optimization, while all the above existing enhanced algorithms have to traverse their intrinsic
+parameter to get the best performance. 

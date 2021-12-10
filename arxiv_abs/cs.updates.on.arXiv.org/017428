@@ -1,0 +1,18 @@
+Image captioning is a task in the field of Artificial Intelligence that merges between computer
+vision and natural language processing. It is responsible for generating legends that describe
+images, and has various applications like descriptions used by assistive technology or indexing
+images (for search engines for instance). This makes it a crucial topic in AI that is undergoing a
+lot of research. This task however, like many others, is trained on large images labeled via human
+annotation, which can be very cumbersome: it needs manual effort, both financial and temporal costs,
+it is error-prone and potentially difficult to execute in some cases (e.g. medical images). To mitigate
+the need for labels, we attempt to use self-supervised learning, a type of learning where models
+use the data contained within the images themselves as labels. It is challenging to accomplish though,
+since the task is two-fold: the images and captions come from two different modalities and usually
+handled by different types of networks. It is thus not obvious what a completely self-supervised
+solution would look like. How it would achieve captioning in a comparable way to how self-supervision
+is applied today on image recognition tasks is still an ongoing research topic. In this project,
+we are using an encoder-decoder architecture where the encoder is a convolutional neural network
+(CNN) trained on OpenImages dataset and learns image features in a self-supervised fashion using
+the rotation pretext task. The decoder is a Long Short-Term Memory (LSTM), and it is trained, along
+within the image captioning model, on MS COCO dataset and is responsible of generating captions.
+Our GitHub repository can be found: https://github.com/elhagry1/SSL_ImageCaptioning_RotationPrediction

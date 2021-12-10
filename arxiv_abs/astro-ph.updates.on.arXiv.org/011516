@@ -1,0 +1,18 @@
+We present ${\tt bajes}$, a parallel and lightweight framework for Bayesian inference of multimessenger
+transients. ${\tt bajes}$ is a Python modular package with minimal dependencies on external libraries
+adaptable to the majority of the Bayesian models and to various sampling methods. We describe the
+general workflow and the parameter estimation pipeline for compact-binary-coalescence gravitational-wave
+transients. The latter is validated against injections of binary black hole and binary neutron
+star waveforms, including confidence interval tests that demonstrates the inference is well-calibrated.
+Binary neutron star postmerger injections are also studied using a network of five detectors made
+of LIGO, Virgo, KAGRA and Einstein Telescope. Postmerger signals will be detectable for sources
+at ${\lesssim}80\,$Mpc, with Einstein Telescope contributing over 90\% of the total signal-to-noise
+ratio. As a full scale application, we re-analyze the GWTC-1 black hole transients using the effective-one-body
+${\tt TEOBResumS}$ approximant, and reproduce selected results with other approximants. ${\tt
+bajes}$ inferences are consistent with previous results; the direct comparison of ${\tt bajes}$
+and ${\tt bilby}$ analyses of GW150914 shows a maximum Jensen-Shannon divergence of $5.2{\times}10^{-4}$.
+GW170817 is re-analyzed using ${\tt TaylorF2}$ with 5.5PN point-mass and 7.5PN tides, ${\tt TEOBResumSPA}$,
+and ${\tt IMRPhenomPv2\_NRTidal}$ with different cutoff-frequencies of $1024\,$Hz and $2048\,$Hz.
+We find that the former choice minimizes systematics on the reduced tidal parameter, while a larger
+amount of tidal information is gained with the latter choice. ${\tt bajes}$ can perform these analyses
+in about 1~day using 128 CPUs. 

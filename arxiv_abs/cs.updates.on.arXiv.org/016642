@@ -1,0 +1,18 @@
+The cost of DNA sequencing has dropped exponentially over the past decade, making genomic data accessible
+to a growing number of scientists. In bioinformatics, localization of short DNA sequences (reads)
+within large genomic sequences is commonly facilitated by constructing index data structures
+which allow for efficient querying of substrings. Recent metagenomic classification pipelines
+annotate reads with taxonomic labels by analyzing their $k$-mer histograms with respect to a reference
+genome database. CPU-based index construction is often performed in a preprocessing phase due
+to the relatively high cost of building irregular data structures such as hash maps. However, the
+rapidly growing amount of available reference genomes establishes the need for index construction
+and querying at interactive speeds. In this paper, we introduce MetaCache-GPU -- an ultra-fast
+metagenomic short read classifier specifically tailored to fit the characteristics of CUDA-enabled
+accelerators. Our approach employs a novel hash table variant featuring efficient minhash fingerprinting
+of reads for locality-sensitive hashing and their rapid insertion using warp-aggregated operations.
+Our performance evaluation shows that MetaCache-GPU is able to build large reference databases
+in a matter of seconds, enabling instantaneous operability, while popular CPU-based tools such
+as Kraken2 require over an hour for index construction on the same data. In the context of an ever-growing
+number of reference genomes, MetaCache-GPU is the first metagenomic classifier that makes analysis
+pipelines with on-demand composition of large-scale reference genome sets practical. The source
+code is publicly available at https://github.com/muellan/metacache . 

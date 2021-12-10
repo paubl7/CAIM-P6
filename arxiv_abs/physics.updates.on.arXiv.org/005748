@@ -1,0 +1,19 @@
+We present a topology-based method for mesh-partitioning in three-dimensional discrete fracture
+network (DFN) simulations that take advantage of the intrinsic multi-level nature of a DFN. DFN
+models are used to simulate flow and transport through low-permeability fractured media in the
+subsurface by explicitly representing fractures as discrete entities. The governing equations
+for flow and transport are numerically integrated on computational meshes generated on the interconnected
+fracture networks. Modern high-fidelity DFN simulations require high-performance computing
+on multiple processors where performance and scalability depend partially on obtaining a high-quality
+partition of the mesh to balance work-loads and minimize communication across all processors.
+The discrete structure of a DFN naturally lends itself to various graph representations. We develop
+two applications of the multilevel graph partitioning algorithm to partition the mesh of a DFN.
+In the first, we project a partition of the graph based on the DFN topology onto the mesh of the DFN and
+in the second, this projection is used as the initial condition for further partitioning refinement
+of the mesh. We compare the performance of these methods with standard multi-level graph partitioning
+using graph-based metrics (cut, imbalance, partitioning time), computational-based metrics
+(FLOPS, iterations, solver time), and total run time. The DFN-based and the mesh-based partitioning
+methods are comparable in terms of the graph-based metrics, but the time required to obtain the partition
+is several orders of magnitude faster using the DFN-based partitions. In combination, these partitions
+are several orders of magnitude faster than the mesh-based partition. In turn, this hybrid method
+outperformed both of the other methods in terms of the total run time. 

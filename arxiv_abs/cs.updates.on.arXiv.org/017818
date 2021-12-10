@@ -1,0 +1,20 @@
+Most deep models for underwater image enhancement resort to training on synthetic datasets based
+on underwater image formation models. Although promising performances have been achieved, they
+are still limited by two problems: (1) existing underwater image synthesis models have an intrinsic
+limitation, in which the homogeneous ambient light is usually randomly generated and many important
+dependencies are ignored, and thus the synthesized training data cannot adequately express characteristics
+of real underwater environments; (2) most of deep models disregard lots of favorable underwater
+priors and heavily rely on training data, which extensively limits their application ranges. To
+address these limitations, a new underwater synthetic dataset is first established, in which a
+revised ambient light synthesis equation is embedded. The revised equation explicitly defines
+the complex mathematical relationship among intensity values of the ambient light in RGB channels
+and many dependencies such as surface-object depth, water types, etc, which helps to better simulate
+real underwater scene appearances. Secondly, a unified framework is proposed, named ANA-SYN,
+which can effectively enhance underwater images under collaborations of priors (underwater domain
+knowledge) and data information (underwater distortion distribution). The proposed framework
+includes an analysis network and a synthesis network, one for priors exploration and another for
+priors integration. To exploit more accurate priors, the significance of each prior for the input
+image is explored in the analysis network and an adaptive weighting module is designed to dynamically
+recalibrate them. Meanwhile, a novel prior guidance module is introduced in the synthesis network,
+which effectively aggregates the prior and data features and thus provides better hybrid information
+to perform the more reasonable image enhancement. 

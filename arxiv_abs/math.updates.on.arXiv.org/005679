@@ -1,0 +1,18 @@
+The current two main methods for computing the numerical are the level-set approach of Mengi and
+Overton and the cutting-plane method of Uhlig, but until now, no formal convergence rate results
+have been established for either. In practice, which is faster is also unclear, with Uhlig's method
+sometimes being much faster than Mengi and Overton's approach, and on other problems, much slower.
+In this paper, we clarify this issue and also propose three improved methods. We show that Mengi and
+Overton's method converges quadratically, as has been suspected, while we completely characterize
+the total cost of Uhlig's method for so-called disk matrices. Then, for arbitrary fields of values,
+we derive the exact Q-linear local convergence rate of Uhlig's cutting procedure. Together, this
+establishes that Uhlig's method is extremely expensive when the field of values is a disk centered
+at the origin, but that the local rate of convergence of his cutting procedure actually varies from
+linear to superlinear depending on the shape and location of the field of values, which we show can
+be encapsulated by a single parameter via introducing the notion of normalized curvature. These
+results fully explain why Uhlig's method can both be exceptionally fast and exceptionally slow.
+With this insight, we propose an improved level-set method and an improved cutting-plane method,
+both of which can be significantly faster than their earlier counterparts, while also establishing
+analogous convergence rate results for both. Moreover, in order to remain efficient for any field
+of values configuration, we introduce a third algorithm that leverages the concept of normalized
+curvature and combines both of our improved iterations. 

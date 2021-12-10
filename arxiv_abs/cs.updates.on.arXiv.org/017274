@@ -1,0 +1,18 @@
+Deep Learning (DL) has achieved great success in many real applications. Despite its success, there
+are some main problems when deploying advanced DL models in database systems, such as hyper-parameters
+tuning, the risk of overfitting, and lack of prediction uncertainty. In this paper, we study cardinality
+estimation for SQL queries with a focus on uncertainty, which we believe is important in database
+systems when dealing with a large number of user queries on various applications. With uncertainty
+ensured, instead of trusting an estimator learned as it is, a query optimizer can explore other options
+when the estimator learned has a large variance, and it also becomes possible to update the estimator
+to improve its prediction in areas with high uncertainty. The approach we explore is different from
+the direction of deploying sophisticated DL models in database systems to build cardinality estimators.
+We employ Bayesian deep learning (BDL), which serves as a bridge between Bayesian inference and
+deep learning.The prediction distribution by BDL provides principled uncertainty calibration
+for the prediction. In addition, when the network width of a BDL model goes to infinity, the model
+performs equivalent to Gaussian Process (GP). This special class of BDL, known as Neural Network
+Gaussian Process (NNGP), inherits the advantages of Bayesian approach while keeping universal
+approximation of neural network, and can utilize a much larger model space to model distribution-free
+data as a nonparametric model. We show that our uncertainty-aware NNGP estimator achieves high
+accuracy, can be built very fast, and is robust to query workload shift, in our extensive performance
+studies by comparing with the existing approaches. 

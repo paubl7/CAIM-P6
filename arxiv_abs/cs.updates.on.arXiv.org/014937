@@ -1,0 +1,20 @@
+The paper presents our research on quantifier elimination (QE) for compositional reasoning and
+verification. For compositional reasoning, QE provides the foundation of our approach, serving
+as the calculus for composition to derive the strongest system-property in a single step, from the
+given component atomic-properties and their interconnection relation. We first developed this
+framework for time-independent properties, and later extended it to time-dependent property
+composition. The extension requires, in addition, shifting the given properties along time to
+span the time horizon of interest, he least of which for the strongest system-property is no more
+than the total time horizons of the component level atomic-properties. The system-initial-condition
+is also composed from atomic-initial-conditions of the components the same way. It is used to verify
+a desired system-level property, alongside the derived strongest system-property, by way of induction.
+Our composition approach is uniform regardless of the composition types (cascade/parallel/feedback)
+for both time-dependent and time-independent properties. We developed a new prototype verifier
+named ReLIC (Reduced Logic Inference for Composition) that implements our above approaches. We
+demonstrated it through several illustrative and practical examples. Further, we advanced the
+$k$-induction based model-checking with QE capabilities, by formulating its base and inductive
+steps into QE problems where all the variables are universally quantified. Our integration of the
+QE solver Redlog with the $k$-induction based model-checking tool JKind, shows the successful
+solving of a non-linear problem that the SMT capable JKind failed to resolve. Finally, we also showcase
+the recent adoption of our approaches within an industrial V\&V tool suite for augmented static
+analysis of Simulink models and Deep Neural Networks (DNNs). 

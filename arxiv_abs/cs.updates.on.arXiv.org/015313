@@ -1,0 +1,19 @@
+Visual-Inertial odometry (VIO) is known to suffer from drifting especially over long-term runs.
+In this paper, we present GVINS, a non-linear optimization based system that tightly fuses GNSS
+raw measurements with visual and inertial information for real-time and drift-free state estimation.
+Our system is aiming to provide accurate global 6-DoF estimation under complex indoor-outdoor
+environment where GNSS signals may be largely intercepted or even totally unavailable. To connect
+global measurements with local states, a coarse-to-fine initialization procedure is proposed
+to efficiently online calibrate the transformation and initialize GNSS states from only a short
+window of measurements. The GNSS pseudorange and Doppler shift measurements are then modelled
+and optimized under a factor graph framework along with visual and inertial constraints. For complex
+and GNSS-unfriendly areas, the degenerate cases are discussed and carefully handled to ensure
+robustness. The engineering challenges involved in the system are also included to facilitate
+relevant GNSS fusion researches. Thanks to the tightly-coupled multi-sensor approach and system
+design, our system fully exploits the merits of three types of sensors and is capable to seamlessly
+cope with the transition between indoor and outdoor environments, where satellites are lost and
+recaptured again. We extensively evaluate the proposed system by both simulation and real-world
+experiments, and the result demonstrates that our system substantially eliminates the drift of
+VIO and preserves the local accuracy in spite of noisy GNSS measurements. In addition, experiments
+also show that our system can gain from even a single satellite while conventional GNSS algorithms
+need four at lease. 

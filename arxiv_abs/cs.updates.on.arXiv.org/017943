@@ -1,0 +1,20 @@
+Automatic segmentation of shoulder muscle MRI is challenging due to the high variation in muscle
+size, shape, texture, and spatial position of tears. Manual segmentation of tear and muscle portion
+is hard, time-consuming, and subjective to pathological expertise. This work proposes a new Region
+and Edge-based Deep Auto-Encoder (RE-DAE) for shoulder muscle MRI segmentation. The proposed
+RE-DAE harmoniously employs average and max-pooling operation in the encoder and decoder blocks
+of the Convolutional Neural Network (CNN). Region-based segmentation incorporated in the Deep
+Auto-Encoder (DAE) encourages the network to extract smooth and homogenous regions. In contrast,
+edge-based segmentation tries to learn the boundary and anatomical information. These two concepts,
+systematically combined in a DAE, generate a discriminative and sparse hybrid feature space (exploiting
+both region homogeneity and boundaries). Moreover, the concept of static attention is exploited
+in the proposed RE-DAE that helps in effectively learning the tear region. The performances of the
+proposed MRI segmentation based DAE architectures have been tested using a 3D MRI shoulder muscle
+dataset using the hold-out cross-validation technique. The MRI data has been collected from the
+Korea University Anam Hospital, Seoul, South Korea. Experimental comparisons have been conducted
+by employing innovative custom-made and existing pre-trained CNN architectures both using transfer
+learning and fine-tuning. Objective evaluation on the muscle datasets using the proposed SA-RE-DAE
+showed a dice similarity of 85.58% and 87.07%, an accuracy of 81.57% and 95.58% for tear and muscle
+regions, respectively. The high visual quality and the objective result suggest that the proposed
+SA-RE-DAE is able to correctly segment tear and muscle regions in shoulder muscle MRI for better
+clinical decisions. 

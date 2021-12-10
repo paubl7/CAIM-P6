@@ -1,0 +1,20 @@
+We analyze a variant of multivariate singular spectrum analysis (mSSA), a widely used method used
+to impute and forecast a multivariate time series. Its restriction to a single time series, known
+as singular spectrum analysis (SSA), has been analyzed recently. Despite its popularity, theoretical
+understanding of mSSA is absent. Towards this we introduce a spatio-temporal factor model to analyze
+mSSA. We establish the in-sample prediction error for both imputation and forecasting scales as
+$1/\sqrt{NT}$, for $N$ time series with $T$ observations per time series. In contrast, for SSA the
+error scales as $1/\sqrt{T}$ and for popular matrix factorization based time series methods, the
+error scales as ${1}/{\min(N, T)}$ -- we note these previous results are established only for imputation.
+Further, we utilize an online learning framework to analyze the one-step-ahead prediction error
+of mSSA and establish it has a regret of ${1}/{(\sqrt{N}T^{0.04})}$ with respect to in-sample forecasting
+error. Empirically, we find mSSA outperforms neural network based methods, LSTM and DeepAR, two
+of the most widely used and empirically effective methods, though they come with no theoretical
+guarantees. To establish our results, we make three technical contributions. First, we show that
+the stacked Page Matrix representation has an approximate low-rank structure for a large class
+of time series models -- in doing so, we introduce a `calculus' for approximate low-rank models.
+In particular, we establish that such models are closed under linear combinations as well as multiplications.
+Second, to establish our regret bounds, we extend the theory of online convex optimization to when
+the constraints are time-varying, a variant not addressed by the current literature. Third, we
+extend the prediction error analysis of Principle Component Regression to when the covariate matrix
+is approximately low-rank. 

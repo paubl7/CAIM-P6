@@ -1,0 +1,19 @@
+The $\hybrid$ model was recently introduced by Augustine et al. \cite{DBLP:conf/soda/AugustineHKSS20}
+in order to characterize from an algorithmic standpoint the capabilities of networks which combine
+multiple communication modes. Concretely, it is assumed that the standard $\local$ model of distributed
+computing is enhanced with the feature of all-to-all communication, but with very limited bandwidth,
+captured by the node-capacitated clique ($\ncc$). In this work we provide several new insights
+on the power of hybrid networks for fundamental problems in distributed algorithms. First, we present
+a deterministic algorithm which solves any problem on a sparse $n$-node graph in $\widetilde{\mathcal{O}}(\sqrt{n})$
+rounds of $\hybrid$. We combine this primitive with several sparsification techniques to obtain
+efficient distributed algorithms for general graphs. Most notably, for the all-pairs shortest
+paths problem we give deterministic $(1 + \epsilon)$- and $\log n/\log \log n$-approximate algorithms
+for unweighted and weighted graphs respectively with round complexity $\widetilde{\mathcal{O}}(\sqrt{n})$
+in $\hybrid$, closely matching the performance of the state of the art randomized algorithm of Kuhn
+and Schneider \cite{10.1145/3382734.3405719}. Moreover, we make a connection with the Ghaffari-Haeupler
+framework of low-congestion shortcuts \cite{DBLP:conf/soda/GhaffariH16}, leading -- among
+others -- to a $(1 + \epsilon)$-approximate algorithm for Min-Cut after $\log^{\mathcal{O}(1)}n$
+rounds, with high probability, even if we restrict local edges to transfer $\mathcal{O}(\log n)$-bits
+per round. Finally, we prove via a reduction from the set disjointness problem that $\widetilde{\Omega}(n^{1/3})$
+rounds are required to determine the radius of an unweighted graph, as well as a $(3/2 - \epsilon)$-approximation
+for weighted graphs. 

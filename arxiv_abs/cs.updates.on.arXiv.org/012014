@@ -1,0 +1,19 @@
+Deep learning models have achieved great success in recent years. However, large amounts of data
+are typically required to train such models. While some types of data, such as images, videos, and
+text, are easier to find, data in certain domains is difficult to obtain. For instance, cybersecurity
+applications routinely use network traffic data which organizations are reluctant to share, even
+internally, due to privacy reasons. An alternative is to use synthetically generated data; however,
+most existing data generating methods lack the ability to capture complex dependency structures
+that are usually prevalent in real data by assuming independence either temporally or between attributes.
+This paper presents our approach called STAN, Synthetic Network Traffic Generation using Autoregressive
+Neural models, to generate realistic synthetic network traffic data. Our novel autoregressive
+neural architecture captures both temporal dependence and dependence between attributes at any
+given time. It integrates convolutional neural layers (CNN) with mixture density layers (MDN)
+and softmax layers to model both continuous and discrete variables. We evaluate performance of
+STAN by training it on both a simulated dataset and a real network traffic data set. Multiple metrics
+are used to compare the generated data with real data and with data generated via several baseline
+methods. Finally, to answer the question -- can real network traffic data be substituted with synthetic
+data to train models of comparable accuracy -- we consider two commonly used models for anomaly detection
+in such data, and compare F1/MSE measures of models trained on real data and those on increasing proportions
+of generated data. The results show only a small decline in accuracy of models trained solely on synthetic
+data. 

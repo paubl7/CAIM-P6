@@ -1,0 +1,18 @@
+Graph Neural Networks (GNNs) have demonstrated superior performance in learning node representations
+for various graph inference tasks. However, learning over graph data can raise privacy concerns
+when nodes represent people or human-related variables that involve sensitive or personal information.
+While numerous techniques have been proposed for privacy-preserving deep learning over non-relational
+data, such as image, audio, video, and text, there is less work addressing the privacy issues pertained
+to applying deep learning algorithms on graphs. As a result and for the first time, in this paper,
+we study the problem of node data privacy, where graph nodes have potentially sensitive data that
+is kept private, but they could be beneficial for a central server for training a GNN over the graph.
+To address this problem, we develop a privacy-preserving, architecture-agnostic GNN learning
+algorithm with formal privacy guarantees based on Local Differential Privacy (LDP). Specifically,
+we propose an LDP encoder and an unbiased rectifier, using which the server can communicate with
+the graph nodes to privately collect their data and approximate the GNN's first layer. To further
+reduce the effect of the injected noise, we propose to prepend a simple graph convolution layer,
+called KProp, which is based on the multi-hop aggregation of the nodes' features acting as a denoising
+mechanism. Finally, we propose a robust training framework, in which we benefit from KProp's denoising
+capability to increase the accuracy of noisy labels. Extensive experiments conducted over real-world
+datasets demonstrate that our method can maintain a satisfying level of accuracy with low privacy
+loss. Our implementation is available online. 

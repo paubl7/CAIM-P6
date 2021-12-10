@@ -1,0 +1,20 @@
+In this paper we demonstrate how the Nengo neural modeling and simulation libraries enable users
+to quickly develop robotic perception and action neural networks for simulation on neuromorphic
+hardware using familiar tools, such as Keras and Python. We identify four primary challenges in
+building robust, embedded neurorobotic systems: 1) developing infrastructure for interfacing
+with the environment and sensors; 2) processing task specific sensory signals; 3) generating robust,
+explainable control signals; and 4) compiling neural networks to run on target hardware. Nengo
+helps to address these challenges by: 1) providing the NengoInterfaces library, which defines
+a simple but powerful API for users to interact with simulations and hardware; 2) providing the NengoDL
+library, which lets users use the Keras and TensorFlow API to develop Nengo models; 3) implementing
+the Neural Engineering Framework, which provides white-box methods for implementing known functions
+and circuits; and 4) providing multiple backend libraries, such as NengoLoihi, that enable users
+to compile the same model to different hardware. We present two examples using Nengo to develop neural
+networks that run on CPUs, GPUs, and Intel's neuromorphic chip, Loihi, to demonstrate this workflow.
+The first example is an end-to-end spiking neural network that controls a rover simulated in Mujoco.
+The network integrates a deep convolutional network that processes visual input from mounted cameras
+to track a target, and a control system implementing steering and drive functions to guide the rover
+to the target. The second example augments a force-based operational space controller with neural
+adaptive control to improve performance during a reaching task using a real-world Kinova Jaco2
+robotic arm. Code and details are provided with the intent of enabling other researchers to build
+their own neurorobotic systems. 

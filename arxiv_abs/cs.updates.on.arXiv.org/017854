@@ -1,0 +1,18 @@
+Multivariate time series (MTS) prediction plays a key role in many fields such as finance, energy
+and transport, where each individual time series corresponds to the data collected from a certain
+data source, so-called channel. A typical pipeline of building an MTS prediction model (PM) consists
+of selecting a subset of channels among all available ones, extracting features from the selected
+channels, and building a PM based on the extracted features, where each component involves certain
+optimization tasks, i.e., selection of channels, feature extraction (FE) methods, and PMs as well
+as configuration of the selected FE method and PM. Accordingly, pursuing the best prediction performance
+corresponds to optimizing the pipeline by solving all of its involved optimization problems. This
+is a non-trivial task due to the vastness of the solution space. Different from most of the existing
+works which target at optimizing certain components of the pipeline, we propose a novel evolutionary
+ensemble learning framework to optimize the entire pipeline in a holistic manner. In this framework,
+a specific pipeline is encoded as a candidate solution and a multi-objective evolutionary algorithm
+is applied under different population sizes to produce multiple Pareto optimal sets (POSs). Finally,
+selective ensemble learning is designed to choose the optimal subset of solutions from the POSs
+and combine them to yield final prediction by using greedy sequential selection and least square
+methods. We implement the proposed framework and evaluate our implementation on two real-world
+applications, i.e., electricity consumption prediction and air quality prediction. The performance
+comparison with state-of-the-art techniques demonstrates the superiority of the proposed approach.

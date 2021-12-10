@@ -1,0 +1,20 @@
+The utility of NISQ devices can be increased by algorithms that fit larger problem sizes on smaller
+devices. One strategy is to exploit a tradeoff between circuit width and circuit depth. Unfortunately,
+this tradeoff still limits the size of tractable problems since the increased depth is often not
+realizable before noise dominates. Here, we develop qubit-efficient quantum algorithms for entanglement
+spectroscopy which avoid this tradeoff. In particular, we develop algorithms for computing the
+trace of the n-th power of the density operator of a quantum system, $Tr(\rho^n)$, (related to the
+R\'enyi entropy of order n) that use fewer qubits than any previous efficient algorithm while achieving
+similar performance in the presence of noise, thus enabling spectroscopy of larger quantum systems
+on NISQ devices than previously possible. Our algorithms, which require a number of qubits independent
+of n, are variants of previous algorithms with width proportional to n, an asymptotic difference.
+The crucial ingredient in these new algorithms is the ability to measure and reinitialize subsets
+of qubits in the course of the computation. By carefully arranging these qubits resets, we are able
+to reuse qubits and increase the circuit depth without suffering the usual noisy consequences.
+We also introduce the notion of effective circuit depth as a generalization of standard circuit
+depth suitable for circuits with qubit resets. This tool helps explain the noise-resilience of
+our qubit-efficient algorithms and should aid in designing future algorithms. We perform numerical
+simulations to compare our algorithms to the original variants and show they perform similarly
+when subjected to noise. Additionally, we experimentally implement one of our qubit-efficient
+algorithms on the Honeywell System Model H0, estimating $Tr(\rho^n)$ for larger n than would have
+been possible with previous algorithms. 

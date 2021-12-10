@@ -1,0 +1,20 @@
+Heat losses through the building envelope is one of the key factors in the calculation of the building
+energy balance. If steady-state heat conduction is observed, which is commonly used to assess the
+heat losses in building, there is an analytical solution for one-dimensional problem. For two and
+three-dimensional problems, especially for the complex geometry cases, one must use numerical
+methods to solve the heat conduction equation. To standardise two and three-dimensional calculation
+of heat losses through building elements, ISO 10211 standard can be used. The standard has four benchmark
+examples with criteria that must be satisfied to declare a method as a high-precision calculation
+method. A problem occurs for Case 1 of benchmark test because the analysed problem has a singular
+point due to discretely assigned Dirichlet boundary conditions. The reliability of the results
+around the singular point could be improved by the refinement of the mesh in the area around the singular
+point, but as a point of interest is the total heat flux that is entering the building element, and
+it must converge between subdivisions, this method is not good since the reliable result cannot
+be reached. The problem for the convergence is in the marginal node because the temperature gradient
+in it increases as the temperature difference remains constant and the distance between the corresponding
+nodes decreases. For that reason, Case 1 from the benchmark is inadequate because even if there is
+a discontinuity in temperature field on the boundary, there is an interval in which this change is
+to happen, and the heat flux has a theoretical limit which is not infinity. From the results of this
+research, it is shown that one should neglect a certain number of singular points in order to achieve
+the tolerance given by the standard since the temperature further from the marginal node is stable
+for any subdivision. 

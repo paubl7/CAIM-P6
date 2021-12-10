@@ -1,0 +1,19 @@
+We consider a dynamic model for competition in a social network, where two strategic agents have
+fixed beliefs and the non-strategic/regular agents adjust their states according to a distributed
+consensus protocol. We suppose that one strategic agent must identify k+ target agents in the network
+in order to maximally spread its own opinion and alter the average opinion that eventually emerges.
+In the literature, this problem is cast as the maximization of a set function and, leveraging on the
+submodular property, is solved in a greedy manner by solving k+ separate single targeting problems.
+Our main contribution is to exploit the underlying graph structure to build more refined heuristics.
+As a first instance, we provide the analytical solution for the optimal targeting problem over complete
+graphs. This result provides a rule to understand whether it is convenient or not to block the opponent's
+influence by targeting the same nodes. The argument is then extended to generic graphs leading to
+more accurate solutions compared to a simple greedy approach. As a second instance, by electrical
+analogy we provide the analytical solution of the single targeting problem for the line graph and
+derive some useful properties of the objective function for trees. Inspired by these findings,
+we define a new algorithm which selects the optimal solution on trees in a much faster way with respect
+to a brute-force approach and works well also over tree-like/sparse graphs. The proposed heuristics
+are then compared to zero-cost heuristics on different random generated graphs and real social
+networks. Summarizing, our results suggest a scheme that tells which algorithm is more suitable
+in terms of accuracy and computational complexity, based on the density of the graphs and its degree
+distribution. 

@@ -1,0 +1,19 @@
+Noise injection-based regularization, such as Dropout, has been widely used in image domain to
+improve the performance of deep neural networks (DNNs). However, efficient regularization in
+the point cloud domain is rarely exploited, and most of the state-of-the-art works focus on data
+augmentation-based regularization. In this paper, we, for the first time, perform systematic
+investigation on noise injection-based regularization for point cloud-domain DNNs. To be specific,
+we propose a series of regularization techniques, namely DropFeat, DropPoint and DropCluster,
+to perform noise injection on the point feature maps at the feature level, point level and cluster
+level, respectively. We also empirically analyze the impacts of different factors, including
+dropping rate, cluster size and dropping position, to obtain useful insights and general deployment
+guidelines, which can facilitate the adoption of our approaches across different datasets and
+DNN architectures. We evaluate our proposed approaches on various DNN models for different point
+cloud processing tasks. Experimental results show our approaches enable significant performance
+improvement. Notably, our DropCluster brings 1.5%, 1.3% and 0.8% higher overall accuracy for PointNet,
+PointNet++ and DGCNN, respectively, on ModelNet40 shape classification dataset. On ShapeNet
+part segmentation dataset, DropCluster brings 0.5%, 0.5% and 0.2% mean Intersection-over-union
+(IoU) increase for PointNet, PointNet++ and DGCNN, respectively. On S3DIS semantic segmentation
+dataset, DropCluster improves the mean IoU of PointNet, PointNet++ and DGCNN by 3.2%, 2.9% and 3.7%,
+respectively. Meanwhile, DropCluster also enables the overall accuracy increase for these three
+popular backbone DNNs by 2.4%, 2.2% and 1.8%, respectively. 

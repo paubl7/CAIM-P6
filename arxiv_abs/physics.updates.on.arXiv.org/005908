@@ -1,0 +1,20 @@
+The phase retrieval problem, where one aims to recover a complex-valued image from far-field intensity
+measurements, is a classic problem encountered in a range of imaging applications. Modern phase
+retrieval approaches usually rely on gradient descent methods in a nonlinear minimization framework.
+Calculating closed-form gradients for use in these methods is tedious work, and formulating second
+order derivatives is even more laborious. Additionally, second order techniques often require
+the storage and inversion of large matrices of partial derivatives, with memory requirements that
+can be prohibitive for data-rich imaging modalities. We use a reverse-mode automatic differentiation
+(AD) framework to implement an efficient matrix-free version of the Levenberg-Marquardt (LM)
+algorithm, a longstanding method that finds popular use in nonlinear least-square minimization
+problems but which has seen little use in phase retrieval. Furthermore, we extend the basic LM algorithm
+so that it can be applied for general constrained optimization problems beyond just the least-square
+applications. Since we use AD, we only need to specify the physics-based forward model for a specific
+imaging application; the derivative terms are calculated automatically through matrix-vector
+products, without explicitly forming any large Jacobian or Gauss-Newton matrices. We demonstrate
+that this algorithm can be used to solve both the unconstrained ptychographic object retrieval
+problem and the constrained "blind" ptychographic object and probe retrieval problems, under
+both the Gaussian and Poisson noise models, and that this method outperforms best-in-class first-order
+ptychographic reconstruction methods: it provides excellent convergence guarantees with (in
+many cases) a superlinear rate of convergence, all with a computational cost comparable to, or lower
+than, the tested first-order algorithms. 

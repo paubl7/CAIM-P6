@@ -1,0 +1,20 @@
+Sentence semantic matching requires an agent to determine the semantic relation between two sentences,
+which is widely used in various natural language tasks, such as Natural Language Inference (NLI),
+Paraphrase Identification (PI), and so on. Much recent progress has been made in this area, especially
+attention-based methods and pre-trained language model based methods. However, most of these
+methods focus on all the important parts in sentences in a static way and only emphasize how important
+the words are to the query, inhibiting the ability of attention mechanism. In order to overcome this
+problem and boost the performance of attention mechanism, we propose a novel dynamic re-read attention,
+which can pay close attention to one small region of sentences at each step and re-read the important
+parts for better sentence representations. Based on this attention variation, we develop a novel
+Dynamic Re-read Network (DRr-Net) for sentence semantic matching. Moreover, selecting one small
+region in dynamic re-read attention seems insufficient for sentence semantics, and employing
+pre-trained language models as input encoders will introduce incomplete and fragile representation
+problems. To this end, we extend DRrNet to Locally-Aware Dynamic Re-read Attention Net (LadRa-Net),
+in which local structure of sentences is employed to alleviate the shortcoming of Byte-Pair Encoding
+(BPE) in pre-trained language models and boost the performance of dynamic reread attention. Extensive
+experiments on two popular sentence semantic matching tasks demonstrate that DRr-Net can significantly
+improve the performance of sentence semantic matching. Meanwhile, LadRa-Net is able to achieve
+better performance by considering the local structures of sentences. In addition, it is exceedingly
+interesting that some discoveries in our experiments are consistent with some findings of psychological
+research. 

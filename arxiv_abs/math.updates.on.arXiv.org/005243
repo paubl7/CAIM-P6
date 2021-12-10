@@ -1,0 +1,19 @@
+We study the hardness of Approximate Query Processing (AQP) of various types of queries involving
+joins over multiple tables of possibly different sizes. In the case where the query result is a single
+value (e.g., COUNT, SUM, and COUNT(DISTINCT)), we prove worst-case information-theoretic lower
+bounds for AQP problems that are given parameters $\epsilon$ and $\delta$, and return estimated
+results within a factor of 1+$\epsilon$ of the true results with error probability at most $\delta$.
+In particular, the lower bounds for cardinality estimation over joins under various settings are
+contained in our results. Informally, our results show that for various database queries with joins,
+unless restricted to the set of queries whose results are always guaranteed to be above a very large
+threshold, the amount of information an AQP algorithm needs for returning an accurate approximation
+is at least linear in the number of rows in the largest table. Similar lower bounds even hold for some
+special cases where additional information such as top-K heavy hitters and all frequency vectors
+are available. In the case of GROUP-BY where the query result is not a single number, we study the lower
+bound for the amount of information used by any approximation algorithm that does not report any
+non-existing group and does not miss groups of large total size. Our work extends the work of Alon,
+Gibbons, Matias, and Szegedy [AGMS99].We compare our lower bounds with the amount of information
+required by Bernoulli sampling to give an accurate approximation. For COUNT queries with joins
+over multiple tables of the same size, the upper bound matches the lower bound, unless the problem
+setting is restricted to the set of queries whose results are always guaranteed to be above a very
+large threshold. 

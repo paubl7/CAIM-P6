@@ -1,0 +1,19 @@
+Despite major advancements in nonlinear programming (NLP) and convex relaxations, most system
+operators around the world still predominantly use some form of linear programming (LP) approximation
+of the AC power flow equations. This is largely due to LP technology's superior reliability and computational
+efficiency, especially in real-time market applications, security-constrained applications,
+and extensions involving integer variables, in addition to its ability to readily generate locational
+marginal prices (LMP) for market applications. In the aim of leveraging the advantages of LP while
+retaining the accuracy of NLP interior-point methods (IPMs), this paper proposes a sequential
+linear programming (SLP) approach consisting of a sequence of carefully constructed supporting
+hyperplanes and halfspaces. The algorithm is numerically demonstrated to converge on 138 test
+cases with up the 3375 buses to feasible high-quality solutions (i) without AC feasibility restoration
+(i.e., using LP solvers exclusively), (ii) in computation times generally within the same order
+of magnitude as those from a state-of-the-art NLP solver, and (iii) with robustness against the
+choice of starting point. In particular, the (relative) optimality gaps and the mean constraint
+violations are on average around 1e-3% and 1e-7, respectively, under a single parameter setting
+for all the 138 test cases. To the best of our knowledge, the proposed SLP approach is the first to use
+LP exclusively to reach feasible and high-quality solutions to the nonconvex AC OPF in a reliable
+way, which paves the way for system and market operators to keep using their LP solvers but now with
+the ability to accurately capture transmission losses, price reactive power (Q-LMP), and obtain
+more accurate LMP. 

@@ -1,0 +1,19 @@
+Supernovae Ia (SN) are among the brightest objects we can observe and can provide a unique window
+on the large scale structure of the Universe at redshifts where other observations are not available.
+The photons emitted by SNe are in fact affected by the density field between the source and the observer,
+and from the observed luminosity distance it is possible to solve the inversion problem (IP), i.e.
+to reconstruct the density field which produced those effects. So far the IP was only solved assuming
+some restrictions about the geometry of the problem, such as spherical symmetry for example, and
+the approach was based on solving complicated systems of differential equations which required
+smooth function as inputs, while observational data is not smooth, due to its discrete nature. In
+order to overcome these limitations we develop for the first time an inversion method which is not
+assuming any symmetry, and can be applied directly to observational data, without the need of any
+data smoothing procedure. The method is based on the use of convolutional neural networks (CNN)
+trained on simulated data, and it shows quite accurate results. The training data set is obtained
+by first generating random density and velocity profiles, and then computing their effects on the
+luminosity distance. The CNN is then trained to reconstruct the density field from the luminosity
+distance. The CNN is a modified version of U-Net to account for the tridimensionality of the data,
+and can reconstruct the density and velocity fields with a good level of accuracy. The use of neural
+networks to analyze observational data from future SNe catalogues will allow to reconstruct the
+large scale structure of the Universe to an unprecedented level of accuracy, at a redshift at which
+few other observations are available. 

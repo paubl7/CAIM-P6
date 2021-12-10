@@ -1,0 +1,19 @@
+While NMT has achieved remarkable results in the last 5 years, production systems come with strict
+quality requirements in arbitrarily niche domains that are not always adequately covered by readily
+available parallel corpora. This is typically addressed by training domain specific models, using
+fine-tuning methods and some variation of back-translation on top of in-domain monolingual corpora.
+However, industrial practitioners can rarely afford to focus on a single domain. A far more typical
+scenario includes a set of closely related, yet succinctly different sub-domains. At Booking.com,
+we need to translate property descriptions, user reviews, as well as messages, (for example those
+sent between a customer and an agent or property manager). An editor might need to translate articles
+across a set of different topics. An e-commerce platform would typically need to translate both
+the description of each item and the user generated content related to them. To this end, we propose
+MDT: a novel method to simultaneously fine-tune on several sub-domains by passing multidimensional
+sentence-level information to the model during training and inference. We show that MDT achieves
+results competitive to N specialist models each fine-tuned on a single constituent domain, while
+effectively serving all N sub-domains, therefore cutting development and maintenance costs by
+the same factor. Besides BLEU (industry standard automatic evaluation metric known to only weakly
+correlate with human judgement) we also report rigorous human evaluation results for all models
+and sub-domains as well as specific examples that better contextualise the performance of each
+model in terms of adequacy and fluency. To facilitate further research, we plan to make the code available
+upon acceptance. 

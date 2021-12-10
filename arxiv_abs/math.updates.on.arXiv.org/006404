@@ -1,0 +1,18 @@
+Sector duration optimization (SDO) is a problem arising in treatment planning for stereotactic
+radiosurgery on Gamma Knife. Given a set of isocenter locations, SDO aims to select collimator size
+configurations and irradiation times thereof such that target tissues receive prescribed doses
+in a reasonable amount of treatment time, while healthy tissues nearby are spared. We present a multiobjective
+linear programming model for SDO with a state-of-the-art delivery system, Leksell Gamma Knife
+Icon, to generate a diverse collection of solutions so that one that best suits patient-specific
+needs can be chosen by clinicians. We develop a generic two-phase solution strategy based on the
+epsilon-constraint method for solving multiobjective optimization models, which aims to systematically
+increase the number of high-quality solutions obtained, instead of conducting a traditional uniform
+search. To improve solution quality further and accelerate the procedure, we incorporate some
+general and problem-specific enhancements. Moreover, we propose an alternative version of our
+two-phase strategy, which makes use of machine learning tools to devote the computational effort
+rather to solving epsilon-constraint models that are predicted to yield clinically desirable
+solutions. In our computational study on eight previously treated real test cases, a significant
+portion of obtained solutions outperforms clinical results and those from a single-objective
+model from the literature. In addition to significant benefits of the algorithmic enhancements,
+our experiments illustrate the usefulness of machine learning strategies, reducing the overall
+run times nearly by half while still capturing a sufficient selection of clinically desirable solutions.

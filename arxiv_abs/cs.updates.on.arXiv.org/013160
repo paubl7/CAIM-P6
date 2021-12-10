@@ -1,0 +1,20 @@
+Generating coherent and useful image/video scenes from a free-form textual description is technically
+a very difficult problem to handle. Textual description of the same scene can vary greatly from person
+to person, or sometimes even for the same person from time to time. As the choice of words and syntax
+vary while preparing a textual description, it is challenging for the system to reliably produce
+a consistently desirable output from different forms of language input. The prior works of scene
+generation have been mostly confined to rigorous sentence structures of text input which restrict
+the freedom of users to write description. In our work, we study a new pipeline that aims to generate
+static as well as animated 3D scenes from different types of free-form textual scene description
+without any major restriction. In particular, to keep our study practical and tractable, we focus
+on a small subspace of all possible 3D scenes, containing various combinations of cube, cylinder
+and sphere. We design a two-stage pipeline. In the first stage, we encode the free-form text using
+an encoder-decoder neural architecture. In the second stage, we generate a 3D scene based on the
+generated encoding. Our neural architecture exploits state-of-the-art language model as encoder
+to leverage rich contextual encoding and a new multi-head decoder to predict multiple features
+of an object in the scene simultaneously. For our experiments, we generate a large synthetic data-set
+which contains 13,00,000 and 14,00,000 samples of unique static and animated scene descriptions,
+respectively. We achieve 98.427% accuracy on test data set in detecting the 3D objects features
+successfully. Our work shows a proof of concept of one approach towards solving the problem, and
+we believe with enough training data, the same pipeline can be expanded to handle even broader set
+of 3D scene generation problems. 

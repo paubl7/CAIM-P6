@@ -1,0 +1,19 @@
+Modern communication systems organize receivers in blocks in order to simplify their analysis
+and design. However, an approach that considers the receiver design from a wider perspective rather
+than treating it block-by-block may take advantage of the impacts of these blocks on each other and
+provide better performance. Herein, we can benefit from machine learning and compose a receiver
+model implementing supervised learning techniques. With this motivation, we consider a one-to-one
+transmission system over a flat fast fading wireless channel and propose a support vector machines
+(SVM)-based receiver that combines the pilot-based channel estimation, data demodulation and
+decoding processes in one joint operation. We follow two techniques in the receiver design. We first
+design one SVM-based classifier that outputs the class of the encoding codeword that enters the
+encoder at the transmitter side. Then, we put forward a model with one SVM-based classifier per one
+bit in the encoding codeword, where each classifier assigns the value of the corresponding bit in
+the encoding vector. With the second technique, we simplify the receiver design especially for
+longer encoding codewords. We show that the SVM-based receiver performs very closely to the maximum
+likelihood decoder, which is known to be the optimal decoding strategy when the encoding vectors
+at the transmitter are equally likely. We further show that the SVM-based receiver outperforms
+the conventional receivers that perform channel estimation, data demodulation and decoding in
+blocks. Finally, we show that we can train the SVM-based receiver with 1-bit analog-to-digital
+converter (ADC) outputs and the SVM-based receiver can perform very closely to the conventional
+receivers that take 32-bit ADC outputs as inputs. 

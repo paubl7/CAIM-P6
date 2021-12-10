@@ -1,0 +1,19 @@
+We consider a very simple dynamical system on weighted graphs which we call Iterative Graph Normalization
+(IGN) and a variant in which we apply a non-linear activation function to the weights after each normalization.
+We show that the indicator vectors of the Maximal Independent Sets of the graph are the only binary
+fixed points of IGN, that they are attractive under simple conditions on the activation function
+and we characterize their basins of attraction. We enumerate a number of other fixed points and we
+prove repulsivity for some classes. Based on extensive experiments and different theoretical
+arguments we conjecture that IGN always converges and converges to a binary solution for non-linear
+activations. If our conjectures are correct, IGN would thus be a differentiable approximation
+algorithm for the Maximum Weight Independent Set problem (MWIS), a central NP-hard optimization
+problem with numerous applications. IGN is closely related to a greedy approximation algorithm
+of MWIS by Kako et al. which has a proven approximation ratio. Experimental results show that IGN
+provides solutions of very similar quality. In the context of the Assignment Problem, IGN corresponds
+to an iterative matrix normalization scheme which is closely related to the Sinkhorn-Knopp algorithm
+except that it projects to a permutation matrix instead of a doubly stochastic matrix. We relate
+our scheme to the Softassign algorithm and provide comparative results. As Graph Normalization
+is differentiable, its iterations can be embedded into a machine learning framework and used to
+train end-to-end any model which includes a graphical optimization step which can be cast as a maximum
+weight independent set problem. This includes problems such as graph and hypergraph matching,
+sequence alignment, clustering, ranking, etc. with applications in multiple domains. 

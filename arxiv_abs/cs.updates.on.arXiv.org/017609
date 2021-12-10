@@ -1,0 +1,20 @@
+Time-series data are one of the fundamental types of raw data representation used in data-driven
+techniques. In machine condition monitoring, time-series vibration data are overly used in data
+mining for deep neural networks. Typically, vibration data is converted into images for classification
+using Deep Neural Networks (DNNs), and scalograms are the most effective form of image representation.
+However, the DNN classifiers require huge labeled training samples to reach their optimum performance.
+So, many forms of data augmentation techniques are applied to the classifiers to compensate for
+the lack of training samples. However, the scalograms are graphical representations where the
+existing augmentation techniques suffer because they either change the graphical meaning or have
+too much noise in the samples that change the physical meaning. In this study, a data augmentation
+technique named ensemble augmentation is proposed to overcome this limitation. This augmentation
+method uses the power of white noise added in ensembles to the original samples to generate real-like
+samples. After averaging the signal with ensembles, a new signal is obtained that contains the characteristics
+of the original signal. The parameters for the ensemble augmentation are validated using a simulated
+signal. The proposed method is evaluated using 10 class bearing vibration data using three state-of-the-art
+Transfer Learning (TL) models, namely, Inception-V3, MobileNet-V2, and ResNet50. Augmented
+samples are generated in two increments: the first increment generates the same number of fake samples
+as the training samples, and in the second increment, the number of samples is increased gradually.
+The outputs from the proposed method are compared with no augmentation, augmentations using deep
+convolution generative adversarial network (DCGAN), and several geometric transformation-based
+augmentations... 

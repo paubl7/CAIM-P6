@@ -1,0 +1,19 @@
+We propose a method to accurately obtain the ratio of tumor cells over an entire histological slide.
+We use deep fully convolutional neural network models trained to detect and classify cells on images
+of H&E-stained tissue sections. Pathologists' labels consisting of exhaustive nuclei locations
+and tumor regions were used to trained the model in a supervised fashion. We show that combining two
+models, each working at a different magnification allows the system to capture both cell-level
+details and surrounding context to enable successful detection and classification of cells as
+either tumor-cell or normal-cell. Indeed, by conditioning the classification of a single cell
+on a multi-scale context information, our models mimic the process used by pathologists who assess
+cell neoplasticity and tumor extent at different microscope magnifications. The ratio of tumor
+cells can then be readily obtained by counting the number of cells in each class. To analyze an entire
+slide, we split it into multiple tiles that can be processed in parallel. The overall tumor cell ratio
+can then be aggregated. We perform experiments on a dataset of 100 slides with lung tumor specimens
+from both resection and tissue micro-array (TMA). We train fully-convolutional models using heavy
+data augmentation and batch normalization. On an unseen test set, we obtain an average mean absolute
+error on predicting the tumor cell ratio of less than 6%, which is significantly better than the human
+average of 20% and is key in properly selecting tissue samples for recent genetic panel tests geared
+at prescribing targeted cancer drugs. We perform ablation studies to show the importance of training
+two models at different magnifications and to justify the choice of some parameters, such as the
+size of the receptive field. 

@@ -1,0 +1,20 @@
+Federated learning enables training a global model from data located at the client nodes, without
+data sharing and moving client data to a centralized server. Performance of federated learning
+in a multi-access edge computing (MEC) network suffers from slow convergence due to heterogeneity
+and stochastic fluctuations in compute power and communication link qualities across clients.
+We propose a novel coded computing framework, CodedFedL, that injects structured coding redundancy
+into federated learning for mitigating stragglers and speeding up the training procedure. CodedFedL
+enables coded computing for non-linear federated learning by efficiently exploiting distributed
+kernel embedding via random Fourier features that transforms the training task into computationally
+favourable distributed linear regression. Furthermore, clients generate local parity datasets
+by coding over their local datasets, while the server combines them to obtain the global parity dataset.
+Gradient from the global parity dataset compensates for straggling gradients during training,
+and thereby speeds up convergence. For minimizing the epoch deadline time at the MEC server, we provide
+a tractable approach for finding the amount of coding redundancy and the number of local data points
+that a client processes during training, by exploiting the statistical properties of compute as
+well as communication delays. We also characterize the leakage in data privacy when clients share
+their local parity datasets with the server. We analyze the convergence rate and iteration complexity
+of CodedFedL under simplifying assumptions, by treating CodedFedL as a stochastic gradient descent
+algorithm. Furthermore, we conduct numerical experiments using practical network parameters
+and benchmark datasets, where CodedFedL speeds up the overall training time by up to $15\times$
+in comparison to the benchmark schemes. 

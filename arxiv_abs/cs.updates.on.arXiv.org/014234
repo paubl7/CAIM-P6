@@ -1,0 +1,18 @@
+Global Positioning Systems are now a standard module in mobile devices, and their ubiquity is fueling
+rapid growth of location-based services (LBSs). This poses the risk of location privacy disclosure.
+Effective location privacy preservation is foremost for various mobile applications. Recently
+two strong privacy notions, geo-indistinguishability and expected inference error, are proposed
+based on statistical quantification. They are complementary for limiting the leakage of location
+information. In this paper, we continue to study the differential privacy preservation of location
+obfuscation mechanism based on PIVE framework proposed by Yu, Liu and Pu on ISOC Network and Distributed
+System Security Symposium (NDSS) in 2017. Since PIVE fails to offer differential privacy guarantees
+on adaptive protection location set (PLS) as claimed, we develop DPIVE, a regionalized location
+obfuscation mechanism with two phases. In Phase I, we determine disjoint sets by partitioning all
+possible positions such that different locations in the same set share the common PLS. In Phase II,
+we construct a probability distribution matrix by exponential mechanism in which each row has its
+own sensitivity of utility (diameter of PLS).This approach utilizes the relationship between
+two privacy notions based on the user-defined inference error threshold and the prior knowledge
+about user's location. Moreover, we introduce PDPIVE, a personalized privacy framework, to achieve
+that each location has its own privacy level on two privacy control knobs, minimum inference error
+and differential privacy parameter. Experiments with two public datasets demonstrate that our
+mechanisms have the superior performance typically on skewed locations. 

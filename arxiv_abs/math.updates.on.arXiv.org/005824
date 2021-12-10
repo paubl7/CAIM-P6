@@ -1,0 +1,19 @@
+Statistical distances, i.e., discrepancy measures between probability distributions, are ubiquitous
+in probability theory, statistics and machine learning. To combat the curse of dimensionality
+when estimating these distances from data, recent work has proposed smoothing out local irregularities
+in the measured distributions via convolution with a Gaussian kernel. Motivated by the scalability
+of the smooth framework to high dimensions, we conduct an in-depth study of the structural and statistical
+behavior of the Gaussian-smoothed $p$-Wasserstein distance $\mathsf{W}_p^{(\sigma)}$, for
+arbitrary $p\geq 1$. We start by showing that $\mathsf{W}_p^{(\sigma)}$ admits a metric structure
+that is topologically equivalent to classic $\mathsf{W}_p$ and is stable with respect to perturbations
+in $\sigma$. Moving to statistical questions, we explore the asymptotic properties of $\mathsf{W}_p^{(\sigma)}(\hat{\mu}_n,\mu)$,
+where $\hat{\mu}_n$ is the empirical distribution of $n$ i.i.d. samples from $\mu$. To that end,
+we prove that $\mathsf{W}_p^{(\sigma)}$ is controlled by a $p$th order smooth dual Sobolev norm
+$\mathsf{d}_p^{(\sigma)}$. Since $\mathsf{d}_p^{(\sigma)}(\hat{\mu}_n,\mu)$ coincides
+with the supremum of an empirical process indexed by Gaussian-smoothed Sobolev functions, it lends
+itself well to analysis via empirical process theory. We derive the limit distribution of $\sqrt{n}\mathsf{d}_p^{(\sigma)}(\hat{\mu}_n,\mu)$
+in all dimensions $d$, when $\mu$ is sub-Gaussian. Through the aforementioned bound, this implies
+a parametric empirical convergence rate of $n^{-1/2}$ for $\mathsf{W}_p^{(\sigma)}$, contrasting
+the $n^{-1/d}$ rate for unsmoothed $\mathsf{W}_p$ when $d \geq 3$. As applications, we provide
+asymptotic guarantees for two-sample testing and minimum distance estimation. When $p=2$, we
+further show that $\mathsf{d}_2^{(\sigma)}$ can be expressed as a maximum mean discrepancy. 

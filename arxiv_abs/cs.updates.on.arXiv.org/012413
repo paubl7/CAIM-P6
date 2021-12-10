@@ -1,0 +1,19 @@
+Predictive modeling is useful but very challenging in biological image analysis due to the high
+cost of obtaining and labeling training data. For example, in the study of gene interaction and regulation
+in Drosophila embryogenesis, the analysis is most biologically meaningful when in situ hybridization
+(ISH) gene expression pattern images from the same developmental stage are compared. However,
+labeling training data with precise stages is very time-consuming even for evelopmental biologists.
+Thus, a critical challenge is how to build accurate computational models for precise developmental
+stage classification from limited training samples. In addition, identification and visualization
+of developmental landmarks are required to enable biologists to interpret prediction results
+and calibrate models. To address these challenges, we propose a deep two-step low-shot learning
+framework to accurately classify ISH images using limited training images. Specifically, to enable
+accurate model training on limited training samples, we formulate the task as a deep low-shot learning
+problem and develop a novel two-step learning approach, including data-level learning and feature-level
+learning. We use a deep residual network as our base model and achieve improved performance in the
+precise stage prediction task of ISH images. Furthermore, the deep model can be interpreted by computing
+saliency maps, which consist of pixel-wise contributions of an image to its prediction result.
+In our task, saliency maps are used to assist the identification and visualization of developmental
+landmarks. Our experimental results show that the proposed model can not only make accurate predictions,
+but also yield biologically meaningful interpretations. We anticipate our methods to be easily
+generalizable to other biological image classification tasks with small training datasets. 

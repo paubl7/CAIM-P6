@@ -1,0 +1,20 @@
+We present a near-tight analysis of the average "query complexity" -- \`a la Nguyen and Onak [FOCS'08]
+-- of the randomized greedy maximal matching algorithm, improving over the bound of Yoshida, Yamamoto
+and Ito [STOC'09]. For any $n$-vertex graph of average degree $\bar{d}$, this leads to the following
+sublinear-time algorithms for estimating the size of maximum matching and minimum vertex cover,
+all of which are provably time-optimal up to logarithmic factors: $\bullet$ A multiplicative $(2+\epsilon)$-approximation
+in $\widetilde{O}(n/\epsilon^2)$ time using adjacency list queries. This (nearly) matches an
+$\Omega(n)$ time lower bound for any multiplicative approximation and is, notably, the first $O(1)$-approximation
+that runs in $o(n^{1.5})$ time. $\bullet$ A $(2, \epsilon n)$-approximation in $\widetilde{O}((\bar{d}
++ 1)/\epsilon^2)$ time using adjacency list queries. This (nearly) matches an $\Omega(\bar{d}+1)$
+lower bound of Parnas and Ron [TCS'07] which holds for any $(O(1), \epsilon n)$-approximation,
+and improves over the bounds of [Yoshida et al. STOC'09; Onak et al. SODA'12] and [Kapralov et al.
+SODA'20]: The former two take at least quadratic time in the degree which can be as large as $\Omega(n^2)$
+and the latter obtains a much larger approximation. $\bullet$ A $(2, \epsilon n)$-approximation
+in $\widetilde{O}(n/\epsilon^3)$ time using adjacency matrix queries. This (nearly) matches
+an $\Omega(n)$ time lower bound in this model and improves over the $\widetilde{O}(n\sqrt{n})$-time
+$(2, \epsilon n)$-approximate algorithm of [Chen, Kannan, and Khanna ICALP'20]. It also turns
+out that any non-trivial multiplicative approximation in the adjacency matrix model requires
+$\Omega(n^2)$ time, so the additive $\epsilon n$ error is necessary too. As immediate corollaries,
+we get improved sublinear time estimators for (variants of) TSP and an improved AMPC algorithm for
+maximal matching. 

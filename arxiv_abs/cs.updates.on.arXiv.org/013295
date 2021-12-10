@@ -1,0 +1,18 @@
+Visual captioning aims to generate textual descriptions given images or videos. Traditionally,
+image captioning models are trained on human annotated datasets such as Flickr30k and MS-COCO,
+which are limited in size and diversity. This limitation hinders the generalization capabilities
+of these models while also rendering them liable to making mistakes. Language models can, however,
+be trained on vast amounts of freely available unlabelled data and have recently emerged as successful
+language encoders and coherent text generators. Meanwhile, several unimodal and multimodal fusion
+techniques have been proven to work well for natural language generation and automatic speech recognition.
+Building on these recent developments, and with the aim of improving the quality of generated captions,
+the contribution of our work in this paper is two-fold: First, we propose a generic multimodal model
+fusion framework for caption generation as well as emendation where we utilize different fusion
+strategies to integrate a pretrained Auxiliary Language Model (AuxLM) within the traditional
+encoder-decoder visual captioning frameworks. Next, we employ the same fusion strategies to integrate
+a pretrained Masked Language Model (MLM), namely BERT, with a visual captioning model, viz. Show,
+Attend, and Tell, for emending both syntactic and semantic errors in captions. Our caption emendation
+experiments on three benchmark image captioning datasets, viz. Flickr8k, Flickr30k, and MSCOCO,
+show improvements over the baseline, indicating the usefulness of our proposed multimodal fusion
+strategies. Further, we perform a preliminary qualitative analysis on the emended captions and
+identify error categories based on the type of corrections. 

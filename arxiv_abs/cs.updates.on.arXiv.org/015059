@@ -1,0 +1,18 @@
+In this work, we discuss the application of convolutional neural networks (CNNs) as a tool to advantageously
+initialize Stokes profile inversions. To demonstrate the usefulness of CNNs, we concentrate in
+this paper on the inversion of LTE Stokes profiles. We use observations taken with the spectropolarimeter
+onboard the Hinode spacecraft as a test benchmark. First, we carefully analyze the data with the
+SIR inversion code using a given initial atmospheric model. The code provides a set of atmospheric
+models that reproduce the observations. These models are then used to train a CNN. Afterwards, the
+same data are again inverted with SIR but using the trained CNN to provide the initial guess atmospheric
+models for SIR. The CNNs allow us to significantly reduce the number of inversion cycles when used
+to compute initial guess model atmospheres, decreasing the computational time for LTE inversions
+by a factor of two to four. CNN's alone are much faster than assisted inversions, but the latter are
+more robust and accurate. The advantages and limitations of machine learning techniques for estimating
+optimum initial atmospheric models for spectral line inversions are discussed. Finally, we describe
+a python wrapper for the SIR and DeSIRe codes that allows for the easy setup of parallel inversions.
+The assisted inversions can speed up the inversion process, but the efficiency and accuracy of the
+inversion results depend strongly on the solar scene and the data used for the CNN training. This
+method (assisted inversions) will not obviate the need for analyzing individual events with the
+utmost care but will provide solar scientists with a much better opportunity to sample large amounts
+of inverted data, which will undoubtedly broaden the physical discovery space. 

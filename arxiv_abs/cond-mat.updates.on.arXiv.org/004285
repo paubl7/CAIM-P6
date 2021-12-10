@@ -1,0 +1,20 @@
+Density functionals with asymptotic corrections to the long-range potential are recognized as
+entry-level methods for electronic structure calculations on molecules that can sustain charge
+transfer. Even though charge transfer is also extremely common in Materials-Science, the application
+of such methods has been rare. We implement CAM-B3LYP within the VASP framework. Results obtained
+for 8 representative materials: aluminum, diamond, graphene, silicon, NaCl, MgO, 2D h-BN and 3D
+h-BN, indicate that CAM-B3LYP predictions embody mean-absolute deviations (MAD) compared to
+HSE06 that are reduced by a factor of 4 for lattice parameters, 4 for quasiparticle band gaps, 3 for
+the lowest optical excitation energies, and 6 for exciton binding energies; the only property for
+which HSE06 performed better was the band-gap of silicon. CAM-B3LYP also appears to provide similar
+or improved accuracy compared to ab initio G0W0 and Bethe-Salpeter equation (BSE) approaches.
+The CAM-B3LYP implementation in VASP was verified by comparison of optimized geometries and reaction
+energies for isolated molecules taken from the ACCDB database, evaluated in large periodic unit
+cells, to analogous results obtained using Gaussian-basis sets by Gaussian-16. Using standard
+GW pseudopotentials and energy cutoffs for the plane-wave calculations and the aug-cc-pV5Z basis
+set for the atomic-basis ones, the MAD in energy for 1738 chemical reactions was 0.34 kcal mol-1 (0.015
+eV), whilst for 1291 bond lengths this was 0.0036 {\AA}. An approximate scheme for the speedy implementation
+of CAM-B3LYP into other electronic-structure codes for materials-science applications was considered
+and shown to be less accurate, but nevertheless useful. Analytical functional derivatives for
+CAM-B3LYP were also obtained and implemented, ca. halving computational cost compared to use of
+standard numerical derivatives. 

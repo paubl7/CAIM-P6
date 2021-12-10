@@ -1,0 +1,19 @@
+With the advent of next-generation surveys and the expectation of discovering huge numbers of strong
+gravitational lens systems, much effort is being invested into developing automated procedures
+for handling the data. The several orders of magnitude increase in the number of strong galaxy-galaxy
+lens systems is an insurmountable challenge for traditional modelling techniques. Whilst machine
+learning techniques have dramatically improved the efficiency of lens modelling, parametric
+modelling of the lens mass profile remains an important tool for dealing with complex lensing systems.
+In particular, source reconstruction methods are necessary to cope with the irregular structure
+of high-redshift sources. In this paper, we consider a Convolutional Neural Network (CNN) that
+analyses the outputs of semi-analytic methods which parametrically model the lens mass and linearly
+reconstruct the source surface brightness distribution. We show the unphysical source reconstructions
+that arise as a result of incorrectly initialised lens models can be effectively caught by our CNN.
+Furthermore, the CNN predictions can be used to automatically re-initialise the parametric lens
+model, avoiding unphysical source reconstructions. The CNN, trained on reconstructions of lensed
+S\'ersic sources, accurately classifies source reconstructions of the same type with a precision
+$P > 0.99$ and recall $R > 0.99$. The same CNN, without re-training, achieves $P=0.89$ and $R=0.89$
+when classifying source reconstructions of more complex lensed HUDF sources. Using the CNN predictions
+to re-initialise the lens modelling procedure, we achieve a 69 per cent decrease in the occurrence
+of unphysical source reconstructions. This combined CNN and parametric modelling approach can
+greatly improve the automation of lens modelling. 

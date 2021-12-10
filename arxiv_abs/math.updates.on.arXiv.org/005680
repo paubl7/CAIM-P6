@@ -1,0 +1,18 @@
+Communication is a crucial phase in the context of distributed training. Because parameter server
+(PS) frequently experiences network congestion, recent studies have found that training paradigms
+without a centralized server outperform the traditional server-based paradigms in terms of communication
+efficiency. However, with the increasing growth of model sizes, these server-free paradigms are
+also confronted with substantial communication overhead that seriously deteriorates the performance
+of distributed training. In this paper, we focus on communication efficiency of two serverless
+paradigms, i.e., Ring All-Reduce (RAR) and gossip, by proposing the Quantized Parallel Restarted
+Stochastic Gradient Descent (QPRSGD), an algorithm that allows multiple local SGD updates before
+a global synchronization, in synergy with the quantization to significantly reduce the communication
+overhead. We establish the bound of accumulative errors according to the synchronization mode
+and the network topology, which is essential to ensure the convergence property. Under both aggregation
+paradigms, the algorithm achieves the linear speedup property with respect to the number of local
+updates as well as the number of workers. Remarkably, the proposed algorithm achieves a convergence
+rate $O(1/\sqrt{NK^2M})$ under the gossip paradigm and outperforms all existing compression
+methods, where $N$ is the times of global synchronizations, and $K$ is the number of local updates,
+while $M$ is the number of nodes. An empirical study on various machine learning models demonstrates
+that the communication overhead is reduced by 90\%, and the convergence speed is boosted by up to
+18.6 times, in a low bandwidth network, in comparison with Parallel SGD. 

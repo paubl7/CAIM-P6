@@ -1,0 +1,19 @@
+We present a multi-stage 3D computer-aided detection and diagnosis (CAD) model for automated localization
+of clinically significant prostate cancer (csPCa) in bi-parametric MR imaging (bpMRI). Deep attention
+mechanisms drive its detection network, targeting salient structures and highly discriminative
+feature dimensions across multiple resolutions. Its goal is to accurately identify csPCa lesions
+from indolent cancer and the wide range of benign pathology that can afflict the prostate gland.
+Simultaneously, a decoupled residual classifier is used to achieve consistent false positive
+reduction, without sacrificing high sensitivity or computational efficiency. In order to guide
+model generalization with domain-specific clinical knowledge, a probabilistic anatomical prior
+is used to encode the spatial prevalence and zonal distinction of csPCa. Using a large dataset of
+1950 prostate bpMRI paired with radiologically-estimated annotations, we hypothesize that such
+CNN-based models can be trained to detect biopsy-confirmed malignancies in an independent cohort.
+For 486 institutional testing scans, the 3D CAD system achieves 83.69$\pm$5.22% and 93.19$\pm$2.96%
+detection sensitivity at 0.50 and 1.46 false positive(s) per patient, respectively, with 0.882$\pm$0.030
+AUROC in patient-based diagnosis $-$significantly outperforming four state-of-the-art baseline
+architectures (U-SEResNet, UNet++, nnU-Net, Attention U-Net) from recent literature. For 296
+external biopsy-confirmed testing scans, the ensembled CAD system shares moderate agreement
+with a consensus of expert radiologists (76.69%; $kappa$ $=$ 0.51$\pm$0.04) and independent pathologists
+(81.08%; $kappa$ $=$ 0.56$\pm$0.06); demonstrating strong generalization to histologically-confirmed
+csPCa diagnosis. 

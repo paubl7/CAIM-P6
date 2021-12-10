@@ -1,0 +1,20 @@
+Two fundamental models in online decision making are that of competitive analysis and that of optimal
+stopping. In the former the input is produced by an adversary, while in the latter the algorithm has
+full distributional knowledge of the input. In recent years, there has been a lot of interest in bridging
+these two models by considering data-driven or sample-based versions of optimal stopping problems.
+In this paper, we study such a version of the classic single selection optimal stopping problem,
+as introduced by Kaplan et al. [2020]. In this problem a collection of arbitrary non-negative numbers
+is shuffled in uniform random order. A decision maker gets to observe a fraction $p\in [0,1)$ of the
+numbers and the remaining are revealed sequentially. Upon seeing a number, she must decide whether
+to take that number and stop the sequence, or to drop it and continue with the next number. Her goal
+is to maximize the expected value with which she stops. On one end of the spectrum, when $p=0$, the
+problem is essentially equivalent to the secretary problem and thus the optimal algorithm guarantees
+a reward within a factor $1/e$ of the expected maximum value. We develop an approach, based on the
+continuous limit of a factor revealing LP, that allows us to obtain the best possible rank-based
+(ordinal) algorithm for any value of $p$. Notably, we prove that as $p$ approaches 1, our guarantee
+approaches 0.745, matching the best possible guarantee for the i.i.d. prophet inequality. This
+implies that there is no loss by considering this more general combinatorial version without full
+distributional knowledge. Furthermore, we prove that this convergence is very fast. Along the
+way we show that the optimal rank-based algorithm takes the form of a sequence of thresholds $t_1,t_2,\ldots$
+such that at time $t_i$ the algorithm starts accepting values which are among the top $i$ values seen
+so far. 

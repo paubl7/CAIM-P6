@@ -1,0 +1,20 @@
+Partitioning a region into districts to favor a particular candidate or a party is commonly known
+as gerrymandering. In this paper, we investigate the gerrymandering problem in graph theoretic
+setting as proposed by Cohen-Zemach et al. [AAMAS 2018]. Our contributions in this article are two-fold,
+conceptual and computational. We first resolve the open question posed by Ito et al. [AAMAS 2019]
+about the computational complexity of the problem when the input graph is a path. Next, we propose
+a generalization of their model, where the input consists of a graph on $n$ vertices representing
+the set of voters, a set of $m$ candidates $\mathcal{C}$, a weight function $w_v: \mathcal{C}\rightarrow
+{\mathbb Z}^+$ for each voter $v\in V(G)$ representing the preference of the voter over the candidates,
+a distinguished candidate $p\in \mathcal{C}$, and a positive integer $k$. The objective is to decide
+if one can partition the vertex set into $k$ pairwise disjoint connected sets (districts) s.t $p$
+wins more districts than any other candidate. The problem is known to be NPC even if $k=2$, $m=2$,
+and $G$ is either a complete bipartite graph (in fact $K_{2,n}$) or a complete graph. This means that
+in search for FPT algorithms we need to either focus on the parameter $n$, or subclasses of forest.
+Circumventing these intractable results, we give a deterministic and a randomized algorithms
+for the problem on paths running in times $2.619^{k}(n+m)^{O(1)}$ and $2^{k}(n+m)^{O(1)}$, respectively.
+Additionally, we prove that the problem on general graphs is solvable in time $2^n (n+m)^{O(1)}$.
+Our algorithmic results use sophisticated technical tools such as representative set family and
+Fast Fourier transform based polynomial multiplication, and their (possibly first) application
+to problems arising in social choice theory and/or game theory may be of independent interest to
+the community. 

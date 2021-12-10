@@ -1,0 +1,19 @@
+Deep neural networks can be fooled by adversarial attacks: adding carefully computed small adversarial
+perturbations to clean inputs can cause misclassification on state-of-the-art machine learning
+models. The reason is that neural networks fail to accommodate the distribution drift of the input
+data caused by adversarial perturbations. Here, we present a new solution - Beneficial Perturbation
+Network (BPN) - to defend against adversarial attacks by fixing the distribution drift. During
+training, BPN generates and leverages beneficial perturbations (somewhat opposite to well-known
+adversarial perturbations) by adding new, out-of-network biasing units. Biasing units influence
+the parameter space of the network, to preempt and neutralize future adversarial perturbations
+on input data samples. To achieve this, BPN creates reverse adversarial attacks during training,
+with very little cost, by recycling the training gradients already computed. Reverse attacks are
+captured by the biasing units, and the biases can in turn effectively defend against future adversarial
+examples. Reverse attacks are a shortcut, i.e., they affect the network's parameters without requiring
+instantiation of adversarial examples that could assist training. We provide comprehensive empirical
+evidence showing that 1) BPN is robust to adversarial examples and is much more running memory and
+computationally efficient compared to classical adversarial training. 2) BPN can defend against
+adversarial examples with negligible additional computation and parameter costs compared to
+training only on clean examples; 3) BPN hurts the accuracy on clean examples much less than classic
+adversarial training; 4) BPN can improve the generalization of the network 5) BPN trained only with
+Fast Gradient Sign Attack can generalize to defend PGD attacks. 

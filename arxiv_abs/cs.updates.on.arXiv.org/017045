@@ -1,0 +1,18 @@
+Semi-supervised domain adaptation (SSDA) aims to solve tasks in target domain by utilizing transferable
+information learned from the available source domain and a few labeled target data. However, source
+data is not always accessible in practical scenarios, which restricts the application of SSDA in
+real world circumstances. In this paper, we propose a novel task named Semi-supervised Source Hypothesis
+Transfer (SSHT), which performs domain adaptation based on source trained model, to generalize
+well in target domain with a few supervisions. In SSHT, we are facing two challenges: (1) The insufficient
+labeled target data may result in target features near the decision boundary, with the increased
+risk of mis-classification; (2) The data are usually imbalanced in source domain, so the model trained
+with these data is biased. The biased model is prone to categorize samples of minority categories
+into majority ones, resulting in low prediction diversity. To tackle the above issues, we propose
+Consistency and Diversity Learning (CDL), a simple but effective framework for SSHT by facilitating
+prediction consistency between two randomly augmented unlabeled data and maintaining the prediction
+diversity when adapting model to target domain. Encouraging consistency regularization brings
+difficulty to memorize the few labeled target data and thus enhances the generalization ability
+of the learned model. We further integrate Batch Nuclear-norm Maximization into our method to enhance
+the discriminability and diversity. Experimental results show that our method outperforms existing
+SSDA methods and unsupervised model adaptation methods on DomainNet, Office-Home and Office-31
+datasets. The code is available at https://github.com/Wang-xd1899/SSHT. 

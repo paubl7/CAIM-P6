@@ -1,0 +1,19 @@
+The increasingly complicated and diverse applications have distinct network performance demands,
+e.g., some desire high throughput while others require low latency. Traditional congestion controls
+(CC) have no perception of these demands. Consequently, literatures have explored the objective-specific
+algorithms, which are based on either offline training or online learning, to adapt to certain application
+demands. However, once generated, such algorithms are tailored to a specific performance objective
+function. Newly emerged performance demands in a changeable network environment require either
+expensive retraining (in the case of offline training), or manually redesigning a new objective
+function (in the case of online learning). To address this problem, we propose a novel architecture,
+DeepCC. It generates a CC agent that is generically applicable to a wide range of application requirements
+and network conditions. The key idea of DeepCC is to leverage both offline deep reinforcement learning
+and online fine-tuning. In the offline phase, instead of training towards a specific objective
+function, DeepCC trains its deep neural network model using multi-objective optimization. With
+the trained model, DeepCC offers near Pareto optimal policies w.r.t different user-specified
+trade-offs between throughput, delay, and loss rate without any redesigning or retraining. In
+addition, a quick online fine-tuning phase further helps DeepCC achieve the application-specific
+demands under dynamic network conditions. The simulation and real-world experiments show that
+DeepCC outperforms state-of-the-art schemes in a wide range of settings. DeepCC gains a higher
+target completion ratio of application requirements up to 67.4% than that of other schemes, even
+in an untrained environment. 

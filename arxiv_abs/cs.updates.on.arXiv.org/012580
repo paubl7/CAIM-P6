@@ -1,0 +1,18 @@
+Many different simulation methods for Stokes flow problems involve a common computationally intense
+task---the summation of a kernel function over $O(N^2)$ pairs of points. One popular technique
+is the Kernel Independent Fast Multipole Method (KIFMM), which constructs a spatial adaptive octree
+and places a small number of equivalent multipole and local points around each octree box, and completes
+the kernel sum with $O(N)$ performance. However, the KIFMM cannot be used directly with nonlinear
+kernels, can be inefficient for complicated linear kernels, and in general is difficult to implement
+compared to less-efficient alternatives such as Ewald-type methods. Here we present the Kernel
+Aggregated Fast Multipole Method (KAFMM), which overcomes these drawbacks by allowing different
+kernel functions to be used for specific stages of octree traversal. In many cases a simpler linear
+kernel suffices during the most extensive stage of octree traversal, even for nonlinear kernel
+summation problems. The KAFMM thereby improves computational efficiency in general and also allows
+efficient evaluation of some nonlinear kernel functions such as the regularized Stokeslet. We
+have implemented our method as an open-source software library STKFMM with support for Laplace
+kernels, the Stokeslet, regularized Stokeslet, Rotne-Prager-Yamakawa (RPY) tensor, and the
+Stokes double-layer and traction operators. Open and periodic boundary conditions are supported
+for all kernels, and the no-slip wall boundary condition is supported for the Stokeslet and RPY tensor.
+The package is designed to be ready-to-use as well as being readily extensible to additional kernels.
+Massive parallelism is supported with mixed OpenMP and MPI. 

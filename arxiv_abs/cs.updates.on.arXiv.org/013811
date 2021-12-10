@@ -1,0 +1,19 @@
+It has been shown in the literature that marijuana use is associated with changes in brain network
+connectivity. We propose large-scale Extended Granger Causality (lsXGC) and investigate whether
+it can capture such changes using resting-state fMRI. This method combines dimension reduction
+with source time-series augmentation and uses predictive time-series modeling for estimating
+directed causal relationships among fMRI time-series. It is a multivariate approach, since it
+is capable of identifying the interdependence of time-series in the presence of all other time-series
+of the underlying dynamic system. Here, we investigate whether this model can serve as a biomarker
+for classifying marijuana users from typical controls using 126 adult subjects with a childhood
+diagnosis of ADHD from the Addiction Connectome Preprocessed Initiative (ACPI) database. We use
+brain connections estimated by lsXGC as features for classification. After feature extraction,
+we perform feature selection by Kendall's-tau rank correlation coefficient followed by classification
+using a support vector machine. As a reference method, we compare our results with cross-correlation,
+which is typically used in the literature as a standard measure of functional connectivity. Within
+a cross-validation scheme of 100 different training/test (90%/10%) data splits, we obtain a mean
+accuracy range of [0.714, 0.985] and a mean Area Under the receiver operating characteristic Curve
+(AUC) range of [0.779, 0.999] across all tested numbers of features for lsXGC, which is significantly
+better than results obtained with cross-correlation, namely mean accuracy of [0.728, 0.912] and
+mean AUC of [0.825, 0.969]. Our results suggest the applicability of lsXGC as a potential biomarker
+for marijuana use. 

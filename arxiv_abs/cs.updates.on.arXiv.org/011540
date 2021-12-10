@@ -1,0 +1,19 @@
+Federated learning platforms are gaining popularity. One of the major benefits is to mitigate the
+privacy risks as the learning of algorithms can be achieved without collecting or sharing data.
+While federated learning (i.e., many based on stochastic gradient algorithms) has shown great
+promise, there are still many challenging problems in protecting privacy, especially during the
+process of gradients update and exchange. This paper presents the first gradient-free federated
+learning framework called GRAFFL for learning a Bayesian generative model based on approximate
+Bayesian computation. Unlike conventional federated learning algorithms based on gradients,
+our framework does not require to disassemble a model (i.e., to linear components) or to perturb
+data (or encryption of data for aggregation) to preserve privacy. Instead, this framework uses
+implicit information derived from each participating institution to learn posterior distributions
+of parameters. The implicit information is summary statistics derived from SuffiAE that is a neural
+network developed in this study to create compressed and linearly separable representations thereby
+protecting sensitive information from leakage. As a sufficient dimensionality reduction technique,
+this is proved to provide sufficient summary statistics. We propose the GRAFFL-based Bayesian
+Gaussian mixture model to serve as a proof-of-concept of the framework. Using several datasets,
+we demonstrated the feasibility and usefulness of our model in terms of privacy protection and prediction
+performance (i.e., close to an ideal setting). The trained model as a quasi-global model can generate
+informative samples involving information from other institutions and enhances data analysis
+of each institution. 

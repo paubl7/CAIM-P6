@@ -1,0 +1,19 @@
+Drug repositioning is designed to discover new uses of known drugs, which is an important and efficient
+method of drug discovery. Researchers only use one certain type of Collaborative Filtering (CF)
+models for drug repositioning currently, like the neighborhood based approaches which are good
+at mining the local information contained in few strong drug-disease associations, or the latent
+factor based models which are effectively capture the global information shared by a majority of
+drug-disease associations. Few researchers have combined these two types of CF models to derive
+a hybrid model with the advantages of both of them. Besides, the cold start problem has always been
+a major challenge in the field of computational drug repositioning, which restricts the inference
+ability of relevant models. Inspired by the memory network, we propose the Hybrid Attentional Memory
+Network (HAMN) model, a deep architecture combines two classes of CF model in a nonlinear manner.
+Firstly, the memory unit and the attention mechanism are combined to generate the neighborhood
+contribution representation to capture the local structure of few strong drug-disease associations.
+Then a variant version of the autoencoder is used to extract the latent factor of drugs and diseases
+to capture the overall information shared by a majority of drug-disease associations. In that process,
+ancillary information of drugs and diseases can help to alleviate the cold start problem. Finally,
+in the prediction stage, the neighborhood contribution representation is combined with the drug
+latent factor and disease latent factor to produce the predicted value. Comprehensive experimental
+results on two real data sets show that our proposed HAMN model is superior to other comparison models
+according to the AUC, AUPR and HR indicators. 

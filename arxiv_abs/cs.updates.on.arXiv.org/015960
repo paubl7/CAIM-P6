@@ -1,0 +1,19 @@
+We develop new algorithmic methods with provable guarantees for feature selection in regard to
+categorical data clustering. While feature selection is one of the most common approaches to reduce
+dimensionality in practice, most of the known feature selection methods are heuristics. We study
+the following mathematical model. We assume that there are some inadvertent (or undesirable) features
+of the input data that unnecessarily increase the cost of clustering. Consequently, we want to select
+a subset of the original features from the data such that there is a small-cost clustering on the selected
+features. More precisely, for given integers $\ell$ (the number of irrelevant features) and $k$
+(the number of clusters), budget $B$, and a set of $n$ categorical data points (represented by $m$-dimensional
+vectors whose elements belong to a finite set of values $\Sigma$), we want to select $m-\ell$ relevant
+features such that the cost of any optimal $k$-clustering on these features does not exceed $B$.
+Here the cost of a cluster is the sum of Hamming distances ($\ell_0$-distances) between the selected
+features of the elements of the cluster and its center. The clustering cost is the total sum of the
+costs of the clusters. We use the framework of parameterized complexity to identify how the complexity
+of the problem depends on parameters $k$, $B$, and $|\Sigma|$. Our main result is an algorithm that
+solves the Feature Selection problem in time $f(k,B,|\Sigma|)\cdot m^{g(k,|\Sigma|)}\cdot
+n^2$ for some functions $f$ and $g$. In other words, the problem is fixed-parameter tractable parameterized
+by $B$ when $|\Sigma|$ and $k$ are constants. Our algorithm is based on a solution to a more general
+problem, Constrained Clustering with Outliers. We also complement our algorithmic findings with
+complexity lower bounds. 

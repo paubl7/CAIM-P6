@@ -1,0 +1,19 @@
+In the (fully) dynamic set cover problem, we have a collection of $m$ sets from a universe of size $n$
+that undergo element insertions and deletions; the goal is to maintain an approximate set cover
+of the universe after each update. We give an $O(f^2)$ update time algorithm for this problem that
+achieves an $f$-approximation, where $f$ is the maximum number of sets that an element belongs to;
+under the unique games conjecture, this approximation is best possible for any fixed $f$. This is
+the first algorithm for dynamic set cover with approximation ratio that {exactly} matches $f$ (as
+opposed to {almost} $f$ in prior work), as well as the first one with runtime \emph{independent of
+$n,m$} (for any approximation factor of $o(f^3)$). Prior to our work, the state-of-the-art algorithms
+for this problem were $O(f^2)$ update time algorithms of Gupta et al. [STOC'17] and Bhattacharya
+et al. [IPCO'17] with $O(f^3)$ approximation, and the recent algorithm of Bhattacharya et al. [FOCS'19]
+with $O(f \cdot \log{n}/\epsilon^2)$ update time and $(1+\epsilon) \cdot f$ approximation, improving
+the $O(f^2 \cdot \log{n}/\epsilon^5)$ bound of Abboud et al. [STOC'19]. The key technical ingredient
+of our work is an algorithm for maintaining a {maximal} matching in a dynamic hypergraph of rank $r$,
+where each hyperedge has at most $r$ vertices, which undergoes hyperedge insertions and deletions
+in $O(r^2)$ amortized update time; our algorithm is randomized, and the bound on the update time
+holds in expectation and with high probability. This result generalizes the maximal matching algorithm
+of Solomon [FOCS'16] with constant update time in ordinary graphs to hypergraphs, and is of independent
+merit; the previous state-of-the-art algorithms for set cover do not translate to (integral) matchings
+for hypergraphs, let alone a maximal one. Our quantitative result for the set cover problem is [...]

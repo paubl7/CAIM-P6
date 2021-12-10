@@ -1,0 +1,19 @@
+Survey telescopes such as the Vera C. Rubin Observatory will increase the number of observed supernovae
+(SNe) by an order of magnitude, discovering millions of events; however, it is impossible to spectroscopically
+confirm the class for all the SNe discovered. Thus, photometric classification is crucial but its
+accuracy depends on the not-yet-finalized observing strategy of Rubin Observatory's Legacy Survey
+of Space and Time (LSST). We quantitatively analyze the impact of the LSST observing strategy on
+SNe classification using the simulated multi-band light curves from the Photometric LSST Astronomical
+Time-Series Classification Challenge (PLAsTiCC). First, we augment the simulated training set
+to be representative of the photometric redshift distribution per supernovae class, the cadence
+of observations, and the flux uncertainty distribution of the test set. Then we build a classifier
+using the photometric transient classification library snmachine, based on wavelet features
+obtained from Gaussian process fits, yielding similar performance to the winning PLAsTiCC entry.
+We study the classification performance for SNe with different properties within a single simulated
+observing strategy. We find that season length is an important factor, with light curves of 150 days
+yielding the highest classification performance. Cadence is also crucial for SNe classification;
+events with median inter-night gap of <3.5 days yield higher performance. Interestingly, we find
+that large gaps (>10 days) in light curve observations does not impact classification performance
+as long as sufficient observations are available on either side, due to the effectiveness of the
+Gaussian process interpolation. This analysis is the first exploration of the impact of observing
+strategy on photometric supernova classification with LSST. 

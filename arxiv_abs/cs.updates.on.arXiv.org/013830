@@ -1,0 +1,20 @@
+Annotation scarcity is a long-standing problem in medical image analysis area. To efficiently
+leverage limited annotations, abundant unlabeled data are additionally exploited in semi-supervised
+learning, while well-established cross-modality data are investigated in domain adaptation.
+In this paper, we aim to explore the feasibility of concurrently leveraging both unlabeled data
+and cross-modality data for annotation-efficient cardiac segmentation. To this end, we propose
+a cutting-edge semi-supervised domain adaptation framework, namely Dual-Teacher++. Besides
+directly learning from limited labeled target domain data (e.g., CT) via a student model adopted
+by previous literature, we design novel dual teacher models, including an inter-domain teacher
+model to explore cross-modality priors from source domain (e.g., MR) and an intra-domain teacher
+model to investigate the knowledge beneath unlabeled target domain. In this way, the dual teacher
+models would transfer acquired inter- and intra-domain knowledge to the student model for further
+integration and exploitation. Moreover, to encourage reliable dual-domain knowledge transfer,
+we enhance the inter-domain knowledge transfer on the samples with higher similarity to target
+domain after appearance alignment, and also strengthen intra-domain knowledge transfer of unlabeled
+target data with higher prediction confidence. In this way, the student model can obtain reliable
+dual-domain knowledge and yield improved performance on target domain data. We extensively evaluated
+the feasibility of our method on the MM-WHS 2017 challenge dataset. The experiments have demonstrated
+the superiority of our framework over other semi-supervised learning and domain adaptation methods.
+Moreover, our performance gains could be yielded in bidirections,i.e., adapting from MR to CT,
+and from CT to MR. 

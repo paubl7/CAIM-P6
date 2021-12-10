@@ -1,0 +1,19 @@
+Learning from implicit feedback is one of the most common cases in the application of recommender
+systems. Generally speaking, interacted examples are considered as positive while negative examples
+are sampled from uninteracted ones. However, noisy examples are prevalent in real-world implicit
+feedback. A noisy positive example could be interacted but it actually leads to negative user preference.
+A noisy negative example which is uninteracted because of unawareness of the user could also denote
+potential positive user preference. Conventional training methods overlook these noisy examples,
+leading to sub-optimal recommendation. In this work, we propose probabilistic and variational
+recommendation denoising for implicit feedback. Through an empirical study, we find that different
+models make relatively similar predictions on clean examples which denote the real user preference,
+while the predictions on noisy examples vary much more across different models. Motivated by this
+observation, we propose denoising with probabilistic inference (DPI) which aims to minimize the
+KL-divergence between the real user preference distributions parameterized by two recommendation
+models while maximize the likelihood of data observation. We then show that DPI recovers the evidence
+lower bound of an variational auto-encoder when the real user preference is considered as the latent
+variables. This leads to our second learning framework denoising with variational autoencoder
+(DVAE). We employ the proposed DPI and DVAE on four state-of-the-art recommendation models and
+conduct experiments on three datasets. Experimental results demonstrate that DPI and DVAE significantly
+improve recommendation performance compared with normal training and other denoising methods.
+Codes will be open-sourced. 

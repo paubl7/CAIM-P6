@@ -1,0 +1,18 @@
+We develop a simulator for quantum computers composed of superconducting transmon qubits. The
+simulation model supports an arbitrary number of transmons and resonators. Quantum gates are implemented
+by time-dependent pulses. Nontrivial effects such as crosstalk, leakage to non-computational
+states, entanglement between transmons and resonators, and control errors due to the pulses are
+inherently included. The time evolution of the quantum computer is obtained by solving the time-dependent
+Schr\"odinger equation. The simulation algorithm shows excellent scalability on high-performance
+supercomputers. We present results for the simulation of up to 16 transmons and resonators. Additionally,
+the model can be used to simulate environments, and we demonstrate the transition from an isolated
+system to an open quantum system governed by a Lindblad master equation. We also describe a procedure
+to extract model parameters from electromagnetic simulations or experiments. We compare simulation
+results to experiments on several NISQ processors of the IBM Q Experience. We find nearly perfect
+agreement between simulation and experiment for quantum circuits designed to probe crosstalk
+in transmon systems. By studying common gate metrics such as the fidelity or the diamond distance,
+we find that they cannot reliably predict the performance of repeated gate applications or practical
+quantum algorithms. As an alternative, we find that the results from two-transmon gate set tomography
+have an exceptional predictive power. Finally, we test a protocol from the theory of quantum error
+correction and fault tolerance. We find that the protocol systematically improves the performance
+of transmon quantum computers in the presence of characteristic control and measurement errors.

@@ -1,0 +1,18 @@
+Neural Networks (NN) have been proven to be powerful tools to analyze Big Data. However, traditional
+CPUs cannot achieve the desired performance and/or energy efficiency for NN applications. Therefore,
+numerous NN accelerators have been used or designed to meet these goals. These accelerators all
+fall into three categories: GPGPUs, ASIC NN Accelerators and CISC NN Accelerators. Though CISC
+NN Accelerators can achieve considerable smaller memory footprint than GPGPU thus improve energy
+efficiency; they still fail to provide same level of data reuse optimization achieved by ASIC NN
+Accelerators because of the inherited poor pragrammability of their CISC architecture. We argue
+that, for NN Accelerators, RISC is a better design choice than CISC, as is the case with general purpose
+processors. We propose RISC-NN, a novel many-core RISC-based NN accelerator that achieves high
+expressiveness and high parallelism and features strong programmability and low control-hardware
+costs. We show that, RISC-NN can implement all the necessary instructions of state-of-the-art
+CISC NN Accelerators; in the meantime, RISC-NN manages to achieve advanced optimization such as
+multiple-level data reuse and support for Sparse NN applications which previously only existed
+in ASIC NN Accelerators. Experiment results show that, RISC-NN achieves on average 11.88X performance
+efficiency compared with state-of-the-art Nvidia TITAN Xp GPGPU for various NN applications.
+RISC-NN also achieves on average 1.29X, 8.37X and 21.71X performance efficiency over CISC-based
+TPU in CNN, MLP and LSTM applications, respectively. Finally, RISC-NN can achieve additional 26.05%
+performance improvement and 33.13% energy reduction after applying pruning for Sparse NN applications.

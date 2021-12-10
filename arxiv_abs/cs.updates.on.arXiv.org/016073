@@ -1,0 +1,18 @@
+Population protocols model information spreading in networks where pairwise node exchanges are
+determined by an external random scheduler. Most of the population protocols in the literature
+assume that the participating $n$ nodes are honest. Such assumption may not be, however, accurate
+for large-scale systems of small devices. Hence, in this work, we study a variant of population protocols,
+where up to $f$ nodes can be Byzantine. We examine the majority (binary) consensus problem against
+different levels of adversary strengths, ranging from the Full adversary that has complete knowledge
+of all the node states to the Weak adversary that has only knowledge about which exchanges take place.
+We also take into account Dynamic vs Static node corruption by the adversary. We give lower bounds
+that require any algorithm solving the majority consensus to have initial difference $d = \Omega(f
++ 1)$ for the tally between the two proposed values, which holds for both the Full Static and Weak Dynamic
+adversaries. We then present an algorithm that solves the majority consensus problem and tolerates
+$f \leq n / c$ Byzantine nodes, for some constant $c>0$, with $d = \Omega(f + \sqrt{n \log n})$ and $O(\log^3
+n)$ parallel time steps, using $O(\log n)$ states per node. We also give an alternative algorithm
+with $d = \Omega(\min\{f \log^2 n + 1,n\})$. Moreover, we combine both algorithms into one using
+random coins. The only other known previous work on Byzantine-resilient population protocols
+tolerates up to $f = o(\sqrt n)$ faulty nodes and works against a static adversary; hence, our protocols
+significantly improve the tolerance by an $\omega(\sqrt n)$ factor and all of them work correctly
+against a stronger dynamic adversary. 

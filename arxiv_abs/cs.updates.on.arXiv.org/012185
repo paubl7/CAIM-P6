@@ -1,0 +1,18 @@
+To employ a Convolutional Neural Network (CNN) in an energy-constrained embedded system, it is
+critical for the CNN implementation to be highly energy efficient. Many recent studies propose
+CNN accelerator architectures with custom computation units that try to improve energy-efficiency
+and performance of CNNs by minimizing data transfers from DRAM-based main memory. However, in these
+architectures, DRAM is still responsible for half of the overall energy consumption of the system,
+on average. A key factor of the high energy consumption of DRAM is the refresh overhead, which is estimated
+to consume 40% of the total DRAM energy. In this paper, we propose a new mechanism, Refresh Triggered
+Computation (RTC), that exploits the memory access patterns of CNN applications to reduce the number
+of refresh operations. We propose three RTC designs (min-RTC, mid-RTC, and full-RTC), each of which
+requires a different level of aggressiveness in terms of customization to the DRAM subsystem. All
+of our designs have small overhead. Even the most aggressive RTC design (i.e., full-RTC) imposes
+an area overhead of only 0.18% in a 16 Gb DRAM chip and can have less overhead for denser chips. Our experimental
+evaluation on six well-known CNNs show that RTC reduces average DRAM energy consumption by 24.4%
+and 61.3%, for the least aggressive and the most aggressive RTC implementations, respectively.
+Besides CNNs, we also evaluate our RTC mechanism on three workloads from other domains. We show that
+RTC saves 31.9% and 16.9% DRAM energy for Face Recognition and Bayesian Confidence Propagation
+Neural Network (BCPNN), respectively. We believe RTC can be applied to other applications whose
+memory access patterns remain predictable for a sufficiently long time. 

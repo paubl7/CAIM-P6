@@ -1,0 +1,19 @@
+In the Online Simple Knapsack Problem we are given a knapsack of unit size 1. Items of size smaller
+or equal to 1 are presented in an iterative fashion and an algorithm has to decide whether to permanently
+include or reject each item into the knapsack without any knowledge about the rest of the instance.
+The goal is then to pack the knapsack as full as possible. In this work, we introduce a third option
+additional to those of packing and rejecting an item, namely that of reserving an item for the cost
+of a fixed fraction $\alpha$ of its size. An algorithm may pay this fraction in order to postpone its
+decision on whether to include or reject the item until after the last item of the instance was presented.
+While the classical Online Simple Knapsack Problem does not admit any constantly bounded competitive
+ratio in the deterministic setting, we find that adding the possibility of reservation makes the
+problem constantly competitive, with varying competitive ratios depending on the value of $\alpha$.
+We give upper and lower bounds for the whole range of reservation costs, with tight bounds for costs
+up to $1/6$---an area that is strictly 2-competitive---and for costs between $\sqrt{2}-1$ and
+$0.5$---an area that is $(2+\alpha)$-competitive. With our analysis, we find a counterintuitive
+characteristic of the problem: Intuitively, one would expect that the possibility of rejecting
+items becomes more and more helpful for an online algorithm with growing reservation costs. However,
+for higher reservation costs between $\sqrt{2}-1$ and $0.5$, an algorithm that is unable to reject
+any items tightly matches the lower bound and is thus the best possible. On the other hand, for any
+positive reservation cost smaller than $1/6$, any algorithm that is unable to reject any items performs
+considerably worse than one that is able to reject. 

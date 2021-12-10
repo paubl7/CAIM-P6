@@ -1,0 +1,20 @@
+Bitcoin (BTC) is probably the most transparent payment network in the world, thanks to the full history
+of transactions available to the public. Though, Bitcoin is not a fully anonymous environment,
+rather a pseudonymous one, accounting for a number of attempts to beat its pseudonimity using clustering
+techniques. There is, however, a recurring assumption in all the cited deanonymization techniques:
+that each transaction output has an address attached to it. That assumption is false. An evidence
+is that, as of block height 591,872, there are several millions transactions with at least one output
+for which the Bitcoin Core client cannot infer an address. In this paper, we present a novel approach
+based on sound graph theory for identifying transaction inputs and outputs. Our solution implements
+two simple yet innovative features: it does not rely on BTC addresses and explores all the transactions
+stored in the blockchain. All the other existing solutions fail with respect to one or both of the
+cited features. In detail, we first introduce the concept of Unknown Transaction and provide a new
+framework to parse the Bitcoin blockchain by taking them into account. Then, we introduce a theoretical
+model to detect, study, and classify -- for the first time in the literature -- unknown transaction
+patterns in the user network. Further, in an extensive experimental campaign, we apply our model
+to the Bitcoin network to uncover hidden transaction patterns within the Bitcoin user network.
+Results are striking: we discovered more than 30,000 unknown transaction DAGs, with a few of them
+exhibiting a complex yet ordered topology and potentially connected to automated payment services.
+To the best of our knowledge, the proposed framework is the only one that enables a complete study
+of the unknown transaction patterns, hence enabling further research in the fields -- for which
+we provide some directions. 

@@ -1,0 +1,20 @@
+Gaussian processes (GPs) provide a framework for Bayesian inference that can offer principled
+uncertainty estimates for a large range of problems. For example, if we consider regression problems
+with Gaussian likelihoods, a GP model can predict both the mean and variance of the posterior in closed
+form. However, identifying the posterior GP scales cubically with the number of training examples
+and requires to store all examples in memory. In order to overcome these obstacles, sparse GPs have
+been proposed that approximate the true posterior GP with pseudo-training examples. Importantly,
+the number of pseudo-training examples is user-defined and enables control over computational
+and memory complexity. In the general case, sparse GPs do not enjoy closed-form solutions and one
+has to resort to approximate inference. In this context, a convenient choice for approximate inference
+is variational inference (VI), where the problem of Bayesian inference is cast as an optimization
+problem -- namely, to maximize a lower bound of the log marginal likelihood. This paves the way for
+a powerful and versatile framework, where pseudo-training examples are treated as optimization
+arguments of the approximate posterior that are jointly identified together with hyperparameters
+of the generative model (i.e. prior and likelihood). The framework can naturally handle a wide scope
+of supervised learning problems, ranging from regression with heteroscedastic and non-Gaussian
+likelihoods to classification problems with discrete labels, but also multilabel problems. The
+purpose of this tutorial is to provide access to the basic matter for readers without prior knowledge
+in both GPs and VI. A proper exposition to the subject enables also access to more recent advances
+(like importance-weighted VI as well as inderdomain, multioutput and deep GPs) that can serve as
+an inspiration for new research ideas. 

@@ -1,0 +1,20 @@
+Domain shift happens in cross-domain scenarios commonly because of the wide gaps between different
+domains: when applying a deep learning model well-trained in one domain to another target domain,
+the model usually performs poorly. To tackle this problem, unsupervised domain adaptation (UDA)
+techniques are proposed to bridge the gap between different domains, for the purpose of improving
+model performance without annotation in the target domain. Particularly, UDA has a great value
+for multimodal medical image analysis, where annotation difficulty is a practical concern. However,
+most existing UDA methods can only achieve satisfactory improvements in one adaptation direction
+(e.g., MRI to CT), but often perform poorly in the other (CT to MRI), limiting their practical usage.
+In this paper, we propose a bidirectional UDA (BiUDA) framework based on disentangled representation
+learning for equally competent two-way UDA performances. This framework employs a unified domain-aware
+pattern encoder which not only can adaptively encode images in different domains through a domain
+controller, but also improve model efficiency by eliminating redundant parameters. Furthermore,
+to avoid distortion of contents and patterns of input images during the adaptation process, a content-pattern
+consistency loss is introduced. Additionally, for better UDA segmentation performance, a label
+consistency strategy is proposed to provide extra supervision by recomposing target-domain-styled
+images and corresponding source-domain annotations. Comparison experiments and ablation studies
+conducted on two public datasets demonstrate the superiority of our BiUDA framework to current
+state-of-the-art UDA methods and the effectiveness of its novel designs. By successfully addressing
+two-way adaptations, our BiUDA framework offers a flexible solution of UDA techniques to the real-world
+scenario. 

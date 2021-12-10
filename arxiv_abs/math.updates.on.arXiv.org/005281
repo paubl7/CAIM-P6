@@ -1,0 +1,18 @@
+It is well-known in biology that ants are able to find shortest paths between their nest and the food
+by successive random explorations, without any mean of communication other than the pheromones
+they leave behind them. This striking phenomenon has been observed experimentally and modelled
+by different mean-field reinforcement-learning models in the biology literature. In this paper,
+we introduce the first probabilistic reinforcement-learning model for this phenomenon. In this
+model, the ants explore a finite graph in which two nodes are distinguished as the nest and the source
+of food. The ants perform successive random walks on this graph, starting from the nest and stopped
+when first reaching the food, and the transition probabilities of each random walk depend on the
+realizations of all previous walks through some dynamic weighting of the graph. We discuss different
+variants of this model based on different reinforcement rules and show that slight changes in this
+reinforcement rule can lead to drastically different outcomes. We prove that, in two variants of
+this model and when the underlying graph is, respectively, any series-parallel graph and a 5-edge
+non-series-parallel losange graph, the ants indeed eventually find the shortest path(s) between
+their nest and the food. Both proofs rely on the electrical network method for random walks on weighted
+graphs and on Rubin's embedding in continuous time. The proof in the series-parallel cases uses
+the recursive nature of this family of graphs, while the proof in the seemingly-simpler losange
+case turns out to be quite intricate: it relies on a fine analysis of some stochastic approximation,
+and on various couplings with standard and generalised P\'olya urns. 

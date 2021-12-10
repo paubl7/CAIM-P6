@@ -1,0 +1,20 @@
+Two recent studies explicitly recommend labeling defective classes in releases using the affected
+versions (AV) available in issue trackers. The aim our study is threefold: 1) to measure the proportion
+of defects for which the realistic method is usable, 2) to propose a method for retrieving the AVs
+of a defect, thus making the realistic approach usable when AVs are unavailable, 3) to compare the
+accuracy of the proposed method versus three SZZ implementations. The assumption of our proposed
+method is that defects have a stable life cycle in terms of the proportion of the number of versions
+affected by the defects before discovering and fixing these defects. Results related to 212 open-source
+projects from the Apache ecosystem, featuring a total of about 125,000 defects, reveal that the
+realistic method cannot be used in the majority (51%) of defects. Therefore, it is important to develop
+automated methods to retrieve AVs. Results related to 76 open-source projects from the Apache ecosystem,
+featuring a total of about 6,250,000 classes, affected by 60,000 defects, and spread over 4,000
+versions and 760,000 commits, reveal that the proportion of the number of versions between defect
+discovery and fix is pretty stable (STDV < 2) across the defects of the same project. Moreover, the
+proposed method resulted significantly more accurate than all three SZZ implementations in (i)
+retrieving AVs, (ii) labeling classes as defective, and (iii) in developing defects repositories
+to perform feature selection. Thus, when the realistic method is unusable, the proposed method
+is a valid automated alternative to SZZ for retrieving the origin of a defect. Finally, given the
+low accuracy of SZZ, researchers should consider re-executing the studies that have used SZZ as
+an oracle and, in general, should prefer selecting projects with a high proportion of available
+and consistent AVs. 

@@ -1,0 +1,18 @@
+This paper aims to develop new mathematical and computational tools for modeling the distribution
+of portfolio returns across portfolios. We establish relevant mathematical formulas and propose
+efficient algorithms, drawing upon powerful techniques in computational geometry and the literature
+on splines, to compute the probability density function, the cumulative distribution function,
+and the k-th moment of the probability function. Our algorithmic tools and implementations efficiently
+handle portfolios with 10000 assets, and compute moments of order k up to 40 in a few seconds, thus
+handling real-life scenarios. We focus on the long-only strategy which is the most common type of
+investment, i.e. on portfolios whose weights are non-negative and sum up to 1; our approach is readily
+generalizable. Thus, we leverage a geometric representation of the stock market, where the investment
+set defines a simplex polytope. The cumulative distribution function corresponds to a portfolio
+score capturing the percentage of portfolios yielding a return not exceeding a given value. We introduce
+closed-form analytic formulas for the first 4 moments of the cross-sectional returns distribution,
+as well as a novel algorithm to compute all higher moments. We show that the first 4 moments are a direct
+mapping of the asset returns' moments. All of our algorithms and solutions are fully general and
+include the special case of equal asset returns, which was sometimes excluded in previous works.
+Finally, we apply our portfolio score in the design of new performance measures and asset management.
+We found our score-based optimal portfolios less concentrated than the mean-variance portfolio
+and much less risky in terms of ranking. 

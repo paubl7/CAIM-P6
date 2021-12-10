@@ -1,0 +1,20 @@
+Accounting for the effects of stellar magnetic phenomena is indispensable to fully exploit radial
+velocities (RVs). Correlated time variations are often mitigated by Gaussian processes (GP).
+They rely on fitting kernel functions that are motivated on mathematical grounds, and whose physical
+interpretation is often elusive. We aim to establish a connection between stellar activity affecting
+RVs and their correlations with physical parameters, and compare this connection with kernels
+used in the literature. We use simple activity models to investigate the relationship between the
+physical processes generating the signals and the covariances typically found in data, and to demonstrate
+the qualitative behaviour of this relationship. We use the StarSim code to calculate RVs of an M dwarf
+with different realistic evolving spot configurations. Their auto-correlation functions (ACF)
+show a very specific behaviour and are related to the kernel. GP regression is performed using a quasi-periodic
+(QP) and harmonic oscillator kernels. Comparison of the resulting kernels with the exact ACFs allows
+us to cross-match the kernel hyper-parameters with the introduced physical values, study the overall
+capabilities of the kernels, and improve their definition. We find that the QP kernel provides a
+more straightforward interpretation of the physics. It is able to consistently recover both the
+introduced rotation period P and the spot lifetime. Our study indicates that the performance can
+be enhanced by fixing the form factor w and adding a physically motivated cosine term with period
+P/2, where the contribution to the ACF for the different spot configurations differs significantly.
+The new quasi-periodic with cosine kernel leads to significantly better model likelihoods, can
+potentially distinguish between different spot configurations, and can thereby improve the sensitivity
+of RV exoplanet searches. 

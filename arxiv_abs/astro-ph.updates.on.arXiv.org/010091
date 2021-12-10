@@ -1,0 +1,19 @@
+With the growth of the scale, depth, and resolution of astronomical imaging surveys, there is an
+increased need for highly accurate automated detection and extraction of astronomical sources
+from images. This also means there is a need for objective quality criteria, and automated methods
+to optimise parameter settings for these software tools. We present a comparison of several tools
+which have been developed to perform this task: namely SExtractor, ProFound, NoiseChisel, and
+MTObjects. In particular, we focus on evaluating performance in situations which present challenges
+for detection -- for example, faint and diffuse galaxies; extended structures, such as streams;
+and objects close to bright sources. Furthermore, we develop an automated method to optimise the
+parameters for the above tools. We present four different objective segmentation quality measures,
+based on precision, recall, and a new measure for the correctly identified area of sources. Bayesian
+optimisation is used to find optimal parameter settings for each of the four tools on simulated data,
+for which a ground truth is known. After training, the tools are tested on similar simulated data,
+to provide a performance baseline. We then qualitatively assess tool performance on real astronomical
+images from two different surveys. We determine that when area is disregarded, all four tools are
+capable of broadly similar levels of detection completeness, while only NoiseChisel and MTObjects
+are capable of locating the faint outskirts of objects. MTObjects produces the highest scores on
+all tests on all four quality measures, whilst SExtractor obtains the highest speeds. No tool has
+sufficient speed and accuracy to be well-suited to large-scale automated segmentation in its current
+form. 

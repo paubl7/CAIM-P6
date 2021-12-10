@@ -1,0 +1,18 @@
+Temporal graphs are graphs where the topology and/or other properties of the graph change with time.
+They have been used to model applications with temporal information in various domains. Problems
+on static graphs become more challenging to solve in temporal graphs because of dynamically changing
+topology, and many recent works have explored graph problems on temporal graphs. In this paper,
+we define a type of matching called {\em 0-1 timed matching} for temporal graphs, and investigate
+the problem of finding a {\em maximum 0-1 timed matching} for different classes of temporal graphs.
+We first prove that the problem is NP-Complete for rooted temporal trees when each edge is associated
+with two or more time intervals. We then propose an $O(n^3)$ time algorithm for the problem on a rooted
+temporal tree with $n$ nodes when each edge is associated with exactly one time interval. The problem
+is then shown to be NP-Complete also for bipartite temporal graphs even when each edge is associated
+with a single time interval and degree of each node is bounded by a constant $k \geq 3$. We next investigate
+approximation algorithms for the problem for temporal graphs where each edge is associated with
+more than one time intervals. It is first shown that there is no $\frac{1}{n^{1-\epsilon}}$-factor
+approximation algorithm for the problem for any $\epsilon > 0$ even on a rooted temporal tree with
+$n$ nodes unless NP = ZPP. We then present a $\frac{1}{\mathcal{N}^* + 1}$-factor approximation
+algorithm for the problem for general temporal graphs where $\mathcal{N^*}$ is the average number
+of edges overlapping in time with each edge in the temporal graph. The same algorithm is also a constant-factor
+approximation algorithm for degree bounded temporal graphs. 

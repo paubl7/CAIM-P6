@@ -1,0 +1,20 @@
+Memory disaggregation provides efficient memory utilization across network-connected systems.
+It allows a node to use part of memory in remote nodes in the same cluster. Recent studies have improved
+RDMA-based memory disaggregation systems, supporting lower latency and higher bandwidth than
+the prior generation of disaggregated memory. However, the current disaggregated memory systems
+manage remote memory only at coarse granularity due to the limitation of the access validation mechanism
+of RDMA. In such systems, to support fine-grained remote page allocation, the trustworthiness
+of all participating systems needs to be assumed, and thus a security breach in a node can propagate
+to the entire cluster. From the security perspective, the memory-providing node must protect its
+memory from memory-requesting nodes. On the other hand, the memory-requesting node requires the
+confidentiality and integrity protection of its memory contents even if they are stored in remote
+nodes. To address the weak isolation support in the current system, this study proposes a novel hardware-assisted
+memory disaggregation system. Based on the security features of FPGA, the logic in each per-node
+FPGA board provides a secure memory disaggregation engine. With its own networks, a set of FPGA-based
+engines form a trusted memory disaggregation system, which is isolated from the privileged software
+of each participating node. The secure memory disaggregation system allows fine-grained memory
+management in memory-providing nodes, while the access validation is guaranteed with the hardware-hardened
+mechanism. In addition, the proposed system hides the memory access patterns observable from remote
+nodes, supporting obliviousness. Our evaluation with FPGA implementation shows that such fine-grained
+secure disaggregated memory is feasible with comparable performance to the latest software-based
+techniques. 

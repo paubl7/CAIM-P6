@@ -1,0 +1,20 @@
+Spiking Neural Networks (SNNs) contain more biologically realistic structures and biologically-inspired
+learning principles than those in standard Artificial Neural Networks (ANNs). SNNs are considered
+the third generation of ANNs, powerful on the robust computation with a low computational cost.
+The neurons in SNNs are non-differential, containing decayed historical states and generating
+event-based spikes after their states reaching the firing threshold. These dynamic characteristics
+of SNNs make it difficult to be directly trained with the standard backpropagation (BP), which is
+also considered not biologically plausible. In this paper, a Biologically-plausible Reward Propagation
+(BRP) algorithm is proposed and applied to the SNN architecture with both spiking-convolution
+(with both 1D and 2D convolutional kernels) and full-connection layers. Unlike the standard BP
+that propagates error signals from post to presynaptic neurons layer by layer, the BRP propagates
+target labels instead of errors directly from the output layer to all pre-hidden layers. This effort
+is more consistent with the top-down reward-guiding learning in cortical columns of the neocortex.
+Synaptic modifications with only local gradient differences are induced with pseudo-BP that might
+also be replaced with the Spike-Timing Dependent Plasticity (STDP). The performance of the proposed
+BRP-SNN is further verified on the spatial (including MNIST and Cifar-10) and temporal (including
+TIDigits and DvsGesture) tasks, where the SNN using BRP has reached a similar accuracy compared
+to other state-of-the-art BP-based SNNs and saved 50% more computational cost than ANNs. We think
+the introduction of biologically plausible learning rules to the training procedure of biologically
+realistic SNNs will give us more hints and inspirations toward a better understanding of the biological
+system's intelligent nature. 

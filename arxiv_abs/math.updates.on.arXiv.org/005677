@@ -1,0 +1,18 @@
+In the $\left(1:b\right)$ component game played on a graph $G$, two players, Maker and Breaker,
+alternately claim~$1$ and~$b$ previously unclaimed edges of $G$, respectively. Maker's aim is
+to maximise the size of a largest connected component in her graph, while Breaker is trying to minimise
+it. We show that the outcome of the game on the binomial random graph is strongly correlated with the
+appearance of a nonempty $(b+2)$-core in the graph. For any integer $k$, the $k$-core of a graph is
+its largest subgraph of minimum degree at least $k$. Pittel, Spencer and Wormald showed in 1996 that
+for any $k\ge3$ there exists an explicitly defined constant $c_{k}$ such that $p=c_{k}/n$ is the
+threshold function for the appearance of the $k$-core in $G(n,p)$. More precisely, $G(n,c/n)$
+has WHP a linear-size $k$-core when the constant $c>c_{k}$, and an empty $k$-core when $c<c_{k}$.
+We show that for any positive constant $b$, when playing the $(1:b)$ component game on $G(n,c/n)$,
+Maker can WHP build a linear-size component if $c>c_{b+2}$, while Breaker can WHP prevent Maker
+from building larger than polylogarithmic-size components if $c<c_{b+2}$. For Breaker's strategy,
+we prove a theorem which may be of independent interest. The standard algorithm for computing the
+$k$-core of any graph is to repeatedly delete ("peel") all vertices of degree less than $k$, as long
+as such vertices remain. When $G(n,c/n)$ for $c<c_{k}$, it was shown by Jiang, Mitzenmacher and
+Thaler that $\log_{k-1}\log n+\Theta(1)$ peeling iterations are WHP necessary and sufficient
+to obtain the (empty) $k$-core of~$G$. Our theorem states that already after a constant number of
+iterations, $G$ is WHP shattered into pieces of polylogarithmic size. 

@@ -1,0 +1,18 @@
+Recommender systems (RS) work effective at alleviating information overload and matching user
+interests in various web-scale applications. Most RS retrieve the user's favorite candidates
+and then rank them by the rating scores in the greedy manner. In the permutation prospective, however,
+current RS come to reveal the following two limitations: 1) They neglect addressing the permutation-variant
+influence within the recommended results; 2) Permutation consideration extends the latent solution
+space exponentially, and current RS lack the ability to evaluate the permutations. Both drive RS
+away from the permutation-optimal recommended results and better user experience. To approximate
+the permutation-optimal recommended results effectively and efficiently, we propose a novel
+permutation-wise framework PRS in the re-ranking stage of RS, which consists of Permutation-Matching
+(PMatch) and Permutation-Ranking (PRank) stages successively. Specifically, the PMatch stage
+is designed to obtain the candidate list set, where we propose the FPSA algorithm to generate multiple
+candidate lists via the permutation-wise and goal-oriented beam search algorithm. Afterwards,
+for the candidate list set, the PRank stage provides a unified permutation-wise ranking criterion
+named LR metric, which is calculated by the rating scores of elaborately designed permutation-wise
+model DPWN. Finally, the list with the highest LR score is recommended to the user. Empirical results
+show that PRS consistently and significantly outperforms state-of-the-art methods. Moreover,
+PRS has achieved a performance improvement of 11.0% on PV metric and 8.7% on IPV metric after the successful
+deployment in one popular recommendation scenario of Taobao application. 

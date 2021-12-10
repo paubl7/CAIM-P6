@@ -1,0 +1,19 @@
+In a recent study (Jozinovi\'c et al, 2020) we showed that convolutional neural networks (CNNs)
+applied to network seismic traces can be used for rapid prediction of earthquake peak ground motion
+intensity measures (IMs) at distant stations using only recordings from stations near the epicenter.
+The predictions are made without any previous knowledge concerning the earthquake location and
+magnitude. This approach differs from the standard procedure adopted by earthquake early warning
+systems (EEWSs) that rely on location and magnitude information. In the previous study, we used
+10 s, raw, multistation waveforms for the 2016 earthquake sequence in central Italy for 915 events
+(CI dataset). The CI dataset has a large number of spatially concentrated earthquakes and a dense
+station network. In this work, we applied the CNN model to an area around the VIRGO gravitational
+waves observatory sited near Pisa, Italy. In our initial application of the technique, we used a
+dataset consisting of 266 earthquakes recorded by 39 stations. We found that the CNN model trained
+using this smaller dataset performed worse compared to the results presented in the original study
+by Jozinovi\'c et al. (2020). To counter the lack of data, we adopted transfer learning (TL) using
+two approaches: first, by using a pre-trained model built on the CI dataset and, next, by using a pre-trained
+model built on a different (seismological) problem that has a larger dataset available for training.
+We show that the use of TL improves the results in terms of outliers, bias, and variability of the residuals
+between predicted and true IMs values. We also demonstrate that adding knowledge of station positions
+as an additional layer in the neural network improves the results. The possible use for EEW is demonstrated
+by the times for the warnings that would be received at the station PII. 

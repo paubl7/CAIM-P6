@@ -1,0 +1,18 @@
+In X-ray observations, estimation of the particle-induced background is important especially
+for faint and/or diffuse sources. Although software exists to generate total (sky and detector)
+background data suitable for a given Chandra ACIS observation, no public software exists to model
+the particle-induced background separately. We aim to understand the spatial and temporal variations
+of the particle-induced background of Chandra ACIS obtained in the two data modes, VFAINT and FAINT.
+Observations performed with ACIS in the stowed position shielded from the sky and the Chandra Deep
+Field South data sets are used. The spectra are modeled with a combination of the instrumental lines
+of Al, Si, Ni, and Au and continuum components. Similar spatial variations of the spectral shape
+are found in VFAINT and FAINT data, which are mainly due to inappropriate correction of charge transfer
+inefficiency for events that convert in the frame-store regions as explained by Bartalucci et al.
+2014. Temporal variation of the spectral hardness ratio is found to be $\sim 10\%$ at maximum, which
+seems to be largely due to solar activity. We model this variation by modifying the spectral hardnesses
+according to the total count rate. Incorporating these properties, we have developed a tool ``mkacispback''
+to generate the particle-induced background spectral model corresponding to an arbitrary celestial
+observation. As an example application, we use the background spectrum produced by the mkacispback
+tool in an analysis of the Cosmic X-ray Background in the CDF-S observations. We find an intensity
+of 3.10 (2.98--$3.21)\times 10^{-12}$ erg s$^{-1}$ cm$^{-2}$ deg$^{-2}$ in the 2--8 keV band,
+consistent with or lower than previous estimates. The tool mkacispback is available at https://github.com/hiromasasuzuki/mkacispback.

@@ -1,0 +1,20 @@
+We present a hybrid physics-based deep learning (DL) framework for handling moving interfaces
+and predicting fluid-structure interaction (FSI). Using the discretized Navier-Stokes in the
+Arbitrary Lagrangian-Eulerian (ALE) reference frame, we generate full-order flow snapshots
+and point-cloud displacements as target physical data for the learning and inference of fluid-structure
+dynamics. This integrated operation of the physics-based modeling with the DL-based reduced-order
+model (DL-ROM) makes our framework hybrid. This multi-level framework is composed of two data-driven
+physics-DL drivers that predict unsteady flow and track the moving point cloud displacements respectively,
+while synchronously exchange the force information at the interface. The first component relies
+on the proper orthogonal decomposition-based recurrent neural network (POD-RNN) as a semi-supervised
+procedure to infer the point cloud ALE description. This model essentially relies on the POD basis
+modes to reduce dimensionality and evolving them in the time domain of RNN. The second component
+utilizes the convolution-based recurrent autoencoder network (CRAN) as a self-supervised DL
+procedure to predict the nonlinear flow dynamics at static Eulerian probes. We introduce these
+probes as spatially structured query nodes in the moving point cloud to resolve the field Lagrangian
+to Eulerian conflict and conveniently train the CRAN driver. We design a novel snapshot-field transfer
+and load recovery (FTLR) algorithm to optimally select the Eulerian probes by recovering bulk force
+quantities. A prototypical problem of flow past a freely oscillating cylinder is selected to test
+the efficacy of the proposed methodology. The framework tracks the interface description and predicts
+highly non-linear wake dynamics for nearly 500 time-steps. These results further the application
+of digital twinning of FSI engineering systems. 

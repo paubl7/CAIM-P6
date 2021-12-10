@@ -1,0 +1,20 @@
+Spiking Neural Networks (SNNs) use spatio-temporal spike patterns to represent and transmit information,
+which is not only biologically realistic but also suitable for ultra-low-power event-driven neuromorphic
+implementation. Motivated by the success of deep learning, the study of Deep Spiking Neural Networks
+(DeepSNNs) provides promising directions for artificial intelligence applications. However,
+training of DeepSNNs is not straightforward because the well-studied error back-propagation
+(BP) algorithm is not directly applicable. In this paper, we first establish an understanding as
+to why error back-propagation does not work well in DeepSNNs. To address this problem, we propose
+a simple yet efficient Rectified Linear Postsynaptic Potential function (ReL-PSP) for spiking
+neurons and propose a Spike-Timing-Dependent Back-Propagation (STDBP) learning algorithm for
+DeepSNNs. In STDBP algorithm, the timing of individual spikes is used to convey information (temporal
+coding), and learning (back-propagation) is performed based on spike timing in an event-driven
+manner. Our experimental results show that the proposed learning algorithm achieves state-of-the-art
+classification accuracy in single spike time based learning algorithms of DeepSNNs. Furthermore,
+by utilizing the trained model parameters obtained from the proposed STDBP learning algorithm,
+we demonstrate the ultra-low-power inference operations on a recently proposed neuromorphic
+inference accelerator. Experimental results show that the neuromorphic hardware consumes 0.751~mW
+of the total power consumption and achieves a low latency of 47.71~ms to classify an image from the
+MNIST dataset. Overall, this work investigates the contribution of spike timing dynamics to information
+encoding, synaptic plasticity and decision making, providing a new perspective to design of future
+DeepSNNs and neuromorphic hardware systems. 

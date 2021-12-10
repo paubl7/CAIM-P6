@@ -1,0 +1,19 @@
+This paper introduces a new extension of Riemannian elastic curve matching to a general class of
+geometric structures, which we call (weighted) shape graphs, that allows for shape registration
+with partial matching constraints and topological inconsistencies. Weighted shape graphs are
+the union of an arbitrary number of component curves in Euclidean space with potential connectivity
+constraints between some of their boundary points, together with a weight function defined on each
+component curve. The framework of higher order invariant Sobolev metrics is particularly well
+suited for retrieving notions of distances and geodesics between unparametrized curves. The main
+difficulty in adapting this framework to the setting of shape graphs is the absence of topological
+consistency, which typically results in an inadequate search for an exact matching between two
+shape graphs. We overcome this hurdle by defining an inexact variational formulation of the matching
+problem between (weighted) shape graphs of any underlying topology, relying on the convenient
+measure representation given by varifolds to relax the exact matching constraint. We then prove
+the existence of minimizers to this variational problem when we have Sobolev metrics of sufficient
+regularity and a total variation (TV) regularization on the weight function. We propose a numerical
+optimization approach to solve the problem, which adapts the smooth FISTA algorithm to deal with
+TV norm minimization and allows us to reduce the matching problem to solving a sequence of smooth
+unconstrained minimization problems. We finally illustrate the capabilities of our new model
+through several examples showcasing its ability to tackle partially observed and topologically
+varying data. 

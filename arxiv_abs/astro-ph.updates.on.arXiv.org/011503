@@ -1,0 +1,19 @@
+Astrophysical time series often contain periodic signals. The large and growing volume of time
+series data from photometric surveys demands computationally efficient methods for detecting
+and characterizing such signals. The most efficient algorithms available for this purpose are
+those that exploit the $\mathcal{O}(N\log N)$ scaling of the Fast Fourier Transform (FFT). However,
+these methods are not optimal for non-sinusoidal signal shapes. Template fits (or periodic matched
+filters) optimize sensitivity for a priori known signal shapes but at a significant computational
+cost. Current implementations of template periodograms scale as $\mathcal{O}(N_f N_{obs})$,
+where $N_f$ is the number of trial frequencies and $N_{obs}$ is the number of lightcurve observations,
+and due to non-convexity, they do not guarantee the best fit at each trial frequency, which can lead
+to spurious results. In this work, we present a non-linear extension of the Lomb-Scargle periodogram
+to obtain a template-fitting algorithm that is both accurate (globally optimal solutions are obtained
+except in pathological cases) and computationally efficient (scaling as $\mathcal{O}(N_f\log
+N_f)$ for a given template). The non-linear optimization of the template fit at each frequency is
+recast as a polynomial zero-finding problem, where the coefficients of the polynomial can be computed
+efficiently with the non-equispaced fast Fourier transform. We show that our method, which uses
+truncated Fourier series to approximate templates, is an order of magnitude faster than existing
+algorithms for small problems ($N\lesssim 10$ observations) and 2 orders of magnitude faster for
+long base-line time series with $N_{obs} \gtrsim 10^4$ observations. An open-source implementation
+of the fast template periodogram is available at https://www.github.com/PrincetonUniversity/FastTemplatePeriodogram.

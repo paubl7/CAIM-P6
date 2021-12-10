@@ -1,0 +1,19 @@
+Harvesting data from distributed Internet of Things (IoT) devices with multiple autonomous unmanned
+aerial vehicles (UAVs) is a challenging problem requiring flexible path planning methods. We propose
+a multi-agent reinforcement learning (MARL) approach that, in contrast to previous work, can adapt
+to profound changes in the scenario parameters defining the data harvesting mission, such as the
+number of deployed UAVs, number, position and data amount of IoT devices, or the maximum flying time,
+without the need to perform expensive recomputations or relearn control policies. We formulate
+the path planning problem for a cooperative, non-communicating, and homogeneous team of UAVs tasked
+with maximizing collected data from distributed IoT sensor nodes subject to flying time and collision
+avoidance constraints. The path planning problem is translated into a decentralized partially
+observable Markov decision process (Dec-POMDP), which we solve through a deep reinforcement learning
+(DRL) approach, approximating the optimal UAV control policy without prior knowledge of the challenging
+wireless channel characteristics in dense urban environments. By exploiting a combination of
+centered global and local map representations of the environment that are fed into convolutional
+layers of the agents, we show that our proposed network architecture enables the agents to cooperate
+effectively by carefully dividing the data collection task among themselves, adapt to large complex
+environments and state spaces, and make movement decisions that balance data collection goals,
+flight-time efficiency, and navigation constraints. Finally, learning a control policy that
+generalizes over the scenario parameter space enables us to analyze the influence of individual
+parameters on collection performance and provide some intuition about system-level benefits.

@@ -1,0 +1,18 @@
+The exponential growths of social media and micro-blogging sites not only provide platforms for
+empowering freedom of expression and individual voices, but also enables people to express anti-social
+behavior like online harassment, cyberbullying, and hate speech. Numerous works have been proposed
+to utilize the textual data for social and anti-social behavior analysis, by predicting the contexts
+mostly for highly-resourced languages like English. However, some languages are under-resourced,
+e.g., South Asian languages like Bengali, that lack computational resources for accurate natural
+language processing (NLP). In this paper, we propose an explainable approach for hate speech detection
+from the under-resourced Bengali language, which we called DeepHateExplainer. In our approach,
+Bengali texts are first comprehensively preprocessed, before classifying them into political,
+personal, geopolitical, and religious hates, by employing the neural ensemble method of different
+transformer-based neural architectures (i.e., monolingual Bangla BERT-base, multilingual
+BERT-cased/uncased, and XLM-RoBERTa). Subsequently, important (most and least) terms are identified
+with sensitivity analysis and layer-wise relevance propagation (LRP), before providing human-interpretable
+explanations. Finally, to measure the quality of the explanation (i.e., faithfulness), we compute
+the comprehensiveness and sufficiency. Evaluations against machine learning (linear and tree-based
+models) and deep neural networks (i.e., CNN, Bi-LSTM, and Conv-LSTM with word embeddings) baselines
+yield F1 scores of 84%, 90%, 88%, and 88%, for political, personal, geopolitical, and religious
+hates, respectively, outperforming both ML and DNN baselines. 

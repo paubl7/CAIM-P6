@@ -1,0 +1,19 @@
+A multiscale (micro-to-macro) analysis is proposed for the prediction of the finite strain behavior
+of composites with hyperelastic constituents and embedded localized damage. The composites are
+assumed to possess periodic microstructure and be subjected to a remote field. At the microscale,
+finite-strain micromechanical analysis based on the homogenization technique for the (intact)
+composite is employed for the prediction of the effective deformation. At the macroscale, a procedure,
+based on the representative cell method and the associated higher-order theory, is developed for
+the determination of the elastic field in the damaged composite. The periodic composite is discretized
+into identical cells and then reduced to the problem of a single cell by application of the discrete
+Fourier transform. The resulting governing equations, interfacial and boundary conditions in
+the Fourier transform domain, are solved by employing the higher-order theory in conjunction with
+an iterative procedure to treat the effects of damage and material nonlinearity. The initial conditions
+for the iterative solution are obtained using the weakly-nonlinear material limit and a natural
+fixed-point iteration. A locally-convergent low-memory Quasi-Newton solver is then employed.
+A new algorithm for the implementation of the solver is proposed, which allows storing in the memory
+directly the vector-function history-sequence, which may be advantageous for convergence-control
+based on specific components of the objective vector-function. The strong-form Fourier transform-based
+approach employed here, in conjunction with the new solver, enables to extend the application of
+the method to nonlinear materials and may have computational efficiency comparable or possibly
+advantageous to that of standard approaches. 

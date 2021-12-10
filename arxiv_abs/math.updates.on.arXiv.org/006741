@@ -1,0 +1,19 @@
+Bilevel optimization recently has attracted increased interest in machine learning due to its
+many applications such as hyper-parameter optimization and policy optimization. Although some
+methods recently have been proposed to solve the bilevel problems, these methods do not consider
+using adaptive learning rates. To fill this gap, in the paper, we propose a class of fast and effective
+adaptive methods for solving bilevel optimization problems that the outer problem is possibly
+nonconvex and the inner problem is strongly-convex. Specifically, we propose a fast single-loop
+BiAdam algorithm based on the basic momentum technique, which achieves a sample complexity of $\tilde{O}(\epsilon^{-4})$
+for finding an $\epsilon$-stationary point. At the same time, we propose an accelerated version
+of BiAdam algorithm (VR-BiAdam) by using variance reduced technique, which reaches the best known
+sample complexity of $\tilde{O}(\epsilon^{-3})$. To further reduce computation in estimating
+derivatives, we propose a fast single-loop stochastic approximated BiAdam algorithm (saBiAdam)
+by avoiding the Hessian inverse, which still achieves a sample complexity of $\tilde{O}(\epsilon^{-4})$
+without large batches. We further present an accelerated version of saBiAdam algorithm (VR-saBiAdam),
+which also reaches the best known sample complexity of $\tilde{O}(\epsilon^{-3})$. We apply the
+unified adaptive matrices to our methods as the SUPER-ADAM \citep{huang2021super}, which including
+many types of adaptive learning rates. Moreover, our framework can flexibly use the momentum and
+variance reduced techniques. In particular, we provide a useful convergence analysis framework
+for both the constrained and unconstrained bilevel optimization. To the best of our knowledge,
+we first study the adaptive bilevel optimization methods with adaptive learning rates. 

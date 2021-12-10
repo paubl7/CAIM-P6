@@ -1,0 +1,19 @@
+Automotive traffic scenes are complex due to the variety of possible scenarios, objects, and weather
+conditions that need to be handled. In contrast to more constrained environments, such as automated
+underground trains, automotive perception systems cannot be tailored to a narrow field of specific
+tasks but must handle an ever-changing environment with unforeseen events. As currently no single
+sensor is able to reliably perceive all relevant activity in the surroundings, sensor data fusion
+is applied to perceive as much information as possible. Data fusion of different sensors and sensor
+modalities on a low abstraction level enables the compensation of sensor weaknesses and misdetections
+among the sensors before the information-rich sensor data are compressed and thereby information
+is lost after a sensor-individual object detection. This paper develops a low-level sensor fusion
+network for 3D object detection, which fuses lidar, camera, and radar data. The fusion network is
+trained and evaluated on the nuScenes data set. On the test set, fusion of radar data increases the
+resulting AP (Average Precision) detection score by about 5.1% in comparison to the baseline lidar
+network. The radar sensor fusion proves especially beneficial in inclement conditions such as
+rain and night scenes. Fusing additional camera data contributes positively only in conjunction
+with the radar fusion, which shows that interdependencies of the sensors are important for the detection
+result. Additionally, the paper proposes a novel loss to handle the discontinuity of a simple yaw
+representation for object detection. Our updated loss increases the detection and orientation
+estimation performance for all sensor input configurations. The code for this research has been
+made available on GitHub. 

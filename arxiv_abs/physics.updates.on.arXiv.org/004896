@@ -1,0 +1,19 @@
+The ability to share social network data at the level of individual connections is beneficial to
+science: not only for reproducing results, but also for researchers who may wish to use it for purposes
+not foreseen by the data releaser. Sharing such data, however, can lead to serious privacy issues,
+because individuals could be re-identified, not only based on possible nodes' attributes, but
+also from the structure of the network around them. The risk associated with re-identification
+can be measured and it is more serious in some networks than in others. Various optimization algorithms
+have been proposed to anonymize the network while keeping the number of changes minimal. However,
+existing algorithms do not provide guarantees on where the changes will be made, making it difficult
+to quantify their effect on various measures. Using network models and real data, we show that the
+average degree of networks is a crucial parameter for the severity of re-identification risk from
+nodes' neighborhoods. Dense networks are more at risk, and, apart from a small band of average degree
+values, either almost all nodes are re-identifiable or they are all safe. Our results allow researchers
+to assess the privacy risk based on a small number of network statistics which are available even
+before the data is collected. As a rule-of-thumb, the privacy risks are high if the average degree
+is above 10. Guided by these results we propose a simple method based on edge sampling to mitigate
+the re-identification risk of nodes. Our method can be implemented already at the data collection
+phase. Its effect on various network measures can be estimated and corrected using sampling theory.
+These properties are in contrast with previous methods arbitrarily biasing the data. In this sense,
+our work could help in sharing network data in a statistically tractable way. 

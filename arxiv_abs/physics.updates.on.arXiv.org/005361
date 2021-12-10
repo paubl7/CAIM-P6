@@ -1,0 +1,20 @@
+Power curve is widely used to estimate power output for planning and operational purposes. Existing
+methods for constructing power curves have three main limitations: (i) they mostly rely on wind
+speed as the sole input, thus ignoring the secondary, yet possibly significant effects of other
+environmental factors, (ii) they largely overlook the complex marine environment in which offshore
+wind turbines operate, potentially compromising their value in offshore wind energy applications,
+and (ii) they solely focus on the first-order properties of wind power, with little information
+about the variation around the mean behavior, which is important for ensuring reliable grid integration,
+asset health monitoring, and energy storage, among others. In light of that, this study investigates
+the impact of several wind- and wave-related factors on offshore wind power variability, with the
+ultimate goal of accurately predicting its first two moments. Our approach couples OpenFAST-a
+high-fidelity stochastic multi-physics simulator-with Gaussian Process (GP) regression to
+reveal the underlying relationships governing offshore weather-to-power conversion. We find
+that a multi-input power curve which captures the combined impact of wind speed, direction, and
+air density, can provide double-digit improvements relative to univariate methods which rely
+on wind speed as the sole explanatory variable. Wave-related variables are found not important
+for predicting the average power output, but appear to be extremely relevant in describing the fluctuation
+of the offshore power around its mean. Tested on real-world data collected at the New York/New Jersey
+bight, our proposed multi-input models demonstrate a high explanatory power in predicting the
+first two moments of offshore wind power, testifying their potential value to the offshore wind
+industry. 

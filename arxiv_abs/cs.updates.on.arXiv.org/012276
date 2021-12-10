@@ -1,0 +1,19 @@
+Deep convolutional neural networks have significantly boosted the performance of fundus image
+segmentation when test datasets have the same distribution as the training datasets. However,
+in clinical practice, medical images often exhibit variations in appearance for various reasons,
+e.g., different scanner vendors and image quality. These distribution discrepancies could lead
+the deep networks to over-fit on the training datasets and lack generalization ability on the unseen
+test datasets. To alleviate this issue, we present a novel Domain-oriented Feature Embedding (DoFE)
+framework to improve the generalization ability of CNNs on unseen target domains by exploring the
+knowledge from multiple source domains. Our DoFE framework dynamically enriches the image features
+with additional domain prior knowledge learned from multi-source domains to make the semantic
+features more discriminative. Specifically, we introduce a Domain Knowledge Pool to learn and
+memorize the prior information extracted from multi-source domains. Then the original image features
+are augmented with domain-oriented aggregated features, which are induced from the knowledge
+pool based on the similarity between the input image and multi-source domain images. We further
+design a novel domain code prediction branch to infer this similarity and employ an attention-guided
+mechanism to dynamically combine the aggregated features with the semantic features. We comprehensively
+evaluate our DoFE framework on two fundus image segmentation tasks, including the optic cup and
+disc segmentation and vessel segmentation. Our DoFE framework generates satisfying segmentation
+results on unseen datasets and surpasses other domain generalization and network regularization
+methods. 

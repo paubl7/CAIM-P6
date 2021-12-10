@@ -1,0 +1,20 @@
+Warfarin, a commonly prescribed drug to prevent blood clots, has a highly variable individual response.
+Determining a maintenance warfarin dose that achieves a therapeutic blood clotting time, as measured
+by the international normalized ratio (INR), is crucial in preventing complications. Machine
+learning algorithms are increasingly being used for warfarin dosing; usually, an initial dose
+is predicted with clinical and genotype factors, and this dose is revised after a few days based on
+previous doses and current INR. Since a sequence of prior doses and INR better capture the variability
+in individual warfarin response, we hypothesized that longitudinal dose response data will improve
+maintenance dose predictions. To test this hypothesis, we analyzed a dataset from the COAG warfarin
+dosing study, which includes clinical data, warfarin doses and INR measurements over the study
+period, and maintenance dose when therapeutic INR was achieved. Various machine learning regression
+models to predict maintenance warfarin dose were trained with clinical factors and dosing history
+and INR data as features. Overall, dose revision algorithms with a single dose and INR achieved comparable
+performance as the baseline dose revision algorithm. In contrast, dose revision algorithms with
+longitudinal dose and INR data provided maintenance dose predictions that were statistically
+significantly much closer to the true maintenance dose. Focusing on the best performing model,
+gradient boosting (GB), the proportion of ideal estimated dose, i.e., defined as within $\pm$20%
+of the true dose, increased from the baseline (54.92%) to the GB model with the single (63.11%) and
+longitudinal (75.41%) INR. More accurate maintenance dose predictions with longitudinal dose
+response data can potentially achieve therapeutic INR faster, reduce drug-related complications
+and improve patient outcomes with warfarin therapy. 

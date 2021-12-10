@@ -1,0 +1,20 @@
+Researchers working on computational analysis of Whole Slide Images (WSIs) in histopathology
+have primarily resorted to patch-based modelling due to large resolution of each WSI. The large
+resolution makes WSIs infeasible to be fed directly into the machine learning models due to computational
+constraints. However, due to patch-based analysis, most of the current methods fail to exploit
+the underlying spatial relationship among the patches. In our work, we have tried to integrate this
+relationship along with feature-based correlation among the extracted patches from the particular
+tumorous region. For the given task of classification, we have used BiLSTMs to model both forward
+and backward contextual relationship. RNN based models eliminate the limitation of sequence size
+by allowing the modelling of variable size images within a deep learning model. We have also incorporated
+the effect of spatial continuity by exploring different scanning techniques used to sample patches.
+To establish the efficiency of our approach, we trained and tested our model on two datasets, microscopy
+images and WSI tumour regions. After comparing with contemporary literature we achieved the better
+performance with accuracy of 90% for microscopy image dataset. For WSI tumour region dataset, we
+compared the classification results with deep learning networks such as ResNet, DenseNet, and
+InceptionV3 using maximum voting technique. We achieved the highest performance accuracy of 84%.
+We found out that BiLSTMs with CNN features have performed much better in modelling patches into
+an end-to-end Image classification network. Additionally, the variable dimensions of WSI tumour
+regions were used for classification without the need for resizing. This suggests that our method
+is independent of tumour image size and can process large dimensional images without losing the
+resolution details. 

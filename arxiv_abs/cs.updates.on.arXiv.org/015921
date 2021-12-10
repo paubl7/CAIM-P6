@@ -1,0 +1,20 @@
+Problem definition: Corporate brands, grassroots activists, and ordinary citizens all routinely
+employ Word-of-mouth (WoM) diffusion to promote products and instigate social change. Our work
+models the formation and spread of negative attitudes via WoM on a social network represented by
+a directed graph. In an online learning setting, we examine how an agent could simultaneously learn
+diffusion parameters and choose sets of seed users to initiate diffusions and maximize positive
+influence. In contrast to edge-level feedback, in which an agent observes the relationship (edge)
+through which a user (node) is influenced, we more realistically assume node-level feedback, where
+an agent only observes when a user is influenced and whether that influence is positive or negative.
+Methodology/results: We propose a new class of negativity-aware Linear Threshold Models. We show
+that in these models, the expected positive influence spread is a monotone submodular function
+of the seed set. Therefore, when maximizing positive influence by selecting a seed set of fixed size,
+a greedy algorithm can guarantee a solution with a constant approximation ratio. For the online
+learning setting, we propose an algorithm that runs in epochs of growing lengths, each consisting
+of a fixed number of exploration rounds followed by an increasing number of exploitation rounds
+controlled by a hyperparameter. Under mild assumptions, we show that our algorithm achieves asymptotic
+expected average scaled regret that is inversely related to any fractional constant power of the
+number of rounds. Managerial implications: During seed selection, our negativity-aware models
+and algorithms allow WoM campaigns to discover and best account for characteristics of local users
+and propagated content. We also give the first algorithms with regret guarantees for influence
+maximization under node-level feedback. 

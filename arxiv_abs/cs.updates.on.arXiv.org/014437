@@ -1,0 +1,19 @@
+Network flows are one of the most studied combinatorial optimization problems with innumerable
+applications. Any flow on a directed acyclic graph (DAG) $G$ having $n$ vertices and $m$ edges can
+be decomposed into a set of $O(m)$ paths, with applications from network routing to assembly of biological
+sequences. In some applications, the flow decomposition corresponds to some particular data that
+need to be reconstructed from the flow, which require finding paths (or subpaths) appearing in all
+possible flow decompositions, referred to as safe paths. Recently, Ma et al. [WABI 2020] addressed
+a related problem in a probabilistic framework. Later, they gave a quadratic-time algorithm based
+on a global criterion, for a generalized version (AND-Quant) of the corresponding problem, i.e.,
+reporting if a given flow path is safe. Our contributions are as follows: 1- A simple characterization
+for the safety of a given path based on a local criterion, which can be directly adapted to give an optimal
+linear time verification algorithm. 2- A simple enumeration algorithm that reports all maximal
+safe paths on a flow network in $O(mn)$ time. The algorithm reports all safe paths using a compact
+representation of the solution (called ${\cal P}_c$), which is $\Omega(mn)$ in the worst case,
+but merely $O(m+n)$ in the best case. 3- An improved enumeration algorithm where all safe paths ending
+at every vertex are represented as funnels using $O(n^2+|{\cal P}_c|)$ space. These can be computed
+and used to report all maximal safe paths, using time linear in the total space required by funnels,
+with an extra logarithmic factor. Overall we present a simple characterization for the problem
+leading to an optimal verification algorithm and a simple enumeration algorithm. The enumeration
+algorithm is improved using the funnel structures for safe paths, which may be of independent interest.

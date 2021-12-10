@@ -1,0 +1,20 @@
+Homomorphic encryption is one of the representative solutions to privacy-preserving machine
+learning (PPML) classification enabling the server to classify private data of clients while guaranteeing
+privacy. This work focuses on PPML using word-wise fully homomorphic encryption (FHE). In order
+to implement deep learning on word-wise homomorphic encryption (HE), the ReLU and max-pooling
+functions should be approximated by some polynomials for homomorphic operations. Most of the previous
+studies focus on HE-friendly networks, where the ReLU and max-pooling functions are approximated
+using low-degree polynomials. However, for the classification of the CIFAR-10 dataset, using
+a low-degree polynomial requires designing a new deep learning model and training. In addition,
+this approximation by low-degree polynomials cannot support deeper neural networks due to large
+approximation errors. Thus, we propose a precise polynomial approximation technique for the ReLU
+and max-pooling functions. Precise approximation using a single polynomial requires an exponentially
+high-degree polynomial, which results in a significant number of non-scalar multiplications.
+Thus, we propose a method to approximate the ReLU and max-pooling functions accurately using a composition
+of minimax approximate polynomials of small degrees. If we replace the ReLU and max-pooling functions
+with the proposed approximate polynomials, well-studied deep learning models such as ResNet and
+VGGNet can still be used without further modification for PPML on FHE. Even pre-trained parameters
+can be used without retraining. We approximate the ReLU and max-pooling functions in the ResNet-152
+using the composition of minimax approximate polynomials of degrees 15, 27, and 29. Then, we succeed
+in classifying the plaintext ImageNet dataset with 77.52% accuracy, which is very close to the original
+model accuracy of 78.31%. 

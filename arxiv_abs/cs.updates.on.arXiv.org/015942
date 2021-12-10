@@ -1,0 +1,18 @@
+Virtualization of distributed real-time systems enables the consolidation of mixed-criticality
+functions on a shared hardware platform thus easing system integration. Time-triggered communication
+and computation can act as an enabler of safe hard real-time systems. A time-triggered hypervisor
+that activates virtual CPUs according to a global schedule can provide the means to allow for a resource
+efficient implementation of the time-triggered paradigm in virtualized distributed real-time
+systems. A prerequisite of time-triggered virtualization for hard real-time systems is providing
+access to a global time base to VMs as well as to the hypervisor. A global time base is the result of clock
+synchronization with an upper bound on the clock synchronization precision. We present a formalization
+of the notion of time in virtualized real-time systems. We use this formalization to propose a virtual
+clock condition that enables us to test the suitability of a virtual clock for the design of virtualized
+time-triggered real-time systems. We discuss and model how virtualization, in particular resource
+consolidation versus resource partitioning, degrades clock synchronization precision. Finally,
+we apply our insights to model the IEEE~802.1AS clock synchronization protocol and derive an upper
+bound on the clock synchronization precision of IEEE 802.1AS. We present our implementation of
+a dependent clock for ACRN that can be synchronized to a grandmaster clock. The results of our experiments
+illustrate that a type-1 hypervisor implementing a dependent clock yields native clock synchronization
+precision. Furthermore, we show that the upper bound derived from our model holds for a series of
+experiments featuring native as well as virtualized setups. 

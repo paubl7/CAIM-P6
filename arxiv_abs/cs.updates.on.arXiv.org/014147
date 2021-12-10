@@ -1,0 +1,19 @@
+Over the past two decades, Support Vector Machine (SVM) has been a popular supervised machine learning
+model, and plenty of distinct algorithms are designed separately based on different KKT conditions
+of the SVM model for classification/regression with the distinct losses, including the convex
+loss or non-convex loss. This paper proposes an algorithm that can train different SVM models in
+a \emph{unified} scheme. Firstly, we introduce a definition of the \emph{LS-DC} (least-squares
+type of difference of convex) loss and show that the most commonly used losses in the SVM community
+are LS-DC loss or can be approximated by LS-DC loss. Based on DCA (difference of convex algorithm),
+we propose a unified algorithm, called \emph{UniSVM}, which can solve the SVM model with any convex
+or non-convex LS-DC loss, in which only a vector will be changed according to the specifically chosen
+loss. Notably, for training robust SVM models with non-convex losses, UniSVM has a dominant advantage
+over all the existing algorithms because it has a closed-form solution per iteration while the existing
+ones always need to solve an L1SVM/L2SVM per iteration. Furthermore, by the low-rank approximation
+of the kernel matrix, UniSVM can solve the large-scale nonlinear problems efficiently. To verify
+the efficacy and feasibility of the proposed algorithm, we perform many experiments on some small
+artificial problems and some large benchmark tasks with/without outliers for classification
+and regression to compare it with some state-of-the-art algorithms. The experimental results
+support that UniSVM can obtain the comparable performance within less training time. The highlight
+advantage of UniSVM is that its core code in Matlab is less than ten lines, hence it can be easily grasped
+by users or researchers. 

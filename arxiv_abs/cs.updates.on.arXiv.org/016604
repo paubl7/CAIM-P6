@@ -1,0 +1,18 @@
+We propose a new, more actionable view of neural network interpretability and data analysis by leveraging
+the remarkable matching effectiveness of representations derived from deep networks, guided
+by an approach for class-conditional feature detection. The decomposition of the filter-ngram
+interactions of a convolutional neural network and a linear layer over a pre-trained deep network
+yields a strong binary sequence labeler, with flexibility in producing predictions at -- and defining
+loss functions for -- varying label granularities, from the fully-supervised sequence labeling
+setting to the challenging zero-shot sequence labeling setting, in which we seek token-level predictions
+but only have document-level labels for training. From this sequence-labeling layer we derive
+dense representations of the input that can then be matched to instances from training, or a support
+set with known labels. Such introspection with inference-time decision rules provides a means,
+in some settings, of making local updates to the model by altering the labels or instances in the support
+set without re-training the full model. Finally, we construct a particular K-nearest neighbors
+(K-NN) model from matched exemplar representations that approximates the original model's predictions
+and is at least as effective a predictor with respect to the ground-truth labels. This additionally
+yields interpretable heuristics at the token level for determining when predictions are less likely
+to be reliable, and for screening input dissimilar to the support set. In effect, we show that we can
+transform the deep network into a simple weighting over exemplars and associated labels, yielding
+an introspectable -- and modestly updatable -- version of the original model. 

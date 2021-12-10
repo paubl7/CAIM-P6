@@ -1,0 +1,18 @@
+It is well-known that GPS is vulnerable to signal spoofing attacks. Although several spoofing detection
+techniques exist, they are incapable of mitigation and recovery from stealthy attackers. In this
+work, we present SemperFi, a single antenna GPS receiver capable of tracking legitimate GPS satellite
+signals and estimating the true location even during a spoofing attack. The main challenge in building
+SemperFi is, unlike most wireless systems where \emph{the data} contained in the wireless signals
+is important, GPS relies on the time of arrival (ToA) of satellite signals. SemperFi is capable of
+distinguishing spoofing signals and recovering legitimate GPS signals that are even completely
+overshadowed by a strong adversary. We exploit the short-term stability of inertial sensors to
+identify the spoofing signal and extend the successive interference cancellation algorithm to
+preserve the legitimate signal's ToA. We implement SemperFi in GNSS-SDR, an open-source software-defined
+GNSS receiver, and evaluate its performance using UAV simulators, real drones, a variety of real-world
+GPS datasets, and various embedded platforms. Our evaluation results indicate that in many scenarios,
+SemperFi can identify adversarial peaks by executing flight patterns that are less than 50 m long
+and recover the true location within 10 seconds (Jetson Xavier). We show that our receiver is secure
+against stealthy attackers who exploit inertial sensor errors and execute seamless takeover attacks.
+We design SemperFi as a pluggable module capable of generating a spoofer-free GPS signal for processing
+on any commercial-off-the-shelf GPS receiver available today. Finally, we release our implementation
+to the community for usage and further research. 

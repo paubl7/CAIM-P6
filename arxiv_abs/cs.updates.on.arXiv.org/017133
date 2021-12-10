@@ -1,0 +1,20 @@
+Testing is the most direct and effective technique to ensure software quality. However, it is a burden
+for developers to understand the poorly-commented tests, which are common in industry environment
+projects. Mobile applications (app) are GUI-intensive and event-driven, so test scripts focusing
+on GUI interactions play a more important role in mobile app testing besides the test cases for the
+source code. Therefore, more attention should be paid to the user interactions and the corresponding
+user event responses. However, test scripts are loosely linked to apps under test (AUT) based on
+widget selectors, making it hard to map the operations to the functionality code of AUT. In such a
+situation, code understanding algorithms may lose efficacy if directly applied to mobile app test
+scripts. We present a novel approach, TestIntent, to infer the intent of mobile app test scripts.
+TestIntent combines the GUI image understanding and code understanding technologies. The test
+script is transferred into an operation sequence model. For each operation, TestIntent extracts
+the operated widget selector and link the selector to the UI layout structure, which stores the detailed
+information of the widgets, including coordinates, type, etc. With code understanding technologies,
+TestIntent can locate response methods in the source code. Afterwards, NLP algorithms are adopted
+to understand the code and generate descriptions. Also, TestIntent can locate widgets on the app
+GUI images. Then, TestIntent can understand the widget intent with an encoder-decoder model. With
+the combination of the results from GUI and code understanding, TestIntent generates the test intents
+in natural language format. We also conduct an empirical experiment, and the results prove the outstanding
+performance of TestIntent. A user study also declares that TestIntent can save developers' time
+to understand test scripts. 

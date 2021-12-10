@@ -1,0 +1,19 @@
+Prostate cancer (PCa) is one of the leading causes of death for men worldwide. Multi-parametric
+magnetic resonance (mpMR) imaging has emerged as a non-invasive diagnostic tool for detecting
+and localising prostate tumours by specialised radiologists. These radiological examinations,
+for example, for differentiating malignant lesions from benign prostatic hyperplasia in transition
+zones and for defining the boundaries of clinically significant cancer, remain challenging and
+highly skill-and-experience-dependent. We first investigate experimental results in developing
+object detection neural networks that are trained to predict the radiological assessment, using
+these high-variance labels. We further argue that such a computer-assisted diagnosis (CAD) system
+needs to have the ability to control the false-positive rate (FPR) or false-negative rate (FNR),
+in order to be usefully deployed in a clinical workflow, informing clinical decisions without further
+human intervention. This work proposes a novel PCa detection network that incorporates a lesion-level
+cost-sensitive loss and an additional slice-level loss based on a lesion-to-slice mapping function,
+to manage the lesion- and slice-level costs, respectively. Our experiments based on 290 clinical
+patients concludes that 1) The lesion-level FNR was effectively reduced from 0.19 to 0.10 and the
+lesion-level FPR was reduced from 1.03 to 0.66 by changing the lesion-level cost; 2) The slice-level
+FNR was reduced from 0.19 to 0.00 by taking into account the slice-level cost; (3) Both lesion-level
+and slice-level FNRs were reduced with lower FP/FPR by changing the lesion-level or slice-level
+costs, compared with post-training threshold adjustment using networks without the proposed
+cost-aware training. 

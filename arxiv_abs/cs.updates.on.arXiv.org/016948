@@ -1,0 +1,19 @@
+Program synthesis from input-output examples has been a long-standing challenge, and recent works
+have demonstrated some success in designing deep neural networks for program synthesis. However,
+existing efforts in input-output neural program synthesis have been focusing on domain-specific
+languages, thus the applicability of previous approaches to synthesize code in full-fledged popular
+programming languages, such as C, remains a question. The main challenges lie in two folds. On the
+one hand, the program search space grows exponentially when the syntax and semantics of the programming
+language become more complex, which poses higher requirements on the synthesis algorithm. On the
+other hand, increasing the complexity of the programming language also imposes more difficulties
+on data collection, since building a large-scale training set for input-output program synthesis
+require random program generators to sample programs and input-output examples. In this work,
+we take the first step to synthesize C programs from input-output examples. In particular, we propose
+LaSynth, which learns the latent representation to approximate the execution of partially generated
+programs, even if their semantics are not well-defined. We demonstrate the possibility of synthesizing
+elementary C code from input-output examples, and leveraging learned execution significantly
+improves the prediction performance over existing approaches. Meanwhile, compared to the randomly
+generated ground-truth programs, LaSynth synthesizes more concise programs that resemble human-written
+code. We show that training on these synthesized programs further improves the prediction performance
+for both Karel and C program synthesis, indicating the promise of leveraging the learned program
+synthesizer to improve the dataset quality for input-output program synthesis. 

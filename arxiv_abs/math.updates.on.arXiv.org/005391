@@ -1,0 +1,20 @@
+Local-gradient-based optimization approaches lack nonlocal exploration ability required for
+escaping from local minima in non-convex landscapes. A directional Gaussian smoothing (DGS) approach
+was recently proposed by the authors (Zhang et al., 2020) and used to define a truly nonlocal gradient,
+referred to as the DGS gradient, in order to enable nonlocal exploration in high-dimensional black-box
+optimization. Promising results show that replacing the traditional local gradient with the nonlocal
+DGS gradient can significantly improve the performance of gradient-based methods in optimizing
+highly multi-modal loss functions. However, the current DGS method is designed for unbounded and
+unconstrained optimization problems, making it inapplicable to real-world engineering design
+optimization problems where the tuning parameters are often bounded and the loss function is usually
+constrained by physical processes. In this work, we propose to extend the DGS approach to the constrained
+inverse design framework in order to find a better design. The proposed framework has its advantages
+in portability and flexibility to naturally incorporate the parameterization, physics simulation,
+and objective formulation together to build up an effective inverse design workflow. A series of
+adaptive strategies for smoothing radius and learning rate updating are developed to improve the
+computational efficiency and robustness. To enable a clear binarized design, a dynamic growth
+mechanism is imposed on the projection strength in parameterization. Our methodology is demonstrated
+by an example of designing a nanoscale wavelength demultiplexer and shows superior performance
+compared to the state-of-the-art approaches. By incorporating volume constraints, the optimized
+design achieves an equivalently high performance but significantly reduces the amount of material
+usage. 

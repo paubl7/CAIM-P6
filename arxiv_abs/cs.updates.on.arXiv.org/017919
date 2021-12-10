@@ -1,0 +1,20 @@
+With the underlying aim of increasing efficiency of computational modelling pertinent for managing
+and protecting the Great Barrier Reef, we investigate the use of deep neural networks for opportunistic
+model emulation of APSIM models by repurposing an existing large dataset containing the outputs
+of APSIM model runs. The dataset has not been specifically tailored for the model emulation task.
+We employ two neural network architectures for the emulation task: densely connected feed-forward
+neural network (FFNN), and gated recurrent unit feeding into FFNN (GRU-FFNN), a type of a recurrent
+neural network. Various configurations of the architectures are trialled. A minimum correlation
+statistic is employed to identify clusters of APSIM scenarios that can be aggregated to form training
+sets for model emulation. We focus on emulating four important outputs of the APSIM model: runoff,
+soil_loss, DINrunoff, Nleached. The GRU-FFNN architecture with three hidden layers and 128 units
+per layer provides good emulation of runoff and DINrunoff. However, soil_loss and Nleached were
+emulated relatively poorly under a wide range of the considered architectures; the emulators failed
+to capture variability at higher values of these two outputs. While the opportunistic data available
+from past modelling activities provides a large and useful dataset for exploring APSIM emulation,
+it may not be sufficiently rich enough for successful deep learning of more complex model dynamics.
+Design of Computer Experiments may be required to generate more informative data to emulate all
+output variables of interest. We also suggest the use of synthetic meteorology settings to allow
+the model to be fed a wide range of inputs. These need not all be representative of normal conditions,
+but can provide a denser, more informative dataset from which complex relationships between input
+and outputs can be learned. 

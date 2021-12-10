@@ -1,0 +1,18 @@
+Consider a totally ordered set $S$ of $n$ elements; as an example, a set of tennis players and their
+rankings. Further assume that their ranking is a total order and thus satisfies transitivity and
+anti-symmetry. Following Frances Yao (1974), an element (player) is said to be $(i,j)$-\emph{mediocre}
+if it is neither among the top $i$ nor among the bottom $j$ elements of $S$. Finding a mediocre element
+is closely related to finding the median element. More than $40$ years ago, Yao suggested a very simple
+and elegant algorithm for finding an $(i,j)$-mediocre element: Pick $i+j+1$ elements arbitrarily
+and select the $(i+1)$-th largest among them. She also asked: "Is this the best algorithm?" No one
+seems to have found a better algorithm ever since. We first provide a deterministic algorithm that
+beats the worst-case comparison bound in Yao's algorithm for a large range of values of $i$ (and corresponding
+suitable $j=j(i)$) even if the current best selection algorithm is used. We then repeat the exercise
+for randomized algorithms; the average number of comparisons of our algorithm beats the average
+comparison bound in Yao's algorithm for another large range of values of $i$ (and corresponding
+suitable $j=j(i)$) even if the best selection algorithm is used; the improvement is most notable
+in the symmetric case $i=j$. Moreover, the tight bound obtained in the analysis of Yao's algorithm
+allows us to give a definite answer for this class of algorithms. In summary, we answer Yao's question
+as follows: (i)~"Presently not" for deterministic algorithms and (ii)~"Definitely not" for randomized
+algorithms. (In fairness, it should be said however that Yao posed the question in the context of
+deterministic algorithms.) 

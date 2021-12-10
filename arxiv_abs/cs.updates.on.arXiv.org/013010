@@ -1,0 +1,20 @@
+Deep Neural Networks (DNNs) are vulnerable to adversarial attacks: carefully constructed perturbations
+to an image can seriously impair classification accuracy, while being imperceptible to humans.
+While there has been a significant amount of research on defending against such attacks, most defenses
+based on systematic design principles have been defeated by appropriately modified attacks. For
+a fixed set of data, the most effective current defense is to train the network using adversarially
+perturbed examples. In this paper, we investigate a radically different, neuro-inspired defense
+mechanism, starting from the observation that human vision is virtually unaffected by adversarial
+examples designed for machines. We aim to reject L^inf bounded adversarial perturbations before
+they reach a classifier DNN, using an encoder with characteristics commonly observed in biological
+vision: sparse overcomplete representations, randomness due to synaptic noise, and drastic nonlinearities.
+Encoder training is unsupervised, using standard dictionary learning. A CNN-based decoder restores
+the size of the encoder output to that of the original image, enabling the use of a standard CNN for
+classification. Our nominal design is to train the decoder and classifier together in standard
+supervised fashion, but we also consider unsupervised decoder training based on a regression objective
+(as in a conventional autoencoder) with separate supervised training of the classifier. Unlike
+adversarial training, all training is based on clean images. Our experiments on the CIFAR-10 show
+performance competitive with state-of-the-art defenses based on adversarial training, and point
+to the promise of neuro-inspired techniques for the design of robust neural networks. In addition,
+we provide results for a subset of the Imagenet dataset to verify that our approach scales to larger
+images. 

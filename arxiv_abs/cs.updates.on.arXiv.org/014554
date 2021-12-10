@@ -1,0 +1,19 @@
+Matching module plays a critical role in display advertising systems. Without query from user,
+it is challenging for system to match user traffic and ads suitably. System packs up a group of users
+with common properties such as the same gender or similar shopping interests into a crowd. Here term
+crowd can be viewed as a tag over users. Then advertisers bid for different crowds and deliver their
+ads to those targeted users. Matching module in most industrial display advertising systems follows
+a two-stage paradigm. When receiving a user request, matching system (i) finds the crowds that the
+user belongs to; (ii) retrieves all ads that have targeted those crowds. However, in applications
+such as display advertising at Alibaba, with very large volumes of crowds and ads, both stages of
+matching have to truncate the long-tailed parts for online serving, under limited latency. That's
+to say, not all ads have the chance to participate in online matching. This results in sub-optimal
+result for both advertising performance and platform revenue. In this paper, we study the truncation
+problem and propose a Truncation Free Matching System (TFMS). The basic idea is to decouple the matching
+computation from the online pipeline. Instead of executing the two-stage matching when user visits,
+TFMS utilizes a near-line truncation-free matching to pre-calculate and store those top valuable
+ads for each user. Then the online pipeline just needs to fetch the pre-stored ads as matching results.
+In this way, we can jump out of online system's latency and computation cost limitations, and leverage
+flexible computation resource to finish the user-ad matching. TFMS has been deployed in our productive
+system since 2019, bringing (i) more than 50% improvement of impressions for advertisers who encountered
+truncation before, (ii) 9.4% Revenue Per Mile gain, which is significant enough for the business.

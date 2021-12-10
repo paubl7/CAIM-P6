@@ -1,0 +1,20 @@
+Recent theoretical and experimental advances show that the inertia of magnetization emerges at
+sub-picoseconds and contributes to the ultrafast magnetization dynamics which cannot be captured
+intrinsically by the LLG equation. Therefore, as a generalization, the inertial Landau-Lifshitz-Gilbert
+(iLLG) equation is proposed to model the ultrafast magnetization dynamics. Mathematically, the
+LLG equation is a nonlinear system of parabolic type with (possible) degeneracy. However, the iLLG
+equation is a nonlinear system of mixed hyperbolic-parabolic type with degeneracy, and exhibits
+more complicated structures. It behaves like a hyperbolic system at the sub-picosecond scale while
+behaves like a parabolic system at larger timescales. Such hybrid behaviors impose additional
+difficulties on designing numerical methods for the iLLG equation. In this work, we propose a second-order
+semi-implicit scheme to solve the iLLG equation. The second temporal derivative of magnetization
+is approximated by the standard centered difference scheme and the first derivative is approximated
+by the midpoint scheme involving three time steps. The nonlinear terms are treated semi-implicitly
+using one-sided interpolation with the second-order accuracy. At each step, the unconditionally
+unique solvability of the unsymmetric linear system of equations in the proposed method is proved
+with a detailed discussion on the condition number. Numerically, the second-order accuracy in
+both time and space is verified. Using the proposed method, the inertial effect of ferromagnetics
+is observed in micromagnetics simulations at small timescales, in consistency with the hyperbolic
+property of the model at sub-picoseconds. For long time simulations, the results of the iLLG model
+are in nice agreements with those of the LLG model, in consistency with the parabolic feature of the
+iLLG model at larger timescales. 

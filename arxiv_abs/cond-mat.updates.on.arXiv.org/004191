@@ -1,0 +1,19 @@
+Crystal structure prediction is a central problem of theoretical crystallography and materials
+science, which until mid-2000s was considered intractable. Several methods, based on either energy
+landscape exploration$^{1,2}$ or, more commonly, global optimization$^{3-8}$, largely solved
+this problem and enabled fully non-empirical computational materials discovery$^{9,10}$. A
+major shortcoming is that, to avoid expensive calculations of the entropy, crystal structure prediction
+was done at zero Kelvin and searched for the global minimum of the enthalpy, rather than free energy.
+As a consequence, high-temperature phases (especially those which are not quenchable to zero temperature)
+could be missed. Here we develop an accurate and affordable solution, enabling crystal structure
+prediction at finite temperatures. Structure relaxation and fully anharmonic free energy calculations
+are done by molecular dynamics with a force field (which can be anything from a parametric force field
+for simpler cases to a trained on-the-fly machine learning interatomic potential), the errors
+of which are corrected using thermodynamic perturbation theory to yield accurate ab initio results.
+We test the accuracy of this method on metals (probing the P-T phase diagram of Al and Fe), a refractory
+intermetallide (WB), and a significantly ionic ceramic compound (Earth-forming silicate MgSiO3
+at pressures and temperatures of the Earth's lower mantle). We find that the hcp-phase of aluminum
+has a wider stability field than previously thought, and the temperature-induced transition $\alpha$-$\beta$
+in WB occurs at 2789 K. It is also found that iron has hcp structure at conditions of the Earth's inner
+core, and the much debated (and important for constraining Earth's thermal structure) Clapeyron
+slope of the post-perovskite phase transition in MgSiO3 is 5.88 MPa/K. 

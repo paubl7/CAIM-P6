@@ -1,0 +1,19 @@
+We explore a class of "open" quantum circuit models with local decoherence ("noise") and local projective
+measurements, each respecting a global Z_2 symmetry. The model supports a spin glass phase where
+the Z_2 symmetry is spontaneously broken (not possible in an equilibrium 1d system), a paramagnetic
+phase characterized by a divergent susceptibility, and an intermediate "trivial" phase. All three
+phases are also stable to Z_2-symmetric local unitary gates, and the dynamical phase transitions
+between the phases are in the percolation universality class. The open circuit dynamics can be purified
+by explicitly introducing a bath with its own "scrambling" dynamics, as in [Bao, Choi, Altman, arXiv:2102.09164],
+which does not change any of the universal physics. Within the spin glass phase the circuit dynamics
+can be interpreted as a quantum repetition code, with each stabilizer of the code measured stochastically
+at a finite rate, and the decoherences as effective bit-flip errors. Motivated by the geometry of
+the spin glass phase, we devise a novel decoding algorithm for recovering an arbitrary initial qubit
+state in the code space, assuming knowledge of the history of the measurement outcomes, and the ability
+of performing local Pauli measurements and gates on the final state. For a circuit with L^d qubits
+running for time T, the time needed to execute the decoder scales as O(L^d T) (with dimensionality
+d). With this decoder in hand, we find that the information of the initial encoded qubit state can
+be retained (and then recovered) for a time logarithmic in L for a 1d circuit, and for a time at least
+linear in L in 2d below a finite error threshold. For both the repetition and toric codes, we compare
+and contrast our decoding algorithm with earlier algorithms that map the error model to the random
+bond Ising model. 

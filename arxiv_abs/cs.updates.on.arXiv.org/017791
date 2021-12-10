@@ -1,0 +1,19 @@
+Based on the powerful feature extraction ability of deep learning architecture, recently, deep-learning
+based watermarking algorithms have been widely studied. The basic framework of such algorithm
+is the auto-encoder like end-to-end architecture with an encoder, a noise layer and a decoder. The
+key to guarantee robustness is the adversarial training with the differential noise layer. However,
+we found that none of the existing framework can well ensure the robustness against JPEG compression,
+which is non-differential but is an essential and important image processing operation. To address
+such limitations, we proposed a novel end-to-end training architecture, which utilizes Mini-Batch
+of Real and Simulated JPEG compression (MBRS) to enhance the JPEG robustness. Precisely, for different
+mini-batches, we randomly choose one of real JPEG, simulated JPEG and noise-free layer as the noise
+layer. Besides, we suggest to utilize the Squeeze-and-Excitation blocks which can learn better
+feature in embedding and extracting stage, and propose a "message processor" to expand the message
+in a more appreciate way. Meanwhile, to improve the robustness against crop attack, we propose an
+additive diffusion block into the network. The extensive experimental results have demonstrated
+the superior performance of the proposed scheme compared with the state-of-the-art algorithms.
+Under the JPEG compression with quality factor Q=50, our models achieve a bit error rate less than
+0.01% for extracted messages, with PSNR larger than 36 for the encoded images, which shows the well-enhanced
+robustness against JPEG attack. Besides, under many other distortions such as Gaussian filter,
+crop, cropout and dropout, the proposed framework also obtains strong robustness. The code implemented
+by PyTorch \cite{2011torch7} is avaiable in https://github.com/jzyustc/MBRS. 

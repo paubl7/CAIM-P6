@@ -1,0 +1,18 @@
+We present a real-world application that uses a quantum computer. Specifically, we trained a Restricted
+Boltzmann Machine (RBM) using quantum annealing (QA) to develop an intrusion detection system.
+RBMs were trained on the ISCX data, which is a benchmark dataset for cybersecurity. For comparison,
+RBMs were also trained using contrastive divergence (CD) which is a classical method. D-Wave's
+2000Q quantum annealer has been used to implement QA. Our analysis of the ISCX data shows that the
+dataset is imbalanced and we present two different schemes to balance the training dataset before
+feeding it to a classifier. The first scheme is based on the oversampling of attack instances. The
+imbalanced training dataset was divided into five sub-datasets that were trained separately.
+A majority voting was performed to get the final result. Our results show the majority vote increased
+the classification accuracy up from 90.24% to 95.68% in the case of CD. For the case of QA, the classification
+accuracy increased from 74.14% to 80.04%. In the second scheme, an RBM was used to generate synthetic
+data to balance the training dataset. The RBMs trained on synthetic data generated from a CD-trained
+RBM performed comparably to the RBMs trained on synthetic data generated from a QA-trained RBM.
+Balanced training data was used to evaluate several classifiers. Among the classifiers investigated,
+K-Nearest Neighbor (KNN) and Neural Network (NN) performed better than other classifiers. They
+both showed an accuracy of 93%. Our results show a proof of concept that a QA-based RBM can be trained
+on a binary dataset, with 64-bit records. The illustrative example suggests the possibility to
+migrate many practical classification problems to QA-based techniques. 

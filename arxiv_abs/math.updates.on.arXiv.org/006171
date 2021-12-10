@@ -1,0 +1,19 @@
+Neighbor Discovery (ND) is the process employed by two wireless devices to discover each other.
+There are many different ND protocols, both in the scientific literature and also those employed
+in practice. All ND protocols involve devices sending beacons, and also listening for them. Protocols
+differ in terms of how the beacon transmissions and reception windows are scheduled, and the device
+sleeps in between consecutive transmissions and reception windows in order to save energy. A successful
+discovery constitutes a sending device's beacon overlapping with a receiving device's reception
+window. The goal of all ND protocols is to minimize the discovery latency. In spite of the ubiquity
+of ND protocols and active research on this topic for over two decades, the basic question "Given
+an energy budget, what is the minimum guaranteed ND latency?", however, still remains unanswered.
+Given the different kinds of protocols that exist, there has also been no standard way of comparing
+them and their performance. This paper, for the first time, answers the question on the best-achievable
+ND latency for a given energy budget. We derive discovery latencies for different scenarios, e.g.,
+when both devices have the same energy budgets, and both devices have different energy budgets.
+We also show that some existing protocols can be parametrized such that they perform optimally.
+The fact that the parametrizations of some other protocols were optimal was not known before, and
+can now be established using our technique. Our results are restricted to the case when a few devices
+discover each other at a time, as is the case in most real-life scenarios. When many devices need to
+discover each other simultaneously, packet collisions play a dominant role in the discovery latency
+and how to analyze such scenarios need further study. 

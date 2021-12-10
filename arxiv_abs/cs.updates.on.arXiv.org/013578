@@ -1,0 +1,19 @@
+Contemporary learning models for computer vision are typically trained on very large (benchmark)
+datasets with millions of samples. These may, however, contain biases, artifacts, or errors that
+have gone unnoticed and are exploitable by the model. In the worst case, the trained model does not
+learn a valid and generalizable strategy to solve the problem it was trained for, and becomes a 'Clever-Hans'
+(CH) predictor that bases its decisions on spurious correlations in the training data, potentially
+yielding an unrepresentative or unfair, and possibly even hazardous predictor. In this paper,
+we contribute by providing a comprehensive analysis framework based on a scalable statistical
+analysis of attributions from explanation methods for large data corpora. Based on a recent technique
+- Spectral Relevance Analysis - we propose the following technical contributions and resulting
+findings: (a) a scalable quantification of artifactual and poisoned classes where the machine
+learning models under study exhibit CH behavior, (b) several approaches denoted as Class Artifact
+Compensation (ClArC), which are able to effectively and significantly reduce a model's CH behavior.
+I.e., we are able to un-Hans models trained on (poisoned) datasets, such as the popular ImageNet
+data corpus. We demonstrate that ClArC, defined in a simple theoretical framework, may be implemented
+as part of a Neural Network's training or fine-tuning process, or in a post-hoc manner by injecting
+additional layers, preventing any further propagation of undesired CH features, into the network
+architecture. Using our proposed methods, we provide qualitative and quantitative analyses of
+the biases and artifacts in various datasets. We demonstrate that these insights can give rise to
+improved, more representative and fairer models operating on implicitly cleaned data corpora.

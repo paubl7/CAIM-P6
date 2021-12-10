@@ -1,0 +1,19 @@
+This work further improves the pseudo-transient approach for the Poisson Boltzmann equation (PBE)
+in the electrostatic analysis of solvated biomolecules. The numerical solution of the nonlinear
+PBE is known to involve many difficulties, such as exponential nonlinear term, strong singularity
+by the source terms, and complex dielectric interface. Recently, a pseudo-time ghost-fluid method
+(GFM) has been developed in [S. Ahmed Ullah and S. Zhao, Applied Mathematics and Computation, 380,
+125267, (2020)], by analytically handling both nonlinearity and singular sources. The GFM interface
+treatment not only captures the discontinuity in the regularized potential and its flux across
+the molecular surface, but also guarantees the stability and efficiency of the time integration.
+However, the molecular surface definition based on the MSMS package is known to induce instability
+in some cases, and a nontrivial Lagrangian-to-Eulerian conversion is indispensable for the GFM
+finite difference discretization. In this paper, an Eulerian Solvent Excluded Surface (ESES)
+is implemented to replace the MSMS for defining the dielectric interface. The electrostatic analysis
+shows that the ESES free energy is more accurate than that of the MSMS, while being free of instability
+issues. Moreover, this work explores, for the first time in the PBE literature, adaptive time integration
+techniques for the pseudo-transient simulations. A major finding is that the time increment $\Delta
+t$ should become smaller as the time increases, in order to maintain the temporal accuracy. This
+is opposite to the common practice for the steady state convergence, and is believed to be due to the
+PBE nonlinearity and its time splitting treatment. Effective adaptive schemes have been constructed
+so that the pseudo-time GFM methods become more efficient than the constant $\Delta t$ ones. 

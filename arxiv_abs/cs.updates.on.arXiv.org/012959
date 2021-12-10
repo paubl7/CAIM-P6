@@ -1,0 +1,19 @@
+Approach and landing accidents (ALAs) have resulted in a significant number of hull losses worldwide,
+aside from runway excursion, hard landing, landing short. Technologies (e.g., instrument landing
+system) and procedures (e.g., stabilized approach criteria) have been developed to reduce ALA
+risks. In this paper, we propose a data-driven method to learn and interpret flight's 4D approach
+and landing parameters to facilitate comprehensible and actionable insights of landing dynamics
+for aircrew and air traffic controller (ATCO) in real-time. Specifically, we develop a tunnel Gaussian
+process (TGP) model to gain an insight into the landing dynamics of aircraft using advanced surface
+movement guidance and control system (A-SMGCS) data, which then indicates the stability of flight.
+TGP hybridizes the strengths of sparse variational Gaussian process and polar Gaussian process
+to learn from a large amount of data in cylindrical coordinates. We examine TGP qualitatively and
+quantitatively by synthesizing two complex trajectory datasets. Empirically, TGP reconstructed
+the structure of the synthesized trajectories. When applied to operational A-SMGCS data, TGP provides
+the probabilistic description of landing dynamics and interpretable 4D tunnel views of approach
+and landing parameters. The 4D tunnel views can facilitate the analysis of procedure adherence
+and augment existing aircrew and ATCO's display during the approach and landing procedures, enabling
+necessary corrective actions. The proposed TGP model can also provide insights and aid the design
+of landing procedures in complex runway configurations such as parallel approach. Moreover, the
+extension of TGP model to the next generation of landing systems (e.g., GNSS landing system) is straight-forward.
+The interactive visualization of our findings are available at https://simkuangoh.github.io/TunnelGP/.

@@ -1,0 +1,20 @@
+Orthogonal drawings, i.e., embeddings of graphs into grids, are a classic topic in Graph Drawing.
+Often the goal is to find a drawing that minimizes the number of bends on the edges. A key ingredient
+for bend minimization algorithms is the existence of an orthogonal representation that describes
+such drawings combinatorially by only listing the angles between the edges around each vertex and
+the directions of bends on the edges, but neglecting any kind of geometric information such as vertex
+coordinates or edge lengths. We generalize this idea to ortho-radial representations of ortho-radial
+drawings, which are embeddings into an ortho-radial grid, whose gridlines are concentric circles
+around the origin and straight-line spokes emanating from the origin but excluding the origin itself.
+Unlike the orthogonal case, there exist ortho-radial representations that do not admit a corresponding
+drawing, for example so-called strictly monotone cycles. An ortho-radial drawing is called valid
+if it does not contain a strictly monotone cycle. Our first result is that an ortho-radial representation
+admits a corresponding drawing if and only if it is valid. Previously such a characterization was
+only known for ortho-radial drawings of paths, cycles, and theta graphs, and in the special case
+of rectangular drawings of cubic graphs, where the contour of each face is required to be a rectangle.
+Further, we give a quadratic-time algorithm that tests for an ortho-radial representation whether
+it is valid, and we show how to draw a valid ortho-radial representation in the same running time.
+Altogether, this reduces the problem of computing a minimum-bend ortho-radial drawing to the task
+of computing a valid ortho-radial representation with the minimum number of bends, and hence establishes
+an ortho-radial analogue of the topology-shape-metrics framework for planar orthogonal drawings
+by Tamassia. 

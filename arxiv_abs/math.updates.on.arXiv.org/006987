@@ -1,0 +1,20 @@
+The problem of domain adaptation conventionally considers the setting where a source domain has
+plenty of labeled data, and a target domain (with a different data distribution) has plenty of unlabeled
+data but none or very limited labeled data. In this paper, we address the setting where the target
+domain has only limited labeled data from a distribution that is expected to change frequently.
+We first propose a fast and light-weight method for adapting a Gaussian mixture density network
+(MDN) using only a small set of target domain samples. This method is well-suited for the setting
+where the distribution of target data changes rapidly (e.g., a wireless channel), making it challenging
+to collect a large number of samples and retrain. We then apply the proposed MDN adaptation method
+to the problem of end-of-end learning of a wireless communication autoencoder. A communication
+autoencoder models the encoder, decoder, and the channel using neural networks, and learns them
+jointly to minimize the overall decoding error rate. However, the error rate of an autoencoder trained
+on a particular (source) channel distribution can degrade as the channel distribution changes
+frequently, not allowing enough time for data collection and retraining of the autoencoder to the
+target channel distribution. We propose a method for adapting the autoencoder without modifying
+the encoder and decoder neural networks, and adapting only the MDN model of the channel. The method
+utilizes feature transformations at the decoder to compensate for changes in the channel distribution,
+and effectively present to the decoder samples close to the source distribution. Experimental
+evaluation on simulated datasets and real mmWave wireless channels demonstrate that the proposed
+methods can quickly adapt the MDN model, and improve or maintain the error rate of the autoencoder
+under changing channel conditions. 

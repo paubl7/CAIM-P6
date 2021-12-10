@@ -1,0 +1,18 @@
+Spiking Neural Networks (SNNs) have emerged as an attractive alternative to traditional deep learning
+frameworks, since they provide higher computational efficiency in event driven neuromorphic
+hardware. However, the state-of-the-art (SOTA) SNNs suffer from high inference latency, resulting
+from inefficient input encoding and training techniques. The most widely used input coding schemes,
+such as Poisson based rate-coding, do not leverage the temporal learning capabilities of SNNs.
+This paper presents a training framework for low-latency energy-efficient SNNs that uses a hybrid
+encoding scheme at the input layer in which the analog pixel values of an image are directly applied
+during the first timestep and a novel variant of spike temporal coding is used during subsequent
+timesteps. In particular, neurons in every hidden layer are restricted to fire at most once per image
+which increases activation sparsity. To train these hybrid-encoded SNNs, we propose a variant
+of the gradient descent based spike timing dependent back propagation (STDB) mechanism using a
+novel cross entropy loss function based on both the output neurons' spike time and membrane potential.
+The resulting SNNs have reduced latency and high activation sparsity, yielding significant improvements
+in computational efficiency. In particular, we evaluate our proposed training scheme on image
+classification tasks from CIFAR-10 and CIFAR-100 datasets on several VGG architectures. We achieve
+top-1 accuracy of $66.46$\% with $5$ timesteps on the CIFAR-100 dataset with ${\sim}125\times$
+less compute energy than an equivalent standard ANN. Additionally, our proposed SNN performs $5$-$300\times$
+faster inference compared to other state-of-the-art rate or temporally coded SNN models. 

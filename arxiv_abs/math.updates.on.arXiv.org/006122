@@ -1,0 +1,18 @@
+Conventional frequentist learning, as assumed by existing federated learning protocols, is limited
+in its ability to quantify uncertainty, incorporate prior knowledge, guide active learning, and
+enable continual learning. Bayesian learning provides a principled approach to address all these
+limitations, at the cost of an increase in computational complexity. This paper studies distributed
+Bayesian learning in a wireless data center setting encompassing a central server and multiple
+distributed workers. Prior work on wireless distributed learning has focused exclusively on frequentist
+learning, and has introduced the idea of leveraging uncoded transmission to enable "over-the-air"
+computing. Unlike frequentist learning, Bayesian learning aims at evaluating approximations
+or samples from a global posterior distribution in the model parameter space. This work investigates
+for the first time the design of distributed one-shot, or "embarrassingly parallel", Bayesian
+learning protocols in wireless data centers via consensus Monte Carlo (CMC). Uncoded transmission
+is introduced not only as a way to implement "over-the-air" computing, but also as a mechanism to
+deploy channel-driven MC sampling: Rather than treating channel noise as a nuisance to be mitigated,
+channel-driven sampling utilizes channel noise as an integral part of the MC sampling process.
+A simple wireless CMC scheme is first proposed that is asymptotically optimal under Gaussian local
+posteriors. Then, for arbitrary local posteriors, a variational optimization strategy is introduced.
+Simulation results demonstrate that, if properly accounted for, channel noise can indeed contribute
+to MC sampling and does not necessarily decrease the accuracy level. 

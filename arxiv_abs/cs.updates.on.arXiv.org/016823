@@ -1,0 +1,18 @@
+A key challenge in mining social media data streams is to identify events which are actively discussed
+by a group of people in a specific local or global area. Such events are useful for early warning for
+accident, protest, election or breaking news. However, neither the list of events nor the resolution
+of both event time and space is fixed or known beforehand. In this work, we propose an online spatio-temporal
+event detection system using social media that is able to detect events at different time and space
+resolutions. First, to address the challenge related to the unknown spatial resolution of events,
+a quad-tree method is exploited in order to split the geographical space into multiscale regions
+based on the density of social media data. Then, a statistical unsupervised approach is performed
+that involves Poisson distribution and a smoothing method for highlighting regions with unexpected
+density of social posts. Further, event duration is precisely estimated by merging events happening
+in the same region at consecutive time intervals. A post processing stage is introduced to filter
+out events that are spam, fake or wrong. Finally, we incorporate simple semantics by using social
+media entities to assess the integrity, and accuracy of detected events. The proposed method is
+evaluated using different social media datasets: Twitter and Flickr for different cities: Melbourne,
+London, Paris and New York. To verify the effectiveness of the proposed method, we compare our results
+with two baseline algorithms based on fixed split of geographical space and clustering method.
+For performance evaluation, we manually compute recall and precision. We also propose a new quality
+measure named strength index, which automatically measures how accurate the reported event is.

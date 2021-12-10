@@ -1,0 +1,18 @@
+Achieving human-like motion in robots has been a fundamental goal in many areas of robotics research.
+Inverse kinematic (IK) solvers have been explored as a solution to provide kinematic structures
+with anthropomorphic movements. In particular, numeric solvers based on geometry, such as FABRIK,
+have shown potential for producing human-like motion at a low computational cost. Nevertheless,
+these methods have shown limitations when solving for robot kinematic constraints. This work proposes
+a framework inspired by FABRIK for human pose imitation in real-time. The goal is to mitigate the
+problems of the original algorithm while retaining the resulting human-like fluidity and low cost.
+We first propose a human constraint model for pose imitation. Then, we present a pose imitation algorithm
+(PIC), and its soft version (PICs) that can successfully imitate human poses using the proposed
+constraint system. PIC was tested on two collaborative robots (Baxter and YuMi). Fifty human demonstrations
+were collected for a bi-manual assembly and an incision task. Then, two performance metrics were
+obtained for both robots: pose accuracy with respect to the human and the percentage of environment
+occlusion/obstruction. The performance of PIC and PICs was compared against the numerical solver
+baseline (FABRIK). The proposed algorithms achieve a higher pose accuracy than FABRIK for both
+tasks (0.25- FABRIK, 0.53-PICs, 0.58-PICs). In addition, PIC and its soft version achieve a lower
+percentage of occlusion during incision (0.10-FABRIK, 0.04-PICs, 0.09-PICs) and a lower percentage
+of obstruction during assembly (0.09-FABRIK, 0.08-PICs, 0.07- PICs). These results show that
+PIC can both efficiently reproduce human poses and achieve key desired effects of human imitation.

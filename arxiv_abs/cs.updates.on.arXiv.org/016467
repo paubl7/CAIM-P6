@@ -1,0 +1,18 @@
+Face recognition has achieved significant progress in deep-learning era due to the ultra-large-scale
+and well-labeled datasets. However, training on ultra-large-scale datasets is time-consuming
+and takes up a lot of hardware resource. Therefore, designing an efficient training approach is
+crucial and indispensable. The heavy computational and memory costs mainly result from the high
+dimensionality of the Fully-Connected (FC) layer. Specifically, the dimensionality is determined
+by the number of face identities, which can be million-level or even more. To this end, we propose
+a novel training approach for ultra-large-scale face datasets, termed Faster Face Classification
+(F$^2$C). In F$^2$C, we first define a Gallery Net and a Probe Net that are used to generate identities'
+centers and extract faces' features for face recognition, respectively. Gallery Net has the same
+structure as Probe Net and inherits the parameters from Probe Net with a moving average paradigm.
+After that, to reduce the training time and hardware costs of the FC layer, we propose a Dynamic Class
+Pool (DCP) that stores the features from Gallery Net and calculates the inner product (logits) with
+positive samples (whose identities are in the DCP) in each mini-batch. DCP can be regarded as a substitute
+for the FC layer but it is far smaller, thus greatly reducing the computational and memory costs.
+For negative samples (whose identities are not in DCP), we minimize the cosine similarities between
+negative samples and those in DCP. Then, to improve the update efficiency of DCP's parameters, we
+design a dual data-loader including identity-based and instance-based loaders to generate a certain
+of identities and samples in mini-batches. 

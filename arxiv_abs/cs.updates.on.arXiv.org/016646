@@ -1,0 +1,18 @@
+Nowadays, subsurface salt body localization and delineation, also called semantic segmentation
+of salt bodies, are among the most challenging geophysicist tasks. Thus, identifying large salt
+bodies is notoriously tricky and is crucial for identifying hydrocarbon reservoirs and drill path
+planning. This work proposes a Data Augmentation method based on training two generative models
+to augment the number of samples in a seismic image dataset for the semantic segmentation of salt
+bodies. Our method uses deep learning models to generate pairs of seismic image patches and their
+respective salt masks for the Data Augmentation. The first model is a Variational Autoencoder and
+is responsible for generating patches of salt body masks. The second is a Conditional Normalizing
+Flow model, which receives the generated masks as inputs and generates the associated seismic image
+patches. We evaluate the proposed method by comparing the performance of ten distinct state-of-the-art
+models for semantic segmentation, trained with and without the generated augmentations, in a dataset
+from two synthetic seismic images. The proposed methodology yields an average improvement of 8.57%
+in the IoU metric across all compared models. The best result is achieved by a DeeplabV3+ model variant,
+which presents an IoU score of 95.17% when trained with our augmentations. Additionally, our proposal
+outperformed six selected data augmentation methods, and the most significant improvement in
+the comparison, of 9.77%, is achieved by composing our DA with augmentations from an elastic transformation.
+At last, we show that the proposed method is adaptable for a larger context size by achieving results
+comparable to the obtained on the smaller context size. 

@@ -1,0 +1,18 @@
+The weights of a deep neural network model are optimized in conjunction with the governing flow equations
+to provide a model for sub-grid-scale stresses in a temporally developing plane turbulent jet at
+Reynolds number $Re_0=6\,000$. The objective function for training is first based on the instantaneous
+filtered velocity fields from a corresponding direct numerical simulation, and the training is
+by a stochastic gradient descent method, which uses the adjoint Navier--Stokes equations to provide
+the end-to-end sensitivities of the model weights to the velocity fields. In-sample and out-of-sample
+testing on multiple dual-jet configurations show that its required mesh density in each coordinate
+direction for prediction of mean flow, Reynolds stresses, and spectra is half that needed by the
+dynamic Smagorinsky model for comparable accuracy. The same neural-network model trained directly
+to match filtered sub-grid-scale stresses -- without the constraint of being embedded within the
+flow equations during the training -- fails to provide a qualitatively correct prediction. The
+coupled formulation is generalized to train based only on mean-flow and Reynolds stresses, which
+are more readily available in experiments. The mean-flow training provides a robust model, which
+is important, though a somewhat less accurate prediction for the same coarse meshes, as might be
+anticipated due to the reduced information available for training in this case. The anticipated
+advantage of the formulation is that the inclusion of resolved physics in the training increases
+its capacity to extrapolate. This is assessed for the case of passive scalar transport, for which
+it outperforms established models due to improved mixing predictions. 

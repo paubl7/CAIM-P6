@@ -1,0 +1,19 @@
+High-dimensional feature vectors are likely to contain sets of measurements that are approximate
+replicates of one another. In complex applications, or automated data collection, these feature
+sets are not known a priori, and need to be determined. This work proposes a class of latent factor
+models on the observed high-dimensional random vector $X \in \mathbb{R}^p$, for defining, identifying
+and estimating the index set of its approximately replicate components. The model class is parametrized
+by a $p \times K$ loading matrix $A$ that contains a hidden sub-matrix whose rows can be partitioned
+into groups of parallel vectors. Under this model class, a set of approximate replicate components
+of $X$ corresponds to a set of parallel rows in $A$: these entries of $X$ are, up to scale and additive
+error, the same linear combination of the $K$ latent factors; the value of $K$ is itself unknown.
+The problem of finding approximate replicates in $X$ reduces to identifying, and estimating, the
+location of the hidden sub-matrix within $A$, and of the partition of its row index set $H$. Both $H$
+and its partiton can be fully characterized in terms of a new family of criteria based on the correlation
+matrix of $X$, and their identifiability, as well as that of the unknown latent dimension $K$, are
+obtained as consequences. The constructive nature of the identifiability arguments enables computationally
+efficient procedures, with consistency guarantees. When $A$ has the errors-in-variable parametrization,
+the difficulty of the problem is elevated. The task becomes that of separating out groups of parallel
+rows that are proportional to canonical basis vectors from other dense parallel rows in $A$. This
+is met under a scale assumption, via a principled way of selecting the target row indices, guided
+by the succesive maximization of Schur complements of appropriate covariance matrices. 

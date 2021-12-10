@@ -1,0 +1,20 @@
+In the hyperbolic community, discontinuous Galerkin approaches are mainly applied when finite
+element methods are considered. As the name suggested, the DG framework allows a discontinuity
+at the element interfaces, which seems for many researchers a favorable property in case of hyperbolic
+balance laws. On the contrary, continuous Galerkin method obtained from a straightforward discretisation
+of the weak form of the PDEs appear to be unsuitable for hyperbolic problems. To remedy this issue,
+stabilization terms are usually added and various formulations can be found in the literature.
+There exists still the perception that continuous Galerkin methods are not suited to hyperbolic
+problems, and the reason of this is the continuity of the approximation. However, this perception
+is not true and the stabilization terms can be removed, in general, provided the boundary conditions
+are suitable. In this paper, we deal with this problem, and present a different approach. We use the
+boundary conditions to stabilize the scheme following a procedure that are frequently used in the
+finite difference community. Here, the main idea is to impose the boundary conditions weakly and
+specific boundary operators are constructed such that they guarantee stability. This approach
+has already been used in the DG framework, but here we apply it with a continuous Galerkin scheme.
+No internal dissipation is needed even if unstructured grids are used. Further, we point out that
+we do not need exact integration, it suffices if the quadrature rule and the norm in the differential
+operator are the same, such that the summation-by-parts (SBP) property is fulfilled meaning that
+a discrete Gauss Th. is valid. This contradicts the perception in the hyperbolic community that
+stability issues for pure Galerkin scheme exist. In numerical simulations, we verify our theoretical
+analysis. 

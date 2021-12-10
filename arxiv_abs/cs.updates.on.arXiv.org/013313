@@ -1,0 +1,18 @@
+Remote sensing image classification exploiting multiple sensors is a very challenging problem:
+data from different modalities are affected by spectral distortions and mis-alignments of all
+kinds, and this hampers re-using models built for one image to be used successfully in other scenes.
+In order to adapt and transfer models across image acquisitions, one must be able to cope with datasets
+that are not co-registered, acquired under different illumination and atmospheric conditions,
+by different sensors, and with scarce ground references. Traditionally, methods based on histogram
+matching have been used. However, they fail when densities have very different shapes or when there
+is no corresponding band to be matched between the images. An alternative builds upon \emph{manifold
+alignment}. Manifold alignment performs a multidimensional relative normalization of the data
+prior to product generation that can cope with data of different dimensionality (e.g. different
+number of bands) and possibly unpaired examples. Aligning data distributions is an appealing strategy,
+since it allows to provide data spaces that are more similar to each other, regardless of the subsequent
+use of the transformed data. In this paper, we study a methodology that aligns data from different
+domains in a nonlinear way through {\em kernelization}. We introduce the Kernel Manifold Alignment
+(KEMA) method, which provides a flexible and discriminative projection map, exploits only a few
+labeled samples (or semantic ties) in each domain, and reduces to solving a generalized eigenvalue
+problem. We successfully test KEMA in multi-temporal and multi-source very high resolution classification
+tasks, as well as on the task of making a model invariant to shadowing for hyperspectral imaging.

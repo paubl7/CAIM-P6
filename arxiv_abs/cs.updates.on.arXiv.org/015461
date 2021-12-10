@@ -1,0 +1,19 @@
+Conventional planar video streaming is the most popular application in mobile systems and the rapid
+growth of 360 video content and virtual reality (VR) devices are accelerating the adoption of VR
+video streaming. Unfortunately, video streaming consumes significant system energy due to the
+high power consumption of the system components (e.g., DRAM, display interfaces, and display panel)
+involved in this process. We propose BurstLink, a novel system-level technique that improves the
+energy efficiency of planar and VR video streaming. BurstLink is based on two key ideas. First, BurstLink
+directly transfers a decoded video frame from the host system to the display panel, bypassing the
+host DRAM. To this end, we extend the display panel with a double remote frame buffer (DRFB), instead
+of the DRAM's double frame buffer, so that the system can directly update the DRFB with a new frame
+while updating the panel's pixels with the current frame stored in the DRFB. Second, BurstLink transfers
+a complete decoded frame to the display panel in a single burst, using the maximum bandwidth of modern
+display interfaces. Unlike conventional systems where the frame transfer rate is limited by the
+pixel-update throughput of the display panel, BurstLink can always take full advantage of the high
+bandwidth of modern display interfaces by decoupling the frame transfer from the pixel update as
+enabled by the DRFB. This direct and burst frame transfer of BurstLink significantly reduces energy
+consumption in video display by reducing access to the host DRAM and increasing the system's residency
+at idle power states. We evaluate BurstLink using an analytical power model that we rigorously validate
+on a real modern mobile system. Our evaluation shows that BurstLink reduces system energy consumption
+for 4K planar and VR video streaming by 41% and 33%, respectively. 

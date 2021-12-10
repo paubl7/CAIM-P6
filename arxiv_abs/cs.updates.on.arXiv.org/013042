@@ -1,0 +1,19 @@
+Cloud-based serverless computing systems, either public or privately provisioned, aim to provide
+the illusion of infinite resources and abstract users from details of the allocation decisions.
+With the goal of providing a low cost and a high QoS, the serverless computing paradigm offers opportunities
+that can be harnessed to attain the goals. Specifically, our strategy in this dissertation is to
+avoid redundant computing, in cases where independent task requests are similar to each other and
+for tasks that are pointless to process. We explore two main approaches to (A) reuse part of computation
+needed to process the services and (B) proactively pruning tasks with a low chance of success to improve
+the overall QoS of the system. For the first approach, we propose a mechanism to identify various
+types of "mergeable" tasks, which can benefit from computational reuse if they are executed together
+as a group. To evaluate the task merging configurations extensively, we quantify the resource-saving
+magnitude and then leveraging the experimental data to create a resource-saving predictor. We
+investigate multiple tasks merging approaches that suit different workload scenarios to determine
+when it is appropriate to aggregate tasks and how to allocate them so that the QoS of other tasks is
+minimally affected. For the second approach, we developed the mechanisms to skip tasks whose chance
+of completing on time is not worth pursuing by drop or defer them. We determined the minimum chance
+of success thresholds for tasks to pass to get scheduled and executed. We dynamically adjust such
+thresholds based on multiple characteristics of the arriving workload and the system's conditions.
+We employed approximate computing to reduce the pruning mechanism's computational overheads
+and ensure that the mechanism can be used practically. 

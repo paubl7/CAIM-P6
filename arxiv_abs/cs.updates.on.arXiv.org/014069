@@ -1,0 +1,18 @@
+X-ray images may present non-trivial features with predictive information of patients that develop
+severe symptoms of COVID-19. If true, this hypothesis may have practical value in allocating resources
+to particular patients while using a relatively inexpensive imaging technique. The difficulty
+of testing such a hypothesis comes from the need for large sets of labelled data, which need to be well-annotated
+and should contemplate the post-imaging severity outcome. This paper presents an original methodology
+for extracting semantic features that correlate to severity from a data set with patient ICU admission
+labels through interpretable models. The methodology employs a neural network trained to recognise
+lung pathologies to extract the semantic features, which are then analysed with low-complexity
+models to limit overfitting while increasing interpretability. This analysis points out that
+only a few features explain most of the variance between patients that developed severe symptoms.
+When applied to an unrelated larger data set with pathology-related clinical notes, the method
+has shown to be capable of selecting images for the learned features, which could translate some
+information about their common locations in the lung. Besides attesting separability on patients
+that eventually develop severe symptoms, the proposed methods represent a statistical approach
+highlighting the importance of features related to ICU admission that may have been only qualitatively
+reported. While handling limited data sets, notable methodological aspects are adopted, such
+as presenting a state-of-the-art lung segmentation network and the use of low-complexity models
+to avoid overfitting. The code for methodology and experiments is also available. 

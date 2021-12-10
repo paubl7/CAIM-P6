@@ -1,0 +1,18 @@
+Convolutional neural network (CNN) inference on mobile devices demands efficient hardware acceleration
+of low-precision (INT8) general matrix multiplication (GEMM). Exploiting data sparsity is a common
+approach to further accelerate GEMM for CNN inference, and in particular, structural sparsity
+has the advantages of predictable load balancing and very low index overhead. In this paper, we address
+a key architectural challenge with structural sparsity: how to provide support for a range of sparsity
+levels while maintaining high utilization of the hardware. We describe a time unrolled formulation
+of variable density-bound block (VDBB) sparsity that allows for a configurable number of non-zero
+elements per block, at constant utilization. We then describe a systolic array microarchitecture
+that implements this scheme, with two data reuse optimizations. Firstly, we increase reuse in both
+operands and partial products by increasing the number of MACs per PE. Secondly, we introduce a novel
+approach of moving the IM2COL transform into the hardware, which allows us to achieve a 3x data bandwidth
+expansion just before the operands are consumed by the datapath, reducing the SRAM power consumption.
+The optimizations for weight sparsity, activation sparsity and data reuse are all interrelated
+and therefore the optimal combination is not obvious. Therefore, we perform an design space evaluation
+to find the pareto-optimal design characteristics. The resulting design achieves 16.8 TOPS/W
+in 16nm with modest 50% model sparsity and scales with model sparsity up to 55.7TOPS/W at 87.5%. As
+well as successfully demonstrating the variable DBB technique, this result significantly outperforms
+previously reported sparse CNN accelerators. 

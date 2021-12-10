@@ -1,0 +1,18 @@
+Quantum system characterization techniques represent the front line in the identification and
+mitigation of noise in quantum computing, but can be expensive in terms of quantum resources and
+time to repeatedly employ. Another challenging aspect is that parameters governing the performance
+of various operations tend to drift over time, and monitoring these is hence a difficult task. One
+of the most promising characterization techniques, gate set tomography (GST), provides a self-consistent
+estimate of the completely positive, trace-preserving (CPTP) maps for a complete set of gates,
+as well as preparation and measurement operators. We develop a method for performance optimization
+seeded by tomography (POST), which couples the power of GST with a classical optimization routine
+to achieve a consistent gate improvement in just a short number of steps within a given calibration
+cycle. By construction, the POST procedure finds the best available gate operation given the hardware,
+and is therefore robust to the effects of drift. Further, in comparison to other quantum error mitigation
+techniques, it builds upon a one-time application of GST. To demonstrate the performance of this
+method on a real quantum computer, we map out the operations of six qubit pairs on the superconducting
+\emph{ibmq\_poughkeepsie} quantum device. Under the restriction of logical-only control, we
+monitor the performance of the POST approach on a chosen CNOT gate over a period of six weeks. In this
+time, we achieve a consistent improvement in gate fidelity, averaging a fidelity increase of 21.1\%
+as measured by randomized benchmarking. The POST approach should find wide applicability as it
+is hardware agnostic, and can be applied at the upper logical level or at a deeper pulse control level.

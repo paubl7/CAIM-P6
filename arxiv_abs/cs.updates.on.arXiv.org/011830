@@ -1,0 +1,19 @@
+An important problem in terrain analysis is modeling how water flows across a terrain creating floods
+by forming channels and filling depressions. In this paper we study a number of \emph{flow-query}
+related problems: Given a terrain $\Sigma$, represented as a triangulated $xy$-monotone surface
+with $n$ vertices, a rain distribution $R$ which may vary over time, determine how much water is flowing
+over a given edge as a function of time. We develop internal-memory as well as I/O-efficient algorithms
+for flow queries. This paper contains four main results: (i) We present an internal-memory algorithm
+that preprocesses $\Sigma$ into a linear-size data structure that for a (possibly time varying)
+rain distribution $R$ can return the flow-rate functions of all edges of $\Sigma$ in $O(\rho k+|\phi|
+\log n)$ time, where $\rho$ is the number of sinks in $\Sigma$, $k$ is the number of times the rain distribution
+changes, and $|\phi|$ is the total complexity of the flow-rate functions that have non-zero values;
+(ii) We also present an I/O-efficient algorithm for preprocessing $\Sigma$ into a linear-size
+data structure so that for a rain distribution $R$, it can compute the flow-rate function of all edges
+using $O(\text{Sort}(|\phi|))$ I/Os and $O(|\phi| \log |\phi|)$ internal computation time.
+(iii) $\Sigma$ can be preprocessed into a linear-size data structure so that for a given rain distribution
+$R$, the flow-rate function of an edge $(q,r) \in \Sigma$ under the single-flow direction (SFD)
+model can be computed more efficiently. (iv) We present an algorithm for computing the two-dimensional
+channel along which water flows using Manning's equation; a widely used empirical equation that
+relates the flow-rate of water in an open channel to the geometry of the channel along with the height
+of water in the channel. 

@@ -1,0 +1,18 @@
+Approximate near-neighbors search (\textsc{ANNS}) is a long-studied problem in computational
+geometry. %that has received considerable attention by researchers in the community. In this paper,
+we revisit the problem and propose the first data structure for curves under the (continuous) Fr\'echet
+distance in $\Reals^d$. Given a set $\P$ of $n$ curves of size at most $m$ each in $\Reals^d$, and a
+real fixed $\delta>0$, we aim to preprocess $\P$ into a data structure so that for any given query
+curve $Q$ of size $k$, we can efficiently report all curves in $\P$ whose Fr\'echet distances to $Q$
+are at most $\delta$. In the case that $k$ is given in the preprocessing stage, for any $\eps>0$ we
+propose a deterministic data structure whose space is $n \cdot O\big(\max\big\{\big(\frac{\sqrt{d}}{\eps}\big)^{kd},
+\big(\frac{\D\sqrt{d}}{\eps^2}\big)^{kd}\big\}\big)$ that can answer \textsc{$(1+\eps)\delta$-ANNS}
+queries in $O(kd)$ query time, where $\D$ is the diameter of $\P$. Considering $k$ as part of the query
+slightly changes the space to $n \cdot O\big(\frac{1}{\eps}\big)^{md} $ with $O(kd)$ query time
+within an approximation factor of $5+\eps$. We show that our generic data structure for ANNS can
+give an alternative treatment of the approximate subtrajectory range searching problem studied
+by de Berg et al. [8]. We also revisit the time-window data structure for spatial density maps in [6].
+Given $\theta>0$, and $n$ time-stamped points spread over $m$ regions in a map, for any query window
+$W$, we propose a data structure of size $O(n/\eps^2)$ and construction time $O((n+m)/\eps^2)$
+that can approximately return the regions containing at least $\theta$ points whose times are within
+$W$ in $O(1)$ query time. 

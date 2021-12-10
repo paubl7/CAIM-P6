@@ -1,0 +1,20 @@
+Bilevel optimization has become a powerful framework in various machine learning applications
+including meta-learning, hyperparameter optimization, and network architecture search. There
+are generally two classes of bilevel optimization formulations for machine learning: 1) problem-based
+bilevel optimization, whose inner-level problem is formulated as finding a minimizer of a given
+loss function; and 2) algorithm-based bilevel optimization, whose inner-level solution is an
+output of a fixed algorithm. For the first class, two popular types of gradient-based algorithms
+have been proposed for hypergradient estimation via approximate implicit differentiation (AID)
+and iterative differentiation (ITD). Algorithms for the second class include the popular model-agnostic
+meta-learning (MAML) and almost no inner loop (ANIL). However, the convergence rate and fundamental
+limitations of bilevel optimization algorithms have not been well explored. This thesis provides
+a comprehensive convergence rate analysis for bilevel algorithms in the aforementioned two classes.
+We further propose principled algorithm designs for bilevel optimization with higher efficiency
+and scalability. For the problem-based formulation, we provide a convergence rate analysis for
+AID- and ITD-based bilevel algorithms. We then develop acceleration bilevel algorithms, for which
+we provide shaper convergence analysis with relaxed assumptions. We also provide the first lower
+bounds for bilevel optimization, and establish the optimality by providing matching upper bounds
+under certain conditions. We finally propose new stochastic bilevel optimization algorithms
+with lower complexity and higher efficiency in practice. For the algorithm-based formulation,
+we develop a theoretical convergence for general multi-step MAML and ANIL, and characterize the
+impact of parameter selections and loss geometries on the their complexities. 

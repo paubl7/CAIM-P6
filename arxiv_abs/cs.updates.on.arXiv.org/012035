@@ -1,0 +1,19 @@
+In this work, we present two parallel algorithms for the large-scale discrete Fourier transform
+(DFT) on Tensor Processing Unit (TPU) clusters. The two parallel algorithms are associated with
+two formulations of DFT: one is based on the Kronecker product, to be specific, dense matrix multiplications
+between the input data and the Vandermonde matrix, denoted as KDFT in this work; the other is based
+on the famous Cooley-Tukey algorithm and phase adjustment, denoted as FFT in this work. Both KDFT
+and FFT formulations take full advantage of TPU's strength in matrix multiplications. In the two
+parallel algorithms, the same strategy of data decomposition is applied to the input data. Through
+the data decomposition, the dense matrix multiplications in KDFT and the Cooley-Tukey-algorithm-based
+transform in FFT are kept local within TPU cores and can be performed completely in parallel. The
+communication among TPU cores is achieved through the one-shuffle scheme in both parallel algorithms,
+with which sending and receiving data takes place simultaneously between two neighboring cores
+and along the same direction on the interconnect network. The one-shuffle scheme is designed for
+the interconnect topology of TPU clusters, minimizing the time required by the communication among
+TPU cores. Both parallel algorithms, namely, KDFT and FFT, are implemented in TensorFlow owing
+to its rich set of functionalities for scientific computing and simplicity in realizing parallel
+computing algorithms. The three-dimensional complex DFT is performed on an example of dimension
+$8192 \times 8192 \times 8192$ with a full TPU Pod: the run time of KDFT is 12.66 seconds and that of
+FFT is 8.3 seconds. Strong and weak scaling analyses are provided to demonstrate the high parallel
+efficiency of the two DFT implementations on TPUs. 

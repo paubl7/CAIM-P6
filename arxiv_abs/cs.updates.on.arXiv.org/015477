@@ -1,0 +1,19 @@
+Context: Mobile app reviews written by users on app stores or social media are significant resources
+for app developers.Analyzing app reviews have proved to be useful for many areas of software engineering
+(e.g., requirement engineering, testing). Automatic classification of app reviews requires
+extensive efforts to manually curate a labeled dataset. When the classification purpose changes
+(e.g. identifying bugs versus usability issues or sentiment), new datasets should be labeled,
+which prevents the extensibility of the developed models for new desired classes/tasks in practice.
+Recent pre-trained neural language models (PTM) are trained on large corpora in an unsupervised
+manner and have found success in solving similar Natural Language Processing problems. However,
+the applicability of PTMs is not explored for app review classification Objective: We investigate
+the benefits of PTMs for app review classification compared to the existing models, as well as the
+transferability of PTMs in multiple settings. Method: We empirically study the accuracy and time
+efficiency of PTMs compared to prior approaches using six datasets from literature. In addition,
+we investigate the performance of the PTMs trained on app reviews (i.e. domain-specific PTMs) .
+We set up different studies to evaluate PTMs in multiple settings: binary vs. multi-class classification,
+zero-shot classification (when new labels are introduced to the model), multi-task setting, and
+classification of reviews from different resources. The datasets are manually labeled app review
+datasets from Google Play Store, Apple App Store, and Twitter data. In all cases, Micro and Macro
+Precision, Recall, and F1-scores will be used and we will report the time required for training and
+prediction with the models. 

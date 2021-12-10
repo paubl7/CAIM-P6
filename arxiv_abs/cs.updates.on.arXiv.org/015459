@@ -1,0 +1,19 @@
+Observations from dynamical systems often exhibit irregularities, such as censoring, where values
+are recorded only if they fall within a certain range. Censoring is ubiquitous in practice, due to
+saturating sensors, limit-of-detection effects, and image-frame effects. In light of recent
+developments on learning linear dynamical systems (LDSs), and on censored statistics with independent
+data, we revisit the decades-old problem of learning an LDS, from censored observations (Lee and
+Maddala (1985); Zeger and Brookmeyer (1986)). Here, the learner observes the state $x_t \in \mathbb{R}^d$
+if and only if $x_t$ belongs to some set $S_t \subseteq \mathbb{R}^d$. We develop the first computationally
+and statistically efficient algorithm for learning the system, assuming only oracle access to
+the sets $S_t$. Our algorithm, Stochastic Online Newton with Switching Gradients, is a novel second-order
+method that builds on the Online Newton Step (ONS) of Hazan et al. (2007). Our Switching-Gradient
+scheme does not always use (stochastic) gradients of the function we want to optimize, which we call
+"censor-aware" function. Instead, in each iteration, it performs a simple test to decide whether
+to use the censor-aware, or another "censor-oblivious" function, for getting a stochastic gradient.
+In our analysis, we consider a "generic" Online Newton method, which uses arbitrary vectors instead
+of gradients, and we prove an error-bound for it. This can be used to appropriately design these vectors,
+leading to our Switching-Gradient scheme. This framework significantly deviates from the recent
+long line of works on censored statistics (e.g., Daskalakis et al. (2018); Kontonis et al. (2019);
+Daskalakis et al. (2019)), which apply Stochastic Gradient Descent (SGD), and their analysis reduces
+to establishing conditions for off-the-shelf SGD-bounds. 

@@ -1,0 +1,18 @@
+Deep graph embedding is an important approach for community discovery. Deep graph neural network
+with self-supervised mechanism can obtain the low-dimensional embedding vectors of nodes from
+unlabeled and unstructured graph data. The high-order information of graph can provide more abundant
+structure information for the representation learning of nodes. However, most self-supervised
+graph neural networks only use adjacency matrix as the input topology information of graph and cannot
+obtain too high-order information since the number of layers of graph neural network is fairly limited.
+If there are too many layers, the phenomenon of over smoothing will appear. Therefore how to obtain
+and fuse high-order information of graph by a shallow graph neural network is an important problem.
+In this paper, a deep graph embedding algorithm with self-supervised mechanism for community discovery
+is proposed. The proposed algorithm uses self-supervised mechanism and different high-order
+information of graph to train multiple deep graph convolution neural networks. The outputs of multiple
+graph convolution neural networks are fused to extract the representations of nodes which include
+the attribute and structure information of a graph. In addition, data augmentation and negative
+sampling are introduced into the training process to facilitate the improvement of embedding result.
+The proposed algorithm and the comparison algorithms are conducted on the five experimental data
+sets. The experimental results show that the proposed algorithm outperforms the comparison algorithms
+on the most experimental data sets. The experimental results demonstrate that the proposed algorithm
+is an effective algorithm for community discovery. 

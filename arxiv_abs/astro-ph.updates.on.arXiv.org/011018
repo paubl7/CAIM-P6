@@ -1,0 +1,20 @@
+We study the potential of Bayesian Neural Networks (BNNs) to detect new physics in the dark matter
+power spectrum, concentrating here on evolving dark energy and modifications to General Relativity.
+After introducing a new technique to quantify classification uncertainty in BNNs, we train two
+BNNs on mock matter power spectra produced using the publicly available code $\tt{ReACT}$ in the
+$k$-range $\left(0.01 - 2.5\right) \, h \mathrm{Mpc}^{-1} $ and redshift bins $\left(0.1,0.478,0.783,1.5\right)$
+with Euclid-like noise. The first network classifies spectra into five labels including $\Lambda$CDM,
+$f(R)$, $w$CDM, Dvali-Gabadaze-Porrati (DGP) gravity and a "random" class whereas the second
+is trained to distinguish $\Lambda$CDM from non-$\Lambda$CDM. Both networks achieve a comparable
+training, validation and test accuracy of $\sim 95\%$. Each network is also capable of detecting
+deviations from $\Lambda$CDM that were not included in the training set, demonstrated with spectra
+generated using the growth-index $\gamma$. We then quantify the constraining power of each network
+by computing the smallest deviation from $\Lambda$CDM such that the noise-averaged non-$\Lambda$CDM
+classification probability is at least $2\sigma$, finding these bounds to be $f_{R0} \lesssim
+10^{-7}$, $\Omega_{rc} \lesssim 10^{-2} $, $-1.05 \lesssim w_0 \lesssim 0.95 $, $-0.2 \lesssim
+w_a \lesssim 0.2 $, $0.52 \lesssim \gamma \lesssim 0.59 $. The bounds on $f(R)$ can be improved by
+training a specialist network to distinguish solely between $\Lambda$CDM and $f(R)$ power spectra
+which can detect a non-zero $f_{R0}$ at $\mathcal{O}\left(10^{-8}\right)$ with a confidence
+$>2\sigma$. We expect that further developments, such as the inclusion of smaller length scales
+or additional extensions to $\Lambda$CDM, will only improve the potential of BNNs to detect new
+physics using cosmological datasets. 

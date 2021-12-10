@@ -1,0 +1,20 @@
+In this contribution, we present an extension of the thermodynamic topology optimization that
+accounts for a non-linear material behavior due to the evolution of plastic strains. Physically,
+a plastic material behavior is characterized by a hysteresis in the stress/strain diagram after
+loading and unloading. In contrast, topology optimization is usually employed for a time-invariant
+load and the optimized component will only be loaded during physical use. Still, a virtual increase
+and decrease of strains, i.e., an unphysical evolution of the strains during the optimization process,
+is locally observed due to the evolution of the structure and thus modulation of the stiffness. If
+a classical plasticity model is employed for this unphysical ``loading'' and ``unloading'', incorrect
+strain and stress states are computed due to the apparent energy dissipation and hysteresis in the
+stress/strain diagram. Therefore, this problem is usually resolved by recomputing the physical
+behavior for each optimization step: the initial conditions are refreshed by deleting all plastic
+strains computed for the previous optimization step. This restores the virgin state for the updated
+topology. The plastic strains are subsequently determined by evaluating the classical plasticity
+model which requires a discretization of the loading which results in several finite element simulations.
+After the correct plastic strains have been found, the next update step for the topology optimization
+is performed. To avoid this time-consuming procedure, we develop a novel surrogate material model
+that allows to correctly account for the physical state in terms of the plastic strains. Hence, finite
+element simulations purely for the plastic material behavior become obsolete such that the optimization
+of plastic materials now consumes comparable computation times as the optimization of elastic
+materials. 

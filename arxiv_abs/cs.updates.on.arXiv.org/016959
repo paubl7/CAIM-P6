@@ -1,0 +1,18 @@
+A common data analysis task is the reduced-rank regression problem: $$\min_{\textrm{rank-}k
+\ X} \|AX-B\|,$$ where $A \in \mathbb{R}^{n \times c}$ and $B \in \mathbb{R}^{n \times d}$ are given
+large matrices and $\|\cdot\|$ is some norm. Here the unknown matrix $X \in \mathbb{R}^{c \times
+d}$ is constrained to be of rank $k$ as it results in a significant parameter reduction of the solution
+when $c$ and $d$ are large. In the case of Frobenius norm error, there is a standard closed form solution
+to this problem and a fast algorithm to find a $(1+\varepsilon)$-approximate solution. However,
+for the important case of operator norm error, no closed form solution is known and the fastest known
+algorithms take singular value decomposition time. We give the first randomized algorithms for
+this problem running in time $$(nnz{(A)} + nnz{(B)} + c^2) \cdot k/\varepsilon^{1.5} + (n+d)k^2/\epsilon
++ c^{\omega},$$ up to a polylogarithmic factor involving condition numbers, matrix dimensions,
+and dependence on $1/\varepsilon$. Here $nnz{(M)}$ denotes the number of non-zero entries of a
+matrix $M$, and $\omega$ is the exponent of matrix multiplication. As both (1) spectral low rank
+approximation ($A = B$) and (2) linear system solving ($n = c$ and $d = 1$) are special cases, our time
+cannot be improved by more than a $1/\varepsilon$ factor (up to polylogarithmic factors) without
+a major breakthrough in linear algebra. Interestingly, known techniques for low rank approximation,
+such as alternating minimization or sketch-and-solve, provably fail for this problem. Instead,
+our algorithm uses an existential characterization of a solution, together with Krylov methods,
+low degree polynomial approximation, and sketching-based preconditioning. 

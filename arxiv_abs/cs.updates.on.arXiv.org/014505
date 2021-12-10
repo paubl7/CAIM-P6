@@ -1,0 +1,19 @@
+Cardinality estimation is perhaps the simplest non-trivial statistical problem that can be solved
+via sketching. Industrially-deployed sketches like HyperLogLog, MinHash, and PCSA are mergeable,
+which means that large data sets can be sketched in a distributed environment, and then merged into
+a single sketch of the whole data set. In the last decade a variety of sketches have been developed
+that are non-mergeable, but attractive for other reasons. They are simpler, their cardinality
+estimates are strictly unbiased, and they have substantially lower variance. We evaluate sketching
+schemes on a reasonably level playing field, in terms of their memory-variance product (MVP). E.g.,
+a sketch that occupies $5m$ bits and whose relative variance is $2/m$ (standard error $\sqrt{2/m}$)
+has an MVP of $10$. Our contributions are as follows. Cohen and Ting independently discovered what
+we call the Martingale transform for converting a mergeable sketch into a non-mergeable sketch.
+We present a simpler way to analyze the limiting MVP of Martingale-type sketches. We prove that the
+\Martingale{} transform is optimal in the non-mergeable world, and that \Martingale{} \fishmonger{}
+in particular is optimal among linearizable sketches, with an MVP of $H_0/2 \approx 1.63$. E.g.,
+this is circumstantial evidence that to achieve 1\% standard error, we cannot do better than a 2 kilobyte
+sketch. \Martingale{} \fishmonger{} is neither simple nor practical. We develop a new mergeable
+sketch called \Curtain{} that strikes a nice balance between simplicity and efficiency, and prove
+that \Martingale{} \Curtain{} has limiting $\MVP\approx 2.31$. It can be updated with $O(1)$ memory
+accesses and it has lower empirical variance than \Martingale{} \LogLog, a practical non-mergeable
+version of HyperLogLog. 

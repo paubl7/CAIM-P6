@@ -1,0 +1,20 @@
+We study the numerical solution of scalar time-harmonic wave equations on unbounded domains which
+can be split into a bounded interior domain of primary interest and an exterior domain with separable
+geometry. To compute the solution in the interior domain, approximations to the Dirichlet-to-Neumann
+(DtN) map of the exterior domain have to be imposed as transparent boundary conditions on the artificial
+coupling boundary. Although the DtN map can be computed by separation of variables, it is a nonlocal
+operator with dense matrix representations, and hence computationally inefficient. Therefore,
+approximations of DtN maps by sparse matrices, usually involving additional degrees of freedom,
+have been studied intensively in the literature using a variety of approaches including different
+types of infinite elements, local non-reflecting boundary conditions, and perfectly matched
+layers. The entries of these sparse matrices are derived analytically, e.g. from transformations
+or asymptotic expansions of solutions to the differential equation in the exterior domain. In contrast,
+in this paper we propose to `learn' the matrix entries from the DtN map in its separated form by solving
+an optimization problem as a preprocessing step. Theoretical considerations suggest that the
+approximation quality of learned infinite elements improves exponentially with increasing number
+of infinite element degrees of freedom, which is confirmed in numerical experiments. These numerical
+studies also show that learned infinite elements outperform state-of-the-art methods for the
+Helmholtz equation. At the same time, learned infinite elements are much more flexible than traditional
+methods as they, e.g., work similarly well for exterior domains involving strong reflections,
+for example, for the atmosphere of the Sun, which is strongly inhomogeneous and exhibits reflections
+at the corona. 

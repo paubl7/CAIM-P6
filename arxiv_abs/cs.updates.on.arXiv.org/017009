@@ -1,0 +1,19 @@
+A key challenge in adversarial robustness is the lack of a precise mathematical characterization
+of human perception, used in the very definition of adversarial attacks that are imperceptible
+to human eyes. Most current attacks and defenses try to avoid this issue by considering restrictive
+adversarial threat models such as those bounded by $L_2$ or $L_\infty$ distance, spatial perturbations,
+etc. However, models that are robust against any of these restrictive threat models are still fragile
+against other threat models. To resolve this issue, we propose adversarial training against the
+set of all imperceptible adversarial examples, approximated using deep neural networks. We call
+this threat model the neural perceptual threat model (NPTM); it includes adversarial examples
+with a bounded neural perceptual distance (a neural network-based approximation of the true perceptual
+distance) to natural images. Through an extensive perceptual study, we show that the neural perceptual
+distance correlates well with human judgements of perceptibility of adversarial examples, validating
+our threat model. Under the NPTM, we develop novel perceptual adversarial attacks and defenses.
+Because the NPTM is very broad, we find that Perceptual Adversarial Training (PAT) against a perceptual
+attack gives robustness against many other types of adversarial attacks. We test PAT on CIFAR-10
+and ImageNet-100 against five diverse adversarial attacks. We find that PAT achieves state-of-the-art
+robustness against the union of these five attacks, more than doubling the accuracy over the next
+best model, without training against any of them. That is, PAT generalizes well to unforeseen perturbation
+types. This is vital in sensitive applications where a particular threat model cannot be assumed,
+and to the best of our knowledge, PAT is the first adversarial training defense with this property.

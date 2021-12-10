@@ -1,0 +1,19 @@
+Graph Neural Networks (GNNs) have demonstrated superior performance in learning node representations
+for various graph inference tasks. However, learning over graph data can raise privacy concerns
+when nodes represent people or human-related variables that involve sensitive or personal information.
+While numerous techniques have been proposed for privacy-preserving deep learning over non-relational
+data, such as image, audio, video, and text, there is less work addressing the privacy issues pertained
+to applying deep learning algorithms on graphs. As a result and for the first time, in this paper,
+we study the problem of node-level privacy, where graph nodes have potentially sensitive features
+that need to be kept private, but they could be beneficial for a central server for training a GNN over
+the graph. To address this problem, we develop a privacy-preserving GNN learning algorithm with
+formal privacy guarantees based on Local Differential Privacy (LDP). Specifically, we propose
+an optimized LDP encoder and an unbiased rectifier, using which the server can communicate with
+the graph nodes to privately collect their data and approximate the graph convolution layer of the
+GNN. To further reduce the effect of the injected noise, we propose a simple graph convolution layer
+based on the multi-hop aggregation of the nodes' features. We argue why LDP is a better choice to tackle
+this problem compared to other privacy-preserving learning paradigms, such as federated learning,
+and discuss how GNNs, due to their unique internal structure, can be more robust to differentially
+private input perturbations than other deep learning models. Extensive experiments conducted
+over real-world datasets demonstrate the significant capability of our method in maintaining
+an appropriate privacy-accuracy trade-off. 

@@ -1,0 +1,19 @@
+Dual-energy computed tomography (DECT) has been widely used in many applications that need material
+decomposition. Image-domain methods directly decompose material images from high- and low-energy
+attenuation images, and thus, are susceptible to noise and artifacts on attenuation images. To
+obtain high-quality material images, various data-driven methods have been proposed. Iterative
+neural network (INN) methods combine regression NNs and model-based image reconstruction algorithm.
+INNs reduced the generalization error of (noniterative) deep regression NNs, and achieved high-quality
+reconstruction in diverse medical imaging applications. BCD-Net is a recent INN architecture
+that incorporates imaging refining NNs into the block coordinate descent (BCD) model-based image
+reconstruction algorithm. We propose a new INN architecture, distinct cross-material BCD-Net,
+for DECT material decomposition. The proposed INN architecture uses distinct cross-material
+convolutional neural network (CNN) in image refining modules, and uses image decomposition physics
+in image reconstruction modules. The distinct cross-material CNN refiners incorporate distinct
+encoding-decoding filters and cross-material model that captures correlations between different
+materials. We interpret the distinct cross-material CNN refiner with patch perspective. Numerical
+experiments with extended cardiactorso (XCAT) phantom and clinical data show that proposed distinct
+cross-material BCD-Net significantly improves the image quality over several image-domain material
+decomposition methods, including a conventional model-based image decomposition (MBID) method
+using an edge-preserving regularizer, a state-of-the-art MBID method using pre-learned material-wise
+sparsifying transforms, and a noniterative deep CNN denoiser. 

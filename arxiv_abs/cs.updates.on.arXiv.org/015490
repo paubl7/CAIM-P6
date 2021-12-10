@@ -1,0 +1,19 @@
+Techniques for multi-target domain adaptation (MTDA) seek to adapt a recognition model such that
+it can generalize well across multiple target domains. While several successful techniques have
+been proposed for unsupervised single-target domain adaptation (STDA) in object detection, adapting
+a model to multiple target domains using unlabeled image data remains a challenging and largely
+unexplored problem. Key challenges include the lack of bounding box annotations for target data,
+knowledge corruption, and the growing resource requirements needed to train accurate deep detection
+models. The later requirements are augmented by the need to retraining a model with previous-learned
+target data when adapting to each new target domain. Currently, the only MTDA technique in literature
+for object detection relies on distillation with a duplicated model to avoid knowledge corruption
+but does not leverage the source-target feature alignment after UDA. To address these challenges,
+we propose a new Incremental MTDA technique for object detection that can adapt a detector to multiple
+target domains, one at a time, without having to retain data of previously-learned target domains.
+Instead of distillation, our technique efficiently transfers source images to a joint target domains'
+space, on the fly, thereby preserving knowledge during incremental MTDA. Using adversarial training,
+our Domain Transfer Module (DTM) is optimized to trick the domain classifiers into classifying
+source images as though transferred into the target domain, thus allowing the DTM to generate samples
+close to a joint distribution of target domains. Our proposed technique is validated on different
+MTDA detection benchmarks, and results show it improving accuracy across multiple domains, despite
+the considerable reduction in complexity. 

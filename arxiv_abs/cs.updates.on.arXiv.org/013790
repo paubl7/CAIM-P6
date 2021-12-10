@@ -1,0 +1,19 @@
+The COVID-19 pandemic has caused many shutdowns in different industries around the world. Sectors
+such as infrastructure construction and maintenance projects have not been suspended due to their
+significant effect on people's routine life. In such projects, workers work close together that
+makes a high risk of infection. The World Health Organization recommends wearing a face mask and
+practicing physical distancing to mitigate the virus's spread. This paper developed a computer
+vision system to automatically detect the violation of face mask wearing and physical distancing
+among construction workers to assure their safety on infrastructure projects during the pandemic.
+For the face mask detection, the paper collected and annotated 1,000 images, including different
+types of face mask wearing, and added them to a pre-existing face mask dataset to develop a dataset
+of 1,853 images. Then trained and tested multiple Tensorflow state-of-the-art object detection
+models on the face mask dataset and chose the Faster R-CNN Inception ResNet V2 network that yielded
+the accuracy of 99.8%. For physical distance detection, the paper employed the Faster R-CNN Inception
+V2 to detect people. A transformation matrix was used to eliminate the camera angle's effect on the
+object distances on the image. The Euclidian distance used the pixels of the transformed image to
+compute the actual distance between people. A threshold of six feet was considered to capture physical
+distance violation. The paper also used transfer learning for training the model. The final model
+was applied on four videos of road maintenance projects in Houston, TX, that effectively detected
+the face mask and physical distance. We recommend that construction owners use the proposed system
+to enhance construction workers' safety in the pandemic situation. 

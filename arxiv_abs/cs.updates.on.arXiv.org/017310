@@ -1,0 +1,19 @@
+Recently, Forbes, Kumar and Saptharishi [CCC, 2016] proved that there exists an explicit $d^{O(1)}$-variate
+and degree $d$ polynomial $P_{d}\in VNP$ such that if any depth four circuit $C$ of bounded formal
+degree $d$ which computes a polynomial of bounded individual degree $O(1)$, that is functionally
+equivalent to $P_d$, then $C$ must have size $2^{\Omega(\sqrt{d}\log{d})}$. The motivation for
+their work comes from Boolean Circuit Complexity. Based on a characterization for $ACC^0$ circuits
+by Yao [FOCS, 1985] and Beigel and Tarui [CC, 1994], Forbes, Kumar and Saptharishi [CCC, 2016] observed
+that functions in $ACC^0$ can also be computed by algebraic $\Sigma\mathord{\wedge}\Sigma\Pi$
+circuits (i.e., circuits of the form -- sums of powers of polynomials) of $2^{\log^{O(1)}n}$ size.
+Thus they argued that a $2^{\omega(\log^{O(1)}{n})}$ "functional" lower bound for an explicit
+polynomial $Q$ against $\Sigma\mathord{\wedge}\Sigma\Pi$ circuits would imply a lower bound
+for the "corresponding Boolean function" of $Q$ against non-uniform $ACC^0$. In their work, they
+ask if their lower bound be extended to $\Sigma\mathord{\wedge}\Sigma\Pi$ circuits. In this paper,
+for large integers $n$ and $d$ such that $\omega(\log^2n)\leq d\leq n^{0.01}$, we show that any
+$\Sigma\mathord{\wedge}\Sigma\Pi$ circuit of bounded individual degree at most $O\left(\frac{d}{k^2}\right)$
+that functionally computes Iterated Matrix Multiplication polynomial $IMM_{n,d}$ ($\in VP$)
+over $\{0,1\}^{n^2d}$ must have size $n^{\Omega(k)}$. Since Iterated Matrix Multiplication
+$IMM_{n,d}$ over $\{0,1\}^{n^2d}$ is functionally in $GapL$, improvement of the afore mentioned
+lower bound to hold for quasipolynomially large values of individual degree would imply a fine-grained
+separation of $ACC^0$ from $GapL$. 

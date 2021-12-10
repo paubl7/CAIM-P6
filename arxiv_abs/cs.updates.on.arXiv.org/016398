@@ -1,0 +1,20 @@
+Deep Learning (DL) and specifically CNN models have become a de facto method for a wide range of vision
+tasks, outperforming traditional machine learning (ML) methods. Consequently, they drew a lot
+of attention in the neuroimaging field in particular for phenotype prediction or computer-aided
+diagnosis. However, most of the current studies often deal with small single-site cohorts, along
+with a specific pre-processing pipeline and custom CNN architectures, which make them difficult
+to compare to. We propose an extensive benchmark of recent state-of-the-art (SOTA) 3D CNN, evaluating
+also the benefits of data augmentation and deep ensemble learning, on both Voxel-Based Morphometry
+(VBM) pre-processing and quasi-raw images. Experiments were conducted on a large multi-site 3D
+brain anatomical MRI data-set comprising N=10k scans on 3 challenging tasks: age prediction, sex
+classification, and schizophrenia diagnosis. We found that all models provide significantly
+better predictions with VBM images than quasi-raw data. This finding evolved as the training set
+approaches 10k samples where quasi-raw data almost reach the performance of VBM. Moreover, we showed
+that linear models perform comparably with SOTA CNN on VBM data. We also demonstrated that DenseNet
+and tiny-DenseNet, a lighter version that we proposed, provide a good compromise in terms of performance
+in all data regime. Therefore, we suggest to employ them as the architectures by default. Critically,
+we also showed that current CNN are still very biased towards the acquisition site, even when trained
+with N=10k multi-site images. In this context, VBM pre-processing provides an efficient way to
+limit this site effect. Surprisingly, we did not find any clear benefit from data augmentation techniques.
+Finally, we proved that deep ensemble learning is well suited to re-calibrate big CNN models without
+sacrificing performance. 

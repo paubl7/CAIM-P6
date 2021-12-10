@@ -1,0 +1,19 @@
+A Happiness Maximizing Set (HMS) is a useful concept in which a smaller subset of a database is selected
+while mostly preserving the best scores along every possible utility function. In this paper, we
+study the Average Happiness Maximizing Sets (AHMS) and $k$-Happiness Maximizing Sets ($k$-HMS)
+problems. Specifically, AHMS maximizes the average of this ratio within a distribution of utility
+functions. Meanwhile, $k$-HMS selects $r$ records from the database such that the minimum happiness
+ratio between the $k$-th best score in the database and the best score in the selected records for
+any possible utility function is maximized. AHMS and $k$-HMS seek the same optimal solutions as
+the more established Average Regret Minimizing Sets (ARMS) and $k$-Regret Minimizing Sets ($k$-RMS)
+problems, respectively, but the use of the happiness metric allows for the derivation of stronger
+theoretical results and more natural approximation schemes. We provide approximation algorithms
+for AHMS with better approximation ratios and time complexities than known algorithms for ARMS.
+Next, we show that the problem of approximating $k$-HMS within any finite factor is NP-Hard when
+the dimensionality of the database is unconstrained and extend the result to an inapproximability
+proof of $k$-RMS. Finally, we provide dataset reduction schemes which can be used to reduce the runtime
+of existing heuristic based algorithms, as well as to derive polynomial-time approximation schemes
+for both $k$-HMS when dimensionality is fixed. We further provide experimental validation showing
+that our AHMS algorithm achieves the same happiness as the existing Greedy Shrink FAM algorithm
+while running faster by over 2 orders of magnitude on even small datasets while our reduction scheme
+was able to reduce runtimes of existing $k$-RMS solvers by up to 92\%. 

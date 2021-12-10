@@ -1,0 +1,18 @@
+In recent years, as blockchain adoption has been expanding across a wide range of domains, e.g.,
+supply chain finance, digital asset, etc., the confidentiality of smart contracts has now become
+a fundamental demand for practical applications. However, while new privacy protection techniques
+are emerging, how existing ones can best fit development settings are understudied. State-of-the-art
+solutions lack architectural support - in terms of programming interfaces - thus are hardly able
+to reach general developers. This paper proposes Cloak, a pluggable and configurable framework
+for developing and deploying confidential smart contracts. The key capability of Cloak is to allow
+developers to implement and deploy practical solutions to \emph{multi-party transaction} (MPT)
+problems, i.e., to transact with secret inputs and states owned by different parties, by simply
+\emph{specifying} it. To this end, Cloak allows users to specify privacy invariants in a declarative
+way, automatically generate runtime with verifiably enforced privacy and deploy it to the existing
+platforms with TEE-Blockchain architecture, enabling the MPT. Additionally, we identify the
+pitfalls in achieving MPT, and provide the treat, i.e., non-deterministic negotiation and fair
+publication of MPT results. In our evaluation on both examples and real-world applications, developers
+manage to deploy business services on blockchain in a concise manner by only developing Cloak smart
+contracts, whose size is less than 30% of the deployed ones, and the gas cost of deployed MPTs reduced
+by 19%. We believe the insights learned from Cloak will pave the way for general-purpose multi-party
+privacy-preserved computation achieved by harmonizing TEE and blockchain. 

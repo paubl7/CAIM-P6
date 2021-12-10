@@ -1,0 +1,18 @@
+This paper presents a novel unsupervised approach to reconstruct human shape and pose from noisy
+point cloud. Traditional approaches search for correspondences and conduct model fitting iteratively
+where a good initialization is critical. Relying on large amount of dataset with ground-truth annotations,
+recent learning-based approaches predict correspondences for every vertice on the point cloud;
+Chamfer distance is usually used to minimize the distance between a deformed template model and
+the input point cloud. However, Chamfer distance is quite sensitive to noise and outliers, thus
+could be unreliable to assign correspondences. To address these issues, we model the probability
+distribution of the input point cloud as generated from a parametric human model under a Gaussian
+Mixture Model. Instead of explicitly aligning correspondences, we treat the process of correspondence
+search as an implicit probabilistic association by updating the posterior probability of the template
+model given the input. A novel unsupervised loss is further derived that penalizes the discrepancy
+between the deformed template and the input point cloud conditioned on the posterior probability.
+Our approach is very flexible, which works with both complete point cloud and incomplete ones including
+even a single depth image as input. Our network is trained from scratch with no need to warm-up the
+network with supervised data. Compared to previous unsupervised methods, our method shows the
+capability to deal with substantial noise and outliers. Extensive experiments conducted on various
+public synthetic datasets as well as a very noisy real dataset (i.e. CMU Panoptic) demonstrate the
+superior performance of our approach over the state-of-the-art methods. Code can be found \url{https://github.com/wangsen1312/unsupervised3dhuman.git}

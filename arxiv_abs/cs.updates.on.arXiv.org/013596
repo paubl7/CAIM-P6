@@ -1,0 +1,18 @@
+Processing-using-DRAM has been proposed for a limited set of basic operations (i.e., logic operations,
+addition). However, in order to enable the full adoption of processing-using-DRAM, it is necessary
+to provide support for more complex operations. In this paper, we propose SIMDRAM, a flexible general-purpose
+processing-using-DRAM framework that enables massively-parallel computation of a wide range
+of operations by using each DRAM column as an independent SIMD lane to perform bit-serial operations.
+SIMDRAM consists of three key steps to enable a desired operation in DRAM: (1) building an efficient
+majority-based representation of the desired operation, (2) mapping the operation input and output
+operands to DRAM rows and to the required DRAM commands that produce the desired operation, and (3)
+executing the operation. These three steps ensure efficient computation of any arbitrary and complex
+operation in DRAM. The first two steps give users the flexibility to efficiently implement and compute
+any desired operation in DRAM. The third step controls the execution flow of the in-DRAM computation,
+transparently from the user. We comprehensively evaluate SIMDRAM's reliability, area overhead,
+operation throughput, and energy efficiency using a wide range of operations and seven diverse
+real-world kernels to demonstrate its generality. Our results show that SIMDRAM provides up to
+5.1x higher operation throughput and 2.5x higher energy efficiency than a state-of-the-art in-DRAM
+computing mechanism, and up to 2.5x speedup for real-world kernels while incurring less than 1%
+DRAM chip area overhead. Compared to a CPU and a high-end GPU, SIMDRAM is 257x and 31x more energy-efficient,
+while providing 93x and 6x higher operation throughput, respectively. 

@@ -1,0 +1,20 @@
+Commit messages are natural language descriptions of code changes, which are important for program
+understanding and maintenance. However, writing commit messages manually is time-consuming
+and laborious, especially when the code is updated frequently. Various approaches utilizing generation
+or retrieval techniques have been proposed to automatically generate commit messages. To achieve
+a better understanding of how the existing approaches perform in solving this problem, this paper
+conducts a systematic and in-depth analysis of the state-of-the-art models and datasets. We find
+that: (1) Different variants of the BLEU metric are used in previous works, which affects the evaluation
+and understanding of existing methods. (2) Most existing datasets are crawled only from Java repositories
+while repositories in other programming languages are not sufficiently explored. (3) Dataset
+splitting strategies can influence the performance of existing models by a large margin. Some models
+show better performance when the datasets are split by commit, while other models perform better
+when the datasets are split by timestamp or by project. Based on our findings, we conduct a human evaluation
+and find the BLEU metric that best correlates with the human scores for the task. We also collect a
+large-scale, information-rich, and multi-language commit message dataset MCMD and evaluate
+existing models on this dataset. Furthermore, we conduct extensive experiments under different
+dataset splitting strategies and suggest the suitable models under different scenarios. Based
+on the experimental results and findings, we provide feasible suggestions for comprehensively
+evaluating commit message generation models and discuss possible future research directions.
+We believe this work can help practitioners and researchers better evaluate and select models for
+automatic commit message generation. 

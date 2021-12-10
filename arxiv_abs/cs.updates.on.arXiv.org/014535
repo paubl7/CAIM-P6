@@ -1,0 +1,19 @@
+As genome sequencing tools and techniques improve, researchers are able to incrementally assemble
+more accurate reference genomes, which enable sensitivity in read mapping and downstream analysis
+such as variant calling. A more sensitive downstream analysis is critical for a better understanding
+of the genome donor (e.g., health characteristics). Therefore, read sets from sequenced samples
+should ideally be mapped to the latest available reference genome that represents the most relevant
+population. Unfortunately, the increasingly large amount of available genomic data makes it prohibitively
+expensive to fully re-map each read set to its respective reference genome every time the reference
+is updated. There are several tools that attempt to accelerate the process of updating a read data
+set from one reference to another (i.e., remapping). However, if a read maps to a region in the old
+reference that does not appear with a reasonable degree of similarity in the new reference, the read
+cannot be remapped. We find that, as a result of this drawback, a significant portion of annotations
+are lost when using state-of-the-art remapping tools. To address this major limitation in existing
+tools, we propose AirLift, a fast and comprehensive technique for remapping alignments from one
+genome to another. Compared to the state-of-the-art method for remapping reads (i.e., full mapping),
+AirLift reduces 1) the number of reads that need to be fully mapped to the new reference by up to 99.99\%
+and 2) the overall execution time to remap read sets between two reference genome versions by 6.7x,
+6.6x, and 2.8x for large (human), medium (C. elegans), and small (yeast) reference genomes, respectively.
+We validate our remapping results with GATK and find that AirLift provides similar accuracy in identifying
+ground truth SNP and INDEL variants as the baseline of fully mapping a read set. 

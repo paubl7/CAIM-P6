@@ -1,0 +1,18 @@
+In real-world video surveillance applications, person re-identification (ReID) suffers from
+the effects of occlusions and detection errors. Despite recent advances, occlusions continue
+to corrupt the features extracted by state-of-art CNN backbones, and thereby deteriorate the accuracy
+of ReID systems. To address this issue, methods in the literature use an additional costly process
+such as pose estimation, where pose maps provide supervision to exclude occluded regions. In contrast,
+we introduce a novel Holistic Guidance (HG) method that relies only on person identity labels, and
+on the distribution of pairwise matching distances of datasets to alleviate the problem of occlusion,
+without requiring additional supervision. Hence, our proposed student-teacher framework is
+trained to address the occlusion problem by matching the distributions of between- and within-class
+distances (DCDs) of occluded samples with that of holistic (non-occluded) samples, thereby using
+the latter as a soft labeled reference to learn well separated DCDs. This approach is supported by
+our empirical study where the distribution of between- and within-class distances between images
+have more overlap in occluded than holistic datasets. In particular, features extracted from both
+datasets are jointly learned using the student model to produce an attention map that allows separating
+visible regions from occluded ones. In addition to this, a joint generative-discriminative backbone
+is trained with a denoising autoencoder, allowing the system to self-recover from occlusions.
+Extensive experiments on several challenging public datasets indicate that the proposed approach
+can outperform state-of-the-art methods on both occluded and holistic datasets 

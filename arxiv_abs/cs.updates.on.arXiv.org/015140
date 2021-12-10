@@ -1,0 +1,19 @@
+Motivated by recent interest in federated submodel learning, this work explores the fundamental
+problem of privately reading from and writing to a database comprised of $K$ files (submodels) that
+are stored across $N$ distributed servers according to an $X$-secure threshold secret sharing
+scheme. One after another, various users wish to retrieve their desired file, locally process the
+information and then update the file in the distributed database while keeping the identity of their
+desired file private from any set of up to $T$ colluding servers. The availability of servers changes
+over time, so elastic dropout resilience is required. The main contribution of this work is an adaptive
+scheme, called ACSA-RW, that takes advantage of all currently available servers to reduce its communication
+costs, fully updates the database after each write operation even though the database is only partially
+accessible due to server dropouts, and ensures a memoryless operation of the network in the sense
+that the storage structure is preserved and future users may remain oblivious of the past history
+of server dropouts. The ACSA-RW construction builds upon CSA codes that were originally introduced
+for XSTPIR and have been shown to be natural solutions for secure distributed matrix multiplication
+problems. ACSA-RW achieves the desired private read and write functionality with elastic dropout
+resilience, matches the best results for private-read from PIR literature, improves significantly
+upon available baselines for private-write, reveals a striking symmetry between upload and download
+costs, and exploits redundant storage dimensions to accommodate arbitrary read and write dropout
+servers up to certain threshold values. It also answers in the affirmative an open question by Kairouz
+et al. by exploiting synergistic gains from the joint design of private read and write operations.

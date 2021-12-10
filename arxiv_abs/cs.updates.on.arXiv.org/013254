@@ -1,0 +1,19 @@
+State-of-the-art deep learning systems often require large amounts of data and computation. For
+this reason, leveraging known or unknown structure of the data is paramount. Convolutional neural
+networks (CNNs) are successful examples of this principle, their defining characteristic being
+the shift-equivariance. By sliding a filter over the input, when the input shifts, the response
+shifts by the same amount, exploiting the structure of natural images where semantic content is
+independent of absolute pixel positions. This property is essential to the success of CNNs in audio,
+image and video recognition tasks. In this thesis, we extend equivariance to other kinds of transformations,
+such as rotation and scaling. We propose equivariant models for different transformations defined
+by groups of symmetries. The main contributions are (i) polar transformer networks, achieving
+equivariance to the group of similarities on the plane, (ii) equivariant multi-view networks,
+achieving equivariance to the group of symmetries of the icosahedron, (iii) spherical CNNs, achieving
+equivariance to the continuous 3D rotation group, (iv) cross-domain image embeddings, achieving
+equivariance to 3D rotations for 2D inputs, and (v) spin-weighted spherical CNNs, generalizing
+the spherical CNNs and achieving equivariance to 3D rotations for spherical vector fields. Applications
+include image classification, 3D shape classification and retrieval, panoramic image classification
+and segmentation, shape alignment and pose estimation. What these models have in common is that
+they leverage symmetries in the data to reduce sample and model complexity and improve generalization
+performance. The advantages are more significant on (but not limited to) challenging tasks where
+data is limited or input perturbations such as arbitrary rotations are present. 

@@ -1,0 +1,20 @@
+Detection of many compact binary coalescences (CBCs) is one of the primary goals of the present and
+future ground-based gravitational-wave (GW) detectors. While increasing the detectors' sensitivities
+will be crucial in achieving this, efficient data analysis strategies can play a vital role. With
+given computational power in hand, efficient data analysis techniques can expand the size and dimensionality
+of the parameter space to search for a variety of GW sources. Matched filtering based analyses that
+depend on modeled signals to produce adequate signal-to-noise ratios for signal detection may
+miss them if the parameter space is too restrained. Specifically, the CBC search is currently limited
+to non-precessing binaries only, where the spins of the components are either aligned or anti-aligned
+to the orbital angular momentum. A hierarchical search for CBCs is thus well motivated. The first
+stage of this search is performed by matched filtering coarsely sampled data with a coarse template
+bank to look for candidate events. These candidates are then followed up for a finer search around
+the vicinity of an event's parameter space. Performing such a search leads to enormous savings in
+computational cost. Here we report the first successful implementation of the hierarchical search
+as a PyCBC-based production pipeline to perform a complete analysis of LIGO observing runs. With
+this, we analyze Advanced LIGO's first and second observing run data. We recover all the events detected
+by the PyCBC (flat) search in the first GW catalog, GWTC-1, published by the LIGO-Virgo collaboration,
+with nearly the same significance using a scaled background. In the analysis, we get an impressive
+factor of 20 speed-up in computation compared to the flat search. With a standard injection study,
+we show that the sensitivity of the hierarchical search remains comparable to the flat search within
+the error bars. 

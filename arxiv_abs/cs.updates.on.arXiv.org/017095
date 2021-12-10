@@ -1,0 +1,19 @@
+Some real problems require the evaluation of expensive and noisy objective functions. Moreover,
+the analytical expression of these objective functions may be unknown. These functions are known
+as black-boxes, for example, estimating the generalization error of a machine learning algorithm
+and computing its prediction time in terms of its hyper-parameters. Multi-objective Bayesian
+optimization (MOBO) is a set of methods that has been successfully applied for the simultaneous
+optimization of black-boxes. Concretely, BO methods rely on a probabilistic model of the objective
+functions, typically a Gaussian process. This model generates a predictive distribution of the
+objectives. However, MOBO methods have problems when the number of objectives in a multi-objective
+optimization problem are 3 or more, which is the many objective setting. In particular, the BO process
+is more costly as more objectives are considered, computing the quality of the solution via the hyper-volume
+is also more costly and, most importantly, we have to evaluate every objective function, wasting
+expensive computational, economic or other resources. However, as more objectives are involved
+in the optimization problem, it is highly probable that some of them are redundant and not add information
+about the problem solution. A measure that represents how similar are GP predictive distributions
+is proposed. We also propose a many objective Bayesian optimization algorithm that uses this metric
+to determine whether two objectives are redundant. The algorithm stops evaluating one of them if
+the similarity is found, saving resources and not hurting the performance of the multi-objective
+BO algorithm. We show empirical evidence in a set of toy, synthetic, benchmark and real experiments
+that GPs predictive distributions of the effectiveness of the metric and the algorithm. 

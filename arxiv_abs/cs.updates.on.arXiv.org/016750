@@ -1,0 +1,18 @@
+Blockchain assisted federated learning (BFL) has been intensively studied as a promising technology
+to process data at the network edge in a distributed manner. In this paper, we focus on BFL over wireless
+environments with varying channels and energy harvesting at clients. We are interested in proposing
+dynamic resource allocation (i.e., transmit power, computation frequency for model training
+and block mining for each client) and client scheduling (DRACS) to maximize the long-term time average
+(LTA) training data size with an LTA energy consumption constraint. Specifically, we first define
+the Lyapunov drift by converting the LTA energy consumption to a queue stability constraint. Then,
+we construct a Lyapunov drift-plus-penalty ratio function to decouple the original stochastic
+problem into multiple deterministic optimizations along the time line. Our construction is capable
+of dealing with uneven durations of communication rounds. To make the one-shot deterministic optimization
+problem of combinatorial fractional form tractable, we next convert the fractional problem into
+a subtractive-form one by Dinkelbach method, which leads to the asymptotically optimal solution
+in an iterative way. In addition, the closed-form of the optimal resource allocation and client
+scheduling is obtained in each iteration with a low complexity. Furthermore, we conduct the performance
+analysis for the proposed algorithm, and discover that the LTA training data size and energy consumption
+obey an [$\mathcal{O}(1/V)$, $\mathcal{O}(\sqrt{V})$] trade-off. Our experimental results
+show that the proposed algorithm can provide both higher learning accuracy and faster convergence
+with limited time and energy consumption based on the MNIST and Fashion-MNIST datasets. 

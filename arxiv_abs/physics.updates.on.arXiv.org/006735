@@ -1,0 +1,19 @@
+Purpose: To develop a scan-specific model that estimates and corrects k-space errors made when
+reconstructing accelerated Magnetic Resonance Imaging (MRI) data. Methods: Scan-Specific Artifact
+Reduction in k-space (SPARK) trains a convolutional-neural-network to estimate and correct k-space
+errors made by an input reconstruction technique by back-propagating from the mean-squared-error
+loss between an auto-calibration signal (ACS) and the input technique's reconstructed ACS. First,
+SPARK is applied to GRAPPA and demonstrates improved robustness over other scan-specific models,
+such as RAKI and residual-RAKI. Subsequent experiments demonstrate that SPARK synergizes with
+residual-RAKI to improve reconstruction performance. SPARK also improves reconstruction quality
+when applied to advanced acquisition and reconstruction techniques like 2D virtual coil (VC-)
+GRAPPA, 2D LORAKS, 3D GRAPPA without an integrated ACS region, and 2D/3D wave-encoded images. Results:
+SPARK yields 1.5x - 2x RMSE reduction when applied to GRAPPA and improves robustness to ACS size for
+various acceleration rates in comparison to other scan-specific techniques. When applied to advanced
+reconstruction techniques such as residual-RAKI, 2D VC-GRAPPA and LORAKS, SPARK achieves up to
+20% RMSE improvement. SPARK with 3D GRAPPA also improves performance by ~2x and perceived image
+quality without a fully sampled ACS region. Finally, SPARK synergizes with non-cartesian 2D and
+3D wave-encoding imaging by reducing RMSE between 20-25% and providing qualitative improvements.
+Conclusion: SPARK synergizes with physics-based acquisition and reconstruction techniques
+to improve accelerated MRI by training scan-specific models to estimate and correct reconstruction
+errors in k-space. 

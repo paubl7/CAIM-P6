@@ -1,0 +1,18 @@
+The original Broad Learning System (BLS) on new added nodes and its existing efficient implementation
+both assume the ridge parameter is near 0 in the ridge inverse to approximate the generalized inverse,
+and compute the generalized inverse solution for the output weights. In this paper, we propose two
+ridge solutions for the output weights in the BLS on added nodes, where the ridge parameter can be
+any positive real number. One of the proposed ridge solutions computes the output weights from the
+inverse Cholesky factor, which is updated by extending the existing inverse Cholesky factorization.
+The other proposed ridge solution computes the output weights from the ridge inverse, and updates
+the ridge inverse by extending the Greville method that can only computes the generalized inverse
+of a partitioned matrix. The proposed BLS algorithm based on the ridge inverse requires the same
+complexity as the original BLS algorithm, while the proposed BLS algorithm based on the inverse
+Cholesky factor requires less complexity and training time than the original BLS and the existing
+efficient BLS. Both the proposed ridge solutions for BLS achieve the same testing accuracy as the
+standard ridge solution in the numerical experiments. The difference between the testing accuracy
+of the proposed ridge solutions and that of the existing generalized inverse solutions is negligible
+when the ridge parameter is very small, and becomes too big to be ignored when the ridge parameter
+is not very small. When the ridge parameter is not near 0, usually the proposed two ridge solutions
+for BLS achieve better testing accuracy than the existing generalized inverse solutions for BLS,
+and then the former are more preferred than the latter. 

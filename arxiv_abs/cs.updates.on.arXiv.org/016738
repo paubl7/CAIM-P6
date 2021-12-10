@@ -1,0 +1,18 @@
+A new learning paradigm, self-supervised learning (SSL), can be used to solve such problems by pre-training
+a general model with large unlabeled images and then fine-tuning on a downstream task with very few
+labeled samples. Contrastive learning is a typical method of SSL, which can learn general invariant
+features. However, most of the existing contrastive learning is designed for classification tasks
+to obtain an image-level representation, which may be sub-optimal for semantic segmentation tasks
+requiring pixel-level discrimination. Therefore, we propose Global style and Local matching
+Contrastive Learning Network (GLCNet) for remote sensing semantic segmentation. Specifically,
+the global style contrastive module is used to learn an image-level representation better, as we
+consider the style features can better represent the overall image features; The local features
+matching contrastive module is designed to learn representations of local regions which is beneficial
+for semantic segmentation. We evaluate four remote sensing semantic segmentation datasets, and
+the experimental results show that our method mostly outperforms state-of-the-art self-supervised
+methods and ImageNet pre-training. Specifically, with 1\% annotation from the original dataset,
+our approach improves Kappa by 6\% on the ISPRS Potsdam dataset and 3\% on Deep Globe Land Cover Classification
+dataset relative to the existing baseline. Moreover, our method outperforms supervised learning
+when there are some differences between the datasets of upstream tasks and downstream tasks. Our
+study promotes the development of self-supervised learning in the field of remote sensing semantic
+segmentation. The source code is available at https://github.com/GeoX-Lab/G-RSIM. 

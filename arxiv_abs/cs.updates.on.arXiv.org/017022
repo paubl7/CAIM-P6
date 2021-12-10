@@ -1,0 +1,19 @@
+Visually-aware recommendation on E-commerce platforms aims to leverage visual information of
+items to predict a user's preference. It is commonly observed that user's attention to visual features
+does not always reflect the real preference. Although a user may click and view an item in light of
+a visual satisfaction of their expectations, a real purchase does not always occur due to the unsatisfaction
+of other essential features (e.g., brand, material, price). We refer to the reason for such a visually
+related interaction deviating from the real preference as a visual bias. Existing visually-aware
+models make use of the visual features as a separate collaborative signal similarly to other features
+to directly predict the user's preference without considering a potential bias, which gives rise
+to a visually biased recommendation. In this paper, we derive a causal graph to identify and analyze
+the visual bias of these existing methods. In this causal graph, the visual feature of an item acts
+as a mediator, which could introduce a spurious relationship between the user and the item. To eliminate
+this spurious relationship that misleads the prediction of the user's real preference, an intervention
+and a counterfactual inference are developed over the mediator. Particularly, the Total Indirect
+Effect is applied for a debiased prediction during the testing phase of the model. This causal inference
+framework is model agnostic such that it can be integrated into the existing methods. Furthermore,
+we propose a debiased visually-aware recommender system, denoted as CausalRec to effectively
+retain the supportive significance of the visual information and remove the visual bias. Extensive
+experiments are conducted on eight benchmark datasets, which shows the state-of-the-art performance
+of CausalRec and the efficacy of debiasing. 

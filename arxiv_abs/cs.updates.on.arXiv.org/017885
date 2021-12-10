@@ -1,0 +1,19 @@
+Classic image scaling (e.g. bicubic) can be seen as one convolutional layer and a single upscaling
+filter. Its implementation is ubiquitous in all display devices and image processing software.
+In the last decade deep learning systems have been introduced for the task of image super-resolution
+(SR), using several convolutional layers and numerous filters. These methods have taken over the
+benchmarks of image quality for upscaling tasks. Would it be possible to replace classic upscalers
+with deep learning architectures on edge devices such as display panels, tablets, laptop computers,
+etc.? On one hand, the current trend in Edge-AI chips shows a promising future in this direction,
+with rapid development of hardware that can run deep-learning tasks efficiently. On the other hand,
+in image SR only few architectures have pushed the limit to extreme small sizes that can actually
+run on edge devices at real-time. We explore possible solutions to this problem with the aim to fill
+the gap between classic upscalers and small deep learning configurations. As a transition from
+classic to deep-learning upscaling we propose edge-SR (eSR), a set of one-layer architectures
+that use interpretable mechanisms to upscale images. Certainly, a one-layer architecture cannot
+reach the quality of deep learning systems. Nevertheless, we find that for high speed requirements,
+eSR becomes better at trading-off image quality and runtime performance. Filling the gap between
+classic and deep-learning architectures for image upscaling is critical for massive adoption
+of this technology. It is equally important to have an interpretable system that can reveal the inner
+strategies to solve this problem and guide us to future improvements and better understanding of
+larger networks. 

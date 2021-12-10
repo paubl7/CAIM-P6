@@ -1,0 +1,20 @@
+A two-phase, low-Mach-number flow solver is proposed for compressible liquid and gas with phase
+change. The interface is tracked using a split Volume-of-Fluid method, which solves the advection
+of the liquid phase. This split advection method is generalized for the case where the liquid velocity
+is not divergence-free and both phases exchange mass across the interface, as happens at near-critical
+and supercritical pressure conditions. In this thermodynamic environment, the dissolution of
+lighter gas species into the liquid phase is enhanced and vaporization or condensation can occur
+simultaneously at different locations along the interface. A sharp interface is identified with
+a Piecewise Linear Interface Construction (PLIC). Mass conservation to machine-error precision
+is achieved in the limit of incompressible liquid, but not with the liquid compressibility and mass
+exchange. The numerical cost of solving two-phase, supercritical flows is very high because: a)
+local phase equilibrium is imposed at each interface cell to determine the interface solution (e.g.,
+temperature); b) a complete thermodynamic model is used to obtain fluid properties; and c) phase-wise
+values for certain variables (i.e., velocity) are obtained via extrapolation techniques. Furthermore,
+the Volume-of-Fluid method and the PLIC add extra computational costs. To alleviate this numerical
+cost, the pressure Poisson equation (PPE) is split into a constant-coefficient implicit part and
+a variable-coefficient explicit part. Thus, a Fast Fourier Transform (FFT) method can be used to
+solve the PPE. Various validation tests are performed to show the accuracy and viability of the present
+approach. Then, the growth of surface instabilities in a binary system composed of liquid n-decane
+and gaseous oxygen at supercritical pressures for n-decane are analyzed. Other features of supercritical
+liquid injection are also shown. 

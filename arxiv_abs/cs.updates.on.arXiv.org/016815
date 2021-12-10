@@ -1,0 +1,18 @@
+In the first part of this dissertation research, we develop a modular framework that can serve as
+a recipe for constructing and analyzing iterative algorithms for convex optimization. Specifically,
+our work casts optimization as iteratively playing a two-player zero-sum game. Many existing optimization
+algorithms including Frank-Wolfe and Nesterov's acceleration methods can be recovered from the
+game by pitting two online learners with appropriate strategies against each other. Furthermore,
+the sum of the weighted average regrets of the players in the game implies the convergence rate. As
+a result, our approach provides simple alternative proofs to these algorithms. Moreover, we demonstrate
+that our approach of optimization as iteratively playing a game leads to three new fast Frank-Wolfe-like
+algorithms for some constraint sets, which further shows that our framework is indeed generic,
+modular, and easy-to-use. In the second part, we develop a modular analysis of provable acceleration
+via Polyak's momentum for certain problems, which include solving the classical strongly quadratic
+convex problems, training a wide ReLU network under the neural tangent kernel regime, and training
+a deep linear network with an orthogonal initialization. We develop a meta theorem and show that
+when applying Polyak's momentum for these problems, the induced dynamics exhibit a form where we
+can directly apply our meta theorem. In the last part of the dissertation, we show another advantage
+of the use of Polyak's momentum -- it facilitates fast saddle point escape in smooth non-convex optimization.
+This result, together with those of the second part, sheds new light on Polyak's momentum in modern
+non-convex optimization and deep learning. 

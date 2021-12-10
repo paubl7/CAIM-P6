@@ -1,0 +1,18 @@
+We investigate higher order symplectic integration strategies within Bayesian cosmic density
+field reconstruction methods. In particular, we study the fourth-order discretisation of Hamiltonian
+equations of motion (EoM). This is achieved by recursively applying the basic second-order leap-frog
+scheme (considering the single evaluation of the EoM) in a combination of even numbers of forward
+time integration steps with a single intermediate backward step. This largely reduces the number
+of evaluations and random gradient computations, as required in the usual second-order case for
+high-dimensional cases. We restrict this study to the lognormal-Poisson model, applied to a full
+volume halo catalogue in real space on a cubical mesh of 1250 $h^{-1}$ Mpc side and 256$^3$ cells.
+Hence, we neglect selection effects, redshift space distortions, and displacements. We note that
+those observational and cosmic evolution effects can be accounted for in subsequent Gibbs-sampling
+steps within the COSMIC BIRTH algorithm. We find that going from the usual second to fourth-order
+in the leap-frog scheme shortens the burn-in phase by a factor of at least $\sim30$. This implies
+that 75-90 independent samples are obtained while the fastest second-order method converges.
+After convergence, the correlation lengths indicate an improvement factor of about 3.0 fewer gradient
+computations for meshes of 256$^3$ cells. In the considered cosmological scenario, the traditional
+leap-frog scheme turns out to outperform higher order integration schemes only at lower dimensional
+problems, e.g. meshes with 64$^3$ cells. This gain in computational efficiency can help to go towards
+a full Bayesian analysis of the cosmological large-scale structure for upcoming galaxy surveys.

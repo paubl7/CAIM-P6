@@ -1,0 +1,20 @@
+This study provides an efficient approach for using text data to calculate patent-to-patent (p2p)
+technological similarity, and presents a hybrid framework for leveraging the resulting p2p similarity
+for applications such as semantic search and automated patent classification. We create embeddings
+using Sentence-BERT (SBERT) based on patent claims. To further increase the patent embedding quality,
+we use transformer models based on SBERT and RoBERT, and apply the augmented approach for fine-tuning
+SBERT by in-domain supervised patent claims data. We leverage SBERTs efficiency in creating embedding
+distance measures to map p2p similarity in large sets of patent data. We deploy our framework for
+classification with a simple Nearest Neighbors (KNN) model that predicts Cooperative Patent Classification
+(CPC) of a patent based on the CPC assignment of the K patents with the highest p2p similarity. We thereby
+validate that p2p similarity captures their technological features in terms of CPC overlap, and
+at the same demonstrate the usefulness of this approach for automatic patent classification based
+on text data. In the out-of-sample model validation, we are able to perform a multi-label prediction
+of all assigned CPC classes on the subclass (640) level on 163,269 patents with an accuracy of 54%
+and F1 score > 63%, which suggests that our model outperforms the current state-of-the-art in text-based
+multi-label and multi-class patent classification by a margin of > 18% F1 score. We furthermore
+discuss the applicability of the presented framework for semantic IP search, patent landscaping,
+and technology intelligence. We finally point towards a future research agenda for leveraging
+multi-source patent embeddings, their appropriateness across applications, as well as to improve
+and validate patent embeddings by creating domain-expert curated Semantic Textual Similarity
+(STS) benchmark datasets. 

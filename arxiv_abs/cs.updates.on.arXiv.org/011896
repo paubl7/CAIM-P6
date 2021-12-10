@@ -1,0 +1,18 @@
+Existing part-aware person re-identification methods typically employ two separate steps: namely,
+body part detection and part-level feature extraction. However, part detection introduces an
+additional computational cost and is inherently challenging for low-quality images. Accordingly,
+in this work, we propose a simple framework named Batch Coherence-Driven Network (BCD-Net) that
+bypasses body part detection during both the training and testing phases while still learning semantically
+aligned part features. Our key observation is that the statistics in a batch of images are stable,
+and therefore that batch-level constraints are robust. First, we introduce a batch coherence-guided
+channel attention (BCCA) module that highlights the relevant channels for each respective part
+from the output of a deep backbone model. We investigate channelpart correspondence using a batch
+of training images, then impose a novel batch-level supervision signal that helps BCCA to identify
+part-relevant channels. Second, the mean position of a body part is robust and consequently coherent
+between batches throughout the training process. Accordingly, we introduce a pair of regularization
+terms based on the semantic consistency between batches. The first term regularizes the high responses
+of BCD-Net for each part on one batch in order to constrain it within a predefined area, while the second
+encourages the aggregate of BCD-Nets responses for all parts covering the entire human body. The
+above constraints guide BCD-Net to learn diverse, complementary, and semantically aligned part-level
+features. Extensive experimental results demonstrate that BCDNet consistently achieves state-of-the-art
+performance on four large-scale ReID benchmarks. 

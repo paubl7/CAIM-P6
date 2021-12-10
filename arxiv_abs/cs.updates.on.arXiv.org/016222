@@ -1,0 +1,19 @@
+With the increase in the learning capability of deep convolution-based architectures, various
+applications of such models have been proposed over time. In the field of anomaly detection, improvements
+in deep learning opened new prospects of exploration for the researchers whom tried to automate
+the labor-intensive features of data collection. First, in terms of data collection, it is impossible
+to anticipate all the anomalies that might exist in a given environment. Second, assuming we limit
+the possibilities of anomalies, it will still be hard to record all these scenarios for the sake of
+training a model. Third, even if we manage to record a significant amount of abnormal data, it's laborious
+to annotate this data on pixel or even frame level. Various approaches address the problem by proposing
+one-class classification using generative models trained on only normal data. In such methods,
+only the normal data is used, which is abundantly available and doesn't require significant human
+input. However, these are trained with only normal data and at the test time, given abnormal data
+as input, may often generate normal-looking output. This happens due to the hallucination characteristic
+of generative models. Next, these systems are designed to not use abnormal examples during the training.
+In this paper, we propose anomaly detection with negative learning (ADNL), which employs the negative
+learning concept for the enhancement of anomaly detection by utilizing a very small number of labeled
+anomaly data as compared with the normal data during training. The idea is to limit the reconstruction
+capability of a generative model using the given a small amount of anomaly examples. This way, the
+network not only learns to reconstruct normal data but also encloses the normal distribution far
+from the possible distribution of anomalies. 

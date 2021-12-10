@@ -1,0 +1,20 @@
+Federated learning (FL) is a promising privacy-preserving distributed machine learning methodology
+that allows multiple clients (i.e., workers) to collaboratively train statistical models without
+disclosing private training data. Due to the characteristics of data remaining localized and the
+uninspected on-device training process, there may exist Byzantine workers launching data poisoning
+and model poisoning attacks, which would seriously deteriorate model performance or prevent the
+model from convergence. Most of the existing Byzantine-robust FL schemes are either ineffective
+against several advanced poisoning attacks or need to centralize a public validation dataset,
+which is intractable in FL. Moreover, to the best of our knowledge, none of the existing Byzantine-robust
+distributed learning methods could well exert its power in Non-Independent and Identically distributed
+(Non-IID) data among clients. To address these issues, we propose FedCom, a novel Byzantine-robust
+federated learning framework by incorporating the idea of commitment from cryptography, which
+could achieve both data poisoning and model poisoning tolerant FL under practical Non-IID data
+partitions. Specifically, in FedCom, each client is first required to make a commitment to its local
+training data distribution. Then, we identify poisoned datasets by comparing the Wasserstein
+distance among commitments submitted by different clients. Furthermore, we distinguish abnormal
+local model updates from benign ones by testing each local model's behavior on its corresponding
+data commitment. We conduct an extensive performance evaluation of FedCom. The results demonstrate
+its effectiveness and superior performance compared to the state-of-the-art Byzantine-robust
+schemes in defending against typical data poisoning and model poisoning attacks under practical
+Non-IID data distributions. 

@@ -1,0 +1,19 @@
+Machine learning has recently demonstrated impressive progress in predictive accuracy across
+a wide array of tasks. Most ML approaches focus on generalization performance on unseen data that
+are similar to the training data (In-Distribution, or IND). However, real world applications and
+deployments of ML rarely enjoy the comfort of encountering examples that are always IND. In such
+situations, most ML models commonly display erratic behavior on Out-of-Distribution (OOD) examples,
+such as assigning high confidence to wrong predictions, or vice-versa. Implications of such unusual
+model behavior are further exacerbated in the healthcare setting, where patient health can potentially
+be put at risk. It is crucial to study the behavior and robustness properties of models under distributional
+shift, understand common failure modes, and take mitigation steps before the model is deployed.
+Having a benchmark that shines light upon these aspects of a model is a first and necessary step in
+addressing the issue. Recent work and interest in increasing model robustness in OOD settings have
+focused more on image modality, while the Electronic Health Record (EHR) modality is still largely
+under-explored. We aim to bridge this gap by releasing BEDS-Bench, a benchmark for quantifying
+the behavior of ML models over EHR data under OOD settings. We use two open access, de-identified
+EHR datasets to construct several OOD data settings to run tests on, and measure relevant metrics
+that characterize crucial aspects of a model's OOD behavior. We evaluate several learning algorithms
+under BEDS-Bench and find that all of them show poor generalization performance under distributional
+shift in general. Our results highlight the need and the potential to improve robustness of EHR models
+under distributional shift, and BEDS-Bench provides one way to measure progress towards that goal.

@@ -1,0 +1,19 @@
+Coded computing is an effective technique to mitigate "stragglers" in large-scale and distributed
+matrix multiplication. In particular, univariate polynomial codes have been shown to be effective
+in straggler mitigation by making the task completion time to depend only on the fastest workers.
+However, these schemes completely ignore the work done by the straggling workers resulting in a
+waste of computational resources. To reduce the amount of work left unfinished at workers, one can
+further decompose the matrix multiplication task into smaller sub-tasks, and assign multiple
+sub-tasks to each worker, possibly heterogeneously, to better fit their particular storage and
+computation capacities. In this work, we propose bivariate polynomial codes to efficiently exploit
+the work carried out by straggling workers. We show that bivariate polynomial codes bring significant
+advantages in terms of upload communication costs and storage efficiency, measured in terms of
+number of sub-tasks that can be computed per worker. We propose two bivariate polynomial coding
+schemes. The first one exploits the fact that bivariate interpolation is always possible on a rectangular
+grid of evaluation points. We obtain such points at the cost of adding some redundant computations.
+For the second scheme, we relax the decoding constraints, and require decodability for almost all
+choices of the evaluation points. We present interpolation sets satisfying the such decodability
+conditions for certain storage configurations of workers. Our numerical results show that bivariate
+polynomial coding considerably reduces the completion time of distributed matrix multiplication.
+We believe that this work opens up a new class of previously unexplored coding schemes for efficient
+coded distributed computation. 

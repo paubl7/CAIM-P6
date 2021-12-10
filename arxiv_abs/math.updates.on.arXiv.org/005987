@@ -1,0 +1,18 @@
+In this paper, we derive a new dimension-free non-asymptotic upper bound for the quadratic $k$-means
+excess risk related to the quantization of an i.i.d sample in a separable Hilbert space. We improve
+the bound of order $\mathcal{O} \bigl( k / \sqrt{n} \bigr)$ of Biau, Devroye and Lugosi, recovering
+the rate $\sqrt{k/n}$ that has already been proved by Fefferman, Mitter, and Narayanan and by Klochkov,
+Kroshnin and Zhivotovskiy but with worse log factors and constants. More precisely, we bound the
+mean excess risk of an empirical minimizer by the explicit upper bound $16 B^2 \log(n/k) \sqrt{k
+\log(k) / n}$, in the bounded case when $\mathbb{P}( \lVert X \rVert \leq B) = 1$. This is essentially
+optimal up to logarithmic factors since a lower bound of order $\mathcal{O} \bigl( \sqrt{k^{1 -
+4/d}/n} \bigr)$ is known in dimension $d$. Our technique of proof is based on the linearization of
+the $k$-means criterion through a kernel trick and on PAC-Bayesian inequalities. To get a $1 / \sqrt{n}$
+speed, we introduce a new PAC-Bayesian chaining method replacing the concept of $\delta$-net with
+the perturbation of the parameter by an infinite dimensional Gaussian process. In the meantime,
+we embed the usual $k$-means criterion into a broader family built upon the Kullback divergence
+and its underlying properties. This results in a new algorithm that we named information $k$-means,
+well suited to the clustering of bags of words. Based on considerations from information theory,
+we also introduce a new bounded $k$-means criterion that uses a scale parameter but satisfies a generalization
+bound that does not require any boundedness or even integrability conditions on the sample. We describe
+the counterpart of Lloyd's algorithm and prove generalization bounds for these new $k$-means criteria.

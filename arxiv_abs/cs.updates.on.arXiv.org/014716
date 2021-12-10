@@ -1,0 +1,19 @@
+Performance increase with general-purpose processors has come to a halt. We can no longer depend
+on Moore's Law to increase computing performance. The only way to achieve higher performance or
+lower energy consumption is by building domain-specific hardware accelerators. To efficiently
+design and verify those domain-specific accelerators, we need agile hardware development. One
+of the main obstacles when proposing such a modern method is the lack of modern tools to attack it.
+To be able to verify a design in such a time-constrained development method, one needs to have efficient
+tools both for design and verification. This paper thus proposes ChiselVerify, an open-source
+tool for verifying circuits described in any Hardware Description Language. It builds on top of
+the Chisel hardware construction language and uses Scala to drive the verification using a testing
+strategy inspired by the Universal Verification Methodology (UVM) and adapted for designs described
+in Chisel. ChiselVerify is created based on three key ideas. First, our solution highly increases
+the productivity of the verification engineer, by allowing hardware testing to be done in a modern
+high-level programming environment. Second, the framework functions with any hardware description
+language thanks to the flexibility of Chisel blackboxes. Finally, the solution is well integrated
+into the existing Chisel universe, making it an extension of currently existing testing libraries.
+We implement ChiselVerify in a way inspired by the functionalities found in SystemVerilog. This
+allows one to use functional coverage, constrained-random verification, bus functional models,
+transaction-level modeling and much more during the verification process of a design in a contemporary
+high-level programming ecosystem. 

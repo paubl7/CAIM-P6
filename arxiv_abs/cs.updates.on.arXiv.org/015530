@@ -1,0 +1,18 @@
+Single image super-resolution (SISR) is one of the most challenging problems in the field of computer
+vision. Among the deep convolutional neural network based methods, attention mechanism has shown
+the enormous potential. However, due to the diverse network architectures, there is a lack of a universal
+attention mechanism for the SISR task. In this paper, we propose a lightweight and efficient Balanced
+Attention Mechanism (BAM), which can be generally applicable for different SISR networks. It consists
+of Avgpool Channel Attention Module (ACAM) and Maxpool Spatial Attention Module (MSAM). These
+two modules are connected in parallel to minimize the error accumulation and the crosstalk. To reduce
+the undesirable effect of redundant information on the attention generation, we only apply Avgpool
+for channel attention because Maxpool could pick up the illusive extreme points in the feature map
+across the spatial dimensions, and we only apply Maxpool for spatial attention because the useful
+features along the channel dimension usually exist in the form of maximum values for SISR task. To
+verify the efficiency and robustness of BAM, we apply it to 12 state-of-the-art SISR networks, among
+which eight were without attention thus we plug BAM in and four were with attention thus we replace
+its original attention module with BAM. We experiment on Set5, Set14 and BSD100 benchmark datasets
+with the scale factor of x2 , x3 and x4 . The results demonstrate that BAM can generally improve the
+network performance. Moreover, we conduct the ablation experiments to prove the minimalism of
+BAM. Our results show that the parallel structure of BAM can better balance channel and spatial attentions,
+thus outperforming the series structure of prior Convolutional Block Attention Module (CBAM).

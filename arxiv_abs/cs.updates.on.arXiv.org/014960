@@ -1,0 +1,19 @@
+Standard registration algorithms need to be independently applied to each surface to register,
+following careful pre-processing and hand-tuning. Recently, learning-based approaches have
+emerged that reduce the registration of new scans to running inference with a previously-trained
+model. In this paper, we cast the registration task as a surface-to-surface translation problem,
+and design a model to reliably capture the latent geometric information directly from raw 3D face
+scans. We introduce Shape-My-Face (SMF), a powerful encoder-decoder architecture based on an
+improved point cloud encoder, a novel visual attention mechanism, graph convolutional decoders
+with skip connections, and a specialized mouth model that we smoothly integrate with the mesh convolutions.
+Compared to the previous state-of-the-art learning algorithms for non-rigid registration of
+face scans, SMF only requires the raw data to be rigidly aligned (with scaling) with a pre-defined
+face template. Additionally, our model provides topologically-sound meshes with minimal supervision,
+offers faster training time, has orders of magnitude fewer trainable parameters, is more robust
+to noise, and can generalize to previously unseen datasets. We extensively evaluate the quality
+of our registrations on diverse data. We demonstrate the robustness and generalizability of our
+model with in-the-wild face scans across different modalities, sensor types, and resolutions.
+Finally, we show that, by learning to register scans, SMF produces a hybrid linear and non-linear
+morphable model. Manipulation of the latent space of SMF allows for shape generation, and morphing
+applications such as expression transfer in-the-wild. We train SMF on a dataset of human faces comprising
+9 large-scale databases on commodity hardware. 

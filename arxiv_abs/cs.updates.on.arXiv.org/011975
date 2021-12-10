@@ -1,0 +1,18 @@
+We examine a control problem where the states of the components of a system deteriorate after a disruption,
+if they are not being repaired by an entity. There exist a set of dependencies in the form of precedence
+constraints between the components, captured by a directed acyclic graph (DAG). The objective
+of the entity is to maximize the number of components whose states are brought back to the fully repaired
+state within a given time. We prove that the general problem is NP-hard, and therefore we characterize
+near-optimal control policies for special instances of the problem. We show that when the deterioration
+rates are larger than or equal to the repair rates and the precedence constraints are given by a DAG,
+it is optimal to continue repairing a component until its state reaches the fully recovered state
+before switching to repair any other component. Under the aforementioned assumptions and when
+the deterioration and the repair rates are homogeneous across all the components, we prove that
+the control policy that targets the healthiest component at each time-step while respecting the
+precedence and time constraints fully repairs at least half the number of components that would
+be fully repaired by an optimal policy. Finally, we prove that when the repair rates are sufficiently
+larger than the deterioration rates, the precedence constraints are given by a set of disjoint trees
+that each contain at most k nodes, and there is no time constraint, the policy that targets the component
+with the least value of health minus the deterioration rate at each time-step while respecting the
+precedence constraints fully repairs at least 1/k times the number of components that would be fully
+repaired by an optimal policy. 

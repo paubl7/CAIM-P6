@@ -1,0 +1,19 @@
+The beginning of 2021 saw a surge in volatility for certain stocks such as GameStop company stock
+(Ticker GME under NYSE). GameStop stock increased around 10 fold from its decade-long average to
+its peak at \$485. In this paper, we hypothesize a buy-and-hold strategy can be outperformed in the
+presence of extreme volatility by predicting and trading consolidation breakouts. We investigate
+GME stock for its volatility and compare it to SPY as a benchmark (since it is a less volatile ETF fund)
+from February 2002 to February 2021. For strategy 1, we develop a Long Short-term Memory (LSTM) Neural
+Network to predict stock prices recurrently with a very short look ahead period in the presence of
+extreme volatility. For our strategy 2, we develop an LSTM autoencoder network specifically designed
+to trade only on consolidation breakouts after predicting anomalies in the stock price. When back-tested
+in our simulations, our strategy 1 executes 863 trades for SPY and 452 trades for GME. Our strategy
+2 executes 931 trades for SPY and 325 trades for GME. We compare both strategies to buying and holding
+one single share for the period that we picked as a benchmark. In our simulations, SPY returns \$281.160
+from buying and holding one single share, \$110.29 from strategy 1 with 53.5% success rate and \$4.34
+from strategy 2 with 57.6% success rate. GME returns \$45.63 from buying and holding one single share,
+\$69.046 from strategy 1 with 47.12% success rate and \$2.10 from strategy 2 with 48% success rate.
+Overall, buying and holding outperforms all deep-learning assisted prediction models in our study
+except for when the LSTM-based prediction model (strategy 1) is applied to GME. We hope that our study
+sheds more light into the field of extreme volatility predictions based on LSTMs to outperform buying
+and holding strategy. 

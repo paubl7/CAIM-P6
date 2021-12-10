@@ -1,0 +1,19 @@
+State-of-the-art pedestrian detectors have achieved significant progress on non-occluded pedestrians,
+yet they are still struggling under heavy occlusions. The recent occlusion handling strategy of
+popular two-stage approaches is to build a two-branch architecture with the help of additional
+visible body annotations. Nonetheless, these methods still have some weaknesses. Either the two
+branches are trained independently with only score-level fusion, which cannot guarantee the detectors
+to learn robust enough pedestrian features. Or the attention mechanisms are exploited to only emphasize
+on the visible body features. However, the visible body features of heavily occluded pedestrians
+are concentrated on a relatively small area, which will easily cause missing detections. To address
+the above issues, we propose in this paper a novel Mutual-Supervised Feature Modulation (MSFM)
+network, to better handle occluded pedestrian detection. The key MSFM module in our network calculates
+the similarity loss of full body boxes and visible body boxes corresponding to the same pedestrian
+so that the full-body detector could learn more complete and robust pedestrian features with the
+assist of contextual features from the occluding parts. To facilitate the MSFM module, we also propose
+a novel two-branch architecture, consisting of a standard full body detection branch and an extra
+visible body classification branch. These two branches are trained in a mutual-supervised way
+with full body annotations and visible body annotations, respectively. To verify the effectiveness
+of our proposed method, extensive experiments are conducted on two challenging pedestrian datasets:
+Caltech and CityPersons, and our approach achieves superior performance compared to other state-of-the-art
+methods on both datasets, especially in heavy occlusion case. 

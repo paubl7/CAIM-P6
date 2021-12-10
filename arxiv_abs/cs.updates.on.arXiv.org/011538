@@ -1,0 +1,19 @@
+Discriminative learning based on convolutional neural networks (CNNs) aims to perform image restoration
+by learning from training examples of noisy-clean image pairs. It has become the go-to methodology
+for tackling image restoration and has outperformed the traditional non-local class of methods.
+However, the top-performing networks are generally composed of many convolutional layers and
+hundreds of neurons, with trainable parameters in excess of several millions. We claim that this
+is due to the inherent linear nature of convolution-based transformation, which is inadequate
+for handling severe restoration problems. Recently, a non-linear generalization of CNNs, called
+the operational neural networks (ONN), has been shown to outperform CNN on AWGN denoising. However,
+its formulation is burdened by a fixed collection of well-known nonlinear operators and an exhaustive
+search to find the best possible configuration for a given architecture, whose efficacy is further
+limited by a fixed output layer operator assignment. In this study, we leverage the Taylor series-based
+function approximation to propose a self-organizing variant of ONNs, Self-ONNs, for image restoration,
+which synthesizes novel nodal transformations onthe-fly as part of the learning process, thus
+eliminating the need for redundant training runs for operator search. In addition, it enables a
+finer level of operator heterogeneity by diversifying individual connections of the receptive
+fields and weights. We perform a series of extensive ablation experiments across three severe image
+restoration tasks. Even when a strict equivalence of learnable parameters is imposed, Self-ONNs
+surpass CNNs by a considerable margin across all problems, improving the generalization performance
+by up to 3 dB in terms of PSNR. 

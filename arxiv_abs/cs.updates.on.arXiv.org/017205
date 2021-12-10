@@ -1,0 +1,20 @@
+A novel LEarning-based Spectrum Sensing and Access (LESSA) framework is proposed, wherein a cognitive
+radio (CR) learns a time-frequency correlation model underlying spectrum occupancy of licensed
+users (LUs) in a radio ecosystem; concurrently, it devises an approximately optimal spectrum sensing
+and access policy under sensing constraints. A Baum-Welch algorithm is proposed to learn a parametric
+Markov transition model of LU spectrum occupancy based on noisy spectrum measurements. Spectrum
+sensing and access are cast as a Partially-Observable Markov Decision Process, approximately
+optimized via randomized point-based value iteration. Fragmentation, Hamming-distance state
+filters and Monte-Carlo methods are proposed to alleviate the inherent computational complexity,
+and a weighted reward metric to regulate the trade-off between CR throughput and LU interference.
+Numerical evaluations demonstrate that LESSA performs within 5 percent of a genie-aided upper
+bound with foreknowledge of LU spectrum occupancy, and outperforms state-of-the-art algorithms
+across the entire trade-off region: 71 percent over correlation-based clustering, 26 percent
+over Neyman-Pearson detection, 6 percent over the Viterbi algorithm, and 9 percent over an adaptive
+Deep Q-Network. LESSA is then extended to a distributed Multi-Agent setting (MA-LESSA), by proposing
+novel neighbor discovery and channel access rank allocation. MA-LESSA improves CR throughput
+by 43 percent over cooperative TD-SARSA, 84 percent over cooperative greedy distributed learning,
+and 3x over non-cooperative learning via g-statistics and ACKs. Finally, MA-LESSA is implemented
+on the DARPA SC2 platform, manifesting superior performance over competitors in a real-world TDWR-UNII
+WLAN emulation; its implementation feasibility is further validated on a testbed of ESP32 radios,
+exhibiting 96 percent success probability. 

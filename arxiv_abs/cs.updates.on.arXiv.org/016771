@@ -1,0 +1,19 @@
+Inside all smart devices, such as smartphones or smartwatches, there are thermally sensitive resistors
+known as thermistors which are used to monitor the temperature of the device. These thermistors
+are sensitive to temperature changes near their location on-device. While they are designed to
+measure the temperature of the device components such as the battery, they can also sense changes
+in the temperature of the ambient environment or thermal entities in contact with the device. We
+have developed a model to estimate core body temperature from signals sensed by these thermistors
+during a user interaction in which the user places the capacitive touchscreen of a smart device against
+a thermal site on their body such as their forehead. During the interaction, the device logs the temperature
+sensed by the thermistors as well as the raw capacitance seen by the touch screen to capture features
+describing the rate of heat transfer from the body to the device and device-to-skin contact respectively.
+These temperature and contact features are then used to model the rate of heat transferred from the
+user's body to the device and thus core-body temperature of the user for ubiquitous and accessible
+fever monitoring using only a smart device. We validate this system in a lab environment on a simulated
+skin-like heat source with a temperature estimate mean absolute error of 0.743$^{\circ}$F (roughly
+0.4$^{\circ}$C) and limit of agreement of $\pm2.374^{\circ}$F (roughly 1.3$^{\circ}$C) which
+is comparable to some off-the-shelf peripheral and tympanic thermometers. We found a Pearson's
+correlation $R^2$ of 0.837 between ground truth temperature and temperature estimated by our system.
+We also deploy this system in an ongoing clinical study on a population of 7 participants in a clinical
+environment to show the similarity between simulated and clinical trials. 

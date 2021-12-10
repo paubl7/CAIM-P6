@@ -1,0 +1,20 @@
+As access to space and robotic autonomy capabilities move forward, there is simultaneously a growing
+interest in deploying large, complex space structures to provide new on-orbit capabilities. New
+space-borne observatories, large orbital outposts, and even futuristic on-orbit manufacturing
+will be enabled by robotic assembly of space structures using techniques like on-orbit additive
+manufacturing which can provide flexibility in constructing and even repairing complex hardware.
+However, the dynamics underlying the robotic assembler during manipulation may operate under
+inertial uncertainties. Thus, inertial estimation of the robot and the manipulated component
+system must be considered during structural assembly. The contribution of this work is to address
+both the motion planning and control for robotic assembly with consideration of the inertial estimation
+of the combined free-flying robotic assembler and additively manufactured component system.
+Specifically, the Linear Quadratic Regulator Rapidly-Exploring Randomized Trees (LQR-RRT*)
+and dynamically feasible path smoothing are used to obtain obstacle-free trajectories for the
+system. Further, model learning is incorporated explicitly into the planning stages via approximation
+of the continuous system and accompanying reward of performing safe, objective-oriented motion.
+Remaining uncertainty can then be dealt with using robust tube model predictive control. By obtaining
+controlled trajectories that consider both obstacle avoidance and learning of the inertial properties
+of the free-flyer and manipulated component system, the free-flyer rapidly considers and plans
+the construction of space structures with enhanced system knowledge. The approach naturally generalizes
+to repairing, refueling, and re-provisioning space structure components while providing optimal
+collision-free trajectories under e.g., inertial uncertainty. 

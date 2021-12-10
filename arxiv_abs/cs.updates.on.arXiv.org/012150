@@ -1,0 +1,20 @@
+Creating bilingual dictionary is the first crucial step in enriching low-resource languages.
+Especially for the closely-related ones, it has been shown that the constraint-based approach
+is useful for inducing bilingual lexicons from two bilingual dictionaries via the pivot language.
+However, if there are no available machine-readable dictionaries as input, we need to consider
+manual creation by bilingual native speakers. To reach a goal of comprehensively create multiple
+bilingual dictionaries, even if we already have several existing machine-readable bilingual
+dictionaries, it is still difficult to determine the execution order of the constraint-based approach
+to reducing the total cost. Plan optimization is crucial in composing the order of bilingual dictionaries
+creation with the consideration of the methods and their costs. We formalize the plan optimization
+for creating bilingual dictionaries by utilizing Markov Decision Process (MDP) with the goal to
+get a more accurate estimation of the most feasible optimal plan with the least total cost before
+fully implementing the constraint-based bilingual lexicon induction. We model a prior beta distribution
+of bilingual lexicon induction precision with language similarity and polysemy of the topology
+as $\alpha$ and $\beta$ parameters. It is further used to model cost function and state transition
+probability. We estimated the cost of all investment plan as a baseline for evaluating the proposed
+MDP-based approach with total cost as an evaluation metric. After utilizing the posterior beta
+distribution in the first batch of experiments to construct the prior beta distribution in the second
+batch of experiments, the result shows 61.5\% of cost reduction compared to the estimated all investment
+plan and 39.4\% of cost reduction compared to the estimated MDP optimal plan. The MDP-based proposal
+outperformed the baseline on the total cost. 

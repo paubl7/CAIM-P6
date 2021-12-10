@@ -1,0 +1,20 @@
+Vector Symbolic Architectures combine a high-dimensional vector space with a set of carefully
+designed operators in order to perform symbolic computations with large numerical vectors. Major
+goals are the exploitation of their representational power and ability to deal with fuzziness and
+ambiguity. Over the past years, several VSA implementations have been proposed. The available
+implementations differ in the underlying vector space and the particular implementations of the
+required VSA operators - with important ramifications for the properties of these architectures.
+For example, not every VSA is equally well suited to address each task, including complete incompatibility.
+This paper provides an overview of eleven available VSA implementations and discusses their commonalities
+and differences in the underlying vector space, bundling, and binding/unbinding operations.
+We create a taxonomy of available binding/unbinding operations and show an important ramification
+for non self-inverse binding operations using an example from analogical reasoning. A main contribution
+is the experimental comparison of the available implementations in order to evaluate (1) the capacity
+of bundles, (2) the approximation quality of non-exact unbinding operations, (3) the influence
+of combining binding and bundling operations on the query answering performance, and (4) the performance
+on two example applications: visual place and language recognition. An overall good performance
+is shown by the HRR VSA in the frequency domain. However, its non-self-inverse binding mechanism
+can negatively influence its applicability, e.g. to analogical reasoning. We expect this systematization
+and comparison to be relevant for development and evaluation of new VSAs, but most importantly,
+to support the selection of an appropriate VSA for a particular task. The implementations are available
+in form of a MATLAB toolbox. 

@@ -1,0 +1,19 @@
+The current COVID-19 pandemic overloads healthcare systems, including radiology departments.
+Though several deep learning approaches were developed to assist in CT analysis, nobody considered
+study triage directly as a computer science problem. We describe two basic setups: Identification
+of COVID-19 to prioritize studies of potentially infected patients to isolate them as early as possible;
+Severity quantification to highlight studies of severe patients and direct them to a hospital or
+provide emergency medical care. We formalize these tasks as binary classification and estimation
+of affected lung percentage. Though similar problems were well-studied separately, we show that
+existing methods provide reasonable quality only for one of these setups. We employ a multitask
+approach to consolidate both triage approaches and propose a convolutional neural network to combine
+all available labels within a single model. In contrast with the most popular multitask approaches,
+we add classification layers to the most spatially detailed upper part of U-Net instead of the bottom,
+less detailed latent representation. We train our model on approximately 2000 publicly available
+CT studies and test it with a carefully designed set consisting of 32 COVID-19 studies, 30 cases with
+bacterial pneumonia, 31 healthy patients, and 30 patients with other lung pathologies to emulate
+a typical patient flow in an out-patient hospital. The proposed multitask model outperforms the
+latent-based one and achieves ROC AUC scores ranging from 0.87+-01 (bacterial pneumonia) to 0.97+-01
+(healthy controls) for Identification of COVID-19 and 0.97+-01 Spearman Correlation for Severity
+quantification. We release all the code and create a public leaderboard, where other community
+members can test their models on our test dataset. 

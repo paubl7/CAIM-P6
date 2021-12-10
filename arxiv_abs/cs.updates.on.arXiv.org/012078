@@ -1,0 +1,18 @@
+Non-Volatile Memory devices may soon be a part of main memory, and programming models that give programmers
+direct access to persistent memory through loads and stores are sought to maximize the performance
+benefits of these new devices. Direct access introduces new challenges. In this work, we identify
+an important aspect of programming for persistent memory: the persistent data retention model.
+A Persistent Data Retention Model describes what happens to persistent data when code that uses
+it is modified. We identify two models present in prior work but not described as such, the Reset and
+Manual Model, and we propose a new one called the Automatic Model. The Reset model discards all persistent
+data when a program changes leading to performance overheads and write amplification. In contrast,
+if data is to be retained, the Manual Model relies on the programmer to implement code that upgrades
+data from one version of the program to the next. This reduces overheads but places a larger burden
+on the programmer. We propose the Automatic Model to assist a programmer by automating some or all
+of the conversion. We describe one such automatic approach, Lazily Extendible Data Structures,
+that uses language extensions and compiler support to reduce the effort and complexity associated
+with updating persistent data. We evaluate our PDRMs in the context of the Persistent Memory Development
+Kit (PMDK) using kernels and the TPC-C application. Manual Model shows an overhead of 2.90% to 4.10%
+on average, and LEDS shows overhead of 0.45% to 10.27% on average, depending on the workload. LEDS
+reduces the number of writes by 26.36% compared to Manual Model. Furthermore, LEDS significantly
+reduces the programming complexity by relying on the compiler to migrate persistent data. 

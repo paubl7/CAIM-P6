@@ -1,0 +1,19 @@
+Neighbor discovery (ND) protocols are used for establishing a first contact between multiple wireless
+devices. The energy consumption and discovery latency of this procedure are determined by the parametrization
+of the protocol. In most existing protocols, reception and transmission are temporally coupled.
+Such schemes are referred to as \textit{slotted}, for which the problem of finding optimized parametrizations
+has been studied thoroughly in the literature. However, slotted approaches are not efficient in
+applications in which new devices join the network gradually and only the joining devices and a master
+node need to run the ND protocol simultaneously. For example, this is typically the case in IoT scenarios
+or Bluetooth Low Energy (BLE) piconets. Here, protocols in which packets are transmitted with periodic
+intervals (PI) can achieve significantly lower worst-case latencies than slotted ones. For this
+class of protocols, optimal parameter values remain unknown. To address this, we propose an optimization
+framework for PI-based BLE-like protocols, which translates any specified duty-cycle (and therefore
+energy budget) into a set of optimized parameter values. We show that the parametrizations resulting
+from one variant of our proposed scheme are optimal when one receiver discovers one transmitter,
+and no other parametrization or ND protocol - neither slotted nor slotless - can guarantee lower
+discovery latencies for a given duty-cycle in this scenario. Since the resulting protocol utilizes
+the channel more aggressively than other ND protocols, beacons will collide more frequently. Hence,
+due to collisions, the rate of successful discoveries gracefully decreases for larger numbers
+of devices discovering each other simultaneously. We also propose a scheme for configuring the
+BLE protocol (and not just BLE-\textit{like} protocols). 

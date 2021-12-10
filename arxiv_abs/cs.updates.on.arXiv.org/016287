@@ -1,0 +1,18 @@
+We investigate the problem of autonomous object classification and semantic SLAM, which in general
+exhibits a tight coupling between classification, metric SLAM and planning under uncertainty.
+We contribute a unified framework for inference and belief space planning (BSP) that addresses
+prominent sources of uncertainty in this context: classification aliasing (classier cannot distinguish
+between candidate classes from certain viewpoints), classifier epistemic uncertainty (classifier
+receives data "far" from its training set), and localization uncertainty (camera and object poses
+are uncertain). Specifically, we develop two methods for maintaining a joint distribution over
+robot and object poses, and over posterior class probability vector that considers epistemic uncertainty
+in a Bayesian fashion. The first approach is Multi-Hybrid (MH), where multiple hybrid beliefs over
+poses and classes are maintained to approximate the joint belief over poses and posterior class
+probability. The second approach is Joint Lambda Pose (JLP), where the joint belief is maintained
+directly using a novel JLP factor. Furthermore, we extend both methods to BSP, planning while reasoning
+about future posterior epistemic uncertainty indirectly, or directly via a novel information-theoretic
+reward function. Both inference methods utilize a novel viewpoint-dependent classifier uncertainty
+model that leverages the coupling between poses and classification scores and predicts the epistemic
+uncertainty from certain viewpoints. In addition, this model is used to generate predicted measurements
+during planning. To the best of our knowledge, this is the first work that reasons about classifier
+epistemic uncertainty within semantic SLAM and BSP. 

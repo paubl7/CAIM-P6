@@ -1,0 +1,19 @@
+Assessing equity in treatment of a subpopulation often involves assigning numerical "scores"
+to all individuals in the full population such that similar individuals get similar scores; matching
+via propensity scores or appropriate covariates is common, for example. Given such scores, individuals
+with similar scores may or may not attain similar outcomes independent of the individuals' memberships
+in the subpopulation. The traditional graphical methods for visualizing inequities are known
+as "reliability diagrams" or "calibrations plots," which bin the scores into a partition of all
+possible values, and for each bin plot both the average outcomes for only individuals in the subpopulation
+as well as the average outcomes for all individuals; comparing the graph for the subpopulation with
+that for the full population gives some sense of how the averages for the subpopulation deviate from
+the averages for the full population. Unfortunately, real data sets contain only finitely many
+observations, limiting the usable resolution of the bins, and so the conventional methods can obscure
+important variations due to the binning. Fortunately, plotting cumulative deviation of the subpopulation
+from the full population as proposed in this paper sidesteps the problematic coarse binning. The
+cumulative plots encode subpopulation deviation directly as the slopes of secant lines for the
+graphs. Slope is easy to perceive even when the constant offsets of the secant lines are irrelevant.
+The cumulative approach avoids binning that smooths over deviations of the subpopulation from
+the full population. Such cumulative aggregation furnishes both high-resolution graphical methods
+and simple scalar summary statistics (analogous to those of Kuiper and of Kolmogorov and Smirnov
+used in statistical significance testing for comparing probability distributions). 

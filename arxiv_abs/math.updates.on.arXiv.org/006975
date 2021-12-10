@@ -1,0 +1,19 @@
+This paper investigates the model for pedestrian flow firstly proposed in [Cristiani et al., DOI:10.1137/140962413].
+The model assumes that each individual in the crowd moves in a known domain, aiming at minimizing
+a given cost functional. Both the pedestrian dynamics and the cost functional itself depend on the
+position of the whole crowd. In addition, pedestrians are assumed to have predictive abilities,
+but limited in time, extending only up to $\theta$ time units into the future, where $\theta\in[0,\infty)$
+is a model parameter. 1) For $\theta=0$ (no predictive abilities), we recover the modeling assumptions
+of the Hughes's model, where people take decisions on the basis of the current position of the crowd
+only. 2) For $\theta\to\infty$, instead, we recover the standard mean field game (MFG) setting,
+where people are able to forecast the behavior of the others at any future time and take decisions
+on the basis of the current and future position of the whole crowd. 3) For intermediate values of $\theta$
+we obtain something different: as in the Hughes's model, the numerical procedure to solve the problem
+requires to run an off-line procedure at any fixed time $t$, which returns the current optimal velocity
+field at time $t$ by solving an associated backward-in-time Hamilton--Jacobi--Bellman equation;
+but, differently from the Hughes's model, here the procedure involves a prediction of the crowd
+behavior in the sliding time window $[t,t+\theta)$, therefore the optimal velocity field is given
+by the solution of a forward-backward system which joins a Fokker--Planck equation with a Hamilton--Jacobi--Bellman
+equation as in the MFG approach. The fact that a different forward-backward system must be solved
+at any time $t$ arises new interesting theoretical questions. Numerical tests will give some clues
+about the well-posedness of the problem. 

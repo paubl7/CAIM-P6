@@ -1,0 +1,18 @@
+We consider the problem of sampling an arbitrary given motif $H$ in a graph $G$, where access to $G$
+is given via queries: degree, neighbor, and pair, as well as uniform edge sample queries. Previous
+algorithms for the uniform sampling task were based on a decomposition of $H$ into a collection of
+odd cycles and stars, denoted $\mathcal{D}^*(H)=\{O_{k_1}, \ldots, O_{k_q}, S_{p_1}, \ldots,
+S_{p_\ell}\}$. These algorithms were shown to be optimal for the case where $H$ is a clique or an odd-length
+cycle, but no other lower bounds were known. We present a new algorithm for sampling arbitrary motifs
+which, up to $\poly(\log n)$ factors, for any motif $H$ whose decomposition contains at least two
+components or at least one star, is always preferable. The main ingredient leading to this improvement
+is an improved uniform algorithm for sampling stars, which might be of independent interest, as
+it allows to sample vertices according to the $p$-th moment of the degree distribution. We further
+show how to use our sampling algorithm to get an approximate counting algorithm, with essentially
+the same complexity. Finally, we prove that this algorithm is \emph{decomposition-optimal} for
+decompositions that contain at least one odd cycle. That is, we prove that for any decomposition
+$D$ that contains at least one odd cycle, there exists a motif $H_{D}$ with decomposition $D$, and
+a family of graphs $\mathcal{G}$, so that in order to output a uniform copy of $H$ in a uniformly chosen
+graph in $\mathcal{G}$, the number of required queries matches our upper bound. These are the first
+lower bounds for motifs $H$ with a nontrivial decomposition, i.e., motifs that have more than a single
+component in their decomposition. 

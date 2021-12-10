@@ -1,0 +1,18 @@
+Differential privacy (DP) is a widely-accepted and widely-applied notion of privacy based on worst-case
+analysis. Often, DP classifies most mechanisms without external noise as non-private [Dwork et
+al., 2014], and external noises, such as Gaussian noise or Laplacian noise [Dwork et al., 2006],
+are introduced to improve privacy. In many real-world applications, however, adding external
+noise is undesirable and sometimes prohibited. For example, presidential elections often require
+a deterministic rule to be used [Liu et al., 2020], and small noises can lead to dramatic decreases
+in the prediction accuracy of deep neural networks, especially the underrepresented classes [Bagdasaryan
+et al., 2019]. In this paper, we propose a natural extension and relaxation of DP following the worst
+average-case idea behind the celebrated smoothed analysis [Spielman and Teng, 2004]. Our notion,
+the smoothed DP, can effectively measure the privacy leakage of mechanisms without external noises
+under realistic settings. We prove several strong properties of the smoothed DP, including composability,
+robustness to post-processing and etc. We proved that any discrete mechanism with sampling procedures
+is more private than what DP predicts. In comparison, many continuous mechanisms with sampling
+procedures are still non-private under smoothed DP. Experimentally, we first verified that the
+discrete sampling mechanisms are private in real-world elections. Then, we apply the smoothed
+DP notion on quantized gradient descent, which indicates some neural networks can be private without
+adding any extra noises. We believe that these results contribute to the theoretical foundation
+of realistic privacy measures beyond worst-case analysis. 

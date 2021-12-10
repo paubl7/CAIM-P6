@@ -1,0 +1,20 @@
+We propose a distributed control algorithm for a multi-agent network whose agents deploy over a
+cluttered region in accordance with a time-varying coverage density function while avoiding collisions
+with all obstacles they encounter. Our algorithm is built on a two-level characterization of the
+network. The first level treats the multi-agent network as a whole based on the distribution of the
+locations of its agents over the spatial domain. In the second level, the network is described in
+terms of the individual positions of its agents. The aim of the multi-agent network is to attain a
+spatial distribution that resembles that of a reference coverage density function (high-level
+problem) by means of local (microscopic) interactions of its agents (low-level problem). In addition,
+as the agents deploy, they must avoid collisions with all the obstacles in the region at all times.
+Our approach utilizes a modified version of Voronoi tessellations which are comprised of what we
+refer to as Obstacle-Aware Voronoi Cells (OAVC) in order to enable coverage control while ensuring
+obstacle avoidance. We consider two control problems. The first problem which we refer to as the
+high-level coverage control problem corresponds to an interpolation problem in the class of Gaussian
+mixtures (no collision avoidance requirement), which we solve analytically. The second problem
+which we refer to as the low-level coverage control problem corresponds to a distributed control
+problem (collision avoidance requirement is now enforced at all times) which is solved by utilizing
+Lloyd's algorithm together with the modified Voronoi tessellation (OAVC) and a time-varying coverage
+density function which corresponds to the solution of the high-level coverage control problem.
+Finally, simulation results for coverage in a cluttered environment are provided to demonstrate
+the efficacy of the proposed approach. 

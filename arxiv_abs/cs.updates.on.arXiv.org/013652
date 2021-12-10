@@ -1,0 +1,19 @@
+Current IP based networks support a wide range of delay-sensitive applications such as live video
+streaming of network gaming. Providing an adequate quality of experience to these applications
+is of paramount importance for a network provider. The offered services are often regulated by tight
+Service Level Agreements that needs to be continuously monitored. Since the first step to guarantee
+a metric is to measure it, delay measurement becomes a fundamental operation for a network provider.
+In many cases, the operator needs to measure the delay on all network links. We refer to the collection
+of all link delays as the Link Delay Vector (LDV). Typical solutions to collect the LDV impose a substantial
+overhead on the network. In this paper, we propose a solution to measure the LDV in real-time with
+a low-overhead approach. In particular, we inject some flows into the network and infer the LDV based
+on the delay of those flows. To this end, the monitoring flows and their paths should be selected minimizing
+the network monitoring overhead. In this respect, the challenging issue is to select a proper combination
+of flows such that by knowing their delay it is possible to solve a set of a linear equation and obtain
+a unique LDV. We first propose a mathematical formulation to select the optimal combination of flows,
+in form of ILP problem. Then we develop a heuristic algorithm to overcome the high computational
+complexity of existing ILP solvers. As a further step, we propose a meta-heuristic algorithm to
+solve the above-mentioned equations and infer the LDV. The challenging part of this step is the volatility
+of link delays. The proposed solution is evaluated over real-world emulated network topologies
+using the Mininet network emulator. Emulation results show the accuracy of the proposed solution
+with a negligible networking overhead in a real-time manner. 

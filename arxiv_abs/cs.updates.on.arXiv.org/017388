@@ -1,0 +1,19 @@
+Biometric has been increasing in relevance these days since it can be used for several applications
+such as access control for instance. Unfortunately, with the increased deployment of biometric
+applications, we observe an increase of attacks. Therefore, algorithms to detect such attacks
+(Presentation Attack Detection (PAD)) have been increasing in relevance. The LivDet-2020 competition
+which focuses on Presentation Attacks Detection (PAD) algorithms have shown still open problems,
+specially for unknown attacks scenarios. In order to improve the robustness of biometric systems,
+it is crucial to improve PAD methods. This can be achieved by augmenting the number of presentation
+attack instruments (PAI) and bona fide images that are used to train such algorithms. Unfortunately,
+the capture and creation of presentation attack instruments and even the capture of bona fide images
+is sometimes complex to achieve. This paper proposes a novel PAI synthetically created (SPI-PAI)
+using four state-of-the-art GAN algorithms (cGAN, WGAN, WGAN-GP, and StyleGAN2) and a small set
+of periocular NIR images. A benchmark between GAN algorithms is performed using the Frechet Inception
+Distance (FID) between the generated images and the original images used for training. The best
+PAD algorithm reported by the LivDet-2020 competition was tested for us using the synthetic PAI
+which was obtained with the StyleGAN2 algorithm. Surprisingly, The PAD algorithm was not able to
+detect the synthetic images as a Presentation Attack, categorizing all of them as bona fide. Such
+results demonstrated the feasibility of synthetic images to fool presentation attacks detection
+algorithms and the need for such algorithms to be constantly updated and trained with a larger number
+of images and PAI scenarios. 

@@ -1,0 +1,19 @@
+Driving behavior modeling is of great importance for designing safe, smart, and personalized autonomous
+driving systems. In this paper, an internal reward function-based driving model that emulates
+the human's internal decision-making mechanism is utilized. To infer the reward function from
+naturalistic human driving data, we propose a structural assumption about human driving behavior
+that focuses on discrete latent driving intentions. It converts the continuous behavior modeling
+problem to a discrete setting and thus makes maximum entropy inverse reinforcement learning (IRL)
+tractable to learn reward functions. Specifically, a polynomial trajectory sampler is adopted
+to generate candidate trajectories considering high-level intentions and approximate the partition
+function in the maximum entropy IRL framework, and an environment model considering interactive
+behaviors among the ego and surrounding vehicles is built to better estimate the generated trajectories.
+The proposed method is applied to learn personalized reward functions for individual human drivers
+from the NGSIM highway dataset. The qualitative results demonstrate that the learned reward function
+is able to explicitly express the preferences of different drivers and interpret their decisions.
+The quantitative results reveal that the learned reward function is robust, which is manifested
+by only a marginal decline in proximity to the human driving trajectories when applying the reward
+function in the testing conditions. For the testing performance, the personalized modeling method
+outperforms the general modeling approach, reducing the modeling errors in human likeness (a custom
+metric to gauge accuracy) by 23%, and these two methods deliver better results compared to other
+baseline methods. 

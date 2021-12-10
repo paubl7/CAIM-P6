@@ -1,0 +1,19 @@
+Collision avoidance and platooning applications require vehicle localization at cm-level accuracy
+and at least 50 Hz rate for full autonomy. The RADAR/LIDAR and camera based methods currently used
+for vehicle localization do not satisfy these requirements, necessitating complementary technologies.
+Visible light positioning (VLP) is a highly suitable complementary technology due to its high accuracy
+and high rate, exploiting the line-of-sight propagation feature of the visible light communication
+(VLC) signals from LED head/tail lights. However, existing vehicular VLP algorithms impose restrictive
+requirements, e.g., use of high-bandwidth circuits, road-side lights and certain VLC modulation
+strategies, and work for limited relative vehicle orientations, thus, are not feasible for general
+use. This paper proposes a VLC-based vehicle localization method that eliminates these restrictive
+requirements by a novel VLC receiver design and associated vehicular VLP algorithm. The VLC receiver,
+named QRX, is low-cost/size, and enables high-rate VLC and high-accuracy angle-of-arrival (AoA)
+measurement, simultaneously, via the usage of a quadrant photodiode. The VLP algorithm estimates
+the positions of two head/tail light VLC transmitters (TX) on a neighbouring vehicle by using AoA
+measurements from two QRXs for localization. The algorithm is theoretically analyzed by deriving
+its Cramer-Rao lower bound on positioning accuracy, and simulated localization performance is
+evaluated under realistic platooning and collision avoidance scenarios. Results demonstrate
+that the proposed method performs at cm-level accuracy and up to 250 Hz rate within a 10 m range under
+realistic harsh road and channel conditions, demonstrating its eligibility for collision avoidance
+and safe platooning. 

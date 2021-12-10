@@ -1,0 +1,20 @@
+The still-maturing noisy intermediate-scale quantum (NISQ) technology faces strict limitations
+on the algorithms that can be implemented efficiently. In quantum chemistry, the variational quantum
+eigensolver (VQE) algorithm has become ubiquitous, using the functional form of the ansatz as a
+degree of freedom, whose parameters are found variationally in a feedback loop between the quantum
+processor and its conventional counterpart. Alternatively, a promising new avenue has been unraveled
+by the quantum variants of techniques grounded on expansions of the moments of the Hamiltonian,
+among which two stand out: the connected moments expansion (CMX) [Phys. Rev. Lett. 58, 53 (1987)]
+and the Peeters-Devreese-Soldatov (PDS) functional [J. Phys. A 17, 625 (1984); Int. J. Mod. Phys.
+B 9, 2899], the latter based on the standard moments <$H^k$>. Contrasting with VQE-based methods
+and provided the quantum circuit prepares a state with non-vanishing overlap with the true ground
+state, CMX often converges to the ground state energy, while PDS is guaranteed to converge by virtue
+of being variational. However, for a finite CMX/PDS order, the circuit may significantly impact
+the energy accuracy. Here we use the ADAPT-VQE algorithm to test shallow circuit construction strategies
+that are not expected to impede their implementation in the present quantum hardware while granting
+sizable accuracy improvement in the computed ground state energies. We also show that we can take
+advantage of the fact that the terms in the connected moments are highly recurring in different powers,
+incurring a sizable reduction in the number of necessary measurements. By coupling this measurement
+caching with a threshold that determines whether a given term is to be measured based on its associated
+scalar coefficient, we observe a further reduction in the number of circuit implementations while
+allowing for tunable accuracy. 

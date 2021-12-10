@@ -1,0 +1,19 @@
+A wide variety of deep reinforcement learning (DRL) models have recently been proposed to learn
+profitable investment strategies. The rules learned by these models outperform the previous strategies
+specially in high frequency trading environments. However, it is shown that the quality of the extracted
+features from a long-term sequence of raw prices of the instruments greatly affects the performance
+of the trading rules learned by these models. Employing a neural encoder-decoder structure to extract
+informative features from complex input time-series has proved very effective in other popular
+tasks like neural machine translation and video captioning in which the models face a similar problem.
+The encoder-decoder framework extracts highly informative features from a long sequence of prices
+along with learning how to generate outputs based on the extracted features. In this paper, a novel
+end-to-end model based on the neural encoder-decoder framework combined with DRL is proposed to
+learn single instrument trading strategies from a long sequence of raw prices of the instrument.
+The proposed model consists of an encoder which is a neural structure responsible for learning informative
+features from the input sequence, and a decoder which is a DRL model responsible for learning profitable
+strategies based on the features extracted by the encoder. The parameters of the encoder and the
+decoder structures are learned jointly, which enables the encoder to extract features fitted to
+the task of the decoder DRL. In addition, the effects of different structures for the encoder and
+various forms of the input sequences on the performance of the learned strategies are investigated.
+Experimental results showed that the proposed model outperforms other state-of-the-art models
+in highly dynamic environments. 

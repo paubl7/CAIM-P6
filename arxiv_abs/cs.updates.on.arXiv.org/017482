@@ -1,0 +1,18 @@
+With the rapid development of measurement technology, LiDAR and depth cameras are widely used in
+the perception of the 3D environment. Recent learning based methods for robot perception most focus
+on the image or video, but deep learning methods for dynamic 3D point cloud sequences are underexplored.
+Therefore, developing efficient and accurate perception method compatible with these advanced
+instruments is pivotal to autonomous driving and service robots. An Anchor-based Spatio-Temporal
+Attention 3D Convolution operation (ASTA3DConv) is proposed in this paper to process dynamic 3D
+point cloud sequences. The proposed convolution operation builds a regular receptive field around
+each point by setting several virtual anchors around each point. The features of neighborhood points
+are firstly aggregated to each anchor based on the spatio-temporal attention mechanism. Then,
+anchor-based 3D convolution is adopted to aggregate these anchors' features to the core points.
+The proposed method makes better use of the structured information within the local region and learns
+spatio-temporal embedding features from dynamic 3D point cloud sequences. Anchor-based Spatio-Temporal
+Attention 3D Convolutional Neural Networks (ASTA3DCNNs) are built for classification and segmentation
+tasks based on the proposed ASTA3DConv and evaluated on action recognition and semantic segmentation
+tasks. The experiments and ablation studies on MSRAction3D and Synthia datasets demonstrate the
+superior performance and effectiveness of our method for dynamic 3D point cloud sequences. Our
+method achieves the state-of-the-art performance among the methods with dynamic 3D point cloud
+sequences as input on MSRAction3D and Synthia datasets. 

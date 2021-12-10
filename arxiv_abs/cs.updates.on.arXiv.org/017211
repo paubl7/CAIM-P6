@@ -1,0 +1,20 @@
+Activation sparsity improves compute efficiency and resource utilization in sparsity-aware
+neural network accelerators. As the predominant operation in DNNs is multiply-accumulate (MAC)
+of activations with weights to compute inner products, skipping operations where (at least) one
+of the two operands is zero can make inference more efficient in terms of latency and power. Spatial
+sparsification of activations is a popular topic in DNN literature and several methods have already
+been established to bias a DNN for it. On the other hand, temporal sparsity is an inherent feature
+of bio-inspired spiking neural networks (SNNs), which neuromorphic processing exploits for hardware
+efficiency. Introducing and exploiting spatio-temporal sparsity, is a topic much less explored
+in DNN literature, but in perfect resonance with the trend in DNN, to shift from static signal processing
+to more streaming signal processing. Towards this goal, in this paper we introduce a new DNN layer
+(called Delta Activation Layer), whose sole purpose is to promote temporal sparsity of activations
+during training. A Delta Activation Layer casts temporal sparsity into spatial activation sparsity
+to be exploited when performing sparse tensor multiplications in hardware. By employing delta
+inference and ``the usual'' spatial sparsification heuristics during training, the resulting
+model learns to exploit not only spatial but also temporal activation sparsity (for a given input
+data distribution). One may use the Delta Activation Layer either during vanilla training or during
+a refinement phase. We have implemented Delta Activation Layer as an extension of the standard Tensoflow-Keras
+library, and applied it to train deep neural networks on the Human Action Recognition (UCF101) dataset.
+We report an almost 3x improvement of activation sparsity, with recoverable loss of model accuracy
+after longer training. 

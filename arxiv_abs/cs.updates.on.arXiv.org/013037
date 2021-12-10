@@ -1,0 +1,19 @@
+Traditional learning-based approaches for run-time Hardware Trojan detection require complex
+and expensive on-chip data acquisition frameworks and thus incur high area and power overhead.
+To address these challenges, we propose to leverage the power correlation between the executing
+instructions of a microprocessor to establish a machine learning-based run-time Hardware Trojan
+(HT) detection framework, called MacLeR. To reduce the overhead of data acquisition, we propose
+a single power-port current acquisition block using current sensors in time-division multiplexing,
+which increases accuracy while incurring reduced area overhead. We have implemented a practical
+solution by analyzing multiple HT benchmarks inserted in the RTL of a system-on-chip (SoC) consisting
+of four LEON3 processors integrated with other IPs like vga_lcd, RSA, AES, Ethernet, and memory
+controllers. Our experimental results show that compared to state-of-the-art HT detection techniques,
+MacLeR achieves 10\% better HT detection accuracy (i.e., 96.256%) while incurring a 7x reduction
+in area and power overhead (i.e., 0.025% of the area of the SoC and <0.07% of the power of the SoC). In
+addition, we also analyze the impact of process variation and aging on the extracted power profiles
+and the HT detection accuracy of MacLeR. Our analysis shows that variations in fine-grained power
+profiles due to the HTs are significantly higher compared to the variations in fine-grained power
+profiles caused by the process variations (PV) and aging effects. Moreover, our analysis demonstrates
+that, on average, the HT detection accuracy drop in MacLeR is less than 1% and 9% when considering
+only PV and PV with worst-case aging, respectively, which is ~10x less than in the case of the state-of-the-art
+ML-based HT detection technique. 

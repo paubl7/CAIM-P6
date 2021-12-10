@@ -1,0 +1,20 @@
+Convolutional neural networks (CNNs) are emerging as powerful tools for visual recognition. Recent
+architecture proposals for sparse CNNs exploit zeros in the feature maps and filters for performance
+and energy without losing accuracy. Sparse architectures that exploit two-sided sparsity in both
+feature maps and filters have been studied only at small scales (e.g., 1K multiply-accumulate(MAC)
+units). However, to realize their advantages in full, the sparse architectures have to be scaled
+up to levels of the dense architectures (e.g., 32K MACs in the TPU). Such scaling is challenging since
+achieving reuse through broadcasts incurs implicit barrier cost raises the inter-related issues
+of load imbalance, buffering, and on-chip bandwidth demand. SparTen, a previous scheme, addresses
+one aspect of load balancing but not other aspects, nor the other issues of buffering and bandwidth.
+To that end, we propose the barrier-free large-scale sparse tensor accelerator (BARISTA). BARISTA
+(1) is the first architecture for scaling up sparse CNN accelerators; (2) reduces on-chip bandwidth
+demand by telescoping request-combining the input map requests and snarfing the filter requests;
+(3) reduces buffering via basic buffer sharing and avoids the ensuing barriers between consecutive
+input maps by coloring the output buffers; (4) load balances intra-filter work via dynamic round-robin
+work assignment; and (5) employs hierarchical buffering which achieves high cache bandwidth via
+a few, wide, shared buffers and low buffering via narrower, private buffers at the compute. Our simulations
+show that, on average, barista performs 5.4x, 2.2x, 1.7x, 2.5x better than a dense, a one-sided,
+a naively-scaled two-sided, and an iso-area two-sided architecture, respectively. Using 45-nm
+technology, ASIC synthesis of our RTL design for four clusters of 8K MACs at 1 GHz clock speed, reports
+213 mm$^2$ area and 170 W power. 

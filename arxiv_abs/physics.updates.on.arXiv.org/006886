@@ -1,0 +1,18 @@
+Kernel ridge regression (KRR) that satisfies energy conservation is a popular approach for predicting
+forcefield and molecular potential, to overcome the computational bottleneck of molecular dynamics
+simulation. However, the computational complexity of KRR increases cubically as the product of
+the number of atoms and simulated configurations in the training sample, due to the inversion of
+a large covariance matrix, which limits its applications to the simulation of small molecules.
+Here, we introduce the atomized force field (AFF) model that requires much less computational costs
+to achieve the quantum-chemical level of accuracy for predicting atomic forces and potential energies.
+Through a data-driven partition on the covariance kernel matrix of the force field and an induced
+input estimation approach on potential energies, we dramatically reduce the computational complexity
+of the machine learning algorithm and maintain high accuracy in predictions. The efficient machine
+learning algorithm extends the limits of its applications on larger molecules under the same computational
+budget. Using the MD17 dataset and another simulated dataset on larger molecules, we demonstrate
+that the accuracy of the AFF emulator ranges from 0.01-0.1 kcal mol$^{-1}$ or energies and 0.001-0.2
+kcal mol$^{-1}$ $\require{mediawiki-texvc}$$\AA^{-1}$ for atomic forces. Most importantly,
+the accuracy was achieved by less than 5 minutes of computational time for training the AFF emulator
+and for making predictions on held-out molecular configurations. Furthermore, our approach contains
+uncertainty assessment of predictions of atomic forces and potentials, useful for developing
+a sequential design over the chemical input space, with nearly no increase of computational costs.

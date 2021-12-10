@@ -1,0 +1,19 @@
+Recently proposed adaptive Sketch & Project (SP) methods connect several well-known projection
+methods such as Randomized Kaczmarz (RK), Randomized Block Kaczmarz (RBK), Motzkin Relaxation
+(MR), Randomized Coordinate Descent (RCD), Capped Coordinate Descent (CCD), etc. into one framework
+for solving linear systems. In this work, we first propose a Stochastic Steepest Descent (SSD) framework
+that connects SP methods with the well-known Steepest Descent (SD) method for solving positive-definite
+linear system of equations. We then introduce two greedy sampling strategies in the SSD framework
+that allow us to obtain algorithms such as Sampling Kaczmarz Motzkin (SKM), Sampling Block Kaczmarz
+(SBK), Sampling Coordinate Descent (SCD), etc. In doing so, we generalize the existing sampling
+rules into one framework and develop an efficient version of SP methods. Furthermore, we incorporated
+the Polyak momentum technique into the SSD method to accelerate the resulting algorithms. We provide
+global convergence results for both the SSD method and the momentum induced SSD method. Moreover,
+we prove $\mathcal{O}(\frac{1}{k})$ convergence rate for the Cesaro average of iterates generated
+by both methods. By varying parameters in the SSD method, we obtain classical convergence results
+of the SD method as well as the SP methods as special cases. We design computational experiments to
+demonstrate the performance of the proposed greedy sampling methods as well as the momentum methods.
+The proposed greedy methods significantly outperform the existing methods for a wide variety of
+datasets such as random test instances as well as real-world datasets (LIBSVM, sparse datasets
+from matrix market collection). Finally, the momentum algorithms designed in this work accelerate
+the algorithmic performance of the SSD methods. 

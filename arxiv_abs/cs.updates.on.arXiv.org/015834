@@ -1,0 +1,20 @@
+Tremor is a key diagnostic feature of Parkinson's Disease (PD), Essential Tremor (ET), and other
+central nervous system (CNS) disorders. Clinicians or trained raters assess tremor severity with
+TETRAS scores by observing patients. Lacking quantitative measures, inter- or intra- observer
+variabilities are almost inevitable as the distinction between adjacent tremor scores is subtle.
+Moreover, clinician assessments also require patient visits, which limits the frequency of disease
+progress evaluation. Therefore it is beneficial to develop an automated assessment that can be
+performed remotely and repeatably at patients' convenience for continuous monitoring. In this
+work, we proposed to train a deep neural network (DNN) with rank-consistent ordinal regression
+using 276 clinical videos from 36 essential tremor patients. The videos are coupled with clinician
+assessed TETRAS scores, which are used as ground truth labels to train the DNN. To tackle the challenge
+of limited training data, optical flows are used to eliminate irrelevant background and statistic
+objects from RGB frames. In addition to optical flows, transfer learning is also applied to leverage
+pre-trained network weights from a related task of tremor frequency estimate. The approach was
+evaluated by splitting the clinical videos into training (67%) and testing sets (0.33%). The mean
+absolute error on TETRAS score of the testing results is 0.45, indicating that most of the errors
+were from the mismatch of adjacent labels, which is expected and acceptable. The model predications
+also agree well with clinical ratings. This model is further applied to smart phone videos collected
+from a PD patient who has an implanted device to turn "On" or "Off" tremor. The model outputs were consistent
+with the patient tremor states. The results demonstrate that our trained model can be used as a means
+to assess and track tremor severity. 

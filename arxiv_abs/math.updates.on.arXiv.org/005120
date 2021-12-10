@@ -1,0 +1,19 @@
+As in other estimation scenarios, likelihood based estimation in the normal mixture set-up is highly
+non-robust against model misspecification and presence of outliers (apart from being an ill-posed
+optimization problem). We propose a robust alternative to the ordinary likelihood approach for
+this estimation problem which performs simultaneous estimation and data clustering and leads
+to subsequent anomaly detection. To invoke robustness, we follow, in spirit, the methodology based
+on the minimization of the density power divergence (or alternatively, the maximization of the
+$\beta$-likelihood) under suitable constraints. An iteratively reweighted least squares approach
+has been followed in order to compute our estimators for the component means (or equivalently cluster
+centers) and component dispersion matrices which leads to simultaneous data clustering. Some
+exploratory techniques are also suggested for anomaly detection, a problem of great importance
+in the domain of statistics and machine learning. Existence and consistency of the estimators are
+established under the aforesaid constraints. We validate our method with simulation studies under
+different set-ups; it is seen to perform competitively or better compared to the popular existing
+methods like K-means and TCLUST, especially when the mixture components (i.e., the clusters) share
+regions with significant overlap or outlying clusters exist with small but non-negligible weights.
+Two real datasets are also used to illustrate the performance of our method in comparison with others
+along with an application in image processing. It is observed that our method detects the clusters
+with lower misclassification rates and successfully points out the outlying (anomalous) observations
+from these datasets. 

@@ -1,0 +1,18 @@
+Data compression is used in a wide variety of tasks, including compression of databases, large learning
+models, videos, images, etc. The cost of decompressing (decoding) data can be prohibitive for certain
+real-time applications. In many scenarios, it is acceptable to sacrifice (to some extent) on compression
+in the interest of fast decoding. In this work, we introduce and study a novel problem of finding a
+prefix tree having the best decode time under the constraint that the code length does not exceed
+a certain threshold for a natural class of memory access cost functions that use blocking (also referred
+to as lookup tables), i.e., these decoding schemes access multiple prefix tree entries in a single
+access, using associative memory table look-ups. We present (i) an exact algorithm for this problem
+that is polynomial in the number of characters and the codelength; (ii) a strongly polynomial pseudo
+approximation algorithm that achieves the best decode time by relaxing the codelength constraint
+by a small factor; and (iii) a more efficient version of the pseudo approximation algorithm that
+achieves near optimal decode time by relaxing the codelength constraint by a small factor. All our
+algorithms are based on dynamic programming and capitalize on an interesting structure of the optimal
+solution. To the best of our knowledge, there is no prior work that gives any provable theoretical
+guarantees for minimizing decode time along with the code length. We also demonstrate the performance
+benefits of our algorithm on different types of real-world data sets, namely (i) a deep learning
+model (Mobilenet-V2); (ii) image and (iii) text data. We also implement and evaluate the performance
+of our algorithms on the GPU. 

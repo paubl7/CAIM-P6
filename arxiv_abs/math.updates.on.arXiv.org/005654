@@ -1,0 +1,19 @@
+We consider a general online stochastic optimization problem with multiple budget constraints
+over a horizon of finite time periods. At each time period, a reward function and multiple cost functions,
+where each cost function is involved in the consumption of one corresponding budget, are drawn from
+an unknown distribution, which is assumed to be non-stationary across time. Then, a decision maker
+needs to specify an action from a convex and compact action set to collect the reward, and the consumption
+each budget is determined jointly by the cost functions and the taken action. The objective of the
+decision maker is to maximize the cumulative reward subject to the budget constraints. Our model
+captures a wide range of applications including online linear programming and network revenue
+management, among others. In this paper, we design near-optimal policies for the decision maker
+under the following two specific settings: a data-driven setting where the decision maker is given
+prior estimates of the distributions beforehand and a no information setting where the distributions
+are completely unknown to the decision maker. Under each setting, we propose a new Wasserstein-distance
+based measure to measure the non-stationarity of the distributions at different time periods and
+show that this measure leads to a necessary and sufficient condition for the attainability of a sublinear
+regret. For the first setting, we propose a new algorithm which blends gradient descent steps with
+the prior estimates. We then adapt our algorithm for the second setting and propose another gradient
+descent based algorithm. We show that under both settings, our polices achieve a regret upper bound
+of optimal order. Moreover, our policies could be naturally incorporated with a re-solving procedure
+which further boosts the empirical performance in numerical experiments. 

@@ -1,0 +1,19 @@
+An articulated body is defined as a finite number of rigid bodies connected by a set of arbitrary constraints
+that limit the relative motion between pairs of bodies. Such a general definition encompasses a
+wide variety of situations in the microscopic world, from bacteria to synthetic micro-swimmers,
+but it is also encountered when discretizing inextensible bodies, such as filaments or membranes.
+Simulating suspensions of such articulated bodies requires to solve the hydrodynamic interactions
+between large collections of objects of arbitrary shape while satisfying the multiple constraints
+that connect them. Two main challenges arise in this task: limiting the cost of the hydrodynamic
+solves, and enforcing the constraints within machine precision at each time-step. To address these
+challenges we propose a formalism that combines the body mobility problem in Stokes flow with a velocity
+formulation of the constraints, resulting in a mixed mobility-resistance problem. While resistance
+problems are known to scale poorly with the particle number, our preconditioned iterative solver
+is not sensitive to the system size. Constraint violations, e.g. due to discrete time-integration
+errors, are prevented by correcting the particles' positions and orientations at the end of each
+time-step. Our correction procedure, based on a nonlinear minimisation algorithm, is negligible
+in terms of computational cost and preserves the accuracy of the time-integration scheme. We showcase
+the robustness and scalability of our method by exploring the locomotion modes of a model microswimmer
+inspired by the diatom colony Bacillaria Paxillifer, and by simulating large suspensions of bacteria
+interacting near a no-slip boundary. Finally, we provide a Python implementation of our framework
+in a collaborative publicly available code. 

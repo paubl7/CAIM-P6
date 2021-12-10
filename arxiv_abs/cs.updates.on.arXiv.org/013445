@@ -1,0 +1,18 @@
+Software is prone to bugs and failures. Security bugs are those that expose or share privileged information
+and access in violation of the software's requirements. Given the seriousness of security bugs,
+there are centralized mechanisms for supporting and tracking these bugs across multiple products,
+one such mechanism is the Common Vulnerabilities and Exposures (CVE) ID description. When a bug
+gets a CVE, it is referenced by its CVE ID. Thus we explore thousands of Free/Libre Open Source Software
+(FLOSS) projects, on Github, to determine if developers reference or discuss CVEs in their code,
+commits, and issues. CVEs will often refer to 3rd party software dependencies of a project and thus
+the bug will not be in the actual product itself. We study how many of these references are intentional
+CVE references, and how many are relevant bugs within the projects themselves. We investigate how
+the bugs that reference CVEs are fixed and how long it takes to fix these bugs. The results of our manual
+classification for 250 bug reports show that 88 (35%), 32 (13%), and 130 (52%) are classified into
+"Version Update", "Fixing Code", and "Discussion". To understand how long it takes to fix those
+bugs, we compare two periods, Reporting Period, a period between the disclosure date of vulnerability
+information in CVE repositories and the creation date of the bug report in a project, and Fixing Period,
+a period between the creation date of the bug report and the fixing date of the bug report. We find that
+44% of bug reports that are classified into "Version Update" or "Fixing Code" have longer Reporting
+Period than Fixing Period. This suggests that those who submit CVEs should notify affected projects
+more directly. 

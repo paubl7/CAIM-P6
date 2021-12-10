@@ -1,0 +1,18 @@
+Despite recent progress in memory augmented neural network (MANN) research, associative memory
+networks with a single external memory still show limited performance on complex relational reasoning
+tasks. Especially the content-based addressable memory networks often fail to encode input data
+into rich enough representation for relational reasoning and this limits the relation modeling
+performance of MANN for long temporal sequence data. To address these problems, here we introduce
+a novel Distributed Associative Memory architecture (DAM) with Memory Refreshing Loss (MRL) which
+enhances the relation reasoning performance of MANN. Inspired by how the human brain works, our
+framework encodes data with distributed representation across multiple memory blocks and repeatedly
+refreshes the contents for enhanced memorization similar to the rehearsal process of the brain.
+For this procedure, we replace a single external memory with a set of multiple smaller associative
+memory blocks and update these sub-memory blocks simultaneously and independently for the distributed
+representation of input data. Moreover, we propose MRL which assists a task's target objective
+while learning relational information existing in data. MRL enables MANN to reinforce an association
+between input data and task objective by reproducing stochastically sampled input data from stored
+memory contents. With this procedure, MANN further enriches the stored representations with relational
+information. In experiments, we apply our approaches to Differential Neural Computer (DNC), which
+is one of the representative content-based addressing memory models and achieves the state-of-the-art
+performance on both memorization and relational reasoning tasks. 

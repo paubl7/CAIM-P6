@@ -1,0 +1,19 @@
+Recently, bound propagation based certified adversarial defense have been proposed for training
+neural networks with certifiable robustness guarantees. Despite state-of-the-art (SOTA) methods
+including interval bound propagation (IBP) and CROWN-IBP have per-batch training complexity
+similar to standard neural network training, to reach SOTA performance they usually need a long
+warmup schedule with hundreds or thousands epochs and are thus still quite costly for training.
+In this paper, we discover that the weight initialization adopted by prior works, such as Xavier
+or orthogonal initialization, which was originally designed for standard network training, results
+in very loose certified bounds at initialization thus a longer warmup schedule must be used. We also
+find that IBP based training leads to a significant imbalance in ReLU activation states, which can
+hamper model performance. Based on our findings, we derive a new IBP initialization as well as principled
+regularizers during the warmup stage to stabilize certified bounds during initialization and
+warmup stage, which can significantly reduce the warmup schedule and improve the balance of ReLU
+activation states. Additionally, we find that batch normalization (BN) is a crucial architectural
+element to build best-performing networks for certified training, because it helps stabilize
+bound variance and balance ReLU activation states. With our proposed initialization, regularizers
+and architectural changes combined, we are able to obtain 65.03% verified error on CIFAR-10 ($\epsilon=\frac{8}{255}$)
+and 82.13% verified error on TinyImageNet ($\epsilon=\frac{1}{255}$) using very short training
+schedules (160 and 80 total epochs, respectively), outperforming literature SOTA trained with
+a few hundreds or thousands epochs. 

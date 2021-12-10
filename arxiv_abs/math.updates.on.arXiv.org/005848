@@ -1,0 +1,19 @@
+This paper proposes an off-grid channel estimation scheme for orthogonal time-frequency space
+(OTFS) systems adopting the sparse Bayesian learning (SBL) framework. To avoid channel spreading
+caused by the fractional delay and Doppler shifts and to fully exploit the channel sparsity in the
+delay-Doppler (DD) domain, we estimate the original DD domain channel response rather than the
+effective DD domain channel response as commonly adopted in the literature. OTFS channel estimation
+is first formulated as a one-dimensional (1D) off-grid sparse signal recovery (SSR) problem based
+on a virtual sampling grid defined in the DD space, where the on-grid and off-grid components of the
+delay and Doppler shifts are separated for estimation. In particular, the on-grid components of
+the delay and Doppler shifts are jointly determined by the entry indices with significant values
+in the recovered sparse vector. Then, the corresponding off-grid components are modeled as hyper-parameters
+in the proposed SBL framework, which can be estimated via the expectation-maximization method.
+To strike a balance between channel estimation performance and computational complexity, we further
+propose a two-dimensional (2D) off-grid SSR problem via decoupling the delay and Doppler shift
+estimations. In our developed 1D and 2D off-grid SBL-based channel estimation algorithms, the
+hyper-parameters are updated alternatively for computing the conditional posterior distribution
+of channels, which can be exploited to reconstruct the effective DD domain channel. Compared with
+the 1D method, the proposed 2D method enjoys a much lower computational complexity while only suffers
+slight performance degradation. Simulation results verify the superior performance of the proposed
+channel estimation schemes over state-of-the-art schemes. 

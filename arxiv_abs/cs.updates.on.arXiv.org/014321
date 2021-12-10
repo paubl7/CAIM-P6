@@ -1,0 +1,20 @@
+DNN-based video analytics have empowered many new applications (e.g., automated retail). Meanwhile,
+the proliferation of fog devices provides developers with more design options to improve performance
+and save cost. To the best of our knowledge, this paper presents the first serverless system that
+takes full advantage of the client-fog-cloud synergy to better serve the DNN-based video analytics.
+Specifically, the system aims to achieve two goals: 1) Provide the optimal analytics results under
+the constraints of lower bandwidth usage and shorter round-trip time (RTT) by judiciously managing
+the computational and bandwidth resources deployed in the client, fog, and cloud environment.
+2) Free developers from tedious administration and operation tasks, including DNN deployment,
+cloud and fog's resource management. To this end, we implement a holistic cloud-fog system referred
+to as VPaaS (Video-Platform-as-a-Service). VPaaS adopts serverless computing to enable developers
+to build a video analytics pipeline by simply programming a set of functions (e.g., model inference),
+which are then orchestrated to process videos through carefully designed modules. To save bandwidth
+and reduce RTT, VPaaS provides a new video streaming protocol that only sends low-quality video
+to the cloud. The state-of-the-art (SOTA) DNNs deployed at the cloud can identify regions of video
+frames that need further processing at the fog ends. At the fog ends, misidentified labels in these
+regions can be corrected using a light-weight DNN model. To address the data drift issues, we incorporate
+limited human feedback into the system to verify the results and adopt incremental learning to improve
+our system continuously. The evaluation demonstrates that VPaaS is superior to several SOTA systems:
+it maintains high accuracy while reducing bandwidth usage by up to 21%, RTT by up to 62.5%, and cloud
+monetary cost by up to 50%. 

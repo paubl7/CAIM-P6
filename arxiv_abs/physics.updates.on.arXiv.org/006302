@@ -1,0 +1,20 @@
+It is shown that a prechosen set of occupied/virtual valence/core atomic/fragmental orbitals
+can be transformed to an equivalent set of localized occupied/virtual pre-molecular orbitals
+(pre-LMO), which can then be taken as probes to select the same number of maximally matching localized
+occupied/virtual Hartree-Fock (HF) or restricted open-shell Hartree-Fock (ROHF) molecular
+orbitals as the initial local orbitals spanning the desired complete active space (CAS). In each
+cycle of the self-consistent field (SCF) calculation, the CASSCF orbitals can be localized by means
+of the noniterative ``top-down least-change'' algorithm for localizing ROHF orbitals, such that
+the maximum matching between the orbitals of two adjacent iterations can readily be monitored,
+leading finally to converged localized CASSCF orbitals that overlap most the guess orbitals. Such
+an approach is to be dubbed as ``imposed CASSCF'' ($\mathbb{i}$CASSCF or simply $\mathbb{i}$CAS
+in short) for good reasons: (1) it has been assumed that only those electronic states that have largest
+projections onto the active space defined by the prechosen atomic/fragmental orbitals are to be
+targeted. This is certainly an imposed constraint but has wide applications in organic and transition
+metal chemistry where valence (or core) atomic/fragmental orbitals can readily be identified.
+(2) The selection of both initial and optimized local active orbitals is imposed from the very beginning
+by the pre-LMOs (which span the same space as the prechosen atomic/fragmental orbitals). Apart
+from the (imposed) automation and localization, $\mathbb{i}$CAS has an additional merit: the
+CAS is guaranteed to be the same for all geometries for the pre-LMOs do not change in character with
+geometry. Both organic molecules and transition metal complexes are taken as showcases to reveal
+the efficacy of $\mathbb{i}$CAS. 

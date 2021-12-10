@@ -1,0 +1,20 @@
+Partitioning a graph into blocks of "roughly equal" weight while cutting only few edges is a fundamental
+problem in computer science with a wide range of applications. In particular, the problem is a building
+block in applications that require parallel processing. While the amount of available cores in
+parallel architectures has significantly increased in recent years, state-of-the-art graph
+partitioning algorithms do not work well if the input needs to be partitioned into a large number
+of blocks. Often currently available algorithms compute highly imbalanced solutions, solutions
+of low quality, or have excessive running time for this case. This is because most high-quality general-purpose
+graph partitioners are multilevel algorithms which perform graph coarsening to build a hierarchy
+of graphs, initial partitioning to compute an initial solution, and local improvement to improve
+the solution throughout the hierarchy. However, for large number of blocks, the smallest graph
+in the hierarchy that is used for initial partitioning still has to be large. In this work, we substantially
+mitigate these problems by introducing deep multilevel graph partitioning and a shared-memory
+implementation thereof. Our scheme continues the multilevel approach deep into initial partitioning
+-- integrating it into a framework where recursive bipartitioning and direct k-way partitioning
+are combined such that they can operate with high performance and quality. Our approach is stronger,
+more flexible, arguably more elegant, and reduces bottlenecks for parallelization compared to
+other multilevel approaches. For example, for large number of blocks our algorithm is on average
+an order of magnitude faster than competing algorithms while computing balanced partitions with
+comparable solution quality. For small number of blocks, our algorithms are the fastest among competing
+systems with comparable quality. 

@@ -1,0 +1,19 @@
+We study distributed multiagent optimization over (directed, time-varying) graphs. We consider
+the minimization of $F+G$ subject to convex constraints, where $F$ is the smooth strongly convex
+sum of the agent's losses and $G$ is a nonsmooth convex function. We build on the SONATA algorithm:
+the algorithm employs the use of surrogate objective functions in the agents' subproblems (going
+thus beyond linearization, such as proximal-gradient) coupled with a perturbed (push-sum) consensus
+mechanism that aims to track locally the gradient of $F$. SONATA achieves precision $\epsilon>0$
+on the objective value in $\mathcal{O}(\kappa_g \log(1/\epsilon))$ gradient computations at
+each node and $\tilde{\mathcal{O}}\big(\kappa_g (1-\rho)^{-1/2} \log(1/\epsilon)\big)$
+communication steps, where $\kappa_g$ is the condition number of $F$ and $\rho$ characterizes
+the connectivity of the network. This is the first linear rate result for distributed composite
+optimization; it also improves on existing (non-accelerated) schemes just minimizing $F$, whose
+rate depends on much larger quantities than $\kappa_g$ (e.g., the worst-case condition number
+among the agents). When considering in particular empirical risk minimization problems with statistically
+similar data across the agents, SONATA employing high-order surrogates achieves precision $\epsilon>0$
+in $\mathcal{O}\big((\beta/\mu) \log(1/\epsilon)\big)$ iterations and $\tilde{\mathcal{O}}\big((\beta/\mu)
+(1-\rho)^{-1/2} \log(1/\epsilon)\big)$ communication steps, where $\beta$ measures the degree
+of similarity of the agents' losses and $\mu$ is the strong convexity constant of $F$. Therefore,
+when $\beta/\mu < \kappa_g$, the use of high-order surrogates yields provably faster rates than
+what achievable by first-order models; this is without exchanging any Hessian matrix over the network.

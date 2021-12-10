@@ -1,0 +1,19 @@
+In many dynamic systems, such as wireless communications, decisions on system operation are updated
+over time, and the decision maker requires an online learning approach to optimize its strategy
+in response to the changing environment. When the loss and constraint functions are convex, this
+belongs to the general family of online convex optimization (OCO). In existing OCO works, the environment
+is assumed to vary in a time-slotted fashion, while the decisions are updated at each time slot. This
+model is inadequate for systems that permit only periodic decision updates, i.e., each decision
+is fixed over multiple time slots, while the environment changes between the decision epochs. In
+this work, we consider periodic decision updates for OCO. We aim to minimize the accumulation of
+time-varying convex loss functions, subject to both short-term and long-term constraints. Information
+about the loss functions within the current update period may be incomplete and is revealed to the
+decision maker only after the decision is made. We propose an efficient algorithm, termed Periodic
+Queueing and Gradient Aggregation (PQGA), which employs novel periodic queues together with aggregated
+gradient descent to update the decisions over time. PQGA is applicable to both constant and time-varying
+update periods. Most importantly, we show that PQGA yields bounded dynamic regret, static regret,
+and constraint violation. Furthermore, they are sublinear over time if the accumulated variation
+of the system states and update periods do not grow too fast. As an example application, we study the
+performance of PQGA in a large-scale multi-antenna system shared by multiple wireless service
+providers. Simulation results show that PQGA converges fast and substantially outperforms the
+known best alternative.? 

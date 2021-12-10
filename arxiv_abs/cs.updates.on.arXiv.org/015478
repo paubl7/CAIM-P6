@@ -1,0 +1,19 @@
+Optimization of quantum circuits using an efficient compiler is key to its success for NISQ computers.
+Several 3rd party compilers are evolving to offer improved performance for large quantum circuits.
+These 3rd parties, or just a certain release of an otherwise trustworthy compiler, may possibly
+be untrusted and this could lead to an adversary to Reverse Engineer (RE) the quantum circuit for
+extracting sensitive aspects e.g., circuit topology, program, and its properties. In this paper,
+we propose obfuscation of quantum circuits to hide the functionality. Quantum circuits have inherent
+margin between correct and incorrect outputs. Therefore, obfuscation (i.e., corruption of functionality)
+by inserting dummy gates is nontrivial. We insert dummy SWAP gates one at a time for maximum corruption
+of functionality before sending the quantum circuit to an untrusted compiler. If an untrusted party
+clones the design, they get incorrect functionality. The designer removes the dummy SWAP gate post-compilation
+to restore the correct functionality. Compared to a classical counterpart, the quantum chip does
+not reveal the circuit functionality. Therefore, an adversary cannot guess the SWAP gate and location/validate
+using an oracle model. Evaluation of realistic quantum circuit with/without SWAP insertion is
+impossible in classical computers. Therefore, we propose a metric-based SWAP gate insertion process.
+The objective of the metric is to ensure maximum corruption of functionality measured using Total
+Variation Distance (TVD). The proposed approach is validated using IBM default noisy simulation
+model. Our metric-based approach predicts the SWAP position to achieve TVD of upto 50%, and performs
+7.5% better than average TVD, and performs within 12.3% of the best obtainable TVD for the benchmarks.
+We obtain an overhead of < 5% for the number of gates and circuit depth after SWAP addition. 

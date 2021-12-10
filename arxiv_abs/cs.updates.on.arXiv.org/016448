@@ -1,0 +1,18 @@
+The states of a deterministic finite automaton A can be identified with collections of words in Pf(L(A))
+-- the set of prefixes of words belonging to the regular language accepted by A. But words can be ordered
+and among the many possible orders a very natural one is the co-lexicographic one. Such naturalness
+stems from the fact that it suggests a transfer of the order from words to the automaton's states.
+In a number of papers automata admitting a total ordering of states coherent with the ordering of
+the set of words reaching them have been proposed. Such class of ordered automata -- the Wheeler automata
+-- turned out to be efficiently stored/searched using an index. Unfortunately not all automata
+can be totally ordered as previously outlined. However, automata can always be partially ordered
+and an intrinsic measure of their complexity can be defined and effectively determined, as the minimum
+width of one of their admissible partial orders. As shown in previous works, this new concept of width
+of an automaton has useful consequences in the fields of graph compression, indexing data structures,
+and automata theory. In this paper we prove that a canonical, minimum-width, partially-ordered
+automaton accepting a language L -- dubbed the Hasse automaton H of L -- can be exhibited. H provides,
+in a precise sense, the best possible way to (partially) order the states of any automaton accepting
+L, as long as we want to maintain an operational link with the (co-lexicographic) order of Pf(L(A)).
+Using H we prove that the width of the language can be effectively computed from the minimum automaton
+recognizing the language. Finally, we explore the relationship between two (often conflicting)
+objectives: minimizing the width and minimizing the number of states of an automaton. 

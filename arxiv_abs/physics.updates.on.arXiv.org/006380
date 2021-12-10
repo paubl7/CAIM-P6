@@ -1,0 +1,20 @@
+This paper introduces a new time-frequency representation method for biomedical signals: the
+dyadic aggregated autoregressive (DASAR) model. Signals, such as electroencephalograms (EEGs)
+and functional near-infrared spectroscopy (fNIRS), exhibit physiological information through
+time-evolving spectrum components at specific frequency intervals: 0-50 Hz (EEG) or 0-150 mHz
+(fNIRS). Spectrotemporal features in signals are conventionally estimated using short-time
+Fourier transform (STFT) and wavelet transform (WT). However, both methods may not offer the most
+robust or compact representation despite their widespread use in biomedical contexts. The presented
+method, DASAR, improves precise frequency identification and tracking of interpretable frequency
+components with a parsimonious set of parameters. DASAR achieves these characteristics by assuming
+that the biomedical time-varying spectrum comprises several independent stochastic oscillators
+with (piecewise) time-varying frequencies. Local stationarity can be assumed within dyadic subdivisions
+of the recordings, while the stochastic oscillators can be modeled with an aggregation of second-order
+autoregressive models (ASAR). DASAR can provide a more accurate representation of the (highly
+contrasted) EEG and fNIRS frequency ranges by increasing the estimation accuracy in user-defined
+spectrum region of interest (SROI). A mental arithmetic experiment on a hybrid EEG-fNIRS was conducted
+to assess the efficiency of the method. Our proposed technique, STFT, and WT were applied on both
+biomedical signals to discover potential oscillators that improve the discrimination between
+the task condition and its baseline. The results show that DASAR provided the highest spectrum differentiation
+and it was the only method that could identify Mayer waves as narrow-band artifacts at 97.4-97.5
+mHz. 

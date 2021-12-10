@@ -1,0 +1,19 @@
+This paper proposes a millimeter wave-NOMA (mmWave-NOMA) system that takes into account the end-user
+signal processing capabilities, an important practical consideration. The implementation of
+NOMA in the downlink (DL) direction requires successive interference cancellation (SIC) to be
+performed at the user terminals, which comes at the cost of additional complexity. In NOMA, the weakest
+user only has to decode its own signal, while the strongest user has to decode the signals of all other
+users in the SIC procedure. Hence, the additional implementation complexity required of the user
+to perform SIC for DL NOMA depends on its position in the SIC decoding order. Beyond fifth-generation
+(B5G) communication systems are expected to support a wide variety of end-user devices, each with
+their own processing capabilities. We envision a system where users report their SIC decoding capability
+to the base station (BS), i.e., the number of other users signals a user is capable of decoding in the
+SIC procedure. We investigate the rate maximization problem in such a system, by breaking it down
+into a user clustering and ordering problem (UCOP), followed by a power allocation problem. We propose
+a NOMA minimum exact cover (NOMA-MEC) heuristic algorithm that converts the UCOP into a cluster
+minimization problem from a derived set of valid cluster combinations after factoring in the SIC
+decoding capability. The complexity of NOMA-MEC is analyzed for various algorithm and system parameters.
+For a homogeneous system of users that all have the same decoding capabilities, we show that this
+equates to a simple maximum number of users per cluster constraint and propose a lower complexity
+NOMA-best beam (NOMA-BB) algorithm. Simulation results demonstrate the performance superiority
+in terms of sum rate compared to orthogonal multiple access (OMA) and traditional NOMA 

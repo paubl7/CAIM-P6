@@ -1,0 +1,19 @@
+Neural information retrieval (IR) models are promising mainly because their semantic matching
+capabilities can ameliorate the well-known synonymy and polysemy problems of word-based symbolic
+approaches. However, the power of neural models' dense representations comes at the cost of inefficiency,
+limiting it to be used as a re-ranker. Sparse representations, on the other hand, can help enhance
+symbolic or latent-term representations and yet take advantage of an inverted index for efficiency,
+being amenable to symbolic IR techniques that have been around for decades. In order to transcend
+the trade-off between sparse representations (symbolic or latent-term based) and dense representations,
+we propose an ultra-high dimensional (UHD) representation scheme equipped with directly controllable
+sparsity. With the high dimensionality, we attempt to make the meaning of each dimension less entangled
+and polysemous than dense embeddings. The sparsity allows for not only efficiency for vector calculations
+but also the possibility of making individual dimensions attributable to interpretable concepts.
+Our model, UHD-BERT, maximizes the benefits of ultra-high dimensional (UHD) sparse representations
+based on BERT language modeling, by adopting a bucketing method. With this method, different segments
+of an embedding (horizontal buckets) or the embeddings from multiple layers of BERT (vertical buckets)
+can be selected and merged so that diverse linguistic aspects can be represented. An additional
+and important benefit of our highly disentangled (high-dimensional) and efficient (sparse) representations
+is that this neural approach can be harmonized with well-studied symbolic IR techniques (e.g.,
+inverted index, pseudo-relevance feedback, BM25), enabling us to build a powerful and efficient
+neuro-symbolic information retrieval system. 

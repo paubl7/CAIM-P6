@@ -1,0 +1,20 @@
+Permutation $\sigma$ appears in permutation $\pi$ if there exists a subsequence of $\pi$ that is
+order-isomorphic to $\sigma$. The natural question is to check if $\sigma$ appears in $\pi$, and
+if so count the number of occurrences. We know that for any fixed length~k, we can check if a given pattern
+of length k appears in a permutation of length n in time linear in n, but being able to count all such
+occurrences in $f(k)\cdot n^{o(k/\log k)}$ time would refute the exponential time hypothesis
+(ETH). This motivates a systematic study of the complexity of counting occurrences for different
+patterns of fixed small length k. We investigate this question for k=4. Very recently, Even-Zohar
+and Leng [arXiv 2019] identified two types of 4-patterns. For the first type they designed an $\~O(n)$
+time algorithm, while for the second they were able to provide an $\~O(n^{1.5})$ time algorithm.
+This brings up the question whether the permutations of the second type are inherently harder than
+the first type. We establish a connection between counting 4-patterns of the second type and counting
+4-cycles in a sparse undirected graph. By designing two-way reductions we show that the complexities
+of both problems are the same, up to polylogarithmic factors. This allows us to provide a reasonable
+argument for why there is a difference in the complexities for counting 4-patterns of the two types.
+In particular, even for the simpler problem of detecting a 4-cycle in a graph on m edges, the best known
+algorithm works in $O(m^{4/3})$ time. Our reductions imply that an $O(n^{4/3-\varepsilon})$
+time algorithm for counting occurrences would imply an exciting breakthrough for counting (and
+hence also detecting) 4-cycles. In the other direction, by plugging in the fastest known algorithm
+for counting 4-cycles, we obtain an algorithm for counting occurrences of any 4-pattern in $O(n^{1.48})$
+time. 

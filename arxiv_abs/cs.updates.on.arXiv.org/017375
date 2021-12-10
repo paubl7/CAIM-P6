@@ -1,0 +1,18 @@
+Smart contract vulnerability detection draws extensive attention in recent years due to the substantial
+losses caused by hacker attacks. Existing efforts for contract security analysis heavily rely
+on rigid rules defined by experts, which are labor-intensive and non-scalable. More importantly,
+expert-defined rules tend to be error-prone and suffer the inherent risk of being cheated by crafty
+attackers. Recent researches focus on the symbolic execution and formal analysis of smart contracts
+for vulnerability detection, yet to achieve a precise and scalable solution. Although several
+methods have been proposed to detect vulnerabilities in smart contracts, there is still a lack of
+effort that considers combining expert-defined security patterns with deep neural networks.
+In this paper, we explore using graph neural networks and expert knowledge for smart contract vulnerability
+detection. Specifically, we cast the rich control- and data- flow semantics of the source code into
+a contract graph. To highlight the critical nodes in the graph, we further design a node elimination
+phase to normalize the graph. Then, we propose a novel temporal message propagation network to extract
+the graph feature from the normalized graph, and combine the graph feature with designed expert
+patterns to yield a final detection system. Extensive experiments are conducted on all the smart
+contracts that have source code in Ethereum and VNT Chain platforms. Empirical results show significant
+accuracy improvements over the state-of-the-art methods on three types of vulnerabilities, where
+the detection accuracy of our method reaches 89.15%, 89.02%, and 83.21% for reentrancy, timestamp
+dependence, and infinite loop vulnerabilities, respectively. 

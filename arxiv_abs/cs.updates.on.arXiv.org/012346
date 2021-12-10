@@ -1,0 +1,19 @@
+In resource-constrained IoT networks, the use of conventional message authentication codes (MACs)
+to provide message authentication and integrity is not possible due to the large size of the MAC output.
+A straightforward yet naive solution to this problem is to employ a truncated MAC which undesirably
+sacrifices cryptographic strength in exchange for reduced communication overhead. In this paper,
+we address this problem by proposing a novel approach for message authentication called \textit{Cumulative
+Message Authentication Code} (CuMAC), which consists of two distinctive procedures: \textit{aggregation}
+and \textit{accumulation}. In aggregation, a sender generates compact authentication tags from
+segments of multiple MACs by using a systematic encoding procedure. In accumulation, a receiver
+accumulates the cryptographic strength of the underlying MAC by collecting and verifying the authentication
+tags. Embodied with these two procedures, CuMAC enables the receiver to achieve an advantageous
+trade-off between the cryptographic strength and the latency in processing of the authentication
+tags. Furthermore, for some latency-sensitive messages where this trade-off may be unacceptable,
+we propose a variant of CuMAC that we refer to as \textit{CuMAC with Speculation} (CuMAC/S). In addition
+to the aggregation and accumulation procedures, CuMAC/S enables the sender and receiver to employ
+a speculation procedure for predicting future message values and pre-computing the corresponding
+MAC segments. For the messages which can be reliably speculated, CuMAC/S significantly reduces
+the MAC verification latency without compromising the cryptographic strength. We have carried
+out comprehensive evaluation of CuMAC and CuMAC/S through simulation and a prototype implementation
+on a real car. 

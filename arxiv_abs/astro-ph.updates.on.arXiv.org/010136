@@ -1,0 +1,18 @@
+We present a method for customizing the root grid of zoom-in initial conditions used for simulations
+of galaxy formation. Starting from the white noise used to seed the structures of an existing initial
+condition, we cut out a smaller region of interest and use this trimmed white noise cube to create
+a new root grid. This new root grid contains similar structures as the original, but allows for a smaller
+box volume and different grid resolution that can be tuned to best suit a given simulation code. To
+minimally disturb the zoom region, the dark matter particles and gas cells from the original zoom
+region are placed within the new root grid, with no modification other than a bulk velocity offset
+to match the systemic velocity of the corresponding region in the new root grid. We validate this
+method using a zoom-in initial condition containing a Local Group analog. We run collisionless
+simulations using the original and modified initial conditions, finding good agreement. The dark
+matter halo masses of the two most massive galaxies at $z=0$ match the original to within 15%. The
+times and masses of major mergers are reproduced well, as are the full dark matter accretion histories.
+While we do not reproduce specific satellite galaxies found in the original simulation, we obtain
+qualitative agreement in the distributions of the maximum circular velocity and the distance from
+the central galaxy. We also examine the runtime speedup provided by this method for full hydrodynamic
+simulations with the ART code. We find that reducing the root grid cell size improves performance,
+but the increased particle and cell numbers can negate some of the gain. We test several realizations,
+with our best runs achieving a speedup of nearly a factor of two. 

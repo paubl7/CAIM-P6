@@ -1,0 +1,20 @@
+Deep neural networks (DNNs) have achieved high accuracy on various tasks and are even robust to natural
+noise that widely exists in captured images due to low quality imaging sensors, etc. However, the
+high performance DNNs also raise inevitable security problems, e.g., automatically recognizing
+a high-profile person's face and switching with a maliciously generated fake one to influence the
+outcomes of various critical events. This fact posts an important and practical problem, i.e.,
+how to generate visually clean images while letting them have the capability of misleading the state-of-the-art
+DNNs to avoid potential security issues. In this paper, we initiate the very first attempt to address
+this very new problem from the perspective of adversarial attack and propose the adversarial denoise
+attack aiming to simultaneously denoise input images while fooling DNNs. More specifically, our
+main contributions are three-fold: First, we identify a totally new task that stealthily embeds
+attacks inside image denoising module widely deployed in multimedia devices as an image post-processing
+operation to simultaneously enhance the visual image quality and fool DNNs. Second, we formulate
+this new task as a kernel prediction problem for image filtering and propose the adversarial-denoising
+kernel prediction that can produce adversarial-noiseless kernels for effective denoising and
+adversarial attacking simultaneously. Third, we implement an adaptive perceptual region localization
+to identify semantic-related vulnerability regions with which the attack can be more effective
+while not doing too much harm to the denoising. We validate our method on the NeurIPS'17 adversarial
+competition dataset. The comprehensive evaluation and analysis demonstrate that our method not
+only realizes denoising but also achieves higher success rate and transferability over the state-of-the-art
+attacks. 

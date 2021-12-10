@@ -1,0 +1,20 @@
+The target representation learned by convolutional neural networks plays an important role in
+Thermal Infrared (TIR) tracking. Currently, most of the top-performing TIR trackers are still
+employing representations learned by the model trained on the RGB data. However, this representation
+does not take into account the information in the TIR modality itself, limiting the performance
+of TIR tracking. To solve this problem, we propose to distill representations of the TIR modality
+from the RGB modality with Cross-Modal Distillation (CMD) on a large amount of unlabeled paired
+RGB-TIR data. We take advantage of the two-branch architecture of the baseline tracker, i.e. DiMP,
+for cross-modal distillation working on two components of the tracker. Specifically, we use one
+branch as a teacher module to distill the representation learned by the model into the other branch.
+Benefiting from the powerful model in the RGB modality, the cross-modal distillation can learn
+the TIR-specific representation for promoting TIR tracking. The proposed approach can be incorporated
+into different baseline trackers conveniently as a generic and independent component. Furthermore,
+the semantic coherence of paired RGB and TIR images is utilized as a supervised signal in the distillation
+loss for cross-modal knowledge transfer. In practice, three different approaches are explored
+to generate paired RGB-TIR patches with the same semantics for training in an unsupervised way.
+It is easy to extend to an even larger scale of unlabeled training data. Extensive experiments on
+the LSOTB-TIR dataset and PTB-TIR dataset demonstrate that our proposed cross-modal distillation
+method effectively learns TIR-specific target representations transferred from the RGB modality.
+Our tracker outperforms the baseline tracker by achieving absolute gains of 2.3% Success, 2.7%
+Precision, and 2.5% Normalized Precision respectively. 

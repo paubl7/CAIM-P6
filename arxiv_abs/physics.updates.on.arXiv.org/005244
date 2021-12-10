@@ -1,0 +1,19 @@
+In order to identify the infected individuals of a population, their samples are divided in equally
+sized groups called pools and a single laboratory test is applied to each pool. Individuals whose
+samples belong to pools that test negative are declared healthy, while each pool that tests positive
+is divided into smaller, equally sized pools which are tested in the next stage. This scheme is called
+adaptive, because the composition of the pools at each stage depends on results from previous stages,
+and nested because each pool is a subset of a pool of the previous stage. Is the infection probability
+$p$ is not smaller than $1-3^{-1/3}$ it is best to test each sample (no pooling). If $p<1-3^{-1/3}$,
+we compute the mean $D_k(m,p)$ and the variance of the number of tests per individual as a function
+of the pool sizes $m=(m_1,\dots,m_k)$ in the first $k$ stages; in the $(k+1)$-th stage all remaining
+samples are tested. The case $k=1$ was proposed by Dorfman in his seminal paper in 1943. The goal is
+to minimize $D_k(m,p)$, which is called the cost associated to~$m$. We show that for $p\in (0, 1-3^{-1/3})$
+the optimal choice is one of four possible schemes, which are explicitly described. For $p>2^{-51}$
+we show overwhelming numerical evidence that the best choice is $(3^k\text{ or }3^{k-1}4,3^{k-1},\dots,3^2,3
+)$, with a precise description of the range of $p$'s where each holds. We then focus on schemes of the
+type $(3^k,\dots,3)$, and estimate that the cost of the best scheme of this type for $p$, determined
+by the choice of $k=k_3(p)$, is of order $O\big(p\log(1/p)\big)$. This is the same order as that
+of the cost of the optimal scheme, and the difference of these costs is explicitly bounded. As an example,
+for $p=0.02$ the optimal choice is $k=3$, $m=(27,9,3)$, with cost $0.20$; that is, the mean number
+of tests required to screen 100 individuals is 20. 

@@ -1,0 +1,20 @@
+We study distributed optimization in the presence of Byzantine adversaries, where both data and
+computation are distributed among $m$ worker machines, $t$ of which may be corrupt. The compromised
+nodes may collaboratively and arbitrarily deviate from their pre-specified programs, and a designated
+(master) node iteratively computes the model/parameter vector for generalized linear models.
+In this work, we primarily focus on two iterative algorithms: Proximal Gradient Descent (PGD) and
+Coordinate Descent (CD). Gradient descent (GD) is a special case of these algorithms. PGD is typically
+used in the data-parallel setting, where data is partitioned across different samples, whereas,
+CD is used in the model-parallelism setting, where data is partitioned across the parameter space.
+In this paper, we propose a method based on data encoding and error correction over real numbers to
+combat adversarial attacks. We can tolerate up to $t\leq \lfloor\frac{m-1}{2}\rfloor$ corrupt
+worker nodes, which is information-theoretically optimal. We give deterministic guarantees,
+and our method does not assume any probability distribution on the data. We develop a {\em sparse}
+encoding scheme which enables computationally efficient data encoding and decoding. We demonstrate
+a trade-off between the corruption threshold and the resource requirements (storage, computational,
+and communication complexity). As an example, for $t\leq\frac{m}{3}$, our scheme incurs only
+a {\em constant} overhead on these resources, over that required by the plain distributed PGD/CD
+algorithms which provide no adversarial protection. To the best of our knowledge, ours is the first
+paper that makes CD secure against adversarial attacks. Our encoding scheme extends efficiently
+to the data streaming model and for stochastic gradient descent (SGD). We also give experimental
+results to show the efficacy of our proposed schemes. 

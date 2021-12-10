@@ -1,0 +1,19 @@
+Matrix inversion problems are often encountered in experimental physics, and in particular in
+high-energy particle physics, under the name of unfolding. The true spectrum of a physical quantity
+is deformed by the presence of a detector, resulting in an observed spectrum. If we discretize both
+the true and observed spectra into histograms, we can model the detector response via a matrix. Inferring
+a true spectrum starting from an observed spectrum requires therefore inverting the response matrix.
+Many methods exist in literature for this task, all starting from the observed spectrum and using
+a simulated true spectrum as a guide to obtain a meaningful solution in cases where the response matrix
+is not easily invertible. In this Manuscript, I take a different approach to the unfolding problem.
+Rather than inverting the response matrix and transforming the observed distribution into the
+most likely parent distribution in generator space, I sample many distributions in generator space,
+fold them through the original response matrix, and pick the generator-level distribution that
+yields the folded distribution closest to the data distribution. Regularization schemes can be
+introduced to treat the case where non-diagonal response matrices result in high-frequency oscillations
+of the solution in true space, and the introduced bias is studied. The algorithm performs as well
+as traditional unfolding algorithms in cases where the inverse problem is well-defined in terms
+of the discretization of the true and smeared space, and outperforms them in cases where the inverse
+problem is ill-defined---when the number of truth-space bins is larger than that of smeared-space
+bins. These advantages stem from the fact that the algorithm does not technically invert any matrix
+and uses only the data distribution as a guide to choose the best solution. 

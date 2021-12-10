@@ -1,0 +1,20 @@
+Recent years have seen a proliferation of new digital products for the efficient management of indoor
+spaces, with important applications like emergency management, virtual property showcasing
+and interior design. These products rely on accurate 3D models of the environments considered,
+including information on both architectural and non-permanent elements. These models must be
+created from measured data such as RGB-D images or 3D point clouds, whose capture and consolidation
+involves lengthy data workflows. This strongly limits the rate at which 3D models can be produced,
+preventing the adoption of many digital services for indoor space management. We provide an alternative
+to such data-intensive procedures by presenting Walk2Map, a data-driven approach to generate
+floor plans only from trajectories of a person walking inside the rooms. Thanks to recent advances
+in data-driven inertial odometry, such minimalistic input data can be acquired from the IMU readings
+of consumer-level smartphones, which allows for an effortless and scalable mapping of real-world
+indoor spaces. Our work is based on learning the latent relation between an indoor walk trajectory
+and the information represented in a floor plan: interior space footprint, portals, and furniture.
+We distinguish between recovering area-related (interior footprint, furniture) and wall-related
+(doors) information and use two different neural architectures for the two tasks: an image-based
+Encoder-Decoder and a Graph Convolutional Network, respectively. We train our networks using
+scanned 3D indoor models and apply them in a cascaded fashion on an indoor walk trajectory at inference
+time. We perform a qualitative and quantitative evaluation using both simulated and measured,
+real-world trajectories, and compare against a baseline method for image-to-image translation.
+The experiments confirm the feasibility of our approach. 

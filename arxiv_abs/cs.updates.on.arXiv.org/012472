@@ -1,0 +1,18 @@
+Deep neural networks are usually trained in the space of the nodes, by adjusting the weights of existing
+links via suitable optimization protocols. We here propose a radically new approach which anchors
+the learning process to reciprocal space. Specifically, the training acts on the spectral domain
+and seeks to modify the eigenvalues and eigenvectors of transfer operators in direct space. The
+proposed method is ductile and can be tailored to return either linear or non-linear classifiers.
+Adjusting the eigenvalues, when freezing the eigenvectors entries, yields performances which
+are superior to those attained with standard methods {\it restricted} to a operate with an identical
+number of free parameters. Tuning the eigenvalues correspond in fact to performing a global training
+of the neural network, a procedure which promotes (resp. inhibits) collective modes on which an
+effective information processing relies. This is at variance with the usual approach to learning
+which implements instead a local modulation of the weights associated to pairwise links. Interestingly,
+spectral learning limited to the eigenvalues returns a distribution of the predicted weights which
+is close to that obtained when training the neural network in direct space, with no restrictions
+on the parameters to be tuned. Based on the above, it is surmised that spectral learning bound to the
+eigenvalues could be also employed for pre-training of deep neural networks, in conjunction with
+conventional machine-learning schemes. Changing the eigenvectors to a different non-orthogonal
+basis alters the topology of the network in direct space and thus allows to export the spectral learning
+strategy to other frameworks, as e.g. reservoir computing. 

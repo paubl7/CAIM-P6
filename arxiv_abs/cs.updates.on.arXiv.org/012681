@@ -1,0 +1,18 @@
+Motivation: The proliferation of Biomedical research articles has made the task of information
+retrieval more important than ever. Scientists and Researchers are having difficulty in finding
+articles that contain information relevant to them. Proper extraction of biomedical entities
+like Disease, Drug/chem, Species, Gene/protein, can considerably improve the filtering of articles
+resulting in better extraction of relevant information. Performance on BioNer benchmarks has
+progressively improved because of progression in transformers-based models like BERT, XLNet,
+OpenAI, GPT2, etc. These models give excellent results; however, they are computationally expensive
+and we can achieve better scores for domain-specific tasks using other contextual string-based
+models and LSTM-CRF based sequence tagger. Results: We introduce BioNerFlair, a method to train
+models for biomedical named entity recognition using Flair plus GloVe embeddings and Bidirectional
+LSTM-CRF based sequence tagger. With almost the same generic architecture widely used for named
+entity recognition, BioNerFlair outperforms previous state-of-the-art models. I performed
+experiments on 8 benchmarks datasets for biomedical named entity recognition. Compared to current
+state-of-the-art models, BioNerFlair achieves the best F1-score of 90.17 beyond 84.72 on the BioCreative
+II gene mention (BC2GM) corpus, best F1-score of 94.03 beyond 92.36 on the BioCreative IV chemical
+and drug (BC4CHEMD) corpus, best F1-score of 88.73 beyond 78.58 on the JNLPBA corpus, best F1-score
+of 91.1 beyond 89.71 on the NCBI disease corpus, best F1-score of 85.48 beyond 78.98 on the Species-800
+corpus, while near best results was observed on BC5CDR-chem, BC3CDR-disease, and LINNAEUS corpus.

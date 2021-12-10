@@ -1,0 +1,18 @@
+We present the open-source Bayesian Atmospheric Radiative Transfer (BART) retrieval package,
+which produces estimates and uncertainties for an atmosphere's thermal profile and chemical abundances
+from observations. Several BART components are also stand-alone packages, including the parallel
+Multi-Core Markov chain Monte Carlo (MC3), which implements several Bayesian samplers; a line-by-line
+radiative-transfer model, transit; a code that calculates Thermochemical Equilibrium Abundances,
+TEA; and a test suite for verifying radiative-transfer and retrieval codes, BARTTest. The codes
+are in Python and C. BART and TEA are under a Reproducible Research (RR) license, which requires reviewed-paper
+authors to publish a compendium of all inputs, codes, and outputs supporting the paper's scientific
+claims. BART and TEA produce the compendium's content. Otherwise, these codes are under permissive
+open-source terms, as are MC3 and BARTTest, for any purpose. This paper presents an overview of the
+code, BARTTest, and an application to eclipse data for exoplanet HD 189733 b. Appendices address
+RR methodology for accelerating science, a reporting checklist for retrieval papers, the spectral
+resolution required for synthetic tests, and a derivation of the effective sample size required
+to estimate any Bayesian posterior distribution to a given precision, which determines how many
+iterations to run. Paper II, by Cubillos et al., presents the underlying radiative-transfer scheme
+and an application to transit data for exoplanet HAT-P-11b. Paper III, by Blecic et al., discusses
+the initialization and post-processing routines, with an application to eclipse data for exoplanet
+WASP-43b. We invite the community to use and improve BART and its components at this http URL 

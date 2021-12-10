@@ -1,0 +1,18 @@
+Previous works on membership inference reveal privacy risks, but assume a balanced prior distribution
+where the adversary randomly chooses target records from a pool that has equal numbers of members
+and non-members and an adversary whose goals are satisfied by merely showing an inference advantage.
+We study membership inference under more realistic assumptions. First, we consider skewed priors,
+to cover cases such as when only a small fraction of the candidate pool targeted by the adversary are
+actually members. For this, we use a metric based on positive predictive value (PPV). Second, we
+consider adversaries that can select inference thresholds according to their attack goals and
+develop a threshold selection procedure that improves inference attacks. Since there remains
+a large gap between what can be guaranteed by differential privacy and what current inference attacks
+expose, we also develop a new strategy for inference attacks based on the intuition that inputs corresponding
+to training set members will be near a local minimum in the loss function. We show that an inference
+attack based on this idea outperforms previous attacks, and that an attack that combines this with
+thresholds on the per-instance loss can achieve high PPV even in settings where other attacks appear
+to be ineffective. Our experimental evaluation shows that models trained without privacy mechanisms
+are vulnerable to our membership inference attacks even in the skewed prior settings where a non-member
+is much more likely to occur than a member, and that models trained with differential privacy are
+vulnerable to our attacks in the balanced prior setting. Code for our experiments can be found here:
+https://github.com/bargavj/EvaluatingDPML. 

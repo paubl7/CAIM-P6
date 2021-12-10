@@ -1,0 +1,20 @@
+The ratio between the probability that two distributions $R$ and $P$ give to points $x$ are known
+as importance weights or propensity scores and play a fundamental role in many different fields,
+most notably, statistics and machine learning. Among its applications, importance weights are
+central to domain adaptation, anomaly detection, and estimations of various divergences such
+as the KL divergence. We consider the common setting where $R$ and $P$ are only given through samples
+from each distribution. The vast literature on estimating importance weights is either heuristic,
+or makes strong assumptions about $R$ and $P$ or on the importance weights themselves. In this paper,
+we explore a computational perspective to the estimation of importance weights, which factors
+in the limitations and possibilities obtainable with bounded computational resources. We significantly
+strengthen previous work that use the MaxEntropy approach, that define the importance weights
+based on a distribution $Q$ closest to $P$, that looks the same as $R$ on every set $C \in \mathcal{C}$,
+where $\mathcal{C}$ may be a huge collection of sets. We show that the MaxEntropy approach may fail
+to assign high average scores to sets $C \in \mathcal{C}$, even when the average of ground truth weights
+for the set is evidently large. We similarly show that it may overestimate the average scores to sets
+$C \in \mathcal{C}$. We therefore formulate Sandwiching bounds as a notion of set-wise accuracy
+for importance weights. We study these bounds to show that they capture natural completeness and
+soundness requirements from the weights. We present an efficient algorithm that under standard
+learnability assumptions computes weights which satisfy these bounds. Our techniques rely on
+a new notion of multicalibrated partitions of the domain of the distributions, which appear to be
+useful objects in their own right. 

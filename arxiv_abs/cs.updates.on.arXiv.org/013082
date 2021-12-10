@@ -1,0 +1,19 @@
+With the assistance of sophisticated training methods applied to single labeled datasets, the
+performance of fully-supervised person re-identification (Person Re-ID) has been improved significantly
+in recent years. However, these models trained on a single dataset usually suffer from considerable
+performance degradation when applied to videos of a different camera network. To make Person Re-ID
+systems more practical and scalable, several cross-dataset domain adaptation methods have been
+proposed, which achieve high performance without the labeled data from the target domain. However,
+these approaches still require the unlabeled data of the target domain during the training process,
+making them impractical. A practical Person Re-ID system pre-trained on other datasets should
+start running immediately after deployment on a new site without having to wait until sufficient
+images or videos are collected and the pre-trained model is tuned. To serve this purpose, in this
+paper, we reformulate person re-identification as a multi-dataset domain generalization problem.
+We propose a multi-dataset feature generalization network (MMFA-AAE), which is capable of learning
+a universal domain-invariant feature representation from multiple labeled datasets and generalizing
+it to `unseen' camera systems. The network is based on an adversarial auto-encoder to learn a generalized
+domain-invariant latent feature representation with the Maximum Mean Discrepancy (MMD) measure
+to align the distributions across multiple domains. Extensive experiments demonstrate the effectiveness
+of the proposed method. Our MMFA-AAE approach not only outperforms most of the domain generalization
+Person Re-ID methods, but also surpasses many state-of-the-art supervised methods and unsupervised
+domain adaptation methods by a large margin. 

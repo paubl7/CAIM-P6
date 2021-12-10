@@ -1,0 +1,18 @@
+Quantum computing is an information processing paradigm that uses quantum-mechanical properties
+to speedup computationally hard problems. Although promising, existing gate-based quantum computers
+consist of only a few dozen qubits and are not large enough for most applications. On the other hand,
+existing QAs with few thousand of qubits have the potential to solve some domain-specific optimization
+problems. QAs are single instruction machines and to execute a program, the problem is cast to a Hamiltonian,
+embedded on the hardware, and a single quantum machine instruction (QMI) is run. Unfortunately,
+noise and imperfections in hardware result in sub-optimal solutions on QAs even if the QMI is run
+for thousands of trials. The limited programmability of QAs mean that the user executes the same
+QMI for all trials. This subjects all trials to a similar noise profile throughout the execution,
+resulting in a systematic bias. We observe that systematic bias leads to sub-optimal solutions
+and cannot be alleviated by executing more trials or using existing error-mitigation schemes.
+To address this challenge, we propose EQUAL (Ensemble Quantum Annealing). EQUAL generates an ensemble
+of QMIs by adding controlled perturbations to the program QMI. When executed on the QA, the ensemble
+of QMIs steers the program away from encountering the same bias during all trials and thus, improves
+the quality of solutions. Our evaluations using the 2041-qubit D-Wave QA show that EQUAL bridges
+the difference between the baseline and the ideal by an average of 14% (and up to 26%), without requiring
+any additional trials. EQUAL can be combined with existing error mitigation schemes to further
+bridge the difference between the baseline and ideal by an average of 55% (and up to 68%). 

@@ -1,0 +1,19 @@
+Pre-training large-scale neural language models on raw texts has made a significant contribution
+to improving transfer learning in natural language processing (NLP). With the introduction of
+transformer-based language models, such as bidirectional encoder representations from transformers
+(BERT), the performance of information extraction from a free text by NLP has significantly improved
+for both the general domain and medical domain; however, it is difficult to train specific BERT models
+that perform well for domains in which there are few publicly available databases of high quality
+and large size. We hypothesized that this problem can be addressed by up-sampling a domain-specific
+corpus and using it for pre-training with a larger corpus in a balanced manner. Our proposed method
+consists of a single intervention with one option: simultaneous pre-training after up-sampling
+and amplified vocabulary. We conducted three experiments and evaluated the resulting products.
+We confirmed that our Japanese medical BERT outperformed conventional baselines and the other
+BERT models in terms of the medical document classification task and that our English BERT pre-trained
+using both the general and medical-domain corpora performed sufficiently well for practical use
+in terms of the biomedical language understanding evaluation (BLUE) benchmark. Moreover, our
+enhanced biomedical BERT model, in which clinical notes were not used during pre-training, showed
+that both the clinical and biomedical scores of the BLUE benchmark were 0.3 points above that of the
+ablation model trained without our proposed method. Well-balanced pre-training by up-sampling
+instances derived from a corpus appropriate for the target task allows us to construct a high-performance
+BERT model. 

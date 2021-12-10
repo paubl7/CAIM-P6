@@ -1,0 +1,18 @@
+Background: Monte Carlo simulations of diffusion are commonly used as a model validation tool as
+they are especially suitable for generating the diffusion MRI signal in complicated tissue microgeometries.
+New method: Here we describe the details of implementing Monte Carlo simulations in three-dimensional
+(3d) voxelized segmentations of cells in microscopy images. Using the concept of the corner reflector,
+we largely reduce the computational load of simulating diffusion within and exchange between multiple
+cells. Precision is further achieved by GPU-based parallel computations. Results: Our simulation
+result of diffusion in the exemplified white matter axons segmented from a mouse brain demonstrates
+its power and value in validations of biophysical models. Furthermore, we provide the theoretical
+background for implementing a discretized diffusion process, and consider the finite-step effects
+of the particle-membrane reflection and permeation events, needed for efficient simulation of
+interactions with irregular boundaries, variable diffusion coefficient, and exchange. Comparison
+with existing methods: To our knowledge, this is the first Monte Carlo pipeline for MR signal simulations
+in a substrate composed of numerous realistic cells, accounting for their permeable and irregularly-shaped
+membranes. Conclusions: The proposed RMS pipeline makes it possible to achieve fast and accurate
+simulations of diffusion in realistic tissue microgeometry, as well as the interplay with other
+MR contrasts. Presently, RMS focuses on simulations of diffusion, exchange, and T1 and T2 NMR relaxation
+in static tissues, with a possibility to straightforwardly account for susceptibility-induced
+T2* effects and flow. 

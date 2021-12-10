@@ -1,0 +1,19 @@
+Recommendation from implicit feedback is a highly challenging task due to the lack of reliable negative
+feedback data. Existing methods address this challenge by treating all the un-observed data as
+negative (dislike) but downweight the confidence of these data. However, this treatment causes
+two problems: (1) Confidence weights of the unobserved data are usually assigned manually, which
+lack flexibility and may create empirical bias on evaluating user's preference. (2) To handle massive
+volume of the unobserved feedback data, most of the existing methods rely on stochastic inference
+and data sampling strategies. However, since a user is only aware of a very small fraction of items
+in a large dataset, it is difficult for existing samplers to select informative training instances
+in which the user really dislikes the item rather than does not know it. To address the above two problems,
+we propose two novel recommendation methods SamWalker and SamWalker++ that support both adaptive
+confidence assignment and efficient model learning. SamWalker models data confidence with a social
+network-aware function, which can adaptively specify different weights to different data according
+to users' social contexts. However, the social network information may not be available in many
+recommender systems, which hinders application of SamWalker. Thus, we further propose SamWalker++,
+which does not require any side information and models data confidence with a constructed pseudo-social
+network. We also develop fast random-walk-based sampling strategies for our SamWalker and SamWalker++
+to adaptively draw informative training instances, which can speed up gradient estimation and
+reduce sampling variance. Extensive experiments on five real-world datasets demonstrate the
+superiority of the proposed SamWalker and SamWalker++. 

@@ -1,0 +1,19 @@
+In high-speed flow past a normal shock, the fluid temperature rises rapidly triggering downstream
+chemical dissociation reactions. The chemical changes lead to appreciable changes in fluid properties,
+and these coupled multiphysics and the resulting multiscale dynamics are challenging to resolve
+numerically. Using conventional computational fluid dynamics (CFD) requires excessive computing
+cost. Here, we propose a totally new efficient approach, assuming that some sparse measurements
+of the state variables are available that can be seamlessly integrated in the simulation algorithm.
+We employ a special neural network for approximating nonlinear operators, the DeepONet, which
+is used to predict separately each individual field, given inputs from the rest of the fields of the
+coupled multiphysics system. We demonstrate the effectiveness of DeepONet by predicting five
+species in the non-equilibrium chemistry downstream of a normal shock at high Mach numbers as well
+as the velocity and temperature fields. We show that upon training, DeepONets can be over five orders
+of magnitude faster than the CFD solver employed to generate the training data and yield good accuracy
+for unseen Mach numbers within the range of training. Outside this range, DeepONet can still predict
+accurately and fast if a few sparse measurements are available. We then propose a composite supervised
+neural network, DeepM&Mnet, that uses multiple pre-trained DeepONets as building blocks and scattered
+measurements to infer the set of all seven fields in the entire domain of interest. Two DeepM&Mnet
+architectures are tested, and we demonstrate the accuracy and capacity for efficient data assimilation.
+DeepM&Mnet is simple and general: it can be employed to construct complex multiphysics and multiscale
+models and assimilate sparse measurements using pre-trained DeepONets in a "plug-and-play" mode.

@@ -1,0 +1,19 @@
+Polynomial expansions are important in the analysis of neural network nonlinearities. They have
+been applied thereto addressing well-known difficulties in verification, explainability, and
+security. Existing approaches span classical Taylor and Chebyshev methods, asymptotics, and
+many numerical approaches. We find that while these individually have useful properties such as
+exact error formulas, adjustable domain, and robustness to undefined derivatives, there are no
+approaches that provide a consistent method yielding an expansion with all these properties. To
+address this, we develop an analytically modified integral transform expansion (AMITE), a novel
+expansion via integral transforms modified using derived criteria for convergence. We show the
+general expansion and then demonstrate application for two popular activation functions, hyperbolic
+tangent and rectified linear units. Compared with existing expansions (i.e., Chebyshev, Taylor,
+and numerical) employed to this end, AMITE is the first to provide six previously mutually exclusive
+desired expansion properties such as exact formulas for the coefficients and exact expansion errors
+(Table II). We demonstrate the effectiveness of AMITE in two case studies. First, a multivariate
+polynomial form is efficiently extracted from a single hidden layer black-box MLP to facilitate
+equivalence testing from noisy stimulus-response pairs. Second, a variety of FFNN architectures
+having between 3 and 7 layers are range bounded using Taylor models improved by the AMITE polynomials
+and error formulas. AMITE presents a new dimension of expansion methods suitable for analysis/approximation
+of nonlinearities in neural networks, opening new directions and opportunities for the theoretical
+analysis and systematic testing of neural networks. 

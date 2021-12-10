@@ -1,0 +1,20 @@
+In database-as-a-service platforms, automated verification of query equivalence helps eliminate
+redundant computation in the form of overlapping sub-queries. Researchers have proposed two pragmatic
+techniques to tackle this problem. The first approach consists of reducing the queries to algebraic
+expressions and proving their equivalence using an algebraic theory. The limitations of this technique
+are threefold. It cannot prove the equivalence of queries with significant differences in the attributes
+of their relational operators. It does not support certain widely-used SQL features. Its verification
+procedure is computationally intensive. The second approach transforms this problem to a constraint
+satisfaction problem and leverages a general-purpose solver to determine query equivalence.
+This technique consists of deriving the symbolic representation of the queries and proving their
+equivalence by determining the query containment relationship between the symbolic expressions.
+While the latter approach addresses all the limitations of the former technique, it only proves
+the equivalence of queries under set semantics. However, in practice, database applications use
+bag semantics. In this paper, we introduce a novel symbolic approach for proving query equivalence
+under bag semantics. We transform the problem of proving query equivalence under bag semantics
+to that of proving the existence of a bijective, identity map between tuples returned by the queries
+on all valid inputs. We implement this symbolic approach in SPES and demonstrate that SPES proves
+the equivalence of a larger set of query pairs (95/232) under bag semantics compared to the state-of-the-art
+tools based on algebraic (30/232) and symbolic approaches (67/232) under set and bag semantics,
+respectively. Furthermore, SPES is 3X faster than the symbolic tool that proves equivalence under
+set semantics. 

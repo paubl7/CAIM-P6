@@ -1,0 +1,19 @@
+This paper presents a dedicated Deep Neural Network (DNN) architecture that reconstructs space-time
+traffic speeds on freeways given sparse data. The DNN is constructed in such a way, that it learns
+heterogeneous congestion patterns using a large dataset of sparse speed data, in particular from
+probe vehicles. Input to the DNN are two equally sized input matrices: one containing raw measurement
+data, and the other indicates the cells occupied with data. The DNN, comprising multiple stacked
+convolutional layers with an encoding-decoding structure and feed-forward paths, transforms
+the input into a full matrix of traffic speeds. The proposed DNN architecture is evaluated with respect
+to its ability to accurately reconstruct heterogeneous congestion patterns under varying input
+data sparsity. Therefore, a large set of empirical Floating-Car Data (FCD) collected on German
+freeway A9 during two months is utilized. In total, 43 congestion distinct scenarios are observed
+which comprise moving and stationary congestion patterns. A data augmentation technique is applied
+to generate input-output samples of the data, which makes the DNN shift-invariant as well as capable
+of managing varying data sparsities. The DNN is trained and subsequently applied to sparse data
+of an unseen congestion scenario. The results show that the DNN is able to apply learned patterns,
+and reconstructs moving as well as stationary congested traffic with high accuracy; even given
+highly sparse input data. Reconstructed speeds are compared qualitatively and quantitatively
+with the results of several state-of-the-art methods such as the Adaptive Smoothing Method (ASM),
+the Phase-Based Smoothing Method (PSM) and a standard Convolutional Neural Network (CNN) architecture.
+As a result, the DNN outperforms the other methods significantly. 

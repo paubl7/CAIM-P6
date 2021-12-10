@@ -1,0 +1,20 @@
+We consider reinforcement learning (RL) in Markov Decision Processes in which an agent repeatedly
+interacts with an environment that is modeled by a controlled Markov process. At each time step $t$,
+it earns a reward, and also incurs a cost-vector consisting of $M$ costs. We design learning algorithms
+that maximize the cumulative reward earned over a time horizon of $T$ time-steps, while simultaneously
+ensuring that the average values of the $M$ cost expenditures are bounded by agent-specified thresholds
+$c^{ub}_i,i=1,2,\ldots,M$. The considerations on the cumulative cost expenditures departs
+from the existing literature, in that the agent now additionally needs to balance the cost expenses
+in an online manner, while simultaneously performing the exploration-exploitation trade-off
+that is typically encountered in RL tasks. In order to measure the performance of a reinforcement
+learning algorithm that satisfies the average cost constraints, we define an $M+1$ dimensional
+regret vector that is composed of its reward regret, and $M$ cost regrets. The reward regret measures
+the sub-optimality in the cumulative reward, while the $i$-th component of the cost regret vector
+is the difference between its $i$-th cumulative cost expense and the expected cost expenditures
+$Tc^{ub}_i$. We prove that with a high probablity, the regret vector of UCRL-CMDP is upper-bounded
+as $O\left( S\sqrt{AT^{1.5}\log(T)}\right)$, where $S$ is the number of states, $A$ is the number
+of actions, and $T$ is the time horizon. We further show how to reduce the regret of a desired subset
+of the $M$ costs, at the expense of increasing the regrets of rewards and the remaining costs. To the
+best of our knowledge, ours is the only work that considers non-episodic RL under average cost constraints,
+and derive algorithms that can~\emph{tune the regret vector} according to the agent's requirements
+on its cost regrets. 

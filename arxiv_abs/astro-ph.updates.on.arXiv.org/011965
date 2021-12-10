@@ -1,0 +1,18 @@
+A starshade suppresses starlight by a factor of 1E11 in the image plane of a telescope, which is crucial
+for directly imaging Earth-like exoplanets. The state of the art in high contrast post-processing
+and signal detection methods were developed specifically for images taken with an internal coronagraph
+system and focus on the removal of quasi-static speckles. These methods are less useful for starshade
+images where such speckles are not present. This paper is dedicated to investigating signal processing
+methods tailored to work efficiently on starshade images. We describe a signal detection method,
+the generalized likelihood ratio test (GLRT), for starshade missions and look into three important
+problems. First, even with the light suppression provided by the starshade, rocky exoplanets are
+still difficult to detect in reflected light due to their absolute faintness. GLRT can successfully
+flag these dim planets. Moreover, GLRT provides estimates of the planets' positions and intensities
+and the theoretical false alarm rate of the detection. Second, small starshade shape errors, such
+as a truncated petal tip, can cause artifacts that are hard to distinguish from real planet signals;
+the detection method can help distinguish planet signals from such artifacts. The third direct
+imaging problem is that exozodiacal dust degrades detection performance. We develop an iterative
+generalized likelihood ratio test to mitigate the effect of dust on the image. In addition, we provide
+guidance on how to choose the number of photon counting images to combine into one co-added image
+before doing detection, which will help utilize the observation time efficiently. All the methods
+are demonstrated on realistic simulated images. 

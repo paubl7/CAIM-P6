@@ -1,0 +1,19 @@
+We consider the estimation of treatment effects in settings when multiple treatments are assigned
+over time and treatments can have a causal effect on future outcomes or the state of the treated unit.
+We propose an extension of the double/debiased machine learning framework to estimate the dynamic
+effects of treatments, which can be viewed as a Neyman orthogonal (locally robust) cross-fitted
+version of $g$-estimation in the dynamic treatment regime. Our method applies to a general class
+of non-linear dynamic treatment models known as Structural Nested Mean Models and allows the use
+of machine learning methods to control for potentially high dimensional state variables, subject
+to a mean square error guarantee, while still allowing parametric estimation and construction
+of confidence intervals for the structural parameters of interest. These structural parameters
+can be used for off-policy evaluation of any target dynamic policy at parametric rates, subject
+to semi-parametric restrictions on the data generating process. Our work is based on a recursive
+peeling process, typical in $g$-estimation, and formulates a strongly convex objective at each
+stage, which allows us to extend the $g$-estimation framework in multiple directions: i) to provide
+finite sample guarantees, ii) to estimate non-linear effect heterogeneity with respect to fixed
+unit characteristics, within arbitrary function spaces, enabling a dynamic analogue of the RLearner
+algorithm for heterogeneous effects, iii) to allow for high-dimensional sparse parameterizations
+of the target structural functions, enabling automated model selection via a recursive lasso algorithm.
+We also provide guarantees for data stemming from a single treated unit over a long horizon and under
+stationarity conditions. 

@@ -1,0 +1,18 @@
+This work does the statistical quality-of-service (QoS) analysis of a block-fading device-to-device
+(D2D) link in a multi-tier cellular network that consists of a macro-BS (BSMC) and a micro-BS (BSmC)
+which both operate in full-duplex (FD) mode. For the D2D link under consideration, we first formulate
+the mode selection problem-whereby D2D pair could either communicate directly, or, through the
+BSmC, or, through the BSMC-as a ternary hypothesis testing problem. Next, to compute the effective
+capacity (EC) for the given D2D link, we assume that the channel state information (CSI) is not available
+at the transmit D2D node, and hence, it transmits at a fixed rate r with a fixed power. This allows us
+to model the D2D link as a Markov system with six-states. We consider both overlay and underlay modes
+for the D2D link. Moreover, to improve the throughput of the D2D link, we assume that the D2D pair utilizes
+two special automatic repeat request (ARQ) schemes, i.e., Hybrid-ARQ (HARQ) and truncated HARQ.
+Furthermore, we consider two distinct queue models at the transmit D2D node, based upon how it responds
+to the decoding failure at the receive D2D node. Eventually, we provide closed-form expressions
+for the EC for both HARQ-enabled D2D link and truncated HARQ-enabled D2D link, under both queue models.
+Noting that the EC looks like a quasi-concave function of r, we further maximize the EC by searching
+for an optimal rate via the gradient-descent method. Simulation results provide us the following
+insights: i) EC decreases with an increase in the QoS exponent, ii) EC of the D2D link improves when
+HARQ is employed, iii) EC increases with an increase in the quality of self-interference cancellation
+techniques used at BSmC and BSMC in FD mode. 

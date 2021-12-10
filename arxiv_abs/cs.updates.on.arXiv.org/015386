@@ -1,0 +1,19 @@
+Existing visual object tracking usually learns a bounding-box based template to match the targets
+across frames, which cannot accurately learn a pixel-wise representation, thereby being limited
+in handling severe appearance variations. To address these issues, much effort has been made on
+segmentation-based tracking, which learns a pixel-wise object-aware template and can achieve
+higher accuracy than bounding-box template based tracking. However, existing segmentation-based
+trackers are ineffective in learning the spatio-temporal correspondence across frames due to
+no use of the rich temporal information. To overcome this issue, this paper presents a novel segmentation-based
+tracking architecture, which is equipped with a spatio-appearance memory network to learn accurate
+spatio-temporal correspondence. Among it, an appearance memory network explores spatio-temporal
+non-local similarity to learn the dense correspondence between the segmentation mask and the current
+frame. Meanwhile, a spatial memory network is modeled as discriminative correlation filter to
+learn the mapping between feature map and spatial map. The appearance memory network helps to filter
+out the noisy samples in the spatial memory network while the latter provides the former with more
+accurate target geometrical center. This mutual promotion greatly boosts the tracking performance.
+Without bells and whistles, our simple-yet-effective tracking architecture sets new state-of-the-arts
+on the VOT2016, VOT2018, VOT2019, GOT-10K, TrackingNet, and VOT2020 benchmarks, respectively.
+Besides, our tracker outperforms the leading segmentation-based trackers SiamMask and D3S on
+two video object segmentation benchmarks DAVIS16 and DAVIS17 by a large margin. The source codes
+can be found at https://github.com/phiphiphi31/DMB. 

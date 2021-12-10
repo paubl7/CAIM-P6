@@ -1,0 +1,18 @@
+Query Optimization remains an open problem for Big Data Management Systems. Traditional optimizers
+are cost-based and use statistical estimates of intermediate result cardinalities to assign costs
+and pick the best plan. However, such estimates tend to become less accurate because of filtering
+conditions caused either from undetected correlations between multiple predicates local to a
+single dataset, predicates with query parameters, or predicates involving user-defined functions
+(UDFs). Consequently, traditional query optimizers tend to ignore or miscalculate those settings,
+thus leading to suboptimal execution plans. Given the volume of today's data, a suboptimal plan
+can quickly become very inefficient. In this work, we revisit the old idea of runtime dynamic optimization
+and adapt it to a shared-nothing distributed database system, AsterixDB. The optimization runs
+in stages (re-optimization points), starting by first executing all predicates local to a single
+dataset. The intermediate result created from each stage is used to re-optimize the remaining query.
+This re-optimization approach avoids inaccurate intermediate result cardinality estimations,
+thus leading to much better execution plans. While it introduces the overhead for materializing
+these intermediate results, our experiments show that this overhead is relatively small and it
+is an acceptable price to pay given the optimization benefits. In fact, our experimental evaluation
+shows that runtime dynamic optimization leads to much better execution plans as compared to the
+current default AsterixDB plans as well as to plans produced by static cost-based optimization
+(i.e. based on the initial dataset statistics) and other state-of-the-art approaches. 

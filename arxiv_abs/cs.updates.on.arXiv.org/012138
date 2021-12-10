@@ -1,0 +1,20 @@
+The alarmingly high mortality rate and increasing global prevalence of cardiovascular diseases
+(CVDs) signify the crucial need for early detection schemes. Phonocardiogram(PCG) signals has
+been historically applied in this domain owing to its simplicity and cost-effectiveness. However,
+insufficiency of expert physicians and human subjectivity affect the applicability of this technique,
+especially in the low-resource settings. For resolving this issue, in this paper, we introduce
+CardioXNet,a novel lightweight CRNN architecture for automatic detection of five classes of cardiac
+auscultation namely normal, aortic stenosis, mitral stenosis, mitral regurgitation and mitral
+valve prolapse using raw PCG signal. The process has been automated by the involvement of two learning
+phases namely, representation learning and sequence residual learning. The first phase mainly
+focuses on automated feature extraction and it has been implemented in a modular way with three parallel
+CNN pathways i.e., frequency feature extractor (FFE), pattern extractor (PE) and adaptive feature
+extractor (AFE). 1D-CNN based FFE and PE respectively learn the coarse and fine-grained features
+from the PCG while AFE explores the salient features from variable receptive fields involving 2D-CNN
+based squeezeexpansion. Thus, in the representation learning phase, the network extracts efficient
+time-invariant features and converges with great rapidity. In the sequential residual learning
+phase,because of the bidirectional-LSTMs and the skip connection, the network can proficiently
+extract temporal features. The obtained results demonstrate that the proposed end-to-end architecture
+yields outstanding performance in all the evaluation metrics compared to the previous state-of-the-art
+methods with up to 99.6% accuracy, 99.6% precision, 99.6% recall and 99.4% F1-score on an average
+while being computationally comparable. 

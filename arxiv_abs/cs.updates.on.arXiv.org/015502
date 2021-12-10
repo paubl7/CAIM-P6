@@ -1,0 +1,18 @@
+A path-planning algorithm for connected and non-connected automated road vehicles on multilane
+motorways is derived from the opportune formulation of an optimal control problem. In this framework,
+the objective function to be minimized contains appropriate respective terms to reflect: the goals
+of vehicle advancement; passenger comfort; and avoidance of collisions with other vehicles, of
+road departures and of negative speeds. Connectivity implies that connected vehicles are able
+to exchange with each other (V2V) or the infrastructure (V2I), real-time information about their
+last generated path. For the numerical solution of the optimal control problem, an efficient feasible
+direction algorithm is used. To ensure high-quality local minima, a simplified Dynamic Programming
+algorithm is also conceived to deliver the initial guess trajectory for the feasible direction
+algorithm. Thanks to low computation times, the approach is readily executable within a model predictive
+control (MPC) framework. The proposed MPC-based approach is embedded within the Aimsun microsimulation
+platform, which enables the evaluation of a plethora of realistic vehicle driving and advancement
+scenarios. Results obtained on a multilane motorway stretch indicate higher efficiency of the
+optimally controlled vehicles in driving closer to their desired speed, compared to ordinary Aimsun
+vehicles. Increased penetration rates of automated vehicles are found to increase the efficiency
+of the overall traffic flow, benefiting manual vehicles as well. Moreover, connected controlled
+vehicles appear to be more efficient compared to the corresponding non-connected controlled vehicles,
+due to the improved real-time information and short-term prediction. 

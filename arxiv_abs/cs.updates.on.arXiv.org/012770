@@ -1,0 +1,19 @@
+In this paper we tackle the problem of automatically designing concurrent data structure operations
+given a sequential data structure specification and knowledge about concurrent behavior. Designing
+concurrent code is a non-trivial task even in simplest of cases. Humans often design concurrent
+data structure operations by transforming sequential versions into their respective concurrent
+versions. This requires an understanding of the data structure, its sequential behavior, thread
+interactions during concurrent execution and shared memory synchronization primitives. We mechanize
+this design process using automated commonsense reasoning. We assume that the data structure description
+is provided as axioms alongside the sequential code of its algebraic operations. This information
+is used to automatically derive concurrent code for that data structure, such as dictionary operations
+for linked lists and binary search trees. Knowledge in our case is expressed using Answer Set Programming
+(ASP), and we employ deduction, induction and abduction---just as humans do---in the reasoning
+involved. ASP allows for succinct modeling of first order theories of pointer data structures,
+run-time thread interactions and shared memory synchronization. Our reasoner can systematically
+make the same judgments as a human reasoner while constructing provably safe concurrent code. We
+present several reasoning challenges involved in transforming the sequential data structure
+into its equivalent concurrent version. All the reasoning tasks are encoded in ASP and our reasoner
+can make sound judgments to transform sequential code into concurrent code. To the best of our knowledge,
+our work is the first one to use commonsense reasoning to automatically transform sequential programs
+into concurrent code. 

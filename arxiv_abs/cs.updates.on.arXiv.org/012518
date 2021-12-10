@@ -1,0 +1,18 @@
+Factorization Machines (FMs) are effective in incorporating side information to overcome the
+cold-start and data sparsity problems in recommender systems. Traditional FMs adopt the inner
+product to model the second-order interactions between different attributes, which are represented
+via feature vectors. The problem is that the inner product violates the triangle inequality property
+of feature vectors. As a result, it cannot well capture fine-grained attribute interactions, resulting
+in sub-optimal performance. Recently, the Euclidean distance is exploited in FMs to replace the
+inner product and has delivered better performance. However, previous FM methods including the
+ones equipped with the Euclidean distance all focus on the attribute-level interaction modeling,
+ignoring the critical intrinsic feature correlations inside attributes. Thereby, they fail to
+model the complex and rich interactions exhibited in the real-world data. To tackle this problem,
+in this paper, we propose a FM framework equipped with generalized metric learning techniques to
+better capture these feature correlations. In particular, based on this framework, we present
+a Mahalanobis distance and a deep neural network (DNN) methods, which can effectively model the
+linear and non-linear correlations between features, respectively. Besides, we design an efficient
+approach for simplifying the model functions. Experiments on several benchmark datasets demonstrate
+that our proposed framework outperforms several state-of-the-art baselines by a large margin.
+Moreover, we collect a new large-scale dataset on second-hand trading to justify the effectiveness
+of our method over cold-start and data sparsity problems in recommender systems. 

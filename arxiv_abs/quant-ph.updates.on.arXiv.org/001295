@@ -1,0 +1,19 @@
+Noisy, intermediate-scale quantum (NISQ) computing devices have become an industrial reality
+in the last few years, and cloud-based interfaces to these devices are enabling exploration of near-term
+quantum computing on a range of problems. As NISQ devices are too noisy for many of the algorithms
+with a known quantum advantage, discovering impactful applications for near-term devices is the
+subject of intense research interest. We explore quantum-assisted machine learning (QAML) on
+NISQ devices through the perspective of tensor networks (TNs), which offer a robust platform for
+designing resource-efficient and expressive machine learning models to be dispatched on quantum
+devices. In particular, we lay out a framework for designing and optimizing TN-based QAML models
+using classical techniques, and then compiling these models to be run on quantum hardware, with
+demonstrations for generative matrix product state (MPS) models. We put forth a generalized canonical
+form for MPS models that aids in compilation to quantum devices, and demonstrate greedy heuristics
+for compiling with a given topology and gate set that outperforms known generic methods in terms
+of the number of entangling gates, e.g., CNOTs, in some cases by an order of magnitude. We present
+an exactly solvable benchmark problem for assessing the performance of MPS QAML models, and also
+present an application for the canonical MNIST handwritten digit dataset. The impacts of hardware
+topology and day-to-day experimental noise fluctuations on model performance are explored by
+analyzing both raw experimental counts and statistical divergences of inferred distributions.
+We also present parametric studies of depolarization and readout noise impacts on model performance
+using hardware simulators. 

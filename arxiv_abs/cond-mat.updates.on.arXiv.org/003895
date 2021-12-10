@@ -1,0 +1,20 @@
+In the previous paper of this series [JCTC 2020, 16, 3757], we presented a theoretical and algorithmic
+framework based on a localized representation of the occupied space that exploits the inherent
+sparsity in the real-space evaluation of the EXX interaction in finite-gap systems. This was accompanied
+by a detailed description of exx, a massively parallel hybrid MPI/OpenMP implementation of this
+approach in Quantum ESPRESSO that enables linear-scaling hybrid DFT based AIMD in the NVE/NVT ensembles
+of condensed-phase systems containing 500--1000 atoms (in fixed orthorhombic cells) with a wall
+time cost comparable to semi-local DFT. In this work, we extend exx to enable hybrid DFT based AIMD
+of large-scale condensed-phase systems with general and fluctuating cells in the NpH/NpT ensembles.
+Our theoretical extension includes an analytical derivation of the EXX contribution to the stress
+tensor for systems in general cells with a computational complexity that scales linearly with system
+size. The corresponding algorithmic extensions to exx include optimized routines that: (i) handle
+static/fluctuating cells with non-orthogonal lattice symmetries, (ii) solve Poisson's equation
+in general cells via an automated selection of the auxiliary grid directions in the Natan-Kronik
+representation of the discrete Laplacian operator, and (iii) evaluate the EXX contribution to
+the stress tensor. We also critically assess the computational performance of the extended exx
+module across several different HPC architectures via case studies on ice Ih, II, and III as well
+as ambient liquid water. We find that the extended exx can evaluate the EXX contribution to the stress
+tensor with negligible cost (< 1%) and remains highly scalable, thereby bringing us another step
+closer to routinely performing hybrid DFT based AIMD for large-scale condensed-phase systems
+across a wide range of thermodynamic conditions. 

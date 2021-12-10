@@ -1,0 +1,20 @@
+A primary goal of the National Oceanic and Atmospheric Administration (NOAA) Warn-on-Forecast
+(WoF) project is to provide rapidly updating probabilistic guidance to human forecasters for short-term
+(e.g., 0-3 h) severe weather forecasts. Maximizing the usefulness of probabilistic severe weather
+guidance from an ensemble of convection-allowing model forecasts requires calibration. In this
+study, we compare the skill of a simple method using updraft helicity against a series of machine
+learning (ML) algorithms for calibrating WoFS severe weather guidance. ML models are often used
+to calibrate severe weather guidance since they leverage multiple variables and discover useful
+patterns in complex datasets. \indent Our dataset includes WoF System (WoFS) ensemble forecasts
+available every 5 minutes out to 150 min of lead time from the 2017-2019 NOAA Hazardous Weather Testbed
+Spring Forecasting Experiments (81 dates). Using a novel ensemble storm track identification
+method, we extracted three sets of predictors from the WoFS forecasts: intra-storm state variables,
+near-storm environment variables, and morphological attributes of the ensemble storm tracks.
+We then trained random forests, gradient-boosted trees, and logistic regression algorithms to
+predict which WoFS 30-min ensemble storm tracks will correspond to a tornado, severe hail, and/or
+severe wind report. For the simple method, we extracted the ensemble probability of 2-5 km updraft
+helicity (UH) exceeding a threshold (tuned per severe weather hazard) from each ensemble storm
+track. The three ML algorithms discriminated well for all three hazards and produced more reliable
+probabilities than the UH-based predictions. Overall, the results suggest that ML-based calibrations
+of dynamical ensemble output can improve short term, storm-scale severe weather probabilistic
+guidance 

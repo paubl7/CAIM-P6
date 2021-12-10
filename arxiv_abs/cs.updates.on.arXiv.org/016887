@@ -1,0 +1,19 @@
+The transformer networks are particularly good at modeling long-range dependencies within a long
+sequence. In this paper, we conduct research on applying the transformer networks for salient object
+detection (SOD). We adopt the dense transformer backbone for fully supervised RGB image based SOD,
+RGB-D image pair based SOD, and weakly supervised SOD within a unified framework based on the observation
+that the transformer backbone can provide accurate structure modeling, which makes it powerful
+in learning from weak labels with less structure information. Further, we find that the vision transformer
+architectures do not offer direct spatial supervision, instead encoding position as a feature.
+Therefore, we investigate the contributions of two strategies to provide stronger spatial supervision
+through the transformer layers within our unified framework, namely deep supervision and difficulty-aware
+learning. We find that deep supervision can get gradients back into the higher level features, thus
+leads to uniform activation within the same semantic object. Difficulty-aware learning on the
+other hand is capable of identifying the hard pixels for effective hard negative mining. We also
+visualize features of conventional backbone and transformer backbone before and after fine-tuning
+them for SOD, and find that transformer backbone encodes more accurate object structure information
+and more distinct semantic information within the lower and higher level features respectively.
+We also apply our model to camouflaged object detection (COD) and achieve similar observations
+as the above three SOD tasks. Extensive experimental results on various SOD and COD tasks illustrate
+that transformer networks can transform SOD and COD, leading to new benchmarks for each related
+task. The source code and experimental results are available via our project page: https://github.com/fupiao1998/TrasformerSOD.

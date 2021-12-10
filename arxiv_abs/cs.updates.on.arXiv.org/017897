@@ -1,0 +1,19 @@
+The inaccessibility of user-perceived reality remains an open issue in pursuing the accurate calibration
+of optical see-through (OST) head-mounted displays (HMDs). Manual user alignment is usually required
+to collect a set of virtual-to-real correspondences, so that a default or an offline display calibration
+can be updated to account for the user's eye position(s). Current alignment-based calibration
+procedures usually require point-wise alignments between rendered image point(s) and associated
+physical landmark(s) of a target calibration tool. As each alignment can only provide one or a few
+correspondences, repeated alignments are required to ensure calibration quality. This work presents
+an accurate and tool-less online OST calibration method to update an offline-calibrated eye-display
+model. The user's bare hand is markerlessly tracked by a commercial RGBD camera anchored to the OST
+headset to generate a user-specific cursor for correspondence collection. The required alignment
+is object-wise, and can provide thousands of unordered corresponding points in tracked space.
+The collected correspondences are registered by a proposed rotation-constrained iterative closest
+point (rcICP) method to optimise the viewpoint-related calibration parameters. We implemented
+such a method for the Microsoft HoloLens 1. The resiliency of the proposed procedure to noisy data
+was evaluated through simulated tests and real experiments performed with an eye-replacement
+camera. According to the simulation test, the rcICP registration is robust against possible user-induced
+rotational misalignment. With a single alignment, our method achieves 8.81 arcmin (1.37 mm) positional
+error and 1.76 degree rotational error by camera-based tests in the arm-reach distance, and 10.79
+arcmin (7.71 pixels) reprojection error by user tests. 

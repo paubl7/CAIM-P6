@@ -1,0 +1,19 @@
+Object detection has been one of the most active topics in computer vision for the past years. Recent
+works have mainly focused on pushing the state-of-the-art in the general-purpose COCO benchmark.
+However, the use of such detection frameworks in specific applications such as autonomous driving
+is yet an area to be addressed. This study presents an enhanced 2D object detector based on Faster
+R-CNN that is better suited for the context of autonomous vehicles. Two main aspects are improved:
+the anchor generation procedure and the performance drop in minority classes. The default uniform
+anchor configuration is not suitable in this scenario due to the perspective projection of the vehicle
+cameras. Therefore, we propose a perspective-aware methodology that divides the image into key
+regions via clustering and uses evolutionary algorithms to optimize the base anchors for each of
+them. Furthermore, we add a module that enhances the precision of the second-stage header network
+by including the spatial information of the candidate regions proposed in the first stage. We also
+explore different re-weighting strategies to address the foreground-foreground class imbalance,
+showing that the use of a reduced version of focal loss can significantly improve the detection of
+difficult and underrepresented objects in two-stage detectors. Finally, we design an ensemble
+model to combine the strengths of the different learning strategies. Our proposal is evaluated
+with the Waymo Open Dataset, which is the most extensive and diverse up to date. The results demonstrate
+an average accuracy improvement of 6.13% mAP when using the best single model, and of 9.69% mAP with
+the ensemble. The proposed modifications over the Faster R-CNN do not increase computational cost
+and can easily be extended to optimize other anchor-based detection frameworks. 

@@ -1,0 +1,19 @@
+A new conservative symmetry-preserving second-order time-accurate PISO-based pressure-velocity
+coupling for solving the incompressible Navier-Stokes equations on unstructured collocated
+grids is presented in this paper. This new method for implicit time stepping is an extension of the
+conservative symmetry-preserving incremental-pressure projection method for explicit time
+stepping and unstructured collocated meshes of Trias et al. (2014). In order to assess and compare
+both methods, we have implemented them within one unified solver in the open source code OpenFOAM.
+We combine both methods with a Butcher tableau for a family of explicit and diagonally implicit Runge-Kutta
+temporal schemes. We assess the energy conservation properties of the implemented discretisation
+methods and the temporal consistency of the selected Runge-Kutta schemes using Taylor-Green vortex
+and lid-driven cavity flow test cases. Although both implemented methods are based on a symmetry-preserving
+discretisation, we show that both methods still produce a small amount of numerical dissipation
+when the total pressure is directly solved from a Poisson equation. This numerical dissipation
+is mainly caused by the corresponding pressure error which is of $O(\Delta t \Delta h^2)$. When an
+incremental-pressure approach is used, where a pressure correction is solved from a Poisson equation,
+the pressure error reduces to $O(\Delta t^2 \Delta h^2)$, yielding better conservation properties:
+both methods are then effectively fully-conservative. Furthermore, we conclude that all selected
+explicit and implicit higher order temporal schemes suffer from a reduction of the temporal order
+to approximately one when the pressure Poisson equation is based on the total pressure due to the
+presence of a pressure error of $O(\Delta t \Delta h^2)$. 

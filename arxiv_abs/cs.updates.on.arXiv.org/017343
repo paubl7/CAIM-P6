@@ -1,0 +1,19 @@
+Federated learning is a distributed learning technique where machine learning models are trained
+on client devices in which the local training data resides. The training is coordinated via a central
+server which is, typically, controlled by the intended owner of the resulting model. By avoiding
+the need to transport the training data to the central server, federated learning improves privacy
+and efficiency. But it raises the risk of model theft by clients because the resulting model is available
+on every client device. Even if the application software used for local training may attempt to prevent
+direct access to the model, a malicious client may bypass any such restrictions by reverse engineering
+the application software. Watermarking is a well-known deterrence method against model theft
+by providing the means for model owners to demonstrate ownership of their models. Several recent
+deep neural network (DNN) watermarking techniques use backdooring: training the models with additional
+mislabeled data. Backdooring requires full access to the training data and control of the training
+process. This is feasible when a single party trains the model in a centralized manner, but not in
+a federated learning setting where the training process and training data are distributed among
+several client devices. In this paper, we present WAFFLE, the first approach to watermark DNN models
+trained using federated learning. It introduces a retraining step at the server after each aggregation
+of local models into the global model. We show that WAFFLE efficiently embeds a resilient watermark
+into models incurring only negligible degradation in test accuracy (-0.17%), and does not require
+access to training data. We also introduce a novel technique to generate the backdoor used as a watermark.
+It outperforms prior techniques, imposing no communication, and low computational (+3.2%) overhead.

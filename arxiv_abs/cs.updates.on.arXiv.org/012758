@@ -1,0 +1,19 @@
+Due to the massive deployment of WiFi APs and its accessibility to various positioning elements,
+WiFi positioning is a key enabler to provide seamless and ubiquitous location services to users.
+There are various kinds of WiFi positioning technologies, depending on the concerned positioning
+element. Among them, round-trip time (RTT) measured by a fine-timing measurement protocol has
+received great attention recently. It provides an acceptable ranging accuracy near the service
+requirements in favorable environments when a line-of-sight (LOS) path exists. Otherwise, a signal
+is detoured along with non-LOS paths, making {the resultant ranging results} different from the
+ground-truth. The difference between the two is called an RTT bias, which is the main reason for poor
+positioning performance. To address it, we aim at leveraging the history of user mobility detected
+by a smartphone's inertial measurement units, called pedestrian dead reckoning (PDR). Specifically,
+PDR provides the geographic relation among adjacent locations, guiding the resultant positioning
+estimates' sequence not to deviate from the user trajectory. To this end, we describe their relations
+as multiple geometric equations, enabling us to render a novel positioning algorithm with acceptable
+accuracy. The algorithm is designed into two phases. First, an RTT bias of each AP can be compensated
+by leveraging the geometric relation mentioned above. It provides a user's relative trajectory
+defined on the local coordinate system of the concerned AP. Second, the user's absolute trajectory
+can be found by rotating every relative trajectory to be aligned, called trajectory alignment.
+The proposed algorithm gives a unique position when the number of detected steps and APs is at least
+4 and 3 for linear mobility and 5 and 2 for arbitrary mobility. 

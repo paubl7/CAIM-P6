@@ -1,0 +1,18 @@
+In recent years, convolutional neural networks (CNNs) have been successfully implemented to various
+image recognition applications, such as medical image analysis, object detection, and image segmentation.
+Many studies and applications have been working on improving the performance of CNN algorithms
+and models. The strategies that aim to improve the performance of CNNs can be grouped into three major
+approaches: (1) deeper and wider network architecture, (2) automatic architecture search, and
+(3) convolutional attention block. Unlike approaches (1) and (2), the convolutional attention
+block approach is more flexible with lower cost. It enhances the CNN performance by extracting more
+efficient features. However, the existing attention blocks focus on enhancing the significant
+features, which lose some potential features in the uncertainty information. Inspired by the test
+time augmentation and test-time dropout approaches, we developed a novel convolutional uncertainty
+attention block (CUAB) that can leverage the uncertainty information to improve CNN-based models.
+The proposed module discovers potential information from the uncertain regions on feature maps
+in computer vision tasks. It is a flexible functional attention block that can be applied to any position
+in the convolutional block in CNN models. We evaluated the CUAB with notable backbone models, ResNet
+and ResNeXt, on a medical image segmentation task. The CUAB achieved a dice score of 73% and 84% in
+pneumonia and pneumothorax segmentation, respectively, thereby outperforming the original
+model and other notable attention approaches. The results demonstrated that the CUAB can efficiently
+utilize the uncertainty information to improve the model performance. 

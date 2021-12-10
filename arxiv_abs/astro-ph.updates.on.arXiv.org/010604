@@ -1,0 +1,18 @@
+In this paper, we present the first study that compares different models of Bayesian Neural Networks
+(BNNs) to predict the posterior distribution of the cosmological parameters directly from the
+Cosmic Microwave Background temperature and polarization maps. We focus our analysis on four different
+methods to sample the weights of the network during training: Dropout, DropConnect, Reparameterization
+Trick (RT), and Flipout. We find out that Flipout outperforms all other methods regardless of the
+architecture used, and provides tighter constraints for the cosmological parameters. Moreover
+we compare with MCMC posterior analysis obtaining comparable error correlation among parameters,
+with BNNs being orders of magnitude faster in inference, although less accurate. Thanks to the speed
+of the inference process with BNNs, the posterior distribution, outcome of the neural network,
+can be used as the initial proposal for the Markov Chain. We show that this combined approach increases
+the acceptance rate in the Metropolis-Hasting algorithm and accelerates the convergence of the
+MCMC, while reaching the same final accuracy. In the second part of the paper, we present a guide to
+the training and calibration of a successful multi-channel BNN for the CMB temperature and polarization
+map. We show how tuning the regularization parameter for the standard deviation of the approximate
+posterior on the weights in Flipout and RT we can produce unbiased and reliable uncertainty estimates,
+i.e., the regularizer acts like a hyperparameter analogous to the dropout rate in Dropout. Finally,
+we show how polarization, when combined with the temperature in a unique multi-channel tensor fed
+to a single BNN, helps to break degeneracies among parameters and provides stringent constraints.

@@ -1,0 +1,18 @@
+Most recent person re-identification approaches are based on the use of deep convolutional neural
+networks (CNNs). These networks, although effective in multiple tasks such as classification
+or object detection, tend to focus on the most discriminative part of an object rather than retrieving
+all its relevant features. This behavior penalizes the performance of a CNN for the re-identification
+task, since it should identify diverse and fine grained features. It is then essential to make the
+network learn a wide variety of finer characteristics in order to make the re-identification process
+of people effective and robust to finer changes. In this article, we introduce Deep Miner, a method
+that allows CNNs to "mine" richer and more diverse features about people for their re-identification.
+Deep Miner is specifically composed of three types of branches: a Global branch (G-branch), a Local
+branch (L-branch) and an Input-Erased branch (IE-branch). G-branch corresponds to the initial
+backbone which predicts global characteristics, while L-branch retrieves part level resolution
+features. The IE-branch for its part, receives partially suppressed feature maps as input thereby
+allowing the network to "mine" new features (those ignored by G-branch) as output. For this special
+purpose, a dedicated suppression procedure for identifying and removing features within a given
+CNN is introduced. This suppression procedure has the major benefit of being simple, while it produces
+a model that significantly outperforms state-of-the-art (SOTA) re-identification methods.
+Specifically, we conduct experiments on four standard person re-identification benchmarks and
+witness an absolute performance gain up to 6.5% mAP compared to SOTA. 

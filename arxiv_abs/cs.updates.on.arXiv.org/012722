@@ -1,0 +1,20 @@
+In this paper, we consider the problem of empirical risk minimization (ERM) of smooth, strongly
+convex loss functions using iterative gradient-based methods. A major goal of this literature
+has been to compare different algorithms, such as gradient descent (GD) or stochastic gradient
+descent (SGD), by analyzing their rates of convergence to $\epsilon$-approximate solutions.
+For example, the oracle complexity of GD is $O(n\log(\epsilon^{-1}))$, where $n$ is the number
+of training samples. When $n$ is large, this can be expensive in practice, and SGD is preferred due
+to its oracle complexity of $O(\epsilon^{-1})$. Such standard analyses only utilize the smoothness
+of the loss function in the parameter being optimized. In contrast, we demonstrate that when the
+loss function is smooth in the data, we can learn the oracle at every iteration and beat the oracle
+complexities of both GD and SGD in important regimes. Specifically, at every iteration, our proposed
+algorithm performs local polynomial regression to learn the gradient of the loss function, and
+then estimates the true gradient of the ERM objective function. We establish that the oracle complexity
+of our algorithm scales like $\tilde{O}((p \epsilon^{-1})^{d/(2\eta)})$ (neglecting sub-dominant
+factors), where $d$ and $p$ are the data and parameter space dimensions, respectively, and the gradient
+of the loss function belongs to a $\eta$-H\"{o}lder class with respect to the data. Our proof extends
+the analysis of local polynomial regression in non-parametric statistics to provide interpolation
+guarantees in multivariate settings, and also exploits tools from the inexact GD literature. Unlike
+GD and SGD, the complexity of our method depends on $d$ and $p$. However, when $d$ is small and the loss
+function exhibits modest smoothness in the data, our algorithm beats GD and SGD in oracle complexity
+for a very broad range of $p$ and $\epsilon$. 

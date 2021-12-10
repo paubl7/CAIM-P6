@@ -1,0 +1,19 @@
+In this paper, we consider the maximization of a probability $\mathbb{P}\{ \zeta \mid \zeta \in
+\mathbf{K}(\mathbf x)\}$ over a closed and convex set $\mathcal X$, a special case of the chance-constrained
+optimization problem. We define $\mathbf{K}(\mathbf x)$ as $\mathbf{K}(\mathbf x) \triangleq
+\{ \zeta \in \mathcal{K} \mid c(\mathbf{x},\zeta) \geq 0 \}$ where $\zeta$ is uniformly distributed
+on a convex and compact set $\mathcal{K}$ and $c(\mathbf{x},\zeta)$ is defined as either {$c(\mathbf{x},\zeta)
+\triangleq 1-|\zeta^T\mathbf{x}|^m$, $m\geq 0$} (Setting A) or $c(\mathbf{x},\zeta) \triangleq
+T\mathbf{x} -\zeta$ (Setting B). We show that in either setting, $\mathbb{P}\{ \zeta \mid \zeta
+\in \mathbf{K(x)}\}$ can be expressed as the expectation of a suitably defined function $F(\mathbf{x},\xi)$
+with respect to an appropriately defined Gaussian density (or its variant), i.e. $\mathbb{E}_{\tilde
+p} [F(\mathbf x,\xi)]$. We then develop a convex representation of the original problem requiring
+the minimization of ${g(\mathbb{E}[F(\mathbf{x},\xi)])}$ over $\mathcal X$ where $g$ is an appropriately
+defined smooth convex function. Traditional stochastic approximation schemes cannot contend
+with the minimization of ${g(\mathbb{E}[F(\cdot,\xi)])}$ over $\mathcal X$, since conditionally
+unbiased sampled gradients are unavailable. We then develop a regularized variance-reduced stochastic
+approximation ({\textbf{r-VRSA}}) scheme that obviates the need for such unbiasedness by combining
+iterative {regularization} with variance-reduction. Notably, ({\textbf{r-VRSA}}) is characterized
+by both almost-sure convergence guarantees, a convergence rate of $\mathcal{O}(1/k^{1/2-a})$
+in expected sub-optimality where $a > 0$, and a sample complexity of $\mathcal{O}(1/\epsilon^{6+\delta})$
+where $\delta > 0$. 

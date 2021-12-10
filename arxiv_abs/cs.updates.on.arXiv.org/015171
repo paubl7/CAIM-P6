@@ -1,0 +1,18 @@
+SU3\_Bench is a microbenchmark developed to explore performance portability across multiple
+programming models/methodologies using a simple, but nontrivial, mathematical kernel. This
+kernel has been derived from the MILC lattice quantum chromodynamics (LQCD) code. SU3\_Bench is
+bandwidth bound and generates regular compute and data access patterns. Therefore, on most traditional
+CPU and GPU-based systems, its performance is mainly determined by the achievable memory bandwidth.
+Although SU3\_Bench is a simple kernel, experience says its subtleties require a certain amount
+of tweaking to achieve peak performance for a given programming model and hardware, making performance
+portability challenging. In this paper, we share some of the challenges in obtaining the peak performance
+for SU3\_Bench on a state-of-the-art Intel Xeon machine, due to the nuances of variable definition,
+the nature of compiler-provided default constructors, how memory is accessed at object creation
+time, and the NUMA effects on the machine. We discuss how to tackle those challenges to improve SU3\_Bench's
+performance by \(2\times\) compared to the original OpenMP implementation available at Github.
+This provides a valuable lesson for other similar kernels. Expanding on the performance portability
+aspects, we also show early results obtained porting SU3\_Bench to the new Intel Programmable Integrated
+Unified Memory Architecture (PIUMA), characterized by a more balanced flops-to-byte ratio. This
+paper shows that it is not the usual bandwidth or flops, rather the pipeline throughput, that determines
+SU3\_Bench's performance on PIUMA. Finally, we show how to improve performance on PIUMA and how
+that compares with the performance on Xeon, which has around one order of magnitude more flops-per-byte.

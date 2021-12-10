@@ -1,0 +1,19 @@
+The paper presents fault-tolerant (FT) labeling schemes for general graphs, as well as, improved
+FT routing schemes. For a given $n$-vertex graph $G$ and a bound $f$ on the number of faults, an $f$-FT
+connectivity labeling scheme is a distributed data structure that assigns each of the graph edges
+and vertices a short label, such that given the labels of the vertices $s$ and $t$, and at most $f$ failing
+edges $F$, one can determine if $s$ and $t$ are connected in $G \setminus F$. The primary complexity
+measure is the length of the individual labels. Since their introduction by [Courcelle, Twigg,
+STACS '07], compact FT labeling schemes have been devised only for a limited collection of graph
+families. In this work, we fill in this gap by proposing two (independent) FT connectivity labeling
+schemes for general graphs, with a nearly optimal label length. This serves the basis for providing
+also FT approximate distance labeling schemes, and ultimately also routing schemes. Our main results
+for an $n$-vertex graph and a fault bound $f$ are: -- There is a randomized FT connectivity labeling
+scheme with a label length of $O(f+\log n)$ bits, hence optimal for $f=O(\log n)$. This scheme is
+based on the notion of cycle space sampling [Pritchard, Thurimella, TALG '11]. -- There is a randomized
+FT connectivity labeling scheme with a label length of $O(\log^3 n)$ bits (independent of the number
+of faults $f$). This scheme is based on the notion of linear sketches of [Ahn et al., SODA '12]. -- For
+$k\geq 1$, there is a randomized routing scheme that routes a message from $s$ to $t$ in the presence
+of a set $F$ of faulty edges, with stretch $O(|F|^2 k)$ and routing tables of size $\tilde{O}(f^3
+n^{1/k})$. This significantly improves over the state-of-the-art bounds by [Chechik, ICALP '11],
+providing the first scheme with sub-linear FT labeling and routing schemes for general graphs.

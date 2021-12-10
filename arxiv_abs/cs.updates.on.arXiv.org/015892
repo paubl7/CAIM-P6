@@ -1,0 +1,18 @@
+Let $\pi$ be an efficient two-party protocol that given security parameter $\kappa$, both parties
+output single bits $X_\kappa$ and $Y_\kappa$, respectively. We are interested in how $(X_\kappa,Y_\kappa)$
+"appears" to an efficient adversary that only views the transcript $T_\kappa$. We make the following
+contributions: $\bullet$ We develop new tools to argue about this loose notion and show (modulo
+some caveats) that for every such protocol $\pi$, there exists an efficient simulator such that
+the following holds: on input $T_\kappa$, the simulator outputs a pair $(X'_\kappa ,Y'_\kappa)$
+such that $(X'_\kappa,Y'_\kappa,T_\kappa)$ is (somewhat) computationally indistinguishable
+from $(X_\kappa,Y_\kappa,T_\kappa)$. $\bullet$ We use these tools to prove the following dichotomy
+theorem: every such protocol $\pi$ is: - either uncorrelated -- it is (somewhat) indistinguishable
+from an efficient protocol whose parties interact to produce $T_\kappa$, but then choose their
+outputs independently from some product distribution (that is determined in poly-time from $T_\kappa$),
+- or, the protocol implies a key-agreement protocol (for infinitely many $\kappa$'s). Uncorrelated
+protocols are uninteresting from a cryptographic viewpoint, as the correlation between outputs
+is (computationally) trivial. Our dichotomy shows that every protocol is either completely uninteresting
+or implies key-agreement. $\bullet$ We use the above dichotomy to make progress on open problems
+on minimal cryptographic assumptions required for differentially private mechanisms for the
+XOR function. $\bullet$ A subsequent work of Haitner et al. uses the above dichotomy to makes progress
+on a longstanding open question regarding the complexity of fair two-party coin-flipping protocols.

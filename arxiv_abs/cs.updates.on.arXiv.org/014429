@@ -1,0 +1,19 @@
+We consider compact representations of collections of similar strings that support random access
+queries. The collection of strings is given by a rooted tree where edges are labeled by an edit operation
+(inserting, deleting, or replacing a character) and a node represents the string obtained by applying
+the sequence of edit operations on the path from the root to the node. The goal is to compactly represent
+the entire collection while supporting fast random access to any part of a string in the collection.
+This problem captures natural scenarios such as representing the past history of an edited document
+or representing highly-repetitive collections. Given a tree with $n$ nodes, we show how to represent
+the corresponding collection in $O(n)$ space and $O(\log n/ \log \log n)$ query time. This improves
+the previous time-space trade-offs for the problem. Additionally, we show a lower bound proving
+that the query time is optimal for any solution using near-linear space. To achieve our bounds for
+random access in persistent strings we show how to reduce the problem to the following natural geometric
+selection problem on line segments. Consider a set of horizontal line segments in the plane. Given
+parameters $i$ and $j$, a segment selection query returns the $j$th smallest segment (the segment
+with the $j$th smallest $y$-coordinate) among the segments crossing the vertical line through
+$x$-coordinate $i$. The segment selection problem is to preprocess a set of horizontal line segments
+into a compact data structure that supports fast segment selection queries. We present a solution
+that uses $O(n)$ space and support segment selection queries in $O(\log n/ \log \log n)$ time, where
+$n$ is the number of segments. Furthermore, we prove that that this query time is also optimal for
+any solution using near-linear space. 

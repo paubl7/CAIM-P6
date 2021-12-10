@@ -1,0 +1,19 @@
+The so-called block-term decomposition (BTD) tensor model, especially in its rank-$(L_r,L_r,1)$
+version, has been recently receiving increasing attention due to its enhanced ability of representing
+systems and signals that are composed of \emph{block} components of rank higher than one, a scenario
+encountered in numerous and diverse applications. Its uniqueness and approximation have thus
+been thoroughly studied. The challenging problem of estimating the BTD model structure, namely
+the number of block terms (rank) and their individual (block) ranks, is of crucial importance in
+practice and has only recently started to attract significant attention. In data-streaming scenarios
+and/or big data applications, where the tensor dimension in one of its modes grows in time or can only
+be processed incrementally, it is essential to be able to perform model selection and computation
+in a recursive (incremental/online) manner. To date there is only one such work in the literature
+concerning the (general rank-$(L,M,N)$) BTD model, which proposes an incremental method, however
+with the BTD rank and block ranks assumed to be a-priori known and time invariant. In this preprint,
+a novel approach to rank-$(L_r,L_r,1)$ BTD model selection and tracking is proposed, based on the
+idea of imposing column sparsity jointly on the factors and estimating the ranks as the numbers of
+factor columns of nonnegligible magnitude. An online method of the alternating iteratively reweighted
+least squares (IRLS) type is developed and shown to be computationally efficient and fast converging,
+also allowing the model ranks to change in time. Its time and memory efficiency are evaluated and
+favorably compared with those of the batch approach. Simulation results are reported that demonstrate
+the effectiveness of the proposed scheme in both selecting and tracking the correct BTD model. 

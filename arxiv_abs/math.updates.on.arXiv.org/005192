@@ -1,0 +1,18 @@
+We consider the bound-constrained global optimization of functions with low effective dimensionality,
+that are constant along an (unknown) linear subspace and only vary over the effective (complement)
+subspace. We aim to implicitly explore the intrinsic low dimensionality of the constrained landscape
+using feasible random embeddings, in order to understand and improve the scalability of algorithms
+for the global optimization of these special-structure problems. A reduced subproblem formulation
+is investigated that solves the original problem over a random low-dimensional subspace subject
+to affine constraints, so as to preserve feasibility with respect to the given domain. Under reasonable
+assumptions, we show that the probability that the reduced problem is successful in solving the
+original, full-dimensional problem is positive. Furthermore, in the case when the objective's
+effective subspace is aligned with the coordinate axes, we provide an asymptotic bound on this success
+probability that captures its algebraic dependence on the effective and, surprisingly, ambient
+dimensions. We then propose X-REGO, a generic algorithmic framework that uses multiple random
+embeddings, solving the above reduced problem repeatedly, approximately and possibly, adaptively.
+Using the success probability of the reduced subproblems, we prove that X-REGO converges globally,
+with probability one, and linearly in the number of embeddings, to an $\epsilon$-neighbourhood
+of a constrained global minimizer. Our numerical experiments on special structure functions illustrate
+our theoretical findings and the improved scalability of X-REGO variants when coupled with state-of-the-art
+global - and even local - optimization solvers for the subproblems. 

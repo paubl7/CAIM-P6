@@ -1,0 +1,19 @@
+Complete randomization allows for consistent estimation of the average treatment effect based
+on the difference in means of the outcomes without strong modeling assumptions on the outcome-generating
+process. Appropriate use of the pretreatment covariates can further improve the estimation efficiency.
+However, missingness in covariates is common in experiments and raises an important question:
+should we adjust for covariates subject to missingness, and if so, how? The unadjusted difference
+in means is always unbiased. The complete-covariate analysis adjusts for all completely observed
+covariates and improves the efficiency of the difference in means if at least one completely observed
+covariate is predictive of the outcome. Then what is the additional gain of adjusting for covariates
+subject to missingness? A key insight is that the missingness indicators act as fully observed pretreatment
+covariates as long as missingness is not affected by the treatment, and can thus be used in covariate
+adjustment to bring additional estimation efficiency. This motivates adding the missingness
+indicators to the regression adjustment, yielding the missingness-indicator method as a well-known
+but not so popular strategy in the literature of missing data. We recommend it due to its many advantages.
+We also propose modifications to the missingness-indicator method based on asymptotic and finite-sample
+considerations. To reconcile the conflicting recommendations in the missing data literature,
+we analyze and compare various strategies for analyzing randomized experiments with missing covariates
+under the design-based framework. This framework treats randomization as the basis for inference
+and does not impose any modeling assumptions on the outcome-generating process and missing-data
+mechanism. 

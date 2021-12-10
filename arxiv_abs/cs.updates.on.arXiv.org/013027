@@ -1,0 +1,18 @@
+Spatial computing architectures promise a major stride in performance and energy efficiency over
+the traditional load/store devices currently employed in large scale computing systems. The adoption
+of high-level synthesis (HLS) from languages such as C++ and OpenCL has greatly increased programmer
+productivity when designing for such platforms. While this has enabled a wider audience to target
+spatial computing architectures, the optimization principles known from traditional software
+design are no longer sufficient to implement high-performance codes, due to fundamentally distinct
+aspects of hardware design, such as programming for deep pipelines, distributed memory resources,
+and scalable routing. To alleviate this, we present a collection of optimizing transformations
+for HLS, targeting scalable and efficient architectures for high-performance computing (HPC)
+applications. We systematically identify classes of transformations (pipelining, scalability,
+and memory), the characteristics of their effect on the HLS code and the resulting hardware (e.g.,
+increasing data reuse or resource consumption), and the objectives that each transformation can
+target (e.g., resolve interface contention, or increase parallelism). We show how these can be
+used to efficiently exploit pipelining, on-chip distributed fast memory, and on-chip dataflow,
+allowing for massively parallel architectures. To quantify the effect of various transformations,
+we cover the optimization process of a sample set of HPC kernels, provided as open source reference
+codes. We aim to establish a common toolbox to guide both performance engineers and compiler engineers
+in tapping into the performance potential offered by spatial computing architectures using HLS.

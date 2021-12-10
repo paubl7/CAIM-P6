@@ -1,0 +1,20 @@
+Federated learning is a setting where agents, each with access to their own data source, combine
+models from local data to create a global model. If agents are drawing their data from different distributions,
+though, federated learning might produce a biased global model that is not optimal for each agent.
+This means that agents face a fundamental question: should they choose the global model or their
+local model? We show how this situation can be naturally analyzed through the framework of coalitional
+game theory. We propose the following game: there are heterogeneous players with different model
+parameters governing their data distribution and different amounts of data they have noisily drawn
+from their own distribution. Each player's goal is to obtain a model with minimal expected mean squared
+error (MSE) on their own distribution. They have a choice of fitting a model based solely on their
+own data, or combining their learned parameters with those of some subset of the other players. Combining
+models reduces the variance component of their error through access to more data, but increases
+the bias because of the heterogeneity of distributions. Here, we derive exact expected MSE values
+for problems in linear regression and mean estimation. We then analyze the resulting game in the
+framework of hedonic game theory; we study how players might divide into coalitions, where each
+set of players within a coalition jointly construct model(s). We analyze three methods of federation,
+modeling differing degrees of customization. In uniform federation, the agents collectively
+produce a single model. In coarse-grained federation, each agent can weight the global model together
+with their local model. In fine-grained federation, each agent can flexibly combine models from
+all other agents in the federation. For each method, we analyze the stable partitions of players
+into coalitions. 

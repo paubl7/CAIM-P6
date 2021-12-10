@@ -1,0 +1,19 @@
+A direct optimization method is presented for density functional calculations of excited electronic
+states using either a real space grid or a plane wave basis set. The method is variational, provides
+atomic forces in the excited states, and can be applied to Kohn-Sham (KS) functionals as well as orbital-density
+dependent functionals (ODD) including explicit self-interaction correction. The implementation
+for KS functionals involves two nested loops: (1) An inner loop for finding a stationary point in
+a subspace spanned by the occupied and a few virtual orbitals corresponding to the excited state;
+(2) an outer loop for minimizing the energy in a tangential direction. For ODD functionals, a third
+loop is used to find the unitary transformation that minimizes the energy functional among occupied
+orbitals only. Combined with the maximum overlap method, the algorithm converges in challenging
+cases where conventional self-consistent field algorithms tend to fail. The benchmark tests presented
+include two charge-transfer excitations in nitrobenzene and an excitation of CO to degenerate
+$\pi^\ast$ orbitals where the importance of complex orbitals is illustrated. An application of
+the method to several metal-to-ligand charge-transfer and metal-centred excited states of an
+Fe$^{\rm II}$ photosensitizer complex is described and the results compared to reported experimental
+estimates. The method is also used to study the effect of Perdew-Zunger self-interaction correction
+on valence and Rydberg excited states of several molecules, both singlet and triplet states. The
+correction is found to improve the description of molecular bond stretching but calculated values
+of the excitation energy are improved only slightly, by {\it ca.} 0.1 eV, due to cancellation of the
+estimated self-interaction error in the ground and excited states. 

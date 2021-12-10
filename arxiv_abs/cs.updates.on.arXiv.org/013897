@@ -1,0 +1,20 @@
+Hyperspectral images involve abundant spectral and spatial information, playing an irreplaceable
+role in land-cover classification. Recently, based on deep learning technologies, an increasing
+number of HSI classification approaches have been proposed, which demonstrate promising performance.
+However, previous studies suffer from two major drawbacks: 1) the architecture of most deep learning
+models is manually designed, relies on specialized knowledge, and is relatively tedious. Moreover,
+in HSI classifications, datasets captured by different sensors have different physical properties.
+Correspondingly, different models need to be designed for different datasets, which further increases
+the workload of designing architectures; 2) the mainstream framework is a patch-to-pixel framework.
+The overlap regions of patches of adjacent pixels are calculated repeatedly, which increases computational
+cost and time cost. Besides, the classification accuracy is sensitive to the patch size, which is
+artificially set based on extensive investigation experiments. To overcome the issues mentioned
+above, we firstly propose a 3D asymmetric neural network search algorithm and leverage it to automatically
+search for efficient architectures for HSI classifications. By analysing the characteristics
+of HSIs, we specifically build a 3D asymmetric decomposition search space, where spectral and spatial
+information are processed with different decomposition convolutions. Furthermore, we propose
+a new fast classification framework, i,e., pixel-to-pixel classification framework, which has
+no repetitive operations and reduces the overall cost. Experiments on three public HSI datasets
+captured by different sensors demonstrate the networks designed by our 3D-ANAS achieve competitive
+performance compared to several state-of-the-art methods, while having a much faster inference
+speed. 

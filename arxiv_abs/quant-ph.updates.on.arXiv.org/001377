@@ -1,0 +1,18 @@
+While mapping a quantum circuit to the physical layer one has to consider the numerous constraints
+imposed by the underlying hardware architecture. Connectivity of the physical qubits is one such
+constraint that restricts two-qubit operations such as CNOT to "connected" qubits. SWAP gates
+can be used to place the logical qubits on admissible physical qubits, but they entail a significant
+increase in CNOT-count, considering the fact that each SWAP gate can be implemented by 3 CNOT gates.
+In this paper we consider the problem of reducing the CNOT-count in Clifford+T circuits on connectivity
+constrained architectures such as noisy intermediate-scale quantum (NISQ) (Preskill, 2018)
+computing devices. We "slice" the circuit at the position of Hadamard gates and "build" the intermediate
+portions. We investigated two kinds of partitioning - (i) a simple method of partitioning the gates
+of the input circuit based on the locality of H gates and (ii) a second method of partitioning the phase
+polynomial of the input circuit. The intermediate {CNOT,T} sub-circuits are synthesized using
+Steiner trees, significantly improving on the methods introduced by Nash, Gheorghiu, Mosca[2020]
+and Kissinger, de Griend[2019]. We compared the performance of our algorithms while mapping different
+benchmark circuits as well as random circuits to some popular architectures such as 9-qubit square
+grid, 16-qubit square grid, Rigetti 16-qubit Aspen, 16-qubit IBM QX5 and 20-qubit IBM Tokyo. We
+found that for both the benchmark and random circuits our first algorithm that uses the simple slicing
+technique dramatically reduces the CNOT-count compared to naively using SWAP gates. Our second
+slice-and-build algorithm also performs very well for benchmark circuits. 

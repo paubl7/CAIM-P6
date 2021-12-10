@@ -1,0 +1,20 @@
+In imperfect-information games, subgame solving is significantly more challenging than in perfect-information
+games, but in the last few years, such techniques have been developed. They were the key ingredient
+to the milestone of superhuman play in no-limit Texas hold'em poker. Current subgame-solving techniques
+analyze the entire common-knowledge closure of the player's current information set, that is,
+the smallest set of nodes within which it is common knowledge that the current node lies. However,
+this set is too large to handle in many games. We introduce an approach that overcomes this obstacle,
+by instead working with only low-order knowledge. Our approach allows an agent, upon arriving at
+an infoset, to basically prune any node that is no longer reachable, thereby massively reducing
+the game tree size relative to the common-knowledge subgame. We prove that, as is, our approach can
+increase exploitability compared to the blueprint strategy. However, we develop three avenues
+by which safety can be guaranteed. First, safety is guaranteed if the results of subgame solves are
+incorporated back into the blueprint. Second, we provide a method where safety is achieved by limiting
+the infosets at which subgame solving is performed. Third, we prove that our approach, when applied
+at every infoset reached during play, achieves a weaker notion of equilibrium, which we coin affine
+equilibrium, and which may be of independent interest. We show that affine equilibria cannot be
+exploited by any Nash strategy of the opponent, so an opponent who wishes to exploit must open herself
+to counter-exploitation. Even without the safety-guaranteeing additions, experiments on medium-sized
+games show that our approach always reduced exploitability even when applied at every infoset,
+and a depth-limited version of it led to--to our knowledge--the first strong AI for the massive challenge
+problem dark chess. 

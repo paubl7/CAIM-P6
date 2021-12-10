@@ -1,0 +1,19 @@
+Analysis of chemical graphs is a major research topic in computational molecular biology due to
+its potential applications to drug design. One approach is inverse quantitative structure activity/property
+relationship (inverse QSAR/QSPR) analysis, which is to infer chemical structures from given chemical
+activities/properties. Recently, a framework has been proposed for inverse QSAR/QSPR using artificial
+neural networks (ANN) and mixed integer linear programming (MILP). This method consists of a prediction
+phase and an inverse prediction phase. In the first phase, a feature vector $f(G)$ of a chemical graph
+$G$ is introduced and a prediction function $\psi$ on a chemical property $\pi$ is constructed with
+an ANN. In the second phase, given a target value $y^*$ of property $\pi$, a feature vector $x^*$ is
+inferred by solving an MILP formulated from the trained ANN so that $\psi(x^*)$ is close to $y^*$
+and then a set of chemical structures $G^*$ such that $f(G^*)= x^*$ is enumerated by a graph search
+algorithm. The framework has been applied to the case of chemical compounds with cycle index up to
+2. The computational results conducted on instances with $n$ non-hydrogen atoms show that a feature
+vector $x^*$ can be inferred for up to around $n=40$ whereas graphs $G^*$ can be enumerated for up
+to $n=15$. When applied to the case of chemical acyclic graphs, the maximum computable diameter
+of $G^*$ was around up to around 8. We introduce a new characterization of graph structure, "branch-height,"
+based on which an MILP formulation and a graph search algorithm are designed for chemical acyclic
+graphs. The results of computational experiments using properties such as octanol/water partition
+coefficient, boiling point and heat of combustion suggest that the proposed method can infer chemical
+acyclic graphs $G^*$ with $n=50$ and diameter 30. 

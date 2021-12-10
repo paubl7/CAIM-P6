@@ -1,0 +1,19 @@
+Analysis of longitudinal changes in imaging studies often involves both segmentation of structures
+of interest and registration of multiple timeframes. The accuracy of such analysis could benefit
+from a tailored framework that jointly optimizes both tasks to fully exploit the information available
+in the longitudinal data. Most learning-based registration algorithms, including joint optimization
+approaches, currently suffer from bias due to selection of a fixed reference frame and only support
+pairwise transformations. We here propose an analytical framework based on an unbiased learning
+strategy for group-wise registration that simultaneously registers images to the mean space of
+a group to obtain consistent segmentations. We evaluate the proposed method on longitudinal analysis
+of a white matter tract in a brain MRI dataset with 2-3 time-points for 3249 individuals, i.e., 8045
+images in total. The reproducibility of the method is evaluated on test-retest data from 97 individuals.
+The results confirm that the implicit reference image is an average of the input image. In addition,
+the proposed framework leads to consistent segmentations and significantly lower processing
+bias than that of a pair-wise fixed-reference approach. This processing bias is even smaller than
+those obtained when translating segmentations by only one voxel, which can be attributed to subtle
+numerical instabilities and interpolation. Therefore, we postulate that the proposed mean-space
+learning strategy could be widely applied to learning-based registration tasks. In addition,
+this group-wise framework introduces a novel way for learning-based longitudinal studies by direct
+construction of an unbiased within-subject template and allowing reliable and efficient analysis
+of spatio-temporal imaging biomarkers. 

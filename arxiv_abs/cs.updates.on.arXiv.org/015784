@@ -1,0 +1,19 @@
+Spatiotemporal traffic time series (e.g., traffic volume/speed) collected from sensing systems
+are often incomplete with considerable corruption and large amounts of missing values, preventing
+users from harnessing the full power of the data. Missing data imputation has been a long-standing
+research topic and critical application for real-world intelligent transportation systems.
+A widely applied imputation method is low-rank matrix/tensor completion; however, the low-rank
+assumption only preserves the global structure while ignores the strong local consistency in spatiotemporal
+data. In this paper, we propose a low-rank autoregressive tensor completion (LATC) framework by
+introducing \textit{temporal variation} as a new regularization term into the completion of a
+third-order (sensor $\times$ time of day $\times$ day) tensor. The third-order tensor structure
+allows us to better capture the global consistency of traffic data, such as the inherent seasonality
+and day-to-day similarity. To achieve local consistency, we design the temporal variation by imposing
+an AR($p$) model for each time series with coefficients as learnable parameters. Different from
+previous spatial and temporal regularization schemes, the minimization of temporal variation
+can better characterize temporal generative mechanisms beyond local smoothness, allowing us
+to deal with more challenging scenarios such "blackout" missing. To solve the optimization problem
+in LATC, we introduce an alternating minimization scheme that estimates the low-rank tensor and
+autoregressive coefficients iteratively. We conduct extensive numerical experiments on several
+real-world traffic data sets, and our results demonstrate the effectiveness of LATC in diverse
+missing scenarios. 

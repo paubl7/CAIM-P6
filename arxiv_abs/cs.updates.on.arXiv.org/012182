@@ -1,0 +1,19 @@
+The influence maximization paradigm has been used by researchers in various fields in order to study
+how information spreads in social networks. While previously the attention was mostly on efficiency,
+more recently fairness issues have been taken into account in this scope. In this paper, we propose
+to use randomization as a mean for achieving fairness. Similar to previous works like Fish et al.
+(WWW '19) and Tsang et al. (IJCAI '19), we study the maximin criterion for (group) fairness. In contrast
+to their work however, we model the problem in such a way that, when choosing the seed sets, probabilistic
+strategies are possible rather than only deterministic ones. We introduce two different variants
+of this probabilistic problem, one that entails probabilistic strategies over nodes (node-based
+problem) and a second one that entails probabilistic strategies over sets of nodes (set-based problem).
+While the original deterministic problem involving the maximin criterion has been shown to be inapproximable,
+interestingly, we show that both probabilistic variants permit approximation algorithms that
+achieve a constant multiplicative factor of 1-1/e plus an additive arbitrarily small error that
+is due to the simulation of the information spread. For an experimental study, we provide implementations
+of multiplicative-weight routines for both problems and compare the achieved fairness values
+to existing methods. Maybe non-surprisingly, we show that the ex-ante values of the computed probabilistic
+strategies are significantly larger than the (ex-post) fairness values of previous methods. This
+indicates that studying fairness via randomization is a worthwhile path to follow. Interestingly
+and maybe more surprisingly, we observe that even the ex-post fairness values computed by our routines,
+dominate over the fairness achieved by previous methods on most of the instances tested. 

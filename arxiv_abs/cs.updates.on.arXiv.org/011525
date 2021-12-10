@@ -1,0 +1,20 @@
+Responding to user reviews promptly and satisfactorily improves application ratings, which is
+key to application popularity and success. The proliferation of such reviews makes it virtually
+impossible for developers to keep up with responding manually. To address this challenge, recent
+work has shown the possibility of automatic response generation. However, because the training
+review-response pairs are aggregated from many different apps, it remains challenging for such
+models to generate app-specific responses, which, on the other hand, are often desirable as apps
+have different features and concerns. Solving the challenge by simply building a model per app (i.e.,
+training with review-response pairs of a single app) may be insufficient because individual apps
+have limited review-response pairs, and such pairs typically lack the relevant information needed
+to respond to a new review. To enable app-specific response generation, this work proposes AARSynth:
+an app-aware response synthesis system. The key idea behind AARSynth is to augment the seq2seq model
+with information specific to a given app. Given a new user review, it first retrieves the top-K most
+relevant app reviews and the most relevant snippet from the app description. The retrieved information
+and the new user review are then fed into a fused machine learning model that integrates the seq2seq
+model with a machine reading comprehension model. The latter helps digest the retrieved reviews
+and app description. Finally, the fused model generates a response that is customized to the given
+app. We evaluated AARSynth using a large corpus of reviews and responses from Google Play. The results
+show that AARSynth outperforms the state-of-the-art system by 22.2% on BLEU-4 score. Furthermore,
+our human study shows that AARSynth produces a statistically significant improvement in response
+quality compared to the state-of-the-art system. 

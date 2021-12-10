@@ -1,0 +1,20 @@
+We study sublinear and local computation algorithms for decision trees, focusing on testing and
+reconstruction. Our first result is a tester that runs in $\mathrm{poly}(\log s, 1/\varepsilon)\cdot
+n\log n$ time, makes $\mathrm{poly}(\log s,1/\varepsilon)\cdot \log n$ queries to an unknown
+function $f$, and: $\circ$ Accepts if $f$ is $\varepsilon$-close to a size-$s$ decision tree; $\circ$
+Rejects if $f$ is $\Omega(\varepsilon)$-far from decision trees of size $s^{\tilde{O}((\log
+s)^2/\varepsilon^2)}$. Existing testers distinguish size-$s$ decision trees from those that
+are $\varepsilon$-far from from size-$s$ decision trees in $\mathrm{poly}(s^s,1/\varepsilon)\cdot
+n$ time with $\tilde{O}(s/\varepsilon)$ queries. We therefore solve an incomparable problem,
+but achieve doubly-exponential-in-$s$ and exponential-in-$s$ improvements in time and query
+complexities respectively. We obtain our tester by designing a reconstruction algorithm for decision
+trees: given query access to a function $f$ that is close to a small decision tree, this algorithm
+provides fast query access to a small decision tree that is close to $f$. By known relationships,
+our results yield reconstruction algorithms for numerous other boolean function properties --
+Fourier degree, randomized and quantum query complexities, certificate complexity, sensitivity,
+etc. -- which in turn yield new testers for these properties. Finally, we give a hardness result for
+testing whether an unknown function is $\varepsilon$-close-to or $\Omega(\varepsilon)$-far-from
+size-$s$ decision trees. We show that an efficient algorithm for this task would yield an efficient
+algorithm for properly learning decision trees, a central open problem of learning theory. It has
+long been known that proper learning algorithms for any class $\mathcal{H}$ yield property testers
+for $\mathcal{H}$; this provides an example of a converse. 

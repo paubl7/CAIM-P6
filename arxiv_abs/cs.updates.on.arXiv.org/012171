@@ -1,0 +1,18 @@
+In object detection with deep neural networks, the box-wise objectness score tends to be overconfident,
+sometimes even indicating high confidence in presence of inaccurate predictions. Hence, the reliability
+of the prediction and therefore reliable uncertainties are of highest interest. In this work, we
+present a post processing method that for any given neural network provides predictive uncertainty
+estimates and quality estimates. These estimates are learned by a post processing model that receives
+as input a hand-crafted set of transparent metrics in form of a structured dataset. Therefrom, we
+learn two tasks for predicted bounding boxes. We discriminate between true positives ($\mathit{IoU}\geq0.5$)
+and false positives ($\mathit{IoU} < 0.5$) which we term meta classification, and we predict $\mathit{IoU}$
+values directly which we term meta regression. The probabilities of the meta classification model
+aim at learning the probabilities of success and failure and therefore provide a modelled predictive
+uncertainty estimate. On the other hand, meta regression gives rise to a quality estimate. In numerical
+experiments, we use the publicly available YOLOv3 network and the Faster-RCNN network and evaluate
+meta classification and regression performance on the Kitti, Pascal VOC and COCO datasets. We demonstrate
+that our metrics are indeed well correlated with the $\mathit{IoU}$. For meta classification we
+obtain classification accuracies of up to 98.92% and AUROCs of up to 99.93%. For meta regression
+we obtain an $R^2$ value of up to 91.78%. These results yield significant improvements compared
+to other network's objectness score and other baseline approaches. Therefore, we obtain more reliable
+uncertainty and quality estimates which is particularly interesting in the absence of ground truth.

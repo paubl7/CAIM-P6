@@ -1,0 +1,20 @@
+Recent experimental achievements motivate an ever-growing interest from companies starting
+to feel the limitations of classical computing. Yet, in light of ongoing privacy scandals, the future
+availability of quantum computing through remotely accessible servers pose peculiar challenges:
+Clients with quantum-limited capabilities want their data and algorithms to remain hidden, while
+being able to verify that their computations are performed correctly. Research in blind and verifiable
+delegation of quantum computing attempts to address this question. However, available techniques
+suffer not only from high overheads but also from over-sensitivity: When running on noisy devices,
+imperfections trigger the same detection mechanisms as malicious attacks, resulting in perpetually
+aborted computations. Hence, while malicious quantum computers are rendered harmless by blind
+and verifiable protocols, inherent noise severely limits their usability. We address this problem
+with an efficient, robust, blind, verifiable scheme to delegate deterministic quantum computations
+with classical inputs and outputs. We show that: 1) a malicious Server can cheat at most with an exponentially
+small success probability; 2) in case of sufficiently small noise, the protocol succeeds with a
+probability exponentially close to 1; 3) the overhead is barely a polynomial number of repetitions
+of the initial computation interleaved with test runs requiring the same physical resources in
+terms of memory and gates; 4) the amount of tolerable noise, measured by the probability of failing
+a test run, can be as high as 25% for some computations and will be generally bounded by 12.5% when using
+a planar graph resource state. The key points are that security can be provided without universal
+computation graphs and that, in our setting, full fault-tolerance is not needed to amplify the confidence
+level exponentially close to 1. 

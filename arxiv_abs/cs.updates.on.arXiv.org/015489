@@ -1,0 +1,19 @@
+Given a social network of users with selection cost, the \textsc{Budgeted Influence Maximization
+Problem} (\emph{BIM Problem} in short) asks for selecting a subset of the nodes (known as \emph{seed
+nodes}) within an allocated budget for initial activation to maximize the influence in the network.
+In this paper, we study this problem under the \emph{co\mbox{-}operative game theoretic} framework.
+We model this problem as a co\mbox{-}operative game where the users of the network are the players
+and for a group of users, the expected influence by them under the \emph{Maximum Influence Arborences}
+diffusion model is its utility. We call this game as \emph{BIM Game} and show this is `non-convex'
+and `sub-additive'. Based on the proposed game\mbox{-}theoretic model and using the solution
+concept called `Shapley Value', we propose an iterative algorithm for finding seed nodes. The proposed
+methodology is divided into mainly two broad steps: the first one is computing the approximate marginal
+gain in \emph{Shapley Value} for all the nodes of the network, and the second one is selecting seed
+nodes from the sorted list until the budget is exhausted. We also show that the proposed methodology
+can even be more effective when the community structure of the network is exploited. The proposed
+methodologies have been implemented, and an extensive set of experiments have been conducted with
+three publicly available social network datasets. From the experiments, we observe that the seed
+set selected by the proposed methodologies lead to more number of influence nodes compared to many
+standard and baseline methods from the literature with a reasonable computational overhead. In
+particular, if the community structure of the network is exploited then there is an increase upto
+$2 \%$ in number of influenced nodes. 

@@ -1,0 +1,18 @@
+We consider demand and supply which arise i.i.d. uniformly in the unit hypercube [0,1]^d in d dimensions,
+and need to be matched with each other while minimizing the expected average distance between matched
+pairs (the "cost"). We characterize the scaling behavior of the achievable cost in three models
+as a function of the dimension d: (i) Static matching of N demand units with N+M supply units. (ii)
+A semi-dynamic model where N+M supply units are present beforehand and N demand units arrive sequentially
+and must be matched immediately. (iii) A fully dynamic model where there are always m supply units
+present in the system, one supply and one demand unit arrive in each period, and the demand must be
+matched immediately. We show that one can achieve nearly the same cost under the semi-dynamic model
+as under the static model, despite uncertainty about the future, and that, under these two models,
+d=1 is the only case where cost far exceeds distance to the nearest neighbor (which is \Theta(1/N^{1/d}))
+and where adding excess supply M substantially reduces cost (by smoothing stochastic fluctuations
+at larger spatial length scales). In the fully dynamic model, we show that, remarkably, for all d
+we can achieve a cost only slightly more than the optimistic distance to the nearest neighbor \Theta(1/m^{1/d}).
+Thus, excess supply m reduces cost in the fully dynamic model for all $d$ by reducing the distance
+to the nearest neighbor. This is a fundamentally different phenomenon than that seen in the other
+two models, where excess supply reduces cost while leaving the distance to the nearest neighbor
+unchanged, only for d=1. Our achievability results are based on analysis of a certain "Hierarchical
+Greedy" algorithm which separately handles stochastic fluctuations at different length scales.

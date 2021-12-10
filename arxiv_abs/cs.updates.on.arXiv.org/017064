@@ -1,0 +1,19 @@
+We design $f$-edge fault-tolerant diameter oracles ($f$-FDOs). We preprocess a given graph $G$
+on $n$ vertices and $m$ edges, and a positive integer $f$, to construct a data structure that, when
+queried with a set $F$ of $|F| \leq f$ edges, returns the diameter of $G-F$. For a single failure ($f=1$)
+in an unweighted directed graph of diameter $D$, there exists an approximate FDO by Henzinger et
+al. [ITCS 2017] with stretch $(1+\varepsilon)$, constant query time, space $O(m)$, and a combinatorial
+preprocessing time of $\widetilde{O}(mn + n^{1.5} \sqrt{Dm/\varepsilon})$.We present an FDO
+for directed graphs with the same stretch, query time, and space. It has a preprocessing time of $\widetilde{O}(mn
++ n^2/\varepsilon)$. The preprocessing time nearly matches a conditional lower bound for combinatorial
+algorithms, also by Henzinger et al. With fast matrix multiplication, we achieve a preprocessing
+time of $\widetilde{O}(n^{2.5794} + n^2/\varepsilon)$. We further prove an information-theoretic
+lower bound showing that any FDO with stretch better than $3/2$ requires $\Omega(m)$ bits of space.
+For multiple failures ($f>1$) in undirected graphs with non-negative edge weights, we give an $f$-FDO
+with stretch $(f+2)$, query time $O(f^2\log^2{n})$, $\widetilde{O}(fn)$ space, and preprocessing
+time $\widetilde{O}(fm)$. We complement this with a lower bound excluding any finite stretch in
+$o(fn)$ space. We show that for unweighted graphs with polylogarithmic diameter and up to $f = o(\log
+n/ \log\log n)$ failures, one can swap approximation for query time and space. We present an exact
+combinatorial $f$-FDO with preprocessing time $mn^{1+o(1)}$, query time $n^{o(1)}$, and space
+$n^{2+o(1)}$. When using fast matrix multiplication instead, the preprocessing time can be improved
+to $n^{\omega+o(1)}$, where $\omega < 2.373$ is the matrix multiplication exponent. 

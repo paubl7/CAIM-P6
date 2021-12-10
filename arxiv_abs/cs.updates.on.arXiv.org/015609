@@ -1,0 +1,18 @@
+Peripheral Arterial Disease (PAD) is a common form of arterial occlusive disease that is challenging
+to evaluate at the point-of-care. Hand-held dopplers are the most ubiquitous device used to evaluate
+circulation and allows providers to audibly "listen" to the blood flow. Providers use the audible
+feedback to subjectively assess whether the sound characteristics are consistent with Monophasic,
+Biphasic, or Triphasic waveforms. Subjective assessment of doppler sounds raises suspicion of
+PAD and leads to further testing, often delaying definitive treatment. Misdiagnoses are also possible
+with subjective interpretation of doppler waveforms. This paper presents a Deep Learning system
+that has the ability to predict waveform phasicity through analysis of hand-held doppler sounds.
+We collected 268 four-second recordings on an iPhone taken during a formal vascular lab study in
+patients with cardiovascular disease. Our end-to-end system works by converting input sound into
+a spectrogram which visually represents frequency changes in temporal patterns. This conversion
+enables visual differentiation between the phasicity classes. With these changes present, a custom
+trained Convolutional Neural Network (CNN) is used for prediction through learned feature extraction.
+The performance of the model was evaluated via calculation of the F1 score and accuracy metrics.
+The system received an F1 score of 90.57\% and an accuracy of 96.23\%. Our Deep Learning system is
+not computationally expensive and has the ability for integration within several applications.
+When used in a clinic, this system has the capability of preventing misdiagnosis and gives practitioners
+a second opinion that can be useful in the evaluation of PAD. 

@@ -1,0 +1,18 @@
+We study the {\em Budgeted Dominating Set} (BDS) problem on uncertain graphs, namely, graphs with
+a probability distribution $p$ associated with the edges, such that an edge $e$ exists in the graph
+with probability $p(e)$. The input to the problem consists of a vertex-weighted uncertain graph
+$\G=(V, E, p, \omega)$ and an integer {\em budget} (or {\em solution size}) $k$, and the objective
+is to compute a vertex set $S$ of size $k$ that maximizes the expected total domination (or total weight)
+of vertices in the closed neighborhood of $S$. We refer to the problem as the {\em Probabilistic Budgeted
+Dominating Set}~(PBDS) problem and present the following results. \begin{enumerate} \dnsitem
+We show that the PBDS problem is NP-complete even when restricted to uncertain {\em trees} of diameter
+at most four. This is in sharp contrast with the well-known fact that the BDS problem is solvable in
+polynomial time in trees. We further show that PBDS is \wone-hard for the budget parameter $k$, and
+under the {\em Exponential time hypothesis} it cannot be solved in $n^{o(k)}$ time. \item We show
+that if one is willing to settle for $(1-\epsilon)$ approximation, then there exists a PTAS for PBDS
+on trees. Moreover, for the scenario of uniform edge-probabilities, the problem can be solved optimally
+in polynomial time. \item We consider the parameterized complexity of the PBDS problem, and show
+that Uni-PBDS (where all edge probabilities are identical) is \wone-hard for the parameter pathwidth.
+On the other hand, we show that it is FPT in the combined parameters of the budget $k$ and the treewidth.
+\item Finally, we extend some of our parameterized results to planar and apex-minor-free graphs.
+\end{enumerate} 

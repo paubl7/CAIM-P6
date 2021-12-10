@@ -1,0 +1,20 @@
+Background: In medical imaging, prior studies have demonstrated disparate AI performance by race,
+yet there is no known correlation for race on medical imaging that would be obvious to the human expert
+interpreting the images. Methods: Using private and public datasets we evaluate: A) performance
+quantification of deep learning models to detect race from medical images, including the ability
+of these models to generalize to external environments and across multiple imaging modalities,
+B) assessment of possible confounding anatomic and phenotype population features, such as disease
+distribution and body habitus as predictors of race, and C) investigation into the underlying mechanism
+by which AI models can recognize race. Findings: Standard deep learning models can be trained to
+predict race from medical images with high performance across multiple imaging modalities. Our
+findings hold under external validation conditions, as well as when models are optimized to perform
+clinically motivated tasks. We demonstrate this detection is not due to trivial proxies or imaging-related
+surrogate covariates for race, such as underlying disease distribution. Finally, we show that
+performance persists over all anatomical regions and frequency spectrum of the images suggesting
+that mitigation efforts will be challenging and demand further study. Interpretation: We emphasize
+that model ability to predict self-reported race is itself not the issue of importance. However,
+our findings that AI can trivially predict self-reported race -- even from corrupted, cropped,
+and noised medical images -- in a setting where clinical experts cannot, creates an enormous risk
+for all model deployments in medical imaging: if an AI model secretly used its knowledge of self-reported
+race to misclassify all Black patients, radiologists would not be able to tell using the same data
+the model has access to. 

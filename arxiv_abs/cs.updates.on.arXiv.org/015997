@@ -1,0 +1,20 @@
+Automated lobar segmentation allows regional evaluation of lung disease and is important for diagnosis
+and therapy planning. Advanced statistical workflows permitting such evaluation is a needed area
+within respiratory medicine; their adoption remains slow, with poor workflow accuracy. Diseased
+lung regions often produce high-density zones on CT images, limiting an algorithm's execution
+to specify damaged lobes due to oblique or lacking fissures. This impact motivated developing an
+improved machine learning method to segment lung lobes that utilises tracheobronchial tree information
+to enhance segmentation accuracy through the algorithm's spatial familiarity to define lobar
+extent more accurately. The method undertakes parallel segmentation of lobes and auxiliary tissues
+simultaneously by employing multi-task learning (MTL) in conjunction with V-Net-attention,
+a popular convolutional neural network in the imaging realm. In keeping with the model's adeptness
+for better generalisation, high performance was retained in an external dataset of patients with
+four distinct diseases: severe lung cancer, COVID-19 pneumonitis, collapsed lungs and Chronic
+Obstructive Pulmonary Disease (COPD), even though the training data included none of these cases.
+The benefit of our external validation test is specifically relevant since our choice includes
+those patients who have diagnosed lung disease with associated radiological abnormalities. To
+ensure equal rank is given to all segmentations in the main task we report the following performance
+(Dice score) on a per-segment basis: normal lungs 0.97, COPD 0.94, lung cancer 0.94, COVID-19 pneumonitis
+0.94 and collapsed lung 0.92, all at p<0.05. Even segmenting lobes with large deformations on CT
+images, the model maintained high accuracy. The approach can be readily adopted in the clinical
+setting as a robust tool for radiologists. 

@@ -1,0 +1,19 @@
+The standard approach to fault-tolerant quantum computation is to store information in a quantum
+error correction code, such as the surface code, and process information using a strategy that can
+be summarized as distill-then-synthesize. In the distill step, one performs several rounds of
+distillation to create high-fidelity logical qubits in a magic state. Each such magic state provides
+one good T gate. In the synthesize step, one seeks the optimal decomposition of an algorithm into
+a sequence of many T gates interleaved with Clifford gates. This gate-synthesis problem is well
+understood for multiqubit gates that do not use any Hadamards. We present an in-depth analysis of
+a unified framework that realises one round of distillation and multiqubit gate synthesis in a single
+step. We call these synthillation protocols, and show they lead to a large reduction in resource
+overheads. This is because synthillation can implement a general class of circuits using the same
+number of T-states as gate synthesis, yet with the benefit of quadratic error suppression. This
+general class includes all circuits primarily dominated by control-control-Z gates, such as adders
+and modular exponentiation routines used in Shor's algorithm. Therefore, synthillation removes
+the need for a costly round of magic state distillation. We also present several additional results
+on the multiqubit gate-synthesis problem. We provide an efficient algorithm for synthesizing
+unitaries with the same worst-case resource scaling as optimal solutions. For the special case
+of synthesizing controlled-unitaries, our techniques are not just efficient but exactly optimal.
+We observe that the gate-synthesis cost, measured by T-count, is often strictly subadditive. Numerous
+explicit applications of our techniques are also presented. 

@@ -1,0 +1,19 @@
+Historically, memory management based on lock-free reference counting was very inefficient,
+especially for read-dominated workloads. Thus, approaches such as epoch-based reclamation (EBR),
+hazard pointers (HP), or a combination thereof have received significant attention. EBR exhibits
+excellent performance but is blocking due to potentially unbounded memory usage. In contrast,
+HP are non-blocking and achieve good memory efficiency but are much slower. Moreover, HP are only
+lock-free in the general case. Recently, several new memory reclamation approaches such as WFE
+and Hyaline have been proposed. WFE achieves wait-freedom, but is less memory efficient and suffers
+from suboptimal performance in oversubscribed scenarios; Hyaline achieves higher performance
+and memory efficiency, but lacks wait-freedom. We present a new wait-free memory reclamation scheme,
+Crystalline, that simultaneously addresses the challenges of high performance, high memory efficiency,
+and wait-freedom. Crystalline guarantees complete wait-freedom even when threads are dynamically
+recycled, asynchronously reclaims memory in the sense that any thread can reclaim memory retired
+by any other thread, and ensures (an almost) balanced reclamation workload across all threads.
+The latter two properties result in Crystalline's high performance and high memory efficiency.
+Simultaneously ensuring all three properties require overcoming unique challenges which we discuss
+in the paper. Crystalline's implementation relies on specialized instructions which are widely
+available on commodity hardware such as x86-64 or ARM64. Our experimental evaluations show that
+Crystalline exhibits outstanding scalability and memory efficiency, and achieves superior throughput
+than typical reclamation schemes such as EBR as the number of threads grows. 

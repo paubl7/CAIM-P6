@@ -1,0 +1,20 @@
+We consider the fundamental problem of assigning distinct labels to agents in the probabilistic
+model of population protocols. Our protocols operate under the assumption that the size $n$ of the
+population is embedded in the transition function. They also rely on a unique leader which can be
+precomputed with a negligible impact on our upper bounds. Among other things, we consider silent
+labeling protocols, where eventually each agent reaches its final state and remains in it forever,
+as well as safe labeling protocols which can produce a valid agent labeling in a finite number of interactions,
+and guarantee that at any step of the protocol no two agents have the same label. We first provide a
+silent and safe protocol which uses only $n+5\sqrt n +4$ states and draws labels from the range $1,\dots,n.$
+. The expected number of interactions required by the protocol is $O(n^3).$ On the other hand, we
+show that any safe protocol, as well as any silent protocol which provides a valid labeling with probability
+$>1-\frac 1n$, uses $\ge n+\sqrt n-1$ states. Hence, our protocol is almost state-optimal. We also
+present a generalization of the protocol to include a trade-off between the number of states and
+the expected number of interactions. We show also that for any safe labeling protocol utilizing
+$n+t<2n$ states the expected number of interactions required to achieve a valid labeling is $\ge
+\frac{n^2}{t+1}$. Next, we present a fast, silent and safe labeling protocol for which the required
+number of interactions is asymptotically optimal, i.e., $O(n \log n/\epsilon)$ w.h.p. It uses
+$(2+\epsilon)n+O(\log n)$ states and the label range $1,\dots,(1+\epsilon)n.$ Finally, we consider
+the so-called pool labeling protocols that include our fast protocol. We show that the expected
+number of interactions required by any pool protocol is $\ge \frac{n^2}{r+1}$, when the labels
+range is $1,\dots, n+r<2n.$ 

@@ -1,0 +1,19 @@
+Sakurai et al. (J Comput Phys, 2019) presented a flux-based volume penalization (VP) approach for
+imposing inhomogeneous Neumann boundary conditions on embedded interfaces. The flux-based VP
+method modifies the diffusion coefficient of the original elliptic (Poisson) equation and uses
+a flux-forcing function as a source term in the equation to impose the desired Neumann boundary conditions.
+As such, the flux-based VP method can be easily incorporated into existing fictitious domain codes.
+Sakurai et al. relied on analytical construction of flux-forcing functions, which limits the practicality
+of the approach. Because of the analytical approach taken in the prior work, only (spatially) constant
+flux values along simple interfaces were considered. In this paper, we present a numerical approach
+to construct flux-forcing functions for arbitrarily complex boundaries. The imposed flux values
+are also allowed to vary spatially in our approach. Furthermore, the flux-based VP method is extended
+to include (spatially varying) Robin boundary conditions, which makes the flux-based method even
+more general. We consider several two- and three-dimensional test examples to access the spatial
+accuracy of the numerical solutions. We formally derive flux-based volume penalized Poisson equation
+satisfying Neumann/Robin boundary condition in strong form; such a derivation was not presented
+in Sakurai et al., where the equation first appeared for the Neumann problem. The derivation reveals
+that the flux-based VP approach relies on a surface delta function to impose inhomogeneous Neumann/Robin
+boundary conditions. However, an explicit construction of the delta function is not necessary
+for the flux-based VP method, which makes it different from other diffuse domain equations presented
+in the literature. 

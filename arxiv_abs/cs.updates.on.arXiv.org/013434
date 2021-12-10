@@ -1,0 +1,20 @@
+Population protocols are a class of algorithms for modeling distributed computation in networks
+of finite-state agents communicating through pairwise interactions. Their suitability for analyzing
+numerous chemical processes has motivated the adaptation of the original population protocol
+framework to better model these chemical systems. In this paper, we further the study of two such
+adaptations in the context of solving approximate majority: persistent-state agents (or catalysts)
+and spontaneous state changes (or leaks). Based on models considered in recent protocols for populations
+with persistent-state agents, we assume a population with $n$ catalytic input agents and $m$ worker
+agents, and the goal of the worker agents is to compute some predicate over the states of the catalytic
+inputs. We call this model the Catalytic Input (CI) model. For $m = \Theta(n)$, we show that computing
+the parity of the input population with high probability requires at least $\Omega(n^2)$ total
+interactions, demonstrating a strong separation between the CI model and the standard population
+protocol model. On the other hand, we show that the simple third-state dynamics of Angluin et al.
+for approximate majority in the standard model can be naturally adapted to the CI model: we present
+such a constant-state protocol for the CI model that solves approximate majority in $O(n \log n)$
+total steps with high probability when the input margin is $\Omega(\sqrt{n \log n})$. We then show
+the robustness of third-state dynamics protocols to the transient leaks events introduced by Alistarh
+et al. In both the original and CI models, these protocols successfully compute approximate majority
+with high probability in the presence of leaks occurring at each step with probability $\beta \leq
+O\left(\sqrt{n \log n}/n\right)$, exhibiting a resilience to leaks similar to that of Byzantine
+agents in previous works. 

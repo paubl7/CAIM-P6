@@ -1,0 +1,19 @@
+The sequential fully implicit (SFI) scheme was introduced (Jenny et al. 2006) for solving coupled
+flow and transport problems. Each time step for SFI consists of an outer loop, in which there are inner
+Newton loops to implicitly and sequentially solve the pressure and transport sub-problems. In
+standard SFI, the sub-problems are usually solved with tight tolerances at every outer iteration.
+This can result in wasted computations that contribute little progress towards the coupled solution.
+The issue is known as `over-solving'. Our objective is to minimize the cost of inner solvers while
+maintaining the convergence rate of SFI. We first extend a nonlinear-acceleration (NA) framework
+(Jiang and Tchelepi 2019) to multi-component compositional models, for ensuring robust outer-loop
+convergence. We then develop inexact-type methods that alleviate `over-solving'. It is found
+that there is no need for one sub-problem to strive for perfection, while the coupled (outer) residual
+remains high due to the other sub-problem. The new SFI solver is tested using several complex cases.
+The problems involve multi-phase and EoS-based compositional fluid systems. We compare different
+strategies such as fixed relaxations on absolute and relative tolerances for the inner solvers,
+as well as an adaptive approach. The results show that the basic SFI method is quite inefficient.
+Away from a coupled solution, additional accuracy achieved in inner solvers is wasted, contributing
+to little or no reduction of the overall outer residual. By comparison, the adaptive inexact method
+provides relative tolerances adequate for the current convergence state of the sub-problems.
+We show across a wide range of flow conditions that the new solver can effectively resolve the over-solving
+issue, and thus greatly improve the overall efficiency. 

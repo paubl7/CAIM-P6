@@ -1,0 +1,20 @@
+In fruit tree growth, pruning is an important management practice for preventing overcrowding,
+improving canopy access to light and promoting regrowth. Due to the slow nature of agriculture,
+decisions in pruning are typically made using tradition or rules of thumb rather than data-driven
+analysis. Many existing algorithmic, simulation-based approaches rely on high-fidelity digital
+captures or purely computer-generated fruit trees, and are unable to provide specific results
+on an orchard scale. We present a framework for suggesting pruning strategies on LiDAR-scanned
+commercial fruit trees using a scoring function with a focus on improving light distribution throughout
+the canopy. A scoring function to assess the quality of the tree shape based on its light availability
+and size was developed for comparative analysis between trees, and was validated against yield
+characteristics, demonstrating a reasonable correlation against fruit count with an $R^2$ score
+of 0.615 for avocado and 0.506 for mango. A tool was implemented for simulating pruning by algorithmically
+estimating which parts of a tree point cloud would be removed given specific cut points using structural
+analysis of the tree, validated experimentally with an average F1 score of 0.78 across 144 experiments.
+Finally, new pruning locations were suggested and we used the previous two stages to estimate the
+improvement of the tree given these suggestions. The light distribution was improved by up to 25.15\%,
+demonstrating a 16\% improvement over commercial pruning on a real tree, and certain cut points
+were discovered which improved light distribution with a smaller negative impact on tree volume.
+The final results suggest value in the framework as a decision making tool for commercial growers,
+or as a starting point for automated pruning since the entire process can be performed with little
+human intervention. 

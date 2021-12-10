@@ -1,0 +1,19 @@
+Permissioned blockchains are becoming popular as data management systems in the enterprise setting.
+Compared to traditional distributed databases, blockchain platforms provide increased security
+guarantees but significantly lower performance. Further, these platforms are quite expensive
+to run for the low throughput they provide. The following are two ways to improve performance and
+reduce cost: (1) make the system utilize allocated resources efficiently; (2) allow rapid and dynamic
+scaling of allocated resources based on load. We explore both of these in this work. We first investigate
+the reasons for the poor performance and scalability of the dominant permissioned blockchain flavor
+called Execute-Order-Validate (EOV). We do this by studying the scaling characteristics of Hyperledger
+Fabric, a popular EOV platform, using vertical scaling and horizontal scaling. We find that the
+transaction throughput scales very poorly with these techniques. At least in the permissioned
+setting, the real bottleneck is transaction processing, not the consensus protocol. With vertical
+scaling, the allocated vCPUs go under-utilized. In contrast, with horizontal scaling, the allocated
+resources get wasted due to redundant work across nodes within an organization. To mitigate the
+above concerns, we first improve resource efficiency by (a) improving CPU utilization with a pipelined
+execution of validation & commit phases; (b) avoiding redundant work across nodes by introducing
+a new type of peer node called sparse peer that selectively commits transactions. We further propose
+a technique that enables the rapid scaling of resources. Our implementation - SmartFabric, built
+on top of Hyperledger Fabric demonstrates 3x higher throughput, 12-26x faster scale-up time, and
+provides Fabric's throughput at 50% to 87% lower cost. 

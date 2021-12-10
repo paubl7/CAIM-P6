@@ -1,0 +1,18 @@
+Pairwise Potts models (PM) provide accurate statistical models of families of evolutionarily
+related protein sequences. Their parameters are the local fields, which describe site-specific
+patterns of amino-acid conservation, and the two-site couplings, which mirror the coevolution
+between pairs of distinct sites. This coevolution reflects structural and functional constraints
+acting on protein sequences during evolution, and couplings can a priori connect any pairs of sites,
+even those being distant along the protein chain, or distant in the three-dimensional protein fold.
+The most conservative choice to describe all of the coevolution signal is to include all possible
+two-site couplings into the PM. This choice, typically made by what is known as Direct Coupling Analysis,
+has been highly successful in using sequences for predicting residue contacts in the three-dimensional
+structure, mutational effects, and in generating new functional sequences. However, the resulting
+PM suffers from important over-fitting effects: many couplings are small, noisy and hardly interpretable,
+and the PM is close to a critical point, meaning that it is highly sensitive to small parameter perturbations.
+In this work, we introduce a parameter-reduction procedure via iterative decimation of the less
+statistically significant couplings. We propose an information-based criterion that identifies
+couplings that are either weak, or statistically unsupported. We show that our procedure allows
+one to remove more than 90% of the PM couplings, while preserving the predictive and generative properties
+of the original dense PM. The resulting model is far away from criticality, meaning that it is more
+robust to noise, and its couplings are more easily interpretable. 

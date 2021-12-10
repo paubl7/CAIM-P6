@@ -1,0 +1,19 @@
+The emergence of small and portable smart sensors have opened up new opportunities for many applications,
+including automated factories, smart cities and connected healthcare, broadly referred to as
+the "Internet of Things (IoT)". These devices produce time series data. While deep neural networks
+(DNNs) has been widely applied to computer vision, natural language processing and speech recognition,
+there is limited research on DNNs for time series prediction. Machine learning (ML) applications
+for time series prediction has traditionally involved predicting the next value in the series.
+However, in certain applications, segmenting the time series into a sequence of trends and predicting
+the next trend is preferred. Recently, a hybrid DNN algorithm, TreNet was proposed for trend prediction.
+TreNet, which combines an LSTM that takes in trendlines and a CNN that takes in point data was shown
+to have superior performance for trend prediction when compared to other approaches. However,
+the study used a standard cross-validation method which does not take into account the sequential
+nature of time series. In this work, we reproduce TreNet using a walk-forward validation method,
+which is more appropriate to time series data. We compare the performance of the hybrid TreNet algorithm,
+on the same three data sets used in the original study, to vanilla MLP, LSTM, and CNN that take in point
+data, and also to traditional ML algorithms, i.e. the Random Forest (RF), Support Vector Regression
+and Gradient Boosting Machine. Our results differ significantly from those reported for the original
+TreNet. In general TreNet still performs better than the vanilla DNN models, but not substantially
+so as reported for the original TreNet. Furthermore, our results show that the RF algorithm performed
+substantially better than TreNet on the methane data set. 

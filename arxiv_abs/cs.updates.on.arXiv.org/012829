@@ -1,0 +1,19 @@
+Deep learning techniques have provided significant improvements in hyperspectral image (HSI)
+classification. The current deep learning based HSI classifiers follow a patch-based learning
+framework by dividing the image into overlapping patches. As such, these methods are local learning
+methods, which have a high computational cost. In this paper, a fast patch-free global learning
+(FPGA) framework is proposed for HSI classification. In FPGA, an encoder-decoder based FCN is utilized
+to consider the global spatial information by processing the whole image, which results in fast
+inference. However, it is difficult to directly utilize the encoder-decoder based FCN for HSI classification
+as it always fails to converge due to the insufficiently diverse gradients caused by the limited
+training samples. To solve the divergence problem and maintain the abilities of FCN of fast inference
+and global spatial information mining, a global stochastic stratified sampling strategy is first
+proposed by transforming all the training samples into a stochastic sequence of stratified samples.
+This strategy can obtain diverse gradients to guarantee the convergence of the FCN in the FPGA framework.
+For a better design of FCN architecture, FreeNet, which is a fully end-to-end network for HSI classification,
+is proposed to maximize the exploitation of the global spatial information and boost the performance
+via a spectral attention based encoder and a lightweight decoder. A lateral connection module is
+also designed to connect the encoder and decoder, fusing the spatial details in the encoder and the
+semantic features in the decoder. The experimental results obtained using three public benchmark
+datasets suggest that the FPGA framework is superior to the patch-based framework in both speed
+and accuracy for HSI classification. Code has been made available at: https://github.com/Z-Zheng/FreeNet.

@@ -1,0 +1,19 @@
+Modern media data such as 360 videos and light field (LF) images are typically captured in much higher
+dimensions than the observers' visual displays. To efficiently browse high-dimensional media
+over bandwidth-constrained networks, a navigational streaming model is considered: a client
+navigates the large media space by dictating a navigation path to a server, who in response transmits
+the corresponding pre-encoded media data units (MDU) to the client one-by-one in sequence. Intra-coding
+an MDU (I-MDU) would result in a large bitrate but I-MDU can be randomly accessed, while inter-coding
+an MDU (P-MDU) using another MDU as a predictor incurs a small coding cost but imposes an order where
+the predictor must be first transmitted and decoded. From a compression perspective, the technical
+challenge is: how to achieve coding gain via inter-coding of MDUs, while enabling adequate random
+access for satisfactory user navigation. To address this problem, we propose landmarks, a selection
+of key MDUs from the high-dimensional media. Using landmarks as predictors, nearby MDUs in local
+neighborhoods are intercoded, resulting in a predictive MDU structure with controlled coding
+cost. It means that any requested MDU can be decoded by at most transmitting a landmark and an inter-coded
+MDU, enabling navigational random access. To build a landmarked MDU structure, we employ tree-structured
+vector quantizer (TSVQ) to first optimize landmark locations, then iteratively add/remove inter-coded
+MDUs as refinements using a fast branch-and-bound technique. Taking interactive LF images and
+viewport adaptive 360 images as illustrative applications, and I-, P- and previously proposed
+merge frames to intra- and inter-code MDUs, we show experimentally that landmarked MDU structures
+can noticeably reduce the expected transmission cost compared with MDU structures without landmarks.

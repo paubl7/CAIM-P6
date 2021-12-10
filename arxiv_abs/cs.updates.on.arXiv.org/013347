@@ -1,0 +1,19 @@
+Establishing causal relations between random variables from observational data is perhaps the
+most important challenge in today's \blue{science}. In remote sensing and geosciences this is
+of special relevance to better understand the Earth's system and the complex interactions between
+the governing processes. In this paper, we focus on observational causal inference, thus we try
+to estimate the correct direction of causation using a finite set of empirical data. In addition,
+we focus on the more complex bivariate scenario that requires strong assumptions and no conditional
+independence tests can be used. In particular, we explore the framework of (non-deterministic)
+additive noise models, which relies on the principle of independence between the cause and the generating
+mechanism. A practical algorithmic instantiation of such principle only requires 1) two regression
+models in the forward and backward directions, and 2) the estimation of {\em statistical independence}
+between the obtained residuals and the observations. The direction leading to more independent
+residuals is decided to be the cause. We instead propose a criterion that uses the {\em sensitivity}
+(derivative) of the dependence estimator, the sensitivity criterion allows to identify samples
+most affecting the dependence measure, and hence the criterion is robust to spurious detections.
+We illustrate performance in a collection of 28 geoscience causal inference problems, in a database
+of radiative transfer models simulations and machine learning emulators in vegetation parameter
+modeling involving 182 problems, and in assessing the impact of different regression models in
+a carbon cycle problem. The criterion achieves state-of-the-art detection rates in all cases,
+it is generally robust to noise sources and distortions. 

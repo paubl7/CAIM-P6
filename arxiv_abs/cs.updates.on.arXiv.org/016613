@@ -1,0 +1,20 @@
+As a research community, we are still lacking a systematic understanding of the progress on adversarial
+robustness, which often makes it hard to identify the most promising ideas in training robust models.
+A key challenge in benchmarking robustness is that its evaluation is often error-prone, leading
+to overestimation of the true robustness of models. While adaptive attacks designed for a particular
+defense are a potential solution, they have to be highly customized for particular models, which
+makes it difficult to compare different methods. Our goal is to instead establish a standardized
+benchmark of adversarial robustness, which as accurately as possible reflects the robustness
+of the considered models within a reasonable computational budget. To evaluate the robustness
+of models for our benchmark, we consider AutoAttack, an ensemble of white- and black-box attacks
+which was recently shown in a large-scale study to improve almost all robustness evaluations compared
+to the original publications. We also impose some restrictions on the admitted models to rule out
+defenses that only make gradient-based attacks ineffective without improving actual robustness.
+Our leaderboard, hosted at https://robustbench.github.io/, contains evaluations of 90+ models
+and aims at reflecting the current state of the art on a set of well-defined tasks in $\ell_\infty$-
+and $\ell_2$-threat models and on common corruptions, with possible extensions in the future.
+Additionally, we open-source the library https://github.com/RobustBench/robustbench that
+provides unified access to 60+ robust models to facilitate their downstream applications. Finally,
+based on the collected models, we analyze the impact of robustness on the performance on distribution
+shifts, calibration, out-of-distribution detection, fairness, privacy leakage, smoothness,
+and transferability. 

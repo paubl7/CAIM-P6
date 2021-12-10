@@ -1,0 +1,18 @@
+Data generalization is a powerful technique for sanitizing multi-attribute data for publication.
+In a multidimensional model, a subset of attributes called the quasi-identifiers (QI) are used
+to define the space and a generalization scheme corresponds to a partitioning of the data space.
+The process of sanitization can be modeled as a constrained optimization problem where the information
+loss metric is to be minimized while ensuring that the privacy criteria are enforced. The privacy
+requirements translate into constraints on the partitions (bins), like minimum occupancy constraints
+for k-anonymity, value diversity constraint for l-diversity etc. Most algorithms proposed till
+date use some greedy search heuristic to search for a locally optimal generalization scheme. The
+performance of such algorithms degrade rapidly as the constraints are made more complex and numerous.
+To address this issue, in this paper we develop a complete enumeration based systematic search framework
+that searches for the globally optimal generalization scheme amongst all feasible candidates.
+We employ a novel enumeration technique that eliminates duplicates and develop effective pruning
+heuristics that cut down the solution space in order to make the search tractable. Our scheme is versatile
+enough to accommodate multiple constraints and information loss functions satisfying a set of
+generic properties (that are usually satisfied by most metrics proposed in literature). Additionally,
+our approach allows the user to specify various stopping criteria and can give a bound on the approximation
+factor achieved by any candidate solution. Finally, we carry out extensive experimentation whose
+results illustrate the power of our algorithm and its advantage over other competing approaches.

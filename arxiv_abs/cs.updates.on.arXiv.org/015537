@@ -1,0 +1,18 @@
+For effective human-robot teaming, it is important for the robots to be able to share their visual
+perception with the human operators. In a harsh remote collaboration setting, however, it is especially
+challenging to transfer a large amount of sensory data over a low-bandwidth network in real-time,
+e.g., for the task of 3D shape reconstruction given 2D camera images. To reduce the burden of data
+transferring, data compression techniques such as autoencoder can be utilized to obtain and transmit
+the data in terms of latent variables in a compact form. However, to overcome the lower-bandwidth
+limitation and achieve faster transmission, an adaptive and flexible over-compression method
+is necessary that can exploit only partial elements of the latent variables. To handle these cases,
+we propose a method for imputation of latent variables whose elements are partially excluded for
+additional compression. To perform imputation with only some dimensions of variables, exploiting
+prior information of the category- or instance-level is essential. In general, a prior distribution
+used in variational autoencoders is achieved from all of the training datapoints regardless of
+their labels. This type of flattened prior makes it difficult to perform imputation from the category-
+or instance-level distributions. We overcome this limitation by exploiting a category-specific
+multi-modal prior distribution in the latent space. By finding a modal in a latent space according
+to the remaining elements of the latent variables, the missing elements can be sampled. Based on
+the experiments on the ModelNet and Pascal3D datasets, the proposed approach shows a consistently
+superior performance over autoencoder and variational autoencoder up to 50\% data loss. 

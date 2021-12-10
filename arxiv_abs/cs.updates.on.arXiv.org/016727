@@ -1,0 +1,20 @@
+The asset trading volume on blockchain-based exchanges (DEX) increased substantially since the
+advent of Automated Market Makers (AMM). Yet, AMMs and their forks compete on the same blockchain,
+incurring unnecessary network and block-space overhead, by attracting sandwich attackers and
+arbitrage competitions. Moreover, conceptually speaking, a blockchain is one database, and we
+find little reason to partition this database into multiple competing exchanges, which then necessarily
+require price synchronization through arbitrage. This paper shows that DEX arbitrage and trade
+routing among similar AMMs can be performed efficiently and atomically on-chain within smart contracts.
+These insights lead us to create a new AMM design, an Automated Arbitrage Market Maker, short A2MM
+DEX. A2MM aims to unite multiple AMMs to reduce overheads, costs and increase blockchain security.
+With respect to Miner Extractable Value (MEV), A2MM serves as a decentralized design for users to
+atomically collect MEV, mitigating the dangers of centralized MEV relay services. We show that
+A2MM offers essential security benefits. First, A2MM strengthens the blockchain consensus security
+by mitigating the competitive exploitation of MEV, therefore reducing the risks of consensus forks.
+A2MM reduces the network layer overhead of competitive transactions, improves network propagation,
+leading to less stale blocks and better blockchain security. Through trade routing, A2MM reduces
+the predatory risks of sandwich attacks by taking advantage of the minimum profitable victim input.
+A2MM also offers financial benefits to traders. Failed swap transactions from competitive trading
+occupy valuable block space, implying an upward pressure on transaction fees. Our evaluations
+shows that A2MM frees up 32.8% block-space of AMM-related transactions. In expectation, A2MM's
+revenue allows to reduce swap fees by 90%. 

@@ -1,0 +1,19 @@
+We develop a fast and scalable computational framework to solve large-scale and high-dimensional
+Bayesian optimal experimental design problems. In particular, we consider the problem of optimal
+observation sensor placement for Bayesian inference of high-dimensional parameters governed
+by partial differential equations (PDEs), which is formulated as an optimization problem that
+seeks to maximize an expected information gain (EIG). Such optimization problems are particularly
+challenging due to the curse of dimensionality for high-dimensional parameters and the expensive
+solution of large-scale PDEs. To address these challenges, we exploit two essential properties
+of such problems: the low-rank structure of the Jacobian of the parameter-to-observable map to
+extract the intrinsically low-dimensional data-informed subspace, and the high correlation
+of the approximate EIGs by a series of approximations to reduce the number of PDE solves. We propose
+an efficient offline-online decomposition for the optimization problem: an offline stage of computing
+all the quantities that require a limited number of PDE solves independent of parameter and data
+dimensions, and an online stage of optimizing sensor placement that does not require any PDE solve.
+For the online optimization, we propose a swapping greedy algorithm that first construct an initial
+set of sensors using leverage scores and then swap the chosen sensors with other candidates until
+certain convergence criteria are met. We demonstrate the efficiency and scalability of the proposed
+computational framework by a linear inverse problem of inferring the initial condition for an advection-diffusion
+equation, and a nonlinear inverse problem of inferring the diffusion coefficient of a log-normal
+diffusion equation, with both the parameter and data dimensions ranging from a few tens to a few thousands.

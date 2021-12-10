@@ -1,0 +1,19 @@
+We provide a control-theoretic perspective on optimal tensor algorithms for minimizing a convex
+function in a finite-dimensional Euclidean space. Given a function $\Phi: \mathbb{R}^d \rightarrow
+\mathbb{R}$ that is convex and twice continuously differentiable, we study a closed-loop control
+system that is governed by the operators $\nabla \Phi$ and $\nabla^2 \Phi$ together with a feedback
+control law $\lambda(\cdot)$ satisfying the algebraic equation $(\lambda(t))^p\|\nabla\Phi(x(t))\|^{p-1}
+= \theta$ for some $\theta \in (0, 1)$. Our first contribution is to prove the existence and uniqueness
+of a local solution to this system via the Banach fixed-point theorem. We present a simple yet nontrivial
+Lyapunov function that allows us to establish the existence and uniqueness of a global solution
+under certain regularity conditions and analyze the convergence properties of trajectories.
+The rate of convergence is $O(1/t^{(3p+1)/2})$ in terms of objective function gap and $O(1/t^{3p})$
+in terms of squared gradient norm. Our second contribution is to provide two algorithmic frameworks
+obtained from discretization of our continuous-time system, one of which generalizes the large-step
+A-HPE framework and the other of which leads to a new optimal $p$-th order tensor algorithm. While
+our discrete-time analysis can be seen as a simplification and generalization of exisiting analysis,
+it is largely motivated by the aforementioned continuous-time analysis, demonstrating the fundamental
+role that the feedback control plays in optimal acceleration and the clear advantage that the continuous-time
+perspective brings to algorithmic design. A highlight of our analysis is that we show that all of
+the $p$-th order optimal tensor algorithms that we discuss minimize the squared gradient norm at
+a rate of $O(k^{-3p})$, which complements the recent analysis. 

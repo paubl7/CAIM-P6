@@ -1,0 +1,18 @@
+Imaging the cosmic 21 cm signal will map out the first billion years of our Universe. The resulting
+3D lightcone (LC) will encode the properties of the unseen first galaxies and physical cosmology.
+Unfortunately, there is no obvious summary statistic to use when interpreting this non-Gaussian
+image, and the commonly-used power spectrum may waste valuable information. Here we build on previous
+work using Convolutional Neural Networks (CNNs) to infer astrophysical parameters directly from
+21 cm LC images. Guided by the properties of LCs, we combine recurrent layers characterizing evolution
+along the redshift axis with 2D convolutional layers characterizing local correlations in the
+sky-plane. Such Recursive Neural Networks (RNNs) are known for efficiently learning temporal
+correlations in sequential data. Using a large database of simulated cosmic 21 cm LCs, we confirm
+that RNNs outperform previously-used CNNs in recovering UV and X-ray galaxy properties, reducing
+the mean squared parameter estimation error by factors of $\sim 2 - 8$. We also corrupt the cosmic
+signal by adding noise expected from a 1000 h integration with the Square Kilometre Array, as well
+as excising a foreground-contaminated ''horizon wedge''. Parameter prediction errors increase
+when the NNs are trained on these contaminated LC images, though recovery is still good even in the
+most pessimistic case (with $R^2 \ge 0.5 - 0.95$). However, we find no notable differences in performance
+between network architectures on the contaminated images. We argue this is due to the size of our
+dataset, highlighting the need for larger datasets and/or better data augmentation in order to
+maximize the potential of NNs in 21 cm parameter estimation. 

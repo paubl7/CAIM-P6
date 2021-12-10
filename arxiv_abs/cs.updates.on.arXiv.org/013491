@@ -1,0 +1,20 @@
+There is a lack of scientific testing of commercially available malware detectors, especially
+those that boast accurate classification of never-before-seen (zero-day) files using machine
+learning (ML). The result is that the efficacy and trade-offs among the different available approaches
+are opaque. In this paper, we address this gap in the scientific literature with an evaluation of
+commercially available malware detection tools. We tested each tool against 3,536 total files
+(2,554 72% malicious, 982 28% benign) including over 400 zero-day malware, and tested with a variety
+of file types and protocols for delivery. Specifically, we investigate three questions: Do ML-based
+malware detectors provide better detection than signature-based detectors? Is it worth purchasing
+a network-level malware detector to complement host-based detection? What is the trade-off in
+detection time and detection accuracy among commercially available tools using static and dynamic
+analysis? We present statistical results on detection time and accuracy, consider complementary
+analysis (using multiple tools together), and provide a novel application of a recent cost-benefit
+evaluation procedure by Iannaconne \& Bridges that incorporates all the above metrics into a single
+quantifiable cost to help security operation centers select the right tools for their use case.
+Our results show that while ML-based tools are more effective at detecting zero-days and malicious
+executables, they work best when used in combination with a signature-based solution. In addition,
+network-based tools had poor detection rates on protocols other than the HTTP or SMTP, making them
+a poor choice if used on their own. Surprisingly, we also found that all the tools tested had lower
+than expected detection rates, completely missing 37% of malicious files tested and failing to
+detect any polyglot files. 

@@ -1,0 +1,18 @@
+Quantum random access memory (QRAM)--memory which stores classical data but allows queries to
+be performed in superposition--is required for the implementation of numerous quantum algorithms.
+While naive implementations of QRAM are highly susceptible to decoherence and hence not scalable,
+it has been argued that the bucket brigade QRAM architecture [Giovannetti et al., Phys. Rev. Lett.
+100 160501 (2008)] is highly resilient to noise, with the infidelity of a query scaling only logarithmically
+with the memory size. In prior analyses, however, this favorable scaling followed directly from
+the use of contrived noise models, thus leaving open the question of whether experimental implementations
+would actually enjoy the purported scaling advantage. In this work, we study the effects of decoherence
+on QRAM in full generality. Our main result is a proof that this favorable infidelity scaling holds
+for arbitrary error channels (including, e.g., depolarizing noise and coherent errors). Our proof
+identifies the origin of this noise resilience as the limited entanglement among the memory's components,
+and it also reveals that significant architectural simplifications can be made while preserving
+the noise resilience. We verify these results numerically using a novel classical algorithm for
+the efficient simulation of noisy QRAM circuits. Our findings indicate that QRAM can be implemented
+with existing hardware in realistically noisy devices, and that high-fidelity queries are possible
+without quantum error correction. Furthermore, we also prove that the benefits of the bucket-brigade
+architecture persist when quantum error correction is used, in which case the scheme offers improved
+hardware efficiency and resilience to logical errors. 

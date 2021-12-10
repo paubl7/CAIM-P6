@@ -1,0 +1,18 @@
+Nowadays, one practical limitation of deep neural network (DNN) is its high degree of specialization
+to a single task or domain (e.g., one visual domain). It motivates researchers to develop algorithms
+that can adapt DNN model to multiple domains sequentially, meanwhile still performing well on the
+past domains, which is known as multi-domain learning. Almost all conventional methods only focus
+on improving accuracy with minimal parameter update, while ignoring high computing and memory
+cost during training, which makes it impossible to deploy multi-domain learning into more and more
+widely used resource-limited edge devices, like mobile phone, IoT, embedded system, etc. During
+our study in multi-domain training, we observe that large memory used for activation storage is
+the bottleneck that largely limits the training time and cost on edge devices. To reduce training
+memory usage, while keeping the domain adaption accuracy performance, in this work, we propose
+Deep Additive Attention Adaption, a novel memory-efficient on-device multi-domain learning
+method, aiming to achieve domain adaption on memory-limited edge devices. To reduce the training
+memory consumption during on-device training, $DA^3$ freezes the weights of the pre-trained backbone
+model (i.e., no need to store activation features during backward propagation). Furthermore,
+to improve the adaption accuracy performance, we propose to improve the model capacity by learning
+a novel additive attention adaptor module, which is also designed to avoid activation memory buffering
+for improving memory efficiency. We validate $DA^3$ on multiple datasets against state-of-the-art
+methods, which shows good improvement in both accuracy and training time. 

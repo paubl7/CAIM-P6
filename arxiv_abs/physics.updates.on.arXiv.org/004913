@@ -1,0 +1,19 @@
+The work is a continuation of a paper by Iskhakov A.S. and Dinh N.T. "Physics-integrated machine
+learning: embedding a neural network in the Navier-Stokes equations". Part I // arXiv:2008.10509
+(2020) [1]. The proposed in [1] physics-integrated (or PDE-integrated (partial differential
+equation)) machine learning (ML) framework is furtherly investigated. The Navier-Stokes equations
+are solved using the Tensorflow ML library for Python programming language via the Chorin's projection
+method. The Tensorflow solution is integrated with a deep feedforward neural network (DFNN). Such
+integration allows one to train a DFNN embedded in the Navier-Stokes equations without having the
+target (labeled training) data for the direct outputs from the DFNN; instead, the DFNN is trained
+on the field variables (quantities of interest), which are solutions for the Navier-Stokes equations
+(velocity and pressure fields). To demonstrate performance of the framework, two additional case
+studies are formulated: 2D turbulent lid-driven cavities with predicted by a DFNN (a) turbulent
+viscosity and (b) derivatives of the Reynolds stresses. Despite its complexity and computational
+cost, the proposed physics-integrated ML shows a potential to develop a "PDE-integrated" closure
+relations for turbulent models and offers principal advantages, namely: (i) the target outputs
+(labeled training data) for a DFNN might be unknown and can be recovered using the knowledge base
+(PDEs); (ii) it is not necessary to extract and preprocess information (training targets) from
+big data, instead it can be extracted by PDEs; (iii) there is no need to employ a physics- or scale-separation
+assumptions to build a closure model for PDEs. The advantage (i) is demonstrated in the Part I paper
+[1], while the advantage (ii) is the subject of the current paper. 

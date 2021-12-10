@@ -1,0 +1,18 @@
+Extended Berkeley Packet Filter (BPF) has emerged as a powerful method to extend packet-processing
+functionality in the Linux operating system. BPF allows users to write code in high-level languages
+like C or Rust and attach them to specific points in the kernel, such as the network device driver.
+To ensure safe execution of a user-developed BPF program in kernel context, Linux employs an in-kernel
+static checker, that only accepts the program if it can be shown to be crash-free and isolated from
+the rest of kernel memory. However, BPF programming is not easy. One, even modest-size BPF programs
+can be rejected by the kernel checker as they are construed to be too large to analyze. Two, the in-kernel
+static checker may incorrectly determine that an eBPF program exhibits unsafe behaviors. Three,
+even small performance optimizations to BPF code (e.g., 5% gains) must be meticulously hand-crafted
+by expert developers. Optimizing compilers for BPF are severely hampered because the kernel checker's
+safety considerations are incompatible with rule-based optimizations used in traditional compilers.
+We present K2, a program-synthesis-based compiler that automatically optimizes BPF bytecode
+with formal correctness and safety guarantees. K2 leverages stochastic search, a formalization
+of BPF in first-order logic, and several domain-specific techniques to accelerate equivalence
+checking of BPF programs. K2 produces code with 6-26% reduced size, reduces average latency by 13-85
+$\mu$s in our setup, and improves the number of packets per second processed per core by 5% relative
+to clang -O3, across programs drawn from production systems at Cilium and the Linux kernel. BPF programs
+produced by K2 can pass the kernel checker. 

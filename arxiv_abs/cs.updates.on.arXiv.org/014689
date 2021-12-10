@@ -1,0 +1,19 @@
+The task of strapdown inertial navigation system (SINS) initial alignment is to calculate the attitude
+transformation matrix from body frame to navigation frame. In this paper, such attitude transformation
+matrix is divided into two parts through introducing the initial inertially fixed navigation frame
+as inertial frame. The attitude changes of the navigation frame corresponding to the defined inertial
+frame can be exactly calculated with known velocity and position provided by GNSS. The attitude
+from body frame to the defined inertial frame is estimated based on the SINS mechanization in inertial
+frame. The attitude, velocity and position in inertial frame are formulated together as element
+of the group of double direct spatial isometries.It is proven that the group state model in inertial
+frame satisfies a particular "group affine" property and the corresponding error model satisfies
+a "log linear" autonomous differential equation on the Lie algebra. Based on such striking property,
+the attitude from body frame to the defined inertial frame can be estimated based on the linear error
+model with even extreme large misalignments. Two different error state vectors are extracted based
+on right and left matrix multiplications and the detailed linear state space models are derived
+based on the right and left errors for SINS mechanization in inertial frame. With the derived linear
+state space models, the explicit initial alignment procedures have been presented. Extensive
+simulation and field tests indicate that the initial alignment based on the left error model can
+perform quite well within a wide range of initial attitude errors, although the used filter is still
+a type of linear Kalman filter. This method is promising in practical products abandoning the traditional
+coarse alignment stage. 

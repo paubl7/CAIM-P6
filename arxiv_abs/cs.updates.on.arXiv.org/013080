@@ -1,0 +1,19 @@
+Signed link prediction in social networks aims to reveal the underlying relationships (i.e. links)
+among users (i.e. nodes) given their existing positive and negative interactions observed. Most
+of the prior efforts are devoted to learning node embeddings with graph neural networks (GNNs),
+which preserve the signed network topology by message-passing along edges to facilitate the downstream
+link prediction task. Nevertheless, the existing graph-based approaches could hardly provide
+human-intelligible explanations for the following three questions: (1) which neighbors to aggregate,
+(2) which path to propagate along, and (3) which social theory to follow in the learning process.
+To answer the aforementioned questions, in this paper, we investigate how to reconcile the \textit{balance}
+and \textit{status} social rules with information theory and develop a unified framework, termed
+as Signed Infomax Hyperbolic Graph (\textbf{SIHG}). By maximizing the mutual information between
+edge polarities and node embeddings, one can identify the most representative neighboring nodes
+that support the inference of edge sign. Different from existing GNNs that could only group features
+of friends in the subspace, the proposed SIHG incorporates the signed attention module, which is
+also capable of pushing hostile users far away from each other to preserve the geometry of antagonism.
+The polarity of the learned edge attention maps, in turn, provide interpretations of the social
+theories used in each aggregation. In order to model high-order user relations and complex hierarchies,
+the node embeddings are projected and measured in a hyperbolic space with a lower distortion. Extensive
+experiments on four signed network benchmarks demonstrate that the proposed SIHG framework significantly
+outperforms the state-of-the-arts in signed link prediction. 

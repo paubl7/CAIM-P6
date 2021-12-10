@@ -1,0 +1,19 @@
+Recently, learning-based algorithms have shown impressive performance in underwater image enhancement.
+Most of them resort to training on synthetic data and achieve outstanding performance. However,
+these methods ignore the significant domain gap between the synthetic and real data (i.e., interdomain
+gap), and thus the models trained on synthetic data often fail to generalize well to real underwater
+scenarios. Furthermore, the complex and changeable underwater environment also causes a great
+distribution gap among the real data itself (i.e., intra-domain gap). However, almost no research
+focuses on this problem and thus their techniques often produce visually unpleasing artifacts
+and color distortions on various real images. Motivated by these observations, we propose a novel
+Two-phase Underwater Domain Adaptation network (TUDA) to simultaneously minimize the inter-domain
+and intra-domain gap. Concretely, a new dual-alignment network is designed in the first phase,
+including a translation part for enhancing realism of input images, followed by an enhancement
+part. With performing image-level and feature-level adaptation in two parts by jointly adversarial
+learning, the network can better build invariance across domains and thus bridge the inter-domain
+gap. In the second phase, we perform an easy-hard classification of real data according to the assessed
+quality of enhanced images, where a rank-based underwater quality assessment method is embedded.
+By leveraging implicit quality information learned from rankings, this method can more accurately
+assess the perceptual quality of enhanced images. Using pseudo labels from the easy part, an easy-hard
+adaptation technique is then conducted to effectively decrease the intra-domain gap between easy
+and hard samples. 

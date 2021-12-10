@@ -1,0 +1,18 @@
+Bayesian model selection enables comparison and ranking of conceptual subsurface models described
+by spatial prior models, according to the support provided by available geophysical data. Deep
+generative neural networks can efficiently encode such complex spatial priors, thereby, allowing
+for a strong model dimensionality reduction that comes at the price of enhanced non-linearity.
+In this setting, we explore a recent adaptive sequential Monte Carlo (ASMC) approach that builds
+on Annealed Importance Sampling (AIS); a method that provides both the posterior probability density
+function (PDF) and the evidence (a central quantity for Bayesian model selection) through a particle
+approximation. Both techniques are well suited to parallel computation and rely on importance
+sampling over a sequence of intermediate distributions, linking the prior and the posterior PDF.
+Each subsequent distribution is approximated by updating the particle weights and states, compared
+with the previous approximation, using a small pre-defined number of Markov chain Monte Carlo (MCMC)
+proposal steps. Compared with AIS, the ASMC method adaptively tunes the tempering between neighboring
+distributions and performs resampling of particles when the variance of the particle weights becomes
+too large. We evaluate ASMC using two different conceptual models and associated synthetic cross-hole
+ground penetrating radar (GPR) tomography data. For the most challenging test case, we find that
+the ASMC method is faster and more reliable in locating the posterior PDF than state-of-the-art
+adaptive MCMC. The evidence estimates are found to be robust with respect to the choice of ASMC algorithmic
+variables and much less sensitive to the model proposal type than MCMC.[...] 

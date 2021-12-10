@@ -1,0 +1,19 @@
+Defects are unavoidable in casting production owing to the complexity of the casting process. While
+conventional human-visual inspection of casting products is slow and unproductive in mass productions,
+an automatic and reliable defect detection not just enhances the quality control process but positively
+improves productivity. However, casting defect detection is a challenging task due to diversity
+and variation in defects' appearance. Convolutional neural networks (CNNs) have been widely applied
+in both image classification and defect detection tasks. Howbeit, CNNs with frequentist inference
+require a massive amount of data to train on and still fall short in reporting beneficial estimates
+of their predictive uncertainty. Accordingly, leveraging the transfer learning paradigm, we
+first apply four powerful CNN-based models (VGG16, ResNet50, DenseNet121, and InceptionResNetV2)
+on a small dataset to extract meaningful features. Extracted features are then processed by various
+machine learning algorithms to perform the classification task. Simulation results demonstrate
+that linear support vector machine (SVM) and multi-layer perceptron (MLP) show the finest performance
+in defect detection of casting images. Secondly, to achieve a reliable classification and to measure
+epistemic uncertainty, we employ an uncertainty quantification (UQ) technique (ensemble of MLP
+models) using features extracted from four pre-trained CNNs. UQ confusion matrix and uncertainty
+accuracy metric are also utilized to evaluate the predictive uncertainty estimates. Comprehensive
+comparisons reveal that UQ method based on VGG16 outperforms others to fetch uncertainty. We believe
+an uncertainty-aware automatic defect detection solution will reinforce casting productions
+quality assurance. 

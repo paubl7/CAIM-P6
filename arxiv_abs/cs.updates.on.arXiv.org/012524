@@ -1,0 +1,19 @@
+The paper investigates the feasibility of confidence estimation for neural machine translation
+models operating at the high end of the performance spectrum. As a side product of the data annotation
+process necessary for building such models we propose sentence level accuracy $SACC$ as a simple,
+self-explanatory evaluation metric for quality of translation. Experiments on two different
+annotator pools, one comprised of non-expert (crowd-sourced) and one of expert (professional)
+translators show that $SACC$ can vary greatly depending on the translation proficiency of the annotators,
+despite the fact that both pools are about equally reliable according to Krippendorff's alpha metric;
+the relatively low values of inter-annotator agreement confirm the expectation that sentence-level
+binary labeling $good$ / $needs\ work$ for translation out of context is very hard. For an English-Spanish
+translation model operating at $SACC = 0.89$ according to a non-expert annotator pool we can derive
+a confidence estimate that labels 0.5-0.6 of the $good$ translations in an "in-domain" test set
+with 0.95 Precision. Switching to an expert annotator pool decreases $SACC$ dramatically: $0.61$
+for English-Spanish, measured on the exact same data as above. This forces us to lower the CE model
+operating point to 0.9 Precision while labeling correctly about 0.20-0.25 of the $good$ translations
+in the data. We find surprising the extent to which CE depends on the level of proficiency of the annotator
+pool used for labeling the data. This leads to an important recommendation we wish to make when tackling
+CE modeling in practice: it is critical to match the end-user expectation for translation quality
+in the desired domain with the demands of annotators assigning binary quality labels to CE training
+data. 

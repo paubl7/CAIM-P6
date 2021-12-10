@@ -1,0 +1,18 @@
+One of the most important aims of grain boundary modeling is to predict the evolution of a large collection
+of grains in phenomena such as abnormal grain growth, coupled grain boundary motion, and recrystallization
+that occur under extreme thermomechanical loads. A unified framework to study the coevolution
+of grain boundaries with bulk plasticity has recently been developed by Admal et al. (2018), which
+is based on modeling grain boundaries as continuum dislocations governed by an energy based on the
+Kobayashi--Warren--Carter (KWC) model (Kobayashi et al., 1998, 2000). While the resulting unified
+model demonstrates coupled grain boundary motion and polygonization (seen in recrystallization),
+it is restricted to grain boundary energies of the Read--Shockley type, which applies only to small
+misorientation angles. In addition, the implementation of the unified model using finite elements
+inherits the computational challenges of the KWC model that originate from the singular diffusive
+nature of its governing equations. The main goal of this study is to generalize the KWC functional
+to grain boundary energies beyond the Read--Shockley-type that respect the bicrystallography
+of grain boundaries. The computational challenges of the KWC model are addressed by developing
+a thresholding method that relies on a primal dual algorithm and the fast marching method, resulting
+in an O(NlogN) algorithm, where N is the number of grid points. We validate the model by demonstrating
+the Herring angle relation, followed by a study of the grain microstructure evolution in a two-dimensional
+face-centered cubic copper polycrystal with crystal symmetry-invariant grain boundary energy
+data obtained from the lattice matching method of Runnels et al. (2016a,b). 

@@ -1,0 +1,19 @@
+Deep learning methods have brought many breakthroughs to computer vision, especially in 2D face
+recognition. However, the bottleneck of deep learning based 3D face recognition is that it is difficult
+to collect millions of 3D faces, whether for industry or academia. In view of this situation, there
+are many methods to generate more 3D faces from existing 3D faces through 3D face data augmentation,
+which are used to train deep 3D face recognition models. However, to the best of our knowledge, there
+is no method to generate 3D faces from 2D face images for training deep 3D face recognition models.
+This letter focuses on the role of reconstructed 3D facial surfaces in 3D face identification and
+proposes a framework of 2D-aided deep 3D face identification. In particular, we propose to reconstruct
+millions of 3D face scans from a large scale 2D face database (i.e.VGGFace2), using a deep learning
+based 3D face reconstruction method (i.e.ExpNet). Then, we adopt a two-phase training approach:
+In the first phase, we use millions of face images to pre-train the deep convolutional neural network
+(DCNN), and in the second phase, we use normal component images (NCI) of reconstructed 3D face scans
+to train the DCNN. Extensive experimental results illustrate that the proposed approach can greatly
+improve the rank-1 score of 3D face identification on the FRGC v2.0, the Bosphorus, and the BU-3DFE
+3D face databases, compared to the model trained by 2D face images. Finally, our proposed approach
+achieves state-of-the-art rank-1 scores on the FRGC v2.0 (97.6%), Bosphorus (98.4%), and BU-3DFE
+(98.8%) databases. The experimental results show that the reconstructed 3D facial surfaces are
+useful and our 2D-aided deep 3D face identification framework is meaningful, facing the scarcity
+of 3D faces. 

@@ -1,0 +1,18 @@
+Let $G = (V,w)$ be a weighted undirected graph with $m$ edges. The cut dimension of $G$ is the dimension
+of the span of the characteristic vectors of the minimum cuts of $G$, viewed as vectors in $\{0,1\}^m$.
+For every $n \ge 2$ we show that the cut dimension of an $n$-vertex graph is at most $2n-3$, and construct
+graphs realizing this bound. The cut dimension was recently defined by Graur et al.\ \cite{GPRW20},
+who show that the maximum cut dimension of an $n$-vertex graph is a lower bound on the number of cut
+queries needed by a deterministic algorithm to solve the minimum cut problem on $n$-vertex graphs.
+For every $n\ge 2$, Graur et al.\ exhibit a graph on $n$ vertices with cut dimension at least $3n/2
+-2$, giving the first lower bound larger than $n$ on the deterministic cut query complexity of computing
+mincut. We observe that the cut dimension is even a lower bound on the number of \emph{linear} queries
+needed by a deterministic algorithm to solve mincut, where a linear query can ask any vector $x \in
+\mathbb{R}^{\binom{n}{2}}$ and receives the answer $w^T x$. Our results thus show a lower bound
+of $2n-3$ on the number of linear queries needed by a deterministic algorithm to solve minimum cut
+on $n$-vertex graphs, and imply that one cannot show a lower bound larger than this via the cut dimension.
+We further introduce a generalization of the cut dimension which we call the $\ell_1$-approximate
+cut dimension. The $\ell_1$-approximate cut dimension is also a lower bound on the number of linear
+queries needed by a deterministic algorithm to compute minimum cut. It is always at least as large
+as the cut dimension, and we construct an infinite family of graphs on $n=3k+1$ vertices with $\ell_1$-approximate
+cut dimension $2n-2$, showing that it can be strictly larger than the cut dimension. 

@@ -1,0 +1,18 @@
+We explore the application of concepts developed in High Energy Physics (HEP) for advanced medical
+data analysis. Our study case is a problem with high social impact: clinically-feasible Magnetic
+Resonance Fingerprinting (MRF). MRF is a new, quantitative, imaging technique that replaces multiple
+qualitative Magnetic Resonance Imaging (MRI) exams with a single, reproducible measurement for
+increased sensitivity and efficiency. A fast acquisition is followed by a pattern matching (PM)
+task, where signal responses are matched to entries from a dictionary of simulated, physically-feasible
+responses, yielding multiple tissue parameters simultaneously. Each pixel signal response in
+the volume is compared through scalar products with all dictionary entries to choose the best measurement
+reproduction. MRF is limited by the PM processing time, which scales exponentially with the dictionary
+dimensionality, i.e. with the number of tissue parameters to be reconstructed. We developed for
+HEP a powerful, compact, embedded system, optimized for extremely fast PM. This system executes
+real-time tracking for online event selection in the HEP experiments, exploiting maximum parallelism
+and pipelining. Track reconstruction is executed in two steps. The Associative Memory (AM) ASIC
+first implements a PM algorithm by recognizing track candidates at low resolution. The second step,
+which is implemented into FPGAs (Field Programmable Gate Arrays), refines the AM output finding
+the track parameters at full resolution. We propose to use this system to perform MRF, to achieve
+clinically reasonable reconstruction time. This paper proposes an adaptation of the HEP system
+for medical imaging and shows some preliminary results. 

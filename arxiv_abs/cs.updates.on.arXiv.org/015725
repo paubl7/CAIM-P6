@@ -1,0 +1,19 @@
+A stable cut of a graph is a cut whose weight cannot be increased by changing the side of a single vertex.
+Equivalently, a cut is stable if all vertices have the (weighted) majority of their neighbors on
+the other side. In this paper we study Min Stable Cut, the problem of finding a stable cut of minimum
+weight, which is closely related to the Price of Anarchy of the Max Cut game. Since this problem is
+NP-hard, we study its complexity on graphs of low treewidth, low degree, or both. We show that the
+problem is weakly NP-hard on severely restricted trees, so bounding treewidth alone cannot make
+it tractable. We match this with a pseudo-polynomial DP algorithm running in time $(\Delta\cdot
+W)^{O(tw)}n^{O(1)}$, where $tw$ is the treewidth, $\Delta$ the maximum degree, and $W$ the maximum
+weight. On the other hand, bounding $\Delta$ is also not enough, as the problem is NP-hard for unweighted
+graphs of bounded degree. We therefore parameterize Min Stable Cut by both $tw+\Delta$ and obtain
+an FPT algorithm running in time $2^{O(\Delta tw)}(n+\log W)^{O(1)}$. Our main result is to provide
+a reduction showing that both aforementioned algorithms are essentially optimal, even if we replace
+treewidth by pathwidth: if there exists an algorithm running in $(nW)^{o(pw)}$ or $2^{o(\Delta
+pw)}(n+\log W)^{O(1)}$, then the ETH is false. Complementing this, we show that we can obtain an
+FPT approximation scheme parameterized by treewidth, if we consider almost-stable solutions.
+Motivated by these mostly negative results, we consider Unweighted Min Stable Cut. Here our results
+already imply a much faster exact algorithm running in time $\Delta^{O(tw)}n^{O(1)}$. We show
+that this is also probably essentially optimal: an algorithm running in $n^{o(pw)}$ would contradict
+the ETH. 

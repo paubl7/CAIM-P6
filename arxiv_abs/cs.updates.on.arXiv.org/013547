@@ -1,0 +1,19 @@
+The development of accurate methods for multi-label classification (MLC) of remote sensing (RS)
+images is one of the most important research topics in RS. Deep Convolutional Neural Networks (CNNs)
+based methods have triggered substantial performance gains in RS MLC problems, requiring a large
+number of reliable training images annotated by multiple land-cover class labels. Collecting
+such data is time-consuming and costly. To address this problem, the publicly available thematic
+products, which can include noisy labels, can be used for annotating RS images with zero-labeling
+cost. However, multi-label noise (which can be associated with wrong as well as missing label annotations)
+can distort the learning process of the MLC algorithm, resulting in inaccurate predictions. The
+detection and correction of label noise are challenging tasks, especially in a multi-label scenario,
+where each image can be associated with more than one label. To address this problem, we propose a
+novel Consensual Collaborative Multi-Label Learning (CCML) method to alleviate the adverse effects
+of multi-label noise during the training phase of the CNN model. CCML identifies, ranks, and corrects
+noisy multi-labels in RS images based on four main modules: 1) group lasso module; 2) discrepancy
+module; 3) flipping module; and 4) swap module. The task of the group lasso module is to detect the
+potentially noisy labels assigned to the multi-labeled training images, and the discrepancy module
+ensures that the two collaborative networks learn diverse features, while obtaining the same predictions.
+The flipping module is designed to correct the identified noisy multi-labels, while the swap module
+task is devoted to exchanging the ranking information between two networks. Our code is publicly
+available online: this http URL 

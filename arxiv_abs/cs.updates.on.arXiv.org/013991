@@ -1,0 +1,20 @@
+In e-commerce, opinion tags refer to a ranked list of tags provided by the e-commerce platform that
+reflect characteristics of reviews of an item. To assist consumers to quickly grasp a large number
+of reviews about an item, opinion tags are increasingly being applied by e-commerce platforms.
+Current mechanisms for generating opinion tags rely on either manual labelling or heuristic methods,
+which is time-consuming and ineffective. In this paper, we propose the abstractive opinion tagging
+task, where systems have to automatically generate a ranked list of opinion tags that are based on,
+but need not occur in, a given set of user-generated reviews. The abstractive opinion tagging task
+comes with three main challenges: (1) the noisy nature of reviews; (2) the formal nature of opinion
+tags vs. the colloquial language usage in reviews; and (3) the need to distinguish between different
+items with very similar aspects. To address these challenges, we propose an abstractive opinion
+tagging framework, named AOT-Net, to generate a ranked list of opinion tags given a large number
+of reviews. First, a sentence-level salience estimation component estimates each review's salience
+score. Next, a review clustering and ranking component ranks reviews in two steps: first, reviews
+are grouped into clusters and ranked by cluster size; then, reviews within each cluster are ranked
+by their distance to the cluster center. Finally, given the ranked reviews, a rank-aware opinion
+tagging component incorporates an alignment feature and alignment loss to generate a ranked list
+of opinion tags. To facilitate the study of this task, we create and release a large-scale dataset,
+called eComTag, crawled from real-world e-commerce websites. Extensive experiments conducted
+on the eComTag dataset verify the effectiveness of the proposed AOT-Net in terms of various evaluation
+metrics. 

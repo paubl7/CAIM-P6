@@ -1,0 +1,19 @@
+Scaling blockchain efficiency is crucial to its widespread usage in which the payment channel is
+one of the most prominent approaches. With payment channels and the network they construct, two
+users can move some transactions off-chain in a predetermined duration to avoid expensive and time-consuming
+on-chain settlements. Existing work is devoted to designing high-throughput payment channel
+networks (PCNs) or efficient PCN routing policies to reduce the fee. In this paper, we investigate
+the PCN routing from a different perspective by answering whether the routing fee of transactions
+can be saved by being a bit more patient. The key idea is to reorder the processing sequence of atomic
+transactions, other than to handle each of them separately and immediately. We present two mechanisms,
+one is periodic transaction processing assisted by a PCN broker and the other is purely strategic
+waiting. In the former, all the incoming transactions in a short time interval are processed collectively.
+We formulate an optimization model to minimize their total routing fee and derive the optimal permutation
+of processing transactions as well as the routing policy for each of them. A Shapley value based scheme
+is presented to redistribute the benefit of reordering among the transactions efficiently and
+fairly. In the latter, we model the waiting time of a strategic transaction on a single payment channel
+as the first passage time problem in queueing theory when the transaction value is higher than the
+edge capacity upon its arrival. By capturing the capacity dynamics, we are able to calculate the
+recursive expression of waiting for time distribution that is useful to gauge a user's cost of patience.
+Experimental results manifest that our cost redistribution mechanism can effectively save routing
+fees for all the transactions, and the waiting time distribution coincides with the model well.

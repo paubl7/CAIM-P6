@@ -1,0 +1,18 @@
+Despite great efforts, neural networks are still prone to adversarial attacks. Recent work has
+shown that adversarial perturbations typically contain high-frequency features, but the root
+cause of this phenomenon remains unknown. Inspired by the theoretical work in linear full-width
+convolutional models (Gunasekar et al, 2018), we hypothesize that the nonlinear local (i.e. bounded-width)
+convolutional models used in practice are implicitly biased to learn high frequency features,
+and that this is the root cause of high frequency adversarial examples. To test this hypothesis,
+we analyzed the impact of different choices of linear and nonlinear architectures on the implicit
+bias of the learned features and the adversarial perturbations, in both spatial and frequency domains.
+We find that the high-frequency adversarial perturbations are critically dependent on the convolution
+operation in two ways: (i) the translation invariance of the convolution induces an implicit bias
+towards sparsity in the frequency domain; and (ii) the spatially-limited nature of local convolutions
+induces an implicit bias towards high frequency features. The explanation for the latter involves
+the Fourier Uncertainty Principle: a spatially-limited (local in the space domain) filter cannot
+also be frequency-limited (local in the frequency domain). Furthermore, using larger convolution
+kernel sizes or avoiding convolutions altogether (e.g. by using Visual Transformers architecture)
+significantly reduces this high frequency bias, but not the overall susceptibility to attacks.
+Looking forward, our work strongly suggests that understanding and controlling the implicit bias
+of architectures will be essential for achieving adversarial robustness. 

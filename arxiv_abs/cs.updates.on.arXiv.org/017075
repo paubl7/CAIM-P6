@@ -1,0 +1,18 @@
+Due to its open-source nature, Android operating system has been the main target of attackers to
+exploit. Malware creators always perform different code obfuscations on their apps to hide malicious
+activities. Features extracted from these obfuscated samples through program analysis contain
+many useless and disguised features, which leads to many false negatives. To address the issue,
+in this paper, we demonstrate that obfuscation-resilient malware analysis can be achieved through
+contrastive learning. We take the Android malware classification as an example to demonstrate
+our analysis. The key insight behind our analysis is that contrastive learning can be used to reduce
+the difference introduced by obfuscation while amplifying the difference between malware and
+benign apps (or other types of malware). Based on the proposed analysis, we design a system that can
+achieve robust and interpretable classification of Android malware. To achieve robust classification,
+we perform contrastive learning on malware samples to learn an encoder that can automatically extract
+robust features from malware samples. To achieve interpretable classification, we transform
+the function call graph of a sample into an image by centrality analysis. Then the corresponding
+heatmaps are obtained by visualization techniques. These heatmaps can help users understand why
+the malware is classified as this family. We implement IFDroid and perform extensive evaluations
+on two widely used datasets. Experimental results show that IFDroid is superior to state-of-the-art
+Android malware familial classification systems. Moreover, IFDroid is capable of maintaining
+98.2% true positive rate on classifying 8,112 obfuscated malware samples. 

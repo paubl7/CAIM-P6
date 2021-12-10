@@ -1,0 +1,19 @@
+In this paper, we outline a way to deploy a privacy-preserving protocol for multiparty Randomized
+Controlled Trials on the scale of 500 million rows of data and more than a billion gates. Randomized
+Controlled Trials (RCTs) are widely used to improve business and policy decisions in various sectors
+such as healthcare, education, criminology, and marketing. A Randomized Controlled Trial is a
+scientifically rigorous method to measure the effectiveness of a treatment. This is accomplished
+by randomly allocating subjects to two or more groups, treating them differently, and then comparing
+the outcomes across groups. In many scenarios, multiple parties hold different parts of the data
+for conducting and analyzing RCTs. Given privacy requirements and expectations of each of these
+parties, it is often challenging to have a centralized store of data to conduct and analyze RCTs.
+We accomplish this by a three-stage solution. The first stage uses the Private Secret Share Set Intersection
+(PS$^3$I) solution to create a joined set and establish secret shares without revealing membership,
+while discarding individuals who were placed into more than one group. The second stage runs multiple
+instances of a general purpose MPC over a sharded database to aggregate statistics about each experimental
+group while discarding individuals who took an action before they received treatment. The third
+stage adds distributed and calibrated Differential Privacy (DP) noise to the aggregate statistics
+and uncertainty measures, providing formal two-sided privacy guarantees. We also evaluate the
+performance of multiple open source general purpose MPC libraries for this task. We additionally
+demonstrate how we have used this to create a working ads effectiveness measurement product capable
+of measuring hundreds of millions of individuals per experiment. 

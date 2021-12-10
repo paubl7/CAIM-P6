@@ -1,0 +1,19 @@
+The subject of "fairness" in artificial intelligence (AI) refers to assessing AI algorithms for
+potential bias based on demographic characteristics such as race and gender, and the development
+of algorithms to address this bias. Most applications to date have been in computer vision, although
+some work in healthcare has started to emerge. The use of deep learning (DL) in cardiac MR segmentation
+has led to impressive results in recent years, and such techniques are starting to be translated
+into clinical practice. However, no work has yet investigated the fairness of such models. In this
+work, we perform such an analysis for racial/gender groups, focusing on the problem of training
+data imbalance, using a nnU-Net model trained and evaluated on cine short axis cardiac MR data from
+the UK Biobank dataset, consisting of 5,903 subjects from 6 different racial groups. We find statistically
+significant differences in Dice performance between different racial groups. To reduce the racial
+bias, we investigated three strategies: (1) stratified batch sampling, in which batch sampling
+is stratified to ensure balance between racial groups; (2) fair meta-learning for segmentation,
+in which a DL classifier is trained to classify race and jointly optimized with the segmentation
+model; and (3) protected group models, in which a different segmentation model is trained for each
+racial group. We also compared the results to the scenario where we have a perfectly balanced database.
+To assess fairness we used the standard deviation (SD) and skewed error ratio (SER) of the average
+Dice values. Our results demonstrate that the racial bias results from the use of imbalanced training
+data, and that all proposed bias mitigation strategies improved fairness, with the best SD and SER
+resulting from the use of protected group models. 

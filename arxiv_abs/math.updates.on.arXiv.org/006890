@@ -1,0 +1,18 @@
+Given a digraph $G$, a set $X\subseteq V(G)$ is said to be absorbing set (resp. dominating set) if
+every vertex in the graph is either in $X$ or is an in-neighbour (resp. out-neighbour) of a vertex
+in $X$. A set $S\subseteq V(G)$ is said to be an independent set if no two vertices in $S$ are adjacent
+in $G$. A kernel (resp. solution) of $G$ is an independent and absorbing (resp. dominating) set in
+$G$. We explore the algorithmic complexity of these problems in the well known class of interval
+digraphs. A digraph $G$ is an interval digraph if a pair of intervals $(S_u,T_u)$ can be assigned
+to each vertex $u$ of $G$ such that $(u,v)\in E(G)$ if and only if $S_u\cap T_v\neq\emptyset$. Many
+different subclasses of interval digraphs have been defined and studied in the literature by restricting
+the kinds of pairs of intervals that can be assigned to the vertices. We observe that several of these
+classes, like interval catch digraphs, interval nest digraphs, adjusted interval digraphs and
+chronological interval digraphs, are subclasses of the more general class of reflexive interval
+digraphs -- which arise when we require that the two intervals assigned to a vertex have to intersect.
+We show that all the problems mentioned above are efficiently solvable, in most of the cases even
+linear-time solvable, in the class of reflexive interval digraphs, but are APX-hard on even the
+very restricted class of interval digraphs called point-point digraphs, where the two intervals
+assigned to each vertex are required to be degenerate, i.e. they consist of a single point each. The
+results we obtain improve and generalize several existing algorithms and structural results for
+subclasses of reflexive interval digraphs. 

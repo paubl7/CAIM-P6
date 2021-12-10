@@ -1,0 +1,20 @@
+Color Doppler by transthoracic echocardiography creates 2-D fan-shaped maps of blood velocities
+in the cardiac cavities. It is a one-component velocimetric technique since it only returns the
+velocity components parallel to the ultrasound beams. Intraventricular vector flow mapping (iVFM)
+is a method to recover the blood velocity vectors from the Doppler scalar fields in an echocardiographic
+three-chamber view. We improved our iVFM numerical scheme by imposing physical constraints. The
+iVFM consisted in minimizing regularized Doppler residuals subject to the condition that two fluid-dynamics
+constraints were satisfied, namely planar mass conservation, and free-slip boundary conditions.
+The optimization problem was solved by using the Lagrange multiplier method. A finite-difference
+discretization of the optimization problem, written in the polar coordinate system centered on
+the cardiac ultrasound probe, led to a sparse linear system. The single regularization parameter
+was determined automatically for non-supervision considerations. The physics-constrained
+method was validated using realistic intracardiac flow data from a patient-specific CFD model.
+The numerical evaluations showed that the iVFM-derived velocity vectors were in very good agreement
+with the CFD-based original velocities, with relative errors ranged between 0.3 and 12%. We calculated
+two macroscopic measures of flow in the cardiac region of interest, the mean vorticity and mean stream
+function, and observed an excellent concordance between physics-constrained iVFM and CFD. The
+capability of physics-constrained iVFM was finally tested with in vivo color Doppler data acquired
+in patients routinely examined in the echocardiographic laboratory. The vortex that forms during
+the rapid filling was deciphered. The physics-constrained iVFM algorithm is ready for routine
+clinical examination. 

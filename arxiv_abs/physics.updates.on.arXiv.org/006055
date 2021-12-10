@@ -1,0 +1,18 @@
+It is well known that numerical simulations of high-speed reacting flows, in the framework of state-to-state
+formulations, are the most detailed but also often prohibitively computationally expensive.
+In this work, we start to investigate the possibilities offered by the use of machine learning methods
+for state-to-state approaches to alleviate such burden. In this regard, several tasks have been
+identified. Firstly, we assessed the potential of state-of-the-art data-driven regression models
+based on machine learning to predict the relaxation source terms which appear in the right-hand
+side of the state-to-state Euler system of equations for a one-dimensional reacting flow of a N$_2$/N
+binary mixture behind a plane shock wave. It is found that, by appropriately choosing the regressor
+and opportunely tuning its hyperparameters, it is possible to achieve accurate predictions compared
+to the full-scale state-to-state simulation in significantly shorter times. Secondly, we investigated
+different strategies to speed-up our in-house state-to-state solver by coupling it with the best-performing
+pre-trained machine learning algorithm. The embedding of machine learning methods into ordinary
+differential equations solvers may offer a speed-up of several orders of magnitude but some care
+should be paid for how and where such coupling is realized. Performances are found to be strongly
+dependent on the mutual nature of the interfaced codes. Finally, we aimed at inferring the full solution
+of the state-to-state Euler system of equations by means of a deep neural network completely by-passing
+the use of the state-to-state solver while relying only on data. Promising results suggest that
+deep neural networks appear to be a viable technology also for these tasks. 

@@ -1,0 +1,18 @@
+Large-scale datasets with high-quality labels are desired for training accurate deep learning
+models. However, due to the annotation cost, datasets in medical imaging are often either partially-labeled
+or small. For example, DeepLesion is such a large-scale CT image dataset with lesions of various
+types, but it also has many unlabeled lesions (missing annotations). When training a lesion detector
+on a partially-labeled dataset, the missing annotations will generate incorrect negative signals
+and degrade the performance. Besides DeepLesion, there are several small single-type datasets,
+such as LUNA for lung nodules and LiTS for liver tumors. These datasets have heterogeneous label
+scopes, i.e., different lesion types are labeled in different datasets with other types ignored.
+In this work, we aim to develop a universal lesion detection algorithm to detect a variety of lesions.
+The problem of heterogeneous and partial labels is tackled. First, we build a simple yet effective
+lesion detection framework named Lesion ENSemble (LENS). LENS can efficiently learn from multiple
+heterogeneous lesion datasets in a multi-task fashion and leverage their synergy by proposal fusion.
+Next, we propose strategies to mine missing annotations from partially-labeled datasets by exploiting
+clinical prior knowledge and cross-dataset knowledge transfer. Finally, we train our framework
+on four public lesion datasets and evaluate it on 800 manually-labeled sub-volumes in DeepLesion.
+Our method brings a relative improvement of 49% compared to the current state-of-the-art approach
+in the metric of average sensitivity. We have publicly released our manual 3D annotations of DeepLesion
+in https://github.com/viggin/DeepLesion_manual_test_set. 

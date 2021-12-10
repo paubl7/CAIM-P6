@@ -1,0 +1,19 @@
+Sparse polynomial interpolation, sparse linear system solving or modular rational reconstruction
+are fundamental problems in Computer Algebra. They come down to computing linear recurrence relations
+of a sequence with the Berlekamp-Massey algorithm. Likewise, sparse multivariate polynomial
+interpolation and multidimensional cyclic code decoding require guessing linear recurrence
+relations of a multivariate sequence.Several algorithms solve this problem. The so-called Berlekamp-Massey-Sakata
+algorithm (1988) uses polynomial additions and shifts by a monomial. The Scalar-FGLM algorithm
+(2015) relies on linear algebra operations on a multi-Hankel matrix, a multivariate generalization
+of a Hankel matrix. The Artinian Gorenstein border basis algorithm (2017) uses a Gram-Schmidt process.We
+propose a new algorithm for computing the Gr{\"o}bner basis of the ideal of relations of a sequence
+based solely on multivariate polynomial arithmetic. This algorithm allows us to both revisit the
+Berlekamp-Massey-Sakata algorithm through the use of polynomial divisions and to completely
+revise the Scalar-FGLM algorithm without linear algebra operations.A key observation in the design
+of this algorithm is to work on the mirror of the truncated generating series allowing us to use polynomial
+arithmetic modulo a monomial ideal. It appears to have some similarities with Pad{\'e} approximants
+of this mirror polynomial.As an addition from the paper published at the ISSAC conferance, we give
+an adaptive variant of this algorithm taking into account the shape of the final Gr{\"o}bner basis
+gradually as it is discovered. The main advantage of this algorithm is that its complexity in terms
+of operations and sequence queries only depends on the output Gr{\"o}bner basis.All these algorithms
+have been implemented in Maple and we report on our comparisons. 

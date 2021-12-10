@@ -1,0 +1,19 @@
+This paper gives a localized method for the multi-commodity flow problem. We relax both the capacity
+constraints and flow conservation constraints, and introduce a \emph{congestion function} \(\psi\)
+for each arc and \emph{height function} \(h\) for each vertex and commodity. If the flow exceeds
+the capacity on arc \(a\), arc \(a\) would have a congestion cost. If the flow into the vertex \(i\)
+is not equal to that out of the vertex for commodity \(k\), vertex \(i\) would have a height, which
+is positively related to the difference between the amount of the commodity \(k\) into the vertex
+\(i\) and that out of the vertex. Based on the height function \(h\) and the congestion function \(\psi\),
+a new conception , \emph{stable pseudo-flow}, is introduced, which satisfies the following conditions:
+(\romannumeral1) for any used arc of commodity \(k\), the height difference between vertex \(i\)
+and vertex \(j\) is equal to the congestion of arc \((i,j)\); (\romannumeral2) for any unused arc
+of commodity \(k\), the height difference between vertex \(i\) and vertex \(j\) is less than or equal
+to the congestion of arc \((i,j)\). If the stable pseudo-flow is a nonzero-stable pseudo-flow,
+there exists no feasible solution for the multi-commodity flow problem; if the stable pseudo-flow
+is a zero-stable pseudo-flow, there exists feasible solution for the multi-commodity flow problem
+and the zero-stable pseudo-flow is the feasible solution. Besides, a non-linear description of
+the multi-commodity flow problem is given, whose solution is stable pseudo-flow. And the non-linear
+description could be rewritten as convex quadratic programming with box constraints. Rather than
+examine the entire network to find path, the conclusion in this paper shows that the multi-commodity
+flow problem could be solved in a localized manner by looking only at the vertex and its neighbors.

@@ -1,0 +1,19 @@
+The fastCAT application uses pre-calculated Monte Carlo (MC) CBCT phantom-specific scatter and
+detector response functions to reduce simulation time for megavoltage (MV) and kilovoltage (kV)
+CBCT imaging. Pre-calculated x-ray beam energy spectra, detector optical spread functions and
+energy deposition, and phantom scatter kernels are combined with GPU raytracing to produce CBCT
+volumes. MV x-ray beam spectra are simulated with EGSnrc for 2.5 and 6 MeV electron beams incident
+on a variety of target materials and kV x-ray beam spectra are calculated analytically for an x-ray
+tube with a tungsten anode. Detectors were modelled in Geant4 extended by Topas and included optical
+transport in the scintillators. Two MV detectors were modelled, a standard Varian AS1200 GOS detector
+and a novel CWO high detective quantum efficiency detector. A kV CsI detector was also modelled.
+Energy dependent scatter kernels were created in Topas for two 16-cm diameter phantoms: A Catphan
+515 contrast phantom and an anthropomorphic head phantom. The Catphan phantom contained inserts
+of 1-5 mm in diameter of six different tissue types. FastCAT simulations retain high fidelity to
+measurements and MC simulations: MTF curves were within 3.5% and 1.2% of measured values for the
+CWO and GOS detectors, respectively. HU values and CNR in a fastCAT Catphan 515 simulation were seen
+to be within 95 % confidence intervals of an equivalent MC simulation for all of the tissues with root
+mean squared errors less than 16 HU and 1.6 in HU values and CNR comparisons, respectively. A fastCAT
+simulation of the Catphan 515 module with an image size of 1024x1024x10 voxels took 61 seconds on
+a GPU while the equivalent Topas MC was estimated to take more than 0.3 CPU years. The fastCAT application
+can be found at https://github.com/jerichooconnell/fastCATs.git. 

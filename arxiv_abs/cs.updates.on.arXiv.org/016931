@@ -1,0 +1,18 @@
+Current radio frequency (RF) sensors at the Edge lack the computational resources to support practical,
+in-situ training for intelligent spectrum monitoring, and sensor data classification in general.
+We propose a solution via Deep Delay Loop Reservoir Computing (DLR), a processing architecture
+that supports general machine learning algorithms on compact mobile devices by leveraging delay-loop
+reservoir computing in combination with innovative electrooptical hardware. With both digital
+and photonic realizations of our design of the loops, DLR delivers reductions in form factor, hardware
+complexity and latency, compared to the State-of-the-Art (SoA). The main impact of the reservoir
+is to project the input data into a higher dimensional space of reservoir state vectors in order to
+linearly separate the input classes. Once the classes are well separated, traditionally complex,
+power-hungry classification models are no longer needed for the learning process. Yet, even with
+simple classifiers based on Ridge regression (RR), the complexity grows at least quadratically
+with the input size. Hence, the hardware reduction required for training on compact devices is in
+contradiction with the large dimension of state vectors. DLR employs a RR-based classifier to exceed
+the SoA accuracy, while further reducing power consumption by leveraging the architecture of parallel
+(split) loops. We present DLR architectures composed of multiple smaller loops whose state vectors
+are linearly combined to create a lower dimensional input into Ridge regression. We demonstrate
+the advantages of using DLR for two distinct applications: RF Specific Emitter Identification
+(SEI) for IoT authentication, and wireless protocol recognition for IoT situational awareness.

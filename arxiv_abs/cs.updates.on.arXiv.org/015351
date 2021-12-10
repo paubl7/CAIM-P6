@@ -1,0 +1,19 @@
+Reshaping accurate and realistic 3D human bodies from anthropometric parameters (e.g., height,
+chest size, etc.) poses a fundamental challenge for person identification, online shopping and
+virtual reality. Existing approaches for creating such 3D shapes often suffer from complex measurement
+by range cameras or high-end scanners, which either involve heavy expense cost or result in low quality.
+However, these high-quality equipments limit existing approaches in real applications, because
+the equipments are not easily accessible for common users. In this paper, we have designed a 3D human
+body reshaping system by proposing a novel feature-selection-based local mapping technique,
+which enables automatic anthropometric parameter modeling for each body facet. Note that the proposed
+approach can leverage limited anthropometric parameters (i.e., 3-5 measurements) as input, which
+avoids complex measurement, and thus better user-friendly experience can be achieved in real scenarios.
+Specifically, the proposed reshaping model consists of three steps. First, we calculate full-body
+anthropometric parameters from limited user inputs by imputation technique, and thus essential
+anthropometric parameters for 3D body reshaping can be obtained. Second, we select the most relevant
+anthropometric parameters for each facet by adopting relevance masks, which are learned offline
+by the proposed local mapping technique. Third, we generate the 3D body meshes by mapping matrices,
+which are learned by linear regression from the selected parameters to mesh-based body representation.
+We conduct experiments by anthropomorphic evaluation and a user study from 68 volunteers. Experiments
+show the superior results of the proposed system in terms of mean reconstruction error against the
+state-of-the-art approaches. 

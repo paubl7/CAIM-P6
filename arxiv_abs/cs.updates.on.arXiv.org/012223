@@ -1,0 +1,19 @@
+In this paper, we propose a novel approach for implicit data representation to evaluate similarity
+of input data using a trained neural network. In contrast to the previous approach, which uses gradients
+for representation, we utilize only the outputs from the last hidden layer of a neural network and
+do not use a backward step. The proposed technique explicitly takes into account the initial task
+and significantly reduces the size of the vector representation, as well as the computation time.
+The key point is minimization of information loss between layers. Generally, a neural network discards
+information that is not related to the problem, which makes the last hidden layer representation
+useless for input similarity task. In this work, we consider two main causes of information loss:
+correlation between neurons and insufficient size of the last hidden layer. To reduce the correlation
+between neurons we use orthogonal weight initialization for each layer and modify the loss function
+to ensure orthogonality of the weights during training. Moreover, we show that activation functions
+can potentially increase correlation. To solve this problem, we apply modified Batch-Normalization
+with Dropout. Using orthogonal weight matrices allow us to consider such neural networks as an application
+of the Random Projection method and get a lower bound estimate for the size of the last hidden layer.
+We perform experiments on MNIST and physical examination datasets. In both experiments, initially,
+we split a set of labels into two disjoint subsets to train a neural network for binary classification
+problem, and then use this model to measure similarity between input data and define hidden classes.
+Our experimental results show that the proposed approach achieves competitive results on the input
+similarity task while reducing both computation time and the size of the input representation.

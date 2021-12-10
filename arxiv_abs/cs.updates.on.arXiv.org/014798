@@ -1,0 +1,19 @@
+Environmental Sound Classification (ESC) is a challenging field of research in non-speech audio
+processing. Most of current research in ESC focuses on designing deep models with special architectures
+tailored for specific audio datasets, which usually cannot exploit the intrinsic patterns in the
+data. However recent studies have surprisingly shown that transfer learning from models trained
+on ImageNet is a very effective technique in ESC. Herein, we propose SoundCLR, a supervised contrastive
+learning method for effective environment sound classification with state-of-the-art performance,
+which works by learning representations that disentangle the samples of each class from those of
+other classes. Our deep network models are trained by combining a contrastive loss that contributes
+to a better probability output by the classification layer with a cross-entropy loss on the output
+of the classifier layer to map the samples to their respective 1-hot encoded labels. Due to the comparatively
+small sizes of the available environmental sound datasets, we propose and exploit a transfer learning
+and strong data augmentation pipeline and apply the augmentations on both the sound signals and
+their log-mel spectrograms before inputting them to the model. Our experiments show that our masking
+based augmentation technique on the log-mel spectrograms can significantly improve the recognition
+performance. Our extensive benchmark experiments show that our hybrid deep network models trained
+with combined contrastive and cross-entropy loss achieved the state-of-the-art performance
+on three benchmark datasets ESC-10, ESC-50, and US8K with validation accuracies of 99.75\%, 93.4\%,
+and 86.49\% respectively. The ensemble version of our models also outperforms other top ensemble
+methods. The code is available at https://github.com/alireza-nasiri/SoundCLR. 

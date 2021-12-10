@@ -1,0 +1,20 @@
+At the present time, sequential item recommendation models are compared by calculating metrics
+on a small item subset (target set) to speed up computation. The target set contains the relevant
+item and a set of negative items that are sampled from the full item set. Two well-known strategies
+to sample negative items are uniform random sampling and sampling by popularity to better approximate
+the item frequency distribution in the dataset. Most recently published papers on sequential item
+recommendation rely on sampling by popularity to compare the evaluated models. However, recent
+work has already shown that an evaluation with uniform random sampling may not be consistent with
+the full ranking, that is, the model ranking obtained by evaluating a metric using the full item set
+as target set, which raises the question whether the ranking obtained by sampling by popularity
+is equal to the full ranking. In this work, we re-evaluate current state-of-the-art sequential
+recommender models from the point of view, whether these sampling strategies have an impact on the
+final ranking of the models. We therefore train four recently proposed sequential recommendation
+models on five widely known datasets. For each dataset and model, we employ three evaluation strategies.
+First, we compute the full model ranking. Then we evaluate all models on a target set sampled by the
+two different sampling strategies, uniform random sampling and sampling by popularity with the
+commonly used target set size of 100, compute the model ranking for each strategy and compare them
+with each other. Additionally, we vary the size of the sampled target set. Overall, we find that both
+sampling strategies can produce inconsistent rankings compared with the full ranking of the models.
+Furthermore, both sampling by popularity and uniform random sampling do not consistently produce
+the same ranking ... 

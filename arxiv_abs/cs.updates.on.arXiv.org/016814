@@ -1,0 +1,18 @@
+OBJECTIVE: Leverage existing biomedical NLP tools and DS domain terminology to produce a novel
+and comprehensive knowledge graph containing dietary supplement (DS) information for discovering
+interactions between DS and drugs, or Drug-Supplement Interactions (DSI). MATERIALS AND METHODS:
+We created SemRepDS (an extension of SemRep), capable of extracting semantic relations from abstracts
+by leveraging a DS-specific terminology (iDISK) containing 28,884 DS terms not found in the UMLS.
+PubMed abstracts were processed using SemRepDS to generate semantic relations, which were then
+filtered using a PubMedBERT-based model to remove incorrect relations before generating our knowledge
+graph (SuppKG). Two pathways are used to identify potential DS-Drug interactions which are then
+evaluated by medical professionals for mechanistic plausibility. RESULTS: Comparison analysis
+found that SemRepDS returned 206.9% more DS relations and 158.5% more DS entities than SemRep. The
+fine-tuned BERT model obtained an F1 score of 0.8605 and removed 43.86% of the relations, improving
+the precision of the relations by 26.4% compared to pre-filtering. SuppKG consists of 2,928 DS-specific
+nodes. Manual review of findings identified 44 (88%) proposed DS-Gene-Drug and 32 (64%) proposed
+DS-Gene1-Function-Gene2-Drug pathways to be mechanistically plausible. DISCUSSION: The additional
+relations extracted using SemRepDS generated SuppKG that was used to find plausible DSI not found
+in the current literature. By the nature of the SuppKG, these interactions are unlikely to have been
+found using SemRep without the expanded DS terminology. CONCLUSION: We successfully extend SemRep
+to include DS information and produce SuppKG which can be used to find potential DS-Drug interactions.

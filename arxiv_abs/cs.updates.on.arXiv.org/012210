@@ -1,0 +1,20 @@
+Finding latent structures in data is drawing increasing attention in diverse fields such as fluid
+dynamics, signal processing, and machine learning. Dimensionality reduction facilitates the
+revelation of such structures. For dynamical systems of linear and nonlinear flows, a prominent
+dimensionality reduction method is DMD, based on the theory of Koopman operators. In this work,
+we adapt DMD to homogeneous flows and show it can approximate well nonlinear spectral image decomposition
+techniques. We examine dynamics based on symmetric $\gamma$-homogeneous operators, $0 < \gamma
+< 1$. These systems have a polynomial decay profile and reach steady state in finite time. DMD, on
+the other hand, can be viewed as an exponential data fitting algorithm. This yields an inherent conflict,
+causing large approximation errors (and non-existence of solutions in some particular cases).
+The contribution of this work is threefold. First, we suggest a rescaling of the time variable that
+solves the conflict between DMD and homogeneous flows. This adaptation of DMD can be performed when
+the homogeneity and the time step size are known. Second, we suggest the blind homogeneity normalization
+for time rescaling when neither the homogeneity nor the step size are known. Third, we formulate
+a new dynamic mode decomposition that constrains the matrix of the dynamics to be symmetric, termed
+SDMD. With these adaptations, we provide a closed form solution of DMD for dynamics $u_t = P(u) $,
+$u(t=0)=u_0$, where $P$ is a nonlinear $\gamma$-homogeneous operator, when $u_0$ admits $P(u_0)=\lambda
+u_0 $. Then, we prove the validity of the blind homogeneity normalization. In addition, we show SDMD
+achieves lower mean square error for the spectrum estimation. Finally, we turn to formulating a
+discrete nonlinear spectral decomposition, based on SDMD and related to nonlinear eigenfunctions
+of $\gamma$-homogeneous operators. 

@@ -1,0 +1,18 @@
+In this paper, we develop structure assisted nonnegative matrix factorization (NMF) methods for
+blind source separation of degenerate data. The motivation originates from nuclear magnetic resonance
+(NMR) spectroscopy, where a multiple mixture NMR spectra are recorded to identify chemical compounds
+with similar structures. Consider the linear mixing model (LMM), we aim to identify the chemical
+compounds involved when the mixing process is known to be nearly singular. We first consider a class
+of data with dominant interval(s) (DI) where each of source signals has dominant peaks over others.
+Besides, a nearly singular mixing process produces degenerate mixtures. The DI condition implies
+clustering structures in the data points. Hence, the estimation of the mixing matrix could be achieved
+by data clustering. Due to the presence of the noise and the degeneracy of the data, a small deviation
+in the estimation may introduce errors in the output. To resolve this problem and improve robustness
+of the separation, methods are developed in two aspects. One is to find better estimation of the mixing
+matrix by allowing a constrained perturbation to the clustering output, and it can be achieved by
+a quadratic programming. The other is to seek sparse source signals by exploiting the DI condition,
+and it solves an $\ell_1$ optimization. If no source information is available, we propose to adopt
+the nonnegative matrix factorization approach by incorporating the matrix structure (parallel
+columns of the mixing matrix) into the cost function and develop multiplicative iteration rules
+for the numerical solutions. We present experimental results of NMR data to show the performance
+and reliability of the method in the applications arising in NMR spectroscopy. 

@@ -1,0 +1,20 @@
+Due to the rise of AI applications, machine learning libraries have become far more accessible,
+with Python being the most common programming language to write them. Machine learning libraries
+tend to be updated periodically, which may deprecate existing APIs, making it necessary for developers
+to update their usages. However, updating usages of deprecated APIs are typically not a priority
+for developers, leading to widespread usages of deprecated APIs which expose library users to vulnerability
+issues. In this paper, we built a tool to automate these updates. We first conducted an empirical
+study to seek a better understanding on how updates of deprecated machine-learning API usages in
+Python can be done. The study involved a dataset of 112 deprecated APIs from Scikit-Learn, TensorFlow,
+and PyTorch. We found dimensions of deprecated API migration related to its update operation (i.e.,
+the required operation to perform the migration), API mapping (i.e., the number of deprecated and
+its corresponding updated APIs),and context dependency (i.e., whether we need to consider surrounding
+contexts when performing the migration). Guided by the findings on our empirical study, we created
+MLCatchUp, a tool to automate the update of Python deprecated API usage that automatically infers
+the API migration transformation through comparison of the deprecated and updated API signatures.
+These transformations are expressed in a Domain Specific Language (DSL). We evaluated MLCatchUp
+using test dataset containing 258 files with 514 API usages that we collected from public GitHub
+repositories. In this evaluation, MLCatchUp achieves a precision of 86.19%. We further improve
+the precision of MLCatchUp by adding a feature that allows it to accept additional user input to specify
+the transformation constraints in the DSL for context-dependent API migration, where MLCatchUp
+achieves a precision of 93.58%. 

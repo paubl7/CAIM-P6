@@ -1,0 +1,18 @@
+Accelerating multi-modal magnetic resonance (MR) imaging is a new and effective solution for fast
+MR imaging, providing superior performance in restoring the target modality from its undersampled
+counterpart with guidance from an auxiliary modality. However, existing works simply introduce
+the auxiliary modality as prior information, lacking in-depth investigations on the potential
+mechanisms for fusing two modalities. Further, they usually rely on the convolutional neural networks
+(CNNs), which focus on local information and prevent them from fully capturing the long-distance
+dependencies of global knowledge. To this end, we propose a multi-modal transformer (MTrans),
+which is capable of transferring multi-scale features from the target modality to the auxiliary
+modality, for accelerated MR imaging. By restructuring the transformer architecture, our MTrans
+gains a powerful ability to capture deep multi-modal information. More specifically, the target
+modality and the auxiliary modality are first split into two branches and then fused using a multi-modal
+transformer module. This module is based on an improved multi-head attention mechanism, named
+the cross attention module, which absorbs features from the auxiliary modality that contribute
+to the target modality. Our framework provides two appealing benefits: (i) MTrans is the first attempt
+at using improved transformers for multi-modal MR imaging, affording more global information
+compared with CNN-based methods. (ii) A new cross attention module is proposed to exploit the useful
+information in each branch at different scales. It affords both distinct structural information
+and subtle pixel-level information, which supplement the target modality effectively. 

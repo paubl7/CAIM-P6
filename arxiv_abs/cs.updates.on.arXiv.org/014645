@@ -1,0 +1,20 @@
+Reinforcement learning (RL) has great potential in sequential decision-making. At present, the
+mainstream RL algorithms are data-driven, relying on millions of iterations and a large number
+of empirical data to learn a policy. Although data-driven RL may have excellent asymptotic performance,
+it usually yields slow convergence speed. As a comparison, model-driven RL employs a differentiable
+transition model to improve convergence speed, in which the policy gradient (PG) is calculated
+by using the backpropagation through time (BPTT) technique. However, such methods suffer from
+numerical instability, model error sensitivity and low computing efficiency, which may lead to
+poor policies. In this paper, a mixed policy gradient (MPG) method is proposed, which uses both empirical
+data and the transition model to construct the PG, so as to accelerate the convergence speed without
+losing the optimality guarantee. MPG contains two types of PG: 1) data-driven PG, which is obtained
+by directly calculating the derivative of the learned Q-value function with respect to actions,
+and 2) model-driven PG, which is calculated using BPTT based on the model-predictive return. We
+unify them by revealing the correlation between the upper bound of the unified PG error and the predictive
+horizon, where the data-driven PG is regraded as 0-step model-predictive return. Relying on that,
+MPG employs a rule-based method to adaptively adjust the weights of data-driven and model-driven
+PGs. In particular, to get a more accurate PG, the weight of the data-driven PG is designed to grow
+along the learning process while the other to decrease. Besides, an asynchronous learning framework
+is proposed to reduce the wall-clock time needed for each update iteration. Simulation results
+show that the MPG method achieves the best asymptotic performance and convergence speed compared
+with other baseline algorithms. 

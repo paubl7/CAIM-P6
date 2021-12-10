@@ -1,0 +1,19 @@
+We present a Bayesian method for estimating instrumental noise parameters and propagating noise
+uncertainties within the global BeyondPlanck Gibbs sampling framework, and apply this to Planck
+LFI time-ordered data. Following previous literature, we adopt a simple $1/f$ model for the noise
+power spectral density (PSD), and implement an optimal Wiener-filter (or constrained realization)
+gap-filling procedure to account for masked data. We then use this procedure to both estimate the
+gapless correlated noise in the time-domain, $n_\mathrm{corr}$, and to sample the noise PSD spectral
+parameters, $\xi^n = \{\sigma_0, f_\mathrm{knee}, \alpha\}$. In contrast to previous Planck
+analyses, we only assume piecewise stationary noise within each pointing period (PID), not throughout
+the full mission, but we adopt the LFI DPC results as priors on $\alpha$ and $f_\mathrm{knee}$. On
+average, we find best-fit correlated noise parameters that are mostly consistent with previous
+results, with a few notable exceptions. However, a detailed inspection of the time-dependent results
+reveals many important findings. First and foremost, we find strong evidence for statistically
+significant temporal variations in all noise PSD parameters, many of which are directly correlated
+with satellite housekeeping data. Second, while the simple $1/f$ model appears to be an excellent
+fit for the LFI 70 GHz channel, there is evidence for additional correlated noise not described by
+a $1/f$ model in the 30 and 44 GHz channels, including within the primary science frequency range
+of 0.1-1 Hz. In general, most 30 and 44 GHz channels exhibit excess noise at the 2-$3 \sigma$ level
+in each one hour pointing period. For some periods of time, we also find evidence of strong common
+mode noise fluctuations across the entire focal plane. (Abridged.) 

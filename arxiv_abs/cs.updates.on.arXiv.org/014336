@@ -1,0 +1,19 @@
+Objective: To discover candidate drugs to repurpose for COVID-19 using literature-derived knowledge
+and knowledge graph completion methods. Methods: We propose a novel, integrative, and neural network-based
+literature-based discovery (LBD) approach to identify drug candidates from both PubMed and COVID-19-focused
+research literature. Our approach relies on semantic triples extracted using SemRep (via SemMedDB).
+We identified an informative subset of semantic triples using filtering rules and an accuracy classifier
+developed on a BERT variant, and used this subset to construct a knowledge graph. Five SOTA, neural
+knowledge graph completion algorithms were used to predict drug repurposing candidates. The models
+were trained and assessed using a time slicing approach and the predicted drugs were compared with
+a list of drugs reported in the literature and evaluated in clinical trials. These models were complemented
+by a discovery pattern-based approach. Results: Accuracy classifier based on PubMedBERT achieved
+the best performance (F1= 0.854) in classifying semantic predications. Among five knowledge graph
+completion models, TransE outperformed others (MR = 0.923, Hits@1=0.417). Some known drugs linked
+to COVID-19 in the literature were identified, as well as some candidate drugs that have not yet been
+studied. Discovery patterns enabled generation of plausible hypotheses regarding the relationships
+between the candidate drugs and COVID-19. Among them, five highly ranked and novel drugs (paclitaxel,
+SB 203580, alpha 2-antiplasmin, pyrrolidine dithiocarbamate, and butylated hydroxytoluene)
+with their mechanistic explanations were further discussed. Conclusion: We show that an LBD approach
+can be feasible for discovering drug candidates for COVID-19, and for generating mechanistic explanations.
+Our approach can be generalized to other diseases as well as to other clinical questions. 

@@ -1,0 +1,19 @@
+Broadcasting in wireless networks is vulnerable to adversarial jamming. To thwart such behavior,
+\emph{resource competitive analysis} is proposed. In this framework, sending, listening, or
+jamming on one channel for one time slot costs one unit of energy. The adversary can employ arbitrary
+strategy to disrupt communication, but has a limited energy budget $T$. The honest nodes, on the
+other hand, aim to accomplish broadcast while spending only $o(T)$. Previous work has shown, in
+a $C$-channels network containing $n$ nodes, for large $T$ values, each node can receive the message
+in $\tilde{O}(T/C)$ time, while spending only $\tilde{O}(\sqrt{T/n})$ energy. However, these
+multi-channel algorithms only work for certain values of $n$ and $C$, and can only tolerate an oblivious
+adversary. In this work, we provide new upper and lower bounds for broadcasting in multi-channel
+radio networks, from the perspective of resource competitiveness. Our algorithms work for arbitrary
+$n,C$ values, require minimal prior knowledge, and can tolerate a powerful adaptive adversary.
+More specifically, in our algorithms, for large $T$ values, each node's runtime is $O(T/C)$, and
+each node's energy cost is $\tilde{O}(\sqrt{T/n})$. We also complement algorithmic results with
+lower bounds, proving both the time complexity and the energy complexity of our algorithms are optimal
+or near-optimal (within a poly-log factor). Our technical contributions lie in using "epidemic
+broadcast" to achieve time efficiency and resource competitiveness, and employing coupling techniques
+in the analysis to handle the adaptivity of the adversary. At the lower bound side, we first derive
+a new energy complexity lower bound for 1-to-1 communication in the multi-channel setting, and
+then apply simulation and reduction arguments to obtain the desired result. 

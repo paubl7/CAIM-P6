@@ -1,0 +1,19 @@
+In the classic longest common substring (LCS) problem, we are given two strings $S$ and $T$, each
+of length at most $n$, over an alphabet of size $\sigma$, and we are asked to find a longest string occurring
+as a fragment of both $S$ and $T$. Weiner, in his seminal paper that introduced the suffix tree, presented
+an $\mathcal{O}(n \log \sigma)$-time algorithm for this problem [SWAT 1973]. For polynomially-bounded
+integer alphabets, the linear-time construction of suffix trees by Farach yielded an $\mathcal{O}(n)$-time
+algorithm for the LCS problem [FOCS 1997]. However, for small alphabets, this is not necessarily
+optimal for the LCS problem in the word RAM model of computation, in which the strings can be stored
+in $\mathcal{O}(n \log \sigma/\log n )$ space and read in $\mathcal{O}(n \log \sigma/\log n )$ time.
+We show that, in this model, we can compute an LCS in time $\mathcal{O}(n \log \sigma / \sqrt{\log
+n})$, which is sublinear in $n$ if $\sigma=2^{o(\sqrt{\log n})}$ (in particular, if $\sigma=\mathcal{O}(1)$),
+using optimal space $\mathcal{O}(n \log \sigma/\log n)$. We then lift our ideas to the problem of
+computing a $k$-mismatch LCS, which has received considerable attention in recent years. In this
+problem, the aim is to compute a longest substring of $S$ that occurs in $T$ with at most $k$ mismatches.
+Thankachan et al.~showed how to compute a $k$-mismatch LCS in $\mathcal{O}(n \log^k n)$ time for
+$k=\mathcal{O}(1)$ [J. Comput. Biol. 2016]. We show an $\mathcal{O}(n \log^{k-1/2} n)$-time
+algorithm, for any constant $k>0$ and irrespective of the alphabet size, using $\mathcal{O}(n)$
+space as the previous approaches. We thus notably break through the well-known $n \log^k n$ barrier,
+which stems from a recursive heavy-path decomposition technique that was first introduced in the
+seminal paper of Cole et al. [STOC 2004] for string indexing with $k$ errors. 

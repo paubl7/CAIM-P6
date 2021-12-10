@@ -1,0 +1,18 @@
+In recent years, data-driven machine learning (ML) methods have revolutionized the computer vision
+community by providing novel efficient solutions to many unsolved (medical) image analysis problems.
+However, due to the increasing privacy concerns and data fragmentation on many different sites,
+existing medical data are not fully utilized, thus limiting the potential of ML. Federated learning
+(FL) enables multiple parties to collaboratively train a ML model without exchanging local data.
+However, data heterogeneity (non-IID) among the distributed clients is yet a challenge. To this
+end, we propose a novel federated method, denoted Federated Disentanglement (FedDis), to disentangle
+the parameter space into shape and appearance, and only share the shape parameter with the clients.
+FedDis is based on the assumption that the anatomical structure in brain MRI images is similar across
+multiple institutions, and sharing the shape knowledge would be beneficial in anomaly detection.
+In this paper, we leverage healthy brain scans of 623 subjects from multiple sites with real data
+(OASIS, ADNI) in a privacy-preserving fashion to learn a model of normal anatomy, that allows to
+segment abnormal structures. We demonstrate a superior performance of FedDis on real pathological
+databases containing 109 subjects; two publicly available MS Lesions (MSLUB, MSISBI), and an in-house
+database with MS and Glioblastoma (MSI and GBI). FedDis achieved an average dice performance of
+0.38, outperforming the state-of-the-art (SOTA) auto-encoder by 42% and the SOTA federated method
+by 11%. Further, we illustrate that FedDis learns a shape embedding that is orthogonal to the appearance
+and consistent under different intensity augmentations. 

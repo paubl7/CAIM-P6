@@ -1,0 +1,20 @@
+Sign language recognition is a challenging problem where signs are identified by simultaneous
+local and global articulations of multiple sources, i.e. hand shape and orientation, hand movements,
+body posture, and facial expressions. Solving this problem computationally for a large vocabulary
+of signs in real life settings is still a challenge, even with the state-of-the-art models. In this
+study, we present a new largescale multi-modal Turkish Sign Language dataset (AUTSL) with a benchmark
+and provide baseline models for performance evaluations. Our dataset consists of 226 signs performed
+by 43 different signers and 38,336 isolated sign video samples in total. Samples contain a wide variety
+of backgrounds recorded in indoor and outdoor environments. Moreover, spatial positions and the
+postures of signers also vary in the recordings. Each sample is recorded with Microsoft Kinect v2
+and contains RGB, depth, and skeleton modalities. We prepared benchmark training and test sets
+for user independent assessments of the models. We trained several deep learning based models and
+provide empirical evaluations using the benchmark; we used CNNs to extract features, unidirectional
+and bidirectional LSTM models to characterize temporal information. We also incorporated feature
+pooling modules and temporal attention to our models to improve the performances. We evaluated
+our baseline models on AUTSL and Montalbano datasets. Our models achieved competitive results
+with the state-of-the-art methods on Montalbano dataset, i.e. 96.11% accuracy. In AUTSL random
+train-test splits, our models performed up to 95.95% accuracy. In the proposed user-independent
+benchmark dataset our best baseline model achieved 62.02% accuracy. The gaps in the performances
+of the same baseline models show the challenges inherent in our benchmark dataset. AUTSL benchmark
+dataset is publicly available at https://cvml.ankara.edu.tr. 

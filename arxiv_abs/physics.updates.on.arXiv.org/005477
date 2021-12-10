@@ -1,0 +1,19 @@
+Free energies govern the behavior of soft and liquid matter, and improving their predictions could
+have a large impact on the development of drugs, electrolytes and homogeneous catalysts. Unfortunately,
+it is challenging to devise an accurate description of effects governing solvation such as hydrogen-bonding,
+van der Waals interactions, or entropy and conformational sampling. We present a Free energy Machine
+Learning (FML) model applicable throughout chemical compound space and based on a representation
+that employs computationally efficient Boltzmann averages for an approximated sampling of configurational
+space. Using the FreeSolv database, FML's out-of-sample prediction errors of experimental hydration
+free energies decay systematically with training set size, and experimental uncertainty (0.6
+kcal/mol) is reached after training on 80\% (490 molecules). Corresponding FML model errors are
+on par or better than state-of-the art, physics based, legacy approaches. To generate the input
+representation for a new query compound, the FML requires approximate and short molecular dynamics
+runs. We showcase the usefulness of FML through analysis of predicted solvation free energies for
+116k organic molecules (all force-field compatible molecules in QM9 database) identifying the
+most and least solvated systems, and rediscovering quasi-linear structure property relationships
+in terms of hydrogen-bond donors, number of NH or OH groups, number of oxygen atoms in hydrocarbons,
+and number of heavy atoms. FML's accuracy is maximal when the temperature used for the molecular
+dynamics simulation to generate averaged input representation samples in training is the same
+as for the query compounds. The sampling time for the representation converges with respect to the
+model's prediction error for both, training and testing. 
