@@ -24,12 +24,15 @@ import numpy as np
 
 __author__ = 'bejar'
 
+def flatten(l):
+  return [item for sublist in l for item in sublist]
+
 def unpack_prot(prot,total_count):
     words = []
     for word,prob in prot:
         w_occurences = prob*total_count
-        words.append(np.repeat(word,w_occurences))
-    unpacked = list(np.ndarray.flatten(np.array(words)))
+        words.append(list(np.repeat(word,w_occurences)))
+    unpacked = flatten(words)
     return unpacked
 
 def intersection(lst1, lst2):
@@ -41,17 +44,18 @@ class MRKmeansStep(MRJob):
     prototypes = {}
 
 
-    def jaccard(self, prot, doc):
-        """
-        Compute here the Jaccard similarity between  a prototype and a document
-        prot should be a list of pairs (word, probability)
-        doc should be a list of words
-        Words must be alphabeticaly ordered
-        The result should be always a value in the range [0,1]
-        """
-        prot_doc = unpack_prot(prot,len(doc))
-        jaccard_similarity = len(intersection(prot_doc,doc))/len(prot+doc)
-        return jaccard_similarity
+    def jaccard(self,prot, doc):
+      """
+      Compute here the Jaccard similarity between  a prototype and a document
+      prot should be a list of pairs (word, probability)
+      doc should be a list of words
+      Words must be alphabeticaly ordered
+      The result should be always a value in the range [0,1]
+      """         
+      prot_doc = unpack_prot(prot,len(doc))  
+      intersection_len = len(intersection(prot_doc,doc))       
+      jaccard_similarity = intersection_len/len(prot+doc)
+      return jaccard_similarity
 
     def configure_args(self):
         """
@@ -93,7 +97,7 @@ class MRKmeansStep(MRJob):
 
         minimum_distance = -1 
         assigned_prototype= ""
-        for prot in self.prototypes:
+        for prot in self.prototypes:     
             distance = self.jaccard(self.prototypes[prot], lwords)
             if (distance < minimum_distance or minimum_distance==-1):
                 assigned_prototype = prot
@@ -147,4 +151,5 @@ class MRKmeansStep(MRJob):
 
 
 if __name__ == '__main__':
+    print('gilipollas')
     MRKmeansStep.run()
