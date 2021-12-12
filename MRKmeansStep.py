@@ -117,23 +117,26 @@ class MRKmeansStep(MRJob):
         :return:
         """
 
-        cluster = []
-        new_prototype = {}
+        new_prototype={}
+        new_prototype_documents=[]
+        n_documents=0
 
         for (doc, words) in values:
-            cluster.append(doc)
+            new_prototype_documents.append(doc)
             for word in words:
                 if word in new_prototype:
                     new_prototype[word] += 1
                 else:
                     new_prototype[word] = 1
-        
-        result = []
+            
+            n_documents += 1
+
+        return_prototype = []
         for word in new_prototype:
-            value = new_prototype[word]/float(len(cluster))
-            result.append((word, value))
+            value = new_prototype[word]/float(n_documents)
+            return_prototype.append((word, value))
     
-        yield key, (sorted(cluster), sorted(result, key=lambda x: x[0]))
+        yield key, (sorted(new_prototype_documents), sorted(return_prototype, key=lambda x: x[0]))
 
 
     def steps(self):
