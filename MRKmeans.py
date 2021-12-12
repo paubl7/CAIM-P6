@@ -22,79 +22,94 @@ import shutil
 import argparse
 import os
 import time
-from mrjob.util import to_lines
 
 __author__ = 'bejar'
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--prot', default='prototypes.txt', help='Initial prototpes file')
     parser.add_argument('--docs', default='documents.txt', help='Documents data')
     parser.add_argument('--iter', default=5, type=int, help='Number of iterations')
-    parser.add_argument('--ncores', default=2, type=int, help='Number of parallel processes to use')
+    parser.add_argument('--nmaps', default=2, type=int, help='Number of parallel map processes to use')
+    parser.add_argument('--nreduces', default=2, type=int, help='Number of parallel reduce processes to use')
+
 
     args = parser.parse_args()
     assign = {}
 
+    if not os.path.exists('res'):
+        os.mkdir('res')
+
     # Copies the initial prototypes
     cwd = os.getcwd()
-    shutil.copy(cwd + '/' + args.prot, cwd + '/prototypes0.txt')
+    shutil.copy(cwd + '/' + args.prot, cwd + '/res/prototypes0.txt')
 
-    nomove = False  # Stores if there has been changes in the current iteration
+    total_time = time.time()
+
+    nomove = False
     for i in range(args.iter):
-        tinit = time.time()  # For timing the iterations
-
-        # Configures the script
+        
+        tinit = time.time()
         print('Iteration %d ...' % (i + 1))
+
         # The --file flag tells to MRjob to copy the file to HADOOP
         # The --prot flag tells to MRKmeansStep where to load the prototypes from
         mr_job1 = MRKmeansStep(args=['-r', 'local', args.docs,
-                                     '--file', cwd + '/prototypes%d.txt' % i,
-                                     '--prot', cwd + '/prototypes%d.txt' % i,
-                                     '--num-cores', str(args.ncores)])
+                                     '--file', cwd + '/res/prototypes%d.txt' % i,
+                                     '--prot', cwd + '/res/prototypes%d.txt' % i,
+                                     '--jobconf', 'mapreduce.job.maps=%d' % args.nmaps,
+                                     '--jobconf', 'mapreduce.job.reduces=%d' % args.nreduces])
 
         # Runs the script
         with mr_job1.make_runner() as runner1:
+            
             runner1.run()
             new_assign = {}
             new_proto = {}
+
             # Process the results of the script iterating the (key,value) pairs
-            for key, value in mr_job1.parse_output(runner1.cat_output()):
-                new_assign[key] = value[0]
-                new_proto[key] = value[1]
-                # You should store things here probably in a datastructure
-            
-            assignFile = open(cwd + '/proto_assignments%d.txt' %(i+1), 'w')
+            for (key, value) in mr_job1.parse_output(runner1.cat_output()):
+                new_assign[key], new_proto[key] = value
+                
+            print(mr_job1.prototypes)
+
+            # If your scripts returns the new assignments you could write them in a file here
+            new_assign_file = open(cwd + '/res/assignments%d.txt' %(i+1), 'w')
             for key in new_assign:
-                aux = key + ':'
-                for value in new_assign[key]:
-                    aux += (value + ' ')
-                assignFile.write(aux + '\n')
-            assignFile.close()
-            
-            
-            f = ""
-            if ((i+1)== args.iter or assign == new_assign):
-                f = '/prototypes-final.txt'
-            
-            else:
-                f = ('/prototypes%d.txt' %(i+1))
-            
+                aux_string = key + ':'
+                for item in new_assign[key]:
+                    aux_string = aux_string + item + ' '
+                new_assign_file.write(aux_string + '\n')
+
+            new_assign_file.close()
+
+            # You should store the new prototypes here for the next iteration
+            if new_assign == assign:
+                nomove = True
+
             assign = new_assign
-            protoFile = open(cwd + f, 'w');
+
+            if (i + 1) == args.iter or nomove:
+                new_proto_file = open(cwd + '/prototypes-final.txt', 'w')
+            else:
+                new_proto_file = open(cwd + '/res/prototypes%d.txt'%(i+1), 'w')
 
             for key in new_proto:
-                aux = key + ':'
+                aux_string = key + ':'
                 for item in new_proto[key]:
-                    aux += item[0] + '+' + repr(item[1]) + ' '
-                aux = aux[0:len(aux)-1]
-                protoFile.write(aux + '\r\n')
-            protoFile.close()
+                    aux_string = aux_string + item[0] + '+' + repr(item[1]) + ' '
+                aux_string = aux_string[:-1]
+                new_proto_file.write(aux_string + '\r\n')
 
-        print(f"Time= {(time.time() - tinit)} seconds")
+            new_proto_file.close()
 
-        if nomove:  # If there is no changes in two consecutive iteration we can stop
+        # If you have saved the assignments, you can check if they have changed from the previous iteration
+
+        print("Time= %f seconds" % (time.time() - tinit))
+
+        if nomove:
             print("Algorithm converged")
             break
-
-    # Now the last prototype file should have the results
+        
+    print("Total time= %f seconds" % (time.time() - total_time))
