@@ -35,21 +35,8 @@ class MRKmeansStep(MRJob):
 
         The result should be always a value in the range [0,1]
         """
-
-        inter_size = 0
-        i = 0
-        j = 0
-        while(i < len(prot) and j < len(doc)):
-            if prot[i][0] == doc[j]:
-                inter_size += 1
-                i += 1
-                j += 1
-            elif prot[i][0] < doc[j]:
-                i += 1
-            else:
-                j += 1
-                
-        return inter_size / float(len(prot) + len(doc) - inter_size)
+        inter_len = len([x for x in doc if x in prot[:][0]])        
+        return inter_len / float(len(prot) + len(doc) - inter_len)
 
     def configure_args(self):
         """
