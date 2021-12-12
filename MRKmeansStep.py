@@ -79,7 +79,7 @@ class MRKmeansStep(MRJob):
         assigned_prot = ''
         minimum_dist = -1
         for key in self.prototypes:
-            distance = self.jaccard(self.prototypes[key], lwords)
+            distance = 1-self.jaccard(self.prototypes[key], lwords)
             if (minimum_dist == -1 or distance < minimum_dist):
                 assigned_prot = key
                 minimum_dist = distance
