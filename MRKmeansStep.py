@@ -16,46 +16,40 @@ MRKmeansDef
 :Created on: 17/07/2017 7:42 
 
 """
-
+import re
 from mrjob.job import MRJob
 from mrjob.step import MRStep
-import numpy as np
-
 
 __author__ = 'bejar'
 
-def flatten(l):
-  return [item for sublist in l for item in sublist]
 
-def unpack_prot(prot,total_count):
-    words = []
-    for word,prob in prot:
-        w_occurences = prob*total_count
-        words.append(list(np.repeat(word,w_occurences)))
-    unpacked = flatten(words)
-    return unpacked
-
-def intersection(lst1, lst2):
-    temp = set(lst2)
-    lst3 = [value for value in lst1 if value in temp]
-    return lst3
-    
 class MRKmeansStep(MRJob):
     prototypes = {}
 
+    def jaccard(self, prot, doc):
+        """
+        Compute here the Jaccard similarity between  a prototype and a document
+        prot should be a list of pairs (word, probability)
+        doc should be a list of words
+        Words must be alphabeticaly ordered
 
-    def jaccard(self,prot, doc):
-      """
-      Compute here the Jaccard similarity between  a prototype and a document
-      prot should be a list of pairs (word, probability)
-      doc should be a list of words
-      Words must be alphabeticaly ordered
-      The result should be always a value in the range [0,1]
-      """         
-      prot_doc = unpack_prot(prot,len(doc))  
-      intersection_len = len(intersection(prot_doc,doc))       
-      jaccard_similarity = intersection_len/len(prot+doc)
-      return jaccard_similarity
+        The result should be always a value in the range [0,1]
+        """
+
+        inter_size = 0
+        i = 0
+        j = 0
+        while(i < len(prot) and j < len(doc)):
+            if prot[i][0] == doc[j]:
+                inter_size += 1
+                i += 1
+                j += 1
+            elif prot[i][0] < doc[j]:
+                i += 1
+            else:
+                j += 1
+                
+        return inter_size / float(len(prot) + len(doc) - inter_size)
 
     def configure_args(self):
         """
@@ -90,21 +84,20 @@ class MRKmeansStep(MRJob):
 
         You can add also more elements to the value element, for example the document_id
         """
-
         # Each line is a string docid:wor1 word2 ... wordn
         doc, words = line.split(':')
         lwords = words.split()
-
-        minimum_distance = -1 
-        assigned_prototype= ""
-        for prot in self.prototypes:     
-            distance = self.jaccard(self.prototypes[prot], lwords)
-            if (distance < minimum_distance or minimum_distance==-1):
-                assigned_prototype = prot
-                minimum_distance= distance
+        
+        # Compute map here
+        assigned_prot = ''
+        minimum_dist = -1
+        for key in self.prototypes:
+            distance = self.jaccard(self.prototypes[key], lwords)
+            if (minimum_dist == -1 or distance < minimum_dist):
+                assigned_prot = key
+                minimum_dist = distance
             
-        # Return pair key, value
-        yield assigned_prototype, (doc, lwords)
+        yield assigned_prot, (doc, lwords)
 
     def aggregate_prototype(self, key, values):
         """
@@ -124,26 +117,25 @@ class MRKmeansStep(MRJob):
         :return:
         """
 
-        new_prototype={}
-        new_prototype_documents=[]
-        n_documents=0
-        for document in values:
-            new_prototype_documents.append(document[0])
-            for word in document[1]:
+        cluster = []
+        new_prototype = {}
+
+        for (doc, words) in values:
+            cluster.append(doc)
+            for word in words:
                 if word in new_prototype:
                     new_prototype[word] += 1
                 else:
                     new_prototype[word] = 1
-            
-            n_documents += 1
-
-        returnPrototype = []
+        
+        result = []
         for word in new_prototype:
-            returnPrototype.append((word,new_prototype[word]/float(n_documents)))
+            value = new_prototype[word]/float(len(cluster))
+            result.append((word, value))
     
-        yield key, (sorted(new_prototype_documents),sorted(returnPrototype, key=lambda x: x[0]))
-    
-    
+        yield key, (sorted(cluster), sorted(result, key=lambda x: x[0]))
+
+
     def steps(self):
         return [MRStep(mapper_init=self.load_data, mapper=self.assign_prototype,
                        reducer=self.aggregate_prototype)
@@ -151,5 +143,4 @@ class MRKmeansStep(MRJob):
 
 
 if __name__ == '__main__':
-    print('gilipollas')
     MRKmeansStep.run()
